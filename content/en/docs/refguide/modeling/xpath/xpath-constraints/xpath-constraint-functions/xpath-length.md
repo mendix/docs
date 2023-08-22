@@ -1,7 +1,7 @@
 ---
-title: "XPath Length"
+title: "XPath length"
 url: /refguide/xpath-length/
-parent: "xpath-constraint-functions"
+weight: 4
 tags: ["studio pro"]
 ---
 
@@ -13,6 +13,12 @@ The `length()` function returns the length of a string attribute or value.
 
 This query returns all customers with a `FirstName` of 5 or more characters:
 
-```java
-//Sales.Customer[length(FirstName) >= 5]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [length(FirstName) >= 5]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Sales.Customer[length(FirstName) >= 5]
+    {{% /tab %}}
+{{< /tabpane >}}

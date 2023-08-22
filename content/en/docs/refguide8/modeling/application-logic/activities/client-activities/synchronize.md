@@ -1,7 +1,6 @@
 ---
 title: "Synchronize"
 url: /refguide8/synchronize/
-parent: "client-activities"
 weight: 70
 tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -54,10 +53,9 @@ If the set of objects selected for synchronization contains objects without loca
 The **Synchronize** activity properties consists of the following sections:
 
 * [Action](#action)
-
 * [Common](#common)
 
-	{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
 
 ## 3 Action Section {#action}
 

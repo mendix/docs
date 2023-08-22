@@ -1,7 +1,6 @@
 ---
 title: "Attributes"
 url: /refguide8/attributes/
-parent: "entities"
 weight: 30
 tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -81,7 +80,7 @@ AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are 
 Binary<sup><small>[1]</small></sup> | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
 Boolean | True or false. | Boolean | 
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |
-Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
+Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](/refguide8/enumerations/). | Enumeration |
 Hashed string | A string which is hashed using the algorithm specified in the [project settings](/refguide8/project-settings/#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
 Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long |
@@ -116,7 +115,7 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 This property is shown if **Type** is set to **Date and time**.
 {{% /alert %}}
 
-This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
+This property indicates whether the date and time should be localized. By default localization is enabled. If you are *not* interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
@@ -188,7 +187,7 @@ The **Default value** property defines the value of this attribute when an objec
 | AutoNumber | 1 | Starting value of this attribute. If there are already objects of this entity, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
 | Binary | N/A |   |
 | Boolean | False |   |
-| Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by ` hour:minute`, or ` hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
+| Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by `hour:minute`, or `hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
 | Decimal | 0 |   |
 | Enumeration | (empty) |   |
 | Hashed string | (empty) |   |

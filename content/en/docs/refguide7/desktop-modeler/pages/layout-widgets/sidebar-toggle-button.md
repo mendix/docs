@@ -1,7 +1,6 @@
 ---
 title: "Sidebar toggle button"
 url: /refguide7/sidebar-toggle-button/
-parent: "layout-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -47,7 +46,7 @@ The sidebar toggle is right-to-left-aware (RTL) which means that in RTL language
 
 {{% /alert %}}
 
-_Default value:_ Left
+*Default value:* Left
 
 ### Mode
 

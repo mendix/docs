@@ -1,7 +1,7 @@
 ---
-title: "Navigation Profile In Mendix Versions 7.2 and 7.3"
+title: "Navigation Profile in Mendix Versions 7.2 and 7.3"
+linktitle: "Navigation Profile in 7.2 and 7.3"
 url: /refguide7/navigation-profile-in-72-and-73/
-parent: "navigation-in-72-and-73"
 description: "Describes the profile properties and profile buttons for Mendix version 7.2 and 7.3."
 ---
 
@@ -57,7 +57,7 @@ If [security](/refguide7/project-security/) is enabled, the menu will only show 
 
 This allows for adding new profiles. The profile name and profile kind can be provided. 
 
-The **Copy settings from profile 'Profile'** check box enables creating a duplicate of the current profile. It copies over all the settings except the profile name and profile kind.
+The **Copy settings from profile 'Profile'** checkbox enables creating a duplicate of the current profile. It copies over all the settings except the profile name and profile kind.
 
 ### 2.2 Change Kind
 

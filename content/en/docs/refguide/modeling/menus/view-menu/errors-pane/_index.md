@@ -1,8 +1,7 @@
 ---
 title: "Errors Pane"
 url: /refguide/errors-pane/
-parent: view-menu
-weight: 30
+weight: 40
 description: "Describes the Errors pane in Mendix Studio Pro."
 tags: ["Studio Pro", "errors", "error list", "errors pane"]
 ---
@@ -13,7 +12,7 @@ To make sure that your app is always consistent and properly built, Studio Pro d
 
 When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane. The errors and warnings in pages, microflows, domain models, and document templates will be highlighted: 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
 
 To display the **Errors** pane, there are two options:
 
@@ -76,7 +75,7 @@ The following actions are available in the drop-down menu:
 * **View documentation about {an error or the name of the element}** – opens the corresponding document that describes this check failure and gives instructions on how to fix it; if there is no documentation on the current message, the option is greyed-out
 * Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the app
 
-##  4 Read More
+## 4 Read More
 
 * [Consistency Errors](/refguide/consistency-errors/)
 * [Studio Pro Overview](/refguide/studio-pro-overview/)

@@ -6,7 +6,7 @@ weight: 93
 
 ## 8.8.0
 
-**Release date: April 1st, 2020**
+**Release date: April 1, 2020**
 
 ### CodeActions
 
@@ -44,6 +44,6 @@ weight: 93
 
 * We introduced this ModelUnit.
 
-#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity & UserTask (Elements)
+#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity, and UserTask (Elements)
 
 * We introduced these elements.

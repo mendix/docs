@@ -1,7 +1,7 @@
 ---
-title: "XPath False"
+title: "XPath false"
 url: /refguide/xpath-false/
-parent: "xpath-constraint-functions"
+weight: 2
 tags: ["studio pro"]
 ---
 
@@ -15,6 +15,12 @@ To use the values `true` or `false` in XPath queries, it is necessary to either 
 
 This query returns all the customers who are not classified as gold customers:
 
-```java
-//Sales.Customer[IsGoldCustomer = false()]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [IsGoldCustomer = false()]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Sales.Customer[IsGoldCustomer = false()]
+    {{% /tab %}}
+{{< /tabpane >}}

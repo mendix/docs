@@ -1,13 +1,12 @@
 ---
 title: "8.2"
 url: /releasenotes/sdk/metamodel-8.2/
-parent: "metamodel-8"
 weight: 99
 ---
 
 ## 8.2.0
 
-**Release date: September 25th, 2019**
+**Release date: September 25, 2019**
 
 ### Constants
 

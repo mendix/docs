@@ -1,7 +1,6 @@
 ---
 title: "Splits"
 url: /refguide7/splits/
-parent: "common-elements"
 ---
 
 This section describes the splits for microflows and nanoflows:

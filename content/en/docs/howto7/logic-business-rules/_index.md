@@ -1,7 +1,9 @@
 ---
-title: "Logic & Business Rules"
+title: "Logic and Business Rules"
 url: /howto7/logic-business-rules/
 weight: 40
+no_list: false
+description_list: true 
 ---
 
 ## 1 Introduction 
@@ -12,19 +14,4 @@ Mendix is all about collaboration between business and IT, and microflows help t
 
 With these how-to's, you can learn how to translate your business logic into microflows and build and debug them from the beginner to the expert level.
 
-## 2 Main Documents in This Category
-
-* [Create Your First Microflow: Hello World!](/howto7/logic-business-rules/create-your-first-microflow-hello-world/)
-* [Trigger Logic Using Microflows](/howto7/logic-business-rules/triggering-logic-using-microflows/)
-* [Create a Custom Save Button](/howto7/logic-business-rules/create-a-custom-save-button/)
-* [Drag Microflows & Pages into a Microflow](/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/)
-* [Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
-* [Work with Lists in a Microflow](/howto7/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Optimize Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
-* [Set Up Error Handling](/howto7/logic-business-rules/set-up-error-handling/)
-* [Optimize Retrieve Activities](/howto7/logic-business-rules/optimizing-retrieve-activities/)
-* [Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
-* [Configure String Concatenation](/howto7/logic-business-rules/string-concatenation/)
-* [Use the Java API](/howto7/logic-business-rules/java-api-tutorial/)
-* [Find Object Activities](/howto7/logic-business-rules/finding-object-activities/)
-* [Use Translatable Validation Messages](/howto7/logic-business-rules/translatable-validation-messages/)
+## 2 Documents in This Category

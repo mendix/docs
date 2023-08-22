@@ -1,7 +1,6 @@
 ---
 title: "Consistency Errors"
 url: /refguide8/consistency-errors/
-parent: "errors-pane"
 weight: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors"]
@@ -40,7 +39,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Integration](/refguide8/integration/)
 * [Security](/refguide8/security/)
 
-##  2 Read More
+## 2 Read More
 
 * [Page Editor Consistency Errors](/refguide8/consistency-errors-pages/)
 * [Navigation Consistency Errors](/refguide8/consistency-errors-navigation/)

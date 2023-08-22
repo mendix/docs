@@ -1,7 +1,6 @@
 ---
 title: "Page Break (Document Template)"
 url: /refguide7/page-break-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Page+Break+(document+template).html
     - /refguide7/page-break-(document-template).html

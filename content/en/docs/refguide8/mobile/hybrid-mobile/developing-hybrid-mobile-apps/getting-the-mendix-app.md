@@ -1,8 +1,10 @@
 ---
 title: "Getting the Mendix Developer App"
 url: /refguide8/getting-the-mendix-app/
-parent: "developing-hybrid-mobile-apps"
 tags: ["studio pro"]
+aliases: 
+    - /refguide/getting-the-mendix-app.html
+    - /refguide/getting-the-mendix-app
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +14,7 @@ You can get the Mendix Developer App on your mobile device by downloading it fro
 
 For information on which mobile operating systems are supported by the Mendix Developer App, see the [Mobile Operating Systems](/refguide8/system-requirements/#mobileos) section of *System Requirements*.
 
-To download the Mendix Developer App, search for "Mendix Developer App" in your device's app store, or select one of the download links below:
+To download the Mendix Developer App, search for "Mendix Developer App" in your device's app store, or select one of these download links (currently, for Android hybrid apps please use the Mendix app link below):
 
 * [Download for iOS](https://apps.apple.com/app/mendix-developer-app/id922423316)
-* [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.MendixDeveloperApp)
+* [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)

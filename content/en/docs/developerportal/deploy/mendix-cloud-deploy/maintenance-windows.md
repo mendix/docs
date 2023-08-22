@@ -1,8 +1,6 @@
 ---
-title: "Maintenance Windows: Configuration"
 title: "Maintenance Windows"
 url: /developerportal/deploy/maintenance-windows/
-parent: "mendix-cloud-deploy"
 weight: 33
 description: "How to configure the maintenance windows for your node environment."
 tags: ["Deploy","App","Developer Portal", "maintenance"]
@@ -18,7 +16,7 @@ In the Mendix Cloud Professional and Enterprise plans you can configure a weekly
 
 ### 1.1 Preferred Maintenance Window
 
-The **Preferred Maintenance Window** is a standard time range in a week where you would prefer system maintenance to occur. This is always shown as **UTC** so don't forget to convert it to your local timezone.
+The **Preferred Maintenance Window** is a standard time range in a week where you would prefer system maintenance to occur. This is always shown as **UTC** so don't forget to convert it to your local time zone.
 
 This window will only be used when planned maintenance is being scheduled.
 
@@ -34,7 +32,7 @@ Where infrastructure maintenance is needed, it is not always possible to do this
 
 To view maintenance windows, you need to have monitor or backup access to your Mendix app. To configure them, you need to have transport rights to it. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 3 Configuring Maintenance for Your Application
+## 3 Configuring Maintenance for Your Application {#configuring}
 
 {{% alert color="warning" %}}
 Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.
@@ -73,5 +71,5 @@ For example: imagine today is Tuesday, your maintenance window is currently Thur
 
 ## 4 Read More
 
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/) 

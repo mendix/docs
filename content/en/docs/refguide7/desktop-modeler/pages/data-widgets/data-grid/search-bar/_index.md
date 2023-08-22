@@ -1,12 +1,11 @@
 ---
 title: "Search Bar"
 url: /refguide7/search-bar/
-parent: "data-grid"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-The search bar contains search fields that allow the end-user to quickly find the information he or she needs.
+The search bar contains search fields that allow the end-user to quickly find the information they need.
 
 ## Search Fields
 

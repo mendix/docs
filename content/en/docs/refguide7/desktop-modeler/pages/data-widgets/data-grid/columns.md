@@ -1,7 +1,6 @@
 ---
 title: "Columns"
 url: /refguide7/columns/
-parent: "data-grid"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## Common Properties
@@ -31,25 +30,26 @@ A column connected to an attribute of type enumeration can show its contexts as 
 
 The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
-_Default value:_ 2
+*Default value:* 2
 
 ### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
-_Default value:_ False
+*Default value:* False
 
 ### Date Format (Only for Attributes of the Type DateTime)
 
 The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
 These are the possible values:
+
 * **Date** (this is the default)
 * **Time**
 * **Date and time**
 * **Custom** (see below for more deteails)
 
-_Default value:_ Date
+*Default value:* Date
 
 If you choose **Custom** as the date format, the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules in this table:
 
@@ -125,4 +125,4 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](/refguide7/data-grid/).
 
-_Default value:_ False
+*Default value:* False

@@ -6,7 +6,7 @@ weight: 89
 
 ## 9.11.0
 
-**Release date: February 16th, 2022**
+**Release date: February 16, 2022**
 
 ### DomainModels
 
@@ -91,9 +91,9 @@ weight: 89
 * We introduced the `adminPage` property.
 * We deleted the `overviewPage` property. 
 
-#### PageReference & PageParameterMapping (Elements)
+#### PageReference and PageParameterMapping (Elements)
 
-* We introduced these element. 
+* We introduced these elements. 
 
 #### UserTask (Element)
 

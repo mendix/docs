@@ -44,7 +44,7 @@ In Windows, use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
-You can also run MxBuild under Linux using the the following command line format:
+You can also run MxBuild under Linux using the following command line format:
 
 `mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
@@ -97,7 +97,6 @@ When MxBuild exits, one of the following codes will be returned:
 | 1 | An internal error occurred |
 | 2 | There's something wrong with the command-line options |
 | 3 | Deployment of the Mendix project failed |
-
 
 If the exit code is larger than 0, MxBuild will also output a message describing the error.
 

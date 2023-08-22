@@ -1,7 +1,6 @@
 ---
 title: "Event Handlers"
 url: /refguide/event-handlers/
-parent: "entities"
 weight: 50
 tags: ["domain model", "entity", "event handler", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -29,7 +28,7 @@ For example, say your **Customer** entity has a **Postcode** attribute and you w
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" >}}
 
-For more information on using event handlers for data validation, see [How To Set Up Data Validation](/howto/data-models/setting-up-data-validation/).
+For more information on using event handlers for data validation, see [Setting Up Data Validation](/refguide/setting-up-data-validation/).
 
 ## 2 Properties
 
@@ -57,7 +56,7 @@ Event handler properties consist of the following sections:
 | Value | Description |
 | --- | --- |
 | Create | The microflow is executed when an object of this entity is created. This happens when the user clicks **Create** on a grid or when an object is created in a microflow. In a [create](/refguide/create-object/) action in a microflow, an after create action is executed after the object is initialized with the attributes' default values, but before any change items specified in the action are applied. |
-| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks **Save** on a page or when an object is committed in a microflow. |
+| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks **Save** on a page or when an object is committed in a microflow. For more information, see the [Security](/refguide/nanoflows/#security) section of *Nanoflows*. |
 | Delete | The microflow is executed when an object of this entity is deleted. This happens when a user clicks **Delete** in a grid or when an object is deleted in a microflow. |
 | Rollback | The microflow is executed when an object of this entity is rolled back. This happens when a user clicks **Cancel** on a page or when an object is rolled back in a microflow. |
 
@@ -74,7 +73,7 @@ If you set this to **No**, you can only specify a microflow with no parameters.
 This property defines the microflow that is executed for the specified event. The microflow must have parameter and return types consistent with the moment and event of the event handler:
 
 * Microflows of all event handlers except **Before Create** can get the object on which the event occurs as parameter.
-* Microflows that are executed _before_ the event should return a Boolean value that specifies whether the event should continue (true) or be cancelled (false). When multiple microflows handle the same event, it is cancelled immediately when one of the microflows returns false. In that case, some microflows might not be executed at all. You can use this feature, for example, to cancel committing an object when a certain condition is not met.
+* Microflows that are executed *before* the event should return a Boolean value that specifies whether the event should continue (true) or be cancelled (false). When multiple microflows handle the same event, it is cancelled immediately when one of the microflows returns false. In that case, some microflows might not be executed at all. You can use this feature, for example, to cancel committing an object when a certain condition is not met.
 
 | [Moment](#moment) | [Event](#event) | Can Get Object as Parameter | Returns a Boolean Value |
 | --- | --- | --- | --- |
@@ -100,4 +99,4 @@ Default: *Yes*
 ## 3 Read More
 
 * [How to Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
-* [How To Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
+* [Setting Up Data Validation](/refguide/setting-up-data-validation/)

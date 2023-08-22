@@ -1,7 +1,6 @@
 ---
 title: "Native Builder (CLI)"
 url: /refguide8/native-builder/
-parent: "native-mobile"
 weight: 70
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "deprecated"]
 ---
@@ -11,12 +10,12 @@ The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Please update to Native Builder v3.2.1 or higher. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
+Please update to Native Builder CLI v3.2.1 or higher. Native Builder CLI v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
 ## 1 Introduction
 
-The Native Builder takes your Mendix project containing a native profile and packages a native mobile app for iOS and Android. To learn more about using the Native Builder, see [How to Deploy your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/).
+The Native Builder (CLI) takes your Mendix project containing a native profile and packages a native mobile app for iOS and Android. To learn more about using the Native Builder, see [How to Deploy your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/).
 
 The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
 
@@ -34,9 +33,9 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. Commands are configured using parameters, shown below. Some of these parameters are required or strongly recommended. The rest of them are optional, and should be used when they pertain to your app. To compose a command with parameters — which will start your Native Builder when executed — do the following:
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
-2.  Target your Native Builder's directory by typing `cd "{your Native Builder .exe location}"` and pressing <kbd>Enter</kbd>:
+2. Target your Native Builder's directory by typing `cd "{your Native Builder .exe location}"` and pressing <kbd>Enter</kbd>:
 
-	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-builder/change-directory.png" alt="change directory" >}}
+    {{< figure src="/attachments/refguide8/mobile/native-mobile/native-builder/change-directory.png" alt="change directory" >}}
 
 ### 2.1 Prepare {#prepare}
 
@@ -44,7 +43,7 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 
 An example of a `prepare` command:
 
-```bash
+```bash {linenos=false}
 native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App" --mendix-version 8.5.0
 ```
 
@@ -67,7 +66,6 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--firebase-android-config-path`          | Absolute path to a *google-services.json* file.          | `C:\MyApp\google-services.json`                     |
 | `--firebase-ios-config-path`          | Absolute path to a *GoogleService-Info.plist* file.          | `C:\MyApp\GoogleService-Info.plist`                 |
 
-
 ### 2.2 Build {#build}
 
 #### 2.2.1 Generating Apps for Distribution
@@ -76,7 +74,7 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 
 If you already ran `prepare`, this is an example of a `build` command:
 
-```bash
+```bash {linenos=false}
 native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
@@ -107,7 +105,7 @@ When used, the `build dev-app` command will create a preview app much like the M
 
 Here is an example of a command featuring `build dev-app`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bundles\developer"
 ```
 
@@ -125,7 +123,6 @@ The `regenerate` command recreates the project on GitHub with the latest version
 There is no automated way to preserve changes you made to a previous template. If you have some, you must apply them manually in the new GitHub repository. In addition, when changing your app's Mendix version, please also update the `mxbuild-path` using the `prepare` command.
 {{% /alert %}}
 
-
 | Parameter                  | Description                                                                 | Example                                             |
 | -------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------- |
 | `--project-name`           | Absolute path to the directory where Java executable is located. | `My Cool App`                                       |
@@ -133,7 +130,7 @@ There is no automated way to preserve changes you made to a previous template. I
 
 An example of a `regenerate` command:
 
-```bash
+```bash {linenos=false}
 native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 ```
 
@@ -147,7 +144,7 @@ The `push-update` command handles generating a new JavaScript bundle and assets,
 
 Here is an example of a command featuring `push-update`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
@@ -169,7 +166,7 @@ The `patch-update` command allows you to update the metadata of a published upda
 
 Here is an example of a command featuring `patch-update`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --target-version  "1.0.1"
 ```
 
@@ -190,7 +187,7 @@ The `rollback-update` command allows you to revert to a previous deployment rele
 
 Here is an example of a command featuring `rollback-update`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release rollback-update --project-name "CoolApp" --label "v4"
 ```
 
@@ -212,7 +209,7 @@ The `list` command displays a pretty-printed list of all deployed releases.
 
 Here is an example of a command featuring `list`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release list --project-name "CoolApp"
 ```
 
@@ -228,7 +225,7 @@ When used, the `bundle` command **will only run the MXBuild step** (skipping Git
 
 Here is an example of a command featuring `bundle`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 ```
 
@@ -246,7 +243,7 @@ Commands to modify the iOS configuration are grouped under the `config ios` comm
 
 To add or remove entitlements, use the `add-entitlements` or `remove-entitlements` commands:
 
-```bash
+```bash {linenos=false}
 native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitlements notification nfc
 ```
 
@@ -259,7 +256,7 @@ native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitl
 
 To add or remove background modes, use the `add-background-modes` or `remove-background-modes` commands:
 
-```bash
+```bash {linenos=false}
 native-builder.exe config ios add-background-modes --project-name "CoolApp" --modes notification
 ```
 
@@ -292,7 +289,7 @@ This parameter specifies the version of the app you want to build. See [Semantic
 
 ### 3.6 --app-identifier
 
-This parameter serves as a unique identifier for your app, which must conform to Android's [application ID](https://developer.android.com/studio8/build/application-id) requirements as well as Apple's [CFBundleIdentifier](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html) requirements. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, for example {com.mendix.MyAwesomeApp}.
+This parameter serves as a unique identifier for your app, which must conform to Android's [application ID](https://developer.android.com/studio/build/application-id) requirements as well as Apple's [CFBundleIdentifier](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html) requirements. Once your app is uploaded to the Apple App Store or the Play Store, the app’s identifier can no longer be modified. If you do modify the identifier after an app is published, it will be treated as a different app by both stores. An app identifier is specified as reverse DNS notation, for example {com.mendix.MyAwesomeApp}.
 
 ### 3.7 --platform
 
@@ -304,15 +301,15 @@ In rare cases, errors might occur after the bundling process has completed. This
 
 ### 3.9 --app-icon-path
 
-This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
+This parameter specifies an app icon file. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **main**.
 
 ### 3.10 --app-round-icon-path
 
-This parameter specifies an app round icon file which is specific to Android. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **master**.
+This parameter specifies an app round icon file which is specific to Android. The image must be a *.png* file, and have a resolution of 1024x1024. Mendix will do the resizing for you. If a file path is not provided, default app icons will be provided by branch **main**.
 
 ### 3.11 --app-splash-screen-path
 
-This parameter specifies an app splash file. The image must be a *.png* file, and have a resolution of 1440x2560. Mendix will do the resizing for you. If a file path is not provided, default app splash images will be provided by branch **master**.
+This parameter specifies an app splash file. The image must be a *.png* file, and have a resolution of 1440x2560. Mendix will do the resizing for you. If a file path is not provided, default app splash images will be provided by branch **main**.
 
 ### 3.12 --build-number
 
@@ -330,18 +327,17 @@ This parameter makes the Native Builder pick a compatible version of the Native 
 
 This parameter provides additional details when the Native Builder incurs errors. When `--verbose` is used and the Native Builder errors, the Native Builder will output a complete stack trace of the error. This is useful for cases where the Native Builder fails with an unknown error.
 
-
 ## 4 Advanced Usage {#advanced-usage}
 
 ### 4.1 Custom Native Code
 
-If you have custom native dependencies or code, you can include them in your app by merging your changes to the **master** branch of the GitHub repository which the Native Builder is making. Every build branches off from **master** and your changes will be included. Remember to synchronize your repository occasionally to get the latest changes from Mendix native template.
+If you have custom native dependencies or code, you can include them in your app by merging your changes to the **main** branch of the GitHub repository which the Native Builder is making. Every build branches off from **main** and your changes will be included. Remember to synchronize your repository occasionally to get the latest changes from Mendix native template.
 
 For more information on syncing your repository, see [When to Regenerate Your Native Template](#sync-your-repository) below.
 
 ### 4.2 Custom App Center Configuration
 
-In App Center you can configure your builds at the branch level. If no configuration is available for branch **master**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **master** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration unless the `regenerate` command is used.
+In App Center you can configure your builds at the branch level. If no configuration is available for branch **main**, Native Builder will create a default configuration. If a configuration is already present, it will not be modified by the tool. When a branch for a build is initialized, the configuration of **main** is copied over. Consecutive builds will not alter this branch's configuration. This is to avoid overriding your custom configuration unless the `regenerate` command is used.
 
 ### 4.3 Custom Developer App
 
@@ -349,7 +345,7 @@ As your Mendix app matures, you may want to expand its functionality (such as by
 
 ## 5 When to Regenerate Your Native Template {#sync-your-repository}
 
-The Native Template is being continuously developed. This means new versions are regularly released to accommodate new features of the Mendix platform or to fix issues. When a new version is available, the Native Builder will suggest you run `regenerate` to update your base template. 
+The Native Template is being continuously developed. This means new versions are regularly released to accommodate new features of the Mendix Platform or to fix issues. When a new version is available, the Native Builder will suggest you run `regenerate` to update your base template. 
 
 You should update your project's template in the following scenarios:
 
@@ -372,7 +368,7 @@ The Native Template is tightly tied to the version of Studio Pro you are running
 
 **Unable to Commit {build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 
-### 6.2 App Center Errors
+### 6.2 App Center Errors {#app-center-errors}
 
 **Invalid API Token** — Your API token is invalid. Follow the [App Center Token](/howto8/mobile/deploying-native-app/#appcenter-token) section in *How to Deploy Your First Mendix Native Mobile App* and provide the API token to Native Builder.
 
@@ -382,7 +378,7 @@ The Native Template is tightly tied to the version of Studio Pro you are running
 
 **The Build Configuration is Overridden with the Default** — While Native Builder is checking to identify if the branch it is building has been manually configured, it may detect false positives. This could lead to your custom configuration getting overridden. If that happens, consider running the build directly using App Center and skip using the Native Builder for this branch.
 
-**Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **master** branch. Then run Native Builder again. The tool will recreate the default build configuration for **master** and your branch.
+**Unknown Error** — If you do not understand an error, you can sign in to App Center and delete the build configuration for the **main** branch. Then run Native Builder again. The tool will recreate the default build configuration for **main** and your branch.
 
 ### 6.3 Unknown Errors
 

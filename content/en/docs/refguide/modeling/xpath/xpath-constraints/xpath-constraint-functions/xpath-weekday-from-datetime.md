@@ -1,7 +1,7 @@
 ---
-title: "XPath Weekday-from-DateTime"
+title: "XPath weekday-from-dateTime"
 url: /refguide/xpath-weekday-from-datetime/
-parent: "xpath-constraint-functions"
+weight: 15
 tags: ["studio pro"]
 ---
 
@@ -13,10 +13,44 @@ The `weekday-from-dateTime()` function extracts the day of the week (as a number
 The range of values returned, and the day of the week corresponding to the lowest value returned depend on which database you are using.
 {{% /alert %}}
 
-## 2 Example
+## 2 Syntax
 
-This query returns all the logs where the day of the week in `DateAttribute` is 6 (Friday, for locally run apps or apps using a PostgreSQL database):
+The syntax is as follows:
 
-```java
-//Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
 ```
+weekday-from-dateTime ( attribute [, timezone ] )
+```
+
+### 2.1 attribute
+
+`attribute` specifies the attribute to extract the day from. Attribute must be of the **Date and time** type.
+
+### 2.2 timezone
+
+`timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
+
+## 3 Examples
+
+This query returns all the logs where the day of the week in `DateAttribute` is 6 in the local time zone (Friday, for locally run apps or apps using a PostgreSQL database):
+
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [weekday-from-dateTime(DateAttribute) = 6]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
+    {{% /tab %}}
+{{< /tabpane >}}
+
+This query returns all the logs where the day of the week in `DateAttribute` is 6 in the New York time zone (Friday, for locally run apps or apps using a PostgreSQL database):
+
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
+    {{% /tab %}}
+{{< /tabpane >}}

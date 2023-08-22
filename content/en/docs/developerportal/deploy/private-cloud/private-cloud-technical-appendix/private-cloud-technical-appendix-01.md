@@ -2,7 +2,6 @@
 title: "Technical Appendix: 1. Introduction to Operators"
 linktitle: "1. Introduction to Operators"
 url: /developerportal/deploy/private-cloud-technical-appendix-01/
-parent: "private-cloud-technical-appendix"
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 10
 tags: ["Private Cloud", "Technical Appendix"]
@@ -14,7 +13,7 @@ The deployment of apps to Mendix for Private Cloud is controlled by the Mendix O
 
 ## 2 What Is an Operator?
 
-### 2.1 Issues around Deploying Manually
+### 2.1 Issues Around Deploying Manually
 
 The quickest way to deploy an application into Kubernetes is to manually create its resources with commands such as `kubectl create pod` or `kubectl apply`. This works with any container image and getting started is easy. But any non-default configuration options require knowledge of how the application and its container image work internally. For example, some applications use environment variables and others require a configuration file.
 
@@ -63,9 +62,9 @@ The Mendix Operator is an all-in-one operator that can do the following actions:
 * Manage network-related objects: services, ingresses, or OpenShift routes.
 * Manage compute and configuration resources for an environment: deployments; [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/); and secrets.
 * Manage data storage (database and blob storage) by:
-    - creating or deleting a new database or storage bucket when an environment is created or deleted
-    - attaching an existing database or storage bucket to an environment, if it can be done safely (for example, a database or a dedicated bucket is not safe if it is shared between applications)
-    - partitioning a database or storage bucket so that each environment can only access its own data
+    * creating or deleting a new database or storage bucket when an environment is created or deleted
+    * attaching an existing database or storage bucket to an environment, if it can be done safely (for example, a database or a dedicated bucket is not safe if it is shared between applications)
+    * partitioning a database or storage bucket so that each environment can only access its own data
 * Build and push a Mendix app container image from an MDA file into a container registry.
 
 ### 3.2 Dependencies

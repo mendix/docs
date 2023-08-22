@@ -1,7 +1,6 @@
 ---
 title: "OQL Order by Clause"
 url: /refguide/oql-order-by-clause/
-parent: "oql"
 tags: ["studio pro"]
 ---
 
@@ -12,7 +11,6 @@ The `ORDER BY` clause specifies the sort order used on columns returned in a `SE
 This clause can include items that do not appear in the `SELECT` clause, except when `SELECT DISTINCT` is specified or when a `GROUP BY` clause exists. When `UNION` is used, the column names or aliases must be those specified in the `SELECT` clause of the first part of the query.
 
 ## 2 Syntax
-
 
 The syntax is as follows:
 

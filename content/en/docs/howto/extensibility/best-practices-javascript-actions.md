@@ -1,9 +1,10 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
+linktitle: "JavaScript Actions Best Practices"
 url: /howto/extensibility/best-practices-javascript-actions/
 category: "Extensibility"
 weight: 60
-description: "This set of best practices will help you get the most out of your JavaScript actions."
+description: "Describes how to create high-quality JavaScript actions, use common implementation patterns, design better APIs, and use JavaScript actions in nanoflows."
 tags: ["JavaScript", "API", "nanoflow"]
 ---
 
@@ -157,7 +158,7 @@ To customize your JavaScript actions, consult the sections below.
 
 #### 2.2.1 Understanding the Mendix Client API
 
-Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
+Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
 
 #### 2.2.2 Using Numeric Parameters in Your JavaScript Actions
 
@@ -173,7 +174,7 @@ y = x.plus(0.2)            // '0.3'
 
 If you know your JavaScript action does not require this extended precision (for example, if you expect a simple integer between 1 and 100), you can easily convert a `Big` object to a JavaScript number:
 
-```javascript
+```javascript {linenos=false}
 const numberValue = Number(bigJsValue); // number
 ```
 
@@ -195,7 +196,7 @@ mx.data.create({
 });
 ```
 
-For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/7/client/mx.data.html#.create) section of the *Mendix Client API*.
+For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/10/client/mx.data.html#.create) section of the *Mendix Client API*.
 
 #### 2.2.4 Changing Objects
 
@@ -208,23 +209,23 @@ mxobj.get("Name");               // "Henry"
 mxobj.getOriginalValue("Name")   // "Fred"
 ```
 
-For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
+For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/10/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
 Use the following code for loading platform-shipped dependencies (please note the shipped dependencies might vary per Mendix version):
 
-```javascript
+```javascript {linenos=false}
 // Synchronous libs that are already loaded
 var lang = require("mendix/lang");
 ```
 
 The following libraries are provided by the Mendix Client:
 
-* [mendix/lang](https://apidocs.rnd.mendix.com/7/client/module-mendix_lang.html)
-* [mendix/validator](https://apidocs.rnd.mendix.com/7/client/module-mendix_validator.html)
-* [mxui/dom](https://apidocs.rnd.mendix.com/7/client/module-mxui_dom.html)
-* [mxui/html/parser](https://apidocs.rnd.mendix.com/7/client/module-mxui_html_parser.html)
+* [mendix/lang](https://apidocs.rnd.mendix.com/10/client/module-mendix_lang.html)
+* [mendix/validator](https://apidocs.rnd.mendix.com/10/client/module-mendix_validator.html)
+* [mxui/dom](https://apidocs.rnd.mendix.com/10/client/module-mxui_dom.html)
+* [mxui/html/parser](https://apidocs.rnd.mendix.com/10/client/module-mxui_html_parser.html)
 
 While there are Dojo and Document Object Model (DOM) functions available, they are not recommended. For more information on Dojo and DOM functions, see the [Understanding Bad Practice](#badpractice) section of this document below. 
 
@@ -251,14 +252,6 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
     
     // BEGIN EXTRA CODE
     ```
-
-#### 2.2.7 Understanding Hybrid App External Dependencies
-
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base & Template* release notes.
-
-It is also possible to add new plugins during a mobile build.
-
-The actual list of plugins use can be found in *config.xml* inside your deployment package.
 
 ### 2.3 Understanding Returns
 
@@ -350,6 +343,7 @@ async function GetUserNameSampleRest(userID) {
     // END USER CODE
 }
 ```
+
 Explaining the Fetch API code:
 
 * The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
@@ -456,7 +450,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
-When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
+When testing, make sure you to check all compatible platforms (web and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 
@@ -477,14 +471,14 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 * Do not assume your user's browser – remember not all browsers have the same capabilities
 * Permanent rendering should be done using pluggable widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
 * Changes to the DOM might be lost due to the Mendix Client which can render the DOM at will (for example, when you add a CSS class to another component the Mendix Client will render the page at will and remove your changes) – you can create and change DOM elements that are placed outside `<div id="content"></div>`
-* Avoid using deprecated libraries – do not use Dojo or Dijit as they will be deprecated (jQuery should also no longer be used)
+* Avoid using deprecated libraries – do not use Dojo or Dijit as they are deprecated (jQuery should also no longer be used)
 * Avoid using Boolean actions that return `undefined`– the Boolean variable is the only variable that requires a value, is the only acceptable state is  `true` or `false`(other variables could be set to `undefined` and can be checked in Mendix Studio Pro as `$variable != empty`)
 
 ## 7 Read More
 
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
 * [JavaScript Actions](/refguide/javascript-actions/)
-* [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * JavaScript basics:
     * [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

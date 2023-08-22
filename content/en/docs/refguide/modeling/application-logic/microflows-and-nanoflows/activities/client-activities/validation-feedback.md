@@ -1,7 +1,6 @@
 ---
 title: "Validation Feedback"
 url: /refguide/validation-feedback/
-parent: "client-activities"
 weight: 70
 tags: ["studio pro", "validation feedback", "client activities"]
 aliases:
@@ -15,12 +14,12 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+This action is ignored and does not work when a microflow is called from an offline or native app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The **Validation feedback** activity does a validation check, and if this check fails, it shows a red message to the end-user below the widget that displays the attribute or association which failed the validation. For example, if the customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
+The **Validation feedback** activity does a validation check, and if this check fails, it shows a red message to the end-user below the widget that displays the attribute or association which failed the validation. For example, if a customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback.png" alt="Validation Feedback"   width="200"  >}}
 
@@ -28,7 +27,7 @@ The **Validation feedback** activity does a validation check, and if this check 
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" width="650px" >}}
 
 The **Validation feedback** properties pane consists of the following sections:
 

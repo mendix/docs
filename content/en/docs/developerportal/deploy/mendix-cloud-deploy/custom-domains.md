@@ -1,7 +1,6 @@
 ---
 title: "Custom Domains"
 url: /developerportal/deploy/custom-domains/
-parent: "mendix-cloud-deploy"
 weight: 27
 description: "How to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
@@ -49,7 +48,7 @@ Before starting this how-to, you will need to have the following prerequisites:
     * What is an SSL/TLS private key and what it is used for?
     * What is a certificate request and what it is used for?
 * a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
-* the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions/))
+* the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions/)) — this must include [Transport Rights](/developerportal/deploy/node-permissions/#transport-rights)
 
 ### 2.2 Create and Configure a CNAME Record{#DNS}
 
@@ -93,17 +92,21 @@ If you do not have an SSL/TLS certificate you can order one from a certificate a
 
 ### 4.1 Generating a Certificate Request for your Custom Domain{#Generating}
 
+{{% alert color="info" %}}
+Certificates are applied to a single app. Therefore, we recommend that you do not use a wildcard (`*`) in the domain for which you are requesting a certificate. See [Can I Create a `*.mycompany.com` Wildcard Certificate?](#wildcard), below, for more information.
+{{% /alert %}}
+
 To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow these steps:
 
-1.  Click **New**.
+1. Click **New**.
 
-2.  Click **Create a Certificate Request**.
+2. Click **Create a Certificate Request**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" >}}
 
-2.  Fill in the required fields.
+3. Fill in the required fields.
 
-4.  Click **Generate**.
+4. Click **Generate**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" >}}
 
@@ -111,7 +114,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168226.png" >}}
 
-    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It will not be available for download in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It is not available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
 You can now go to your certificate authority to get a signed SSL/TLS certificate.
 
@@ -149,7 +152,7 @@ To upload the custom domain certificate, follow these steps:
 
 2. Click **Upload Certificate, Chain and Key**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/upload-certificate.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" >}}
 
 3. Type a **Description** for the certificate.
 
@@ -163,7 +166,7 @@ To upload the custom domain certificate, follow these steps:
 
 7. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
-    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
@@ -189,6 +192,10 @@ You can handle an expiring domain certificate by replacing it with a new one. Yo
 
 You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
+{{% alert color="info" %}}
+If you are rotating a certificate, you do not need to remove the current domain configuration when replacing the certificate. Selecting a new certificate for an existing domain will reconfigure the existing domain with the selected certificate. 
+{{% /alert %}}
+
 ### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
 You can also edit an existing custom domain certificate.
@@ -199,7 +206,7 @@ You can also edit an existing custom domain certificate.
 For this you will need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
-## 7 Configuring a Custom Domain<a name="Configuring"></a>
+## 7 Configuring a Custom Domain {#Configuring}
 
 Once a custom domain certificate has been uploaded, you can configure a custom domain for one of your application environments.
 
@@ -227,7 +234,6 @@ To configure a custom domain for your application environment, follow these step
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168229.png" >}}
     
-
 {{% alert color="info" %}}
 
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
@@ -236,9 +242,9 @@ Make sure you have configured a CNAME record for your custom domain with your do
 
 ## 8 Frequently Asked Questions
 
-### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate?
+### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate? {#wildcard}
 
-Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single application.
+Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single app. This is because the private key is stored securely and is not accessible to you or Mendix Support, so you will not be able to reuse it in other apps.
 
 If you have your own custom domain certificate, you can upload it to all of your apps and use it for all the environments of all of your apps.
 
@@ -250,9 +256,13 @@ Your certificate is signed by the certificate authority (CA). They sign your cer
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
-### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
+### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL? {#use-custom-url}
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
+
+### 8.4 Can I Configure Multiple Custom Domains for the Same Application? {#multiple-custom-domains}
+
+Yes, you can configure multiple custom domains for the same application. Please note that this can only be done by [uploading multiple own custom domain certificates](#Uploading). You can only [generate one certificate signing request for one custom domain](#Generating) for your application.
 
 ## 9 Read More
 
@@ -260,5 +270,5 @@ For certain use cases, it is important for the Mendix runtime to know the public
 * [Environments](/developerportal/deploy/environments/)
 * [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)
 * [Control Center](/developerportal/control-center/)

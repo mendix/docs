@@ -1,7 +1,6 @@
 ---
 title: "Row (Document Template)"
 url: /refguide8/row-document-template/
-parent: "table-document-template"
 tags: ["studio pro"]
 aliases:
     - /refguide8/row-(document-template).html

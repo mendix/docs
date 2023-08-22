@@ -1,7 +1,6 @@
 ---
 title: "Call Nanoflow"
 url: /refguide/nanoflow-call/
-parent: "client-activities"
 weight: 2
 tags: ["studio pro", "nanoflow call", "call nanoflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,17 +12,13 @@ tags: ["studio pro", "nanoflow call", "call nanoflow"]
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
 
-The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call.png" alt="Nanoflow Call"   width="200"  >}}
-
-Arguments can be passed to the nanoflow and the result can be stored in a variable.
+The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). Arguments can be passed to the nanoflow and the result can be stored in a variable.
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" width="650px" >}}
 
 The **Nanoflow call** properties pane consists of the following sections:
 

@@ -1,7 +1,6 @@
 ---
 title: "Published Web Service"
 url: /refguide8/published-web-service/
-parent: "published-web-services"
 tags: ["studio pro"]
 ---
 
@@ -45,7 +44,7 @@ It is important to correctly configure the target namespace before publishing yo
 
 Select **Include tags for associations** if you need to include tags for associations in XML. This is usually not necessary, and support for this will be removed in a future version.
 
-To see the effect of this check box, consider a person with two dogs and a cat. When you do not select **Include tags for associations**, the XML looks like this:
+To see the effect of this checkbox, consider a person with two dogs and a cat. When you do not select **Include tags for associations**, the XML looks like this:
 
 ```xml
 <Person name="John">
@@ -69,9 +68,9 @@ When you do check **Include tags for associations**, the XML looks like this:
 </Person>
 ```
 
-### 3.5 Export WSDL File & Export XML Schema Definition
+### 3.5 Export WSDL File and Export XML Schema Definition
 
-By using this button, you can save the generated WSDL file, and its XML schema definition on your local hard drive. You can do this already before running your project, unlike when you download it from `http://localhost:8080/ws-doc/` .
+By using these buttons, you can save the generated WSDL file, and its XML schema definition on your local hard drive. You can do this already before running your project, unlike when you download it from `http://localhost:8080/ws-doc/` .
 
 ### 3.6 Documentation
 

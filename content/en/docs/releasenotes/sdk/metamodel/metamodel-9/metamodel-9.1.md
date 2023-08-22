@@ -1,17 +1,16 @@
 ---
 title: "9.1"
 url: /releasenotes/sdk/metamodel-9.1/
-parent: "metamodel-9"
 weight: 99
 ---
 
 ## 9.1.0
 
-**Release date: April 21st, 2021**
+**Release date: April 21, 2021**
 
 ### DomainModels
 
-#### FloatAttributeTypeBase, FloatAttributeType & CurrencyAttributeType (Elements)
+#### FloatAttributeTypeBase, FloatAttributeType, and CurrencyAttributeType (Elements)
 
 * We deleted these elements.
 

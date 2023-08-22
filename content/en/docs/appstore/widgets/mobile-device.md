@@ -21,7 +21,7 @@ The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget
 * **App ID** – the unique identifier of your mobile app (for example, *com.mycompany.awesomeapp*)
 * **App version** – the version of your mobile app (for example, *1.2.1*)
 
-Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile/) applications is recommended.
+This widget is used for Mendix hybrid mobile applications.
 
 ### 1.1 Features
 
@@ -36,7 +36,7 @@ Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile/) applicati
 
 The device ID is very useful for anonymous apps in which you still want to persist data per device. By using the device ID, you can store data related to the device so that the next time the end-user opens the app on that device, the correct data and settings can be loaded.
 
-#### 1.2.2 Differentiating the UI for Android & iOS
+#### 1.2.2 Differentiating the UI for Android and iOS
 
 Android and iOS have different design patterns and guidelines. By leveraging the platform info of this widget, you can change the UI your app delivers based on the platform being used. For example, you can show a back button only on iOS, because Android has a standard back button.
 

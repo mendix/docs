@@ -1,7 +1,8 @@
 ---
 title: "Set Up Server-Side Paging and Sorting for a Microflow Data Source"
+linktitle: "Server-Side Paging and Sorting"
 url: /howto8/logic-business-rules/server-side-paging/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 description: "This how-to will teach you how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it."
 tags: [ "microflow", "Data Grid", "rest service", "server-side" ]
 ---
@@ -45,7 +46,7 @@ Once successful, your project should have the following elements:
 Now you can start calling the REST service from your microflow data source. To create a microflow data source which returns a list of characters, do the following:
 
 1. Right-click your module, click **Add Microflow**, and create a new microflow named *Call_REST*.
-2. From the **Toolbox**, drag a **Call REST service** activity onto the microflow.
+2. From the **Toolbox**, drag a **Call REST service** activity into the microflow.
 3. Double-click your **Call REST service** activity.
 4. Click the **Location** > **Edit** button: 
 
@@ -65,7 +66,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
     {{< figure src="/attachments/howto8/logic-business-rules/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  >}}
 
-10. From the **Toolbox** drag the **Retrieve** activity onto the microflow and double-click it.
+10. From the **Toolbox** drag the **Retrieve** activity into the microflow and double-click it.
 11. Click **Association** > **Select**, click **Expand All**, and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
 12. Click **OK** to accept this association.
 13. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
@@ -76,7 +77,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
 In previous section you created a microflow which return a list of characters. Next you will use this microflow as a data source for a data grid:
 
-1. From the **Toolbox**, drag and drop a **Data grid** onto a page.
+1. From the **Toolbox**, drag a **Data grid** onto a page.
 2. Double-click the blue header of the newly-placed data grid.
 3. Click the **Data source** tab:
 
@@ -101,7 +102,7 @@ This generates a data view around your data grid, creates the necessary widgets 
 
 In the previous section you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
 
-1. Open the the **CallREST** microflow.
+1. Open the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
 4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:
@@ -206,7 +207,7 @@ You only need to use this data in your microflow and pass the search criteria to
 
 5. Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
 
-    ```
+    ```text {linenos=false}
     if $Paging/Name = empty then '' else $Paging/Name
     ```
 

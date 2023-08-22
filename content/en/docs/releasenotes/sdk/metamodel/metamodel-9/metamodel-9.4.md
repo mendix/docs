@@ -6,7 +6,7 @@ weight: 96
 
 ## 9.4.0
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 ### Rest
 
@@ -27,7 +27,7 @@ weight: 96
 * We introduced the `nativeHomePage` and `otaEnabled` properties.
 * We deleted the `homePage` property.
 
-#### NativeHomePageBase & NativeHomePage (Elements)
+#### NativeHomePageBase and NativeHomePage (Elements)
 
 * We introduced these elements.
 
@@ -44,4 +44,3 @@ weight: 96
 #### PageParameter (Elements)
 
 * We introduced this element.
-

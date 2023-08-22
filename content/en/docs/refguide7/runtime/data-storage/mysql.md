@@ -1,7 +1,6 @@
 ---
 title: "MySQL/MariaDB"
 url: /refguide7/mysql/
-parent: "data-storage"
 weight: 50
 ---
 

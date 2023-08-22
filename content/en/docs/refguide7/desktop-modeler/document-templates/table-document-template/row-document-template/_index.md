@@ -1,7 +1,6 @@
 ---
 title: "Row (Document Template)"
 url: /refguide7/row-document-template/
-parent: "table-document-template"
 aliases:
     - /refguide7/Row+(document+template).html
     - /refguide7/row-(document-template).html

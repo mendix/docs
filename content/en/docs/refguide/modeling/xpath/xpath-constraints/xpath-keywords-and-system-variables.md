@@ -1,8 +1,7 @@
 ---
-title: "XPath Keywords & System Variables"
+title: "XPath Keywords and System Variables"
 url: /refguide/xpath-keywords-and-system-variables/
-parent: "xpath-constraints"
-tags: ["studio pro", "BeginOfCurrent"]
+tags: ["studio pro", "BeginOfCurrent", "system variables"]
 ---
 
 ## 1 Overview
@@ -20,13 +19,19 @@ Either of these keywords can be used to check whether an attribute has a value (
 
 This query returns all the customers whose name is not known to the system:
 
-```java
-//Sales.Customer[Name = NULL]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [Name = NULL]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[Name = NULL]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
 
-## 3 System Variables
+## 3 System Variables {#system-variables}
 
 System variables can be used to obtain system or date related values. The available tokens are described below.
 
@@ -47,7 +52,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" width="500px" >}}
 
 ### 3.3 Time-Related
 
@@ -68,6 +73,14 @@ The following tokens can be used to obtain a date and time value:
 | `[%BeginOfCurrentDayUTC%]` | The date and time at the beginning of the current day in UTC. |
 | `[%EndOfCurrentDay%]` | The date and time at the end of the current day. |
 | `[%EndOfCurrentDayUTC%]` | The date and time at the end of the current day in UTC. |
+| `[%BeginOfYesterday%]` | The date and time at the beginning of yesterday. |
+| `[%BeginOfYesterdayUTC%]` | The date and time at the beginning of yesterday in UTC. |
+| `[%EndOfYesterday%]` | The date and time at the end of yesterday. |
+| `[%EndOfYesterdayUTC%]` | The date and time at the end of yesterday in UTC. |
+| `[%BeginOfTomorrow%]` | The date and time at the beginning of tomorrow. |
+| `[%BeginOfTomorrowUTC%]` | The date and time at the beginning of tomorrow in UTC. |
+| `[%EndOfTomorrow%]` | The date and time at the end of tomorrow. |
+| `[%EndOfTomorrowUTC%]` | The date and time at the end of tomorrow in UTC. |
 | `[%BeginOfCurrentWeek%]` | The date and time at the beginning of the current week. |
 | `[%BeginOfCurrentWeekUTC%]` | The date and time at the beginning of the current week in UTC. |
 | `[%EndOfCurrentWeek%]` | The date and time at the end of the current week. |
@@ -101,27 +114,52 @@ These variables must be used as string values and placed between two quotes. Tim
 
 This query returns only customers who have registered since the beginning of this week:
 
-```java
-//Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [DateRegistered >= '[%BeginOfCurrentWeek%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns only customers who have registered this week:
 
-```java
-//Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns only customers who have registered in the past three years:
 
-```java
-//Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns users with the role "Administrator":
 
-```java
-//System.User[System.UserRoles = '[%UserRole_Administrator%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [System.UserRoles = '[%UserRole_Administrator%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //System.User[System.UserRoles = '[%UserRole_Administrator%]']
+    {{% /tab %}}
+{{< /tabpane >}}
+
 {{% alert color="info" %}}
 Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.
 {{% /alert %}}

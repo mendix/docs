@@ -1,11 +1,15 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
+linktitle: "Deploy Mobile App with Native Builder CLI"
 url: /howto8/mobile/deploying-native-app-cli/
-parent: "use-cli-docs"
 weight: 20
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
+
+{{% alert color="warning" %}}
+The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. Read more on how to deploy your app [here](/howto8/mobile/deploying-native-app/).
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
@@ -26,9 +30,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
- * Use v1.0.0 with Mendix 8.0
- * Use v2.0.0 with Mendix 8.1.0 and above
- * Use v3.0.0 with Mendix 8.3.0 and above
+* Use v1.0.0 with Mendix 8.0
+* Use v2.0.0 with Mendix 8.1.0 and above
+* Use v3.0.0 with Mendix 8.3.0 and above
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
 
@@ -100,7 +104,7 @@ Now you will run your first `prepare` command:
 
     This warning is part of App Center's security policy. 
 
-2. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
+4. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-apps.png" alt="App Center Applications" >}}
 
@@ -128,9 +132,9 @@ You have successfully prepared your app, and in the next section will make a bui
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide8/native-builder/#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
-This is an example build command using the the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
+This is an example build command using the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
-```bash
+```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
@@ -140,7 +144,7 @@ Now it is time for you to make your own first build:
 2. Make sure you are in still in your Native Builder directory.
 3. Write this command, with your own information replacing the example text:
 
-    ```
+    ```text {linenos=false}
     native-builder.exe build --project-name {ExampleName} --build-number {1} --app-version {0.1.0}
     ```
 
@@ -214,7 +218,7 @@ The next steps differ depending on the type of app you want to configure.
 
 Finally, either start a build for this branch manually or run the `build` command again with the same build number as before:
 
-```bash
+```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
@@ -265,7 +269,7 @@ For distributing to a specific platform, see the subsequent sections below:
 
 #### 6.1.1 Local Signing {#android-local-signing}
 
-You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio8/command-line/apksigner).
+You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
 #### 6.1.2 Installing on a Device
 
@@ -276,15 +280,14 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Note which folder you transfer the APK into.
 2. Open your phone’s file manager, navigate to the folder containing your APK, then tap the APK file to open it.
 3. Tap the **Install** button. 
-    
-    {{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
-    {{% /alert %}}
-    
+
+    {{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.{{% /alert %}}
+
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-app-launch.gif" alt="android app launch"   width="300"  >}}
 
-You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio8/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
+You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
 #### 6.1.3 Uploading to the Google Play Store
 
@@ -292,11 +295,11 @@ This section details publishing a signed Android app to the Google Play store. T
 
 * Completed the [Signing a Build](#signing-a-build) section above
 * Produced an *app-release.apk* build
-* Read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). 
+* Read Google's overview of [the Android app publishing process](https://developer.android.com/studio/publish). 
 
 Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish/preparing) for information on edge cases to resolve before publishing. 
 
-Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
+Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare and roll out a release](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 
 ### 6.2 Distributing for iOS {#ios-distributing}
 
@@ -307,7 +310,6 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
 1. Using an Xcode version below 11, double-click the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
-
 2. Click the *Distribute App* button to start the local signing flow.:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-1.png" alt="Xcode Application loader"   width="400"  >}}
@@ -347,7 +349,7 @@ To install the *ipa* on your device, follow these steps:
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appletrust.png" alt="trust dialog"   width="400"  >}}
 
 2. Open iTunes and connect your iOS device to your computer.
-3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
+3. Select the *.ipa* package file that you downloaded earlier, and drag it into your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
 4. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so.
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
@@ -366,15 +368,15 @@ There are two ways to enable tablet mode:
 By default, building for tablets is disabled in XCode. Do the following to enable tablet settings:
 
 1. Select the following options in your XCode workspace:<br />
-    a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
-    b. **Portrait**.<br />
-    c. **Landscape Left**.<br />
-    d. **Landscape Right.**<br />
-    e. **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
+    1. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
+    1. **Portrait**.<br />
+    1. **Landscape Left**.<br />
+    1. **Landscape Right.**<br />
+    1. **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
 
-1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
+1. Commit these changes to your project's primary branch so consecutive builds have the tablet settings enabled.
 
 ##### 6.2.3.2 Directly Change the Files on GitHub
 
@@ -393,38 +395,38 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 1. Using the **Find file** functionality again, find and open *info.plist*.
 1. Click the edit icon, then change the code like so: 
 
-    a. Before the final `</dict>` line, add this key:<br />
+    1. Before the final `</dict>` line, add this key:<br />
 
-    ```
-    <key>UIRequiresFullScreen</key>
-    <true/>
-    ```
+        ```text
+        <key>UIRequiresFullScreen</key>
+        <true/>
+        ```
 
-    b. Change this code:<br />
+    1. Change this code:<br />
 
-    ```
-        <key>UISupportedInterfaceOrientations</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-    </array>
-    ```
+        ```text
+            <key>UISupportedInterfaceOrientations</key>
+        <array>
+            <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        ```
 
-    to the following:<br />
+        to the following:<br />
 
-    ```
-        <key>UISupportedInterfaceOrientations</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-        <string>UIInterfaceOrientationLandscapeLeft</string>
-        <string>UIInterfaceOrientationLandscapeRight</string>
-    </array>
-    ```
+        ```text
+            <key>UISupportedInterfaceOrientations</key>
+        <array>
+            <string>UIInterfaceOrientationPortrait</string>
+            <string>UIInterfaceOrientationLandscapeLeft</string>
+            <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        ```
 
 1. Commit these changes.
 
 #### 6.2.4 Uploading to the Apple App Store
 
-To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
+To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and received a build signed for the Apple Store):
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:

@@ -1,7 +1,7 @@
 ---
 title: "Optimize Retrieve Activities"
 url: /howto7/logic-business-rules/optimizing-retrieve-activities/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 9
 tags: ["microflow", "retrieve", "optimize"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
@@ -51,4 +51,4 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 * [How to Optimize Retrieve Activities](/howto7/logic-business-rules/optimizing-retrieve-activities/)
 * [How to Configure Error Handling](/howto7/logic-business-rules/set-up-error-handling/)
 * [How to Optimize Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
-* [How to Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
+* [How to Extract and Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)

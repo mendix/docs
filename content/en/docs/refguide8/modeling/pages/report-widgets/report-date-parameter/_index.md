@@ -1,7 +1,6 @@
 ---
 title: "Report Date Parameter"
 url: /refguide8/report-date-parameter/
-parent: "report-widgets"
 weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -21,7 +20,7 @@ For example, a report may show order data for a customer over a selected period,
 You can add more fields to a report date parameter widget to make it easier for an end-user to select a date range. See [Additional Report Date Parameter Fields](#additional-fields), below, for more information.
 {{% /alert %}}
 
-The report date parameter is displayed in structure mode with the data set parameter name shown between square brackets and colored blue. The **From** and **To** dates shown in blue are examples to indicate that these are date fields.
+The report date parameter is displayed in **Structure mode** with the data set parameter name shown between square brackets and colored blue. The **From** and **To** dates shown in blue are examples to indicate that these are date fields.
 
 {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/report-date-parameter.png" alt="Report date parameter in structure mode" >}}
 

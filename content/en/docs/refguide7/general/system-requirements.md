@@ -36,55 +36,47 @@ The [Team Server](/refguide7/team-server/) is implemented using Subversion, and 
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Web Modeler
+## 4 Server
 
-The [Mendix Web Modeler](/studio7/) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
-
-{{% alert color="info" %}}
-The browser you use needs to have JavaScript turned on.
-{{% /alert %}}
-
-## 5 Server
-
-### 5.1 Operating System
+### 4.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
 * Debian 8 (Jessie) and above
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
-### 5.2 Web Server
+### 4.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 5.3 Database Server
+### 4.3 Database Server
 
-* [IBM DB2](/refguide7/db2/) 11.1, 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide7/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2017, 2019
+* [IBM DB2](/refguide7/db2/) 11.5 for Linux, Unix, and Windows
+* [MariaDB](/refguide7/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6, 10.11
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2021
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](/refguide7/mysql/) 8.0
-* [Oracle Database](/refguide7/oracle/) 12c Release 2, 19
-* PostgreSQL 10, 11, 12, 13, 14
+* [Oracle Database](/refguide7/oracle/) 19, 21c
+* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro version 7.23.35)
 * [SAP HANA](/refguide7/saphana/) 2.00.040.00.1545918182
 
-### 5.4 Java
+### 4.4 Java
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. The Mendix Desktop Modeler will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
 {{% /alert %}}
 
-### 5.5 Application Server
+### 4.5 Application Server
 
 Jetty is built into the [Mendix Runtime](/refguide7/runtime/), so an application server is not required.
 
-## 6 Browsers
+## 5 Browsers
 
-### 6.1 Desktop Browsers
+### 5.1 Desktop Browsers
 
 * Google Chrome
 * Mozilla Firefox 
@@ -92,33 +84,44 @@ Jetty is built into the [Mendix Runtime](/refguide7/runtime/), so an application
 * Microsoft Edge
 * Microsoft Internet Explorer 11
 
-### 6.2 Mobile Browsers
+### 5.2 Mobile Browsers
 
 * iOS 9 and above (Safari)
 * Android 5.0 and above
 * Windows Phone 8 and above
 
-### 6.3 Hybrid Preview
+### 5.3 Hybrid Preview
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-## 7 Mobile Operating Systems
+## 6 Mobile Operating Systems
 
-For Mendix apps and the [Mendix Developer App](/refguide7/getting-the-mendix-app/):
+For hybrid apps built with Mendix (and the [Mendix Developer App](/refguide7/getting-the-mendix-app/)) the following operating system versions are supported:
 
-* iOS 9 and above
-* Android 5.0 and above
+* Latest version of iOS
+* Latest three versions of Android
 
-## 8 MxBuild{#mxbuild}
+Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+You can build hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+
+We recommend the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
+
+* CPU: minimum 2 cores with 2 GHz
+* Memory: minimum 2 GB
+
+Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
+
+## 7 MxBuild{#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](/refguide7/mxbuild/) for more information.
 
-### 8.1 Mendix Version 7.1 & Above
+### 7.1 Mendix Version 7.1 and Above
 
 * Mono v4.6.x or .NET v4.6.2
 * JDK 8.
 
-### 8.2 Mendix Version 7.0.2
+### 7.2 Mendix Version 7.0.2
 
 * Mono v3.1.0 or .NET v4.5
 * JDK 8

@@ -1,7 +1,6 @@
 ---
 title: "Entities"
 url: /refguide7/entities/
-parent: "domain-model"
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -23,7 +22,7 @@ Let us say you have a collection of CDs like the one in the table below.
 | Title | Artist |
 | --- | --- |
 | How to Dismantle an Atomic Bomb | U2 |
-| Exodus | Bob Marley & The Wailers |
+| Exodus | Bob Marley and The Wailers |
 
 The rows in the table are CDs. The type of the two rows is 'CD' and this is the entity name. A specific CD like 'How to Dismantle an Atomic Bomb' of the band U2 is called an object of the entity 'CD'. Characteristics like the title and artist are called attributes.
 
@@ -31,12 +30,12 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 ## Components
 
-*   [Attributes](/refguide7/attributes/)
-*   [Associations](/refguide7/associations/)
-*   [Validation Rules](/refguide7/validation-rules/)
-*   [Event Handlers](/refguide7/event-handlers/)
-*   [Indexes](/refguide7/indexes/)
-*   [Access Rules](/refguide7/access-rules/)
+* [Attributes](/refguide7/attributes/)
+* [Associations](/refguide7/associations/)
+* [Validation Rules](/refguide7/validation-rules/)
+* [Event Handlers](/refguide7/event-handlers/)
+* [Indexes](/refguide7/indexes/)
+* [Access Rules](/refguide7/access-rules/)
 
 ## General Properties {#entities-general-properties}
 
@@ -48,7 +47,7 @@ The name property defines the name of the entity. This name is used to refer to 
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events etcetera of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the Car entity has Vehicle as its generalization.
 
-The generalization specifies the entity of which this entity derives her properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
+The generalization specifies the entity of which this entity derives its properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
 
 {{% alert color="info" %}}
 
@@ -82,7 +81,7 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False | Entity does not contain the system attribute 'createdDate'. |
 
-_Default value:_ False
+*Default value:* False
 
 {{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
@@ -97,7 +96,7 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False | Entity does not contain the system attribute 'changedDate'. |
 
-_Default value:_ False
+*Default value:* False
 
 {{% alert color="info" %}}
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
@@ -112,7 +111,7 @@ This property defines whether the entity has the system association 'owner'. Thi
 | True | Entity has the system association 'owner'. |
 | False | Entity does not have the system association 'owner'. |
 
-_Default value:_ False
+*Default value:* False
 
 ### Store 'changedBy'
 
@@ -123,4 +122,4 @@ This property defines whether the entity has the system association 'changedBy'.
 | True | Entity has the system association 'changedBy'. |
 | False | Entity does not have the system association 'changedBy'. |
 
-_Default value:_ False
+*Default value:* False

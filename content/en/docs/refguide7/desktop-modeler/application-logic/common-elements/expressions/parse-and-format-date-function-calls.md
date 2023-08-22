@@ -1,7 +1,6 @@
 ---
-title: "Parse & Format Date Function Calls"
+title: "Parse and Format Date Function Calls"
 url: /refguide7/parse-and-format-date-function-calls/
-parent: "expressions"
 description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
 ---
 
@@ -11,15 +10,15 @@ See [http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html](h
 
 ## parseDateTime[UTC]
 
-Takes a string and tries to parse it. If it fails and a default value is specified, it returns the default value. Otherwise, an error is raised. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
+Takes a string and tries to parse it. If it fails and a default value is specified, it returns the default value. Otherwise, an error is raised. The function `parseDateTime` uses the user's time zone and `parseDateTimeUTC` uses the UTC calendar.
 
 ### Input parameters
 
-*   a date
+* a date
     Type: String
-*   a format
+* a format
     Type: String
-*   a default value (**optional**)
+* a default value (**optional**)
     Type: DateTime
 
 ### Output
@@ -34,7 +33,7 @@ parseDateTime('2015-05-21', 'yyyy-MM-dd')
 returns
 
 ```java
-The date May 21st, 2015\. The time will be 12 o'clock at night because it is not specified.
+The date May 21, 2015\. The time will be 12 o'clock at night because it is not specified.
 ```
 
 ```java
@@ -53,9 +52,9 @@ Converts the datetime to a string, formatted according to the format parameter. 
 
 ### Input parameters
 
-*   a date
+* a date
     Type: DateTime
-*   a format (**optional**)
+* a format (**optional**)
     Type: String
 
 ### Output
@@ -85,7 +84,7 @@ Converts the time part of datetime to a string in a standard format. `formatTime
 
 ### Input parameters
 
-*   a date
+* a date
     Type: DateTime
 
 ### Output
@@ -109,7 +108,7 @@ Converts the date part of datetime to a string in a standard format. `formatDate
 
 ### Input parameters
 
-*   a date
+* a date
     Type: DateTime
 
 ### Output

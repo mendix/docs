@@ -1,7 +1,6 @@
 ---
 title: "Annotation"
 url: /refguide8/annotation/
-parent: "application-logic"
 weight: 60
 tags: ["studio pro", "annotation", annotation flow]
 aliases:

@@ -16,7 +16,7 @@ Document Templates are used to model a template required as input for a document
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [document template](/refguide7/document-template/) itself.
 {{% /alert %}}
 
-Document templates may contain components, also known as _widgets_. Below is an overview of all widget categories:
+Document templates may contain components, also known as *widgets*. Below is an overview of all widget categories:
 
 * [Core widgets](#core) are central to building document templates in Mendix. These are the widgets that can show a list of entities or a single entity
 * [Layout widgets](#layout) are used to structure the layout of your document templates
@@ -181,4 +181,3 @@ For more information, see [Static Image (Document Template)](/refguide7/static-i
 A static image inside a table cell.
 
 {{% /alert %}}
-

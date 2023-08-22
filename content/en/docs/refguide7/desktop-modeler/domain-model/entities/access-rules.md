@@ -1,7 +1,6 @@
 ---
 title: "Access Rules"
 url: /refguide7/access-rules/
-parent: "entities"
 weight: 70
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -39,7 +38,7 @@ The module roles to which this access rule applies have a checkmark in the box b
 
 ### Allow creating new objects
 
-If this check box is checked, users are allowed to create new objects of this entity.
+If this checkbox is checked, users are allowed to create new objects of this entity.
 
 ### Allow deleting existing objects
 

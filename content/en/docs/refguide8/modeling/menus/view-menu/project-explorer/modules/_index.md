@@ -1,7 +1,6 @@
 ---
 title: "Modules"
 url: /refguide8/modules/
-parent: "project-explorer"
 weight: 20
 tags: ["studio pro", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,7 +25,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | Document type | Typical elements | Description |
 | --- | --- | --- |
 | [Pages](/refguide8/pages/) | [Data view](/refguide8/data-view/), [Data grid](/refguide8/data-grid/), [Table](/refguide8/table/), [Text box](/refguide8/text-box/) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
-| [Microflows](/refguide8/microflows/) | [Activities](/refguide8/activities/), [Sequence Flow](/refguide8/sequence-flow/) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
+| [Microflows](/refguide8/microflows/) | [Activities](/refguide8/activities/), [Sequence Flow](/refguide8/sequence-flow/) | Microflows describe the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide8/enumerations/) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
 ## 3 Page Resources

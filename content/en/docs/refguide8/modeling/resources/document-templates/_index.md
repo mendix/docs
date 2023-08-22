@@ -1,7 +1,6 @@
 ---
 title: "Document Templates"
 url: /refguide8/document-templates/
-parent: "resources"
 weight: 90
 tags: ["studio pro", "document template"]
 aliases:
@@ -22,7 +21,7 @@ Document Templates are used to model a template required as input for a document
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [document template](/refguide8/document-template/) itself.
 {{% /alert %}}
 
-The document templates also contain components, also know as _widgets_. Below is a categorized overview of all widgets. The following categories are used:
+The document templates also contain components, also know as *widgets*. Below is a categorized overview of all widgets. The following categories are used:
 
 * [Core widgets](#core) are central to building document templates in Mendix. These are the widgets that can show a list of entities or a single entity
 * [Layout widgets](#layout) are used to structure the layout of your document templates
@@ -48,7 +47,6 @@ For more information, see [Data Grid (Document Template)](/refguide8/data-grid-d
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-grid-document-template/918138.png" >}}
 
 A data grid showing a list of orders with a description and the referenced customer name.
-
 {{% /alert %}}
 
 ### 2.2 Data View
@@ -62,7 +60,6 @@ For more information, see [Data View (Document Template)](/refguide8/data-view-d
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-view-document-template/918139.png" >}}
 
 A data view showing order line information.
-
 {{% /alert %}}
 
 ### 2.3 Template Grid
@@ -76,7 +73,6 @@ For more information, see [Template Grid (Document Template)](/refguide8/templat
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918137.png" >}}
 
 A template grid showing products with name and description.
-
 {{% /alert %}}
 
 ## 3 Layout Widgets {#layout}
@@ -95,7 +91,6 @@ For more information, see [Table (Document Template)](/refguide8/table-document-
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918134.png" >}}
 
 A table with four rows and three columns. Last row containing a data view with another table.
-
 {{% /alert %}}
 
 ### 3.2 Page Break
@@ -109,7 +104,6 @@ For more information, see [Page Break (Document Template)](/refguide8/page-break
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918135.png" >}}
 
 A page break
-
 {{% /alert %}}
 
 ### 3.3 Line Break
@@ -133,7 +127,6 @@ For more information, see [Dynamic Label (Document Template)](/refguide8/dynamic
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918131.png" >}}
 
 A dynamic label linking to a customer name.
-
 {{% /alert %}}
 
 ### 4.2 Dynamic Image
@@ -147,7 +140,6 @@ For more information, see [Dynamic Image (Document Template)](/refguide8/dynamic
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918132.png" >}}
 
 A dynamic image inside a table cell, showing the preset default image.
-
 {{% /alert %}}
 
 ## 5 Static Data Widgets {#static}
@@ -165,7 +157,6 @@ For more information, see [Static Label (Document Template)](/refguide8/static-l
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918130.png" >}}
 
 A label with text 'Customer name'.
-
 {{% /alert %}}
 
 ### 5.2 Title
@@ -185,6 +176,4 @@ For more information, see [Static Image (Document Template)](/refguide8/static-i
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918133.png" >}}
 
 A static image inside a table cell.
-
 {{% /alert %}}
-

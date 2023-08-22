@@ -1,5 +1,6 @@
 ---
 title: "Implement Community Best Practices for App Performance"
+linktitle: "Best Practices for App Performance"
 url: /howto7/general/community-best-practices-for-app-performance/
 category: "General"
 weight: 4
@@ -33,9 +34,9 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
 * Don't use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
-	* Combine attributes in one entity and add an enum to determine its specialization.
-	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
-	* Add a non-persistent layer with inheritance that is populated by your business logic.
+    * Combine attributes in one entity and add an enum to determine its specialization.
+    * Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
+    * Add a non-persistent layer with inheritance that is populated by your business logic.
 * Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 
 {{% alert color="info" %}}
@@ -44,7 +45,7 @@ Mendix is said to have optimized the retrieves, so not every association ID is l
 
 {{% /alert %}}
 
-##  3 Index Best Practices
+## 3 Index Best Practices
 
 Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practises apply:
 
@@ -102,7 +103,7 @@ For OQL, many of the same best practices apply as for XPath.
 * Minimize the number of roles per user.
 * Minimize the number of rules per entity.
 
-## 10 Web Services & XML Best Practices
+## 10 Web Services and XML Best Practices
 
 * Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.

@@ -1,7 +1,6 @@
 ---
 title: "Generate Document"
 url: /refguide/generate-document/
-parent: "activities"
 weight: 80
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro", "generate document"]
@@ -15,8 +14,6 @@ This activity can only be used in **Microflows**.
 ## 1 Introduction
 
 The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide/document-templates/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document.png" alt="Generate Document" >}}
 
 For more information on which types of documents can be created, see [Document Type](#document-type).
 
@@ -50,7 +47,7 @@ The language in which the titles and labels of the document should appear is des
 | Option | Description |
 | --- | --- |
 | Current user *(default)*  | Use the language of the current user. |
-| Project default | Use the default language that is specified in the [App Settings](/refguide/project-settings/). |
+| Project default | Use the default language that is specified in the [App Settings](/refguide/app-settings/). |
 | Variable | Use the language stored in the selected object, which must be of type *System.Language*. |
 
 ### 3.3 Document Type{#document-type}

@@ -1,7 +1,6 @@
 ---
 title: "Module Role"
 url: /refguide7/module-role/
-parent: "module-security"
 ---
 
 

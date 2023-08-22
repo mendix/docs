@@ -1,7 +1,6 @@
 ---
 title: "Common Properties"
 url: /refguide8/microflow-element-common-properties/
-parent: "application-logic"
 weight: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
@@ -21,7 +20,6 @@ Not every element in a microflow or a nanoflow has all of these properties.
 These are the common properties for microflows and nanoflows:
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/microflow-element-common-properties/microflow-element-common-properties.png" alt="Common properties in properties pane"   width="30%"  >}}
-
 
 * [Caption](#caption)
 * [Auto-generate caption](#auto-generate-caption)

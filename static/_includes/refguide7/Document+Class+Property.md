@@ -6,6 +6,7 @@ The class property allows you to specify one or more cascading style sheet (CSS)
 
 Styling is applied in the following order:<br />
 <br />
+
 1) the default styling defined by the theme the project uses<br />
 2) the `Class` property of the widget<br />
 3) the `Style` property of the widget.

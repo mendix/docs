@@ -1,7 +1,6 @@
 ---
 title: "Grid Create Button"
 url: /refguide7/grid-new-button/
-parent: "control-bar"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -46,11 +45,11 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 | Inline at bottom | The new instance is added directly at the bottom of the grid or reference set selector and can be edited inline. |
 | In a page | The new instance is added and can be edit in a page. The page in which this instance is being edited can be set with the page property |
 
-_Default value:_ In a page
+*Default value:* In a page
 
 ### Page
 
-This property is relevant if the edit location is set to 'In a page' and it indicates the page that is shown to the end-user when he or she clicks this button. The end-user can use this page to edit the newly created object before it is saved. This page should contain a data view connected to the same entity as this grid or reference set selector.
+This property is relevant if the edit location is set to 'In a page' and it indicates the page that is shown to the end-user when they click this button. The end-user can use this page to edit the newly created object before it is saved. This page should contain a data view connected to the same entity as this grid or reference set selector.
 
 See [Opening Pages](/refguide7/opening-pages/).
 

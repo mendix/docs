@@ -1,14 +1,16 @@
 ---
 title: "Execute an SQL Statement on an External Database"
+linktitle: "Execute SQL on External Database"
 url: /howto/integration/execute-an-sql-statement-on-an-external-database/
 category: "Integration"
 weight: 17
+description: "Describes how to execute an SQL statement on relational external databases using Database Connector."
 tags: ["database connector", SQL", "database", "external database", "integration"]
 ---
 
 ## 1 Introduction
 
-The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/connectors/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
+The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/connectors/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement), as explained in this document, and [Execute query](/appstore/connectors/database-connector/#execute-query), described in the [Database connector documentation](/appstore/connectors/database-connector/). 
 
 The **Execute statement** action provides a consistent environment for Mendix apps to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
 
@@ -55,20 +57,20 @@ To use an **Execute statement** action in a microflow, follow these steps:
 
 1. Find the **Execute statement** in the **Toolbox**.
 
-2. Drag the **Execute statement** action to your microflow: 
+2. Drag the **Execute statement** action into your microflow: 
 
-	{{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
+    {{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 
 3. Configure the statement:
-	* Provide all the valid arguments to the statement action
-	* The **Jdbc url** argument must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver
-		* It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor (for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
-	* Specify the **Output Variable name**
-		* In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
+    * Provide all the valid arguments to the statement action
+    * The **Jdbc url** argument must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver
+        * It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor (for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
+    * Specify the **Output Variable name**
+        * In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 
-	{{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
+    {{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
 
-	The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
+    The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 
 {{% alert color="warning" %}}
 It is your responsibility to apply the proper security, as this action can allow for SQL injection into your Mendix application. Among others things, do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.

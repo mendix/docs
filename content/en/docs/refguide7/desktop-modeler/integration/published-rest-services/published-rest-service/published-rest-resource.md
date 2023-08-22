@@ -1,7 +1,6 @@
 ---
 title: "Published REST Resource"
 url: /refguide7/published-rest-resource/
-parent: "published-rest-service"
 weight: 50
 description: "The configurable options for a published REST resource"
 tags: ["published REST", "resource"]
@@ -27,6 +26,6 @@ You can generate a published REST resource from an entity in your domain model. 
 
 The resource name uniquely identifies the resource in the [service](/refguide7/published-rest-service/). It is part of the location of the operations, so it cannot contain spaces or special characters.
 
-## <a name="public-documentation"></a>2.2 Public Documentation
+## 2.2 Public Documentation {#public-documentation}
 
 The public documentation is used in the service's [OpenAPI (Swagger) documentation page](/refguide7/published-rest-services/#interactive-documentation). You can use [GitHub-flavored markdown](/refguide7/gfm-syntax/) for rich text.

@@ -1,17 +1,16 @@
 ---
 title: "9.3"
 url: /releasenotes/sdk/metamodel-9.3/
-parent: "metamodel-9"
 weight: 97
 ---
 
 ## 9.3.0
 
-**Release date: June 16th, 2021**
+**Release date: June 16, 2021**
 
 ### DomainModels
 
-#### Entity, Attribute & AssociationBase (Elements)
+#### Entity, Attribute, and AssociationBase (Elements)
 
 * We introduced the `exportLevel` property.
 
@@ -31,7 +30,7 @@ weight: 97
 
 * We removed the experimental status of this model unit.
 
-#### QueueConfig & BasicQueueConfig (Elements)
+#### QueueConfig and BasicQueueConfig (Elements)
 
 * We removed the experimental status of these elements.
 

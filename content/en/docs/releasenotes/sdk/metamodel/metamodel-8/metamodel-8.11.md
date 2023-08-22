@@ -6,7 +6,7 @@ weight: 90
 
 ## 8.11.0
 
-**Release date: June 30th, 2020**
+**Release date: June 30, 2020**
 
 ### DomainModels
 
@@ -93,6 +93,6 @@ weight: 90
 * We introduced the `userSource` property.
 * We deleted the `userRole` property.
 
-#### CallMicroflowTask, UserSource & XPathBasedUserSource (Elements)
+#### CallMicroflowTask, UserSource, and XPathBasedUserSource (Elements)
 
 * We introduced these elements.

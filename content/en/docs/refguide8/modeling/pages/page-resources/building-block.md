@@ -1,7 +1,6 @@
 ---
 title: "Building Block"
 url: /refguide8/building-block/
-parent: "page-resources"
 weight: 40
 tags: ["studio pro", "building block", "page resource"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -37,8 +36,8 @@ The display name determines the name of the building block that will appear in t
 
 ### 4.2 Image
 
-The image selected will appear in the **Building Blocks** tab of Studio's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in the **Building Blocks** tab of Studio Pro's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, Studio Pro will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
 
 ### 4.3 Documentation URL
 
-The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio's **Toolbox**.
+The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio Pro's **Toolbox**.

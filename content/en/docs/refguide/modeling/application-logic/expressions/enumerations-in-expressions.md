@@ -1,7 +1,6 @@
 ---
 title: "Enumerations in Expressions"
 url: /refguide/enumerations-in-expressions/
-parent: "expressions"
 weight: 170
 tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---
@@ -27,7 +26,16 @@ else
   OrderProcessing.Status.started
 ```
 
-## 2 getCaption
+You can also use conditional statements to check whether two emuneration values are the same:
+
+```java
+if $Order/Status = OrderProcessing.Status.completed then 
+  true 
+else 
+  false
+```
+
+## 2 getCaption {#get-caption}
 
 The `getCaption` function takes an enumeration value and returns the caption of this value. The *caption* is a translatable string and the result of this function depends on the current language.
 

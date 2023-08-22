@@ -1,7 +1,6 @@
 ---
 title: "Demo Users"
 url: /refguide7/demo-users/
-parent: "project-security"
 ---
 
 ## 1 Introduction

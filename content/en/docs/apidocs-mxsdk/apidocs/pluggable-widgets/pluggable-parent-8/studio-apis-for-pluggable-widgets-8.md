@@ -1,7 +1,7 @@
 ---
-title: "Preview Appearance APIs for Pluggable Widgets"
+title: "Preview Appearance APIs – Mx8"
+linktitle: "Preview Appearance APIs"
 url: /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets-8/
-parent: "pluggable-parent-8"
 weight: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
@@ -9,7 +9,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 
 ## 1 Introduction
 
-This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode.
+This guide explains the APIs offered by Mendix Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Studio Pro's **Design mode**.
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
@@ -51,14 +51,11 @@ type ImageIcon = { type: "image"; imageUrl: string; }
 type IconProperty = null | GlyphIcon | ImageIcon;
 ```
 
-Icon properties are exposed objects containing a `type` field that is `"glyph"` if a glyphicon is selected,
- `"image"` if an image is selected, or `null` if no icon is selected at all.
+Icon properties are exposed objects containing a `type` field that is `"glyph"` if a glyphicon is selected, `"image"` if an image is selected, or `null` if no icon is selected at all.
 
-For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to
-display the correct icon. It will be an empty string value if no icon has been selected.
+For the `"glyph"` type, `iconClass` is available. It contains the class to apply on a `glyphicon` element to display the correct icon. It will be an empty string value if no icon has been selected.
 
-For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached
-by Studio and Studio Pro's Design mode. It will be an empty string value if no image has been selected.
+For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
 ### 2.3 Image
 
@@ -71,11 +68,9 @@ type DynamicImage = { type: "dynamic"; entity: string; };
 type ImageProperty = null | StaticImage | DynamicImage;
 ```
 
-Image properties are exposed objects containing a `type` field that is `"static"` if a static image is selected,
- `"dynamic"` if an entity is selected, or `null` if no image is selected at all.
+Image properties are exposed objects containing a `type` field that is `"static"` if a static image is selected, `"dynamic"` if an entity is selected, or `null` if no image is selected at all.
 
-For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached
-by Studio and Studio Pro's Design mode. It will be an empty string value if no image has been selected.
+For the `"static"` type, `imageUrl`  is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
 For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
@@ -83,7 +78,7 @@ For the `"dynamic"` type, `entity` is available. It represents the entity where 
 
 This property appears as follows:
 
-```
+```typescript
 type WidgetsProperty = {
     widgetCount: number;
     renderer: React.Component
@@ -106,14 +101,14 @@ replacing the placeholders with the names of the attributes.
 
 For example, you could see these placeholders:
 
-```
+```text
 Name: {1}
 Description: {2}
 ```
 
 Using parameters `EventName` and `EventDescription` instead of the placeholders would look like this:
 
-```
+```text
 Name: {EventName}
 Description: {EventDescription}
 ```
@@ -144,10 +139,9 @@ Here are a few examples:
 * `MyFirstModule.Event`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event`
 
-## 3 Preview Module for Studio and Design Mode
+## 3 Preview Module for Studio Pro's Design Mode
 
-It is possible to create a preview for pluggable widgets that will be rendered in Studio's page editor,
-as well as Studio Pro's Design Mode.
+It is possible to create a preview for pluggable widgets in Studio Pro's Design Mode.
 
 Add the module by adding a file to your custom widget with the same name as your `xml` file as well as the suffix
 `.editorPreview.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.editorPreview.js`.
@@ -156,8 +150,7 @@ This preview module is expected to be a CommonJS module, exporting the following
 
 ### 3.1 Exposed Libraries
 
-In Studio and Design mode, only a few libraries are allowed to be imported. This is expected to occur through the
-CommonJS method: by using `require`.
+In **Design mode**, only a few libraries are allowed to be imported. This is expected to occur through the CommonJS method: by using `require`.
 
 It is possible to require the following modules:
 
@@ -169,10 +162,8 @@ It is possible to require the following modules:
 
 The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
-* `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability`
-  system property, or if it is inside a read-only data view)
-* `className` (`string`): the classes from the system, which will include manually configured classes through the `class`
-  property in Studio Pro, and the classes resulting from configured design properties
+* `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability` system property, or if it is inside a read-only data view)
+* `className` (`string`): the classes from the system, which will include manually configured classes through the `class` property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
 
 Assuming a pluggable widget with the string properties `content` and `style`, the following shows a simple preview component:

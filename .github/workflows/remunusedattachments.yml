@@ -1,0 +1,39 @@
+# This is a basic workflow to help you get started with Actions
+name: Remove unused attachments
+
+# Controls when the workflow will run
+on:
+  schedule:
+    - cron: '00 21 1 * *'
+   # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "rem-unused-attachments"
+  rem-unused-attachments:
+    # Check if the event is not triggered by a fork
+    if: github.repository_owner == 'mendix'
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - run: python _scripts/removeUnusedAttachments.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Run removeUnusedAttachments.py on docs
+          title: '[Auto] Remove unused attachments'
+          body: |
+            "We're trying to delete some unnecessary attachments."
+          branch: rem-unused-attachments
+          assignees: MarkvanMents
+          reviewers: MarkvanMents
+          labels: Internal WIP
+          add-paths: |
+            static/attachments/**

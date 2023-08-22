@@ -23,7 +23,7 @@ Below is a chart showing the processes involved in deploying your app. Each of t
 
 ### 2.1 Deployer
 
-This is initiated by the Mendix Cloud Portal to manage the deployment of an app.
+This is initiated by the Mendix Cloud facilities to manage the deployment of an app.
 
 ### 2.2 Docker Environment
 
@@ -31,7 +31,7 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the project model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
+This is the project model as created by Studio Pro. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 
@@ -70,4 +70,3 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 ### 2.11 Runtime Server
 
 This is the interpreter which runs the app. For more information see [Runtime Server](/refguide8/runtime-server/).
-

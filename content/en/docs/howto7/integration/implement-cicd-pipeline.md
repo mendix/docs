@@ -1,5 +1,6 @@
 ---
-title: "Implement a Simple CICD Pipeline with Mendix APIs"
+title: "Implement a Simple CI/CD Pipeline with Mendix APIs"
+linktitle: "Implement CI/CD Pipeline"
 url: /howto7/integration/implement-cicd-pipeline/
 category: "Integration"
 tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
@@ -18,7 +19,6 @@ Before starting this how-to, make sure you are familiar with the following:
 * CICD
 * Using REST services
 * [Unit Testing](/appstore/modules/unit-testing/) module (only if used in your application)
-* [Application Test Suite](/addons/ats-addon/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -74,7 +74,7 @@ If the environment is running, you need to stop it. To do this, use the [Stop En
 
 #### 3.3.3 Deploying/Transporting the Package
 
-To deploy/transport a package to the environment, use the [Transporting a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package).
+To deploy/transport a package to the environment, use the [Transport a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package).
 
 For this action, you need the `PackageId` from section [3.2.2 Building the Package](#BuildPackage).
 
@@ -108,7 +108,6 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{< figure src="/attachments/howto7/integration/implement-cicd-pipeline/11UnitTestsStatus.png" >}}
 
-
 {{% alert color="info" %}}
 
 You can also (manually) create a web service that exposes the standard junit structure from the data available in the UnitTesting module.
@@ -117,7 +116,7 @@ You can also (manually) create a web service that exposes the standard junit str
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api/#api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/#ats-and-ci-cd).
+ATS has its own API for CICD. 
 
 ### 3.5 Next Steps
 

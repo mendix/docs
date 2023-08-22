@@ -1,7 +1,6 @@
 ---
 title: "Reference Selector"
 url: /refguide/reference-selector/
-parent: "input-widgets"
 weight: 70
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,7 +10,7 @@ tags: ["studio pro"]
 
 A **reference selector** is used to display and, optionally, allow the end-user to select the value of a one-to-one or one-to-many [association](/refguide/associations/) by selecting the associated object.
 
-A reference selector must be placed in a [data widget](/refguide/data-widgets/). The object(s) retrieved by this data widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
+A reference selector must be placed in a [data container](/refguide/data-widgets/). The object(s) retrieved by this container must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
 
 For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 
@@ -24,66 +23,34 @@ For example, the following reference allows the end-user to see, and set, the as
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector.png" >}}
 
 {{% alert color="info" %}}
-If you only want to _display_ information, you can also use a [text box](/refguide/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
+If you only want to *display* information, you can also use a [text box](/refguide/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
 {{% /alert %}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of reference selector properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference selector properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-properties.png"   width="400"  >}}
-
-Reference selector properties consist of the following sections:
-
-* [Common](#common)
-* [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Editability](#editability)
-* [Events](#events)
-* [Formatting](#formatting)
+Properties:
 * [General](#general)
+* [Data Source](#data-source)
 * [Label](#label)
-* [Selectable Objects](#selectable-objects)
-* [Validation](#validation)
+* [Editability](#editability)
 * [Visibility](#visibility)
+* [Validation](#validation)
+* [Events](#events)
+* [Accessibility](#accessibility)
+* [Common](#common)
+* [Selectable Objects](#selectable-objects)
 
-### 2.1 Common Section{#common}
+Styling:
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+## 3 Properties
 
-### 2.2 Data Source Section{#data-source}
+### 3.1 General Section{#general}
 
-{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
-
-The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
-
-### 2.3 Design Properties Section{#design-properties}
-
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.4 Editability Section{#editability}
-
-{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
-
-### 2.5 Events Section{#events}
-
-The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-### 2.6 Formatting Section{#formatting}
-
-The formatting section applies only to the way that numeric attributes are displayed. These are attributes of the following data types:
-
-* Decimal
-* Integer
-* Long
-
-{{% snippet file="/static/_includes/refguide/numeric-formatting-link.md" %}}
-
-### 2.7 General Section{#general}
-
-#### 2.7.1 Select Using{#select-using}
+#### 3.1.1 Select Using{#select-using}
 
 {{% alert color="warning" %}}The **Select using** property is not shown for native mobile pages. Native mobile pages only support the **Drop-down** method of selection{{% /alert %}}
 
@@ -101,17 +68,17 @@ The reference selector allows the end-user to select objects by using either a d
 There is a small difference in functionality between a **Drop-down** reference selector and a **Page** reference selector. When changing a reference selector item that also has a linked list included in a second drop-down menu or page, the **Page** reference selector is NOT cleared as it is with a **Drop-down** reference selector.
 {{% /alert %}}
 
-#### 2.7.1.1 Drop-Down {#drop-down}
+#### 3.1.1.1 Drop-Down {#drop-down}
 
 The drop-down reference selector is similar to a [drop-down](/refguide/drop-down/) for an enumeration, except that it allows users to choose from a list of objects which can be associated with the current object, rather than a list of values from an enumeration.
 
-The reference selector displays an attribute from the objects which can be linked to the current entity via an association. The chosen attribute should be unique for each object which can be associated, otherwise the end-user will have difficulty choosing the correct one. For example, you should display a company _name_ (which will hopefully be unique) rather than the company _region_ (which will probably not be unique to a company).
+The reference selector displays an attribute from the objects which can be linked to the current entity via an association. The chosen attribute should be unique for each object which can be associated, otherwise the end-user will have difficulty choosing the correct one. For example, you should display a company *name* (which will hopefully be unique) rather than the company *region* (which will probably not be unique to a company).
 
-#### 2.7.1.2 Page {#page}
+#### 3.1.1.2 Page {#page}
 
 Select using a page, links a button to the right of the widget with a pop-up page which is used to make the selection. You must choose the page to be displayed using the [Select Page](#select-page) property.
 
-#### 2.7.2 Empty Option Caption
+#### 3.1.2 Empty Option Caption
 
 {{% alert color="info" %}}
 This is only displayed if [Select using](#select-using) is set to **Drop-down**.
@@ -121,7 +88,7 @@ This property specifies the caption for the empty option in the drop-down refere
 
 Filling out the caption for an empty option improves the user experience of your application. It also helps end-users using screen-reader to operate the application easily.
 
-#### 2.7.3 Select Page{#select-page}
+#### 3.1.3 Select Page{#select-page}
 
 {{% alert color="info" %}}
 This is only displayed if [Select using](#select-using) is set to **Page**. Consequently, select page is not supported on native mobile pages.
@@ -135,7 +102,7 @@ It is recommended that you generate a new page to show by right-clicking the wid
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/generate-select-page.png" alt="Generate a select page by right-clicking the widget" >}}
 
-See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
+See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event and Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
 
 **Page title**
 
@@ -145,9 +112,9 @@ See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click 
 
 You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-This is activated by checking the **Override page title** check box.
+This is activated by checking the **Override page title** checkbox.
 
-#### 2.7.4 Go-To Page
+#### 3.1.4 Go-To Page
 
 {{% alert color="warning" %}}Go-to page is not supported on native mobile pages.{{% /alert %}}
 
@@ -165,13 +132,45 @@ It is recommended that you generate a new go-to page by right-clicking the widge
 
 You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-This is activated by checking the **Override page title** check box.
+This is activated by checking the **Override page title** checkbox.
 
-### 2.8 Label Section{#label}
+### 3.2 Data Source Section{#data-source}
+
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
+
+The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
+
+### 3.3 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
-### 2.9 Selectable Objects Section{#selectable-objects}
+### 3.4 Editability Section{#editability}
+
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
+
+### 3.5 Visibility Section{#visibility}
+
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+
+### 3.6 Validation Section{#validation}
+
+{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+
+### 3.7 Events Section{#events}
+
+The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+### 3.8 Accessibility{#accessibility}
+
+The native version of this widget has multiple accessibility properties. For more information on the **Accessible**, **Screen Reader Caption**, and **Screen Reader Hint** properties, see [Mobile Accessibility](/refguide/mobile/using-mobile-capabilities/mobile-accessibility/). That document also contains more details on how Mendix widgets can work with screen readers, as well as details on special use cases.
+
+### 3.9 Common Section{#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+### 3.10 Selectable Objects Section{#selectable-objects}
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection.
 
@@ -181,7 +180,7 @@ The **Source** property sets which of the three ways to define the selectable ob
 * XPath
 * Microflow
 
-#### 2.9.1 Database
+#### 3.10.1 Database
 
 Database is the default source for the selectable objects. By default, all database objects of the correct entity type will be selectable.
 
@@ -197,7 +196,7 @@ See the [constraints](/refguide/database-source/#constraints) section of *Databa
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
-#### 2.9.2 XPath{#xpath-constraints}
+#### 3.10.2 XPath{#xpath-constraints}
 
 If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 
@@ -215,7 +214,7 @@ A reference selector can be constrained by one or more paths. This is typically 
 
 Imagine you have an ordering system where the products are sorted into categories – for example, food products and drink products. On a page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category (*food*, for example), the product selector is constrained by this category and shows only products in the category.
 
-_Example Domain model_
+*Example Domain model*
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
 
 In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
@@ -244,7 +243,7 @@ Now the end-user will only see products in the selected category:
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
-#### 2.9.3 Microflow
+#### 3.10.3 Microflow
 
 {{% alert color="warning" %}}
 A microflow can only be used if the selection is made using a drop-down.
@@ -260,16 +259,18 @@ Microflow specifies the microflow which is run to return the list of objects.
 
 In microflow settings you can specify what parameters are passed to the microflow, depending on the parameters specified in the microflow itself.
 
-### 2.10 Validation Section{#validation}
+## 4 Styling
 
-{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+### 4.1 Design Properties Section{#design-properties}
 
-### 2.11 Visibility Section{#visibility}
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+### 4.2 Common Section{#common-styling}
 
-## 3 Read More
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-*   [Data view](/refguide/data-view/)
-*   [Entities](/refguide/entities/)
-*   [Associations](/refguide/associations/)
+## 5 Read More
+
+* [Data view](/refguide/data-view/)
+* [Entities](/refguide/entities/)
+* [Associations](/refguide/associations/)

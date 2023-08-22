@@ -1,7 +1,6 @@
 ---
 title: "XPath Month-From-DateTime"
 url: /refguide8/xpath-month-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

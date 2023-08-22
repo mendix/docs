@@ -4,12 +4,11 @@ url: /releasenotes/mobile/mendix-mobile-app/
 category: "Mobile"
 weight: 20
 description: "These are the release notes for the Mendix Mobile app."
-toc-level: 1
 ---
 
 ## Android 4.7.1 / iOS 4.7.1
 
-**Release date: March 26th, 2018**
+**Release date: March 26, 2018**
 
 ### Fixes
 
@@ -22,7 +21,7 @@ toc-level: 1
 
 ## Android 4.7.0 / iOS 4.7.0
 
-**Release date: March 23rd, 2018**
+**Release date: March 23, 2018**
 
 ### New Functionality
 
@@ -43,7 +42,7 @@ toc-level: 1
 
 ## Android 4.6.0 / iOS 4.6.0
 
-**Release date: November 30th, 2017**
+**Release date: November 30, 2017**
 
 ### New Functionality
 
@@ -55,7 +54,7 @@ toc-level: 1
 
 ## Android 4.5.0 / iOS 4.5.0
 
-**Release date: October 24th, 2017**
+**Release date: October 24, 2017**
 
 ### New Functionality
 
@@ -66,15 +65,15 @@ toc-level: 1
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
+* We removed support for custom profiles that were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
 
 ### Limitation
 
 * Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
-## iOS 4.4.1 <a name="RN441"></a>
+## iOS 4.4.1 {#RN441}
 
-**Release date: October 2nd, 2017**
+**Release date: October 2, 2017**
 
 ### Bug Fixes
 
@@ -86,7 +85,7 @@ toc-level: 1
 
 ## Android 4.4.0 / iOS 4.4.0
 
-**Release date: July 21st, 2017**
+**Release date: July 21, 2017**
 
 ### New Functionality
 
@@ -109,7 +108,7 @@ toc-level: 1
 
 ## Android 4.3.0
 
-**Release date: July 10th, 2017**
+**Release date: July 10, 2017**
 
 ### New Functionality
 
@@ -120,7 +119,7 @@ We have added two new features to accelerate your app delivery projects:
 
 ## Android 4.1.0 / iOS 4.3.0
 
-**Release date: April 7th, 2017**
+**Release date: April 7, 2017**
 
 With this release, we greatly improved the user experience of the Mendix Mobile app.
 

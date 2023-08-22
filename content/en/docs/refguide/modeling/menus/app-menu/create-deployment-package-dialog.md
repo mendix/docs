@@ -1,7 +1,6 @@
 ---
 title: "Create Deployment Package"
 url: /refguide/create-deployment-package-dialog/
-parent: "app-menu"
 tags: ["studio pro", "project menu", "deployment package"]
 ---
 
@@ -16,9 +15,9 @@ Most deployment targets have a limit on the uncompressed size of deployment pack
 
 | Target | Maximum Deployment Package Size |
 | --- | --- |
-| Mendix Cloud | 1GB |
-| SAP BTP | 1.5GB |
-| Mendix for Private Cloud | 200MB |
+| Mendix Cloud | 1 GB |
+| SAP BTP | 1.5 GB |
+| Mendix for Private Cloud | 512 MB |
 
 This is the uncompressed size of the deployment package (.mda file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
 
@@ -62,3 +61,7 @@ You can enter a custom **Description** for this deployment package. It is purely
 For both versioned and non-versioned deployment packages, you will need to know where the deployment package will be saved. This is shown in the **File name** field. This not editable.
 
 All packages are placed in a directory **releases** inside your app directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (using the  the Studio Pro version you originally used) so there is no need to put them on the Team Server.
+
+## 5 Troubleshooting
+
+If you have difficulty creating a deployment package, it could be an issue with version control. See [Cannot Create Package from a Revision](/refguide/troubleshoot-version-control-issues/#cannot-create-package) in *Troubleshooting Version Control* for more information.

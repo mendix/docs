@@ -1,7 +1,8 @@
 ---
 title: "Projects in the Mendix Metamodel"
+linktitle: "Projects in the Metamodel"
 url: /apidocs-mxsdk/mxsdk/projects-metamodel/
-parent: "understanding-the-metamodel"
+description: "This document describes how the Mendix Metamodel handles projects in relation to modules and documents."
 weight: 1
 ---
 
@@ -15,14 +16,14 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| [App](/refguide/project/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
+| [App](/refguide/app/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
 | [Modules](/refguide/modules/) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html) |
 | |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) | |
 | |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) | |
 
 ### 1.2 Project Documents
 
-Project-level documents describe project security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
+Project-level documents describe app security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
 
 #### 1.2.1 Graphical Overview
 
@@ -30,10 +31,10 @@ Project-level documents describe project security, app settings, app navigation 
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| | [App Settings](/refguide/project-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
-| [Project Security](/refguide/project-security/) | |
-| [Navigation](/refguide/navigation/) | |
-| [System Texts](/refguide/system-texts/) | |
+|[App Settings](/refguide/app-settings/)| [ProjectSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/settings.ProjectSettings.html) |
+| [App Security](/refguide/app-security/) | [ProjectSercurity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ProjectSecurity.html)|
+| [Navigation](/refguide/navigation/) |[NavigationDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/navigation.NavigationDocument.html)|
+| [System Texts](/refguide/system-texts/) |[SystemTextCollection](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.SystemTextCollection.html) |
 
 ## 2 Modules
 

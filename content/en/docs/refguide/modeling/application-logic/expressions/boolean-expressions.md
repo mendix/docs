@@ -1,7 +1,6 @@
 ---
 title: "Boolean Expressions"
 url: /refguide/boolean-expressions/
-parent: "expressions"
 weight: 50
 tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
@@ -20,7 +19,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     (6 > 4) and (3 < 5)
     ```
 
@@ -28,7 +27,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     ('hello' = 'hallo') and (3 < 5)
     ```
 
@@ -42,11 +41,11 @@ The `or` operator combines two Boolean expressions, and returns `true` if at lea
 
 The examples below illustrate which value the expression returns:
 
-* You have a entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
+* You have an entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
 
     If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     ($product/price < $product/recommendedPrice : 2) or ($product/price > 0)
     ```
 
@@ -54,10 +53,10 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input: 
 
-    ```java
+    ```java {linenos=false}
     ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
     ```
-        
+
     The expression will return `false`, because both expressions are false.
 
 ## 4 not
@@ -78,20 +77,16 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     not('hello' = 'hallo')
     ```
 
     The expression will return `true` .
 
-
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     not(true)
     ```
 
     The expression will return `false` .
-
-
-

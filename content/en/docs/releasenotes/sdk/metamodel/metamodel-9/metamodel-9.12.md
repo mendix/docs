@@ -6,7 +6,7 @@ weight: 88
 
 ## 9.12.0
 
-**Release date: March 21st, 2022**
+**Release date: March 21, 2022**
 
 ### DomainModels
 
@@ -28,7 +28,7 @@ weight: 88
 
 * We changed the default value of the `^size` property.
 
-#### DeleteExternalObject, WorkflowOperationAction, WorkflowOperation, AbortOperation, ContinueOperation, PauseOperation, RestartOperation, UnpauseOperation, GetWorkflowDataAction & RetryOperation (Elements)
+#### DeleteExternalObject, WorkflowOperationAction, WorkflowOperation, AbortOperation, ContinueOperation, PauseOperation, RestartOperation, UnpauseOperation, GetWorkflowDataAction, and RetryOperation (Elements)
 
 * We introduced these elements. 
 
@@ -51,7 +51,7 @@ weight: 88
 
 * We introduced the `schedule` and `onOverlap` properties. 
 
-#### Schedule, YearSchedule, YearDateSchedule, YearWeekdaySchedule, MonthSchedule, MonthDateSchedule, MonthWeekdaySchedule, WeekSchedule, DaySchedule, HourSchedule & MinuteSchedule (Elements)
+#### Schedule, YearSchedule, YearDateSchedule, YearWeekdaySchedule, MonthSchedule, MonthDateSchedule, MonthWeekdaySchedule, WeekSchedule, DaySchedule, HourSchedule, and MinuteSchedule (Elements)
 
 * We introduced these elements. 
 

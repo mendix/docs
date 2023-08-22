@@ -1,7 +1,7 @@
 ---
 title: "Advanced Custom Settings in Mendix Runtime"
+linktitle: "Advanced Custom Settings"
 url: /refguide/tricky-custom-runtime-settings/
-parent: "custom-settings"
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
 tags: ["Support", "custom settings"]
 ---
@@ -22,7 +22,7 @@ The following settings influence the behavior of the Mendix web client:
 | --- | --- | --- |
 | `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after `SessionTimeout` milliseconds of inactivity (default 10 minutes), even if the browser remains open. See `SessionTimeout` in the next section for more information. | true |
 
-### 2.2 General Settings
+### 2.2 General Settings {#general-settings}
 
 The following custom settings can be configured:
 
@@ -30,15 +30,16 @@ The following custom settings can be configured:
 | --- | --- | --- |
 | `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
 | `LongLivedSessionTimeout` | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
+| `com.mendix.offline.DeleteAutoCommittedObjectsAfterSync` | Defines if auto-committed created during offline synchronization will be deleted from the database immediately. | true |
 | `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
-| `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
+| `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
 
 Increasing the session timeout can improve the user experience, especially on mobile devices. It is important to keep in mind that entities used to present data to the user or entities that are created or retrieved when a user executes a microflow are tied to that user's session, and those entities can remain in memory for long periods of time. When a user signs out, these entities will be removed from memory, but if the user idles but does not sign out (for example, if they leave the browser tab open while executing other tasks or simply close the browser without signing out), the session timeout can act as a safeguard that prevents memory usage from being tied up by idle sessions. The first case can also be mitigated by setting the `EnableKeepAlive` custom setting to false. On most browsers, this setting will ensure that any idle browser tab will be affected by the session timeout as well.
 
 Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a maximum value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
 
 Another consideration is that configuring `ClusterManagerActionInterval` to be much longer than the `SessionTimeout` will lead to expired sessions remaining in the database longer.
-Configuring `SessionKeepAliveUpdatesInterval` to be longer than the `ClusterManagerActionInterval` or configuring `SessionKeepAliveUpdatesInterval` to be longer than the `SessionTimeout` will cause active sessions to be cleaned up. In Studio Pro 9.13 and later the runtime will fail to start if these three settings are not configured correctly.
+Configuring `SessionKeepAliveUpdatesInterval` to be longer than the `ClusterManagerActionInterval` or configuring `SessionKeepAliveUpdatesInterval` to be longer than the `SessionTimeout` will cause active sessions to be cleaned up. The Runtime will fail to start if these three settings are not configured correctly.
 
 With stateless runtime, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value.
 
@@ -54,7 +55,7 @@ So, make sure to keep in mind all of the above when changing these values. Also,
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show more information about the page or the microflow that leads to this query. |   |
+| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show more information about the page or the microflow that leads to this query. | 10000  |
 
 `LogMinDurationQuery` can be a very helpful tool in detecting queries that are taking longer than expected. This is especially useful for queries that only take longer than expected after the data used in and by the app grows larger, because this might mean the queries will only become slower after a few months of usage and might not have turned up in pre-release performance tests. Determining that a query is slow depends on the type of app you are running. But in general, any query that directly affects a user using the app (meaning, not a background process) will have a lower threshold for determining it as slow than a query running in the background. For example, a drop-down menu that takes 5 seconds to load before anything can be selected is many times worse than a PDF generated in the background taking 8 instead of 4 seconds because of a “slow” query that takes 5 seconds instead of 1 second.
 
@@ -64,7 +65,7 @@ The most important part of this setting is to regularly check the application lo
 
 You can find these log entries by looking for the following phrase in your application log: **Query executed in**. The phrase will appear in an example like this: `Jan 01 02:03:04.567 - WARNING - ConnectionBus_Queries: (1/4) Query executed in 642 seconds and 694 milliseconds: UPDATE "somemodule$someentity”`.
 
-## 4 The Number of Database Connections
+## 4 The Number of Database Connections{#num-connections}
 
 ### 4.1 Connection Pooling
 
@@ -112,8 +113,6 @@ However, if all of the following are true, you should increase the `ConnectionPo
 * There is plenty of database memory available at all times
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
-
-In addition, keep in mind that changing this value for an application running in Mendix Cloud v3 will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/) stating the number to which you intend to change the value. When your application is running in Mendix Cloud v4, you can change the value without a change on the database node.
 
 ## 5 Read More
 

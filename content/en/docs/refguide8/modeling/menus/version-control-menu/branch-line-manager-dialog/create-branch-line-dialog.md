@@ -1,7 +1,6 @@
 ---
 title: "Create Branch Line"
 url: /refguide8/create-branch-line-dialog/
-parent: "branch-line-manager-dialog"
 weight: 90
 tags: ["studio pro", "create branch line"]
 ---
@@ -23,15 +22,15 @@ To view the **Create Branch Line** dialog box,  do the following:
 
 The **Create Branch Line** dialog box is displayed.
 
-For more information on how to manage branch lines, see the [Managing Development Lines in Studio Pro](/refguide8/collaborative-development/#managing-branches) section in *Collaborative Development* and [Branch Line Manager](/refguide8/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide8/version-control/). 
+For more information on how to manage branch lines, see [Branch Line Manager](/refguide8/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide8/version-control/). 
 
 ## 2 Create Branch From
 
 **Create branch from** allows you to choose the development line you want to create the branch line from. You can choose one of the following options:
 
-* <a name="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
-* <a name="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
-* <a name="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
+* <a id="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
+* <a id="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
+* <a id="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
 
 ## 3 Revision 
 
@@ -66,4 +65,3 @@ Since branch line names must be unique, this option shows the existing branch li
 ## 8 Read More
 
 * [Version Control](/refguide8/version-control/)
-* [Collaborative Development](/refguide8/collaborative-development/)

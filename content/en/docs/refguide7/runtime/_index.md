@@ -2,6 +2,8 @@
 title: "Mendix Runtime"
 url: /refguide7/runtime/
 weight: 40
+no_list: false
+description_list: true 
 ---
 
 ## 1 Introduction
@@ -14,19 +16,10 @@ You need a license to run an application in production mode. Without a license, 
 
 ## 3 APIs
 
-You can extend the functionality of the Runtime by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/#runtime) section of *API Documentation*.
+You can extend the functionality of the Runtime by writing Java actions. For more information, see the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
 
 {{% alert color="info" %}}
 Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
 {{% /alert %}}
 
-## 4 Main Documents in This Category
-
-* [Clustered Mendix Runtime](/refguide7/clustered-mendix-runtime/)
-* [Customization](/refguide7/custom-settings/)
-* [Data Storage](/refguide7/data-storage/)
-* [Date & Time Handling](/refguide7/datetime-handling-faq/)
-* [Logging](/refguide7/logging/)
-* [Monitoring Mendix Runtime](/refguide7/monitoring-mendix-runtime/)
-* [Objects & Caching](/refguide7/objects-and-caching/)
-* [Transient Objects & Garbage Collecting](/refguide7/transient-objects-garbage-collecting/)
+## 4 Documents in This Category

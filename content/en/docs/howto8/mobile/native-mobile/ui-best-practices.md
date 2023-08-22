@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for Native Mobile App UI"
+linktitle: "Native Mobile App UI Best Practices"
 url: /howto8/mobile/ui-best-practices/
-parent: "native-mobile"
 weight: 35
 description: "This document will teach you how to build a native mobile app's UI."
 tags: ["ux", "native", "mobile", "ui"]
@@ -41,7 +41,7 @@ In apps where custom UX or UI is more important (for example B2C and B2B apps) t
 
 At Mendix we strongly believe in enabling other developers as they grow to scale and speed up development. In general there are more Mendix developers than UI or UX designers. Therefore, when building a mobile app it is important that a UI or UX designer can enable Mendix developers as much as possible to speed up development.
 
-One could compare building with Mendix to building with toy blocks. Give a maker a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
+One could compare building with Mendix to building with toy blocks. Give a user a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
 
 To learn about building a Mendix native mobile app's UI, consult the sections below. Be sure to see the [Configure Design Properties](#configure-design-props) section below for key information on implementing design easily.
 
@@ -109,7 +109,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 By changing styling in the **core** folder you risk incurring errors the next time you update Atlas. Updating Atlas might also be more difficult. 
 
-A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/).
+A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself.
 
 ### 4.4 Favor Design Properties Over Including Properties
 
@@ -131,7 +131,6 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 * Put the styling for building blocks and page templates in *theme/styles/native/ui_resources/{YOUR_APP_OR_MODULE_NAME}* and include it in *theme/styles/native/main.js*
 * Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
 * Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme
-
 
 ## 5 Read More
 

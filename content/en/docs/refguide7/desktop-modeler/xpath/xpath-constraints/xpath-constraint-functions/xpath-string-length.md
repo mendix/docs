@@ -1,7 +1,6 @@
 ---
 title: "XPath string-length"
 url: /refguide7/xpath-string-length/
-parent: "xpath-constraint-functions"
 ---
 
 

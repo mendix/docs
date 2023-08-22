@@ -1,25 +1,24 @@
 ---
 title: "Password Policy"
 url: /refguide7/password-policy/
-parent: "project-security"
 ---
 
 
 You can specify a number of requirements for passwords. These requirements will be enforced when creating new users or changing passwords of existing users.
 
-### Minimum length
+## Minimum length
 
 Specifies the minimum length of passwords.
 
-### Require digit
+## Require digit
 
 Specifies whether at least one digit is required in passwords.
 
-### Require mixed case
+## Require mixed case
 
 Specifies whether passwords must contain at least one lowercase character and one uppercase character.
 
-### Require symbol
+## Require symbol
 
 Specifies whether passwords must contain at least one special symbol.
 

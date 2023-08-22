@@ -1,7 +1,6 @@
 ---
 title: "Offline Device Profile"
 url: /refguide7/offline-device-profile/
-parent: "navigation-before-72"
 description: "Describes usage of the offline device profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 

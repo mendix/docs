@@ -1,0 +1,619 @@
+openapi: 3.0.0
+x-stoplight:
+  id: f38beb4c10b50
+info:
+  title: Deploy API
+  version: 3.0.0
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+  description: The API to manage apps deployed to the Mendix Cloud.
+paths:
+  '/apps/{appId}':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    patch:
+      summary: Change technical contact for an app
+      operationId: patch-apps-technicalContact
+      responses:
+        '200':
+          description: OK
+        '400':
+          $ref: '#/components/responses/error400_Patch_App'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Patch_App'
+        '404':
+          $ref: '#/components/responses/error404_Patch_App'
+        '500':
+          $ref: '#/components/responses/error500'
+      tags:
+        - apps
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  technicalContact:
+                    userId: jane.doe@domain.tld
+              properties:
+                technicalContact:
+                  type: object
+                  properties:
+                    userId:
+                      type: string
+            examples:
+              example-1:
+                value:
+                  technicalContact:
+                    userId: jane.doe@domain.tld
+      description: Update app
+  '/apps/{appId}/environments/{environmentId}/permissions':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+      - $ref: '#/components/parameters/environmentId'
+    get:
+      summary: Get an array of permissions to an environment for team members of an app
+      tags:
+        - permissions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  technicalContact:
+                    $ref: '#/components/schemas/userId'
+                  permissions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/permission'
+                  pagination:
+                    $ref: '#/components/schemas/pagination'
+              examples:
+                example-1:
+                  value:
+                    technicalContact: jane.doe@domain.tld
+                    permissions:
+                      - member:
+                          userId: jane.doe@domain.tld
+                        canDeployApp: true
+                        canManageBackups: true
+                        canViewAlerts: true
+                        canAccessAPI: true
+                        canViewLogs: true
+                        canManagePrivileges: true
+                    pagination:
+                      offset: 60
+                      limit: 20
+                      size: 17
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Get_Permission'
+        '404':
+          $ref: '#/components/responses/error404_Get_Permission'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-environment-permissions
+      description: Retrieve an array of application team members with their permissions to the specified environment.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: userId
+          description: User email address
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+    patch:
+      summary: Update the list of permissions to an environment for team members of an app
+      operationId: update-environment-permissions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  permissions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/permission-patch'
+              examples:
+                example-1:
+                  value:
+                    permissions:
+                      - member:
+                          userId: jane.doe@domain.tld
+                        canDeployApp: true
+                        canManageBackups: true
+                        canViewAlerts: true
+                        canAccessAPI: true
+                        canViewLogs: true
+                        canManagePrivileges: true
+        '400':
+          $ref: '#/components/responses/error400_Patch_Permission'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Patch_Permission'
+        '404':
+          $ref: '#/components/responses/error404_Patch_Permission'
+        '500':
+          $ref: '#/components/responses/error500'
+      description: Updates the permissions of one or more application team members to the specified environment.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                permissions:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/permission-patch'
+            examples:
+              example-1:
+                value:
+                  permissions:
+                    - member:
+                        userId: jane.doe@domain.tld
+                      canDeployApp: true
+                      canManageBackups: true
+                      canViewAlerts: true
+                      canAccessAPI: true
+                      canViewLogs: true
+                      canManagePrivileges: true
+      tags:
+        - permissions
+tags:
+  - name: apps
+  - name: permissions
+servers:
+  - url: 'https://cloud.home.mendix.com/api/v3'
+    description: Production
+components:
+  requestBodies: {}
+  schemas:
+    error:
+      description: An error object explaining what happened.
+      type: object
+      properties:
+        error:
+          type: object
+          required:
+            - code
+            - message
+          properties:
+            code:
+              type: integer
+              minimum: 0
+              description: The HTTP status code.
+              example: 400
+            message:
+              type: string
+              description: Explanation of what happened.
+              example: Request validation errors
+            invalid-params:
+              type: array
+              uniqueItems: true
+              minItems: 1
+              description: RFC7807 compatible list with detailed feedback.
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: query-parameter
+                    description: The group or type this message is for.
+                  reason:
+                    type: string
+                    example: Value 'lisense' is not supported
+                    description: Feedback on what is wrong or what was expected.
+                required:
+                  - name
+                  - reason
+      required:
+        - error
+    pagination:
+      title: pagination
+      type: object
+      description: Pagination attributes that reflect the parameters used to get the objects in the response.
+      properties:
+        offset:
+          type: integer
+          minimum: 0
+          description: The offset used to get the array of objects. It starts at 0.
+          example: 60
+        limit:
+          type: integer
+          minimum: 1
+          description: 'The maximum number of objects to retrieve. When not specified then the server will set use the default value. If this is set to a number which is greater than the maximum supported number of objects, then the supported maximum is used.'
+          example: 20
+        size:
+          type: integer
+          minimum: 0
+          description: The number of objects in the response.
+          example: 17
+      required:
+        - offset
+        - limit
+        - size
+    permission:
+      type: object
+      x-examples: {}
+      properties:
+        member:
+          type: object
+          properties:
+            userId:
+              $ref: '#/components/schemas/userId'
+        canDeployApp:
+          type: boolean
+        canManageBackups:
+          type: boolean
+        canViewAlerts:
+          type: boolean
+        canAccessAPI:
+          type: boolean
+        canViewLogs:
+          type: boolean
+        canManagePrivileges:
+          type: boolean
+    permission-patch:
+      title: permission-patch
+      x-stoplight:
+        id: dyz00k411xjh7
+      type: object
+      properties:
+        member:
+          type: object
+          properties:
+            userId:
+              $ref: '#/components/schemas/userId'
+        canDeployApp:
+          type: boolean
+        canManageBackups:
+          type: boolean
+        canViewAlerts:
+          type: boolean
+        canAccessAPI:
+          type: boolean
+        canViewLogs:
+          type: boolean
+        canManagePrivileges:
+          type: boolean
+    userId:
+      type: string
+      title: userId
+      description: The ID of the user.
+      example: jane.doe@domain.tld
+  parameters:
+    offset:
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: Used with paging and defines the offset.
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+      description: Used with paging and defines the maximum number of objects to return.
+    appId:
+      name: appId
+      in: path
+      schema:
+        format: uuid
+        type: string
+      description: The unique ID of an app.
+      required: true
+    environmentId:
+      name: environmentId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+      description: The ID of an environment.
+  responses:
+    error400_Patch_App:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Request body
+                      reason: 'Attribute ''userId'' is required, or the provided value is not supported'
+            Example 2:
+              value:
+                error:
+                  code: 400
+                  message: User <userId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 3:
+              value:
+                error:
+                  code: 400
+                  message: The user <userId> is not member of an application
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error400_Patch_Permission:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Request body
+                      reason: Invalid request body
+    error401:
+      description: |-
+        There were no usable authentication credentials found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-1:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+                  invalid-params:
+                    - name: Authentication
+                      reason: Missing or invalid Authorization header
+    error403_Patch_App:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+            Example 3:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The user is not the Technical Contact of the app
+    error403_Get_Permission:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+            Example 3:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The account is not privileged to perform this request for environment <environmentId>
+    error403_Patch_Permission:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+            Example 3:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The account is not privileged to perform this request for environment <environmentId>
+            Example 4:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Only technical contact can change manage permission
+    error404_Patch_App:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application <appId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error404_Get_Permission:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application <appId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 2:
+              value:
+                error:
+                  code: 404
+                  message: Environment <environmentId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error404_Patch_Permission:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application <appId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 2:
+              value:
+                error:
+                  code: 404
+                  message: Environment <environmentId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 3:
+              value:
+                error:
+                  code: 404
+                  message: Permission not found for user <userId>
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error500:
+      description: Internal System Error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 500
+                  message: A system error occurred
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 2:
+              value:
+                error:
+                  code: 500
+                  message: Not able to authenticate the request due a technical failure
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+  securitySchemes:
+    Personal Access Token:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'

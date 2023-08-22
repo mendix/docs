@@ -1,5 +1,6 @@
 ---
 title: "Configure the Mendix Feedback Widget for iOS"
+linktitle: "Configure iOS Mendix Feedback Widget"
 url: /howto7/mobile/feedback-widget-ios/
 category: "Mobile Development"
 weight: 20
@@ -31,10 +32,8 @@ To make the feedback button work as it should, you need only to add two lines to
 <allow-navigation href="https://sprintr.home.mendix.com/*" />
 ```
 
-Now build your appliaction and you will see a correctly rendered feedback widget! 
-
-For more information on the Cordova Whitelist plugin, see [cordova-plugin-whitelist](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist/).
+Now build your app and you will see a correctly rendered feedback widget! 
 
 ## 4 Read More
 
-* [Feedback Management](/developerportal/collaborate/feedback/)
+* [Feedback Management](/developerportal/app-insights/feedback/)

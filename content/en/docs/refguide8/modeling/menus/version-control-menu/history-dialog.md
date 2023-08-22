@@ -1,7 +1,6 @@
 ---
 title: "History"
 url: /refguide8/history-dialog/
-parent: "version-control-menu"
 weight: 50
 tags: ["studio pro"]
 ---
@@ -13,8 +12,6 @@ tags: ["studio pro"]
 ## 1 Introduction
 
 Use the **History** dialog box to look at all the changes that have been committed to a development line of an app. This dialog box is also used when selecting a revision to merge from, create a branch line off of, or create a deployment archive of.
-
-{{< figure src="/attachments/refguide8/version-control/collaborative-development/history-dialog.png" >}}
 
 ## 2 Revisions
 

@@ -6,7 +6,7 @@ weight: 86
 
 ## 8.15.0
 
-**Release date: October 20th, 2020** 
+**Release date: October 20, 2020** 
 
 ### Rest
 
@@ -20,6 +20,6 @@ weight: 86
 
 * We introduced the `submitBehaviour` and `submitOnInputDelay` properties.
 
-#### WorkflowTemplateType, UserTaskTemplateType & WorkflowOverviewTemplateType (Elements)
+#### WorkflowTemplateType, UserTaskTemplateType, and WorkflowOverviewTemplateType (Elements)
 
 * We introduced these elements.

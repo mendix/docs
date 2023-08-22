@@ -1,7 +1,6 @@
 ---
 title: "Sidebar Toggle"
 url: /refguide8/sidebar-toggle-button/
-parent: "layout"
 weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

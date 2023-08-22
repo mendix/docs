@@ -1,7 +1,6 @@
 ---
 title: "Download From Version Control Server Dialog"
 url: /refguide7/download-from-version-control-dialog/
-parent: "dialogs"
 aliases:
     - /refguide7/download-from-team-server-dialog.html
     - /refguide7/download-from-team-server-dialog

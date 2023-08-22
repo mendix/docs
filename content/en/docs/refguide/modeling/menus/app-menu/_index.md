@@ -1,7 +1,6 @@
 ---
 title: "App Menu"
 url: /refguide/app-menu/
-parent: "menus"
 description: "Describes the App Menu in Studio Pro."
 weight: 30
 tags: ["Studio Pro", "app menu", "top bar"]
@@ -35,7 +34,7 @@ The **Check Widgets** option checks that the widgets you have implemented in the
 
 ### 2.5 Convert Classes to Design Properties
 
-The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [How To Implement Native Mobile Styling](/howto/mobile/native-styling/) for more information.
+The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/) for more information.
 
 ## 3 Synchronize App Directory {#synchronize}
 
@@ -59,7 +58,7 @@ The **Deploy for Eclipse** option deploys the app to the deployment directory. T
 
 Shortcut key: <kbd>F6</kbd>
 
-## 6 Create Deployment Package
+## 6 Create Deployment Package{#create-package}
 
 The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the app. This can be used if you want to deploy your app on a Windows server or on a custom Mendix Cloud.
 
@@ -67,7 +66,7 @@ Shortcut key:  <kbd>F7</kbd>
 
 For more information on settings displayed on the Create Deployment Package dialog box, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 
-## 7 Clean Deployment Directory
+## 7 Clean Deployment Directory {#clean-deployment-directory}
 
 The **Clean Deployment Directory** option cleans the deployment directory.
 

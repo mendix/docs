@@ -26,9 +26,16 @@ This module keeps keep track of what changes are made in your Mendix application
 
 The two sections below describe the two options for configuring this module.
 
-### 2.1 Associations & Events
+{{% alert color="info" %}}
 
-For this configuration option, add a reference set association from your entity to the **Log** entity or an association from the **Log** entity to the entity that needs to be audited. Add an after-create, before-commit, and before-delete event to your entity that is identical to the events on the **AudittrailSuperClass**. The Java actions will automatically create the log item and all the required log lines based on the changes.
+As both configuration options require changing the entity, it is not possible to use Audit Trail directly with entities in the **System** module. It is still possible to add audit to specializations of such entities using the associations and events option.
+
+While it is possible to add required associations and event handlers to marketplace modules, such model changes are overwritten when marketplace modules are updated. Therefore, in this scenario it is recommended to use specializations.
+{{% /alert %}} 
+
+### 2.1 Associations and Events
+
+For this configuration option, add a reference set association from your entity to the **Log** entity or an association from the **Log** entity to the entity that needs to be audited. Add a before-commit and before-delete event to your entity that is identical to the events on the **AudittrailSuperClass**. The Java actions will automatically create the log item and all the required log lines based on the changes.
 
 Next, configure the **IncludeOnlyChangedAttributes** constant for whether you want to log all the attributes or just the changes.
 
@@ -52,5 +59,5 @@ Changing the audit behavior is easily done by altering the values of the constan
 * **CreateLogObjectWithoutMemberChanges** (default: false) – If none of the members have been changed, this property determines whether a commit will still generate a log record populated only with the `changed date` and `changed by` fields.
 * **LogLineDateFormat** (default: MM/dd/yyyy) – This constant determines the format to be used to convert date attributes to strings. It uses the same pattern as used by the [parse and format date function calls](/refguide/parse-and-format-date-function-calls/).
 * **LogServerTimeZoneDateNotation** (default: true) – This determines if the date should be audited in the **ServerTimeZone**. If both the session time zone and **ServerTimeZone** are enabled, you will see two dates in the audit overview.
-* **ServerTimeZone** (default: Etc/UTC) – This the time zone in which the server time zone is printed. This will be a static time zone and should match the notation as used in Java (for an example, see [TimeZones in Java](http://stackoverflow.com/questions/1694885/timezones-in-java)).
-* **LogSessionTimeZoneDateNotation** (default: true) – This determines if the date should be audited in the session time zone of the user that makes the change. If both the session time zone and the server time zone are enabled, you will see two dates in the audit overview.
+* **ServerTimeZone** (default: UTC) – This the time zone in which the server time zone is printed. This will be a static time zone and should match the notation as used in Java (for an example, see [TimeZones in Java](http://stackoverflow.com/questions/1694885/timezones-in-java)).
+* **LogSessionTimeZoneDateNotation** (default: false) – This determines if the date should be audited in the session time zone of the user that makes the change. If both the session time zone and the server time zone are enabled, you will see two dates in the audit overview.

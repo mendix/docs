@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for Development"
+linktitle: "Best Practices for Development"
 url: /howto7/general/dev-best-practices/
 category: "General"
 weight: 3
@@ -194,7 +195,7 @@ For integrations, you have the following types of microflow:
 
 ### 3.5 Other Document Types
 
-#### 3.5.1 Layouts & Snippets
+#### 3.5.1 Layouts and Snippets
 
 [Layouts](/refguide7/layout/) and [snippets](/refguide7/snippet/) should be identified with prefixes.
 
@@ -251,7 +252,7 @@ You can define the [home pages](/refguide7/show-home-page/) per device and role 
 | Role based home page | Tablet  | Home_Tablet_{Userrole}  |
 | Role based home page | Mobile  | Home_Phone_{Userrole}   |
 
-## 4 General Guidelines & Best Practices
+## 4 General Guidelines and Best Practices
 
 ### 4.1 Domain Models
 
@@ -281,7 +282,7 @@ Split microflows up into logical, functional elements. If a microflow has more t
 
 Certain cases (such as validation checks) may require this rule to be ignored to produce an understandable result.
 
-#### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
+#### 4.2.2 Documentation and Annotations {#documentation-and-annotations}
 
 All complex microflows (more than ten activities or more than two splits) should have an [annotation](/refguide7/annotations/) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
@@ -303,13 +304,39 @@ Event triggers on input fields must be kept as simple as possible, since they ar
 
 The number of parameters for a microflow should be kept to a minimum to facilitate reusability. The more parameters a microflow has, the more difficult it is to determine what should be put into the parameters to make the microflow run correctly.
 
-#### 4.2.5 Error Handling & Logging
+#### 4.2.5 Error Handling and Logging
 
 Use microflow [error handling](/howto7/logic-business-rules/set-up-error-handling/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide7/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
-### 4.3 Warnings & Modeler Feedback
+#### 4.2.6 Validating Inputs in Microflows
+
+When microflows are invoked from the client side, it is important to validate the inputs. By having validations, you prevent incorrect, inappropriate, or potentially harmful data from being used in your microflows. This protects your application against security vulnerabilities. The following presents the best practices regarding the integrity and validation of inputs in your microflows.
+
+##### 4.2.6.1 Implementing Validation Checks
+
+Adding validation checks is vital for ensuring that input data conforms to the expected data type, format, range, or other application-specific constraints. For instance, if a numeric input is expected within a defined range, validation checks should confirm that the input is indeed numeric and falls within the specified range.
+
+##### 4.2.6.2 Managing Unexpected Values
+
+When building microflows, it is important to account for the potential occurrence of unexpected values. These could be empty values, or values outside the expected range or format. It is also important to ensure that read-only attributes only contain expected values.
+
+{{% alert color="warning" %}}
+We strongly recommend adding validation checks to all microflows inputs, including read-only attributes. 
+
+We also recommend avoiding storing intermediary values in attributes (such as, *TotalPrice*). Instead, calculate these values when needed to ensure you have the correct values.
+{{% /alert %}}
+
+Microflows should incorporate mechanisms to detect unexpected values and respond suitably – this might involve returning an error message to the end-user or executing a fallback operation. 
+
+##### 4.2.6.3 Updating Validation Logic Regularly
+
+As the application evolves, the validation logic within microflows should be updated accordingly to reflect changes in business logic or data models. This regular review and update of validation checks ensures that microflows remain secure and function correctly over time.
+
+By prioritizing the validation of inputs in microflows, you not only enhance the security of your application, but also ensure a more predictable and stable user experience. This practice underscores the development of reliable and robust applications.
+
+### 4.3 Warnings and Modeler Feedback
 
 No warnings should be visible in the Modeler, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 

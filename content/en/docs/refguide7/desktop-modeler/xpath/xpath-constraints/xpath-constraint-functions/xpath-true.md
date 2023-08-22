@@ -1,7 +1,6 @@
 ---
 title: "XPath true"
 url: /refguide7/xpath-true/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview
@@ -17,4 +16,3 @@ This query returns all the customers who are classified as "gold customers":
 ```java
 //Sales.Customer[IsGoldCustomer = true()]
 ```
-

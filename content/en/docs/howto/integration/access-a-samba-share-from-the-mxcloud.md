@@ -3,6 +3,7 @@ title: "Access a Samba Share"
 url: /howto/integration/access-a-samba-share-from-the-mxcloud/
 category: "Integration"
 weight: 11
+description: "Describes how to access a Samba share from the MxCloud and use a server name."
 tags: ["Samba", "share"]
 ---
 
@@ -42,7 +43,7 @@ public Boolean executeAction() throws Exception
 
 ## 3 Using a Servername Instead of an IP Address
 
-If you choose to connect to a server based on the server name instead of the IP address, you will have to enable all the properties related to this option. For details on the the different WINS properties that need to be specified in order for the library to resolve the domain and the server, see this page: [https://jcifs.samba.org/src/docs/resolver.html](https://jcifs.samba.org/src/docs/resolver.html).
+If you choose to connect to a server based on the server name instead of the IP address, you will have to enable all the properties related to this option. For details on the different WINS properties that need to be specified in order for the library to resolve the domain and the server, see this page: [https://jcifs.samba.org/src/docs/resolver.html](https://jcifs.samba.org/src/docs/resolver.html).
 
 | Name | Resolution Properties |
 | --- | --- |
@@ -62,11 +63,12 @@ However, the cloud edit library requires an additional property override. The DF
 
 The cloud does not allow the properties to be specified using the system properties. Therefore, you will need to specify these through Java, and before initializing any of the JCIFS classes, you will need to specify the exact `Config` options. This can be done by using the following line of code:
 
-```
+```shell {linenos=false}
 jcifs.Config.setProperty("jcifs.smb.client.dfs.disabled","false");
 ```
+
 For more details on all the properties, see here: [http://jcifs.samba.org/src/docs/api/overview-summary.html#scp](http://jcifs.samba.org/src/docs/api/overview-summary.html#scp).
 
 ## 4 Further Documentation
 
-*   [http://jcifs.samba.org/](http://jcifs.samba.org/)
+* [http://jcifs.samba.org/](http://jcifs.samba.org/)

@@ -2,7 +2,6 @@
 title: "Secure Outgoing Connections from Your App"
 linktitle: "Secure Outgoing Connections"
 url: /developerportal/deploy/securing-outgoing-connections-from-your-application/
-parent: "general"
 weight: 10
 description: "Describes which methods are available for securing connections from your app to the outside world."
 tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
@@ -50,7 +49,7 @@ The rest of the security features of scenario 2 can also be applied.
 
 If a back end service owned by you does not support HTTPS out of the box, you can add a HTTPS reverse proxy server such as NGINX or HAProxy in front of it. This HTTPS reverse proxy can optionally also act as a firewall and can be deployed in a highly available way.
 
-Migrations of back-end services within your data center can be done transparently by decoupling it from the public address of your service. The app in the Mendix Cloud simply connects to an HTTPS endpoint.
+Migrations of back-end services within the same region can be done transparently by decoupling it from the public address of your service. The app in the Mendix Cloud simply connects to an HTTPS endpoint.
 
 {{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399044.png" >}}
 
@@ -63,23 +62,19 @@ This scenario is identical to scenario 4, with one exception: your app includes 
 ### Scenario 6 - VPN
 
 {{% alert color="warning" %}}
-VPN is not supported at all in Mendix Cloud V4.
-
-VPN is deprecated in Mendix Cloud V3. Although you can still set it up, you will not receive support from Mendix for a VPN in Mendix Cloud V3, or for using VPN in deployments to other clouds.
+VPN is not supported at all in the Mendix Cloud.
 {{% /alert %}}
 
 Many companies use a Virtual Private Network (VPN) to secure network connections between their own offices and data centers and other companies.
-
-Mendix offered IPSEC VPN in the Mendix Cloud V3 on some legacy connections, but is currently moving towards other secure protocols. These work better with modern Cloud-native best practices such as scaling horizontally, failover to other data centers, and multi-tenant cloud environments. It was removed in Mendix Cloud V4.
 
 In this scenario, unencrypted TCP/UDP protocols can be used; all inter-network traffic is transparently encrypted by the VPN IPSEC Gateways. Subnets which should be routed over the VPN connections have to managed manually, and DNS resolution is done locally. Therefore, the app has to connect to the back end service by its IP address rather than its domain name.
 
 The following disadvantages apply:
 
-*   DNS is not available
-*   With failover data centers, VPN becomes extremely difficult to manage
-*   Connections are added to (virtual) machines, this makes deployment to multi-tenant public-cloud environments based on containerization a challenge
-*   VPN gateways potentially add two more single points of failure
+* DNS is not available
+* With failover data centers, VPN becomes extremely difficult to manage
+* Connections are added to (virtual) machines, this makes deployment to multi-tenant public-cloud environments based on containerization a challenge
+* VPN gateways potentially add two more single points of failure
 
 {{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399048.png" >}}
 

@@ -1,5 +1,6 @@
 ---
 title: "Application Autoscaler for SAP Business Technology Platform"
+linktitle: "Application Autoscaler for SAP BTP"
 url: /partners/sap/sap-autoscaler/
 category: "SAP"
 weight: 47
@@ -86,7 +87,7 @@ For all the types of schedule you will need to set the following:
 
 * **Min Instances** – minimum number of application instances that always run
 * **Max Instances** – maximum number of application instances that can be provisioned as part of application scaling
-* **Timezone** – the timezone in which to run the schedule
+* **Timezone** – the time zone in which to run the schedule
 
 {{% alert color="info" %}}
 For custom schedules you will see these values on the screen more than once, but changing them in one place will automatically set them in the others.
@@ -157,4 +158,3 @@ The new rule, and any existing rules will be shown in the configurator as shown 
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
-

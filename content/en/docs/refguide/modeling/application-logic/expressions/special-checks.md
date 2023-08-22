@@ -1,7 +1,6 @@
 ---
 title: "Special Checks"
 url: /refguide/special-checks/
-parent: "expressions"
 weight: 40
 description: "Describes special checks in expressions in Mendix."
 tags: ["studio pro", "special checks", "special check", "expressions"]
@@ -78,7 +77,7 @@ Assuming $object1 is a domain entity that has a member called 'member1', the tab
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
 
-## 4 Checking Whether an Object Is New<a name="new"></a>
+## 4 Checking Whether an Object Is New {#new}
 
 Checks whether an object is new. 
 
@@ -124,7 +123,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| Returns whether the changes done to the object [offline](/refguide/offline-first/) have been synchronized to the runtime database. In web profiles and [hybrid profiles](/refguide/navigation/#hybrid-profiles) without offline support, this always returns `true`. | Boolean |
+| Returns whether the changes done to the object [offline](/refguide/offline-first/) have been synchronized to the runtime database. In web profiles without offline support, this always returns `true`. | Boolean |
 
 ### 5.3 Example
 

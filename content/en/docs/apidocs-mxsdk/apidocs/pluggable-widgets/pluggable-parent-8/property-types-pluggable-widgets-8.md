@@ -1,8 +1,7 @@
 ---
-title: "Pluggable Widget Property Types"
+title: "Property Types – Mx8"
 url: /apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/
-parent: "pluggable-parent-8"
-weight: 20
+weight: 10
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
@@ -31,33 +30,33 @@ This defines the prop `key` in the client component props which are supplied to 
 This defines a property's type. A `type` must be one of the following: 
 
 * Static Types
-	* [string](#string)
-	* [boolean](#boolean)
-	* [integer](#integer)
-	* [decimal](#decimal)
-	* [enumeration](#enumeration)
+    * [string](#string)
+    * [boolean](#boolean)
+    * [integer](#integer)
+    * [decimal](#decimal)
+    * [enumeration](#enumeration)
 * Component Types
-	* [icon](#icon)
-	* [image](#image)
-	* [widgets](#widgets)
+    * [icon](#icon)
+    * [image](#image)
+    * [widgets](#widgets)
 * Dynamic Types
-	* [expression](#expression)
-	* [textTemplate](#texttemplate)
-	* [action](#action)
-	* [attribute](#attribute)
-	* [object](#object)
-	* [file](#file)
-	* [datasource](#datasource)
+    * [expression](#expression)
+    * [textTemplate](#texttemplate)
+    * [action](#action)
+    * [attribute](#attribute)
+    * [object](#object)
+    * [file](#file)
+    * [datasource](#datasource)
 
 ### 1.2 XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
 ## 2 Static Types
 
-Static types are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
+Static types are made to pass values configured in Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
 
 ### 2.1 String{#string}
 
@@ -70,9 +69,8 @@ The string property type is represented as a simple text input in Studio Pro. It
 | `type`         | Yes      | String         | Must be `string`                                             |
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | No       | String         | Default value for the property                              |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input, `false` otherwise |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
-
 
 #### 2.1.2 Studio Pro UI
 
@@ -242,6 +240,7 @@ This property type was introduced in Mendix 8.1.
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 3.1.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -280,6 +279,7 @@ GIF images are not supported in native mobile apps on Android devices.
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 3.2.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -308,7 +308,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.7.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
+Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio Pro.
 {{% /alert %}}
 
 #### 3.3.1 XML Attributes
@@ -331,7 +331,7 @@ When the component is defined without the `dataSource` attribute as follows:
 </property>
 ```
 
-then the Studio Pro UI for the component appears like this:
+Then the Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/widgets.png" alt="studio pro ui" >}}
 
@@ -346,7 +346,7 @@ When the component is defined with the `dataSource` attribute, assuming `myDataS
 </property>
 ```
 
-then the Studio Pro UI for the component appears like this:
+Then the Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/widgets_with_ds.png" alt="studio pro ui" >}}
 
@@ -376,7 +376,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.14.
 
 #### 4.1.2 XML Elements
 
-`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix platform will ensure the that configured expression returns the correct data type.
+`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
 | Supported Return Types | Corresponding Types Client Components Receive |
 | -------------------- | --------------------------------------------- |
@@ -414,21 +414,19 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
 {{% /alert %}}
 
-
 #### 4.2.1 XML Attributes
 
 | Attribute    | Required | Attribute Type | Description                                                                                                                                                          |
 | ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
 | `key`        | Yes      | String         | See [key](#key) |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise                                                                                                   |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input, `false` otherwise                                                                                                   |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 
-
 #### 4.2.2 XML Elements
 
-`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings/#languages-tab) in Studio Pro.
+`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/app-settings/#languages-tab) in Studio Pro.
 
 #### 4.2.3 Studio Pro UI
 
@@ -503,13 +501,13 @@ Support for the `dataSource` attribute was introduced in Mendix 8.12.
 | ------------ | -------- | -------------- | ------------------------------------------------------------ |
 | `type`       | Yes      | String         | Must be `attribute`                                          |
 | `key`        | Yes      | String         | See [key](#key) |
-| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `onChange`   | No       | Property Path  | The path to an Action property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
 
 #### 4.4.2 XML Elements
 
-`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
+`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
 
 `<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
 
@@ -659,7 +657,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ## 5 System Properties {#system-properties}
 
-System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
+System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix Platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
 
 * `Label`
 * `Name`

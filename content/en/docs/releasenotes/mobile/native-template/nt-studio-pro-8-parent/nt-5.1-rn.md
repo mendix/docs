@@ -1,15 +1,44 @@
 ---
 title: "Native Template 5.1"
 url: /releasenotes/mobile/nt-5.1-rn/
-parent: "nt-studio-pro-8-parent"
 weight: 20
 description: "Native Template 5.1 release notes."
 ---
 
+{{% alert color="warning" %}}
+Native Template versions [5.0](/releasenotes/mobile/nt-5.0-rn/) and [5.1](/releasenotes/mobile/nt-5.1-rn/) are no longer receiving updates. Also, Native Template does not work for versions below 8.18.9. 
+
+Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio-pro-8-parent/) with the latest Studio Pro [8.18.x](/releasenotes/studio-pro/8.18/) patch release.
+{{% /alert %}}
+
+## 5.1.21
+
+**Release date: December 27, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
+
+## 5.1.20
+
+**Release date: November 9, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+* We fixed an issue which affected Android apps built locally using Apple M1 machines.
+
+## 5.1.19
+
+**Release date: May 11, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
 
 ## 5.1.17
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -17,7 +46,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.16
 
-**Release date: September 9th, 2021**
+**Release date: September 9, 2021**
 
 ### Fixes
 
@@ -25,7 +54,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.15
 
-**Release date: August 9th, 2021**
+**Release date: August 9, 2021**
 
 ### Improvements
 
@@ -33,17 +62,17 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.14
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 ### Improvements
 
 * We improved the capability configurations by adding an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
 * We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
-* We removed support for the deprecated Fabric & Crashlytics module.
+* We removed support for the deprecated Fabric and Crashlytics module.
 
 ## 5.1.13
 
-**Release date: June 30th, 2021**
+**Release date: June 30, 2021**
 
 ### Improvements
 
@@ -56,11 +85,11 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.12
 
-**Release date: June 11th, 2021**
+**Release date: June 11, 2021**
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide9/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 
@@ -74,7 +103,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.11
 
-**Release date: May 14th, 2021**
+**Release date: May 14, 2021**
 
 ### Fixes 
 
@@ -82,7 +111,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.10
 
-**Release date: April 6th, 2021**
+**Release date: April 6, 2021**
 
 ### Improvements
 
@@ -94,7 +123,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.9
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Mobile Toolkit for 5.1.x
 
@@ -114,7 +143,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 ## 5.1.8 {#518}
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 ### Fixes
 
@@ -123,7 +152,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 ## 5.1.7
 
-**Release date: March 12th, 2021**
+**Release date: March 12, 2021**
 
 {{% alert color="warning" %}}
 We have decided to retract version 5.1.7 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8](#518). 
@@ -135,7 +164,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.6
 
-**Release date: February 15th, 2021**
+**Release date: February 15, 2021**
 
 ### Fixes
 
@@ -145,7 +174,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.5
 
-**Release date: February 4th, 2021**
+**Release date: February 4, 2021**
 
 ### Fixes
 
@@ -154,7 +183,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.4
 
-**Release date: December 22nd, 2020**
+**Release date: December 22, 2020**
 
 ### Fixes
 
@@ -162,7 +191,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.3
 
-**Release date: November 27th, 2020**
+**Release date: November 27, 2020**
 
 ### Improvements
 
@@ -174,7 +203,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.1
 
-**Release date: November 2nd, 2020**
+**Release date: November 2, 2020**
 
 ### Disclaimer
 
@@ -190,7 +219,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.0
 
-**Release date: October 27th, 2020**
+**Release date: October 27, 2020**
 
 ### Disclaimer
 

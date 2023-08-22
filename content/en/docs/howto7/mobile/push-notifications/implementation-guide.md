@@ -1,7 +1,6 @@
 ---
 title: "Implement Push Notifications"
 url: /howto7/mobile/implementation-guide/
-parent: "push-notifications"
 weight: 10
 tags: ["mobile", "push notification"]
 ---
@@ -42,14 +41,14 @@ The Push Notifications Connector assumes that the mobile app and the back-end pa
 
 The PushNotifications module has two dependencies:
 
- * [Encryption](/appstore/modules/encryption/) module
- * [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
+* [Encryption](/appstore/modules/encryption/) module
+* [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
 
 To include these dependencies, download them from the Marketplace in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting app files, which you can confirm by clicking **OK**.
 
 {{% alert color="info" %}}
 
-If your app is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
+If your app is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the primary layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
 {{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217886.jpg" >}}
 
@@ -79,10 +78,10 @@ If your app already has a microflow set to execute after startup, we suggest to 
 
 {{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/after-startup-microflow.png" >}}
 
-
 ## 7 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the app navigation, so it can be reached after you deploy your app. This page contains three tabs:
+
 * **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed
 * **Devices** – contains a list of all the devices registered with the application and is useful for testing purposes
 * **Configuration** – used to configure your application so that it can reach the respective services (APNs and FCM) later on
@@ -96,6 +95,7 @@ Do not add the administration pages to the navigation layout of offline devices.
 ## 8 Setting Up the Project Security for Your Module
 
 On the **User roles** tab of the **Project Security** dialog box, include the following:
+
 * The **PushNotifications.Administrator** role as part of the main **Administrator** role
 * The **PushNotifications.User** role as part of the main **User** role
 * The **PushNotifications.Anonymous** role role as part of the main **Anonymous** role (if your application allows anonymous users)

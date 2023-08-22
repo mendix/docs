@@ -1,7 +1,6 @@
 ---
 title: "Get Started with Native Mobile"
 url: /howto8/mobile/getting-started-with-native-mobile/
-parent: "native-mobile"
 weight: 5
 description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.
 tags: ["native", "mobile", "developer", "test"]
@@ -26,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For information on device requirements, see [System Requirements](/refguide8/system-requirements/)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
+## 3 Creating a New App Based on the Quickstarter App {#quickstartapp}
 
 For details on making a Mendix app using the Blank Native Mobile App template, download the Make It Native 8 app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module containing widgets and nanoflow actions for native mobile apps. For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path). Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
@@ -39,7 +38,7 @@ To start a new app based on a template, follow these steps:
 3. Click **Create app** to close the dialog box.
 4. Click **Run Locally** to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
 5. After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box.
-6.  If asked to create database **'default'**, click **Yes**.
+6. If asked to create database **'default'**, click **Yes**.
 
 At this point you have a running native mobile app. To view your app on a mobile device, however, you need to download the Make It Native app.
 
@@ -53,7 +52,7 @@ To view your app on an Android device (or emulator), you must download and insta
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 8 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
+To view your app on an iOS device, you must download and install the Make It Native 8 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
 
 {{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
 
@@ -63,9 +62,9 @@ Viewing your app on a mobile device will allow you to test native features and o
 
 1. Locate your app's QR code in Mendix Studio Pro by clicking the drop-down menu next to the **View** button, then selecting **View on your device** and navigating to the **Native mobile** tab. Here you will see your test app's QR code.
 2. Start the Make It Native app by tapping its icon on your device.
-3.  Tap the  **Scan a QR Code** button:
+3. Tap the  **Scan a QR Code** button:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/scan-qr.png" alt="Scan QR Code"   width="500"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/scan-qr.png" alt="Scan QR Code"   width="500"  >}}
 
 4. If prompted, grant the app permission to access your device's camera.
 5. Point your mobile device's camera at the QR code. It will automatically launch your test app on your mobile device.
@@ -86,9 +85,9 @@ You may notice an **Enable dev mode** toggle on the Make It Native app home page
 
 To see how changes made in Mendix Studio Pro are displayed live on your testing device, make a small change to your app.
 
-1.  Put a text widget on your app's home page. Then, write some text into it. In this example, "Native rules!" has been added: 
+1. Put a text widget on your app's home page. Then, write some text into it. In this example, "Native rules!" has been added: 
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" >}}
 
 2. Click **Run Locally** to automatically update the running app on your device, and see your new text. When you click **Run Locally**, your app will automatically reload while keeping state. 
 

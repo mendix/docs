@@ -1,8 +1,7 @@
 ---
 title: "Menu"
 url: /refguide/menu/
-parent: "page-resources"
-weight: 50
+weight: 3
 tags: ["studio pro", "menu", "menu item", "page resource"]
 aliases:
     - /refguide/menu-item.html
@@ -18,9 +17,7 @@ A menu document defines a navigation menu that can be used by a [menu widget](/r
 A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
 {{% alert color="info" %}}
-
-If [security](/refguide/project-security/) is enabled, the menu will only show items that the user has access to.
-
+If [security](/refguide/app-security/) is enabled, the menu will only show items that the user has access to.
 {{% /alert %}}
 
 ## 2 Menu Item {#menu-item}
@@ -41,5 +38,5 @@ A menu item or a sub-item has the following general properties:
 ## 3 Read More
 
 * [Pages](/refguide/pages/)
-* [Menus & Navigation](/refguide/menu-widgets/)
-
+* [Menus and Navigation](/refguide/menu-widgets/)
+* [Triggering a Microflow from a Menu Item](/refguide/triggering-microflow-from-menu-item/)

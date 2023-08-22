@@ -1,7 +1,6 @@
 ---
 title: "XPath quarter-from-dateTime"
 url: /refguide7/xpath-quarter-from-datetime/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview
@@ -15,4 +14,3 @@ The `quarter-from-dateTime()` function extracts the amount of quarters from a Da
 ```
 
 This query returns all the logs where the amount of quarters in `DateAttribute` is 4 (for example, "2011-12-30").
-

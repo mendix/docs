@@ -1,7 +1,6 @@
 ---
 title: "Increment Counter"
 url: /refguide/metrics-increment-counter/
-parent: "metrics-activities"
 weight: 30
 tags: ["studio pro", "metrics", "micrometer"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -15,13 +14,11 @@ This activity can only be used in **Microflows**.
 
 The **Increment Counter** activity can be used to increment a metrics counter by one.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-increment-counter/increment-counter.png" alt="Increment Counter" >}}
-
 ## 2 Properties
 
 An example of increment counter properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-increment-counter/increment-counter-properties.png" alt="Increment Counter Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-increment-counter/properties.png" alt="Increment Counter Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

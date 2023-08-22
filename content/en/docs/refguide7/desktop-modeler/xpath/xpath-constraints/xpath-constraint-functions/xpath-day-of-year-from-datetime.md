@@ -1,7 +1,6 @@
 ---
 title: "XPath day-of-year-from-dateTime"
 url: /refguide7/xpath-day-of-year-from-datetime/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview

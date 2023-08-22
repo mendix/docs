@@ -1,28 +1,26 @@
 ---
 title: "Use Mendix Data Storage APIs to Build Reusable microflow Actions"
+linktitle: "Data Storage APIs for Reusable Microflows"
 url: /howto7/extensibility/howto-datastorage-api/
 category: "Extensibility"
 weight: 5
 description: "Describes creating custom microflow actions using Data Storage APIs."
 tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
-output:
-  word_document: default
-  html_document: default
 ---
 
 ## 1 Introduction
 
 The Mendix Modeler supports two query languages to retrieve data:
 
-* Xpath as an easy to use query language to retrieve objects
+* XPath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in the Mendix Modeler, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
+You can use these query languages in the Mendix Modeler, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to XPath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 
-* Retrieve advanced Xpath - returns a list of entities as specified by an Xpath expression
-* Retrieve advanced OQL - returns a list of entities as specified by a OQL query
+* Retrieve advanced XPath - returns a list of entities as specified by an XPath expression
+* Retrieve advanced OQL - returns a list of entities as specified by an OQL query
 * Retrieve Dataset OQL - returns a list of entities as specified by a Dataset OQL query
 * Retrieve advanced SQL - returns a list of entities as specified by a SQL query
 * Create first Monday of month list - returns a list of dates of the first Monday of every month in a specified range
@@ -34,15 +32,15 @@ For more information on Java programming for Mendix, see [Java Programming](/ref
 
 For more information on calling Java actions from a microflow, see [Java Actions](/refguide7/java-actions/).
 
-## 2 Retrieving Advanced Xpath
+## 2 Retrieving Advanced XPath
 
-The goal is to create a microflow action where a user can specify an Xpath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
+The goal is to create a microflow action where a user can specify an XPath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
 
-In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in the Mendix modeler. The goal, however, is to illustrate how you can use the Xpath Java API.
+In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in the Mendix modeler. The goal, however, is to illustrate how you can use the XPath Java API.
 
 The Java action needs the following parameters:
 
-* A string where the user can specify the Xpath expression to be executed
+* A string where the user can specify the XPath expression to be executed
 * A result entity where the user specifies which entity is to be returned
 * A return type which specifies that the action returns a list of the entities specified in the previous parameter.
 
@@ -56,7 +54,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image007.png" >}}
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your Xpath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
@@ -68,7 +66,7 @@ Here’s an example domain model with two entities: Department and Employee.
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image011.png" >}}
 
-You can drag the Java action created above from the toolbox onto a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
+You can drag the Java action created above from the toolbox into a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image013.png" >}}
 
@@ -76,8 +74,8 @@ You can drag the Java action created above from the toolbox onto a microflow. In
 
 The following example illustrates how you can use the OQL APIs for reporting purposes. OQL is the general-purpose Mendix query language, very much resembling SQL. The biggest differences between OQL and SQL are:
 
-*	OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
-*	OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
+* OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
+* OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
 
 The following non-persistable entity shows what data you are interested in for your report:
 
@@ -103,7 +101,7 @@ You can create a generic microflow action to execute OQL queries and return a li
 * ResultEntity – which entity will hold the retrieved data
 * A list of the ResultEntity specified as a return type.
 
-As in the Xpath example above, a **Type parameter** is defined to specify that the return list uses the type specified in ResultEntity.
+As in the XPath example above, a **Type parameter** is defined to specify that the return list uses the type specified in ResultEntity.
 
 Additionally, you need to expose the Java action as a microflow action, provide a caption and an icon.
 
@@ -156,16 +154,16 @@ The definition of the Java action resembles the OQL action, but instead of an OQ
 
 The Java implementation below implements the following steps:
 
-*	Use *Core.dataStorage().executeWithConnection()* to execute some Java statements that receive a JDBC connection from the internal connection pool. This API is constructed to enable the Mendix platform to guarantee that connections are returned to the pool after usage.
+* Use *Core.dataStorage().executeWithConnection()* to execute some Java statements that receive a JDBC connection from the internal connection pool. This API is constructed to enable the Mendix Platform to guarantee that connections are returned to the pool after usage.
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image026.png" >}}
 
-*	With the JDBC connection you can now implement your Java as you would with a regular JDBC connection. 
-*	A prepared statement is created, executed and the resulting records are made available through a ResultSet.
+* With the JDBC connection you can now implement your Java as you would with a regular JDBC connection. 
+* A prepared statement is created, executed and the resulting records are made available through a ResultSet.
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image027.png" >}}
 
-*	Next you loop through all the records in the ResultSet and create a Mendix object as specified by the user via ResultEntity.
+* Next you loop through all the records in the ResultSet and create a Mendix object as specified by the user via ResultEntity.
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image028.png" >}}
 
@@ -197,9 +195,9 @@ This example has a page where a user can enter a start and end date. The microfl
 
 In Postgres you can query a list of the dates of all Mondays between these dates using the following Postgres specific query:
 
-*	Using a common table expression (CTE), you create a set of all first dates of every month in the range
-*	Using another CTE you determine the dates of the Mondays for these months
-*	Finally, you select these dates if they still fall in range specified
+* Using a common table expression (CTE), you create a set of all first dates of every month in the range
+* Using another CTE you determine the dates of the Mondays for these months
+* Finally, you select these dates if they still fall in range specified
 
 For example:
 
@@ -213,16 +211,16 @@ You create a Java action with parameters for the start date and the end date. Yo
 
 ### 6.2 Creating the Java Code
 
-1.	Specify the required SQL statement in the Java method. JDBC queries expect the parameters to be specified by question marks (?) in the SQL statement.
+1. Specify the required SQL statement in the Java method. JDBC queries expect the parameters to be specified by question marks (?) in the SQL statement.
 
     {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image034.png" >}}
 
-2.	Next, use the Mendix API to execute some statements using the JDBC connection. Here you create a prepared statement, define the JDBC parameter values, and execute the SQL query.
+2. Next, use the Mendix API to execute some statements using the JDBC connection. Here you create a prepared statement, define the JDBC parameter values, and execute the SQL query.
 
     {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image035.png" >}}
 
-3.	Using the FirstMondayDate Java proxy, instantiate a new Mendix object and set the date attribute. 
-4.	Finally, return the created list of dates.
+3. Using the FirstMondayDate Java proxy, instantiate a new Mendix object and set the date attribute. 
+4. Finally, return the created list of dates.
 
     {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image036.png" >}}
 

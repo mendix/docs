@@ -1,7 +1,6 @@
 ---
-title: "Menus & Navigation"
+title: "Menus and Navigation"
 url: /refguide/menu-widgets/
-parent: "pages"
 weight: 45
 tags: ["studio pro", "menu widgets", "navigation", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -22,7 +21,6 @@ Menus and navigation widgets display menu items configured in the [Navigation](/
 * [Simple Menu Bar](/refguide/simple-menu-bar/) – displays menu items of a [navigation profile](/refguide/navigation/#profiles) or a [menu](/refguide/menu/) document in a form a horizontal or vertical bar 
 
     {{< figure src="/attachments/refguide/modeling/pages/menu-widgets/simple-menu-bar-example.png" alt="Simple Menu Bar Example" >}}
-
 
 ## 2 Performing Basic Functions
 

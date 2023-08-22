@@ -143,4 +143,4 @@ Existing association data in the database must also adhere to the updated one-to
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/startup-error-assoc.png" >}}
 
-We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). For example, the Mendix platform could consistently return the same address each run, but other addresses would be dormant entries in the database.
+We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). For example, the Mendix Platform could consistently return the same address each run, but other addresses would be dormant entries in the database.

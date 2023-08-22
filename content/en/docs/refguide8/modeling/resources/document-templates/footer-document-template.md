@@ -1,7 +1,6 @@
 ---
 title: "Footer (Document Template)"
 url: /refguide8/footer-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide8/footer-(document-template).html

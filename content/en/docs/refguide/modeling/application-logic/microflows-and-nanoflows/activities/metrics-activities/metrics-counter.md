@@ -1,7 +1,6 @@
 ---
 title: "Counter"
 url: /refguide/metrics-counter/
-parent: "metrics-activities"
 weight: 10
 tags: ["studio pro", "metrics", "micrometer"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,8 +13,6 @@ This activity can only be used in **Microflows**.
 ## 1 Introduction
 
 The **Counter** activity can be used to increment a metrics counter by a specific value.
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter.png" alt="Counter" >}}
 
 ## 2 Properties
 

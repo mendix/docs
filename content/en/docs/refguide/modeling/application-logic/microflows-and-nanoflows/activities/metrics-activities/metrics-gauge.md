@@ -1,7 +1,6 @@
 ---
 title: "Gauge"
 url: /refguide/metrics-gauge/
-parent: "metrics-activities"
 weight: 20
 tags: ["studio pro", "metrics", "micrometer"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,8 +13,6 @@ This activity can only be used in **Microflows**.
 ## 1 Introduction
 
 The **Gauge** activity can be used to set a gauge to a specific value.
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-gauge/gauge.png" alt="Gauge" >}}
 
 ## 2 Properties
 

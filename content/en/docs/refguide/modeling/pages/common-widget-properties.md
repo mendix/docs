@@ -1,9 +1,10 @@
 ---
 title: "Properties Common in the Page Editor"
 url: /refguide/common-widget-properties/
-parent: "pages"
 weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
+aliases:
+    - /refguide/Conditions
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
@@ -23,15 +24,15 @@ The Screen reader caption property allows information to be read by screen reade
 
 The **Screen reader caption** property can be set on the following widgets:
 
-*   [Text Box](/refguide/text-box/)
-*   [Text Area](/refguide/text-area/)
-*   [Drop-down](/refguide/drop-down/)
-*   [Check Box](/refguide/check-box/)
-*   [Radio Buttons](/refguide/radio-buttons/)
-*   [Date Picker](/refguide/date-picker/)
-*   [File Manager](/refguide/file-manager/)
-*   [Reference Selector](/refguide/reference-selector/)
-*   [Input Reference Set Selector](/refguide/input-reference-set-selector/)
+* [Text Box](/refguide/text-box/)
+* [Text Area](/refguide/text-area/)
+* [Drop-down](/refguide/drop-down/)
+* [Checkbox](/refguide/check-box/)
+* [Radio Buttons](/refguide/radio-buttons/)
+* [Date Picker](/refguide/date-picker/)
+* [File Manager](/refguide/file-manager/)
+* [Reference Selector](/refguide/reference-selector/)
+* [Input Reference Set Selector](/refguide/input-reference-set-selector/)
 
 ## 3 Common Section{#common-properties}
 
@@ -39,7 +40,7 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ### 3.1 Name{#name}
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support/).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto/integration/selenium-support/).
 
 ### 3.2 Tab Index{#tab-index}
 
@@ -81,6 +82,10 @@ The dynamic classes property was introduced in Mendix Studio Pro v8.14.
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
 
+{{% alert color="info" %}}
+On a DataGrid column, a dynamic class is only applied to the `<col>` element, not to the `<td>` element (in contrast to the class property). 
+{{% /alert %}}
+
 ### 3.6 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
@@ -97,12 +102,12 @@ This property identifies an attribute which is used in an input widget.
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
 
-*   [Text Box](/refguide/text-box/)
-*   [Text Area](/refguide/text-area/)
-*   [Drop-down](/refguide/drop-down/)
-*   [Check Box](/refguide/check-box/)
-*   [Radio Buttons](/refguide/radio-buttons/)
-*   [Date Picker](/refguide/date-picker/)
+* [Text Box](/refguide/text-box/)
+* [Text Area](/refguide/text-area/)
+* [Drop-down](/refguide/drop-down/)
+* [Checkbox](/refguide/check-box/)
+* [Radio Buttons](/refguide/radio-buttons/)
+* [Date Picker](/refguide/date-picker/)
 
 The attribute can be one of the following:
 
@@ -118,9 +123,9 @@ You can edit attributes of any enclosing data container including grandparent da
 
 For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input elements:
 
-*   [Reference Selector](/refguide/reference-selector/)
-*   [Reference Set Selector](/refguide/reference-set-selector/)
-*   [Input Reference Set Selector](/refguide/input-reference-set-selector/)
+* [Reference Selector](/refguide/reference-selector/)
+* [Reference Set Selector](/refguide/reference-set-selector/)
+* [Input Reference Set Selector](/refguide/input-reference-set-selector/)
 
 For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data container entity by following an association, of the type which matches the widget, through the domain model.
 
@@ -237,9 +242,9 @@ There are three options, described below:
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/project-settings/#rounding) section of **App Settings**.
+If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
 
-If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
+If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
 Default: *Fixed*
 
@@ -263,7 +268,7 @@ This only applies to attributes of type Decimal and is available only when the [
 
 The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-The way that the number is rounded when displayed is defined in the [Rounding](/refguide/project-settings/#rounding) section of **App Settings**.
+The way that the number is rounded when displayed is defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
 
 Default: *2*
 
@@ -315,6 +320,7 @@ The possible values of a predefined validation are the following:
 Custom validation is an expression that follows the [Microflow expression](/refguide/expressions/) syntax.
 
 There are a number of variables you can use in your expression:
+
 * `$currentObject` – the current object
 * `$value` – the current member (attribute or association) value
 
@@ -344,7 +350,11 @@ By default, whether or not an element is displayed in the browser is determined 
 You can choose both **Context** conditions and **Module roles** conditions to apply to the widget.
 {{% /alert %}}
 
-Note that with the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages. 
+{{% alert color="warning" %}}
+With the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages.
+
+Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. We recommend that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
+{{% /alert %}}
 
 #### 9.1.1 Context
 
@@ -354,7 +364,24 @@ A practical example would be a web shop in which the user must submit both billi
 
 ##### 9.1.1.1 Based on Attribute Value{#visibility-based-on-attribute-value}
 
-When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+When selected, this shows the widget while a particular attribute has a certain value. 
+
+{{% alert color="info" %}}
+Visibility based on an attribute value can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
+
+Only Boolean and enumeration attributes can be used for this purpose.
+
+{{% /alert %}}
+
+For example, you have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Billing address is the same as delivery address** option (it is checked by default). 
+
+A page where a customer fills in their details can look the following way:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/customer-page-example.png" alt="Customer Details"  width="500">}}
+
+The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/condition-for-visibility-dialog.png" alt="An example of visibility properties" width="500">}}
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
@@ -375,4 +402,3 @@ The widget can be made visible to a specific of the user roles available in your
 | Applicable roles  | The widget is visible if access rules allow it (for example if the user that is signed in has a role for which the target is set to be visible/accessible). |
 | All roles         | The widget is always visible. |
 | Selected roles    | This setting will render the widget as invisible to all users that are not linked to one of the selected user roles. |
-

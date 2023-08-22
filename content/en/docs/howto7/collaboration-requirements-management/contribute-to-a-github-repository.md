@@ -1,7 +1,7 @@
 ---
 title: "Contribute to a GitHub Repository"
 url: /howto7/collaboration-requirements-management/contribute-to-a-github-repository/
-category: "Collaboration & Requirements Management"
+category: "Collaboration and Requirements Management"
 weight: 20
 tags: ["github"]
 ---
@@ -25,9 +25,9 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To make changes to an existing repository, follow these guidelines:
 
-* Create a new branch from where you want to base your work on your fork (this is usually the repository's master branch)
-* To quickly create a branch based on master, use `git checkout -b fix/master/my_contribution master`
-    * Avoiding working directly on the master branch is adivsed
+* Create a new branch from where you want to base your work on your fork (this is usually the repository's production branch)
+* To quickly create a branch based on production, use `git checkout -b fix/production/my_contribution production`
+    * Avoiding working directly on the production branch is adivsed
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing.
 * Make sure you have added the necessary tests for your changes
@@ -45,7 +45,7 @@ To submit changes, follow these guidelines:
 
 ## 5 Read More
 
-* [Stories](/developerportal/collaborate/stories/)
+* [Stories](/developerportal/project-management/stories/)
 * [How to Start Your Own Repository](/howto7/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide7/version-control/)
 * [How to Share the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database/)

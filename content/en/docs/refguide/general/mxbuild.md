@@ -2,8 +2,8 @@
 title: "MxBuild"
 url: /refguide/mxbuild/
 category: "General Info"
-weight: 50
-description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
+weight: 30
+description: "Describes MxBuild, which is a command-line tool for building and deploying Mendix Apps."
 tags: ["build", "deploy", "deployment package", "command-line", "studio pro"]
 ---
 
@@ -11,13 +11,20 @@ tags: ["build", "deploy", "deployment package", "command-line", "studio pro"]
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
-The version of MxBuild which you need is dependent on the version of the Mendix model you want to build. You can find your correct MxBuild by entering this URL into a browser and replacing `mxversion` with your own, full Mendix version number: `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
+The version of MxBuild you need depends on the version of the Mendix model you would like to build, as well as the host operating system you would like to use.
+
+The table below can help you find the correct MxBuild. Copy a URL from the corresponding row into your browser and replace `mxversion` with your full Mendix version number:
+
+| Operating System | Mendix Version               | URL                                                          |
+| ---------------- | ---------------------------- | ------------------------------------------------------------ |
+| Linux (x64)      | All versions                 | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
+| Windows (x64)    | All version of Studio Pro 10 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
 
 {{% alert color="info" %}}
 
-A build number is included in the version, and this has to be included in the link path mentioned above — for example`8.12.1.3458` is the 3458 build of the 8.12.1 Studio Pro release.
+A build number is included in the version, and this has to be included in the link path mentioned above — for example, `10.0.0.5003` is the 5003 build of the 10.0.0 Studio Pro release.
 
-You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz).
+You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\10.0.0.5003`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.5003.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.5003.tar.gz)).
 
 Any public version of Studio Pro in this  [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
@@ -41,9 +48,9 @@ In Windows, use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
-You can also run MxBuild under Linux using the the following command line format:
+You can also run MxBuild under Linux using the following command line format:
 
-`mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
+`mxbuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 
@@ -58,7 +65,7 @@ Command-line options are described in the table below:
 | `--java-exe-path=FILENAME` | (Required). The **full path** to the Java executable.<br/>For example, `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`.<br/>For Windows the *DIRECTORY* should be enclosed in double-quotes `"`, and must contain the complete file name `...\java.exe`. |
 | <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted. Creates a deployment package (.mda file)<br/>`deploy`: deploys the app without making a deployment package. |
 | `--loose-version-check` | Creates a deployment package from an app which was created with a lower Mendix version.<br/>The app will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your app. |
-| `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#project-errors) section below. |
+| `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 
 ### 2.2 Options When Creating a Package
 
@@ -92,10 +99,9 @@ When MxBuild exits, one of the following codes will be returned:
 | 2 | There is something wrong with the command-line options. |
 | 3 | Deployment of the Mendix app failed. |
 
-
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
-## 4 App Errors {#project-errors}
+## 4 App Errors {#app-errors}
 
 When your Mendix app contains errors, deployment will fail and MxBuild will report these errors. You can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file.
 

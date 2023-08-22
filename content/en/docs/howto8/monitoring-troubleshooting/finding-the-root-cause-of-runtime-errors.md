@@ -1,7 +1,7 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 url: /howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 8
 tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
@@ -44,7 +44,7 @@ You need to have the timestamp of when the error occurred. The logs can contain 
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png" >}}
 
-Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR – ` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
+Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR –` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
 
 1. The microflow and action where the error occurred.
 2. The type of error that occurred.
@@ -55,7 +55,7 @@ With these three pieces of information, you should be able to find the cause of 
 ## 4 Read More
 
 * [Clear Warning Messages](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)

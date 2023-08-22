@@ -1,7 +1,6 @@
 ---
 title: "Upload To Version Control Server"
 url: /refguide7/upload-to-version-control-dialog/
-parent: "dialogs"
 aliases:
     - /refguide7/upload-to-team-server-dialog.html
     - /refguide7/upload-to-team-server-dialog

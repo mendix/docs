@@ -1,13 +1,12 @@
 ---
 title: "8.1"
 url: /releasenotes/sdk/metamodel-8.1/
-parent: "metamodel-8"
 weight: 100
 ---
 
 ## 8.1.0
 
-**Release date: August 29th, 2019**
+**Release date: August 29, 2019**
 
 ### CustomWidgets
 

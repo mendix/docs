@@ -6,7 +6,7 @@ weight: 97
 
 ## 8.4.0
 
-**Release date: November 22nd, 2019**
+**Release date: November 22, 2019**
 
 ### CodeActions
 
@@ -26,11 +26,11 @@ weight: 97
 
 * We deleted the `argumentRuntime` property.
 
-#### JavaScriptActionCallAction & JavaScriptActionParameterMapping (Elements)
+#### JavaScriptActionCallAction and JavaScriptActionParameterMapping (Elements)
 
 * We removed the experimental status of these elements.
 
-#### StringTemplateParameterValue & PushToClientAction (Elements)
+#### StringTemplateParameterValue and PushToClientAction (Elements)
 
 * We introduced these elements.
 
@@ -73,7 +73,7 @@ weight: 97
 
 * We added the public `platform` property.
 
-#### MicroflowParameterMapping & NanoflowParameterMapping (Elements)
+#### MicroflowParameterMapping and NanoflowParameterMapping (Elements)
 
 * We introduced the `variable` property.
 * We deleted the `widget` property. Use the `variable` property instead.

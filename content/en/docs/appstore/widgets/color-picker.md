@@ -12,6 +12,7 @@ tags: ["marketplace", "marketplace component", "widget", "color picker", "react"
 The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value that is stored in a string attribute
 
 ### 1.1 Features
+
 * Render using the button, input box, and inline modes
 * Execute an action after a color change using the [Events tab](#events-tab)
 * Add a label

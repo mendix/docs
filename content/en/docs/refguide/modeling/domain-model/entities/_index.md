@@ -1,7 +1,6 @@
 ---
 title: "Entities"
 url: /refguide/entities/
-parent: "domain-model"
 weight: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -22,7 +21,7 @@ For example, you have a collection of CDs like the one in the table below:
 | Title | Artist |
 | --- | --- |
 | How to Dismantle an Atomic Bomb | U2 |
-| Exodus | Bob Marley & The Wailers |
+| Exodus | Bob Marley and The Wailers |
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
@@ -36,7 +35,7 @@ The entity type defines how the data is handled and there are two types:
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" >}}
 
 {{% alert color="info" %}}
-You can also use data sources from other applications in your app through the [Data Hub](/refguide/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
+You can also use data sources from other applications in your app through the [Integration Pane](/refguide/integration-pane/). These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
 
 For further information see [External Entities](/refguide/external-entities/).
 {{% /alert %}}
@@ -89,11 +88,9 @@ The name has to be unique only within a module domain model. You can have two en
 #### 3.3.2 Export Level 
 
 {{% alert color="info" %}}
-
 **Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
-
 {{% /alert %}}
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.
@@ -152,11 +149,15 @@ This property defines whether the entity contains the system attribute 'changedD
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
 {{% alert color="info" %}}
-The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+The 'changedDate' property is updated when a value is set. Setting an attribute to the value it already had and committing the entity updates the 'changedDate'.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+A data grid cannot directly display this system member of the System.User entity or its specializations.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The `changedDate` value will not be updated if you update the entity directly in Java using calls which resolve to use the [`com.mendix.systemwideinterfaces.core.IMendixObject.setValue​(IContext context, java.lang.String memberName, java.lang.Object value)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/IMendixObject.html#setValue(com.mendix.systemwideinterfaces.core.IContext,java.lang.String,java.lang.Object)) method (for example, `Entity.setValue(IContext, String)`). If you need `changedDate` to be updated when using Java, use the [`com.mendix.core.Core.change​(IContext context, IMendixObject object, java.util.Map<java.lang.String,​java.lang.String> changes)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#change(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.util.Map)) method.
 {{% /alert %}}
 
 #### 3.4.3 Store 'owner' {#store-owner}
@@ -185,11 +186,11 @@ You can also edit an entity by opening the entity properties dialog box.
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-*   [Attributes](/refguide/attributes/)
-*   [Associations](/refguide/associations/)
-*   [Validation Rules](/refguide/validation-rules/)
-*   [Event Handlers](/refguide/event-handlers/)
-*   [Indexes](/refguide/indexes/)
-*   [Access Rules](/refguide/access-rules/)
+* [Attributes](/refguide/attributes/)
+* [Associations](/refguide/associations/)
+* [Validation Rules](/refguide/validation-rules/)
+* [Event Handlers](/refguide/event-handlers/)
+* [Indexes](/refguide/indexes/)
+* [Access Rules](/refguide/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

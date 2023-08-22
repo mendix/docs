@@ -1,7 +1,6 @@
 ---
 title: "Get Started"
 url: /howto/front-end/get-started/
-parent: "atlas-ui"
 weight: 10
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
@@ -26,7 +25,7 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 ## 3 Design Elements
 
-Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
+Our UI library is fully integrated into Mendix Studio Pro. After creating a page and selecting a layout in Mendix Studio Pro, you can find building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" >}}
 
@@ -44,13 +43,13 @@ Our UI library is fully integrated into Mendix Studio. After choosing a navigati
 
 Mendix apps contain a default look which is part of the [Atlas Core module](https://marketplace.mendix.com/link/component/117187). This offers the default look (styling and design properties) and feel for all the platform-supported widgets and forms the basis for Mendix app designs. To view these styling elements for yourself, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-Next to that, for both web and native mobile Mendix offers respectively [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) and [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) as out of the box modules with standard page templates and building blocks. These are part of the blank starter apps ([Blank Web App](https://marketplace.mendix.com/link/component/51830) & [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511)), but can be removed if users do not want to use the default templates and building blocks.
+Next to that, for both web and native mobile Mendix offers respectively [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) and [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) as out of the box modules with standard page templates and building blocks. These are part of the blank starter apps ([Blank Web App](https://marketplace.mendix.com/link/component/51830) and [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511)), but can be removed if users do not want to use the default templates and building blocks.
 
 When Mendix releases a new version of these modules, these can be updated as regular modules.
 
 ## 5 Customizing Default Look and Feel
 
-Mendix apps come out of the box with the default Atlas look and feel, which can be customized using [Studio's theme customizer](/studio/theme-customizer/), by [changing the theme settings](/howto/front-end/customize-styling-new/), and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
+Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto/front-end/customize-styling-new/) and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
 ## 6 Re-Using Designs Across Apps
 

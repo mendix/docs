@@ -1,7 +1,6 @@
 ---
 title: "Consumed REST Services"
 url: /refguide8/consumed-rest-services/
-parent: "integration"
 description: "Presents an overview of consumed REST services and JSON in Mendix."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

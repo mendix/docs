@@ -6,7 +6,7 @@ weight: 92
 
 ## 8.9.0
 
-**Release date: April 30th, 2020**
+**Release date: April 30, 2020**
 
 ### DomainModels
 
@@ -28,7 +28,7 @@ weight: 92
 
 * We introduced the `numberOfPages` property.
 
-#### WorkflowCallAction, SetWorkflowActivityOutcomeAction & OpenUserTaskAction (Elements)
+#### WorkflowCallAction, SetWorkflowActivityOutcomeAction, and OpenUserTaskAction (Elements)
 
 * We introduced these elements.
 

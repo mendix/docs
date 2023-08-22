@@ -1,7 +1,6 @@
 ---
 title: "Native Mobile Styling"
 url: /refguide8/native-styling-refguide/
-parent: "native-mobile"
 weight: 20
 description: "This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
 tags: ["Native", "Class", "Design", "Property", "Style", "Widget", "studio pro"]
@@ -325,7 +324,7 @@ The widget’s style properties are structured as follows:
 | `container` | This has all ViewStyle properties.   |   |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
 | `input` | This has all TextStyle properties. |  |
-| `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>* `characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>* `sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
+| `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>*`characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>*`sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
@@ -420,11 +419,11 @@ The widget’s render hierarchy is as follows for uniform:
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
-### 6.4 Check Box 
+### 6.4 Checkbox 
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a check box widget could look in an app:
+A checkbox input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a checkbox widget could look in an app:
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
 The widget’s style properties structure is as follows:
 
@@ -456,13 +455,13 @@ The widget’s style properties structure is as follows:
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
 | `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
-The default class to style all check box inputs is named `Checkbox`.
+The default class to style all checkbox inputs is named `Checkbox`.
 
 ### 6.5 Date Picker
 
@@ -609,7 +608,7 @@ The navigation style properties are as follows:
 | `bottomBar` | `container` | This has all ViewStyle properties. |
 | `bottomBar` | `label` | This has all TextStyle properties. |
 | `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
-| `bottomBar` | `icon` | This has all ViewStyle properties. |
+| `bottomBar` | `icon` | This has all TextStyle properties. |
 | `bottomBar` | `selectedIcon` | This has all ViewStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |
@@ -1103,7 +1102,7 @@ The widget’s style properties are as follows:
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### 11.22 List View Swipe
 
@@ -1143,11 +1142,11 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
 * Modal bottom sheet:
 
-	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  >}}
+    {{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  >}}
 
 * Expanding bottom sheet:
 
-	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
+    {{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
 The widget’s style properties are as follows:
 
@@ -1232,7 +1231,6 @@ A main object has four objects.
 | dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
-
 #### CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
@@ -1279,7 +1277,7 @@ The widget’s style properties are as follows:
 
 Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
-```
+```text
 export myCarouselStyle = {
     container: ViewStyle  //
     cardLayout: ...LayoutStyle,

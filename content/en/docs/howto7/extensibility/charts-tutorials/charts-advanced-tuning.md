@@ -1,7 +1,7 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
+linktitle: "Chart Advanced Tuning"
 url: /howto7/extensibility/charts-advanced-tuning/
-parent: "charts-tutorials"
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
 tags: ["Desktop Modeler", "Charts", "Layout", "Chart Type"]
@@ -53,6 +53,7 @@ To create a custom layout, follow these steps:
       }
     }
     ```
+
 10. Change the font settings till the chart shows the required font. Copy the font settings.
 
     {{% alert color="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}
@@ -85,7 +86,7 @@ To create a custom configuration, follow these steps:
 2. Select the name of the series you want to display differently from the drop down menu: in this case **Series 1**.
 3. Edit the **Custom settings**; change them to `{ "type": "line" }`.
     {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png" alt="chart editor" >}}
-4. Copy the the custom settings.
+4. Copy the custom settings.
 5. In the modeler, open the **Series 1** configuration.
 6. Paste the new configuration for the data into the **(Layout) Options** property in the **Advanced** tab.
 

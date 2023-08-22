@@ -1,7 +1,6 @@
 ---
 title: "Loop"
 url: /refguide7/loop/
-parent: "common-elements"
 ---
 
 ## 1 Introduction

@@ -21,33 +21,33 @@ The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget 
 
 ## 2 Configuration
 
-Drag and drop the widget onto a page. Place one or more widgets inside the Pop-Up Menu widget's trigger area to appoint which widgets trigger the menu. After that, use the configuration properties included in the **General** tab.
+Drag the widget onto a page. Place one or more widgets inside the Pop-Up Menu widget's trigger area to appoint which widgets trigger the menu. After that, use the configuration properties included in the **General** tab.
 
 The **Menu items** property allows you to configure actions and dividers that are part of the menu. Click **New** to create a new item. On the **Edit Menu Items Item** dialog box, configure the tabs and properties described below.
 
 The **General** tab in the **Edit Menu Items Item** dialog box has the following properties:
 
 * **Item type** – determines if the menu item is an action button or a divider for buttons
-	* Default: **Button**
-	* Configurable when **Custom visualization** is set to **Yes**
+    * Default: **Button**
+    * Configurable when **Custom visualization** is set to **Yes**
 * **Text** – the text value to be displayed in the button
-	* Configurable when the **Item type** is **Button**
+    * Configurable when the **Item type** is **Button**
 * **Visible** – a Boolean expression indicating whether the item is visible or not
-	* Default: **true**
+    * Default: **true**
 * **On click action** – executes an action when the button is activated through mouse or keyboard.
-	* Configurable when the **Item type** is **Button**
+    * Configurable when the **Item type** is **Button**
 * **Style** – sets the button's brand style
-	* Default: **Default**
-	* Configurable when the **Item type** is **Button**
+    * Default: **Default**
+    * Configurable when the **Item type** is **Button**
 
 Other main properties of the widget are as follows:
 
 * **Open on** – determines whether hovering or clicking the trigger widgets displays the menu
-	* Default: **Click**
-* **Menu position**  – determines the location of a visible menu relative to the trigger area with widgets
-	* Default: **Bottom**
+    * Default: **Click**
+* **Menu position**  – determines the location of a visible menu relative to the trigger area
+    * Default: **Bottom**
 * **Custom visualization** – determines whether menu items can be composed of text or widgets
-	* Default: **No**
-	* Note that the on click action should still be configured on the menu items and not internal widgets
+    * Default: **No**
+    * Note that the on click action should still be configured on the menu items and not internal widgets
 
 If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view/) and set **Custom visualization** to **Yes**.

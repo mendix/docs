@@ -1,7 +1,6 @@
 ---
 title: "Trim to Date"
 url: /refguide7/trim-to-date/
-parent: "expressions"
 ---
 
 ## 1 Introduction
@@ -128,12 +127,12 @@ returns:
 
 Trim the date to months, rounding off all days to zero.
 
-`trimToMonths` uses the user's timezone and `trimToMonthsUTC` uses the UTC timezone.
+`trimToMonths` uses the user's time zone and `trimToMonthsUTC` uses the UTC time zone.
 
 ### 6.1 Input Parameters
 
-*   date that should be trimmed
-*   Type: DateTime
+* date that should be trimmed
+* Type: DateTime
 
 ### 6.2 Output
 

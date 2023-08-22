@@ -1,7 +1,6 @@
 ---
 title: "View Menu"
 url: /refguide8/view-menu/
-parent: "menus"
 description: "Describes the View Menu in Studio Pro."
 weight: 20
 tags: ["Studio Pro", "view menu", "top bar"]
@@ -24,9 +23,7 @@ Via this menu you can also enable or disable the [full screen mode](#full-screen
 You can change the default layout of panes and arrange them in the layout you like.
 
 {{% alert color="info" %}}
-
 Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide8/studio-pro-overview/#documents) section in *Studio Pro Overview*.
-
 {{% /alert %}}
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
@@ -35,29 +32,20 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
-   1. Pane-height – left 
+    1. Pane-height – left 
+    2. Pane-height – right 
+    3. Pane-height – top
+    4. Pane-height – bottom
+    5. New pane as a new tab
 
-   2. Pane-height – right 
-
-   3. Pane-height – top
-
-   4. Pane-height – bottom
-
-   5. New pane as a new tab
-
-      {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.
-      
-      {{% /alert %}}
+        {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.{{% /alert %}}
 
 2. Within the current *window* you can position a pane in one of the following ways:
 
-   1. Full-window height – left
-
-   2. Full-window height – right
-
-   3. Full-window height – top
-
-   4. Full-window height – bottom
+    1. Full-window height – left
+    2. Full-window height – right
+    3. Full-window height – top
+    4. Full-window height – bottom
 
 The video below shows examples of how to position a pane:
 
@@ -70,7 +58,7 @@ Menu items of the **View** menu are described in sections below.
 
 ### 3.1 Changes
 
-For version control enabled projects (projects with [Team Server](/developerportal/collaborate/team-server/) or other SVN servers), the [Changes pane](/refguide8/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control enabled projects (projects with [Team Server](/developerportal/general/team-server/) or other SVN servers), the [Changes pane](/refguide8/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
@@ -82,7 +70,7 @@ The **Connector** pane displays elements that can be connected to the currently 
 
 ### 3.3 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide8/data-hub-pane/) allows you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and integrate registered data sources that are available for your organization. You can add [external entities](/refguide8/external-entities/) to your app via this pane and view entities and services already consumed in your project. 
+The [Data Hub pane](/refguide8/data-hub-pane/) allows you to browse the [Catalog](/catalog/) and integrate registered data sources that are available for your organization. You can add [external entities](/refguide8/external-entities/) to your app via this pane and view entities and services already consumed in your project. 
 
 ### 3.3 Console {#console}
 
@@ -112,7 +100,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.9 Stories
 
-For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide8/stories-pane/). 
+For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/stories/) of the current [Sprint](/developerportal/project-management/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide8/stories-pane/). 
 
 ### 3.10 Toolbox {#toolbox}
 

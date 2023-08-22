@@ -1,7 +1,6 @@
 ---
-title: "Backups API V1"
+title: "Backups API v1"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
-parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 20
 ---
@@ -9,7 +8,7 @@ weight: 20
 {{% alert color="warning" %}}
 This documents version 1 of the backups API **which is now deprecated**.
 
-You are advised to use the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support  long-running tasks.
+You are advised to use the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support  long-running tasks.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -37,8 +36,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 **Request Parameters**
 
-*   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *AppId* (String): Sub-domain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
 
 **Example Request**
 
@@ -101,9 +100,9 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of the app. This is the production subdomain, do not add the mode (for example, do not add `-accp` for acceptance – see the example below)
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)
-*   _SnapshotId_ (String): Identifier of the backup
+* *AppId* (String): Subdomain name of the app. This is the production subdomain, do not add the mode (for example, do not add `-accp` for acceptance – see the example below)
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)
+* *SnapshotId* (String): Identifier of the backup
 
 **Example Request**
 
@@ -139,7 +138,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.3 Create a Backup of an Environment (Mendix Cloud v4 Only)
+### 3.3 Create a Backup of an Environment
 
 {{% alert color="warning" %}}
 This call will trigger the creation of a snapshot and will return the **SnapshotID** immediately. However, the creation of the snapshot takes some time and if the creation hasn't completed you will get a **500 INTERNAL_SERVER_ERROR** response from a request to download the backup (see above). In this case, it is recommended that you periodically retry downloading the backup until the call is successful.
@@ -147,7 +146,7 @@ This call will trigger the creation of a snapshot and will return the **Snapshot
 
 #### 3.3.1 Description
 
-Create a backup of an environment. The response contains the details of the created backup. This call is only available for Mendix Cloud v4 applications.
+Create a backup of an environment. The response contains the details of the created backup.
 
 ```bash
 HTTP Method: POST
@@ -158,10 +157,9 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
-*   _Comment_ (String): Optional comment for this snapshot.
-
+* *AppId* (String): Subdomain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *Comment* (String): Optional comment for this snapshot.
 
 **Example Request**
 
@@ -201,11 +199,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.4 Restore a Backup to an Environment (Mendix Cloud v4 Only)
+### 3.4 Restore a Backup to an Environment
 
 #### 3.4.1 Description
 
-Restore a previously created backup to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
+Restore a previously created backup to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the restored backup. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
 
 ```bash
 HTTP Method: POST
@@ -216,9 +214,9 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
-*   _SnapshotId_ (String): ID of the snapshot to be restored.
+* *AppId* (String): Subdomain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *SnapshotId* (String): ID of the snapshot to be restored.
 
 **Example Request**
 

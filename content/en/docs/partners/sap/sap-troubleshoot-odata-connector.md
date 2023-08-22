@@ -9,7 +9,7 @@ tags: ["SAP", "integration", "OData", "Troubleshoot", "destination", "401", "404
 
 ## 1 Introduction
 
-There are some common issues which occur when using the OData Connector for SAP Solutions module from the Marketplace. This document lists some of these issues and the possible causes.
+There are some common issues which occur when using the OData Connector for SAP solutions module from the Marketplace. This document lists some of these issues and the possible causes.
 
 ## 2 Getting Destination Failed
 
@@ -94,6 +94,7 @@ To set log level for an application deployed to SAP BTP, go to â€˜Model Optionsâ
 To perform Java debugging, you must do the following:
 
 1. Set the following environment properties.
+
     ```yml
     DEVELOPMENT_MODE= true
     JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]

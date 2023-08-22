@@ -2,8 +2,8 @@
 title: "Deploy API – Version 2"
 url: /apidocs-mxsdk/apidocs/deploy-api-2/
 category: "API Documentation"
-description: "Version 2 of APIs which can be used to deploy Mendix apps to licensed nodes"
-weight: 26
+description: "Deploy API v2 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
+weight: 35
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
@@ -16,12 +16,12 @@ The Deploy API only works for apps which are deployed to the Mendix Cloud.
 The Deploy API allows you to manage application environments in the Mendix Cloud. Version 2 introduces improved APIs for some actions.
 
 {{% alert color="warning" %}}
-The V2 Deploy API only supports the endpoints listed here. For all other API calls, the [V1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+The v2 Deploy API only supports the endpoints listed here. For all other API calls, the [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
 {{% /alert %}}
 
 ## 2 Authentication{#authentication}
 
-The Deploy API requires authentication via API keys as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API* (V1).
+The Deploy API requires authentication via API keys as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API* (v1).
 
 ## 3 API Calls
 
@@ -40,9 +40,9 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/packages/upload?name=<Package
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app
-*   _PackageName_ (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
-*   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
+* *AppId* (String): Subdomain name of an app
+* *PackageName* (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
+* *file* (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
 **Example Request**
 
@@ -64,6 +64,7 @@ Content-Disposition: form-data;
 ```
 
 Curl example:
+
 ```bash
 curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
@@ -99,8 +100,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/jobs/<JobId>
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app
-*   _JobID_ (String): the ID of a job which was triggered by a previous API call
+* *AppId* (String): Subdomain name of an app
+* *JobID* (String): the ID of a job which was triggered by a previous API call
 
 **Example Request**
 

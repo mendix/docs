@@ -1,7 +1,6 @@
 ---
 title: "Find Things in the Model"
 url: /apidocs-mxsdk/mxsdk/finding-things-in-the-model/
-parent: "manipulating-existing-models"
 tags: ["marketplace", "app store module", "module"]
 ---
 
@@ -11,7 +10,7 @@ The `model` object you get back from `workingCopy.model()` can be used to find a
 
 ## 2 The model.root Property
 
-The `root` object refers to the `root` project node in the **App Explorer** in Studio Pro. From there, you can walk through the app tree and into specific documents.
+The `root` object refers to the `root` app node in the **App Explorer** in Studio Pro. From there, you can walk through the app tree and into specific documents.
 
 For example, this snippet finds the name of the first attribute of the `Customer` entity in the first module of your app:
 

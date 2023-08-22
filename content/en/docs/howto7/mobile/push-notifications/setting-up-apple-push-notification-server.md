@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Apple Push Notification Server"
+linktitle: "Apple Push Notification Server"
 url: /howto7/mobile/setting-up-apple-push-notification-server/
-parent: "push-notifications"
 weight: 30
 tags: ["mobile", "push notification", "apple", "server"]
 ---
@@ -31,7 +31,7 @@ Log in to Apple Developer and navigate to [https://developer.apple.com/account/i
 
 ### 2.2 Creating a Key
 
-Click on the **+** icon on the upper-right side of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** check box, and then press **Contine**. On the next page, press **Confirm**.
+Click on the **+** icon on the upper-right side of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** checkbox, and then press **Contine**. On the next page, press **Confirm**.
 
 ### 2.3 Downloading the Key
 
@@ -45,11 +45,11 @@ For this purpose, do the following:
 
 * Create a new APNs configuration, and choose a name for the new configuration
 * Choose a topic for the new configuration (you can freely choose one)
-  *	Set the **Authentication Type** to **Token**
-  * If you receive a "topic disallowed" error message, leave the topic field empty
+    * Set the **Authentication Type** to **Token**
+    * If you receive a "topic disallowed" error message, leave the topic field empty
 * Add your Apple Push Notification service key
-  *	Enter your team ID as shown on the Apple developer website
-  *	Enter the key ID as copied during the previous step
+    * Enter your team ID as shown on the Apple developer website
+    * Enter the key ID as copied during the previous step
 
 ## 3 Option B: Using an SSL certificate
 
@@ -83,7 +83,7 @@ For this purpose, do the following:
 
 * Create a new APNs configuration, and choose a name for the new configuration
 * Choose a topic for the new configuration (you can freely choose one)
-  *	Set the **Authentication Type** to **Certificate**
-  *	Choose the **Stage** that corresponds to the type of certificate you have created
+    * Set the **Authentication Type** to **Certificate**
+    * Choose the **Stage** that corresponds to the type of certificate you have created
 * Add your Apple Push Notification service SSL certificate in the *.p12* format
-  *	Enter the password that you used during creation of the certificate
+    * Enter the password that you used during creation of the certificate

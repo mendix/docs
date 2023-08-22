@@ -1,7 +1,6 @@
 ---
 title: "Uniqueness Constraint Migration"
 url: /refguide7/uniqueness-constraint-migration/
-parent: "data-storage"
 weight: 30
 ---
 

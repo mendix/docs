@@ -1,9 +1,8 @@
 ---
 title: "Create Object"
 url: /refguide/create-object/
-parent: "object-activities"
 weight: 40
-tags: ["studio pro"]
+tags: ["studio pro", "create object", "activity"]
 ---
 
 {{% alert color="warning" %}}
@@ -12,13 +11,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The create object activity can be used to create an object.
+The **Create object** activity can be used to create an object.
 
 ## 2 Properties
 
 An example of create object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" width="700px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -41,7 +40,7 @@ The entity of which you want to create an object.
 
 ### 3.2 Commit
 
-**Commit** defines the way the object is committed. See the section [How Commits Work](/refguide/committing-objects/#how-commits-work) in *Commit Object(s)* for more information on committing.
+**Commit** defines the way the object is committed. For more information on committing, see the section [How Commits Work](/refguide/committing-objects/#how-commits-work) in Commit Object(s) .
 
 | Option | Description |
 | --- | --- |
@@ -51,29 +50,29 @@ The entity of which you want to create an object.
 
 #### 3.2.1 Commits in Nanoflows
 
-Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object activity is used in an offline app, the changes are committed to the offline database.
 
 ### 3.3 Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 
-Default: *No*
+Default: **No**
 
 #### 3.3.1 Microflow Is Called from the Client in an Online App
 
-If **Refresh in client** is set to *No*, the change is not reflected in any widgets in the client.
+If **Refresh in client** is set to **No**, the change is not reflected in any widgets in the client.
 
-If **Commit** and **Refresh in client** are both set to *Yes*, [data sources](/refguide/data-sources/) are reloaded and the new object's values are displayed in relevant widgets.
+If **Commit** and **Refresh in client** are both set to **Yes**, [data sources](/refguide/data-sources/) are reloaded and the new object's values are displayed in relevant widgets.
 
-#### 3.3.2  Microflow Is Called in an Offline, Native, or Hybrid App
+#### 3.3.2  Microflow Is Called in an Offline or Native App
 
-When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+When inside a microflow that is called from an offline or native app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
-#### 3.3.4  Action Is in a Nanoflow
+#### 3.3.3  Action Is in a Nanoflow
 
-In a nanoflow, the create object action reloads [data sources](/refguide/data-sources/) as if Refresh in client was set to *Yes*.
+In a nanoflow, the create object action reloads [data sources](/refguide/data-sources/) as if **Refresh in client** was set to **Yes**.
 
 ### 3.4 Change Members
 
@@ -89,13 +88,20 @@ This is the name of the resulting object which can be used by all activities tha
 
 ## 5 What Happens During a Create?
 
-Wherever an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow, and web services will always follow the steps described in the image below.
+Wherever an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow and web services always follows the steps described in the image below.
 
-* Events: all before and after events are executed, and if any before-create event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the changes are reverted with the default error handling behavior
-* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
-* Result: a new object is available after these triggers
-	* The object will have the **Instantiated** state
-	* This influences the behavior in the other object actions
+* Events:
+    * All before and after events are executed, and if any before-create event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the changes are reverted with the default error handling behavior
+* Database:
+    * There is no database communication happening during this event unless it is specified in a before- or after-create event
+* Result:
+    * A new object is available after these triggers
+    * The object has the **Instantiated** state
+    * This influences the behavior in the other object actions
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/18582173.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" >}}
+
+{{% alert color="info" %}}
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
+{{% /alert %}}

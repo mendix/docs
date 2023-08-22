@@ -1,7 +1,6 @@
 ---
 title: "Administrator"
 url: /refguide8/administrator/
-parent: "project-security"
 weight: 20
 tags: ["studio pro", "administrator", "project security", "security"]
 ---

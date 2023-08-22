@@ -1,7 +1,6 @@
 ---
 title: "Text Area"
 url: /refguide8/text-area/
-parent: "input-widgets"
 weight: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -90,7 +89,7 @@ Default: *No*
 
 #### 2.6.2 Number of Lines
 
-**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
+**Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scroll bar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
 Default: *5*
 
@@ -108,7 +107,9 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 {{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
-This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+This is the text displayed when the number of characters is higher than the maximum allowed number of characters.
+
+This type of message can also occur when a loaded or stored value exceeds the character limit
 
 #### 2.6.5 Maximum Length
 
@@ -147,5 +148,5 @@ The autocomplete property specifies if a text area should have autocomplete enab
 
 ## 3 Read More
 
-*   [Data view](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data view](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

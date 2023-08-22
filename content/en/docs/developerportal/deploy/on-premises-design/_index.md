@@ -2,7 +2,7 @@
 title: "On-Premises"
 url: /developerportal/deploy/on-premises-design/
 category: "Deployment"
-description: "Describes the options for deploying a Mendix app on premises"
+description: "Describes how to deploy to various on premises platforms."
 weight: 80
 tags: ["Deployment", "On premises", "Environment"]
 aliases:

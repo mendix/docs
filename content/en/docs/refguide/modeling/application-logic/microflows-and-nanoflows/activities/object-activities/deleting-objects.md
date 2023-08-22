@@ -1,20 +1,19 @@
 ---
 title: "Delete Object(s)"
 url: /refguide/deleting-objects/
-parent: "object-activities"
 weight: 50
-tags: ["studio pro"]
+tags: ["studio pro", "delete object", "activity"]
 ---
 
 ## 1 Introduction
 
-Delete object(s) can be used to delete one or more objects.
+The **Delete object(s)** activity can be used to delete one or more objects.
 
 ## 2 Properties
 
 An example of delete object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" width="650px" >}}
 
 This activity cannot be used to delete [external objects](/refguide/external-entities/). Use the [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
@@ -41,27 +40,27 @@ The name of the object or list of objects that will be deleted. If you choose a 
 
 This setting defines whether data sources are rerun after objects are deleted from the database.
 
-Default: *No*
+Default: **No**
 
 {{% alert color="info" %}}
-To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**. When an object is deleted, it will display any attributes as null, but the object will still be displayed (for example, there will be a blank entry for the deleted object in a list view) 
+To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are always reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**. When an object is deleted, it will display any attributes as null, but the object will still be displayed (for example, there will be a blank entry for the deleted object in a list view).
 
-If **Refresh in client** is set to *Yes* then all widgets will be updated, including those which are only updated when a [data source](/refguide/data-sources/) is loaded. 
+If **Refresh in client** is set to **Yes**, then all widgets are updated, including those which are only updated when a [data source](/refguide/data-sources/) is loaded. 
 
 When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
 {{% /alert %}}
 
 #### 3.2.1 Activity Used in a Microflow Called from the Client in a Responsive Web App or PWA
 
-If **Refresh in client** is set to *No*, the data sources are not rerun, and widgets which need to reload data will still display the object(s).
+If **Refresh in client** is set to **No**, the data sources are not rerun, and widgets which need to reload data will still display the object(s).
 
-If set to *Yes*, the deletion is reflected across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
+If set to **Yes**, the deletion is reflected across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 
 #### 3.2.2 Activity Used in a Microflow Called in an Offline-First App
 
-When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+When inside a microflow that is called from an offline or native app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
 #### 3.2.3 Activity Used in a Nanoflow {#delete-in-nano}
 
@@ -76,16 +75,20 @@ When using the activity in a nanoflow accessible from an offline profile, please
 * Deleting non-persistable objects is not supported
 * If the entity of an object passed to the activity has any associations with other entities in the domain model, the delete behavior for each of those associations must be set to **Keep {associated entity name} object(s)** (for more details, see the [example below](#delete-example))
 * Setting a different delete behavior option triggers a consistency error
-* Before and after delete events will be triggered only upon synchronization of the deleted object
-* Before and after delete events will not be triggered for an object that does not exist in the runtime database
-*  When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
-	* Deleting such an object removes it from the device and does not require synchronization, therefore the before and after events of the corresponding entity will not be triggered
+* Before and after delete events are only triggered upon synchronization of the deleted object
+* Before and after delete events are not triggered for an object that does not exist in the runtime database
+* When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
+    * Deleting such an object removes it from the device and does not require synchronization, and therefore the before and after events of the corresponding entity will not be triggered
 
-For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties/#delete-behavior) section of *Association Properties*.
+For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties/#delete-behavior) section of Association Properties.
 
-<a name="delete-example"></a> For example, the **On delete of 'Customer' object** option below should be set to **Keep 'Order' objects**:
+### 4.1 Example {#delete-example}
+
+The following example shows that one **Customer** object is associated with multiple **Order** objects:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-0.png"   width="350"  >}}
+
+The **On delete of 'Customer' object** option below should be set to **Keep 'Order' objects**:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-1.png"   width="350"  >}}
 
@@ -97,22 +100,30 @@ For more information on associations' delete behavior, see the [Delete Behavior]
 
 ### 6.1 Activity Used in a Microflow or a Nanoflow in a Responsive Web App or PWA
 
-Clicking a **Delete** button or triggering a delete activity will initiate the delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
+Clicking a **Delete** button or triggering a delete activity will initiate delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
 
-In detail, this is what happens during deletions:
+In detail, the following graph shows what happens during deletions:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" >}}
+
+{{% alert color="info" %}}
+The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The **Delete object(s)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object(s)** activity.
+{{% /alert %}}
 
 * Events:
-	* All before and after events are executed, and if any before-delete event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
-	* Changes made prior to the rollback will be kept
+    * All before and after events are executed, and if any before-delete event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
+    * Changes made prior to the rollback are kept
 * Database:
-	* If an object has the **Instantiated** state, there will be no database communication required
-	* For any other status, a delete query is executed in the database
+    * If an object has the **Instantiated** state, there will be no database communication required
+    * For any other status, a delete query is executed in the database
 * Result:
-	* The object will be removed from memory and (if applicable) from the database
-	* All delete behavior for the associations is validated, and any associated objects are removed as well
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/18582171.png" >}}
+    * The object is be removed from memory and (if applicable) from the database
+    * All delete behavior for the associations is validated, and any associated objects are removed as well
 
 ### 6.2 Activity Used in a Nanoflow in an Offline-First App 
 

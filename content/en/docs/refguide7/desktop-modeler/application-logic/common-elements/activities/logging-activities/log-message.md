@@ -1,7 +1,6 @@
 ---
 title: "Log Message"
 url: /refguide7/log-message/
-parent: "logging-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -34,7 +33,7 @@ The log level defines the severity of the log message. In the modeler console do
 | Error | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917894.png" >}} | Used to log error messages. These messages appear in red. |
 | Critical | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917895.png" >}} | Used to log critical errors. These messages appear in  white on red  . |
 
-_Default value:_ Info
+*Default value:* Info
 
 ### 2.2 Log Node Name
 
@@ -68,4 +67,4 @@ Defines whether to include the stack trace of the latest error in this log messa
 
 Double-clicking these log messages shows the stack trace.
 
-This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in the modeler.
+This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stack trace to the logline in the modeler.

@@ -1,0 +1,59 @@
+# This is a basic workflow to help you get started with Actions
+name: Auto lint content
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow at a specific time
+  schedule:
+    - cron: '00 20 1 * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "lint-pr"
+  lint-pr:
+    # Check if the event is not triggered by a fork
+    if: github.repository_owner == 'mendix'
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      # Installs NodeJS v16 in runner environment
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      # Installs linting tool via npm
+      - name: Install markdown linter
+        run: npm install markdownlint-cli2 --global
+      # Runs linter on content, rules specified in yaml config file
+      # Adds the terminal messages to tmp.log file
+      - name: Run markdownlint-cli2
+        run: |
+          markdownlint-cli2-config ".markdownlint-cli2.yaml" "content/en/docs/**/*.md" 2>&1 | tee ./tmp.log
+      # Dumps tmp.log contents into env variable, to use for PR body text
+      - name: Grab markdownlint log
+        id: echo-log
+        run: |
+          chmod +x ./tmp.log
+          VER=$(cat << EOF ./tmp.log)
+          echo "VER<<EOF" >> $GITHUB_ENV
+          echo "$VER" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      # Creates PR for linted content changes
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Run markdownlint-cli2 on docs
+          title: '[Auto] Lint docs'
+          body: |
+            ${{ env.VER }}
+          branch: lint-docs
+          assignees: MarkvanMents
+          reviewers: MarkvanMents
+          labels: Internal WIP
+          add-paths: |
+            content/en/docs/**/*.md

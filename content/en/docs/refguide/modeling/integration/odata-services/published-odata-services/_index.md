@@ -37,6 +37,12 @@ Use the **Version** field to assign a version number to the service. This number
 It is recommended to use [semantic versioning](https://semver.org/) for services that you publish.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Once a version is released to production, any further changes should be made to a new version of the service.
+
+This is because changes to a particular version of a published OData service will be reflected in every environment for which the service is published. For example, if you have version 1.0.0 published to both test and production environments, any changes you make to version 1.0.0 of the service in test will also be reflected in the service in production.  
+{{% /alert %}}
+
 ### 2.3 Location
 
 The location denotes where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.

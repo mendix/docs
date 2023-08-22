@@ -13,6 +13,8 @@ As of Mendix 10, Studio Pro allows you to publish microflows as part of an OData
 
 ### 2.1 Add a microflow
 
+{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/microflows-grid.png" alt="published microflows" >}}
+
 In the **Microflows** tab of the published OData service, click the **Add** button. This will open a selector dialog where you can select the microflow you want to publish. From here you can also press **New** to create a new microflow for this purpose. Upon clicking **Select** the microflow will be added with the microflow name as its default **Exposed name**. In order to change this and add documentation, you can edit the published microflow.
 
 Another way of publishing a microflow is from the microflow itself, by right-clicking on the canvas and clicking **Publish as OData action...**, or dragging the microflow from the connector pane onto the **Microflows** grid within the published OData service's **Microflows** tab.

@@ -145,7 +145,7 @@ External actions are displayed under the service, below the entities. By default
 
 By clicking the expand button next to the action, the parameters and return type of that action are shown. You can right-click and select **Find Usages** in order to search for all the places the action is used throughout the app.
 
-{{< figure src="TODO" alt="Integration pane actions" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/actions.png" alt="integration pane actions" >}}
 
 {{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged to a microflow.{{% /alert %}}
 

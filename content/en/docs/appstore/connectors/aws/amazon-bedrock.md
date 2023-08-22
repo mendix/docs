@@ -9,32 +9,25 @@ tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
 
 ## 1 Introduction
 
-The [Amazon Bedrock]([#needs-link]) connector enables you to enrich your Mendix app with AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
+The connector enables you to enrich your Mendix app with AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/). 
 
 ### 1.1 Typical Use Cases
 
-Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that's best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, privately customize FMs with your own data, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities. Agents for Amazon Bedrock are fully managed and make it easier for developers to create generative-AI applications that can deliver up-to-date answers based on proprietary knowledge sources and complete tasks for a wide range of use cases.
+Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that's best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, privately customize FMs with your own data, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities. Typical use cases could include the following:
+
+* Building an AI Agent to answer questions about propietary data.
+* Generating images based on text-prompts and displaying them in the Mendix app.
 
 ### 1.2 Prerequisites {#prerequisites}
-
-#### VARIANT 1 - IF THE CONNECTOR ONLY REQUIRES THE AWS AUTHENTICATION CONNECTOR
 
 The Amazon Bedrock connector requires Mendix Studio Pro version 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
-#### VARIANT 2 - IF THE CONNECTOR ALSO HAS OTHER DEPENDENCIES
-
-The Amazon Bedrock connector requires Mendix Studio Pro version 9.18.0 or above.
-
-To use the Amazon Bedrock connector, you must also install and configure the following modules:
-
-* [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-* {OTHER MODULES AS REQUIRED, WITH A SHORT DESCRIPTION OF THEIR PURPOSE AND A LINK TO THEIR PAGES ON MARKETPLACE.}
-
 ### 1.3 Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+The pricing of the Amazon Bedrock Connectors is dependent on the Foundational Model used an can be found in the Foundational Model overview in the AWS consle. 
 
 {{% alert color="info" %}}
 Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
@@ -48,7 +41,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **{MODULENAME}** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to {AWS SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **Amazon Bedrock Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### 3.1 Configuring AWS Authentication
 
@@ -58,10 +51,10 @@ In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. 
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use session or static credentials to authenticate.
-    The Amazon Bedrock connector supports {SUPPORTED CONNECTION TYPES, USUALLY "both session and static credentials"}. By default, the connector is pre-configured to use {STATIC/SESSION, USUALLY "static"} credentials, but you may want to switch to {SESSION/STATIC, USUALLY "session"} credentials, for example, {IF SWITCHING TO SESSION, "to increase the security of your app"; IF SWITCHING TO STATIC, "to quickly test the authentication process"}. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The Amazon Bedrock connector supports {SUPPORTED CONNECTION TYPES, USUALLY "both session and static credentials"}. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
+    < figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">
 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
@@ -86,9 +79,23 @@ In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for {AWS SERVICE NAME}, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
-{A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
+3. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **ListFoundationModels** activity.
+4. Drag the **ListFoundationModels** activity onto the work area of your microflow.
+5. Double-click the **ListFoundationModels** activity to configure the required parameters.
+6. For the ENUM_Region parameter provide a value by using a variable or an expression. For a list of available AWS regions, see [ENUM_Region](#enum-region).
+7. For the Credentials parameter, provide a Credentials Object from the AWS Authentication Connector. One way to achieve this is described below:
+    * In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **Credentials_GenerateFromConstants** action under > **Resources** > **Authentication**.
+    * Drag the **Credentials_GenerateFromConstants** to the beginning of your microflow.
+    * Double-click the **Credentials_Generate** activity to configure the required parameters and provide a value for the AWS Region.
+7. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activtiy.    
+8. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
+9. Double click the **Retrieve** activity and make sure *By Association* is selected.
+10. Select the *ModelSummary_ListFoundationModelsResponse* association, which will return a List of Type [`ModelSummary`](#modelsummary).
+11. To further use the response information, we recommend to create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
 
@@ -98,15 +105,11 @@ To help you work with the Amazon Bedrock connector, the following sections of th
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.X {ENTITY NAME}
-
-{DESCRIBE THE ENTITY AND ITS PURPOSE. LIST ATTRIBUTES, GENERALIZATIONS AND ASSOCIATIONS WHERE RELEVANT}
-
-#### 4.1.1 ListFoundationModelsResponse
+#### 4.1.1 ListFoundationModelsResponse {#listfoundationmodelsresponse}
 
 The ListFoundationModelsResponse entity collects (via association) details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the ModelSummary entity.
 
-#### 4.1.2 ModelSummary
+#### 4.1.2 ModelSummary {#modelsummary}
 
 The ModelSummary entity stores details (per model) needed to invoke all the available foundational models. 
 
@@ -126,7 +129,7 @@ This is the request entity of the InvokeModelGeneric action.
 | `ContentType` | The ContentType attribute describes the MIME type of the input data in the request. The default value is 'application/json'.|
 | `SavePrompt` | The SavePrompt attribute describes whether to save this prompt in your prompt history. Default value is false.|
 
-#### 4.1.4 InvokeModelGenericResponde {#invokemodelgenericresponse}
+#### 4.1.4 InvokeModelGenericResponse {#invokemodelgenericresponse}
 This is the response entity of the InvokeModelGeneric action.
 
 | Attribute | Description |
@@ -137,46 +140,48 @@ This is the response entity of the InvokeModelGeneric action.
 
 ### 4.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon Bedrock connector, enumerations list values such as {USUALLY "the list of available AWS regions", POSSIBLY ALSO OTHERS AS REQUIRED}.
+An enumeration is a predefined list of values that can be used as an attribute type. For the more information, see [Enumerations](https://docs.mendix.com/refguide/enumerations/).
 
-#### 4.2.1 `{ENUMERATION NAME}`
+#### 4.2.1 `ENUM_Region` {#enum-region}
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| {ENUMERATION ELEMENT NAME} | {ENUMERATION ELEMENT VALUE} | {ENUMERATION ELEMENT DESCRIPTION} |
+| Name | Caption |
+| --- | --- |
+| us_east_2 | US East (Ohio) |
+| us_east_1 | US East (N. Virginia) |
+| us_west_1 | US West (N. California) |
+| us_west_2 | US West (Oregon) |
+| af_south_1 | Africa (Cape Town) |
+| ap_east_1 | Asia Pacific (Hong Kong) |
+| ap_southeast_3 | Asia Pacific (Jakarta) |
+| ap_south_1 | Asia Pacific (Mumbai) |
+| ap_northeast_3 | Asia Pacific (Osaka) |
+| ap_northeast_2 | Asia Pacific (Seoul) |
+| ap_southeast_1 | Asia Pacific (Singapore) |
+| ap_southeast_2 | Asia Pacific (Sydney) |
+| ap_northeast_1 | Asia Pacific (Tokyo) |
+| ca_central_1 | Canada (Central) |
+| eu_central_1 | Europe (Frankfurt) |
+| eu_west_1 | Europe (Ireland) |
+| eu_west_2 | Europe (London) |
+| eu_south_1 | Europe (Milan) |
+| eu_west_3 | Europe (Paris) |
+| eu_north_1 | Europe (Stockholm) |
+| me_south_1 | Middle East (Bahrain) |
+| sa_east_1 | South America (São Paulo) |
 
 ### 4.3 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Bedrock connector, they {PURPOSE OF THE ACTIVITIES}.
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
 
-#### 4.3.X {ACTIVITY NAME}
+#### 4.3.1 List Foundation Models {#list-foundation-models}
 
-The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
-"}
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
-
-##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
-
-This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
-
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |
-
-#### 4.3.1 GET_V1_ListFoundationModels
-
-The GET_V1_ListFoundationModels Bedrock activity allows you to get all the available foundational models AWS Bedrock provides. It requires a Credentials object and ENUM_Region value (like "us_west_2").
+The `List Foundation Models` activity allows you to get all the available foundational models AWS Bedrock provides. It requires a Credentials object and ENUM_Region value (like "us_west_2").
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Credentials + ENUM_Region` | `ListFoundationModelsResponse & ModelSummary` |
+| `Credentials`, `ENUM_Region` | `ListFoundationModelsResponse`, `ListFoundationalModelsResponse` |
 
 #### 4.3.2 Invoke Model Generic {#invoke-model-generic}
 The `InvokeModel Generic` activity allows you to invoke a model from amazon bedrock. this action provides the generic parts that are equal for the invokation of every model. It requires AWS_Region, RequestBody, InvokeModelGenericRequest as input parameters.

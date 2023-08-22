@@ -59,12 +59,18 @@ Only users with the **App Settings** permission can change the description of th
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Manage Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
 
-On the tab, you can only see the environments that satisfy these requirements:
+On the tab, you can only see the environments that satisfy the following requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
-* Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
+* You are currently assigned a user role in the app which allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
+
+{{% alert color="info" %}}
+When deploying your application to a non-production environment, the deploying user and the Technical Contact are always assigned the Administrator user role.
+
+When deploying your application to a production environment, the Technical Contact is always assigned the Administrator user role. If you cannot see an environment, ask your Technical Contact to assign you a user role for that environment which allows you to manage other users. 
+{{% /alert %}}
 
 ### 3.1 Managing Users {#manage-users}
 

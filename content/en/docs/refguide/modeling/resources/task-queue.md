@@ -262,7 +262,13 @@ Task queues have the following limitations:
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
 
-### 4.3 High-Level Implementation Overview
+### 4.3 Behavior If App Stops Unexpectedly
+
+If your app stops unexpectedly, a task can be left in a running state. This means that the [retry on failure](#retry) mechanism will not be triggered as the task does not appear to have failed.
+
+However, within 30 minutes of your app being restarted, the Mendix runtime will see that the task is no longer owned (see [High-Level Implementation Overview](#implementation), below) and will reschedule the tasks. This means that you will not see your tasks immediately restarted after an unexpected stop, but they will be restarted a few minutes later.
+
+### 4.4 High-Level Implementation Overview{#implementation}
 
 Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`, `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, `Arguments`, `ContextType`, `ContextData`, and `System.owner` of the task. This happens as part of the transaction which calls the microflow or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
 

@@ -22,5 +22,5 @@ You can **Add** or **Delete** parameters from the published microflow using the 
 To edit a published parameter, either select a parameter and click **edit** or double-click the parameter. The **Edit published microflow parameter** will show up which allows you to edit the **Exposed name** of the published parameter, and you can set a value for **Can be empty**. If **Can be empty** is disabled, calls to the published microflow will fail if the parameter is not provided.
 
 {{% alert color="info" %}}
-Note that boolean parameters can never be empty.
+Note that boolean and list parameters can never be empty.
 {{% /alert %}}

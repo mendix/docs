@@ -54,6 +54,10 @@ In the table below the selected action, you will find the parameters that are de
 
 Selecting a row in the table and hitting **Edit parameter value**, or simply double-clicking it, will show you the [Edit External Action Parameter Mapping](#edit-parameter-mapping) dialog, where you can edit the argument that will be passed when calling the external action.  
 
+### 4.3 Output
+
+On the bottom of the dialog there will be an **Output** section if the action has a return value defined. If the action returns something, this box displays the type of the return value. The **Use return variable** toggle will by default be set to Yes, in which case you can enter a name for the variable that you want to be created with the return value.
+
 ## 5 Public Documentation Tab {#public-documentation}
 
 In the **Public documentation** tab, you can find a **Summary** and a **Description**. These fields contain documentation provided by the author of the service.

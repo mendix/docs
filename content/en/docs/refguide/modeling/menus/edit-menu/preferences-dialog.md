@@ -73,14 +73,6 @@ A directory where Gradle is located on the computer that you use to deploy the a
 
 Gradle is necessary to deploy Mendix applications if the **Build using Gradle** setting is enabled.
 
-#### 3.2.3 Use custom repositories
-
-Enabling this option will allow you to specify which repositories should be used by Gradle.
-
-#### 3.2.4 Repositories
-
-Here you can specify which repositories to use for Gradle. The contents of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default this field contains: `mavenCentral()`.
-
 ## 4 Mendix Assist Tab
 
 ### 4.1 Logic Bot

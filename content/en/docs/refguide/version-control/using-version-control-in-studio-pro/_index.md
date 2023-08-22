@@ -127,6 +127,21 @@ To push changes, select **Version Control** > **Push** or make sure that the **A
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
 
+#### 4.3.1 Push fast-forward only
+
+It could happen that while you were working on the changes on your branch somebody else pushed their changes to it already. In this case when you will try to push your commit you will see an information dialog suggestign you to Pull to integrate those remote changes into yours.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
+
+This happens because git sees your changes and changes on the remote as simultaneous and potentially conflicting. The end result should contain both changes (yours and theirs) in order they were committed.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/remote-local-rebase.png" >}} 
+
+When you pull the changes, SudioPro will merge the changes from the remote into your local branch. After this you will need to make a so called "Merge Commit". This commit is very important as it contains the changes that might have happened during integration of remote changes into yours.
+There are 2 possible scenarios for that:
+1. No conflicts -- (e.g. you added a microflow and somebody else added a module on the remote). In this case Studio pro can autoresolve this and there is nothing for you to do.
+2. Conflicting changes -- (e.g. a button was changed by both you and the other developer on the remote). In this case you will need to make some changes to resolve conflicts (as if it would've been a normal merge of two branches). In this case the merge commit will contain these changes so that all the 3 sets of changes can be reviewed in history: what you did locally, what somebody else did while you were working, and what did you do to accomodate their changes into yours.
+
 ### 4.4 Pulling
 
 Pulling retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.

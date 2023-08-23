@@ -201,7 +201,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
     * You can now create, link, or remove stories directly from an epic.
     * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-    * If you use Scrum, you can now see a summary of your completed Sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-Sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * If you use Scrum, you can now see a summary of your completed Sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
     * You can now [import](/developerportal/project-management/epics/planning/#import-stories) and [export](/developerportal/project-management/epics/archive/#export-archived-stories) stories using Excel files.
 
 #### Fixes

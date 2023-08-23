@@ -22,10 +22,10 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 * Enables you to migrate open stories (stories in any uncompleted Sprint or backlog, with the status "to-do" or "running") from the Developer Portal to Jira
 * Allows you to associate your commits in Studio Pro (version 7.19 or above) to Jira stories
 
-    * In case of a Scrum board, the Stories Pane shows all stories from all your active sprints, ordered by the Rank attribute
-    * In case of Kanban board, the Stories Pane shows all stories from your board, taking the sub-query of the board settings into account, ordered by the Rank attribute
+    * In case of a Scrum board, the Stories pane shows all stories from all your active Sprints, ordered by the Rank attribute
+    * In case of Kanban board, the Stories pane shows all stories from your board, taking the sub-query of the board settings into account, ordered by the Rank attribute
 
-* Convert your Feedback in App Insights will result in a story in Jira
+* Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira
 
 ## 3 Limitations
 

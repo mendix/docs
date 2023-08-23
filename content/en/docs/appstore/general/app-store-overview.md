@@ -35,10 +35,9 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | --- | --- |
 | [Module](/appstore/modules/) | Software functionality which can include a data model, logic, and UI with a portable security model. |
 | [Widget](/appstore/widgets/) | Single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
-| **Theme** | Ready-to-use layouts—themes of a personalized style which can be shared and used by Makers to enrich the app with a specific design. |
 | **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with by configuring a connection in the app’s module. |
 | <a id="industry"></a>**Solution** | Out-of-the-box solutions which are aimed at industry and domain problems, delivering instant value. These solutions are usually at least 80% ready for use and need minimal adaptation to make them work for the customer-specific use case. |
-| **Starter Template** | Sample projects which have certain capabilities in place to provide a basis for the Maker to start developing their app. The Maker does not create an app from a blank template but from a template which already has some features configured.|
+| **Starter Template** | Sample projects that have certain capabilities in place to provide a basis for the user to start developing their own app. The user does not create an app from a blank template, but from a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
 | **Industry Template** | Accelerators for implementing industry-specific processes. Industry Templates increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Templates are starter templates which are intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They will usually cover around 20% of the process. |
 
 The following filter options are also available:

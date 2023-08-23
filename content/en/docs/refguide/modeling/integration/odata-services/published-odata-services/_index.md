@@ -40,7 +40,7 @@ It is recommended to use [semantic versioning](https://semver.org/) for services
 {{% alert color="warning" %}}
 Once a version is released to production, any further changes should be made to a new version of the service.
 
-This is because changes to a particular version of a published OData service will be reflected in every environment for which the service is published. For example, if you have version 1.0.0 published to both test and production environments, any changes you make to version 1.0.0 of the service in test will also be reflected in the service in production.  
+This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
 {{% /alert %}}
 
 ### 2.3 Location

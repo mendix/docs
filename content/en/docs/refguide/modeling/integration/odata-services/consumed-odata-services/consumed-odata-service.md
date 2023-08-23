@@ -174,11 +174,11 @@ Minor service updates can be deployed to the same service endpoints, thereby ens
 
 When a major change has been made to a published service we recommend that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number.
 
-In this case the new service should be registered in the Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**:
+In this case the new service should be registered in the Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 2 registered occurrences of the **BikeVehicleTruckService**:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update-version.png" alt="4 endpoints"   width="250"  >}}
 
-There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both major versions have also been deployed to **Acceptance** which also results in separately registered assets in the Catalog at different endpoints.
+There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. 
 
 {{% alert color="info" %}}
 Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change.
@@ -206,7 +206,7 @@ In the [Integration Pane](/refguide/integration-pane/), in search results and in
 
 ##### 4.3.1.2 Update Service Dialog Box
 
-When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **App** sections, the **Update** dialog box is displayed.
+When you click **Update** on the **Consumed OData Service** document or the update icon in the **Integration** pane, the **Update** dialog box is displayed.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" >}}
 
@@ -232,13 +232,9 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-switch.png" alt="major change environment" >}}
 
-2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from (note that an endpoint is also detected that is deployed to **Production**) and click **Switch**:
+2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from (note that an endpoint is also detected that is deployed to **Production**) and click **Switch**.
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switch-environment.png" alt="major change environment" >}}
-
-3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document will display the changed service details and the [Integration Pane](/refguide/integration-pane/) now displays that you are consuming from the selected environment:
-
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switch-new-environment.png" alt="major change environment dh pane"   width="300"  >}}
+3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document will display the changed service details and the [Integration Pane](/refguide/integration-pane/) now displays that you are consuming from the selected environment.
 
 ## 5 Read More
 

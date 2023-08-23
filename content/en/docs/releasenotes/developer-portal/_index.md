@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### August 24, 2023
+
+#### Improvements
+
+* We listened to your feedback and finetuned our [Jira integration](/developerportal/project-management/jira-connector/) support for Scrum boards. The [Stories Pane](/refguide/stories-pane/) in Studio Pro now shows all stories belonging to the active sprints of your board (this used to be all open sprints with a limitation of 50 stories)
+
 ### August 17, 2023
 
 #### Improvements

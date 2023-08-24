@@ -48,7 +48,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 - We fixed an issue where new users who were trying to access Feedback for the first time via a URL would be presented with an error.
 - We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
 - We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
-- We fixed an issue where when clicking **Developer Portal** within the MxDock, users would not be brought to the Developer Portal home Page.
+- We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
 
 ### August 17, 2023
 

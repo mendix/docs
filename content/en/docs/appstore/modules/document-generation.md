@@ -223,7 +223,7 @@ If no time zone is configured for the user that is passed in the `Generate as us
 ### 4.4 Styling Documents
 
 #### 4.4.1 Page settings
-The following Page-related design properties are available in the **Design properties** section in the properties panel.
+The following Page-related design properties are available in the **Styling** tab of the properties panel.
 
 | Design property | Description |
 |-----------------|-------------|
@@ -235,7 +235,7 @@ The following Page-related design properties are available in the **Design prope
 
 You can use the **Page break** widget that is included in this module to structure your documents. This widget enables you to force a page break at a specific position in your document. In addition, you can use the **Add page break** design property that is available for Container widgets.
 
-The following Container widget related design properties are available in the **Design properties** section in the properties panel.
+The following Container widget related design properties are available in the **Styling** tab of the properties panel.
 
 | Design property | Description |
 |-----------------|-------------|

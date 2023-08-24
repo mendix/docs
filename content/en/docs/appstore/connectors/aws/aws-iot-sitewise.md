@@ -481,6 +481,35 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | NextToken | Describes the token for the next set of results, or null if there are no additional results. |
 
+### 4.1.51 GetAssetPropertyAggregatesRequest {#get-asset-property-aggregates-request}
+
+| Attribute | Description |
+| --- | --- |
+| AggregateType | Describes the data aggregating function and is a required parameter. |
+| AssetID | Describes the ID of the asset. |
+| EndDate | Describes the inclusive end of the range from which to query historical data and is a required parameter. |
+| MaxResults | Describes the maximum number of results to return for each paginated request. |
+| NextToken | Describes the token to be used for the next set of paginated results. |
+| PropertyAlias | Describes the alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). |
+| PropertyID | Describes the ID of the asset property. |
+| Quality | Describes the quality by which to filter asset data. |
+| Resolution | Describes the time interval over which to aggregate data and is a required parameter. |
+| StartDate | Describes the exclusive start of the range from which to query historical data and is a required parameter. |
+| TimeOrdering | Describes the chronological sorting order of the requested information. |
+
+### 4.1.52 GetAssetPropertyAggregatesResponse {#get-asset-property-aggregates-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token for the next set of results, or null if there are no additional results. |
+
+### 4.1.53 AggregatedValue {#aggregated-value}
+
+| Attribute | Description |
+| --- | --- |
+| Quality | Describes the quality of the aggregated data. |
+| Timestamp | Describes the date the aggregating computations occurred. |
+
 ### 4.1. ENTITY_NAME {#entity_name}
 
 | Attribute | Description |
@@ -628,6 +657,26 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | ASCENDING | ASCENDING | Chronological sorting order of the requested information is ascending. |
 | DESCENDING | DESCENDING | Chronological sorting order of the requested information is descending. |
 
+#### 4.2.55 ENUM_Resolution
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| _1m | 1m | Time interval of one minute over which data is aggregated. |
+| _15m | 15m | Time interval of fifteen minutes over which data is aggregated. |
+| _1h | 1h | Time interval of one hour over which data is aggregated. |
+| _1d | 1d | Time interval of one day over which data is aggregated. |
+
+#### 4.2.55 ENUM_AggregateType
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| AVERAGE | AVERAGE | Data aggregating function being the mean value in the specified period. |
+| COUNT | COUNT | Data aggregating function being the count of data points. |
+| MAXIMUM | MAXIMUM | Data aggregating function being the maximum value in the specified period. |
+| MINIMUM | MINIMUM | Data aggregating function being the minimum value in the specified period. |
+| SUM | SUM | Data aggregating function being the summed up value in the specified period. |
+| STANDARD_DEVIATION | STANDARD_DEVIATION | Data aggregating function being the standard deviation in the specified period. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -748,7 +797,15 @@ The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to re
 
 | Input | Output | 
 | --- | --- | 
-| `GetAssetPropertyValueRequestHistory` | `GetAssetPropertyValueResponseHistory` |
+| `GetAssetPropertyValueHistoryRequest` | `GetAssetPropertyValueHistoryResponse` |
+
+#### 4.3.13 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+
+The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retrieve aggregated values for an asset property. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyAggregatesRequest` object and returns a `GetAssetPropertyAggregatesResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `GetAssetPropertyAggregatesRequest` | `GetAssetPropertyAggregatesResponse` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

@@ -96,14 +96,14 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
-1. Enable the DocGen request handler.
+1. Enable the DocGen request handler (licensed apps only).
 2. Register your app environments.
 
 The steps for each procedure are described in the sections below. 
 
-#### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
+#### 3.2.1 Enabling the DocGen Request Handler for Licensed Apps {#enable-docgen}
 
-{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app to Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#24-deploying-a-free-app-to-the-mendix-cloud). You can  [register your app environment](#register-app) directly.{{% /alert %}}
+{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#24-deploying-a-free-app-to-the-mendix-cloud) to Mendix Public Cloud. You can [register your app environment](#register-app) directly.{{% /alert %}}
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
@@ -136,9 +136,9 @@ The steps for each procedure are described in the sections below.
 
 #### 3.2.2 Registering Your App Environments {#register-app}
 
-1. Add the snippet **Snip_AppRegistration** to a page that is accessible to admin users in your app.
-2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service.
-3. Make sure that your changes are deployed to your Mendix Cloud environment.
+1. Add the snippet **Snip_AppRegistration** to a page in your app that is accessible to users with the **Administrator** module role set in the **DocumentGeneration** module. The snippet can be found in the  **_UseMe** > **Admin** folder of the **DocumentGeneration** module.
+2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service. The scheduled event can be found in the  **_UseMe** > **Scheduled events** folder of the **DocumentGeneration** module.
+3. Make sure that your changes are [deployed to your Mendix Cloud environment](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#2-deploying-an-app-to-the-mendix-cloud).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.

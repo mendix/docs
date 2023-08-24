@@ -100,67 +100,71 @@ The domain model is a data model that describes the information in your applicat
 
 #### 4.1.1 ListFoundationModelsResponse {#listfoundationmodelsresponse}
 
-The ListFoundationModelsResponse entity collects (via association) details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the ModelSummary entity.
+The `ListFoundationModelsResponse` entity collects (through association) the details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the `ModelSummary` entity.
 
 #### 4.1.2 ModelSummary {#modelsummary}
 
-The ModelSummary entity stores details (per model) needed to invoke all the available foundational models. 
+The `ModelSummary` entity stores the details (per model) needed to invoke all the available foundational models. 
 
 | Attribute/Association | Description |
 | --- | --- |
 | `ModelArn` | The ARN (Amazon Resource Name) that identifies the foundational model (string)|
-| `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models and is used to invoke the model in question (string)|
-| `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the ListFoundationalModelsResponse (string)|
+| `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
+| `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the `ListFoundationalModelsResponse` (string)|
 
 #### 4.1.3 InvokeModelGenericRequest {#invokemodelgenericrequest}
-This is the request entity of the InvokeModelGeneric action.
+
+This is the request entity of the `InvokeModelGeneric` action.
 
 | Attribute | Description |
 | --- | --- |
-| `ModelId` | The ModelId attribute describes identifier of the model and is a required parameter.|
-| `Accept` | The Accept attribute describes the desired MIME type of the inference body in the response. The default value is 'application/json'.|
-| `ContentType` | The ContentType attribute describes the MIME type of the input data in the request. The default value is 'application/json'.|
-| `SavePrompt` | The SavePrompt attribute describes whether to save this prompt in your prompt history. Default value is false.|
+| `ModelId` | The `ModelId` attribute describes identifier of the model and is a required parameter.|
+| `Accept` | The `Accept` attribute describes the desired MIME type of the inference body in the response. The default value is `application/json`.|
+| `ContentType` | The `ContentType` attribute describes the MIME type of the input data in the request. The default value is `application/json`.|
+| `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**.|
 
 #### 4.1.4 InvokeModelGenericResponse {#invokemodelgenericresponse}
-This is the response entity of the InvokeModelGeneric action.
+
+This is the response entity of the `InvokeModelGeneric` action.
 
 | Attribute | Description |
 | --- | --- |
-| `ContentType` | The ContenType attribute describes the MIME type of the inference result.|
-| `ProomptId` | The PromptId describes the identifier of the prompt. Only is available for prompts that are saved.|
-| `ResponseBody` | The ResponseBody attribute holds the JSON response body of the specific model.|
+| `ContentType` | The `ContentType` attribute describes the MIME type of the inference result.|
+| `ProomptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved.|
+| `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model.|
 
 ### 4.2 Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the more information, see [Enumerations](https://docs.mendix.com/refguide/enumerations/).
 
-#### 4.2.1 `ENUM_Region` {#enum-region}
+#### 4.2.1 ENUM_Region {#enum-region}
+
+This enumeration provides a list of available AWS regions.
 
 | Name | Caption |
 | --- | --- |
-| us_east_2 | US East (Ohio) |
-| us_east_1 | US East (N. Virginia) |
-| us_west_1 | US West (N. California) |
-| us_west_2 | US West (Oregon) |
-| af_south_1 | Africa (Cape Town) |
-| ap_east_1 | Asia Pacific (Hong Kong) |
-| ap_southeast_3 | Asia Pacific (Jakarta) |
-| ap_south_1 | Asia Pacific (Mumbai) |
-| ap_northeast_3 | Asia Pacific (Osaka) |
-| ap_northeast_2 | Asia Pacific (Seoul) |
-| ap_southeast_1 | Asia Pacific (Singapore) |
-| ap_southeast_2 | Asia Pacific (Sydney) |
-| ap_northeast_1 | Asia Pacific (Tokyo) |
-| ca_central_1 | Canada (Central) |
-| eu_central_1 | Europe (Frankfurt) |
-| eu_west_1 | Europe (Ireland) |
-| eu_west_2 | Europe (London) |
-| eu_south_1 | Europe (Milan) |
-| eu_west_3 | Europe (Paris) |
-| eu_north_1 | Europe (Stockholm) |
-| me_south_1 | Middle East (Bahrain) |
-| sa_east_1 | South America (São Paulo) |
+| `us_east_2` | **US East (Ohio)** |
+| `us_east_1` | **US East (N. Virginia)** |
+| `us_west_1` | **US West (N. California)** |
+| `us_west_2` | **US West (Oregon)** |
+| `af_south_1` | **Africa (Cape Town)** |
+| `ap_east_1` | **Asia Pacific (Hong Kong)** |
+| `ap_southeast_3` | **Asia Pacific (Jakarta)** |
+| `ap_south_1` | **Asia Pacific (Mumbai)** |
+| `ap_northeast_3` | **Asia Pacific (Osaka)** |
+| `ap_northeast_2` | **Asia Pacific (Seoul)** |
+| `ap_southeast_1` | **Asia Pacific (Singapore)** |
+| `ap_southeast_2` | **Asia Pacific (Sydney)** |
+| `ap_northeast_1` | **Asia Pacific (Tokyo)** |
+| `ca_central_1` | **Canada (Central)** |
+| `eu_central_1` | **Europe (Frankfurt)** |
+| `eu_west_1` | **Europe (Ireland)** |
+| `eu_west_2` | **Europe (London)** |
+| `eu_south_1` | **Europe (Milan)** |
+| `eu_west_3` | **Europe (Paris)** |
+| `eu_north_1` | **Europe (Stockholm)** |
+| `me_south_1` | **Middle East (Bahrain)** |
+| `sa_east_1` | **South America (São Paulo)** |
 
 ### 4.3 Activities {#activities}
 
@@ -168,7 +172,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 4.3.1 List Foundation Models {#list-foundation-models}
 
-The `List Foundation Models` activity allows you to get all the available foundational models AWS Bedrock provides. It requires a Credentials object and ENUM_Region value (like "us_west_2").
+The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires a **Credentials** object and an `ENUM_Region` value (like **us_west_2**).
 
 The input and output for this service are shown in the table below:
 
@@ -177,7 +181,8 @@ The input and output for this service are shown in the table below:
 | `Credentials`, `ENUM_Region` | `ListFoundationModelsResponse`, `ListFoundationalModelsResponse` |
 
 #### 4.3.2 Invoke Model Generic {#invoke-model-generic}
-The `InvokeModel Generic` activity allows you to invoke a model from amazon bedrock. this action provides the generic parts that are equal for the invokation of every model. It requires AWS_Region, RequestBody, InvokeModelGenericRequest as input parameters.
+
+The `InvokeModel Generic` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `RequestBody` and `InvokeModelGenericRequest` as input parameters.
 
 The input and output for this service are shown in the table below:
 

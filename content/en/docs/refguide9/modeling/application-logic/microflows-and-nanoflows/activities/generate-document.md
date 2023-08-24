@@ -11,6 +11,10 @@ tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", 
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+For generation of PDF documents see our [PDF document generation module](https://docs.mendix.com/appstore/modules/document-generation/)
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide9/document-templates/). 

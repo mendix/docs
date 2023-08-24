@@ -22,34 +22,28 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features
 
 * We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
+
   * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
   * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
   * We added documentation links on the start page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
-
 
 #### Improvements
 
 * We improved the Feedback in App Insights as follows:
 
     * When you manually create feedback items, you can now leave your email address.
-
-    - You can now archive multiple feedback items in one go.
-
-
-    - You can now download the attachments of feedback items that reporters have uploaded.
-
-
-    - If you have the right permission, you can now delete comments on the side panel of a feedback item.
-
+    * You can now archive multiple feedback items in one go.
+    * You can now download the attachments of feedback items that reporters have uploaded.
+    * If you have the right permission, you can now delete comments on the side panel of a feedback item.
 
 * We fine-tuned our [Jira integration](/developerportal/project-management/jira-connector/) support for Scrum boards. The [Stories pane](/refguide/stories-pane/) in Studio Pro now shows all stories belonging to the active Sprints of your board (this used to be all open Sprints with a limitation of 50 stories)
 
 #### Fixes
 
-- We fixed an issue where new users who were trying to access Feedback for the first time via a URL would be presented with an error.
-- We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
-- We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
-- We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
+* We fixed an issue where new users who were trying to access Feedback for the first time via a URL would be presented with an error.
+* We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
+* We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
+* We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
 
 ### August 17, 2023
 

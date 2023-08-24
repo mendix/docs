@@ -2,8 +2,8 @@
 title: "ATS 1 Best Practices"
 url: /appstore/partner-solutions/ats/bp-one/
 weight: 20
+no_list: false
+description_list: true
 ---
 
-These are the main documents in this section:
-
-* [Finding the Action You Need](/appstore/partner-solutions/ats/bp-one-finding-the-action-you-need/)
+These are the documents in this section:

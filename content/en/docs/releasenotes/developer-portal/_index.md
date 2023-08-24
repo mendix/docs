@@ -15,13 +15,42 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
-## 2023
+# 2023
+
+### August 28, 2023
+
+#### New Features
+
+* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 
 ### August 24, 2023
 
 #### New Features
 
-* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
+* We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
+
+  * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+  * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
+  * We added documentation links on the start page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+
+#### Improvements
+
+* We improved the Feedback in App Insights as follows:
+
+    * When you manually create feedback items, you can now leave your email address.
+    * You can now archive multiple feedback items in one go.
+    * You can now download the attachments of feedback items that reporters have uploaded.
+    * If you have the right permission, you can now delete comments on the side panel of a feedback item.
+
+* We fine-tuned our [Jira integration](/developerportal/project-management/jira-connector/) support for Scrum boards. The [Stories pane](/refguide/stories-pane/) in Studio Pro now shows all stories belonging to the active Sprints of your board (this used to be all open Sprints with a limitation of 50 stories)
+
+#### Fixes
+
+* We fixed an issue where new users who were trying to access Feedback for the first time via a URL would be presented with an error.
+* We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
+* We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
+* We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
+
 ### August 17, 2023
 
 #### Improvements
@@ -199,7 +228,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
     * You can now create, link, or remove stories directly from an epic.
     * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * If you use Scrum, you can now see a summary of your completed Sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
     * You can now [import](/developerportal/project-management/epics/planning/#import-stories) and [export](/developerportal/project-management/epics/archive/#export-archived-stories) stories using Excel files.
 
 #### Fixes

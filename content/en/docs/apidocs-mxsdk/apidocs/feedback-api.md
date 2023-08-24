@@ -9,7 +9,7 @@ tags: ["Feedback", "Developer Portal", "API"]
 
 ## 1 Introduction
 
-The Mendix Feedback API allows you to retrieve, add and manage feedback for your Mendix projects.
+The Mendix Feedback API allows you to retrieve, add and manage feedback for your Mendix apps.
 
 To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](/attachments/apidocs-mxsdk/apidocs/feedback-api/19398864.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/).
 
@@ -32,22 +32,22 @@ This call **accepts** the specified feedback item. This means that the app team 
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
-| ApiKey | String | The ApiKey the application uses to access the Feedback API for this project.
+| ApiKey | String | The ApiKey the application uses to access the Feedback API for this app.
 | FeedbackItemID | Integer/Long | The ID of the Feedback item to be accepted 
-| ProjectID | String |  The ID of the project
+| appID | String |  The ID of the app
 
 * Return value – Boolean
 
 ### 2.2 AddFeedback
 
-This call **adds a new feedback item** to the project and returns the ID of the new feedback item.
+This call **adds a new feedback item** to the app and returns the ID of the new feedback item.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
-| ApiKey | String | The ApiKey the application uses to access the Feedback API for this project. 
+| ApiKey | String | The ApiKey the application uses to access the Feedback API for this app. 
 | Description | String | Description of the feedback item. (Optional) 
 | IssueType | Enumeration IssueType | Type of the feedback item (Question/Idea/Problem) 
-| ProjectID | String | The ID of the project. 
+| ProjectID | String | The ID of the app. 
 | Shortname | String | The name of the feedback item. 
 | UserEmail | String | Email address of the user who created the feedback item. 
 | Username | String | Name of the user who created the feedback item.
@@ -60,9 +60,9 @@ This call **closes** the specified feedback item.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
-| ApiKey | String | The ApiKey the application uses to access the Feedback API for this project.
+| ApiKey | String | The ApiKey the application uses to access the Feedback API for this app.
 | FeedbackItemID | Integer/Long | The id of the feedback item being closed. 
-| ProjectID | String | The ID of the project. 
+| ProjectID | String | The ID of the app. 
 | Reason | String | Reason why the feedback item is being closed (Optional)
 
 * Return value – Enumeration IssueState (see below for possible values)
@@ -73,21 +73,21 @@ This call **deletes** the specified feedback item.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
-| ApiKey | String | The ApiKey the application uses to access the Feedback API for this project.
+| ApiKey | String | The ApiKey the application uses to access the Feedback API for this app.
 | FeedbackItemID | Integer/Long | The ID of the Feedback item to be deleted 
-| ProjectID | String | The ID of the project.
+| ProjectID | String | The ID of the app.
 
 * Return value – Boolean
 
 ### 2.5 GetFeedbackItems
 
-This call **retrieves a list of all feedback items** for the project which satisfy the IssueState filter.
+This call **retrieves a list of all feedback items** for the app which satisfy the IssueState filter.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
-| ApiKey | String | The ApiKey the application uses to access the Feedback API for this project. |
-| IssueStateFilter | Enumeration IssueState | State of the Feedback items to be retrieved (Open, Under_review, Accepted, Scheduled, Solved, Rejected; empty returns all feedback for the project). |
-| ProjectID | String | The ID of the project. |
+| ApiKey | String | The ApiKey the application uses to access the Feedback API for this app. |
+| IssueStateFilter | Enumeration IssueState | State of the Feedback items to be retrieved (Open, Under_review, Accepted, Scheduled, Solved, Rejected; empty returns all feedback for the app). |
+| ProjectID | String | The ID of the app. |
 
 * Return value – List of Issue
 
@@ -97,8 +97,8 @@ This call **retrieves a single feedback item** by ID.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
-| ApiKey | String | The ApiKey the application uses to access the Feedback API for this project.
+| ApiKey | String | The ApiKey the application uses to access the Feedback API for this app.
 | FeedbackItemID | Integer/Long | The ID of the Feedback item to be retrieved 
-| ProjectID | String | The ID of the project.
+| ProjectID | String | The ID of the app.
 
 * Return value – Issue

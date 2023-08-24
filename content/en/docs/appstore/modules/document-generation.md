@@ -196,16 +196,19 @@ For scenarios where you want to generate documents as a system task (for example
 
    {{% alert color="info" %}}Do not use regular user accounts for the **Generate as user** parameter, since this could have side effects, for example, changes in the last login date, or failures when multiple sessions are disabled and the applicable user logs in at the same time.{{% /alert %}}
 
-4. Run the app and create a new local user as the service user. Give the service user the app role that you created for document generation and use a strong password. The service user will be used to generate documents. When starting with a blank app, you can add the **Administration.Account_Overview** page to manage and create new users. 
+4. Run the app and create a new local user as the service user. Give the service user the app role that you created above and use a strong password. The service user will be used to generate documents.
 
-   {{% alert color="info" %}}You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.{{% /alert %}}
+   {{% alert color="info" %}}
+   When starting with a blank app, you can use the **Administration.Account_Overview** page from the [Administration module](appstore/modules/administration/) to manage and create new users.
 
-5. Create a microflow to retrieve and return the configured service user.
+   You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.{{% /alert %}}
 
-6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user) as input for the **Generate as user** parameter of the action.
+5. Create a microflow to retrieve and return the configured service user object.
+
+6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user object) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
-We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to login. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
+We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
 

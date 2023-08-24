@@ -56,7 +56,7 @@ The PDF document generation service does not store pages or documents at any tim
 
 ### 1.4 Known issues
 
-* The `System.Owner` association is currently not set to the user which has run the microflow.
+* The `System.Owner` association is currently not set to the user which has run the microflow. Instead, the user that is configured for the `Generate as user` property of the **Generate PDF from page** action is used to set the association.
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
 

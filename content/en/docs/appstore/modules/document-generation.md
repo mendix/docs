@@ -254,58 +254,16 @@ We recommend not to use the viewport width (`vw`) and viewport height (`vh`) uni
 
 ### 5.1 App Environment Registration Issues
 
-#### 5.1.1 Invalid Developer Credentials
+In case you encounter any issues while [registering your app environment(s)](#register-app), refer to the table below for more details and suggestions on how to resolve them.
 
-If you encounter the message "Invalid developer credentials",  then the developer information as provided in the **Email** and **API key** fields is incorrect. 
-
-Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active.
-
-#### 5.1.2 Invalid App
-
-If you encounter any of the following error messages:
-
-* "Invalid app"
-* "App not found for the given user"
-
-Then the provided App ID is either incorrect or that the developer (based on the **Email** and **API key** fields) does not have access to this app
-
-Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app.
-
-#### 5.1.3 Invalid Application URL
-
-If you encounter the message "Application URL does not match any of the environment URLs", then the app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. 
-
-Verify that the **App ID** and **Application URL** fields are correct.
-
-#### 5.1.4 Unable to Reach App
-
-If you encounter any of the following error messages:
-
-* "Domain verification failed, unable to reach app"
-* "Domain verification failed, unable to reach verification endpoint"
-* "Domain verification failed, verification endpoint inactive"
-
-Then the cloud service was unable to reach your app.
-
-Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen).
-
-#### 5.1.5 Invalid Token
-
-If you encounter the message "Domain verification failed, invalid token", then the cloud service was able to reach your app, but could not verify that this app is currently trying to register.
-
-Verify that the application URL matches the current environment.
-
-#### 5.1.6 Other Errors
-
-If you encounter any of the following error messages:
-
-* "Project verification failed"
-* "Domain verification failed, invalid response from verification endpoint"
-* "Domain verification failed for unknown reason"
-
-Then an unexpected error occurred.
-
-Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal.
+| Error | Error message(s) | Description | Suggestion |
+|-------|------------------|-------------|------------|
+| **Invalid Developer Credentials** | - "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
+| **Invalid App** | - "Invalid app"<br>- "App not found for the given user" | The provided App ID is either incorrect or that the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
+| **Invalid Application URL** | - "Application URL does not match any of the environment URLs" | The app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. | Verify that the **App ID** and **Application URL** fields are correct. |
+| **Unable to Reach App** | - "Domain verification failed, unable to reach app"<br>- "Domain verification failed, unable to reach verification endpoint"<br>- "Domain verification failed, verification endpoint inactive" | The cloud service was unable to reach your app. | Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen). |
+| **Invalid Token** | - "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
+| **Other Errors** | - "Project verification failed"<br>- "Domain verification failed, invalid response from verification endpoint"<br>- "Domain verification failed for unknown reason" | An unexpected error occurred. | Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal. |
 
 ### 5.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 

@@ -103,9 +103,11 @@ The steps for each procedure are described in the sections below.
 
 #### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
 
+{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app to Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#24-deploying-a-free-app-to-the-mendix-cloud). You can  [register your app environment](#register-app) directly.{{% /alert %}
+
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application deployed to Mendix Public Cloud.
+2. Make sure that you have the application [deployed to Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#2-deploying-an-app-to-the-mendix-cloud).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 

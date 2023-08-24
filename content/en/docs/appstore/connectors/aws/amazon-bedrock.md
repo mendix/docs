@@ -79,16 +79,16 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 3. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **ListFoundationModels** activity.
 4. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 5. Double-click the **ListFoundationModels** activity to configure the required parameters.
-6. For the ENUM_Region parameter provide a value by using a variable or an expression. For a list of available AWS regions, see [ENUM_Region](#enum-region).
-7. For the Credentials parameter, provide a Credentials Object from the AWS Authentication Connector. One way to achieve this is described below:
-    * In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **Credentials_GenerateFromConstants** action under > **Resources** > **Authentication**.
-    * Drag the **Credentials_GenerateFromConstants** to the beginning of your microflow.
-    * Double-click the **Credentials_Generate** activity to configure the required parameters and provide a value for the AWS Region.
-7. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activtiy.    
+6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. For a list of available AWS regions, see [ENUM_Region](#enum-region).
+7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
+    1. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **Credentials_GenerateFromConstants** action under > **Resources** > **Authentication**.
+    2. Drag the **Credentials_GenerateFromConstants** to the beginning of your microflow.
+    3. Double-click the **Credentials_Generate** activity to configure the required parameters and provide a value for the AWS Region.
+7. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
 8. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
-9. Double click the **Retrieve** activity and make sure *By Association* is selected.
-10. Select the *ModelSummary_ListFoundationModelsResponse* association, which will return a List of Type [`ModelSummary`](#modelsummary).
-11. To further use the response information, we recommend to create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+9. Double-click the **Retrieve** activity and make sure **By Association** is selected.
+10. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
+11. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
 

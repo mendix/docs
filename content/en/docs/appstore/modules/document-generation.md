@@ -103,7 +103,7 @@ The steps for each procedure are described in the sections below.
 
 #### 3.2.1 Enabling the DocGen Request Handler {#enable-docgen}
 
-{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app to Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#24-deploying-a-free-app-to-the-mendix-cloud). You can  [register your app environment](#register-app) directly.{{% /alert %}
+{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app to Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#24-deploying-a-free-app-to-the-mendix-cloud). You can  [register your app environment](#register-app) directly.{{% /alert %}}
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
@@ -201,7 +201,8 @@ For scenarios where you want to generate documents as a system task (for example
    {{% alert color="info" %}}
    When starting with a blank app, you can use the **Administration.Account_Overview** page from the [Administration module](appstore/modules/administration/) to manage and create new users.
 
-   You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.{{% /alert %}}
+   You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.
+   {{% /alert %}}
 
 5. Create a microflow to retrieve and return the configured service user object.
 

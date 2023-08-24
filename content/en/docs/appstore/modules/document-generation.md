@@ -13,7 +13,9 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
 This module uses the PDF document generation service running in the Mendix Public Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
-When using 'Run locally' in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
+When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
+
+When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
 When running on Mendix Cloud, the PDF document generation service on Mendix Public Cloud (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
@@ -39,7 +41,7 @@ The PDF document generation service does not store pages or documents at any tim
 
 * Currently, PDF is the only supported document export format.
 * For deployment, currently only the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
-* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend to compress high-resolution images to reduce their file size.
+* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Complex documents (e.g. large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
@@ -50,13 +52,13 @@ The PDF document generation service does not store pages or documents at any tim
     * Contact support if these guidelines do not fit your specific use case.
 * The `Generate PDF from page` microflow action does not support multiple page parameters.
 * Objects that are created in microflows that contain the `Generate PDF from page` action are not available to use in your PDF document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
-* Setting the microflow property **Apply entity access** to *Yes* does not have any effect on the `Generate PDF from page` action. Regardless of the **Apply entity access** setting, the action does not require *Create* or *Write* access rights for the FileDocument object that gets created.
+* Setting the microflow property **Apply entity access** to *Yes* does not have any effect on the `Generate PDF from page` action. Regardless of the **Apply entity access** setting, the action does not require *Create* or *Write* access rights for the `FileDocument` object that gets created.
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
 ### 1.4 Known issues
 
-* The `System.Owner` association is currently not set to the user which has run the microflow. Instead, the user that is configured for the `Generate as user` property of the **Generate PDF from page** action is used to set the association.
+* The `System.Owner` association is currently not set to the user which has run the microflow. Instead, the user that is configured for the `Generate as user` property of the `Generate PDF from page` action is used to set the association.
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
 
@@ -67,8 +69,8 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 ## 3 Configuration {#configuration}
 
 1. In the **App Explorer**, open the **App** section, double-click **Settings**, then go to the **Runtime** tab, and configure the **ASu_DocumentGeneration_Initialize** microflow for the `After startup` property. If there is already an after startup microflow set, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
-2. In the **App Explorer**, double-click **Security** in the App section, and then set the `Security level` to *Prototype/demo* or *Production*.
-3. In the **App Explorer**, double-click **Security** in the App section again, then go to the **User roles** tab and perform the following steps:
+2. In the **App Explorer**, double-click **Security** in the **App** section, and then set the `Security level` to *Prototype/demo* or *Production*.
+3. In the **App Explorer**, double-click **Security** in the **App** section again, then go to the **User roles** tab and perform the following steps:
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
     2. Add the module role **Administrator** from the **DocumentGeneration** module to all app user roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
 4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This wil automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
@@ -103,11 +105,11 @@ The steps for each procedure are described in the sections below.
 
 #### 3.2.1 Enabling the DocGen Request Handler for Licensed Apps {#enable-docgen}
 
-{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#24-deploying-a-free-app-to-the-mendix-cloud) to Mendix Public Cloud. You can [register your app environment](#register-app) directly.{{% /alert %}}
+{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app](/developerportal/deploy/mendix-cloud-deploy/#deploy-free-app) to Mendix Public Cloud. You can [register your app environment](#register-app) directly.{{% /alert %}}
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application [deployed to Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#2-deploying-an-app-to-the-mendix-cloud).
+2. Make sure that you have the application [deployed to Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/##deploy-app-mendix-cloud).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
@@ -138,7 +140,7 @@ The steps for each procedure are described in the sections below.
 
 1. Add the snippet **Snip_AppRegistration** to a page in your app that is accessible to users with the **Administrator** module role set in the **DocumentGeneration** module. The snippet can be found in the  **_UseMe** > **Admin** folder of the **DocumentGeneration** module.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service. The scheduled event can be found in the  **_UseMe** > **Scheduled events** folder of the **DocumentGeneration** module.
-3. Make sure that your changes are [deployed to your Mendix Cloud environment](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#2-deploying-an-app-to-the-mendix-cloud).
+3. Make sure that your changes are [deployed to your Mendix Cloud environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
@@ -149,7 +151,7 @@ The steps for each procedure are described in the sections below.
 
 ### 4.1 Generating Documents for the Current User
 
-1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. When app security was set to **Production** you need to assign *Read* access rights for the user roles that should be able to download the document.
+1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. When app security was set to **Production**, you need to assign *Read* access rights for the user roles that should be able to download the document.
 
 2. Create a page that you want to export as a document. In the properties of the page, set the design property **Enable PDF export** to *Yes*. As the layout of the page, you can use your own layout or the **DocumentGeneration_Default** layout from the **_UseMe** > **Layouts** folder. If you want, you can duplicate the **ExampleDocument** in the **Examples** folder to get started. Make sure to move and include the new page in your own module.
 

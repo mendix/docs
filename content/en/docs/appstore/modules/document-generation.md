@@ -151,9 +151,9 @@ The steps for each procedure are described in the sections below.
 
 1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. When app security was set to **Production** you need to assign *Read* access rights for the user roles that should be able to download the document.
 
-2. Create a page that you want to export as a document. In the properties of the page, set the design property **Enable export to PDF** to *Yes*. As the layout of the page, you can use your own layout or the **DocumentGeneration_Default** layout from the **_UseMe** > **Layouts** folder. If you want, you can duplicate the **ExampleDocument** in the **Examples** folder to get started. Make sure to move and include the new page in your own module.
+2. Create a page that you want to export as a document. In the properties of the page, set the design property **Enable PDF export** to *Yes*. As the layout of the page, you can use your own layout or the **DocumentGeneration_Default** layout from the **_UseMe** > **Layouts** folder. If you want, you can duplicate the **ExampleDocument** in the **Examples** folder to get started. Make sure to move and include the new page in your own module.
 
-    {{% alert color="info" %}}Setting the **Enable export to PDF** design property to *Yes* is required. Otherwise, the PDF document generation action will result in a timeout.{{% /alert %}}
+    {{% alert color="info" %}}Setting the **Enable PDF export** design property to *Yes* is required. Otherwise, the PDF document generation action will result in a timeout.{{% /alert %}}
 
     {{% alert color="info" %}}Using the **DocumentGeneration_Default** layout is not required. You can use any layout of layout type *Responsive*, or create your own layout, as long as the layout does not include a scroll container. Layouts that do include a scroll container, such as *Atlas_Default*, will not work properly. {{% /alert %}}
 

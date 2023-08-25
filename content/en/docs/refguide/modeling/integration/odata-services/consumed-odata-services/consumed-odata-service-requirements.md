@@ -8,7 +8,9 @@ tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
-The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data and logic between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide/consumed-rest-services/) functionality.
+The OData implementation in Mendix does not support all features of the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data and logic between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed.
+
+When using 3rd-party APIs, we advise you to make a proof of concept to ensure that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, you can use the Mendix [REST](/refguide/consumed-rest-services/) functionality instead.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -61,7 +63,7 @@ The most commonly used attribute types can be used in your app. The types of the
 | OData Type                     | Mendix Type                           |
 | ---                            | ---                                   |
 | Binary                         | Binary (but see 3.4) |
-| Boolean                        | Boolean <sup><small>[1]</small></sup> |
+| Boolean                        | Boolean ¹ |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
 | Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
@@ -118,15 +120,17 @@ Supported types, and their corresponding type in Mendix, are:
 
 | OData Type                        | Mendix Type                           |
 | ---                               | ---                                   |
-| Boolean                           | Boolean <sup><small>[1]</small></sup> |
+| Boolean                           | Boolean ¹ |
 | Byte, SByte, Int16, Int32, Int64  | Integer/Long |
-| Collection of Entities            | List |
-| DateTime, DateTimeOffset, Time    | Date/time |
-| Decimal, Double, Single           | Decimal <sup><small>[2]</small></sup> |
+| Collection of Entities            | List of objects|
+| DateTime, DateTimeOffset, Time    | Date and time |
+| Decimal, Double, Single           | Decimal ² |
 | Entity                            | Object |
 | Enumeration                       | Enumeration |
 | String, Guid                      | String |
 
 Note that the only supported Collection type is a Collection of Entities, and that binary parameters or return values are not supported for consumed OData actions.
 
-<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the action returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the action returns a value outside of the range, there will be an error.</small>
+¹ In Mendix, Booleans cannot be null. If the action returns null, the value will be false in Mendix.
+
+² Decimal values outside of the range of a Mendix [Decimal](/refguide/attributes/#type) are currently not supported. If the action returns a value outside of the range, the action will return an error.

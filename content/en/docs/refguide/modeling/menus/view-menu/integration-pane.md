@@ -33,9 +33,9 @@ The following functionality is available in the pane:
 * [View information](#viewing) on the service, its entities, attributes, and associations – When you enter a search term and browse through services, you can view various information on them.
 * [View services used in your app](#used-in-app) – Services and the entities that are currently being used in your app are displayed in the **Used in your App** section and are indicated with a green check-mark in the search results. For more information, see the [Used in Your App](#used-in-app) section below. 
 
-### 2.2 Used in Your App Section {#used-in-app}
+### 2.1 Used in Your App Section {#used-in-app}
 
-When you do not enter search text in the [Integration Pane](/refguide/integration-pane/), then **Used in your App** section is displayed. This shows the consumed services and the related external entities and actions used in the current app. The list of entities, associations, attributes, and actions for the consumed services are shown as for the search results:
+When you do not enter search text in the [Integration Pane](/refguide/integration-pane/), then the **Used in your App** section is displayed. This shows the consumed services and the related external entities and actions used in the current app. The list of entities, associations, attributes, and actions for the consumed services are shown as for the search results:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/used-in-your-app.png" alt="User in Your App Section" >}}
 
@@ -147,7 +147,7 @@ By clicking the expand button next to the action, the parameters and return type
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/actions.png" alt="integration pane actions" width="400" >}}
 
-{{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged to a microflow.{{% /alert %}}
+{{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged into a microflow.{{% /alert %}}
 
 ## 5 Read More
 

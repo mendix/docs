@@ -7,7 +7,7 @@ tags: ["Catalog", "security", "entity security", "dataset security","odata servi
 
 ## 1 Introduction
 
-For Mendix apps that publish or consume [external entities](/refguide/external-entities/) and/or actions (abstracted OData services), the following details apply:
+For Mendix apps that publish or consume [external entities](/refguide/external-entities/) and/or actions (abstracted OData services), the following security is applied:
 
 * The security for the OData service is defined in the publishing app at the app, module, and entity or microflow level
 * The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities or microflows from the service are used in a consuming app when end-users try to access these
@@ -20,7 +20,7 @@ For Mendix apps that publish or consume [external entities](/refguide/external-e
 
     * On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso/),  but it can also be the organization's identification protocol
 
-* In the publishing app in Studio Pro, access can be defined as follows:
+* Access in the app publishing the external entities and actions can be [defined in Studio Pro](/refguide/published-odata-services/#security) as follows:
 
     * None
     * Basic authentication on the user name and password

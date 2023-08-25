@@ -1,7 +1,7 @@
 ---
 title: "OData Query Options"
 url: /refguide/odata-query-options/
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "update", "delete", "actions"]
+tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "create", "update", "delete", "actions"]
 ---
 
 ## 1 Introduction
@@ -173,7 +173,7 @@ Specify new values for attributes in the body of the request. Here is an example
 }
 ```
 
-### 10.1.1 Updating Attributes of Enumeration Type
+#### 10.1.1 Updating Attributes of Enumeration Type
 
 Attributes of an enumeration type can be updated by specifying the exposed value of the enumeration, without the prefix of the enumeration type, in the body of the `PATCH` request.
 For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR` and `MyModule.Country.JP`, exposed as `France`, `Brazil`, and `Japan` respectively, you can update your object as follows:
@@ -188,7 +188,7 @@ For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.
 Specifying the enumeration member by its numeric value is not supported.
 {{% /alert %}}
 
-### 10.2 Updating asociations
+### 10.2 Updating Associations
 
 When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. Here is an example:
 
@@ -240,9 +240,9 @@ Clients can only set values for an association from the entity that is the [owne
 
 When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
-## 13 Calling microflows {#actions}
+## 13 Calling Microflows {#actions}
 
-Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the **Edit published microflow** dialog; on the bottom you will find the **example of location** property.
+Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the [Edit published microflow](/refguide/published-odata-microflow/) dialog; on the bottom you will find the **example of location** property.
 
 The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. For example:
 
@@ -255,7 +255,7 @@ The request body is always a JSON object, with a property for each parameter tha
 }
 ```
 
-If a parameter has type _object_ or _list_, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting new objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference _and_ attributes of the object combined, which results in an existing object with the additional attributes' values. For example:
+If a parameter has type _object_ or _list_, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference _and_ attributes of the object combined, which results in an existing object with the additional attributes' values. For example:
 
 ```json
 {

@@ -1,11 +1,13 @@
 ---
 title: "Use an SAP Connectivity Service with REST and SOAP"
 linktitle: "Use SAP Connectivity Service with REST and SOAP"
-url: /partners/sap/sap-destination-with-rest/
+url: /developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/
 category: "SAP"
 weight: 25
 description: "How to configure Mendix native REST and SOAP calls to use the SAP Destination Service and the SAP Connectivity Service to reach on-premises services."
 tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", "REST", "SOAP"]
+aliases:
+    - /partners/sap/sap-destination-with-rest/
 ---
 
 ## 1 Introduction
@@ -19,20 +21,20 @@ This how-to will teach you how to configure a REST or SOAP call to use the confi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app which can be deployed to SAP BTP
-* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP BTP account; see [SAP Destination Service](/partners/sap/sap-destination-service/) for more information
+* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP BTP account; see [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more information
 * Imported an **OData Connector for SAP solutions** version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
 
 In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP BTP.
 
-{{< figure src="/attachments/partners/sap/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" >}}
 
 This will return a **Destination** object. This is named *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
 
 The Destination object has the properties shown in the image below:
 
-{{< figure src="/attachments/partners/sap/sap-destination-with-rest/destination-entity.png" alt="Destination entity" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/destination-entity.png" alt="Destination entity" >}}
 
 ### 3.1 Configuring a REST Call
 
@@ -50,7 +52,7 @@ The following entries are required in the **General** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-{{< figure src="/attachments/partners/sap/sap-destination-with-rest/rest-general.png" alt="REST general tab" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-general.png" alt="REST general tab" >}}
 
 #### 3.1.2 HTTP Headers Tab
 
@@ -66,7 +68,7 @@ The following HTTP Headers do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-{{< figure src="/attachments/partners/sap/sap-destination-with-rest/rest-http-headers.png" alt="REST HTTP headers tab" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-http-headers.png" alt="REST HTTP headers tab" >}}
 
 ### 3.2 Configuring a SOAP Call
 
@@ -85,7 +87,7 @@ The following entries are required in the **Operation** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-{{< figure src="/attachments/partners/sap/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" >}}
 
 #### 3.2.2 HTTP Headers Tab
 
@@ -101,11 +103,11 @@ The same HTTP Headers are required as for a REST call. They do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-{{< figure src="/attachments/partners/sap/sap-destination-with-rest/web-service-http-headers.png" alt="SOAP web services HTTP headers tab" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/web-service-http-headers.png" alt="SOAP web services HTTP headers tab" >}}
 
 ## 4 Read More
 
-* [SAP Destination Service](/partners/sap/sap-destination-service/)
+* [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/)
 * [Consumed Web Services](/refguide/consumed-web-services/)
 * [Consumed Web Service](/refguide/consumed-web-service/)
 * [Call Web Service Action](/refguide/call-web-service-action/)

@@ -3,7 +3,7 @@ title: "SAP Business Technology Platform"
 linktitle: "SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
-weight: 40
+weight: 10
 description: "Describes how to deploy to SAP Business Technology Platform."
 tags: ["SAP", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -92,7 +92,7 @@ You may be asked to provide your credentials in one of two ways:
 * The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
 
 {{% alert color="info" %}}
-If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/partners/sap/sap-single-sign-on/).
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
 {{% /alert %}}
 
 You will now be asked to provide the final details for the SAP BTP development environment.
@@ -417,7 +417,7 @@ Click **Scale Now** to apply the new settings. If the application is running, it
 Click **Reset** to return the values to what they were before the sliders were moved.
 
 {{% alert color="info" %}}
-You can also make use of the **Application Autoscaler** service on SAP BTP. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/).
+You can also make use of the **Application Autoscaler** service on SAP BTP. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/).
 {{% /alert %}}
 
 #### 7.1.9 Change License Subscription ID
@@ -487,7 +487,7 @@ If you use the **PostgreSQL, Hyperscaler Option** service on SAP BTP, Mendix can
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If you use the **Application Autoscaler** service on SAP BTP, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
+If you use the **Application Autoscaler** service on SAP BTP, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/) for more information.
 {{% /alert %}}
 
 To upload the JSON **File** for service binding, follow these steps:
@@ -772,4 +772,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 11 Read More
 
-* [SAP Single Sign On](/partners/sap/sap-single-sign-on/)
+* [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)

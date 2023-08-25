@@ -15,8 +15,6 @@ This module uses the PDF document generation service running in the Mendix Publi
 
 When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
-When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
-
 When running on Mendix Cloud, the PDF document generation service on Mendix Public Cloud (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
 {{< figure src="/attachments/appstore/modules/document-generation/request-flow.png" >}}
@@ -176,7 +174,7 @@ The steps for each procedure are described in the sections below.
 
     5. Use **$currentUser** for the **Generate as user** property. This will generate the document in the context and using the access rights of the user which runs the microflow. To generate the document in a system context, see the section [Generating Documents as a System Task](#system-task) below.
 
-    6. Set the value for the **Wait for result** property. If you set it to *false*, the result object will be available instantly, while the content will be added at a later stage. Set the **Wait for result** property to *true* only for direct user actions. Do not set the value too *true* for batch processing.
+    6. Set the value for the **Wait for result** property. If you set it to *false*, the result object will be available instantly, while the content will be added at a later stage. Set the **Wait for result** property to *true* only for direct user actions. Do not set the value to *true* for batch processing.
 
         {{% alert color="info" %}}Whenever there are multiple document requests for the same app environment, the document generation service will prioritize requests that have the **Wait for result** property set to *true* above requests that have the property set to *false*.{{% /alert %}}
 

@@ -349,8 +349,8 @@ To enable the use of app constants to configure the OIDC SSO module, configure y
 
 Use the following security best-practices when setting up your constants:
 
-* Set the [Export level](/refguide/configure-add-on-and-solution-modules#export-level) for these constants to `Hidden` for security reasons.
-* Mask your client_secret so the value is not visible in the developer portal – [constants](/developerportal/deploy/environments-details#constants) in the *Environment Details* documentation for more information.
+* Set the [Export level](/refguide/configure-add-on-and-solution-modules/#export-level) for these constants to `Hidden` for security reasons.
+* Mask your client_secret so the value is not visible in the developer portal – [constants](/developerportal/deploy/environments-details/#constants) in the *Environment Details* documentation for more information.
 
 The configuration you set through constants will mirror the configuration described in [General OIDC Clients](#general-oidc), above.
 

@@ -116,7 +116,9 @@ The following settings are available:
 
 * **Import from** – select **URL** or **File** for the location of the metadata:
     * **URL** – specify the URL for the metadata
-    * **File** – click **Browse** to select an XML metadata file
+    * **File** – click **Browse** to select a metadata file
+
+You can use the URL of a file that contains the metadata, such as `https://services.odata.org/V4/Northwind/Northwind.svc/$metadata`, or click a 'Share' link of a data source on [catalog.mendix.com](https://catalog.mendix.com/) and paste that value.
 
 When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used.
 

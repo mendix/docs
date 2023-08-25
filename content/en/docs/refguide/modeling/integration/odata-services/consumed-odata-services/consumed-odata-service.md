@@ -104,7 +104,7 @@ The microflow must return a `String` containing the error message. If it returns
 
 Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 
-### 3.1 Metadata
+### 2.7 Metadata
 
 When you create a consumed OData service, the metadata editor allows you to open an OData contract from a file or URL. When you have already consumed a contract, you can click the **Update** button to update the existing contract with a new version from file or URL.
 
@@ -126,7 +126,7 @@ This information is not stored, so if you download the metadata from the same se
 
 When you import the metadata, you can add external entities and actions from the consumed OData service in the [Integration Pane](/refguide/integration-pane/).
 
-### 3.2 Properties
+### 2.8 Properties
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
@@ -142,9 +142,9 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **OData version** – The OData version: can be OData 3 or OData 4.
 * **Use QuerySegment** – When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. When set to `Yes`, then a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
 
-## 4 Updating or Switching a Consumed OData Service {#updating}
+## 3 Updating or Switching a Consumed OData Service {#updating}
 
-### 4.1 Consuming from Service Endpoints{#consume-service-endpoints}
+### 3.1 Consuming from Service Endpoints{#consume-service-endpoints}
 
 When you add an external entity to your app, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint.
 
@@ -154,13 +154,13 @@ The same service, deployed to a different environment will be to a different ser
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your app, Studio Pro will retrieve the information it requires from the contract that is at that endpoint.
 
-### 4.2 Semantic Numbering for Service Versions {#semantic}
+### 3.2 Semantic Numbering for Service Versions {#semantic}
 
 It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users.
 
 We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
-#### 4.2.1 Minor Service Updates
+#### 3.2.1 Minor Service Updates
 
 *Minor* service updates are, for example,  additional fields added to the service or new operations included which would not break any apps that consume the previous versions.
 
@@ -168,7 +168,7 @@ If semantic numbering is used then a minor/non-breaking change to a service can 
 
 Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service.
 
-#### 4.2.2 Major Service Updates
+#### 3.2.2 Major Service Updates
 
 *Major* service updates are for example, when entities or attributes are removed, or input parameters are required, which would be incompatible for the consuming apps and result in the consuming app "breaking".
 
@@ -184,17 +184,17 @@ There is a major service update indicated by the change in the version number fr
 Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change.
 {{% /alert %}}
 
-### 4.3 Update or Switch {#update-switch}
+### 3.3 Update or Switch {#update-switch}
 
 When a change in the contract at a consumed endpoint is detected (possibly due to a minor change), or if the same named service is deployed with a major version number but to a different endpoint, the following options are available in the **Consumed OData Service** screen.
 
-#### 4.3.1. Update
+#### 3.3.1. Update
 
 The **Update** option is available when Studio Pro detects that that the contract at the Catalog endpoint is different to the one currently consumed in the app. If the **Update** option is selected, the new contract will be loaded in the App.
 
 See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
 
-##### 4.3.1.1 Integration Pane
+##### 3.3.1.1 Integration Pane
 
 In the [Integration Pane](/refguide/integration-pane/), in search results and in the **Used in your App** section an update arrow indicate if there is a different contract at the Catalog endpoint:
 
@@ -204,21 +204,21 @@ In the [Integration Pane](/refguide/integration-pane/), in search results and in
 * Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract at the Catalog endpoint and this will be loaded in the app.
 * The list of entities in this new version in the Data Hub are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service.
 
-##### 4.3.1.2 Update Service Dialog Box
+##### 3.3.1.2 Update Service Dialog Box
 
 When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **App** sections, the **Update** dialog box is displayed.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" >}}
 
 The consumed OData service that is currently consumed in the app (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
 
-#### 4.3.2. Switch
+#### 3.3.2. Switch
 
 When an OData service is published to a different endpoint or to a different environment this will mean that it will be registered as a different asset in the Catalog.
 
 In the example given in the [Consuming from Service Endpoints](#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**.
 
-#### 4.3.3 Switching Consumed Services
+#### 3.3.3 Switching Consumed Services
 
 A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the [Integration Pane](/refguide/integration-pane/).
 
@@ -240,7 +240,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switch-new-environment.png" alt="major change environment dh pane"   width="300"  >}}
 
-## 5 Read More
+## 4 Read More
 
 * [Integration Pane](/refguide/integration-pane/)
 * [Consumed OData Services](/refguide/consumed-odata-services/)

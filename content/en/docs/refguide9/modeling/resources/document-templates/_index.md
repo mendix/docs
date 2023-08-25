@@ -10,7 +10,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-For generation of PDF documents see our [PDF document generation module](https://docs.mendix.com/appstore/modules/document-generation/)
+For information about generating PDF documents, see the [PDF Document Generation](/appstore/modules/document-generation/) module.
 {{% /alert %}}
 
 ## 1 Introduction

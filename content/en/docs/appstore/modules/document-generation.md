@@ -68,7 +68,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration {#configuration}
 
-1. In the **App Explorer**, open the **App** section, double-click **Settings**, then go to the **Runtime** tab, and configure the **ASu_DocumentGeneration_Initialize** microflow for the `After startup` property. If there is already an after startup microflow set, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
+1. In the **App Explorer**, open the **App** section, double-click **Settings**, then go to the **Runtime** tab, and configure the **ASu_DocumentGeneration_Initialize** microflow for the **After startup** property. If there is already an after startup microflow set, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
 2. In the **App Explorer**, double-click **Security** in the **App** section, and then set the `Security level` to *Prototype/demo* or *Production*.
 3. In the **App Explorer**, double-click **Security** in the **App** section again, then go to the **User roles** tab and perform the following steps:
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
@@ -145,45 +145,45 @@ The steps for each procedure are described in the sections below.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
 
-{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the App URL that was provided during the registration. Note that a change in the App URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
+{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
 
 ## 4 Usage
 
 ### 4.1 Generating Documents for the Current User
 
-1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. When app security was set to **Production**, you need to assign *Read* access rights for the user roles that should be able to download the document.
+1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. When app security was set to *Production*, you need to assign *Read* access rights to the user roles which should be able to download the document.
 
 2. Create a page that you want to export as a document. In the properties of the page, set the design property **Enable PDF export** to *Yes*. As the layout of the page, you can use your own layout or the **DocumentGeneration_Default** layout from the **_UseMe** > **Layouts** folder. If you want, you can duplicate the **ExampleDocument** in the **Examples** folder to get started. Make sure to move and include the new page in your own module.
 
     {{% alert color="info" %}}Setting the **Enable PDF export** design property to *Yes* is required. Otherwise, the PDF document generation action will result in a timeout.{{% /alert %}}
 
-    {{% alert color="info" %}}Using the **DocumentGeneration_Default** layout is not required. You can use any layout of layout type *Responsive*, or create your own layout, as long as the layout does not include a scroll container. Layouts that do include a scroll container, such as *Atlas_Default*, will not work properly. {{% /alert %}}
+    {{% alert color="info" %}}Using the **DocumentGeneration_Default** layout is not required. You can use any layout of layout type **Responsive**, or create your own layout, as long as the layout does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly. {{% /alert %}}
 
 3. Create a microflow that contains a **Show page** activity that opens the page you created in the previous step.
 
 {{% alert color="info" %}}If you want, you can copy **DOC_ExampleDocument_Print** microflow from the **Examples** folder to get started.{{% /alert %}}
 
 4. Create a microflow with the **Generate PDF from page** action to render this page as a PDF document. Configure the **Generate PDF from page** action as follows:
-    1. Select the microflow you created in the previous step for the `Page microflow` property.
+    1. Select the microflow you created in the previous step for the **Page microflow** property.
 
-    2. Select the context object that you want to pass to the page as input parameter. If the page does not require an input object, select *empty*.
+    2. Select the context object that you want to pass to the page as an input parameter. If the page does not require an input object, select *empty*.
 
        {{% alert color="info" %}}To pass the context object to the page, you should configure this object as the input parameter in the microflow created in the previous step.{{% /alert %}}
 
     3. Select the entity that you created in step 1 as the `Result entity`.
 
-    4. Fill in the `File name` property. The Java action will append **.pdf** to the generated documents.
+    4. Fill in the **File name** property. The Java action will append **.pdf** to the generated documents.
 
-    5. Use **$currentUser** for the `Generate as user` property. This will generate the document in the context and using the access rights of the user which runs the microflow. To generate the document in a system context, see the section [Generating Documents as a System Task](#system-task) below.
+    5. Use **$currentUser** for the **Generate as user** property. This will generate the document in the context and using the access rights of the user which runs the microflow. To generate the document in a system context, see the section [Generating Documents as a System Task](#system-task) below.
 
-    6. Set the value for the `Wait for result` property. If you set it to *false*, the result object will be available instantly, while the content will be added at a later stage. Set the `Wait for result` property to *true* only for direct user actions. Do not set the value to *true* for batch processing.
+    6. Set the value for the **Wait for result** property. If you set it to *false*, the result object will be available instantly, while the content will be added at a later stage. Set the **Wait for result** property to *true* only for direct user actions. Do not set the value too *true* for batch processing.
 
-        {{% alert color="info" %}}Whenever there are multiple document requests for the same app environment, the document generation service will prioritize requests that have the `Wait for result` property set to *true* above requests that have the property set to *false*.{{% /alert %}}
+        {{% alert color="info" %}}Whenever there are multiple document requests for the same app environment, the document generation service will prioritize requests that have the **Wait for result** property set to *true* above requests that have the property set to *false*.{{% /alert %}}
 
-5. Verify that the user which you configured in the `Generate document as` property has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
+5. Verify that the user which you configured in the **Generate document as** property has access to the page microflow created in step 3, as well as access to all relevant data used in the page to be exported.
 
 {{% alert color="info" %}}
-To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the `Wait for result` property of the **Generate PDF from page** action to *true*.
+To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the **Wait for result** property of the **Generate PDF from page** action to *true*.
 {{% /alert %}}
 
 ### 4.2 Generating Documents as a System Task {#system-task}
@@ -220,37 +220,37 @@ We recommend to try to log in as the service user at least once, to verify if th
 For the localization of dates and times, the document generation service uses the time zone of the user that is passed in the `Generate as user` property.
 
 {{% alert color="info" %}}
-If no time zone is configured for the user that is passed in the `Generate as user` property, and the default time zone in the App Settings in Studio Pro is set to *(none)*, all dates and times will be displayed using UTC.
+If no time zone is configured for the user that is passed in the `Generate as user` property, and the default time zone in the [App Settings](/refguide/app-settings/) in Studio Pro is set to *(none)*, all dates and times will be displayed using UTC.
 {{% /alert %}}
 
 ### 4.4 Styling Documents
 
 #### 4.4.1 Page settings
-The following Page-related design properties are available in the **Styling** tab of the properties panel.
+The following page-related design properties are available in the **Styling** tab of the properties panel.
 
 | Design property | Description |
 |-----------------|-------------|
-| **Page orientation** | To set the page orientation for your documents. |
-| **Page size** | To set the page size for your documents. |
-| **Show page numbers** | To enable page numbers for your documents. At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage. |
+| **Page orientation** | This design property enables you to set the page orientation for your documents. |
+| **Page size** | This design property enables you to set the page size for your documents. |
+| **Show page numbers** | This design property enables you to show page numbers in your documents. <br>{{% alert color="info" %}}At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage{{% /alert %}} |
 
 #### 4.4.2 Page breaks
 
-You can use the **Page break** widget that is included in this module to structure your documents. This widget enables you to force a page break at a specific position in your document. In addition, you can use the **Add page break** design property that is available for Container widgets.
+You can use the **Page break** widget that is included in this module to structure your documents. This widget enables you to force a page break at a specific position in your document. In addition, you can use the **Add page break** design property that is available for **Container** widgets.
 
-The following Container widget related design properties are available in the **Styling** tab of the properties panel.
+The following **Container** widget related design properties are available in the **Styling** tab of the properties panel.
 
 | Design property | Description |
 |-----------------|-------------|
-| **Add page break** | This design property enables you to force a page break *before* or *after* the specific container widget. |
-| **Avoid break inside** | To prevent page breaks *within* a specific container. This can be useful to keep widgets grouped together on the same page. |
+| **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
+| **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
 #### 4.4.3 Advanced styling
 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
 {{% alert color="info" %}}
-We recommend not to use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm` etc.) or other relative units (such as `%`, `em` or `rem`) instead.
+We recommend not using the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
 {{% /alert %}}
 
 ## 5 Troubleshooting
@@ -261,23 +261,23 @@ In case you encounter any issues while [registering your app environment(s)](#re
 
 | Error | Error message(s) | Description | Suggestion |
 |-------|------------------|-------------|------------|
-| **Invalid Developer Credentials** | - "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
-| **Invalid App** | - "Invalid app"<br>- "App not found for the given user" | The provided App ID is either incorrect or that the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
-| **Invalid Application URL** | - "Application URL does not match any of the environment URLs" | The app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. | Verify that the **App ID** and **Application URL** fields are correct. |
+| **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
+| **Invalid App** | - "Invalid app"<br>- "App not found for the given user" | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
+| **Invalid Application URL** | "Application URL does not match any of the environment URLs" | The app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. | Verify that the **App ID** and **Application URL** fields are correct. |
 | **Unable to Reach App** | - "Domain verification failed, unable to reach app"<br>- "Domain verification failed, unable to reach verification endpoint"<br>- "Domain verification failed, verification endpoint inactive" | The cloud service was unable to reach your app. | Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen). |
-| **Invalid Token** | - "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
+| **Invalid Token** | "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
 | **Other Errors** | - "Project verification failed"<br>- "Domain verification failed, invalid response from verification endpoint"<br>- "Domain verification failed for unknown reason" | An unexpected error occurred. | Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal. |
 
 ### 5.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
-In general, we recommend you to perform the following steps in case of any issues during runtime:
+In general, we recommend you perform the following steps in case of any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
 #### 5.2.1 Rendering/Styling Issues
 
-In case of issues regarding styling, we recommend you to temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend to use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
+In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
 #### 5.2.2 Local Service Errors
 
@@ -288,7 +288,7 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 	at DocumentGenerationTest.ACT_TestDocument_WrongLayout (JavaAction : 'Generate PDF from page')
 ```
 
-We recommend you to temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
+We recommend you temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
 #### 5.2.3 Cloud Service Errors
 
@@ -297,7 +297,7 @@ In case you encounter the message "Unable to generate document, service response
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
 
-In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
+In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
 
 #### 5.2.4 Timeout Errors
 

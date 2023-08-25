@@ -277,7 +277,7 @@ This table breaks down the roles and permissions for content groups:
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/group-content.png"  width="250"  >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/group-content.png"  width="400"  >}}
 
 {{% alert color="info" %}}
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not appear in this dialog box.
@@ -285,7 +285,7 @@ A component can only be assigned to one content group at a time. If a component 
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/general/app-store-overview/group-content-context.png" >}}
+{{< figure src="/attachments/appstore/general/app-store-overview/group-content-context.png" width="400" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 

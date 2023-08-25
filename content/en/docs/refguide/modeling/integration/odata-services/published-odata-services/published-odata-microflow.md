@@ -36,7 +36,7 @@ Either select the microflow and click **Edit** or double-click the microflow to 
 The resulting location must be unique. This means that a published microflow cannot have the same exposed name as another published microflow or published entity.
 {{% /alert %}}
 
-In the **Public documentation** tab you can add a short **Summary** and a longer **Description** to describe the behaviour of the action.
+In the **Public documentation** tab you can add a short **Summary** and a longer **Description** to describe the behavior of the action.
 
 ### 2.3 Return Type
 
@@ -59,5 +59,5 @@ To edit a published parameter, either select the parameter and click **Edit** or
 {{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/published-parameter.png" alt="published microflow parameter" width="700" >}}
 
 {{% alert color="info" %}}
-Note that boolean and list parameters can never be empty.
+Note that Boolean and list parameters can never be empty.
 {{% /alert %}}

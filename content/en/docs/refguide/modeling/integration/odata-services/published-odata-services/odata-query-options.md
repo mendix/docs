@@ -255,7 +255,7 @@ The request body is always a JSON object, with a property for each parameter tha
 }
 ```
 
-If a parameter has type _object_ or _list_, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference _and_ attributes of the object combined, which results in an existing object with the additional attributes' values. For example:
+If a parameter has type *object* or *list*, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference *and* attributes of the object combined, which results in an existing object with the additional attributes' values. For example:
 
 ```json
 {

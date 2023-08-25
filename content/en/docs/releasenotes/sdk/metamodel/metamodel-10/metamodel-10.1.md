@@ -6,60 +6,38 @@ weight: 99
 
 ## 10.1.0
 
-**Release date: June 19, 2023**
+**Release date: July 24, 2023**
 
 ### Microflows
 
 #### Microflow (ModelUnit)
-* We introduced the `url` property. 
-* We introduced the `urlSegments` property. 
 
-#### MicroflowParameterAttributeUrlSegment (Element)
-* We introduced this element. 
+* We introduced the `url` and `urlSegments` properties. 
 
-#### ParameterIdUrlSegment (Element)
-* We introduced this element. 
+#### MicroflowParameterAttributeUrlSegment, ParameterIdUrlSegment (Elements)
+
+* We introduced these elements. 
 
 ### Url
 
-#### UrlSegment (Element)
-* We introduced this element. 
+#### StaticUrlSegment, UrlSegment (Elements)
 
-#### StaticUrlSegment (Element)
-* We introduced this element. 
+* We introduced these elements. 
 
 ### Rest
 
 #### PublishedRestService (ModelUnit)
-* We introduced the `openApi3Schema` property. Info: "The contents of the OpenAPI v3 specification for the published REST service"
+
+* We introduced the `openApi3Schema` property for the contents of an OpenAPI v3 specification for a published REST service.
 
 ### Navigation
 
 #### NavigationDocument (ModelUnit)
-* We deleted the `queriess` property. 
-* We deleted the `operations` property. 
+
+* We deleted the `queriess` and `operations` properties. 
 
 ### Pages
 
-#### UrlSegment (Element)
-* We deleted this element. 
+#### NamedValue, RetrievalQuery, RetrievalQueryParameter, RuntimeOperation, StaticUrlSegment, UrlSegment, UserRoleSet (Elements)
 
-#### StaticUrlSegment (Element)
-* We deleted this element. 
-
-#### RetrievalQuery (Element)
-* We deleted this element. 
-
-#### UserRoleSet (Element)
-* We deleted this element. 
-
-#### RetrievalQueryParameter (Element)
-* We deleted this element. 
-
-#### NamedValue (Element)
-* We deleted this element. 
-
-#### RuntimeOperation (Element)
-* We deleted this element. 
-
-This page has been generated automatically.
+* We deleted these elements. 

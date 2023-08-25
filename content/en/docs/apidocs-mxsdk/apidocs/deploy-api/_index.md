@@ -107,7 +107,7 @@ URL: https://deploy.mendix.com/api/1/apps
 
 An object with the following key-value pair:
 
-* *ProjectId* (String) : The Developer Portal project identifier that should be linked to the new Free App. This value can be found under **COLLABORATE** > **General Settings**, and it is represented as **App ID**.
+* *ProjectId* (String) : The Developer Portal project identifier that should be linked to the new Free App. This value can be found on the **General** tab of the **Settings** page of your app, and it is represented as **App ID**.
 
 **Example Request**
 
@@ -559,7 +559,7 @@ An object with the following key-value pairs:
 ### 3.10 Upload Package{#upload-package}
 
 {{% alert color="info" %}}
-When uploading large (>300 MB) packages, this API can time out. In this case, you should switch to the [V2 version of this API](/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package).
+When uploading large (>300 MB) packages, this API can time out. In this case, you should switch to the [v2 version of this API](/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package).
 {{% /alert %}}
 
 #### 3.10.1 Description

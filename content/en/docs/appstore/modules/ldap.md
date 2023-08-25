@@ -56,11 +56,11 @@ The LDAP module also has the following features if SSO via SAML or OIDC is not p
 
 ### 1.3 Dependencies
 
-This module is dependent on the following additional modules – make sure they are also present in your app project and configured properly:
+This module is dependent on the following additional modules – make sure they are also present in your app and configured properly:
 
-* [Community Commons Functions Library](https://docs.mendix.com/appstore/modules/community-commons-function-library/)
-* [Encryption](https://docs.mendix.com/appstore/modules/encryption/)
-* [Administration](https://docs.mendix.com/appstore/modules/administration/)
+* [Community Commons Functions Library](/appstore/modules/community-commons-function-library/)
+* [Encryption](/appstore/modules/encryption/)
+* [Administration](/appstore/modules/administration/)
 
 ### 1.4 Limitations
 
@@ -75,7 +75,7 @@ The LDAP module has the following limitations:
 
 The following instructions assume that you want the Administrator role in your app to be the administrator of the LDAP functionality. You can choose a different role if you wish to separate this role from other administration roles.
 
-1. [Add the](https://docs.mendix.com/appstore/general/app-store-content/) [LDAP](https://docs.mendix.com/appstore/general/app-store-content/) [module to your app.](https://docs.mendix.com/appstore/general/app-store-content/)
+1. [Add the](/appstore/general/app-store-content/) [LDAP](/appstore/general/app-store-content/) [module to your app.](/appstore/general/app-store-content/)
 1. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
 1. Select the **Ldap.ASu_StartLdap** microflow as your **After startup** microflow. If there is already an after startup microflow, do not replace it, but add the **Ldap.ASu_StartLdap** microflow as a sub-microflow in the existing microflow.
 1. Add the **Ldap.OpenLdapServersOverview** microflow to your app's navigation. Only give access to administrators.
@@ -96,7 +96,7 @@ You can also perform a manual synchronization at any time using the **Sync Users
 
 ### 3.2 Basic Configuration
 
-After enabling LDAP in your app project, you need configure it to work with your LDAP server. This is done using various pages within the app to fill in the required information.
+After enabling LDAP in your app, you need configure it to work with your LDAP server. This is done using various pages within the app to fill in the required information.
 
 Configure your app by doing the following:
 
@@ -164,7 +164,7 @@ The following settings are available:
 * **Available attributes** – These are the LDAP attributes that are available to map to user attributes. Click **Refresh** to load this list from the LDAP server.
 * **Custom attribute mapping** – You can define the mappings for other attributes of the **User** entity, or a specialization of the **User** entity, that need to be imported from the LDAP server. For each mapping, you can specify an LDAP attribute, and the attribute in which its value will be stored. Note that you can only map to attributes of the User entity which are of type string. This mapping is the same as set up in **User Authentication Mapping**.
 
-When using the LDAP module for user synchronization in combination with a separate method of authentication (for example, the SAML module), you typically want to persist a user identifier in your Mendix app (using **Custom attribute mapping**) and use that to identify the end-user that is signed in when receiving the SAML response (the Identifying Assertion). This needs alignment between the LDAP module configuration and the [SAML  module configuration](https://docs.mendix.com/appstore/modules/saml/#324-user-provisioning). One option might be to use the user’s email address, but we recommend using an immutable ‘technical’ user identifier. This may be a user attribute different from the username that the user would be entering in a login screen at the IdP which supports SAML.
+When using the LDAP module for user synchronization in combination with a separate method of authentication (for example, the SAML module), you typically want to persist a user identifier in your Mendix app (using **Custom attribute mapping**) and use that to identify the end-user that is signed in when receiving the SAML response (the Identifying Assertion). This needs alignment between the LDAP module configuration and the [SAML  module configuration](/appstore/modules/saml/#324-user-provisioning). One option might be to use the user’s email address, but we recommend using an immutable ‘technical’ user identifier. This may be a user attribute different from the username that the user would be entering in a login screen at the IdP which supports SAML.
 
 ##### 3.2.2.2 Authentication Configuration
 

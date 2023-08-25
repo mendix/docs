@@ -7,6 +7,8 @@ weight: 10
 description: "Describes a merge algorithm and how it resolves conflicts."
 tags: ["merge", "algorithm", "conflict", "resolution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+aliases:
+    - /refguide/new-merge-algorithm
 ---
 
 ## 1 Introduction

@@ -11,6 +11,7 @@ weight: 100
 
 ### Improvements
 
+* We have added support for Mendix 10.
 * We have added support for Selenium version 4 (BETA).
 * We have added support for the latest compatible browser versions for Chrome, Firefox, and Edge for Selenium 4.
 * We have removed support for the Internet Explorer browser.
@@ -428,7 +429,7 @@ Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested an
 
 ### Fixes
 
-* Due to the use of an outdated appium library, it was not possible to test a web application on mobile. This is now fixed.
+* Due to the use of an outdated Appium library, it was not possible to test a web application on mobile. This is now fixed.
 
 ## 2.16.0
 
@@ -832,7 +833,7 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 
 It is now possible to give members of an ATS app, administration rights directly from the "App Settings" page in ATS. In other words it is no longer required for an app administrator in ATS to have an administrative role in the project in Mendix Sprintr. Please keep in mind that users still need to be a member of a project in Sprintr for them to be eligible to be app administrators for the corresponding app in ATS.
 
-In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Sprintr changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Sprintr will always have administrative rights in ATS.
+In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Developer Portal will always have administrative rights in ATS.
 
 ### Mendix 7.13, 7.14, and 7.15
 

@@ -138,13 +138,15 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 Company Details {#company-details}
+### 6.1 General Settings {#company-general-settings}
 
-On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
+On the **General Settings** tab of this page, you can edit your **Company Name** and **Description**.
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
+
+To export all the email domains, use the **Export to Excel** button.
 
 {{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
 

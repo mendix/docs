@@ -273,7 +273,7 @@ There can be additional issues when using cookies in iframes for end-users using
 
 To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](/developerportal/deploy/custom-domains/) to ensure that the app you want to embed is part of the same domain. For example, if your page is `mainpage.domain.name`, then the app embedded in the iframe should be `appname.domain.name`.
 
-##### 4.2.2.2 Applying a Different SameSite Setting
+##### 4.2.2.2 Applying a Different SameSite Setting{#samesite}
 
 From Studio Pro version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
 

@@ -155,7 +155,7 @@ The `SynthesizeSpeechRequest` entity is used when calling the [SynthesizeSpeech]
 | `Text` | Text to synthesize (string)|
 | `TextType` | It is used to specify whether the input text is plain text or SSML. If left empty, the default value is 'plain text' (enum)|
 | `OutputFormat` | The format that the output should be encoded (enum)|
-| `SampleRate` | The sample rate for speech syhthesis (string)|
+| `SampleRate` | The sample rate for speech synthesis (string)|
 | `Engine` | The engine that will be used during speech synthesis (enum)|
 | `VoiceID` | The ID of the voice (string)|
 | `LanguageCode` | The language code of the voice (string)|
@@ -194,7 +194,7 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 
 | Name | Caption |
 | --- | --- |
-| us_east_2 | US Easth (Ohio) |
+| us_east_2 | US East (Ohio) |
 | us_east_1 | US East (N. Virginia) |
 | us_west_1 | US West (N. California) |
 | us_west_2 | US West (Oregon) |

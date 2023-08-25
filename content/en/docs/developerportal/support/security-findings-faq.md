@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 

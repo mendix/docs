@@ -84,6 +84,8 @@ Make sure your Windows VM Firewall is active and properly configured.
 
 {{% alert color="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
+
+The **Z:** drive is typically how Parallels names the network drive on the Mac it is running on. This **Z:** drive starts with a letter, but *is not a mapped drive*. **Use the C: drive instead, as it is a mapped drive.**
 {{% /alert %}}
 
 Read the tips below to check the network drive before viewing your app on your testing device:
@@ -95,7 +97,7 @@ Read the tips below to check the network drive before viewing your app on your t
 * Incorrect network drives will always have **\\** at the start of their file location:
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  >}}
-
+    
 ## 5 Viewing Your App on Your Testing Device
 
 When running your app on your test device, you cannot use the QR code within Mendix Studio Pro's **View Mobile App** dialog box:
@@ -106,7 +108,7 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 1. Make sure your test device and Mac are on the same Wi-Fi network.
 2. Place your cursor over your Wi-Fi symbol in your system tray, then and click while holding <kbd>Option</kbd> to see your Mac's advanced network information. You will see your **IP Address** in this drop-down menu.
-3. In your Make It Native app's **Host** field, type *{your IP address}:8080*:
+3. In your Make It Native app's **Host** field, type `{your IP address}:8080` like this:
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png" alt="ip in dev app"   width="200"  >}}
 
@@ -122,12 +124,12 @@ If you experience issues connecting with the Make It Native app, make sure your 
 
 For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/refguide/mobile/getting-started-with-mobile/#viewingchanges) section in *Getting Started with Mobile*.
 
-## 7 Improving Performance
+## 7 Improving Performance {#performance}
 
 To improve the performance, you can do the following: 
 
-* Run Parallels in a window, instead of Coherence mode
-* Store apps on disk C:\
+* Run Parallels in full-screen mode in a window instead of in **Coherence** mode
+* Store your apps in the virtual machine (VM) on local disk *C:\*
 
 ### 7.1 Increasing Network Speed {#increase-network-speed}
 

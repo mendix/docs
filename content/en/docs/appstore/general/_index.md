@@ -7,6 +7,7 @@ no_list: false
 description_list: true
 tags: ["marketplace", "marketplace component", "marketplace content", "share"]
 aliases:
+    - /community/app-store/
     - /community/app-store/index.html
 ---
 

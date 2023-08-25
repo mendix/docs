@@ -45,4 +45,3 @@ In the **SVN repository address field**, enter the address of the app you want t
 ## 3 Read More
 
 * [Version Control](/refguide8/version-control/)
-

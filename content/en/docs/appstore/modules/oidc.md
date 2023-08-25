@@ -44,6 +44,7 @@ Alternatives to using OIDC SSO for managing single sign on are:
 * Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs.
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
     * For example, PKCE will be used automatically if it is detected.
+* Configuration can be controlled through constants set during your deployment. 
 * Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
 * Support for multiple OIDC IdPs, by allowing configuration of user provisioning and access token parsing microflows per IdP.
 * Supports responsive web applications, a.k.a. browser based applications.
@@ -75,6 +76,7 @@ The OIDC SSO module does not yet support
 * Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
 * Mobile apps.
 * PWA Apps.
+* Controlling the configuration using constants requires an app restart.
 
 ## 2 Dependencies
 
@@ -268,7 +270,9 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
-#### 5.2.1 General OIDC Clients
+You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Azure AD Client Configuration](#azure), and [Amazon Cognito Client Configuration](#cognito), below. You can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
+
+#### 5.2.1 General OIDC Clients {#general-oidc}
 
 In this case, the OIDC client is the app you are making.
 
@@ -288,9 +292,7 @@ In this case, the OIDC client is the app you are making.
 1. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
     * If you don't have an automatic configuration URL, you can fill in the other endpoints manually.
 1. Click **Save**
-    {{% alert color="info" %}}
-    Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.
-    {{% /alert %}}
+    {{% alert color="info" %}}Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.{{% /alert %}}
 1. Select your client configuration and click **Edit**.
 1. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline` scope.
@@ -302,7 +304,7 @@ Once you have completed these steps, the SSO-configuration is ready for testing.
 
 See the section [Optional Features](#optional) information on additional optional features you may want to implement.
 
-#### 5.2.2 Microsoft Azure AD Client Configuration for APIs 
+#### 5.2.2 Microsoft Azure AD Client Configuration for APIs {#azure}
 
 For Azure AD access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
 
@@ -313,7 +315,7 @@ For Azure AD access to APIs through an access token, in addition to the configur
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
-#### 5.2.3 Amazon Cognito Client Configuration
+#### 5.2.3 Amazon Cognito Client Configuration {#cognito}
 
 After you configure the necessary settings in Amazon Cognito, you must add the endpoint URLs to your Mendix app, and then add a button to sign in with Amazon Cognito.
 
@@ -338,6 +340,70 @@ After you configure the necessary settings in Amazon Cognito, you must add the e
     {{< figure src="/attachments/appstore/connectors/aws-cognito/samplelogin.png" alt="Sample endpoint URLs">}}
 
 Users who are part of the user pool you created in Amazon Cognito can now log in with their Amazon Cognito user name and password.
+
+#### 5.2.4 Automated Deploy-time SSO Configuration{#deploy-time}
+
+You can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than using the app's administration pages. As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app’s constants.
+
+To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (OIDC.Startup) as (part of) the [after startup](/refguide/app-settings/#after-startup) microflow.
+
+Use the following security best-practices when setting up your constants:
+
+* Set the [Export level](/refguide/configure-add-on-and-solution-modules#export-level) for these constants to `Hidden` for security reasons.
+* Mask your client_secret so the value is not visible in the developer portal – [constants](/developerportal/deploy/environments-details#constants) in the *Environment Details* documentation for more information.
+
+The configuration you set through constants will mirror the configuration described in [General OIDC Clients](#general-oidc), above.
+
+{{% alert color="info" %}}
+SSO configurations created using constants will be shown as read only on the OpenID Setup page in the app.
+
+The following error messages will be displayed when you try to edit/delete.
+
+* error at edit:  You cannot modify as it is created from deployment.
+* error at delete:  You cannot delete as it is created from deployment.
+{{% /alert %}}
+
+The following constants are mandatory when creating an OIDC SSO configuration
+
+* **ClientID** – the client id
+* **ClientAlias** – the client alias
+* **ClientSecret** – the client secret (see security best-practice, above)
+* **AutomaticConfigurationURL** – the URL of the well-known endpoint 
+
+The following constants are optional:
+
+* **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
+
+    Examples: `client_secret_post` or `client_secret_basic`
+
+* **CallbackResponseMode** (*default: Query*) – : the callback response mode — the caption of OIDC.ENU_ResponseMode
+
+    Example: `Query`
+
+* **CustomATP**: a custom access token processing microflow — the value of `CompleteName` in the mxmodelreflection$microflows table
+
+    Example: `OIDC.Default_PIB_TokenProcessing_CustomATP`
+
+* **CustomCallbackURL** – the custom callback URL
+
+* **SelectedClaim** – selected claim values — multiple values can be separated by a space
+
+    Example: `auth_time created_at`
+
+* **SelectedScope** – selected scopes — multiple values can be separated by a space
+
+    Example: `openid profile email`
+
+* **UserProvisioningFlow** (*default: Standard OIDC*) – the custom user provisioning — the `caption` of OIDC.ENU_UserProvisioningFlows
+
+    Example: `Standard OIDC`
+
+* **SessionEndPoint** – the end session endpoint
+
+* **ACRValues** – selected ACRvalues — the selected scopes with multiple values separated by a space  
+
+    Example: `acr1 acr2`
+
 
 ## 6 User Provisioning
 

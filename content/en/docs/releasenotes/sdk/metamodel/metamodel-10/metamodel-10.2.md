@@ -10,13 +10,9 @@ weight: 98
 
 ### DomainModels
 
-#### MaterializedRemoteEntitySource (Element)
+#### MaterializedRemoteEntitySource, CachedMappedValue (Elements)
 
-* We deleted this element. 
-
-#### CachedMappedValue (Element)
-
-* We deleted this element. 
+* We deleted these elements.  
 
 ### Enumerations
 
@@ -36,14 +32,11 @@ weight: 98
 
 #### CallExternalAction (Element)
 
-* We introduced the `parameterMappings` property. 
-* We introduced the `variableName` property. 
-* We introduced the `variableDataType` property. 
-* We introduced the `variableDataTypeRuntime` property. 
+* We introduced the `parameterMappings`, `variableName`, `variableDataType`, and `variableDataTypeRuntime` properties. 
 
 #### ExternalActionParameterMapping (Element)
 
-* We introduced this element. Info: "Maps an action parameter with its argument"
+* We introduced this element for mapping an action parameter with its argument.
 
 ### Kafka
 
@@ -55,13 +48,13 @@ weight: 98
 
 #### PublishedODataMicroflow (Element)
 
-* We introduced the `returnType` property. Info: "Return type of the microflow"
-* We introduced the `returnTypeRuntime` property. Info: "Runtime return type of the microflow"
+* We introduced the `returnType` property for the return type of the microflow.
+* We introduced the `returnTypeRuntime` property for the Mendix Runtime return type of the microflow.
 
 #### PublishedODataMicroflowParameter (Element)
 
-* We deleted the `type` property. Info: "Replaced with dataType"
-* We introduced the `dataType` property. Info: "Replacement of type"
+* We introduced the `dataType` property.
+* We deleted the `type` property, which has been replaced with `dataType`.
 
 #### ODataRemoteEnumerationSource (Element)
 
@@ -71,35 +64,16 @@ weight: 98
 
 #### DesignPropertyValue (Element)
 
-* We deleted the `type` property. 
-* We deleted the `stringValue` property. 
-* We deleted the `booleanValue` property. 
 * We introduced the `value` property. 
+* We deleted the `type`, `stringValue`, and `booleanValue` properties.
 
-#### AbstractDesignPropertyValue (Element)
+#### AbstractDesignPropertyValue, OptionDesignPropertyValue, ToggleDesignPropertyValue, CustomDesignPropertyValue, CompoundDesignPropertyValue (Elements)
 
-* We introduced this element. 
-
-#### OptionDesignPropertyValue (Element)
-
-* We introduced this element. 
-
-#### ToggleDesignPropertyValue (Element)
-
-* We introduced this element. 
-
-#### CustomDesignPropertyValue (Element)
-
-* We introduced this element. 
-
-#### CompoundDesignPropertyValue (Element)
-
-* We introduced this element. 
+* We introduced these elements. 
 
 #### DataViewSource (Element)
 
-* We deleted the `pageParameter` property. 
-* We deleted the `snippetParameter` property. 
+* We deleted the `pageParameter` and `snippetParameter` properties. 
 
 ### Workflows
 

@@ -69,7 +69,7 @@ For readers with more knowledge of the OAuth and OIDC protocol.
 
 #### 1.2.2 Limitations
 
-The OIDC SSO module does not yet support
+The OIDC SSO module does not yet support the following:
 
 * Requesting claims via the 'claims' query parameter, as per OIDC specs.
 * Other client authentication methods such as using asymmetric keys (“private_key_jwt”).
@@ -77,6 +77,8 @@ The OIDC SSO module does not yet support
 * Mobile apps.
 * PWA Apps.
 * Controlling the configuration using constants requires an app restart.
+
+Also, if an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IDP can be used to sign the end-user in.
 
 ## 2 Dependencies
 
@@ -622,6 +624,14 @@ If your microflow is not correctly implemented you will be told that **Authentic
 ### 8.3 Deep Links
 
 To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to '/oauth/v2/login?cont='
+
+If end-users that use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If that is successful, the end-user will automatically be redirected back to the deeplink.
+
+The DeepLink module does not have full support for multiple IDPs, so it can only trigger logins at one IDP. If you do not specify which IdP you want the DeepLink module to use, it will use the default IdP.
+
+You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
+
+To use OIDC SSO module in conjunction with the DeepLink module, you can choose between the following methods of selecting an IDP:
 
 ### 8.4 Logging Out
 

@@ -403,7 +403,6 @@ The following constants are optional:
 
     Example: `acr1 acr2`
 
-
 ## 6 User Provisioning
 
 Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app (as an `Account` object in the Administration module) when they log in for the first time.
@@ -566,7 +565,27 @@ The OIDC SSO module provides a default access token parsing microflow for Azure 
 
 To confirm that the authorization is working, get an access token from your Azure AD IdP and pass it to the API Endpoint using the authorization header.
 
-#### 8.2.3 Parsing Access Tokens Using a Custom Microflow 
+#### 8.2.3 Parsing OIDC Provider Access Tokens
+
+The OIDC SSO module provides a default access token parsing microflow to use when you are authenticating using the OIDC Provider module as your IdP.
+
+To parse the OIDC Provider access tokens you need to do the following when performing OIDC Client Configuration: 
+
+1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
+
+    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" >}}
+
+2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
+
+3. Configure the user roles in your app to match the roles returned by OIDC Provider. End-users will be given the matching role when they sign into the app. If the role in the OIDC Provider token is not found in the Mendix app the end-user will not be given any user role.
+
+    If any one of the selected scopes of OIDC SSO matches with OIDC Provider Scopes then the user role is created. If you specify extra scopes those scopes are ignored.
+    
+4. Save the configuration. 
+    
+* To confirm that the authorization is working, get an access token from your OIDC Provider IdP and pass it to the API Endpoint using the authorization header. 
+
+#### 8.2.4 Parsing Access Tokens Using a Custom Microflow 
 
 If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure AD.
 

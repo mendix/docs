@@ -33,7 +33,7 @@ In the error handling flow, you can include activities that update the database.
 You can also include decisions in the error handling flow based on what you want. It is recommended to put a [Log message activity](/refguide/log-message/) in the error handling flow to log the error and present a custom error message to the end-user.
 {{% /alert %}}
 
-It is important to know that when a microflow is started by an end-user (for example, by clicking a button), a savepoint is always created at the very beginning of the microflow. This is the case for **Microflow 1** in all the following examples. Knowing how savepoints are created and function is key to understanding how error handling works.
+It is important to know that when a microflow is started by an end-user (for example, by clicking a button), a savepoint is always created at the very beginning of the microflow. This is the case for **Microflow 1** in all the following examples. Knowing how savepoints are created and function is key to understanding how handling errors works.
 
 In the following subsections, we introduce the functionality of each error handling option using simple examples.
 

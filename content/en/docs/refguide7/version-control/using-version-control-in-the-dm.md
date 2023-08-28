@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control the Desktop Modeler. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide7/version-control/).
+This reference guide describes how to use version control in the Desktop Modeler. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide7/version-control/).
 
 ## 2 Starting a Project with Version Control
 

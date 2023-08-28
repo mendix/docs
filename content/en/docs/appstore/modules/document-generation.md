@@ -304,5 +304,5 @@ If you encounter the message "Failed to load page: TimeoutError: waiting for sel
 
 * Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
 * A widget or add-on in the `index.html` is used that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
-* The required `DocumentLayout` or `document-content` class is not used on the page you try to export.
+* The required **Enable PDF export** design property is not set to *Yes* for the page you are trying to export to PDF.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.

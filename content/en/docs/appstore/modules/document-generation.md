@@ -214,8 +214,16 @@ We recommend to try to log in as the service user at least once, to verify if th
 {{% /alert %}}
 
 
-### 4.3 Date and Time Handling
+### 4.3 Language and Date/Time Handling
 
+#### 4.3.1 Language
+For the language of the document, the document generation service uses the language of the user that is passed in the `Generate as user` property.
+
+{{% alert color="info" %}}
+If no language is configured for the user that is passed in the `Generate as user` property, the default language as set in the [App Settings](/refguide/app-settings/) in Studio Pro is used.
+{{% /alert %}}
+
+#### 4.3.2 Date/Time Handling
 For the localization of dates and times, the document generation service uses the time zone of the user that is passed in the `Generate as user` property.
 
 {{% alert color="info" %}}

@@ -87,7 +87,6 @@ It requires the following Marketplace modules to be included in your app:
 * [Encryption](https://marketplace.mendix.com/link/component/1011) – see [Encryption](/appstore/modules/encryption/) documentation
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation
-* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) – see [Native Mobile Resources](/appstore/modules/native-mobile-resources/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
 
 ## 3 Installation
@@ -135,7 +134,7 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 9. You can see some errors in the Errors tab. To resolve these errors, import the “Atlas Core” module from the Marketplace.
 10. If you still have errors, review the information in [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/) and use it to resolve the issues.
 11. Delete the “Atlas_UI_Resources” module from your app. Your app is now using themes from the Atlas Core Module.
-12. Update the “Administration”, “MendixSSO”, and “Native Mobile Resources” modules to the latest version by importing them from the Marketplace.
+12. Update the “Administration” and “MendixSSO” modules to the latest version by importing them from the Marketplace.
 
 #### 3.2.2 Replacing Community Edition with Platform Edition on Mendix Version 9
 

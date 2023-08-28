@@ -15,7 +15,13 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
-## 2023
+# 2023
+
+### August 28, 2023
+
+#### New Features
+
+* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 
 ### August 24, 2023
 
@@ -89,9 +95,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue where under certain circumstances, it was possible to remove the last Scrum Master of an app.
 
 ### August 8, 2023
+
 #### Improvements
 
-* We released the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for general use. This API allows you to manage webhooks for actions which are performed on your Mendix apps. 
+* We released the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for general use. This API allows you to manage webhooks for actions which are performed on your Mendix apps.
 
 ### July 27, 2023
 

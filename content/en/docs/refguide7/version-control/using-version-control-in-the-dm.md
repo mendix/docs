@@ -24,7 +24,7 @@ To start a new project with version control do the following:
 
 The app is created on the Team Server, and a working copy is created in the **Project directory**. This is opened in the Desktop Modeler so that you can start working immediately.
 
-{{< figure src="/attachments/refguide7/version-control/using-version-control-in-the-dm/2018-03-02_11-11-18.png" >}}
+{{< figure src="/attachments/version-control/using-version-control-in-the-dm/2018-03-02_11-11-18.png" >}}
 
 ## 3 Joining a Project
 

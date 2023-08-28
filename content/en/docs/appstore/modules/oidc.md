@@ -78,7 +78,10 @@ The OIDC SSO module does not yet support the following:
 * PWA Apps.
 * Controlling the configuration using constants requires an app restart.
 
-Also, if an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IDP can be used to sign the end-user in.
+The OIDC SSO module also has the following limitations:
+
+* If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IDP can be used to sign the end-user in.
+* If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
 
 ## 2 Dependencies
 

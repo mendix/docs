@@ -267,7 +267,7 @@ If a parameter has type *object* or *list*, the value of the parameter's propert
 }
 ```
 
-If the referenced object can not be found, the action will fail.
+If the referenced object cannot be found, the action will fail.
 
 If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 

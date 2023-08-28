@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources and remote operations in apps through the [Integration Pane](/refguide/integration-pane/).
+Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources and actions in apps through the [Integration Pane](/refguide/integration-pane/).
 
 OData services that are registered in the [Catalog](/catalog/) expose entities that can be dragged and dropped into your domain model through the [Integration Pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
 
@@ -24,7 +24,7 @@ The OData implementation in Mendix does not support all features in the OData sp
 
 ### 2.1 External Entities {#external-entities}
 
-When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned.
+When an external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
 
 External entities have some limitations compared to persistable entities:
 

@@ -190,7 +190,7 @@ Specifying the enumeration member by its numeric value is not supported.
 
 ### 10.2 Updating Associations
 
-When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. Here is an example:
+When the association refers to a single object, use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to set an associated object, or use `null` to empty the associated object. Here is an example:
 
 ```json
 {
@@ -255,7 +255,7 @@ The request body is always a JSON object, with a property for each parameter tha
 }
 ```
 
-If a parameter has type *object* or *list*, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the `@id` syntax to reference the existing object. It is also possible to pass both an `@id` reference *and* attributes of the object combined, which results in an existing object with the additional attributes' values. For example:
+If a parameter has type *object* or *list*, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the existing object. It is also possible to pass both an `@id` reference *and* attributes of the object combined, which results in the existing object having the additional attributes' values. For example:
 
 ```json
 {
@@ -266,6 +266,8 @@ If a parameter has type *object* or *list*, the value of the parameter's propert
   }
 }
 ```
+
+If the referenced object can not be found, the action will fail.
 
 If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 

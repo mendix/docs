@@ -14,7 +14,7 @@ In a [microflow](/refguide/microflows/), microflow elements ([activities](/refgu
 
 This document introduces different error handling options in microflows and explains how they work using simple examples. An example of how combined custom error handling works is also given in [An Example of Combined Error Handling](#example).
 
-This document also presents information on how you can inspect errors using predefined error objects and the best practices for working with error handling in microflows.
+This document also presents information on how you can inspect errors using predefined error objects and the best practices for working with handling errors in microflows.
 
 ## 2 Error Handling Options {#errorhandlers}
 

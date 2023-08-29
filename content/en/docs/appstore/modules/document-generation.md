@@ -42,7 +42,7 @@ The PDF document generation service does not store pages or documents at any tim
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
-* Widgets or add-ons to your `index.html` that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
+* Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
 * Complex documents (e.g. large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
     * Only set the `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations.
@@ -56,7 +56,7 @@ The PDF document generation service does not store pages or documents at any tim
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
-### 1.4 Known issues
+### 1.4 Known Issues
 
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
@@ -75,7 +75,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This wil automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section.
 
-### 3.1 Running Locally from Studio Pro{#run-locally}
+### 3.1 Running Locally from Studio Pro {#run-locally}
 
 To be able to test PDF document generation when using **Run locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
 
@@ -213,10 +213,10 @@ For scenarios where you want to generate documents as a system task (for example
 We recommend to try to log in as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
-
 ### 4.3 Language and Date/Time Handling
 
 #### 4.3.1 Language
+
 For the language of the document, the document generation service uses the language of the user that is passed in the `Generate as user` property.
 
 {{% alert color="info" %}}
@@ -224,6 +224,7 @@ If no language is configured for the user that is passed in the `Generate as use
 {{% /alert %}}
 
 #### 4.3.2 Date/Time Handling
+
 For the localization of dates and times, the document generation service uses the time zone of the user that is passed in the `Generate as user` property.
 
 {{% alert color="info" %}}
@@ -233,6 +234,7 @@ If no time zone is configured for the user that is passed in the `Generate as us
 ### 4.4 Styling Documents
 
 #### 4.4.1 Page settings
+
 The following page-related design properties are available in the **Styling** tab of the properties panel.
 
 | Design property | Description |
@@ -252,7 +254,7 @@ The following **Container** widget related design properties are available in th
 | **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
 | **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
-#### 4.4.3 Advanced styling
+#### 4.4.3 Advanced Styling
 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
@@ -311,6 +313,6 @@ In case you encounter the message "No configuration object available. For use in
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 
 * Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
-* A widget or add-on in the `index.html` is used that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
-* The required **Enable PDF export** design property is not set to *Yes* for the page you are trying to export to PDF.
+* A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
+* The required **Enable PDF export** design property is not set to **Yes** for the page you are trying to export to PDF.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.

@@ -18,6 +18,8 @@ The Deploy API allows you to manage application environments in the Mendix Cloud
 
 {{% alert color="info" %}}
 The v4 Deploy API only supports the endpoints listed here. For all other API calls, the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+
+We recommend that, where possible, you use calls from the same version of the API as the naming across versions is not consistent. For example, the {appId} in the version 4 API is retrieved as the {ProjectId} from the version 1 API.
 {{% /alert %}}
 
 ## 2 Authentication{#authentication}
@@ -47,12 +49,6 @@ Authorization: MxToken 7LJE…vk
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
 ## 3 Examples
-
-If you need to retrieve app and environment information in an app, you will have to use the [Deploy API – Version 1](/apidocs-mxsdk/apidocs/deploy-api/) calls to do this.
-
-{{% alert color="warning" %}}
-The {appId} in version 4 is retrieved as the {ProjectId} from the version 1 API.
-{{% /alert %}}
 
 ### 3.1 Using the API to Change the Technical Contact
 

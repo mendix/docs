@@ -4,7 +4,7 @@ linktitle: "Register OData Resources"
 url: /catalog/register/register-data/
 description: "Describes how to register OData resources in the Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 weight: 10
-tags: ["Catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
+tags: ["Catalog", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
     - /catalog/register/
     - /catalog/register-data/
@@ -148,6 +148,12 @@ To register services, you need the following:
 * Service `Path`, `Name`, and `ContractType`
 * Service version `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
+
+{{% alert color="warning" %}}
+Once a version is released to production, any updated contracts should be given a new version, even if only registering for a non-production environment.
+
+This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
+{{% /alert %}}
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
 
@@ -312,6 +318,9 @@ Follow the steps below:
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
+
+    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version, even if only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.{{% /alert %}}
+
 4. Select the **Go to next step** option that appears once you have filled out all the required fields.
 5. On the **Application** screen, select an existing application by name, or register a new one. **Technical Owner** and **Business Owner** can be edited through the **Curation** feature later.
 6. Select the **Go to next step** option that appears once you have filled out all the required fields.

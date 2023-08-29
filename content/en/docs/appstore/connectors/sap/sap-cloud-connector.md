@@ -1,23 +1,25 @@
 ---
 title: "SAP Cloud Connector"
-url: /partners/sap/sap-cloud-connector/
+url: /appstore/connectors/sap/sap-cloud-connector/
 category: "SAP"
 weight: 28
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "on-premises", "Cloud Connector", "Destination Services", "SAP BTP", "SAP Business Technology Platform"]
+aliases:
+    - /partners/sap/sap-cloud-connector/
 ---
 
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-SAP Cloud Connector is not available in OData Connector for SAP solutions version 4.0.0, and above. For these versions, use the method described in [SAP Destination Service](/partners/sap/sap-destination-service/) to use Cloud Connector functionality with OData Connector for SAP solutions.
+SAP Cloud Connector is not available in OData Connector for SAP solutions version 4.0.0, and above. For these versions, use the method described in [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) to use Cloud Connector functionality with OData Connector for SAP solutions.
 {{% /alert %}}
 
 A challenge when running an application in the cloud is to be able to access your on-premises systems in a secure way.
 
 For SAP Business Technology Platform (SAP BTP) users, this is solved by using the SAP Cloud Connector. With the SAP Cloud Connector, a Mendix application deployed on SAP BTP can access any SAP system running on premises.
 
-{{< figure src="/attachments/partners/sap/sap-cloud-connector/connectivity-service.png" >}}
+{{< figure src="/attachments/appstore/connectors/sap-cloud-connector/connectivity-service.png" >}}
 
 For more information, see [Cloud Connector](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e6c7616abb5710148cfcf3e75d96d596.html
 ) in the SAP Help Portal.
@@ -32,10 +34,9 @@ An important dependency for the SAP Cloud Connector is the JWT token received fr
 
 When the XSUAA Connector for SAP Business Technology Platform and Cloud Connector are set up, the only thing a developer needs to do to use it is enable the **Use SAP cloud connector** flag on one of the OData Connector for SAP solutions operators (such as Get List, Create, or Delete).
 
-{{< figure src="/attachments/partners/sap/sap-cloud-connector/cloud-connector.png" >}}
+{{< figure src="/attachments/appstore/connectors/sap-cloud-connector/cloud-connector.png" >}}
 
 ## 4 Read More
 
-* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/)
-* [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)
-* [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)

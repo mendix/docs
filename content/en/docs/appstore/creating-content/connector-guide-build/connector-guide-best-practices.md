@@ -2,7 +2,7 @@
 title: "Best Practices for Building Connectors"
 url: /appstore/creating-content/connector-guide-best-practices/
 weight: 7
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best practices"]
+tags: ["connectors", "studio pro", "build", "connector guide", "best practices"]
 ---
 
 ## 1 Introduction

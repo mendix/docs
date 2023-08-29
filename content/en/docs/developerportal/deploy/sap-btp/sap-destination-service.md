@@ -1,10 +1,12 @@
 ---
 title: "SAP Destination Service"
-url: /partners/sap/sap-destination-service/
+url: /developerportal/deploy/sap-cloud-platform/sap-destination-service/
 category: "SAP"
 weight: 20
 description: "Reference for using SAP Destination Services within the OData Connector for SAP solutions."
 tags: ["SAP", "OData Connector", "Destination Service", "Cloud Connector", "Connectivity Service"]
+aliases:
+    - /partners/sap/sap-destination-service/
 ---
 
 ## 1 Introduction
@@ -19,7 +21,7 @@ The SAP Destination Service will only provide the correct information when run o
 
 Your Mendix app will use destinations which are configured as part of your SAP subaccount. From your SAP BTP cockpit, you can see which destinations have been configured.
 
-{{< figure src="/attachments/partners/sap/sap-destination-service/sap-cockpit-destinations.png" alt="SAP BTP cockpit - Destinations screen" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-service/sap-cockpit-destinations.png" alt="SAP BTP cockpit - Destinations screen" >}}
 
 It is not the aim of this document to explain how to configure destinations. For this you need to see the SAP documentation here: [SAP Business Technology Platform Connectivity: Destinations](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e4f1d97cbb571014a247d10f9f9a685d.html).
 
@@ -31,11 +33,11 @@ Although you can use the SAP Destination Service on its own, the main use within
 
 There is one action within the OData Connector for SAP solutions module which allows you to get information about a destination. This is **Get Destination**, which is in the *SAP Destination Service* category of the microflow toolbox.
 
-{{< figure src="/attachments/partners/sap/sap-destination-service/drag-get-destination.png" alt="Drag a Get Destination action from the toolbox" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-service/drag-get-destination.png" alt="Drag a Get Destination action from the toolbox" >}}
 
 The **Get Destination** action properties look like this:
 
-{{< figure src="/attachments/partners/sap/sap-destination-service/get-destination-properties.png" alt="Get Destination properties dialog" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-service/get-destination-properties.png" alt="Get Destination properties dialog" >}}
 
 **Destination** is a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit.
 
@@ -45,7 +47,7 @@ The **Get Destination** action properties look like this:
 
 By default, your destination will be found and authenticated using XSUAA. This is controlled using a constant `XSUAAEnabled` which defaults to `true`.
 
-{{< figure src="/attachments/partners/sap/sap-destination-service/xsuaaenabled.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-service/xsuaaenabled.png" >}}
 
 Set `XSUAAEnabled` to `true` if your application is using XSUAA for user authentication, and you want to use the generated access token to authenticate with destination service.
 
@@ -60,7 +62,7 @@ With `XSUAAEnabled` set to `false`, the destination will use the `VCAP` settings
 
 The details of your SAP destination are held in the **Destination** entity which is part of the *SAPODataConnector* domain model. The entity looks like this:
 
-{{< figure src="/attachments/partners/sap/sap-destination-service/destination-entity.png" alt="Destination entity" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-service/destination-entity.png" alt="Destination entity" >}}
 
 This contains attributes for all the possible information about a destination, but only those attributes which are relevant to the chosen *Authentication* method will be populated with values.
 
@@ -170,7 +172,7 @@ You need to get the destination at least once before you perform any actions whi
 
 You should catch any exceptions when using the **Get Destination** to access the service in your microflows.
 
-{{< figure src="/attachments/partners/sap/sap-destination-service/get-destination-error-flow.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-service/get-destination-error-flow.png" >}}
 
 If your access token has expired, you will get a return code of **401**. The access token cannot be refreshed automatically and the end-user will be signed out and will need to sign in again to get a new token.
 
@@ -186,7 +188,7 @@ If you want to deploy locally, during development or testing for example, you wi
 
 When you use OData Connector for SAP solutions actions, you often have to provide a string containing a URL or query. Without Destination Services this needs to contain the SERVICEROOT, that is: the endpoint of the service being consumed.
 
-With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/) for more details.
+With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) for more details.
 
 ## 7 Troubleshooting
 
@@ -206,5 +208,5 @@ Ensure that the user accessing the Mendix App has the required level of access o
 
 ## 8 Read More
 
-* [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/)
-* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)

@@ -1,10 +1,12 @@
 ---
 title: "SAP Horizon Native UI Resources"
-url: /partners/sap/sap-native-resources/
+url: /appstore/modules/sap-ui-resources/sap-native-resources/
 category: "SAP"
 weight: 18
 description: "The SAP Horizon Native UI Resources module allows you to create Native apps with Fiori Horizon-theme UI styling."
 tags: ["SAP", "Fiori", "UI", "resources", "Native"]
+aliases:
+    - /partners/sap/sap-native-resources/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

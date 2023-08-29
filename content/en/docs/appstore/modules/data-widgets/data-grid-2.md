@@ -88,7 +88,7 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (like entities in Data Hub) neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
@@ -167,7 +167,7 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
 
 {{% alert color="warning" %}}
-This property not available if you enable "Custom content" for the column
+This property is not available if you enable **Custom content** for the column
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" >}}

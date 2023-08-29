@@ -2,7 +2,7 @@
 title: "Search in the Catalog"
 url: /catalog/manage/search/
 description: "Describes how to find data sources and datasets in the Catalog."
-tags: ["data hub", "Catalog", "data source", "dataset"]
+tags: ["Catalog", "data source", "dataset"]
 aliases:
     - /data-hub/data-hub-catalog/search/
     - /data-hub/data-hub-catalog/manage-data-sources/search/
@@ -235,7 +235,7 @@ Every published OData service (or data source) has a version number. Apps that c
 
 #### 3.1.2 Environments
 
-The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
+The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 

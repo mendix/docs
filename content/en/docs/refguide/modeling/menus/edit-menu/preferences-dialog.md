@@ -92,7 +92,7 @@ The **Best Practice Bot** tab contains the following settings:
 
 This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When enabled, the pre-selected answer is **yes**; otherwise, it is **no**.
 
-## 5 Version Control Tab
+## 5 Version Control Tab {#version-control}
 
 ### 5.1 File Comparison
 

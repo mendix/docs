@@ -17,6 +17,17 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### August 31, 2023
+
+#### Improvements
+
+{{% todo %}}Add description of new endpoints{{% /todo %}}
+
+* We added a new deploy API, [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/). This replaces the current version 3 API and adds the following endpoints:
+    * One
+    * Two
+* We are deprecating [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) as its functionality is duplicated by version 4. The version 3 endpoints will be removed in March 2024.
+
 ### August 7, 2023
 
 #### Improvements

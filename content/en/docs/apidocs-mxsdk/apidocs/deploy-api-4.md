@@ -1,30 +1,28 @@
 ---
-title: "Deploy API – Version 3"
-url: /apidocs-mxsdk/apidocs/deploy-api-3/
+title: "Deploy API – Version 4"
+url: /apidocs-mxsdk/apidocs/deploy-api-4/
 type: swagger
 category: "API Documentation"
-description: "Deploy API v3 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
-weight: 40
+description: "Deploy API v4 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
+weight: 42
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
 {{% alert color="warning" %}}
-The Deploy API version 3 is deprecated and will be removed in March 2024. Please use [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/) which contains all the v3 endpoints, plus additional endpoints.
-
 The Deploy API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in the Mendix Cloud. Version 3 introduces additional actions and improved actions for some actions.
+The Deploy API allows you to manage application environments in the Mendix Cloud. Version 4 introduces additional actions and improved features for some actions. It replaces the deprecated [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
 
 {{% alert color="info" %}}
-The v3 Deploy API only supports the endpoints listed here. For all other API calls, the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+The v4 Deploy API only supports the endpoints listed here. For all other API calls, the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
 {{% /alert %}}
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Deploy API v3 uses a personal access token (PAT).
+Authentication for the Deploy API v4 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
@@ -42,7 +40,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 
 ```http {linenos=false}
-GET /api/v3/clusters HTTP/1.1
+GET /api/v4/clusters HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
@@ -53,7 +51,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 If you need to retrieve app and environment information in an app, you will have to use the [Deploy API – Version 1](/apidocs-mxsdk/apidocs/deploy-api/) calls to do this.
 
 {{% alert color="warning" %}}
-The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.
+The {appId} in version 4 is retrieved as the {ProjectId} from the version 1 API.
 {{% /alert %}}
 
 ### 3.1 Using the API to Change the Technical Contact
@@ -121,4 +119,6 @@ The following steps will change the permissions of a team member to an environme
 Due to the current configuration, the **Try it out** option returns a network error. You can test the API by pasting the generated curl statement into your terminal, or using a client such as Postman.
 {{% /alert %}}
 
-{{< swaggerui src="/openapi-spec/cloud-portal-v3.yaml"  >}}
+{{% todo %}}Upload V4 YAML{{% /todo %}}
+
+{{< swaggerui src="/openapi-spec/cloud-portal-v4.yaml"  >}}

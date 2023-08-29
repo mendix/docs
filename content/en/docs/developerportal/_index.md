@@ -46,7 +46,7 @@ You can then access the following parts of the Mendix Platform:
 * [Control Center](/developerportal/control-center/)
 * [Portfolio](/developerportal/portfolio-management/)
 * [Marketplace](/appstore/)
-* [Data Hub](/data-hub/)
+* [Catalog](/catalog/)
 * [Academy](https://academy.mendix.com/link/home)
 * [Docs](/)
 * [Forum](/developerportal/community-tools/mendix-forum/)

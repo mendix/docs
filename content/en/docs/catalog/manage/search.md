@@ -2,7 +2,7 @@
 title: "Search in the Catalog"
 url: /catalog/manage/search/
 description: "Describes how to find data sources and datasets in the Catalog."
-tags: ["data hub", "Catalog", "data source", "dataset"]
+tags: ["Catalog", "data source", "dataset"]
 aliases:
     - /data-hub/data-hub-catalog/search/
     - /data-hub/data-hub-catalog/manage-data-sources/search/

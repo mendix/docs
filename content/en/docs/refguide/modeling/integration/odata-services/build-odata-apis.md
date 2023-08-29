@@ -2,7 +2,7 @@
 title: "Build OData APIs with REST Best Practices"
 url: /refguide/build-odata-apis/
 weight: 75
-tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connector guide", "odata", "published odata services", "integration"]
+tags: ["connectors", "studio pro", "build", "API", "REST", "connector guide", "odata", "published odata services", "integration"]
 ---
 
 ## 1 Introduction

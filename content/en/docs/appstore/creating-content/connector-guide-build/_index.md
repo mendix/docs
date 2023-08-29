@@ -4,7 +4,7 @@ url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
 weight: 5
 description: "Introduces the concept of connectors, how they work, and the basic steps for building and publishing connectors."
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how to"]
+tags: ["connectors", "studio pro", "build", "connector guide", "how to"]
 ---
 
 ## 1 Introduction
@@ -37,7 +37,7 @@ Connectors can be used in your app to simplify connecting to existing third-part
 
 ### 2.1 Connecting to Other Systems
 
-Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Data Hub](/data-hub/). 
+Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Catalog](/data-hub/). 
 
 They can also be used to package a Java library provided by the other system to make the connection. These Java library functions can be exposed via Java actions as custom microflow activities (see [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/)). This makes it simpler for Mendix developers without in-depth knowledge about third-party integrations to use these connectors in their business logic.
 

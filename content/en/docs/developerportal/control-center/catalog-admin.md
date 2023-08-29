@@ -4,7 +4,7 @@ url: /developerportal/control-center/catalog-admin/
 category: "Control Center"
 weight: 15
 description: "Describes the Mendix Admin functions for Mendix Admin and curators."
-tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
+tags: ["Mendix Admin", "curator", "custom owner", "administration"]
 aliases:
     - /developerportal/control-center/data-hub-admin/
 ---

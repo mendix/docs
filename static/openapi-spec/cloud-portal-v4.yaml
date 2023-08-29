@@ -325,8 +325,6 @@ tags:
 servers:
   - url: 'https://cloud.home.mendix.com/api/v4'
     description: Production
-  - url: 'https://cloud.home-test.mendix.com/api/v4'
-    description: Test
 components:
   requestBodies: {}
   schemas:

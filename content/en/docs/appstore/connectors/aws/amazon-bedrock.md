@@ -9,13 +9,13 @@ tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
 
 ## 1 Introduction
 
-The [Amazon Bedrock]([#needs-link]) connector enables you to enrich your Mendix app with AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/). 
+The [Amazon Bedrock]([#needs-link]) connector enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/). 
 
 ### 1.1 Typical Use Cases
 
 Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities. Typical use cases include the following:
 
-* Building an AI agent to answer questions about propietary data.
+* Building an AI agent to answer questions about proprietary data.
 * Generating images based on text prompts and displaying them in the Mendix app.
 
 ### 1.2 Prerequisites {#prerequisites}

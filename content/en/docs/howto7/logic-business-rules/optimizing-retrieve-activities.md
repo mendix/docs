@@ -26,7 +26,7 @@ Preventing the creation of the same objects multiple times on different places c
 
 You can easily work around this by using a sub-microflow at a different place. In order to avoid making exceptions in your microflow for the default behavior, do not put the standard logic in a sub microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception and changing it so that it fits in our standard flow.
 
-The easiest way to implement this is to move all the logic for acquiring the primary address into a sub-microflow. This way, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
+The easiest way to implement this is to move all the logic for acquiring the primary address into a sub-microflow. That way, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
 
 {{< figure src="/attachments/howto7/logic-business-rules/optimizing-retrieve-activities/18581013.png" >}}
 

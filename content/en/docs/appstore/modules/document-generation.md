@@ -108,7 +108,7 @@ The steps for each procedure are described in the sections below.
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application [deployed to Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/##deploy-app-mendix-cloud).
+2. Make sure that you have the application [deployed to Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
@@ -200,7 +200,7 @@ For scenarios where you want to generate documents as a system task (for example
 4. Run the app and create a new local user as the service user. Give the service user the app role that you created above and use a strong password. The service user will be used to generate documents.
 
    {{% alert color="info" %}}
-   When starting with a blank app, you can use the **Administration.Account_Overview** page from the [Administration module](appstore/modules/administration/) to manage and create new users.
+   When starting with a blank app, you can use the **Administration.Account_Overview** page from the [Administration module](/appstore/modules/administration/) to manage and create new users.
 
    You could also add a **Find or create** microflow to your after startup logic that performs this step automatically.
    {{% /alert %}}

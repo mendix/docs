@@ -43,7 +43,7 @@ The PDF document generation service does not store pages or documents at any tim
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
-* Complex documents (e.g. large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
+* Complex documents (for example, large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
     * Only set the `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations.
     * Do not exceed 250 documents per day.

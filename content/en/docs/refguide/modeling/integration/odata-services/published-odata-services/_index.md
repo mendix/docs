@@ -25,6 +25,8 @@ Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/
 
 ## 2 General
 
+To create a Published OData Service, right-click on the module in your app and choose **Add other** > **Published OData service**. You can also edit an existing published OData service by double-clicking on it, or right-clicking on it and selecting **Open**.
+
 ### 2.1 Service Name
 
 The service name uniquely identifies the published OData service within the app.
@@ -55,7 +57,7 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
 
-### 2.5.1 Entity Details
+#### 2.5.1 Entity Details
 
 This list gives an overview of all published attributes and associations.
 
@@ -65,7 +67,7 @@ This list gives an overview of all [enumerations](/refguide/enumerations/) that 
 
 Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
 
-### 2.6.1 Enumeration Details
+#### 2.6.1 Enumeration Details
 
 This list gives an overview of the values of the published enumeration.
 
@@ -73,15 +75,23 @@ Click **Edit** to change the exposed name of the enumeration value (the name as 
 
 Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
+### 2.7 Microflows
+
+This list gives an overview of all microflows published as [OData actions](/refguide/published-odata-microflow/).
+
+### 2.8 Parameters
+
+This list gives an overview of the [parameters](/refguide/published-odata-microflow/#pub-odata-mflow-parameters) of a selected microflow.
+
 ## 3 Settings
 
 ### 3.1 Configuration
 
-### 3.1.1 OData Version
+#### 3.1.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
-### 3.1.2 Associations
+#### 3.1.2 Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
 
@@ -240,7 +250,7 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 ## 8 Publishing OData Services
 
-To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionalitity, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deleteable**), select the relevent checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) these resources using [External Object activities](/refguide/external-object-activities/). 
+To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) these resources using [External Object activities](/refguide/external-object-activities/). 
 
 ## 9 Limitations
 

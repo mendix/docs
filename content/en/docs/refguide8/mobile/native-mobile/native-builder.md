@@ -17,7 +17,7 @@ Please update to Native Builder CLI v3.2.1 or higher. Native Builder CLI v3.2.1 
 
 The Native Builder (CLI) takes your Mendix project containing a native profile and packages a native mobile app for iOS and Android. To learn more about using the Native Builder, see [How to Deploy your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/).
 
-The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
+The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native Builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository (named using the project name argument provided) employing the latest version of the Mendix Native Template repository which fits the Mendix version provided.

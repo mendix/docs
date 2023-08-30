@@ -20,11 +20,11 @@ The **Consumed OData Service** document contains the following information:
 * Service name and the icon for the source application of the originating app
 * Version number of the consumed service
 * **View in Catalog** link to the **Service Details** where you can see the full service details that are registered
-* **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
+* **Update/Switch** – you can update the consumed service contract to another version that has been detected in the [Catalog](/data-hub/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in the Catalog:
     * **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point.
-    * **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
+    * **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in the Catalog and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-    {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
+    {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Catalog search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
     {{% alert color="info" %}}In the [Integration Pane](/refguide/integration-pane/), consumed services have an **Update** icon (a blue arrow) if they have an update available.{{% /alert %}}
 
@@ -130,7 +130,7 @@ When you import the metadata, you can add external entities from the consumed OD
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-service-doc-properties.png"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-service-doc-properties.png"   width="500"  >}}
 
 * **Entities** – The URL of the metadata defining the entities and associated datasets.
 * **Documentation** – An additional description about this service for the current app.
@@ -174,7 +174,7 @@ Minor service updates can be deployed to the same service endpoints, thereby ens
 
 When a major change has been made to a published service we recommend that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number.
 
-In this case the new service should be registered in the Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 2 registered occurrences of the **BikeVehicleTruckService**:
+In this case the new service should be registered in the Catalog as a different service, and show up in the Catalog as a separate asset. In the following example, there are 2 registered occurrences of the **BikeVehicleTruckService**:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update-version.png" alt="4 endpoints"   width="250"  >}}
 
@@ -202,7 +202,7 @@ In the [Integration Pane](/refguide/integration-pane/), in search results and in
 
 * The service version that is *currently consumed* is shown (in this example **1.0.0**)
 * Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract at the Catalog endpoint and this will be loaded in the app.
-* The list of entities in this new version in the Data Hub are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service.
+* The list of entities in this new version in the Catalog are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service.
 
 ##### 4.3.1.2 Update Service Dialog Box
 
@@ -210,7 +210,7 @@ When you click **Update** on the **Consumed OData Service** document or the upda
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" >}}
 
-The consumed OData service that is currently consumed in the app (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
+The consumed OData service that is currently consumed in the app (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Catalog (**2.0.0**).
 
 #### 4.3.2. Switch
 

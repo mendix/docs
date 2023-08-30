@@ -4,7 +4,7 @@ linktitle: "Register OData Resources"
 url: /catalog/register/register-data/
 description: "Describes how to register OData resources in the Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 weight: 10
-tags: ["Catalog", "external entities", "register", "published OData service" ,"how to", "registration"]
+tags: ["data hub", "Catalog", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
     - /catalog/register/
     - /catalog/register-data/

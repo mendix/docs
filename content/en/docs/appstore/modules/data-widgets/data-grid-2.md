@@ -2,7 +2,7 @@
 title: "Data Grid 2"
 url: /appstore/modules/data-grid-2/
 description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "data grid", "platform support"]
+tags: ["marketplace", "marketplace component", "data grid", "platform support", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -3,6 +3,8 @@ title: "Hybrid Mobile"
 url: /refguide8/hybrid-mobile/
 category: "Mobile"
 weight: 2
+no_list: false
+description_list: true 
 tags: ["mobile", "hybrid", "studio pro"]
 ---
 
@@ -16,8 +18,3 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Un
 
 ## 2 Documents in This Section
 
-* [Configuring Hybrid Mobile Apps To Run Offline](/refguide8/configuring-hybrid-mobile-apps-to-run-offline/)
-* [Customizing Hybrid Mobile Apps](/refguide8/customizing-hybrid-mobile-apps/)
-* [Developing Hybrid Mobile Apps](/refguide8/developing-hybrid-mobile-apps/)
-* [Managing App Signing Keys](/refguide8/managing-app-signing-keys/)
-* [Packaging Hybrid Mobile Apps](/refguide8/packaging-hybrid-mobile-apps/)

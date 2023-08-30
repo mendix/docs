@@ -3,6 +3,8 @@ title: "Integration"
 url: /refguide8/integration/
 category: "App Modeling"
 weight: 110
+no_list: false
+description_list: true 
 tags: ["studio pro"]
 ---
 
@@ -22,12 +24,4 @@ For a [call REST service](/refguide8/call-rest-action/) activity and JSON suppor
 For a [call web service](/refguide8/call-web-service-action/) activity and support for SOAP web services/XML, see [Consumed Web Services](/refguide8/consumed-web-services/).
 {{% /alert %}}
 
-## 2 Other Documents in This Section
-
-* [Consumed App Services](/refguide8/consumed-app-services/)
-* [HttpRequest and HttpResponse System Entities](/refguide8/http-request-and-response-entities/)
-* [JSON Structures](/refguide8/json-structures/)
-* [Message Definitions](/refguide8/message-definitions/)
-* [Published App Services](/refguide8/published-app-services/)
-* [Published OData Services](/refguide8/published-odata-services/)
-* [XML Schemas](/refguide8/xml-schemas/)
+## 2 Documents in This Section

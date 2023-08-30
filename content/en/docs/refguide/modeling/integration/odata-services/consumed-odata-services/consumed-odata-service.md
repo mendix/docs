@@ -35,7 +35,7 @@ The **Service URL** displays the URL of the service endpoint:
 * Click **Select** to select another [constant](/refguide/constants/) for the service
 * Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/constant.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/constant.png" width="450" >}}
 
 ### 2.2 Timeout
 
@@ -150,7 +150,7 @@ When you add an external entity to your app, you are consuming the entity from a
 
 The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Catalog. In the following example, there are three endpoints for the **Sales 1.0.0** which is deployed to the production environment and the **Acceptance** and **Test** environments:
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/same-service-different-endpoints.png" alt="2 endpoints"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/same-service-different-endpoints.png" alt="2 endpoints"   width="400"  >}}
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your app, Studio Pro will retrieve the information it requires from the contract that is at that endpoint.
 
@@ -198,7 +198,7 @@ See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-
 
 In the [Integration Pane](/refguide/integration-pane/), in search results and in the **Used in your App** section an update arrow indicate if there is a different contract at the Catalog endpoint:
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-available.png" alt="update service app-pane" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-available.png" alt="update service app-pane" width="500" >}}
 
 * The service version that is *currently consumed* is shown (in this example **1.0.0**)
 * Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract at the Catalog endpoint and this will be loaded in the app.
@@ -208,7 +208,7 @@ In the [Integration Pane](/refguide/integration-pane/), in search results and in
 
 When you click **Update** on the **Consumed OData Service** document or the update icon in the **Integration** pane, the **Update** dialog box is displayed.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" width="700" >}}
 
 The consumed OData service that is currently consumed in the app (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Catalog (**2.0.0**).
 
@@ -224,13 +224,13 @@ A published OData services that is deployed to multiple environments or is publi
 
 In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update.png" alt="major change environment" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update.png" alt="major change environment" width="550" >}}
 
 To consume the service deployed to the **Acceptance environment**, follow these steps:
 
 1. Click  **Update** > **Switch** on the **Consumed OData Service** document:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-switch.png" alt="major change environment" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/update-switch.png" alt="major change environment" width="600" >}}
 
 2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from (note that an endpoint is also detected that is deployed to **Production**) and click **Switch**.
 

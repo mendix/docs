@@ -74,7 +74,7 @@ You can watch for any changes in your *src* folder by using the default watch ta
 
 {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398842.png" >}}
 
-Now, everytime you make changes in your *src* folder, it will automatically build a new .mpk file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
+Now, everytime you make changes in your *src* folder, it will automatically build a new *.mpk* file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
 
 #### 4.2.1 Why and How to Use Grunt Watch
 

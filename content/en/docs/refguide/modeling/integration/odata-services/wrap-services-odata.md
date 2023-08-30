@@ -3,7 +3,7 @@ title: "Wrap Services, APIs, or Databases with OData"
 url: /refguide/wrap-services-odata/
 linktitle: "Wrap with OData"
 weight: 80
-tags: ["connectors", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
+tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
 ---
 
 ## 1 Introduction
@@ -35,7 +35,7 @@ OData is a set of best practices for building REST APIs that standardizes many a
 ### 2.2 Compatibility with Data Hub
 
 Wrapping a service, API, or database in OData ensures compatibility with the [Catalog](/catalog/). Published OData services are registered automatically in the [Catalog](/catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Catalog](/catalog/) and made available in the Studio Pro [Integration Pane](/refguide/integration-pane/).
-  
+
 ## 3 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 
 When building a connector or integration, you might only need to move data from back-end services to the client apps instead of storing the data in the database. To support this, you can expose [non-persistable entities](/refguide/entities/#non-persistable-entity) as [published OData resources](/refguide/published-odata-resource/). Previously, only persistable entities could be exposed as published OData resources.

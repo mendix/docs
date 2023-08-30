@@ -8,7 +8,7 @@ description_list: true
 cascade:
     - space: "Catalog Guide"
     - mendix_version: 10
-tags: ["Catalog", "landscape", "external entities", "external users"]
+tags: ["data hub", "Catalog", "landscape", "external entities", "external users"]
 aliases:
     - /data-hub/data-catalog/index.html
     - /data-hub/

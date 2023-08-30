@@ -721,7 +721,7 @@ components:
       required: false
       schema:
         type: string
-      description: 'The value of this parameter can only be `package`. When you provide this query parameter, the response will only contain the package object. This query parameter is optional.'
+      description: 'The value of this parameter can only be `package`. The query parameter is optional and when you provide it the response will contain the package object of the package deployed in the environment in addition to the environment details.'
     licenseType:
       name: licenseType
       in: query

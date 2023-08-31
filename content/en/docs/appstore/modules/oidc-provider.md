@@ -258,6 +258,9 @@ Typically you want to propagate the end-user’s identity from the OIDC Provider
 To pass this additional information, you need to create custom claims. You can do this as follows:
 
 1. Create a microflow which returns a value to the claim.
+
+    You can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object. JSON will be created with the attribute name as the key and the attribute value as the value.
+
 1. Run (publish) your app.
 1. Sign in to your app as an Administrator.
 1. Open the **Mx Objects** overview page and synchronize the required modules to see the new microflow.
@@ -353,25 +356,34 @@ The format of non-custom claims in the ID-token is as follows:
 ```json {linenos=false}
 {
     "com.mendix.user.language": "en_US",
-    "sub": "test",
+    "sub": "3",
     "iss": "http://localhost:8080/",
     "com.mendix.user.entity": "Administration.Account",
     "nonce": "k5CDLkTE7Q61Q0cUTSgy",
     "com.mendix.user.attributes": {
-        "Email": "",
-        "FullName": "test",
+        "Email": "test@gmail.com",
+        "FullName": "test token",
         "IsLocalUser": "true"
     },
     "aud": "DemoClient",
     "scope": "",
+    "name": "test token",
     "exp": 1681970318,
+    “email”:"test@gmail.com",
     "com.mendix.user.timezone": "",
     "iat": 1681969718,
     "com.mendix.user.roles": [
         "User"
     ]
+    “username”:”test”
 }
 ```
+
+In versions of OIDC Provider below 1.1.0, the following values are not included in the ID-token claim:
+
+* "email"
+* "name"
+* "username"
 
 ## 6 Troubleshooting
 

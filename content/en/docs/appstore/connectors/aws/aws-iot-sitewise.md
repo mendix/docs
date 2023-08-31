@@ -510,6 +510,55 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | Quality | Describes the quality of the aggregated data. |
 | Timestamp | Describes the date the aggregating computations occurred. |
 
+### 4.1.54 AbstractEntry {#abstract-entry}
+
+| Attribute | Description |
+| --- | --- |
+| AssetID | Describes the ID of the asset in which the asset property was created. |
+| EntryID | Describes the ID of the entry and is a required parameter. |
+| PropertyAlias | Describes the alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). |
+| PropertyID | Describes the ID of the asset property. |
+
+### 4.1.55 AbstractErrorEntry {#abstract-error-entry}
+
+| Attribute | Description |
+| --- | --- |
+| EntryID | Describes the ID of the entry. |
+| ErrorCode | Describes the error code. |
+| ErrorMessage | Describes the associated error message. |
+
+### 4.1.56 AbstractSkippedEntry {#abstract-skipped-entry}
+
+| Attribute | Description |
+| --- | --- |
+| CompletionStatus | Describes the completion status of each entry that is associated with a batch retrieval API. |
+| EntryID | Describes the ID of the entry. |
+
+### 4.1.57 AbstractSuccessEntry {#abstract-success-entry}
+
+| Attribute | Description |
+| --- | --- |
+| EntryID | Describes the ID of the entry. |
+
+### 4.1.58 ErrorInfo {#error-info}
+
+| Attribute | Description |
+| --- | --- |
+| ErrorCode | Describes the error code. |
+| ErrorTimestamp | Describes the date the error occurred. |
+
+### 4.1.59 BatchGetAssetPropertyValueRequest {#batch-get-asset-property-value-request}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token to be used for the next set of paginated results. |
+
+### 4.1.60 BatchGetAssetPropertyValueResponse {#batch-get-asset-property-value-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token for the next set of results, or null if there are no additional results. |
+
 ### 4.1. ENTITY_NAME {#entity_name}
 
 | Attribute | Description |
@@ -666,7 +715,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | _1h | 1h | Time interval of one hour over which data is aggregated. |
 | _1d | 1d | Time interval of one day over which data is aggregated. |
 
-#### 4.2.55 ENUM_AggregateType
+#### 4.2.56 ENUM_AggregateType
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -676,6 +725,21 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | MINIMUM | MINIMUM | Data aggregating function being the minimum value in the specified period. |
 | SUM | SUM | Data aggregating function being the summed up value in the specified period. |
 | STANDARD_DEVIATION | STANDARD_DEVIATION | Data aggregating function being the standard deviation in the specified period. |
+
+#### 4.2.57 ENUM_ErrorCode
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| ResourceNotFoundException | ResourceNotFoundException | Retrieving the property value returned an error because the resource was not found. |
+| InvalidRequestException | InvalidRequestException | Retrieving the property value returned an error because the request was invalid. |
+| AccessDeniedException | AccessDeniedException | Retrieving the property value returned and error because access was denied. |
+
+#### 4.2.58 ENUM_CompletionStatus
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| SUCCESS | SUCCESS | The entry was skipped because it was included in a prior batch retrieval call. |
+| ERROR | ERROR | The entry was skipped because it returned an error. |
 
 ### 4.3 Activities {#activities}
 
@@ -806,6 +870,22 @@ The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retr
 | Input | Output | 
 | --- | --- | 
 | `GetAssetPropertyAggregatesRequest` | `GetAssetPropertyAggregatesResponse` |
+
+#### 4.3.14 BatchGetAssetPropertyValue {#batch-get-asset-property-value}
+
+The `BatchGetAssetPropertyValue` Amazon Iot SiteWise activity allows you to get the current value for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueRequest` object and returns a `BatchGetAssetPropertyValueResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `BatchGetAssetPropertyValueRequest` | `BatchGetAssetPropertyValueResponse` |
+
+#### 4.3.15 BatchGetAssetPropertyValueHistory {#batch-get-asset-property-value-history}
+
+The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to get the historical values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueHistoryRequest` object and returns a `BatchGetAssetPropertyValueHistoryResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `BatchGetAssetPropertyValueHistoryRequest` | `BatchGetAssetPropertyValueHistoryResponse` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

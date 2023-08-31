@@ -24,6 +24,10 @@ The general notion of software quality embraces a variety of quality aspects, of
 
 ## 2 Additional Information
 
+{{% alert color="info" %}}
+To request or renew your license, go to [this form](https://addon.mendix.com/index.html).
+{{% /alert %}}
+
 * Mendix AQM is available for projects based on Mendix 6.0 and above
 * Mendix AQM supports self-service onboarding of new AQM apps for existing customers via Mendix Support
 * Mendix AQM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales

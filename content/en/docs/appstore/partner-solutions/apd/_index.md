@@ -18,4 +18,8 @@ This section contains all the documentation for versions 1 and 2 of Application 
 With version 3, the product has been renamed from **Mendix Application Performance Monitor (APM)** to **Mendix Application Performance Diagnostics (APD)**.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+To request or renew your license, go to [this form](https://addon.mendix.com/index.html).
+{{% /alert %}}
+
 ## 2 Documents in This Section

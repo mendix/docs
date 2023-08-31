@@ -16,8 +16,8 @@ Mendix users can use the Catalog to search for and consume registered OData serv
 Catalog users can do the following: 
 
 * Publish services and register them in the Catalog from Studio Pro
-* Register [published OData services](/refguide/published-odata-services/)(v2, v3, and v4) for non-Mendix apps manually
-* Update the metadata such as descriptions, tags, contact information, and discoverability of their own registered services
+* Manually register [published OData services](/refguide/published-odata-services/) (v2, v3, and v4) for non-Mendix apps
+* Update the metadata, such as descriptions, tags, contact information, and discoverability of their own registered services
 * See all the discoverable services and datasets registered in their organization’s Catalog, and connect to the data by using the published entities as external entities in their apps in Studio Pro
 
 ## 2 Mendix Admin {#admin}
@@ -39,4 +39,4 @@ Mendix Admins can add **External Users** to their company's Catalog. See the [Ex
 
 The Curator curates registered services in the Catalog to ensure that registered services are visible to the relevant users and to enrich the information on registered assets. An organization can have several Curators. 
 
-Curators are assigned by the a [Mendix Admin](#admin) and can enrich the metadata of registered services and datasets with descriptions, tags, contact information, and discoverability.
+Curators are assigned by a [Mendix Admin](#admin) and can enrich the metadata of registered services and datasets with descriptions, tags, contact information, and discoverability.

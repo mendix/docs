@@ -25,7 +25,7 @@ The general notion of software quality embraces a variety of quality aspects, of
 ## 2 Additional Information
 
 {{% alert color="info" %}}
-To request or renew your license, go to [this form](https://addon.mendix.com/index.html).
+To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
 {{% /alert %}}
 
 * Mendix AQM is available for projects based on Mendix 6.0 and above

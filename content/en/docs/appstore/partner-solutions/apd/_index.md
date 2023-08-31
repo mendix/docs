@@ -19,7 +19,7 @@ With version 3, the product has been renamed from **Mendix Application Performan
 {{% /alert %}}
 
 {{% alert color="info" %}}
-To request or renew your license, go to [this form](https://addon.mendix.com/index.html).
+To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
 {{% /alert %}}
 
 ## 2 Documents in This Section

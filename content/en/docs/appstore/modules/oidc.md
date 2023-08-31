@@ -46,7 +46,8 @@ Alternatives to using OIDC SSO for managing single sign on are:
     * For example, PKCE will be used automatically if it is detected.
 * Configuration can be controlled through constants set during your deployment. 
 * Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
-* Support for multiple OIDC IdPs, by allowing configuration of user provisioning and access token parsing microflows per IdP.
+* Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
+* Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IDP). 
 * Supports responsive web applications, a.k.a. browser based applications.
 * Works with the Mendix DeepLink module.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
@@ -66,6 +67,7 @@ For readers with more knowledge of the OAuth and OIDC protocol.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
+* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP).
 
 #### 1.2.2 Limitations
 
@@ -590,7 +592,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
     
 * To confirm that the authorization is working, get an access token from your OIDC Provider IdP and pass it to the API Endpoint using the authorization header. 
 
-#### 8.2.4 Parsing Access Tokens Using a Custom Microflow 
+#### 8.2.4 Parsing Access Tokens Using a Custom Microflow{#custom-parsing}
 
 If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure AD.
 
@@ -641,6 +643,52 @@ To use OIDC SSO module in conjunction with the DeepLink module, you can choose b
 A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
+
+
+### 8.5 Use ACR to Request Authentication Method
+
+By default, the OIDC SSO module does not care how users are signed in at your IDP, that is left to the discretion of the IDP. In some cases your IDP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
+
+The following sections describe the steps needed to make use of the ACR mechanism.
+
+#### 8.5.1 Configuring Authentication Methods That Can Be Requested at Your IDP
+
+To configure the ACR value(s) in the OIDC SSO module, follow these steps: 
+
+1. Navigate to the screen where the OIDC configuration is managed. 
+2. Select your client configuration and click **Edit**.
+3. Add the ACR values that are supported by your IDP to the OIDC Client Configuration.
+
+    For example, supported ACR Values for Okta IdP are: `urn:okta:loa:1fa:any` and `urn:okta:loa:2fa:any`.
+ 
+4. Save the configuration changes. 
+
+#### 8.5.2 Selecting the ACR Value During Sign In
+
+When you have configured multiple ACR values for your IDP, the OIDC module shows the ACR values as additional ways to sign in on the default login page.
+
+{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" >}}
+
+#### 8.5.3 Customizing the Login Page
+
+If you want to customize this login page for your end-users, perform the following steps:
+
+1. Create a new [page](/refguide/page/).
+1. Open the App Navigation and set the newly created login page as the [Default home page](/refguide/setting-up-the-navigation-structure/#home).
+1. Create [Role-based home pages](/refguide/setting-up-the-navigation-structure/#role-based-home-page) for the user roles. Set the target to the Home page in the module.
+1. In the **Authentication** section, set the new login page as the **Sign-in page**.
+
+Depending on how your login-page works and/or which login-option is selected by the end-user, the OIDC SSO module will select the corresponding ACR value in the `acr_values` request parameter.
+
+#### 8.5.4 ID-token Processing
+
+Your IDP may have different ways of handling requests to use a specific authentication method. The OpenID Connect protocol allows for different kinds of logic at your IDP. A few options are:
+
+* Your IDP may always ensure users are authenticated as requested
+* Your IDP may honor what is requested on a ‘best effort’ basis and indicate the actual authentication method used in the ID-token that is sent to your app.
+* Your IDP may send an error response to your app if the requested authentication method was not possible for the user that was asked to login, for whatever reason.
+
+When a user successfully signs in at your IDP, your IDP may or may not return an ACR claim in the ID-token. If your IDP returns the actual authentication method that was used in the ACR claim in the ID-token (and/or Access Token), you can create a [custom User Provisioning microflow](#custom-provisioning) (or [custom access token parsing microflow](#custom-parsing)) to grant or restrict access to specific resources or functionalities based on the level of authentication assurance.
 
 ## 9 Testing and Troubleshooting{#testing}
 

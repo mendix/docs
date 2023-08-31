@@ -16,7 +16,7 @@ The **Call REST service** activity can be used to call a REST endpoint. You can 
 
 ## 2 Properties
 
-An example of call rest action properties is represented in the image below:
+An example of the call REST service activity's properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" >}}
 
@@ -216,7 +216,7 @@ The **Variable** field defines the name for the result of the operation.
 
 #### 7.3.1 $latestHttpResponse Variable
 
-The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity. This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
+The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST service** activity. This variable can only be accessed in the microflow where the **Call REST service** activity is used.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
@@ -225,7 +225,7 @@ This attribute is filled when one of the following scenarios occur:
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
 
-#### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
+#### 7.3.2 Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide/error-handling-in-microflows/#errorhandlers).
 
@@ -249,3 +249,22 @@ There are two ways to resolve this:
 2. Handle the error in your microflow and retry a number of times before returning the error. Your flow might look similar to the one below.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" >}}
+
+## 10 Security Considerations {#security}
+
+### 10.1 Preventing Vulnerabilities in your App
+
+The call REST service activity allows your app to execute calls to any possible endpoint. Given that the **Location** property is provided by a string template, you are able to compose dynamic URLs that contain variable values. You could even model a microflow where (a part of) the URL is provided by the user. This gives the developer a lot of power, but comes with risks, too.
+
+One of the possible vulnerabilities is the [Server Side Request Forgery (SSRF)](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery) vulnerability. In an SSRF attack, the user of your application is able to get access to resources that are otherwise not accessible. This is done by, instead of directly trying to access an inaccessible resource, having the application do the call to that resource and return its contents. This is a possibility when there is an internal service running behind a firewall, accessible to other apps, but not accessible to any other client on the web. However, by letting your app do the call, this internal resource is accessible, and depending on how your app is built, could be returned to the user.
+
+*Example:* You have created two apps, one called *MySecretService* with a published OData service that serves employee data to your other internal apps. It is deployed behind a firewall, can be accessed on `https://my.secret.ip.address/odata/employeeservice/v1`, and its access is restricted to make sure only your other apps can call this service. Your second app is called *PDFService* and allows you to provide a URL and click Generate, which triggers a microflow with a Call REST service activity that has the provided URL as its Location, and passes the retrieved contents from that URL on to a PDF generator, and returns the created PDF to the user. Now, a malicious user could pass the URL `https://my.secret.ip.address/odata/employeeservice/v1/Employee(11034)` to the service and press Generate. The user, who from his own device has no access to that internal service, will receive a PDF from the PDFService with all the data found for employee with ID 11034.
+
+In order to prevent this type of attacks from happening, there are a number of precautions you can take. Here are the main methods to do this:
+
+- Verify that your Call REST service activities never call a URL that is input by the user
+
+If that is not possible, 
+- Make sure to validate and sanitize the user inputs;
+- Maintain a whitelist of the domains that should be accessible and use it to validate URLs;
+- Do not return the response from the call unprocessed to the user.

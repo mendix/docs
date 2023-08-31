@@ -37,8 +37,9 @@ The OIDC Provider has the following features and limitations:
 
 **Features**
 
-* allows for registration of Mendix apps via the client registration endpoint
-* works/integrates with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module
+* It allows for registration of Mendix apps via the client registration endpoint.
+* It works/integrates with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module.
+* It provides a standard mechanism to communicate which user roles are assigned for the end-user in connected Mendix apps.
 * It supports responsive web applications, using the common OAuth Authorization Code grant.
 * Your apps can be registered as an OIDC client with the OIDC Provider using the client registration API or client configuration screen. The client registration API allows you to register your client automatically when using a CI/CD deployment pipeline.
 * It publishes a well-known endpoint to communicate endpoints and other IdP characteristics to client applications. Mendix apps using the OIDC SSO module will consume this endpoint to perform actions like retrieving the keys needed to validate ID-tokens that they receive.
@@ -201,7 +202,7 @@ Choose one of the two options, below.
 
 Whichever option you choose, you will need to use [Custom User Provisioning](/appstore/modules/oidc/#custom-provisioning) in the OIDC SSO module of your client app to assign the correct user roles to the end-user.
 
-##### 3.3.3.1 Configuration of the OIDC Provider for Centralized Authorization with Scopes
+##### 3.3.3.1 Configuration of the OIDC Provider for Centralized Authorization with Scopes{#configure-scopes}
 
  When you follow the recommended approach for [centralized authorization](#centralized-auth) using OAuth scopes, the OIDC Provider needs to know which user roles have been implemented in your Mendix apps, so the client can assign those user roles.
 
@@ -210,7 +211,12 @@ The scope values (user roles) that you assign to the authenticated user in the O
 To return requested scopes to your client app, you need to perform the following steps to configure the OIDC Provider:
 
 1. Open the **Scopes** tab for the client you want to configure
-1. Create a new scope for every user role which is implemented in your client apps. This scope has the same **Name** as the user role in your client app.
+1. Create a new scope for every user role which is implemented in your client apps. You can identify the user role in one of two ways:
+
+    1. use the **Name** as the user role in your client app.
+    1. use the UUID of the user role in your client app.
+    
+        The benefit of this second approach is that it avoids ‘scope collision’. In other words, you avoid having confusion between user roles with the same name but in different apps.
 
     If your client app consumes APIs and wants to get access using the Access Token from the OIDC Provider, you may want to configure additional scope values, as required by those APIs.
 
@@ -239,6 +245,11 @@ The scopes you configure are not added automatically to the “scopes_supported�
     The Microflow returns the scope(s) as a String containing space-separated values. If any of the requested scopes are not associated with the client then the microflow returns an empty value as output.
     
     {{% alert color="info" %}}The default implementation of `OpenIDConnectProvider.SUB_CustomScope` grants any requested scope provided it is associated with client (your Mendix app). It does not do any validation of the end user.{{% /alert %}}
+
+1. In the connected apps, select the following microflows in the [OIDC SSO](/appstore/modules/oidc/) module to let you app apply the assigned user roles to the end-users:
+
+    * `UserProvisioning_StandardOIDC` as the user provisioning microflow
+    * `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow** for access token parsing
 
 ##### 3.3.3.2 Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims{#propagate-custom-claims}
 
@@ -420,3 +431,9 @@ This means that the access token will contain a "sub" claim which gets value fro
 This is the case where the OIDC Provider module can be used separately as an IDP without building an IAM structure.
 
 Where there is no IAM brokering functionality, the administrator can create end-users (Accounts) using the AccountDetail page in the OIDC Provider module. This page creates `AccountDetail` objects which automatically create `Account` objects in the app to represent the AccountDetails as accounts.
+
+### 7.4 Structure of ID and Access Tokens
+
+For situations where the Centralized Authorization concept is used (see [Centralized Authorization](#centralized-auth), above), the OIDC Provider module uses the ‘scope’ claim in both the ID and Access token to communicate assigned user roles to connected Mendix apps. The scope parameter has the format `mx:app:userrole:{user-role}`, where `{user-role}` is either the name or the UUID of the role in the connected app as set up in [Configuration of the OIDC Provider for Centralized Authorization with Scopes](#configure-scopes).
+
+For example: `mx:app:userrole:53f5d6fa-6da9-4a71-b011-454ec052cce8`

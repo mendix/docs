@@ -13,6 +13,18 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### Aug 10, 2023
+
+#### Improvements
+
+* You can now easily update your data source to a newer version from the Data Source details Page. 
+
+### July 24, 2023
+
+#### Fixes
+
+* We fixed an issue where datasets sometimes disappeared from an endpoint.
+
 ### July 6, 2023
 
 #### Improvements
@@ -287,7 +299,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed a bug where an empty V3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
+* We fixed a bug where an empty v3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
 * We fixed a bug where notifications were not sent when the notification title was more than 100 characters. The maximum number of characters in notification titles is now 100.
 
 ### August 11, 2022
@@ -369,7 +381,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed a bug where the `GET ServiceVersion` operation of the DataHub V2 API would not always return the `ContractType` of a `Service`. See [Catalog APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
+* We fixed a bug where the `GET ServiceVersion` operation of the DataHub v2 API would not always return the `ContractType` of a `Service`. See [Catalog APIs](https://platformcore.pages.rnd.mendix.com/datahub-spec/) for a list of all available APIs.
 
 ### May 19, 2022
 
@@ -519,7 +531,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed a bug where V3 contracts uploaded as single XML files were not downloadable from the Catalog via the **Download Contract** button.
+* We fixed a bug where v3 contracts uploaded as single XML files were not downloadable from the Catalog via the **Download Contract** button.
 
 ### January 6, 2022
 

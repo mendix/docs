@@ -164,7 +164,7 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `AbstractMessageAttribute` | | This entity holds information required to publisj a message, specifically the message's attributes. The attributes it contains are `AttributeType`, which represents the native data type of the content, `Name`, which represents the attribute, and `Value`, which represents the attribute's value. This entity can be used to send messages to subsets of one's subscriber base. |
+| `AbstractMessageAttribute` | | This entity holds information required to publish a message, specifically the message's attributes. The attributes it contains are `AttributeType`, which represents the native data type of the content, `Name`, which represents the attribute, and `Value`, which represents the attribute's value. This entity can be used to send messages to subsets of one's subscriber base. |
 | `Topic` | | This generalization entity represents information on topics inside the Amazon SNS environment. The `ARN` (Amazon Resource Name) attribute represents an identification on Amazon's side, and the `Name` attribute represents the topic's name. |
 | `Message` | | This entity holds information for publishing a message, specifically the message to be broadcasted. The attributes it contains are `Subject`, which represents the message's subject, and `Body`, which represents the message's content. Required attributes: `_id`; `Message`. |
 | `ListTopicsResponse` | | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of `ListTopicsTopic` objects. Attributes: `NextToken` (string) - this token can be used to retrieve the next set of topics. |
@@ -240,7 +240,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
  
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |    **US Easth (Ohio)** |
+| `us_east_2` |    **US East (Ohio)** |
 | `us_east_1` |    **US East (N. Virginia)** |
 | `us_west_1` |    **US West (N. California)** |
 | `us_west_2` |    **US West (Oregon)** |

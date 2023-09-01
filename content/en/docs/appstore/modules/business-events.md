@@ -101,7 +101,7 @@ To consume a business event, you first need to create a **Consumed Business Even
 3. Import an AsyncAPI service document. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
 4. Click **OK**.
 
-{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available.png" >}}
 
 #### 4.1.3 Subscribing to a Business Event
 
@@ -370,15 +370,26 @@ Any free app in your organization will be able to receive any event published by
 
 To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). See [Mendix Event Broker License](#event-broker-license) for licensing information.
 
-You can also use your own event broker cluster.
+Make sure you [enable the Mendix Event Broker](#enable-mx-event-broker) for every app and environment before deploying.
 
-#### 6.3.1 Warning Message When Deploying
+#### 6.3.1 Warning Message When Enabling Mendix Event Broker
 
-If you are deploying an app to production that contains a published business event service, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
+If you enabled the [Mendix Event Broker](#mendix-event-broker) for an environment, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
-1. Select the **Enable** checkbox for the environment.
-2. Transport the mda to an environment.
-3. Restart the environment.
+1. **Enable** the checkbox for the environment.
+1. Transport the *.mda* file to an environment.
+1. Restart the environment.
+
+#### 6.3.2 Deploy Order
+
+The app that defines a business event service (**app A**), needs to be deployed and ran before the app that uses that business events service (**app B**) is ran.
+
+When this requirement is not met, **app B** will either be terminated or, when using [Business Events Module](https://marketplace.mendix.com/link/component/202649) version 3.7.0 and higher, produce errors in the log.
+
+When this occurs, please execute the following steps:
+
+1. Ensure **app A** has started in the same [space](#521-environments-and-spaces) as **app B**.
+1. Restart **app B**.
    
 ### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 

@@ -9,6 +9,8 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
 {{% alert color="warning" %}}
+The Deploy API version 3 is deprecated and will be removed in March 2024. Please use [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/) which contains all the v3 endpoints, plus additional endpoints.
+
 The Deploy API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}
 
@@ -16,8 +18,8 @@ The Deploy API only works for apps which are deployed to the Mendix Cloud.
 
 The Deploy API allows you to manage application environments in the Mendix Cloud. Version 3 introduces additional actions and improved actions for some actions.
 
-{{% alert color="warning" %}}
-The V3 Deploy API only supports the endpoints listed here. For all other API calls, the [V2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [V1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+{{% alert color="info" %}}
+The v3 Deploy API only supports the endpoints listed here. For all other API calls, the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
 {{% /alert %}}
 
 ## 2 Authentication{#authentication}
@@ -48,7 +50,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ## 3 Examples
 
-If you need to retrieve app and environment information in an app, you will have to use the [Deploy API – Version 1](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api/) calls to do this.
+If you need to retrieve app and environment information in an app, you will have to use the [Deploy API – Version 1](/apidocs-mxsdk/apidocs/deploy-api/) calls to do this.
 
 {{% alert color="warning" %}}
 The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.

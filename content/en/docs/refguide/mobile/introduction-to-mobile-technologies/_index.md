@@ -36,7 +36,7 @@ Mendix offers options to build both native mobile apps and PWAs. Depending on yo
 {{% alert color="warning" %}}
 PWAs have the following limitations:
 
-* Push notifications are not supported for PWAs on iOS or Android
+* Push notifications are not supported for PWAs
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 

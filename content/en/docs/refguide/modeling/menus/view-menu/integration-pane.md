@@ -3,7 +3,7 @@ title: "Integration Pane"
 url: /refguide/integration-pane/
 weight: 30
 description: "Describes the Integration Pane in Mendix Studio Pro."
-tags: ["studio Pro", "data hub", "Integration Pane", "data hub catalog"]
+tags: ["data hub", "studio Pro", "Integration Pane", "data hub catalog"]
 aliases:
     - /refguide/data-hub-pane/
 ---
@@ -13,6 +13,8 @@ aliases:
 Use the Integration Pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the [Integration Pane](/refguide/integration-pane/).
 
 You can search in the Catalog through the [Integration Pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
+
+Besides external entities, OData services can expose actions that can be called from within microflows. From this pane you can drag these actions onto a microflow, where they will appear as a **Call external action** activity. In this activity you can configure the parameters and result variable.
 
 To display the [Integration Pane](/refguide/integration-pane/), click **View** > **Integration**.
 
@@ -31,13 +33,13 @@ The following functionality is available in the pane:
 * [View information](#viewing) on the service, its entities, attributes, and associations – When you enter a search term and browse through services, you can view various information on them.
 * [View services used in your app](#used-in-app) – Services and the entities that are currently being used in your app are displayed in the **Used in your App** section and are indicated with a green check-mark in the search results. For more information, see the [Used in Your App](#used-in-app) section below. 
 
-### 2.2 Used in Your App Section {#used-in-app}
+### 2.1 Used in Your App Section {#used-in-app}
 
-When you do not enter search text in the [Integration Pane](/refguide/integration-pane/), then **Used in your App** section is displayed. This shows the consumed services and the external entities used in the current app. The list of entities, associations, and attributes for the consumed services are shown as for the search results:
+When you do not enter search text in the [Integration Pane](/refguide/integration-pane/), then the **Used in your App** section is displayed. This shows the consumed services and the related external entities and actions used in the current app. The list of entities, associations, attributes, and actions for the consumed services are shown as for the search results:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/used-in-your-app.png" alt="User in Your App Section" >}}
 
-For more information on how to add entities to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities*.
+For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide/call-external-action/).
 
 ## 3 Searching Catalog Sources {#search}
 
@@ -120,7 +122,7 @@ If you right-click a consumed entity and **Go to entity**, it will take you to t
 
 The associations that are exposed in the services are listed before attributes in alphabetical order. You can click on the **+** to see the entity that the association is with.
 
-**Mulitiple association**s between the same entities are shown before single associations.
+**Multiple association**s between the same entities are shown before single associations.
 
 In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your app:
 
@@ -136,6 +138,16 @@ Unsupported attributes are grayed out and are not included in your app.
 
 If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the [Integration Pane](/refguide/integration-pane/).
 Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/catalog/write-data/).
+
+### 4.3 Actions {#actions}
+
+External actions are displayed under the service, below the entities. By default the actions are hidden and can be made visible by clicking **Show more...**
+
+By clicking the expand button next to the action, the parameters and return type of that action are shown. You can right-click and select **Find Usages** in order to search for all the places the action is used throughout the app.
+
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/actions.png" alt="integration pane actions" width="400" >}}
+
+{{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged into a microflow.{{% /alert %}}
 
 ## 5 Read More
 

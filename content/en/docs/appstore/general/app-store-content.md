@@ -7,12 +7,12 @@ weight: 3
 tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 aliases:
+    - /community/app-store/use-app-store-content-in-the-modeler/
+    - /developerportal/app-store/app-store-content/
+    - /developerportal/app-store/use-app-store-content-in-the-modeler/
     - /community/app-store/use-app-store-content-in-the-modeler.html
     - /developerportal/app-store/app-store-content.html
     - /developerportal/app-store/use-app-store-content-in-the-modeler.html
-    - /community/app-store/use-app-store-content-in-the-modeler
-    - /developerportal/app-store/app-store-content
-    - /developerportal/app-store/use-app-store-content-in-the-modeler
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors "downloading", "widget", and "project-layout" below are mapped, so they should not be removed or changed.
 ---

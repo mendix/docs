@@ -107,3 +107,9 @@ The latest version of Make It Native 9 is only compatible with versions of Mendi
 ### 3.2 Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+
+### 3.3 Avoid Network or Cloud Folders
+
+Storing a Mendix project on a network drive or in a cloud folder (such as those provided by OneDrive or Dropbox) is **not recommended**. Storing your projects in such folders will significantly slow down Studio Pro and cause errors when trying to run projects containing a native mobile profile. Note also that projects with a native mobile profile can only be started from drive **C:**.
+
+If your home directory is managed by OneDrive, create a new folder on your computer outside of your home directoy (for example **C:\Mendix**) and place the Mendix projects in there.

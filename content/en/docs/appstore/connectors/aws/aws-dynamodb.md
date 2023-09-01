@@ -233,7 +233,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `UPDATING` | **UPDATING** | The enumeration element that shows the status of a table that is being updated |
 | `DELETING` | **DELETING** | The enumeration element that shows the status of a table that is being deleted |
 | `ACTIVE` | **ACTIVE** | The enumeration element that shows the status of a table that is active |
-| `INACCESSIBLE_ENCRYPTION_CREDENTIALS` | **INACCESSIBLE_ENCRYPTION_CREDENTIALS** | The enumeration element that shows the status of a table that has an inaccesible AWS KMS key. Table operations may fail due to this |
+| `INACCESSIBLE_ENCRYPTION_CREDENTIALS` | **INACCESSIBLE_ENCRYPTION_CREDENTIALS** | The enumeration element that shows the status of a table that has an inaccessible AWS KMS key. Table operations may fail due to this |
 
 #### 4.2.3 `ENUM_KEY`
 

@@ -13,6 +13,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### August 5, 2023
+
+#### Improvements
+
+* Categories are now **Content Types**. We have reduced the number of content types and made them consistent across the platform. To learn more about the different content types available, visit the [Marketplace Guide](/appstore/general/app-store-overview/).
+* Sub-categories have been replaced with **Categories**. When submitting a new component, you can apply between one and three categories. When searching in the Marketplace, you can use categories to filter the content and find the right component for your use case.
+
 ### June 29, 2023
 
 #### New Features
@@ -367,7 +374,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 #### Improvements
 
-We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/partners/sap/sap-logger/).
+We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/appstore/connectors/sap/sap-logger/).
 
 ### June 6, 2019
 
@@ -418,7 +425,7 @@ We have noticed that when searching in the App Store (via the **Search Mendix** 
 
 #### SAP OData Connector 4.0
 
- This version of the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525/) allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP back end services. See [SAP Destination Service](/partners/sap/sap-destination-service/).
+ This version of the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525/) allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP back end services. See [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -438,7 +445,7 @@ The existing SAP Blank app template has been replaced by a new Fiori Blank app t
 
 #### Breaking Changes
 
-The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/partners/sap/sap-destination-service/) for more details.
+The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more details.
 
 ## 2017
 

@@ -28,10 +28,6 @@ If you have any additional useful resources, feel free to mention them in the co
 * [Editing TypeScript](https://code.visualstudio.com/docs/languages/typescript) with Visual Studio Code
 * Debugging your app with [Node Inspector](https://www.npmjs.com/package/node-inspector)
 
-## 4 Videos
-
-{{% youtube h7NLi2w8ytg %}}
-
-## 5 Other
+## 4 Other
 
 * [Node.js refcard](https://dzone.com/refcardz/nodejs) - Node.js is the JavaScript engine we use to run our scripts

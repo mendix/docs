@@ -1,19 +1,20 @@
 ---
-title: "Migrate from to a Different Public Cloud Datacenter"
+title: "Migrate to a Different Public Cloud Region"
+linktitle: "Migrate to Other Region"
 url: /developerportal/deploy/migrating-on-public-cloud/
 weight: 10
-description: "How to migrate your app from one Mendix Public Cloud datacenter to another."
-tags: ["App","Migrate","Developer Portal","public cloud","Node"]
+description: "How to migrate your app from one Mendix Public Cloud region to another."
+tags: ["App","Migrate","Developer Portal","public cloud","Node", "region", "data center"]
 aliases:
     - /developerportal/howto/migrating-to-v4.html
     - /developerportal/howto/migrating-to-v4
     - /developerportal/deploy/migrating-to-v4
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+# Original of diagram is in a powerpoint slide under /static/originals/…
 ---
 
 ## 1 Introduction
 
-This document explains how to migrate your licensed app from one Mendix public cloud datacenter to another.
+This document explains how to migrate your licensed app from one Mendix public cloud region to another.
 
 ## 2 Migration considerations
 

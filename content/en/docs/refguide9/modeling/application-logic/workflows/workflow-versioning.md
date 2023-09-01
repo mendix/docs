@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "versions", "update"]
 
 ## 1 Introduction
 
-Workflows are processes that can potentially run for a long time. While a workflow is in progress, new versions of the app may be deployed containing changes to the running workflow and affecting running workflow instances. This document describes the way Mendix handles workflow versioning, the impact of changes on running instaces, and the ways app developers or administrators can solve conflicts.
+Workflows are processes that can potentially run for a long time. While a workflow is in progress, new versions of the app may be deployed containing changes to the running workflow and affecting running workflow instances. This document describes the way Mendix handles workflow versioning, the impact of changes on running instances, and the ways app developers or administrators can solve conflicts.
 
 ## 2 Workflow Versioning
 

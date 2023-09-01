@@ -73,7 +73,7 @@ In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve an asset property's current value, implement the [GetAssetPropertyValue](#get-asset-property-value) activity by doing the following steps:
 
 {A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
 
@@ -878,11 +878,3 @@ The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you 
 | Input | Output | 
 | --- | --- | 
 | `BatchGetAssetPropertyValueHistoryRequest` | `BatchGetAssetPropertyValueHistoryResponse` |
-
-##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
-
-This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
-
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |

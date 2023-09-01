@@ -1,7 +1,7 @@
 ---
 title: "Call REST Service"
 url: /refguide/call-rest-action/
-tags: ["studio pro", "integration activity", "call rest service"]
+tags: ["studio pro", "integration activity", "Call REST service"]
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -16,13 +16,13 @@ The **Call REST service** activity can be used to call a REST endpoint. You can 
 
 ## 2 Properties
 
-An example of the call REST service activity's properties is represented in the image below:
+An example of the Call REST service activity's properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="Call REST service properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The call rest action properties pane consists of the following sections:
+The Call REST service properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -66,7 +66,7 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 
 ### 4.3 Use Timeout on Request
 
-Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. 
+Set **Use timeout on request** to **Yes** to be able specify how long the Call REST service activity should wait for the REST endpoint to respond. 
 
 {{% alert color="warning" %}}
 It is recommended that you keep this set to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
@@ -230,7 +230,7 @@ This attribute is filled when one of the following scenarios occur:
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide/error-handling-in-microflows/#errorhandlers).
 
 {{% alert color="warning" %}}
-You should always add an error handler for a [call REST service](/refguide/call-rest-action/) action.
+You should always add an error handler for a [Call REST service](/refguide/call-rest-action/) action.
 {{% /alert %}}
 
 ## 8 Common Section{#common}
@@ -254,17 +254,18 @@ There are two ways to resolve this:
 
 ### 10.1 Preventing Vulnerabilities in your App
 
-The call REST service activity allows your app to execute calls to any possible endpoint. Given that the **Location** property is provided by a string template, you are able to compose dynamic URLs that contain variable values. You could even model a microflow where (a part of) the URL is provided by the user. This gives the developer a lot of power, but comes with risks, too.
+The Call REST service activity allows your app to execute calls to any possible endpoint. Given that the **Location** property is provided by a string template, you can compose dynamic URLs that contain variable values. You could even model a microflow where (a part of) the URL is provided by the user. This gives the developer a lot of power, but comes with risks, too.
 
-One of the possible vulnerabilities is the [Server Side Request Forgery (SSRF)](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery) vulnerability. In an SSRF attack, the user of your application is able to get access to resources that are otherwise not accessible. This is done by, instead of directly trying to access an inaccessible resource, having the application do the call to that resource and return its contents. This is a possibility when there is an internal service running behind a firewall, accessible to other apps, but not accessible to any other client on the web. However, by letting your app do the call, this internal resource is accessible, and depending on how your app is built, could be returned to the user.
+One possible vulnerability is [Server Side Request Forgery (SSRF)](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery). In an SSRF attack, the user of your application is able to get access to resources that are otherwise not accessible. This is done by making the application do a call to a usually inaccessible resource and return its contents, instead of trying to access the resource directly. This can happen when the resource is an internal service running behind a firewall, accessible to other apps but not accessible to any other client on the web. The resource is accessible to your app and, depending on how your app is built, it could make the call and return data to the user.
 
-*Example:* You have created two apps, one called *MySecretService* with a published OData service that serves employee data to your other internal apps. It is deployed behind a firewall, can be accessed on `https://my.secret.ip.address/odata/employeeservice/v1`, and its access is restricted to make sure only your other apps can call this service. Your second app is called *PDFService* and allows you to provide a URL and click Generate, which triggers a microflow with a Call REST service activity that has the provided URL as its Location, and passes the retrieved contents from that URL on to a PDF generator, and returns the created PDF to the user. Now, a malicious user could pass the URL `https://my.secret.ip.address/odata/employeeservice/v1/Employee(11034)` to the service and press Generate. The user, who from his own device has no access to that internal service, will receive a PDF from the PDFService with all the data found for employee with ID 11034.
+*Example:* You have created two apps. Your first app is called *MySecretService* and has a published OData service that serves employee data to your other internal apps. It is deployed behind a firewall, can be accessed on `https://my.secret.ip.address/odata/employeeservice/v1`, and its access is restricted to make sure only your other apps can call it. Your second app is called *PDFService* and allows you to provide a URL and click Generate. This triggers a microflow with a Call REST service activity that has the provided URL as its Location; it passes the retrieved contents from that URL to a PDF generator, and returns the created PDF to the user. Now, a malicious user could provide the URL `https://my.secret.ip.address/odata/employeeservice/v1/Employee(11034)` to the *PDFService* app and press Generate. The user, who from his own device has no access to that internal service, will receive a PDF from the PDFService with all the data found for the employee with ID 11034.
 
-In order to prevent this type of attacks from happening, there are a number of precautions you can take. Here are the main methods to do this:
+To prevent this type of attack from happening, you can take the following precautions:
 
-- Verify that your Call REST service activities never call a URL that is input by the user
+* Verify that your Call REST service activities never call a URL that is input by the user.
 
-If that is not possible, 
-- Make sure to validate and sanitize the user inputs;
-- Maintain a whitelist of the domains that should be accessible and use it to validate URLs;
-- Do not return the response from the call unprocessed to the user.
+If that is not possible:
+
+* Always validate and sanitize the user inputs
+* Maintain a whitelist of the domains that should be accessible and use it to validate URLs
+* Do not allow the user to access an unprocessed response from the call

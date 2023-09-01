@@ -55,6 +55,6 @@ To launch the app, do the following:
 
     {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-run-configuration.png" alt="Launch configuration" >}}
 
-After you have launched the application, the **M2EE Admin Console** will appear. This is the same console as you would normally see in Mendix Studio Pro, if you want to run the application from there. You can stop your application by closing the console.
+After you have launched the application, the **M2EE Admin Console** will appear. This is the same console as you would normally see in Mendix Studio Pro, if you had run the application from there. You can stop your application by closing the console.
 
 {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-debug-log.png" alt="M2EE Admin Console" >}}

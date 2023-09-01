@@ -56,10 +56,11 @@ The PDF document generation service does not store pages or documents at any tim
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
-### 1.4 Known Issues
+### 1.4 Known Issues {#known-issues}
 
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
+* If you configured the Mendix Runtime custom app setting [ApplicationRootURL](/refguide/custom-settings/#ApplicationRootUrl) to a custom domain, then the PDF document generation service returns a [timeout error](#module-usage-runtime-issues), and the PDF is not generated.
 
 ## 2 Installation {#installation}
 
@@ -316,3 +317,4 @@ If you encounter the message "Failed to load page: TimeoutError: waiting for sel
 * A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
 * The required **Enable PDF export** design property is not set to **Yes** for the page you are trying to export to PDF.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.
+* The custom app setting [ApplicationRootURL](/refguide/custom-settings/#ApplicationRootUrl) is configured to a custom domain. This is a [known issue](#known-issues).

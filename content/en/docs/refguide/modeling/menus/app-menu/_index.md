@@ -58,7 +58,7 @@ The **Deploy for Eclipse** option deploys the app to the deployment directory. T
 
 Shortcut key: <kbd>F6</kbd>
 
-For more information on how write Java actions from Eclipse, see [Using Eclipse][/refguide/java-programming/using-eclipse.md].
+For more information on how write Java actions from Eclipse, see [Using Eclipse](/refguide/java-programming/using-eclipse.md).
 
 ## 6 Create Deployment Package{#create-package}
 

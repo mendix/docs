@@ -192,6 +192,10 @@ You can handle an expiring domain certificate by replacing it with a new one. Yo
 
 You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
+{{% alert color="info" %}}
+If you are rotating a certificate, you do not need to remove the current domain configuration when replacing the certificate. Selecting a new certificate for an existing domain will reconfigure the existing domain with the selected certificate. 
+{{% /alert %}}
+
 ### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
 You can also edit an existing custom domain certificate.

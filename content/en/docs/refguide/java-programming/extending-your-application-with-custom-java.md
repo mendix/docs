@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the app into your Eclipse working environment.{{% /alert %}}
 
-* Have an app ready using the [Asset Management](https://marketplace.mendix.com/link/component/107652) template.
+* Have an app ready using the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template.
 
 ## 3 Adding a Java Action in Studio Pro
 

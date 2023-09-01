@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "amazon", "AWS IoT SiteWise", "co
 
 ## 1 Introduction
 
-The [AWS IoT Sitewise](MARKETPLACE LINK TBD) connector provides a way for you to optimize the data collection and processing for your Mendix app by implementing [AWS IoT SiteWise](https://aws.amazon.com/iot-sitewise/).
+The [AWS IoT Sitewise](https://marketplace.mendix.com/link/component/215633) connector provides a way for you to optimize the data collection and processing for your Mendix app by implementing [AWS IoT SiteWise](https://aws.amazon.com/iot-sitewise/).
 
 ### 1.1 Typical Use Cases
 
@@ -17,20 +17,9 @@ AWS IoT SiteWise is a managed service that simplifies collecting, organizing, an
 
 ### 1.2 Prerequisites {#prerequisites}
 
-#### VARIANT 1 - IF THE CONNECTOR ONLY REQUIRES THE AWS AUTHENTICATION CONNECTOR
-
 The AWS IoT SiteWise connector requires Mendix Studio Pro version 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-
-#### VARIANT 2 - IF THE CONNECTOR ALSO HAS OTHER DEPENDENCIES
-
-The AWS IoT SiteWise connector requires Mendix Studio Pro version 9.18.0 or above.
-
-To use the AWS IoT SiteWise connector, you must also install and configure the following modules:
-
-* [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-* {OTHER MODULES AS REQUIRED, WITH A SHORT DESCRIPTION OF THEIR PURPOSE AND A LINK TO THEIR PAGES ON MARKETPLACE.}
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ### 1.3 Licensing and Cost
 
@@ -48,17 +37,15 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **{MODULENAME}** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to {AWS SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSIoTSiteWiseConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to AWS IoT SiteWise. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### 3.1 Configuring AWS Authentication
 
-#### THIS SECTION HAS SCREENSHOTS FROM THE DYNAMODB CONNECTOR. REPLACE THEM WITH SIMILAR SCREENSHOTS FROM YOUR CONNECTOR.
-
-In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use session or static credentials to authenticate.
-    The AWS IoT SiteWise connector supports {SUPPORTED CONNECTION TYPES, USUALLY "both session and static credentials"}. By default, the connector is pre-configured to use {STATIC/SESSION, USUALLY "static"} credentials, but you may want to switch to {SESSION/STATIC, USUALLY "session"} credentials, for example, {IF SWITCHING TO SESSION, "to increase the security of your app"; IF SWITCHING TO STATIC, "to quickly test the authentication process"}. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The AWS IoT SiteWise connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
@@ -66,7 +53,7 @@ In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **{MODULENAME}** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AWSIoTSiteWiseConnector** > **ConnectionDetails** section.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
@@ -86,7 +73,7 @@ In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. 
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for {AWS SERVICE NAME}, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
 
 {A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
 
@@ -98,36 +85,799 @@ To help you work with the AWS IoT SiteWise connector, the following sections of 
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
+### 4.1.1 ListAssetModelsRequest {#listassetmodelsrequest}
 
-| Name | Description |
+| Attribute | Description |
 | --- | --- |
-| {ENTITY NAME} | {ENTITY DESCRIPTION} |
+| `MaxResults` | Describes the maximum number of asset models returned in the response. By default it is set to 50 and can return a maximum of 250 asset models. |
+| `NextToken` | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token. |
+
+### 4.1.2 ListAssetModelsResponse {#listassetmodelsresponse}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes whether there are more asset models in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+
+### 4.1.3  AssetModelSummary {#assetmodelsummary}
+
+| Attribute | Description |
+| --- | --- |
+| `ARN` | The ARN (Amazon Resource Name)  of the asset model |
+| `CreationDate` | The creation date of the asset model |
+| `Description` | The description of the asset model |
+| `AssetModelID` | The asset model ID of the asset model |
+| `LastUpdateDate` | The last update date of the asset model |
+| `Name` | The name of the asset model |
+
+### 4.1.4 AssetModelStatus {#assetmodelstatus}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetModelStatus` entity. |
+
+### 4.1.5 AbstractAssetModelStatus {#abstract-asset-model-status}
+
+| Attribute | Description |
+| --- | --- |
+| `State` | The current status state of the asset model |
+
+### 4.1.6 ErrorDetails {#error-details}
+
+| Attribute | Description |
+| --- | --- |
+| `Code` | The error code |
+| `Message` | The error message |
+
+### 4.1.7 DetailedError {#detailed-error}
+
+| Attribute | Description |
+| --- | --- |
+| `Code` | The error code |
+| `Message` | The error message |
+
+### 4.1.8 ListProjectsRequest {#list-projects-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | Describes the maximum number of projects returned in the response. By default it is set to 50 and can return a maximum of 250 asset models. |
+| `NextToken` | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token. |
+| `PortalID` | Describes the portal ID from which the projects will be retrieved. |
+
+### 4.1.9 ListProjectsResponse {#list-projects-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes whether there are more projects in the portal that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+
+### 4.1.10 ProjectSummary {#project-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `CreationDate` | The creation date of the project |
+| `Description` | The description of the project |
+| `ProjectID` | The asset model ID of the project |
+| `LastUpdateDate` | The last update date of the project |
+| `Name` | The name of the project |
+
+### 4.1.11 DescribeProjectRequest {#describe-project-request}
+
+| Attribute | Description |
+| --- | --- |
+| `PortalID` | The ID of the portal the project is in |
+| `ProjectARN` | The Amazon Resource Name (ARN) of the project |
+| `CreationDate` | The creation date of the project |
+| `Description` | The description of the project |
+| `ProjectID` | The asset model ID of the project |
+| `LastUpdateDate` | The last update date of the project |
+| `Name` | The name of the project |
+
+### 4.1.12 DescribeProjectResponse {#describe-project-response}
+
+| Attribute | Description |
+| --- | --- |
+| `ProjectID` | Describes the project ID. |
+
+
+### 4.1.13 ListPortalsRequest {#list-portals-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | Describes the maximum number of portal summaries returned in the response. By default it is set to 50 and can return a maximum of 250 portals. |
+| `NextToken` | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token. |
+
+### 4.1.14 ListPortalsResponse {#list-portals-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes whether there are more portals in the region that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+
+### 4.1.15  PortalSummary {#portal-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `CreationDate` | The creation date of the portal |
+| `Description` | The description of the portal |
+| `PortalID` | The ID of the portal |
+| `LastUpdateDate` | The last update date of the portal |
+| `Name` | The name of the portal |
+| `RoleARN` | The ARN (Amazon Resource Name) of the service role that allows the portal's users to access the AWS IoT SiteWise resources |
+| `StartURL` | The URL for the AWS IoT SiteWise Monitor portal |
+
+### 4.1.16 PortalStatus {#portal-status}
+
+| Attribute | Description |
+| --- | --- |
+| `State` | The current status state of the portal |
+
+### 4.1.17 MonitorErrorDetails {#monitor-error-details}
+
+| Attribute | Description |
+| --- | --- |
+| `Code` | The error code |
+| `Message` | The error message |
+
+### 4.1.18 ListAssetsRequest {#list-assets-request}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token to be used for the next set of paginated results. |
+| `MaxResults` | Describes the maximum number of results to return for each request. The default value is 50. |
+| `AssetModelID` | Describes the ID of the asset model by which to filter the list of assets. This attribute is required if you choose `ALL`or `(empty)` for Filter attribute. |
+| `Filter` | The Filter attribute describes the filter for the requested list of assets. Choose one of the following options: **ALL** – The list includes all assets for a given asset model ID. The `assetModelID` attribute is required if you filter by ALL. **TOP_LEVEL** – The list includes only top-level assets in the asset hierarchy tree.<p>The default value for this attribute is ALL, not selecting either option will result in the ALL filter to be applied to your request. |
+
+### 4.1.19 ListAssetsResponse {#list-assets-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token for the next set of results, or `(empty)` if there are no additional results. |
+
+### 4.1.20 AssetSummary {#asset-summary}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity. |
+
+### 4.1.21  AbstractAssetSummary {#abstract-asset-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `ARN` | The ARN of the asset |
+| `AssetModelID` | The ID of the asset model used to create this asset |
+| `CreationDate` | The creation date of the asset |
+| `Description` | The description of the asset |
+| `_ID` | The ID of the asset |
+| `LastUpdateDate` | The last update date of the asset |
+| `Name` | The name of the asset |
+
+### 4.1.22 DescribeAssetModelRequest {#describe-asset-model-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetModelID` | Describes the ID of the asset model and is a required parameter. |
+
+### 4.1.23 DescribeAssetModelResponse {#describe-asset-model-response}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetModelArn` | Describes the Amazon Resource Name (ARN) of the asset model. |
+| `AssetModelCreationDate` | Describes the date that the asset model resource was created. |
+| `AssetModelDescription` | Describes the asset model's description. |
+| `AssetModelID` | Describes the ID of the asset model. |
+| `AssetModelLastUpdateDate` | Describes the date the asset model was last updated. |
+| `AssetModelName` | Describes the name of the asset model. |
+
+### 4.1.24 _Type {#type}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The generalized entity does not contain any attributes, it is a wrapper entity holding references to property entities (Measurement, Transform, Attribute and Metric). |
+
+### 4.1.25 ProcessingConfig {#processing-config}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The generalized entity does not contain any attributes, it is a configuration profile for where information is processed and forwarded. |
+
+### 4.1.26 Variable {#variable}
+
+| Attribute | Description |
+| --- | --- |
+| `Name` | Describes the friendly name of the variable to be used in the expression. |
+
+### 4.1.27 AbstractAssetStatus {#abstract-asset-status}
+
+| Attribute | Description |
+| --- | --- |
+| `State` | The current status state of the asset. |
+
+### 4.1.28 ListProjectAssetsRequest {#list-project-assets-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | Describes the maximum number of project assets returned in the response. By default it is set to 50 and can return a maximum of 250 asset models. |
+| `NextToken` | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token. |
+| `ProjectID` | Describes the project ID from which the assets will be retrieved. |
+
+### 4.1.29 ListProjectAssetsResponse {#list-project-assets-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes whether there are more assets in the project that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+
+### 4.1.30 AssetID {#asset-id}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset. |
+
+### 4.1.31 DescribeAssetRequest {#describe-asset-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset and is a required parameter. |
+
+### 4.1.32 DescribeAssetResponse {#describe-asset-response}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetARN` | Describes the Amazon Resource Name (ARN) of the asset. |
+| `AssetCreationDate` | Describes the date the asset was created. |
+| `AssetDescription` | Describes a description for the asset. |
+| `AssetID` | Describes the ID of the asset. |
+| `AssetLastUpdateDate` | Describes the date the asset was last updated. |
+| `AssetModelID` | Describes the ID of the asset model that was used to create the asset. |
+| `AssetName` | Describes the name of the asset. |
+
+### 4.1.33 AssetProperty {#asset-property}
+
+| Attribute | Description |
+| --- | --- |
+| `DataType` | Describes the data type of the asset property. |
+| `_ID` | Describes the ID of the asset property. |
+| `Name` | Describes the name of the property. |
+| `Alias` | Describes the alias that identifies the property, such as an OPC-UA server data stream path, for example, `/company/windfarm/3/turbine/7/temperature`. |
+| `DataTypeSpec` | Describes the data type of the structure for this property. This parameter exists on properties that have the STRUCT data type. |
+| `Unit` | Describes the unit (such as Newtons or RPM) of the asset property. |
+
+### 4.1.34 ListAssetRelationshipsRequest {#list-asset-relationships-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AsssetID` | Describes the asset ID from whose relationships will be received. |
+| `MaxResults` | Describes the maximum number of project assets returned in the response. By default it is set to 50 and can return a maximum of 250 asset models. |
+| `NextToken` | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token. |
+
+### 4.1.35 ListAssetRelationshipsResponse {#list-asset-relationships-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes whether there are more assets in the project that can be listed. The next list requests to Amazon IoT SiteWise can be continued with this `NextToken`. |
+
+### 4.1.36 AssetRelationshipSummary {#asset-relationship-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `RelationshipType` | Describes the relationship type of the assets in this relationship. |
+
+### 4.1.37 AssetHierarchyInfo {#asset-hierarchy-info}
+
+| Attribute | Description |
+| --- | --- |
+| `ChildAssetID` | Describes the ID of the child asset in this asset relationship. |
+| `ParentAssetID` | Describes the ID of the parent asset in this asset relationship. |
+
+### 4.1.38 ListAssociatedAssetsRequest {#list-associated-assets-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset. |
+| `HierarchyID` | Describes the ID of the hierarchy by which child assets are associated to the asset. |
+| `NextToken` | Describes the token to be used for the next set of paginated results. |
+| `MaxResults` | Describes the maximum number of results to return for each request. The default value is 50. |
+| `TraversalDirection` | Describes the direction to list associated assets. Choose one of the following options: **CHILD** – The list includes all child assets associated to the asset. The `HierarchyId` parameter is required if you choose CHILD. **PARENT** – The list includes the asset's parent asset.<p>The default value for this attribute is CHILD, not selecting either option will result in the CHILD traversal direction to be applied to your request. |
+
+### 4.1.39 ListAssociatedAssetsResponse {#list-associated-assets-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token for the next set of results, or `(empty)` if there are no additional results. |
+
+### 4.1.40 AssociatedAssetsSummary {#associated-assets-summary}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetSummary` entity. |
+
+### 4.1.41 DescribeAssetPropertyRequest {#describe-asset-property-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset and is a required parameter. |
+| `PropertyID` | Describes the ID of the asset property and is a required parameter. |
+
+### 4.1.42 DescribeAssetPropertyResponse {#describe-asset-property-response}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset. |
+| `AssetModelID` | Describes the ID of the asset model. |
+| `AssetName` | Describes the name of the asset. |
+
+### 4.1.43 GetAssetPropertyValueRequest {#get-asset-property-value-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset |
+| `PropertyAlias` | Describes alias that identifies the property |
+| `PropertyID` | Describes ID of the asset property |
+
+### 4.1.44 GetAssetPropertyValueResponse {#get-asset-property-value-response}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes |
+
+### 4.1.45 PropertyValue {#property-value}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the `AbstractAssetPropertyValue` entity |
+
+### 4.1.46 AbstractAssetPropertyValue {#abstract-asset-property-value}
+
+| Attribute | Description |
+| --- | --- |
+| `Quality` | Describes the quality of the asset property value |
+
+### 4.1.47 TimeInNanos {#time-in-nanos}
+
+| Attribute | Description |
+| --- | --- |
+| `TimeInSeconds` | Describes the timestamp date, in seconds, in the Unix epoch format |
+| `OffsetInNanos` | Describes the nanosecond offset from `TimeInSeconds` |
+
+### 4.1.48 Variant {#variant}
+
+| Attribute | Description |
+| --- | --- |
+| `hasBooleanValue` | Describes if the asset property has a BooleanValue  |
+| `BooleanValue` | Describes asset property data of type Boolean (true or false) |
+| `DoubleValue` | Describes asset property data of type double (floating point number) |
+| `IntegerValue` | Describes asset property data of type integer (whole number) |
+| `StringValue` | Describes asset property data of type string (sequence of characters). |
+
+### 4.1.49 GetAssetPropertyValueHistoryRequest {#get-asset-property-value-history-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset and is a required parameter coupled with PropertyID. Alternatively, the `PropertyAlias` attribute can be used instead. |
+| `EndDate` | Describes the inclusive end of the range from which to query historical data. |
+| `MaxResults` | Describes the maximum number of results to return for each paginated request. |
+| `NextToken` | Describes the token to be used for the next set of paginated results. |
+| `PropertyAlias` | Describes the alias that identifies the property, such as an OPC-UA server data stream path (for example, `/company/windfarm/3/turbine/7/temperature`) and is a required parameter when `AssetID` and `PropertyID` are not specified. |
+| `PropertyID` | Describes the ID of the asset property and is a required parameter coupled with `AssetID`. Alternatively, the `PropertyAlias` attribute can be used instead. |
+| `Quality` | Describes the quality by which to filter asset data. |
+| `StartDatev | Describes the exclusive start of the range from which to query historical data. |
+| `TimeOrdering` | Describes the chronological sorting order of the requested information. |
+
+### 4.1.50 GetAssetPropertyValueHistoryResponse {#get-asset-property-value-history-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token for the next set of results, or null if there are no additional results. |
+
+### 4.1.51 GetAssetPropertyAggregatesRequest {#get-asset-property-aggregates-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AggregateType` | Describes the data aggregating function and is a required parameter. |
+| `AssetID` | Describes the ID of the asset. |
+| `EndDate` | Describes the inclusive end of the range from which to query historical data and is a required parameter. |
+| `MaxResults` | Describes the maximum number of results to return for each paginated request. |
+| `NextToken` | Describes the token to be used for the next set of paginated results. |
+| `PropertyAlias` | Describes the alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). |
+| `PropertyID` | Describes the ID of the asset property. |
+| `Quality` | Describes the quality by which to filter asset data. |
+| `Resolution` | Describes the time interval over which to aggregate data and is a required parameter. |
+| `StartDate` | Describes the exclusive start of the range from which to query historical data and is a required parameter. |
+| `TimeOrdering` | Describes the chronological sorting order of the requested information. |
+
+### 4.1.52 GetAssetPropertyAggregatesResponse {#get-asset-property-aggregates-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token for the next set of results, or null if there are no additional results. |
+
+### 4.1.53 AggregatedValue {#aggregated-value}
+
+| Attribute | Description |
+| --- | --- |
+| `Quality` | Describes the quality of the aggregated data. |
+| `Timestamp` | Describes the date the aggregating computations occurred. |
+
+### 4.1.54 AbstractEntry {#abstract-entry}
+
+| Attribute | Description |
+| --- | --- |
+| `AssetID` | Describes the ID of the asset in which the asset property was created. |
+| `EntryID` | Describes the ID of the entry and is a required parameter. |
+| `PropertyAlias` | Describes the alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). |
+| `PropertyID` | Describes the ID of the asset property. |
+
+### 4.1.55 AbstractErrorEntry {#abstract-error-entry}
+
+| Attribute | Description |
+| --- | --- |
+| `EntryID` | Describes the ID of the entry. |
+| `ErrorCode` | Describes the error code. |
+| `ErrorMessage` | Describes the associated error message. |
+
+### 4.1.56 AbstractSkippedEntry {#abstract-skipped-entry}
+
+| Attribute | Description |
+| --- | --- |
+| `CompletionStatus` | Describes the completion status of each entry that is associated with a batch retrieval API. |
+| `EntryID` | Describes the ID of the entry. |
+
+### 4.1.57 AbstractSuccessEntry {#abstract-success-entry}
+
+| Attribute | Description |
+| --- | --- |
+| `EntryID` | Describes the ID of the entry. |
+
+### 4.1.58 ErrorInfo {#error-info}
+
+| Attribute | Description |
+| --- | --- |
+| `ErrorCode` | Describes the error code. |
+| `ErrorTimestamp` | Describes the date the error occurred. |
+
+### 4.1.59 BatchGetAssetPropertyValueRequest {#batch-get-asset-property-value-request}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token to be used for the next set of paginated results. |
+
+### 4.1.60 BatchGetAssetPropertyValueResponse {#batch-get-asset-property-value-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token for the next set of results, or null if there are no additional results. |
+
+### 4.1.61 BatchGetAssetPropertyValueHistoryRequest {#batch-get-asset-property-value-history-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | The maximum number of results to return for each paginated request. The maximum value of MaxResults can be set to 20000.|
+| `NextToken` | Describes the token to be used for the next set of paginated results. |
+
+### 4.1.62 BatchGetAssetPropertyValueHistoryResponse {#batch-get-asset-property-value-history-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | Describes the token for the next set of results, or null if there are no additional results. |
 
 ### 4.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the AWS IoT SiteWise connector, enumerations list values such as {USUALLY "the list of available AWS regions", POSSIBLY ALSO OTHERS AS REQUIRED}.
+An enumeration is a predefined list of values that can be used as an attribute type. For the AWS IoT SiteWise connector, enumerations list values such as the list of available AWS regions, the asset model state, error details code and the detailed error codes.
 
-#### 4.2.1 `{ENUMERATION NAME}`
+#### 4.2.1 ENUM_Region {#enum-region}
+
+| Name | Caption | 
+| --- | --- | 
+| `us_east_2` | US East (Ohio) | 
+| `us_east_1` | US East (N. Virginia) | 
+| `us_west_1` | US West (N. California) | 
+| `us_west_2` | US West (Oregon) | 
+| `af_south_1` | Africa (Cape Town) | 
+| `ap_east_1` | Asia Pacific (Hong Kong) | 
+| `ap_southeast_3` | Asia Pacific (Jakarta) | 
+| `ap_south_1` | Asia Pacific (Mumbai) | 
+| `ap_northeast_3` | Asia Pacific (Osaka) | 
+| `ap_northeast_2` | Asia Pacific (Seoul) | 
+| `ap_southeast_1` | Asia Pacific (Singapore) | 
+| `ap_southeast_2` | Asia Pacific (Sydney) | 
+| `ap_northeast_1` | Asia Pacific (Tokyo) | 
+| `ca_central_1` | Canada (Central) | 
+| `eu_central_1` | Europe (Frankfurt) | 
+| `eu_west_1` | Europe (Ireland) | 
+| `eu_west_2` | Europe (London) | 
+| `eu_south_1` | Europe (Milan) | 
+| `eu_west_3` | Europe (Paris) | 
+| `eu_north_1` | Europe (Stockholm) | 
+| `me_south_1` | Middle East (Bahrain) | 
+| `sa_east_1` | South America (São Paulo) |
+
+#### 4.2.2 ENUM_AssetModelStatus_State
+
+ Name | Caption | Description |
+| --- | --- | --- |
+| `CREATING` | CREATING | The asset model is being created. |
+| `ACTIVE` | ACTIVE | The asset model is active. |
+| `UPDATING`  | UPDATING  | The asset model is being updated. |
+| P`ROPAGATING` | PROPAGATING | The asset model's changes are propagating to its assets. |
+| `DELETING` | DELETING | The asset model is being deleted. |
+| `FAILED` | FAILED | The asset model failed to validate during a create or update operation. |
+
+#### 4.2.3 ENUM_ErrorDetails_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| {ENUMERATION ELEMENT NAME} | {ENUMERATION ELEMENT VALUE} | {ENUMERATION ELEMENT DESCRIPTION} |
+| `VALIDATION_ERROR` | VALIDATION_ERROR |  |
+| `INTERNAL_FAILURE` | INTERNAL_FAILURE |  |
+
+#### 4.2.4 ENUM_DetailedError_Code
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `INCOMPATIBLE_COMPUTE_LOCATION` | INCOMPATIBLE_COMPUTE_LOCATION |  |
+| `INCOMPATIBLE_FORWARDING_CONFIGURATION` | INCOMPATIBLE_FORWARDING_CONFIGURATION |  |
+
+#### 4.2.5 ENUM_PortalStatus_State
+
+ Name | Caption | Description |
+| --- | --- | --- |
+| `CREATING` | CREATING | The portal is being created. |
+| `UPDATING`  | UPDATING  | The portal is being updated. |
+| `DELETING` | DELETING | The portal is being deleted. |
+| `ACTIVE` | ACTIVE | The portal is active. |
+| `FAILED` | FAILED | The portal failed to validate during a create or update operation. |
+
+#### 4.2.6 ENUM_MonitorErrorDetails_Code
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `INTERNAL_FAILURE` | INTERNAL_FAILURE |  |
+| `VALIDATION_ERROR` | VALIDATION_ERROR |  |
+| `LIMIT_EXCEEDED` | LIMIT_EXCEEDED |  |
+
+#### 4.2.7 ENUM_AssetModelCompositeModelType
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `AWS` | INTERNAL_FAILURE | The type of the composite model. |
+| `ALARM` | VALIDATION_ERROR | The type of the composite model. |
+
+#### 4.2.8 ENUM_ComputeLocation
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `EDGE` | EDGE | The variable is being computed on the Edge device. |
+| `CLOUD` | CLOUD | The variable is being computed in the cloud. |
+
+#### 4.2.9 ENUM_DataType
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `_STRING` | STRING | The variable is of type string. |
+| `INTEGER` | INTEGER | The variable is of type string. |
+| `_DOUBLE` | DOUBLE | The variable is of type string. |
+| `_BOOLEAN` | BOOLEAN | The variable is of type string. |
+| `STRUCT` | STRUCT | The variable is of type string. |
+
+#### 4.2.10 ENUM_ForwardingConfigState
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `DISABLED` | DISABLED | The forwarding config state is disabled. |
+| `ENABLED` | ENABLED | The forwarding config state is enabled. |
+
+#### 4.2.11 ENUM_ListAssetsFilter
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ALL` | ALL | The filter to retrieve all assets associated with a specified asset model. |
+| `TOP_LEVEL` | TOP_LEVEL | The filter to retrieve only top-level assets. |
+
+#### 4.2.12 ENUM_PropertyNotificationState
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ENABLED` | ENABLED | Describes a property's notification state. |
+| `DISABLED` | DISABLED | Describes a property's notification state. |
+
+#### 4.2.13 ENUM_AssociatedAsset_TraversalDirection
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `CHILD` | CHILD | Lists all child assets associated to the asset. |
+| `PARENT` | PARENT | The list includes the asset's parent asset. |
+
+#### 4.2.14 ENUM_AssetPropertyValue_Quality
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `GOOD` | GOOD | The data isn't affected by any issues. |
+| `BAD` | BAD | The data is affected by an issue such as sensor failure. |
+| `UNCERTAIN` | UNCERTAIN | The data is affected by an issue such as sensor inaccuracy. |
+
+#### 4.2.15 ENUM_TimeOrdering
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ASCENDING` | ASCENDING | Chronological sorting order of the requested information is ascending. |
+| `DESCENDING` | DESCENDING | Chronological sorting order of the requested information is descending. |
+
+#### 4.2.16 ENUM_Resolution
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `_1m` | 1m | Time interval of one minute over which data is aggregated. |
+| `_15m` | 15m | Time interval of fifteen minutes over which data is aggregated. |
+| `_1h` | 1h | Time interval of one hour over which data is aggregated. |
+| `_1d` | 1d | Time interval of one day over which data is aggregated. |
+
+#### 4.2.17 ENUM_AggregateType
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `AVERAGE` | AVERAGE | Data aggregating function being the mean value in the specified period. |
+| `COUNT` | COUNT | Data aggregating function being the count of data points. |
+| `MAXIMUM` | MAXIMUM | Data aggregating function being the maximum value in the specified period. |
+| `MINIMUM` | MINIMUM | Data aggregating function being the minimum value in the specified period. |
+| `SUM` | SUM | Data aggregating function being the summed up value in the specified period. |
+| `STANDARD_DEVIATION` | STANDARD_DEVIATION | Data aggregating function being the standard deviation in the specified period. |
+
+#### 4.2.18 ENUM_ErrorCode
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ResourceNotFoundException` | ResourceNotFoundException | Retrieving the property value returned an error because the resource was not found. |
+| `InvalidRequestException` | InvalidRequestException | Retrieving the property value returned an error because the request was invalid. |
+| `AccessDeniedException` | AccessDeniedException | Retrieving the property value returned and error because access was denied. |
+
+#### 4.2.19 ENUM_CompletionStatus
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `SUCCESS` | SUCCESS | The entry was skipped because it was included in a prior batch retrieval call. |
+| `ERROR` | ERROR | The entry was skipped because it returned an error. |
 
 ### 4.3 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the AWS IoT SiteWise connector, they {PURPOSE OF THE ACTIVITIES}.
+Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 4.3.1 {ACTIVITY NAME}
+#### 4.3.1 ListAssetModels {#list-asset-models}
 
-The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
-"}
+The `ListAssetModels` Amazon Iot SiteWise activity allows you to retrieve a list of all asset model summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListAssetModelsRequest` object and returns a `ListAssetModelsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
 
-The input and output for this service are shown in the table below:
+| Input | Output | 
+| --- | --- | 
+| `ListAssetModelsRequest` | `ListAssetModelsResponse` |
 
-| Input | Output |
-| --- | --- |
-| `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
+The `ListAssetModels` method supports pagination. The `MaxResults` in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set `MaxResults`, the response includes 50 results by default. If you set `MaxResults` and there are additional results to display, the response includes a value for NextToken. Use `NextToken` as a parameter in your next request to the `ListAssetModels` method to receive the next page of results.
+
+#### 4.3.2 DescribeAssetModel {#describe-asset-model}
+
+The `DescribeAssetModel` Amazon Iot SiteWise activity allows you to retrieve information about an asset model. It requires a valid `ENUM_Region` parameter and a `DescribeAssetModelRequest` object and returns a `DescribeAssetModelResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeAssetModelRequest` | `DescribeAssetModelResponse` |
+
+#### 4.3.3 ListProjects {#list-projects}
+
+The `ListProjects` Amazon Iot SiteWise activity allows you to retrieve a list of all project summaries for an AWS IoT SiteWise Monitor portal. It requires a valid `ENUM_Region` parameter and a `ListProjectsRequest` object with a valid `PortalID` and returns a `ListProjectsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListProjectsRequest` | `ListProjectsResponse` |
+
+The `ListProjects` method supports pagination. The `MaxResults` in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set `MaxResults` and there are additional results to display, the response includes a value for `NextToken`. Use `NextToken` as a parameter in your next request to the `ListProjects` method to receive the next page of results.
+
+#### 4.3.4 DescribeProject {#describe-project}
+
+The `DescribeProject` Amazon Iot SiteWise activity allows you to get details on a specific project that exists within your AWS environment. It requires a valid `ENUM_Region` parameter and a `DescribeProjectRequest` object with a valid `ProjectID` and returns a `DescribeProjectResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeProjectRequest` | `DescribeProjectResponse` |
+
+#### 4.3.5 ListPortals {#list-portals}
+
+The `ListPortals` Amazon Iot SiteWise activity allows you to retrieve a list of all portal summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListPortalsRequest` object and returns a `ListPortalsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListPortalsRequest` | `ListPortalsResponse` |
+
+The `ListPortals` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set `MaxResults` and there are additional results to display, the response includes a value for NextToken. Use `NextToken` as a parameter in your next request to the `ListPortals` method to receive the next page of results.
+
+#### 4.3.6 ListAssets {#list-assets}
+
+The `ListAssets` Amazon Iot SiteWise activity allows you to retrieve a list of all asset summaries for the given region. It requires a valid `ENUM_Region` parameter and a `ListAssetsRequest` object and returns a `ListAssetsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListAssetsRequest` | `ListAssetsResponse` |
+
+The `ListAssets` method supports pagination. The MaxResults in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for `NextToken`. Use `NextToken` as a parameter in your next request to the `ListAssets` method to receive the next page of results.
+
+#### 4.3.7 ListProjectAssets {#list-project-assets}
+
+The `ListProjectAssets` Amazon Iot SiteWise activity allows you to retrieve a list of assets belonging to a project. It requires a valid `ENUM_Region` parameter and a `ListProjectAssetsRequest` object with a valid `ProjectID` and returns a `ListProjectAssetsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListProjectAssetsRequest` | `ListProjectAssetsResponse` |
+
+The `ListProjectAssets` method supports pagination. The `MaxResults` in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set `MaxResults`, the response includes 50 results by default. If you set `MaxResults` and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListProjectAssets` method to receive the next page of results.
+
+#### 4.3.8 DescribeAsset {#describe-asset}
+
+The `DescribeAsset` Amazon Iot SiteWise activity allows you to retrieve information for a given asset. It requires a valid `ENUM_Region` parameter and a `DescribeAssetRequest` object with a valid `AssetID` and returns a `DescribeAssetResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeAssetRequest` | `DescribeAssetResponse` |
+
+#### 4.3.9 ListAssociatedAssets {#list-associated-assets}
+
+The `ListAssociatedAssets` Amazon Iot SiteWise activity allows you to retrieve a list of all associated assets for the given asset. It requires a valid `ENUM_Region` parameter and a `ListAssociatedAssetsRequest` object wit a valid AssetID and returns a `ListAssociatedAssetsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListAssociatedAssetsRequest` | `ListAssociatedAssetsResponse` |
+
+The `ListAssociatedAssets` method supports pagination. The `MaxResults` in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set `MaxResults` and there are additional results to display, the response includes a value for NextToken. Use NextToken as a parameter in your next request to the `ListAssociatedAssets` method to receive the next page of results.
+
+#### 4.3.10 ListAssetRelationships {#list-asset-relationships}
+
+The `ListAssetRelationships` Amazon Iot SiteWise activity allows you to retrieve a list of asset relationships for an asset. It requires a valid `ENUM_Region` parameter and a `ListAssetRelationshipsRequest` object with a valid AssetID and returns a `ListAssetRelationshipsResponse` object, which can include a maximum of 250 results. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListAssetRelationshipsRequest` | `ListAssetRelationshipsResponse` |
+
+The `ListAssetRelationships` method supports pagination. The `MaxResults` in the request can be set to specify the maximum number of results to be returned in the response object. If you do not set MaxResults, the response includes 50 results by default. If you set MaxResults and there are additional results to display, the response includes a value for `NextToken`. Use NextToken as a parameter in your next request to the `ListAssetRelationships` method to receive the next page of results.
+
+#### 4.3.11 DescribeAssetProperty {#describe-asset-property}
+
+The `DescribeAssetProperty` Amazon Iot SiteWise activity allows you to retrieve information about an asset property. It requires a valid `ENUM_Region` parameter and a `DescribeAssetPropertyRequest` object with a valid AssetID & PropertyID, and returns a `DescribeAssetPropertyResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `DescribeAssetPropertyRequest` | `DescribeAssetPropertyResponse` |
+
+#### 4.3.12 GetAssetPropertyValue {#get-asset-property-value}
+
+The `GetAssetPropertyValue` Amazon Iot SiteWise activity allows you to retrieve an asset property's current value. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyValueRequest` object and returns a `GetAssetPropertyValueResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `GetAssetPropertyValueRequest` | `GetAssetPropertyValueResponse` |
+
+#### 4.3.13 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+
+The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to retrieve a set of an asset property's historic values. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyValueHistoryRequest` object and returns a `GetAssetPropertyValueHistoryResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `GetAssetPropertyValueHistoryRequest` | `GetAssetPropertyValueHistoryResponse` |
+
+#### 4.3.13 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+
+The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retrieve aggregated values for an asset property. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyAggregatesRequest` object and returns a `GetAssetPropertyAggregatesResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `GetAssetPropertyAggregatesRequest` | `GetAssetPropertyAggregatesResponse` |
+
+#### 4.3.14 BatchGetAssetPropertyValue {#batch-get-asset-property-value}
+
+The `BatchGetAssetPropertyValue` Amazon Iot SiteWise activity allows you to get the current value for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueRequest` object and returns a `BatchGetAssetPropertyValueResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `BatchGetAssetPropertyValueRequest` | `BatchGetAssetPropertyValueResponse` |
+
+#### 4.3.15 BatchGetAssetPropertyValueHistory {#batch-get-asset-property-value-history}
+
+The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to get the historical values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueHistoryRequest` object and returns a `BatchGetAssetPropertyValueHistoryResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `BatchGetAssetPropertyValueHistoryRequest` | `BatchGetAssetPropertyValueHistoryResponse` |
 
 ##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
 

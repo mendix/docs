@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/catalog-apis/
 category: "API Documentation"
 description: "Describes the Catalog APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
 weight: 25
-tags: ["data hub", "Catalog API", "authentication", "personal access token"]
+tags: ["data hub", Catalog API", "authentication", "personal access token"]
 aliases:
     - /apidocs-mxsdk/apidocs/data-hub-apis/
 ---
@@ -57,4 +57,4 @@ For step-by-step instructions, see the [Registering a Service Through the Catalo
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/catalog/register/register-data/#transform-api) section of *How to Register OData Resources in the Catalog*.
 
-V4 compatibility for the **Transform API** is accessible via the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
+The v4 compatibility for the **Transform API** is accessible via the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.

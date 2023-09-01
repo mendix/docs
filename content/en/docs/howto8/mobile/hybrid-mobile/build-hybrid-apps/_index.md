@@ -2,6 +2,8 @@
 title: "Build Hybrid Apps "
 url: /howto8/mobile/build-hybrid-apps/
 weight: 2
+no_list: false
+description_list: true 
 tags: ["mobile", "hybrid"]
 ---
 
@@ -16,6 +18,3 @@ Hybrid apps are built by using PhoneGap to wrap a web app in a native wrapper. H
 The documents in this section focus on publishing hybrid apps in the Apple and Google app stores. For more details on platform-specific installation packages see [Mobile App](/developerportal/deploy/mobileapp/) in the Developer Portal Guide.
 
 ## 2 Documents in This Section
-
-* [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)

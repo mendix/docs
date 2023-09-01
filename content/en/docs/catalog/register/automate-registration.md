@@ -4,7 +4,7 @@ linktitle: "Automate Catalog Registration"
 url: /catalog/register/automate-registration/
 description: "Learn how to automate Catalog registration in a pipeline deploying to a (virtual) private Cloud."
 weight: 40
-tags: ["Catalog", "security", "registration", "pipeline","register services"]
+tags: ["data hub", "Catalog", "security", "registration", "pipeline","register services"]
 aliases:
     - /catalog/automate-registration/
 ---

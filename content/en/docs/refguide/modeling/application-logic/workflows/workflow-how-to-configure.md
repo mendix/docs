@@ -17,13 +17,13 @@ This how-to explains how to build an employee onboarding process using the workf
 
 This how-to will teach you how to do the following:
 
-* Creating a workflow
-* Creating user tasks for different user roles
-* Configuring pages for the user tasks
-* Restricting page access to the relevant user roles
-* Creating a decision in the workflow
-* Using a microflow to extend logic of the workflow
-* Testing your workflow from the perspective of different users
+* Create a workflow
+* Create user tasks for different user roles
+* Configure pages for the user tasks
+* Restrict page access to the relevant user roles
+* Create a decision in the workflow
+* Use a microflow to extend logic of the workflow
+* Test your workflow from the perspective of different users
 
 The how-to describes the following use case: 
 
@@ -33,7 +33,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/). 
+* Your app includes the [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/). 
 
 * Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to do the following:
 

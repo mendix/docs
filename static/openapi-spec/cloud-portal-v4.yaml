@@ -1,0 +1,1295 @@
+openapi: 3.0.0
+x-stoplight:
+  id: f38beb4c10b50
+info:
+  title: Deploy API
+  version: 4.0.0
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+  description: The API to manage apps deployed to the Mendix Cloud.
+paths:
+  /apps:
+    get:
+      tags:
+        - apps
+      summary: Get list of apps
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/licenseType'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apps'
+        '400':
+          $ref: '#/components/responses/error400_Get_Apps'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Get_Apps'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-apps
+      description: Get an array of all applications for the authorized user
+  '/apps/{appId}':
+    get:
+      tags:
+        - apps
+      summary: Get an app
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/app'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Get_App'
+        '404':
+          $ref: '#/components/responses/error404_Get_App'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-app
+      description: Get information about a single app.
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    patch:
+      summary: Change technical contact for an app
+      operationId: patch-apps-technicalContact
+      responses:
+        '200':
+          description: OK
+        '400':
+          $ref: '#/components/responses/error400_Patch_App'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Patch_App'
+        '404':
+          $ref: '#/components/responses/error404_Patch_App'
+        '500':
+          $ref: '#/components/responses/error500'
+      tags:
+        - apps
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  technicalContact:
+                    userId: jane.doe@domain.tld
+              properties:
+                technicalContact:
+                  type: object
+                  properties:
+                    userId:
+                      type: string
+            examples:
+              example-1:
+                value:
+                  technicalContact:
+                    userId: jane.doe@domain.tld
+      description: Update app
+  '/apps/{appId}/environments':
+    get:
+      tags:
+        - environments
+      summary: Get an array of environments of an app
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/expand'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/environments'
+              examples:
+                example-1:
+                  value:
+                    environments:
+                      - id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
+                        appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+                        name: Test
+                        state: stopped
+                        isProduction: false
+                        url: 'http://example.com'
+                        dbVersion: string
+                        planName: XL21-PREMIUM
+                        package:
+                          id: 3bda6b5b-f038-4c09-8697-d065446b7084
+                          appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+                          modelVersion: 1.3.0.623
+                          runtimeVersion: 9.12.0.41679
+                          createdOn: '2019-08-24T14:15:22Z'
+                          expiresOn: '2019-08-24T14:15:22Z'
+                          description: string
+                          fileName: MainLine-1.3.0.623.mda
+                          fileSize: 42364523
+                    pagination:
+                      offset: 60
+                      limit: 20
+                      size: 17
+        '400':
+          $ref: '#/components/responses/error400_Get_App_Environments'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Get_App_Environments'
+        '404':
+          $ref: '#/components/responses/error404_Get_App_Environments'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-app-environments
+      description: Get all environments of the app.
+    parameters:
+      - $ref: '#/components/parameters/appId'
+  '/apps/{appId}/environments/{environmentId}':
+    parameters:
+      - schema:
+          type: string
+        name: appId
+        in: path
+        required: true
+      - schema:
+          type: string
+        name: environmentId
+        in: path
+        required: true
+    get:
+      summary: Get an environment
+      tags:
+        - environments
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/environment'
+        '400':
+          $ref: '#/components/responses/error400_Get_App_Environment'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Get_App_Environment'
+        '404':
+          $ref: '#/components/responses/error404_Get_App_Environment'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-environment-details
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/expand'
+      description: Get information about the specified environment.
+  '/apps/{appId}/environments/{environmentId}/permissions':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+      - $ref: '#/components/parameters/environmentId'
+    get:
+      summary: Get an array of permissions to an environment for team members of an app
+      tags:
+        - permissions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  technicalContact:
+                    $ref: '#/components/schemas/userId'
+                  permissions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/permission'
+                  pagination:
+                    $ref: '#/components/schemas/pagination'
+              examples:
+                example-1:
+                  value:
+                    technicalContact: jane.doe@domain.tld
+                    permissions:
+                      - member:
+                          userId: jane.doe@domain.tld
+                        canDeployApp: true
+                        canManageBackups: true
+                        canViewAlerts: true
+                        canAccessAPI: true
+                        canViewLogs: true
+                        canManagePrivileges: true
+                    pagination:
+                      offset: 60
+                      limit: 20
+                      size: 17
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Get_Permission'
+        '404':
+          $ref: '#/components/responses/error404_Get_Permission'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-environment-permissions
+      description: Retrieve an array of application team members with their permissions to the specified environment.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: userId
+          description: User email address
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+    patch:
+      summary: Update the list of permissions to an environment for team members of an app
+      operationId: update-environment-permissions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  permissions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/permission-patch'
+              examples:
+                example-1:
+                  value:
+                    permissions:
+                      - member:
+                          userId: jane.doe@domain.tld
+                        canDeployApp: true
+                        canManageBackups: true
+                        canViewAlerts: true
+                        canAccessAPI: true
+                        canViewLogs: true
+                        canManagePrivileges: true
+        '400':
+          $ref: '#/components/responses/error400_Patch_Permission'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403_Patch_Permission'
+        '404':
+          $ref: '#/components/responses/error404_Patch_Permission'
+        '500':
+          $ref: '#/components/responses/error500'
+      description: Updates the permissions of one or more application team members to the specified environment.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                permissions:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/permission-patch'
+            examples:
+              example-1:
+                value:
+                  permissions:
+                    - member:
+                        userId: jane.doe@domain.tld
+                      canDeployApp: true
+                      canManageBackups: true
+                      canViewAlerts: true
+                      canAccessAPI: true
+                      canViewLogs: true
+                      canManagePrivileges: true
+      tags:
+        - permissions
+tags:
+  - name: apps
+  - name: environments
+  - name: permissions
+servers:
+  - url: 'https://cloud.home.mendix.com/api/v4'
+    description: Production
+components:
+  requestBodies: {}
+  schemas:
+    app:
+      description: An app is identified by a unique App ID. This can be seen on the **General** page of the app in the Developer Portal. Additional information is added to manage the deployment of the app to the Mendix Cloud.
+      type: object
+      title: app
+      properties:
+        id:
+          $ref: '#/components/schemas/appId'
+        name:
+          type: string
+          example: My fabulous app
+          description: The name of the app.
+        licenseType:
+          type: string
+          enum:
+            - free
+            - licensed
+          description: The type of license. Free apps are created directly from Studio (Pro).
+        subdomain:
+          type: string
+          example: myfabulousapp
+          description: The environment URLs are based on this value. It is set when the app is created and cannot be changed. The value is unique in the Mendix Cloud.
+        technicalContact:
+          $ref: '#/components/schemas/membership'
+        region:
+          type: string
+          example: prod2-eu-central-1
+          description: The region or cluster where the app's environments are running.
+      required:
+        - id
+        - name
+        - licenseType
+        - subdomain
+        - technicalContact
+        - region
+    apps:
+      description: An array of apps.
+      type: object
+      properties:
+        apps:
+          type: array
+          description: The array of apps.
+          items:
+            $ref: '#/components/schemas/app'
+        pagination:
+          $ref: '#/components/schemas/pagination'
+      required:
+        - apps
+        - pagination
+    appId:
+      type: string
+      title: appId
+      format: uuid
+      example: c533ee0b-f7db-4e62-868b-1192d392ccec
+      description: The unique App ID of the app. This can be seen on the **General** page of the app in the Developer Portal. It is a UUID format.
+    error:
+      description: An error object explaining what happened.
+      type: object
+      properties:
+        error:
+          type: object
+          required:
+            - code
+            - message
+          properties:
+            code:
+              type: integer
+              minimum: 0
+              description: The HTTP status code.
+              example: 400
+            message:
+              type: string
+              description: Explanation of what happened.
+              example: Request validation errors
+            invalid-params:
+              type: array
+              uniqueItems: true
+              minItems: 1
+              description: RFC7807 compatible list with detailed feedback.
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: query-parameter
+                    description: The group or type this message is for.
+                  reason:
+                    type: string
+                    example: Value 'lisense' is not supported
+                    description: Feedback on what is wrong or what was expected.
+                required:
+                  - name
+                  - reason
+      required:
+        - error
+    pagination:
+      title: pagination
+      type: object
+      description: Pagination attributes that reflect the parameters used to get the objects in the response.
+      properties:
+        offset:
+          type: integer
+          minimum: 0
+          description: The offset used to get the array of objects. It starts at 0.
+          example: 60
+        limit:
+          type: integer
+          minimum: 1
+          description: 'The maximum number of objects to retrieve. When not specified then the server will set use the default value. If this is set to a number which is greater than the maximum supported number of objects, then the supported maximum is used.'
+          example: 20
+        size:
+          type: integer
+          minimum: 0
+          description: The number of objects in the response.
+          example: 17
+      required:
+        - offset
+        - limit
+        - size
+    environment:
+      description: 'Information about a specific environment, identified by its unique ID'
+      type: object
+      title: environment
+      x-examples:
+        example-1:
+          id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
+          appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+          name: Test
+          state: stopped
+          isProduction: false
+          url: 'http://example.com'
+          dbVersion: string
+          planName: XL21-PREMIUM
+          package:
+            id: 3bda6b5b-f038-4c09-8697-d065446b7084
+            appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+            modelVersion: 1.3.0.623
+            runtimeVersion: 9.12.0.41679
+            createdOn: '2019-08-24T14:15:22Z'
+            expiresOn: '2019-08-24T14:15:22Z'
+            description: string
+            fileName: MainLine-1.3.0.623.mda
+            fileSize: 42364523
+      properties:
+        id:
+          $ref: '#/components/schemas/environmentId'
+        appId:
+          $ref: '#/components/schemas/appId'
+        name:
+          type: string
+          description: The name of the environment.
+          example: Test
+        state:
+          type: string
+          enum:
+            - stopped
+            - running
+            - notdeployed
+          description: The state of the environment.
+          example: running
+        isProduction:
+          type: boolean
+          default: false
+          description: Indicates if the environment is marked as Production.
+        url:
+          type: string
+          format: uri
+          description: The full URL to access the app running in the environment.
+        dbVersion:
+          type: string
+          description: The database version used.
+        planName:
+          type: string
+        package:
+          $ref: '#/components/schemas/package'
+      required:
+        - id
+        - appId
+        - name
+        - state
+        - isProduction
+        - url
+    environments:
+      title: environments
+      type: object
+      properties:
+        environments:
+          type: array
+          items:
+            $ref: '#/components/schemas/environment'
+        pagination:
+          $ref: '#/components/schemas/pagination'
+      required:
+        - environments
+        - pagination
+      x-examples:
+        example-1:
+          environments:
+            - id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
+              appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+              name: Test
+              state: stopped
+              isProduction: false
+              url: 'http://example.com'
+              dbVersion: string
+              planName: XL21-PREMIUM
+              package:
+                id: 3bda6b5b-f038-4c09-8697-d065446b7084
+                appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+                modelVersion: 1.3.0.623
+                runtimeVersion: 9.12.0.41679
+                createdOn: '2019-08-24T14:15:22Z'
+                expiresOn: '2019-08-24T14:15:22Z'
+                description: string
+                fileName: MainLine-1.3.0.623.mda
+                fileSize: 42364523
+          pagination:
+            offset: 60
+            limit: 20
+            size: 17
+    environmentId:
+      type: string
+      title: environmentId
+      format: uuid
+      example: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
+    permission:
+      type: object
+      properties:
+        member:
+          type: object
+          properties:
+            userId:
+              $ref: '#/components/schemas/userId'
+        canDeployApp:
+          type: boolean
+        canManageBackups:
+          type: boolean
+        canViewAlerts:
+          type: boolean
+        canAccessAPI:
+          type: boolean
+        canViewLogs:
+          type: boolean
+        canManagePrivileges:
+          type: boolean
+    permission-patch:
+      title: permission-patch
+      x-stoplight:
+        id: dyz00k411xjh7
+      type: object
+      properties:
+        member:
+          type: object
+          properties:
+            userId:
+              $ref: '#/components/schemas/userId'
+        canDeployApp:
+          type: boolean
+        canManageBackups:
+          type: boolean
+        canViewAlerts:
+          type: boolean
+        canAccessAPI:
+          type: boolean
+        canViewLogs:
+          type: boolean
+        canManagePrivileges:
+          type: boolean
+    package:
+      title: package
+      type: object
+      x-examples:
+        example-1:
+          id: 3bda6b5b-f038-4c09-8697-d065446b7084
+          appId: c533ee0b-f7db-4e62-868b-1192d392ccec
+          modelVersion: 1.3.0.623
+          runtimeVersion: 9.12.0.41679
+          createdOn: '2019-08-24T14:15:22Z'
+          expiresOn: '2019-08-24T14:15:22Z'
+          description: string
+          fileName: MainLine-1.3.0.623.mda
+          fileSize: 42364523
+          url: 'http://example.com'
+      properties:
+        id:
+          $ref: '#/components/schemas/packageId'
+        appId:
+          $ref: '#/components/schemas/appId'
+        modelVersion:
+          type: string
+          example: 1.3.0.623
+          description: The version of the model. This is added by the developer when the package is created.
+        runtimeVersion:
+          type: string
+          example: 9.12.0.41679
+          description: The Mendix runtime version.
+        createdOn:
+          type: string
+          format: date-time
+        expiresOn:
+          type: string
+          format: date-time
+          description: The date the package will expire when not in use. This is set only for packages that are unused.
+        description:
+          description: 'The Tag description of the package, added by the developer when the package is created.'
+          type: string
+        fileName:
+          type: string
+          example: MainLine-1.3.0.623.mda
+          description: The file name of the package (MDA) file.
+        fileSize:
+          type: integer
+          minimum: 0
+          example: 42364523
+          description: The size of the package file (MDA) in bytes.
+      required:
+        - id
+        - appId
+        - modelVersion
+        - runtimeVersion
+        - createdOn
+        - fileName
+        - fileSize
+    packageId:
+      type: string
+      title: packageId
+      format: uuid
+      example: 3bda6b5b-f038-4c09-8697-d065446b7084
+      description: The ID of the package.
+    membership:
+      title: membership
+      type: object
+      description: A Mendix user who is a team member of an app.
+      properties:
+        userId:
+          $ref: '#/components/schemas/userId'
+        name:
+          type: string
+          description: The full name of the user.
+          example: Jane Doe
+        status:
+          type: string
+          enum:
+            - active
+            - inactive
+          description: The user's status in this membership. A user can have an active status in the Mendix platform but has an inactive status for an app.
+      required:
+        - userId
+        - name
+        - status
+    userId:
+      type: string
+      title: userId
+      description: The ID of the user.
+      example: jane.doe@domain.tld
+  parameters:
+    offset:
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+      description: Used with pagination and defines the offset.
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+      description: Used with pagination and defines the maximum number of objects to return.
+    appId:
+      name: appId
+      in: path
+      schema:
+        format: uuid
+        type: string
+      description: The unique ID of an app.
+      required: true
+    environmentId:
+      name: environmentId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+      description: The ID of an environment.
+    expand:
+      name: expand
+      in: query
+      required: false
+      schema:
+        type: string
+      description: 'The value of this parameter can only be `package`. The query parameter is optional and when you provide it the response will contain the package object of the package deployed in the environment in addition to the environment details.'
+    licenseType:
+      name: licenseType
+      in: query
+      required: false
+      schema:
+        type: string
+        enum:
+          - free
+          - licensed
+    sort:
+      name: sort
+      in: query
+      required: false
+      schema:
+        type: string
+      description: 'Defines the attribute used for sorting the response objects and the sorting order. Possible values are `name`, `index`, `+name`, `-name`, `+index`, and `-index`, where `+` means ascending and `-` stands for descending. Note: you must use URL encoding for `+` and `-` inside the parameter, that is, replace `-` with `%2d` and replace  `+` with `%2b`. For example, you should write `+name` as `%2dname`. If the sorting order is not provided, for example, you use `name` as the attribute, then the default order is ascending. If the query parameter is empty, then the response is sorted by `name` and the sorting order is ascending.'
+  responses:
+    error400:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-1:
+              value:
+                error:
+                  code: 400
+                  message: Request validation errors
+                  invalid-params:
+                    - name: query-parameter
+                      reason: Value 'license' is not supported
+    error400_Patch_App:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Request body
+                      reason: 'Attribute ''userId'' is required, or the provided value is not supported'
+            Example 2:
+              value:
+                error:
+                  code: 400
+                  message: User <userId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 3:
+              value:
+                error:
+                  code: 400
+                  message: The user <userId> is not member of an application
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error400_Get_Apps:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Query parameter
+                      reason: Value 'fre' of 'licenseType' is not supported
+            Example 2:
+              value:
+                error:
+                  code: 400
+                  message: Request validation errors
+                  invalid-params:
+                    - name: query-parameter
+                      reason: Value 'lisense' is not supported
+    error400_Get_App_Environments:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Query parameter
+                      reason: Value '+inde' of 'sort' is not supported
+            Example 2:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Query parameter
+                      reason: Value 'packag' of 'expand' is not supported
+    error400_Get_App_Environment:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Query parameter
+                      reason: Value 'packag' of 'expand' is not supported
+    error400_Patch_Permission:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Validation errors
+                  invalid-params:
+                    - name: Request body
+                      reason: Invalid request body
+    error401:
+      description: |-
+        There were no usable authentication credentials found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-1:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+                  invalid-params:
+                    - name: Authentication
+                      reason: Missing or invalid Authorization header
+    error403:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+    error403_Get_Apps:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+    error403_Get_App_Environments:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+    error403_Get_App_Environment:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+    error403_Get_App:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+    error403_Patch_App:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+            Example 3:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The user is not the Technical Contact of the app
+    error403_Get_Permission:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+            Example 3:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The account is not privileged to perform this request for environment <environmentId>
+    error403_Patch_Permission:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+            Example 2:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Account not found or inactive
+            Example 3:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The account is not privileged to perform this request for environment <environmentId>
+            Example 4:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: Only technical contact can change manage permission
+    error404:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+    error404_Get_App:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application 'Id' not found
+                  invalid-params: []
+    error404_Get_App_Environments:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application not found
+                  invalid-params: []
+    error404_Get_App_Environment:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application not found
+                  invalid-params: []
+            Example 2:
+              value:
+                error:
+                  code: 404
+                  message: Environment not found
+                  invalid-params: []
+    error404_Patch_App:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application <appId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error404_Get_Permission:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application <appId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 2:
+              value:
+                error:
+                  code: 404
+                  message: Environment <environmentId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error404_Patch_Permission:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 404
+                  message: Application <appId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 2:
+              value:
+                error:
+                  code: 404
+                  message: Environment <environmentId> not found
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 3:
+              value:
+                error:
+                  code: 404
+                  message: Permission not found for user <userId>
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+    error500:
+      description: Internal system error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 500
+                  message: Internal system error
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+            Example 2:
+              value:
+                error:
+                  code: 500
+                  message: Not able to authenticate the request due a technical failure
+                  invalid-params:
+                    - name: ''
+                      reason: ''
+  securitySchemes:
+    MxID3 token:
+      type: http
+      scheme: bearer
+    Personal Access Token:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'

@@ -10,6 +10,7 @@ aliases:
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
@@ -198,7 +199,7 @@ Pushing the project folder to a Cloud Foundry cluster is not currently supported
 To resolve the issue, implement one of the following workarounds:
 
 * If the app model is stored on the Mendix Teamserver, use the Build API to [build a deployment package](/apidocs-mxsdk/apidocs/build-api/#start-building-deployment-package), and push that package with the CF buildpack.
-* [Build a deployment package from Studio Pro](/refguide/app-menu/#6-create-deployment-package), and push that package with the CF buildpack.
+* [Build a deployment package from Studio Pro](/refguide/app-menu/#create-package), and push that package with the CF buildpack.
 * Run [MxBuild](/refguide/mxbuild/) from your CI/CD pipeline to build a deployment package, and push that package with the CF buildpack.
 
 This issue will be solved in an upcoming version of the buildpack.

@@ -71,7 +71,7 @@ The **System.WorkflowUserTask_TargetUsers** is populated based on the [Targeted 
 
 If during the process of targeting users [on-created event](/refguide/user-task/#events) and user task state-change event (set in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events)) succeed, the **State** changes to **In Progress**. If one of them fail, the **State** is set to **Failed**. After the user task state is set to **Failed**, the workflow state will be changed to **Failed**. 
 
-Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](https://docs.mendix.com/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry workflow** option to set the workflow into the in-progress state again.
+Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry workflow** option to set the workflow into the in-progress state again.
 
 The **System.WorkflowUserTask** entity is used for the Task Inbox. To keep the Task Inbox performant, user task objects are deleted when they are no longer necessary. This happens when the user task state becomes **Completed** or **Aborted**.
 

@@ -15,7 +15,7 @@ You can use [Eclipse IDE for Java Developers](https://eclipseide.org/) to write 
 
 To use Eclipse, you first need to set up your app so that Eclipse recognizes it.
 
-In Studio Pro, open the Mendix app containing the Java actions you want edit. Select **App > Deploy for Eclipse** to generate the necessary files for Eclipse to recognize the App directory as a Java project. This generates the Eclipse project file, classpath file, and launch configuration.
+In Studio Pro, open the Mendix app containing the Java actions you want to edit. Select **App > Deploy for Eclipse** to generate the necessary files for Eclipse to recognize the App directory as a Java project. This generates the Eclipse project file, classpath file, and launch configuration.
 
 ## 3 Setting Up Eclipse
 

@@ -4,20 +4,22 @@ url: /refguide/using-eclipse/
 weight: 2
 category: "Java Programming"
 description: "Describes how to set up Eclipse, and how to add a Mendix application to Eclipse and launch it."
-tags: ["studio pro"]
+tags: ["studio pro", "Java", IDE"]
 ---
 
 ## 1 Introduction
 
-You can use Eclipse to write and debug Java actions in your Mendix app. 
+You can use [Eclipse IDE for Java Developers](https://eclipseide.org/) to write and debug Java actions in your Mendix app. 
 
 ## 2 Deploy For Eclipse
 
-In Studio Pro, open the Mendix App project containing the Java actions you want edit. Select **App > Deploy for Eclipse** to generate the necessary files for Eclipse to recognize the App directory as a Java project. It generates the Eclipse project file, classpath file, and launch configuration.
+To use Eclipse, you first need to set up your app so that Eclipse recognizes it.
 
-## 2 Setting Up Eclipse
+In Studio Pro, open the Mendix app containing the Java actions you want edit. Select **App > Deploy for Eclipse** to generate the necessary files for Eclipse to recognize the App directory as a Java project. This generates the Eclipse project file, classpath file, and launch configuration.
 
-In Mendix, all text is saved in UTF-8 encoding. To make sure your source code is also saved in UTF-8, do the following:
+## 3 Setting Up Eclipse
+
+In Mendix, all text is saved in UTF-8 encoding. To make sure your source code is also saved in UTF-8, do the following in Eclipse:
 
 1. Select **Window > Preferences**.
 2. Select **Workspace** in the new menu window.
@@ -25,36 +27,34 @@ In Mendix, all text is saved in UTF-8 encoding. To make sure your source code is
 
     {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-utf8-encoding.png" alt="Settings UTF-8 encoding" >}}
 
-You should also have a Java Development Kit (JDK) installed and selected.
+You must also have a Java Development Kit (JDK) installed and selected. Make sure to add a JDK under **Installed JREs** and select it as the default in Eclipse.
 
 {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-jdk.png" alt="Selecting a default JDK" >}}
 
-Make sure to add a JDK and select it as the default in Eclipse.
+## 4 Adding a Mendix App
 
-## 3 Adding a Mendix App
-
-To add a Mendix app to Eclipse, do the following:
+To add a Mendix app to Eclipse, do the following in Eclipse:
 
 1. Select **File > Import**.
-2. Open the **General** folder, select **Existing Projects into Workspace** and select **Next >**:
+2. Open the **General** folder, select **Existing Projects into Workspace** and click **Next >**:
 
     {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-select-import.png" alt="Import existing project" >}}
 
-3. Use the option **Select root directory**, browse to your Mendix app folder and select **Finish**:
+3. Use the option **Select root directory**, browse to your Mendix app folder and click **Finish**:
 
     {{< figure src="/attachments/refguide/java-programming/using-eclipse/import-eclipse-project.png" alt="Select root directory" >}}
 
-## 4 Launching a Mendix App
+## 5 Launching a Mendix App
 
 To launch the app, do the following:
 
 1. Select **Run > Run configurations...** or **Run > Debug configurations...**, depending on how you would like to start the application. 
-2. Find **Java application** in the list. It should contain a launch configuration named after the Mendix app's project directory.
+2. Find **Java application** in the list. It should contain a launch configuration with the same name as the Mendix app's directory.
 3. Select the launch configuration.
 4. Select **Run** (or **Debug**) to start the application:
 
     {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-run-configuration.png" alt="Launch configuration" >}}
 
-After you have launched the application, the **M2EE Admin Console** will appear. This is the same console as you would normally see in Mendix Studio Pro, if you would run the application from there. You can stop your application by closing the console.
+After you have launched the application, the **M2EE Admin Console** will appear. This is the same console as you would normally see in Mendix Studio Pro, if you want to run the application from there. You can stop your application by closing the console.
 
 {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-debug-log.png" alt="M2EE Admin Console" >}}

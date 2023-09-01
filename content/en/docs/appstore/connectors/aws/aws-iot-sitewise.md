@@ -75,7 +75,19 @@ In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To
 
 After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve an asset property's current value, implement the [GetAssetPropertyValue](#get-asset-property-value) activity by doing the following steps:
 
-{A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+2. Enter a name for your microflow, for example, *ACT_GetAssetPropertyValue*, and then click **OK**.
+3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **GetAssetPropertyValue** activity.
+4. Drag the **GetAssetPropertyValue** activity onto the work area of your microflow.
+5. Double-click the **GetAssetPropertyValue** microflow activity to configure the required parameters.
+6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws_region).
+7. Click **OK**.
+8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+9. Position the **Retrieve** activity between the **GetAssetPropertyValue** activity and the microflow end event.
+10. Double-click the **Retrieve** activity.
+11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **GetAssetPropertyValue** as the association.
+12. Click **OK**.
+13. Configure a method for triggering the **ACT_GetAssetPropertyValue** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference
 

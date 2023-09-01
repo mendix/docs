@@ -31,6 +31,7 @@ If you only want to *display* information, you can also use a [text box](/refgui
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference selector properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -43,6 +44,7 @@ Properties:
 * [Selectable Objects](#selectable-objects)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

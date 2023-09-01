@@ -185,13 +185,13 @@ If you have credentials that have been generated without the help of the **GetSe
     * **AccessKeyId** - your IAM access key 
     * **SecretAccesskey** - your secret access key
     * **Provider** - set to *_Session*
-		
+        
 2. Create a **SessionToken** object with the following parameters:
     * **Token** - your token 
     * **Credentials_SessionToken** - the association between **Credentials** and **SessionToken** 
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/association.png" >}}
-		
+        
 You can then use the above as a valid set of credentials.
 
 ### 4.2 Implementing Static Credentials {#static}

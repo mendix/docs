@@ -559,6 +559,19 @@ NOT ALL ARE GENERALIZATIONS! -> The entities in the table below describe all gen
 | --- | --- |
 | NextToken | Describes the token for the next set of results, or null if there are no additional results. |
 
+### 4.1.61 BatchGetAssetPropertyValueHistoryRequest {#batch-get-asset-property-value-history-request}
+
+| Attribute | Description |
+| --- | --- |
+| MaxResults | The maximum number of results to return for each paginated request. The maximum value of MaxResults can be set to 20000.|
+| NextToken | Describes the token to be used for the next set of paginated results. |
+
+### 4.1.62 BatchGetAssetPropertyValueHistoryResponse {#batch-get-asset-property-value-history-response}
+
+| Attribute | Description |
+| --- | --- |
+| NextToken | Describes the token for the next set of results, or null if there are no additional results. |
+
 ### 4.1. ENTITY_NAME {#entity_name}
 
 | Attribute | Description |

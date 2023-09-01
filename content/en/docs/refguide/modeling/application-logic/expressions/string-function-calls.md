@@ -501,7 +501,7 @@ The output is:
 False
 ```
 
-In `isMatch()`, the regex is implicitly anchored at `^` and `$`, meaning that `isMatch()` will always match the entire input string instead of a substring.
+In `isMatch()`, the regex is implicitly anchored at `^` and `$`. This means that `isMatch()` will always match the entire input string instead of a substring.
 
 **Other Examples**
 

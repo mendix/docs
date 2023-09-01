@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "amazon", "AWS IoT SiteWise", "co
 
 ## 1 Introduction
 
-The [AWS IoT Sitewise](MARKETPLACE LINK TBD) connector provides a way for you to optimize the data collection and processing for your Mendix app by implementing [AWS IoT SiteWise](https://aws.amazon.com/iot-sitewise/).
+The [AWS IoT Sitewise](https://marketplace.mendix.com/link/component/215633) connector provides a way for you to optimize the data collection and processing for your Mendix app by implementing [AWS IoT SiteWise](https://aws.amazon.com/iot-sitewise/).
 
 ### 1.1 Typical Use Cases
 
@@ -40,8 +40,6 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 After you install the connector, you can find it in the **App Explorer**, in the **AWSIoTSiteWiseConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to AWS IoT SiteWise. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### 3.1 Configuring AWS Authentication
-
-#### THIS SECTION HAS SCREENSHOTS FROM THE DYNAMODB CONNECTOR. REPLACE THEM WITH SIMILAR SCREENSHOTS FROM YOUR CONNECTOR.
 
 In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 

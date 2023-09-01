@@ -2,7 +2,7 @@
 title: "Build OData APIs with REST Best Practices"
 url: /refguide/build-odata-apis/
 weight: 75
-tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connector guide", "odata", "published odata services", "integration"]
+tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connector guide", "OData", "published OData services", "integration"]
 ---
 
 ## 1 Introduction
@@ -90,7 +90,7 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" >}} 
 
-### 3.1 Getting a Resource by Identifier
+### 3.2 Getting a Resource by Identifier
 
 Fetch a single **Customer** resource by providing the identifier between brackets:
 
@@ -104,7 +104,7 @@ The response is as follows:
 
 OData also supports using multi-field IDs by providing the required attributes as a key value list between the brackets.
 
-### 3.2 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
+### 3.3 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
 
 OData standardizes how to specify which resources to consume. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix Runtime service implementation will be able to push down the filtering, sorting, and pagination into the database. This uses the database query optimizer and available indexes to optimize performance.
 

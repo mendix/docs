@@ -1,7 +1,7 @@
 ---
 title: "OData Query Options"
 url: /refguide/odata-query-options/
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
+tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "create", "update", "delete", "actions"]
 ---
 
 ## 1 Introduction
@@ -173,7 +173,7 @@ Specify new values for attributes in the body of the request. Here is an example
 }
 ```
 
-### 10.1.1 Updating Attributes of Enumeration Type
+#### 10.1.1 Updating Attributes of Enumeration Type
 
 Attributes of an enumeration type can be updated by specifying the exposed value of the enumeration, without the prefix of the enumeration type, in the body of the `PATCH` request.
 For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR` and `MyModule.Country.JP`, exposed as `France`, `Brazil`, and `Japan` respectively, you can update your object as follows:
@@ -188,9 +188,9 @@ For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.
 Specifying the enumeration member by its numeric value is not supported.
 {{% /alert %}}
 
-### 10.2 Updating asociations
+### 10.2 Updating Associations
 
-When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. Here is an example:
+When the association refers to a single object, use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to set an associated object, or use `null` to empty the associated object. Here is an example:
 
 ```json
 {
@@ -239,3 +239,42 @@ Clients can only set values for an association from the entity that is the [owne
 ## 12 Deleting Objects {#deleting-objects}
 
 When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+
+## 13 Calling Microflows {#actions}
+
+Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the [Edit published microflow](/refguide/published-odata-microflow/) dialog; on the bottom you will find the **example of location** property.
+
+The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. For example:
+
+```json
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "FirstWorkingDay": "20240101T00:00:00.000Z",
+  "CreatePayrollAccount": true
+}
+```
+
+If a parameter has type *object* or *list*, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the existing object. It is also possible to pass both an `@id` reference *and* attributes of the object combined, which results in the existing object having the additional attributes' values. For example:
+
+```json
+{
+  "OffboardingDate": "20231231T00:00:00.000Z",  
+  "Employee": {
+    "@id": "Employees(1783)",
+    "Email": "john.doe.personal@gmail.com"
+  }
+}
+```
+
+If the referenced object cannot be found, the action will fail.
+
+If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
+
+{{% alert type="info" %}}
+Note that an object that is passed to a microflow will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 
+{{% /alert %}}
+
+{{% alert type="info" %}}
+The *publish microflows* functionality was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+{{% /alert %}}

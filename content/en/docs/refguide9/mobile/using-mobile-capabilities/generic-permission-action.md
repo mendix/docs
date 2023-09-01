@@ -102,7 +102,7 @@ To test the remaining permissions you can build a [native app](/refguide9/mobile
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
 {{% alert color="info" %}}
-The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
+The permissions that you cannot find using the Native Builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
 ## 5 Updating Native App Permissions {#update-native-permissions}

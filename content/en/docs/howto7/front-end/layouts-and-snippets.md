@@ -26,7 +26,7 @@ When you look at a page, you can see that a page consists of two important compo
 * Layout – the structure of the page (just like PowerPoint has one or more layout presets)
 * Content – what is displayed within the structure of the page
 
-While modeling the pages, you select a layout when a page is created.
+While modeling the pages, you can select a layout when a page is created.
 
 ### 2.2 The Value of Layouts
 

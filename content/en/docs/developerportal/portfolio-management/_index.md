@@ -522,3 +522,4 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 ## 7 Read More
 
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
+* [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)

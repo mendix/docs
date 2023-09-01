@@ -766,7 +766,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 * **IRSA Authentication** - Set to **no**.
 * **Create bucket per environment** - Set to **yes**.
-* **Create account (IAM user) per environment** - Set to **no**.
+* **Create account (IAM user) per environment** - Set to **yes**.
 * **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
 * **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - Set to **yes**.

@@ -54,13 +54,13 @@ On the **Inbox** page, everyone from your team can view all the unarchived feedb
 
 In the list on the **Inbox** page, you can find the following information for each feedback item:
 
-- **ID** – the unique number that is assigned to the feedback item
-- **Subject** – the title of the feedback item given by the reporter
-- **Submitter** – the email address of the reporter
-- **Tags** – tags that your team has assigned to the feedback item
-- **Status** – the status that your team has set to the feedback item
-- **Linked** – number of the feedback items that are linked to this feedback
-- **Date** – the date when the feedback was submitted
+* **ID** – the unique number that is assigned to the feedback item
+* **Subject** – the title of the feedback item given by the reporter
+* **Submitter** – the email address of the reporter
+* **Tags** – tags that your team has assigned to the feedback item
+* **Status** – the status that your team has set to the feedback item
+* **Linked** – number of the feedback items that are linked to this feedback
+* **Date** – the date when the feedback was submitted
 
 {{% alert color="info" %}}For more information about each bullet item above, see the list in the [Feedback Details](#feedback-details) section.{{% /alert %}}
 
@@ -98,13 +98,13 @@ On the **Archive** page, everyone in your team can view all the archived feedbac
 
 In the list on the **Archive** page, you can find the following information for each feedback item:
 
-- **ID** – the unique number that is assigned to the feedback item
-- **Subject** – the title of the feedback item given by the reporter
-- **Submitter** – the email address of the reporter
-- **Tags** – tags that your team has assigned to the feedback item
-- **Status** – the status that your team has set to the feedback item
-- **Date** – the date when the feedback was submitted
-- **Archive Date** – the date when the feedback was archived
+* **ID** – the unique number that is assigned to the feedback item
+* **Subject** – the title of the feedback item given by the reporter
+* **Submitter** – the email address of the reporter
+* **Tags** – tags that your team has assigned to the feedback item
+* **Status** – the status that your team has set to the feedback item
+* **Date** – the date when the feedback was submitted
+* **Archive Date** – the date when the feedback was archived
 
 To export all the archived feedback items into one Excel file, click **Export**.
 
@@ -124,11 +124,11 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/third-party-integration.png" >}}
 
-  * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
-  * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
-  * Ellipsis (**...**)
-    * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
-    * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
+    * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
+    * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
+    * Ellipsis (**...**)
+        * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
+        * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
 
 * **Last activity** – This shows when the last edit to the feedback item was made.
 
@@ -142,14 +142,14 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
 * **Metadata** – This shows a list of metadata of the feedback item.
 
-  - **Active Userrole** – This is the user role the reporter has in your app
-  - **Active form**– This is the page from which the reporter sent the feedback
-  - **Screen Size** – This is the dimensions of the reporter’s screen in pixels
-  - **Browser** – This is the version of the browser the reporter was using
-  - **Application location** – This is the URL of the page from which the reporter sent the feedback
-  - **Submitter name** – This shows the name of the reporter
-  - **Submitter email** – This shows the email of the reporter
-  - **Submission date** – This shows the date when the feedback was submitted
+    * **Active Userrole** – This is the user role the reporter has in your app
+    * **Active form**– This is the page from which the reporter sent the feedback
+    * **Screen Size** – This is the dimensions of the reporter’s screen in pixels
+    * **Browser** – This is the version of the browser the reporter was using
+    * **Application location** – This is the URL of the page from which the reporter sent the feedback
+    * **Submitter name** – This shows the name of the reporter
+    * **Submitter email** – This shows the email of the reporter
+    * **Submission date** – This shows the date when the feedback was submitted
 
 * **Tags** – These are the tags assigned to the feedback item. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags to a feedback item.
 

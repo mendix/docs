@@ -445,17 +445,17 @@ You can use the search box to search for an app in the list using the app name o
 
 The list shows the following information:
 
-- **App Name** – This is the name of the app. 
+* **App Name** – This is the name of the app. 
 
-- **Environment** – This shows the name of the app's production environment.
+* **Environment** – This shows the name of the app's production environment.
 
-- **Latest Alert Date** – This is the date and time the latest alert occurred.
+* **Latest Alert Date** – This is the date and time the latest alert occurred.
 
-- **Critical** – This shows the number of critical alerts of this production environment.
+* **Critical** – This shows the number of critical alerts of this production environment.
 
-- **Warnings** – This shows the number of warning alerts of this production environment.
+* **Warnings** – This shows the number of warning alerts of this production environment.
 
-- **Alerts** – This shows the types of the alerts of this production environment.
+* **Alerts** – This shows the types of the alerts of this production environment.
 
 ### 15.1 Refreshing the Dashboard
 
@@ -473,11 +473,11 @@ If you click **Go to Cloud Portal** on the upper-right corner of the page, you a
 
 The **Environment Details** page also lists the alert information of this specific production environment. In the list, you can see the following details:
 
-- **Alert Type** – This shows the name of the alert type.
-- **Status** – This shows the status of the specific alert, indicated by an icon:
-    - A critical alert is indicated by a circle icon with a cross in the middle.
-    - A warning alert is indicated by a triangle icon with an exclamation mark in the middle.
-    - An OK alert is indicated by the word **OK**.
-- **Timestamp** – This is the date and time this alert occurred.
+* **Alert Type** – This shows the name of the alert type.
+* **Status** – This shows the status of the specific alert, indicated by an icon:
+    * A critical alert is indicated by a circle icon with a cross in the middle.
+    * A warning alert is indicated by a triangle icon with an exclamation mark in the middle.
+    * An OK alert is indicated by the word **OK**.
+* **Timestamp** – This is the date and time this alert occurred.
 
 ## 16 Documents in This Category

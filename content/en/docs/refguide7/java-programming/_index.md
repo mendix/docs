@@ -52,4 +52,3 @@ For details on usage and example, see [How to Use the Java API](/howto7/logic-bu
 For details on this topic, see [Using Eclipse](/refguide7/using-eclipse/).
 
 ## 5 Documents in This Category
-

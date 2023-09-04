@@ -73,7 +73,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 3. In the **App Explorer**, double-click **Security** in the **App** section again, then go to the **User roles** tab and perform the following steps:
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
     2. Add the module role **Administrator** from the **DocumentGeneration** module to all app user roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
-4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This wil automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This will automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section.
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
@@ -161,7 +161,7 @@ The steps for each procedure are described in the sections below.
 
 3. Create a microflow that contains a **Show page** activity that opens the page you created in the previous step.
 
-{{% alert color="info" %}}If you want, you can copy **DOC_ExampleDocument_Print** microflow from the **Examples** folder to get started.{{% /alert %}}
+    {{% alert color="info" %}}If you want, you can copy **DOC_ExampleDocument_Print** microflow from the **Examples** folder to get started.{{% /alert %}}
 
 4. Create a microflow with the **Generate PDF from page** action to render this page as a PDF document. Configure the **Generate PDF from page** action as follows:
     1. Select the microflow you created in the previous step for the **Page microflow** property.

@@ -17,4 +17,3 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Un
 {{% /alert %}}
 
 ## 2 Documents in This Section
-

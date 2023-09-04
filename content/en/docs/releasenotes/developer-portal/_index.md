@@ -15,7 +15,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
-# 2023
+## 2023
 
 ### August 28, 2023
 
@@ -29,9 +29,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
 
-  * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
-  * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
-  * We added documentation links on the start page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+    * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+    * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
+    * We added documentation links on the start page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 
 #### Improvements
 
@@ -66,26 +66,26 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * The new feedback management tool **Feedback** does the following:
 
-   * Allows you to add tags to feedback items so you can see patterns more easily
-   * Enables you to define custom statuses for feedback items – you can create your workflow, your way
-   * Supports identifying which environment the feedback item comes from (for example, production or test environment)
-   * Search more easily – you can now filter on environment, submission dates, and assignees
-   * Supports linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
-   * Enables submitters to see and update their feedback items in the Developer Portal
-   * Supports linking feedback items with Jira – for all of you who make use of our new Jira connector
+    * Allows you to add tags to feedback items so you can see patterns more easily
+    * Enables you to define custom statuses for feedback items – you can create your workflow, your way
+    * Supports identifying which environment the feedback item comes from (for example, production or test environment)
+    * Search more easily – you can now filter on environment, submission dates, and assignees
+    * Supports linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
+    * Enables submitters to see and update their feedback items in the Developer Portal
+    * Supports linking feedback items with Jira – for all of you who make use of our new Jira connector
 
    You can find all your existing feedback data already in the new Feedback tool. If you have set up Epics or Jira as your project management tool, Feedback is already linked to your tool. In other words, you do not need to do anything, just try it out and tell us what you think.
 
 * Complementing Feedback, **Mini Surveys** helps you to set short, effective surveys to gather diverse feedback, and enables data-driven decision-making to improve app and features. Mini Surveys does the following:
 
-   * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
-   * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
-   * Support defining the duration of the survey
-   * Offers the toaster feature for you to designate the survey's on-screen placement
-   * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
-   * Supports recording all survey responses, even if a customer does not complete the entire survey
-   * Offers the test mode functionality for you to experiment prior to deploying the survey to a broader audience
-   * Provides a comprehensive view of responses for in-depth analysis
+    * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
+    * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
+    * Support defining the duration of the survey
+    * Offers the toaster feature for you to designate the survey's on-screen placement
+    * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
+    * Supports recording all survey responses, even if a customer does not complete the entire survey
+    * Offers the test mode functionality for you to experiment prior to deploying the survey to a broader audience
+    * Provides a comprehensive view of responses for in-depth analysis
 
 ### August 10, 2023
 

@@ -45,7 +45,6 @@ The following articles contain information about deploying your Mendix app on th
 * [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/) – has information on binding and configuring the Application Autoscaler
 * [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/) – describes utilizing all the options of Mendix SSO as an SAP user
 
-
 ## 3 Learning Path
 
 If you are getting started with using SAP with Mendix, you may find it helpful to follow the [Learn to Build an SAP App](https://academy.mendix.com/link/path/32) learning path (you must be signed in to the Mendix Platform to see this learning path).

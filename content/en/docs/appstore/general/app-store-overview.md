@@ -43,7 +43,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 The following filter options are also available:
 
 * **Category**
-* **Support** – **Platform**, **Partner**, **Siemens***, or **Community**
+* **Support** – **Platform**, **Partner**, **Siemens**, or **Community**
 * **Industry**
 * **Compatibility**
 * **Visibility** – **Public** or **Private** content

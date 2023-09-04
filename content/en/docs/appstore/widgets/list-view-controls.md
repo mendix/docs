@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "list view control", "c
 ---
 
 {{% alert color="warning" %}}
-This widget is deprecated. You can use the [Data Widgets](/appstore/modules/data-widgets/) instead.
+This widget is deprecated. You can use the [Data Widgets](/appstore/modules/data-widgets/) instead. 
 {{% /alert %}}
 
 ## 1 Introduction

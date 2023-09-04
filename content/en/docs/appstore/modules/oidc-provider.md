@@ -221,6 +221,7 @@ To return requested scopes to your client app, you need to perform the following
     If your client app consumes APIs and wants to get access using the Access Token from the OIDC Provider, you may want to configure additional scope values, as required by those APIs.
 
     {{% alert color="warning" %}}
+
 Do not to create scopes with the same name as standard scopes (as defined in the [OIDC specs](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)), for example:
 
 * openid - apps will use this scope value to request identity propagation from the OIDC Provider by means of an ID-token.
@@ -446,6 +447,11 @@ Where there is no IAM brokering functionality, the administrator can create end-
 
 ### 7.4 Structure of ID and Access Tokens
 
-For situations where the Centralized Authorization concept is used (see [Centralized Authorization](#centralized-auth), above), the OIDC Provider module uses the ‘scope’ claim in both the ID and Access token to communicate assigned user roles to connected Mendix apps. The scope parameter has the format `mx:app:userrole:{user-role}`, where `{user-role}` is either the name or the UUID of the role in the connected app as set up in [Configuration of the OIDC Provider for Centralized Authorization with Scopes](#configure-scopes).
+For situations where the Centralized Authorization concept is used (see [Centralized Authorization](#centralized-auth), above), the OIDC Provider module uses the ‘scope’ claim in both the ID and Access token to communicate assigned user roles to connected Mendix apps. The scope parameter one of the following the formats:
 
-For example: `mx:app:userrole:53f5d6fa-6da9-4a71-b011-454ec052cce8`
+* `mx:app:userrole:{user-role-UUID}`, where `{user-role-UUID}` is the UUID of the role in the connected app
+* `{user-role}`, where `{user-role}` is the name of the user role
+
+These are set up in [Configuration of the OIDC Provider for Centralized Authorization with Scopes](#configure-scopes). Multiple scopes will be separated by spaces.
+
+For example: `mx:app:userrole:53f5d6fa-6da9-4a71-b011-454ec052cce8 mx:app:userrole:6c5ea333-799c-4438-96fc-2528ced788e4`

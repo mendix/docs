@@ -169,3 +169,4 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [Import Excel Documents](/howto/integration/importing-excel-documents/)
 * [Expose a Web Service](/howto/integration/expose-a-web-service/)
 * [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)
+* [Security Considerations](/refguide/call-rest-action/#security)

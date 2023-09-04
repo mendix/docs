@@ -117,8 +117,4 @@ The following steps will change the permissions of a team member to an environme
 
 ## 4 API Reference
 
-{{% alert color="warning" %}}
-Due to the current configuration, the **Try it out** option returns a network error. You can test the API by pasting the generated curl statement into your terminal, or using a client such as Postman.
-{{% /alert %}}
-
 {{< swaggerui src="/openapi-spec/cloud-portal-v3.yaml"  >}}

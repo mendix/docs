@@ -4,7 +4,7 @@ url: /refguide/using-eclipse/
 weight: 2
 category: "Java Programming"
 description: "Describes how to set up Eclipse, and how to add a Mendix application to Eclipse and launch it."
-tags: ["studio pro", "Java", IDE"]
+tags: ["studio pro", "Java", "IDE"]
 ---
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ In Mendix, all text is saved in UTF-8 encoding. To make sure your source code is
 
     {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-utf8-encoding.png" alt="Settings UTF-8 encoding" >}}
 
-You must also have a Java Development Kit (JDK) installed and selected. Make sure to add a JDK under **Installed JREs** and select it as the default in Eclipse.
+You must also have a Java Development Kit (JDK) installed and selected. You will normally have a JDK installed as part of your Studio Pro installation. Check that the JDK you want to use is listed under **Installed JREs** and select it as the default in Eclipse.
 
 {{< figure src="/attachments/refguide/java-programming/using-eclipse/eclipse-jdk.png" alt="Selecting a default JDK" >}}
 

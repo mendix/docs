@@ -101,7 +101,7 @@ For OQL, many of the same best practices apply as for XPath.
 
 ## 9 Web Services and XML 
 
-* Use SSHA256 instead of BCrypt.
+* Use SSHA256 instead of BCrypt (except for [password hashing](/refguide/app-settings/#hash-algorithm)).
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.
 

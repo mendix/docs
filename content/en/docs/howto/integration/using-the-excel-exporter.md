@@ -168,6 +168,7 @@ To create the worksheet layout, follow these steps:
     Below you can find an example of the definition of a template and the corresponding exported Excel file: the two worksheets are defined as **Topic** and **PubMessage** in the template, and the corresponding Excel file has two sheets that have the same names.
 
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/multiple-sheets.png" >}} 
+
 ### 6.4 Configuring Dynamic Column Data {#dynamic-column-data}
 
 To configure the dynamic column data, follow these steps:

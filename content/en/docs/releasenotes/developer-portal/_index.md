@@ -17,6 +17,40 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### August 28, 2023
+
+#### New Features
+
+* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
+
+### August 24, 2023
+
+#### New Features
+
+* We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
+
+    * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+    * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
+    * We added documentation links on the start page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+
+#### Improvements
+
+* We improved the Feedback in App Insights as follows:
+
+    * When you manually create feedback items, you can now leave your email address.
+    * You can now archive multiple feedback items in one go.
+    * You can now download the attachments of feedback items that reporters have uploaded.
+    * If you have the right permission, you can now delete comments on the side panel of a feedback item.
+
+* We fine-tuned our [Jira integration](/developerportal/project-management/jira-connector/) support for Scrum boards. The [Stories pane](/refguide/stories-pane/) in Studio Pro now shows all stories belonging to the active Sprints of your board (this used to be all open Sprints with a limitation of 50 stories)
+
+#### Fixes
+
+* We fixed an issue where new users who were trying to access Feedback for the first time via a URL would be presented with an error.
+* We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
+* We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
+* We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
+
 ### August 17, 2023
 
 #### Improvements
@@ -32,26 +66,26 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * The new feedback management tool **Feedback** does the following:
 
-   * Allows you to add tags to feedback items so you can see patterns more easily
-   * Enables you to define custom statuses for feedback items – you can create your workflow, your way
-   * Supports identifying which environment the feedback item comes from (for example, production or test environment)
-   * Search more easily – you can now filter on environment, submission dates, and assignees
-   * Supports linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
-   * Enables submitters to see and update their feedback items in the Developer Portal
-   * Supports linking feedback items with Jira – for all of you who make use of our new Jira connector
+    * Allows you to add tags to feedback items so you can see patterns more easily
+    * Enables you to define custom statuses for feedback items – you can create your workflow, your way
+    * Supports identifying which environment the feedback item comes from (for example, production or test environment)
+    * Search more easily – you can now filter on environment, submission dates, and assignees
+    * Supports linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
+    * Enables submitters to see and update their feedback items in the Developer Portal
+    * Supports linking feedback items with Jira – for all of you who make use of our new Jira connector
 
    You can find all your existing feedback data already in the new Feedback tool. If you have set up Epics or Jira as your project management tool, Feedback is already linked to your tool. In other words, you do not need to do anything, just try it out and tell us what you think.
 
 * Complementing Feedback, **Mini Surveys** helps you to set short, effective surveys to gather diverse feedback, and enables data-driven decision-making to improve app and features. Mini Surveys does the following:
 
-   * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
-   * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
-   * Support defining the duration of the survey
-   * Offers the toaster feature for you to designate the survey's on-screen placement
-   * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
-   * Supports recording all survey responses, even if a customer does not complete the entire survey
-   * Offers the test mode functionality for you to experiment prior to deploying the survey to a broader audience
-   * Provides a comprehensive view of responses for in-depth analysis
+    * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
+    * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
+    * Support defining the duration of the survey
+    * Offers the toaster feature for you to designate the survey's on-screen placement
+    * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
+    * Supports recording all survey responses, even if a customer does not complete the entire survey
+    * Offers the test mode functionality for you to experiment prior to deploying the survey to a broader audience
+    * Provides a comprehensive view of responses for in-depth analysis
 
 ### August 10, 2023
 
@@ -61,9 +95,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue where under certain circumstances, it was possible to remove the last Scrum Master of an app.
 
 ### August 8, 2023
+
 #### Improvements
 
-* We released the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for general use. This API allows you to manage webhooks for actions which are performed on your Mendix apps. 
+* We released the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for general use. This API allows you to manage webhooks for actions which are performed on your Mendix apps.
 
 ### July 27, 2023
 
@@ -195,7 +230,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
     * You can now create, link, or remove stories directly from an epic.
     * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * If you use Scrum, you can now see a summary of your completed Sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
     * You can now [import](/developerportal/project-management/epics/planning/#import-stories) and [export](/developerportal/project-management/epics/archive/#export-archived-stories) stories using Excel files.
 
 #### Fixes

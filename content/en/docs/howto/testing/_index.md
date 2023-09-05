@@ -18,4 +18,4 @@ These blog posts also present useful details on testing:
 * [8 Lightweight Quality Assurance Practices](https://www.mendix.com/blog/8-lightweight-quality-assurance-practices/)
 * [The Quality Assurance Mindset in Mendix](http://ww2.mendix.com/expert-webinar-quality-assurance.html)
 
-## 2 Main Documents in This Category
+## 2 Documents in This Category

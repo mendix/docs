@@ -66,7 +66,7 @@ To import a web service using the wizard, follow these steps:
 
 10. Click **Finish** to create the web service.
 
-### 2.1 The Outcome
+### 2.2 The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
 
@@ -85,7 +85,7 @@ To import a web service directly, follow these steps:
 
 1. Right-click a module and select **Add Other** > **Consumed web service**.
 2. Specify a name for the new consumed web service and click **OK**.
-3. In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. Click **Edit**, and in the **WSDL Source** diaglog box, specify a **URL** or load a **File** from your computer.
+3. In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. Click **Edit**, and in the **WSDL Source** dialog box, specify a **URL** or load a **File** from your computer.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/enter-wsdl-url.png" >}}
 

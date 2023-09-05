@@ -114,13 +114,11 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the content type in the initial version of your content. You cannot change this setting after the initial version is published.{{% /alert %}}
 
-2. You can add up to three **Categories** for your component, which will help Makers find your component easier.
-
+2. You can add up to three **Categories** for your component, which will help other users find your component more easily.
 3. Enter a **Name** for your component.
 4. Enter a **Description** of your component.
 
     {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
-
 
 5. Select the location where you want to publish your component:
 

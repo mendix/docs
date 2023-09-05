@@ -37,7 +37,7 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 
 ### 1.2 Minor Version
 
-In the 9.24.1 example, the second number (**18**) indicates the minor version. 
+In the 9.24.1 example, the second number (**24**) indicates the minor version. 
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 

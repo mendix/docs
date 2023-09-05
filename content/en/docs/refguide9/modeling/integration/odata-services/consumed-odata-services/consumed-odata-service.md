@@ -2,7 +2,7 @@
 title: "Consumed OData Service"
 url: /refguide9/consumed-odata-service/
 weight: 10
-tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
+tags: ["studio pro", "odata service", "consumed odata service"]
 aliases:
     - /refguide9/consumed-odata-service-properties
 ---

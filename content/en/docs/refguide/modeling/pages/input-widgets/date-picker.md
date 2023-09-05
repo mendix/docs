@@ -21,6 +21,7 @@ For example, the following date picker allows the end-user to see, and set, the 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Date picker properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -32,6 +33,7 @@ Properties:
 * [Events](#events)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

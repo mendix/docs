@@ -584,7 +584,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
-3. Configure the user roles in your app to match the roles returned by OIDC Provider. End-users will be given the matching role when they sign into the app. If the role in the OIDC Provider token is not found in the Mendix app the end-user will not be given any user role.
+3. Configure the user roles in your app to match the roles returned by OIDC Provider. End-users will be given the matching role when they sign into the app. If the role in the OIDC Provider token is not found in the Mendix app the end-user will be given the user role `User`, but will not be given access to application.
 
     If any one of the selected scopes of OIDC SSO matches with OIDC Provider Scopes then the user role is created. If you specify extra scopes those scopes are ignored.
     
@@ -675,7 +675,7 @@ If you want to customize this login page for your end-users, perform the followi
 
 1. Create a new [page](/refguide/page/).
 1. Open the App Navigation and set the newly created login page as the [Default home page](/refguide/setting-up-the-navigation-structure/#home).
-1. Create [Role-based home pages](/refguide/setting-up-the-navigation-structure/#role-based-home-page) for the user roles. Set the target to the Home page in the module.
+1. Create [Role-based home pages](/refguide/setting-up-the-navigation-structure/#role-based-home-page) for the user roles. Set the newly created login page as the target home page.
 1. In the **Authentication** section, set the new login page as the **Sign-in page**.
 
 Depending on how your login-page works and/or which login-option is selected by the end-user, the OIDC SSO module will select the corresponding ACR value in the `acr_values` request parameter.

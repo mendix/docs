@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix users can use the Catalog to search for and consume registered OData services. Users can also register new services and, because they are the data source owners, curate them.
+Mendix users can use the Catalog to search for and consume registered OData services. Users can also register new services and curate their services.
 
 Catalog users can do the following: 
 
@@ -33,10 +33,10 @@ For more information, see the [Catalog](/developerportal/control-center/#catalog
 
 ### 2.1 External Users
 
-Mendix Admins can add **External Users** to their company's Catalog. See the [External Users](/developerportal/control-center/catalog-admin/#external-users) section in *Catalog Administration*.
+Mendix Admins can add external users to their company's Catalog. See the [External Users](/developerportal/control-center/catalog-admin/#external-users) section in *Catalog Administration*.
 
 ## 3 Curator {#curator}
 
-The Curator curates registered services in the Catalog to ensure that registered services are visible to the relevant users and to enrich the information on registered assets. An organization can have several Curators. 
+The Curator curates registered services in the Catalog. They can ensure that registered services are visible to the relevant users and can enrich the information on registered assets. An organization can have several Curators. 
 
 Curators are assigned by a [Mendix Admin](#admin) and can enrich the metadata of registered services and datasets with descriptions, tags, contact information, and discoverability.

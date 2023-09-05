@@ -231,7 +231,7 @@ Do not to create scopes with the same name as standard scopes (as defined in the
 {{% /alert %}}
 
     {{% alert color="info" %}}    
-The scopes you configure are not added automatically to the “scopes_supported” attribute on the OIDC Provider’s well-known endpoint. You must manually configure the scope value in your client app to be able to request it.
+The scopes you configure are not added automatically to the "scopes_supported" attribute on the OIDC Provider’s well-known endpoint. You must manually configure the scope value in your client app to be able to request it.
 {{% /alert %}}
 
 1. Add logic to the OIDC Provider to assign user roles (custom scope values) based on your preferred business logic. 
@@ -370,13 +370,13 @@ The format of non-custom claims in the ID-token is as follows:
     "scope": "",
     "name": "test token",
     "exp": 1681970318,
-    “email”:"test@gmail.com",
+    "email":"test@gmail.com",
     "com.mendix.user.timezone": "",
     "iat": 1681969718,
     "com.mendix.user.roles": [
         "User"
     ]
-    “username”:”test”
+    "username":"test"
 }
 ```
 
@@ -429,7 +429,7 @@ Using OAuth scopes is the recommended approach since it is the standard OAuth so
 
 Since the OIDC Provider issues access tokens for end-users that are logged in, it needs to record end-users as objects in the app which contains the OIDC Provider module.
 
-The OIDC Provider module adds the `AccountDetail` entity into your Provider app. It uses the `MendixUserID` attribute of `AccountDetail` to populate the “sub” claim in the access token. For any other user claims you want to include in your access token, you need to create a microflow as described in [Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims](#propagate-custom-claims), above.
+The OIDC Provider module adds the `AccountDetail` entity into your Provider app. It uses the `MendixUserID` attribute of `AccountDetail` to populate the "sub" claim in the access token. For any other user claims you want to include in your access token, you need to create a microflow as described in [Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims](#propagate-custom-claims), above.
 
 There are two ways in OIDC Provider to get create accounts:
 

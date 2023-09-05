@@ -584,13 +584,13 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
-3. Configure the user roles in your app to match the roles returned by OIDC Provider. End-users will be given the matching role when they sign into the app. If the role in the OIDC Provider token is not found in the Mendix app the end-user will be given the user role `User`, but will not be given access to application.
-
     If any one of the selected scopes of OIDC SSO matches with OIDC Provider Scopes then the user role is created. If you specify extra scopes those scopes are ignored.
     
+3. Configure the user roles in your app to match the roles returned by OIDC Provider. End-users will be given the matching role when they sign into the app. If the role in the OIDC Provider token is not found in the Mendix app the end-user will be given the user role `User`, but will not be given access to application.
+   
 4. Save the configuration. 
     
-* To confirm that the authorization is working, get an access token from your OIDC Provider IdP and pass it to the API Endpoint using the authorization header. 
+To confirm that the authorization is working, get an access token from your OIDC Provider IdP and pass it to the API Endpoint using the authorization header. 
 
 #### 8.2.4 Parsing Access Tokens Using a Custom Microflow{#custom-parsing}
 

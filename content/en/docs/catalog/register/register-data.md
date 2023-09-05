@@ -67,7 +67,7 @@ Once you have a personal access token, follow this series of REST calls to regis
 
     If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering the services.
 
-The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, and other operations on these same paths. In this how-to, you will fill out only the required fields and one operation per path. 
+The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, and other operations on these same paths. In this how-to, you will fill out only the required fields and one operation per path.
 
 #### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
 
@@ -157,7 +157,7 @@ Once a version is released to production, any updated contracts should be given 
 This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.
 {{% /alert %}}
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints).
 
 You can see an example of a request below:
 
@@ -239,9 +239,9 @@ To call the Transform endpoint of the Registration API, you need the following:
 
     {{% alert color="info" %}}These two values can be found in the *metadata.json* file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson).
 
-You can see an example of a request that converts a *dependencies.json* file below: 
+You can see an example of a request that converts a *dependencies.json* file below:
 
 ```curl
 curl --location --request PUT 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
@@ -330,7 +330,7 @@ Follow the steps below:
     2. **Sandbox** – The Mendix Free App environment, data is not of production quality.
     3. **Non-production** – Hosting is paid for, but data is not of production quality.
 
-8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later. 
+8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
 9. Select **Done!** to complete the registration.
 
 Congratulations! Your OData service is registered in the Catalog. 
@@ -339,7 +339,7 @@ The discoverable status of the OData service defaults to the value set by the Me
 
 #### 4.2.1 Selecting an Authentication Method {#authentication}
 
-Publishers of a data source can determine how consuming developers will need to identify themselves when consuming the data source. 
+Publishers of a data source can determine how consuming developers will need to identify themselves when consuming the data source.
 
 The Catalog supports the following methods:
 
@@ -361,7 +361,7 @@ If you are using a module from the Mendix Marketplace, select **Other** and then
 TFolders in a ZIP contract are structured relative to the Document Base URL.
 
 * Primary document – This must be indicated by naming the document *primary*.
-* Absolute URI – If the file location/URI is given by an absolute URL—that is, if it includes the full path starting from `http` or `https`, followed by the domain and the rest of the URI—then the top-level folder must be named either `http` or `https`, depending on the original URL. Each following folder shall then represent a segment of the path, starting with the topmost folder `http` or `https`. 
+* Absolute URI – If the file location/URI is given by an absolute URL—that is, if it includes the full path starting from `http` or `https`, followed by the domain and the rest of the URI—then the top-level folder must be named either `http` or `https`, depending on the original URL. Each following folder shall then represent a segment of the path, starting with the topmost folder `http` or `https`.
 * Relative URI – All referenced documents that are relative to the primary document must have their folder structure given in such a way that when it is combined together will give the relative path as it is used in the primary document.
 
 See the ZIP structure example for reference:

@@ -255,7 +255,28 @@ The following **Container** widget related design properties are available in th
 | **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
 | **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
-#### 4.4.3 Advanced Styling
+#### 4.4.3 Applying custom fonts {#Applying-custom-fonts}
+
+For extended font support, we recommend to make use of custom fonts. To apply a custom font follow the steps below:
+
+We will be using the `Noto Sans SC` for this example. You can visit [Google fonts](https://fonts.google.com) for more font options or use a font of your choice.
+
+1. Download the font from [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
+2. Copy the `NotoSansSC-Regular.ttf` font file from the static folder of the downloaded package into the `theme\web\fonts` folder of the app
+3. Add the lines below to the `main.scss` file of the app theme (using the built-in styling editor in Studio Pro: `Styling > web > main.scss`).
+ ```css
+    @font-face {
+        font-family: 'Noto Sans SC';
+        src: url(fonts/NotoSansSC-Regular.ttf);
+    }
+
+    .font-noto-sans-sc {
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+```
+4. Add the class `font-noto-sans-sc` to all applicable texts / widgets
+
+#### 4.4.4 Advanced Styling
 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 

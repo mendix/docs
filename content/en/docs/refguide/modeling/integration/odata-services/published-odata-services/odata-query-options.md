@@ -1,7 +1,7 @@
 ---
 title: "OData Query Options"
 url: /refguide/odata-query-options/
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
+tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "create", "update", "delete", "actions"]
 ---
 
 ## 1 Introduction
@@ -72,17 +72,7 @@ We support the following comparison operators:
 | ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
 | le | less than or equal to | `/Employees?$filter=Age le 15` |
 
-### 4.3 Arithmetic Operators
-
-| Operator | Meaning | Example                              | Returns |
-| ---      | ---     | ---                                  | ---     |
-| add      | add | `/Products?$filter=Prices add 2 eq 10` | All products with price 8 |
-| sub      | minus | `/Products?$filter=Prices sub 2 eq 10` | All products with price 12 |
-| mul      | multiplied by | `/Products?$filter=Prices mul 2 eq 10` | All products with price 5 |
-| div      | divided by |`/Products?$filter=Prices div 2 eq 10` | All products with price 20 |
-| mod      | modulus |`/Products?$filter=Prices mod 5 eq 0`  | All products with price divisible by 5 |
-
-### 4.4 Functions
+### 4.3 Functions
 
 | Function     | Example                                 | Returns |
 | ---          | ---                                     | ---     |
@@ -92,14 +82,14 @@ We support the following comparison operators:
 | length       | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5 |
 | year         | `/Employees?$filter=year(DateOfBirth) eq 1990`  | All employees born in the year 1990 |
 | month        | `/Employees?$filter=month(DateOfBirth) eq 5`    | All employees born in May |
-| day          | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31st day of the month |
+| day          | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31 day of the month |
 | hour         | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1 PM) and 13:59 (1:59 PM) |
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
 <small><sup>1</sup> In OData 3 (deprecated), the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
 
-### 4.5 Combining Filters
+### 4.4 Combining Filters
 
 Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`.
 
@@ -110,7 +100,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filte
 | not | `/Employees?$filter=not(Name eq 'John')` |
 | ( ) | `/Employees?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)` |
 
-### 4.6 Filtering by Association
+### 4.5 Filtering by Association
 
 You can filter on attributes of an associated entity. The way you do this depends on whether the association exposes one object or a list of objects.
 
@@ -120,6 +110,10 @@ You can filter on attributes of an associated entity. The way you do this depend
 | Filter on an associated list  | `City?$filter=BornIn/any(person:person/Year le 1919)` |
 
 Filtering on an associated object or list in this way is possible when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you [expose associations as an associated object ID](/refguide/odata-representation/#associations).
+
+### 4.6 Arithmetic Operators
+
+The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.
 
 ## 5 Sorting
 
@@ -145,7 +139,7 @@ You can limit the number of returned objects using the `$top` query option, wher
 
 ### 7.2 Skip (Offset)
 
-You can skip a number of objects before retrieving the result using the `$skip` query option, where the offset is a positive integer. For example: `?$skip=100` will return objects starting with the 101st object in the list.
+You can skip a number of objects before retrieving the result using the `$skip` query option, where the offset is a positive integer. For example: `?$skip=100` will return objects starting with the 101 object in the list.
 
 ## 8 Null Literals
 
@@ -179,7 +173,7 @@ Specify new values for attributes in the body of the request. Here is an example
 }
 ```
 
-### 10.1.1 Updating Attributes of Enumeration Type
+#### 10.1.1 Updating Attributes of Enumeration Type
 
 Attributes of an enumeration type can be updated by specifying the exposed value of the enumeration, without the prefix of the enumeration type, in the body of the `PATCH` request.
 For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR` and `MyModule.Country.JP`, exposed as `France`, `Brazil`, and `Japan` respectively, you can update your object as follows:
@@ -194,9 +188,9 @@ For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.
 Specifying the enumeration member by its numeric value is not supported.
 {{% /alert %}}
 
-### 10.2 Updating asociations
+### 10.2 Updating Associations
 
-When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. Here is an example:
+When the association refers to a single object, use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to set an associated object, or use `null` to empty the associated object. Here is an example:
 
 ```json
 {
@@ -245,3 +239,42 @@ Clients can only set values for an association from the entity that is the [owne
 ## 12 Deleting Objects {#deleting-objects}
 
 When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+
+## 13 Calling Microflows {#actions}
+
+Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the [Edit published microflow](/refguide/published-odata-microflow/) dialog; on the bottom you will find the **example of location** property.
+
+The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. For example:
+
+```json
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "FirstWorkingDay": "20240101T00:00:00.000Z",
+  "CreatePayrollAccount": true
+}
+```
+
+If a parameter has type *object* or *list*, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the existing object. It is also possible to pass both an `@id` reference *and* attributes of the object combined, which results in the existing object having the additional attributes' values. For example:
+
+```json
+{
+  "OffboardingDate": "20231231T00:00:00.000Z",  
+  "Employee": {
+    "@id": "Employees(1783)",
+    "Email": "john.doe.personal@gmail.com"
+  }
+}
+```
+
+If the referenced object cannot be found, the action will fail.
+
+If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
+
+{{% alert type="info" %}}
+Note that an object that is passed to a microflow will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 
+{{% /alert %}}
+
+{{% alert type="info" %}}
+The *publish microflows* functionality was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+{{% /alert %}}

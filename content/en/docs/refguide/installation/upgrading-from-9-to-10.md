@@ -12,10 +12,6 @@ tags: ["studio pro", "upgrade", "runtime", "xpath"]
 
 Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#major-version) release that provides powerful tools for building your apps and brings a host of improvements and fixes. For the full list of changes, see the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/).
 
-{{% alert color="warning" %}}
-Mendix Studio Pro [10.0](/releasenotes/studio-pro/10.0/) is currently in [Beta](/releasenotes/beta-features/). The GA release is in June, 2023, as scheduled in the [Studio Pro release timeline](/releasenotes/studio-pro/lts-mts/#major-version).
-{{% /alert %}}
-
 ### 1.1 Upgrading from Studio Pro 9 to 10
 
 The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
@@ -24,7 +20,7 @@ Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0
 
 ### 1.2 Upgrading from Older Versions of Studio Pro
 
-If your app is on a Studio Pro version below 9, you must upgrade sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](https://docs.mendix.com/refguide8/moving-from-7-to-8/), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/), and finally from 9 to 10. 
+If your app is on a Studio Pro version below 9, you must upgrade sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/)), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), and finally from 9 to 10. 
 
 If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
@@ -62,12 +58,14 @@ Check if there is a newer version of your component available in the Marketplace
 
 Be sure to update these key widgets, resources, and actions:
 
-* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
+* [MendixSSO](https://marketplace.mendix.com/link/component/111349)
 
-In general you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
+In general, you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 
 ## 6 Reviewing and Testing Your App
 
@@ -118,6 +116,22 @@ In Studio Pro 10, we added a new feature called [multi-user tasks](/refguide/mul
 If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in your project, you will have to upgrade the module to v3.0.0 or later due to this change. Along with this, you need to execute the migration microflow `ACT_Assignee_Migration` (available from the `WorkflowAdminCenter` page) or add the `ASu_Assignee_Migrate` microflow to the after startup microflow of your project.
 
 User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
+
+### 7.6 DOM Structure Changes
+
+Studio Pro 10 introduces DOM structure changes to the web client to ensure compatibility with future versions of React.
+
+A `div[data-widget-wrapper]` element is placed around a React widget if its container is rendered as a Dojo widget, while the extra `script` element for such widgets has been removed. This added `div` element should not affect the page layout directly (as it uses `display: contents`), but it may affect the CSS styling that relies on direct child (`>`), sibling (`+`), or `nth-child` selectors.
+
+These changes may impact your current styling.
+
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, please adjust your css selectors accordingly.
+
+### 7.7 Moving Away from Glyphicon
+
+In Studio Pro 10, the glyphicon is slowly being phased out. Although a currently selected glyphicon will still work, some of the widgets that Studio Pro 10 uses are no longer using a glyphicon class name.
+
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, a possible workaround for this is to manually add the [Atlas icons module](https://github.com/mendix/atlas/raw/main/resources/Atlas_Icons.mpk) to your app.
 
 ## 8 Read More
 

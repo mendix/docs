@@ -288,7 +288,7 @@ More options can be found here: [Title configurations](https://plot.ly/javascrip
 
 ### 2.7 Color
 
-Sets the the background color of a graph.
+Sets the background color of a graph.
 
 ``` json
 {

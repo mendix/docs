@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 
@@ -207,3 +207,12 @@ The Mendix Client is bundled with the full dojo library. However, not all functi
 #### 8.6.2 Prototype Pollution Vulnerability - CVE-2021-23450
 
 Mendix versions 9.11.0 and above use Dojo 1.16.4. The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
+
+### 8.7 BREACH Attacks
+
+The Mendix Runtime implements a number of mitigation methods which mean that the Mendix Runtime is not vulnerable to [BREACH attacks](https://www.breachattack.com/). These recommended mitigation methods protect resources by:
+
+* Separating secrets from user input
+* Randomizing secrets per request
+* Masking secrets
+* Protecting vulnerable pages with CSRF

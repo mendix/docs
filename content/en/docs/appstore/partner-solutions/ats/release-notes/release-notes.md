@@ -5,9 +5,38 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.0
+
+**Release date: July 25, 2023**
+
+### Improvements
+
+* We have added support for Mendix 10.
+* We have added support for Selenium version 4 (BETA).
+* We have added support for the latest compatible browser versions for Chrome, Firefox, and Edge for Selenium 4.
+* We have removed support for the Internet Explorer browser.
+
+## 2.28.13
+
+**Release date: June 20, 2023**
+
+### Fixes
+
+* We updated the certificate authority certificates to fix connect issues with custom Selenium hubs.
+* We released a new extension to fix the removal of the ATS Web Recorder from the Google Chrome Web Store.
+* We changed our email service.
+
+## 2.28.12
+
+**Release date: May 23, 2023**
+
+### Improvements
+
+* We made preparations for a new recorder extension
+
 ## 2.28.11
 
-**Release date: May 9th, 2023**
+**Release date: May 9, 2023**
 
 ### Fixes
 
@@ -17,7 +46,7 @@ weight: 100
 
 ## 2.28.10
 
-**Release date: April 11th, 2023**
+**Release date: April 11, 2023**
 
 ### Improvements
 
@@ -25,13 +54,13 @@ weight: 100
 
 ### Fixes
 
-* We fixed a styling issue that caused a button to be missplaced.
+* We fixed a styling issue that caused a button to be misplaced.
 * We fixed an issue that caused users to see all the import runs across their apps instead of their current app.
 * We fixed an issue that caused the **App Admin** panel to not display any environments or Selenium hubs.
 
 ## 2.28.9
 
-**Release date: March 28th, 2023**
+**Release date: March 28, 2023**
 
 ### Fixes
 
@@ -43,7 +72,7 @@ weight: 100
 
 ## 2.28.8
 
-**Release date: March 7th, 2023**
+**Release date: March 7, 2023**
 
 ### Fixes
 
@@ -54,7 +83,7 @@ weight: 100
 
 ## 2.28.7
 
-**Release date: January 31st, 2023**
+**Release date: January 31, 2023**
 
 ### Fixes
 
@@ -62,7 +91,7 @@ weight: 100
 
 ## 2.28.6
 
-**Release date: January 17th, 2023**
+**Release date: January 17, 2023**
 
 ### Fixes
 
@@ -70,7 +99,7 @@ weight: 100
 
 ## 2.28.5
 
-**Release date: January 3rd, 2023**
+**Release date: January 3, 2023**
 
 ### Fixes
 
@@ -80,7 +109,7 @@ weight: 100
 
 ## 2.28.4
 
-**Release date: December 6th, 2022**
+**Release date: December 6, 2022**
 
 ### Fixes
 
@@ -88,7 +117,7 @@ weight: 100
 
 ## 2.28.3
 
-**Release date: November 29th, 2022**
+**Release date: November 29, 2022**
 
 ### Fixes
 
@@ -96,7 +125,7 @@ weight: 100
 
 ## 2.28.2
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -105,7 +134,7 @@ weight: 100
 
 ## 2.28.1
 
-**Release date: October 25th, 2022**
+**Release date: October 25, 2022**
 
 ### Fixes
 
@@ -113,7 +142,7 @@ weight: 100
 
 ## 2.28.0
 
-**Release date: October 11th, 2022**
+**Release date: October 11, 2022**
 
 ### Fixes
 
@@ -123,7 +152,7 @@ weight: 100
 
 ## 2.27.0
 
-**Release date: July 25th, 2022**
+**Release date: July 25, 2022**
 
 ### Fixes
 
@@ -132,13 +161,13 @@ weight: 100
 * We fixed the Switch widget not being recorded in Studio Pro 9.
 * We fixed an issue where clicking the navigation menu was not recorded in Studio Pro 9.
 
-### Improvements 
+### Improvements
 
 * We added execution support for the Tree Node and Gallery Marketplace widgets.
 
 ## 2.26.0
 
-**Release date: July 5th, 2022**
+**Release date: July 5, 2022**
 
 ### Fixes
 
@@ -146,13 +175,13 @@ weight: 100
 * ATS now prevents editing while updating parameters to prevent possible data loss.
 * ATS now shows a waiting pop-up window while fetching the fields of custom actions, which can be useful when there are lots of parameters in a custom action.
 
-### Improvements 
+### Improvements
 
 * ATS now support [Data Grid 2](/appstore/modules/data-grid-2/).
 
 ## 2.25.1
 
-**Release date: April 27th, 2022**
+**Release date: April 27, 2022**
 
 ### Fixes
 
@@ -161,16 +190,16 @@ weight: 100
 
 ## 2.25.0
 
-**Release date: November 2nd, 2021**
+**Release date: November 2, 2021**
 
-### Improvements 
+### Improvements
 
 * The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18/#8187).
 * The ATS Job running web service no longer needs a username and password combination to authenticate the requests. The API token is enough to authenticate the request.
 
 ## 2.24.0
 
-**Release date: April 8th, 2021**
+**Release date: April 8, 2021**
 
 ### Mendix 9 Support
 
@@ -190,7 +219,7 @@ With this release, ATS officially supports testing apps that are built with Mend
 
 ## 2.23.0
 
-**Release date: March 2nd, 2021**
+**Release date: March 2, 2021**
 
 ### Dark Theme Support
 
@@ -212,14 +241,14 @@ To prevent such incidents, we no longer allow two users to edit a test case simu
 
 * The **Extract action** dialog box has been renamed to **Set details** to avoid confusion.
 * All functions that return a web element have had that output parameter renamed to be more consistent. ATS does not distinguish between different types of web elements, and we hope the new naming makes that clearer.
-* We fixed several styling issues, most notably, support for responsive mode. On smaller screns, the side menu will now collapse into a slide-over that can be toggled via a hamburger menu. The primary use for this is the recording screen, where you might want to have the recording and the app that you are recording side by side.
+* We fixed several styling issues, most notably, support for responsive mode. On smaller screens, the side menu will now collapse into a slide-over that can be toggled via a hamburger menu. The primary use for this is the recording screen, where you might want to have the recording and the app that you are recording side by side.
 * The **Import**/**New** buttons on the repository have now been split into two separate buttons instead of a single action button.
 
 ### Fixes
 
 * We fixed a bug where a scheduled test did not start without giving any error message.
 * Changes to a dataset name and description were sometimes not saved correctly. This also caused linked test cases to fail. Both issues have now been fixed.
-* Due to a bug, a job that failed during the initial stage did not show any logs. This has been fixed. 
+* Due to a bug, a job that failed during the initial stage did not show any logs. This has been fixed.
 * The **Value** drop-down menu closed intermittently. We have made changes to the widget to avoid this as much as possible.
 * We fixed a bug where importing failed for a test case that had a step using the output value of a previous step that was a custom action.
 * We fixed an issue where the **Log off** button did not work and instead showed some JSON. It now works correctly by first logging the user out of their current ATS session and then redirecting them to the Mendix Developer Portal.
@@ -227,13 +256,13 @@ To prevent such incidents, we no longer allow two users to edit a test case simu
 
 ## 2.22.0
 
-**Release date: January 19th, 2021**
+**Release date: January 19, 2021**
 
 ### Reworked Value Entry Widget
 
 Due to increased feedback from users, we have overhauled the widget used to enter test step values. Here are the main changes:
 
-* Major speed improvements – instead of checking for values every time, the widget now caches the possible values leading to a more fluent experience.  
+* Major speed improvements – instead of checking for values every time, the widget now caches the possible values leading to a more fluent experience.
 * Literal values are editable – when the selected value is a literal string (for example, `button1`), then clicking to edit the value keeps this literal value so it can easily be edited in place (which means that changing `button1` to `button2` is much easier compared to before, when the entire string had to be retyped).
 * Pressing <kbd>Enter</kbd> saves the currently selected value – it is no longer necessary to manually click the recommended value, as pressing <kbd>Enter</kbd> now automatically selects it.
 
@@ -241,7 +270,7 @@ We hope you enjoy these improvements and that they help you speed up your work w
 
 ### More Warnings for Fewer Errors
 
-Test cases in ATS are dynamic with values that come from parameters, datasets, and previous test steps. In this release, we added checks for all of these to ensure that when you delete a test step, for example, its output (meaning, its return value) is not used in subsequent steps. If the value is used, a warning is shown that allows you to cancel the operation. The same applies when removing or deleting datasets and the parameters of a custom action. Disabling test steps is also covered by this check. 
+Test cases in ATS are dynamic with values that come from parameters, datasets, and previous test steps. In this release, we added checks for all of these to ensure that when you delete a test step, for example, its output (meaning, its return value) is not used in subsequent steps. If the value is used, a warning is shown that allows you to cancel the operation. The same applies when removing or deleting datasets and the parameters of a custom action. Disabling test steps is also covered by this check.
 
 ### Improvements
 
@@ -256,7 +285,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.21.0
 
-**Release date: December 1st, 2020**
+**Release date: December 1, 2020**
 
 ### New Features
 
@@ -276,7 +305,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 ### Fixes
 
 * We fixed a bug where the recorder showed an error if too many events were recorded in a short span of time (usually caused by double/triple clicking). As a consequence, if many events are recorded in a short span of time, there might be a noticeable delay before the events appear in the recording screen. Let us know if this happens often.
-* A bug where schedules with a schedule time set in the past were set to disabled without a message has been fixed. Now, a message is corectly shown.
+* A bug where schedules with a schedule time set in the past were set to disabled without a message has been fixed. Now, a message is correctly shown.
 * Due to a bug, it was not possible to download a recording from ATSelenium. This is now fixed.
 * We fixed a bug where the **Get Visible Item/Row Count** function returned the wrong result for a data grid. (CP 11186)
 * We investigated an issue concerning duplicate parameters in test steps. Additional checks were added to prevent this from happening in the future. (CP 11189)
@@ -284,7 +313,7 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.20.1
 
-**Release date: August 24th, 2020**
+**Release date: August 24, 2020**
 
 ### Fixes
 
@@ -293,11 +322,11 @@ Test cases in ATS are dynamic with values that come from parameters, datasets, a
 
 ## 2.20.0
 
-**Release date: August 17th, 2020**
+**Release date: August 17, 2020**
 
 ### Built-in Selenium (Preview)
 
-One of the biggest hurdles when starting with ATS is setting up a Selenium instance. Finally, we are now offering this out-of the box. Every enteprise licensed app will include a pre-configured Selenium hub for free that can run up to three parallel sesions (one session for single-app licenses). Please note that this is a preview feature, and the main goal is to gather feedback before it is officially released and is subject to change without notice.
+One of the biggest hurdles when starting with ATS is setting up a Selenium instance. Finally, we are now offering this out-of the box. Every enterprise licensed app will include a pre-configured Selenium hub for free that can run up to three parallel sessions (one session for single-app licenses). Please note that this is a preview feature, and the main goal is to gather feedback before it is officially released and is subject to change without notice.
 
 ### Live View (Preview)
 
@@ -323,7 +352,7 @@ This feature is only available for licensed Mendix apps and only if the user **s
 
 #### Configure a Default Selenium Hub and Environment
 
-When starting a new test case/suite, it was always required to select an environment and a Selenium hub for that execution. 
+When starting a new test case/suite, it was always required to select an environment and a Selenium hub for that execution.
 
 To speed this up, we added the option to choose a default hub and environment. They can be configured from the app settings page. The built-in Selenium will be set as a default.
 
@@ -344,7 +373,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.19.0
 
-**Release date: June 9th 2020**
+**Release date: June 9 2020**
 
 ### License Improvements
 
@@ -359,11 +388,11 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.18.0
 
-**Release date: May 14th, 2020**
+**Release date: May 14, 2020**
 
 ### Improvements
 
-* ATS now supports the recording and execution of clicking on containers and list views. 
+* ATS now supports the recording and execution of clicking on containers and list views.
 
 ### Fixes
 
@@ -375,7 +404,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.17.1 {#2171}
 
-**Release date: May 4th, 2020**
+**Release date: May 4, 2020**
 
 ### Improvements
 
@@ -387,7 +416,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ## 2.17.0
 
-**Release date: April 30th, 2020**
+**Release date: April 30, 2020**
 
 ### Mendix 8.9 Compatibility
 
@@ -400,11 +429,11 @@ Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested an
 
 ### Fixes
 
-* Due to the use of an outdated appium library, it was not possible to test a web application on mobile. This is now fixed.
+* Due to the use of an outdated Appium library, it was not possible to test a web application on mobile. This is now fixed.
 
 ## 2.16.0
 
-**Release date: October 16th, 2019**
+**Release date: October 16, 2019**
 
 ### Mendix 8.2.2 Compatibility
 
@@ -419,7 +448,7 @@ Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2/#822) can now be tes
 
 ## 2.15.0
 
-**Release date: September 26th, 2019**
+**Release date: September 26, 2019**
 
 ### Desktop Recorder
 
@@ -431,7 +460,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.14.1
 
-**Release date: September 18th, 2019**
+**Release date: September 18, 2019**
 
 ### Fixes
 
@@ -439,7 +468,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.14.0
 
-**Release date: September 17th, 2019**
+**Release date: September 17, 2019**
 
 ### Improvements
 
@@ -453,7 +482,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ## 2.13.2
 
-**Release date: August 4th, 2019**
+**Release date: August 4, 2019**
 
 ### Mendix 8 Compatibility
 
@@ -467,22 +496,22 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested us
 
 ## 2.13.1
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 ### Fixes
 
 * We fixed an issue where test suites within test suites did not finish properly.
-* We fixed an issue where click coordinates did not work properly if the elements were outisde the viewport.
+* We fixed an issue where click coordinates did not work properly if the elements were outside the viewport.
 
 ## 2.13.0
 
-**Release date: July 31st, 2019**
+**Release date: July 31, 2019**
 
 ### Upgraded Selenium from Version 3.8 to 3.141.59
 
 This lets ATS run tests on the latest browser versions, which provides improvements in both speed and stability.
 
-If you are using Browserstack or Saucelabs, ATS will automatically use the new version, and you do not have to do anything. 
+If you are using Browserstack or Saucelabs, ATS will automatically use the new version, and you do not have to do anything.
 
 If you are using another Selenium hub, we highly recommend updating it to use Selenium version 3.141.59, as the current version will no longer be supported. You can the download Selenium version 3.141.59 [here](https://www.seleniumhq.org/download/).
 
@@ -498,7 +527,7 @@ If you are using another Selenium hub, we highly recommend updating it to use Se
 
 ## 2.12.0
 
-**Release date: July 21st, 2019**
+**Release date: July 21, 2019**
 
 ### Test Step Settings
 
@@ -506,7 +535,7 @@ We are very excited to bring you new features that are geared towards making it 
 
 * Disable a test step
 * Abort execution on not passed
-* Negate the assert in a test case 
+* Negate the assert in a test case
 
 #### Disabling a Test Step
 
@@ -514,11 +543,11 @@ This feature lets you temporarily disable a test step without deleting it. This 
 
 #### Abort Execution on Not Passed
 
-We have often seen that large test suites need a kind of setup script at the beggining that creates certain data and other conditions. When case this script fails, it makes no sense to continue with the execution of the test suite anymore. This is exaclty the scenario that we had in mind when we created this feature. When a step is flaged as abort not passed, if it is not passed any subsequent test, the steps will not be executed. This saves time and money. The feature is only available for test suites with sequential execution.
+We have often seen that large test suites need a kind of setup script at the beginning that creates certain data and other conditions. When case this script fails, it makes no sense to continue with the execution of the test suite anymore. This is exactly the scenario that we had in mind when we created this feature. When a step is flagged as abort not passed, if it is not passed any subsequent test, the steps will not be executed. This saves time and money. The feature is only available for test suites with sequential execution.
 
 #### Negate Test Result
 
-Most of the time, tests assert the presence of elements on a page and assert that text or number have an expected value. However, sometimes there is a need to assert the opposite (meaning, assert that an element is NOT on the page) or that a text does not have a certain value. This is now possible with the negate toggle. 
+Most of the time, tests assert the presence of elements on a page and assert that text or number have an expected value. However, sometimes there is a need to assert the opposite (meaning, assert that an element is NOT on the page) or that a text does not have a certain value. This is now possible with the negate toggle.
 
 This is a complete list of all the functions that can be negated:
 
@@ -562,19 +591,19 @@ This is a complete list of all the functions that can be negated:
 
 #### Fixes
 
-* We fixed a bug where the function name was not shown for a test step with no parameters (for test cases and actions). 
+* We fixed a bug where the function name was not shown for a test step with no parameters (for test cases and actions).
 * We fixed a bug where in rare circumstances logs were missing for test cases.
 * We fixed a bug where ATS did not wait for the page to load after logging in.
 
 ## 2.11.2
 
-**Release date: June 17th 2019**
+**Release date: June 17 2019**
 
 ### Extended API
 
-As more people embrace CI/CD in the development process, we saw a need for more functionality and information from our API. 
+As more people embrace CI/CD in the development process, we saw a need for more functionality and information from our API.
 
-On the functionality side, we added the operation **Rerun not passed** to the ATS API. Now you can set up your CI/CD pipeline to rerun failed test cases automatically. 
+On the functionality side, we added the operation **Rerun not passed** to the ATS API. Now you can set up your CI/CD pipeline to rerun failed test cases automatically.
 
 On the information side, we added options to retrieve the following data for a job using the existing **GetJobStatus** operation:
 
@@ -584,25 +613,25 @@ On the information side, we added options to retrieve the following data for a j
 
 For more details, see the [ATS 2 Reference Guide](/appstore/partner-solutions/ats/rg-two-cicd-api/).
 
-### Linmitations
+### Limitations
 
 * The customizable **Mendix Wait** function does not time out properly on Mozilla Firefox when configured with a timeout less than the default of 60 seconds.
 
 ## 2.11.1
 
-**Release date: June 11th 2019**
+**Release date: June 11 2019**
 
 ### Fixes
 
 * We fixed a bug introduced with release [2.11.0](#2-11-0) that caused tests on Mozilla Firefox to fail during login.
 
-### Linmitations
+### Limitations
 
 * The customizable **Mendix Wait** function does not time out properly on Mozilla Firefox when configured with a timeout less than the default of 60 seconds.
 
 ## 2.11.0 {#2-11-0}
 
-**Release date: June 4th 2019**
+**Release date: June 4 2019**
 
 ### Support for More Mendix Marketplace Widgets
 
@@ -615,8 +644,8 @@ We are constantly on the lookout for popular widgets that we can support with AT
 
 ### Improvements
 
-* We added a customizable timeout to the **Mendix Wait**  function. Use this whenever you know that a certain microflow will take a long time to respond (> 60 seconds) in order to avoid a timeout exception. The wait function will ensure that the Selenium session is active by sending **Keep alive** signals.
-* The **Rerun not passed** functionality now also works for data-driven test cases. 
+* We added a customizable timeout to the **Mendix Wait** function. Use this whenever you know that a certain microflow will take a long time to respond (> 60 seconds) in order to avoid a timeout exception. The wait function will ensure that the Selenium session is active by sending **Keep alive** signals.
+* The **Rerun not passed** functionality now also works for data-driven test cases.
 
 ### Fixes
 
@@ -626,7 +655,7 @@ We are constantly on the lookout for popular widgets that we can support with AT
 
 ## 2.10.0
 
-**Release date: May 18th 2019**
+**Release date: May 18 2019**
 
 ### Alerting Improvements
 
@@ -645,7 +674,7 @@ These are the new features on Browserstack side:
 * Individual test case executions in Browserstack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
 * Test case executions in Browserstack now show the result from ATS.
 
-    {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
+  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
 
 These are the new features on the ATS side:
 
@@ -657,7 +686,7 @@ These are the new features on the ATS side:
 This table compares the nomenclature:
 
 | ATS              | Browserstack |
-| ---              | ---          |
+| ---------------- | ------------ |
 | App              | Project      |
 | Job              | Build        |
 | Single test case | Session      |
@@ -665,15 +694,15 @@ This table compares the nomenclature:
 ### Other Improvements
 
 * The custom search dialog boxes for creating schedules and job templates have been replaced with the standard ATS search dialog box.
-* With the growth in popularity of ATS, we see that users are creating bigger test suites, which was putting stress on the ATS back end. Therefore, we are releasing several optimizations for processing the results from a test run. We expect this to improve performance for all users, but especially for users with large test suites. 
+* With the growth in popularity of ATS, we see that users are creating bigger test suites, which was putting stress on the ATS back end. Therefore, we are releasing several optimizations for processing the results from a test run. We expect this to improve performance for all users, but especially for users with large test suites.
 
 ### Fixes
 
 * When re-running a failed test suite, the configuration would default to the latest used for that test suite, instead of to the configuration that was used in the original run of the test suite. This is now fixed.
 
-## 2.9.5 
+## 2.9.5
 
-**Release date: February 12th, 2019**
+**Release date: February 12, 2019**
 
 ### Support for Mendix 7.22.2
 
@@ -693,7 +722,7 @@ Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/stud
 
 ## 2.9.4
 
-**Release date: December 4th, 2018**
+**Release date: December 4, 2018**
 
 ### Improvements
 
@@ -702,17 +731,17 @@ Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/stud
 
 ### (Potentially) Breaking change
 
-Due to complaints about flaky tests that were caused by long on-change change microflows (>500 ms), we have decided to change the behavior of the **Set Value** function. 
+Due to complaints about flaky tests that were caused by long on-change change microflows (>500 ms), we have decided to change the behavior of the **Set Value** function.
 
 In previous versions, the Set Value function typed in a value in an input field and kept the focus on the field. Therefore, the on-change and on-leave microflows were not triggered until a later test step, where another element on the page was focused (for example, via a click). This was done deliberately, as we felt that it was natural user behavior (as in, keeping the focus until an interaction occurs with another element on the page).
 
 Since ATS version 2.9.4, the Set Value function unfocuses the widget after setting the value and waits for the on-change and on-leave microflows to finish before proceeding with the next steps in a test case. We hope that this makes tests more stable when on-change microflows are used, since the wait ensures that such microflows have finished executing before proceeding with the test.
 
-We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a Support ticket.
+We do not expect this change to cause any issues with existing tests. However, if you notice strange behavior related to the Set Value function after the update, please inform us by submitting a Support ticket.
 
 ## 2.9.3
 
-**Release date: October 15th, 2018**
+**Release date: October 15, 2018**
 
 ### Improvements
 
@@ -728,7 +757,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ## 2.9.2
 
-**Release date: August 21st, 2018**
+**Release date: August 21, 2018**
 
 ### Mendix 7.17
 
@@ -738,13 +767,13 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 * We fixed an issue where it was possible to create two keywords with the same name within the same folder. This occurred when using the extract action. This is now fixed, so attempting to save a keyword with a name that already exists triggers a proper validation.
 * When generating a PDF report for a set of selected items, some nested test cases were not correctly added to the report, resulting in incorrect values for the doughnut chart. This is now fixed.
-* When running a test suite that contains other nested test suites, the result for the corresponding job on the **Test runs** page showed no result, even when the job had finished. This also caused the CI/CD to return incorrect values for such jobs. This is now fixed. 
+* When running a test suite that contains other nested test suites, the result for the corresponding job on the **Test runs** page showed no result, even when the job had finished. This also caused the CI/CD to return incorrect values for such jobs. This is now fixed.
 * We fixed an issue where changing the name of an output parameter for a custom action cleared references to that output parameter in test cases where it was used.
-* When jobs that were initiated via the API were canceled, the job result was set as passed. This is now fixed, and canceled jobs always return failed as result. 
+* When jobs that were initiated via the API were canceled, the job result was set as passed. This is now fixed, and canceled jobs always return failed as result.
 
 ## 2.9.1
 
-**Release date: August 9th, 2018**
+**Release date: August 9, 2018**
 
 ### Fixes
 
@@ -752,33 +781,33 @@ Mendix applications that are based on Mendix version 7.17 can now be tested and 
 
 ## 2.9.0
 
-**Release date: July 10th, 2018**
+**Release date: July 10, 2018**
 
 ### Improvements
 
 #### No Access App Role
 
-It is now possible to specify that certain members of a project in the Developer Portal do not get any access to a project in ATS. This can be configured by app administrators from the **App settings**. Members of an app that have the **No access** role will not see this app in their **My apps** page and will not be able to view, edit, and run test cases from this app. 
+It is now possible to specify that certain members of a project in the Developer Portal do not get any access to a project in ATS. This can be configured by app administrators from the **App settings**. Members of an app that have the **No access** role will not see this app in their **My apps** page and will not be able to view, edit, and run test cases from this app.
 
 {{% alert color="info" %}}
 
 Scrum Masters in the Developer Portal always keep the administrator role in ATS.
 
-{{% /alert %}}  
+{{% /alert %}}
 
 #### Default App Role
 
-We have implemented a functionality to set a default role per app. This role will be applied to the new members of an app. The default role can be changed by app administrators in **App settings**. 
+We have implemented a functionality to set a default role per app. This role will be applied to the new members of an app. The default role can be changed by app administrators in **App settings**.
 
 {{% alert color="info" %}}
 
 Scrum Masters in the Developer Portal get an administrator role in ATS even if the default role is set to **No access** or **Tester**.
 
-{{% /alert %}}  
+{{% /alert %}}
 
 ### On-Premises
 
-We are reintroducing **On-Premises** as a deployment option for ATS. At this point we have introduced a new user role **Tenant administrator** which will only be used in on-premises instances of ATS. The tenant administrator will be able to create and edit accounts and apps. 
+We are reintroducing **On-Premises** as a deployment option for ATS. At this point we have introduced a new user role **Tenant administrator** which will only be used in on-premises instances of ATS. The tenant administrator will be able to create and edit accounts and apps.
 
 For more details on tenant administration, see [Administration](/appstore/partner-solutions/ats/rg-two-administration/) in *ATS 2 Reference Guide*.
 
@@ -789,7 +818,7 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 ### Fixes
 
 * We fixed the issue where it was not possible to export documentation for test cases/suites with a description longer than 200 characters
-* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a *Timeout exception while waiting the application to be idle* 
+* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a *Timeout exception while waiting the application to be idle*
 
 ### Limitations
 
@@ -798,13 +827,13 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 
 ## 2.8.0
 
-**Release date: June 15th, 2018**
+**Release date: June 15, 2018**
 
-### Control of Administration Rights 
+### Control of Administration Rights
 
 It is now possible to give members of an ATS app, administration rights directly from the "App Settings" page in ATS. In other words it is no longer required for an app administrator in ATS to have an administrative role in the project in Mendix Sprintr. Please keep in mind that users still need to be a member of a project in Sprintr for them to be eligible to be app administrators for the corresponding app in ATS.
 
-In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Sprintr changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Sprintr will always have administrative rights in ATS.
+In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Developer Portal will always have administrative rights in ATS.
 
 ### Mendix 7.13, 7.14, and 7.15
 
@@ -826,7 +855,7 @@ It is now possible to see a video recording for test cases executed on Browserst
 
 ### Improvements
 
-* We have made several changes to the wait function making it more stable, especially when running on slow devices or slow selenium servers. 
+* We have made several changes to the wait function making it more stable, especially when running on slow devices or slow selenium servers.
 * We made changes to how recordings are handled internally which makes saving and cancelling a recording much faster.
 
 ### Fixes
@@ -839,7 +868,7 @@ It is now possible to see a video recording for test cases executed on Browserst
 
 ### Important Change
 
-The built-in function *Assert not null* behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly. 
+The built-in function *Assert not null* behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
 
 **IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function *Assert not null* with *Assert null*. This change is done automatically and will not affect the behavior of your existing test cases.
 
@@ -849,11 +878,11 @@ The built-in function *Assert not null* behavior has been changed. Up to and inc
 
 ## 2.7.1
 
-**Release date: May 15th, 2018**
+**Release date: May 15, 2018**
 
 ### Mobile Testing
 
-We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account, you can test on Android 6 and 7 on real mobile devices. 
+We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account, you can test on Android 6 and 7 on real mobile devices.
 
 * The format of test cases and the functions that are used to test on desktop devices work the same way on mobile devices.
 * ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
@@ -869,13 +898,13 @@ When a job or a test suite has not passed it is now possible to do another run o
 
 ### Changes in Calculation
 
-In order to make it easier to read and understand the results of a test run we are making some changes. Here are the main points: 
+In order to make it easier to read and understand the results of a test run we are making some changes. Here are the main points:
 
 * The result **Skipped** has been renamed to **Not executed**.
-* Test cases that fail durin the initialization will have the result **Not executed** instead of **Failed**.
+* Test cases that fail during the initialization will have the result **Not executed** instead of **Failed**.
 * **Canceled** is no longer a result but a flag that can be set additionally to the result.
 * Whenever a test case is canceled it will keep the result and will get an additional canceled flag. For example, tests that were canceled during teardown will get the passed result and a canceled flag.
-* Test suites do not have a result per se, but maintain a counter of passed / total test cases. 
+* Test suites do not have a result per se, but maintain a counter of passed / total test cases.
 * With regards to the charts on the dashboard we no longer distinguish between failed and not executed. Instead we only distinguish between passed and not passed.
 
 For all the details please refer to [results section in the ATS reference guide](/appstore/partner-solutions/ats/rg-two-results/).
@@ -912,7 +941,7 @@ The same holds for the function parameters.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.
 * We added a progress bar on the sidebar search dialog. We hope that this helps prevent error due to accidentally double clicking on the select button.
-* When running a job on Browserstack or Saucelabs the job name is set as the the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
+* When running a job on Browserstack or Saucelabs the job name is set as the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
 
 ### Fixes
 
@@ -925,7 +954,7 @@ The same holds for the function parameters.
 * When a test case failed in a teardown step any existing screenshot from a regular step was overwritten. In order to fix this we do not take a screenshot during teardown steps anymore.
 * It was possible to add records to a dataset with no fields. This is now fixed.
 * When editing a folder and clicking cancel, the changes to the folder name were still saved. We fixed this so that clicking cancel does not result in any changes being applied.
-* When moving a folder it would sometimes happen the the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
+* When moving a folder it would sometimes happen the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
 * Due to a bug it was no longer possible to expand certain items on the dashboard anymore. This is now fixed.
 * When testing on Internet Explorer the calculation of the application context for example, dialog was not working. This had the effect that sometimes an element was found that was not within the current context which probably then causes a test case to fail. This is now fixed.
 * We fixed an issue in the recorder where the recorder would send too much information to ATS causing it to slow down significantly.
@@ -947,7 +976,7 @@ The same holds for the function parameters.
 
 ## 2.6.1
 
-**Release date: April 5th, 2018**
+**Release date: April 5, 2018**
 
 ### Fixes
 
@@ -955,11 +984,11 @@ The same holds for the function parameters.
 
 ## 2.6.0
 
-**Release date: March 27th, 2018**
+**Release date: March 27, 2018**
 
 ### Selective Reporting
 
-We know that the ability to generate reports is important in order to get an overview of software quality. This is why we are always looking for ways to improve the reporting capabilities of ATS. Starting with this release, it is now possible to configure a custom report that only contains the test cases and/or test suites that you want to be part of the report. This functionality is available through the dashboard, by clicking **Download report**, which opens a dialog box with two options for reporting: **All** and **Selected**. If you select **All**, the PDF report will contain all the test cases and suites in the project (this is the same as the default behavior until now). If you select **Selected**, then you can customize the report by specifying which test cases, test suites, and folders should be included in the report. 
+We know that the ability to generate reports is important in order to get an overview of software quality. This is why we are always looking for ways to improve the reporting capabilities of ATS. Starting with this release, it is now possible to configure a custom report that only contains the test cases and/or test suites that you want to be part of the report. This functionality is available through the dashboard, by clicking **Download report**, which opens a dialog box with two options for reporting: **All** and **Selected**. If you select **All**, the PDF report will contain all the test cases and suites in the project (this is the same as the default behavior until now). If you select **Selected**, then you can customize the report by specifying which test cases, test suites, and folders should be included in the report.
 
 ### Upgraded Selenium Version and Support for Newer Browser Versions
 
@@ -999,11 +1028,11 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 
 ### Limitations
 
-* When you click **Download** on the newly added **Download report** dialog box before the doughnut chart has finished rendering, the chart will not be shown in the PDF. 
+* When you click **Download** on the newly added **Download report** dialog box before the doughnut chart has finished rendering, the chart will not be shown in the PDF.
 
 ## 2.5.0
 
-**Release date: March 8th, 2018**
+**Release date: March 8, 2018**
 
 ### Functions
 
@@ -1040,7 +1069,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.4.1
 
-**Release date: February 5th, 2018**
+**Release date: February 5, 2018**
 
 ### Fixes
 
@@ -1050,13 +1079,13 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.4.0
 
-**Release date: January 24th, 2018**
+**Release date: January 24, 2018**
 
 ### Improvements
 
 * We've introduced categories for our built-in core actions. You will now find each in one of the following categories: **Widget/Set**, **Widget/Get**, **Widget/Assert**, **Widget/Find**, **Widget/Other**, **Mendix**, **Web**, **Mouse & Keyboard**, **Logic**, **Generators**. This change will help you to find the action that you need much faster.
 * Based on the new core action categories, we've also redesigned the UI. Searching and selecting an action is now easier than ever before. Previously, we had a simple drop-down menu with an integrated search field. It was difficult if you didn't know what to search for. It was also not prepared to show a lot of results. Now, there is a full-height dialog box with lots of space. A nice tree structure shows all the data. Categories and sub-categories hold the core actions, and folders hold your custom actions. The dialog box also includes a lightning-fast search. If you know what you're looking for, start typing, and the tree filters with every key stroke. If you want to explore the full set of core actions, click the **Expand All** button and browse the full tree.
-* We like consistency and ease of use. So, we decided to roll out the new **Search  Select** dialog box for other scenarios. Whether you want to add a test case to a test suite or connect a user story with a test case you'll see the same dialog.
+* We like consistency and ease of use. So, we decided to roll out the new **Search Select** dialog box for other scenarios. Whether you want to add a test case to a test suite or connect a user story with a test case you'll see the same dialog.
 * We've increased the number of execution logs that are shown in lists. We now show the first 50 instead of only the first 10. If you have a very large job, test case or test suite you no longer need t click the **Load more** button so many times.
 
 ### Fixes
@@ -1084,7 +1113,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.3.1
 
-**Release date: December 5th, 2018**
+**Release date: December 5, 2018**
 
 ### Improvements
 
@@ -1096,7 +1125,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.3.0
 
-**Release date: November 29th, 2017**
+**Release date: November 29, 2017**
 
 ### Improvements
 
@@ -1116,7 +1145,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ## 2.2.0
 
-**Release date: November 14th, 2017**
+**Release date: November 14, 2017**
 
 ### Terms of Use and Privacy Policy
 
@@ -1144,7 +1173,7 @@ After your first login to this release, you'll see a pop-up window, which will a
 
 ## 2.1.0
 
-**Release date: October 27th, 2017**
+**Release date: October 27, 2017**
 
 ### Performance
 
@@ -1178,7 +1207,7 @@ We saw decreasing performance in some parts of the UI when you had a lot of data
 
 ## 2.0.0
 
-**Release date: October 19th, 2017**
+**Release date: October 19, 2017**
 
 ### More Platform Integration
 
@@ -1198,7 +1227,7 @@ All customers can use this instance without affecting each other's work. Data is
 
 #### SSO and App Synchronization
 
-You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [http://ats.mendix.com](http://ats.mendix.com), you will automatically be signed in with your Mendix account. 
+You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [http://ats.mendix.com](http://ats.mendix.com), you will automatically be signed in with your Mendix account.
 
 After login, the ATS dashboard shows all your licensed apps. From there, you can select one of your apps and start testing.
 
@@ -1250,7 +1279,7 @@ The best part of this new setting is that you can combine test suites with diffe
 
 Mendix apps are cross-platform and responsive. Users can access your app from different browsers, operating systems, and screen resolutions. To ensure quality across all platforms, you will need to cover more than just one configuration.
 
-It was already possible to switch between the Chrome and Firefox browserx. On top of that, it is now possible to select between different operating systems and screen sizes.
+It was already possible to switch between the Chrome and Firefox browsers. On top of that, it is now possible to select between different operating systems and screen sizes.
 
 Since the number of possible options is very high, we have made a pre-selection that gives you good real-world coverage. You can select between two browsers, eight operating systems, and five screen resolutions:
 
@@ -1318,11 +1347,11 @@ The following features have been removed as a result of design decisions:
 
 ### Minor Fixes
 
-Many bug fixes and small changes have been maded, including everything from the 1.8 branch. For an overview of these changes, see 1.8.
+Many bug fixes and small changes have been made, including everything from the 1.8 branch. For an overview of these changes, see 1.8.
 
 ## 1.8.8
 
-**Release date: December 14th, 2017**
+**Release date: December 14, 2017**
 
 ### Fixes
 
@@ -1331,22 +1360,22 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 ## 1.8.7
 
-**Release date: July 3rd, 2017**
+**Release date: July 3, 2017**
 
 ### Fixes
 
 * We fixed a bug where Mendix actions were not shown in the search results if there were more than 25 results.
-* We fixed a bug where the error log was lost due to being too long. 
+* We fixed a bug where the error log was lost due to being too long.
 * We fixed a bug where the action **Set Value** could set a value on a read only widget.
 * We fixed a bug where the statistics of **Passed** test cases was reported differently on the **Dashboard** as compared to the **My projects** page.
 
 ## 1.8.6
 
-**Release date: June 2nd, 2017**
+**Release date: June 2, 2017**
 
 ### New Action: Hover
 
-* We added a new action, which will simulate the mouse hovering over a given web element. 
+* We added a new action, which will simulate the mouse hovering over a given web element.
 
 ### ATS Helper
 
@@ -1364,14 +1393,14 @@ Many bug fixes and small changes have been maded, including everything from the 
 
 * We fixed the bug for sandbox apps where the execution of a test case failed with the error "MTF not defined."
 * We fixed the test result calculation on the dashboard where data-driven tests were not taken into account.
-* We fixed the bug on the import of a test case where the parameter of a conditional action was mistakenly added to the regular action if the conditional action had a dataset field as the input parameter value. 
-* We fixed the selection of applications and Selenium hubs for scheduled tests where it was possible to select an application or Selenium hub from another project.  
+* We fixed the bug on the import of a test case where the parameter of a conditional action was mistakenly added to the regular action if the conditional action had a dataset field as the input parameter value.
+* We fixed the selection of applications and Selenium hubs for scheduled tests where it was possible to select an application or Selenium hub from another project.
 
 ## 1.8.5
 
-**Release date: February 24th, 2017**
+**Release date: February 24, 2017**
 
-### Compatibiliy with Mendix 7
+### Compatibility with Mendix 7
 
 ATS now supports testing the recently released Mendix 7.
 
@@ -1394,7 +1423,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.4
 
-**Release date: February 1st, 2017**
+**Release date: February 1, 2017**
 
 ### New Action
 
@@ -1411,13 +1440,13 @@ ATS now supports testing the recently released Mendix 7.
 * If you configured a dataset with more than 30 fields for your test case, only the first 30 fields could be used due to a UI bug. This has been fixed.
 * A change of the project name now also updates the root folder in the repository.
 * We fixed the bug where users were able to select Selenium configurations and applications from other projects in the test run configuration.
-* We fixed the bug where the chart on the project selection page did not show the same results as the chart on the project dashboard.     
+* We fixed the bug where the chart on the project selection page did not show the same results as the chart on the project dashboard.
 * The **Show Log** link on the project dashboard is now hidden for tests that have never been executed.
 * We fixed the bug where test cases were added in the wrong order to an empty test suite.
 
 ## 1.8.3
 
-**Release date: December 19th, 2016**
+**Release date: December 19, 2016**
 
 ### Improvements
 
@@ -1425,7 +1454,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.2
 
-**Release date: December 13th, 2016**
+**Release date: December 13, 2016**
 
 ### Fixes
 
@@ -1433,7 +1462,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.1
 
-**Release date: November 7th, 2016**
+**Release date: November 7, 2016**
 
 ### Fixes
 
@@ -1441,7 +1470,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ## 1.8.0
 
-**Release date: November 6th, 2016**
+**Release date: November 6, 2016**
 
 ### Supporting Mendix Marketplace Widgets
 

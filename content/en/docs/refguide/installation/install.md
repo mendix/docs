@@ -62,7 +62,12 @@ The prerequisites are the following:
 * [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
-* [Git for Windows (x64)](https://git-scm.com/download/win)
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
+
+    | 10.0.0 - 10.1.0 | 10.2.0 - onwards | 
+    | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
+    
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
 
@@ -102,6 +107,22 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 Mendix also offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installer is available to download on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
 
 As compared to the regular installer, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionality.
+
+## 7 Signing In
+
+When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
+
+You can sign in with your Mendix account, or with your own company account if this has been set up as an Identify Provider in the Mendix platform.
+
+In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
+
+{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" >}}
+
+To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
+
+{{% alert color="warning" %}}
+Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
+{{% /alert %}}
 
 ## 8 Next Steps
 

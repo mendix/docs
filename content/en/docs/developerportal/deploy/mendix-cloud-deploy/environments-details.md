@@ -82,7 +82,7 @@ To clear the environment, follow these steps:
 
 ### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
 
-If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app, you can rename the environments.
+If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app, you can rename the environments.
 
 To rename the environment, follow these steps:
 
@@ -273,7 +273,7 @@ There can be additional issues when using cookies in iframes for end-users using
 
 To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](/developerportal/deploy/custom-domains/) to ensure that the app you want to embed is part of the same domain. For example, if your page is `mainpage.domain.name`, then the app embedded in the iframe should be `appname.domain.name`.
 
-##### 4.2.2.2 Applying a Different SameSite Setting
+##### 4.2.2.2 Applying a Different SameSite Setting{#samesite}
 
 From Studio Pro version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
@@ -461,6 +461,7 @@ Click **Add** > **Supported** to choose from the following variables:
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DD_SITE** – directs metrics to a specific Datadog region
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
+* **JVM_GARBAGE_COLLECTOR** – overrides the automatic configuration of the Java garbage collector — accepted values are `Serial` or `G1`
 * **METRICS_AGENT_CONFIG** – passes a configuration JSON to control the metrics passed to Datadog
 * **SAMESITE_COOKIE_PRE_MX812** – sets `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
 * **USAGE_METRICS_EMAIL_FIELDS** – if your app uses specializations of the `System.User` entity to store users, use this variable to point to the them. This enables us to identify internal and external users of your app. The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app which contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user. If you have multiple specializations of `System.User`, you can specify the values in comma-separated format. That is `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`. In the following example there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
@@ -505,9 +506,9 @@ For example, you may wish to use tags when logging with Datadog. For more inform
 
 ## 9 Services Tab {#services}
 
-You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
+You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
 
-Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
+Here, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
 
 ### 9.1 Available Services
 

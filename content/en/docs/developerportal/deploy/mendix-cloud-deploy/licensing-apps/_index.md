@@ -66,7 +66,7 @@ If you do not fall into any of the categories above, please contact [Mendix Supp
 
 ### 3.2 Authorization
 
-You need to be the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the node, otherwise you will not have the rights to link an app to the node.
+You need to be the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the node, otherwise you will not have the rights to link an app to the node.
 
 You need to have enabled two-factor authentication. See [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 

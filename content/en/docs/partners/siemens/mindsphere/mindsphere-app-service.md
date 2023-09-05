@@ -301,7 +301,7 @@ Data Hub only supports reading of data from Insights Hub. This means that you ca
 
 You cannot create associations between external entities. To work around this, always publish related asset types in a single contract so that your app can identify the association between them.
 
-For example, imagine that you have an Asset Type `CNGTurbine` which has a derived Asset Type `LPGTurbine`. If you publish an OData contract for `CNGTurbine` and a separate contract for `LPGTurbine`, you cannot create a association directly between `LPGTurbine` and `CNGTurbine` in the Mendix Domain Model as these are two different contracts. If you publish them in a single contract, you can also publish the association and use the fact that `LPGTurbine` is derived from `CNGTurbine`.
+For example, imagine that you have an Asset Type `CNGTurbine` which has a derived Asset Type `LPGTurbine`. If you publish an OData contract for `CNGTurbine` and a separate contract for `LPGTurbine`, you cannot create an association directly between `LPGTurbine` and `CNGTurbine` in the Mendix Domain Model as these are two different contracts. If you publish them in a single contract, you can also publish the association and use the fact that `LPGTurbine` is derived from `CNGTurbine`.
 
 ### 8.3 Date and Time Attributes
 

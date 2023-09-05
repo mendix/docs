@@ -1,6 +1,7 @@
 ---
 title: "XPath week-from-dateTime"
 url: /refguide/xpath-week-from-datetime/
+weight: 14
 tags: ["studio pro"]
 ---
 
@@ -34,15 +35,27 @@ week-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the local time zone (for example, "2011-01-13"):
 
-```java {linenos=false}
-//Logging.Log[week-from-dateTime(DateAttribute) = 2]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [week-from-dateTime(DateAttribute) = 2]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[week-from-dateTime(DateAttribute) = 2]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the New York time zone (for example, "2011-01-13"):
 
-```java {linenos=false}
-//Logging.Log[week-from-dateTime(DateAttribute, 'America/New_York') = 2]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [week-from-dateTime(DateAttribute, 'America/New_York') = 2]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[week-from-dateTime(DateAttribute, 'America/New_York') = 2]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 ## 4 Read More
 

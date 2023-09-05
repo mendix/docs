@@ -187,7 +187,7 @@ As of now your application has the user roles **admin** and **user**, but none o
 
 ### 2.6 Deploying your app
 
-Just simply press the **Run** button within your Mendix Studio Pro to use the [Free App](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy) feature. Deployment of a Mendix Mobile native application to the Insights Hub Cloud Foundry environment is currently not supported, so please use always one of the Mendix cloud environments.
+Just simply press the **Run** button within your Mendix Studio Pro to use the [Free App](/developerportal/deploy/mendix-cloud-deploy/) feature. Deployment of a Mendix Mobile native application to the Insights Hub Cloud Foundry environment is currently not supported, so please use always one of the Mendix cloud environments.
 
 ## 3 Module Details{#moduledetails}
 

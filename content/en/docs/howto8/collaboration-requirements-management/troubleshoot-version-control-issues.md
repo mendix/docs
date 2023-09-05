@@ -172,7 +172,7 @@ You have resolved the conflict and can commit from Studio Pro.
 
 If you get this error, try the following options:
 
-* In the [Developer Portal](/developerportal/collaborate/team/), check whether the user has access to the app:
+* In the [Developer Portal](/developerportal/general/team/), check whether the user has access to the app:
     * If they do not have access, invite them to the app
     * If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network – this protocol is [required](/refguide8/system-requirements/) by Studio Pro for [version control](/refguide8/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall

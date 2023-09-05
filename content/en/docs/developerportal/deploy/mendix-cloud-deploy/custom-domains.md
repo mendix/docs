@@ -192,6 +192,10 @@ You can handle an expiring domain certificate by replacing it with a new one. Yo
 
 You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
+{{% alert color="info" %}}
+If you are rotating a certificate, you do not need to remove the current domain configuration when replacing the certificate. Selecting a new certificate for an existing domain will reconfigure the existing domain with the selected certificate. 
+{{% /alert %}}
+
 ### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
 You can also edit an existing custom domain certificate.
@@ -252,9 +256,13 @@ Your certificate is signed by the certificate authority (CA). They sign your cer
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
-### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?{#use-custom-url}
+### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL? {#use-custom-url}
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
+
+### 8.4 Can I Configure Multiple Custom Domains for the Same Application? {#multiple-custom-domains}
+
+Yes, you can configure multiple custom domains for the same application. Please note that this can only be done by [uploading multiple own custom domain certificates](#Uploading). You can only [generate one certificate signing request for one custom domain](#Generating) for your application.
 
 ## 9 Read More
 
@@ -262,5 +270,5 @@ For certain use cases, it is important for the Mendix runtime to know the public
 * [Environments](/developerportal/deploy/environments/)
 * [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
-* [App Roles](/developerportal/collaborate/app-roles/)
+* [App Roles](/developerportal/general/app-roles/)
 * [Control Center](/developerportal/control-center/)

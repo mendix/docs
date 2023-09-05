@@ -9,14 +9,9 @@ description_list: true
 cascade:
     - space: "Studio Pro 10 Guide"
     - mendix_version: 10
-    - banner: "Mendix 10 is currently in Beta. For details on Mendix 9.24 LTS, see Studio Pro 9 Guide."
     - sitemap:
         priority: 0.8
 ---
-
-{{% alert color="warning" %}}
-Mendix 10 is currently in [Beta](/releasenotes/beta-features/). Looking for documentation on Mendix 9.24 LTS instead? See [Studio Pro 9 Guide](/refguide9/).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -26,7 +21,7 @@ Before installing Studio Pro 10, please read [System Requirements](/refguide/sys
 
 If you have been using Studio Pro version 9, we recommend reading [Upgrading from Mendix Studio Pro 9 to 10](/refguide/upgrading-from-9-to-10/).
 
-If you are looking to build your first app, check out the [Quickstart](/refguide/quickstart-guide/).
+If you are looking to build your first app, check out the [Quickstarts](/quickstarts/).
 
 If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 10 How-tos](/howto/).
 

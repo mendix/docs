@@ -16,93 +16,33 @@ For example, the following text area allows the end-user to see, and set, the **
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/text-area.png" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of text area properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text area properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/text-area-properties.png"   width="250"  >}}
+Properties:
 
-Text area properties consist of the following sections:
-
-* [Common](#common)
-* [Data source](#data-source)
-* [Design Properties](#design-properties)
-* [Editability](#editability)
-* [Events](#events)
 * [General](#general)
+* [Data source](#data-source)
 * [Label](#label)
-* [Validation](#validation)
+* [Editability](#editability)
 * [Visibility](#visibility)
+* [Validation](#validation)
+* [Accessibility](#accessibility)
+* [Common](#common)
+* [Events](#events)
+* [On Change Behavior](#on-change-behavior)
 
-### 2.1 Common Section{#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Data Source Section{#data-source}
+## 3 Properties
 
-{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
+### 3.1 General Section{#general}
 
-### 2.3 Design Properties Section{#design-properties}
-
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.4 Editability Section{#editability}
-
-{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
-
-### 2.5 Events Section{#events}
-
-#### 2.5.1 On Change{#on-change}
-
-The on change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget after the value has been changed.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-#### 2.5.2 On Change Behavior
-
-The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
-
-* **When user leaves input field (Default)**
-* **While user is entering data**
-
-##### 2.5.2.1 When User Leaves Input Field (Default)
-
-Text area will apply changes when a value is different than a previously saved value in the database and the following condition is met:
-
-* Blurred: this will trigger on change and on leave events
-
-This means that there is no way for users to trigger an on change event while typing. To address that use case, please use the second option: [While user is entering data](#user-enters-data).
-
-##### 2.5.2.2 While User is Entering Data {#user-enters-data}
-
-This option allows users to trigger an on change event while they are typing. 
-
-Text area will save changes if both these conditions are met:
-
-* The value is different than the previously saved value in the database 
-* The last change occurred after the configured **Apply after (ms)** length of time
-
-With **While user is entering data**, users can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-#### 2.5.3 On Enter
-
-The on enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-#### 2.5.4 On Leave
-
-The on leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
-
-This differs from the [on change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
-
-{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
-
-### 2.6 General Section{#general}
-
-#### 2.6.1 Grow Automatically
+#### 3.1.1 Grow Automatically
 
 {{% alert color="info" %}}The grow automatically property does not impact the behavior of native mobile pages. On iOS, the text area will always grow automatically
 {{% /alert %}}
@@ -111,13 +51,13 @@ This property defines whether the text area grows automatically depending on the
 
 Default: *No*
 
-#### 2.6.2 Number of Lines
+#### 3.1.2 Number of Lines
 
 **Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scroll bar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
 Default: *5*
 
-#### 2.6.3 Counter Message
+#### 3.1.3 Counter Message
 
 {{% alert color="info" %}}Counter message is not supported on native mobile pages.{{% /alert %}}
 
@@ -127,7 +67,7 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/counter-message.png" >}}
 
-#### 2.6.4 Text Too Long Message
+#### 3.1.4 Text Too Long Message
 
 {{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
@@ -135,7 +75,7 @@ This is the text displayed when the number of characters is higher than the maxi
 
 This type of message can also occur when a loaded or stored value exceeds the character limit
 
-#### 2.6.5 Maximum Length
+#### 3.1.5 Maximum Length
 
 This property specifies the maximum number of characters that can be typed in this text area.
 
@@ -145,20 +85,20 @@ This property specifies the maximum number of characters that can be typed in th
 | Unlimited | The maximum number of characters is unlimited |
 | Custom | The maximum number of characters is specified in the widget properties |
 
-#### 2.6.6 Placeholder Text
+#### 3.1.6 Placeholder Text
 
 The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
-#### 2.6.7 Autocomplete
+#### 3.1.7 Autocomplete
 
 The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves mobile devices' ability to pre-populate fields.
 
 {{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert color="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
-#### 2.6.8 AutoFocus {#autofocus}
+#### 3.1.8 AutoFocus {#autofocus}
 
 If `true`, the text area will be rendered focused with the device keyboard opened.
 
@@ -166,19 +106,93 @@ If `true`, the text area will be rendered focused with the device keyboard opene
 This option is only available in native pages.
 {{% /alert %}}
 
-### 2.7 Label Section{#label}
+### 3.2 Data Source Section{#data-source}
+
+{{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
+
+### 3.3 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
-### 2.8 Validation Section{#validation}
+### 3.4 Editability Section{#editability}
 
-{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+{{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
-### 2.9 Visibility Section{#visibility}
+### 3.5 Visibility Section{#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+### 3.6 Validation Section{#validation}
+
+{{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
+
+### 3.7 Accessibility Section{#accessibility}
+
+#### 3.7.1 Aria Required
+
+In a text area widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
+
+### 3.8 Common Section{#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+### 3.9 Events Section{#events}
+
+#### 3.9.1 On Change{#on-change}
+
+The on change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget after the value has been changed.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+#### 3.9.2 On Enter
+
+The on enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+#### 3.9.3 On Leave
+
+The on leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
+
+This differs from the [on change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+### 3.10 On Change Behavior {#on-change-behavior}
+
+The On Change Behavior property lets users select how **on change** is handled via the following options Studio Pro: 
+
+* When user leaves input field (Default)
+* While user is entering data
+
+#### 3.10.1 When user leaves input field (Default)
+
+This option will work as in previous versions of Studio Pro. Text area will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
+
+* On enter key pressed: This will trigger on change and on enter key press events
+* Blurred: This will trigger on change and on leave events
+
+This means that there is no way for users to trigger an on change event while typing. That use case requires the second option: **While user is entering data**.
+
+#### 3.10.2 While user is entering data
+
+This option allows makes it so users trigger an on change event while they are typing. Text area will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
+
+With **While user is entering data**, users now can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
+
+{{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section{#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section{#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Read More
 
 * [Data view](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)

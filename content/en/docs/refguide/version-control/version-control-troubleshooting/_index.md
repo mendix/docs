@@ -8,6 +8,7 @@ tags: ["version control", "troubleshoot", "Studio Pro"]
 aliases:
     - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #cannot-create-package below is mapped from Studio Pro, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -79,3 +80,30 @@ There are properties of the Git repository that provide you with the information
 `git remote -v` — lists the remotes specified for the repository
 
 `git config --list --show-origin --show-scope` — provides information on user's Git config
+
+### 3.4 Cannot Create Package from a Revision{#cannot-create-package}
+
+Sometimes it is impossible to create a package from a certain revision. See below for a description of the most common case and troubleshooting steps for resolving it.
+
+#### 3.4.1 Missing Metadata
+
+##### 3.4.1.1 Issue
+
+When you commit (and push) changes to the repository, Studio Pro adds an additional commit with so called metadata to a special refspec `.git/refs/notes/mx_metadata``. Making it a refspec means that you will not see this commit in your commits history.
+This metadata contains the information needed to create a deployment package (for instance the version of Studio Pro that was used to create this revision).
+
+To create a deployment package, Studio Pro downloads the specific revision into a temporary folder and then creates the package from there. Studio Pro checks the Mendix version of the selected revision to confirm that it is compatible with the version of Studio Pro. 
+
+Without the metadata, Studio Pro cannot find out this information.
+
+##### 3.4.1.2 Solution
+
+You can force Studio Pro to recreate the metadata by doing the following:
+
+1. Checkout the revision you want to create a deployment package from in a separate directory.
+2. Open it with the correct version of Studio Pro.
+3. Create a branch from it and switch to the new branch. 
+4. Do a cosmetic change (e.g. move an activity in a microflow a few pixels)
+5. Commit and Push the changes from Studio Pro.
+
+This will recreate the metadata and you should now be able to create a deployment package from this new revision.

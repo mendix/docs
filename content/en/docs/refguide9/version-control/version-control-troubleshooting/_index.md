@@ -80,7 +80,7 @@ To solve this issue, follow the steps below:
 4. Double-click the `svn:ignore` property. The **Edit Properties** dialog box opens.
 5. Copy all text of the **Property value** via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 6. Paste the text into a new document in Notepad++ (or another editor that understands newline conventions).
-7. In the lower right, double-click **Windows (CR LF)** and select **Unix (LF)** instead. This will change the newline type from CRLF to LF.
+7. In the lower-right corner of the screen, double-click **Windows (CR LF)** and select **Unix (LF)** instead. This will change the newline type from CRLF to LF.
 8. Copy all text again.
 9. Go back to the **Edit Properties** dialog box.
 10. Replace the current content by pasting from the clipboard via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
@@ -171,7 +171,7 @@ You have resolved the conflict and can commit from Studio Pro.
 
 If you get this error, try the following options:
 
-* In the [Developer Portal](/developerportal/collaborate/team/), check whether the user has access to the app:
+* In the [Developer Portal](/developerportal/general/team/), check whether the user has access to the app:
     * If they do not have access, invite them to the app
     * If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network. This protocol is [required](/refguide9/system-requirements/) by Studio Pro for [version control](/refguide9/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall.

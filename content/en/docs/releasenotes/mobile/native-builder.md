@@ -21,7 +21,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.2.2
 
-**Release date: October 16th, 2020**
+**Release date: October 16, 2020**
 
 ### Improvements
 
@@ -33,7 +33,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.2.1
 
-**Release date: October 5th, 2020**
+**Release date: October 5, 2020**
 
 ### Improvements
 
@@ -42,7 +42,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.2.0
 
-**Release date: February 5th, 2020**
+**Release date: February 5, 2020**
 
 ### Improvements
 
@@ -57,13 +57,13 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.1.0
 
-**Release date: December 17th, 2019**
+**Release date: December 17, 2019**
 
 ### Improvements
 
 * A few factors, such as third-party services' stability, might crash the Native Builder with no visible errors. To give you more information during such a crash, we introduced the global `--verbose` argument. If provided, the Native Builder will output an extended stack trace in case of an error.
 * To simplify custom builds we introduced the `bundle` command. With the `bundle` command, you can easily generate a JavaScript bundle without having to go through the whole build process. This command will generate an iOS or an Android JavaScript bundle and all the required assets, then output the bundle to the provided path.
-* As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project. Important to know, is that if an unknown version is provided native builder will use the latest available version for creating the repository. 
+* As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project. It is important to know that if an unknown version is provided, the Native Builder will use the latest available version for creating the repository. 
 
 ### Fixes
 
@@ -73,7 +73,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 3.0.0
 
-**Release date: October 29th, 2019**
+**Release date: October 29, 2019**
 
 ### Improvements
 
@@ -105,7 +105,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 2.0.0
 
-**Release date: September 3rd, 2019**
+**Release date: September 3, 2019**
 
 ### Improvements
 
@@ -124,7 +124,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 1.0.0
 
-**Release date: August 15th, 2019**
+**Release date: August 15, 2019**
 
 ### Improvements
 
@@ -140,6 +140,6 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ## 0.1.0
 
-**Release date: August 1st, 2019**
+**Release date: August 1, 2019**
 
 * This marks the initial release of the Native Builder.

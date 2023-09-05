@@ -14,41 +14,28 @@ A container is a layout element that can be used to simultaneously style, hide, 
 
 In a browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 semantic elements (for example, `section`, `main`, `article`, `nav`).
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of container properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Container properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/container/container-properties.png" alt="Container Properties"   width="300"  >}}
+Properties:
 
-Container properties consist of the following sections:
-
-* [Accessibility](#accessibility)
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
-* [Events](#events)
 * [Visibility](#visibility)
+* [Events](#events)
+* [Common](#common)
+* [Accessibility](#accessibility)
 
-### 2.1 Accessibility {#accessibility}
+Styling:
 
-#### 2.1.1 Hide for Screen Readers 
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-This property specifies whether to hide the container from screen readers or not.
+## 3 Properties 
 
-{{% alert color="info" %}} The container should not have any focusable elements inside such as input elements, links, or buttons. These elements will cause the container to be announced by screen readers.
-{{% /alert %}}
+### 3.1 General Section {#general}
 
-### 2.2 Common Section {#common}
-
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
-
-### 2.3 Design Properties Section{#design-properties}
-
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.4 General Section {#general}
-
-#### 2.4.1 Render Mode
+#### 3.1.1 Render Mode
 
 The **Render mode** determines which HTML5 tag will be used to show the container in the web browser. 
 
@@ -67,19 +54,42 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 {{% alert color="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 
-### 2.5 Events Section {#events}    
+### 3.2 Visibility Section {#visibility}
 
-#### 2.5.1 On-Click {#on-click}    
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+
+### 3.3 Events Section {#events}    
+
+#### 3.3.1 On-Click {#on-click}    
 
 The **On-click** property specifies the action that will be executed when the user clicks the container (either with their mouse pointer or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container is in focus).
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-### 2.6 Visibility Section {#visibility}
+### 3.4 Common Section {#common}
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 4 Read More
+### 3.5 Accessibility Section {#accessibility}
+
+#### 3.5.1 Hide for Screen Readers 
+
+This property specifies whether to hide the container from screen readers or not.
+
+{{% alert color="info" %}} The container should not have any focusable elements inside such as input elements, links, or buttons. These elements will cause the container to be announced by screen readers.
+{{% /alert %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section{#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

@@ -16,7 +16,7 @@ This document presents the system requirements for the various parts of the Mend
 
 Mendix Studio Pro has the requirements listed in the following sections.
 
-### 2.1 Software Specifications
+### 2.1 Software Specifications {#software}
 
 Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
@@ -46,7 +46,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-### 2.2 Hardware Specifications
+### 2.2 Hardware Specifications {#hardware}
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
 
@@ -85,7 +85,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You need `Code (full)` permission for your token.
 
-##### 2.5.2 GitHub 
+#### 2.5.2 GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -93,7 +93,7 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 
 You need `repo` permissions for your token.
 
-##### 2.5.3 GitLab 
+#### 2.5.3 GitLab 
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
@@ -101,7 +101,7 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You need `write_repository` permission for the token.
 
-##### 2.5.4 BitBucket 
+#### 2.5.4 BitBucket 
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
@@ -119,7 +119,7 @@ If you are using the Intel® UHD Graphics 630 graphics processor, please ensure 
 
 ## 3 Team Server {#ts}
 
-The [Team Server](/developerportal/collaborate/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/general/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -144,7 +144,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.1 Operating System {#server-os}
 
-* Microsoft Windows Server 2008 SP2 and above
+* Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
     * Debian 8 (Jessie) and above
     * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
@@ -152,7 +152,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.2 Web Server
 
-* Microsoft Internet Information Services 7 and above
+* Microsoft Internet Information Services 8 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
@@ -166,7 +166,7 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.3, 10.4, 10.5, 10.6, 10.11
+* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
@@ -238,7 +238,7 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* Mono v5.20.x or .NET v4.7.2
+* .NET 6.0
 * JDK 11
 
 ## 12 mx Command-Line Tool {#mxtool}

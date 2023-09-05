@@ -9,7 +9,7 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 
 ## 1 Introduction
 
-With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals.
+With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals. The microflow is run using the [task queue](/refguide/task-queue/) mechanism.
 
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other*).
 
@@ -21,7 +21,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 10. |
+| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. See [Task Queues](/refguide/task-queue/) for additional information about this object. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 11. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties
@@ -46,7 +46,7 @@ Yearly events come in 2 flavors:
 
 #### 4.1.1 Specific Date
 
-This allows you to run the event on the same date every year.  For example, April 5th.
+This allows you to run the event on the same date every year (for example, April 5th).
 
 | Property | Description |
 | --- | --- |
@@ -55,7 +55,7 @@ This allows you to run the event on the same date every year.  For example, Apri
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 
 {{% alert color="warning" %}}
-It is possible to select the leap day (February 29th). In non-leap years the event will then be executed on February 28th.
+It is possible to select the leap day (February 29). In non-leap years the event will then be executed on February 28th.
 {{% /alert %}}
 
 #### 4.1.2 Specific Month and Weekday
@@ -78,7 +78,7 @@ Monthly events also come in 2 flavors:
 
 #### 4.2.1 Specific Date
 
-This allows you to run the event on the same date every month, or number of months.  For example, the 5th of each month.
+This allows you to run the event on the same date every month, or number of months (for example, the 5th of each month).
 
 | Property | Description |
 | --- | --- |
@@ -151,7 +151,7 @@ If a repeated scheduled event takes longer than the interval, an overlap would o
 
 * **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has completed. The next event will start at the next available scheduled time.
 
-    This is the default and will ensure that events are always executed at a scheduled time.
+    This is the default and will ensure that events are always executed at a scheduled time, subject to queue resources being available (see [Running Concurrently](#concurrently), below).
 
 * **Delay next** – If an event takes longer than its interval, the next event is delayed until it has completed. The next event will start immediately after the previous one has completed and will likely not be executed at a scheduled time.
 
@@ -168,9 +168,9 @@ However, if server time is chosen there may be daylight saving for the configure
 If a time is chosen which is in the daylight saving time window (the time at which the clocks change, for example between 01:00 and 03:00 in Europe), then that time will not occur on one day of the year and occur
 twice on another day of the year. The scheduled event will not be affected by this and will execute exactly once on those days.
 
-### 5.2 Running Concurrently
+### 5.2 Running Concurrently{#concurrently}
 
-You cannot run more than ten scheduled events in parallel per cluster node.
+No more than ten scheduled events can run in parallel per cluster node. Additional scheduled events will be queued and run in "first in, first out" order as currently running events finish.
 
 This limit cannot be overridden.
 

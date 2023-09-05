@@ -5,6 +5,10 @@ description: "This documentation will give you insight into creating documents w
 tags: ["Document", "Generate", "Word", "PDF", "studio pro"]
 ---
 
+{{% alert color="info" %}}
+For information about generating PDF documents, see the [PDF Document Generation](/appstore/modules/document-generation/) module.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Have you been wondering how to create your own documents with Mendix? This reference will tell you how to do it!

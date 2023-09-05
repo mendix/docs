@@ -10,6 +10,7 @@ aliases:
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
@@ -155,7 +156,7 @@ Some trial accounts may not include object storage.
 You may need to configure your file store by using environment variables. See the [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack) for more information.
 {{% /alert %}}
 
-## 6 Deploy Your App to Cloud Foundry
+## 6 Deploy Your App to Cloud Foundry (Deprecated)
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
@@ -164,6 +165,8 @@ You may need to configure your file store by using environment variables. See th
     {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/run-on-cf.png" >}} 
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
+
+{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix version 11.{{% /alert %}}
 
 ## 7 Cloud Foundry Environment Variables
 
@@ -182,6 +185,24 @@ If you encounter any problems, you should consult the application logs. These ar
 2. Open the **Logs**.
 
 {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/cf-log.png" >}}
+
+### 8.1 Cannot Push Project Folder
+
+When using the buildpack to push a Mendix project folder to a Cloud Foundry cluster, the push fails with the following error message: *Cannot open assembly 'MendixBuilder/modeler/mxbuild.exe': no such file or directory.*
+
+#### 8.1.1 Cause
+
+Pushing the project folder to a Cloud Foundry cluster is not currently supported.
+
+#### 8.1.2 Solution
+
+To resolve the issue, implement one of the following workarounds:
+
+* If the app model is stored on the Mendix Teamserver, use the Build API to [build a deployment package](/apidocs-mxsdk/apidocs/build-api/#start-building-deployment-package), and push that package with the CF buildpack.
+* [Build a deployment package from Studio Pro](/refguide/app-menu/#create-package), and push that package with the CF buildpack.
+* Run [MxBuild](/refguide/mxbuild/) from your CI/CD pipeline to build a deployment package, and push that package with the CF buildpack.
+
+This issue will be solved in an upcoming version of the buildpack.
 
 ## 9 Read More
 

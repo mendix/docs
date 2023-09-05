@@ -6,6 +6,12 @@ description: "Use this API to extend the requirements and project management cap
 weight: 90
 ---
 
+{{% alert color="warning" %}}
+We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to [download your work](/developerportal/collaborate/general-settings/#story-archive) before that date.
+
+As of the GA release on December 1, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of Stories. You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Mendix Stories API allows you to retrieve, create, and update the Sprint, stories, and tasks in your Mendix apps.
@@ -18,7 +24,7 @@ Each call also requires the parameters `username` and `password`. These are the 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can create and manage your [API keys](/developerportal/collaborate/general-settings/#general-settings-api-keys) in the **General Settings** of your project.
+You can create and manage your [API keys](/developerportal/collaborate/general-settings/#general-settings-api-keys) in the **Settings** of your project.
 {{% /alert %}}
 
 To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](/attachments/apidocs-mxsdk/apidocs/stories-api/19398865.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/).

@@ -4,9 +4,9 @@ url: /releasenotes/sdk/metamodel-10.0/
 weight: 100
 ---
 
-## 10.0.0 Beta 2
+## 10.0.0 GA
 
-**Release date: May 25th, 2023**
+**Release date: June 19, 2023**
 
 ### Microflows
 
@@ -29,14 +29,14 @@ weight: 100
 
 #### UnlockWorkflowAction (Element)
 
-* We introduced the `workflowSelection` property. 
+* We introduced the `workflowSelection` property.
 * We deleted the `workflow` property. 
 
 ### Projects
 
 #### ModuleSettings (ModelUnit)
 
-* We introduced the `solutionIdentifier` and `jarDependencies` properties. 
+* We introduced the `solutionIdentifier`, `jarDependencies`, and `basedOnVersion` properties.
 
 ### Settings
 
@@ -82,17 +82,17 @@ weight: 100
 
 #### NavigationDocument (ModelUnit)
 
-* We deleted the `reports` and `reportParameters` properties. 
+* We deleted the `reports` and `reportParameters` properties.
 
 ### Pages
 
 #### Page (ModelUnit)
 
-* We introduced the `urlSegments` property. 
+* We introduced the `urlSegments` property.
 
 #### UrlSegment, ParameterAttributeUrlSegment, ParameterIdUrlSegment, StaticUrlSegment (Elements)
 
-* We introduced these elements. 
+* We introduced these elements.
 
 #### EntityPathSource (Element)
 
@@ -107,10 +107,10 @@ weight: 100
 
 #### ReportParameter (Element)
 
-* We deleted the `parameterTypeRuntime` and `reportId` properties. 
+* We deleted the `parameterTypeRuntime` and `reportId` properties.
 
 ### Workflows
 
-#### WaitForNotificationActivity, WorkflowDefinitionSelection, WorkflowDefinitionNameSelection, WorkflowDefinitionObjectSelection (Elements)
+#### WaitForNotificationActivity, MajorityCompletionCriteria, ThresholdCompletionCriteria, WorkflowDefinitionSelection, WorkflowDefinitionNameSelection, WorkflowDefinitionObjectSelection (Elements)
 
-* We introduced these elements.  
+* We introduced these elements.

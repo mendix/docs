@@ -43,7 +43,7 @@ There are the following type of modules:
 | Document type | Typical elements | Description |
 | --- | --- | --- |
 | [Pages](/refguide/pages/) | [Data view](/refguide/data-view/), [Data grid](/refguide/data-grid/), [Table](/refguide/table/), [Text box](/refguide/text-box/) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
-| [Microflows](/refguide/microflows/) | [Activities](/refguide/activities/), [Sequence Flow](/refguide/sequence-flow/) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
+| [Microflows](/refguide/microflows/) | [Activities](/refguide/activities/), [Sequence Flow](/refguide/sequence-flow/) | Microflows describe the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide/enumerations/) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
 ## 4 Page Resources

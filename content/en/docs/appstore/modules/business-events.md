@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. 
 
-To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you'll need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). 
+To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). 
 
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above, and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}} 
@@ -35,7 +35,7 @@ To use Mendix Business Events, you will need the following:
 
 ## 2 Licensing {#licensing}
 
-The Mendix Business Events module itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
+The Mendix Business Events module itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
 
 ## 3 Configuration
 
@@ -77,7 +77,7 @@ If you are running with Studio Pro 9.24 and above, skip down to [Creating a Serv
 
 #### 4.1.1 Creating a Published Business Event Service {#create-be}
 
-A **Published Business Event Service** contains a definition of the business events provided by this service. A document can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to a OpenAPI or WSDL contract.
+A **Published Business Event Service** contains a definition of the business events provided by this service. A document can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to an OpenAPI or WSDL contract.
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 2. Provide the name for your service and **OK** to create it.
@@ -101,14 +101,14 @@ To consume a business event, you first need to create a **Consumed Business Even
 3. Import an AsyncAPI service document. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
 4. Click **OK**.
 
-{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
+{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available.png" >}}
 
 #### 4.1.3 Subscribing to a Business Event
 
 There are two ways to subscribe to, or consume a specific business event:
 
 * **Add** the subscription in the [consumed business event service](#consume-be)
-* **Drag and drop** the business event from the **Data Hub pane** to your domain model
+* **Drag and drop** the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
 
 ##### 4.1.3.1 Automatically Created Event Handler Microflow and Entity
 
@@ -220,7 +220,7 @@ The business event service document is open in Studio Pro:
 After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
 * Open the business service document and click **Add**
-* **Drag and drop** the business event from the **Data Hub pane** to your domain model
+* **Drag and drop** the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
 
 To publish a business event service, you need to use it in a microflow.
 
@@ -302,7 +302,7 @@ There is a single Kafka broker for Free Apps that all your company Free Apps can
 
 Purchase a license to the Mendix Event Broker to deploy unlimited apps on production environments in the Mendix Cloud. Ask your Customer Success Manager or Account Manager to get in touch with us to purchase a license. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
 
-Licenses for the Mendix Event Broker are available for all regions, but once selected, you can only run on a single region (no multi-region support). To learn more about how this broker works, see [Mendix Event Broker](#mendix-event-broker).
+Licenses for the Mendix Event Broker are available for all regions, but once selected, you can only run on a single region (no multi-region support). To learn more about how this broker works, see [Mendix Event Broker](#mendix-event-broker). This license is available for all customers. You can also run business events on [your own Kafka cluster](#byok).
 
 #### 5.1.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
@@ -325,11 +325,15 @@ Technical Contacts with a license to the Mendix Event Broker can manage its feat
 
 See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more information.
 
-#### 5.2.2 Topics and Channels
+#### 5.2.2 Topics and Channels {#topics-channels}
 
 Events are placed in Channels, sometimes called Topics. Apps subscribed to a channel will receive events published to this channel.
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+
+For information on setting topics and channels for your own Kafka clusters ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
+
+A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
 
 #### 5.2.3 Error Handling
 
@@ -343,14 +347,12 @@ This is implemented as follows:
 
 ## 6 Deployment {#deployment}
 
-Business Events offers three different deployment models:
+Business Events offers four different deployment models:
 
 1. Deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 2. Free apps use a free multi-tenant Event Broker
 3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-
-{{% alert color="info" %}}
-Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.{{% /alert %}} 
+4. Apps running own Kafka cluster (Bring your own Kafka) [Currently in [Beta](/releasenotes/beta-features/)]
 
 ### 6.1 Local Deployment
 
@@ -368,15 +370,47 @@ Any free app in your organization will be able to receive any event published by
 
 To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). See [Mendix Event Broker License](#event-broker-license) for licensing information.
 
-You can also use your own event broker cluster.
+Make sure you [enable the Mendix Event Broker](#enable-mx-event-broker) for every app and environment before deploying.
 
-#### 6.3.1 Warning Message When Deploying
+#### 6.3.1 Warning Message When Enabling Mendix Event Broker
 
-If you deploying an app to production that contains a published business event service, you might receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
+If you enabled the [Mendix Event Broker](#mendix-event-broker) for an environment, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
-1. Select the **Enable** checkbox for the environment.
-2. Transport the mda to an environment.
-3. Restart the environment.
+1. **Enable** the checkbox for the environment.
+1. Transport the *.mda* file to an environment.
+1. Restart the environment.
+
+#### 6.3.2 Deploy Order
+
+The app that defines a business event service (**app A**), needs to be deployed and ran before the app that uses that business events service (**app B**) is ran.
+
+When this requirement is not met, **app B** will either be terminated or, when using [Business Events Module](https://marketplace.mendix.com/link/component/202649) version 3.7.0 and higher, produce errors in the log.
+
+When this occurs, please execute the following steps:
+
+1. Ensure **app A** has started in the same [space](#521-environments-and-spaces) as **app B**.
+1. Restart **app B**.
+   
+### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
+
+{{% alert color="info" %}}
+This deployment method is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
+
+Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker). If you wish to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
+
+#### 6.4.1 Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
+
+Business Events module exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster. 
+
+All the constants are part of the Mendix Business Events module.
+
+* `BusinessEvents.ServerUrl` – Configure your Kafka bootstrap servers here as `host1:port1,host2:port2,...`. The setting is used to connect the app.
+* `BusinessEvents.Username` and `BusinessEvents.Password` – The module supports Kafka’s SASL/SCRAM SHA-512 authentication mechanism, and the Kafka cluster should be set up to authenticate clients with this. See [Configuring Kafka Brokers](https://kafka.apache.org/documentation/#security_sasl_scram_brokerconfig) in the Apache Kafka documentation for further instructions.
+* `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this setting, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
+
+{{% alert color="warning" %}}Special characters are not allowed in the `BusinessEvents.EventBrokerSpace` constant. {{% /alert %}}
+
+For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
 
 ## 7 Local Testing {#local-testing}
 
@@ -440,7 +474,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 8. How do I configure which Kafka cluster to use?
 
-    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime. During runtime, the configurations are provided during startup automatically, since only Mendix Cloud is supported.
+    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime.
 
 9. How do I delete or clean up events and tasks?
 

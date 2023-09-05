@@ -3,6 +3,8 @@ title: "ATS Reference Guides"
 url: /appstore/partner-solutions/ats/rg-ats/
 category: "ATS"
 weight: 2
+no_list: false
+description_list: true 
 description: "Presents a list of ATS reference guides for each ATS version."
 ---
 
@@ -10,7 +12,4 @@ description: "Presents a list of ATS reference guides for each ATS version."
 
 The *ATS Reference Guides* are organized according to the ATS version.
 
-## 2 Main Documents in This Section
-
-* [ATS 2 Reference Guide](/appstore/partner-solutions/ats/rg-two-ats/)
-* [ATS 1 Reference Guide](/appstore/partner-solutions/ats/rg-one-ats/)
+## 2 Documents in This Section

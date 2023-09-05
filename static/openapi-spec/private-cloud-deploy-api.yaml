@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.2.0
+  version: 4.4.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -697,6 +697,10 @@ components:
                 mxAdminPassword:
                   type: string
                   example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                runtimeVersion:
+                  type: string
+                  default: 9.24.2
+                  example: 9.24.2
                 environmentVariables:
                   type: array
                   items:
@@ -1009,7 +1013,9 @@ components:
         - Connected
         - Standalone
       example: Connected
-      description: Model for installationType.
+      description: |-
+        non-editable</br>
+        Model for installationType.
       x-examples:
         example-connected: Connected
         example-standalone: Standalone
@@ -1077,6 +1083,7 @@ components:
                   planName:
                     type: string
                     example: my-db | my-str
+                    description: non-editable
                   planType:
                     $ref: '#/components/schemas/planType'
                   activate:
@@ -1085,6 +1092,7 @@ components:
                   planConfig:
                     type: string
                     example: '"{type:\"database | storage\"}"'
+                    description: non-editable
             enableDevelopmentMode:
               type: boolean
               default: false
@@ -1107,6 +1115,11 @@ components:
                   displayName:
                     type: string
                     example: member name
+                    description: non-editable
+                  autoAcceptInvite:
+                    type: boolean
+                    default: false
+                    description: Can be used to automatically accept the invite for this user.
                   permissions:
                     type: object
                     properties:
@@ -1117,6 +1130,12 @@ components:
                         type: boolean
                         default: false
                       scaleApp:
+                        type: boolean
+                        default: false
+                      startApp:
+                        type: boolean
+                        default: false
+                      stopApp:
                         type: boolean
                         default: false
                       editAppConstants:
@@ -1212,7 +1231,14 @@ components:
                     $ref: '#/components/schemas/invitationStatus'
                   displayName:
                     type: string
-                    example: member name
+                    description: non-editable
+                    example: PrivateCloud User
+                  autoAcceptInvite:
+                    type: boolean
+                    default: false
+                    description: |-
+                      Can be used to automatically accept the invite for this user. <br/>
+                      Can be used <strong>ONLY</strong> for new invites.
                 required:
                   - email
           required:
@@ -1268,7 +1294,7 @@ components:
     invitationStatus:
       title: invitationStatus
       type: string
-      description: Model for the status of the member invite.
+      description: non-editable </br> Model for the status of the member invite.
       example: Invitation_Sent
       enum:
         - Invitation_Sent
@@ -1279,7 +1305,9 @@ components:
     planType:
       title: planType
       type: string
-      description: Model for the database or storage plan type.
+      description: |-
+        non-editable </br>
+        Model for the database or storage plan type.
       enum:
         - OnDemand
         - Dedicated
@@ -1521,6 +1549,7 @@ components:
                     subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                     debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                     mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                    runtimeVersion: 9.24.2
                     environmentVariables:
                       - name: custom-env-variable1
                         value: custom-env-variable1-value
@@ -1611,6 +1640,7 @@ components:
                         subscriptionSecret: c3Vic2NyaXB0aW9uLXNlY3JldA==
                         debuggerPassword: NEtpKStwIjhiMzVVUUcodw==
                         mxAdminPassword: NEtpKStwIjhiMzVVUUcodw==
+                        runtimeVersion: 9.24.2
                         environmentVariables:
                           - name: custom-env-variable1
                             value: custom-env-variable1-value
@@ -1736,10 +1766,13 @@ components:
                       role: Developer
                       status: Invitation_Sent
                       displayName: member name
+                      autoAcceptInvite: false
                       permissions:
                         manageEnvironment: false
                         deployApp: true
                         scaleApp: true
+                        startApp: true
+                        stopApp: true
                         editAppConstants: true
                         manageAppScheduledEvents: true
                         viewAppLogs: true
@@ -1813,6 +1846,8 @@ components:
                             manageEnvironment: false
                             deployApp: true
                             scaleApp: true
+                            startApp: true
+                            stopApp: true
                             editAppConstants: true
                             manageAppScheduledEvents: true
                             viewAppLogs: true
@@ -1871,6 +1906,8 @@ components:
                             manageEnvironment: false
                             deployApp: true
                             scaleApp: true
+                            startApp: true
+                            stopApp: true
                             editAppConstants: true
                             manageAppScheduledEvents: true
                             viewAppLogs: true
@@ -2021,6 +2058,7 @@ components:
             subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            runtimeVersion: 9.24.2
             environmentVariables:
               - name: custom-env-variable1
                 value: custom-env-variable1-value
@@ -2075,6 +2113,7 @@ components:
             - email: abc@xxx.com
               status: Invitation_Sent
               displayName: member-name e.g John
+              autoAcceptInvite: false
     UpdateNamespaceManifest:
       value:
         manifestVersion: 2.0.0
@@ -2099,10 +2138,13 @@ components:
               role: Developer
               status: Invitation_Sent
               displayName: member name
+              autoAcceptInvite: false
               permissions:
                 manageEnvironment: false
                 deployApp: true
                 scaleApp: true
+                startApp: true
+                stopApp: true
                 editAppConstants: true
                 manageAppScheduledEvents: true
                 viewAppLogs: true

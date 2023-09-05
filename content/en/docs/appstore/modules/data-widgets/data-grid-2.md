@@ -2,21 +2,23 @@
 title: "Data Grid 2"
 url: /appstore/modules/data-grid-2/
 description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "data grid", "platform support"]
+tags: ["marketplace", "marketplace component", "data grid", "platform support", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. 
+
+The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
+
+The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 
 Here is an example of a data grid using filters:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/example.png" alt="Example of data grid using filters" >}}
 
-### 1.2 Advanced Options
-
-The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
+You can enable these advanced options to customize your data grid:
 
 * Pagination type
 * Pagination position
@@ -86,7 +88,7 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (like entities in Data Hub) neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
@@ -165,7 +167,7 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
 
 {{% alert color="warning" %}}
-This property not available if you enable "Custom content" for the column
+This property is not available if you enable **Custom content** for the column
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" >}}

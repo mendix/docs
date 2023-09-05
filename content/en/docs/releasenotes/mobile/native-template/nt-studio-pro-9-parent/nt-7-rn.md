@@ -5,9 +5,29 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.5 {#705}
+
+**Release date: August 24, 2023**
+
+* We upgraded the Android SDK version to 33.
+
+## 7.0.3 {#703}
+
+**Release date: August 8, 2023**
+
+* We fixed a distorted splash screen issue for Android.
+
+## 7.0.2 {#702}
+
+**Release date: August 1, 2023**
+
+### Fixes
+
+* We fixed an issue where the QR code scanner would not work on the iOS version of a custom developer app.
+
 ## 7.0.1 {#701}
 
-**Release date: April 13th, 2023**
+**Release date: April 13, 2023**
 
 ### Fixes
 
@@ -17,7 +37,7 @@ description: "Native Template 7 release notes."
 
 ## 7.0.0 {#700}
 
-**Release date: March 23rd, 2023**
+**Release date: March 23, 2023**
 
 ### Improvements
 

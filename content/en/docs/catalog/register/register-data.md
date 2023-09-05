@@ -224,24 +224,24 @@ It is possible, although uncommon, to update the URL of a hosted environment. Th
 
 #### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
-The Transform API is an endpoint in the Registration API. It converts the `dependencies.json` file that your Mendix app generates into the fields that the Registration API requires to register services. 
+The Transform API is an endpoint in the Registration API. It converts the *dependencies.json* file that your Mendix app generates into the fields that the Registration API requires to register services.
 
 {{% alert color="info" %}}These optional fields are not currently converted by the Transform API: `SecurityClassification`, `Discoverable`, `Validated`, `ServiceVersion`, and `Tags`.{{% /alert %}}
 
 To call the Transform endpoint of the Registration API, you need the following:
 
-* Your app's `dependencies.json` file converted to an escaped JSON string
+* Your app's *dependencies.json* file converted to an escaped JSON string
 
-    {{% alert color="info" %}}You can find your `dependencies.json` file in the `deployment` > `model` folder of your Mendix application.{{% /alert %}}
+    {{% alert color="info" %}}You can find your *dependencies.json* file in the `deployment` > `model` folder of your Mendix application.{{% /alert %}}
 
 * Endpoint location `Name`
 * Endpoint location `Value`
 
-    {{% alert color="info" %}}These two values can be found in the `metadata.json` file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
+    {{% alert color="info" %}}These two values can be found in the *metadata.json* file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson). 
 
-You can see an example of a request that converts a `dependencies.json` file below: 
+You can see an example of a request that converts a *dependencies.json* file below: 
 
 ```curl
 curl --location --request PUT 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \

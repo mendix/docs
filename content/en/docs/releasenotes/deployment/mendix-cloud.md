@@ -17,9 +17,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
-{{% todo %}}TODO: Date may need to be updated{{% /todo %}}
-
-### August 18, 2023 
+### September 5, 2023 
 
 #### Improvements
 

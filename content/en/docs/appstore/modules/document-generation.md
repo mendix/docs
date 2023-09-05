@@ -259,7 +259,7 @@ The following **Container** widget related design properties are available in th
 
 For extended font support, we recommend to make use of custom fonts. To apply a custom font follow the steps below:
 
-We will be using the `Noto Sans SC` for this example. You can visit [Google fonts](https://fonts.google.com) for more font options or use a font of your choice.
+We will be using the `Noto Sans SC` font for this example. You can visit [Google fonts](https://fonts.google.com) for more font options or use a font of your choice.
 
 1. Download the font from [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
 2. Copy the `NotoSansSC-Regular.ttf` font file from the static folder of the downloaded package into the `theme\web\fonts` folder of the app

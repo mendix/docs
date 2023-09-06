@@ -131,7 +131,7 @@ To push changes, select **Version Control** > **Push** or make sure that the **A
 
 While you were working on your branch somebody may have pushed their changes to the server already. In this case Pushing isn’t possible and you’ll need to take further action first.
 
-Studio Pro uses [Autofetch](/refguide/auto-fetch/) to discover changes on the server. If by the moment you click Commit the remote changes are known to Studio Pro, the Commit dialog will contain a note about this and Push will be disabled.
+Studio Pro uses [automatic fetching](/refguide/auto-fetch/) to discover changes on the server. If by the moment you click Commit the remote changes are known to Studio Pro, the Commit dialog will contain a note about this and Push will be disabled.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
 

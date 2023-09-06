@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### September 7, 2023
+
+#### Deprecations
+
+* We have removed the **Onboarding** page from Control Center.
+
 ### August 28, 2023
 
 #### New Features

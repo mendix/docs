@@ -358,7 +358,7 @@ If you are using a module from the Mendix Marketplace, select **Other** and then
 
 #### 4.2.2 Contract Structure {#contract-structure}
 
-TFolders in a ZIP contract are structured relative to the Document Base URL.
+Folders in a ZIP contract are structured relative to the Document Base URL.
 
 * Primary document – This must be indicated by naming the document *primary*.
 * Absolute URI – If the file location/URI is given by an absolute URL—that is, if it includes the full path starting from `http` or `https`, followed by the domain and the rest of the URI—then the top-level folder must be named either `http` or `https`, depending on the original URL. Each following folder shall then represent a segment of the path, starting with the topmost folder `http` or `https`.

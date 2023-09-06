@@ -358,12 +358,13 @@ If you are using a module from the Mendix Marketplace, select **Other** and then
 
 #### 4.2.2 Contract Structure {#contract-structure}
 
-Folders in a ZIP contract are structured relative to the Document Base URL.
+All ZIP contracts must include a primary document, named *primary*.
 
-* Primary document – This must be indicated by naming the document *primary*.
-* Absolute URI – If the file location/URI is given by an absolute URL—that is, if it includes the full path starting from `http` or `https`, followed by the domain and the rest of the URI—then the top-level folder must be named either `http` or `https`, depending on the original URL. Each following folder shall then represent a segment of the path, starting with the topmost folder `http` or `https`.
-* Relative URI – All referenced documents that are relative to the primary document must have their folder structure given in such a way that when it is combined together will give the relative path as it is used in the primary document.
+The other documents in the ZIP file should be structured within a series of nested folders, in which each segment of the URI path is represented by its own folder. It's possible to use absolute URLs or relative URIs, but these have different top-level folders:
 
-See the ZIP structure example for reference:
+* Absolute URI – The entire URL is represented in the folder structure, starting with an *http* or *https* folder in the root of the ZIP file. This top-level *http* or *https* folder contains a folder named after the domain. The domain folder contains a series of other folders and files representing the rest of the URL path.
+* Relative URI – The folders and files must be structured relative to the Document Base URL. In other words, relative URIs use a folder structure that matches the relative path as it is used in the primary document.
 
-{{< figure src="/attachments/catalog/register-data/zip-file-structure.png" >}}
+The following diagram shows examples of the ZIP contract structure for both URI types. The absolute folder structure is the same in each case, but the relative structure depends on the Document Base URL. Note that *odata*, *v1*, and *docs* are each separate folders, but in the absolute folder structure shown here, they are represented in a condensed format to save space.
+
+{{< figure src="/attachments/catalog/register-data/zip-file-structure.png" alt="Absolute and relative folder structures for two different base URLs.">}}

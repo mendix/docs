@@ -260,7 +260,18 @@ To pass this additional information, you need to create custom claims. You can d
 
 1. Create a microflow which returns a value to the claim.
 
-    You can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object. JSON will be created with the attribute name as the key and the attribute value as the value.
+    You can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object.
+    
+    The ID-token will be a nested JSON structure with the name of the object as the key and a list of attribute names of your object as the keys and the attribute values as the values.
+
+    ```json {linenos=false}
+    "MyObjectName": {
+        "MyObjectAttribute1Name" : "MyObjectAttribute1Value",
+        "MyObjectAttribute2Name" : "MyObjectAttribute2Value"
+    }
+    ```
+
+    "MyObjectName" will be used as the claim name. See note about how to name custom claims in the [Propagate Custom Claims](#propagate-custom-claims) section, above.
 
 1. Run (publish) your app.
 1. Sign in to your app as an Administrator.

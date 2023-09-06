@@ -10,7 +10,7 @@ tags: ["studio pro", "expression", "date creation", "expressions"]
 Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that  `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](/refguide/app-settings/#scheduled) section of **App Settings**.
 
 {{% alert color="info" %}}
-Don't use `dateTimeUTC` in client-side expressions when you want to assign them to date and time attributes where Localize is set to No. The localize functionality is built into the attribute type itself and using the UTC functions causes timezone conversions to be handled twice.
+Don't use `dateTimeUTC` in client-side expressions when you want to assign them or compare them to date and time attributes where Localize is set to No. The localize functionality is built into the attribute type itself and using the UTC functions causes timezone conversions to be handled twice.
 {{% /alert %}}
 
 This function does not accept variable or attribute parameters, only fixed values. To create a date using parameters, use the [parseDateTime](/refguide/parse-and-format-date-function-calls/#parsedatetime-utc) function.

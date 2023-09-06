@@ -129,18 +129,30 @@ To push changes, select **Version Control** > **Push** or make sure that the **A
 
 #### 4.3.1 Push fast-forward only
 
-It could happen that while you were working on the changes on your branch somebody else pushed their changes to it already. In this case when you will try to push your commit you will see an information dialog suggestign you to Pull to integrate those remote changes into yours.
+While you were working on your branch somebody may have pushed their changes to the server already. In this case Pushing isn’t possible and you’ll need to take further action first.
+
+Studio Pro uses [Autofetch](/refguide/auto-fetch/) to discover changes on the server. If by the moment you click Commit the remote changes are known to Studio Pro, the Commit dialog will contain a note about this and Push will be disabled.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
+
+If the changes are discovered during the push an information dialog with instructions will be shown.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
 
-This happens because git sees your changes and changes on the remote as simultaneous and potentially conflicting. The end result should contain both changes (yours and theirs) in order they were committed.
+Git prevents you from pushing because it sees your changes and the remote changes as simultaneous and potentially conflicting. In this diagram you see that Git doesn’t know how to combine commits #3 and #5.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/remote-local-rebase.png" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" >}} 
 
-When you pull the changes, SudioPro will merge the changes from the remote into your local branch. After this you will need to make a so called "Merge Commit". This commit is very important as it contains the changes that might have happened during integration of remote changes into yours.
-There are 2 possible scenarios for that:
-1. No conflicts -- (e.g. you added a microflow and somebody else added a module on the remote). In this case Studio pro can autoresolve this and there is nothing for you to do.
-2. Conflicting changes -- (e.g. a button was changed by both you and the other developer on the remote). In this case you will need to make some changes to resolve conflicts (as if it would've been a normal merge of two branches). In this case the merge commit will contain these changes so that all the 3 sets of changes can be reviewed in history: what you did locally, what somebody else did while you were working, and what did you do to accomodate their changes into yours.
+When you Pull the changes, Studio Pro will merge the changes from the server into your local branch. After solving potential conflicts, you will need to make a ‘merge commit’. This commit contains the changes that might have happened during integration of remote changes into yours. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" >}} 
+
+There are 2 possible scenarios when merging and needing to make a merge commit:
+
+1. No conflicts (e.g. you added a microflow and somebody else added a module on the server)
+    In this case Studio pro can autoresolve this and there is nothing for you to do.
+2. Conflicting changes (e.g. a button was changed by both you and the other developer on the remote)
+    In this case you will need to make some changes to resolve conflicts. The merge commit will contain these changes so that all the 3 sets of changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what did you do to integrate their changes into yours.
 
 ### 4.4 Pulling
 

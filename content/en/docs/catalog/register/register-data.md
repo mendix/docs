@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Registering a Service Through Mendix Cloud {#mendix-cloud}
 
-If you have an exposed OData service that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Catalog](/catalog/).
+If you have a [published OData service](/refguide/published-odata-services/) that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), then congratulations! Your service is already registered in the [Catalog](/catalog/).
 
 ## 4 Registering a Service Without Mendix Cloud {#without-mendix-cloud}
 
@@ -45,7 +45,7 @@ If you are not using Mendix Cloud to deploy your Mendix application, there are t
 
 The Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. To register your service, you need to provide details about both the application and the environment where the service is deployed.
 
-For detailed information on working with external entities and the Catalog without Mendix Cloud (for on-premises or local deployment), see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
+For detailed information on working with external entities and the Catalog for on-premises deployment, without Mendix Cloud, see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
 
 ### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 
@@ -152,7 +152,7 @@ To register services, you need the following:
 * Service `Contract` with `Type` and `Value`
 
 {{% alert color="warning" %}}
-Once a version is released to production, any updated contracts should be given a new version. This applies even if you're only registering for a non-production environment.
+Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.
 
 This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.
 {{% /alert %}}
@@ -232,7 +232,7 @@ To call the Transform endpoint of the Registration API, you need the following:
 
 * Your app's *dependencies.json* file converted to an escaped JSON string
 
-    {{% alert color="info" %}}You can find your *dependencies.json* file in the `deployment` > `model` folder of your Mendix application.{{% /alert %}}
+    {{% alert color="info" %}}You can find your *dependencies.json* file in the *deployment* > *model* folder of your Mendix application.{{% /alert %}}
 
 * Endpoint location `Name`
 * Endpoint location `Value`
@@ -317,12 +317,12 @@ Follow the steps below:
 1. Start at the [Catalog homepage](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** service.
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 
-3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
+3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the OData service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
-    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you're only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.{{% /alert %}}
+    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.{{% /alert %}}
 
 4. Once you have filled out all the required fields, select **Next**.
-5. On the **Application** screen, select an existing application by name or register a new one. You'll also be able to edit **Technical Owner** and **Business Owner** through the **Curation** feature after registration is completed.
+5. On the **Application** screen, select an existing application by name or register a new one. You will also be able to edit **Technical Owner** and **Business Owner** through the **Curation** feature after registration is completed.
 6. Once you have filled out all the required fields, select **Next**.
 7. On the **Environment** screen, select an existing environment by name, or provide the **Environment Name**, **Environment Location** (URL), and **Environment Type** to register a new one. The **Environment Type** options give users an indication of what type of data they might find there:
 
@@ -362,8 +362,8 @@ All ZIP contracts must include a primary document, named *primary*.
 
 The other documents in the ZIP file should be structured within a series of nested folders, in which each segment of the URI path is represented by its own folder. It's possible to use absolute URLs or relative URIs, but these have different top-level folders:
 
-* Absolute URI – The entire URL is represented in the folder structure, starting with an *http* or *https* folder in the root of the ZIP file. This top-level *http* or *https* folder contains a folder named after the domain. The domain folder contains a series of other folders and files representing the rest of the URL path.
-* Relative URI – The folders and files must be structured relative to the Document Base URL. In other words, relative URIs use a folder structure that matches the relative path as it is used in the primary document.
+* **Absolute URL** – The entire URL is represented in the folder structure, starting with an *http* or *https* folder in the root of the ZIP file. This top-level *http* or *https* folder contains a folder named after the domain. The domain folder contains a series of other folders and files representing the rest of the URL path.
+* **Relative URI** – The folders and files must be structured relative to the Document Base URL. In other words, relative URIs use a folder structure that matches the relative path as it is used in the primary document.
 
 The following diagram shows examples of the ZIP contract structure for both URI types. The absolute folder structure is the same in each case, but the relative structure depends on the Document Base URL. Note that *odata*, *v1*, and *docs* are each separate folders, but in the absolute folder structure shown here, they are represented in a condensed format to save space.
 

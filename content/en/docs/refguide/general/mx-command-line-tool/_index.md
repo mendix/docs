@@ -45,6 +45,7 @@ These are the available [module commands](/refguide/mx-command-line-tool/module/
 |---|---|
 | [show-module-version](/refguide/mx-command-line-tool/module/#show-module-version) | Shows the version of the module specified. |
 | [set-module-version](/refguide/mx-command-line-tool/module/#set-module-version) | Sets the version of the module specified. |
+| [module-import](/refguide/mx-command-line-tool/module/#module-import) | Import a module from an mpk package specified into a project specified. |
 
 ### 3.1 Export Package Commands
 

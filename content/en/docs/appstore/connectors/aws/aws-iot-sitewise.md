@@ -73,7 +73,7 @@ In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve an asset property's current value, implement the [ListAssets](#list-assets) activity by doing the following steps:
+After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve a list of asset models, implement the [ListAssetModels](#list-assets) activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListAssetModels*, and then click **OK**.
@@ -86,9 +86,9 @@ After you configure the authentication profile for AWS IoT SiteWise, you can imp
 9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 10. Position the **Retrieve** activity between the **ListAssetModels** activity and the microflow end event.
 11. Double-click the **Retrieve** activity.
-12. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **GetAssetPropertyValue** as the association.
+12. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **ListAssetModels** as the association.
 13. Click **OK**.
-14. Configure a method for triggering the **ACT_GetAssetPropertyValue** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+14. Configure a method for triggering the **ACT_ListAssetModels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference
 
@@ -608,7 +608,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `CREATING` | CREATING | The asset model is being created. |
 | `ACTIVE` | ACTIVE | The asset model is active. |
 | `UPDATING`  | UPDATING  | The asset model is being updated. |
-| P`ROPAGATING` | PROPAGATING | The asset model's changes are propagating to its assets. |
+| `PROPAGATING` | PROPAGATING | The asset model's changes are propagating to its assets. |
 | `DELETING` | DELETING | The asset model is being deleted. |
 | `FAILED` | FAILED | The asset model failed to validate during a create or update operation. |
 

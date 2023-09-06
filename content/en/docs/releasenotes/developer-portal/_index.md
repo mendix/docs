@@ -20,7 +20,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 ### September 7, 2023
 
 #### Fixes 
-* In [AppInsights](/developerportal/app-insights/) we fixed and updated project members sprintr permissions. 
 * We added the following fixes to [Feedback](/developerportal/app-insights/feedback/) in App Insights:
     * We fixed Feedback items not being sent from Native Templates to [Feedback](/developerportal/app-insights/feedback/) in AppInsights.
     * We fixed issue where trying to close a Feedback Item will throw an error.

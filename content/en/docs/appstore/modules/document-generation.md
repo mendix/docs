@@ -255,7 +255,7 @@ The following **Container** widget related design properties are available in th
 | **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
 | **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
-#### 4.4.3 Applying custom fonts {#Applying-custom-fonts}
+#### 4.4.3 Applying custom fonts {#applying-custom-fonts}
 
 For extended font support, we recommend to make use of custom fonts. To apply a custom font follow the steps below:
 

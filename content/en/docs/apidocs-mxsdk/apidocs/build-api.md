@@ -83,7 +83,7 @@ List of objects with the following key-value pairs:
      "CreationDate" :  1404739654045 ,
      "Version" :  "1.1.5.9" ,
      "PackageId" :  "4ee10492-6cfc-4582-b825-a9040c0988ad" ,
-     "Size" :  1.057138442993164
+     "Size" :  1999059
 },{
      "Name" :  "Main line-2.5.4.63.mda" ,
      "Status" :  "Succeeded" ,
@@ -92,7 +92,7 @@ List of objects with the following key-value pairs:
      "CreationDate" :  1404990271835 ,
      "Version" :  "2.5.4.63" ,
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
-     "Size" :  3.0571174621582031
+     "Size" :  7731521
 }]
 ```
 
@@ -145,8 +145,8 @@ An object with the following key-value pairs:
 * *Size* (Long) : Size of the package in bytes
 * *Url* (object): A json object containing the following:
 
-    * *Location*: The URL pointing to the package file.
-    * *TTL*: How long the URL is valid (in seconds).
+    * *Location* (String): The URL pointing to the package file.
+    * *TTL* (Long): How long the URL is valid (in seconds).
 
 ##### 2.2.3.1 Error Codes
 
@@ -288,7 +288,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
      "Branch" : "branches/feature" ,
-     "Revision" :  63 ,
+     "Revision" :  "63" ,
      "Version" :  "2.5.4" ,
      "Description" :  "Add scientific mode"
 }

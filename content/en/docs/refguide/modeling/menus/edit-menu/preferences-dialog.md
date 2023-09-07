@@ -141,9 +141,13 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
-#### 5.3.6 Enable automatic fetching from a repository
+#### 5.3.6 Enable Automatic Fetching from a Repository{#enable-auto-fetch}
 
-Select **Enable automatic fetching from a repository** to enable [Automatic fetch mechanism](/refguide/auto-fetch/)
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.3.
+{{% /alert %}}
+
+Select **Enable automatic fetching from a repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
 
 ## 6 Work Environment Tab
 

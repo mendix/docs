@@ -26,6 +26,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Deprecations
 
+* We have removed the **Onboarding** page from Control Center.
 * We deprecated the numerical 1-10 rating question option in [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights.
 
 ### August 28, 2023
@@ -717,7 +718,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We have released the company [Onboarding](/developerportal/control-center/#onboarding) functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
+* We have released the company **Onboarding** functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
 ### September 23, 2021
 

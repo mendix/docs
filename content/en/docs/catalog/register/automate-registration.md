@@ -46,9 +46,7 @@ Follow the steps for [preparing your service details using the Transform endpoin
 
 ## 5 Register the Application
 
-Then, register the application.
-
-For this section, you will need: 
+To register the application, you will need: 
 
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The application **Name**
@@ -59,9 +57,7 @@ Upon completion, you will have the `application_UUID`.
 
 ## 6 Register the Environment 
 
-Next, register the environment.
-
-For this section, you will need:
+To register the environment, you will need:
 
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`
@@ -75,9 +71,7 @@ Upon completion, you will have the `environment_UUID`.
 
 ## 7 Register the Endpoint(s)
 
-Last, register the service endpoint(s).
-
-For this section, you will need:
+To register the service endpoint(s), you will need:
 
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`

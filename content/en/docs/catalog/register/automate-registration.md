@@ -11,13 +11,13 @@ aliases:
 
 ## 1 Introduction
 
-The [Catalog](/catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to Mendix Cloud. 
+The [Catalog](/catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to the Mendix Cloud. 
 
 For people deploying to a (virtual) private cloud, you can follow the steps in this document to automate registration to the Catalog in your pipeline.
 
 ## 2 Prerequisites
 
-Before you begin, make sure you have the following: 
+Before you begin, ensure that you have the following:
 
 * A working pipeline that deploys your Mendix app (see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for the first steps on deploying to a private cloud)
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access the Catalog APIs
@@ -46,7 +46,9 @@ Follow the steps for [preparing your service details using the Transform endpoin
 
 ## 5 Register the Application
 
-To register the application, you will need: 
+Then, register the application.
+
+For this section, you will need: 
 
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The application **Name**
@@ -57,7 +59,9 @@ Upon completion, you will have the `application_UUID`.
 
 ## 6 Register the Environment 
 
-To register the environment, you will need:
+Next, register the environment.
+
+For this section, you will need:
 
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`
@@ -71,7 +75,9 @@ Upon completion, you will have the `environment_UUID`.
 
 ## 7 Register the Endpoint(s)
 
-To register the service endpoint(s), you will need:
+Last, register the service endpoint(s).
+
+For this section, you will need:
 
 * A [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat)
 * The `application_UUID`

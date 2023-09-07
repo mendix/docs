@@ -10,13 +10,13 @@ aliases:
     - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
-#If moving or renaming this doc file, implement a temporary redirect and let the relevant team know they should update the URL in the product. See *Mapping to Products* for more details. 
-#The anchor #registration-form below is mapped, so it should not be removed or changed.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+#The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
 
-There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. We support all OData versions.
+There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. Mendix supports all OData versions.
 
 This how-to will teach you how to register a service in the following ways:
 
@@ -28,9 +28,9 @@ This how-to will teach you how to register a service in the following ways:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* You have Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed.
-* You have a Mendix account.
-* You have an exposed OData service that you are ready to register. For instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/data-hub/share-data/).
+* You have Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed
+* You have a Mendix account
+* You have an exposed OData service that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/data-hub/share-data/))
 
 ## 3 Registering a Service Through Mendix Cloud {#mendix-cloud}
 
@@ -71,7 +71,7 @@ The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazon
 
 #### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
 
-To register an application, you need:
+To register an application, you need the following:
 
 * Personal access token
 * Application `Name`
@@ -314,9 +314,8 @@ The Catalog has a UI form where you can register a single exposed OData service.
 
 Follow the steps below:
 
-1. Start at the [Catalog homepage](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** service.
+1. Start at the [Catalog home page](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** service.
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
-
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the OData service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
     {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.{{% /alert %}}
@@ -324,11 +323,11 @@ Follow the steps below:
 4. Once you have filled out all the required fields, select **Next**.
 5. On the **Application** screen, select an existing application by name or register a new one. You will also be able to edit **Technical Owner** and **Business Owner** through the **Curation** feature after registration is completed.
 6. Once you have filled out all the required fields, select **Next**.
-7. On the **Environment** screen, select an existing environment by name, or provide the **Environment Name**, **Environment Location** (URL), and **Environment Type** to register a new one. The **Environment Type** options give users an indication of what type of data they might find there:
+7. On the **Environment** screen, select an existing environment by name, or provide the **Environment Name**, **Environment Location** (URL), and **Environment Type** to register a new one. The **Environment Type** options give an indication of what type of data you might find there:
 
-    1. **Production** – Data is of production quality.
-    2. **Sandbox** – The Mendix Free App environment, data is not of production quality.
-    3. **Non-production** – Hosting is paid for, but data is not of production quality.
+    1. **Production** – Data is of production quality
+    2. **Sandbox** – The Mendix Free App environment, data is not of production quality
+    3. **Non-production** – Hosting is paid for, but data is not of production quality
 
 8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
 9. Select **Done!** to complete the registration.

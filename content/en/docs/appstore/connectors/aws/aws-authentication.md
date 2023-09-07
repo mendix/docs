@@ -68,7 +68,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 4 Usage
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model and activities that you can use to authenticate your app in AWS. Each activity corresponds to an authentication method, and can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
+After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There is one microflow activity that implements the two basic authentication methods and one Java action that can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
 
 * [Session credentials](#session)
 * [Static credentials](#static)

@@ -373,21 +373,21 @@ The format of non-custom claims in the ID-token is as follows:
     "com.mendix.user.entity": "Administration.Account",
     "nonce": "k5CDLkTE7Q61Q0cUTSgy",
     "com.mendix.user.attributes": {
-        "Email": "test@gmail.com",
-        "FullName": "test token",
+        "Email": "janedoe@example.com",
+        "FullName": "Jane Doe",
         "IsLocalUser": "true"
     },
     "aud": "DemoClient",
     "scope": "",
-    "name": "test token",
+    "name": "Jane Doe",
     "exp": 1681970318,
-    "email":"test@gmail.com",
+    "email":"janedoe@example.com",
     "com.mendix.user.timezone": "",
     "iat": 1681969718,
     "com.mendix.user.roles": [
         "User"
     ]
-    "username":"test"
+    "username":"Jane Doe"
 }
 ```
 

@@ -51,7 +51,7 @@ Should you consider using a connected environment, the following URLs should be 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}
 
 3. Click **Set up Mendix for Private Cloud**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
 4. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
@@ -59,7 +59,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
-6. Click **Register Cluster**. 
+6. Click **Register Cluster**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png" >}}
 
@@ -153,17 +153,17 @@ You can do this as follows:
 1. Sign in to the OpenShift Console.
 
 2. Click **Copy Login Command** in the user drop-down.
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" >}}
 
 3. Choose your IdP (Identity Provider).
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" >}}
 
 4. Click **Display Token**.
 
 5. Copy the command under **Log in with this token**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" >}}
 
 6. Paste the command into your command line terminal and press Enter.
@@ -202,7 +202,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
     You will see the screen below.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
 
     {{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
@@ -246,7 +246,7 @@ The options do the following:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
 
-3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
+3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**).
 
 4. Each page will lead you through the information you need to supply.
 
@@ -312,7 +312,7 @@ Hosts which should be excluded from proxying are specified as:
     * an IP address prefix (`1.2.3.4`)
     * an IP address prefix in CIDR notation (`1.2.3.4/8`)
     * a domain name
-    * if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
+    * if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied
 * each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
 * a domain name matches that name and all subdomains
 * a domain name with a leading "." matches subdomains only
@@ -367,7 +367,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         ```
 
 2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
 
 These custom CAs will be trusted by:
@@ -430,7 +430,7 @@ You can license the Operator and Runtime of your application by configuring the 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" >}}
 
 {{% alert color="info" %}}
-In order to configure PCLM, make sure that the Operator version is 2.11.0 and above. 
+In order to configure PCLM, make sure that the Operator version is 2.11.0 and above.
 {{% /alert %}}
 
 ## 6 Advanced Operator Configuration
@@ -602,7 +602,7 @@ spec:
 
 You can change the following options:
 
-* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
+* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
 ### 6.3 Mendix App Resource Customization {#advanced-resource-customization}
@@ -689,7 +689,7 @@ spec:
             periodSeconds: 25
             successThreshold: 1
             failureThreshold: 4
-        terminationGracePeriodSeconds: 300      
+        terminationGracePeriodSeconds: 300
         resources:
           limits:
             cpu: 1
@@ -781,7 +781,7 @@ terminationGracePeriodSeconds: 300
 The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
 
-#### 5.3.4 Customize Container Resources: Memory and CPU
+#### 6.3.4 Customize Container Resources: Memory and CPU
 
 Let us now analyze the `resources` section from the example application deployment, above:
 
@@ -869,7 +869,7 @@ spec:
   runtimeStartupProbe:
     failureThreshold: 30
     periodSeconds: 10
-  runtimeTerminationGracePeriodSeconds: 300    
+  runtimeTerminationGracePeriodSeconds: 300
 ```
 
 The following fields can be configured:
@@ -1062,6 +1062,34 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
+### 6.8 Pod labels
+
+#### 6.8.1 General pod labels
+
+Mendix Operator version 2.13.0 or above allows you to specify default pod labels for app-related pods: task pods (build and storage provisioners) and runtime (app) pods.
+
+To specify default pod labels for a namespace, specify them in `customPodLabels.general` in `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod labels
+  customPodLabels:
+    # Optional: general pod labels (applied to all app-related pods)
+    general:
+      # Example: enable Azure Workload Identity
+      azure.workload.identity/use: "true"
+```
+
+Alternatively, for Standalone clusters, pod labels can be specified in the `MendixApp` CR for a specific app.
+
+{{% alert color="warning" %}}
+The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
+{{% /alert %}}
+
 ## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
@@ -1092,7 +1120,7 @@ Here you can perform the following actions on the entire cluster:
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG" >}}
 
 {{% alert color="info" %}}
-When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
+When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
 
 The only limitations are that:
 
@@ -1312,7 +1340,7 @@ This tab shows information on the versions of the various components installed i
 
 #### 7.2.7 Customization
 
-This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
+This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers.
 
 Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 

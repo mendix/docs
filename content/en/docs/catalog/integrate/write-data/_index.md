@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/catalog/write-data/) and shows you how OData annotations give you the power to create, update, and delete data. 
+This how-to builds on the information provided in [How to Share Data Between Apps](/catalog/write-data/) and shows you how OData annotations give you the power to create, update, and delete data.
 
 This how-to will teach you how to do the following:
 
@@ -18,7 +18,7 @@ This how-to will teach you how to do the following:
 * See which capabilities a particular entity, attribute, or association has in the Catalog
 * Consume an updatable OData resource in your Mendix app
 
-The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro uses the OData definitions.
+The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro sticks with the OData definitions.
 
 Note the following terminology differences described in the table below:
 

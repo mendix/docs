@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Catalog](/catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to Mendix Cloud. 
+The [Catalog](/catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to Mendix Cloud.  
 
 For people deploying to a (virtual) private cloud, you can follow the steps in this document to automate registration to the Catalog in your pipeline.
 

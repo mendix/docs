@@ -17,10 +17,13 @@ In this document, `domain` is used to identify the domain registered to you thro
 For apps deployed to the Mendix Cloud, you can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
 ## 2 Paths
+If you specify an app URL location on a (sub)path, it is necessary for the Mendix runtime to know the public URL of your application. This can be done by setting the customer [runtime setting](/refguide/custom-settings/#applicationrooturl) `ApplicationRootUrl`. 
 
-Do not use a path to your app. Your app should always be at the root of your subdomain. In other words at a location `https://subdomain.domain/`.
+{{% alert color="info" %}}
+For Mendix version 9 or lower it is not possible to a use a path to your app. Your app should always be at the root of your subdomain. In other words at a location `https://subdomain.domain/`.
 
 If you want to deploy several apps on the same domain, you should use different subdomains to identify the app. For example, use `https://appA.apps.mydomain.com/` and not `https://mydomain.com/apps/appA`.
+{{% /alert %}}
 
 ## 3 Main Domain Name
 

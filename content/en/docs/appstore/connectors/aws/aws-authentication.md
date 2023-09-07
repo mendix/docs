@@ -89,7 +89,7 @@ You can implement session credentials in one of the following ways:
 
 #### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
 
-To generate session credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal, and then add the **GetSessionCredentials** activity to a microflow in Studio Pro.
+To generate session credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal, and then add the **Credentials_GenerateFromConstants** microflow to a microflow in Studio Pro.
 
 ##### 4.1.1.1  Adding a Client Certificate in the Developer Portal
 
@@ -113,7 +113,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
 
-##### 4.1.1.2 Using the GetSessionCredentials Activity in Studio Pro
+##### 4.1.1.2 Using the Credentials_GenerateFromConstants Microflow in Studio Pro
 
 After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
 

@@ -39,6 +39,7 @@ Any of the following changes are interpreted as non-conflicting:
     * Changing user assignment or user assignment option in a user task
     * Changing due dates of a user task
 * Adding outcomes in a **Decision**, **Call microflow** or **User task** activities
+* Changing the decision method in a **Multi-User Task** or one of its settings
 * Changing the context entity, referenced microflows, referenced pages, or referenced workflows
 
 ### 3.2 Workflow Versioning Conflict Types
@@ -63,6 +64,7 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | *Resolvable*:                                       |                                                              |                                                              |                                                              |                                                              |
 | Parallel Branch Introduced                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          |
 | Selected Outcome Replaced                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
+| User Task Outcome Changed                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Activities Introduced in Executed Path              | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Executed Activities Moved to Re-executable Position | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 
@@ -167,7 +169,18 @@ You can do one of the following:
 * The Administrator can use *Mark-as-Resolved* to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.11 Activities Introduced in the Executed Path
+#### 3.2.11 User Task Outcome Changed
+
+When an app developer changes the decision method of a multi-user task, or one of its settings, the user task could have a different outcome that before the change. This may not necessarily be a problem, but might be and needs to be assessed.
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The app developer can revert the change (which moves the activity back) and deploy this version.
+
+#### 3.2.12 Activities Introduced in the Executed Path
 
 When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
 
@@ -178,7 +191,7 @@ You can do one of the following:
 * The Administrator can use *Mark-as-Resolved* to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.12 Executed Activities Moved to a Re-executable Position
+#### 3.2.13 Executed Activities Moved to a Re-executable Position
 
 When an app developer moves activities within a workflow, workflow instances that have executed or are executing the moved activities may have to re-execute these activities. In this case user tasks or microflows may have to be re-executed. If actions are non-idempotent, changes may happen more than once (for example, object creation or sending data to external systems).
 

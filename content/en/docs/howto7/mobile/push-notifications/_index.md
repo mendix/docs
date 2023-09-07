@@ -3,6 +3,8 @@ title: "Include Push Notifications"
 url: /howto7/mobile/push-notifications/
 category: "Mobile Development"
 weight: 10
+no_list: false
+description_list: true 
 tags: ["mobile", "push notification"]
 ---
 
@@ -52,9 +54,3 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository/).
 
 ## 7 Documents in This Section
-
-* [How to Implement Push Notifications](/howto7/mobile/implementation-guide/)
-* [How to Send Push Notifications](/howto7/mobile/sending-push-notifications/)
-* [How to Set Up the Firebase Cloud Messaging Server](/howto7/mobile/setting-up-google-firebase-cloud-messaging-server/)
-* [How to Set Up the Apple Push Notification Server](/howto7/mobile/setting-up-apple-push-notification-server/)
-* [How to Test the Push Notifications Implementation](/howto7/mobile/testing-the-implementation/)

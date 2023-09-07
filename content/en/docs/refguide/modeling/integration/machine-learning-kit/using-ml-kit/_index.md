@@ -233,7 +233,7 @@ The ONNX community develops and maintains the converters for many ML frameworks.
 
 {{% alert color="info" %}}Once you build a model, see examples of notebooks that show you how to export them to ONNX in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/notebooks).{{% /alert %}}
 
-### 4.3 Versioning {#versioning}
+### 4.2 Versioning {#versioning}
 
 Use [ONNX versioning schemes](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) while creating and integrating ONNX computation graphs with Mendix apps. Mendix Studio Pro guides developers to comply with the suggested internal representation, and package OpSets.
 

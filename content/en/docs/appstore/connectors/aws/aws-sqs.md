@@ -583,7 +583,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `SendMessageBatchRequest`, `Credentials`, `AWS Region ` | `SendMessageBatchResponse` |
+| `SendMessageBatchRequest`, `Credentials`, `AWS Region` | `SendMessageBatchResponse` |
 
 #### 4.3.2 Receive Messages {#receive-messages}
 

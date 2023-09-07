@@ -51,7 +51,7 @@ To inspect a widget, press and hold <kbd>Ctrl</kbd> while moving your mouse poin
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-ats-helper/inspection.png" >}}
 
-The ATS Helper will highlight the selected widget with a yellow border. The ATS Helper dialog box will show you the `Mx Name` as well as the Mx Name Selector properties.
+The ATS Helper will highlight the selected widget with a yellow border. The ATS Helper dialog box will show you the `Mx Name` as well as the **Mx Name Selector** properties.
 
 If you release <kbd>Ctrl</kbd>, the widget will remain selected.
 

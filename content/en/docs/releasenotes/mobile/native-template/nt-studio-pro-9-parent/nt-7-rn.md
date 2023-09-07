@@ -5,6 +5,18 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.5 {#705}
+
+**Release date: August 24, 2023**
+
+* We upgraded the Android SDK version to 33.
+
+## 7.0.3 {#703}
+
+**Release date: August 8, 2023**
+
+* We fixed a distorted splash screen issue for Android.
+
 ## 7.0.2 {#702}
 
 **Release date: August 1, 2023**

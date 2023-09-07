@@ -111,7 +111,7 @@ You can customize a URL by adding [custom domains](/developerportal/deploy/custo
 
 Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (80 and 443) with connections to HTTP (80) being redirected to HTTPS (443).
 
-## 2 Deploying an App to the Mendix Cloud
+## 2 Deploying an App to the Mendix Cloud {#deploy-app-mendix-cloud}
 
 There are several options available to deploy your application to a connected Mendix Cloud node.
 
@@ -190,7 +190,7 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 
 The app is now deployed. You can configure the administrative account.
 
-### 2.4 Deploying a Free App to the Mendix Cloud
+### 2.4 Deploying a Free App to the Mendix Cloud {#deploy-free-app}
 
 With a Free App, you can deploy your app to the Mendix Cloud from Studio Pro by using one of the following methods:
 

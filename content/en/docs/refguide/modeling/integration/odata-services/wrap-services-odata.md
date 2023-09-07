@@ -3,7 +3,7 @@ title: "Wrap Services, APIs, or Databases with OData"
 url: /refguide/wrap-services-odata/
 linktitle: "Wrap with OData"
 weight: 80
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
+tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
 ---
 
 ## 1 Introduction
@@ -18,7 +18,7 @@ In this guide, you will learn about the following:
 * Using a microflow to define how resources should be retrieved and stored, and to return values of published OData services
 * Selecting a key when exposing entities as OData resources
 
-### 1.2 Prerequisites
+### 1.1 Prerequisites
 
 Before you read this guide, do the following:
 
@@ -34,7 +34,7 @@ OData is a set of best practices for building REST APIs that standardizes many a
 
 ### 2.2 Compatibility with Data Hub
 
-Wrapping a service, API, or database in OData ensures compatibility with the [Catalog](/catalog/). Published OData services are registered automatically in the [Catalog](/catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Catalog](/catalog/) and made available in the Studio Pro [Integration Pane](/refguide/integration-pane/).
+Wrapping a service, API, or database in OData ensures compatibility with the [Catalog](/catalog/). Published OData services are registered automatically in the [Catalog](/catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy if you are using [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Catalog](/catalog/) and made available in the Studio Pro [Integration Pane](/refguide/integration-pane/).
   
 ## 3 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 
@@ -55,7 +55,7 @@ In Studio Pro, you can expose entities as OData resources by adding them to a pu
 
 When a consuming app reads your published OData service, it sends a GET request. You can handle an incoming GET request for an OData resource in the following ways:
 
-1. **Read from database** – This action pases the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action does not apply to non-persistable entities, because non-persistable entities cannot be retrieved from the database. For those, call a microflow.
+1. **Read from database** – This action passes the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action does not apply to non-persistable entities, because non-persistable entities cannot be retrieved from the database. For those, call a microflow.
 2. **Call a microflow** – This action calls a microflow defined in the *Readable* section. Specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
 
 The resulting list of objects from either will then be transformed into an OData payload. If it fails, you will see a [status code](/refguide/published-odata-services/#status-codes) of `500`.
@@ -209,7 +209,7 @@ Run the Twitter client to receive decoded OData requests.
 
 Ensure that you have created microflows for all entities used in your connector. When you run your app, you can enter the ID of a Twitter user and view their latest tweets and followers.
 
-## 7.2 Updatable Operational Data Stores {#operational-data-stores}
+### 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
 Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/refguide/configuring-a-domain-model/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
 

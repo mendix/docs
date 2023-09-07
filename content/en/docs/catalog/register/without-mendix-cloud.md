@@ -4,7 +4,7 @@ description: "Describes how to use Catalog and external entities for local deplo
 url: /catalog/register/data-sources-without-mendix-cloud/
 linktitle: "Private Cloud/On-Premises Registration"
 weight: 40
-tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "private cloud", Tencent", "without mendix cloud"]
+tags: ["data hub", "entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "private cloud", Tencent", "without mendix cloud"]
 aliases:
     - /data-hub/data-hub-without-mendix-cloud/
     - /catalog/data-sources-without-mendix-cloud/

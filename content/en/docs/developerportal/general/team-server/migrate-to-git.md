@@ -77,12 +77,6 @@ You can check common causes of a failed migration below and resolve them. After 
 
 The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix version 9.12. To resolve this, delete or upgrade these branches. 
 
-Migration failure may be also caused by the naming of your branches. You can resolve such migration failures by connecting to Tortoise SVN. For more information, see the [Working Outside Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro) section in *Using Version Control in Studio Pro*. Reasons can be one of the following:
-
-* There are no branches called *branches/trunk* or *branches/tags*.
-* There are branches with the same name but a different casing, such as *branch1* and *BRANCH1*.
-* There are branches with a name that is not valid in Git, for more information see [Git Documentation](https://git-scm.com/docs/git-check-ref-format).
-
 ## 6 Read More
 
 * [Version Control](/refguide/version-control/)

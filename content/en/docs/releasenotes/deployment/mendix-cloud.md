@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### September 4, 2023 
+
+#### Improvements
+
+* We added webhooks for status [alerts](/developerportal/operate/monitoring-application-health/) generated for your environments.
+
 ### August 7, 2023
 
 #### Improvements
@@ -234,7 +240,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 #### Improvements
 
-* We have added two new graphs on the [Metrics page for Cloudv v4](/developerportal/operate/trends-v4/):
+* We have added two new graphs on the [Metrics page for Cloud v4](/developerportal/operate/trends-v4/):
     * Number of files in storage
     * Size of files in storage (in bytes)
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
@@ -405,7 +411,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Mendix Cloud v3 Archived Logs
 
-* We have deleted archived logs older than 6 months for all Mendix Cloud v3 apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+* We have deleted archived logs older than 6 months for all Mendix Cloud **v3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
 
 ### June 8, 2021
 

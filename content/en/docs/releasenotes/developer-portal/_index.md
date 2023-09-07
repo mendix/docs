@@ -19,9 +19,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### September 7, 2023
 
+#### Fixes 
+
+* We fixed Feedback items not being sent from Native Templates to [Feedback](/developerportal/app-insights/feedback/) in [App Insights](/developerportal/app-insights/).
+* We fixed an issue where trying to close a feedback item threw an error.
+
 #### Deprecations
 
 * We have removed the **Onboarding** page from Control Center.
+* We deprecated the numerical 1-10 rating question option in [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights.
 
 ### August 28, 2023
 

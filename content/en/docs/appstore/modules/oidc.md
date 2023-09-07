@@ -44,10 +44,10 @@ Alternatives to using OIDC SSO for managing single sign on are:
 * Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs.
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
     * For example, PKCE will be used automatically if it is detected.
-* Configuration can be controlled through constants set during your deployment (Version 2.3.0 and above). 
+* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
 * Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
 * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
-* Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IDP) (Version 2.3.0 and above). 
+* Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IDP) (version 2.3.0 and above). 
 * Supports responsive web applications, a.k.a. browser based applications.
 * Works with the Mendix DeepLink module.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
@@ -67,7 +67,7 @@ For readers with more knowledge of the OAuth and OIDC protocol.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
-* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (Version 2.3.0 and above).
+* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
 
 #### 1.2.2 Limitations
 
@@ -278,7 +278,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
-You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Azure AD Client Configuration](#azure), and [Amazon Cognito Client Configuration](#cognito), below. In Version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
+You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Azure AD Client Configuration](#azure), and [Amazon Cognito Client Configuration](#cognito), below. In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
 
 #### 5.2.1 General OIDC Clients {#general-oidc}
 

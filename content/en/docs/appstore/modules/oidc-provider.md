@@ -214,7 +214,7 @@ To return requested scopes to your client app, you need to perform the following
 1. Create a new scope for every user role which is implemented in your client apps. You can identify the user role in one of two ways:
 
     1. use the **Name** as the user role in your client app.
-    1. use the UUID of the user role in your client app.
+    1. From version 1.1.0 you can also use the UUID of the user role in your client app.
     
         The benefit of this second approach is that it avoids ‘scope collision’. In other words, you avoid having confusion between user roles with the same name but in different apps.
 
@@ -250,6 +250,9 @@ The scopes you configure are not added automatically to the "scopes_supported" a
 1. In the connected apps, select the following microflows in the [OIDC SSO](/appstore/modules/oidc/) module to let you app apply the assigned user roles to the end-users:
 
     * `UserProvisioning_StandardOIDC` as the user provisioning microflow
+
+        This is available in version 2.3.0 and above of the OIDC SSO module. For versions below this, you will need to write a custom user provisioning microflow.
+
     * `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow** for access token parsing
 
 ##### 3.3.3.2 Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims{#propagate-custom-claims}
@@ -260,7 +263,7 @@ To pass this additional information, you need to create custom claims. You can d
 
 1. Create a microflow which returns a value to the claim.
 
-    You can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object.
+    From version 1.1.0, you can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object.
     
     The ID-token will be a nested JSON structure with the name of the object as the key and a list of attribute names of your object as the keys and the attribute values as the values.
 
@@ -460,7 +463,7 @@ Where there is no IAM brokering functionality, the administrator can create end-
 
 For situations where the Centralized Authorization concept is used (see [Centralized Authorization](#centralized-auth), above), the OIDC Provider module uses the ‘scope’ claim in both the ID and Access token to communicate assigned user roles to connected Mendix apps. The scope parameter one of the following the formats:
 
-* `mx:app:userrole:{user-role-UUID}`, where `{user-role-UUID}` is the UUID of the role in the connected app
+* `mx:app:userrole:{user-role-UUID}`, where `{user-role-UUID}` is the UUID of the role in the connected app (version 1.1.0 and above)
 * `{user-role}`, where `{user-role}` is the name of the user role
 
 These are set up in [Configuration of the OIDC Provider for Centralized Authorization with Scopes](#configure-scopes). Multiple scopes will be separated by spaces.

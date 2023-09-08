@@ -17,8 +17,6 @@ tags: ["marketplace", "marketplace component", "SAP", "{CONNECTOR NAME}", "conne
 
 ### 1.2 Prerequisites {#prerequisites}
 
-#### VARIANT 1 - IF THE CONNECTOR ONLY REQUIRES THE SAP AUTHENTICATION CONNECTOR
-
 {LIST PREREQUISITES}
 
 ### 1.3 Licensing and Cost

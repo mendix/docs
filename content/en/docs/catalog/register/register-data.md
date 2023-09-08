@@ -10,7 +10,6 @@ aliases:
     - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
-	
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -166,7 +165,6 @@ curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v4/a
 ```
 
 {{% alert color="info" %}} If you are receiving a `400` response because your contract metadata is getting rejected, use the [Transform API](#transform-api) to get the contract in the right format. If you want to register more than one service for the same application and environment at once, add another object to the `Endpoints` list in the request body.{{% /alert%}}
-
 
 A successful `PUT` call results in a `200` status code and a JSON response body that includes the details you provided about the service or services, along with a unique ID and some other details:
 

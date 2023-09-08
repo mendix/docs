@@ -170,7 +170,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 #### 4.1.2 Using Credentials Generated Outside of Studio Pro {#credentials-cli}
 
-If you have credentials that have been generated without the help of the **GetSessionCredentials** action, for example through the AWS command line interface, you can use them in your app in the following manner:
+If you have credentials that have been generated without the help of the **Credentials_GenerateFromConstants** action, for example through the AWS command line interface, you can use them in your app in the following manner:
 
 1. Create a **Credentials** object with the following parameters:
     * **AccessKeyId** - your IAM access key 

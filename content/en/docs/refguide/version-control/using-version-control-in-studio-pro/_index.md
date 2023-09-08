@@ -135,7 +135,7 @@ The features described in this section were introduced in Mendix version 10.3.
 
 While you were working on your branch somebody may have pushed their changes to the server already. In this case pushing isn’t possible and you will need to take further action first.
 
-In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment you click **Commit** the remote changes are known to Studio Pro, the commit dialog will contain a note about this and **Also push changes to the remote server** will be set to **No** and disabled.
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this and **Also push changes to the remote server** will be set to **No** and disabled.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
 

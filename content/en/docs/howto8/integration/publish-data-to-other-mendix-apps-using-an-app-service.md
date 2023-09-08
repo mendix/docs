@@ -37,13 +37,13 @@ To create pages that allows users to create, edit, and delete products, follow t
 
     {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/edit-product-page.png" >}}
 
-5. Open the **** and add a data grid.
+5. Open the **Home page** and add a data grid.
 6. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
 7. On the dialog box that appears, click **OK**.
 8. From the **Project Explorer**, drag the **EditUser** page onto the **New** button.
 9. From the **Project Explorer**, drag the **EditUser** page onto the **Edit [default]** button.
 
-    {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/.png" >}}
+    {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/homepage.png" >}}
 
 ## 5 Creating a Microflow
 

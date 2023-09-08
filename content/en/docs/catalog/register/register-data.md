@@ -10,7 +10,7 @@ aliases:
     - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
-	- /data-hub/data-hub-catalog/register
+    - /data-hub/data-hub-catalog/register
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---

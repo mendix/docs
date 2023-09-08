@@ -10,7 +10,7 @@ aliases:
     - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
-	- /data-hub/data-hub-catalog/register
+	
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -46,7 +46,7 @@ If you are not using Mendix Cloud to deploy your Mendix application, there are t
 
 The Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. To register your service, you need to provide details about both the application and the environment where the service is deployed.
 
-For detailed information on working with external entities and the Catalog for on-premises deployment, without Mendix Cloud, see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
+For details on working with external entities and the Catalog without Mendix Cloud, see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
 
 ### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 
@@ -56,14 +56,14 @@ First, you need to create an authentication token to get access to the Catalog A
 
 For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
-Once you have a personal access token, follow this series of REST calls to register the details of your exposed OData service:
+Once you have a personal access token, you will follow this series of REST calls to register the details of your exposed OData services:
 
-1. [Register the application and retrieve an application UUID](#register-application).
-2. Use the application UUID to [register the environment, then retrieve the environment UUID](#register-environment).
-3. Use the application UUID and the environment UUID to [register one or more services](#register-services).
+1. [Register the application](#register-application) and retrieve an application UUID.
+2. Use the application UUID to [register the environment](#register-environment) and retrieve the environment UUID.
+3. Use the application UUID and the environment UUID to [register services](#register-services). If needed, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering the service.
 
-    If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering the service.
-
+Each step is described in detail in the following sections.
+ 
 The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, and other operations on these same paths. In this how-to, you will fill out only the required fields and one operation per path.
 
 #### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
@@ -165,7 +165,8 @@ curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v4/a
 --data-raw '{"Endpoints":[{"Path": "/path/to/my/service/endpoint","ServiceVersion":{"Version": "1.0","Service":{"Name": "My-Service-Name","ContractType": "OData_3_0"},"SecurityScheme": { "SecurityTypes": [{"Name": "Basic"}] },"Contracts":[{"Type": "Metadata",  "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"}]}}]}'
 ```
 
-If you are receiving a `400` response because your contract metadata is getting rejected, use the [Transform API](#transform-api) to get it in the right format. If you want to register more than one service for the same application and environment at once, add another object to the `Endpoints` list in the request body.
+{{% alert color="info" %}} If you are receiving a `400` response because your contract metadata is getting rejected, use the [Transform API](#transform-api) to get the contract in the right format. If you want to register more than one service for the same application and environment at once, add another object to the `Endpoints` list in the request body.{{% /alert%}}
+
 
 A successful `PUT` call results in a `200` status code and a JSON response body that includes the details you provided about the service or services, along with a unique ID and some other details:
 

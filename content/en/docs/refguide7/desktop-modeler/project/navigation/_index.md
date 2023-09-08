@@ -17,7 +17,7 @@ The **Navigation** document can be found by expanding the **Project** node in th
 
 ## 2 Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, there are seven types of profiles: Responsive, Tablet browser, Phone browser, Hybrid tablet online app, Hybrid tablet onffine app, Hybrid phone online app, and Hybrid tablet offline app. Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see [3 Redirection to Profiles](#Redirection)).
+At the heart of the navigation model in Mendix, there are seven types of profiles: Responsive, Tablet browser, Phone browser, Hybrid tablet online app, Hybrid tablet onffine app, Hybrid phone online app, and Hybrid tablet offline app. Users that access the app via a particular device type are automatically redirected to the home page of the appropriate profile based on the profile type (for details, see [3 Redirection to Profiles](#Redirection)).
 
 {{% alert color="info" %}}
 

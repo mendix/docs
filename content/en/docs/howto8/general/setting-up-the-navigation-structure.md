@@ -41,7 +41,7 @@ Do the following:
     2. Click **OK**.
 
 3. In **Home pages** > **Default home page**, click **Select**.
-4. Select the page you want to use as the default home page. The example below uses *Homepage_Web*:
+4. Select the page you want to use as the default home page. The example below uses *_Web*:
 
     {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/select-home-page.jpg" >}}
 

@@ -91,7 +91,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-test-case/login-input-parameters-e.png" >}}
 
-10. After you log in to the Company Expenses app, you see the homepage. To create a new expense, click **New Expense** in the app. This means that ATS must click the button. To get the information you need, open the ATS Helper and hover over the **New Expense** button while holding <kbd>Ctrl</kbd>. 
+10. After you log in to the Company Expenses app, you see the home page. To create a new expense, click **New Expense** in the app. This means that ATS must click the button. To get the information you need, open the ATS Helper and hover over the **New Expense** button while holding <kbd>Ctrl</kbd>. 
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-test-case/helper-new-expense-button.png" >}}
 

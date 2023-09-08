@@ -19,13 +19,13 @@ To make setup easy, the Push Notifications Connector module includes snippets th
 1. Paste the **Native** folder contents into your own app's navigation.
 1. In your app's navigation, expand the new **Native** folder.
 1. Copy the **NativeHomepage_Snippet** snippet.
-1. Paste the snippet into your Native navigation’s homepage.
+1. Paste the snippet into your Native navigation’s home page.
 
 ## 2 App Events Widget
 
 Completing the previous section brings the **App events** widget into your app. This widget is already configured and part of a snippet, so you should not need to change it. 
 
-If you already had an **App events** widget on your homepage, follow these steps:
+If you already had an **App events** widget on your home page, follow these steps:
 
 1. Open the **App events** widget.
 1. In  **Page load**, select **Call a nanoflow** from the **On load**  drop-down list. 

@@ -60,7 +60,7 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 
 You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. 
 
-Go ahead and customize the homepage further by changing the banner text.
+Go ahead and customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 

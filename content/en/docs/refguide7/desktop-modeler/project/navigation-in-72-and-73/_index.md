@@ -23,7 +23,7 @@ The **Navigation** document can be found by expanding the **Project** node in th
 
 ## 2 Profiles
 
-At the heart of the navigation model in Mendix, there are five kinds of profiles: responsive, tablet (browser), phone (browser), hybrid app, and hybrid offline app. Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile kind (for details, see [3 Redirection to Profiles](#Redirection)).
+At the heart of the navigation model in Mendix, there are five kinds of profiles: responsive, tablet (browser), phone (browser), hybrid app, and hybrid offline app. Users that access the app via a particular device type are automatically redirected to the home page of the appropriate profile based on the profile kind (for details, see [3 Redirection to Profiles](#Redirection)).
 
 {{% alert color="info" %}}
 

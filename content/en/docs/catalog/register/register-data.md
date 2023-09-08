@@ -10,6 +10,7 @@ aliases:
     - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
+	- /data-hub/data-hub-catalog/register
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -18,7 +19,7 @@ aliases:
 
 There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. Mendix supports all OData versions.
 
-This how-to will teach you how to register a service in the following ways:
+This how-to teaches you how to register a service in the following ways:
 
 * [Through Mendix Cloud](#mendix-cloud), where registration occurs automatically when you deploy a [published OData service](/refguide/published-odata-services/) to Mendix Cloud
 * [Through the Catalog Registration API](#registration-api)
@@ -51,11 +52,7 @@ For detailed information on working with external entities and the Catalog for o
 
 Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed OData services. 
 
-First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers:
-
-```http
-Authorization: MxToken <your_Personal_Access_Token>
-```
+First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers: `Authorization: MxToken <your_Personal_Access_Token>`.
 
 For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
@@ -65,7 +62,7 @@ Once you have a personal access token, follow this series of REST calls to regis
 2. Use the application UUID to [register the environment, then retrieve the environment UUID](#register-environment).
 3. Use the application UUID and the environment UUID to [register one or more services](#register-services).
 
-    If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering the services.
+    If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering the service.
 
 The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, and other operations on these same paths. In this how-to, you will fill out only the required fields and one operation per path.
 
@@ -154,7 +151,7 @@ To register services, you need the following:
 {{% alert color="warning" %}}
 Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.
 
-This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.
+This is because changes to a particular version of a published OData service are reflected in the entities and attributes available through the Catalog, for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.
 {{% /alert %}}
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints).
@@ -232,7 +229,7 @@ To call the Transform endpoint of the Registration API, you need the following:
 
 * Your app's *dependencies.json* file converted to an escaped JSON string
 
-    {{% alert color="info" %}}You can find your *dependencies.json* file in the *deployment* > *model* folder of your Mendix application.{{% /alert %}}
+    {{% alert color="info" %}}You can find your *dependencies.json* file in the **deployment** > **model** folder of your Mendix application.{{% /alert %}}
 
 * Endpoint location `Name`
 * Endpoint location `Value`
@@ -258,7 +255,7 @@ curl --location --request PUT 'https://datahub-spec.s3.eu-central-1.amazonaws.co
 }'
 ```
 
-A successful `PUT` call results in a `200` status code and a JSON response body. The `PUTPublishedEndpoints` section is what you will want to register your services:
+A successful `PUT` call results in a `200` status code and a JSON response body. To register your services, use the information in the `PUTPublishedEndpoints` section.
 
 ```json
 {
@@ -318,16 +315,16 @@ Follow the steps below:
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the OData service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
-    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.{{% /alert %}}
+    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service are reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.{{% /alert %}}
 
 4. Once you have filled out all the required fields, select **Next**.
 5. On the **Application** screen, select an existing application by name or register a new one. You will also be able to edit **Technical Owner** and **Business Owner** through the **Curation** feature after registration is completed.
 6. Once you have filled out all the required fields, select **Next**.
-7. On the **Environment** screen, select an existing environment by name, or provide the **Environment Name**, **Environment Location** (URL), and **Environment Type** to register a new one. The **Environment Type** options give an indication of what type of data you might find there:
+7. On the **Environment** screen, select an existing environment by name, or provide the **Environment Name**, **Environment Location** (URL), and **Environment Type** to register a new one. The **Environment Type** options indicate what type of data you might find there:
 
-    1. **Production** – Data is of production quality
-    2. **Sandbox** – The Mendix Free App environment, data is not of production quality
-    3. **Non-production** – Hosting is paid for, but data is not of production quality
+    * **Production** – data is of production quality
+    * **Sandbox** – the Mendix Free App environment, data is not of production quality
+    * **Non-production** – hosting is paid for, but data is not of production quality
 
 8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
 9. Select **Done!** to complete the registration.
@@ -361,9 +358,9 @@ All ZIP contracts must include a primary document, named *primary*.
 
 The other documents in the ZIP file should be structured within a series of nested folders, in which each segment of the URI path is represented by its own folder. It's possible to use absolute URLs or relative URIs, but these have different top-level folders:
 
-* **Absolute URL** – The entire URL is represented in the folder structure, starting with an *http* or *https* folder in the root of the ZIP file. This top-level *http* or *https* folder contains a folder named after the domain. The domain folder contains a series of other folders and files representing the rest of the URL path.
-* **Relative URI** – The folders and files must be structured relative to the Document Base URL. In other words, relative URIs use a folder structure that matches the relative path as it is used in the primary document.
+* Absolute URL – The entire URL is represented in the folder structure, starting with an **http** or **https** folder in the root of the ZIP file. This top-level **http** or **https** folder contains a folder named after the domain. The domain folder contains a series of other folders and files representing the rest of the URL path.
+* Relative URI – The folders and files must be structured relative to the Document Base URL. In other words, relative URIs use a folder structure that matches the relative path as it is used in the primary document.
 
-The following diagram shows examples of the ZIP contract structure for both URI types. The absolute folder structure is the same in each case, but the relative structure depends on the Document Base URL. Note that *odata*, *v1*, and *docs* are each separate folders, but in the absolute folder structure shown here, they are represented in a condensed format to save space.
+The following diagram shows examples of the ZIP contract structure for both URI types. The absolute folder structure is the same in each case, but the relative structure depends on the Document Base URL. Note that **odata**, **v1**, and **docs** are each separate folders, but in the absolute folder structure shown here, they are represented in a condensed format to save space.
 
 {{< figure src="/attachments/catalog/register-data/zip-file-structure.png" alt="Absolute and relative folder structures for two different base URLs.">}}

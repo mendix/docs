@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### September 8, 2023 
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with pg_dump version 14.8.
+
 ### September 4, 2023 
 
 #### Improvements

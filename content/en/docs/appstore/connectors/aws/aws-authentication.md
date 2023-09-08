@@ -189,28 +189,18 @@ You can then use the above as a valid set of credentials.
 
 Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure session credentials.
 
-{{% alert color="info" %}}
-The steps described below are required for the following use cases:
-
-* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
-* If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
-
-If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
-{{% /alert %}}
-
-To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
+To create static credentials with the **Credentials_GenerateFromConstants** activity in your app, perform the following steps:
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
-3. Drag the **GetStaticCredentials** activity from the **Toolbox** into the work area of the microflow.
-    For some platform-supported connectors, the activity may already be present in the microflow. In that case, proceed to the next step.
-4. Double-click the **GetStaticCredentials** activity and fill in **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites). You can decide how to provide them securely in your app.
+3. Drag the **Credentials_GenerateFromConstants** microflow from the **App Explorer** into the work area of the microflow.
+4. Create a new **Configuration** in the **Settings** of your app.
+5. In the **Constants** tab, add the **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites) as **AWSAuthentication.AccessKey** and **AWSAuthentication.SecretAccessKey** respectively. You can decide how to provide them securely in your app.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-static-credentials-constants.png" >}}
 
     The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
-5. Continue the configuration by adding more activities to your microflow.
+6. Continue the configuration by adding more activities to your microflow.
 
 ### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}
 

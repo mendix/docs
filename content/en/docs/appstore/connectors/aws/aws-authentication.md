@@ -68,7 +68,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 4 Usage
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There is one microflow activity that implements the two basic authentication methods and one Java action that can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
+After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There is the microflow **Credentials_GenerateFromConstants** that implements the two basic authentication methods and one Java action **GetSigV4Headers** that can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
 
 * [Session credentials](#session)
 * [Static credentials](#static)
@@ -84,12 +84,12 @@ Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Rol
 
 You can implement session credentials in one of the following ways:
 
-* By using the **GetSessionCredentials** activity in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
+* By using the **Credentials_GenerateFromConstants** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
 * By using credentials generated outside of Studio Pro, for example, through the AWS command-line interface. For more information, see [Using Credentials Generated Outside of Studio Pro](#credentials-cli).
 
 #### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
 
-To generate session credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal, and then add the **Credentials_GenerateFromConstants** microflow to a microflow in Studio Pro.
+To generate session credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **Credentials_GenerateFromConstants** microflow to a microflow in Studio Pro.
 
 ##### 4.1.1.1  Adding a Client Certificate in the Developer Portal
 
@@ -113,55 +113,46 @@ The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
 
-##### 4.1.1.2 Using the Credentials_GenerateFromConstants Microflow in Studio Pro
+#### 4.1.1.2 Configuring the Session Credentials Connection Details in the Developer Portal {#configure-credentials}
 
-After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
+1. Log in to the Developer Portal, and then select your app.
+2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
+3. In the **Model Options** tab, in the **Constants** section, select the constant from the table below and click **Edit**.
+   
+   | Parameter | Value |
+   | --- | --- |
+   | **AWSAuthentication.ClientCertificateID** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+   | **AWSAuthentication.Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+   | **AWSAuthentication.ProfileARN** | ARN of the profile [created in IAM Roles Anywhere](#prerequisites) |
+   | **AWSAuthentication.RoleARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+   | **AWSAuthentication.SessionName** | An identifier for the session |
+   | **AWSAuthentication.TrustAnchorARN** | ARN of the trust anchor [created in IAM Roles Anywhere](#prerequisites) |
 
-{{% alert color="info" %}}
-The steps described below are required for the following use cases:
+   The image below shows an example:
 
-* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
-* If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+   {{< figure src="tbd" >}}
 
-If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
-{{% /alert %}}
+4. In the popup enter your values in the **New Value** field and click **Save**.
+5. When all constants have been set, restart the environment in order to make the new constant values effective.
+
+##### 4.1.1.3 Using the Credentials_GenerateFromConstants Microflow in Studio Pro
+
+After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **Credentials_GenerateFromConstants** microflow to a microflow.
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
-3. Drag the **GetSessionCredentials** activity from the **Toolbox** into the work area of the microflow.
-4. Double-click the **GetSessionCredentials** activity and configure the parameters as shown in the table below:
+3. Drag a **Microflow call** activity from the **Toolbox** into the work area of the microflow.
+4. Double-click the new activity and select the **Credentials_GenerateFromConstants** microflow from the **Operations** folder.
+5. Select the **AWSRegion** parameter and click **Edit parameter value**.
+6. Select **Expression** and enter the corresponding AWS region from the enumeration **ENUM_Region**. Then click **OK**.
+7. Close the popup with another click on **OK**.
 
-    | Parameter | Value |
-    | --- | --- |
-    | **Region** | AWS region |
-    | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](#prerequisites) |
-    | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](#prerequisites) |
-    | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
-    | **Session Name** | An identifier for the session |
+The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
+8. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
 
-    The image below shows an example:
-
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-session-credentials.png" >}}
-
-    The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
-5. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
-
-##### 4.1.1.3 Configuring the Local Setup
+##### 4.1.1.4 Configuring the Local Setup
 
 To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro.
-
-{{% alert color="info" %}}
-The steps described below are required for the following use cases:
-
-* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
-* If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
-
-If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
-{{% /alert %}}
 
 1. In Studio Pro, open the **App Settings** dialog box, and then go to the **Configurations** tab.
 2. Create a new configuration or edit an existing configuration.
@@ -171,11 +162,11 @@ If you want to use the AWS Authentication connector with an existing [platform-s
 
    {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
-4. Click **OK**.
-5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.
-6. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
+4. Now go to the **Constants** tab and configure the constants of the session credentials' connection details.
+5.  Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
+6. click **OK**.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/client-certificate-id.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-constants.png" >}}
 
 #### 4.1.2 Using Credentials Generated Outside of Studio Pro {#credentials-cli}
 

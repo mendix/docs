@@ -185,39 +185,7 @@ This annotation specifies the starting UID and range of UIDs allowed to be used 
 
 Choose a UID from the allowed range, for example 1001280000.
 
-#### 2.3.2 Install the Grafana Loki Stack
-
-Run the following commands in a Bash console: replace `{uid}` with the UID chosen in the previous step (for example 1001280000); and `{project}` with the project name (for example `grafana`):
-
-```shell
-PROJECT={project}
-GRAFANA_UID={uid}
-helm upgrade --install loki grafana/loki-stack --version='^2.8.0' --namespace=${PROJECT} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
---set prometheus.enabled=true,prometheus.server.persistentVolume.enabled=true,prometheus.server.persistentVolume.size=50Gi,prometheus.server.retention=7d \
---set loki.persistence.enabled=true,loki.persistence.size=10Gi,loki.config.chunk_store_config.max_look_back_period=168h,loki.config.table_manager.retention_deletes_enabled=true,loki.config.table_manager.retention_period=168h \
---set promtail.enabled=true,promtail.containerSecurityContext.privileged=true,promtail.containerSecurityContext.allowPrivilegeEscalation=true \
---set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false \
---set grafana.securityContext.runAsUser=${GRAFANA_UID},grafana.securityContext.runAsGroup=0,grafana.securityContext.fsGroup=${GRAFANA_UID} \
---set prometheus.server.securityContext.runAsUser=${GRAFANA_UID},prometheus.server.securityContext.runAsGroup=0,prometheus.server.securityContext.fsGroup=${GRAFANA_UID} \
---set prometheus.kube-state-metrics.securityContext.runAsUser=${GRAFANA_UID},prometheus.kube-state-metrics.securityContext.runAsGroup=0,prometheus.kube-state-metrics.securityContext.fsGroup=${GRAFANA_UID} \
---set loki.securityContext.runAsUser=${GRAFANA_UID},loki.securityContext.runAsGroup=0,loki.securityContext.fsGroup=${GRAFANA_UID}
-```
-
-This Helm chart will install and configure Grafana, Prometheus, Loki, and their dependencies.
-
-You might need to adjust some parameters to match the scale and requirements of your environment:
-
-* **grafana.persistence.size** – specifies the volume size used by Grafana to store its configuration;
-* **prometheus.server.persistentVolume.size** – specifies the volume size used by Prometheus to store metrics;
-* **prometheus.server.retention** – specifies how long metrics are kept by Prometheus before they will be discarded;
-* **loki.persistence.size** – specifies the volume size used by Loki to store logs;
-* **loki.config.chunk_store_config.max_look_back_period** – specifies the maximum retention period for storing chunks (compressed log entries);
-* **loki.config.table_manager.retention_period** – specifies the maximum retention period for storing logs in indexed tables;
-* **promtail.enabled** – specifies if the Promtail component should be installed (required for collecting Mendix app environment logs).
-
-For more details see the [Loki installation guide](https://grafana.com/docs/loki/latest/installation/microservices-helm/).
-
-#### 2.3.3 Add Permissions to Collect Container Logs
+#### 2.3.2 Add Permissions to Collect Container Logs
 
 To read logs from Pods (including logs from Mendix app environments), the Loki stack uses [Promtail](https://grafana.com/docs/loki/next/clients/promtail/).
 
@@ -269,6 +237,38 @@ volumes:
 - 'hostPath'
 EOF
 ```
+
+#### 2.3.3 Install the Grafana Loki Stack
+
+Run the following commands in a Bash console: replace `{uid}` with the UID chosen in the previous step (for example 1001280000); and `{project}` with the project name (for example `grafana`):
+
+```shell
+PROJECT={project}
+GRAFANA_UID={uid}
+helm upgrade --install loki grafana/loki-stack --version='^2.8.0' --namespace=${PROJECT} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
+--set prometheus.enabled=true,prometheus.server.persistentVolume.enabled=true,prometheus.server.persistentVolume.size=50Gi,prometheus.server.retention=7d \
+--set loki.persistence.enabled=true,loki.persistence.size=10Gi,loki.config.chunk_store_config.max_look_back_period=168h,loki.config.table_manager.retention_deletes_enabled=true,loki.config.table_manager.retention_period=168h \
+--set promtail.enabled=true,promtail.containerSecurityContext.privileged=true,promtail.containerSecurityContext.allowPrivilegeEscalation=true \
+--set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false \
+--set grafana.securityContext.runAsUser=${GRAFANA_UID},grafana.securityContext.runAsGroup=0,grafana.securityContext.fsGroup=${GRAFANA_UID} \
+--set prometheus.server.securityContext.runAsUser=${GRAFANA_UID},prometheus.server.securityContext.runAsGroup=0,prometheus.server.securityContext.fsGroup=${GRAFANA_UID} \
+--set prometheus.kube-state-metrics.securityContext.runAsUser=${GRAFANA_UID},prometheus.kube-state-metrics.securityContext.runAsGroup=0,prometheus.kube-state-metrics.securityContext.fsGroup=${GRAFANA_UID} \
+--set loki.securityContext.runAsUser=${GRAFANA_UID},loki.securityContext.runAsGroup=0,loki.securityContext.fsGroup=${GRAFANA_UID}
+```
+
+This Helm chart will install and configure Grafana, Prometheus, Loki, and their dependencies.
+
+You might need to adjust some parameters to match the scale and requirements of your environment:
+
+* **grafana.persistence.size** – specifies the volume size used by Grafana to store its configuration;
+* **prometheus.server.persistentVolume.size** – specifies the volume size used by Prometheus to store metrics;
+* **prometheus.server.retention** – specifies how long metrics are kept by Prometheus before they will be discarded;
+* **loki.persistence.size** – specifies the volume size used by Loki to store logs;
+* **loki.config.chunk_store_config.max_look_back_period** – specifies the maximum retention period for storing chunks (compressed log entries);
+* **loki.config.table_manager.retention_period** – specifies the maximum retention period for storing logs in indexed tables;
+* **promtail.enabled** – specifies if the Promtail component should be installed (required for collecting Mendix app environment logs).
+
+For more details see the [Loki installation guide](https://grafana.com/docs/loki/latest/installation/microservices-helm/).
 
 #### 2.3.4 Expose the Grafana Web UI
 

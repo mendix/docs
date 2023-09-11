@@ -522,7 +522,7 @@ The statistics tool now gathers statistics over different time periods:
 * The JDBC query and explain-plan functionality for the built-in database work only after starting the database viewer in the Mendix Modeler from the advanced menu of the console.
 * The performance tool can run out of memory when recording. The protection options advised for the performance tool still expect 1 GB of available memory, so for small implementations, the protection options should be stricter.
 * When the Before Shutdown microflow is not configured, and some tools are running, the shutdown of the Mendix application can hang for about a minute.
-* For Mendix versions 5 and above, the microflow names are taken from the action caption. So if the action caption is changed in the Mendix Modeler, the Call Microflow action in the performance tool does not drill down. In addition, the caption only contains the microflow name, not the module name, so if multiple microflows exist with the same name but they are in different modules, the performance tool cannot pick the right one.
+* For Mendix 5 and above, the microflow names are taken from the action caption. So if the action caption is changed in the Mendix Modeler, the Call Microflow action in the performance tool does not drill down. In addition, the caption only contains the microflow name, not the module name, so if multiple microflows exist with the same name but they are in different modules, the performance tool cannot pick the right one.
 * On load-balanced environments without sticky sessions, the APM tool is randomly connected to instances, and this does not work! For 1.6.1, you need access to specific servers to use the APM tool.
 * ChartJS sometimes is not responsive enough, and a refresh of the page might be needed.
 * When the runtime stops and the APM console is open, errors appear due to the auto-refresh of grids and ChartJS.
@@ -667,7 +667,7 @@ Per module it can be configured to remove data after a certain amount of days. D
 This version supports Mendix 6.2.0 and above only. Also only on java 8.
 
 * Statistics Tool gave a parse error on logout in the logging. Not really visible for users, but would create a trap if trapping on warnings. Now fixed, so logout is also in the statistics.
-* During installation there were sometimes errors on startup, because Mendix generates different parameter names in java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import java actions to prevent these installation errors. Also parameter 'MicroflowName' in java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
+* During installation there were sometimes errors on startup, because Mendix generates different parameter names in Java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import java actions to prevent these installation errors. Also parameter 'MicroflowName' in java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
 * A grid in the Mendix 6 version of the performance tool details was changed from to be able to sort on loop iterations.
 * When choosing sample data during install the explain plan sample data for MySQL is now also added.
 

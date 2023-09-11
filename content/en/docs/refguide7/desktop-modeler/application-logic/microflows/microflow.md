@@ -68,7 +68,7 @@ See also [Module Security](/refguide7/module-security/).
 This property indicates whether entity access based on the current user is applied when performing operations on objects. Applying entity access limits the objects that are retrieved by the [retrieve action](/refguide7/retrieve/) to only those that the current user is allowed to see. Similarly, to reading and writing attributes and associations the entity access of the current user is applied. If entity access is not applied on the other hand, all operations are allowed and all objects are retrieved.
 
 {{% alert color="warning" %}}
-Microflows that apply entity access have an **Entity Access** tag in the editor for Mendix versions 7.14 and above. For Mendix versions below that, the editor has a yellow background for microflows that apply entity access.
+Microflows that apply entity access have an **Entity Access** tag in the editor for Mendix 7.14 and above. For Mendix versions below that, the editor has a yellow background for microflows that apply entity access.
 {{% /alert %}}
 
 | Option | Description |

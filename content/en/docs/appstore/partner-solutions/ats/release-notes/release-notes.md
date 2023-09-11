@@ -715,7 +715,7 @@ Mendix applications that are based on [Mendix 7.22.2](/releasenotes/studio-pro/7
 
 ### Fixes
 
-* We fixed an issue where a click was not be recorded on some buttons in Mendix versions 7.18+.
+* We fixed an issue where a click was not be recorded on some buttons in Mendix 7.18 and above.
 * In rare cases under a very high testing load, jobs got stuck in the queued status. We have added additional checks to prevent this from happening.
 * In some scenarios, the **Recordings** tab was not available in ATS. We addressed this issue by changing the way recordings are retrieved.
 * We fixed a UI issue where double-clicking on an item in an ATS repository showed a generic error message.
@@ -822,7 +822,7 @@ Mendix applications based on Mendix 7.16 can now be tested and recorded with ATS
 
 ### Limitations
 
-* For Mendix versions 7.13 and above it is likely that test will not properly wait for the execution of asynchronous microflows. As a temporary workaround please manually add the **Sleep** step with a proper duration after triggering asynchronous microflows.
+* For Mendix 7.13 and above, it is likely that test will not properly wait for the execution of asynchronous microflows. As a temporary workaround please manually add the **Sleep** step with a proper duration after triggering asynchronous microflows.
 * We did not explicitly test the impact of nanoflows on ATS, but we have not yet received any issue reports related to them
 
 ## 2.8.0
@@ -1000,7 +1000,7 @@ You can now run ATS tests against Internet Explorer 11. We are happy to announce
 
 ### Mendix 7.11 and 7.12
 
-Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and recorded with ATS. We have not explicitly tested the impact of nanoflows (the newest feature added in Mendix 7.12) on ATS, but we do not expect any significant problems here.
+Mendix applications built on Mendix 7.11 or 7.12 can now be tested and recorded with ATS. We have not explicitly tested the impact of nanoflows (the newest feature added in Mendix 7.12) on ATS, but we do not expect any significant problems here.
 
 ### Improvements
 

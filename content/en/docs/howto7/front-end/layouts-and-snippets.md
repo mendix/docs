@@ -168,7 +168,7 @@ When a user visits a Mendix application, they are automatically redirected to th
 For more information on navigation profiles, see the following for reference:
 
 * [Navigation in Mendix 7.4 and Above](/refguide7/navigation/)
-* [Navigation in Mendix Versions 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
+* [Navigation in Mendix 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
 * [Navigation Before Mendix 7.2](/refguide7/navigation-before-72/)
 * [Solving Issues with Navigation Profile Conversion to 7.4](/refguide7/navigation-conversion-to-74/)
 

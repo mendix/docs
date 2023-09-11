@@ -154,7 +154,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
 You can use single sign on to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint. To do this, you need to add `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the `index.html` file.
 
 {{% alert color="info" %}}
-For Mendix versions 9 and 10, there is no `index.html` file, so you need to create this file first. You can find instructions on how to do this in the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
+For Mendix 9 and 10, there is no `index.html` file, so you need to create this file first. You can find instructions on how to do this in the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
 {{% /alert %}}
 
 If you use this method, do not forget to set the **SSOLandingPage** constant to a value different than `index.html`. Otherwise, the app will come back to `index.html` which will be redirected again to single sign on, resulting in an endless loop. **SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt. We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
@@ -252,7 +252,7 @@ The following settings control user provisioning:
 {{% alert color="info" %}}
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.1.8/v3.1.9 and above for Mendix versions 9 and 10
+* v3.1.8/v3.1.9 and above for Mendix 9 and 10
 * v2.2.0 and above for Mendix 8
 * v1.16.4 and above for Mendix 7
 {{% /alert %}}
@@ -350,7 +350,7 @@ See [Custom Behavior](#customuserprovisioning), below, for more information.
 
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.1.8/v3.1.9 and above for Mendix versions 9 and 10
+* v3.1.8/v3.1.9 and above for Mendix 9 and 10
 * v2.2.0 and above for Mendix 8
 * v1.16.4 and above for Mendix 7
 
@@ -395,7 +395,7 @@ In-session authentication is a process that takes place within a session that wa
 
 In-session authentication at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
+* v3.3.0/v3.3.1 and above for Mendix 9 and 10
 * v2.3.0 and above for Mendix 8
 
 Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
@@ -453,7 +453,7 @@ To use artifact binding, select ARTIFACT_BINDING option for **Response protocol 
 
 Using artifact binding for SAML responses at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
+* v3.3.0/v3.3.1 and above for Mendix 9 and 10
 * v2.3.0 and above for Mendix 8
 
 #### 4.4.2 Use AssertionConsumerService Concept
@@ -489,7 +489,7 @@ Although the typical use case for requesting attributes is to obtain information
 
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
+* v3.3.0/v3.3.1 and above for Mendix 9 and 10
 * v2.3.0 and above for Mendix 8
 
 ### 4.6 Encryption Settings{#encryption-settings}
@@ -605,9 +605,9 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory).
 * **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
-### 6.2 Troubleshooting an Endless Redirect Loop in Mendix Versions 9 and 10
+### 6.2 Troubleshooting an Endless Redirect Loop in Mendix 9 and 10
 
-When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix versions 9 and 10, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
+When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and 10, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time.
 

@@ -40,7 +40,7 @@ The Forgot Password module has the following dependencies:
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-² Versions of the Forgot Password module below 4.1.0 (Mendix 8) and 5.1.0 (Mendix version 9 and above), and those for Mendix 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that if you are using Mendix versions 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
+² Versions of the Forgot Password module below 4.1.0 (Mendix 8) and 5.1.0 (Mendix version 9 and above), and those for Mendix 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that if you are using Mendix 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
 ## 2 Installing the Forgot Password Module{#installing}
 

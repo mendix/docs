@@ -27,6 +27,7 @@ For example, the following image contains two sets of radio buttons.  The first 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Radio button properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -36,6 +37,7 @@ Properties:
 * [Events](#events)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

@@ -141,10 +141,10 @@ This query returns only customers who have registered in the past three years:
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
+    [DateRegistered > '[%BeginOfCurrentDay%] - 3 *[%YearLength%]']
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
+    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3* [%YearLength%]']
     {{% /tab %}}
 {{< /tabpane >}}
 

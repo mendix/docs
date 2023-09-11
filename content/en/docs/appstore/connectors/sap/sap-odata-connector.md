@@ -128,7 +128,7 @@ To create a page to show the objects in a list, follow these steps:
 
     {{< figure src="/attachments/appstore/connectors/sap-odata-connector/show-get-list-result.png" >}}
 
-5. Drag a **open page button** on your homepage.
+5. Drag a **open page button** on your home page.
 6. Select the page you have just created to be displayed.
 
 {{% alert color="success" %}}

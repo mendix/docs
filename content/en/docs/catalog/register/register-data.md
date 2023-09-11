@@ -10,6 +10,7 @@ aliases:
     - /catalog/register-data/
     - /catalog/register-data-sources/register-data/
     - /catalog/register-data-sources/register
+    - /data-hub/data-hub-catalog/register
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
@@ -308,7 +309,8 @@ The Catalog has a UI form where you can register a single exposed OData service.
 
 Follow the steps below:
 
-1. Start at the [Catalog home page](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** service.
+1. Start at the [Catalog home page](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
+
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the OData service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 

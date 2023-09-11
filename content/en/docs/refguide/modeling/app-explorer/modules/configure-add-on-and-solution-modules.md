@@ -24,7 +24,7 @@ You can mark a standard module (app module) as an add-on or solution module at a
 
 All content of add-on and solution modules is set to be hidden from consumers by default (modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
-### 2.1 Changing Export Level of a Document/Element
+### 2.1 Changing Export Level of a Document/Element{#export-level}
 
 Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers will be able to use a certain document/element in their app. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
 

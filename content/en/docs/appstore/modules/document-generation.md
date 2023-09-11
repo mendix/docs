@@ -56,7 +56,7 @@ The PDF document generation service does not store pages or documents at any tim
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 
-### 1.4 Known Issues
+### 1.4 Known Issues {#known-issues}
 
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix versions below 9.24.5 and Mendix 10.0.0.
@@ -72,7 +72,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 3. In the **App Explorer**, double-click **Security** in the **App** section again, then go to the **User roles** tab and perform the following steps:
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
     2. Add the module role **Administrator** from the **DocumentGeneration** module to all app user roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
-4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This wil automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
+4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This will automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
 5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section.
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
@@ -160,7 +160,7 @@ The steps for each procedure are described in the sections below.
 
 3. Create a microflow that contains a **Show page** activity that opens the page you created in the previous step.
 
-{{% alert color="info" %}}If you want, you can copy **DOC_ExampleDocument_Print** microflow from the **Examples** folder to get started.{{% /alert %}}
+    {{% alert color="info" %}}If you want, you can copy **DOC_ExampleDocument_Print** microflow from the **Examples** folder to get started.{{% /alert %}}
 
 4. Create a microflow with the **Generate PDF from page** action to render this page as a PDF document. Configure the **Generate PDF from page** action as follows:
     1. Select the microflow you created in the previous step for the **Page microflow** property.

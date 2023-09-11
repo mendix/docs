@@ -62,7 +62,7 @@ On top of open-source community-supported content, we are introducing an additio
 * Partners are free to select an existing open-source license, or they can select a commercial option with the corresponding license and present that.
 * Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
 
-You can find and use partner-supported components on the [Marketplace homepage](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/general/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
+You can find and use partner-supported components on the [Marketplace home page](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/general/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
 
 ## 2022
 

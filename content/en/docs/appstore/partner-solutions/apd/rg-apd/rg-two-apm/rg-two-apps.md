@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/apd/rg-two-apps/
 
 ## 1 Apps Overview
 
-The homepage of APM displays the list of licensed applications from the Mendix Developer Portal in alphabetical order.
+The home page of APM displays the list of licensed applications from the Mendix Developer Portal in alphabetical order.
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/ProjectsDashboard.png" >}}
 

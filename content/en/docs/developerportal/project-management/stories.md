@@ -16,7 +16,7 @@ As of the GA release on December 1, 2022, [Epics](/developerportal/project-manag
 
 ## 1 Introduction
 
-In **Stories**, you are able to manage Sprints, stories, and labels for your app. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
+In **Stories**, you are able to manage Sprints, stories, and labels for your app. These components are often used in an [Agile development](https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
 By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards.
 

@@ -91,7 +91,7 @@ There are several cases in which an app's standard theme and content is not rich
 
 ### 3.5 Iterate and Discuss
 
-Mendix is a platform for Agile development environments, which also applies when creating a UI kit and the related Mendix themes and components. Keep iterating, discussing, and improving.
+Mendix is a platform for [Agile development](https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) environments, which also applies when creating a UI kit and the related Mendix themes and components. Keep iterating, discussing, and improving.
 
 ## 4 Best Practices 
 

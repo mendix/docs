@@ -46,6 +46,7 @@ You must explicitly commit the object in the data view containing your reference
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference set selector consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data source](#data-source)
 * [Visibility](#visibility)
@@ -54,6 +55,7 @@ Properties:
 * [Selectable Objects](#selectable-objects)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

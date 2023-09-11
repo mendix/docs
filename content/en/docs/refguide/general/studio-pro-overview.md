@@ -92,7 +92,7 @@ At the bottom of the Studio Pro main window pane is a status bar. On the left is
 
 On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
 
-## 7 Shortcut Keys
+## 7 Shortcut Keys {#shortcuts}
 
 This section summarizes the shortcut keys available in Studio Pro. It is divided into sections which indicate where you can use the keys.
 

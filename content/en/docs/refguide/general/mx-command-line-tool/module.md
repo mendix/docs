@@ -90,7 +90,7 @@ This table shows the return codes and their description:
 
 The `mx module-import` command imports a specified source module into an App.
 
-### 3.1 Usage
+### 4.1 Usage
 
 Use the following command pattern for `mx module-import`:
 
@@ -106,13 +106,13 @@ For `MPK_PATH`, enter a *.mpk* file with the module.
 
 For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module in.
 
-### 3.2 Examples
+### 4.2 Examples
 
 Here is an example:
 
 `mx module-import MyNewModule.mpk MyApp.mpr`
 
-### 3.3 Return Codes
+### 4.3 Return Codes
 
 The commands return 0 in case of success.
 
@@ -150,4 +150,3 @@ Exit code 111
 `Module 'Module' already exist in the app.`
 
 Exit code 303
-

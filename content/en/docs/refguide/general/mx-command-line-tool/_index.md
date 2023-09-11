@@ -28,7 +28,7 @@ These are the available [app commands](/refguide/mx-command-line-tool/app/):
 | [create-project](/refguide/mx-command-line-tool/app/#create-project) | Creates a new Mendix app. |
 | [show-version](/refguide/mx-command-line-tool/app/#show-version) | Shows the Studio Pro version that was last used to edit the app. |
 
-### 3.1 Adaptable Solutions Commands
+### 3.2 Adaptable Solutions Commands
 
 These are the available [adaptable solutions commands](/refguide/mx-command-line-tool/adaptable/):
 
@@ -37,7 +37,7 @@ These are the available [adaptable solutions commands](/refguide/mx-command-line
 | [show-app-version](/refguide/mx-command-line-tool/adaptable/#show-app-version) | Shows the application version of the app. |
 | [set-app-version](/refguide/mx-command-line-tool/adaptable/#set-app-version) | Sets the application version of the app. |
 
-### 3.1 Module Commands
+### 3.3 Module Commands
 
 These are the available [module commands](/refguide/mx-command-line-tool/module/):
 
@@ -47,7 +47,7 @@ These are the available [module commands](/refguide/mx-command-line-tool/module/
 | [set-module-version](/refguide/mx-command-line-tool/module/#set-module-version) | Sets the version of the module specified. |
 | [module-import](/refguide/mx-command-line-tool/module/#module-import) | Import a module from an mpk package specified into a project specified. |
 
-### 3.1 Export Package Commands
+### 3.4 Export Package Commands
 
 These are the available [export package commands](/refguide/mx-command-line-tool/export/):
 
@@ -57,7 +57,7 @@ These are the available [export package commands](/refguide/mx-command-line-tool
 | [create-solution-package](/refguide/mx-command-line-tool/export/#create-solution-package) | Exports a solution package. |
 | [create-module-package](/refguide/mx-command-line-tool/export/#create-module-package) | Exports a module package. |
 
-### 3.1 Merging and Diffing Commands
+### 3.5 Merging and Diffing Commands
 
 These are the available [merging and diffing commands](/refguide/mx-command-line-tool/merge/):
 

@@ -27,6 +27,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * When deploying an image to an environment, the Mendix Operator will now use the built image's sha256 digest to ensure that what was built will be deployed.
 * We have updated the list of supported platforms to include Kubernetes 1.28 and OpenShift 4.13.
 
+Upgrading to Mendix Operator v2.13.0 from a previous version will restart environments managed by that version of the Operator.
+
 ### August 17, 2023
 
 #### Portal Improvements

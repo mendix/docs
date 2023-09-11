@@ -12,6 +12,10 @@ The commands in this group are related to Mendix modules.
 
 Typically, these commands require a path to the *.mpr* file and the module name as parameters.
 
+{{% alert color="info" %}}
+To see the command parameters for each command you can use the `--help` parameter. For example `mx show-module-version --help`.
+{{% /alert %}}
+
 ## 2 mx show-module-version Command {#show-module-version}
 
 The `mx show-module-verion` command outputs the version of a module.
@@ -21,12 +25,6 @@ The `mx show-module-verion` command outputs the version of a module.
 Use the following command pattern for `mx show-module-version`:
 
 `mx show-module-version TARGET-FILE MODULE-NAME` 
-
-These are the `OPTIONS`:
-
-| Option | Shortcut | Result |
-| --- | --- | --- |
-| `--help` | `-h` | Displays the help text `and exits.`, |
 
 For `TARGET-FILE`, enter a *.mpr* file.
 
@@ -59,12 +57,6 @@ Use the following command pattern for `mx set-module-version`:
 
 `mx set-module-version TARGET-FILE MODULE-NAME NEW-VERSION` 
 
-These are the `OPTIONS`:
-
-| Option | Shortcut | Result |
-| --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
-
 For `TARGET-FILE`, enter a *.mpr* file.
 
 For `MODULE-NAME`, enter the name of the module.
@@ -88,7 +80,7 @@ This table shows the return codes and their description:
 
 ## 4 mx module-import Command {#module-import}
 
-The `mx module-import` command imports a specified source module into an App.
+The `mx module-import` command imports a source module (*.mpk*) into an app.
 
 ### 4.1 Usage
 
@@ -96,15 +88,9 @@ Use the following command pattern for `mx module-import`:
 
 `mx module-import MPK_PATH MPR_PATH` 
 
-These are the `OPTIONS`:
+For `MPK_PATH`, enter a *.mpk* file with the module you want to import.
 
-| Option | Shortcut | Result |
-| --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
-
-For `MPK_PATH`, enter a *.mpk* file with the module.
-
-For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module in.
+For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module into.
 
 ### 4.2 Examples
 
@@ -114,39 +100,45 @@ Here is an example:
 
 ### 4.3 Return Codes
 
-The commands return 0 in case of success.
+The command returns 0 if it is successful.
 
-In case of errors, the exit code consists of three digits XYZ:
+If there are errors, the exit code consists of three digits: XYZ where:
 
-X determines the error type:
-1 – parameter validation error
-2 – output-related error
-3 – errors related to the execution of the operation
-Y is the number of the parameter the error is related to
-Z determines error details:
-1 - Module you are trying to import is protected and cannot be imported.
-2 - Module you are trying to import is Theme module and cannot be imported.
-3 - Project already contains a module with the name of an importing module. Thus the module can't be imported.
-4 - Module is not found in the MPK package
-5 - Project Version is not supported by the current version of Mx.exe
-6 - Project can't be loaded
-7 - Module can't be loaded
-8 - Import of a module failed. Result project can't be saved.
+* X determines the error type:
 
-E.g. 
+    * 1 – parameter validation error
+    * 2 – output-related * error
+    * 3 – errors related to the execution of * the operatio* n
 
-`> mx.exe module-import Module.mxmodule App.mpr`
+* Y is the number of the parameter the error * is related to. The .mpk file is parameter 0, the .mpr file is parameter 1.
 
-`Importing protected module is not supported`
+* Z indicates the error details:
+
+    * 1 – Module you are trying to import is protected and cannot be imported.
+    * 2 – Module you are trying to import is a Theme module and cannot be imported.
+    * 3 – Project already contains a module with the name as the module you are importing. Thus the module can't be imported.
+    * 4 – No module is found in the MPK package.
+    * 5 – Project Version is not supported by the current version of mx.exe
+    * 6 – Project can't be loaded
+    * 7 – Module can't be loaded
+    * 8 – Import of a module failed. Resulting project can't be saved.
+
+For example:
+
+```bash {linenos=false}
+> mx.exe module-import Module.mxmodule App.mpr
+Importing protected module is not supported
+```
 
 Exit code 111
 
-`> mx.exe module-import Module.mpk App.mpr`
+or
 
-`The mpr file version is '10.3.0-dev'.`
-
-`Importing module Module into project MyApp`
-
-`Module 'Module' already exist in the app.`
+```bash {linenos=false}
+> mx.exe module-import Module.mpk App.mpr
+The mpr file version is '10.3.0-dev'.
+Importing module Module into project MyApp
+Module 'Module' already exists in the app.
+```
 
 Exit code 303

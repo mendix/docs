@@ -17,6 +17,10 @@ Mendix Studio Pro comes with the mx command-line tool. You can find the executab
 
 ## 3 Available Commands
 
+{{% alert color="info" %}}
+To see a list of commands you can use the command `mx --help`.
+{{% /alert %}}
+
 ### 3.1 App Commands
 
 These are the available [app commands](/refguide/mx-command-line-tool/app/):
@@ -43,9 +47,9 @@ These are the available [module commands](/refguide/mx-command-line-tool/module/
 
 |  Command | Description |
 |---|---|
-| [show-module-version](/refguide/mx-command-line-tool/module/#show-module-version) | Shows the version of the module specified. |
-| [set-module-version](/refguide/mx-command-line-tool/module/#set-module-version) | Sets the version of the module specified. |
-| [module-import](/refguide/mx-command-line-tool/module/#module-import) | Import a module from an mpk package specified into a project specified. |
+| [show-module-version](/refguide/mx-command-line-tool/module/#show-module-version) | Shows the version of a module. |
+| [set-module-version](/refguide/mx-command-line-tool/module/#set-module-version) | Sets the version of a module. |
+| [module-import](/refguide/mx-command-line-tool/module/#module-import) | Import a module from an mpk package into an app. |
 
 ### 3.4 Export Package Commands
 
@@ -66,10 +70,6 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
 
-## 4 mx Tool Options
+## 4 Undocumented Options
 
-The mx tool has a `--help` option that outputs all the commands available.
-
-## 5 Undocumented Options
-
-The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.
+The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options are used at your own risk.

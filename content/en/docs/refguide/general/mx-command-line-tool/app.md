@@ -24,10 +24,11 @@ These are the `OPTIONS`:
 
 | Option | Default Value | Result |
 | --- | --- | --- |
-| `app-name` | App | Assigns the specified app name to the app. |
-| `output-dir` | Current directory | The directory in which to create the app. |
-| `language-code` | en_US | The default language of the app. | 
-| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app in the Developer Portal, this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
+| `--app-name` | App | Assigns the specified app name to the app. |
+| `--help` | | Shows help for the `mx create-project` command and exits.|
+| `--language-code` | en_US | The default language of the app. | 
+| `--output-dir` | Current directory | The directory in which to create the app. |
+| `--sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app in the Developer Portal, this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package *.mpk* file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -69,9 +70,9 @@ Use the following command pattern for `mx show-version`:
 
 These are the `OPTIONS`:
 
-| Option | Shortcut | Result |
-| --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
+| Option | Result |
+| --- | --- |
+| `--help` | Shows help for the `mx show-version` command and exits. |
 
 For `INPUT`, enter an *.mpr* file.
 
@@ -112,7 +113,7 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
+| `--help` | | Shows help for the `mx convert`` command and exits. |
 | `--in-place` | `-p` | Converts the current app directory. Use this option to convert a folder containing a Mendix app. Otherwise, `mx convert` will convert *.mpk* files. | 
 | `--skip-error-check` | `-s` | Does not check for errors. Use this option to disable app error-checking during the conversion. When omitted, the tool will report on the number of errors, warnings, and deprecations in the app and do the conversion. |
 
@@ -162,7 +163,7 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--help`| `-h` | Displays the help text and exits. |
+| `--help`| | Shows help for the `mx check` command and exits. |
 | `--warnings` | `-w` | Includes warnings in the output. |
 | `--deprecations` | `-d` | Includes deprecations in the output. |
 | `--performance`  | `-p` | Includes performance checks in the output (performance recommendations are only outputted if there are no errors). |

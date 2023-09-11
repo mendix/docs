@@ -20,11 +20,11 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * `1` – parameter validation error
     * `2` – output-related error
     * `3` – errors related to the execution of the operation
-* `Y` is the number of the parameter the error is related to (if applicable)
+* `Y` is the number of the parameter the error is related to (if applicable). The first parameter is parameter 0.
 * `Z` determines error details:
     * `1` – file is not found
     * `2` – app is too old
-    * `3` –  distribution is not enabled
+    * `3` – distribution is not enabled
     * `4` – version is not in the SemVer format
     * `5` – app was not initialized from a solution package
 
@@ -45,11 +45,11 @@ These are the `OPTIONS`:
 | Option | Shortcut | Result |
 | --- | --- | --- |
 | `--based-on` | `-b` | Shows the `Based on` version. |
-| `--help` | `-h` | Displays the help text and exits. |
+| `--help` | | Shows help for the `mx show-app-version` command and exits. |
 
 For `MPR-FILE`, enter an *.mpr* file.
 
-The `Based on` version is a version of a solution package (*.mxsolution*) that the current app is based on.
+The `--based-on` version is a version of a solution package (*.mxsolution*) that the current app is based on.
 
 ### 2.2 Examples
 
@@ -68,7 +68,7 @@ This table shows the return codes and their description:
 | --- | --- |
 | `0` | No errors. |
 | `315` | If `-b` was specified, but the app is not based on a solution.  |
-| `313` | If -b was not specified, but distribution as a solution is not enabled for the app. |
+| `313` | If `-b` was not specified, but distribution as a solution is not enabled for the app. |
 
 ## 3 mx set-app-version Command {#set-app-version}
 
@@ -82,9 +82,9 @@ Use the following command pattern for `mx set-app-version`:
 
 These are the `OPTIONS`:
 
-| Option | Shortcut | Result |
-| --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
+| Option | Result |
+| --- | --- |
+| `--help` | Shows help for the `mx set-app-version` command and exits. |
 
 For `MPR-FILE`, enter an *.mpr* file.
 

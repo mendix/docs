@@ -55,13 +55,11 @@ First, you need to create an authentication token to get access to the Catalog A
 
 For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
-Once you have a personal access token, you will follow this series of REST calls to register the details of your exposed OData services:
+Once you have a personal access token, follow this series of REST calls (described in detail in the following sections) to register the details of your exposed OData services:
 
 1. [Register the application](#register-application) and retrieve an application UUID.
 2. Use the application UUID to [register the environment](#register-environment) and retrieve the environment UUID.
 3. Use the application UUID and the environment UUID to [register services](#register-services). If needed, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering the service.
-
-Each step is described in detail in the following sections.
  
 The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, and other operations on these same paths. In this how-to, you will fill out only the required fields and one operation per path.
 
@@ -216,7 +214,7 @@ Completing the `PUT` operation call more than once overwrites the details for al
 
 ##### 4.1.3.1 Behavior When Renaming an Environment
 
-It is possible, although uncommon, to update the URL of a hosted environment. The root URLs update upon redeployment, and endpoints that are registered under that environment get updated endpoint locations.
+It is possible (although uncommon) to update the URL of a hosted environment. The root URLs update upon redeployment, and endpoints that are registered under that environment get updated endpoint locations.
 
 #### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
@@ -233,9 +231,9 @@ To call the Transform endpoint of the Registration API, you need the following:
 * Endpoint location `Name`
 * Endpoint location `Value`
 
-    {{% alert color="info" %}}These two values can be found in the *metadata.json* file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
+    {{% alert color="info" %}}You can find these two values in the *metadata.json* file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson).
+    {{% alert color="info" %}}For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson).{{% /alert %}}
 
 You can see an example of a request that converts a *dependencies.json* file below:
 
@@ -325,7 +323,7 @@ Follow the steps below:
     * **Sandbox** – the Mendix Free App environment, data is not of production quality
     * **Non-production** – hosting is paid for, but data is not of production quality
 
-8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
+8. Select your **Authentication** method. For details on supported authentication types, see the [Authentication](#authentication) section below. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
 9. Select **Done!** to complete the registration.
 
 Congratulations! Your OData service is registered in the Catalog. 

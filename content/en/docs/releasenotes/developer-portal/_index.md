@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes 
 
-* We fixed Feedback items not being sent from Native Templates to [Feedback](/developerportal/app-insights/feedback/) in [App Insights](/developerportal/app-insights/).
+* We fixed feedback items not being sent from Native Templates to [Feedback](/developerportal/app-insights/feedback/) in [App Insights](/developerportal/app-insights/).
 * We fixed an issue where trying to close a feedback item threw an error.
 
 #### Deprecations

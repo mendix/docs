@@ -115,31 +115,39 @@ To use ECR with the Mendix Operator, you will need to:
 
     ```json
     {
-	"Version": "2012-10-17",
-	"Statement": [
-	    {
-		"Sid": "AllowImageBuilds",
-		"Effect": "Allow",
-		"Action": [
-		    "ecr:BatchGetImage",
-		    "ecr:BatchCheckLayerAvailability",
-		    "ecr:CompleteLayerUpload",
-		    "ecr:GetDownloadUrlForLayer",
-		    "ecr:InitiateLayerUpload",
-		    "ecr:PutImage",
-		    "ecr:UploadLayerPart"
-		],
-		"Resource": "arn:aws:ecr:<aws_region>:<account_id>:repository/<repository>"
-	    },
-	    {
-		"Sid": "AllowAuthentication",
-		"Effect": "Allow",
-		"Action": "ecr:GetAuthorizationToken",
-		"Resource": "*"
-	    }
-	]
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "AllowImageBuilds",
+                "Effect": "Allow",
+                "Action": [
+                    "ecr:BatchGetImage",
+                    "ecr:BatchCheckLayerAvailability",
+                    "ecr:CompleteLayerUpload",
+                    "ecr:GetDownloadUrlForLayer",
+                    "ecr:InitiateLayerUpload",
+                    "ecr:PutImage",
+                    "ecr:List",
+                    "ecr:UploadLayerPart",
+                    "ecr:DescribeRepositories",
+                    "ecr:CreateRepository"
+                ],
+                "Resource": "arn:aws:ecr:<aws_region>:<account_id>:repository/<repository>"
+            },
+            {
+                "Sid": "AllowAuthentication",
+                "Effect": "Allow",
+                "Action": "ecr:GetAuthorizationToken",
+                "Resource": "*"
+            }
+        ]
     }
     ```
+
+    {{% alert color="info" %}}The `DescribeRepositories` and `CreateRepository` actions are optional.
+    They allow the Mendix Operator to check if the ECR repository exists, and create the repository if it doesn't exist.
+    If the repository already exists, these actions can be removed.{{% /alert %}}
+
 4. Allow the Mendix Operator to assume this role by configuring the role's trust policy.
 
     1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
@@ -180,13 +188,13 @@ To access the ACR registry, the Mendix Operator will use its Kubernetes Service 
 
 To use ACR with the Mendix Operator, you will need to:
 
-1. Create an ACR container registry. 
-2. Follow the [guide](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster) to 
-    
+1. Create an ACR container registry.
+2. Follow the [guide](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster) to
+
     * enable workload identity authentication in AKS
     * create a managed identity for the Mendix Operator image builder
     * establish the federated identity credential
-    
+
     Other steps are provided as examples and can be skipped.
     You'll need to specify the Kubernetes namespace and name - the namespace where the Mendix Operator is installed, and a Kubernetes service account name.
     The Mendix Operator will use this Service Account to authenticate itself with ACR.
@@ -282,7 +290,7 @@ Docker Hub will automatically create the repository when an image is pushed.
 | Registry name       | `<username>/<repository>`, where `<username>` is a username for Docker Hub |
 | With authentication | ☑ checked       |
 | User                | Username for a quay.io robot account |
-| Password            | Token (password) for the robot account | 
+| Password            | Token (password) for the robot account |
 
 Before pushing images to quay.io, you will need to create the repository first.
 To access quay.io, you will need to create a robot account, and give this account write permissions to the destination repository.
@@ -358,4 +366,3 @@ You can customize the registry imageNameTemplate in OperatorConfiguration with t
 * `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Private Cloud Portal.
 * `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.
-

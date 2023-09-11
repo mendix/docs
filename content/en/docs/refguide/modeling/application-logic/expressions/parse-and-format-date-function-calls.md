@@ -54,7 +54,7 @@ The following pattern letters are only available for microflows:
 | X      | Time zone                                 | -08; -0800; -08:00                    |
 
 {{% alert color="info" %}}
-For some parse and format functions, there are extra UTC variants. Don't use these UTC variants (like `parseDateTimeUTC`) in client-side expressions when you want to assign them or compare them to date and time attributes where Localize is set to No. The localize functionality is built into the attribute type itself and using the UTC functions causes timezone conversions to be handled twice.
+For some parse and format functions, there are UTC variants. Do not use these UTC variants (for example, `parseDateTimeUTC`) in client-side expressions when you want to assign the output to (or compare the output with) an attribute of type **Date and time** where **Localize** is disabled. In the client, the localization functionality is built into the attribute type itself, and using UTC functions causes the time zone conversion to be handled twice.
 {{% /alert %}}
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}

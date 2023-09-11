@@ -124,17 +124,17 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/customer-attribute-examples.png" >}}
 
-#### 2.2.2 Localize
+#### 2.2.2 Localize {#localize}
 
 {{% alert color="info" %}}
 This property is shown if **Type** is set to **Date and time**.
 {{% /alert %}}
 
-This property indicates whether the date and time should be localized when displaying (or picking) their value. By default localization is enabled. If you are *not* interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
+This property indicates whether the date and time should be localized when displaying (or picking) their value. By default localization is enabled. If you are NOT interested in the time component of a date (for example, a birthday), you should toggle this property off. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2 in Europe will be on April 1 in the U.S.A.
 
-In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed. To avoid that this conversion is happening twice, UTC functions and tokens like [dateTimeUTC](/refguide/date-creation/) should not be used in client expressions to assign values to date and time attributes where localization is disabled.
+In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed. To avoid this time zone conversion from happening twice, UTC functions and tokens like [dateTimeUTC](/refguide/date-creation/) should not be used in client-side expressions to assign values to **Date and time** attributes where localization is disabled.
 
-Default: *Yes*
+Default: *enabled*
 
 #### 2.2.3 Enumeration
 

@@ -95,7 +95,7 @@ The following tokens can be used to obtain a date and time value:
 | `[%EndOfCurrentYearUTC%]` | The date and time at the end of the current year in UTC. |
 
 {{% alert color="info" %}}
-Don't use the UTC variants of these tokens (like `[%BeginOfCurrentDayUTC%]`) in client-side expressions when you want to assign them or compare them to date and time attributes where Localize is set to No. The localize functionality is built into the attribute type itself and using the UTC functions causes timezone conversions to be handled twice.
+Do not use the UTC variants of these tokens (for example, `[%BeginOfCurrentDayUTC%]`) in client-side expressions if you want to assign the output to (or compare the output with) an attribute of type **Date and Time** where **Localize** is disabled. In the client, the localization functionality is built into the attribute type itself, and using the UTC functions causes the time zone conversion to be handled twice.
 {{% /alert %}}
 
 The following tokens can be used to add or subtract a period of time from a date and time token value:

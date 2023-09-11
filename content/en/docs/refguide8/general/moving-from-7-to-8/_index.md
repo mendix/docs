@@ -107,7 +107,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 ## 4 Elements of Type Float and Currency {#float-currency}
 
-The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
+The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix version 8. 
 
 The following elements of type Float or Currency will report errors in version 8:
 

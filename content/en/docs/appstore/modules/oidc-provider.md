@@ -405,7 +405,7 @@ In versions of OIDC Provider below 1.1.0, the following values are not included 
 ### 6.1 Infinite Loop of Redirects
 
 The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
-To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix version 8.11](/releasenotes/studio-pro/8.11/).
+To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix 8.11](/releasenotes/studio-pro/8.11/).
 
 ## 7 About Authorization{#about-authorization}
 

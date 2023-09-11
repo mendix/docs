@@ -12,7 +12,7 @@ tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis"]
 [Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to Datadog to provide additional monitoring.
 
 {{% alert color="info" %}}
-Datadog logging and application metrics are supported in Mendix version 7.15 and above.
+Datadog logging and application metrics are supported in Mendix 7.15 and above.
 {{% /alert %}}
 
 {{% alert color="info" %}}

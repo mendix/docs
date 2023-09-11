@@ -6,7 +6,7 @@ description: "Describes usage of the Hybrid Tablet profile in a Mendix app for M
 
 {{% alert color="warning" %}}
 
-For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in 7.2 and 7.3](/refguide7/navigation-in-72-and-73/). For Mendix version 7.4 and above, see [Navigation](/refguide7/navigation/).
+For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in 7.2 and 7.3](/refguide7/navigation-in-72-and-73/). For Mendix 7.4 and above, see [Navigation](/refguide7/navigation/).
 
 {{% /alert %}}
 

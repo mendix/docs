@@ -24,7 +24,7 @@ You can find the build number in path of your Mendix installation (for example `
 
 {{% /alert %}}
 
-So, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
+So, MxBuild for Mendix 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 

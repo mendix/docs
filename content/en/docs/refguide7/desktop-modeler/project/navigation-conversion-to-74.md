@@ -7,7 +7,7 @@ description: "Describes requirements and possible fixes for navigation profile c
 
 ## 1 Changes in 7.4 for Profiles
 
-In Mendix versions 7.2 and 7.3, there was no exact separation between hybrid tablet and hybrid phone profiles. The only separation was the logical meaning of a profile name like "MyTabletProfile" and "MyPhoneProfile." In Mendix version 7.4, the separation of hybrid profiles by device type was introduced. This makes profiles easier to understand and work with.
+In Mendix versions 7.2 and 7.3, there was no exact separation between hybrid tablet and hybrid phone profiles. The only separation was the logical meaning of a profile name like "MyTabletProfile" and "MyPhoneProfile." In Mendix 7.4, the separation of hybrid profiles by device type was introduced. This makes profiles easier to understand and work with.
 
 Also, to prevent confusion while working with profiles, having more than one profile of a specific type is not permitted. This restriction allows us to omit the profile name.
 

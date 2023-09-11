@@ -706,7 +706,7 @@ This table compares the nomenclature:
 
 ### Support for Mendix 7.22.2
 
-Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/studio-pro/7.22/) can now be recorded and tested with ATS.
+Mendix applications that are based on [Mendix 7.22.2](/releasenotes/studio-pro/7.22/) can now be recorded and tested with ATS.
 
 ### Improvements
 
@@ -761,7 +761,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ### Mendix 7.17
 
-Mendix applications that are based on Mendix version 7.17 can now be tested and recorded with ATS.
+Mendix applications that are based on Mendix 7.17 can now be tested and recorded with ATS.
 
 ### Fixes
 
@@ -813,7 +813,7 @@ For more details on tenant administration, see [Administration](/appstore/partne
 
 ### Mendix 7.16
 
-Mendix applications based on Mendix version 7.16 can now be tested and recorded with ATS.
+Mendix applications based on Mendix 7.16 can now be tested and recorded with ATS.
 
 ### Fixes
 
@@ -837,7 +837,7 @@ In order to make sure that administration rights which have been granted to user
 
 ### Mendix 7.13, 7.14, and 7.15
 
-Mendix applications which are based on Mendix version 7.13, 7.14 or 7.15, can now be tested and recorded with ATS.
+Mendix applications which are based on Mendix 7.13, 7.14 or 7.15, can now be tested and recorded with ATS.
 
 ### Mobile Testing Improvements
 

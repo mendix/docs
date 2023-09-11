@@ -128,7 +128,7 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 If you already have the [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529) (community edition) in your module, you can migrate to this, platform supported, version by following the instruction below.
 
-#### 3.2.1 Upgrading from Mendix Version 8 to Mendix Version 9
+#### 3.2.1 Upgrading from Mendix 8 to Mendix 9
 
 To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 

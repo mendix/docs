@@ -178,7 +178,7 @@ See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAM
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in version 1.16.6 and above for Mendix version 7.
+The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in version 1.16.6 and above for Mendix 7.
 {{% /alert %}}
 
 If you have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide7/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **SAML20.HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. 

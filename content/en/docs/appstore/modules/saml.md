@@ -36,7 +36,7 @@ The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.or
 * Web browser SSO profile using one of the following bindings
     * HTTP redirect, 
     * HTTP POST bindings
-    * Artifact binding for SAML responses (Mendix version 8 and above)
+    * Artifact binding for SAML responses (Mendix 8 and above)
 * Single Logout profile
 
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
@@ -114,7 +114,7 @@ There are different versions of the SAML module, depending on which version of M
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
-    * For Mendix version 7 and version 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
+    * For Mendix 7 and 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
     * For Mendix version 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
     
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix version 9.
@@ -236,7 +236,7 @@ The following settings control user provisioning:
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
 
-    {{% alert color="info" %}}In Mendix version 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.{{% /alert %}}
+    {{% alert color="info" %}}In Mendix 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.{{% /alert %}}
 
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
@@ -253,8 +253,8 @@ The following settings control user provisioning:
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.1.8/v3.1.9 and above for Mendix versions 9 and 10
-* v2.2.0 and above for Mendix version 8
-* v1.16.4 and above for Mendix version 7
+* v2.2.0 and above for Mendix 8
+* v1.16.4 and above for Mendix 7
 {{% /alert %}}
 
 * **Use custom logic for user provisioning** and **Use custom after sign-in logic**
@@ -322,7 +322,7 @@ You also need to define where the user account will be stored within your app. P
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
 
-In Mendix version 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
+In Mendix 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
 
 ### 4.2 Provisioning
 
@@ -351,8 +351,8 @@ See [Custom Behavior](#customuserprovisioning), below, for more information.
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.1.8/v3.1.9 and above for Mendix versions 9 and 10
-* v2.2.0 and above for Mendix version 8
-* v1.16.4 and above for Mendix version 7
+* v2.2.0 and above for Mendix 8
+* v1.16.4 and above for Mendix 7
 
 #### 4.2.4 Just in Time Provisioning
 
@@ -396,7 +396,7 @@ In-session authentication is a process that takes place within a session that wa
 In-session authentication at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
-* v2.3.0 and above for Mendix version 8
+* v2.3.0 and above for Mendix 8
 
 Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
 
@@ -454,7 +454,7 @@ To use artifact binding, select ARTIFACT_BINDING option for **Response protocol 
 Using artifact binding for SAML responses at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
-* v2.3.0 and above for Mendix version 8
+* v2.3.0 and above for Mendix 8
 
 #### 4.4.2 Use AssertionConsumerService Concept
 
@@ -490,7 +490,7 @@ Although the typical use case for requesting attributes is to obtain information
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
-* v2.3.0 and above for Mendix version 8
+* v2.3.0 and above for Mendix 8
 
 ### 4.6 Encryption Settings{#encryption-settings}
 

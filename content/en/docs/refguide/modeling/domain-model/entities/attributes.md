@@ -132,7 +132,7 @@ This property is shown if **Type** is set to **Date and time**.
 
 This property indicates whether the date and time should be localized when displaying (or picking) their value. By default localization is enabled. If you are NOT interested in the time component of a date and you want the date to be exactly the same all over the world (for example, a birthday), you should toggle this property off. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2 in Europe will be on April 1 in the U.S.A.
 
-In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed. To avoid this time zone conversion from happening twice, UTC functions and tokens like [dateTimeUTC](/refguide/date-creation/) should not be used in client-side expressions to assign values to **Date and time** attributes where localization is disabled.
+In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (enabled) or in UTC (disabled). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed. To avoid this time zone conversion from happening twice, UTC functions and tokens like [dateTimeUTC](/refguide/date-creation/) should not be used in client-side expressions to assign values to **Date and time** attributes where localization is disabled.
 
 Default: *enabled*
 

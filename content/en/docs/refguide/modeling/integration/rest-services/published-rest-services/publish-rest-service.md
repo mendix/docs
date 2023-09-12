@@ -27,8 +27,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create the example project that you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new app and rename the **MyFirstModule** module to **RESTExample**.
-2. Open the domain model of the RESTExample module.
+1. Create a new app and rename the *MyFirstModule* module to *RESTExample*.
+2. Open the domain model of the *RESTExample* module.
 3. Create entities with an association like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/domainmodel.png" >}}
@@ -67,42 +67,39 @@ To be able to use the data from your model in the REST service, you need to crea
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Published REST Service**.
 2. Enter *PRS_OrderService* for the **Name** of your REST service. The REST service is now opened.
-3. Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**:
+3. Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**. Then click **OK** to close the dialog box.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddRestResource.png" >}}
 
-4. Click **OK** to close the dialog box.
-5. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
-6. In the **Operation** dialog box, enter`{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this same dialog box.
+4. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
+5. In the **Operation** dialog box, enter `{OrderID}` in the **Operation path** field, making sure to include the braces (`{}`). This allows the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this dialog box.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddOperation.png" >}}
 
-7. In the same dialog box, click **Select** next to the **Microflow** field. Because you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
+6. In the same dialog box, click **Select** next to the **Microflow** field. Because you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddOperationMicroflow.png" >}}
 
-8. Click **Show** to start editing the newly created microflow.
-9. Add two parameters: **httpRequest** and **OrderID**.
+7. Click **Show** to start editing the newly created microflow.
+8. <a id="eight"></a>Add two parameters: **httpRequest** and **OrderID**.
 
-    {{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** paramter. If you create an **Export Mapping** in steps 11-19 below, you will need to remove the **httpResponse** parameter to avoid getting any errors.{{% /alert %}}
+    {{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** parameter. If you create an **Export Mapping** in steps 11-19 below, you will need to remove the **httpResponse** parameter to avoid getting any errors.{{% /alert %}}
 
-10. Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This makes it possible to search for the **OrderID** (autonumber).
+9. Add an action to the microflow to convert the **OrderID** variable from **String** data type to **Integer/Long**. This makes it possible to search for the **OrderID** (autonumber).
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ConvertOrderID.png" >}}
 
-10. Add a second activity to the microflow to retrieve the **Order** based on the **OrderID**. This retrieve action from the database returns one order.
+10. Add a second activity to the microflow to retrieve the **Order** based on the **OrderID**. This **Retrieve** action from the database returns one order.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a id="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
+11. <a id="eleven"></a>The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the **RESTExample** module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
 
     {{% alert color="info" %}}Creating an Export Mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability for clients to select the media type they want returned to the server. Follow the next steps in this document to learn how to set up Export Mapping in this case, but note that you can also return the list of objects from the microflow. The platform will export it in the format desired by the client, as indicated by the **Accept** header. The client can then specify if it wants to receive XML or JSON.{{% /alert %}}
     
-12. In the **Select schema elements for export mapping** dialog box, select the **Message definition** option, and then select the **MD_Orders** mapping created earlier via the **Select** button:
+12. In the **Select schema elements for export mapping** dialog box, select the **Message definition** option, and then use the **Select** button to select the **MD_Orders** mapping created earlier. Once you've selected all the attributes shown below, click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/SelectSchemaForExport.png" >}}
-
-    Make sure to select all the attributes as shown above, then click **OK**.
 
 13. In the export mapping that is shown, map the objects to the same objects from the domain model (either by double-clicking or dragging from the **Connector** pane). Make sure to map the attributes with the same names. Your mapping should look like this:
 
@@ -118,24 +115,24 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponse.png" >}}
 
-    The **StatusCode** will return "OK" as a `200` message. The content of the message is mapped to the exported JSON from [step 16](#sixteen). And add the **HttpVersion** that you will be using (in this case, `HTTP/1.1`).
+    The **StatusCode** will return "OK" as a `200` message. The content of the message is mapped to the exported JSON from [step 16](#sixteen). Also add the **HttpVersion** that you will be using (in this case, `HTTP/1.1`).
 
 18. Add an activity to the microflow for adding a header to the response:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponseHeader.png" >}}
 
-    Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json'`(or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response.
+    Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json'` (or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response.
 19. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/CompleteMFNoErrorHandling.png" >}}
     
-    If you have error CE0346, remove the **httpResponse** parameter that may have been automatically created in step 4.2.7.
+    {{% alert color="info" %}}If you have error CE0346, remove the **httpResponse** parameter that may have been automatically created in [step 8](#eight).{{% /alert %}}
 
 ### 4.3 Viewing the App {#viewing}
 
 To view and try out your app, follow these steps:
 
-1. Run your app and open it in the browser via this URL: `http://localhost:8080/rest-doc/`.
+1. Run your app and open it in the browser using this URL: [http://localhost:8080/rest-doc/](http://localhost:8080/rest-doc/).
 2. You will see a page with the documentation of all your published REST services:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestOverview.png" >}}
@@ -144,8 +141,8 @@ To view and try out your app, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestDetails.png" >}}
 
-4. Click **GET** followed by **Try it out**.
-5. Fill in a **OrderID** and click **Execute**:
+4. Click **GET**, then **Try it out**.
+5. Fill in an **OrderID** and click **Execute**:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestExceute.png" >}}
 
@@ -162,7 +159,7 @@ In this new service, no error handling has been implemented. For example, if you
 ### 5.1 Adding Error Handling
 
 1. Open the **PRS_GetGetOrderByID** microflow, right-click the first activity, then select the option to **Set Error Handling** to **Custom with rollback**.
-2. After the first activity, add an activity that creates a new **HttpResponse** object. Enter *NewHttpErrorResponse* for the **Name**, and map the attributes like this:
+2. After the first activity, add an activity that creates a new **HttpResponse** object. Enter *NewHttpErrorResponse* for the **Name**. Then map the attributes like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorResponse.png" >}}
 
@@ -185,11 +182,11 @@ In this new service, no error handling has been implemented. For example, if you
 
 ### 5.2 Additional Error Handling
 
-Now that you covered the error handling of the parameter parsing, it's time to handle empty responses. Empty responses are not really errors, but it is always a good idea to indicate what happened when nothing is returned.
+Now that you have covered the error handling of the parameter parsing, it's time to handle empty responses. Empty responses are not really errors, but it is always a good idea to indicate what happened when nothing is returned.
 
 To add the error handling for those situations when the **OrderID** parameter is filled but no result is found, follow these steps:
 
-1. After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The **True** exit is connected to the activity for exporting to JSON. For the **False** exit, add new **Create Object** activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
+1. After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The **true** exit is connected to the activity for exporting to JSON. For the **false** exit, add new **Create Object** activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/OrderNotFoundResponse.png" >}}
 

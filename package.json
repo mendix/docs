@@ -4,7 +4,7 @@
   "description": "Node files needed by Docsy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "hugo server --environment development"
   },
   "repository": {
     "type": "git",

@@ -11,7 +11,7 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 {{% alert color="warning" %}}
 This page is about **legacy** scheduled events. Please see [Scheduled Events – Task Queue](/refguide9/scheduled-events-task-queue/) for information about the current method of implementing scheduled events.
 
-Mendix versions 9.12.0 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
+Mendix 9.12 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
 
 If your app is Mendix version 9.12.0 or above, legacy scheduled events will have been converted to [task queue scheduled events](/refguide9/scheduled-events-task-queue/) automatically unless this is impossible. See the [Migration](/refguide9/scheduled-events/#migration) section of *Scheduled Events* for more information.
 
@@ -162,7 +162,7 @@ If a repeated scheduled event takes longer than the interval then the next sched
 
 The execution of a scheduled event produces a `System.ScheduledEventInformation` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix versions 9.9.0 and above, the `System.ScheduledEventInformation` can be cleaned up automatically by specifying the `com.mendix.core.ScheduledEventsCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up. The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
+In Mendix 9.9 and above, the `System.ScheduledEventInformation` can be cleaned up automatically by specifying the `com.mendix.core.ScheduledEventsCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up. The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
 
 If `com.mendix.core.ScheduledEventsCleanupAge` is not specified, no cleanup is performed.
 

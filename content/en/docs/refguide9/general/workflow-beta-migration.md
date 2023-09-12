@@ -16,9 +16,9 @@ This document explains how to migrate your existing workflow apps depending on t
 
 ## 2 Changes to the System Module Domain Model {#system-module}
 
-### 2.1 Changes in Mendix Versions 9.6-9.9
+### 2.1 Changes in Mendix 9.6–9.9
 
-The following is changed in the domain model of the System Module in **Mendix version 9.6, 9.7, 9.8, and 9.9**:
+The following is changed in the domain model of the System module in Mendix 9.6, 9.7, 9.8, and 9.9:
 
 1. The **WorkflowSystemTask**, and **WorkflowVersion** entities have been removed and are now handled in the background by the runtime.
 2. The **WorkflowTaskInstance** entity has been merged into the **WorkflowUserTask** entity.
@@ -93,7 +93,7 @@ Securing user tasks now happens through the domain model by setting [entity acce
 
 ### 3.2 Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10 {#migrate-910}
 
-If you would like to migrate your app with workflow functionality **from** Mendix versions 9.6-9.9 **to** Mendix version 9.10, follow the steps below.
+If you would like to migrate your app with workflow functionality **from** Mendix 9.6-9.9 **to** Mendix 9.10, follow the steps below.
 
 #### 3.2.1 Back Up Your App
 

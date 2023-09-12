@@ -149,7 +149,7 @@ This property defines whether the entity contains the system attribute 'changedD
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
 {{% alert color="info" %}}
-The 'changedDate' property is updated when a value is set.  [In Mendix version 9.5.0 and above, setting an attribute to the value it already had and committing the entity updates the 'changedDate'](/releasenotes/studio-pro/9.5/#breaking-changes). In Mendix versions below 9.5.0 the behavior is the same as for Mendix version 8 and the 'changedDate' property is only updated when the value is different.
+The 'changedDate' property is updated when a value is set.  [In Mendix version 9.5.0 and above, setting an attribute to the value it already had and committing the entity updates the 'changedDate'](/releasenotes/studio-pro/9.5/#breaking-changes). In Mendix 9.4 and below, the behavior is the same as for Mendix version 8 and the 'changedDate' property is only updated when the value is different.
 {{% /alert %}}
 
 {{% alert color="info" %}}

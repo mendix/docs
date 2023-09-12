@@ -26,9 +26,9 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
-    * AdoptOpenJDK 11 (x64) – for Mendix versions below 9.14.0
-    * Adoptium Temurin JDK 11 (x64) – for Mendix versions from 9.14.0 and below 9.18.0
-    * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
+    * AdoptOpenJDK 11 (x64) – for Mendix 9.13 and below
+    * Adoptium Temurin JDK 11 (x64) – for Mendix 9.14 to 9.17
+    * Eclipse Temurin JDK 11 (x64)– for Mendix 9.18 and above
     
     Oracle JDK 11 can also be used if this is already installed.
 * Git for Windows (x64)

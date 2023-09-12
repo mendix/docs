@@ -242,7 +242,7 @@ Interrupting task threads may cause them to fail. These tasks will be marked as 
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
+In Mendix 9.9 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
 
 If `com.mendix.core.ProcessedTasksCleanupAge` is not specified, no cleanup is performed.
 
@@ -281,7 +281,7 @@ Task queues have the following limitations:
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
 * In versions of Mendix below 9.9.0, the total amount of parallelism per node is limited to 40. This means that at most 40 queues with parallelism 1 can be defined, or a single queue with parallelism 40, or somewhere in between, as long as the total does not exceed 40.
-* Queued actions that have failed can't be rescheduled out-of-the-box in Mendix versions below 9.9.0. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
+* Queued actions that have failed cannot be rescheduled out of the box in Mendix 9.8 and below. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
 
 ### 4.3 High-Level Implementation Overview
 

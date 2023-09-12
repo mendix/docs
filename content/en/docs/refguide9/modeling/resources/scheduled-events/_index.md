@@ -27,7 +27,7 @@ Most importantly, you can no longer specify a specific date and time for task qu
 
 In addition, these recurring events will now work as expected in the face of daylight saving time.
 
-Mendix versions 9.12.0 and above supports the following schedule types:
+Mendix 9.12 and above supports the following schedule types:
 
 * **Legacy** – the type that existing before Mendix 9.12.0 — see [Legacy scheduled events](/refguide9/scheduled-events-legacy/)
 * **Yearly** – an event that occurs once a year on a specific day or date and at a specified time — see [Yearly scheduled events](/refguide9/scheduled-events-task-queue/#yearly)

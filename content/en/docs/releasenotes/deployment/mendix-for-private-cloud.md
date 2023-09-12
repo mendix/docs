@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.13.0 {#2.13.0}
 
-* We've added support for Azure Workload Identity authentication when pushing images to Azure Container Registry.
+* We've added support for Azure Workload Identity authentication when pushing images to Azure Container Registry. To use this option, the `mxpc-cli` installation and configuration tool now has a dedicated `microsoft-acr` registry type.
 * We've added an option to specify additional custom pod labels for an environment (or all environments in the namespace).
 * To improve security, ECR will use IRSA authentication by default instead of static credentials.
 * We've updated documentation on configuring and using container registries.

@@ -269,9 +269,10 @@ You can refer to the following properties settings for this example:
 
 ##### 2.5.2.5 Microflow {#microflow}
 
-Select this decision method when none of the other decision methods does what you need and you want to provide your own microflow to make the decision.
+Select this decision method when none of the other decision methods does what you need and you want to provide your own microflow to determine the final outcome of the task.
+This microflow will be executed every time when a user selects an outcome for the task, regardless of the [Completion moment](#completion-moment) setting.
 
-The provided microflow can have any or all of the following parameters:
+The provided microflow can have any or all of the following parameters, all of which are optional:
 
 | Type                                     | Description |
 |------------------------------------------|-------------|
@@ -287,7 +288,7 @@ The multi-user task will complete as soon as a non-empty outcome is returned, un
 
 {{% alert color="warning" %}}
 When all required participants ([Completion condition](#completion-condition)) have completed their task and the microflow still returns en empty value the workflow will be marked as failed.
-To prevent this it's suggested to check this in the microflow. E.g. When the number of selected outcomes equals the number of required participants, then a fallback outcome value MUST be returned. 
+To prevent this it's suggested to check this in the microflow. E.g. When the number of selected outcomes equals the number of required participants, then a fallback outcome is returned. 
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" >}}

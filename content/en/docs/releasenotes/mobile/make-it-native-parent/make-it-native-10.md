@@ -12,7 +12,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ## iOS 1.1.0 / Android 1.1.0
 
-**Release date: -**
+**Release date: September 13th, 2023**
 
 ### Features
 
@@ -30,12 +30,12 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ### Improvements
 
-- We made the **Launch App** screen consistently remember your previously used URL.
-- The **History** tab now automatically opens the launch screen to quickly launch your app.
+- We made the `Launch App` screen consistently remember your previously used URL.
+- The `History` tab now automatically opens the launch screen to quickly launch your app.
 
 ### Fixes
 
-- We fixed the **History** tab so it no longer saves duplicate entries.
+- We fixed the `History` tab so it no longer saves duplicate entries.
 - We fixed rendering the onboarding screens on all devices.
 - We fixed several design and usability issues throughout the app.
 
@@ -63,4 +63,4 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 ### New Features
 
-- We introduced the **History** tab, allowing you to access frequently visited URLs without retyping them.
+- We introduced the `History` tab, allowing you to access frequently visited URLs without retyping them.

@@ -254,15 +254,15 @@ The following **Container** widget related design properties are available in th
 | **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
 | **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
-#### 4.4.3 Applying custom fonts {#applying-custom-fonts}
+#### 4.4.3 Applying Custom Fonts {#applying-custom-fonts}
 
-For extended font support, we recommend to make use of custom fonts. To apply a custom font follow the steps below:
+For extended font support, Mendix recommends using custom fonts. To apply a custom font, follow the steps below:
 
-We will be using the `Noto Sans SC` font for this example. You can visit [Google fonts](https://fonts.google.com) for more font options or use a font of your choice.
+The procedure uses the `Noto Sans SC` font as an example. You can visit [Google fonts](https://fonts.google.com) for more font options or use a font of your choice.
 
-1. Download the font from [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
-2. Copy the `NotoSansSC-Regular.ttf` font file from the static folder of the downloaded package into the `theme\web\fonts` folder of the app
-3. Add the lines below to the `main.scss` file of the app theme (using the built-in styling editor in Studio Pro App explorer panel: `Styling > web > main.scss`).
+1. Download the font [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC).
+2. Copy the font file *NotoSansSC-Regular.ttf* from the *static* folder of the downloaded font package into the *theme\web\fonts* folder of the app.
+3. Add the lines below to the file *main.scss* of the app theme (using the built-in styling editor in Studio Pro App explorer panel: `Styling > web > main.scss`).
  ```css
     @font-face {
         font-family: 'Noto Sans SC';
@@ -272,8 +272,8 @@ We will be using the `Noto Sans SC` font for this example. You can visit [Google
     .font-noto-sans-sc {
         font-family: 'Noto Sans SC', sans-serif;
     }
-```
-4. Add the class `font-noto-sans-sc` to all applicable texts / widgets
+ ```
+4. Add the class `font-noto-sans-sc` to all applicable text and widgets.
 
 #### 4.4.4 Advanced Styling
 

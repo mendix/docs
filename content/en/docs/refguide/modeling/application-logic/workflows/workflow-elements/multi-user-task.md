@@ -269,43 +269,39 @@ You can refer to the following properties settings for this example:
 
 ##### 2.5.2.5 Microflow {#microflow}
 
-Select this decision method when none of the other decision methods does what you need and you want to provide your own microflow to determine the final outcome of the task.
-This microflow will be executed every time when a user selects an outcome for the task, regardless of the [Completion moment](#completion-moment) setting.
+Select this decision method when none of the other decision methods does what you need, and you want to provide your own microflow to determine the final outcome of the multi-user task. This microflow is executed every time when a participant selects an outcome for the multi-user task, regardless of the [Completion moment](#completion-moment) setting.
 
 The provided microflow can have any or all of the following parameters, all of which are optional:
 
 | Type                                     | Description |
 |------------------------------------------|-------------|
 | `Integer/Long`                           | The number of participants that is required to select an outcome. Its value is determined by the [Completion condition](#completion-condition) settings. |
-| List of `System.WorkflowUserTaskOutcome` | All outcomes that have been selected so far. The outcomes are ordered in the order in which they occurred, oldest first. |
+| List of `System.WorkflowUserTaskOutcome` | All outcomes that have been selected so far. These outcomes are ordered in the order in which they occurred, earliest first. |
 | `System.WorkflowUserTask`                | The multi-user task for which the decision must be made. |
 | `System.Workflow`                        | The workflow instance that contains the multi-user task. |
 | workflow context                         | The [worklow parameter](/refguide/workflow-parameters) variable. |
 
-The provided microflow should return a value of type String, containing the final outcome of the decision method.
-If no decision can be taken yet based on the selected outcomes, the microflow should return _empty_ (or an empty string).
-The multi-user task will complete as soon as a non-empty outcome is returned, unless the [Completion moment](#completion-moment) has been set to **When all participants completed their task**.
+The provided microflow should return a value of type **String**, containing the final outcome of the multi-user task. 
+If no decision can be taken yet based on the selected outcomes, the microflow should return `empty` (or an empty string).
+The multi-user task completes as soon as a non-empty outcome is returned, unless the [Completion moment](#completion-moment) has been set to **When all participants completed their task**.
 
 {{% alert color="warning" %}}
-When all required participants ([Completion condition](#completion-condition)) have completed their task and the microflow still returns en empty value the workflow will be marked as failed.
-To prevent this it's suggested to check this in the microflow. E.g. When the number of selected outcomes equals the number of required participants, then a fallback outcome is returned. 
+When all required participants (based on the [Completion condition](#completion-condition)) have completed their task and the microflow still returns an empty value, the workflow is marked as failed. To prevent this from happening, it is suggested to check this in the microflow. For example, When the number of selected outcomes equals to the number of required participants, then a fallback outcome is returned. 
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" >}}
 
 {{% alert color="warning" %}}
-When a value is returned that is not defined in the [Outcomes](#outcomes), then the multi-user task will be marked as failed.
+When a value is returned that is not defined in the [Outcomes](#outcomes), the multi-user task will be marked as failed.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If the microflow is changed in between deployments, it might return a different result after the deployment than during the previous deployment, for user tasks that are in progress.
-This cannot be detected during [workflow versioning conflict detection](/refguide/workflow-versioning) because the microflow cannot be called at that point.
-As a result it will not cause a conflict and behaves as if the workflow is marked as resolved.
+If the microflow is changed in between deployments, it might return a different result after the deployment from during the previous deployment, for user tasks that are in progress. This cannot be detected during [workflow versioning conflict detection](/refguide/workflow-versioning) because the microflow cannot be called at that point. As a result, it will not cause a conflict and behaves like when the workflow is marked as resolved.
 {{% /alert %}}
 
 ###### 2.5.2.5.1 Example
 
-As an example consider the trivial case where the quickest participant decides, which basically means choosing the first outcome. This can be achieved using the following microflow:
+As an example, consider the trivial case where the quickest participant decides, which basically means choosing the first outcome. This can be achieved using the following microflow:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision.png" alt="Custom Microflow Decision Method" >}}
 

@@ -5,17 +5,29 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.6 {#706}
+
+**Release date: September 13, 2023**
+
+### Additions
+
+- Introduced `com.google.android.gms.permission.AD_ID` permission to the Android Manifest file. This permission governs access to the advertising ID, facilitating more effective targeting and personalization within the app's advertisement services. (Note: This permission is currently disabled with the tools:node="remove" attribute.)
+
 ## 7.0.5 {#705}
 
 **Release date: August 24, 2023**
 
-* We upgraded the Android SDK version to 33.
+### Improvements
+
+- We upgraded the Android SDK version to 33.
 
 ## 7.0.3 {#703}
 
 **Release date: August 8, 2023**
 
-* We fixed a distorted splash screen issue for Android.
+### Fixes
+
+- We fixed a distorted splash screen issue for Android.
 
 ## 7.0.2 {#702}
 
@@ -23,7 +35,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed an issue where the QR code scanner would not work on the iOS version of a custom developer app.
+- We fixed an issue where the QR code scanner would not work on the iOS version of a custom developer app.
 
 ## 7.0.1 {#701}
 
@@ -31,9 +43,9 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed an issue with iOS builds throwing duplicate symbols during the build phase both in AppCenter and locally.
-* We fixed an issue affecting cookies in Android devices. (Tickets 178853, 178053)
-* We fixed an issue affecting the `mailto` schema in Android. (Ticket 180301)
+- We fixed an issue with iOS builds throwing duplicate symbols during the build phase both in AppCenter and locally.
+- We fixed an issue affecting cookies in Android devices. (Tickets 178853, 178053)
+- We fixed an issue affecting the `mailto` schema in Android. (Ticket 180301)
 
 ## 7.0.0 {#700}
 
@@ -41,5 +53,5 @@ description: "Native Template 7 release notes."
 
 ### Improvements
 
-* We updated our React Native version to 0.70.7
-* We updated certain libraries to be compatible with Studio Pro [9.24](/releasenotes/studio-pro/9.24/)
+- We updated our React Native version to 0.70.7
+- We updated certain libraries to be compatible with Studio Pro [9.24](/releasenotes/studio-pro/9.24/)

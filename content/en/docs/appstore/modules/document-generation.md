@@ -254,7 +254,28 @@ The following **Container** widget related design properties are available in th
 | **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
 | **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
-#### 4.4.3 Advanced Styling
+#### 4.4.3 Applying Custom Fonts {#applying-custom-fonts}
+
+For extended font support, Mendix recommends using custom fonts. To apply a custom font, follow the steps below:
+
+The procedure uses the `Noto Sans SC` font as an example. You can visit [Google fonts](https://fonts.google.com) for more font options or use a font of your choice.
+
+1. Download the font [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC).
+2. Copy the font file *NotoSansSC-Regular.ttf* from the *static* folder of the downloaded font package into the *theme\web\fonts* folder of the app.
+3. In Studio Pro, go to **Styling** > **Web** > **main.scss** in **App Explorer**, and add the lines below to the *main.scss* file in the built-in styling editor:
+ ```css
+    @font-face {
+        font-family: 'Noto Sans SC';
+        src: url(fonts/NotoSansSC-Regular.ttf);
+    }
+
+    .font-noto-sans-sc {
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+ ```
+4. Add the class `font-noto-sans-sc` to all applicable text and widgets.
+
+#### 4.4.4 Advanced Styling
 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 

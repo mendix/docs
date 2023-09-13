@@ -262,7 +262,7 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 
 1. Download the font [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC).
 2. Copy the font file *NotoSansSC-Regular.ttf* from the *static* folder of the downloaded font package into the *theme\web\fonts* folder of the app.
-3. Add the lines below to the file *main.scss* of the app theme (using the built-in styling editor in Studio Pro App explorer panel: `Styling > web > main.scss`).
+3. In Studio Pro, go to **Styling** > **Web** > **main.scss** in **App Explorer**, and add the lines below to the *main.scss* file in the built-in styling editor:
  ```css
     @font-face {
         font-family: 'Noto Sans SC';

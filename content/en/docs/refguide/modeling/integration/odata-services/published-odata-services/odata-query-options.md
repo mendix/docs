@@ -247,9 +247,9 @@ When a published resource has the [Deletable](/refguide/published-odata-resource
 
 ## 13 Calling Microflows {#actions}
 
-Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. Here is an example: `POST /odata/myservice/v1/OnboardNewEmployee`.
+To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL. Here is an example: `POST /odata/myservice/v1/OnboardNewEmployee`.
 
-To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/) dialog and look at the **Example of location** property.
+The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/) dialog and look at the **Example of location** property.
 
 The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. Here is an example:
 
@@ -262,9 +262,9 @@ The request body is always a JSON object, with a property for each parameter tha
 }
 ```
 
-If a parameter has the data type **Object**, the value of the parameter's property is a JSON object. If parameter's data type is **List**, the value of the parameter's property is a JSON array. This is similar to what is expected when [inserting objects](#inserting-objects) for that entity.
+If a parameter has the data type **Object**, the value of the parameter's property is a JSON object. If a parameter's data type is **List**, the value of the parameter's property is a JSON array. This is similar to what is expected when [inserting objects](#inserting-objects) for that entity.
 
-To pass an existing object, use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the existing object. You can also pass attributes of an object along with the `@id` reference. This assigns the specified attribute values to the existing object. Here is an example:
+To pass an existing object, use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the object. When you pass an object using the `@id` reference, you can also pass attributes of the object; this assigns the specified attribute values to the existing object. Here is an example that passes the `Employees(1783)` object while specifying a value for the `Email` attribute:
 
 ```json
 {

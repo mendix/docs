@@ -48,15 +48,15 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.1 Creating the Mapping
 
-1. In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Message Definitions**.
-2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
-3. The message definition is now opened. You need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select**, then choose the **Order** entity from the list.
+1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Message definitions**.
+2. In the **Add Message Definitions** dialog box, enter *MD_Orders* in the **Name** field. Press **OK** to create and start editing the new message definition.
+3. Select **Add** so that you can select the entity to use for the *MD_Orders* definition. Then click **Select** and choose the **Order** entity from the list.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MD_AddEntity.png" >}}
 
-4. After selecting the **Order** entity, the **Structure** part of the dialog box is filled with only the **Order** object selected.
+4. Selecting the **Order** entity fills in the **Structure** part of the **Message Definition** dialog box. By default, only the **Order** checkbox is selected.
 5. Select the **OrderID** and **Customer** attributes.
-6. Expand the **OrderItem_Order** association and select the **Product** and **Quantity** attributes:
+6. Select and expand the **OrderItem_Order** association, then select the **Product** and **Quantity** attributes:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MD_SelectedAttributes.png" >}}
 
@@ -65,18 +65,18 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.2 Configuring the REST Service
 
-1. In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Published REST Service**.
-2. Enter *PRS_OrderService* for the **Name** of your REST service. The REST service is now opened.
-3. Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**. Then click **OK** to close the dialog box.
+1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Published REST Service**.
+2. Enter *PRS_OrderService* for the **Name** of your REST service. Then press **OK** to create and start editing the new REST service.
+3. Add a new resource to your service by clicking **Add** in the **Resources** section. Enter *GetOrderByID* for the **Resource name**, then click **OK** to close the dialog box.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddRestResource.png" >}}
 
 4. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
-5. In the **Operation** dialog box, enter `{OrderID}` in the **Operation path** field, making sure to include the braces (`{}`). This allows the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this dialog box.
+5. In the **Operation** dialog box, enter *{OrderID}* in the **Operation path** field, making sure to include the braces (`{}`). This allows the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this dialog box.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddOperation.png" >}}
 
-6. In the same dialog box, click **Select** next to the **Microflow** field. Because you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
+6. In the same dialog box, click **Select** next to the **Microflow** field. Because you do not yet have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddOperationMicroflow.png" >}}
 
@@ -93,11 +93,11 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a id="eleven"></a>The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the **RESTExample** module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
+11. <a id="eleven"></a>The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building an export mapping. To start, right-click the **RESTExample** module on the **App Explorer** and select **Add other** > **Export Mapping** to add a new export mapping named *EM_ExportOrder*.
 
-    {{% alert color="info" %}}Creating an Export Mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability for clients to select the media type they want returned to the server. Follow the next steps in this document to learn how to set up Export Mapping in this case, but note that you can also return the list of objects from the microflow. The platform will export it in the format desired by the client, as indicated by the **Accept** header. The client can then specify if it wants to receive XML or JSON.{{% /alert %}}
+    {{% alert color="info" %}}Creating an export mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability to select which media type you want returned to the server.<br><br>You can follow the next steps in this document to learn how to set up Export Mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the **Accept** header. You can then specify if you want to receive XML or JSON.{{% /alert %}}
     
-12. In the **Select schema elements for export mapping** dialog box, select the **Message definition** option, and then use the **Select** button to select the **MD_Orders** mapping created earlier. Once you've selected all the attributes shown below, click **OK**.
+12. In the **Select schema elements for export mapping** dialog box, select **Message definition**, and then use the **Select** button to select the **MD_Orders** mapping created earlier. Once you have selected all the attributes shown below, click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/SelectSchemaForExport.png" >}}
 
@@ -111,11 +111,11 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MFExportWithMapping.png" >}}
 
-17. Add an activity to the microflow to create an object of the type **HttpResponse**:
+17. Add an activity to the microflow to create an object of type **HttpResponse**:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponse.png" >}}
 
-    The **StatusCode** will return "OK" as a `200` message. The content of the message is mapped to the exported JSON from [step 16](#sixteen). Also add the **HttpVersion** that you will be using (in this case, `HTTP/1.1`).
+    The **StatusCode** will return `OK` as a `200` message. The content of the message is mapped to the exported JSON from [step 16](#sixteen). Also add the **HttpVersion** that you will be using (in this case, `HTTP/1.1`).
 
 18. Add an activity to the microflow for adding a header to the response:
 

@@ -50,6 +50,8 @@ Mendix uses the following static IP addresses. If you need further information, 
 | Mendix Cloud UK | London (eu-west-2) | `18.130.169.15` <br /> `35.177.185.47` <br /> `52.56.174.215` | {app-name}.mendixcloud.com<br/>*or*<br/>{app-name}-{environment-type}.mendixcloud.com |
 | Mendix Cloud US | North Virginia (us-east-1) | `34.197.224.250` <br /> `52.55.243.62` <br /> `52.205.207.103` | {app-name}.mendixcloud.com<br/>*or*<br/>{app-name}-{environment-type}.mendixcloud.com |
 | Mendix Cloud US | Oregon (us-west-2) | `35.160.4.29` <br /> `44.236.131.88` <br /> `54.190.172.197` | {app-name}.apps.us-2a.mendixcloud.com<br/>*or*<br/>{app-name}-{environment-type}.apps.us-2a.mendixcloud.com |
+| Mendix Cloud Middle East | UAE (me-central-1) | `3.29.189.106` <br /> `3.29.155.3` <br /> `3.29.53.85` | {app-name}.apps.me-2a.mendixcloud.com<br/>*or*<br/>{app-name}-{environment-type}.apps.me-2a.mendixcloud.com |
+| Mendix Cloud SA | São Paulo (sa-east-1) | `15.229.194.124` <br /> `54.232.11.167` <br /> `177.71.150.202` | {app-name}.apps.sa-1a.mendixcloud.com<br/>*or*<br/>{app-name}-{environment-type}.apps.sa-1a.mendixcloud.com |
 
 ##### 2.2.1.1 Accessing AWS Services in Mendix Cloud
 

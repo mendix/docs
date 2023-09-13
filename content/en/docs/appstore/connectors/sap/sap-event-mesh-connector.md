@@ -1,23 +1,33 @@
 ---
-title: "{CONNECTOR-NAME}"
-url: /appstore/connectors/sap/{CONNECTOR-NAME}/
-description: "Describes the configuration and usage of the {CONNECTOR NAME} connector from the Mendix Marketplace. {SAP SERVICE NAME} is {SAP SERVICE DESCRIBED IN 1 SENTENCE}."
+title: "SAP Event Mesh Connector"
+url: /appstore/connectors/sap/sap-event-mesh-connector/
+description: "Describes the configuration and usage of the SAP Event Mesh connector from the Mendix Marketplace. The SAP Event Mesh service is allows applications to communicate through asynchronous events."
 weight: 20
-tags: ["marketplace", "marketplace component", "SAP", "{CONNECTOR NAME}", "connector"]
+tags: ["marketplace", "marketplace component", "SAP", "SAP Event Mesh", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-{BRIEFLY DESCRIBE WHAT YOU CAN ACHIEVE BY USING THE CONNECTOR. INCLUDE LINKS TO THE CONNECTOR PAGE ON MARKETPLACE, AND TO THE SAP SERVICE WEBSITE.}
+The [SAP Event Mesh connector](#needs-link) connector enables you to connect your app to [SAP Event Mesh](https://discovery-center.cloud.sap/serviceCatalog/event-mesh) and connect your Mendix app to applications, services, and systems across hybrid environments.
 
 ### 1.1 Typical Use Cases
 
-{DESCRIBE WHAT THE SAP SERVICE DOES. MUST VERIFY WITH SAP IF WE CAN USE THE SERVICE DESCRIPTION FROM THE SAP WEBSITE.}
+You can use the connector to perform the following tasks: 
+
+* Management of processes for all queues and topics 
+* Publishing of messages to a queue or topic, consumption of message from queue
+* Publishing an event to a queue
 
 ### 1.2 Prerequisites {#prerequisites}
 
-{LIST PREREQUISITES}
+Role collections required for user to be able to configure enterprise messaging service
+
+Enterprise Messaging Developer - developer role
+
+Enterprise Messaging Display - only read role
+
+Enterprise Messaging Administrator - administrator role
 
 ### 1.3 Licensing and Cost
 
@@ -31,7 +41,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **{MODULENAME}** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to {SAP SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the SAP service, you must also configure SAP authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **SAPEventMeshConnector** section. The connector provides a [domain model](#domain-model) and several [actions](#actions) that you can use to connect your app to {SAP SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the SAP service, you must also configure SAP authentication for the connector.
 
 ### 3.1 Configuring SAP Authentication
 
@@ -39,7 +49,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.2 Configuring a Microflow for an SAP Service
 
-After you configure the authentication profile for {SAP SERVICE NAME}, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+After you configure the authentication profile for the SAP Event Mesh service, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
 
 {A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
 
@@ -67,9 +77,9 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | --- | --- | --- |
 | {ENUMERATION ELEMENT NAME} | {ENUMERATION ELEMENT VALUE} | {ENUMERATION ELEMENT DESCRIPTION} |
 
-### 4.3 Activities {#activities}
+### 4.3 Actions {#actions}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the {CONNECTOR NAME} connector, they {PURPOSE OF THE ACTIVITIES}.
+The SAP Event Mesh connector allows your Mendix app to manage queues and queue subscriptions by using microflows and microflow activities.
 
 #### 4.3.1 {ACTIVITY NAME}
 

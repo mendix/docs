@@ -916,7 +916,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact Support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024 MB.|
-| 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
+| 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps built with Mendix 7.0 or above. Please upgrade to activate this functionality. |
 | 400 | NOT_ALLOWED| Scaling is only available for licensed apps using a supported version of Mendix. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 

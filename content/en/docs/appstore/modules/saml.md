@@ -115,14 +115,14 @@ There are different versions of the SAML module, depending on which version of M
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
     * For Mendix 7 and 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
-    * For Mendix version 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
+    * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
     
-        * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix version 9.
-        * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix version 9 and are using the 3.0 version of Atlas UI. 
+        * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix 9.
+        * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix 9 and are using version 3.0 of Atlas UI. 
 
-    * For Mendix version 10, you should use the latest versions of the module that is compatible with the 3.0 version of Atlas UI (that is, the version for apps newly built on Mendix 9 or newer). These are currently the same as the odd-numbered releases mentioned above for Mendix version 9; in future releases of the SAML module, there will be separate versions of the module dedicated for Mendix version 10.
+    * For Mendix 10, you should use the latest versions of the module that is compatible with the 3.0 version of Atlas UI (that is, the version for apps newly built on Mendix 9 or newer). These are currently the same as the odd-numbered releases mentioned above for Mendix 9; in future releases of the SAML module, there will be separate versions of the module dedicated for Mendix 10.
 
-        Mendix version 10 does not support the 2.0 version of the Atlas UI, so you should never use the even-numbered (Atlas 2.0-compatible) SAML patch releases with your Mendix 10 app.
+        Mendix 10 does not support the 2.0 version of the Atlas UI, so you should never use the even-numbered (Atlas 2.0-compatible) SAML patch releases with your Mendix 10 app.
 
 3. To download the required release, in **Releases** tab, find the release that is compatible with your app per the guidelines in the **Documentation** tab, and then click the **Download** button by the number of the release.
 4. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAML module into your app.
@@ -145,7 +145,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
     
             Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](/appstore/modules/saml/#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
-        {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix version 10.{{% /alert %}}
+        {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix 10.{{% /alert %}}
 
 1. Sign in to the application and configure the SAML module as described in the [Configuration](#config) section.
 

@@ -334,6 +334,6 @@ In case you encounter the message "No configuration object available. For use in
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 
 * The required **Enable PDF export** design property is not set to **Yes** for the page you are trying to export to PDF.
-* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully and does not trigger any client errors by temporarily adding the page to for example the app navigation.
+* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend to temporarily add the page to for example the app navigation.
 * A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.

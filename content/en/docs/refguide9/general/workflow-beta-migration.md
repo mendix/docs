@@ -10,7 +10,7 @@ tags: ["studio pro", "workflow", "migration", "beta"]
 
 ## 1 Introduction
 
-[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix version from 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
+[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
 
 This document explains how to migrate your existing workflow apps depending on the version you are migrating to. It is meant for advanced Mendix developers, so proceed with caution.
 
@@ -26,9 +26,9 @@ The following is changed in the domain model of the System module in Mendix 9.6,
 4. The **WorkflowInstance** entity has been renamed to **Workflow** to be more in line with how entity naming is done in Mendix.
 5. Some attributes have received small naming updates.
 
-### 2.2 Changes in Mendix Version 9.10
+### 2.2 Changes in Mendix 9.10
 
-The following is changed in the domain model of the System Module in **Mendix version 9.10**:
+The following is changed in the domain model of the System Module in Mendix 9.10:
 
 * Tasks do not require the WorkflowUserTask entity specialization anymore compared to 9.6-9.9
 * Workflows do not require the Workflow entity specialization anymore compared to 9.6-9.9

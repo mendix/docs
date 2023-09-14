@@ -21,7 +21,7 @@ The mx tool performs the commands described below.
 
 ### 3.1 mx convert Command
 
-The `mx convert` command converts the app(s) MPK file(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 9.12.2.44241, then `mx convert` will convert the app to that version. 
+The `mx convert` command converts the app(s) MPK file(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix 9.12.2.44241, then `mx convert` will convert the app to that version. 
 
 The input can be a single file, directory, or multiple files.
 

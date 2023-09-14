@@ -69,7 +69,7 @@ In particular, it is easier to fix deprecations in Java actions (see [Java Versi
 
 ### 3.4 Save Version 7 Project
 
-Your app is now ready to be upgraded to Mendix Version 8.
+Your app is now ready to be upgraded to Mendix 8.
 
 It is recommended that you backup/commit your project at this point so that you can return to it if necessary.
 
@@ -107,7 +107,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 ## 4 Elements of Type Float and Currency {#float-currency}
 
-The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix version 8. 
+The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix 8. 
 
 The following elements of type Float or Currency will report errors in version 8:
 

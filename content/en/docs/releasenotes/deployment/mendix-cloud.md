@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### September 14, 2023 
+
+#### Improvements
+
+* We added the AWS Middle East (UAE) region as a new deployment target.
+
 ### September 8, 2023 
 
 #### Improvements

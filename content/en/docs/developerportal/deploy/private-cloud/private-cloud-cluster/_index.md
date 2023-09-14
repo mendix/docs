@@ -874,8 +874,8 @@ The following fields can be configured:
 
 * `Liveness`, `readiness`, `startupProbe`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace — any changes made in the Deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
 * `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
-* `metricsSidecarResources`: this is used for all m2ee-metrics containers in the namespace
-* `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
+* `metricsSidecarResources` – this is used for all m2ee-metrics containers in the namespace
+* `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
 ### 6.4 Customize Runtime Metrics {#customize-runtime-metrics}

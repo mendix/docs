@@ -14,7 +14,7 @@ The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) modul
 This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (Sign up and Forgot password). In the sign up case, the end-user will also be asked to provide their name. For version 5.3.0 of the module and above, you can specify different templates to be sent, depending on the language in which the end-user is seeing the app.
 
 {{% alert color="info" %}}
-Versions of the Forgot Password module below 4.1.0 (Mendix 8) and 5.1.0 (Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
+Versions of the Forgot Password module below 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
 There is no alternative version for use with Mendix 7.
 {{% /alert %}}
@@ -27,7 +27,7 @@ There are three versions of the Forgot Password module, depending on whether you
 | 8.18.x | 4.x.x |
 | 7.23.x | 3.6.x and above |
 
-¹ If you are using Mendix version 9.20.0 or above, you must use version 5.1.0 or above of the Forgot Password module.
+¹ If you are using Mendix 9.20.0 or above, you must use version 5.1.0 or above of the Forgot Password module.
 
 If you already use the Forgot Password module in your Mendix 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix 8 to Mendix 9](#upgrade8-9), at the end of this page.
 
@@ -40,7 +40,7 @@ The Forgot Password module has the following dependencies:
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-² Versions of the Forgot Password module below 4.1.0 (Mendix 8) and 5.1.0 (Mendix version 9 and above), and those for Mendix 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that if you are using Mendix 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
+² Versions of the Forgot Password module below 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above), and those for Mendix 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that if you are using Mendix 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
 ## 2 Installing the Forgot Password Module{#installing}
 
@@ -85,7 +85,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
             * `System.User`
             * `MyFirstModule.User`
 
-            ³ `Email_Connector` permissions are needed if you are using version 4.1.0 or above (Mendix 8) or version 5.1.0 or above (Mendix version 9 and above). `EmailTemplate` permissions are only needed if using a version which uses the deprecated Email Module with Templates module.
+            ³ `Email_Connector` permissions are needed if you are using version 4.1.0 or above (for Mendix 8) or version 5.1.0 or above (for Mendix 9 and above). `EmailTemplate` permissions are only needed if using a version which uses the deprecated Email Module with Templates module.
 
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:
@@ -143,11 +143,11 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below 
     {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}}
 1. This will resolve two of the errors. Open the page of error and again change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
 
-You have now successfully upgraded the Forgot Password Module to work with Mendix version 9.
+You have now successfully upgraded the Forgot Password Module to work with Mendix 9.
 
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
-Versions 4.1.0 (Mendix 8) and 5.1.0 (Mendix version 9 and above) and above of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. There is a community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to help with your upgrade to these versions.
+Versions 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above) and above of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. There is a community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to help with your upgrade to these versions.
 
 {{% alert color="warning" %}}
 Use these instructions before you upgrade the Forgot Password module. The point at which you should get the new version is included in the steps below.
@@ -192,7 +192,7 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 
 #### 5.2.4 Actions After the Migration
 
-1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix version 9 and above). This will have the Email Connector module as a dependency.
+1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix 9 and above). This will have the Email Connector module as a dependency.
 1. Delete the Email Module with Templates module.
 1. Delete the Email Connector Migration Utility module.
 1. Remove the Administrator user roles for EmailTemplate and MigrationUtility.

@@ -21,7 +21,7 @@ The mx tool enables the options described below.
 
 ### 3.1 mx convert Command
 
-The `mx convert` command converts the apps to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 8.1.0.58215, then `mx convert` will convert apps to that version. 
+The `mx convert` command converts the apps to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix 8.1.0.58215, then `mx convert` will convert apps to that version. 
 
 The input can be a single file, directory, or multiple files.
 

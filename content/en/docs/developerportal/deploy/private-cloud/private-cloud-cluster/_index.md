@@ -306,17 +306,16 @@ List all local (including cluster-local) IP addresses and domains in the **No pr
 
 Hosts which should be excluded from proxying are specified as:
 
-* a string containing comma-separated values
-* each value is
-    * an IP address prefix (`1.2.3.4`)
-    * an IP address prefix in CIDR notation (`1.2.3.4/8`)
-    * a domain name
-    * if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied
-* each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
-* a domain name matches that name and all subdomains
-* a domain name with a leading "." matches subdomains only
+* A string containing comma-separated values, where each value is one of the following:
+    * An IP address prefix (`1.2.3.4`)
+    * An IP address prefix in CIDR notation (`1.2.3.4/8`)
+    * A domain name
+    * If you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied
+* Each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
+* A domain name matches that name and all subdomains
+* A domain name with a leading "." matches subdomains only
 
-    For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
+    For example, "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
 
 For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
 

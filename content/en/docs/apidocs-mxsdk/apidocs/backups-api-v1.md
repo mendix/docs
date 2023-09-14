@@ -1,5 +1,5 @@
 ---
-title: "Backups API Version 1 (Deprecated)"
+title: "Backups API – Version 1 (Deprecated)"
 linktitle: "Backups API v1"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."

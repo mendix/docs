@@ -32,7 +32,12 @@ To clone the repo please keep in mind:
 
 To run a local version of the site: 
 
-1. Run cmd: `npm start`
+1. Run one of the following commands:
+
+    * `npm run build`
+    * `./node_modules/.bin/hugo server --environment development` – in this case, you can use [different parameters](https://gohugo.io/commands/hugo_server/) to build the site in different ways—for example, build a copy of the production site and save it locally. 
+    
+        The path syntax prefacing `hugo` may be different based on your operating system and terminal you use.
 
     Once the site is built you will see a table indicating how many pages have been created. You will need to wait until the server is set up before you can see the site.
 

@@ -257,7 +257,7 @@ Mendix supports two client authentication methods: `client_secret_post` (client 
 
 ### 9.3 Incorrect Conditional Access Policies
 
-Prior to Mendix version 9.18.0, Studio Pro used an embedded browser for signing in. Conditional access policies in AzureAD could block this Studio Pro browser. For example, you could hit this limitation when using Microsoft's Intune for MDM/MAM with versions of Mendix below 9.18.
+Prior to Mendix 9.18.0, Studio Pro used an embedded browser for signing in. Conditional access policies in AzureAD could block this Studio Pro browser. For example, you could hit this limitation when using Microsoft's Intune for MDM/MAM with versions of Mendix below 9.18.
 
 From version 9.18.0, Mendix Studio Pro uses the system browser for signing in to overcome this limitation.
 

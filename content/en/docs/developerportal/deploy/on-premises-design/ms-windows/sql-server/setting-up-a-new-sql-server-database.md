@@ -59,7 +59,7 @@ You need to replace `MySchema` with the name of your schema.
 ## 4 Configuring the necessary SQL Server extensions
 
 {{% alert color="info" %}}
-You do not have to configure these extensions for Mendix version 8.0.0 and above.
+You do not have to configure these extensions for Mendix 8.0.0 and above.
 
 For Mendix 7, you only need to perform these steps if the following are true:
 

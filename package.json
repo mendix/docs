@@ -4,7 +4,8 @@
   "description": "Node files needed by Docsy",
   "main": "index.js",
   "scripts": {
-    "start": "hugo server --environment development"
+    "start": "hugo server --environment development",
+    "build": "hugo server --environment development"
   },
   "repository": {
     "type": "git",

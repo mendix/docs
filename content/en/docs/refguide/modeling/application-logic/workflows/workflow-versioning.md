@@ -38,8 +38,8 @@ Any of the following changes are interpreted as non-conflicting:
     * Changing a referenced page in a user task
     * Changing user assignment or user assignment option in a user task
     * Changing due dates of a user task
-* Adding outcomes in a **Decision**, **Call microflow** or **User task** activities
-* Changing the decision method in a **Multi-User Task** or one of its settings
+* Adding outcomes in **Decision**, **Call microflow** or **User task** activities
+* Changing the decision method in a **Multi-user task** or one of its settings
 * Changing the context entity, referenced microflows, referenced pages, or referenced workflows
 
 ### 3.2 Workflow Versioning Conflict Types
@@ -50,7 +50,7 @@ The Workflow Versioning Conflict Detection system detects different types of con
 
 Conflicts with the possible mitigations listed above can be summarized in the following matrix (you can see details for each conflict in the sections below):
 
-| **Conflict Type/Mitigation**                        | **Abort**                                                    | **Restart**                                                  | **Mark-As-Resolved**                                         | **Jump To Different Activities**                             |
+| **Conflict Type/Mitigation**                        | **Abort**                                                    | **Restart**                                                  | ***Mark-as-Resolved***                                         | **Jump To Different Activities**                             |
 | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | *Non-resolvable:*                                   |                                                              |                                                              |                                                              |                                                              |
 | Context Entity Replaced                             | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
@@ -74,7 +74,7 @@ When an app developer changes the **Workflow Context** entity of a workflow, exi
 
 You can do one of the following: 
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
@@ -90,7 +90,7 @@ This conflict may occur even without deploying a new app version.
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 
 #### 3.2.4 Workflow Definition Deleted
@@ -99,7 +99,7 @@ When an app developer deletes a workflow or excludes a workflow from an app and 
 
 You can do one of the following: 
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The app developer can revert the change (or include the workflow to the app again) and deploy it.
 
 #### 3.2.5 Current Activity Removed
@@ -108,8 +108,8 @@ When an app developer removes certain activities from a workflow and deploys tha
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The Administrator can apply jumping to different activities. The Workflow Commons module has pages where the Administrator can decide which activity in the workflow to continue from (which activity to jump to). As a developer, you can also use microflow activities [Generate jump-to options](/refguide/generate-jump-to-options/) and [Apply jump-to option](/refguide/apply-jump-to-option/) to build custom pages and logic to migrate running workflow instances.
 * The app developer can revert the change (which adds the activities back) and deploy this version.
 
@@ -123,8 +123,8 @@ This conflict happens in most cases in combination with a Current Activity Remov
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The app developer can revert the change (which adds the branch back) and deploy it.
 
 #### 3.2.7 Current Activity Moved out of Branch
@@ -133,8 +133,8 @@ When an app developer moves activities out of a branch of a **Parallel Split**, 
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.8 Parallel Split Introduced in Executing Path
@@ -143,8 +143,8 @@ When an app developer adds a **Parallel Split** with one or more branches and mo
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
 
 #### 3.2.9 Parallel Branch Introduced
@@ -153,9 +153,9 @@ When an app developer adds a branch to a **Parallel Split** and deploys this cha
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.10 Selected Outcome Replaced
@@ -164,20 +164,20 @@ When an app developer adds a new outcome to a user task, a microflow, or a decis
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.11 User Task Outcome Changed
 
-When an app developer changes the decision method of a multi-user task, or one of its settings, the user task could have a different outcome that before the change. This may not necessarily be a problem, but might be and needs to be assessed.
+When an app developer changes the decision method of a multi-user task, or one of its settings, the multi-user task could have a different outcome from that before the change. This may not necessarily be a problem, but might be and needs to be assessed.
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.12 Activities Introduced in the Executed Path
@@ -186,9 +186,9 @@ When an app developer adds one or more activities in a workflow (or moves one or
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.13 Executed Activities Moved to a Re-executable Position
@@ -197,7 +197,7 @@ When an app developer moves activities within a workflow, workflow instances tha
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.

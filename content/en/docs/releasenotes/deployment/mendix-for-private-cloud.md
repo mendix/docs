@@ -17,17 +17,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.13.0 {#2.13.0}
 
-* We've added support for Azure Workload Identity authentication when pushing images to Azure Container Registry. To use this option, the `mxpc-cli` installation and configuration tool now has a dedicated `microsoft-acr` registry type.
-* We've added an option to specify additional custom pod labels for an environment (or all environments in the namespace).
+* We have added support for Azure Workload Identity authentication when pushing images to Azure Container Registry. To use this option, the `mxpc-cli` installation and configuration tool now has a dedicated `microsoft-acr` registry type.
+* We have added an option to specify additional custom pod labels for an environment (or all environments in the namespace).
 * To improve security, ECR will use IRSA authentication by default instead of static credentials.
-* We've updated documentation on configuring and using container registries.
+* We have updated documentation on configuring and using container registries.
 * When pushing an image to a non-existing ECR repository, the Operator will attempt to create it by calling the ECR API.
-* We've added support for Postgres 15.
-* We refactored registry authentication code to use library authentication instead of binary plugins; this allows to keep dependencies up to date, improves reliability of builds and allows to have improved logging of the authentication process.
+* We have added support for Postgres 15.
+* We refactored registry authentication code to use library authentication instead of binary plugins. This allows the dependencies to be kept up to date, improves reliability of builds and allows improved logging of the authentication process.
 * When deploying an image to an environment, the Mendix Operator will now use the built image's sha256 digest to ensure that what was built will be deployed.
 * We have updated the list of supported platforms to include Kubernetes 1.28 and OpenShift 4.13.
-
-Upgrading to Mendix Operator v2.13.0 from a previous version will restart environments managed by that version of the Operator.
+* Upgrading to Mendix Operator v2.13.0 from a previous version will restart environments managed by that version of the Operator.
 
 ### August 17, 2023
 

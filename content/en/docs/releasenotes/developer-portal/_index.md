@@ -1209,7 +1209,7 @@ In Portfolio Management, you can do the following
 
 #### UI Improvements
 
-* With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
+* With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
 
 ### April 8, 2019
 

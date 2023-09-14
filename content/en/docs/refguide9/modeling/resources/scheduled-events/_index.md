@@ -41,7 +41,7 @@ Mendix 9.12 and above supports the following schedule types:
 
 When migrating to version [9.12.0](/releasenotes/studio-pro/9.12/#9120) or above, Studio Pro will attempt to convert legacy scheduled events into task queue-based events, when possible. In cases where this is not possible, a deprecation warning will be shown (in versions [9.12.1](/releasenotes/studio-pro/9.12/#9121) and above). Right-click the warning to see possible options for fixing it. If none of the options is suitable, you should perform the conversion manually.
 
-The following cases cannot be converted automatically when the model is upgraded to Mendix version 9.12.0 or above:
+The following cases cannot be converted automatically when the model is upgraded to Mendix 9.12.0 or above:
 
 * The event is not repeating — remove the scheduled event or use the [Java API](/refguide9/task-queue/#queuing) to schedule a one-time action — we no-longer support non-repeating scheduled events.
 * The event has a start-time in the future, which we'll stop supporting — change the start-time to a date in the past or switch to a task queue based scheduled event.

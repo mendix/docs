@@ -13,7 +13,7 @@ This page is about **legacy** scheduled events. Please see [Scheduled Events –
 
 Mendix 9.12 and above allow legacy scheduled events to be edited, but do not allow new legacy scheduled events to be created.
 
-If your app is Mendix version 9.12.0 or above, legacy scheduled events will have been converted to [task queue scheduled events](/refguide9/scheduled-events-task-queue/) automatically unless this is impossible. See the [Migration](/refguide9/scheduled-events/#migration) section of *Scheduled Events* for more information.
+If your app is Mendix 9.12.0 or above, legacy scheduled events will have been converted to [task queue scheduled events](/refguide9/scheduled-events-task-queue/) automatically unless this is impossible. See the [Migration](/refguide9/scheduled-events/#migration) section of *Scheduled Events* for more information.
 
 Legacy scheduled events are deprecated and will no longer be supported from Mendix 10.
 {{% /alert %}}

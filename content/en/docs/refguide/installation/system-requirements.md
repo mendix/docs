@@ -16,7 +16,7 @@ This document presents the system requirements for the various parts of the Mend
 
 Mendix Studio Pro has the requirements listed in the following sections.
 
-### 2.1 Software Specifications
+### 2.1 Software Specifications {#software}
 
 Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
@@ -46,7 +46,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-### 2.2 Hardware Specifications
+### 2.2 Hardware Specifications {#hardware}
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
 
@@ -144,16 +144,16 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.1 Operating System {#server-os}
 
-* Microsoft Windows Server 2008 SP2 and above
+* Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
-    * Debian 8 (Jessie) and above
+    * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
     * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
     * CentOS 6, CentOS 7
 
 ### 6.2 Web Server
 
-* Microsoft Internet Information Services 7 and above
-* Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
+* Microsoft Internet Information Services 8 and above
+* Nginx
 * Apache
 
 ### 6.3 Java {#java}

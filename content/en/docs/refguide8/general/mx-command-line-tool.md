@@ -21,7 +21,7 @@ The mx tool enables the options described below.
 
 ### 3.1 mx convert Command
 
-The `mx convert` command converts the apps to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 8.1.0.58215, then `mx convert` will convert apps to that version. 
+The `mx convert` command converts the apps to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix 8.1.0.58215, then `mx convert` will convert apps to that version. 
 
 The input can be a single file, directory, or multiple files.
 
@@ -86,7 +86,7 @@ The `OPTIONS` are described in the table below:
 | `app-name` | App | Assigns the specified app name to the app. |
 | `output-dir` | Current directory | The directory in which to create the project. |
 | `language-code` | Optional | The default language of the app. |
-| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/general/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). |
+| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.
 

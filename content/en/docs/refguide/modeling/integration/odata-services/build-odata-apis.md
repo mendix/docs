@@ -2,7 +2,7 @@
 title: "Build OData APIs with REST Best Practices"
 url: /refguide/build-odata-apis/
 weight: 75
-tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connector guide", "odata", "published odata services", "integration"]
+tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connector guide", "OData", "published OData services", "integration"]
 ---
 
 ## 1 Introduction
@@ -52,7 +52,7 @@ For every published resource, you can define what functionality is available:
 * **Update** = PATCH
 * **Delete** = DELETE 
 
-You can also define other capabilities, like if you can count results (using a `$count` query), skip results (using a `$skip` query), or limit the number of results returned (usimg a `$top` query): 
+You can also define other capabilities, like if you can count results (using a `$count` query), skip results (using a `$skip` query), or limit the number of results returned (using a `$top` query): 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/edit-published-resource.png" >}} 
 
@@ -90,7 +90,7 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" >}} 
 
-### 3.1 Getting a Resource by Identifier
+### 3.2 Getting a Resource by Identifier
 
 Fetch a single **Customer** resource by providing the identifier between brackets:
 
@@ -104,13 +104,13 @@ The response is as follows:
 
 OData also supports using multi-field IDs by providing the required attributes as a key value list between the brackets.
 
-### 3.2 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
+### 3.3 Filtering, Sorting, Paginating, and Selecting Data {#filter-sort-page-select-data}
 
 OData standardizes how to specify which resources to consume. This provides the client with the tools to ensure that the response payload is as small as possible. It also ensures that the Mendix Runtime service implementation will be able to push down the filtering, sorting, and pagination into the database. This uses the database query optimizer and available indexes to optimize performance.
 
 The following URL parameters are available:
 
-* **$filter** – This defines [filter expressions](https://docs.mendix.com/refguide/odata-query-options/#4-filtering) for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
+* **$filter** – This defines [filter expressions](/refguide/odata-query-options/#4-filtering) for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
 * **$top**, **$skip** – This indicates how many resource to skip and how many to return, helping to implement client-side pagination.
 * **$orderby** – This defines how to sort the resources in the response payload.
 * **$select** – This defines which attributes of the resource to return.
@@ -129,7 +129,7 @@ Alternatively, you can specify the query in the payload of a POST call, which ca
 
 ## 4 Creating and Changing Data with Full CRUD {#creating-changing-data}
 
-Published OData services in Studo Pro allow you to easily create and change data.
+Published OData services in Studio Pro allow you to easily create and change data.
 
 ### 4.1 Inserting New Data
 
@@ -329,7 +329,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)?$expand=Addresses,No
 
 The response is as follows:
 
-     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
 You can use select and expand in combination with filters, sorting, top and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data). See the following GET request:
 
@@ -342,7 +342,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers
             &$top=1
 ```
 
-     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/sort-top-skip.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/sort-top-skip.png" >}} 
 
 For long queries, place the query in the request body. You can do this by using POST, and adding `$query` to the endpoint. See the following POST request:
 
@@ -353,7 +353,7 @@ Content-Type: text/plain
 
 The response is as follows:
 
-     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/long-queries.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/long-queries.png" >}} 
 
 This result is very similar to using GraphQL, where you can query a graph of objects, and limit the attributes returned to only those that you need. 
 

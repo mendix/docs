@@ -67,7 +67,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 
 {{% alert color="info" %}}
 
-The possibility to use an empty path was introduced in Mendix version 7.19.0.
+The possibility to use an empty path was introduced in Mendix 7.19.0.
 
 {{% /alert %}}
 

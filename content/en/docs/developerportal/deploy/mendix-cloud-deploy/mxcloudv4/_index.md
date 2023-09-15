@@ -26,9 +26,11 @@ The primary hosting locations are as follows:
 * Mendix Cloud EU: AWS Dublin
 * Mendix Cloud EU: AWS Frankfurt
 * Mendix Cloud Middle East: AWS Bahrain
+* Mendix Cloud Middle East: AWS UAE
 * Mendix Cloud UK: AWS London
 * Mendix Cloud US: AWS North Virginia
 * Mendix Cloud US: AWS Oregon
+* Mendix Cloud SA: AWS São Paulo
 
 Backups will always be stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable, i.e. once it has been written to our storage location, it can no longer be modified or overwritten.
 

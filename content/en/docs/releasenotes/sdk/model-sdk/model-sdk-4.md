@@ -5,6 +5,20 @@ weight: 97
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.78.0 {#478}
+
+**Release date: August 23, 2023**
+
+* We added support for Mendix [10.2.0](/releasenotes/studio-pro/10/).
+* We added support for Mendix Metamodel [10.2.0](/releasenotes/sdk/metamodel-10.2/).
+
+## 4.77.0 {#477}
+
+**Release date: July 19, 2023**
+
+* We added support for Mendix [10.1.0](/releasenotes/studio-pro/10.1/).
+* We added support for Mendix Metamodel [10.1.0](/releasenotes/sdk/metamodel-10.1/).
+
 ## 4.76.0 {#476}
 
 **Release date: June 19, 2023**
@@ -512,7 +526,7 @@ weight: 97
 | Story | Impact | Description |
 |------|-----|---|
 | MS-508 | None | Allow detaching elements contained by a required part property. An error is thrown if the required property is still empty after the current (synchronous) action. |
-| MS-433 | None | Added the `exportModuleMpk` method to allow users to export an MPK file for a specific module in the working copy. |
+| MS-433 | None | Added the `exportModuleMpk` method to allow users to export an *.mpk* file for a specific module in the working copy. |
 | MS-477 | None | Experimental classes and properties are now marked as such in the TypeScript documentation. |
 | MS-519 | None | Added support for Modeler version 7.8.0. |
 

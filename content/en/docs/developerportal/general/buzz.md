@@ -32,8 +32,6 @@ You can see the size of your **Team** and your team members on the right side of
 
 **Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](/developerportal/project-management/stories/).
 
-**App Feedback** shows the last few items of feedback for this app. Click **Show all** to see all the [Feedback](/developerportal/general/feedback/).
-
 ## 4 Communicating on Buzz
 
 The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. In the **Update status** box, add a comment and click **Share**. You can also attach an image or a document via **Add**. 

@@ -17,6 +17,110 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### September 7, 2023
+
+#### Fixes 
+
+* We fixed feedback items not being sent from Native Templates to [Feedback](/developerportal/app-insights/feedback/) in [App Insights](/developerportal/app-insights/).
+* We fixed an issue where trying to close a feedback item threw an error.
+
+#### Deprecations
+
+* We have removed the **Onboarding** page from Control Center.
+* We deprecated the numerical 1-10 rating question option in [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights.
+
+### August 28, 2023
+
+#### New Features
+
+* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
+
+### August 24, 2023
+
+#### New Features
+
+* We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
+
+    * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+    * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
+    * We added documentation links on the home page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+
+#### Improvements
+
+* We improved the Feedback in App Insights as follows:
+
+    * When you manually create feedback items, you can now leave your email address.
+    * You can now archive multiple feedback items in one go.
+    * You can now download the attachments of feedback items that reporters have uploaded.
+    * If you have the right permission, you can now delete comments on the side panel of a feedback item.
+
+* We fine-tuned our [Jira integration](/developerportal/project-management/jira-connector/) support for Scrum boards. The [Stories pane](/refguide/stories-pane/) in Studio Pro now shows all stories belonging to the active Sprints of your board (this used to be all open Sprints with a limitation of 50 stories)
+
+#### Fixes
+
+* We fixed an issue where new users who were trying to access Feedback for the first time via a URL would be presented with an error.
+* We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
+* We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
+* We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
+
+### August 17, 2023
+
+#### Improvements
+
+* In Control Center, on the [Members](/developerportal/control-center/#members) page you can now sort members based on the number of apps to which they belong.
+* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/developerportal/control-center/#company-general-settings) tab of the [Company Settings](/developerportal/control-center/#company) page.
+
+### August 12, 2023
+
+#### New Features
+
+* We released [App Insights](/developerportal/app-insights/) for GA as a brand new suite that enables you to collect, analyze, and act on the input of your users while innovating faster. App Insights includes two tools: [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+
+* The new feedback management tool **Feedback** does the following:
+
+    * Allows you to add tags to feedback items so you can see patterns more easily
+    * Enables you to define custom statuses for feedback items – you can create your workflow, your way
+    * Supports identifying which environment the feedback item comes from (for example, production or test environment)
+    * Search more easily – you can now filter on environment, submission dates, and assignees
+    * Supports linking feedback items together, so that if multiple users report the same bug, you can treat and update all their feedback as one
+    * Enables submitters to see and update their feedback items in the Developer Portal
+    * Supports linking feedback items with Jira – for all of you who make use of our new Jira connector
+
+   You can find all your existing feedback data already in the new Feedback tool. If you have set up Epics or Jira as your project management tool, Feedback is already linked to your tool. In other words, you do not need to do anything, just try it out and tell us what you think.
+
+* Complementing Feedback, **Mini Surveys** helps you to set short, effective surveys to gather diverse feedback, and enables data-driven decision-making to improve app and features. Mini Surveys does the following:
+
+    * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
+    * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
+    * Support defining the duration of the survey
+    * Offers the toaster feature for you to designate the survey's on-screen placement
+    * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
+    * Supports recording all survey responses, even if a customer does not complete the entire survey
+    * Offers the test mode functionality for you to experiment prior to deploying the survey to a broader audience
+    * Provides a comprehensive view of responses for in-depth analysis
+
+### August 10, 2023
+
+#### Fixes
+
+* We fixed an issue with Jira connector where sub-tasks in Kanban boards in Jira would cause duplicate entries in the **Stories** pane in Studio Pro, causing it to throw an error. 
+* We fixed an issue where under certain circumstances, it was possible to remove the last Scrum Master of an app.
+
+### August 8, 2023
+
+#### Improvements
+
+* We released the [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for general use. This API allows you to manage webhooks for actions which are performed on your Mendix apps.
+
+### July 27, 2023
+
+#### Improvements
+
+* In Mendix 10, we have combined the strength of Mendix Studio and Studio Pro – they are not separate anymore, so we have removed the last links from the Developer Portal to Studio.
+* We have improved the information regarding the sunsetting of [Mendix Stories](/developerportal/project-management/stories/) (remember, that will be October 1!).
+* We are preparing the platform for the [big upgrade of the Feedback management experience](https://www.mendix.com/blog/mendix-release-10-0-a-new-era/#app-insights). The new Feedback management and Mini Surveys are a part of our brand new product suite called App Insights. The date for upgrading Feedback management is August 12. If you are using the current Feedback management tool, you will have received more detailed information in an email sent on Monday, July 24 (subject line: "Upgrade to new Feedback Management").
+* You asked, we listened: In Epics, you can now see who created a story on the story details page.
+
 ### July 13, 2023
 
 #### New Features 
@@ -59,7 +163,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira Connector](/developerportal/project-management/jira-connector/).
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira connector](/developerportal/project-management/jira-connector/).
 
 #### Improvements
 
@@ -128,7 +232,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where authors of a [feedback](/developerportal/general/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
+* We fixed an issue where authors of a [feedback](/developerportal/app-insights/feedback/) item would receive notifications on that item even though they specifically set the system not to send any notifications.
 
 ### April 13, 2023
 
@@ -138,7 +242,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * You can now add, rename, and delete tags, as well as change tag colors (21 colors to choose from!).
     * You can now create, link, or remove stories directly from an epic.
     * The address bar in your browser now shows the link to the exact board, story, and epic, so you can bookmark individual pages and easily come back to them.
-    * If you use Scrum, you can now see a summary of your completed sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
+    * If you use Scrum, you can now see a summary of your completed Sprint on the [archived Sprint details](/developerportal/project-management/epics/archive/#archived-sprint-details) page. You can see how many stories were completed and uncompleted, as well as the breakdown of completed points in the Sprint.
     * You can now [import](/developerportal/project-management/epics/planning/#import-stories) and [export](/developerportal/project-management/epics/archive/#export-archived-stories) stories using Excel files.
 
 #### Fixes
@@ -191,7 +295,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 With this feature, you can do the following:
 
@@ -255,7 +359,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### New Features
 
-We have released the Beta version of [Product Insights](/developerportal/general/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+We have released the Beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
 A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
 
@@ -328,7 +432,7 @@ In Portfolio Management, you can do the following
 
 #### Deprecations
 
-* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/general/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
 
 ### September 28, 2022
 
@@ -460,7 +564,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where replies on [Feedback](/developerportal/general/feedback/) emails were not correctly processed into comments.
+* We fixed an issue where replies on [Feedback](/developerportal/app-insights/feedback/) emails were not correctly processed into comments.
 
 #### Improvements
 
@@ -503,7 +607,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the submitter of a [feedback item](/developerportal/general/feedback/) was no longer able to comment on that issue after they left the app.
+* We fixed an issue where the submitter of a [feedback item](/developerportal/app-insights/feedback/) was no longer able to comment on that issue after they left the app.
 
 ### March 10, 2022
 
@@ -554,7 +658,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/general/feedback/) item. (Tickets 134179, 136172)
+* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/app-insights/feedback/) item. (Tickets 134179, 136172)
 
 ### November 18, 2021
 
@@ -597,7 +701,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/general/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
+* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/app-insights/feedback/#feedback-details). (Tickets 132892, 132959, 132983, 133075)
 
 ### October 14, 2021 {#oct-fourteen}
 
@@ -614,7 +718,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We have released the company [Onboarding](/developerportal/control-center/#onboarding) functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
+* We have released the company **Onboarding** functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
 ### September 23, 2021
 
@@ -739,7 +843,7 @@ In Portfolio Management, you can do the following
 #### Fixes
 
 * We fixed an issue where some graphs in the Control Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
-* We fixed the page title of the [Mendix Studio](/studio/) landing page.
+* We fixed the page title of the Mendix Studio landing page.
 * Page links now open in the correct tab.
 
 ### April 26, 2021
@@ -945,7 +1049,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where email notifications on [feedback](/developerportal/general/feedback/) items were not sent under certain circumstances.
+* We fixed an issue where email notifications on [feedback](/developerportal/app-insights/feedback/) items were not sent under certain circumstances.
 
 ### July 13, 2020
 
@@ -1105,7 +1209,7 @@ In Portfolio Management, you can do the following
 
 #### UI Improvements
 
-* With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
+* With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
 
 ### April 8, 2019
 

@@ -3,6 +3,8 @@ title: "Java Programming"
 url: /refguide7/java-programming/
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
 weight: 50
+no_list: false
+description_list: true 
 ---
 
 ## 1 Introduction
@@ -49,7 +51,4 @@ For details on usage and example, see [How to Use the Java API](/howto7/logic-bu
 
 For details on this topic, see [Using Eclipse](/refguide7/using-eclipse/).
 
-## 5 Main Documents in This Category
-
-* [Troubleshooting](/refguide7/troubleshooting/)
-* [Using Eclipse](/refguide7/using-eclipse/)
+## 5 Documents in This Category

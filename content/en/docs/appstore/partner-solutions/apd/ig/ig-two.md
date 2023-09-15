@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/apd/ig-two/
 weight: 1
 aliases:
     - /apm/installation-guide.html
-    - /apm/installation-guide
+    - /apm/installation-guide/
 ---
 
 ## 1 Introduction

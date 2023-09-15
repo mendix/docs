@@ -22,7 +22,7 @@ For critical production incidents, please contact Mendix Support by [phone](http
 Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
-* [Mendix Documentation](https://docs.mendix.com/)
+* [Mendix Documentation](/)
 * [Mendix Platform status](https://status.mendix.com)
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
@@ -151,7 +151,7 @@ If you are reporting a security finding or other security-related issue, for exa
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
     * A description of the issue found — please submit only one finding per support ticket.
-    * Where the issue was found — for example, which url, which Mendix version, the app id?
+    * Where the issue was found — for example, which URL, which Mendix version, the App ID?
     * How the issue was found — for example, was it from scanning an app and, if so, which tool was used?
     * A copy of an app containing the reported issue — see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
     * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit a vulnerability.

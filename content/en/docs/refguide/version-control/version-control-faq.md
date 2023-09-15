@@ -13,7 +13,7 @@ tags: ["git", "teamserver", "byo-git"]
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
-Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
+Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 

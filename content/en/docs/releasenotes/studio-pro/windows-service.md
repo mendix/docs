@@ -236,7 +236,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Now the backup folder will be created automatically when creating a backup, if it doesn't exist and if it has its default path.
 * Now the runtime and admin HTTP port numbers are checked for uniqueness; otherwise a message will be shown. New apps will get unique numbers.
 * Changed new default M2EE admin server passwords to a length of 32 characters, used for the communication between the Mendix Service Console/Windows Service and Mendix.
-* Added possibility to define the publicness of the runtime and admin server HTTP ports (listening on localhost, public or a comma-separated list of IP addresses), only for Mendix versions 4.3 and higher.
+* Added possibility to define the publicness of the runtime and admin server HTTP ports (listening on localhost, public or a comma-separated list of IP addresses), only for Mendix 4.3 and above.
 * Changed database type choice text 'Oracle 10.2 and later' to 'Oracle 11.2 and later'.
 * Reordered the database types alphabetically.
 * Set SQL Server as default database type.

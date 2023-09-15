@@ -4,6 +4,29 @@ url: /releasenotes/mobile/nt-5.2-rn/
 weight: 10
 description: "Native Template 5.2 release notes."
 ---
+
+{{% alert color="info" %}}
+The latest version of Native Template 5.2 targets Android 11 (API level 30). 
+
+To target Android 13 (API level 33 or higher), you can update the `compileSdkVersion` and `targetSdkVersion` to 33 in the **build.gradle** file and update your dependencies (as shown in the *Build a new version of your native mobile app* section of [this blog](https://www.mendix.com/blog/update-needed-for-android-native-mobile-apps/). 
+{{% /alert %}}
+
+## 5.2.18
+
+**Release date: May 24, 2023**
+
+### Fixes
+
+* We fixed an issue which affected building apps with remote or local notifications enabled. (Tickets 185505, 186171)
+
+## 5.2.17
+
+**Release date: May 16, 2023**
+
+### Fixes
+
+* We updated AppCenter configurations.
+  
 ## 5.2.16
 
 **Release date: January 20, 2023**

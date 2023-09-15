@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows you to configure a mapping between a request handler and microflows. In this way, you can create additional entry points to access specific parts of your application. The Deep Link module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 {{% alert color="info" %}}
-If you are using Mendix version 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
+If you are using Mendix 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
 {{% /alert %}}
 
 If you need to access pages or set up a published REST service, the Deep Link module may not be the best solution – there are also other approaches available. For the differences between these approaches, see the table below:
@@ -71,7 +71,7 @@ Make sure that all roles—including your guest roles—which need to access you
 
 Make sure that the roles that need to change the configuration of the Deep Link module at runtime have the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
 
-### 3.4 Adding the Configuration Overview Snippet the Custom Admin Page
+### 3.4 Adding the Configuration Overview Snippet to the Custom Admin Page
 
 To configure and manage deep links at runtime, add the **DeepLink.DeeplinkConfigurationOverview** snippet to a custom admin page, and make sure that all the users who operate the app can access this page. You need to add the **DeepLink.Admin** module role to their user roles.
 
@@ -123,13 +123,13 @@ To view all the available deep link configurations and example URLs, add the **D
 ### 3.6 Configuring Constants
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
-* **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](https://docs.mendix.com/refguide/anonymous-users/#2-anonymous-users-properties).
+* **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](/refguide/anonymous-users/#2-anonymous-users-properties).
 
     For the **LoginLocation** constant, it is IMPORTANT to note the following:
 
     * When the value is left empty, the default location is `login.html` (this file should be available in the theme folder).
     * When the login location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the login location.
-    * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required).
+    * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO v2.0 and above is required).
     * When using XSUAA, set the value to `/xsauaalogin/login?ret=`.
     * When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
         * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.
@@ -145,11 +145,11 @@ To view all the available deep link configurations and example URLs, add the **D
 
 When using the Deep Link module in Mendix 9 and above, you might get stuck in an endless redirect loop.
 
-This is because for Mendix 9, the [default value for SameSite cookies](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) has been changed to `"Strict"` meaning that session cookies cannot be forwarded.
+This is because for Mendix 9, the [default value for SameSite cookies](/developerportal/deploy/environments-details/#samesite) has been changed to `"Strict"` meaning that session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
 
-Additionally, there is an incompatibility between Mendix version 9.20 and above and earlier versions of the Deep Link module which could cause this. If you are using Mendix version 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
+Additionally, there is an incompatibility between Mendix 9.20 and above and earlier versions of the Deep Link module which could cause this. If you are using Mendix 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
 
 ### 4.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
 

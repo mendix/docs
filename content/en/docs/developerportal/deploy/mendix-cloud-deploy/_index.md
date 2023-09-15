@@ -56,7 +56,7 @@ If you are not currently a customer but would prefer to use a licensed cloud nod
 If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
 
-¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as `Active` will be counted towards the number of end-users of the app.
+¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as `Active` will be counted towards the number of end-users of the app.
 
 #### 1.1.1 Sleep Mode
 
@@ -111,7 +111,7 @@ You can customize a URL by adding [custom domains](/developerportal/deploy/custo
 
 Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (80 and 443) with connections to HTTP (80) being redirected to HTTPS (443).
 
-## 2 Deploying an App to the Mendix Cloud
+## 2 Deploying an App to the Mendix Cloud {#deploy-app-mendix-cloud}
 
 There are several options available to deploy your application to a connected Mendix Cloud node.
 
@@ -168,10 +168,6 @@ You can also deploy an app from Team Server. To do this, follow these steps:
 
 The package is deployed to the cloud.
 
-#### 2.2.3 Deploying via Studio
-
-To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
-
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
@@ -194,9 +190,9 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 
 The app is now deployed. You can configure the administrative account.
 
-### 2.4 Deploying a Free App to the Mendix Cloud
+### 2.4 Deploying a Free App to the Mendix Cloud {#deploy-free-app}
 
-With a Free App, you can deploy your app to the Mendix Cloud from Studio or Studio Pro by using one of the following methods:
+With a Free App, you can deploy your app to the Mendix Cloud from Studio Pro by using one of the following methods:
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
@@ -226,6 +222,7 @@ The following plans are available for Mendix:
 * Basic
 * Standard
 * Premium
+* Premium Plus
 
 For more information, see [Pricing](https://www.mendix.com/pricing/).
 
@@ -233,30 +230,22 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-The Standard resource packs listed below can be used with both Standard and Premium plans.
+The current resource packs are listed below.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
 | XS21 | 1 GiB | 0.25 | 1 GiB | 2 | 5 GiB | 10 GiB |
-| S21 | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
-| M21 | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
-| L21 | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
-| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
-| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
-| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
-| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+| S21 ¹ | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
+| M21 ¹ | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
+| L21 ¹ | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
+| XL21 ¹ ² | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
+| XXL21 ¹ ² | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
+| XXXL21 ¹ ² | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 ¹ ² | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
 
-The Premium resource packs listed below can only be purchased with a Premium plan.
+¹ Can also be used with a Premium plan to provide multi-AZ fallback
 
-| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
-| --- | --- | --- | --- | --- | --- | --- |
-| S21 | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
-| M21 | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
-| L21 | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
-| XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
-| XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
-| XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
-| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+² Can also be used with a Premium Plus plan to provide multi-region fallback
 
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 

@@ -10,9 +10,14 @@ aliases:
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide8/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide9/deploying-a-mendix-app-to-cloud-foundry.html
+    - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
+    - /refguide8/deploying-a-mendix-app-to-cloud-foundry 
+    - /refguide9/deploying-a-mendix-app-to-cloud-foundry
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -165,7 +170,7 @@ You may need to configure your file store by using environment variables. See th
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
 
-{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix version 11.{{% /alert %}}
+{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix 11.{{% /alert %}}
 
 ## 7 Cloud Foundry Environment Variables
 
@@ -198,7 +203,7 @@ Pushing the project folder to a Cloud Foundry cluster is not currently supported
 To resolve the issue, implement one of the following workarounds:
 
 * If the app model is stored on the Mendix Teamserver, use the Build API to [build a deployment package](/apidocs-mxsdk/apidocs/build-api/#start-building-deployment-package), and push that package with the CF buildpack.
-* [Build a deployment package from Studio Pro](/refguide/app-menu/#6-create-deployment-package), and push that package with the CF buildpack.
+* [Build a deployment package from Studio Pro](/refguide/app-menu/#create-package), and push that package with the CF buildpack.
 * Run [MxBuild](/refguide/mxbuild/) from your CI/CD pipeline to build a deployment package, and push that package with the CF buildpack.
 
 This issue will be solved in an upcoming version of the buildpack.

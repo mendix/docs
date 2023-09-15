@@ -8,6 +8,7 @@ description_list: true
 tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 aliases:
     - /howtogeneral/support/index.html
+    - /howtogeneral/support/
 ---
 
 ## 1 What You Can Expect from Mendix Support
@@ -48,13 +49,13 @@ Extended Support may be offered in cases where the support of a major Mendix ver
 
 There are 6-month and 12-month packages available for Extended Support.
 
-For example, support for Mendix version 7 is scheduled to end upon the release of Mendix version 10 GA. However, if you have purchased Extended Support, version 7 remains supported for either six months or one year from the release date of version 10 GA.
+For example, support for Mendix 7 has ended upon the release of Mendix 10 GA. However, if you have purchased Extended Support, version 7 remains supported for either six months or one year from the release date of Mendix 10 GA.
 
 Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 

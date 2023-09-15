@@ -19,18 +19,26 @@ This document is for the Mendix Feedback module, compatible with Studio Pro v.9.
 
 All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
 
-The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/general/feedback/) section of the Developer Portal, but your app will keep working as usual.
+The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
-If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
+If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher. 
+
+If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in the Developer Portal, we recommend that you remove the server location value within the widget and keep it empty.
 
 In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 {{% /alert %}}
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/general/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
+
+{{% alert color="info" %}}
+From 12 August, 2023 onwards, the way that feedback is presented in the Developer Portal will become part of **App Insights**. For details the [Feedback](/developerportal/app-insights/feedback/) documentation for details.
+
+Existing and new feedback items will continue to be available and you will not need to change the Mendix Feedback module in your app(s).
+{{% /alert %}}
 
 The Mendix Feedback module is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.
 
@@ -59,15 +67,15 @@ You should install the latest version of the Mendix Feedback module, as it will 
 ### 3.1 Adding the Feedback Widget to Your App
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
-2.  In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
+2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px">}} 
 
-3.  Drop the Feedback widget into a position in the layout:
+3. Drop the Feedback widget into a position in the layout:
 
     {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
-4.  [Configure the Feedback widget](#configuration).
+4. [Configure the Feedback widget](#configuration).
 
 5. If your app allows anonymous users, do as follows:
 
@@ -141,7 +149,7 @@ The image is allowed up to 5MB in one of the following formats: JPG, JPEG, PNG, 
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" width="500px" >}} 
 
-After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/general/feedback/) page of the app in the Developer Portal. Once you see the final page, you have successfully submitted your feedback.
+After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in the Developer Portal. Once you see the final page, you have successfully submitted your feedback.
 
 ## 4 Upgrading the Deprecated Feedback Widget to the Feedback Module {#upgrade}
 
@@ -176,14 +184,14 @@ If you see the following error, click **close** and then go to your widget folde
 {{% alert color="warning" %}}
 **All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
 
-The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/general/feedback/) section of the Developer Portal, but your app will keep working as usual.
+The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
 If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
 {{% /alert %}}
 
 ### 6.1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/general/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px">}}
 
@@ -201,7 +209,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 #### 6.1.3 Limitations
 
 * This widget can only be used in combination with Mendix apps
-* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
+* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
 ### 6.2 Configuration {#legacy-configuration}
 
@@ -262,7 +270,7 @@ Once you are in feedback mode, you can click anywhere on the screen to **leave a
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/comment.png" width="600px">}}
 
-And voila! A screenshot of the current page is created, which you can choose to attach to your feedback. After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/general/feedback/) page of the app in the Developer Portal.
+And voila! A screenshot of the current page is created, which you can choose to attach to your feedback. After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in the Developer Portal.
 
 When you have left your feedback, you need to exit the feedback mode by clicking **Exit Feedback Mode**:
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/exit-feedback-mode.png" >}}

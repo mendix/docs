@@ -8,8 +8,6 @@ description: "Use this API to manage webhooks."
 tags: ["API", "webhooks", "Mendix Cloud"]
 ---
 
-{{% alert color="warning" %}} This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
-
 ## 1 Introduction
 
 The Mendix Webhooks API allows you to manage [webhooks](/developerportal/deploy/webhooks/).

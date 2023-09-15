@@ -73,7 +73,13 @@ A directory where Gradle is located on the computer that you use to deploy the a
 
 Gradle is necessary to deploy Mendix applications if the **Build using Gradle** setting is enabled.
 
-## 4 Mendix Assist Tab
+### 2.4 Disk Location
+
+#### 2.4.1 Default App Directory {#default-directory}
+
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
+
+### 3 Mendix Assist Tab
 
 ### 4.1 Logic Bot
 
@@ -96,7 +102,7 @@ The **Best Practice Bot** tab contains the following settings:
 
 This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When enabled, the pre-selected answer is **yes**; otherwise, it is **no**.
 
-## 6 Version Control Tab
+## 5 Version Control Tab
 
 ### 6.1 File Comparison
 

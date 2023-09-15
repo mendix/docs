@@ -9,6 +9,10 @@ weight: 1
 The Application Performance Diagnostics (APD) tool is a solution that helps you to analyze performance issues and runtime behavior.
 
 {{% alert color="info" %}}
+To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
+{{% /alert %}}
+
+{{% alert color="info" %}}
 In earlier releases, this tool was called Application Performance Monitor (APM).
 {{% /alert %}}
 

@@ -24,13 +24,13 @@ weight: 100
 
 | Story # | Impact | Description |
 | --- | --- | --- |
-| 600896 | Low | Various meta model updates *for Mendix version 6.1.0* - see below. |
+| 600896 | Low | Various meta model updates for Mendix 6.1.0 - see below. |
 
-The following changes are made per 600896 and pertain exclusively to models made with Mendix version 6.1.0 and above:
+The following changes are made per 600896 and pertain exclusively to models made with Mendix 6.1.0 and above:
 
 * Introduced a new modeling construct `SelectorDatabaseSource` for pages.
 * `DatabaseConstraint` cannot be created directly in a `DatabaseSourceBase` instance anymore. Instead, use the `create` method of `DatabaseConstraint` and assign the instance explicitly to a suitable container, as in, `databaseConstraints` of either an instance of (a sub type of) `DatabaseSourceBase` or `SelectorDatabaseSource`.
-* These properties have been deleted, so should not be accessed on models with Mendix version 6.1.0 and above:
+* These properties have been deleted, so should not be accessed on models with Mendix 6.1.0 and above:
     * `systemEntityType` of both `MsdMicroflow` and `MsdMicroflowParameter`,
     * `parameterTypeName` of `ExportMapping`, and
     * `allowSimpleMappingInheritance` of `OperationInfo`.
@@ -62,7 +62,7 @@ Please run `npm update mendixmodelsdk --save`.
 | 561960 | Low | Convenience methods to create elements and add them to a parent directly are introduced for all elements that are stored at a unique place (this holds for most elements except for utilities like `texts.Text`). See the next paragraph for more details. |
 | 553639 | Low | The Model API and SDK observe the same rules for setting properties to `null` as the Modeler does: (1) list properties cannot receive `null` at all, (2) non-list properties can only be set to `null` if they are are object-typed (as in, not primitive or enum) and not required (see documentation). |
 | 561972 | Low | It is no longer possible to move a model element from one model to another. In other words: model elements can only exist within the model they were created in. |
-| 562069, 561977, 568908 | None | The SDK is now versioned in the sense that structures and properties can have lifecycles, moving from `not yet introduced` to `introduced` to `deprecated` to `deleted` depending on which version of the Mendix Modeler was used to create (the MPK for) the working copy. The SDK provides suitable warnings or errors (once per structure/property per connection) on the console whenever a structure or property is used that is either not yet introduced, deprecated or deleted. |
+| 562069, 561977, 568908 | None | The SDK is now versioned in the sense that structures and properties can have lifecycles, moving from `not yet introduced` to `introduced` to `deprecated` to `deleted` depending on which version of the Mendix Modeler was used to create (the *.mpk* for) the working copy. The SDK provides suitable warnings or errors (once per structure/property per connection) on the console whenever a structure or property is used that is either not yet introduced, deprecated or deleted. |
 | 463511* | Low | Finding images by qualified name now works, so for example, `pages.StaticImageViewer.image` isn't always `null`. |
 | 585563 | Low | Stability improvements when uploading large files. |
 | 583025 | Low | `Structure#traverse` now checks whether the structure has been loaded and fails if not. You have to pre-load traversed structures first if not done already. |

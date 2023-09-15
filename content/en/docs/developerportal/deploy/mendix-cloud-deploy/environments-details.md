@@ -273,16 +273,16 @@ There can be additional issues when using cookies in iframes for end-users using
 
 To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](/developerportal/deploy/custom-domains/) to ensure that the app you want to embed is part of the same domain. For example, if your page is `mainpage.domain.name`, then the app embedded in the iframe should be `appname.domain.name`.
 
-##### 4.2.2.2 Applying a Different SameSite Setting
+##### 4.2.2.2 Applying a Different SameSite Setting{#samesite}
 
-From Studio Pro version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
+From Studio Pro 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
-* For Studio Pro version 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
+* For Studio Pro 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
 * For Studio Pro version 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
-For Mendix versions below 8.12, there was no SameSite value set on cookies, and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which sets `SameSite=None; Secure;` for all your cookies.
+For Mendix 8.11 and below, there was no SameSite value set on cookies, and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The **SAMESITE_COOKIE_PRE_MX812** setting is implemented the next time your app is deployed after you apply the change.

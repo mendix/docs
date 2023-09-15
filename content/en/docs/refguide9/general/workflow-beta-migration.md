@@ -10,15 +10,15 @@ tags: ["studio pro", "workflow", "migration", "beta"]
 
 ## 1 Introduction
 
-[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix version from 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
+[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
 
 This document explains how to migrate your existing workflow apps depending on the version you are migrating to. It is meant for advanced Mendix developers, so proceed with caution.
 
 ## 2 Changes to the System Module Domain Model {#system-module}
 
-### 2.1 Changes in Mendix Versions 9.6-9.9
+### 2.1 Changes in Mendix 9.6–9.9
 
-The following is changed in the domain model of the System Module in **Mendix version 9.6, 9.7, 9.8, and 9.9**:
+The following is changed in the domain model of the System module in Mendix 9.6, 9.7, 9.8, and 9.9:
 
 1. The **WorkflowSystemTask**, and **WorkflowVersion** entities have been removed and are now handled in the background by the runtime.
 2. The **WorkflowTaskInstance** entity has been merged into the **WorkflowUserTask** entity.
@@ -26,9 +26,9 @@ The following is changed in the domain model of the System Module in **Mendix ve
 4. The **WorkflowInstance** entity has been renamed to **Workflow** to be more in line with how entity naming is done in Mendix.
 5. Some attributes have received small naming updates.
 
-### 2.2 Changes in Mendix Version 9.10
+### 2.2 Changes in Mendix 9.10
 
-The following is changed in the domain model of the System Module in **Mendix version 9.10**:
+The following is changed in the domain model of the System Module in Mendix 9.10:
 
 * Tasks do not require the WorkflowUserTask entity specialization anymore compared to 9.6-9.9
 * Workflows do not require the Workflow entity specialization anymore compared to 9.6-9.9
@@ -41,13 +41,13 @@ The following is changed in the domain model of the System Module in **Mendix ve
 
 The following sub-sections explain the steps to take in migrating your app with the workflow functionality depending on the version you would like to migrate to.
 
-If you would like to migrate your app to **Mendix version 9.6-9.9**, see the [Migrating Your App to Mendix Version 9.6-9.9](#migrate) section below.
+If you would like to migrate your app to **Mendix 9.6-9.9**, see the [Migrating Your App to Mendix 9.6-9.9](#migrate) section below.
 
-If you would like to migrate your app to **Mendix version 9.10**, see the [Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10](#migrate-910) section below.
+If you would like to migrate your app to **Mendix 9.10**, see the [Migrating Your App from Mendix 9.6-9.9 to Mendix 9.10](#migrate-910) section below.
 
-### 3.1 Migrating Your App to Mendix Version 9.6-9.9 {#migrate}
+### 3.1 Migrating Your App to Mendix 9.6-9.9 {#migrate}
 
-If you would like to migrate your app with workflow functionality to Mendix version 9.6,9.7,9.8, or 9.9, follow the steps below.
+If you would like to migrate your app with workflow functionality to Mendix 9.6,9.7,9.8, or 9.9, follow the steps below.
 
 #### 3.1.1 Back Up Your App
 
@@ -59,7 +59,7 @@ Build data migration microflows if necessary.
 
 #### 3.1.3 Upgrade Your App
 
-Upgrade your app to Mendix version 9.6-9.9. To upgrade to your app, follow these steps:
+Upgrade your app to Mendix 9.6-9.9. To upgrade to your app, follow these steps:
 
 1. Download Studio Pro 9.6-9.9.
 1. Open your app in Studio Pro.
@@ -73,7 +73,7 @@ Make sure the correct user entity is set in the App Settings: open **App Setting
 
 #### 3.1.5 Set Up Your Domain Model {#domain-model}
 
-After upgrading to the Mendix version 9.6-9.9, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply remove the generalization and this will automatically make your entity persistable again. This entity represents your business data going through the workflow and is used for the **Workflow Context** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below.
+After upgrading to the Mendix 9.6-9.9, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply remove the generalization and this will automatically make your entity persistable again. This entity represents your business data going through the workflow and is used for the **Workflow Context** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below.
 
 For every workflow in your application you now need an entity that represents the instances of the workflow and will be used by the **Workflow Instance** parameter in the workflow editor. This entity needs to be a specialization of the **Workflow** entity in the System module and has to be connected to your workflow context entity via either a one-to-one or one-to-many association, where the owner is the **Workflow Instance** entity. 
 
@@ -91,9 +91,9 @@ If you did not implement custom UI in your workflow pages, we highly recommend j
 
 Securing user tasks now happens through the domain model by setting [entity accesses](/refguide9/module-security/#entity-access), and you no longer need to select which module roles are allowed to execute a task. Setting target users remains unchanged.
 
-### 3.2 Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10 {#migrate-910}
+### 3.2 Migrating Your App from Mendix 9.6-9.9 to Mendix 9.10 {#migrate-910}
 
-If you would like to migrate your app with workflow functionality **from** Mendix versions 9.6-9.9 **to** Mendix version 9.10, follow the steps below.
+If you would like to migrate your app with workflow functionality **from** Mendix 9.6-9.9 **to** Mendix 9.10, follow the steps below.
 
 #### 3.2.1 Back Up Your App
 
@@ -105,7 +105,7 @@ Build data migration microflows if necessary.
 
 #### 3.2.3 Upgrade Your App
 
-Upgrade your app to Mendix version 9.10. To upgrade to your app, follow these steps:
+Upgrade your app to Mendix 9.10. To upgrade to your app, follow these steps:
 
 1. Download Studio Pro [9.10](/releasenotes/studio-pro/9.10/).
 1. Open your app in Studio Pro.

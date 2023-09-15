@@ -1,12 +1,12 @@
 ---
-title: "DB2"
+title: "DB2 ⚠"
 url: /refguide9/db2/
 weight: 40
 tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
-Support for DB2 is deprecated and [was removed in Mendix 10](/releasenotes/studio-pro/9.12/#deprecations).
+⚠ Support for DB2 is deprecated and [was removed in Mendix 10](/releasenotes/studio-pro/9.12/#deprecations).
 {{% /alert %}}
 
 ## 1 Introduction

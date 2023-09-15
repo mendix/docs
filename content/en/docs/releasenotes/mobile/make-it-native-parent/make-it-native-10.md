@@ -14,15 +14,18 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 **Release date: September 15th, 2023**
 
-### Features
+### New Features
 
-* Rebranding: Introduced fresh designs for Make It Native 10.
-* History Integration: Implemented a new history feature. (for Android)
+* We added a new history integration feature for Android. Now you can easily see your most recent successful network connections.
+
+### Improvements
+
+* We introduced fresh visual designs for Make It Native 10.
 
 ### Fixed
 
-* Library Update: Upgraded `react-native-device-info` to version 8.7.1 to enhance device compatibility and performance.
-* We've updated Showcase Banking App.
+* We upgraded `react-native-device-info` to version 8.7.1 to enhance device compatibility and performance.
+* We updated the Showcase Banking App.
 
 ## iOS 1.0.3
 

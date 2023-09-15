@@ -12,17 +12,17 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ## iOS 1.1.0 / Android 1.1.0
 
-**Release date: September 13th, 2023**
+**Release date: September 15th, 2023**
 
 ### Features
 
-- Rebranding: Introduced fresh designs for Make It Native 10.
-- History Integration: Implemented a new history feature. (for Android)
+* Rebranding: Introduced fresh designs for Make It Native 10.
+* History Integration: Implemented a new history feature. (for Android)
 
 ### Fixed
 
-- Library Update: Upgraded `react-native-device-info` to version 8.7.1 to enhance device compatibility and performance.
-- We've updated Showcase Banking App.
+* Library Update: Upgraded `react-native-device-info` to version 8.7.1 to enhance device compatibility and performance.
+* We've updated Showcase Banking App.
 
 ## iOS 1.0.3
 
@@ -30,14 +30,14 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ### Improvements
 
-- We made the `Launch App` screen consistently remember your previously used URL.
-- The `History` tab now automatically opens the launch screen to quickly launch your app.
+* We made the **Launch App** screen consistently remember your previously used URL.
+* The **History** tab now automatically opens the launch screen to quickly launch your app.
 
 ### Fixes
 
-- We fixed the `History` tab so it no longer saves duplicate entries.
-- We fixed rendering the onboarding screens on all devices.
-- We fixed several design and usability issues throughout the app.
+* We fixed the **History** tab so it no longer saves duplicate entries.
+* We fixed rendering the onboarding screens on all devices.
+* We fixed several design and usability issues throughout the app.
 
 ## Android 1.0.0
 
@@ -49,9 +49,9 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 ### Improvements
 
-- We made the default language `- en-US`.
-- We refreshed the app's design with a cleaner and more intuitive layout.
-- We improved visual elements and icons for a more polished and modern look.
+* We made the default language `- en-US`.
+* We refreshed the app's design with a cleaner and more intuitive layout.
+* We improved visual elements and icons for a more polished and modern look.
 
 ## iOS 1.0.0
 
@@ -63,4 +63,4 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 ### New Features
 
-- We introduced the `History` tab, allowing you to access frequently visited URLs without retyping them.
+* We introduced the **History** tab, allowing you to access frequently visited URLs without retyping them.

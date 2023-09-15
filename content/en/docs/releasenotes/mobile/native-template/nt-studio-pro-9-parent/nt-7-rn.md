@@ -5,15 +5,28 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.6 {#706}
+
+**Release date: September 15, 2023**
+
+### Additions
+
+* We added a `com.google.android.gms.permission.AD_ID` permission to the Android manifest file. This permission governs access to the advertising ID, facilitating more effective targeting and personalization within the app's advertisement services.
+  * Note that this permission is currently disabled with the `tools:node="remove"` attribute.
+
 ## 7.0.5 {#705}
 
 **Release date: August 24, 2023**
+
+### Improvements
 
 * We upgraded the Android SDK version to 33.
 
 ## 7.0.3 {#703}
 
 **Release date: August 8, 2023**
+
+### Fixes
 
 * We fixed a distorted splash screen issue for Android.
 

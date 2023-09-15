@@ -279,7 +279,7 @@ The provided microflow can have any or all of the following parameters, all of w
 | List of `System.WorkflowUserTaskOutcome` | All outcomes that have been selected so far. These outcomes are ordered in the order in which they occurred, earliest first. |
 | `System.WorkflowUserTask`                | The multi-user task for which the decision must be made. |
 | `System.Workflow`                        | The workflow instance that contains the multi-user task. |
-| workflow context                         | The [worklow parameter](/refguide/workflow-parameters) variable. |
+| workflow context                         | The [workflow parameter](/refguide/workflow-parameters/) variable. |
 
 The provided microflow should return a value of type **String**, containing the final outcome of the multi-user task. 
 If no decision can be taken yet based on the selected outcomes, the microflow should return `empty` (or an empty string).
@@ -296,7 +296,7 @@ When a value is returned that is not defined in the [Outcomes](#outcomes), the m
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If the microflow is changed in between deployments, it might return a different result after the deployment from during the previous deployment, for user tasks that are in progress. This cannot be detected during [workflow versioning conflict detection](/refguide/workflow-versioning) because the microflow cannot be called at that point. As a result, it will not cause a conflict and behaves like when the workflow is marked as resolved.
+If the microflow is changed in between deployments, it might return a different result after the deployment from during the previous deployment, for user tasks that are in progress. This cannot be detected during [workflow versioning conflict detection](/refguide/workflow-versioning/) because the microflow cannot be called at that point. As a result, it will not cause a conflict and behaves like when the workflow is marked as resolved.
 {{% /alert %}}
 
 ###### 2.5.2.5.1 Example

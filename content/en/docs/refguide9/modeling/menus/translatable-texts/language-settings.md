@@ -217,9 +217,9 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Vietnamese | Vietnam | vi_VN | 9.0.5 |
 | Welsh | Wales | cy_GB | 9.0.5 |
 
-## 6 List of Deprecated Languages
+## 6 List of Deprecated Languages ⚠
 
-You can find the list of deprecated languages in the table below:
+⚠ You can find the list of deprecated languages in the table below:
 
 | Language                     | Region                | Locale   | Available Since | Deprecated In |
 | ---------------------------- | --------------------- | -------- | --------------- | ------------- |

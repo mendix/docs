@@ -1,5 +1,5 @@
 ---
-title: "Format String"
+title: "Format String ⚠"
 url: /appstore/widgets/format-string/
 category: "Widgets"
 description: "Describes the configuration and usage of the Format String widget, which is available in the Mendix Marketplace."
@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 ---
 
 {{% alert color="warning" %}}
-This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
+⚠This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -44,7 +44,7 @@ The advantage of this is that the stricter model does not affect the current dat
 
 ### 2.2 Current Situation for Uniqueness Validation
 
-Using runtime validation for uniqueness has been deprecated. However, until it is removed, we are providing a Runtime setting that, if set to **Database**, will enforce the unique validation rules on a database level.
+⚠ Using runtime validation for uniqueness has been deprecated. However, until it is removed, we are providing a Runtime setting that, if set to **Database**, will enforce the unique validation rules on a database level.
 
 {{< figure src="/attachments/refguide8/runtime/data-storage/uniqueness-constraint-migration/uniqueness-validation-setting.PNG" >}}
 

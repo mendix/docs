@@ -310,7 +310,7 @@ Some examples of existing claims are:
 * com.mendix.user.timezone¹
 * com.mendix.user.roles¹
 
-*¹ The claims starting com.mendix.user are an alpha feature and may be deprecated in a future release in favor of standard claims specified by OIDC protocol. The OIDC SSO (client) module does not process these claims.*
+*¹ ⚠ The claims starting com.mendix.user are an alpha feature and may be deprecated in a future release in favor of standard claims specified by OIDC protocol. The OIDC SSO (client) module does not process these claims.*
 {{% /alert %}}
 
 ## 4 Configuring an OIDC Client

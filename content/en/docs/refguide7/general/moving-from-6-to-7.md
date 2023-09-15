@@ -114,13 +114,13 @@ Dojo APIs exposed through the global `dojo` object are no longer supported, as t
 
 ## 5 Deprecated Features
 
-The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.
+⚠ The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.
 
 ### 5.1 Client Deprecations
 
-The `mx.server.request` client API method has been deprecated. We bet you never even knew it existed! If you did, be aware that it no longer handles validations. This responsibility has been moved to `mx.data`.
+⚠ The `mx.server.request` client API method has been deprecated. We bet you never even knew it existed! If you did, be aware that it no longer handles validations. This responsibility has been moved to `mx.data`.
 
-The `MxContext` methods `setTrackId` and `setTrackEntity` have been deprecated. Use the `setContext` method instead.
+⚠ The `MxContext` methods `setTrackId` and `setTrackEntity` have been deprecated. Use the `setContext` method instead.
 
 ### 5.2 Runtime Deprecations on `com.mendix.core.Core`
 
@@ -133,13 +133,13 @@ The `MxContext` methods `setTrackId` and `setTrackEntity` have been deprecated. 
 
 ## 6 Removed Deprecated Functionality
 
-The following features were deprecated in Mendix 6 and have been removed in Mendix 7.
+⚠ The following features were deprecated in Mendix 6 and have been removed in Mendix 7.
 
 ### 6.1 Removed Client Functionality
 
 #### 6.1.1 Split Panes
 
-We dropped support for the vertical and horizontal split pane widgets that have been deprecated since Mendix 6. From now on, these widgets will result in consistency errors in the Modeler. To smooth out the conversion path, we introduced a tool to convert existing split panes (one-by-one or all together) into layout grids. You can access the tool by right-clicking the consistency error message or from the **Tools** menu.
+⚠ We dropped support for the vertical and horizontal split pane widgets that have been deprecated since Mendix 6. From now on, these widgets will result in consistency errors in the Modeler. To smooth out the conversion path, we introduced a tool to convert existing split panes (one-by-one or all together) into layout grids. You can access the tool by right-clicking the consistency error message or from the **Tools** menu.
 
 Note that while the tool is definitely awesome, it is not perfect. The resulting layout grids will not be able to dynamically resize (via the animated resize feature of the split panes, which is no longer supported in the platform), and the markup and scrolling behavior might be a bit different. So, please test your applications after updating to Mendix 7! (Do we really have to mention that?)
 
@@ -151,7 +151,7 @@ For more information, see [Layouts](/refguide7/layout/#layout-type) and the blog
 
 #### 6.1.3 Apply Context and Remove from Context
 
-The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated in Mendix 5.19, and they have been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
+⚠ The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated in Mendix 5.19, and they have been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
 
 ### 6.2 Removed Client APIs
 

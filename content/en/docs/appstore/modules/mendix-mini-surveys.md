@@ -54,7 +54,7 @@ You can achieve this using the data view and nanoflow solution we provide in the
 2. Copy the **ShowSurvey_UsingDataView** snippet to the page where you want the survey to load. You also need to ensure that the Mini Survey widget is on the same page.
 3. Open the **ShowSurvey_UsingConstant** nanoflow and open the **SurveyID** action activity, replace the string value with your constant variable.
 
-{{% alert color="info" %}} We will continue to support this deprecated solution. In a future version you will be able to configure survey IDs in the App Insights dashboard, without configuring constants or string values in your app.{{% /alert %}} 
+{{% alert color="info" %}}⚠ We will continue to support this deprecated solution. In a future version you will be able to configure survey IDs in the App Insights dashboard, without configuring constants or string values in your app.{{% /alert %}} 
 
 ### 4.2 What Happens if a User Does Not Finish Answering a Survey? {#unfinished-survey}
 

@@ -186,6 +186,7 @@ Example 2
 * `protocol` – the protocol of the connection.
 * `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
   
+
 Example 1
 
 ```json
@@ -366,7 +367,7 @@ The name must adhere to the following rules:
 It is recommended to use a common prefix that uniquely defines your organisation and application.
 {{% /alert %}}
 
-### 5.2 Deprecated usages
+### 5.2 Deprecated usages ⚠
 
 The following deprecated usages will be removed in the future releases,
 

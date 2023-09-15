@@ -76,6 +76,12 @@ Your mouse pointer should not activate a white dot. This indicates the creation 
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/association-move-arrow.png" >}}
 
+### 3.4 Reverse the Association direction
+
+You can reverse the association direction by righ-clicking your association and selecting 'Reverse direction'.
+
+{{< figure src="/attachments/refguide/modeling/domain-model/associations/reverse-association-direction.png" >}}
+
 ## 4 Association Examples {#examples}
 
 ### 4.1 One-to-Many Association {#one-to-many}

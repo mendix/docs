@@ -1,5 +1,5 @@
 ---
-title: "Registry configuration"
+title: "Registry Configuration"
 url: /developerportal/deploy/private-cloud-registry/
 description: "Describes how to configure the OCI image registry in Mendix for Private Cloud."
 weight: 11
@@ -12,40 +12,29 @@ tags: ["Private Cloud","Registry","Container","ACR","ECR","GCR","quay.io","OpenS
 
 To run an app, Kubernetes needs it to be available in an OCI image registry.
 
-When a new version of the app is deployed, the Mendix Operator will run a _build_ pod - to package an app into a container image and push it into your private OCI registry.
+When a new version of the app is deployed, the Mendix Operator will run a *build* pod - to package an app into a container image and push it into your private OCI registry.
 
-To do this, the Operator needs to know which registry to use and how to authenticate with it.
+To do this, the Mendix Operator needs to know which registry to use and how to authenticate with it.
 
-### 1.1 Supported container registries
+### 1.1 Supported Container Registries
 
-The [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec) documents the standards and APIs that a container registry needs to support in order to be compliant.
-
-The Mendix Operator uses [go-containerregistry](https://github.com/google/go-containerregistry) to build and push images to a container registry.
-
-This allows Mendix for Private Cloud to support most container registries.
-In most cases, if a container registry supports basic authentication (static username and password), the Mendix Operator supports it.
+The [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec) documents the standards and APIs that a container registry needs to support in order to be compliant. The Mendix Operator uses [go-containerregistry](https://github.com/google/go-containerregistry) to build and push images to a container registry. This allows Mendix for Private Cloud to support most container registries. In most cases, if a container registry supports basic authentication (static username and password), the Mendix Operator supports it.
 
 Some examples of such container registries are:
 
-* quay.io
+* Quay.io
 * Docker Hub
 * Azure ACR [admin account](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#admin-account)
 * Self-hosted registries such as [Sonartype Nexus](https://www.sonatype.com/products/nexus-repository)
 
-However, static credentials are often considered insecure, and cloud providers offer alternative authentication methods based on short-lived tokens.
-For example, pushing an image to ECR requires getting a short-lived token from the AWS API.
-
-For more details about specific container registries see the [Configure registry](#configure-registry) section.
+However, static credentials are often considered insecure, and cloud providers offer alternative authentication methods based on short-lived tokens. For example, pushing an image to ECR requires getting a short-lived token from the AWS API. For more details about specific container registries, see the [Configure registry](#configure-registry) section.
 
 ### 1.2 Limitations
 
-Combining multiple authentication methods is not possible at the moment.
-For example, Nexus uses static username/password credentials, while ECR requires using an authentication plugin that integrates with AWS IAM; if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix for Private Cloud in a Nexus repository, you will need to use Nexus (or another registry supporting static credentials) - using ECR or ACR as the target registry will not be possible.
+Combining multiple authentication methods is not possible at the moment. For example, Nexus uses static username/password credentials, while ECR requires using an authentication plugin that integrates with AWS IAM; if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix for Private Cloud in a Nexus repository, you will need to use Nexus (or another registry supporting static credentials). Using ECR or ACR as the target registry will not be possible.
 
-The Docker image URL standard doesn't have an way to specify if a registry should be accessed over HTTP or HTTPS.
-Mendix for Private Cloud relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project.
-These heuristics are based on an assumption that it's not possible to get a valid TLS certificate for "local" addresses.
-If the registry domain name matches any of these rules, TLS will be disabled and all communication with the registry will happen over unencrypted HTTP:
+The Docker image URL standard does not have an way to specify if a registry should be accessed over HTTP or HTTPS. Mendix for Private Cloud relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project.
+These heuristics are based on an assumption that it's not possible to get a valid TLS certificate for local addresses. If the registry domain name matches any of these rules, TLS will be disabled and all communication with the registry will happen over unencrypted HTTP:
 
 * A private network RFC1918 IP address (`10.0.0.0/8`, `172.16.0.0/12` or `192.168.0.0/16`).
 * A `localhost` domain name.
@@ -54,15 +43,12 @@ If the registry domain name matches any of these rules, TLS will be disabled and
 
 In all other cases, Mendix for Private Cloud will use HTTPS to access the registry.
 
-### 1.3 Push and pull URLs
+### 1.3 Push and Pull URLs
 
-Mendix for Private Cloud builds images from inside the cluster.
-After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resouce;
+Mendix for Private Cloud builds images from inside the cluster. After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resouce;
 to start a copy of the app, Kubernetes will pull the image directly from the registry.
 
-If the registry is hosted externally (outside the cluster), there's no difference between connecting to the registry from a pod in the cluster, or from the cluster node.
-
-However, if the registry is hosted in the cluster, there's a difference:
+If the registry is hosted externally (outside the cluster), there is no difference between connecting to the registry from a pod in the cluster, or from the cluster node. However, if the registry is hosted in the cluster, there are the following differences:
 
 Mendix Operator needs to push images to the container registry:
 
@@ -76,12 +62,11 @@ Kubernetes nodes need to pull images from the container registry:
 
 The Mendix Operator needs to push images to one URL (the push URL), but needs to tell Kubernetes to pull images from another URL (the pull URL).
 
-## 2 Configure registry
+## 2 Configuring the Registry
 
 ### 2.1 OpenShift 3 Registry {#openshift-3-registry}
 
-Mendix for Private Cloud will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created.
-This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
+Mendix for Private Cloud will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created. This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
 
 Before configuring the OpenShift 3 registry, run `oc get svc docker-registry -n default` to get the registry domain name and IP address.
 
@@ -94,24 +79,19 @@ Use the following configuration options:
 
 OpenShift 4 requires no configuration - all OpenShift 4 clusters use the same configuration.
 
-Mendix for Private Cloud will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created.
-This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
+Mendix for Private Cloud will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created. This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
 
 ### 2.3 Amazon Elastic Container Registry
 
-In general, Elastic Container Registries can only be used with EKS clusters.
+In general, Elastic Container Registries can only be used with EKS clusters. To improve security, AWS ECR doesn't support static or basic credentials. Instead, ECR relies on time-limited tokens that can be generated by the [ecr-credential-helper](https://github.com/awslabs/amazon-ecr-credential-helper).
 
-To improve security, AWS ECR doesn't support static or basic credentials.
-Instead, ECR relies on time-limited tokens that can be generated by the [ecr-credential-helper](https://github.com/awslabs/amazon-ecr-credential-helper).
+To access the ECR registry, the Mendix Operator will automatically request an authentication token from the AWS IAM API. To call the IAM API, the Mendix Operator can use [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) or an AWS IAM access and secret key (not recommended by Amazon).
 
-To access the ECR registry, the Mendix Operator will automatically request an authentication token from the AWS IAM API.
-To call the IAM API, the Operator can use [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) or an AWS IAM access and secret key (not recommended by Amazon).
-
-To use ECR with the Mendix Operator, you will need to:
+To use ECR with the Mendix Operator, you must do the following steps:
 
 1. Create an ECR repository, for example `mendixapps/mynamespace`.
 2. Allow EKS to pull images from ECR, as documented in https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html
-3. Create an IAM role with the following policy (replace `<aws_region>` with the account's region, `<account_id>` with your AWS account number, `<repository>` with the repository name from Step 1):
+3. Create an IAM role with the following policy (replace `<aws_region>` with the account's region, `<account_id>` with your AWS account number, `<repository>` with the repository name from step 1):
 
     ```json
     {
@@ -144,9 +124,7 @@ To use ECR with the Mendix Operator, you will need to:
     }
     ```
 
-    {{% alert color="info" %}}The `DescribeRepositories` and `CreateRepository` actions are optional.
-    They allow the Mendix Operator to check if the ECR repository exists, and create the repository if it doesn't exist.
-    If the repository already exists, these actions can be removed.{{% /alert %}}
+    {{% alert color="info" %}}The `DescribeRepositories` and `CreateRepository` actions are optional. They allow the Mendix Operator to check if the ECR repository exists, and create the repository if it does not exist. If the repository already exists, these actions can be removed.{{% /alert %}}
 
 4. Allow the Mendix Operator to assume this role by configuring the role's trust policy.
 
@@ -166,16 +144,14 @@ Use the following configuration options:
 * **Pull URL** - specify the registry IP address returned by `oc get svc` earlier
 * **Registry name** - specify the repository name you created on step 1, for example: `mendixapps/mynamespace`
 * **Region** - specify the ECR region, for example `eu-west-1`
-* **Authentication** - choose the authentication mode, _Kubernetes Service Account_ (recommended) or _AWS Static Credentials_ (not recommented by AWS)
+* **Authentication** - choose the authentication mode, *Kubernetes Service Account* (recommended) or *AWS Static Credentials* (not recommented by AWS)
    * **IAM Role ARN** - the role ARN you created on step 3
    * **K8s Service Account** - the Kubernetes service account that the Mendix Operator should use for authentication; it should match the service account name specified on step 4; the account will be created automatically when you apply the changes
    * **Access Key ID** - the IAM access key to use for static authentication (only when using the _AWS Static Credentials_ mode)
    * **Access Secret Key** - the IAM secret key to use for static authentication (only when using the _AWS Static Credentials_ mode)
 
 {{% alert color="info" %}}
-ECR authentication will only work `amazon-ecr` option in the CLI.
-Other options (e.g. generic registry) will not enable the pod annotations required for the ECR authentication plugin to work correctly.
-Only the `amazon-ecr` option is validated and supported when using the Elastic Container Registry on AWS.
+ECR authentication will only work `amazon-ecr` option in the CLI. Other options (for example, generic registry) will not enable the pod annotations required for the ECR authentication plugin to work correctly. Only the `amazon-ecr` option is validated and supported when using the Elastic Container Registry on AWS.
 {{% /alert %}}
 
 ### 2.4 Azure Container Registry
@@ -195,9 +171,7 @@ To use ACR with the Mendix Operator, you will need to:
     * create a managed identity for the Mendix Operator image builder
     * establish the federated identity credential
 
-    Other steps are provided as examples and can be skipped.
-    You'll need to specify the Kubernetes namespace and name - the namespace where the Mendix Operator is installed, and a Kubernetes service account name.
-    The Mendix Operator will use this Service Account to authenticate itself with ACR.
+    Other steps are provided as examples and can be skipped. You must specify the Kubernetes namespace and name - the namespace where the Mendix Operator is installed, and a Kubernetes service account name. The Mendix Operator will use this Service Account to authenticate itself with ACR.
 
     Write down the `USER_ASSIGNED_CLIENT_ID`, it will be needed later.
 
@@ -211,8 +185,7 @@ Use the following configuration options:
 * **AZWI Client ID** - the workload identity `USER_ASSIGNED_CLIENT_ID` created on step 2, for example `00000000-0000-0000-0000-000000000000`.
 
 {{% alert color="warning" %}}
-Azure Workload Identity authentication is supported in Mendix Operator 2.13.0 and later versions.
-Older versions can only authenticate with ACR using static credentials; upgrading to Mendix Operator and switching to workload identity authentication is highly recommended.
+Azure Workload Identity authentication is supported in Mendix Operator 2.13.0 and later versions. Older versions can only authenticate with ACR using static credentials; upgrading to Mendix Operator and switching to workload identity authentication is highly recommended.
 {{% /alert %}}
 
 ### 2.5 Google Container Registry
@@ -223,7 +196,7 @@ To access the GCR registry, the Mendix Operator will use its Kubernetes Service 
 
 To use GCR with the Mendix Operator, you will need to:
 
-1. Create a GCP Service Account (⚠️  this is not the same as a Kubernetes Service Account).
+1. Create a GCP Service Account (note that this is not the same as a Kubernetes Service Account).
 2. Assign the _Artifact Registry Writer_ (`roles/artifactregistry.writer`) role to the GCR Service Account.
 3. Allow the Mendix Operator to use the GCR Service Account by running:
 
@@ -246,7 +219,7 @@ Use the following configuration options:
 * **GCP Service Account** - the GCP account name created on step 1, for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the GCP service account on step 3; the Kubernetes Service Account will be created automatically when you apply the changes.
 
-### 2.6 Generic registry with authentication
+### 2.6 Generic Registry with Authentication
 
 This option works with most other registries - if the registry supports Basic authentication, this option should be compatible.
 
@@ -263,7 +236,7 @@ Use the following configuration options:
 * **With authentication** - allows to specify the username and password used to access the registry. This is required for almost all registries, the only exception is self-hosted registries in test envrionments such as MicroK8s, k3s or Minikube.
 * **Add credentials to pull secrets in default service account** - if your cluster is not using built-in authentication, checking this option will automatically image pull credentials to the `default` Kubernetes ServiceAccount. This would enable authentication when pulling app images.
 
-#### 2.6.1 Example configurations
+#### 2.6.1 Example Configurations
 
 Here are a few example configurations for container registries:
 
@@ -274,7 +247,7 @@ Here are a few example configurations for container registries:
 | Push URL            | index.docker.io |
 | Pull URL            | index.docker.io |
 | Registry name       | `<username>/<repository>`, where `<username>` is a username for Docker Hub |
-| With authentication | ☑ checked       |
+| With authentication | enabled       |
 | User                | A username for Docker Hub |
 | Password            | An access token for the Docker Hub user |
 
@@ -288,7 +261,7 @@ Docker Hub will automatically create the repository when an image is pushed.
 | Push URL            | quay.io         |
 | Pull URL            | quay.io         |
 | Registry name       | `<username>/<repository>`, where `<username>` is a username for Docker Hub |
-| With authentication | ☑ checked       |
+| With authentication | enabled       |
 | User                | Username for a quay.io robot account |
 | Password            | Token (password) for the robot account |
 
@@ -302,14 +275,14 @@ To access quay.io, you will need to create a robot account, and give this accoun
 | Push URL            | `<hostname>:<port>`    |
 | Pull URL            | `<hostname>:<port>`    |
 | Registry name       | `<path/to/repository>` |
-| With authentication | ☑ checked       |
+| With authentication | enabled      |
 | User                | Username for a user or account with push and pull permissions |
 | Password            | Token (password) for a user or account with push and pull permissions |
 
 Check your image registry documentation to see if repositories can be created automatically (on push) or need to be pre-created.
 Some registries impose limitations on repository names, for example the repositiry path cannot have more than three parts.
 
-### 2.8 Existing docker-registry secret
+### 2.8 Existing Docker Registry Secret
 
 If you already have a existing `~/.docker/config.json` file, you can use it directly by choosing the `docker-secret` option.
 
@@ -328,23 +301,23 @@ After creating the `dockerconfigjson` secret, you can configure Mendix for Priva
     * Registries could also have security or technical limitations on what can be specified as the repository name.
 * **Secret name** - name of the Kubernetes secret you've created.
 
-You will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
+You must add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-## 3 Advanced options
+## 3 Advanced Options
 
 You can host the default Mendix components in your own registry, for example if your cluster is firewalled and cannot open up a route to the Mendix registry. In this case you need to migrate some, or all, of the Mendix components to your cluster. See the instructions in [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/) to find out how to do this.
 
 ### 3.1 Customizing the image name template {#customize-registry-imagenametemplate}
 
-ImageNameTemplate allows you to specify how the image name and tag are generated. It allows both use of OpenShift-style "repository per app" and ECR-style "tag per app". For example, a value of imageNameTemplate may be `registry.example.com/mendix-apps/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}` which would generate an image for the build like `registry.example.com/mendix-apps/pgv9gw71-0.0.1.2-1640699175.392`
+**ImageNameTemplate** allows you to specify how the image name and tag are generated. It allows both use of OpenShift-style "repository per app" and ECR-style "tag per app". For example, a value of **imageNameTemplate** may be `registry.example.com/mendix-apps/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}` which would generate an image for the build like `registry.example.com/mendix-apps/pgv9gw71-0.0.1.2-1640699175.392`
 
-The imageNameTemplate is generated by mxpc-cli when you update the registry configuration.
+The **imageNameTemplate** is generated by mxpc-cli when you update the registry configuration.
 
 {{% alert color="warning" %}}
 Any manual changes you make to the imageNameTemplate in the manifest are overwritten when you update the registry configuration using mxpc-cli.
 {{% /alert %}}
 
-An example of the imageNameTemplate in the operator configuration manifest is given below.
+An example of the **imageNameTemplate** in the Mendix Operator configuration manifest is given below.
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -359,7 +332,7 @@ spec:
   # …
 ```
 
-You can customize the registry imageNameTemplate in OperatorConfiguration with these available variables:
+You can customize the registry **imageNameTemplate** in **OperatorConfiguration** with these available variables:
 
 * `{{.Name}}`: internal environment name.
 * `{{.Generation}}`: value of the Build CR’s [Generation](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace#generation) attribute.

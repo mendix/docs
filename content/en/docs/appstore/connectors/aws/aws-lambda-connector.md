@@ -95,9 +95,11 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description | Specializations |
 | --- | --- | --- |
-| `Function` | Name of a Lambda function, used to invoke a function | `InvokeFunctionRequest`; `FunctionResponse`; `DeleteFunctionRequest` |
+| `InvokeFunctionRequest` | Stores the request for a `InvokeFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 | `ListFunctionResponse` | Stores the response for a `ListFunctions` call |  |
+| `FunctionResponse` | Stores the response containing a list of available lambda functions for a `ListFunctions` call |  |
 | `InvokeFunctionResponse` | Stores the response for an `InvokeFunction` call |  |
+| `DeleteFunctionRequest` | Stores the request for a `DeleteFunctions` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 
 ### 4.2 Activities {#activities}
 

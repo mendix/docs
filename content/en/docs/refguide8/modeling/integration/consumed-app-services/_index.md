@@ -1,5 +1,5 @@
 ---
-title: "Consumed App Services"
+title: "Consumed App Services ⚠"
 url: /refguide8/consumed-app-services/
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,7 @@ tags: ["studio pro"]
 {{% /alert %}}
 
 {{% alert color="info" %}}
-App services are deprecated and were removed in Studio Pro 9. Use a [consumed web service](/refguide8/consumed-web-services/) to consume existing app services.
+⚠ App services are deprecated and were removed in Studio Pro 9. Use a [consumed web service](/refguide8/consumed-web-services/) to consume existing app services.
 {{% /alert %}}
 
 App services are a way of connecting Mendix applications to each other. An app service can be imported and its content can be used. As for now, app services provide the following content:

@@ -119,7 +119,7 @@ You can do one of the following:
 
 * The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
 * The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue (the currently running activity within the removed branch will be aborted).
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed branch will be aborted).
 * The app developer can revert the change (which adds the branch back) and deploy it.
 
 #### 3.2.7 Current Activity Moved out of Branch

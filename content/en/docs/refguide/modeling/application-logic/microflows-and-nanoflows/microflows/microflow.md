@@ -29,6 +29,23 @@ Microflow properties consist of the following sections:
 
 **Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
 
+#### 2.1.2 URL
+
+Microflow URLs allow you to execute a microflow when the user navigates to a specific URL within your application. The microflow will be executed during the client startup before the home page is shown. When the microflow executes an 'Open Page' . Note that the full URL of the microflow will be the base URL of your application followed by `/p/` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/microflow`).
+
+Microflows with parameters can also have URLs. For those microflows, all parameters must be present in the URL. Parameters can be included in the URL by writing their name between brackets, e.g. `my-microflow/{Name}` where 'Name' is the name of the parameter. For object parameters the name of the parameter and the name of the attribute is used, e.g. `my-microflow/{Product/Name}`. Primitive parameters will be parsed from the URL and their value directly passed to the microflow, while for object parameters an XPath query is used to retrieve the object by the value of the attribute.
+
+For example, in the URL `product/{Product/Name}` the `Name` attribute of the parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute or primitive parameter of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
+
+Next to this, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}` for example. In the microflow URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows how the parameter will be retrieved:
+
+{{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.jpg" alt="microflow url dialog" >}}
+
+
+{{% alert color="warning" %}}
+URLs are not supported for microflows that have non-persistable entities or lists as parameters.
+{{%/alert %}}
+
 #### 2.1.2 Export Level 
 
 {{% alert color="info" %}}

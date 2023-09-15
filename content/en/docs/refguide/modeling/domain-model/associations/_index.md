@@ -78,7 +78,7 @@ Your mouse pointer should not activate a white dot. This indicates the creation 
 
 ### 3.4 Reverse the Association direction
 
-You can reverse the association direction by righ-clicking your association and selecting **Reverse direction**.
+You can reverse the association direction by right-clicking your association and selecting **Reverse direction**.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/reverse-association-direction.png" >}}
 

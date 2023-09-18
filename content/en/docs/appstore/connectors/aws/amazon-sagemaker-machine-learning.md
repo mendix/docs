@@ -9,7 +9,11 @@ tags: ["AWS", "Amazon SageMaker", "machine learning", "ML", "Mendix Studio Pro"]
 
 ## 1 Introduction
 
-[Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) is an email platform that provides an easy way to send and receive email using your own email addresses and domains. Amazon SES also provides SMTP details, which you can configure in the Mendix platform-supported [Email Connector](https://marketplace.mendix.com/link/component/120739) to send emails in your app.
+Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses on developing algorithms and models that enable computers to learn from data and make predictions or decisions without being explicitly programmed. In this way, models can be trained based on custom data of a specific sector or company, and can perform tasks more efficiently than an out-of-the-box foundational model. In this article, you will learn how you can incorporate ML into your Mendix app by using [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/).
+
+### 1.1 Prerequisites
+
+
 
 ## 2 Configuring the Mendix Email Connector for Amazon SES
 

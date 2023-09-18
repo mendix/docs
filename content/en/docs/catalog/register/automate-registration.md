@@ -41,7 +41,7 @@ For this section, you will need:
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **DefaultValue**)
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to prepare your service details. When finished, [Register the application](#5-register-the-application).
+Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to prepare your service details. When finished, [register the application](#5-register-the-application).
 
 ## 5 Register the Application
 
@@ -64,7 +64,7 @@ To register the environment, you will need:
 * Environment `Location`
 * Environment `Type`
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. 
+Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. When finished, [register the endpoint(s)](#7-register-the-endpoints).
 
 Upon completion, you will have the `environment_UUID`.
 

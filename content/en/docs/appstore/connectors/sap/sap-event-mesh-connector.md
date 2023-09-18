@@ -81,7 +81,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 The SAP Event Mesh connector allows your Mendix app to manage queues and queue subscriptions by using microflows and microflow activities.
 
-#### 4.3.1 {ACTIVITY NAME}
+#### 4.3.1 Publish Message to Queue
 
 The `{ACTIVITYNAME}` {SAP SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
 "}

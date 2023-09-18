@@ -82,6 +82,6 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Cloud self-service (Mendix Cloud) | Currently in Private Beta<br>GA: TBD |
-| Landscape overview (Mendix Cloud, Cloud Dedicated) | Public Beta: Q3 2023<br>GA: TBD |
+| Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for Public Beta [Aug 28, 2023](/releasenotes/developer-portal/#august-28-2023)<br>GA: TBD |
 | Dependency governance (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
 | Cloud self-service (Cloud Dedicated) | Private Beta: Q4 2023<br>GA: TBD |

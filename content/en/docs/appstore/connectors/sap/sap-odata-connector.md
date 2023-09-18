@@ -275,7 +275,7 @@ The OData Connector for SAP solutions module gives you access to additional acti
 This section describes all the actions of the OData Connector for SAP solutions. They are categorized as being either for [entity and attribute manipulation](#EntityManipulation) or [helper actions](#HelperActions).
 
 {{% alert color="info" %}}
-Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
+Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData v4. Currently, only **Get List** and **Get Entry** are supported for services using OData v4.
 {{% /alert %}}
 
 Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to *empty*.

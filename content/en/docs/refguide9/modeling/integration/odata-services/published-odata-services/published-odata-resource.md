@@ -125,7 +125,7 @@ Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/rel
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
+Selecting more than one attribute as the key is only available for published OData services that use OData v4.
 {{% /alert %}}
 
 ## 9 Capabilities {#capabilities}

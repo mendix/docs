@@ -226,6 +226,8 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
     | `Region` | The AWS region where your service resides |
     | `Path` | URI from domain to query; enter `\` to leave blank |
     | `RequestBody` | The body of your request; signature version 4 headers require that the request body as part of the signing process, before you make the actual call. |
+    | `EndpointURL` | The URL of the top-level domain. For many services that would be amazonaws.com. For Lambda this can also be `on.aws`. If not specified will default to `amazonaws.com`. |
+    | `SubDomain` | Services use a sub-domain in their host. This can be the service name for services like s3. But for lambda it would be `lambda-url` for example. Leave empty if it is the same as the **ServiceName**. |
     
 * `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
 * `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.

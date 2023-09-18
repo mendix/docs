@@ -42,7 +42,7 @@ The new features were divided into these major themes, which are described in th
 | Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| PDF Document Generation module | Released for Public Beta [May 31, 2023](/appstore/modules/document-generation/)<br>GA: Q3 2023 |
+| PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
 | Insights into commits by peers| GA: Q3 2023 |
 | Rich design properties | GA: Q3 2023 |
 | Visual data filters | GA: Q3 2023 |

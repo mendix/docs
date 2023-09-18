@@ -137,7 +137,7 @@ Select **Enable automatic repository optimization** to run Git repository optimi
 
 This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
-#### 6.2.5 Enable Private Version Control with Git 
+#### 6.2.5 Enable Private Version Control with Git {#enable-with-Git}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 

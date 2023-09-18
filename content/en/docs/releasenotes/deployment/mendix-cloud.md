@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### September 18, 2023
+
+#### Improvements
+
+* To improve the security of Teamserver SVN, we have dropped support for TLSv1.0 and TLSv1.1 when connecting to Teamserver SVN.
+
 ### September 14, 2023 
 
 #### Improvements

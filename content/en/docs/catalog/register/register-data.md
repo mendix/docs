@@ -29,7 +29,7 @@ This how-to teaches you how to register a service in the following ways:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* You have Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed
+* You have Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed
 * You have a Mendix account
 * You have an exposed OData service that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/data-hub/share-data/))
 

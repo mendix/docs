@@ -32,7 +32,7 @@ You can also create environments and deploy and manage apps using the [Mendix fo
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro version 7.23.3 (build 48173) or above.
+* Mendix Studio Pro 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. If you want to change it to Developer mode, the Cluster Manager can do this from the cluster manager page.
 

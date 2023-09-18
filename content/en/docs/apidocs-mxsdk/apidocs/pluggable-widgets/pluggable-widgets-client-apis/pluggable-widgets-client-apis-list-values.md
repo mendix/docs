@@ -397,7 +397,7 @@ In this code sample, checks of status `myDataSource` and availability of items a
 {{% alert color="info" %}}
 The `get` method was introduced in Mendix Studio Pro 9.0.
 
-⚠ You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+⚠You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ### 3.2 ListAttributeValue {#listattributevalue}

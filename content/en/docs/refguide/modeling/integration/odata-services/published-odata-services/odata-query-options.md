@@ -30,7 +30,7 @@ For this example, imagine that you have four entities in your domain model: **Em
 * An association between **Employee** and **Address**
 * An association between **City** and **Address**
 
-Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` (OData 3 (⚠ deprecated)).
+Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` (OData 3 (⚠deprecated)).
 
 ## 3 Counting the Number of Objects
 
@@ -56,7 +56,7 @@ This table describes how to pass values for different attribute types:
 | --- | --- |
 | String | Enclosed in single quotes (for example, `'John'`) |
 | Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enum type name is not supported |
-| Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3 (⚠ deprecated): Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
+| Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3 (⚠deprecated): Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
 | Other | Plain value (for example, 15) |
 
 ### 4.2 Comparison Operators
@@ -87,7 +87,7 @@ We support the following comparison operators:
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<small><sup>1</sup> In OData 3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
+<small><sup>1</sup> In OData 3 (⚠deprecated), the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
 
 ### 4.4 Combining Filters
 

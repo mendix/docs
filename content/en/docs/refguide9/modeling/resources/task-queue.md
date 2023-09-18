@@ -190,7 +190,7 @@ If you are using Mendix 9.9.0 or above, you can use the `com.mendix.core.Process
 
 ### 2.9 Execution Context {#context}
 
-Prior to Mendix 9.6 tasks were always executed in a system context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](/refguide9/microflow/) for more information). ⚠ As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
+Prior to Mendix 9.6 tasks were always executed in a system context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](/refguide9/microflow/) for more information). ⚠As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
 
 In case where **Apply entity access** is set to *true*, the following rules apply:
 
@@ -205,7 +205,7 @@ Projects containing task queues that were created before Mendix 9.6 will get a d
 You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.
 
 {{% alert color="warning" %}}
-⚠ You will be asked to confirm this change as, after choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
+⚠You will be asked to confirm this change as, after choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
 {{% /alert %}}
 
 ### 2.10 Task Status

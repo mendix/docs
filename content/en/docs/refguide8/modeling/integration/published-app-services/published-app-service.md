@@ -9,7 +9,7 @@ tags: ["studio pro"]
 {{% /alert %}}
 
 {{% alert color="info" %}}
-⚠ App services are deprecated and were removed in Studio Pro 9. Use a [published web service](/refguide8/published-web-services/) or a [published REST service](/refguide8/published-rest-services/) instead.
+⚠App services are deprecated and were removed in Studio Pro 9. Use a [published web service](/refguide8/published-web-services/) or a [published REST service](/refguide8/published-rest-services/) instead.
 {{% /alert %}}
 
 ## 1 General Tab

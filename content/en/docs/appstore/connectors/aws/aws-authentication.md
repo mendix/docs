@@ -273,6 +273,26 @@ These entities are used as input for the `GetSigV4Headers` Java action, which re
 
 The values set in the response entity are used as request headers in the REST call to AWS.
 
+### 4.4 Custom Client Settings {#custom-client-settings}
+
+In some cases, the default settings of the AWS client are not enough. In these cases, you can edit the settings of request objects that inherit from the AbstractRequest entity included in the AWS Authentication module and pass along the settings that you wish to customize. Note that only the values that have been set (are not empty) will be set on the customized client. 
+
+#### 4.4.1 Basic Client Config
+
+This is the simplest version of the customizable client. Only the API time out and the endpoint url can be set here. These settings can be used for both REST based connectors, and for SDK based connectors.
+
+#### 4.4.2 Sdk Client Config
+
+These configurations can be used for SDK based connectors. It contains the ability to set a maximum total time spent on making the call across all retries. You can also add specific settings to override the retry policy, and settings to override the type of HttpClient and its settings. By default, the ApacheHttpClient will be used.
+
+#### 4.4.2.1 Apache Http Config
+
+This entity contains the settings that can be adjusted on the ApacheHttpClient that is used to make calls to the selected AWS Service. All settings that are set (ie not left empty) will be used to override your default settings on the ApacheHttpClient. 
+
+#### 4.4.2.2 URL Http Config
+
+This entity will set the http client to be an UrlHttpClient. This client will then have the values that are set in the attributes. Any values left empty will not be set, and instead use your systems default settings. 
+
 #### 5 Read More
 
 * [Securely Connect with the AWS Authentication Connector](https://www.mendix.com/blog/securely-connect-with-the-aws-authentication-connector/)

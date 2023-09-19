@@ -9,7 +9,7 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro version [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
 
 ### 1.1 Major Version {#major-version}
 

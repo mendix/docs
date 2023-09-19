@@ -73,7 +73,7 @@ Return codes are described in the table below:
 
 ### 3.2 mx create-project Command
 
-The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 8.1.0.58215,  `mx create project` will create a new app in that version. 
+The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 8.1.0.58215,  `mx create project` will create a new app in that version. 
 
 #### 3.2.1 Usage
 
@@ -139,7 +139,7 @@ Errors in the MPR are always reported.
 
 For `INPUT`, enter a single *.mpr* file.
 
-From Studio Pro version 9.17, you can optionally specify the path to an exported Suppress Warnings file (JSON file). This means that `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior which is to read from the *project-settings.user.json* file in the app directory.
+From Studio Pro 9.17, you can optionally specify the path to an exported Suppress Warnings file (JSON file). This means that `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior which is to read from the *project-settings.user.json* file in the app directory.
 
 #### 3.3.2 Examples
 

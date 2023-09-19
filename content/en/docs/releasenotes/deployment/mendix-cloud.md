@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* To improve the security of Teamserver SVN, we have dropped support for TLSv1.0 and TLSv1.1 when connecting to Teamserver SVN.
+* To improve the security of [Team Server](/developerportal/general/team-server/) for apps versioned with SVN, we have dropped support for TLS v1.0 and TLS v1.1 when connecting to the SVN Team Server.
 
 ### September 14, 2023 
 

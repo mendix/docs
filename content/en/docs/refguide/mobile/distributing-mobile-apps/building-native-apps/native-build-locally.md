@@ -124,7 +124,7 @@ To build an iOS app with XCode, do the following:
     The iOS app is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install). If you are using an M1 machine, make sure to first [install Rosetta](https://support.apple.com/en-us/HT211861) and then [install CocoaPods via Homebrew](https://formulae.brew.sh/formula/cocoapods).
 
 {{% alert color="warning" %}}
-If you encounter the following error while executing Cocoapods on an M1, reinstall Cocoapods as described above and try again.
+If you encounter the following error while executing CocoaPods on an M1, reinstall CocoaPods as described above and try again:
 `LoadError - dlsym(0x7f8926035eb0, Init_ffi_c): symbol not found`
 {{% /alert %}}
 

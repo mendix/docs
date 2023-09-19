@@ -31,9 +31,7 @@ Microflow properties consist of the following sections:
 
 #### 2.1.2 URL
 
-Microflow URLs allow you to execute a microflow when the user navigates to a specific URL within your application. The microflow will be executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) action. The microflow's full URL will be the base URL of your application, followed by `/p/`, followed by the page's configured URL. 
-
-Take this URL for an example: `http://example.mendixcloud.com/p/microflow`.
+Microflow URLs allow you to execute a microflow when the user navigates to a specific URL within your application. The microflow will be executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) action its page is the first page shown to the user. The microflow's full URL will be the base URL of your application, followed by `/p/`, followed by the microflow's configured URL. For example: `http://example.mendixcloud.com/p/microflow` is the URL of a microflow with `microflow` as the URL.
 
 Microflows with parameters can also have URLs. Such cases require that all parameters be present in the URL. Parameters can be included in the URL by writing their names between brackets, for example `my-microflow/{Name}` where `Name` is the parameter's name. 
 
@@ -43,10 +41,9 @@ For example, in the URL `product/{Product/Name}` the `Name` attribute of the par
 
 Next to this, you can use `Id` as an attribute to include the entity's identifier in the URL. This would appear as `product/{Product/Id}` for example. 
 
-In the microflow URL dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It and also shows how the parameter will be retrieved:
+In the microflow URL dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
 {{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.jpg" alt="microflow url dialog" >}}
-
 
 {{% alert color="warning" %}}
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.

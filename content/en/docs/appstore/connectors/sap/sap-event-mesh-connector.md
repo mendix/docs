@@ -21,13 +21,11 @@ You can use the connector to perform the following tasks:
 
 ### 1.2 Prerequisites {#prerequisites}
 
-Role collections required for user to be able to configure enterprise messaging service
+The following roles are required for the user to be able to configure the SAP Enterprise Messaging service:
 
-Enterprise Messaging Developer - developer role
-
-Enterprise Messaging Display - only read role
-
-Enterprise Messaging Administrator - administrator role
+* Enterprise Messaging Developer - developer role
+* Enterprise Messaging Display - read-only role
+* Enterprise Messaging Administrator - administrator role
 
 ### 1.3 Licensing and Cost
 
@@ -37,25 +35,32 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the {CONNECTOR NAME} connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAP Event Mesh connector into your app.
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **SAPEventMeshConnector** section. The connector provides a [domain model](#domain-model) and several [actions](#actions) that you can use to connect your app to {SAP SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the SAP service, you must also configure SAP authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **SAPEventMeshConnector** section. The connector provides a [domain model](#domain-model) and several [actions](#actions) that you can use to connect your app to the SAP Event Mesh service. Each action can be implemented by using it in a microflow. 
 
-### 3.1 Configuring SAP Authentication
+To ensure that your app can connect to the SAP service, you must also bind and configure the Enterprise Messaging service.
 
-{DESCRIBE THE AUTHENTICATION}
+### 3.1 Configuring the Enterprise Messaging Service
 
-### 3.2 Configuring a Microflow for an SAP Service
+The **Event Mesh Configurator** provides a user friendly interface to create the JSON required to configure the required Enterprise Messaging service. To bind and configure the service, perform the following steps:
 
-After you configure the authentication profile for the SAP Event Mesh service, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+1. Ensure that the **enterprise-messaging** service is in the status **Services To Be Bound** in Developer Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
+2. Click **⚙️ Configurator** to open the configurator.
+3. Provide the following information:
+    * **EM Name** - enter a display name for the service.
+    * **Namespace** - the namespace is a prefix that ensures that every message client within a subaccount is unique. It must consists of 3 segments and contain no more than 24 characters. As a best practice, use the format *orgName/clientName/uniqueId*.
+    * **Options** - select **Messaging**.
+    * **Rules** - this section defines the publish or consume privileges for a message client. In order to allow access to a queue or topic, you must include the namespace of the corresponding owner message client. Instead of a defined namespace, you can use the placeholder *$(namespace)*.
+4. Click **Upload Configuration To Service** to upload the configuration automatically. The configuration will be applied when your app is restarted.
 
-{A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
+    Alternatively, click **Download Configuration File** to save the file locally so that you can review it, or reuse it. You can upload it manually to the Enterprise Messaging service by clicking **Browse…** next to the **Configurator JSON** option, and then choosing the file that you downloaded.
 
 ## 4 Technical Reference
 
-To help you work with the {CONNECTOR NAME} connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the SAP Event Mesh connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
 ### 4.1 Domain Model {#domain-model}
 
@@ -81,21 +86,41 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 The SAP Event Mesh connector allows your Mendix app to manage queues and queue subscriptions by using microflows and microflow activities.
 
-#### 4.3.1 Publish Message to Queue
+#### 4.3.1 Publish Message to Queue or Topic
 
-The `{ACTIVITYNAME}` {SAP SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
-"}
+The `PublishMessage` activity allows you to publish messages to queues or topics. It requires the following parameters:
 
-The input and output for this service are shown in the table below:
+* Credentials
+* Destination 
+* Queue or Topic Name
+* Message
+* Message Or Content Type
 
-| Input | Output |
-| --- | --- |
-| `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
+#### 4.3.2 Consume Message from a Queue
 
-##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
+The `ConsumeMessage` activity allows you to consume a message from a queue. It requires the following parameters:
 
-This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
+* Credentials
+* Queue Name
 
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |
+#### 4.3.3 Publish Event
+
+The `PublishCloudEvent` activity allows you to publish events that are compliant with the Cloud Events specification. It requires the following parameters:
+
+* Credentials
+* EventId
+* EventSource
+* EventType
+* MessageData
+
+#### 4.3.4 Get All Queues
+
+The `GetQueueList` microflow allows you to retrieve a list of queues. It requires the Management Credentials parameter.
+
+#### 4.3.5 Get Queue Details
+
+The `GetQueueDetails` microflow allows you to retrieve detailed information about a queue. It requires the Management Credentials and Queue Name as parameters.
+
+#### 4.3.6 Get Queue Subscriptions
+
+The `GetQueueSubscriptions` microflow allows you to retrieve information about subscriptions to a queue. It requires the Management Credentials and Queue Name as parameters.

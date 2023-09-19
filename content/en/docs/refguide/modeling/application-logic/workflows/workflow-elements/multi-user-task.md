@@ -271,7 +271,7 @@ You can refer to the following properties settings for this example:
 
 Select this decision method when none of the other decision methods does what you need, and you want to provide your own microflow to determine the final outcome of the multi-user task. This microflow is executed every time when a participant selects an outcome for the multi-user task, regardless of the [Completion moment](#completion-moment) setting.
 
-The provided microflow can have any or all of the following parameters, all of which are optional:
+Through the **Decision microflow** setting, you can provide your own microflow. The provided microflow can have any or all of the following parameters, all of which are optional:
 
 | Type                                     | Description |
 |------------------------------------------|-------------|

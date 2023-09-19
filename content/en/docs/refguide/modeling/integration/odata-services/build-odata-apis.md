@@ -317,7 +317,7 @@ The response is as follows:
 
 ## 5 Performance
 
-OData enables you to specify which attributes you need so that other attributes are not included in the response. This reduces the size of the response message. 
+OData enables you to specify which attributes you need so other attributes are not included in the response. This reduces the size of the response message. 
 
 To reduce the number of round-trips, you can include associated objects in the response using the `$expand` expression. See the following GET request:
 
@@ -329,7 +329,7 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
-You can use select and expand in combination with filters, sorting, top and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data). See the following GET request:
+You can use select and expand in combination with filters, sorting, top, and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data). See the following GET request:
 
 ```
 GET http://localhost:8080/odata/CustomerApi/v1/Customers
@@ -418,7 +418,7 @@ In this example, you can expose a single REST resource that combines data from t
 
 ### 6.3 Defining Logic in an Insert Microflow
 
-How do you provide logic in a REST API if REST best practices specify that you should only use the default HTTP operations (insert, update, retrieve or delete)?
+How do you provide logic in a REST API if REST best practices specify that you should only use the default HTTP operations (insert, update, retrieve, or delete)?
 
 Consider the input parameters of your logic as the REST resource. In this way, executing logic can be modeled by handling the logic in the insert microflow. This allows you to execute the logic when a client POSTs a new resource to your API. 
 
@@ -434,7 +434,7 @@ This example shows a `CustomerEmailRequest` entity that a client can create usin
 
 ### 6.4 Running Operations Asynchronously 
 
-Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that you’ll do it in the background. In Mendix Studio Pro, you can use a [Task Queue](/refguide/task-queue/) to schedule the logic to be run in the background. In the meantime, the client can GET the resource to see what the status is.
+Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that you’ll do it in the background. In Mendix Studio Pro, you can use a [Task Queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can GET the resource to see what the status is.
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 

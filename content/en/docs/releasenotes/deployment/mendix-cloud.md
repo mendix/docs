@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+
+### September 19, 2023
+
+#### Improvements
+
+* We've introduced timeout limit for idle connections that are actively running a transaction. This change enhances system efficiency by automatically releasing resources from idle, ongoing transactions to optimize overall performance.
+
 ### September 18, 2023
 
 #### Improvements

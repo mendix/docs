@@ -1,7 +1,7 @@
 ---
 title: "OpenAPI Beta Functionality"
 linktitle: "OpenAPI Beta Functionality"
-url: /catalog/register/register-data/openapi-beta-functionality
+url: /catalog/register/openapi-beta-functionality
 description: "Provides explanation of OpenAPI Beta functionality in Catalog"
 weight: 10
 tags: ["data hub", "Catalog", "external entities", "register", "published OData service" ,"how to", "registration"]

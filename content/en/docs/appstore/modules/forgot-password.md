@@ -42,6 +42,13 @@ The Forgot Password module has the following dependencies:
 
 ² Versions of the Forgot Password module below 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above), and those for Mendix 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that if you are using Mendix 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
+### 1.2 Features and Limitations
+
+* Allows end-users to reset the password stored locally in your app.
+* Allows end-users to signup for your app. This validates that the end-user has access to the email address they enter by sending a password reset email.
+* Supports email aliases, in other words, the from address in email templates can be different from the SMTP account used to send the email.
+* Supports multi-language email templates for sending password reset emails.
+
 ## 2 Installing the Forgot Password Module{#installing}
 
 {{% alert color="info" %}}

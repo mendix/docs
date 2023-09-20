@@ -31,7 +31,7 @@ Microflow properties consist of the following sections:
 
 #### 2.1.2 URL
 
-Microflow URLs allow you to execute a microflow when the user navigates to a specific URL within your application. The microflow will be executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) action its page is the first page shown to the user. The microflow's full URL will be the base URL of your application, followed by `/p/`, followed by the microflow's configured URL. For example: `http://example.mendixcloud.com/p/microflow` is the full URL for the microflow URL `microflow`.
+Microflow URLs allow you to execute a microflow when the user navigates to a specific URL within your application. The microflow will be executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) action its page is the first page shown to the user. The microflow's full URL will be the base URL of your application, followed by `/p/`, followed by the microflow's configured URL. For example: `http://example.mendixcloud.com/p/microflow` is a full URL for the microflow URL `microflow`.
 
 Microflows with parameters can also have URLs. Such cases require that all parameters be present in the URL. Parameters can be included in the URL by writing their names between brackets, for example `my-microflow/{Name}` where `Name` is the parameter's name. 
 

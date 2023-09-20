@@ -8,32 +8,45 @@ tags: ["studio pro", "end event", "event"]
 
 ## 1 Introduction
 
-An end event defines where the flow will stop. 
-
-An end event can return a value: an object, enumeration, a list, etc. For more information, see the [Return Value](#return-value) section. 
+An end event defines where the flow stops. It can return a value: an object, enumeration, a list, etc. For more information, see the [Return Type](#return-type) section below.
 
 In the example below, a *Buyer* variable of the *Customer* entity is returned by the end event:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event.png" >}}
 
-The number of end events depends on the number of possible outcomes of the microflow or a nanoflow. That means there can be more than one end event, for example when a [decision](/refguide/decision/) is used:
+The number of end events depends on the number of possible outcomes of the microflow or nanoflow. That means there can be more than one end event, for example when a [decision](/refguide/decision/) is used:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-events.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-events.png" width="500px" >}}
 
-## 2 Behavior Properties
+## 2 Properties
+
+The end event properties pane consists of the following sections:
+
+* [Return value](#return-value)
+* [Return type](#return-type)
 
 ### 2.1 Return Value {#return-value}
 
-The return value is the value that is returned to the flow that called the current flow. If you have several end events and they have a return value, they all need to return a value of the same type. For example, if one of the end events returns an object of type *Entity*, the others need to return the same type: 
+The return value is the value that is returned to the flow that called the current flow. You can specify or change the return value either through the **End Event** dialog box or through the **Properties** pane.
+
+{{% alert color="info" %}}
+The option to change the return value of an end event through the **Properties** pane was introduced in Studio Pro 10.3.0.
+{{% /alert %}}
+
+If you have several end events and they have a return value, they all need to return a value of the same type. For example, if one of the end events returns an object of type *Entity*, the others need to return the same type: 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/return-value.png"   width="300px"  >}}
 
-You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value. After you type an [expression](/refguide/expressions/) in the **End Event** dialog box, you will see an option that allows you to update the return type:
+### 2.2 Return Type {#return-type}
+
+You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value. For more information on possible return types, see [Data Types](/refguide/data-types/).
+
+After you type an [expression](/refguide/expressions/) in the **End Event** dialog box, you will see an option that allows you to update the return type:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event-form.png" width="500px" >}}
 
 {{% alert color="info" %}}
-If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
+If you are calling a microflow from another microflow, a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
 {{% /alert %}}
 
 ## 3 Read More

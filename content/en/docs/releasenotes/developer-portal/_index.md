@@ -17,6 +17,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### September 21, 2023
+
+#### New Features
+
+* You can now see your story revision history under the new "Revisions" section on the story details page. This feature is only available for Git projects.
+* Excel export is here for the Planning page as well.
+* We have also added a couple of extra fields to the Excel export: Assigned to and Archived by.
+* Typing "bug" or "feature" into the search bar now filters on story type (so it shows bugs only or features only). More ways to filter out stories coming soon!
+
 ### September 7, 2023
 
 #### Fixes 

@@ -27,7 +27,7 @@ Some examples of such container registries are:
 * Azure ACR [admin account](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#admin-account)
 * Self-hosted registries such as [Sonartype Nexus](https://www.sonatype.com/products/nexus-repository)
 
-However, static credentials are often considered insecure, and cloud providers offer alternative authentication methods based on short-lived tokens. For example, pushing an image to ECR requires getting a short-lived token from the AWS API. For more details about specific container registries, see the [Configure registry](#configure-registry) section.
+However, static credentials are often considered insecure, and cloud providers offer alternative authentication methods based on short-lived tokens. For example, pushing an image to ECR requires getting a short-lived token from the AWS API. For more details about specific container registries, see the [Configuring the Registry](#configure-registry) section.
 
 ### 1.2 Limitations
 
@@ -62,7 +62,7 @@ Kubernetes nodes need to pull images from the container registry:
 
 The Mendix Operator needs to push images to one URL (the push URL), but needs to tell Kubernetes to pull images from another URL (the pull URL).
 
-## 2 Configuring the Registry
+## 2 Configuring the Registry {#configure-registry}
 
 ### 2.1 OpenShift 3 Registry {#openshift-3-registry}
 

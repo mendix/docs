@@ -140,7 +140,7 @@ You can change the internal name if you wish, but do not reuse one which has alr
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
 {{% alert color="info" %}}
-If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only    the enabled plan will be visiable for selection.
+If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection.
 {{% /alert %}}
 
 

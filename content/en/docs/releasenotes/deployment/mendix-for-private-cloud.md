@@ -18,7 +18,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Portal Improvements
 
 * We have improved the user experience for the Cluster Manager, Environment Overview and Environment details pages by revamping the UI and adding sorting, searching and filtering.
-* We have added a feature which will allow to add customized core resource plans in the Cluster manager pages
+* We have added a feature which will allow the creation of customized core resource plans in the Cluster Manager page.
 
 #### Deploy API Improvements
 

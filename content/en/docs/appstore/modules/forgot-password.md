@@ -105,8 +105,8 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
 1. Run the application.
 1. Login as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
-    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). This will create an SMTP configuration.
-    * Select the SMTP configuration you want to use for sending this email.
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). In version 5.4.0 and above this will create an SMTP configuration which you will need to select.
+    * In version 5.4.0 and above, select the SMTP configuration you want to use for sending this email.
     * From the dropdown, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
 
         For version 5.3.0 and above, you can **Create** and **Edit** several reset email templates, each of which is linked to a [language](/refguide/language-settings/) you have added to your app. The template linked to the language in which the end-user sees the app will be used to send the email. If there is no template explicitly associated with the end-user's language, the template which is not associated with any language will be used. For versions below 5.3.0, you will only be able to set up a single template.

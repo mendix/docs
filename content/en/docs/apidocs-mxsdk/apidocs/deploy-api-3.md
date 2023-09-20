@@ -118,4 +118,8 @@ The following steps will change the permissions of a team member to an environme
 
 ## 4 API Reference
 
+{{< donottranslate >}}
+
 {{< swaggerui src="/openapi-spec/cloud-portal-v3.yaml"  >}}
+
+{{< /donottranslate >}}

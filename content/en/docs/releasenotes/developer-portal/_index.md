@@ -22,7 +22,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features
 
 * We released a few new features for [Epics](developerportal/project-management/epics/):
-  * We have added a new section named **Revisions** in the [story details](developerportal/project-management/epics/board/#story-details) dialog box, which shows the revision history of a story. This feature is only available for apps that uses Git for version control.
+  * We have added a new section named **Revisions** in the [story details](developerportal/project-management/epics/board/#story-details) dialog box, which shows the revision history of a story. This feature is only available for apps that use Git for version control.
   * On the **Planning** page, you can now [export stories](/developerportal/project-management/epics/planning/#export-stories) to an Excel file.
   * If you [export archived stories](/developerportal/project-management/epics/archive/#export-archived-stories) on the **Archive** page, you can find two new columns in the Excel file: **Assigned to** and **Archived by**.
   * On the **Planning** page,  you can now type *bug* or *feature* in the search bar to filter on the story type so that it only shows bugs or features. More ways to filter out stories coming soon.

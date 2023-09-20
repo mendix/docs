@@ -17,6 +17,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### September 21, 2023
+
+* We have done all the preparation work for sunsetting Stories (remember it's on October 1).
+Even after that date, you will be able to go into Epics and migrate all your stories, comments, attachments and more, but Stories will not be available in the project navigation anymore.
+
 ### September 7, 2023
 
 #### Fixes 

@@ -296,7 +296,7 @@ To run an app in Kubernetes, it needs to be converted (packaged) into a containe
 
 The Mendix Operator automatically builds and pushes images into a private OCI registry; to push an image to the target registry, the Mendix Operator needs to be configured.
 
-See the [Image registry](/developerportal/deploy/private-cloud-registry) document for a list of supported registries and instructions how to configure each one.
+See the [Image registry](/developerportal/deploy/private-cloud-registry/) document for a list of supported registries and instructions how to configure each one.
 
 #### 4.3.3 Proxy {#proxy}
 

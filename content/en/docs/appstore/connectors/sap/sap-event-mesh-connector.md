@@ -124,3 +124,27 @@ The `GetQueueDetails` microflow allows you to retrieve detailed information abou
 #### 4.3.6 Get Queue Subscriptions
 
 The `GetQueueSubscriptions` microflow allows you to retrieve information about subscriptions to a queue. It requires the Management Credentials and Queue Name as parameters.
+
+#### 4.3.7 Create or Update Queue
+
+The `CreateOrUpdateQueue` activity allows you to create a new queue or update an existing queue. It requires the Management Credentials and Queue Name as parameters.
+
+#### 4.3.8 Delete Queue
+
+The `DeleteQueue` activity allows you to delete a queue. It requires the Management Credentials and Queue Name as parameters.
+
+#### 4.3.9 Create Queue Subscription
+
+The `CreateQueueSubscription` activity allows you to create a new subscription to a queue. It requires the following parameters:
+
+* Management credentials
+* Topic or topics to be created
+* Queue or queues subscribed to the topic
+
+#### 4.3.10 Delete Queue Subscription
+
+The `DeleteQueueSubscription` activity allows you to delete a subscription to a queue. It requires the following parameters:
+
+* Management credentials
+* Topic to be deleted
+* Queue or queues subscribed to the topic that you want to delete

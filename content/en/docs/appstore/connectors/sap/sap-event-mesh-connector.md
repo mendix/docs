@@ -70,17 +70,38 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Name | Description |
 | --- | --- |
-| {ENTITY NAME} | {ENTITY DESCRIPTION} |
+| **Credentials** | Credential details |
+| **Response** | Messaging API response |
+| **Error** | Error reported by the messaging API response |
+| **ConsumeResponse** | Response to the `ConsumeMessage` action |
+| **PublishResponse** | Response to the `PublishMessage` action |
+| **Queue** | Queue details response |
+| **QueueSubscriptions** | Queue subscription response |
 
 ### 4.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the {CONNECTOR NAME} connector, enumerations list values such as {USUALLY "the list of available SAP regions", POSSIBLY ALSO OTHERS AS REQUIRED}.
+An enumeration is a predefined list of values that can be used as an attribute type. For the SAP Event Mesh connector, enumerations list values such as the type of credentials required for the available actions.
 
-#### 4.2.1 `{ENUMERATION NAME}`
+#### 4.2.1 `Enum_CredentialType`
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| {ENUMERATION ELEMENT NAME} | {ENUMERATION ELEMENT VALUE} | {ENUMERATION ELEMENT DESCRIPTION} |
+| management | Management | Credentials required for queue management tasks |
+| messaging | Messaging | Credentials required for messaging tasks |
+
+#### 4.2.2 `Enum_DestinationType`
+
+| Name | Caption |
+| --- | --- |
+| queue | Queue |
+| topic | Topic |
+
+#### 4.2.2 `Enum_AccessType`
+
+| Name | Caption |
+| --- | --- |
+| NON_EXCLUSIVE | NON_EXCLUSIVE |
+| EXCLUSIVE | EXCLUSIVE |
 
 ### 4.3 Actions {#actions}
 

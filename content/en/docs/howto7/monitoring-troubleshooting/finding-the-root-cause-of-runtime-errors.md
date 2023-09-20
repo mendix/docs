@@ -14,7 +14,7 @@ This how-to will teach you how to do the following:
 
 * Find the root cause of runtime errors via two methods
 
-## 2 Method 1 – Using the Modeler
+## 2 Using the Modeler
 
 If the application is deployed from the Modeler, the information is located in the console:
 
@@ -32,7 +32,7 @@ There are three key pieces of information in this window:
 
 With these three pieces of information, you should be able to find the cause of the error. If you cannot determine the cause from this information, you can put a break point in the specified microflow and debug the situation.
 
-## 3 Method 2 – Using the Application Logs
+## 3 Using the Application Logs
 
 If the application is deployed from the service console or in the cloud, the information is available in the application logs. 
 

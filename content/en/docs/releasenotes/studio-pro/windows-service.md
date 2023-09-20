@@ -12,6 +12,13 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.7
 
+### 4.7.2
+
+**Release date: September 21, 2023**
+
+* We fixed the problem that new or deleted application constants are not picked up correctly when updating the app via the `Update-MxApp` cmdlet. (Ticket #185938)
+* We added a new field to specify the maximum value of form posts (bytes) in the Jetty Configuration part in the Advanced Settings Window.
+
 ### 4.7.1
 
 **Release date: February 24, 2023**

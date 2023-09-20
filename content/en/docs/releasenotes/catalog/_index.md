@@ -13,7 +13,20 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
-### Aug 10, 2023
+### September 21, 2023
+
+#### Features
+
+* We have added Beta support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix model are now automatically registered when you deploy to the Mendix Cloud. Have a look and let us know what you think!
+ 
+#### Improvements
+* We made several improvements to the UI of the Search Results page.
+ 
+#### Fixes
+* We fixed some broken links in the registration interface and in the footer of the page.
+* We added the Feedback widget to a few pages where it was missing.
+
+### August 10, 2023
 
 #### Improvements
 

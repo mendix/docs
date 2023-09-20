@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.4.0
+  version: 4.5.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -299,9 +299,14 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Deletes a specific environment.
+      description: |-
+        Deletes a specific environment.<br/>
+        This should only be used if your application doesn't have environments deployed in multiple namespaces.<br/>
+        We recommend using the endpoint `Delete Environment for a specified Namespace`.<br/>
+        This endpoint **will be removed in future versions**.
       tags:
         - environments
+      deprecated: true
     put:
       summary: Update Environment
       operationId: update-environment
@@ -316,7 +321,11 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Updates a specific environment based on a manifest.
+      description: |-
+        Updates a specific environment based on a manifest.<br/>
+        This should only be used if your application doesn't have environments deployed in multiple namespaces.<br/>
+        We recommend using the endpoint `Update Environment for a specified Namespace`.<br/>
+        This endpoint **will be removed in future versions**.
       parameters:
         - schema:
             type: string
@@ -335,6 +344,7 @@ paths:
         description: Manifest of an environment.
       tags:
         - environments
+      deprecated: true
   '/apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}':
     parameters:
       - name: appId
@@ -376,8 +386,8 @@ paths:
       tags:
         - environments
     delete:
-      summary: Delete Environment
-      operationId: delete-environment
+      summary: Delete Environment for a specified Namespace
+      operationId: delete-environment-for-a-specified-namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -389,12 +399,12 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Deletes a specific environment.
+      description: Deletes an environment for a specified namespace.
       tags:
         - environments
     put:
-      summary: Update Environment
-      operationId: update-environment
+      summary: Update Environment for a specified Namespace
+      operationId: update-environment-for-a-specified-namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -406,7 +416,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Updates a specific environment based on a manifest.
+      description: Updates an environment based on a manifest for a specified namespace.
       parameters:
         - schema:
             type: string

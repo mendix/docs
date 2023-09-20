@@ -113,7 +113,7 @@ If you are not already on the installation tab for your namespace, go to it by f
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
-2. Click **Details** next to the namespace you want to use.
+2. Click Details icon next to the namespace you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
 
@@ -1235,7 +1235,6 @@ You can also see an activity log containing the following information for all na
 * When developer mode is enabled in the namespace
 * When developer mode is disabled in the namespace
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 
 #### 7.2.1 Apps
 
@@ -1369,13 +1368,34 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 ##### 7.2.4.1 Deactivating a Plan
 
-Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
+Enable the toggle button next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
 ##### 7.2.4.2 Activating a Plan
 
-Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
+Disable the toggle button next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-#### 7.2.5 Installation
+#### 7.2.5 Custom Core Resource Plan
+
+Here, you can create customized plan for your core resources. 
+
+1. Click **Add New Plan** 
+2. Provide a name to the plan under **Plan Name**
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
+
+3. Provide the required CPU Limits, CPU Request, Memmory Limit and Memory Request based on your choice 
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}
+
+4. Click **OK** button to save the customized resource plan.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" >}}
+
+5. In order to make the customized plan available to the customer, make sure to enable the toggle button next Use custom core resources plans.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
+
+#### 7.2.6 Installation
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
 
@@ -1383,11 +1403,11 @@ You can use the Configuration Tool again to change the configuration of your nam
 
 You can also download the Configuration Tool again, if you wish.
 
-#### 7.2.6 Additional Information
+#### 7.2.7 Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
 
-#### 7.2.7 Customization
+#### 7.2.8 Customization
 
 This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
 
@@ -1407,7 +1427,7 @@ Enabling the Development Mode option will allow users to change the type of an e
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 
-#### 7.2.8 PCLM Statistics
+#### 7.2.9 PCLM Statistics
 
 This tab shows information about claimed licenses, operator licenses and runtime licenses.
 

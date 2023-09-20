@@ -13,35 +13,116 @@ Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses o
 
 ### 1.1 Prerequisites
 
+To complete this tutorial, you need the following tools:
 
+* [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/) - For creating and training the model. Amazon SageMaker is a fully managed machine-learning service from Amazon that helps you build, train and deploy machine learning models quickly. It offers a wide range of features that include, but are not limited to, Jupyter notebooks, Pipelines,  SageMaker Studio, Canvas and RStudio.
+* Python 3.0 - To write the code.
+* Mendix Studio Pro 10.1.1 - The latest version of Mendix; includes the ML Kit required to create tailored smart end-user apps.
 
-## 2 Configuring the Mendix Email Connector for Amazon SES
+By following the tutorial, you will create a demo spam filter with the help of Amazon SageMaker and Mendix. To help you achieve that, download the following demo files:
 
-To configure your SES account in the Email Connector in Studio Pro, follow these steps: 
+* [The spam_nb.ipynb notebook example](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/spam_nb.ipynb)
+* [The spam.csv file](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/spam.csv)
 
-1. Get the following details from Amazon SES: 
-    * SMTP hostname 
-    * SMTP username 
-    * SMTP password
+## 2 Getting Started with Amazon SageMaker Studio
 
-    For more information, see [Obtaining Amazon SES SMTP credentials](https://docs.aws.amazon.com/ses/latest/dg/smtp-credentials.html).
+To start using SageMaker Studio, perform the following steps:
 
-    {{% alert color="info" %}}Only email IDs and identities configured under Verified identities, and that are verified for Amazon SES accounts, can be used as sender and receiver.{{% /alert %}}
+1. Log in to your AWS account and navigate to the SageMaker service. 
+2. In the SageMaker dashboard, from the left side menu, select the **Studio** to go to the SageMaker Studio interface.
+3. Choose a user profile and open Studio. 
+    If there is not a profile or a domain, create one by choosing **Domains** from the left-side menu, and then following the instructions.   
+4. On the SageMaker Studio Home screen, click **Open Launcher**.
+5. Click the **Change environment** button to select the image type (CPU or GPU) and the kernel.
+6. In the left-hand navigation menu, click the **Files** icon.
+7. Upload the *spam_nb.ipynb* and *spam.csv* example files.
+8. Once the files are visible in the folder, open the *spam_nb.ipynb* file. For a detailed explanation of the contents of the file, see [Spam_nb.ipynb File Contents](#file-contents).
 
-2. Download the Email Connector module and import it into your Studio Pro app. For more information, see [Email Connector](/appstore/connectors/email-connector/).
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/sagemaker.png" alt="The uploaded files in SageMaker Studio">}}
 
-    {{% alert color="warning" %}}Ensure that you follow the prerequisites listed in the [Email Connector documentation](/appstore/connectors/email-connector/). Missing a step might lead to errors.{{% /alert %}}
+9. Run the notebook to execute the code.
+    1. Put the cursor at the first line.
+    2. Click the **Play** icon on top, and then click it again to run the model training and create the ONNX file.
+    3. Check the **Files** folder, right-click **spam_nb.onnx**, and download the file.
+    4. After training and testing the model, terminate all running instances to avoid extra charges.
 
-3. Set up the Email Connector. For more information, see [Set Up in Studio Pro](/appstore/connectors/email-connector/#setup) and [Email Account Configuration](/appstore/connectors/email-connector/#accountconfig).  
-4. On the **EmailConnector_Overview** page, click **Add email account**. 
-5. Enter the following details: 
-    * **Email** - SMTP username for Amazon SES 
-    * **Password** -  SMTP password for Amazon SES 
-6. Click **Next**.
-7. Click **OK** to manually configure your email account. 
-8. Select the **Send emails** checkbox, and then enter the following details: 
-    * **Protocol** - SMTP 
-    * **Server host** - enter SMTP hostname for Amazon SES 
-    * **Server port** - any configured STARTTLS port for Amazon SES (for example, 25, 587, 2587, and so on) 
-    * Select Use TLS / Use SSL accordingly 
-9. Click **Finish**. 
+### 2.1 Spam_nb.ipynb File Contents {#file-contents}
+
+{DETAILS}
+
+## 3 Importing the Model into Mendix Studio Pro
+
+After creating the ONNX model file, import it into Mendix Studio Pro by doing the following steps:
+
+1. Open Mendix 10.1.1 Studio Pro and create a new blank app.
+2. Select the module called **MyFirstModule** in the **App Explorer** and right-click it to open the pop-up menu.
+3. Click **ML_model_mapping**.
+4. Click **Import Model** in the upper left corner and import the ONNX file. Mendix will automatically create the input and output objects.
+5. If an error message appears at the ML Model input, open the entity and fix the issue by selecting **1** as the **Static tensor shape**.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/ml-model.png" alt="The Static tensor shape">}}
+
+6. Verify that the domain model resembles the following screenshot:
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/domain-model.png" alt="The domain model">}}
+
+7. Go to the domain model in the **App Explorer**, add an extra entity, and call it *Email*.
+8. Add the following string attributes to the **Email** entity: 
+    * *Payload* (unlimited characters) 
+    * *Prediction* (leave the default value)
+9. Select the email entity and right-click to open the side menu, then select **Generate overview pages**.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/generate-pages.png" alt="The Generate overview pages option">}}
+
+    Mendix automatically creates the **Email Overview** and **Email_NewEdit** pages, and place them in the **Overview pages** section of the **App Explorer**. 
+
+10. Find the **Email_NewEdit** page and double-click to open it.
+11. Double-click the **Save** action to open its properties.
+12. In the **Events** section, select **Call a microflow** > **Select** > **New**.
+13. Name the new microflow *Predict_Spam* (or P*redictSpam*).
+14. Once the new microflow is open, add the following:
+
+    * A parameter for the email entity.
+    * A **Create object** action for the input object of the ML model.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/create-object.png" alt="The Create object action configuration">}}
+
+    * The **Call ML model** action; select the available ML model mapping and input object, and then click **OK**.
+    * A **Change Object** action; set **Commit** and **Refresh** to **Yes**. As a member, select the prediction, and as value, set the output label of the **OutputObject**.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/change-object.png" alt="The Change object action configuration">}}
+
+    * A **Close page** action.
+
+15. In the **App Explorer**, open the **Navigation** and select the email overview page as the default page and home page.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/pages.png" alt="The default page and home page highlighted">}}
+
+16. Click the **Run** icon in the upper right corner to run the project. Once it is ready, click the **View App** button to go to the local application.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/run-app.png" alt="The Run and View App options">}}
+
+## 4 Testing the Spam Filter
+
+After importing the ML model into Mendix Studio Pro, test the performance of the spam filter by doing the following steps:
+
+1. On the homepage of your test app, click **New**.
+
+    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/test-app.png" alt="The test spam filter">}}
+
+2. Add a message as a payload, for example:
+
+    *Congratulations!*
+    *You have been selected as one of the lucky winners of the Microsoft Lottery 2023. You have won a cash prize of $10,000,000 USD and a brand new laptop.*
+    *To claim your prize, you need to contact our agent with the following information:* 
+    *Name:*
+    *Address:*
+    *Phone number:*
+    *Email address:*
+    *Contact Agent*
+
+If the email is recognized as spam, the prediction will display *spam*, and if not, *ham*.
+
+## 5 Read More:
+
+* [mlkit-example-app](https://github.com/mendix/mlkit-example-app)

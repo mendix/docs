@@ -95,9 +95,10 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description | Specializations |
 | --- | --- | --- |
-| `InvokeFunctionRequest` | Stores the request for a `InvokeFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
+| `ListFunctionRequest` | Stores the request for a `ListFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 | `ListFunctionResponse` | Stores the response for a `ListFunctions` call |  |
 | `FunctionResponse` | Stores the response containing a list of available lambda functions for a `ListFunctions` call |  |
+| `InvokeFunctionRequest` | Stores the request for a `InvokeFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 | `InvokeFunctionResponse` | Stores the response for an `InvokeFunction` call |  |
 | `DeleteFunctionRequest` | Stores the request for a `DeleteFunctions` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 
@@ -108,6 +109,10 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 #### 4.2.1 ListFunctions
 
 This activity lists all the Lambda functions which are available for the supplied AWS credentials.
+
+**Parameters**
+
+* Parameter of the type `ListFunctionsRequest` – Requesting a list of available Lambda functions
 
 **Returns**
 

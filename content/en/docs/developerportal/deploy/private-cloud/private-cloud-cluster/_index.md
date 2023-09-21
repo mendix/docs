@@ -51,7 +51,7 @@ Should you consider using a connected environment, the following URLs should be 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}
 
 3. Click **Set up Mendix for Private Cloud**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
 4. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
@@ -59,7 +59,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 
-6. Click **Register Cluster**. 
+6. Click **Register Cluster**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png" >}}
 
@@ -153,17 +153,17 @@ You can do this as follows:
 1. Sign in to the OpenShift Console.
 
 2. Click **Copy Login Command** in the user drop-down.
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" >}}
 
 3. Choose your IdP (Identity Provider).
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" >}}
 
 4. Click **Display Token**.
 
 5. Copy the command under **Log in with this token**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" >}}
 
 6. Paste the command into your command line terminal and press Enter.
@@ -202,7 +202,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
     You will see the screen below.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
 
     {{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
@@ -246,7 +246,7 @@ The options do the following:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
 
-3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
+3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**).
 
 4. Each page will lead you through the information you need to supply.
 
@@ -292,56 +292,11 @@ Additional network options such as Ingress/Service annotations and Service ports
 
 ##### 4.3.2.4 Registry {#registry}
 
-Selecting a registry type and configuring its credentials will configure the destination registry used by Mendix for Private Cloud to build images.
-Images are pulled from this registry by Kubernetes, bypassing the Mendix Operator.
+To run an app in Kubernetes, it needs to be converted (packaged) into a container image and pushed to an OCI registry.
 
-You can choose one of the following registry types. OpenShift registries can only be used for clusters on the OpenShift platform. AWS ECR can only be used for AWS EKS clusters. For some of these registries you may need to supply additional information such as the pull URL, push URL, name, and secret.
+The Mendix Operator automatically builds and pushes images into a private OCI registry; to push an image to the target registry, the Mendix Operator needs to be configured.
 
-* OpenShift 3 Registry
-* OpenShift 4 Registry
-* Amazon Elastic Container Registry (AWS ECR)
-* Generic registry with authentication – this supports most registries, for example Azure Container Registry, quay.io, or Docker Hub
-* Generic registry without authentication – this can be used for basic, self-hosted registries such as the ones included with Minikube and MicroK8s
-* Existing docker-registry secret
-* Google Cloud Container Registry
-
-**Additional Information**
-
-You can host the default Mendix components in your own registry, for example if your cluster is firewalled and cannot open up a route to the Mendix registry. In this case you need to migrate some, or all, of the Mendix components to your cluster. See the instructions in [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/) to find out how to do this.
-
-For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
-
-For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount – no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
-
-For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
-
-When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering). You can choose between Static credentials and [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html).
-
-For **Google Cloud Container Registry**, the supported authentication is [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). You will need to supply the following:
-
-* `Registry Name`: google container registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
-* `Registry URL`: container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
-* `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
-* `Kubernetes Service Account`: the Kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the Kubernetes service account to your google service account.
-
-    Below is an example how to bind a google cloud service account to a kubernetes service account:
-
-    ```shell
-    gcloud iam service-accounts add-iam-policy-binding \
-            --role roles/iam.workloadIdentityUser \
-            --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
-            GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
-    ```
-
-{{% alert color="info" %}}
-Make sure that you update the values for PROJECT_ID, K8S_NAMESPACE, GSA_NAME and KSA_NAME.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The workload identity is only enabled when using the google-gcr option in the CLI.
-Other options (e.g. generic registry) will not enable the pod annotations required for the GCR authentication plugin to work correctly.
-Only the google-gcr option is validated and supported when using the Google Container Registry on Google Cloud Platform.
-{{% /alert %}}
+See the [Image registry](/developerportal/deploy/private-cloud-registry/) document for a list of supported registries and instructions how to configure each one.
 
 #### 4.3.3 Proxy {#proxy}
 
@@ -351,17 +306,16 @@ List all local (including cluster-local) IP addresses and domains in the **No pr
 
 Hosts which should be excluded from proxying are specified as:
 
-* a string containing comma-separated values
-* each value is
-    * an IP address prefix (`1.2.3.4`)
-    * an IP address prefix in CIDR notation (`1.2.3.4/8`)
-    * a domain name
-    * if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
-* each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
-* a domain name matches that name and all subdomains
-* a domain name with a leading "." matches subdomains only
+* A string containing comma-separated values, where each value is one of the following:
+    * An IP address prefix (`1.2.3.4`)
+    * An IP address prefix in CIDR notation (`1.2.3.4/8`)
+    * A domain name
+    * If you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied
+* Each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
+* A domain name matches that name and all subdomains
+* A domain name with a leading "." matches subdomains only
 
-    For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
+    For example, "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
 
 For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
 
@@ -411,7 +365,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         ```
 
 2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
-   
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
 
 These custom CAs will be trusted by:
@@ -474,7 +428,7 @@ You can license the Operator and Runtime of your application by configuring the 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" >}}
 
 {{% alert color="info" %}}
-In order to configure PCLM, make sure that the Operator version is 2.11.0 and above. 
+In order to configure PCLM, make sure that the Operator version is 2.11.0 and above.
 {{% /alert %}}
 
 ## 6 Advanced Operator Configuration
@@ -646,7 +600,7 @@ spec:
 
 You can change the following options:
 
-* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
+* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
 ### 6.3 Mendix App Resource Customization {#advanced-resource-customization}
@@ -733,7 +687,7 @@ spec:
             periodSeconds: 25
             successThreshold: 1
             failureThreshold: 4
-        terminationGracePeriodSeconds: 300      
+        terminationGracePeriodSeconds: 300
         resources:
           limits:
             cpu: 1
@@ -825,7 +779,7 @@ terminationGracePeriodSeconds: 300
 The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
 
-#### 5.3.4 Customize Container Resources: Memory and CPU
+#### 6.3.4 Customize Container Resources: Memory and CPU
 
 Let us now analyze the `resources` section from the example application deployment, above:
 
@@ -913,51 +867,18 @@ spec:
   runtimeStartupProbe:
     failureThreshold: 30
     periodSeconds: 10
-  runtimeTerminationGracePeriodSeconds: 300    
+  runtimeTerminationGracePeriodSeconds: 300
 ```
 
 The following fields can be configured:
 
 * `Liveness`, `readiness`, `startupProbe`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace — any changes made in the Deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
 * `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
-* `metricsSidecarResources`: this is used for all m2ee-metrics containers in the namespace
-* `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
+* `metricsSidecarResources` – this is used for all m2ee-metrics containers in the namespace
+* `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
-### 6.4 Customize Registry ImageNameTemplate {#customize-registry-imagenametemplate}
-
-ImageNameTemplate allows you to specify how the image name and tag are generated. It allows both use of OpenShift-style "repository per app" and ECR-style "tag per app". For example, a value of imageNameTemplate may be `registry.example.com/mendix-apps/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}` which would generate an image for the build like `registry.example.com/mendix-apps/pgv9gw71-0.0.1.2-1640699175.392`
-
-The imageNameTemplate is generated by mxpc-cli when you update the registry configuration.
-
-{{% alert color="warning" %}}
-Any manual changes you make to the imageNameTemplate in the manifest are overwritten when you update the registry configuration using mxpc-cli.
-{{% /alert %}}
-
-An example of the imageNameTemplate in the operator configuration manifest is given below.
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-    # …
-spec:
-  registry:
-    imageNameTemplate: 'my-registry/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}'
-    pullURL: 'image-registry.openshift-image-registry.svc:5000'
-    pushURL: 'image-registry.openshift-image-registry.svc:5000'
-    type: openshift
-  # …
-```
-
-You can customize the registry imageNameTemplate in OperatorConfiguration with these available variables:
-
-* `{{.Name}}`: internal environment name.
-* `{{.Generation}}`: value of the Build CR’s [Generation](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace#generation) attribute.
-* `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Private Cloud Portal.
-* `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
-* `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.
-
-### 6.5 Customize Runtime Metrics {#customize-runtime-metrics}
+### 6.4 Customize Runtime Metrics {#customize-runtime-metrics}
 
 Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
 
@@ -1016,7 +937,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 6.6 Customize Service Account {#customize-service-account}
+### 6.5 Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -1028,7 +949,7 @@ The service account can be customized for Private Cloud Operator version 2.7.0 a
 
 If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
-### 6.7 Autoscaling
+### 6.6 Autoscaling
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
@@ -1139,6 +1060,34 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
+### 6.8 Pod labels
+
+#### 6.8.1 General pod labels
+
+Mendix Operator version 2.13.0 or above allows you to specify default pod labels for app-related pods: task pods (build and storage provisioners) and runtime (app) pods.
+
+To specify default pod labels for a namespace, specify them in `customPodLabels.general` in `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod labels
+  customPodLabels:
+    # Optional: general pod labels (applied to all app-related pods)
+    general:
+      # Example: enable Azure Workload Identity
+      azure.workload.identity/use: "true"
+```
+
+Alternatively, for Standalone clusters, pod labels can be specified in the `MendixApp` CR for a specific app.
+
+{{% alert color="warning" %}}
+The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
+{{% /alert %}}
+
 ## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
@@ -1169,7 +1118,7 @@ Here you can perform the following actions on the entire cluster:
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG" >}}
 
 {{% alert color="info" %}}
-When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
+When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
 
 The only limitations are that:
 
@@ -1409,7 +1358,7 @@ This tab shows information on the versions of the various components installed i
 
 #### 7.2.8 Customization
 
-This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
+This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers.
 
 Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 

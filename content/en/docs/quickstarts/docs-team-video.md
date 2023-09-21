@@ -20,9 +20,41 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## 3 The Team
 
-### 3.1 Connor Land
+### 3.1 Dana Breseman
 
-Key facts about Connor Land:
+Key facts about Dana:
+
+1. Dana looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/dana-picture.png" width="350px" alt="Dana">}}
+
+1. Dana is new to the team, so her components are to be determined.
+
+{{% alert type="info" %}}
+I am baking sourdough bread again, and need suggestions on what to name my starter.
+{{% /alert %}}
+
+### 3.2 Adam Dupaski
+
+Key facts about Adam:
+
+1. Adam looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/adam-picture.png" width="350px" alt="Adam">}}
+
+1. Adam covers the following components:
+    1. Studio Pro release notes
+    1. Marketplace docs
+    1. Technical editing
+    1. Documentation processes
+
+{{% alert type="info" %}}
+I joined the Mendix Community team as a Technical Writer in 2016.
+{{% /alert %}}
+
+### 3.3 Connor Land
+
+Key facts about Connor:
 
 1. He looks like this:
 
@@ -38,49 +70,15 @@ Key facts about Connor Land:
 When I am not technically writing, I am usually at the skatepark growing my collection of bruises.
 {{% /alert %}}
 
-### X.1
+### 3.4 Yiyun Liao
 
-Key facts about Luyao Zhang:
+Key facts about Yiyun:
 
-1. Luyao Zhang looks like this:
-
-    {{< figure src="/attachments/quickstarts/video/luyao-picture.png" width="350px" alt="Luyao">}}
-
-1. Luyao Zhang covers the following components:
-    1. Marketplace modules
-    1. API and SDK docs
-    1. Control Center
-
-{{% alert type="info" %}}
-I have started writing many novels, but I have not finished one... yet.
-{{% /alert %}}
-
-### X.1
-
-Key facts about Dana Breseman:
-
-1. Dana looks like this:
-
-    {{< figure src="/attachments/quickstarts/video/dana-picture.png" width="350px" alt="Dana">}}
-
-1. Before joining Mendix, Dana lived in the following countries:
-    1. United States
-    1. Germany
-    1. Rwanda
-
-{{% alert type="info" %}}
-I just got back into baking sourdough bread and I'm looking for suggestions on what to name my starter.
-{{% /alert %}}
-
-### X.1
-
-Key facts about Yiyun Liao
-
-1. Yiyun Liao looks like this:
+1. Yiyun looks like this:
 
     {{< figure src="/attachments/quickstarts/video/yiyun-picture.png" width="350px" alt="Yiyun">}}
 
-1. X covers the following components:
+1. Yiyun covers the following components:
     1. Microflows and nanoflows
     1. Workflows
     1. Mendix Assist
@@ -89,55 +87,43 @@ Key facts about Yiyun Liao
 I love spicy food and noodles! Spicy noodles are my favorite!
 {{% /alert %}}
 
-### X.1
+### 3.5 Mark van Ments
 
-Key facts about Adam Dupaski:
-
-1. Adam looks like this:
-
-    {{< figure src="/attachments/quickstarts/video/X.png" width="350px" alt="Adam">}}
-
-1. Adam covers the following components:
-    1. Studio Pro release notes
-    1. Marketplace docs
-    1. Technical editing
-    1. Documentation processes
-
-{{% alert type="info" %}}
-I joined the Mendix Community team as a Technical Writer in 2016.
-{{% /alert %}}
-
-### X.1
-
-Key facts about Mark van Ments:
+Key facts about Mark:
 
 1. Mark looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/mark-picture.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/mark-picture.png" width="350px" alt="NAME">}}
 
 1. Mark covers the following components:
     1. Mendix Cloud
     1. Runtime
 
 {{% alert type="info" %}}
-Fun fact alert!
+I sing opera, and my favorite aria is *Winterstürme wichen dem Wonnemond*.
 {{% /alert %}}
 
-### X.1
+### 3.6 Maria Shaposhnikova
 
-Key facts about Karuna Vengurlekar:
+Key facts about Maria:
 
-1. Karuna looks like this:
+1. Maria looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/maria-picture.png" width="350px" alt="NAME">}}
+
+1. Maria covers the following components:
+    1. Studio/Studio Fusion
+    1. Workflow
+    1. Version control
+    1. MxAssist
 
 {{% alert type="info" %}}
-When not at work, Karuna loves travelling, painting and spending some quality time by herself.
+I love Georgian food, and hate scary movies.
 {{% /alert %}}
 
-### X.1
+### 3.7 Quinn Tracy
 
-Key facts about Quinn Tracy:
+Key facts about Quinn:
 
 1. Quinn looks like this:
 
@@ -146,43 +132,39 @@ Key facts about Quinn Tracy:
 1. Quinn is new to the team, so her components are to be determined.
 
 {{% alert type="info" %}}
-Quinn was out sick when we made this video!
+Insert personal note here.
 {{% /alert %}}
 
-### X.1
+### 3.8 Karuna Vengurlekar
 
-Key facts about X
+Key facts about Karuna:
 
-1. X looks like this:
+1. Karuna looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/karuna-picture.png" width="350px" alt="NAME">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
+1. Karuna is new to the team, so her components are to be determined.
 
 {{% alert type="info" %}}
-Fun fact alert!
+When not at work, Karuna loves travelling, painting and spending some quality time by herself.
 {{% /alert %}}
 
-### X.1
+### 3.9 Luyao Zhang
 
-Key facts about X
+Key facts about Luyao:
 
-1. X looks like this:
+1. Luyao looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/luyao-picture.png" width="350px" alt="Luyao">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
+1. Luyao covers the following components:
+    1. Marketplace modules
+    1. API and SDK docs
+    1. Control Center
 
 {{% alert type="info" %}}
-Fun fact alert!
+I have started writing many novels, but I have not finished one... yet.
 {{% /alert %}}
-
 
 ## 4 Read More
 

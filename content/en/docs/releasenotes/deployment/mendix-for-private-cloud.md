@@ -13,6 +13,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### September 21, 2023
+
+#### Portal Improvements
+
+* We have improved the user experience for the Cluster Manager, Environment Overview and Environment details pages by revamping the UI and adding sorting, searching, and filtering.
+* We have added a feature which will allow the creation of customized core resource plans in the Cluster Manager page.
+
+#### Deploy API Improvements
+
+* We have fixed a bug which occurred when providing an extra space in the URL for the API.
+* We have improved the **Update Environment** and **Delete Environment** requests by adding the namespace parameter.
+
 ### September 19th, 2023
 
 #### Mendix Operator v2.13.0 {#2.13.0}

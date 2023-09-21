@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Features
 
-* We have added Beta support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix model are now automatically registered when you deploy to the Mendix Cloud. Have a look and let us know what you think!
+* We added [Beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. Have a look and let us know what you think.
  
 #### Improvements
 * We made several improvements to the UI of the Search Results page.

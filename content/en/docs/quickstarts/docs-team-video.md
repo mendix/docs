@@ -26,7 +26,7 @@ Key facts about Connor Land:
 
 1. He looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/connor-land.jpg" width="450px" alt="Connor Land">}}
+    {{< figure src="/attachments/quickstarts/video/connor-land.jpg" width="350px" alt="Connor Land">}}
 
 1. He covers the following components:
     1. Front End technology

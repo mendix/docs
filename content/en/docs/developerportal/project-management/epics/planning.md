@@ -202,7 +202,7 @@ On this tab, you can migrate all or part of your content from [Stories](/develop
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
-#### 5.4.1 Migration Process
+### 6.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
@@ -226,7 +226,7 @@ To migrate from Stories to Epics, follow these steps:
 
 5. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
-#### 5.4.2 What Is Migrated?
+### 6.2 What Is Migrated?
 
 These are the new locations of migrated stories:
 
@@ -256,7 +256,7 @@ Beside the story details above, the remaining details for your stories are migra
 
 {{% alert color="warning" %}}In [Stories](/developerportal/project-management/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-#### 5.4.3 Migration Report {#migration-report}
+### 6.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 

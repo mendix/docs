@@ -218,8 +218,6 @@ To migrate from Stories to Epics, follow these steps:
 
 3. Select the content you want to migrate.
 
-   {{% alert color="warning" %}}On October 1, Stories will not be available in the project navigation or General Settings. For projects that were still using Stories, Epics will become the default planning tool. The option to migrate all data is available from the three-dot menu on the Planning page in Epics.{{% /alert %}}
-
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.

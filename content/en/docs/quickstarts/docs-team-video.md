@@ -1,0 +1,46 @@
+---
+title: "Get to Know Docs"
+url: /quickstarts/get-to-know-docs/
+weight: 10
+description: "Learn the basics about Mendix's documentation team."
+tags: ["tea", "oxford commas", "information architecture"]
+---
+
+## 1 Introduction 
+
+This highly technical document will teach you the ins and outs of Mendix's documentation team.
+
+## 2 Prerequisites 
+
+Before starting this guide, make sure you have completed the following prerequisites:
+
+* Have a love for finding the right word
+* Know how to collaborate with all types of people
+* Download the latest versions of Studio Pro, Parallels, and Node.JS (just in case)
+
+## 3 The Team
+
+### 3.1 Connor Land
+
+Key facts about Connor Land:
+
+1. He looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/connor-land.jpg" width="450px" alt="Connor Land">}}
+
+1. He covers the following components:
+    1. Front End technology
+    1. Mobile app building
+    1. Marketplace and core widgets
+    1. Analytic information
+
+{{% alert type="info" %}}
+When Connor is technically writing, you can often find him at the skatepark growing his collection of bruises.
+{{% /alert %}}
+
+## 4 Read More
+
+* We are excited to join C&C and cannot wait to get to know you all better.
+* This marks the conclusion of the Documentation intro video.
+* If you are still reading this, you have high reading comprehension speed.
+* Might I interest you in a career in technical documentation?

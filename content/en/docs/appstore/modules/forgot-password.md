@@ -127,8 +127,6 @@ To disable the signup functionality and use the Forgot Password module only for 
 
 ### 2.1 Using Email Aliases{#email-aliases}
 
-{{% todo %}}Is this going to be version 5.4.0?{{% /todo %}}
-
 From version 5.4.0 of the Forgot Password module, the `fromAddress` used in the email template does not have to be the same as the email address in the SMTP configuration. This provides flexibility, allowing you to send emails from different addresses while utilizing the same SMTP configuration for authentication.
  
 Say, for example, your SMTP username is `user@example.com` and you have configured this account in your SMTP configuration. You could set the `fromAddress` in your email template to be any email address or alias you have control over, such as `sales@example.com`, `support@example.com`, or `ceo@example.com`, and this is what the recipient will see in the email they receive.

@@ -194,11 +194,11 @@ On this tab, you can enable or disable the toast notifications that appear like 
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/toast-notification.png" width="500px" >}}
 
-### 5.4 Data Migration {#data-migration}
+### 5.4 Data Migration 
 
-On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Migrating Stories to Epics](#migrate-stories) section below.
+On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Migrating Stories to Epics](#data-migration) section below.
 
-## 6 Migrating Stories to Epics {#migrate-stories}
+## 6 Migrating Stories to Epics {#data-migration}
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
@@ -206,25 +206,23 @@ On this tab, you can migrate all or part of your content from [Stories](/develop
 
 To migrate from Stories to Epics, follow these steps:
 
-1. Click the settings icon on the upper-right side of the screen.
+1. Click the **...** icon on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
 
-2.  Click the **...** icon on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
+   {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
 
-    {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
-    
-    Alternatively, select **Board Settings** and then go to the **Data Migration** tab. 
+   Alternatively, select **Board Settings** and then go to the **Data Migration** tab. 
 
-3. Read the information and then click **Start Migration**:
+2. Read the information and then click **Start Migration**:
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 
-4. Select the content you want to migrate.
+3. Select the content you want to migrate.
 
    {{% alert color="warning" %}}On October 1, Stories will not be available in the project navigation or General Settings. For projects that were still using Stories, Epics will become the default planning tool. The option to migrate all data is available from the three-dot menu on the Planning page in Epics.{{% /alert %}}
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
-5. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
+4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
 ### 6.2 What Is Migrated?
 

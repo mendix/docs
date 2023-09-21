@@ -14,7 +14,7 @@ aliases:
 {{% alert color="warning" %}}
 As of the GA release on December 1, 2022, Epics is the default tool for you to manage the development process of new apps. Epics is a replacement of [Stories](/developerportal/project-management/stories/). You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later. 
 
-To migrate your data from Stories to Epics, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
+To migrate your data from Stories to Epics, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 {{% /alert %}}
 
 ## 1 Introduction

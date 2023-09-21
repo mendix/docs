@@ -25,7 +25,7 @@ The new features were divided into these major themes, which are described in th
 | Capability or Feature | Expected Release |
 | --- | --- |
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
-| App Insights | Released for Public Beta [Dec 13, 2022](/releasenotes/developer-portal/#december-13-2022)<br>GA: Q3 2023 |
+| App Insights | Released for GA [Aug 12, 2023](/releasenotes/developer-portal/#august-12-2023) |
 | Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q4 2023 |
 | Community spaces | Currently in Private Beta<br>GA: Q3 2023 |
 
@@ -42,7 +42,7 @@ The new features were divided into these major themes, which are described in th
 | Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| PDF Document Generation module | Released for Public Beta [May 31, 2023](/appstore/modules/document-generation/)<br>GA: Q3 2023 |
+| PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
 | Insights into commits by peers| GA: Q3 2023 |
 | Rich design properties | GA: Q3 2023 |
 | Visual data filters | GA: Q3 2023 |
@@ -82,6 +82,6 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Cloud self-service (Mendix Cloud) | Currently in Private Beta<br>GA: TBD |
-| Landscape overview (Mendix Cloud, Cloud Dedicated) | Public Beta: Q3 2023<br>GA: TBD |
+| Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for Public Beta [Aug 28, 2023](/releasenotes/developer-portal/#august-28-2023)<br>GA: TBD |
 | Dependency governance (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
 | Cloud self-service (Cloud Dedicated) | Private Beta: Q4 2023<br>GA: TBD |

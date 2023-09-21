@@ -77,6 +77,7 @@ The story details dialog box shows the following items:
     * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
     * You can type a person in the editor by typing *@*, and the person's name, and then selecting the right person from the list. Once you save the story, the system will send a notification to the tagged person.
 
+* **Created by** – This shows the person who created the story.
 * **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
 * **Tasks** – All the tasks are listed.
@@ -92,6 +93,7 @@ The story details dialog box shows the following items:
 
 * **Story Points** – You can set the story points to an integer.
 * **Attached Files** – You can add attached files by clicking **+**.
+* **Revision** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
     * You can sort the comments by clicking the **Newest** or **Oldest** button.
 

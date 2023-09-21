@@ -35,58 +35,58 @@ Key facts about Connor Land:
     1. Analytic information
 
 {{% alert type="info" %}}
-When Connor is technically writing, you can often find him at the skatepark growing his collection of bruises.
+When Connor is not technically writing, you can often find him at the skatepark growing his collection of bruises.
 {{% /alert %}}
 
 ### X.1
 
-Key facts about X
+Key facts about Luyao Zhang:
 
-1. X looks like this:
+1. Luyao Zhang looks like this:
 
     {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
+1. Luyao Zhang covers the following components:
+    1. Marketplace modules
+    1. API and SDK docs
+    1. Control Center
 
 {{% alert type="info" %}}
-Fun fact alert!
+I have started writing many novels, but I have not finished one... yet.
 {{% /alert %}}
 
 ### X.1
 
-Key facts about X
+Key facts about Dana Breseman:
 
-1. X looks like this:
+1. Dana looks like this:
 
     {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
+1. Before joining Mendix, Dana lived in the following countries:
+    1. United States
+    1. Germany
+    1. Rwanda
 
 {{% alert type="info" %}}
-Fun fact alert!
+I just got back into baking sourdough bread and I'm looking for suggestions on what to name my starter.
 {{% /alert %}}
 
 ### X.1
 
-Key facts about X
+Key facts about Yiyun Liao
 
-1. X looks like this:
+1. Yiyun Liao looks like this:
 
     {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
 
 1. X covers the following components:
-    1. 
-    1. 
-    1. 
+    1. Microflows and nanoflows
+    1. Workflows
+    1. Mendix Assist
 
 {{% alert type="info" %}}
-Fun fact alert!
+I love spicy food and noodles! Spicy noodles are my favorite!
 {{% /alert %}}
 
 ### X.1

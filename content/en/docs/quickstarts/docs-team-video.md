@@ -38,6 +38,160 @@ Key facts about Connor Land:
 When Connor is technically writing, you can often find him at the skatepark growing his collection of bruises.
 {{% /alert %}}
 
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+### X.1
+
+Key facts about X
+
+1. X looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+
+1. X covers the following components:
+    1. 
+    1. 
+    1. 
+
+{{% alert type="info" %}}
+Fun fact alert!
+{{% /alert %}}
+
+
 ## 4 Read More
 
 * We are excited to join C&C and cannot wait to get to know you all better.

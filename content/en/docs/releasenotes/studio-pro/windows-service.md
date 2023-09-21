@@ -8,7 +8,7 @@ aliases:
     - /releasenotes/desktop-modeler/windows-service
 ---
 
-To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.
+To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click **Related Downloads**.
 
 ## 4.7
 
@@ -16,25 +16,25 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 **Release date: September 21, 2023**
 
-* We fixed the problem that new or deleted application constants are not picked up correctly when updating the app via the `Update-MxApp` cmdlet. (Ticket #185938)
-* We added a new field to specify the maximum value of form posts (bytes) in the Jetty Configuration part in the Advanced Settings Window.
+* We fixed an issue where new or deleted application constants were not picked up correctly when updating your app via the `Update-MxApp` cmdlet. (Ticket 185938)
+* We added a new field to specify the maximum value of form posts (bytes) in the **Jetty Configuration** section of the **Advanced Settings** window.
 
 ### 4.7.1
 
 **Release date: February 24, 2023**
 
-* Add possibility to add extra logsubscribers in the Settings.yaml file. See https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392 for more information. Compared to that information, the 'Logging' property has to start with an uppercase letter, so 'Logging:' instead of 'logging:'. The loglevel setting as described is not supported for the Windows Service.
-* We replaced the modified YAML parser YamlSerializer 0.9.0.2 by YamlDotNet 12.3.1.
+* We added the possibility to add extra `logsubscribers` in the *Settings.yaml* file (for more information, see [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392). Compared to that information, the `Logging` property has to start with an upper-case letter (as in, `Logging:' instead of `logging:`). The `loglevel` setting as described is not supported for the Windows Service.
+* We replaced the modified YAML parser YamlSerializer 0.9.0.2 with YamlDotNet 12.3.1.
 * We updated the Newtonsoft Json.NET library from version 13.0.1 to 13.0.2.
-* We have added build number information to the version information of the executables and the subject field of the MSI installer file.
+* We added build number information to the version information of the executables and the subject field of the MSI installer file.
 
 ### 4.7.0
 
 **Release date: August 26, 2022**
 
-* We fixed an exception which occurred when updating an app where files with a path exceeding 260 characters are overwritten. (Ticket 142021)
+* We fixed an exception that occurred when updating an app where files with a path exceeding 260 characters were overwritten. (Ticket 142021)
 * We now require Microsoft .NET Framework version 4.6.2 instead of 4.5.2.
-* We removed the license id check in the Service Console itself, because this check is already done by the server.
+* We removed the license ID check in the Service Console itself, because this check is already done by the server.
 * We updated the DotNetZip library from version 1.13.3 to 1.16.0.
 * We updated the Newtonsoft Json.NET library from version 12.0.2 to 13.0.1.
 * We updated the Tulpep.ActiveDirectoryObjectPicker library from version 2.3.133 to 3.0.11.
@@ -46,7 +46,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 **Release date: February 8, 2021**
 
-* <a id="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](/releasenotes/studio-pro/8.0/) and above if that is not configured yet.
+* <a id="46ki"></a>We fixed a known issue where we now find a correct AdoptOpenJDK version for [Studio Pro 8.0](/releasenotes/studio-pro/8.0/) and above if that is not configured yet.
 * We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the checkbox on the **Update App** form to apply the user rights again. For more information, see the release note about this checkbox for version [4.5.1](#451) below. (Ticket 67514)
 * We now allow you to not configure the main location of the files when starting the Mendix Service Console for the first time. The application will be closed in that case.
 * We fixed an issue where errors during the download or extraction of the server distribution file were not shown.
@@ -64,7 +64,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 * We updated the [Newtonsoft Json.NET](https://www.newtonsoft.com/json) library from 5.0.3 to 12.0.2.
 * We updated the [DotNetZip](https://archive.codeplex.com/?p=DotNetZip) library from version 1.11.0 to 1.13.3.
 * We replaced an old version of the [Active Directory Common Dialogs .NET](https://archive.codeplex.com/?p=adui) library with [Tulpep.ActiveDirectoryObjectPicker](https://www.nuget.org/packages/Tulpep.ActiveDirectoryObjectPicker/) 2.3.133.
-* Known issue: If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
+* We founhd a known issue where if an Oracle Java 8 installation is available, this version is selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
     * Fixed in [4.6.1](#46ki).
 
 ## 4.5

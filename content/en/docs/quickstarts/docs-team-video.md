@@ -26,7 +26,7 @@ Key facts about Connor Land:
 
 1. He looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/connor-land.jpg" width="350px" alt="Connor Land">}}
+    {{< figure src="/attachments/quickstarts/video/connor-picture.png" width="350px" alt="Connor">}}
 
 1. He covers the following components:
     1. Front End technology
@@ -35,7 +35,7 @@ Key facts about Connor Land:
     1. Analytic information
 
 {{% alert type="info" %}}
-When Connor is not technically writing, you can often find him at the skatepark growing his collection of bruises.
+When I am not technically writing, I am usually at the skatepark growing my collection of bruises.
 {{% /alert %}}
 
 ### X.1
@@ -44,7 +44,7 @@ Key facts about Luyao Zhang:
 
 1. Luyao Zhang looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/luyao-picture.png" width="350px" alt="Luyao">}}
 
 1. Luyao Zhang covers the following components:
     1. Marketplace modules
@@ -61,7 +61,7 @@ Key facts about Dana Breseman:
 
 1. Dana looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/dana-picture.png" width="350px" alt="Dana">}}
 
 1. Before joining Mendix, Dana lived in the following countries:
     1. United States
@@ -78,7 +78,7 @@ Key facts about Yiyun Liao
 
 1. Yiyun Liao looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/yiyun-picture.png" width="350px" alt="Yiyun">}}
 
 1. X covers the following components:
     1. Microflows and nanoflows
@@ -91,16 +91,33 @@ I love spicy food and noodles! Spicy noodles are my favorite!
 
 ### X.1
 
-Key facts about X
+Key facts about Adam Dupaski:
 
-1. X looks like this:
+1. Adam looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/X.png" width="350px" alt="Adam">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
+1. Adam covers the following components:
+    1. Studio Pro release notes
+    1. Marketplace docs
+    1. Technical editing
+    1. Documentation processes
+
+{{% alert type="info" %}}
+I joined the Mendix Community team as a Technical Writer in 2016.
+{{% /alert %}}
+
+### X.1
+
+Key facts about Mark van Ments:
+
+1. Mark looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/mark-picture.jpg" width="350px" alt="NAME">}}
+
+1. Mark covers the following components:
+    1. Mendix Cloud
+    1. Runtime
 
 {{% alert type="info" %}}
 Fun fact alert!
@@ -108,53 +125,28 @@ Fun fact alert!
 
 ### X.1
 
-Key facts about X
+Key facts about Karuna Vengurlekar:
 
-1. X looks like this:
+1. Karuna looks like this:
 
     {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
-
 {{% alert type="info" %}}
-Fun fact alert!
+When not at work, Karuna loves travelling, painting and spending some quality time by herself.
 {{% /alert %}}
 
 ### X.1
 
-Key facts about X
+Key facts about Quinn Tracy:
 
-1. X looks like this:
+1. Quinn looks like this:
 
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
+    {{< figure src="/attachments/quickstarts/video/quinn-picture.png" width="350px" alt="NAME">}}
 
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
+1. Quinn is new to the team, so her components are to be determined.
 
 {{% alert type="info" %}}
-Fun fact alert!
-{{% /alert %}}
-
-### X.1
-
-Key facts about X
-
-1. X looks like this:
-
-    {{< figure src="/attachments/quickstarts/video/X.jpg" width="350px" alt="NAME">}}
-
-1. X covers the following components:
-    1. 
-    1. 
-    1. 
-
-{{% alert type="info" %}}
-Fun fact alert!
+Quinn was out sick when we made this video!
 {{% /alert %}}
 
 ### X.1

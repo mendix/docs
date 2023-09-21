@@ -48,7 +48,53 @@ To start using SageMaker Studio, perform the following steps:
 
 ### 2.1 Spam_nb.ipynb File Contents {#file-contents}
 
-{DETAILS}
+The *spam_nb.ipynb* file consists of the following parts:
+
+* The necessary libraries   
+* Training and exporting  
+* Testing
+
+#### 2.1.1 Necessary Libraries
+
+At this point, the libraries are imported: 
+
+* The SYS module which will help control and change the environment runtime. 
+* The skl2onnx module. The sklearn-onnx contains the functions to convert models from scikit-learn toolkits into ONNX.   
+* The onnx module.  
+* The onnxruntime module. 
+ 
+#### 2.1.2 Training and Exporting
+
+At this point, the model is trained and converted to ONNX, and then exported to an ONNX file.
+
+This example teaches the model to predict by using a training set. 
+  
+The training set consist of training data (X_train) associated with the known results (y_train). The model will learn which pattern will be labelled as *1 (true)*, for example *spam*, or as *0 (false)*, for example *ham*. This process is also called *fitting*. A testing set is also going to be included (X_test, y_test). 
+
+In lines 1-10, the required methods are imported. In the next line, 12 data set are imported (*df = pd.read_csv("spam.csv", encoding="L1")*), and the attributes X and y are defined (*X = df["v2"].values, y = df["v1"].values*).
+
+Then 4 portions of data are created, which will be used for fitting & predicting values.
+
+*X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=345)*
+
+The sklearn.model_selection.train_test_split spits the arrays into random train and test subsets.
+
+In the next lines. the pipeline object is created: 
+
+*pipe = make_pipeline( 
+    CountVectorizer(binary=True), 
+    MultinomialNB() 
+)*
+
+In the next line, the fitting of the model begins: *pipe.fit (X_train, y_train)*.
+
+To convert the model to the ONNX file using the *to_onnx* function, and then to export the file to the files in the notebook using the *write* function.
+
+*onxx_pipeline = to_onnx(pipe, initial_types=[('message', StringTensorType([None, 1]))])*
+*with open("spam_nb.onnx", "wb") as f:*
+*f.write(onxx_pipeline.SerializeToString())*
+
+For more examples and information about converting a pipeline to ONNX, refer to the ONNX documentation. 
 
 ## 3 Importing the Model into Mendix Studio Pro
 

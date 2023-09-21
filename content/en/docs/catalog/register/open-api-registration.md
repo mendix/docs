@@ -1,24 +1,31 @@
 ---
-title: "OpenAPI Beta Functionality"
+title: "OpenAPI Automatic Registration"
 linktitle: "OpenAPI Beta Functionality"
 url: /catalog/register/openapi-beta-functionality
 description: "Provides explanation of OpenAPI Beta functionality in Catalog"
-weight: 10
+weight: 50
 tags: ["data hub", "Catalog", "external entities", "register", "published OData service" ,"how to", "registration"]
 aliases:
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
+{{% alert color="info" %}}
+This functionality is currently in [Beta](/releasenotes/beta-features/).
+{{% /alert %}}
+
+
 ## 1 Introduction
 
-We are excited to introduce our OpenAPI Beta functionality, designed to enhance your experience with Mendix applications deployed on MxCloud. This feature automatically registers all your OpenAPI and OData APIs in the Catalog, making them easily discoverable within your organization.
+OpenAPI automatic registration registers all your OpenAPI and OData APIs in the Catalog automatically when you app is deployed to the Mendix CLoud. This makes them easily discoverable within your organization.
 
-## 2 How to Get Your APIs Registered?
+## 2 Prerequisites
 
-For OpenAPI, ensure you are using Mendix Studio Pro v10.0 or higher.
-For OData, make sure you are using Mendix Studio Pro 8.14 or higher.
-If your APIs are not hosted on MxCloud, explore alternative methods to register them [here](/catalog/register/).
+For OpenAPI, your app needs to be made using Mendix Studio Pro version 10.0 or above.
+
+For OData, your app needs to be made using Mendix Studio Pro version 10.0 or above.
+
+If your data sources are not hosted on Mendix Cloud, see [Register Data Sources](/catalog/register/) to explore alternative methods to register them.
 
 ## 3 Who Can Discover Your APIs?
 

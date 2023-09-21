@@ -157,18 +157,18 @@ You can use one of the available page templates to rapidly create a consistent U
 
 Note that these pages work best when combined with the appropriate **Navigation layout**. For example, the **Fiori Launchpad** page template works best with the *SAP_Launchpad (SAP_Fiori_Web_UI_Resources)* **Navigation Layout**.
 
-## 6 Theme Selector{#theme-selector}
+## 6 Theme Selector {#theme-selector}
 
-You can give the end-use the option to choose their own theme. There is an example of this on the **Home** page of the Web UI Package for SAP Fiori theme Marketplace Module. The end-user can click a button to switch between a *Dark Theme* or a *Light Theme*.
+In order to select the theme for your app, specify it in the *index.html* page as `html class="name-of-theme"`, for example, `html class="theme-horizon-morning"`. The following themes are available:
+
+* **theme-horizon-morning**
+* **theme-horizon-evening**
+* **theme-quartz-light**
+* **theme-quartz-dark**
+
+You can also give the end-use the option to choose their own theme. There is an example of this on the **Home** page of the Web UI Package for SAP Fiori theme Marketplace Module. The end-user can click a button to switch between a *Dark Theme* or a *Light Theme*.
 
 To do this you need to trigger a nanoflow which passes a variable containing the name of the theme to the **ChangeTheme_JavaScript_Action** JavaScript action. This changes the theme and implements it directly on your app's pages.
-
-The themes available are:
-
-* **light** *(default)* – equivalent to the SAP Quartz Light theme
-* **dark** – equivalent to the SAP Quartz Dark theme
-* **belize**
-* **belizeDeep**
 
 ## 7 Demo Apps
 

@@ -203,10 +203,10 @@ When you select a history item and click **Show item**, the details of the story
 
 ## 9 Story Archive {#story-archive}
 
-Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
+Once you have switched from Mendix Stories to Epics or Jira, Mendix archives any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
 
 {{% alert color="warning" %}}
-We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to download your work before that date.
+Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  >}}

@@ -27,6 +27,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
   * If you [export archived stories](/developerportal/project-management/epics/archive/#export-archived-stories) on the **Archive** page, you can find two new columns in the Excel file: **Assigned to** and **Archived by**.
   * On the [Planning](/developerportal/project-management/epics/planning/) page,  you can now type *bug* or *feature* in the search bar to filter on the story type so that it only shows bugs or features. More ways to filter out stories coming soon.
 
+#### Deprecations
+
+* We have done all the preparation work for sunsetting [Stories](/developerportal/project-management/stories/) (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
+
 
 ### September 7, 2023
 

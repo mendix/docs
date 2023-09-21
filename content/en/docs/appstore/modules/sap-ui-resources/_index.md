@@ -2,12 +2,10 @@
 title: "SAP Fiori UI Resources"
 url: /appstore/modules/sap-ui-resources/sap-fiori-3-0/
 category: "SAP"
-weight: 70
 description: "Information on how to make an SAP Fiori version 3.0 themed app"
 tags: ["SAP", "Fiori", "Building Block", "Page Design", "Layout", "UI", "UX", "3.0"]
 aliases:
     - /partners/sap/sap-fiori-3-0/
-
 ---
 
 <!-- NOTES

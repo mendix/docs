@@ -28,7 +28,7 @@ Each row shows the following information about a story:
 * Story points
 * To whom the story is assigned
 
-On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID.
+On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), story type (type *bug* or *feature*) and story ID.
 
 On the upper-right corner of the page, you can see two buttons:
 
@@ -155,13 +155,24 @@ You can import your stories using an Excel file to Epics as follows:
 
 You can find all the imported stories in the **Backlog**.
 
-## 4 Board Settings {#settings}
+## 4 Exporting Stories {#export-stories}
+
+You can export your stories on the **Planning** page to an Excel file as follows:
+
+1. On the upper-right corner of the **Planning** page, click **...** and then click **Export Stories**.
+
+   {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories.png" >}}
+2. Select from where you want to export stories.
+3. Click **Continue** to see a preview of the Excel file.
+4. Click **Export to Excel**.
+
+## 5 Board Settings {#settings}
 
 When you click **...** on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, and **Data Migration**. These tabs are described in the sections below.
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/board-settings.png" >}}
 
-### 4.1 Managing Tags {#manage-tags}
+### 5.1 Managing Tags {#manage-tags}
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
@@ -173,23 +184,23 @@ To delete a tag, hover over the row of the tag, and then click the delete icon t
 
 To change the tag color, click the current color, and then select the new color from the dialog box.
 
-### 4.2 Board Type {#board-type}
+### 5.2 Board Type {#board-type}
 
 On this tab, you can switch between a Scrum workflow and Kanban workflow. The workflow you select determines how the [Board](/developerportal/project-management/epics/board/#different-boards) page and the [Planning](#different-plannings) page look.
 
-### 4.3 Toast Settings
+### 5.3 Toast Settings
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/toast-notification.png" width="500px" >}}
 
-### 4.4 Data Migration {#data-migration}
+### 5.4 Data Migration {#data-migration}
 
 On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
-#### 4.4.1 Migration Process
+#### 5.4.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
@@ -207,7 +218,7 @@ To migrate from Stories to Epics, follow these steps:
 
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
-#### 4.4.2 What Is Migrated?
+#### 5.4.2 What Is Migrated?
 
 These are the new locations of migrated stories:
 
@@ -237,7 +248,7 @@ Beside the story details above, the remaining details for your stories are migra
 
 {{% alert color="warning" %}}In [Stories](/developerportal/project-management/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-#### 4.4.3 Migration Report {#migration-report}
+#### 5.4.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 

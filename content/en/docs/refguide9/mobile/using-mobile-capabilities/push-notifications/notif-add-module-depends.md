@@ -40,7 +40,6 @@ Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/
 1. Search for *Nanoflow commons*.
 1. Open the [Nanoflow commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module.
 1. Click **Download**.
-1. Add the **NativeMobileResources.User** module role to the **Anonymous** user role.
 1. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](/appstore/modules/nanoflow-commons/).
 
 ## 5 Implementing the Native Mobile Resources Module
@@ -51,6 +50,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 1. Search for *Native mobile resources*.
 1. Open the [Native mobile resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module.
 1. Click **Download**.
+1. Add the `NativeMobileResources.User` module role to the `Anonymous` user role.
 1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](/appstore/modules/native-mobile-resources/).
 
 ## 6 Implementing the Atlas Core Module

@@ -11,23 +11,23 @@ This document describes the properties of a microflow. If you want to see what m
 
 ## 2 Properties
 
-An example of microflow properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-properties.png" alt="Microflow Properties"   width="250"  >}}
-
 Microflow properties consist of the following sections:
 
+* [General](#General)
 * [Common](#common)
 * [Usage](#usage)
-* [Output](#output)
 * [Security](#security)
 * [Concurrent execution](#concurrent)
 
-### 2.1 Common Section {#common}
+### 2.1 General Section {#general}
 
-#### 2.1.1 Name
+#### 2.1.1 Return Type
 
-**Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
+The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
+
+{{% alert color="info" %}}
+To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
+{{% /alert %}}
 
 #### 2.1.2 URL
 
@@ -49,7 +49,13 @@ In the microflow URL dialog box, the configured URL is shown together with an ex
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.
 {{%/alert %}}
 
-#### 2.1.2 Export Level 
+### 2.2 Common Section {#common}
+
+#### 2.2.1 Name
+
+**Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
+
+#### 2.2.2 Export Level 
 
 {{% alert color="info" %}}
 
@@ -64,29 +70,19 @@ This property is only available for add-on and solution modules. For more inform
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
 | Usable             | Consumers can see the API and use the microflow in their app. They will not be able to see the contents of the microflow and how it is built. |
 
-#### 2.1.3 Documentation
+#### 2.2.3 Documentation
 
 **Documentation** allows you to describe your microflow to make it easier for people to use and modify it.
 
-### 2.2 Usage Section {#usage}
+### 2.3 Usage Section {#usage}
 
-#### 2.2.1 Mark as Used
+#### 2.3.1 Mark as Used
 
 You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
 
 By setting the property **Mark as used** to **Yes**, you explicitly specify that the microflow is used and Studio Pro will no longer list it when searching for unused items.
 
 Default: *No*
-
-### 2.3 Output Section {#output}
-
-#### 2.3.1 Return Type
-
-The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
-
-{{% alert color="info" %}}
-To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
-{{% /alert %}}
 
 ### 2.4 Security Section {#security}
 

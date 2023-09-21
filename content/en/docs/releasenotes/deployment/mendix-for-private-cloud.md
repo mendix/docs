@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### September ???th, 2023
+### September 19th, 2023
 
 #### Mendix Operator v2.13.0 {#2.13.0}
 

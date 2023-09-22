@@ -184,5 +184,5 @@ If the email is recognized as spam, the prediction will display *spam*, and if n
 * [AI-enhanced app development for the enterprise](https://www.mendix.com/platform/ai/)
 * [Introducing the Mendix ML Kit for Low-Code ML Deployment](https://www.mendix.com/blog/introducing-the-mendix-ml-kit-for-low-code-deployment/)
 * [AI-Infused Apps](https://www.mendix.com/evaluation-guide/app-lifecycle/ai-infused-apps/)
-* [Machine Learning Kit](https://docs.mendix.com/refguide/machine-learning-kit/)
+* [Machine Learning Kit](/refguide/machine-learning-kit/)
 * [AI at the Speed of Thought: A Guide to ML-Enhanced Applications Powered by Mendix and Amazon SageMaker](https://www.mendix.com/blog/ai-at-the-speed-of-thought-a-guide-to-ml-enhanced-applications-powered-by-mendix-and-amazon-sagemaker/)

@@ -25,8 +25,8 @@ When automatic fetching is enabled, the repository state indicator is displayed 
 This indicator shows the following:
 
 * the name of the current branch
-* the number of incoming commits – commits that exist on the remote but are not pulled to your machine yet
-* the number of outgoing commits – commits that exist on your machine (local commits) but are not pushed to the remote 
+* the number of incoming commits that exist on this branch of the remote but are not pulled to your machine yet
+* the number of outgoing commits that exist on this branch on your machine (local commits) but are not pushed to the remote 
 
 ## 3 Configuration
 

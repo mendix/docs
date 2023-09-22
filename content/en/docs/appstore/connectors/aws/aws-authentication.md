@@ -275,23 +275,27 @@ The values set in the response entity are used as request headers in the REST ca
 
 ### 4.4 Custom Client Settings {#custom-client-settings}
 
-In some cases, the default settings of the AWS client are not enough. In these cases, you can edit the settings of request objects that inherit from the AbstractRequest entity included in the AWS Authentication module and pass along the settings that you wish to customize. Note that only the values that have been set (are not empty) will be set on the customized client. 
+In some cases, the default settings of the AWS client are not enough. In these cases, you can edit the settings of request objects that inherit from the `AbstractRequest` entity included in the AWS Authentication module, and pass along the settings that you wish to customize.
+
+{{% alert color="info" %}}
+Only the values which have been set (that is, which are not empty) will be set on the customized client. 
+{{% /alert %}}
 
 #### 4.4.1 Basic Client Config
 
-This is the simplest version of the customizable client. Only the API time out and the endpoint url can be set here. These settings can be used for both REST based connectors, and for SDK based connectors.
+This is the simplest version of the customizable client. You can only set the API time out and the endpoint URL here. These settings can be used for both REST-based and SDK-based connectors.
 
-#### 4.4.2 Sdk Client Config
+#### 4.4.2 SDK Client Config
 
-These configurations can be used for SDK based connectors. It contains the ability to set a maximum total time spent on making the call across all retries. You can also add specific settings to override the retry policy, and settings to override the type of HttpClient and its settings. By default, the ApacheHttpClient will be used.
+This configuration can be used for SDK-based connectors. You can use it to set a maximum total time spent on making the call across all retries. You can also add specific settings to override the retry policy, and settings to override the type of `HttpClient` and its settings. By default, the `ApacheHttpClient` will be used.
 
-#### 4.4.2.1 Apache Http Config
+#### 4.4.2.1 Apache HTTP Config
 
-This entity contains the settings that can be adjusted on the ApacheHttpClient that is used to make calls to the selected AWS Service. All settings that are set (ie not left empty) will be used to override your default settings on the ApacheHttpClient. 
+This entity contains the settings that can be adjusted on the `ApacheHttpClient` that is used to make calls to the selected AWS Service. All settings which are set (that is, which are not left empty) will be used to override your default settings on the `ApacheHttpClient`. 
 
-#### 4.4.2.2 URL Http Config
+#### 4.4.2.2 URL HTTP Config
 
-This entity will set the http client to be an UrlHttpClient. This client will then have the values that are set in the attributes. Any values left empty will not be set, and instead use your systems default settings. 
+This entity will set the HTTP client to be an `UrlHttpClient`. This client will then have the values that are set in the attributes. Any values left empty will not be set, and instead use your system default settings. 
 
 #### 5 Read More
 

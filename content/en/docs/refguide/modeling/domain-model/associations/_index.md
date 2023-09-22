@@ -78,7 +78,7 @@ Your mouse pointer should not activate a white dot. This indicates the creation 
 
 ### 3.4 Reverse the Association Direction
 
-You can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
+In Mendix 10.3.0 and above, you can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
 
 Reversing the direction of an association creates a new association structure and exchanges the ownership of the association. It will also change the name of the association to reflect this change. This means you need to change how you access the associated entities.
 

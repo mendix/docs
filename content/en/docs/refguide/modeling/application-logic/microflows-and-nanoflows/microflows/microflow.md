@@ -43,7 +43,7 @@ You can also use `Id` as an attribute to include the entity's identifier in the 
 
 In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
-{{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog"  width="600" >}}
+{{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog"  width="550" >}}
 
 {{% alert color="warning" %}}
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.

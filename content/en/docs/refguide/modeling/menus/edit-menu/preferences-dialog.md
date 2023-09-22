@@ -113,41 +113,47 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 5.2 Subversion 
+### 5.2 Git 
 
-#### 5.2.1 Enable Private Version Control with Subversion {#enable}
-
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
-
-### 5.3 Git 
-
-#### 5.3.1 Name
+#### 5.2.1 Name
 
 Specify your name for Git to use it in commit messages and make them more informative.
 
-#### 5.3.2 Email
+#### 5.2.2 Email
 
 Specify your email for Git to use it in commit messages and make them more informative.
 
-#### 5.3.3 Enable Automatic Repository Optimization {#optimization}
+#### 5.2.3 Enable Automatic Repository Optimization {#optimization}
 
 Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
 
-#### 5.3.4 Number of Commits
+#### 5.2.4 Number of Commits
 
 This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
-#### 5.3.5 Enable Private Version Control with Git 
+#### 5.2.5 Enable Private Version Control with Git 
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
-#### 5.3.6 Enable Automatic Fetching from a Repository{#enable-auto-fetch}
+#### 5.2.6 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
 
 {{% alert color="info" %}}
 This setting was introduced in Mendix version 10.3.
 {{% /alert %}}
 
-Select **Enable automatic fetching from a repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
+Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
+
+#### 5.2.7 Fetch Interval, Minutes
+
+The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
+### 5.3 Changes
+
+#### 5.3.1 Truncate Long Values
+
+### 5.4 Solution Warning
+
+#### 5.4.1 Show Warning on Updating Marketplace Modules
 
 ## 6 Work Environment Tab
 

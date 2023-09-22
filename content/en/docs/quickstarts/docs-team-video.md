@@ -52,7 +52,23 @@ Key facts about Adam:
 I joined the Mendix Community team as a Technical Writer in 2016.
 {{% /alert %}}
 
-### 3.3 Connor Land
+### 3.3 Kasia Koltun
+
+Key facts about Kasia:
+
+1. She looks like this:
+
+    {{< figure src="/attachments/quickstarts/video/kasia-picture.png" width="350px" alt="Kasia">}}
+
+1. She covers the following components:
+    1. Private Cloud
+    1. AWS documentation
+
+{{% alert type="info" %}}
+I have been with Mendix for a year.
+{{% /alert %}}
+
+### 3.4 Connor Land
 
 Key facts about Connor:
 
@@ -70,7 +86,7 @@ Key facts about Connor:
 When I am not technically writing, I am usually at the skatepark growing my collection of bruises.
 {{% /alert %}}
 
-### 3.4 Yiyun Liao
+### 3.5 Yiyun Liao
 
 Key facts about Yiyun:
 
@@ -87,7 +103,7 @@ Key facts about Yiyun:
 I love spicy food and noodles! Spicy noodles are my favorite!
 {{% /alert %}}
 
-### 3.5 Mark van Ments
+### 3.6 Mark van Ments
 
 Key facts about Mark:
 
@@ -103,7 +119,7 @@ Key facts about Mark:
 I sing opera, and my favorite aria is *Winterstürme wichen dem Wonnemond*.
 {{% /alert %}}
 
-### 3.6 Maria Shaposhnikova
+### 3.7 Maria Shaposhnikova
 
 Key facts about Maria:
 
@@ -125,7 +141,7 @@ Maria is currently on maternity leave, tending to her new "minor version".
 I love Georgian food, and hate scary movies.
 {{% /alert %}}
 
-### 3.7 Quinn Tracy
+### 3.8 Quinn Tracy
 
 Key facts about Quinn:
 
@@ -143,7 +159,7 @@ Known issue: Quinn was sick and could not record voiceover. This KI will be fixe
 Quinn is quite adept at playing the steel drums.
 {{% /alert %}}
 
-### 3.8 Karuna Vengurlekar
+### 3.9 Karuna Vengurlekar
 
 Key facts about Karuna:
 
@@ -157,7 +173,7 @@ Key facts about Karuna:
 When not at work, Karuna loves travelling, painting and spending some quality time by herself.
 {{% /alert %}}
 
-### 3.9 Luyao Zhang
+### 3.10 Luyao Zhang
 
 Key facts about Luyao:
 

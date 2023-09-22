@@ -113,7 +113,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 5.2 Subversion
+### 5.2 Subversion 
 
 #### 5.2.1 Enable Private Version Control with Subversion {#enable}
 

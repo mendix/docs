@@ -12,7 +12,7 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-Epics is a replacement of [Stories](/developerportal/project-management/stories/), which will be sunset and become unavailable on October 1, 2023. From October 1, 2023 onwards, for apps that were still using Stories, Epics will become the default project management tool. After October 1, 2023, you can still migrate the stories to Epics. To migrate your data from stories to Epics, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
+Epics is a replacement of [Stories](/developerportal/project-management/stories/), which will be retired on October 1, 2023. From October 1, 2023 onwards, for apps that were still using Stories, Epics will become the default project management tool. After October 1, 2023, you can still migrate the stories to Epics. To migrate your data from stories to Epics, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 
 {{% /alert %}}
 

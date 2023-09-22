@@ -111,7 +111,7 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 
 ## 3 Importing Stories {#import-stories}
 
-{{% alert color="warning" %}}This is not the right way to migrate, since it will only move your story titles and descriptions, not comments, attachments and tags. If you need your Stories data in Epics, make sure to use the [migration tool](#data-migration).{{% /alert %}}
+{{% alert color="warning" %}}Importing stories is not the right way to migrate stories to Epics, since it only moves your story titles and descriptions, not comments, attachments, or tags. If you need the data of your stories in Epics, make sure to use the [migration tool](#data-migration).{{% /alert %}}
 
 You can import your stories using an Excel file to Epics as follows:
 
@@ -202,7 +202,7 @@ On this tab, you can migrate all or part of your content from [Stories](/develop
 
 ## 6 Migrating Stories to Epics {#data-migration}
 
-Mendix recommends you migrate your stories to Epics as soon as possible, because [Stories](/developerportal/project-management/stories/) will be sunset and become unavailable on October 1, 2023. From October 1, 2023 onwards, for apps that were still using Stories, Epics will become the default project management tool. After October 1, 2023, you can still migrate the stories to Epics. 
+Mendix recommends you migrate your stories to Epics as soon as possible, as [Stories](/developerportal/project-management/stories/) will be retired on October 1, 2023. For apps that were still using Stories, Epics will automatically become the default project management tool. However, you can still migrate stories to Epics after October 1, 2023.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
@@ -226,7 +226,11 @@ To migrate from Stories to Epics, follow these steps:
 
 A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
-{{% alert color="warning" %}}Once you have migrated your stories from Stories to Epics, Mendix archives any work you may have had in Stories. You can review your work in [Stories Archive](/developerportal/collaborate/general-settings/#story-archive) on the **Settings** page of the app, and download it if necessary. Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.{{% /alert %}}
+{{% alert color="warning" %}}
+Once you have migrated your stories from Stories to Epics, Mendix archives any work you may have had in Stories. You can review your work in [Stories Archive](/developerportal/collaborate/general-settings/#story-archive) on the **Settings** page of the app, and download it if necessary. 
+
+Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
+{{% /alert %}}
 
 ### 6.2 What Is Migrated?
 

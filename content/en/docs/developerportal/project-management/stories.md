@@ -9,7 +9,7 @@ tags: ["Stories", "Sprint", "Project management", "Developer Portal"]
 ---
 
 {{% alert color="warning" %}}
-Mendix recommends you [migrate your stories to Epics](](/developerportal/project-management/epics/planning/#data-migration) ) as soon as possible, because [Stories](/developerportal/project-management/stories/) will be officially sunset and become unavailable on October 1, 2023. For apps that were still using Stories, Epics will become the default project management tool. After October 1, 2023, you can still migrate stories to Epics. 
+Mendix recommends you [migrate your stories to Epics](/developerportal/project-management/epics/planning/#data-migration ) as soon as possible, because [Stories](/developerportal/project-management/stories/) will be officially retired on October 1, 2023. For apps that were still using Stories, Epics will automatically become the default project management tool. However, you can still migrate stories to Epics after October 1, 2023.
 
 We will delete all data from Stories starting October 1, 2024. We strongly urge you to [download your work](/developerportal/collaborate/general-settings/#story-archive) before that date. 
 {{% /alert %}}

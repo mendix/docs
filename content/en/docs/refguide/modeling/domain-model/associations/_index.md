@@ -76,22 +76,22 @@ Your mouse pointer should not activate a white dot. This indicates the creation 
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/association-move-arrow.png" >}}
 
-### 3.4 Reverse the Association direction
+### 3.4 Reverse the Association Direction
 
-You can reverse the association direction by right-clicking your association and selecting **Reverse direction**.
+You can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
 
-Reversing an association creates a new association structure and exchanges the ownership of the association. This means you need to change how you access the associated entities.
+Reversing the direction of an association creates a new association structure and exchanges the ownership of the association. It will also change the name of the association to reflect this change. This means you need to change how you access the associated entities.
 
-For example, if you initially had a (1-*) **Order_Customer** association, meaning One 'Customer' object is associated with multiple 'Order' objects so a customer can have multiple orders, but an order can only have one customer. When reversed, it will be changed to (*-1) **Customer_Order**, indicating that One 'Order' object is associated with multiple 'Customer' objects so an order can have multiple customers, but a customer can only have one order.
+For example, say you have a (`1-*`) **Order_Customer** association, meaning one `Customer` object is associated with multiple `Order` objects so a customer can have multiple orders, but an order can only have one customer. When you reverse the association direction, it will be changed to (`*-1`) **Customer_Order**, indicating that one `Order` object is associated with multiple `Customer` objects so an order can have multiple customers, but a customer can only have one order.
 
 In cases of bidirectional associations, such as many-to-many or one-to-one associations, where both entities refer to each other mutually, reversing the association has no significant impact on the association itself because both entities are owners.
 
-In all cases, you should change how you access data using the new association name to be able to access the associated entities.
+In all cases, you should change how you access data, using the new association name to be able to access the associated entities.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/reverse-association-direction.png" >}}
 
 {{% alert color="warning" %}}
-Please note that reversing the association will result in the loss of referenced data.
+Reversing the association will result in the loss of existing associations, but the objects themselves (the `Order` and `Customer` objects in the above example) will not be deleted.
 {{% /alert %}}
 
 ## 4 Association Examples {#examples}

@@ -1,7 +1,7 @@
 ---
 title: "Get to Know Docs"
 url: /quickstarts/get-to-know-docs/
-weight: 10
+weight: 60
 description: "Learn the basics about Mendix's documentation team."
 tags: ["tea", "oxford commas", "information architecture"]
 ---
@@ -117,6 +117,10 @@ Key facts about Maria:
     1. Version control
     1. MxAssist
 
+{{% alert color="warning" %}}
+Maria is currently on maternity leave, tending to her new "minor version".
+{{% /alert %}}
+
 {{% alert type="info" %}}
 I love Georgian food, and hate scary movies.
 {{% /alert %}}
@@ -131,8 +135,12 @@ Key facts about Quinn:
 
 1. Quinn is new to the team, so her components are to be determined.
 
+{{% alert color="warning" %}}
+Known issue: Quinn was sick and could not record voiceover. This KI will be fixed in upcoming versions of Quinn.
+{{% /alert %}}
+
 {{% alert type="info" %}}
-Insert personal note here.
+Quinn is quite adept at playing the steel drums.
 {{% /alert %}}
 
 ### 3.8 Karuna Vengurlekar

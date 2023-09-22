@@ -59,7 +59,7 @@ This table describes how to pass values for different attribute types:
 | String         | Enclose the value in single quotes (for example, `'John'`). |
 | Enumeration    | Enclose the enumeration member name in single quotes, prefixed with the enumeration type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enumeration type name is not supported. |
 | Datetime       | For OData v4, use a plain value (for example, `2021-12-31`). For OData v3 (deprecated), enclose the value in single quotes and prefix `datetime` (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`). |
-| Other          | Plain value (for example, `15`)                            |
+| Other          | Use a plain value (for example, `15`).                            |
 
 ### 4.2 Comparison Operators
 
@@ -85,7 +85,7 @@ Mendix supports the following comparison operators:
 | `year`                 | `/Employees?$filter=year(DateOfBirth) eq 1990`  | All employees born in the year 1990                                   |
 | `month`                | `/Employees?$filter=month(DateOfBirth) eq 5`    | All employees born in May                                             |
 | `day`                  | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31st day of the month                       |
-| `hour`                 | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1 PM) and 13:59 (1:59 PM)     |
+| `hour`                 | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1:00 PM) and 13:59 (1:59 PM)     |
 | `minute`               | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour               |
 | `second`               | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
@@ -104,7 +104,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. Here is an example: `
 
 ### 4.5 Filtering by Association
 
-You can filter on attributes of an associated entity. The way to do this depends on whether the association exposes one object or a list of objects.
+You can filter on attributes of an associated entity. The syntax depends on whether the association exposes one object or a list of objects:
 
 | Type                           | Example                                               |
 | ------------------------------ | ----------------------------------------------------- |
@@ -119,11 +119,11 @@ The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in
 
 ## 5 Sorting
 
-To sort the result, use the `$orderby` query option. Here are some examples: `?$orderby=Name` or `?$orderby=BirthPlace/CityName`.
+To sort the result, use the `$orderby` query option. Here are some examples: `?$orderby=Name` and `?$orderby=BirthPlace/CityName`.
 
-The default direction is ascending. You can make this explicit as follows: `?$orderby=Name asc`.
+The default sort direction is ascending. You can make this explicit as follows: `?$orderby=Name asc`.
 
-You can also order the result in a descending direction. Here is an example: `?$orderby=Name desc`.
+You can also order the result in descending direction. Here is an example: `?$orderby=Name desc`.
 
 To sort on multiple attributes, separate each attribute with a comma. Here is an example: `?$orderby=Name asc,Age desc`.
 
@@ -230,7 +230,7 @@ You can update an association only from the entity that is the [owner](/refguide
 
 When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, you can create new objects by sending a `POST` request to the URL of the entity set. Here is an example: `POST /odata/myservice/v1/Employees`.
 
-The body of the request may specify attribute and association values, just as with updates. There is one difference: when the association refers to multiple objects, objects are specified without using `@delta`. Here is an example:
+The body of the request may specify attribute and association values, just as with updates. However, unlike with updates, the `@delta` syntax is not used to specify objects, even when the association refers to multiple objects. Here is an example:
 
 ```json
 {

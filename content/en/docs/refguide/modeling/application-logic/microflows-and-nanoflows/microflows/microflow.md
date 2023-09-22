@@ -13,7 +13,7 @@ This document describes the properties of a microflow. If you want to see what m
 
 Microflow properties consist of the following sections:
 
-* [General](#General)
+* [General](#general)
 * [Common](#common)
 * [Usage](#usage)
 * [Security](#security)

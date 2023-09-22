@@ -51,7 +51,7 @@ To use the data from your model in the REST service, you need to create a messag
 ### 4.1 Creating the Mapping
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Message definitions**.
-2. In the **Add Message Definitions** dialog box, enter **MD_Orders** in the **Name** field. Press **OK** to create and start editing the new message definition.
+2. In the **Add Message Definitions** dialog box, enter *MD_Orders* in the **Name** field. Press **OK** to create and start editing the new message definition.
 3. Select **Add** to launch the **Message Definition** dialog box.
 4. You need to select the entity to use for the **MD_Orders** definition. Click **Select** and choose the **Order** entity from the list. Selecting the entity fills in the **Structure** part of the **Message Definition** dialog box. By default, only the **Order** checkbox is selected.
 5. Select the **OrderID** and **Customer** attributes.

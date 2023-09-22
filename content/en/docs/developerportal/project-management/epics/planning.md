@@ -111,6 +111,8 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 
 ## 3 Importing Stories {#import-stories}
 
+{{% alert color="warning" %}}Importing stories is not the right way to migrate stories to Epics, since it only moves your story titles and descriptions, not comments, attachments, or tags. If you need the data of your stories in Epics, make sure to use the [migration tool](#data-migration).{{% /alert %}}
+
 You can import your stories using an Excel file to Epics as follows:
 
 1. On the upper-right corner of the **Planning** page, click **...** and then click **Import Stories**.
@@ -194,31 +196,43 @@ On this tab, you can enable or disable the toast notifications that appear like 
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/toast-notification.png" width="500px" >}}
 
-### 5.4 Data Migration {#data-migration}
+### 5.4 Data Migration 
 
-On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics.
+On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Migrating Stories to Epics](#data-migration) section below.
+
+## 6 Migrating Stories to Epics {#data-migration}
+
+Mendix recommends you migrate your stories to Epics as soon as possible, as [Stories](/developerportal/project-management/stories/) will be retired on October 1, 2023. For apps that were still using Stories, Epics will automatically become the default project management tool. However, you can still migrate stories to Epics after October 1, 2023.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
-#### 5.4.1 Migration Process
+### 6.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
-1. Click the settings icon on the upper-right side of the screen.
+1.  Click the **...** icon on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
 
-2. Go to the **Data Migration** tab. Be sure to read the information before you click **Start Migration**:
+    {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
+
+    Alternatively, select **Board Settings** and then go to the **Data Migration** tab. 
+
+2.  Read the information and then click **Start Migration**:
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 
-3. Select the content you want to migrate.
+3.  Select the content you want to migrate.
 
-   {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
+    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
-   {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
+A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
-4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
+{{% alert color="warning" %}}
+Once you have migrated your stories from Stories to Epics, Mendix archives any work you may have had in Stories. You can review your work in [Stories Archive](/developerportal/collaborate/general-settings/#story-archive) on the **Settings** page of the app, and download it if necessary. 
 
-#### 5.4.2 What Is Migrated?
+Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
+{{% /alert %}}
+
+### 6.2 What Is Migrated?
 
 These are the new locations of migrated stories:
 
@@ -248,7 +262,7 @@ Beside the story details above, the remaining details for your stories are migra
 
 {{% alert color="warning" %}}In [Stories](/developerportal/project-management/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-#### 5.4.3 Migration Report {#migration-report}
+### 6.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 

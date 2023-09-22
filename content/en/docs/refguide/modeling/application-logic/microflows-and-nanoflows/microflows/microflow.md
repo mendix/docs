@@ -31,17 +31,17 @@ To indicate whether or not an object should be committed, you can use Boolean as
 
 #### 2.1.2 URL
 
-Microflow URLs allow you to execute a microflow when the user navigates to a specific URL within your application. The microflow will be executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) action its page is the first page shown to the user. The microflow's full URL will be the base URL of your application, followed by `/p/`, followed by the microflow's configured URL. For example: `http://example.mendixcloud.com/p/microflow` is a full URL for the microflow URL `microflow`.
+Microflow URLs allow you to execute a microflow when the end-user navigates to a specific URL within your application. The microflow is executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) activity, its page is the first page shown to the end-user. The microflow's full URL starts with the base URL of your application, followed by `/p/`, and then by the microflow's configured URL. For example, `http://example.mendixcloud.com/p/microflow` is the full URL for the microflow's configured URL `microflow`.
 
-Microflows with parameters can also have URLs. Such cases require that all parameters be present in the URL. Parameters can be included in the URL by writing their names between brackets, for example `my-microflow/{Name}` where `Name` is the parameter's name. 
+Microflows with parameters can also have URLs. Such cases require that all parameters are present in the URL. You should include the parameters in the URL by writing their names between brackets, for example, `my-microflow/{Name}` where `Name` is the parameter's name. 
 
-For object parameters, the name of the parameter and the name of the attribute is used, for example `my-microflow/{Product/Name}`. Primitive parameters will be parsed from the URL and their values directly passed to the microflow. However, for object parameters an XPath query is used to retrieve the object by the value of the attribute.
+For object parameters, the name of the parameter and the name of the attribute are used, for example, `my-microflow/{Product/Name}`. For primitive parameters, they are parsed from the URL and their values are directly passed to the microflow. However, for object parameters, an XPath query is used to retrieve the object by the value of the attribute.
 
-For example, in the URL `product/{Product/Name}` the `Name` attribute of the parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute or primitive parameter of types `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
+For example, in the URL `product/{Product/Name}`, the `Name` attribute of the parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute or primitive parameter of types `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
 
-Next to this, you can use `Id` as an attribute to include the entity's identifier in the URL. This would appear as `product/{Product/Id}` for example. 
+You can also use `Id` as an attribute to include the entity's identifier in the URL. This would appear as `product/{Product/Id}` for example. 
 
-In the microflow URL dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
+In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
 {{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog"  width="600" >}}
 

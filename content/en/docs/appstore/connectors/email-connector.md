@@ -17,7 +17,7 @@ The Email Connector includes the following features:
 
 * Configuration of multiple email accounts
     * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
-        * Supports Authorization Code Flow and Client Credentials Flow
+        * Supports authorization code flow and client credentials flow
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
 * Email templates
@@ -28,7 +28,7 @@ The Email Connector supports the following protocols:
 * IMAP and IMAPS
 * SMTP 
 
-### 1.2 Prerequisites
+### 1.2 Prerequisites {#prerequisites}
 
 {{% alert color="warning" %}}
 Follow these prerequisites carefully. Missing a step might lead to errors.
@@ -36,17 +36,17 @@ Follow these prerequisites carefully. Missing a step might lead to errors.
 
 Before you use the Email Connector in your app, do the following:
 
-1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up to date.
-2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up to date.
-3. Remove any existing email modules (such as [IMAP/POP3](https://marketplace.mendix.com/link/component/1042/) and [Email Module with Templates](https://marketplace.mendix.com/link/component/259/)).
-4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*).
-5. [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory) before running the app.
+* Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up to date.
+* Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up to date.
+* Remove any existing email modules (such as [IMAP/POP3](https://marketplace.mendix.com/link/component/1042/) and [Email Module with Templates](https://marketplace.mendix.com/link/component/259/)).
+* Remove any orphaned JAR files (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*) from any old email modules in the *userlib* subdirectory.
+* [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory).
 
 ### 1.2.1 Migrating from Another Module
 
-If you are migrating to the Email Connector from another email module, we recommend that you test your settings in a new app first.
+If you are migrating to the Email Connector from another email module, consider testing your settings in a new app first.
 
-Mendix recommends using the community-supported [Email Connector migration utility](https://marketplace.mendix.com/link/component/205008) to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/).
+Mendix recommends using the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/).
 
 ### 1.3 Included Widgets {#included-widgets}
 
@@ -56,14 +56,14 @@ The following widgets are bundled in the module:
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
-If you already have these widgets in your app, and they are not up to date, you will get a "Some widgets can not be read" error. 
+If you already have these widgets in your app, and they are not up to date, you will get a `Some widgets can not be read` error. 
 
 ## 2 Setup in Studio Pro {#setup}
 
 After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
-1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
-2. Launch the user interface (UI) by using the *ACT_EmailAccount_LaunchEmailConnectorOverview* microflow in the **USEME/Microflows** folder.
+1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module, if you did not complete this step in [Prerequisites](#prerequisites).
+2. Launch the user interface (UI) by using the **ACT_EmailAccount_LaunchEmailConnectorOverview** microflow in the *USEME/Microflows* directory.
 
 ### 2.1 Module Security and Roles
 
@@ -75,56 +75,56 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 ### 3.1 Adding Email Account {#adding-email-account}
 
-When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Select **Get Started** and follow the steps to add email accounts. The wizard takes you through three stages to configure either your primary email account or a shared mailbox:
+When you run your app to use the Email Connector module for the first time (and if no earlier data is present), you will see a welcome screen with an account setup wizard. Select **Get Started** and follow the steps to add email accounts. The wizard takes you through three stages to configure either your primary email account or a shared mailbox:
 
 1. Choose the authentication method that you want to use. You can choose either **Basic Credentials** or **Azure AD** (OAuth 2.0).
-2. Choose if you want to configure the **Primary** account or **Shared Mailbox**.
+2. Choose if you want to configure the **Primary** account or the **Shared Mailbox**.
 3. Choose the protocols for sending and receiving emails.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure **Shared Mailbox** using Basic and OAuth 2.0 authentication, or using the Authorization Code Flow or the Client Credentials Flow.
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure the **Shared Mailbox** using Basic and OAuth 2.0 authentication, or using the authorization code flow or the client credentials flow.
 
 To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for sending and receiving emails.
 
 {{% alert color="info" %}}
-You can configure either your primary email account or shared mailbox in the wizard, but not both at the same time. To add both a primary and a shared mailbox, go through the wizard twice; first configure your primary account, and then configure the shared mailbox. You can choose to only configure a shared mailbox, although your primary email account is needed to configure it.
+The wizard will not allow you to configure both your primary email account and shared mailbox at the same time. To add both a primary and a shared mailbox, go through the wizard twice; first configure your primary account, and then configure the shared mailbox. You can also choose to only configure a shared mailbox, but you will need your primary email account to configure it.
 {{% /alert %}}
 
 #### 3.1.1 Automatic Configuration
 
-Based on the entered email address domain, the module will try to fetch send and receive email configuration details. This auto-discovery of configuration works for well-known email domains (including Gmail, Outlook, Yahoo, and Microsoft). If it fails to detect the email settings automatically, you will be asked to enter all the settings manually to add the email account.
+Based on the entered email address domain, the module will try to fetch configuration details for sending and receiving email. This auto-discovery of configuration works for well-known email domains (such as Gmail, Outlook, Yahoo, and Microsoft). If the module fails to detect the email settings automatically, you will be prompted to enter all the settings manually to add the email account.
 
 {{% alert color="info" %}}
-In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records to get the desired configuration and create the `Email_Connector.EmailAccount`.
+In Studio Pro, you can use the **GetAutoConfig** Java action to get all supported email configurations for the provided username. This action returns results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records to get the desired configuration and create the `Email_Connector.EmailAccount`.
 {{% /alert %}}
 
 #### 3.1.2 Manual Configuration
 
-To manually configure the account, you have to enter the **protocol**, **server host** and **server port** to configure sending and receiving emails. Refer to the email server documentation to get this information.
+To manually configure the account, you must enter the protocol, server host, and server port to configure sending and receiving emails. Refer to the email server documentation to get this information.
 
 ### 3.2 Additional Account Settings {#other-account-settings}
 
-You can set up the following additional account settings:
+You can optionally set up the following additional account settings:
 
-* **Subscribe to incoming emails** – You can select this option to get a notification about the new incoming emails. For modeling, use the `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
+* **Subscribe to incoming emails** – Select this option to get a notification about the new incoming emails. For modeling, use the **SubscribeToIncomingEmail** Java action. Read more about this in the section below.
 
-{{% alert color="warning" %}}
-This is only supported for IMAP protocols, and some servers may not support it at all.
-{{% /alert %}}
+    {{% alert color="warning" %}}
+    This is only supported for IMAP protocols. Some servers may not support it at all.
+    {{% /alert %}}
 
 * **Sanitize email to prevent XSS attacks** – option to turn on removal of malicious scripts to prevent XSS attacks. This option is unselected by default. 
 
-{{% alert color="warning" %}}
-Mendix strongly recommends turning on this **Sanitize email to prevent XSS attacks** setting. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
-{{% /alert %}}
+    {{% alert color="warning" %}}
+    Mendix strongly recommends turning on this **Sanitize email to prevent XSS attacks** setting. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+    {{% /alert %}}
 
 * **Replicate everything in 'X' folder** – option to fetch emails
     * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**.
-    * When this setting is selected, then the module will fetch all the emails (ordered from oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration.
+    * When this setting is selected, then the module will fetch all the emails (ordered from oldest to newest) from that folder in the batch size specified in the **Email Batch Size** configuration.
 * **Timeout** – the connection timeout for send/receive emails operations. This can be set in the **Email Account** object.
 
 ## 4 Usage
 
-Once you have set up an account, you can use it in microflow activities to send and receive emails. The information in the following sections includes usage instructions for Studio Pro, as well as when you run the connector in your app.
+Once you have set up an account, you can use it in microflow activities to send and receive emails. The information in the following sections includes usage instructions for Studio Pro, as well as for when you run the connector in your app.
 
 ### 4.1 Sending Email
 
@@ -132,8 +132,8 @@ When the module is running, click **New Email** to compose and send new emails.
 
 When modeling your app in Studio Pro, use the **SendEmail** Java action to send emails. The input parameters are as follows:
 
-* **Email Account** Email account consisting of outgoing email configuration.
-* **Email Message** Email Message object to be sent
+* **Email Account** – Email account consisting of outgoing email configuration.
+* **Email Message** – **Email Message** object to be sent
 
 The **Return type** is a Boolean value. The Java action will connect to the email server using the provided details and send an email, and will return **True** if successful. If the action fails, the error object and cause will be displayed.
 
@@ -141,22 +141,22 @@ The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple em
 
 ### 4.2 Receiving Email
 
-Click **Fetch Emails** to receive emails. Emails will be fetched in the background and processed by server as configured in the email account.
+Click **Fetch Emails** to receive emails. Emails will be fetched in the background and processed by server, as configured in the email account.
 
-When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action. Once this Java action is called in the background, emails will be fetched over multiple Java threads and would be returned back to user in async manner. Email fetching will continue till the conditions defined in the email account settings at the Mendix side are met (such as "fetch Latest 1000 emails")
+When modeling your app in Studio Pro, use the **RetrieveEmailMessages** Java action. Once this Java action is called in the background, emails will be fetched over multiple Java threads and returned in an async manner. Email fetching will continue until the conditions defined in the email account settings at the Mendix side are met (such as "fetch Latest 1000 emails").
 
 The input parameters for receiving email are the following: 
 
 * **EmailAccount** – email account consisting of incoming email configuration
 * **onEmailFetchMicroflow** – a microflow that will be triggered when **List of EmailMessage** is fetched from the email server as per the batch size configured in the email account
-    * You can process the list according to what you need. 
-    * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
-    * Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
+    * You can process the list according to what you need
+    * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow
+    * Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**
 
     {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter names and data types.{{% /alert %}}
 
-* **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch action is successfully completed.
-* **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation.
+* **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch action is successfully completed
+* **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation
 
 ### 4.3 Using Email Templates
 
@@ -177,7 +177,7 @@ The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable))
 * **Email template** – email template from which email message object is created and sent
-* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** and you can send it later using a scheduled event. You can use microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
+* **Queued** – when `true`, email message will be stored in the **EmailMessage** entity with its status as **QUEUED**. In this case, you can send it later using a scheduled event. You can use microflow **SE_SendQueuedEmails** to create scheduled events. You the can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
 Refer to the sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. This microflow demonstrates how to use **CreateEmailFromTemplate** Java action and set attachments to EmailMessage in addition to attachments provided by EmailTemplate.
 
@@ -188,7 +188,7 @@ When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java ac
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration
 * **Email template** – email template from which email message object is created and sent
-* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** and you can send it later using a  scheduled event. You can use microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
+* **Queued** – when `true`, email message will be stored in the **EmailMessage** entity with status as **QUEUED** and you can send it later using a  scheduled event. You can use microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
 Refer to sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 
@@ -216,7 +216,7 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 The input parameters are the following:
 
 * **Email account** – email account consisting of incoming email configuration
-* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow*.
+* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list as needed. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change the input parameter name and data type.
@@ -237,7 +237,7 @@ For some use cases, like triggering actions when a new email is received, you ne
 
 #### 4.5.2 Additional Considerations 
 
-* Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete subscription flow is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
+* Before subscribing to incoming email, it is recommended to first unsubscribe from any incoming email. This helps prevents the application from having duplicate subscriptions for a single email account. The complete subscription flow is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
 
 * The subscription to new emails will work only if the email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option.
 
@@ -257,26 +257,26 @@ If no email accounts are configured, then you can create a new OAuth configurati
 
 #### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
-To configure OAuth provider for the Authentication Code Flow, the following details are required:
+To configure OAuth provider for the authentication code flow, the following details are required:
 
-* **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-* **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-* **Callback Path** – enter any string, based on which the callback URL will be auto-generated
-* **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as callback/redirect URI
+* **Client ID** – available on the [Azure Portal](https://portal.azure.com/) once you have registered your app
+* **Client Secret** – available on the Azure Portal once you have registered your app
+* **Callback Path** – enter any string, based on which the callback URL will be autogenerated
+* **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure Portal as the callback/redirect URI
 
-To configure OAuth provider for Client Credential code grant flow, the following details are required:
+To configure OAuth provider for client credentials grant flow, the following details are required:
 
-* **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-* **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-* **Tenant ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+* **Client ID** – available on the Azure Portal once you have registered your app
+* **Client Secret** – available on the Azure Portal once you have registered your app
+* **Tenant ID** – available on the Azure Portal once you have registered your app
  
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
-To register your app in the Azure Portal, follow Microsoft's Tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
+To register your app in the Azure Portal, follow Microsoft's Tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as the **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
 
 This connector contains functionality for sending and receiving emails, so during the OAuth process the connector will ask for permissions for sending and receiving email.
 
-On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under the **API permissions** tab on the sidebar:
+On the [Azure Portal](https://portal.azure.com/), ensure that you have the following permissions enabled under the **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/connectors/email-connector/app-permissions.png" >}}
 
@@ -284,9 +284,9 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 To register your app in the Azure Portal, follow Microsoft's [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-This connector contains functionality of sending and receiving emails, so Office 365 Exchange Online related APIs need to be given permission along with Admin consent.
+This connector contains functionality for sending and receiving emails, so APIs related to Office 365 Exchange Online need to be given permission along with Admin consent.
 
-* On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+* On the [Azure Portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/connectors/email-connector/client-cred-api-permissions.png" >}}
 
@@ -295,7 +295,7 @@ This connector contains functionality of sending and receiving emails, so Office
 
 ### 4.8 Queuing Emails
 
-Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending it again until **Max. send attempts** is reached. Any unsent messages after exhausting max attempts is moved from **Queued** tab to the **Failed** tab on the overview page.
+Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending it again until **Max. send attempts** is reached. Any unsent messages after the maximum attempt limit is reached are moved from the **Queued** tab to the **Failed** tab on the overview page.
 
 ## 5 Troubleshooting
 
@@ -305,10 +305,10 @@ If you encounter any problems with sending or receiving emails, check the **Erro
 
 ### 5.1.1 Gmail Accounts
 
-Gmail no longer supports basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
+Gmail no longer supports basic authentication (usernames and passwords), but you can still set up an account in the Email Connector by doing the following:
 
 1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and change the setting in your Google account.
-2. Set up an App Password to sign into the Email connector. See [Sign in with App Passwords](https://support.google.com/accounts/answer/185833).
+2. Set up an app password to sign in to the Email Connector. See [Sign in with app passwords](https://support.google.com/accounts/answer/185833).
 
 ### 5.2 Adding OAuth 2.0 Configuration to an App with Basic Authentication
 
@@ -334,10 +334,10 @@ For more information, see the [Reverse Proxy Inbound Rules](/developerportal/dep
 
 ### 5.4 Configuring Local Email Clients
 
-Configuring local clients, such as [PaperCut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If using a tool like PaperCut, do the following:
+Configuring local clients, such as [Papercut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If you are using a tool like Papercut, do the following:
 
 1. Follow the steps for [adding an email account](#adding-email-account). 
-2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.
+2. Continue with manual configuration in the wizard. (Automatic configuration will not work for local clients.)
 3. Select the **Send emails** checkbox.
 4. Select **SMTP** for the **Protocol**, and enter `localhost` for the **Server host**. Enter the **Server port** number (for example, `25`).
 5. Enter a random email ID and password on the login screen, and it should be configured.
@@ -348,14 +348,16 @@ To add attachments to the email message, do the following:
 
 1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable in all the places where the **FileDocument** entity is required. 
 
+    {{% alert color="info" %}}
     If you have a custom entity, you can extend it with the **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity.
+    {{% /alert %}}
 
 2. Set the **Attachment_EmailMessage** association.
 
 ### 5.6 Page Styling
 
-If the **Email Connector** page styling is affected as you select and view email messages, it is likely due to errors in the email message CSS. To resolve them, turn on the **Sanitize email to prevent XSS attacks** option in the [Account Settings](#other-account-settings).
+If the **Email Connector** page styling is affected as you select and view email messages, that is likely due to errors in the email message CSS. To resolve them, turn on **Sanitize email to prevent XSS attacks** in [Account Settings](#other-account-settings).
 
 ## 6 Known Errors
 
-If you already have the [included widgets](#included-widgets) in your app, and they are not up to date, you may get a "Some widgets can not be read" error when trying to run locally.
+If you already have the [included widgets](#included-widgets) in your app, and they are not up to date, you may get a `Some widgets can not be read` error when trying to run locally.

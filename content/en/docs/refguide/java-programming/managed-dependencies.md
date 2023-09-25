@@ -2,7 +2,7 @@
 title: "Managed Dependencies"
 url: /refguide/managed-dependencies/
 category: "Java Programming"
-weight: 5
+weight: 50
 description: "Describes how to use the managed dependencies feature in Studio Pro"
 tags: ["managed dependencies", "gradle", "java", "maven", "custom repository", "maven central", "dependency synchronization", "vendorlib"]
 ---

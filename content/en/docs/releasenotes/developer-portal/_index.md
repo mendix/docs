@@ -29,7 +29,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Deprecations
 
-* We have done all the preparation work for sunsetting [Stories](/developerportal/project-management/stories/) (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
+* We have done all the preparation work for retiring [Stories](/developerportal/project-management/stories/) (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
 
 
 ### September 7, 2023

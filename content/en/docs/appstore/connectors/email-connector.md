@@ -16,7 +16,7 @@ The [Email Connector](https://marketplace.mendix.com/link/component/120739) allo
 The Email Connector includes the following features:
 
 * Configuration of multiple email accounts
-    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) (via authorization code flow or client credentials flow) to configure Microsoft Azure AD accounts
+    * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Azure AD accounts
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
 * Email templates
@@ -90,7 +90,7 @@ The wizard will not allow you to configure both your primary email account and s
 
 #### 3.1.1 Automatic Configuration
 
-Based on the entered email address domain, the module will try to fetch configuration details for sending and receiving email. This auto-discovery of configuration works for well-known email domains (such as Gmail, Outlook, Yahoo, and Microsoft). If the module fails to detect the email settings automatically, it will prompt you to enter them manually to add the email account.
+Based on the entered email address domain, the module will try to fetch configuration details for sending and receiving email. This auto-discovery of configuration works for well-known email domains (including Gmail, Outlook, Yahoo, and Microsoft). If the module fails to detect the email settings automatically, it will prompt you to enter them manually to add the email account.
 
 {{% alert color="warning" %}}
 You may need to adjust your Gmail settings before you can add a Gmail account. For more information, see [Gmail Accounts](#gmail-accounts).
@@ -100,7 +100,7 @@ In Studio Pro, it is also possible to use the **GetAutoConfig** Java action to g
 
 #### 3.1.2 Manual Configuration
 
-To manually configure sending and receiving emails, enter the protocol, server host, and server port. Refer to the email server documentation to get this information.
+To manually configure the account for sending and receiving emails, enter the protocol, server host, and server port. Refer to the email server documentation to get this information.
 
 ### 3.2 Additional Account Settings {#other-account-settings}
 
@@ -132,14 +132,14 @@ When sending an email, the **To** and **Content** fields are mandatory. In **To*
 
 Click **Fetch Emails** to receive emails. Emails are fetched in the background and processed by the server, as configured in the email account.
 
-When modeling your app in Studio Pro, use the **RetrieveEmailMessages** Java action. Once this Java action is called in the background, emails will be fetched over multiple Java threads and returned asynchronously. Email fetching continues until the conditions defined in the email account settings are met. For example, you could set the app to fetch the latest 1,000 emails. For more information, see [Additional Account Settings](#other-account-settings).
+When modeling your app in Studio Pro, use the **RetrieveEmailMessages** Java action. Once this Java action is called in the background, emails are fetched over multiple Java threads and returned asynchronously. Email fetching continues until the conditions defined in the email account settings are met. For example, you could set the app to fetch the latest 1,000 emails. For more information, see [Additional Account Settings](#other-account-settings).
 
 The input parameters for receiving email are the following: 
 
 * **EmailAccount** – This is an email account consisting of the incoming email configuration.
-* **onEmailFetchMicroflow** – This is a microflow that is triggered when **List of EmailMessage** is fetched from the email server, as per the batch size specified in the email account settings. You can process the list according to your needs. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.
+* **onEmailFetchMicroflow** – This is a microflow that is triggered when **List of EmailMessage** is fetched from the email server, as per the batch size specified in the email account settings. You can process the list according to your needs.
 
-    {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter names or data types. For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.{{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter name or data type. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.{{% /alert %}}
 
 * **onFetchCompleteMicroflow** – This is a microflow that is triggered when the fetch action is successfully completed.
 * **onFetchErrorMicroflow** – This is a microflow that is triggered if there are errors while fetching from the email server.
@@ -152,8 +152,8 @@ You can create and use templates for a specific email account.
 
 You can create email templates in two ways:
 
-* In the app, click the **Email Templates** button and follow the wizard.
-* In Studio Pro, use the **SNIP_EmailTemplate_Overview** snippet located in **Private** > **Snippets**. Use the snippet on a page and save it on a button click.
+* While running the app, click the **Email Templates** button and follow the wizard.
+* While modeling the app in Studio Pro, use the **SNIP_EmailTemplate_Overview** snippet located in **Private** > **Snippets**. Use the snippet on a page and save it on a button click.
 
 #### 4.3.2 Creating an Email Message from a Template
 
@@ -202,9 +202,9 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 The input parameters are the following:
 
 * **EmailAccount** – This is an email account consisting of the incoming email configuration.
-* **onNewEmailReceivedMicroflow** – This is a microflow that is triggered when new email (List) is received from the server. You can process the list according to your needs. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
+* **onNewEmailReceivedMicroflow** – This is a microflow that is triggered when new email (List) is received from the server. You can process the list according to your needs.
 
-    {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.{{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.{{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – This is a microflow that is triggered when the subscription state is changed; the state can be any of the following values:
     * `SUBSCRIPTIONFAILED`
@@ -246,7 +246,7 @@ To configure an OAuth provider for the authentication code flow, provide the fol
 * **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
 * **Client Secret** – available on the Azure portal once you have registered your app
 * **Callback Path** – enter any string, and the callback URL will be autogenerated based on this string
-* **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as the callback/redirect URI
+* **Callback URL** – configured on the Azure portal as the **Redirect URI**, the URL where the OAuth provider will redirect with the authorization code
 
 To configure an OAuth provider for the client credentials grant flow, provide the following details:
 
@@ -256,7 +256,7 @@ To configure an OAuth provider for the client credentials grant flow, provide th
  
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
-To register your app in the Azure portal, follow Microsoft's tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as the **Callback URL** mentioned in configuring [OAuth Provider Configuration Details](#oauth-config-details).
+To register your app on the Azure portal, follow Microsoft's tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). As mentioned above in [OAuth Provider Configuration Details](#oauth-config-details), make sure to set the **Redirect URI** as the **Callback URL**.
 
 This connector contains functionality for sending and receiving emails, so during the OAuth process, the connector will ask for permissions for sending and receiving emails.
 
@@ -284,7 +284,7 @@ Emails can be queued to be sent later. You can send the messages in the **Queued
 
 ### 5.1 Sending or Receiving Email
 
-If you encounter any problems with sending or receiving emails, check the **Error logs** in the **Account Settings** and the logs in Studio Pro. If you have sent an email and it does not appear in your app, but there is nothing in the log file, then it is not an error on the connector side.
+If you encounter any problems with sending or receiving emails, check the **Error logs** in the **Account Settings** and the logs in Studio Pro. If you have sent an email and it does not appear in your app, but there is nothing in the log file, then the error is not on the connector side.
 
 ### 5.1.1 Gmail Accounts{#gmail-accounts}
 
@@ -338,7 +338,7 @@ To add attachments to the email message, do the following:
 
 ### 5.6 Page Styling
 
-If the **Email Connector** page styling is affected as you select and view email messages, that is likely due to errors in the email message CSS. To resolve them, turn on **Sanitize email to prevent XSS attacks** in [Account Settings](#other-account-settings).
+If the **Email Connector** page styling is affected as you select and view email messages, that is likely due to errors in the email message CSS. To resolve the errors, turn on **Sanitize email to prevent XSS attacks** in [Account Settings](#other-account-settings).
 
 ## 6 Known Errors
 

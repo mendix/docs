@@ -69,7 +69,7 @@ A directory where Gradle is located on the computer that you use to deploy the a
 
 #### 3.2.2 Use Custom Repositories
 
-Enabling this option allows you to specify which repositories should be used by Gradle.
+Enabling this option allows you to specify which repositories should be used by Gradle. For more information see [Managed Dependencies](/refguide/managed-dependencies/).
 
 #### 3.2.3 Repositories
 

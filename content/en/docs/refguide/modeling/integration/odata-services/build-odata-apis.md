@@ -242,7 +242,7 @@ When changing data with `POST`, `PUT`, or `DELETE`, validation rules specified o
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-rules.png" >}} 
 
-The validation rules on customer show that both `Firstname` and `Lastname` are mandatory. When you try to create a new customer without a last name, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response. See the following `POST` request:
+The validation rules on **Customer** show that both `Firstname` and `Lastname` are mandatory. When you try to create a new customer without a last name, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response. See the following `POST` request:
 
 ```
 POST http://localhost:8080/odata/CustomerApi/v1/Customers
@@ -266,13 +266,13 @@ You can generate and reuse generated validation microflows. The following exampl
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
 
-     Use the *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
+2. Use the *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
 
-2. Specify that you want to use a microflow to insert a new **Customer** resource via the OData API. This microflow will be called when you do a `POST` operation on the endpoint of the resource:
+3. Specify that you want to use a microflow to insert a new **Customer** resource via the OData API. This microflow will be called when you do a `POST` operation on the endpoint of the resource:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/specify-use-microflow.png" >}} 
 
-3. In the insert microflow, call the generated validation microflow and commit the object if the validation succeeds:
+4. In the insert microflow, call the generated validation microflow and commit the object if the validation succeeds:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
 
@@ -329,7 +329,9 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
-You can use select and expand in combination with filters, sorting, top, and skip as discussed in [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data). See the following `GET` request:
+You can use select and expand in combination with filters, sorting, top, and skip. For more information, see the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section below. 
+
+See the following `GET` request:
 
 ```
 GET http://localhost:8080/odata/CustomerApi/v1/Customers
@@ -365,10 +367,10 @@ You may not want to directly publish APIs for your persistable entities because 
 
 There are two ways to take an API-first approach, as explained in [API-First vs. API Design-First: A Comprehensive Guide](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide):
 
-1. Start by defining a contract, like an OpenAPI document.
-2. Set the use case and developer experience of using your APIs first.
+* Define a contract, like an OpenAPI document. This is not something supported by Mendix OData services unless the contract is also based on OData.
+* Set the use case and developer experience of using your APIs first. This is not tied to a specific tool. You can start by defining your APIs on a whiteboard, in a text document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
 
-The first is not something supported by Mendix OData services unless the contract is also based on OData. The second, however, is not tied to a specific tool. You can start by defining your APIs on a whiteboard, in a text document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
+
 
 ### 6.1 Defining a Resource Model
 

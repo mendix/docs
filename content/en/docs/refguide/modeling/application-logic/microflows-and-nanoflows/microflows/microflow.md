@@ -21,7 +21,7 @@ Microflow properties consist of the following sections:
 
 ### 2.1 General Section {#general}
 
-#### 2.1.1 Return Type
+#### 2.1.1 Return Type {#returntype}
 
 The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
 
@@ -29,7 +29,7 @@ The return type defines what information the microflow returns. The caller of th
 To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
 {{% /alert %}}
 
-#### 2.1.2 URL
+#### 2.1.2 URL {#url}
 
 Microflow URLs allow you to execute a microflow when the end-user navigates to a specific URL within your application. The microflow is executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) activity, its page is the first page shown to the end-user. The microflow's full URL starts with the base URL of your application, followed by `/p/`, and then by the microflow's configured URL. For example, `http://example.mendixcloud.com/p/microflow` is the full URL for the microflow's configured URL `microflow`.
 

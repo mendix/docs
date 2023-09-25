@@ -16,8 +16,7 @@ The [Email Connector](https://marketplace.mendix.com/link/component/120739) allo
 The Email Connector includes the following features:
 
 * Configuration of multiple email accounts
-    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
-        * Supports authorization code flow and client credentials flow
+    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) (via authorization code flow or client credentials flow) to configure Microsoft Azure AD accounts
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
 * Email templates
@@ -56,7 +55,7 @@ The following widgets are bundled in the module:
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
-If you already have these widgets in your app, and they are not up to date, you will get a `Some widgets can not be read` error. 
+{{% alert color="info" %}}If you already have these widgets in your app, and they are not up to date, you will get a `Some widgets can not be read` error.{{% /alert %}}
 
 ## 2 Setup in Studio Pro {#setup}
 
@@ -67,7 +66,7 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 ### 2.1 Module Security and Roles
 
-The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wide use cases in mind. Check that the access rights fit your use case and security requirements before linking the module role to user roles in [App Security](/refguide/app-security/).
+The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wide use cases in mind. Confirm that the access rights fit your use case and security requirements before linking the module role to user roles in [App Security](/refguide/app-security/).
 
 ## 3 Email Account Configuration {#accountconfig}
 
@@ -75,18 +74,18 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 ### 3.1 Adding Email Account {#adding-email-account}
 
-When you run your app to use the Email Connector module for the first time (and if no earlier data is present), you will see a welcome screen with an account setup wizard. Select **Get Started** and follow the steps to add email accounts. The wizard takes you through three stages to configure either your primary email account or a shared mailbox:
+When you run your app to use the Email Connector module for the first time (and if no earlier data is present), you will see a welcome screen with an account setup wizard. Select **Get Started** and follow the steps to add email accounts. The wizard takes you through three steps to configure either your primary email account or a shared mailbox:
 
 1. Select the authentication method that you want to use. You can choose either **Use Basic Credentials** or **Use Microsoft Azure AD** (OAuth 2.0).
 2. Select if you want to configure a primary mailbox or a shared mailbox.
 3. Select your desired protocols for sending and receiving emails.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. You can also add and configure the shared mailbox using Basic and OAuth 2.0 authentication, or by using the authorization code flow or the client credentials flow.
+You can add and configure primary and shared mailboxes in the Email Connector using basic authentication or OAuth 2.0 for Microsoft Azure AD accounts. For OAuth authentication, you can use the authorization code flow or the client credentials flow.
 
-To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for sending and receiving emails.
+For details on how to configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for sending and receiving emails.
 
 {{% alert color="info" %}}
-The wizard will not allow you to configure both your primary email account and shared mailbox at the same time. To add both a primary and a shared mailbox, go through the wizard twice; first configure your primary account, and then configure the shared mailbox. You can also choose to only configure a shared mailbox, but you will need your primary email account to configure it.
+The wizard will not allow you to configure both your primary email account and shared mailbox at the same time. To add both a primary and a shared mailbox, go through the wizard twice; first configure your primary account, then configure the shared mailbox. You can also choose to only configure a shared mailbox, but you will need your primary email account to configure it.
 {{% /alert %}}
 
 #### 3.1.1 Automatic Configuration
@@ -127,26 +126,23 @@ When modeling your app in Studio Pro, use the **SendEmail** Java action to send 
 
 The return type is a Boolean value. This Java action uses the provided details to connect to the email server and send an email. It returns `True` if successful and displays the error object and cause if it fails.
 
-When sending an email, the **To** and **Content** fields are mandatory. In **To**, **CC**, or **BCC**, you can optionally specify multiple email addresses, each separated by a semicolon (`;`).
+When sending an email, the **To** and **Content** fields are mandatory. In **To**, **CC**, and **BCC**, you can optionally specify multiple email addresses, each separated by a semicolon (`;`).
 
 ### 4.2 Receiving Email
 
-Click **Fetch Emails** to receive emails. Emails are fetched in the background and processed by server, as configured in the email account.
+Click **Fetch Emails** to receive emails. Emails are fetched in the background and processed by the server, as configured in the email account.
 
-When modeling your app in Studio Pro, use the **RetrieveEmailMessages** Java action. Once this Java action is called in the background, emails will be fetched over multiple Java threads and returned in an async manner. Email fetching continues until the conditions defined in the email account settings are met. For example, you could set the app to fetch the latest 1,000 emails. For more information, see [Additional Account Settings](#other-account-settings).
+When modeling your app in Studio Pro, use the **RetrieveEmailMessages** Java action. Once this Java action is called in the background, emails will be fetched over multiple Java threads and returned asynchronously. Email fetching continues until the conditions defined in the email account settings are met. For example, you could set the app to fetch the latest 1,000 emails. For more information, see [Additional Account Settings](#other-account-settings).
 
 The input parameters for receiving email are the following: 
 
-* **EmailAccount** – email account consisting of incoming email configuration
-* **onEmailFetchMicroflow** – a microflow that is triggered when **List of EmailMessage** is fetched from the email server, as per the batch size specified in the email account settings
-    * You can process the list according to what you need
-    * Make sure you have the list of **Email_Connector.EmailMessage** as a parameter to this microflow
-    * Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**
+* **EmailAccount** – This is an email account consisting of the incoming email configuration.
+* **onEmailFetchMicroflow** – This is a microflow that is triggered when **List of EmailMessage** is fetched from the email server, as per the batch size specified in the email account settings. You can process the list according to your needs. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.
 
-    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter names and data types.{{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter names or data types. For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.{{% /alert %}}
 
-* **onFetchCompleteMicroflow** – a microflow that is triggered when the fetch action is successfully completed
-* **onFetchErrorMicroflow** – a microflow that is triggered if there are errors during the fetch from email server operation
+* **onFetchCompleteMicroflow** – This is a microflow that is triggered when the fetch action is successfully completed.
+* **onFetchErrorMicroflow** – This is a microflow that is triggered if there are errors while fetching from the email server.
 
 ### 4.3 Using Email Templates
 
@@ -167,7 +163,7 @@ The input parameters are the following:
 
 * **DataObject** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable).
 * **EmailTemplate** – This is an email template from which an **EmailMessage** object is created and sent.
-* **Queued** – When `true`, the email message will be stored in the **EmailMessage** entity with its status as **QUEUED**. In this case, you can send it later using a scheduled event. You can use the microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
+* **Queued** – When `true`, the email message is stored in the **EmailMessage** entity with its status as **Queued**. In this case, you can send it later using a scheduled event. You can use the microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
 Refer to the sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. This microflow demonstrates how to use the **CreateEmailFromTemplate** Java action and set attachments to **EmailMessage** in addition to attachments provided by **EmailTemplate**.
 
@@ -176,9 +172,9 @@ Refer to the sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**.
 When modeling your app in Studio Pro, use the **SendEmailWithTemplate** Java action to send an email from a template. The input parameters are the following:
 
 * **Data Object** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable).
-* **EmailAccount** – This is an email account consisting of outgoing email configuration.
+* **EmailAccount** – This is an email account consisting of the outgoing email configuration.
 * **EmailTemplate** – This is an email template from which an **EmailMessage** object is created and sent.
-* **Queued** – When `true`, the email message will be stored in the **EmailMessage** entity with its status as **QUEUED**. In this case, you can send it later using a scheduled event. You can use the microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
+* **Queued** – When `true`, the email message is stored in the **EmailMessage** entity with its status as **QUEUED**. In this case, you can send it later using a scheduled event. You can use the microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
 Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 
@@ -188,7 +184,7 @@ You can choose to configure a digital signature and email encryption when the mo
 
 #### 4.4.1 Digital Signing
 
-Digitally signed emails support only PKCS #12 certificates.
+Digitally signed emails support only PKCS#12 certificates.
 
 #### 4.4.2 Email Encryption
 
@@ -205,25 +201,25 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 
 The input parameters are the following:
 
-* **EmailAccount** – This is an email account consisting of incoming email configuration.
-* **onNewEmailReceivedMicroflow** – This is a microflow that is triggered when new email (List) is received from the server. You can process the list as needed. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
+* **EmailAccount** – This is an email account consisting of the incoming email configuration.
+* **onNewEmailReceivedMicroflow** – This is a microflow that is triggered when new email (List) is received from the server. You can process the list according to your needs. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
 
-    {{% alert color="warning" %}}When duplicating this microflow, do not change the input parameter name and data type.{{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.{{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – This is a microflow that is triggered when the subscription state is changed; the state can be any of the following values:
     * `SUBSCRIPTIONFAILED`
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
 
-    Make sure that microflow accepts the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
-
-    {{% alert color="warning" %}}When duplicating this microflow, do not change the input parameter name or data type.{{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onSubscriptionStateChangedMicroflow** microflow, do not change the input parameter names or data types. The microflow must accept the string parameters `State` and `Comment`. For reference, see the sample microflow **OCH_Background_SubscriptionStateChanged**.{{% /alert %}}
     
 #### 4.5.1 Enabling Subscription in Email Settings
 
-For some use cases, like triggering actions when a new email is received, you need to enable the subscription to new emails using in the Email Settings as well as in the subscription microflow documented in [Subscribing to Incoming Email](#subscribe-incoming-email).
+For some use cases, like triggering actions when a new email is received, you need to enable the subscription to new emails in the email settings as well as in the subscription microflow documented in [Subscribing to Incoming Email](#subscribe-incoming-email).
 
 #### 4.5.2 Additional Considerations 
+
+When subscribing to incoming email, keep the following additional considerations in mind:
 
 * Before subscribing to incoming email, it is recommended to first unsubscribe from any incoming email. This helps prevent the application from having duplicate subscriptions for a single email account. The complete subscription flow is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
 
@@ -235,75 +231,75 @@ When modeling your app in Studio Pro, use the **UnsubscribeFromIncomingEmail** J
 
 There is one input parameter:
 
-* **EmailAccount** – email account consisting of incoming email configuration
+* **EmailAccount** – email account consisting of the incoming email configuration
 
 ### 4.7 Configuring Azure OAuth 2.0 {#create-oauth}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
-If no email accounts are configured, you can create a new OAuth configuration from the **Add Email Account** wizard by selecting **Azure AD**. Otherwise, select **OAuth Configurations** to add, delete, and edit OAuth configurations, as described below.
+If no email accounts are configured, you can create a new OAuth configuration from the **Add Email Account** wizard by selecting **Use Microsoft Azure AD**. Otherwise, select **OAuth Configurations** to add, delete, and edit OAuth configurations, as described below.
 
 #### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
-To configure an OAuth provider for the authentication code flow, the following details are required:
+To configure an OAuth provider for the authentication code flow, provide the following details:
 
-* **Client ID** – available on the [Azure Portal](https://portal.azure.com/) once you have registered your app
-* **Client Secret** – available on the Azure Portal once you have registered your app
-* **Callback Path** – enter any string, based on which the callback URL will be autogenerated
-* **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure Portal as the callback/redirect URI
+* **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+* **Client Secret** – available on the Azure portal once you have registered your app
+* **Callback Path** – enter any string, and the callback URL will be autogenerated based on this string
+* **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as the callback/redirect URI
 
-To configure OAuth provider for the client credentials grant flow, the following details are required:
+To configure an OAuth provider for the client credentials grant flow, provide the following details:
 
-* **Client ID** – available on the Azure Portal once you have registered your app
-* **Client Secret** – available on the Azure Portal once you have registered your app
-* **Tenant ID** – available on the Azure Portal once you have registered your app
+* **Client ID** – available on the Azure portal once you have registered your app
+* **Client Secret** – available on the Azure portal once you have registered your app
+* **Tenant ID** – available on the Azure portal once you have registered your app
  
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
-To register your app in the Azure Portal, follow Microsoft's tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as the **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
+To register your app in the Azure portal, follow Microsoft's tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). While registering, set the redirect/callback URI as the **Callback URL** mentioned in configuring [OAuth Provider Configuration Details](#oauth-config-details).
 
-This connector contains functionality for sending and receiving emails, so during the OAuth process the connector will ask for permissions for sending and receiving email.
+This connector contains functionality for sending and receiving emails, so during the OAuth process, the connector will ask for permissions for sending and receiving emails.
 
-On the [Azure Portal](https://portal.azure.com/), ensure that you have the following permissions enabled under the **API permissions** tab on the sidebar:
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under the **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/app-permissions.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/app-permissions.png" alt="API permissions for authentication code flow" >}}
 
 #### 4.7.3 Settings in the Microsoft Azure Portal (Client Credentials Flow)
 
-To register your app in the Azure Portal, follow Microsoft's [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+To register your app in the Azure portal, follow Microsoft's [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-This connector contains functionality for sending and receiving emails, so APIs related to Office 365 Exchange Online need to be given permission along with Admin consent.
+This connector contains functionality for sending and receiving emails, so APIs related to Office 365 Exchange Online need to be given permission along with admin consent.
 
-On the [Azure Portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/client-cred-api-permissions.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" >}}
 
-Admin status is given on the added API permissions. Tenant admin must register the Azure application's service principal in Exchange via Exchange Online PowerShell, as described in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
+Admin status is given on the added API permissions. The tenant admin must register the Azure application's service principal in Exchange via Exchange Online PowerShell, as described in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 
 ### 4.8 Queuing Emails
 
-Emails can be queued to be sent later. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending it again until **Max. send attempts** is reached. Any unsent messages after the maximum attempt limit is reached are moved from the **Queued** tab to the **Failed** tab on the overview page.
+Emails can be queued to be sent later. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector automatically tries resending it again until **Max. send attempts** is reached. After this limit is reached, any unsent messages are moved from the **Queued** tab to the **Failed** tab on the overview page.
 
 ## 5 Troubleshooting
 
 ### 5.1 Sending or Receiving Email
 
-If you encounter any problems with sending or receiving emails, check the **Error logs** in the **Account Settings** and the logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+If you encounter any problems with sending or receiving emails, check the **Error logs** in the **Account Settings** and the logs in Studio Pro. If you have sent an email and it does not appear in your app, but there is nothing in the log file, then it is not an error on the connector side.
 
 ### 5.1.1 Gmail Accounts{#gmail-accounts}
 
 Gmail no longer supports basic authentication (usernames and passwords), but you may still be able to set up an account in the Email Connector by doing the following:
 
-1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and change the setting in your Google account.
+1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and turn off the **Less secure app access** setting in your Google account.
 2. Set up an app password to sign in to the Email Connector. See [Sign in with app passwords](https://support.google.com/accounts/answer/185833).
 
 ### 5.2 Adding OAuth 2.0 Configuration to an App with Basic Authentication
 
-If you already have an email account configured using basic authentication in your app, and you want to use OAuth 2.0 authentication without removing that email account, do the following: 
+If you already have an email account configured using basic authentication in your app, and you want to use OAuth 2.0 authentication without removing that email account, do the following:
 
-1. On the overview page, click **OAuth Configurations** to add a new configuration. For more information, see [OAuth Provider Configuration Details](#oauth-config-details).  
+1. On the overview page, click **OAuth Configurations** and add a new configuration. For more information, see [OAuth Provider Configuration Details](#oauth-config-details).
 2. For the desired email account, set the **isOAuthUsed** attribute of the **EmailAccount** entity to **True**.
-3. Associate the existing email account with your newly created OAuth provider.
+3. Associate the email account with your newly created OAuth provider.
 4. Navigate to the overview page, click **Manage Accounts**, and select the account.
 5. Go to the **Server Settings** tab in **Account Settings** and select **Re-authenticate Access**.
 

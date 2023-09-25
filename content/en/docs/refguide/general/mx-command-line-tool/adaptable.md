@@ -20,7 +20,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * `1` – parameter validation error
     * `2` – output-related error
     * `3` – errors related to the execution of the operation
-* `Y` is the number of the parameter the error is related to (if applicable). It the error is not related to the parameters, this is zero.
+* `Y` is the number of the parameter the error is related to (if applicable). If the error is not related to the parameters, this is zero.
 * `Z` determines error details:
     * `1` – file is not found
     * `2` – app is too old

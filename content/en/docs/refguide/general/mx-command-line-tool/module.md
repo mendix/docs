@@ -110,7 +110,7 @@ If there are errors, the exit code consists of three digits: XYZ where:
     * 2 – output-related * error
     * 3 – errors related to the execution of * the operatio* n
 
-* Y is the number of the parameter the error * is related to. It the error is not related to the parameters, this is zero.
+* Y is the number of the parameter the error * is related to. If the error is not related to the parameters, this is zero.
 
 * Z indicates the error details:
 

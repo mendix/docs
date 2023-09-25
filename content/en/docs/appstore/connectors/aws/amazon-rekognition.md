@@ -402,7 +402,7 @@ The `JS_AddBoundingBox` JavaScript action can be used to generate a rectangle ar
  
 | Parameter | Description |
 | --- | --- |
-| `ClassName` (String) | A string representation of the container upon which a rectable is to be generated. |
+| `ClassName` (String) | A string representation of the container upon which a rectangle is to be generated. |
 | `BoundingBox` (Object) | An object of the type `BoundingBox`. The object must have the following attributes: `Top`, `Left`, `Height` and `Width`. |
 | `CustomLabel` (Object) | An object of the identification. The object must have the `Confidence` attribute. |
 | `HighConfidenceThreshold` (Decimal) | The minimum threshold of confidence for the rectangle to be considered of high confidence. This results in a green rectangle being rendered. Range: 0 - 100 |

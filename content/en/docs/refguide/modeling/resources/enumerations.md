@@ -33,7 +33,7 @@ An enumeration has the following properties:
 
 * **Enumeration values** – An enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
-The following properties are only available when the enumeration is an external enumeration that is called through a [consumed Odata service](/refguide/consumed-odata-service/):
+The following properties are only available when the enumeration is an external enumeration that is part of a [consumed Odata service](/refguide/consumed-odata-service/):
 
 * **From service** - This property shows the source of the enumeration and allows you to **Detach** the enumeration from the source. 
 * **Original name** - The original name of the enumeration from the source.

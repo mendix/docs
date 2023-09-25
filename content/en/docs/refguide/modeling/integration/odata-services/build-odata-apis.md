@@ -436,7 +436,7 @@ This example shows a **CustomerEmailRequest** entity that a client can create us
 
 ### 6.4 Running Operations Asynchronously 
 
-Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that you’ll do it in the background. In Mendix Studio Pro, you can use a [Task Queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can `GET` the resource to see what the status is.
+Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that it will be done in the background. In Mendix Studio Pro, you can use a [task queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can `GET` the resource to see what the status is.
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 
@@ -478,7 +478,7 @@ If you need to introduce breaking changes, duplicate the entire OData service an
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/versioning.png" >}} 
 
-This approach ensures customer applications can migrate at their own pace because you will have the old version and the new major version of the API in your application. Once all client applications have migrated, you can remove the old API from your application.
+This approach ensures customer applications can migrate at their own pace because you will have the old version and the new major version of the API in your application. Once all customer applications have migrated, you can remove the old API from your application.
 
 ## 8 Read More
 

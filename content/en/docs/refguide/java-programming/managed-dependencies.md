@@ -85,7 +85,13 @@ For more details, you can refer to the [Gradle documentation on Declaring reposi
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" alt="Custom Repository" >}}
 
-## 7 Troubleshooting
+## 7 Marketplace Modules
+
+The dependency information is included when importing and exporting a module and is therefore also included in Marketplace Modules. The actual dependency artifacts are not included, as these are automatically synchronized upon import.
+
+When there’s an issue with the managed dependencies of a marketplace module, it is possible to revert to an earlier version by removing the new version and download an earlier version from the marketplace.
+
+## 8 Troubleshooting
 
 There can be multiple reasons for dependency resolution to fail. We have listed several failure causes with steps how to fix the issue.
 

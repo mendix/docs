@@ -144,7 +144,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 #### 5.3.6 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
 
 {{% alert color="info" %}}
-This setting was introduced in Mendix version 10.3.
+This setting was introduced in Mendix version 10.2.
 {{% /alert %}}
 
 Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
@@ -152,14 +152,6 @@ Select **Enable automatic fetching from a remote repository** to enable the [Aut
 #### 5.3.7 Fetch Interval, Minutes
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
-
-### 5.4 Changes
-
-#### 5.4.1 Truncate Long Values
-
-### 5.5 Solution Warning
-
-#### 5.5.1 Show Warning on Updating Marketplace Modules
 
 ## 6 Work Environment Tab
 

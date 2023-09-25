@@ -7,7 +7,7 @@ description: "Describes how to join the Mendix Component Partner Program to prom
 tags: ["marketplace", "partner", "partner program", "component partner program", "component"]
 ---
 
-## 1 Introduction=
+## 1 Introduction=sasasadsfda
 
 The process is simple: Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/), design and build your content, edit your listing, and submit it to the Marketplace for the [Partner](/appstore/general/app-store-content-support/#category) support category.
 

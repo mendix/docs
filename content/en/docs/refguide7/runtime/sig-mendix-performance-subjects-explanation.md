@@ -10,32 +10,7 @@ This document outlines the communication patterns used by the Mendix Runtime env
 
 These are the goals for this document:
 
-* Present information for assessing the quality of the Mendix Runtime environment regarding efficiency of communication
-* Present information for determining the impact of their design decisions on communication efficiency and performance
-
-This document was written to address the missing information required by SIG to assess the performance efficiency of communication of Mendix applications. The last section of the document outlines the SIG scoring on this subject and how this document addresses these requirements.
-
-## 2 Outline of Communication Within the Mendix Runtime Environment
-
-The Mendix Platform consists of the following components:
-
-* Mendix Platform – completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-
-* Developer Portal – web-based collaborative environment for design, development, and deployment of apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
-
-* Marketplace – a portal with hundreds of publicly available building blocks to speed up app development
-
-* Mendix Modeler – multi-user modeling studio of the Mendix Platform
-* Team Server – a central repository for managing application model versions
-* Runtime environment – runs applications using a server part (Mendix Runtime) and a client part (Mendix Client)
-* Build – creates deployment packages from artifacts such as models, style sheets, and custom Java classes
-* MxID – a user management and provisioning service that applies the OpenID standard
-
-The focus of this document is on the Mendix Runtime environment, more specifically the collaboration between the following parts:
-
-* Mendix Client – JavaScript client running in the browser of a user
-* Mendix Runtime – Java/Scala runtime running on a server, responsible for executing microflow logic, business rules, and persisting objects
-* RDBMS – where the data is persisted
+* Present information for assessing the quali
 * Optionally, a state store to share state between horizontally scaled runtime instances
 
 Communication between these components operates as follows:

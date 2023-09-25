@@ -94,7 +94,7 @@ To learn more about using external entities with security enabled (in production
 
 When a call to the OData service fails, users will see a generic error message. Create an [error-handling microflow](refguide/error-handling-in-microflows/) to change this message.
 
-When the service responds with an unsuccessful status code (not in the 2XX range), or does not return a response at all, this microflow decides which message to show to the user.
+When the service responds with an unsuccessful status code (not in the 2xx range), or does not return a response at all, this microflow decides which message to show to the user.
 
 The microflow should have an argument of type `System.HttpResponse`. If the OData service returns a response, the argument has a value. Otherwise, it is `empty`.
 

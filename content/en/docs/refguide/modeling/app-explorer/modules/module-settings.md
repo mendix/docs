@@ -58,7 +58,15 @@ This setting is available for only add-on and solution module types.
 
 A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-We recommend setting a new version every time changes are made to the module. 
+We recommend setting a new version every time changes are made to the module.
+
+## 4 Java Dependencies
+
+{{% alert color="info" %}}
+Java managed dependencies are available in Mendix version 10.3.0 and above.
+{{% /alert %}}
+
+You can add managed dependencies for each module on the **Java Dependencies** tab. See [Managed Dependencies](/refguide/managed-dependencies/) for more information.
 
 ## 5 Read More
 

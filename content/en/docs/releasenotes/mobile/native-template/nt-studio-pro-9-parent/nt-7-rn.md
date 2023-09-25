@@ -9,17 +9,17 @@ description: "Native Template 7 release notes."
 
 **Release date: September 25, 2023**
 
-## Fixes
+### Fixes
 
-* We have enhanced file encryption on Android.
+* We enhanced file encryption on Android.
 
 ## 7.0.7 {#706}
 
 **Release date: September 22, 2023**
 
-## Fixes
+### Fixes
 
-* We have updated clearKeychain method to clear only necessary data.
+* We updated the `clearKeychain` method to clear only necessary data.
 
 ## 7.0.6 {#706}
 

@@ -53,7 +53,7 @@ When a change is made to a specified dependency, for example, the dependency is 
 
 You can trigger a manual synchronization in the menu **App** > **Synchronize dependencies**. You may want to do this, for example, when synchronization failed due to connectivity issues. Additionally, dependency synchronization also occurs when a project is opened in Studio Pro.
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/app-synchronize-dependencies.png" alt="App Menu Synchronize Dependencies" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/synchronize-app-dependencies.png" alt="App Menu Synchronize Dependencies" >}}
 
 Once Gradle has resolved and downloaded all dependencies successfully, it places them in the `vendorlib` directory. This directory is used to store .jar files of all the managed dependencies. Contrary to the `userlib`  folder, the `vendorlib` folder is completely managed by Studio Pro. Files here will automatically be added and removed based on the specified dependencies. The `vendorlib` folder will be committed to your version control just like the `userlib`.
 

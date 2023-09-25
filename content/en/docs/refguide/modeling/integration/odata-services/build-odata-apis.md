@@ -380,11 +380,11 @@ Define a resource model using [non-persistable entities](/refguide/persistabilit
 
 Refer to the [example domain model](#starting-domain-model) for this section.
 
-In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the `Firstname` and `Lastname` attributes into a single attribute, `Fullname`. Provide the home address information and exclude other address types:
+In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the *Firstname* and *Lastname* attributes into a single attribute, *Fullname*. Provide the home address information and exclude other address types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-1. Add the `CustomerHomeAddress` entity as a resource to the OData service:
+1. Add the *CustomerHomeAddress* entity as a resource to the OData service:
 
 2. Use an OQL dataset to define the query to fetch this information from your entities:
 
@@ -420,11 +420,11 @@ In this example, you can expose a single REST resource that combines data from t
 
 ### 6.3 Defining Logic in an Insert Microflow
 
-How do you provide logic in a REST API if REST best practices specify that you should only use the default HTTP operations (insert, update, retrieve, or delete)?
+How do you provide logic in a REST API if REST best practices specify that you should only use the default CRUD operations?
 
 Consider the input parameters of your logic as the REST resource. In this way, executing logic can be modeled by handling the logic in the insert microflow. This allows you to execute the logic when a client `POSTs` a new resource to your API. 
 
-This example shows a `CustomerEmailRequest` entity that a client can create using an API. 
+This example shows a **CustomerEmailRequest** entity that a client can create using an API. 
 
 1. The API will execute the logic to send the customer an email when this resource is created:
 
@@ -470,7 +470,7 @@ The response is as follows:
 
 ## 7 Versioning {#versioning}
 
-Reliable versioning is important for APIs. Client applications should trust your API to not make any incompatible changes that will cause the app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering your clients a period of time where they can migrate from the old version to the new version. This means you need to the ability to run 2 versions of the same API side by side.
+Reliable versioning is important for APIs. Client applications should trust your API to not make any incompatible changes that will cause the app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering the end-user a period of time where they can migrate from the old version to the new version. This means you need to the ability to run two versions of the same API side by side.
 
 With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default, Mendix suggests using [semantic versioning](https://semver.org/), adding the major version number to the URL. 
 
@@ -478,7 +478,7 @@ If you need to introduce breaking changes, duplicate the entire OData service an
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/versioning.png" >}} 
 
-This approach ensures client applications can migrate at their own pace because you will have the old version and the new major version of the API in your application. Once all client applications have migrated, you can remove the old API from your application.
+This approach ensures customer applications can migrate at their own pace because you will have the old version and the new major version of the API in your application. Once all client applications have migrated, you can remove the old API from your application.
 
 ## 8 Read More
 

@@ -15,7 +15,7 @@ aliases:
 
 ## 1 Introduction
 
-The **General Settings** page presents an overview of your app.
+The **Settings** page presents an overview of your app.
 
 On the top of page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle which enables or disables notifications for this app.
 
@@ -25,7 +25,7 @@ On the top of page, you can see the image of the app, the app name, and the comp
 Only users with the **App Settings** permission can edit the image and the app name.
 {{% /alert %}}
 
-The **General Settings** page always contains the following tabs:
+The **Settings** page always contains the following tabs:
 
 * **General**
 * **Access Management**
@@ -59,12 +59,18 @@ Only users with the **App Settings** permission can change the description of th
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Manage Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
 
-On the tab, you can only see the environments that satisfy these requirements:
+On the tab, you can only see the environments that satisfy the following requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
-* Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
+* You are currently assigned a user role in the app which allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
+
+{{% alert color="info" %}}
+When deploying your application to a non-production environment, the deploying user and the Technical Contact are always assigned the Administrator user role.
+
+When deploying your application to a production environment, the Technical Contact is always assigned the Administrator user role. If you cannot see an environment, ask your Technical Contact to assign you a user role for that environment which allows you to manage other users. 
+{{% /alert %}}
 
 ### 3.1 Managing Users {#manage-users}
 
@@ -141,7 +147,7 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-It is possible to migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Planning*.
+It is possible to migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
@@ -197,10 +203,10 @@ When you select a history item and click **Show item**, the details of the story
 
 ## 9 Story Archive {#story-archive}
 
-Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
+Once you have switched from Mendix Stories to Epics or Jira, Mendix archives any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
 
 {{% alert color="warning" %}}
-We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to download your work before that date.
+Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  >}}

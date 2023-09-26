@@ -2,7 +2,7 @@
 title: "Consumed OData Service"
 url: /refguide8/consumed-odata-service/
 weight: 10
-tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
+tags: ["studio pro", "odata service", "consumed odata service"]
 ---
 
 {{% alert color="info" %}}
@@ -127,7 +127,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Service ID** – the unique identifier of the service in the Catalog
 * **Application ID** – the unique identifier of the application that the service was published from in the Catalog
 * **Metadata** – the contents of the metadata file defining the service
-* **OData version** – the OData version: can be OData 3 or OData 4
+* **OData version** – the OData version (can be v3 or v4)
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 

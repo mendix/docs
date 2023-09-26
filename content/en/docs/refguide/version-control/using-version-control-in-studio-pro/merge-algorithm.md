@@ -8,7 +8,7 @@ description: "Describes a merge algorithm and how it resolves conflicts."
 tags: ["merge", "algorithm", "conflict", "resolution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 aliases:
-    - /refguide/new-merge-algorithm.html
+    - /refguide/new-merge-algorithm
 ---
 
 ## 1 Introduction
@@ -36,7 +36,7 @@ Your colleague's new document layout is shown below:
 
 You make the following changes on a branch line:
 
-* You change the text *Home* to *My homepage*
+* You change the text *Home* to *My home page*
 * You add a data grid inside the bottom layout grid
 
 Your page is now laid out as shown below:

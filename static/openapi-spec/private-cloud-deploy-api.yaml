@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.3.0
+  version: 4.5.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -299,9 +299,14 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Deletes a specific environment.
+      description: |-
+        Deletes a specific environment.<br/>
+        This should only be used if your application doesn't have environments deployed in multiple namespaces.<br/>
+        We recommend using the endpoint `Delete Environment for a specified Namespace`.<br/>
+        This endpoint **will be removed in future versions**.
       tags:
         - environments
+      deprecated: true
     put:
       summary: Update Environment
       operationId: update-environment
@@ -316,7 +321,11 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Updates a specific environment based on a manifest.
+      description: |-
+        Updates a specific environment based on a manifest.<br/>
+        This should only be used if your application doesn't have environments deployed in multiple namespaces.<br/>
+        We recommend using the endpoint `Update Environment for a specified Namespace`.<br/>
+        This endpoint **will be removed in future versions**.
       parameters:
         - schema:
             type: string
@@ -335,6 +344,7 @@ paths:
         description: Manifest of an environment.
       tags:
         - environments
+      deprecated: true
   '/apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}':
     parameters:
       - name: appId
@@ -376,8 +386,8 @@ paths:
       tags:
         - environments
     delete:
-      summary: Delete Environment
-      operationId: delete-environment
+      summary: Delete Environment for a specified Namespace
+      operationId: delete-environment-for-a-specified-namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -389,12 +399,12 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Deletes a specific environment.
+      description: Deletes an environment for a specified namespace.
       tags:
         - environments
     put:
-      summary: Update Environment
-      operationId: update-environment
+      summary: Update Environment for a specified Namespace
+      operationId: update-environment-for-a-specified-namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -406,7 +416,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Updates a specific environment based on a manifest.
+      description: Updates an environment based on a manifest for a specified namespace.
       parameters:
         - schema:
             type: string
@@ -1013,7 +1023,9 @@ components:
         - Connected
         - Standalone
       example: Connected
-      description: Model for installationType.
+      description: |-
+        non-editable</br>
+        Model for installationType.
       x-examples:
         example-connected: Connected
         example-standalone: Standalone
@@ -1081,6 +1093,7 @@ components:
                   planName:
                     type: string
                     example: my-db | my-str
+                    description: non-editable
                   planType:
                     $ref: '#/components/schemas/planType'
                   activate:
@@ -1089,6 +1102,7 @@ components:
                   planConfig:
                     type: string
                     example: '"{type:\"database | storage\"}"'
+                    description: non-editable
             enableDevelopmentMode:
               type: boolean
               default: false
@@ -1111,6 +1125,11 @@ components:
                   displayName:
                     type: string
                     example: member name
+                    description: non-editable
+                  autoAcceptInvite:
+                    type: boolean
+                    default: false
+                    description: Can be used to automatically accept the invite for this user.
                   permissions:
                     type: object
                     properties:
@@ -1222,7 +1241,14 @@ components:
                     $ref: '#/components/schemas/invitationStatus'
                   displayName:
                     type: string
-                    example: member name
+                    description: non-editable
+                    example: PrivateCloud User
+                  autoAcceptInvite:
+                    type: boolean
+                    default: false
+                    description: |-
+                      Can be used to automatically accept the invite for this user. <br/>
+                      Can be used <strong>ONLY</strong> for new invites.
                 required:
                   - email
           required:
@@ -1278,7 +1304,7 @@ components:
     invitationStatus:
       title: invitationStatus
       type: string
-      description: Model for the status of the member invite.
+      description: non-editable </br> Model for the status of the member invite.
       example: Invitation_Sent
       enum:
         - Invitation_Sent
@@ -1289,7 +1315,9 @@ components:
     planType:
       title: planType
       type: string
-      description: Model for the database or storage plan type.
+      description: |-
+        non-editable </br>
+        Model for the database or storage plan type.
       enum:
         - OnDemand
         - Dedicated
@@ -1748,6 +1776,7 @@ components:
                       role: Developer
                       status: Invitation_Sent
                       displayName: member name
+                      autoAcceptInvite: false
                       permissions:
                         manageEnvironment: false
                         deployApp: true
@@ -2094,6 +2123,7 @@ components:
             - email: abc@xxx.com
               status: Invitation_Sent
               displayName: member-name e.g John
+              autoAcceptInvite: false
     UpdateNamespaceManifest:
       value:
         manifestVersion: 2.0.0
@@ -2118,6 +2148,7 @@ components:
               role: Developer
               status: Invitation_Sent
               displayName: member name
+              autoAcceptInvite: false
               permissions:
                 manageEnvironment: false
                 deployApp: true

@@ -32,7 +32,7 @@ You can also create environments and deploy and manage apps using the [Mendix fo
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro version 7.23.3 (build 48173) or above.
+* Mendix Studio Pro 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. If you want to change it to Developer mode, the Cluster Manager can do this from the cluster manager page.
 
@@ -42,7 +42,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open the **General Settings** page for your app in the Developer Portal.
+1. Open the **Settings** page for your app in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image2.png" >}}
 
@@ -56,7 +56,7 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
-1. On the **Environments** page for your app in the Developer Portal, click **Create Package From Teamserver**.
+1. On the **Environments** page for your app in the Developer Portal, click **Create Deployment Package**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image9.png" >}}
 
@@ -69,7 +69,7 @@ Before you can create an environment, you will need to create a deployment packa
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image11.png" >}}
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
-5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
+5. Select an environment in **Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
 6. Click **Build this revision.**
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image12.png" >}}
@@ -139,6 +139,11 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
+{{% alert color="info" %}}
+If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection.
+{{% /alert %}}
+
+
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
     {{% alert color="info" %}}
@@ -176,20 +181,28 @@ If creation of the environment fails, then contact your cluster manager. If they
 
 You can deploy the deployment package of your app by doing the following:
 
-1. Click **Deploy** next to the deployment package you wish to deploy.
-2. Confirm the **Target** environment (you can select a different one here if one is available).
+1. Click **Deploy** button provided in **...** section next to the deployment package you wish to deploy.
+2. Select the **Destination** environment by clicking on Change environment (you can select a different one here if one is available).
 3. Confirm that the **Status** is *Ready*.
 4. Click **Transport**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image15.png" >}}
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/constantTab.png" >}}
+
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/scheduledevent.png" >}}
+
 7. Click **Continue** to continue to the Start Application confirmation page.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image16.png" >}}
 
 8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/ApplyChangesPage.png" >}}
 
 You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
 
@@ -510,7 +523,7 @@ On the **Log Levels** tab, you can change the log levels which are used for the 
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/log-levels-tab-1.png" >}}
 
-The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModile.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
+The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModule.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/log-levels-tab-2.png" >}}
 
@@ -561,6 +574,9 @@ You will receive a warning that you have made some changes. Click **Apply Change
 ### 5.7 Debugger
 
 On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/#private-cloud).
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/debuggerTab.png" >}}
+
 
 ## 6 Current Limitations{#limitations}
 

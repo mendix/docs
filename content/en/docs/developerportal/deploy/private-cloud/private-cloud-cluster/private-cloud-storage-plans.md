@@ -766,7 +766,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 * **IRSA Authentication** - Set to **no**.
 * **Create bucket per environment** - Set to **yes**.
-* **Create account (IAM user) per environment** - Set to **no**.
+* **Create account (IAM user) per environment** - Set to **yes**.
 * **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
 * **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - Set to **yes**.
@@ -1350,85 +1350,6 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - Set to **yes**.
 * **Access Key** and **Secret Key** - Credentials for the "admin" user account, used to create or delete environment IAM users.
-
-#### 3.3.7 Create Account with Inline Policy {#s3-create-account-inline-policy}
-
-This automated, on-demand option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
-
-{{% alert color="warning" %}}
-We do not recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments. This option is primarily here for historical reasons.
-
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
-{{% /alert %}}
-
-##### 3.3.7.1 Prerequisites
-
-* An existing S3 bucket
-* An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
-
-    ```json
-    {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Sid": "iamPermissions",
-                "Effect": "Allow",
-                "Action": [
-                    "iam:DeleteAccessKey",
-                    "iam:PutUserPolicy",
-                    "iam:DeleteUserPolicy",
-                    "iam:DeleteUser",
-                    "iam:CreateUser",
-                    "iam:CreateAccessKey"
-                ],
-                "Resource": [
-                    "arn:aws:iam::<account_id>:user/mendix-*"
-                ]
-            }
-        ]
-    }
-    ```
-
-##### 3.3.7.2 Limitations
-
-* Access/Secret keys used by existing environments can only be rotated manually.
-* It is not possible to customize how the inline IAM policy is created.
-
-##### 3.3.7.3 Environment Isolation
-
-* Every environment has its own IAM user.
-* The S3 bucket is shared. 
-    * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
-    * An environment cannot access files from other environments.
-* The Mendix Operator does not need permissions to create new buckets, only to create IAM users and inline policies.
-
-##### 3.3.7.4 Create Workflow
-
-When a new environment is created, the Mendix Operator performs the following actions:
-
-* Generate a new IAM username.
-* Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
-* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
-
-##### 3.3.7.5 Delete Workflow
-
-When an existing environment is deleted, the Mendix Operator performs the following actions:
-
-* (Only if *Prevent Data Deletion* is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
-* Delete that environment's IAM user.
-* Delete that environment's Kubernetes blob file storage credentials secret.
-
-##### 3.3.7.6 Configuring the Plan
-
-In the Amazon S3 plan configuration, enter the following details:
-
-* **IRSA Authentication** - Set to **no**.
-* **Create bucket per environment** - Set to **no**.
-* **Create account (IAM user) per environment** - Set to **yes**.
-* **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
-* **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
-* **Create inline policy** - Set to **yes**.
-* **Access Key** and **Secret Key** - Credentials for the admin user account, used to create or delete environment IAM users.
 
 ### 3.4 Azure Blob Storage {#blob-azure}
 

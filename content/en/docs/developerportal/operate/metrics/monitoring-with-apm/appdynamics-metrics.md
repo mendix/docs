@@ -16,7 +16,7 @@ For support on other cloud deployment options, such as Private Cloud, refer to t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-AppDynamics is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
+AppDynamics is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 {{% /alert %}}
 
 For more information on the data you can send to AppDynamics, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).

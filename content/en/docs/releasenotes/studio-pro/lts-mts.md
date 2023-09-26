@@ -9,7 +9,7 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro version [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
 
 ### 1.1 Major Version {#major-version}
 
@@ -37,7 +37,7 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 
 ### 1.2 Minor Version
 
-In the 9.24.1 example, the second number (**18**) indicates the minor version. 
+In the 9.24.1 example, the second number (**24**) indicates the minor version. 
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 

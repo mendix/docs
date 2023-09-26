@@ -7,10 +7,6 @@ description: "The app development team can utilize Mendix's user-friendly [Mini 
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
 ---
 
-{{% alert color="warning" %}}
-This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
@@ -157,7 +153,7 @@ To create a mini survey, follow these steps:
    * **Conditions** – The conditions you enter here do not affect the mini survey directly. You still need to configure these conditions later in Studio Pro.
      * **Where** – Describe the location where the mini survey appears.
      * **When & How** – Describe what can trigger the mini survey to appear.
-     * **Target User Group (Optional)** – Describe the target user group you would like to reach. Leaving the text box empty means you woud like to reach all users.
+     * **Target User Group (Optional)** – Describe the target user group you would like to reach. Leaving the text box empty means you would like to reach all users.
      * **Attachments (Optional)** – Add attachments if needed. Supported formats are Microsoft Office files, .*pdf*, .*text*, .*png*, and .*jpeg*.
    * **Settings** – The settings in this section take effect immediately. You do not need to implement these settings later in Studio Pro.
      * **Runtime** –  Set the start and end time of the mini survey.
@@ -187,7 +183,7 @@ To edit a mini survey, perform the following steps:
 
 Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 
-# 3.3.1 Obtaining an API Key {#obtain-api-key}
+#### 3.3.1 Obtaining an API Key {#obtain-api-key}
 
 To obtain an API key for the implementation, follow these steps:
 
@@ -232,7 +228,7 @@ A mini survey has the following opt-out rules:
 
 Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you use the **TEST_MODE** constant to avoid clearing every time.
 
-{{% alert color="info" %}}In a future release, we will allow you to customise these opt-out rules from the App Insights portal.{{% /alert %}} 
+{{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 
 ### 3.6 Unfinished Surveys
 

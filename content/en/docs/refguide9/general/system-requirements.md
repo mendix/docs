@@ -26,9 +26,9 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
-    * AdoptOpenJDK 11 (x64) – for Mendix versions below 9.14.0
-    * Adoptium Temurin JDK 11 (x64) – for Mendix versions from 9.14.0 and below 9.18.0
-    * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
+    * AdoptOpenJDK 11 (x64) – for Mendix 9.13 and below
+    * Adoptium Temurin JDK 11 (x64) – for Mendix 9.14 to 9.17
+    * Eclipse Temurin JDK 11 (x64)– for Mendix 9.18 and above
     
     Oracle JDK 11 can also be used if this is already installed.
 * Git for Windows (x64)
@@ -79,7 +79,7 @@ If you want to use TortoiseSVN in combination with Studio Pro, download the late
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.<br />
 <br />
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ### 2.5 File Locations
@@ -170,14 +170,14 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 * Microsoft Windows Server 2008 SP2 and above
 * The following Unix-like operating systems:
-    * Debian 8 (Jessie) and above
+    * Debian OldOldStable (LTS), Debian OldStable, Debian Stable
     * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
     * CentOS 6, CentOS 7
 
 ### 6.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
-* Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
+* Nginx
 * Apache
 
 ### 6.3 Java {#java}
@@ -201,7 +201,7 @@ Current support:
 * [Oracle Database](/refguide9/oracle/): 19, 21c
 * PostgreSQL: 11, 12, 13, 14, 15
 * [SAP HANA](/refguide9/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
+* [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.

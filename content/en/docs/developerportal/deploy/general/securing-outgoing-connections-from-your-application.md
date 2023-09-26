@@ -49,7 +49,7 @@ The rest of the security features of scenario 2 can also be applied.
 
 If a back end service owned by you does not support HTTPS out of the box, you can add a HTTPS reverse proxy server such as NGINX or HAProxy in front of it. This HTTPS reverse proxy can optionally also act as a firewall and can be deployed in a highly available way.
 
-Migrations of back-end services within your data center can be done transparently by decoupling it from the public address of your service. The app in the Mendix Cloud simply connects to an HTTPS endpoint.
+Migrations of back-end services within the same region can be done transparently by decoupling it from the public address of your service. The app in the Mendix Cloud simply connects to an HTTPS endpoint.
 
 {{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399044.png" >}}
 

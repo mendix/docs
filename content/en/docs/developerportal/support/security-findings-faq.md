@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 
@@ -173,9 +173,9 @@ We cannot remove these files from Mendix 7 as some customers might have included
 
 Support for Mendix 7 will be ending with the release of Mendix 10 in the summer of 2023. If you are still concerned about this report, you can upgrade to a later version of Mendix, which does not have these bootstrap files.
 
-#### 8.4.1 Bootstrap Vulnerabilities in Mendix Version 8 and Above
+#### 8.4.1 Bootstrap Vulnerabilities in Mendix 8 and Above
 
-In Mendix version 8 and above the Bootstrap JavaScript files have been removed. All Bootstrap styling has been moved to the Mendix AtlasUI themes.
+In Mendix 8 and above, the Bootstrap JavaScript files have been removed. All Bootstrap styling has been moved to the Mendix AtlasUI themes.
 
 If there still is a security finding in the your project, you may be using the Bootstrap library in your custom theme.
 We would therefore suggest that you do one of the following:
@@ -206,7 +206,7 @@ The Mendix Client is bundled with the full dojo library. However, not all functi
 
 #### 8.6.2 Prototype Pollution Vulnerability - CVE-2021-23450
 
-Mendix versions 9.11.0 and above use Dojo 1.16.4. The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
+Mendix 9.11.0 and above uses Dojo 1.16.4. The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
 
 ### 8.7 BREACH Attacks
 

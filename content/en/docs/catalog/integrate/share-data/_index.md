@@ -2,7 +2,7 @@
 title: "Share Data Between Apps"
 url: /catalog/share-data/
 description: "Describes how to publish and register a simple data asset to the Catalog from Studio Pro and create a new app that consumes this asset."
-tags: ["Catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
+tags: ["data hub", "Catalog", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 weight: 10
 aliases:
     - /catalog/use-data-catalog.html
@@ -29,7 +29,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install Mendix Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating an App {#createapp} 
 
@@ -60,7 +60,7 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 
 You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. 
 
-Go ahead and customize the homepage further by changing the banner text.
+Go ahead and customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 

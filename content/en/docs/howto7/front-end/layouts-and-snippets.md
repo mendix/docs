@@ -26,7 +26,7 @@ When you look at a page, you can see that a page consists of two important compo
 * Layout – the structure of the page (just like PowerPoint has one or more layout presets)
 * Content – what is displayed within the structure of the page
 
-While modeling the pages, you select a layout when a page is created.
+While modeling the pages, you can select a layout when a page is created.
 
 ### 2.2 The Value of Layouts
 
@@ -168,8 +168,8 @@ When a user visits a Mendix application, they are automatically redirected to th
 For more information on navigation profiles, see the following for reference:
 
 * [Navigation in Mendix 7.4 and Above](/refguide7/navigation/)
-* [Navigation in Mendix Versions 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
-* [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72/)
+* [Navigation in Mendix 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
+* [Navigation Before Mendix 7.2](/refguide7/navigation-before-72/)
 * [Solving Issues with Navigation Profile Conversion to 7.4](/refguide7/navigation-conversion-to-74/)
 
 ### 5.7 Menu Document

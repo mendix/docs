@@ -56,7 +56,7 @@ This is the Mendix app in mda format, which defines the app in a way which can b
 
 ### 2.8 CDN
 
-This data repository stores components of the deployment process such as versions of the Mendix Runtime and Mx Build.
+This data repository stores components of the deployment process such as versions of the Mendix Runtime and MxBuild.
 
 ### 2.9 Java RE
 

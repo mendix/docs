@@ -53,7 +53,7 @@ Access to the data is through the published REST OData service, with reading, qu
 The following operations are affected by using external entities in a consuming app:
 
 * Aggregations – you can count a list of external entities, but you cannot show other aggregations such as sum, average, minimum, and maximum.
-    * [OData version 3.0](https://www.odata.org/documentation/odata-version-3-0/) does not support these operations; the only exception is that you can use the [aggregate list](/refguide/aggregate-list/) microflow activity, which for all aggregations except **Count** will retrieve everything and perform the aggregation in memory
+    * [OData v3.0](https://www.odata.org/documentation/odata-version-3-0/) does not support these operations; the only exception is that you can use the [aggregate list](/refguide/aggregate-list/) microflow activity, which for all aggregations except **Count** will retrieve everything and perform the aggregation in memory
 * [XPath](/refguide/xpath/) – you can use XPath to filter external entities; all XPath constructs are supported, except the following:
     * Three conversions from date/time: `day-of-year-from-dateTime`, `weekday-from-dateTime`, and `week-from-dateTime`
     * Aggregations: `avg()`, `max()`, `min()`, and `sum()`

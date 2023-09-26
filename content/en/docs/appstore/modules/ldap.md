@@ -56,7 +56,7 @@ The LDAP module also has the following features if SSO via SAML or OIDC is not p
 
 ### 1.3 Dependencies
 
-This module is dependent on the following additional modules – make sure they are also present in your app project and configured properly:
+This module is dependent on the following additional modules – make sure they are also present in your app and configured properly:
 
 * [Community Commons Functions Library](/appstore/modules/community-commons-function-library/)
 * [Encryption](/appstore/modules/encryption/)
@@ -96,7 +96,7 @@ You can also perform a manual synchronization at any time using the **Sync Users
 
 ### 3.2 Basic Configuration
 
-After enabling LDAP in your app project, you need configure it to work with your LDAP server. This is done using various pages within the app to fill in the required information.
+After enabling LDAP in your app, you need configure it to work with your LDAP server. This is done using various pages within the app to fill in the required information.
 
 Configure your app by doing the following:
 

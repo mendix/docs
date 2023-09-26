@@ -18,8 +18,14 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 ## 2 Features
 
 * Supports connecting your Mendix app to Jira
+* Supports both Scrum and Kanban boards
 * Enables you to migrate open stories (stories in any uncompleted Sprint or backlog, with the status "to-do" or "running") from the Developer Portal to Jira
 * Allows you to associate your commits in Studio Pro (version 7.19 or above) to Jira stories
+
+    * In case of a Scrum board, the Stories pane shows all stories from all your active Sprints, ordered by the Rank attribute
+    * In case of Kanban board, the Stories pane shows all stories from your board, taking the sub-query of the board settings into account, ordered by the Rank attribute
+
+* Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira
 
 ## 3 Limitations
 
@@ -27,11 +33,9 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 As we further develop this feature, we may lift these limitations with future releases.
 {{% /alert %}}
 
-* Feedback issues and stories from Epics are not migrated to Jira.
-* Feedback issues accepted in the Developer Portal will not result in a story in your Jira board.
+* Feedback issues, and stories from Epics are not migrated to Jira.
+* The Stories pane in Studio Pro does not show the status and story points of a story correctly.
 * You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
-* The Stories pane only shows Jira issue types "Story" or "Bug".
-* The Stories pane does not show the status and story points of a story correctly.
 
 ## 4 Prerequisites
 
@@ -39,6 +43,7 @@ As we further develop this feature, we may lift these limitations with future re
 * You need to have an active subscription to Jira.
 * You need to have a project in Jira with a Scrum board or a Kanban board.
 * You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+* To convert feedback items to stories in Jira, your project in Jira must have the issue types "Story" and "Bug". For more information on how to set up issue types for your project, see [Associate issue types with projects](https://support.atlassian.com/jira-cloud-administration/docs/associate-issue-types-with-projects/).
 
 ## 5 Procedure
 

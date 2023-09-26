@@ -44,7 +44,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
 
 {{% alert color="info" %}}Once the start time of the mini survey is reached, the mini survey will start running, and all the target users of the mini survey will receive the survey automatically.{{% /alert %}}
 
- ## 4 FAQ {#faq} 
+## 4 FAQ {#faq} 
 
 ### 4.1 How to Use a Constant Variable for Survey ID to Show a Survey? 
 
@@ -73,7 +73,8 @@ If your app uses a master layout page and many child pages. You can place one Mi
 ### 4.5 What Are the Survey Opt-Out Rules? {#survey-rules} 
 
 A mini survey has the following opt-out rules: 
- * If a user has closed a survey, without answering any questions, then the survey will not show again to this user.
+
+* If a user has closed a survey, without answering any questions, then the survey will not show again to this user.
 
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 

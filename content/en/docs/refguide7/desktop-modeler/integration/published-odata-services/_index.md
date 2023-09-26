@@ -13,7 +13,7 @@ In the Modeler, entities can be exposed as [OData resources](/refguide7/publishe
 
 ## 2 OData Version
 
-The standard used for OData in Mendix is [OData version 3](http://www.odata.org/documentation/odata-version-3-0)) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+The standard used for OData in Mendix is [OData v3](http://www.odata.org/documentation/odata-version-3-0)) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
 ## 3 Query Options
 

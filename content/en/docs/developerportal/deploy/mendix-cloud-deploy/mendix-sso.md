@@ -49,7 +49,7 @@ Click **Authorize** to continue using Mendix SSO with this app. After authorizin
 
 ### 2.2 Assigning End-User Roles
 
-Give end-users access to your app through the [Manage App Users](/developerportal/collaborate/general-settings/#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General Settings** page of your app.
+Give end-users access to your app through the [Access Management](/developerportal/collaborate/general-settings/#managing-app-users) tab on the *Settings* page in the Developer Portal.
 
 {{% alert color="warning" %}}
 Do not attempt to add or delete Mendix SSO users using administration functions within the app. If user access is not modified through the Developer Portal, then user access to your app will not be changed.

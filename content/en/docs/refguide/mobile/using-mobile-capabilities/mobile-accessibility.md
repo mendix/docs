@@ -16,7 +16,7 @@ This guide only applies to native mobile apps.
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro version **9.22.0** or above
+* Install Mendix Studio Pro [9.22.0](/releasenotes/studio-pro/9.22/) or above
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/)
 

@@ -38,7 +38,13 @@ Any of the following changes are interpreted as non-conflicting:
     * Changing a referenced page in a user task
     * Changing user assignment or user assignment option in a user task
     * Changing due dates of a user task
-* Adding outcomes in a **Decision**, **Call microflow** or **User task** activities
+    * Changing the **Targeted users** settings or the **Completion condition** settings of a multi-user task, resulting in a different number of required participants
+    * Changing the type of decision method in a multi-user task
+    * changing the settings of a decision method in a multi-user task, resulting in a different final outcome than before (except when the [Microflow decision method](/refguide/multi-user-task/#microflow) is chosen, becasue then we cannot detect a conflict)
+
+        {{% alert color="info" %}} For the changes mentioned above that relate to a multi-user task, they only apply if the multi-user task already has at least one selected outcome. If not, anything can be changed without a conflicting resulting. {{% /alert %}}
+
+* Adding outcomes in **Decision**, **Call microflow** or **User task** activities
 * Changing the context entity, referenced microflows, referenced pages, or referenced workflows
 
 ### 3.2 Workflow Versioning Conflict Types
@@ -49,7 +55,7 @@ The Workflow Versioning Conflict Detection system detects different types of con
 
 Conflicts with the possible mitigations listed above can be summarized in the following matrix (you can see details for each conflict in the sections below):
 
-| **Conflict Type/Mitigation**                        | **Abort**                                                    | **Restart**                                                  | **Mark-As-Resolved**                                         | **Jump To Different Activities**                             |
+| **Conflict Type/Mitigation**                        | **Abort**                                                    | **Restart**                                                  | **Mark-as-Resolved**                                         | **Jump To Different Activities**                             |
 | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | *Non-resolvable:*                                   |                                                              |                                                              |                                                              |                                                              |
 | Context Entity Replaced                             | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
@@ -57,14 +63,15 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Workflow Definition Deleted                         | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
 | *Partially resolvable*:                             |                                                              |                                                              |                                                              |                                                              |
 | Current Activity Removed                            | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
-| Parallel Split Branch Removed                       | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | Current Activity Moved out of Branch                | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | Parallel Split Introduced in Executed Path          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | *Resolvable*:                                       |                                                              |                                                              |                                                              |                                                              |
 | Parallel Branch Introduced                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          |
 | Selected Outcome Replaced                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
+| Multi-User Task Outcome Changed                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Activities Introduced in Executed Path              | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Executed Activities Moved to Re-executable Position | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
+| Parallel Split Branch Removed                       | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 
 #### 3.2.2 Context Entity Replaced
 
@@ -72,7 +79,7 @@ When an app developer changes the **Workflow Context** entity of a workflow, exi
 
 You can do one of the following: 
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
@@ -88,7 +95,7 @@ This conflict may occur even without deploying a new app version.
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 
 #### 3.2.4 Workflow Definition Deleted
@@ -97,7 +104,7 @@ When an app developer deletes a workflow or excludes a workflow from an app and 
 
 You can do one of the following: 
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can revert the change (or include the workflow to the app again) and deploy it.
 
 #### 3.2.5 Current Activity Removed
@@ -106,8 +113,8 @@ When an app developer removes certain activities from a workflow and deploys tha
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The Administrator can apply jumping to different activities. The Workflow Commons module has pages where the Administrator can decide which activity in the workflow to continue from (which activity to jump to). As a developer, you can also use microflow activities [Generate jump-to options](/refguide/generate-jump-to-options/) and [Apply jump-to option](/refguide/apply-jump-to-option/) to build custom pages and logic to migrate running workflow instances.
 * The app developer can revert the change (which adds the activities back) and deploy this version.
 
@@ -115,14 +122,11 @@ You can do one of the following:
 
 When an app developer removes a branch from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that branch cannot continue execution. 
 
-{{% alert color="info" %}}
-This conflict happens in most cases in combination with a Current Activity Removed conflict.
-{{% /alert %}}
-
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed branch will be aborted).
 * The app developer can revert the change (which adds the branch back) and deploy it.
 
 #### 3.2.7 Current Activity Moved out of Branch
@@ -131,8 +135,8 @@ When an app developer moves activities out of a branch of a **Parallel Split**, 
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.8 Parallel Split Introduced in Executing Path
@@ -141,8 +145,8 @@ When an app developer adds a **Parallel Split** with one or more branches and mo
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
 
 #### 3.2.9 Parallel Branch Introduced
@@ -151,9 +155,9 @@ When an app developer adds a branch to a **Parallel Split** and deploys this cha
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.10 Selected Outcome Replaced
@@ -162,29 +166,40 @@ When an app developer adds a new outcome to a user task, a microflow, or a decis
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.11 Activities Introduced in the Executed Path
+#### 3.2.11 Multi-User Task Outcome Changed
+
+When an app developer changes the decision method of a multi-user task, or some of its settings, the multi-user task could have a different outcome from that before the change. This may not necessarily be a problem, but it might be and needs to be assessed.
+
+You can do one of the following:
+
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
+* The app developer can revert the change (which moves the activity back) and deploy this version.
+
+#### 3.2.12 Activities Introduced in the Executed Path
 
 When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.12 Executed Activities Moved to a Re-executable Position
+#### 3.2.13 Executed Activities Moved to a Re-executable Position
 
 When an app developer moves activities within a workflow, workflow instances that have executed or are executing the moved activities may have to re-execute these activities. In this case user tasks or microflows may have to be re-executed. If actions are non-idempotent, changes may happen more than once (for example, object creation or sending data to external systems).
 
 You can do one of the following:
 
-* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.

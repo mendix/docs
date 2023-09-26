@@ -43,7 +43,7 @@ The new features were divided into these major themes, which are described in th
 | MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
-| Managed Java dependencies | Released for GA [Sept 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
+| Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
 | Insights into commits by peers| GA: Q3 2023 |
 | Rich design properties | GA: Q3 2023 |
 | Visual data filters | GA: Q4 2023 |

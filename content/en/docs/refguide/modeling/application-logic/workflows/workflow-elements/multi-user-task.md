@@ -286,7 +286,7 @@ If no decision can be taken yet based on the selected outcomes, the microflow sh
 The multi-user task completes as soon as a non-empty outcome is returned, unless the [Completion moment](#completion-moment) has been set to **When all participants completed their task**.
 
 {{% alert color="warning" %}}
-When all required participants (based on the [Completion condition](#completion-condition)) have completed their task and the microflow still returns an empty value, the workflow is marked as failed. To prevent this from happening, it is suggested to check this in the microflow. For example, When the number of selected outcomes equals to the number of required participants, then a fallback outcome is returned. 
+When all required participants (based on the [Completion condition](#completion-condition)) have completed their task and the microflow still returns an empty value, the workflow is marked as failed. To prevent this from happening, it is suggested to check this in the microflow. For example, when the number of selected outcomes equals to the number of required participants, then a fallback outcome is returned. 
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" >}}

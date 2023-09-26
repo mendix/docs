@@ -380,11 +380,11 @@ Define a resource model using [non-persistable entities](/refguide/persistabilit
 
 Refer to the [example domain model](#starting-domain-model) for this section.
 
-In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the *Firstname* and *Lastname* attributes into a single attribute, *Fullname*. Provide the home address information and exclude other address types:
+In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the **Firstname** and **Lastname** attributes into a single attribute, **Fullname**. Provide the home address information and exclude other address types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
 
-1. Add the *CustomerHomeAddress* entity as a resource to the OData service:
+1. Add the **CustomerHomeAddress** entity as a resource to the OData service:
 
 2. Use an OQL dataset to define the query to fetch this information from your entities:
 
@@ -420,7 +420,7 @@ In this example, you can expose a single REST resource that combines data from t
 
 ### 6.3 Defining Logic in an Insert Microflow
 
-How do you provide logic in a REST API if REST best practices specify that you should only use the default CRUD operations?
+How do you provide logic in a REST API if REST best practices specify that you should only use the default CRUD (create, read, update, delete) operations?
 
 Consider the input parameters of your logic as the REST resource. In this way, executing logic can be modeled by handling the logic in the insert microflow. This allows you to execute the logic when a client `POSTs` a new resource to your API. 
 

@@ -26,6 +26,8 @@ Java managed dependencies are available in Mendix version 10.3.0 and above.
 
 You can add managed dependencies for each module on the **Java Dependencies** tab. See [Managed Dependencies](/refguide/managed-dependencies/) for more information.
 
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-java-dependencies.png" >}}
+
 ## 3 Export
 
 {{% alert color="warning" %}}
@@ -34,7 +36,7 @@ Access to this functionality is currently limited and can be gained through the 
 
 Select the **Export** tab:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-export.png" >}}
 
 ### 3.1 Module Type {#module-type}
 

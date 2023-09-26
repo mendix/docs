@@ -219,7 +219,7 @@ Imagine you have an ordering system where the products are sorted into categorie
 *Example Domain model*
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
 
-In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
+In the domain model, the order line has one-to-many associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
 {{% alert color="info" %}}
 Such a triangle-shaped part of the domain model is what makes using **constrained by** possible.

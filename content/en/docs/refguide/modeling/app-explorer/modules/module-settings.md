@@ -6,21 +6,39 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+{{% alert color="info" %}}
+In Mendix version 10.3.0 and above, there are two tabs, **Java Dependencies** and **Export**. In earlier versions, the content of the **Export** tab is the only content of the dialog box.
 {{% /alert %}}
 
 ## 1 Introduction
 
-Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
+Module settings allow you to set Java managed dependencies, choose the type of the module, and set a version for certain module types.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
-
-To open module settings, select the module in the App Explorer and double-click **Settings**:
+To open module settings, double-click **Settings** in the required module.
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/settings.png" >}}
 
-## 2 Module Type {#module-type}
+## 2 Java Dependencies
+
+{{% alert color="info" %}}
+Java managed dependencies are available in Mendix version 10.3.0 and above.
+{{% /alert %}}
+
+You can add managed dependencies for each module on the **Java Dependencies** tab. See [Managed Dependencies](/refguide/managed-dependencies/) for more information.
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-java-dependencies.png" >}}
+
+## 3 Export
+
+{{% alert color="warning" %}}
+Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+{{% /alert %}}
+
+Select the **Export** tab:
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-export.png" >}}
+
+### 3.1 Module Type {#module-type}
 
 There are three different types of modules and the choice of the type depends on the purpose of the module. You can choose one the following:
 
@@ -28,13 +46,13 @@ There are three different types of modules and the choice of the type depends on
 * [Add-on module](#add-on-module)
 * [Solution Module](#solution-module)
 
-### 2.1 App Module {#app-module}
+#### 3.1.1 App Module {#app-module}
 
 **App module** is a standard way of structuring your app. Use app modules to distinguish between functional domains: create an app module for each relevant domain and put all pages, microflows, entities, and other documents in one place.
 
 An **App module** is exported as a package file (*.mpk* ) that includes the full source code of the module.
 
-### 2.2 Add-on Module {#add-on-module}
+#### 3.1.2 Add-on Module {#add-on-module}
 
 An **add-on module** is a stand-alone module that is not dependent on other modules and is used as a separate element, for example, as a connector. 
 
@@ -44,13 +62,13 @@ If you are creating functionality that can be exported and used by other users s
 
 When the module is set as the add-on module, it gets the letter A as an icon.
 
-### 2.3 Solution Module {#solution-module}
+#### 3.1.3 Solution Module {#solution-module}
 
 **Solution modules** are only used for developing a solution and are an inseparable part of it. Set of solution modules used for the solution form the **solution core**. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information on solutions, see [Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
 When the module is set as the solution module, it gets the letter S as an icon.
 
-## 3 Module Version
+### 3.2 Module Version
 
 {{% alert color="info" %}}
 This setting is available for only add-on and solution module types.
@@ -58,9 +76,9 @@ This setting is available for only add-on and solution module types.
 
 A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-We recommend setting a new version every time changes are made to the module. 
+We recommend setting a new version every time changes are made to the module.
 
-## 5 Read More
+## 4 Read More
 
 * [Modules](/refguide/modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)

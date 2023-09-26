@@ -45,7 +45,7 @@ The new features were divided into these major themes, which are described in th
 | PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
 | Insights into commits by peers| GA: Q3 2023 |
 | Rich design properties | GA: Q3 2023 |
-| Visual data filters | GA: Q3 2023 |
+| Visual data filters | GA: Q4 2023 |
 | Managed Java dependencies | GA: Q4 2023 |
 | Mendix Chat | GA: Q4 2023 |
 | Mixed online and offline data | GA: Q4 2023 |

@@ -29,7 +29,7 @@ Click **Select…** and check the modules you want to work on.
 
 The default is to work on all modules in the app.
 
-### 2.2 Source Text Contains
+### 2.2 Search
 
 To search for a particular phrase in the source language text, type what you want to search for. It is not possible to search for text in the destination language.
 

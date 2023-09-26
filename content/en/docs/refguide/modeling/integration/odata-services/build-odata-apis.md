@@ -329,7 +329,7 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expand-expression.png" >}} 
 
-You can use select and expand in combination with filters, sorting, top, and skip. For more information, see the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section below. 
+You can use `select` and `expand` in combination with `filter`, `orderby`, `top`, and `skip`. For more information, see the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section below. 
 
 See the following `GET` request:
 

@@ -67,7 +67,7 @@ Most dependencies can be managed using the managed dependencies feature. However
 
 When you have created a module that contains `.jar` files in the `userlib` folder, the best practice is to port these to managed dependencies if the `.jar`s are available in a Maven repository. Add the specified dependency to your module and simply remove the old `.jar` file from the `userlib` folder to prevent a conflict.
 
-Platform-supported Marketplace modules created by Mendix have been updated with a custom mechanism to automatically migrate to managed dependencies. Each module with Java dependencies contains a migration file that cleans up specific files from the `userlib` folder and adds them as managed dependencies.
+Platform-supported Marketplace modules created by Mendix have been updated with a custom mechanism to automatically migrate to managed dependencies.
 
 ## 6 Custom Repositories{#custom-repos}
 
@@ -100,20 +100,14 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
     * Check whether you specified the correct **Group ID**, **Artifact ID**, and **Version**. These are case-sensitive.
     * If you are using a [custom repository](#custom-repos), check whether the dependency exists in the repository.
 
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/unknown-dependency.png" >}}
-
 2. CE9806 – Unable to reach repository / mis-configuration of custom repository.
 
     * Check that **Repositories** are configured if [**Use custom repositories**](#custom-repos) is set to *Yes*.
-
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/unknown-repositories.png" >}}
 
 3. CE9805 – Network connection failure.
 
     * Check that you have a working internet connection.
     * If you are using a [custom repository](#custom-repos), check that the repository can be reached.
-
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/unknown-host.png" >}}
 
 4. CE9803 – Any failure which is not covered in the above scenarios.
 

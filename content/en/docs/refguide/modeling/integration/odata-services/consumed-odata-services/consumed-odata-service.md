@@ -39,7 +39,7 @@ The **Service URL** displays the URL of the service endpoint:
 
 ### 2.2 Timeout
 
-**Timeout** is the response time for fetching data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows/).
+**Timeout** is the response time for fetching data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows).
 
 Default value: *300 seconds*
 
@@ -92,7 +92,7 @@ To learn more about using external entities with security enabled (in production
 
 ### 2.6 Error Handling Microflow
 
-When a call to the OData service fails, users will see a generic error message. Create an [error-handling microflow](refguide/error-handling-in-microflows/) to change this message.
+When a call to the OData service fails, users will see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows) to change this message.
 
 When the service responds with an unsuccessful status code (not in the 2xx range), or does not return a response at all, this microflow decides which message to show to the user.
 

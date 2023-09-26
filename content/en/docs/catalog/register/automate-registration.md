@@ -32,7 +32,7 @@ You can also find *dependencies.json* in **Deployment** > **Model** folder of yo
 
 ## 4 Change the Data Structure {#transform}
 
-Ensure your contract metadata will be accepted by transforming *dependencies.json* using the **Transform** endpoint of the Registration API (see the [Registration API](apidocs-mxsdk/apidocs/catalog-apis/) section in *Catalog APIs*).
+Ensure your contract metadata will be accepted by transforming *dependencies.json* using the **Transform** endpoint of the Registration API (see the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis) section in *Catalog APIs*).
 
 For this section, you will need:
 

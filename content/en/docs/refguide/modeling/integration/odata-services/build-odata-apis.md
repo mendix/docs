@@ -37,7 +37,7 @@ REST APIs, and especially OData APIs, often provide access to data within the ap
 
 ## 2 Creating OData APIs {#creating-odata-apis}
 
-Create OData APIs by right-clicking on an entity > **Expose as OData resource** or right clicking on a module > **Add other** > **Published OData service**. 
+Create OData APIs by right clicking on an entity > **Expose as OData resource** or right clicking on a module > **Add other** > **Published OData service**. 
 
 ### 2.1 Published OData Service Document
 
@@ -262,7 +262,7 @@ The response is as follows:
 
 You can generate and reuse generated validation microflows. The following example shows a validation microflow for the customer entity. 
 
-1. On a save button, right-click and select **Generate validation microflow**. The resulting validation microflow looks like this:
+1. On a save button, right click and select **Generate validation microflow**. The resulting validation microflow looks like this:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
 

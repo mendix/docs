@@ -93,7 +93,7 @@ Follow these guidelines and conventions when writing:
 * Make sure the Markdown file name reflects the the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
 * Name the Markdown and image files in lower-case with a hyphen (`-`) between each word, and do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * When creating screenshots:
-    * Make sure the resolution of your screen is 100% (or a multiple thereof) so that you do not get artifacts that cauze fuzziness
+    * Make sure the resolution of your screen is 100% (or a multiple thereof) so that your images are sharp
     * Focus on the part of screen that contains the information you need so that the browser does not have to shrink the image when it displays it, and crop the image closely
     * Make sure the image file has a name that makes sense so it is easy to find it
     * Save the image as a *.png* (preferred), *.jpg*, or *.gif* file

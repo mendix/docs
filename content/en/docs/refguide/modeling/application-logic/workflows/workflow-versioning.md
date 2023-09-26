@@ -63,7 +63,6 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Workflow Definition Deleted                         | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
 | *Partially resolvable*:                             |                                                              |                                                              |                                                              |                                                              |
 | Current Activity Removed                            | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
-| Parallel Split Branch Removed                       | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | Current Activity Moved out of Branch                | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | Parallel Split Introduced in Executed Path          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | *Resolvable*:                                       |                                                              |                                                              |                                                              |                                                              |
@@ -72,6 +71,7 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Multi-User Task Outcome Changed                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Activities Introduced in Executed Path              | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Executed Activities Moved to Re-executable Position | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
+| Parallel Split Branch Removed                       | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 
 #### 3.2.2 Context Entity Replaced
 
@@ -122,14 +122,11 @@ You can do one of the following:
 
 When an app developer removes a branch from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that branch cannot continue execution. 
 
-{{% alert color="info" %}}
-This conflict happens in most cases in combination with a Current Activity Removed conflict.
-{{% /alert %}}
-
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed branch will be aborted).
 * The app developer can revert the change (which adds the branch back) and deploy it.
 
 #### 3.2.7 Current Activity Moved out of Branch

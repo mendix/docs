@@ -43,9 +43,7 @@ Sonatype’s [Maven Central Repository](https://central.sonatype.com/) is a good
 
 After finding the package of your choice, locate the Snippets part, containing the identifier:
 
-{{% todo %}}Need to ask Leroy for the SS{{% /todo %}}
-
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" >}}
 
 ## 3 Dependency Synchronization
 

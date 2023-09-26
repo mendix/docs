@@ -12,7 +12,7 @@ In Mendix version 10.3.0 and above, there are two tabs, **Java Dependencies** an
 
 ## 1 Introduction
 
-Module settings allow you to set Java managed dependencies, choose the type of the module when you build your app, and set a version for certain module types.
+Module settings allow you to set Java managed dependencies, choose the type of the module, and set a version for certain module types.
 
 To open module settings, double-click **Settings** in the required module.
 

@@ -3,7 +3,7 @@ title: "Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
-description: "Creating a Webhook to trigger actions from the Mendix cloud"
+description: "Creating a webhook to trigger actions from the Mendix cloud"
 tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
@@ -13,14 +13,14 @@ Webhooks allow you to send information about your licensed Mendix app deployed t
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
-* On package upload – when a deployment package is available in the Developer Portal — this includes creating a package from the Team Server
-* Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
+* Package upload – when a deployment package is available in the Developer Portal, including when a package is created from the Team Server
+* Team Server push – when a new commit is pushed to the Team Server (will only be triggered if your app is stored in a Git repository)
 * Alerts - when an alert is triggered for your Mendix app
 
-The webhooks contain a retry mechanism if an error response is received from the endpoint to ensure that the trigger reaches the endpoint.
+The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 
 {{% alert color="info" %}}
-Webhooks are only available for licensed Mendix apps which are deployed to the Mendix Cloud or Mendix for Private Cloud.
+Webhooks are only available for licensed Mendix apps that are deployed to the Mendix Cloud or Mendix for Private Cloud.
 
 They are set up and work independently of the deprecated [webhooks for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
 {{% /alert %}}
@@ -32,48 +32,45 @@ They are set up and work independently of the deprecated [webhooks for Sprints a
 To set up a webhook, do the following:
 
 1. Open your app in the Developer Portal.
-1. Open the **Webhooks** page from the left-hand menu.
-
-    You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
-
+1. Open the **Webhooks** page from the menu on the left. You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:
-    * **Webhook Name** – a name, so you can identify the webhook
-    * **URL** – the endpoint which will receive the payload when one of the event types selected in **Available Events** occurs
-    * **Validation Secret** – a secret which is shared with the endpoint to verify that it has been triggered by this webhook — see [Verifying Your Webhook](#verify-webhook), below for more information. If you leave this blank, a secret will be generated automatically for you — you can see the generated value if you go back in to edit the webhook.
-    * **Available Events** – the event or events which will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below
-    * **Custom Headers** – a **Key**/**Value** pair which is sent as an HTTP header to the endpoint
+    * **Webhook Name** – This is a name, so you can identify the webhook.
+    * **URL** – This is the endpoint that will receive the payload when one of the event types selected in **Available Events** occurs.
+    * **Validation Secret** – This is a secret that is shared with the endpoint to verify that it has been triggered by this webhook. For more information, see [Verifying Your Webhook](#verify-webhook) below. If you leave this blank, a secret will be generated automatically for you; you can see the generated value if you return to edit the webhook.
+    * **Available Events** – This is the event (or events) that will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below.
+    * **Custom Headers** – This is a **Key**/**Value** pair that is sent as an HTTP header to the endpoint.
 
-You can edit or delete an existing webhook by clicking the ellipsis, **…**, in the **Action** column for the webhook you want to change and then select **Edit Webhook** or **Delete Webhook**.
+You can edit or delete an existing webhook by clicking the ellipsis (`...`) in the **Action** column for the webhook you want to change and then selecting **Edit Webhook** or **Delete Webhook**.
 
 ### 2.2 Editing an Existing Webhook
 
-If you select **Edit Webhook** from the ellipsis, **…**, in the **Action** column for a webhook you want to change, you have the following actions available to you:
+If you select **Edit Webhook** from the ellipsis (`...`) in the **Action** column for a webhook you want to change, the following actions are available:
 
-* You can update **Webhook Name**, **URL**, and **Validation Secret** — click **Save** to save the changes.
-* You can add or delete **Custom Headers** — click **Save** to save the changes.
+* Update **Webhook Name**, **URL**, or **Validation Secret**, and click **Save** to save the changes.
+* Add or delete **Custom Headers**, and click **Save** to save the changes.
 
     {{% alert color="info" %}}You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.{{% /alert %}}
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
-* Click **(De)activate Webhook** to switch deactivate an active webhook or activate an inactive webhook.
+* Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
 * Click **Delete Webhook*** to completely remove the webhook.
 
 ## 3 Webhook Headers
 
-Every POST payload contains the following delivery information as part of the header:
+Every `POST`` payload contains the following delivery information as part of the header:
 
-* **connection** – `close`, indicating that there is no further information for this HTTP request
-* **content-length** – the size of the HTTP request in bytes, for example `475`
-* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>`, for example `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=` — see [Verifying Your Webhook](#verify-webhook), below for more information
-* **webhook-id** – a unique identifier for this webhook trigger, for example `msg_2M605iBQRge9hTgpYg7fKXQubaw`
-* **user-agent** – the user agent used to process this trigger.
-* **webhook-timestamp** – the time the webhook was triggered, for example `1677072542`
+* **connection** – `close`, indicating that there is no further information for the HTTP request
+* **content-length** – the size of the HTTP request in bytes (for example, `475`)
+* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>` (for example, `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`); for more information, see [Verifying Your Webhook](#verify-webhook) below
+* **webhook-id** – a unique identifier for this webhook trigger (for example, `msg_2M605iBQRge9hTgpYg7fKXQubaw`)
+* **user-agent** – the user agent used to process this trigger
+* **webhook-timestamp** – the time the webhook was triggered (for example, `1677072542`)
 * **content-type** – `application/json`
 * **accept** – `*/*`
-* **host** – the host part of the endpoint URL, for example `gitlab.com`
+* **host** – the host part of the endpoint URL (for example, `gitlab.com`)
 
-In addition, you can add your own custom headers. See [Setting Up a Webhook](#setting-up) for more information.
+You can also add your own custom headers. For more information, see [Setting Up a Webhook](#setting-up).
 
 {{% alert color="info" %}}
 The order of these headers is not guaranteed.
@@ -83,53 +80,49 @@ The order of these headers is not guaranteed.
 
 You will want to verify that your endpoint has received a payload from Mendix and that the request has not been generated or intercepted by a bad actor. 
 
-This verification is enabled through the `webhook-signature` which is sent in the webhook header. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
+This verification is enabled through the **webhook-signature** that is sent in the webhook header. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
-To verify the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. In general, this is done as follows:
+To verify the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. This is the general process:
 
-1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
+1. Construct a string containing the signed content, which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full stop (`.`) between each element.
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
-1. Ensure the result is base64 encoded.
-
-    For example, in a bash script this might be:
+1. Ensure the result is base64 encoded. For example, in a bash script, this might be as follows:
 
     ```bash {linenos=false}
-    WEBHOOK_ID=# from the header
-    WEBHOOK_TIMESTAMP=# from the header
-    PAYLOAD=# payload of the message
-    VALIDATION_SECRET=# set when creating the webhook in the Developer Portal
+    WEBHOOK_ID= #from the header
+    WEBHOOK_TIMESTAMP= #from the header
+    PAYLOAD= #payload of the message
+    VALIDATION_SECRET= #set when creating the webhook in the Developer Portal
 
-    # to generate the signature:
+    #to generate the signature:
     printf '%s.%s.%s' "$WEBHOOK_ID" "$WEBHOOK_TIMESTAMP" "$PAYLOAD" | openssl dgst -sha256 -binary -hmac "$VALIDATION_SECRET" | openssl base64
     ```
 
-1. Compare **calculated-signature** with **webhook-signature** to ensure that they match. Note that the **webhook-signature** is prefixed by a version and a delimiter. For example, the signature for `v1,f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=` is just `f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=`
+1. Compare **calculated-signature** with **webhook-signature** to ensure that they match. Note that the **webhook-signature** is prefixed by a version and a delimiter. For example, the signature for `v1,f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=` is just `f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8=`.
 
 When verifying your webhook signature, bear the following in mind:
 
-* The signature list **webhook-signature** usually contains a single signature. If there is more than one signature, you should use the first signature, which is calculated using the latest validation secret.
-* You should use a constant-time string comparison method in order to prevent timing attacks.
-* You should also verify that **webhook-timestamp** is within your tolerance for the current system time, to ensure you are not receiving timestamp attacks where old webhook payloads are being sent to your endpoint.
+* The signature list **webhook-signature** usually contains a single signature. If there is more than one signature, use the first signature, which is calculated using the latest validation secret.
+* To prevent timing attacks, use a constant-time string comparison method.
+* To protect against timestamp attacks, where old webhook payloads are sent to your endbpoint, verify that **webhook-timestamp** is within your tolerance for the current system time.
 
 ### 3.1.1 Verifying Your Webhook Using Mendix
 
 You can use Mendix to verify your webhook, using functions available in the [Community Commons](/appstore/modules/community-commons-function-library/) module. To do this, follow the steps below:
 
-1. Ensure that your app contains the Community Commons module.
+1. Confirm that your app contains the Community Commons module.
 1. Retrieve a list of `System.HttpHeader` objects over the association `$HttpRequest/HttpHeaders` using the HttpRequest from the webhook.
-1. Obtain the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers by using a *Find by expression* **List operation** on the list of `System.HttpHeader` objects. You can use an expression like `toLowerCase($currentObject/Key) = 'webhook-id'` and extract the `/Value` attribute.
-1. Create a string variable consisting of the `webhook-id`, `webhook-timestamp`, and the `Content` attribute of the `$HttpRequest` separated by points (`.`). For example `$WebhookId + '.'+ $WebhookTimestamp + '.' + $HttpRequest/Content`.
+1. Obtain the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers by using a **Find by expression List operation** on the list of `System.HttpHeader` objects. You can use an expression like `toLowerCase($currentObject/Key) = 'webhook-id'` and extract the `/Value` attribute.
+1. Create a string variable consisting of the `webhook-id`, `webhook-timestamp`, and the `Content` attribute of the `$HttpRequest` separated by periods (`.`). Here is an example: `$WebhookId + '.'+ $WebhookTimestamp + '.' + $HttpRequest/Content`.
 1. Hash the string variable you just created using the Community Commons action **Generate HMAC SHA256 hash** and the validation secret you set when creating the webhook.
-1. Prefix this hashed string with the prefix from the webhook signature, for example `v1,`.
-1. Compare the string you have created (the hash plus the prefix) with the `webhook-signature` you retrieved from the list of `System.HttpHeader` objects earlier.
+1. Prefix this hashed string with the prefix from the webhook signature (for example, `v1,`).
+1. Compare the string you have created (the hash and the prefix) with the `webhook-signature` you retrieved from the list of `System.HttpHeader` objects earlier. If the two strings match, then the webhook call is valid.
 
-    If the two strings match, then the webhook call is valid.
-
-{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" >}}
+{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" >}}
 
 ## 4 Package Upload to Developer Portal
 
-When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Teamserver), and the webhook responds to the event **On package upload**, request content containing a payload with the following format will be sent to the configured endpoint:
+When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
 ```json {linenos=false}
 {
@@ -146,12 +139,12 @@ When you [upload a package to the Developer Portal](/developerportal/deploy/envi
 If you need a specific package id for an API call, you will need to use the **Retrieve Packages** call of the [Build API](/apidocs-mxsdk/apidocs/build-api/) to find all the packages and then use the **name** value to find the latest package information for the package you want.
 
 {{% alert color="info" %}}
-Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
+Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labeled differently in the API.
 {{% /alert %}}
 
 ## 5 Teamserver Push (Git)
 
-When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
+When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
 ```json {linenos=false}
 {
@@ -179,10 +172,10 @@ When you push a model change to the [Git Team Server](/developerportal/general/t
 }
 ```
 
-The **after**, **before**, and **id** values are git commit hashes. In most cases, you will want to use the **after** hash which is the last commit on the branch.
+The **after**, **before**, and **id** values are git commit hashes. In most cases, you will want to use the **after** hash (the last commit on the branch).
 
 {{% alert color="info" %}}
-Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
+Make sure to use the correct key names if using this payload information to call other Mendix APIs. The data may be labeled differently in the API.
 {{% /alert %}}
 
 ## 6 Alerts Webhooks
@@ -203,10 +196,10 @@ When an alert is triggered for your Mendix app, a payload with the following for
 }
 ```
 
-See [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/) for detailed information on receiving alerts.
+For details on receiving alerts, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/).
 
 ## 7 Logging
 
-You will see [log messages](/developerportal/operate/logs/) in the Developer Portal from the creation or update of your webhooks.
+You will see [log messages](/developerportal/operate/logs/) in the Developer Portal indicating when your webhooks were created or updated.
 
-We do not create a log message for when a webhook is triggered.
+Mendix Cloud does not create a log message when a webhook is triggered.

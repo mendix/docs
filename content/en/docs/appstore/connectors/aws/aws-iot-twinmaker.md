@@ -17,7 +17,7 @@ AWS IoT TwinMaker makes it easier for developers to create digital twins of real
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The AWS IoT TwinMaker connector requires Mendix Studio Pro version 9.18.3 or above.
+The AWS IoT TwinMaker connector requires Mendix Studio Pro 9.18.3 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT TwinMaker connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 

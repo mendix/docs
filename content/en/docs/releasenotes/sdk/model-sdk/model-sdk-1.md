@@ -24,13 +24,13 @@ weight: 100
 
 | Story # | Impact | Description |
 | --- | --- | --- |
-| 600896 | Low | Various meta model updates *for Mendix version 6.1.0* - see below. |
+| 600896 | Low | Various meta model updates for Mendix 6.1.0 - see below. |
 
-The following changes are made per 600896 and pertain exclusively to models made with Mendix version 6.1.0 and above:
+The following changes are made per 600896 and pertain exclusively to models made with Mendix 6.1.0 and above:
 
 * Introduced a new modeling construct `SelectorDatabaseSource` for pages.
 * `DatabaseConstraint` cannot be created directly in a `DatabaseSourceBase` instance anymore. Instead, use the `create` method of `DatabaseConstraint` and assign the instance explicitly to a suitable container, as in, `databaseConstraints` of either an instance of (a sub type of) `DatabaseSourceBase` or `SelectorDatabaseSource`.
-* These properties have been deleted, so should not be accessed on models with Mendix version 6.1.0 and above:
+* These properties have been deleted, so should not be accessed on models with Mendix 6.1.0 and above:
     * `systemEntityType` of both `MsdMicroflow` and `MsdMicroflowParameter`,
     * `parameterTypeName` of `ExportMapping`, and
     * `allowSimpleMappingInheritance` of `OperationInfo`.

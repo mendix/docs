@@ -15,7 +15,7 @@ The version of MxBuild which you need is dependent on the version of the Mendix 
 
 {{% alert color="info" %}}
 
-Mendix versions 7.18.1 and above include a build number in the version, and this has to be included in the link path. For example:
+Mendix 7.18.1 and above includes a build number in the version, and this has to be included in the link path. For example:
 
 * 7.17.2
 * 7.18.1.40272

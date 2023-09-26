@@ -170,7 +170,7 @@ You may need to configure your file store by using environment variables. See th
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
 
-{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix version 11.{{% /alert %}}
+{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix 11.{{% /alert %}}
 
 ## 7 Cloud Foundry Environment Variables
 

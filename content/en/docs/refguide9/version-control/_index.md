@@ -20,7 +20,7 @@ Version Control allows you to manage your app development in two ways:
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Developer Portal.
 
 {{% alert color="info" %}}
-Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO (Bring Your Own) Git was in Beta from Mendix version [9.6.0](/releasenotes/studio-pro/9.6/#960) and was GA in Mendix version [9.24.0](/releasenotes/studio-pro/9.24/#private-git). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
+Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO (Bring Your Own) Git was in Beta from Mendix [9.6.0](/releasenotes/studio-pro/9.6/#960) and was GA in Mendix [9.24.0](/releasenotes/studio-pro/9.24/#private-git). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
 {{% /alert %}}
 
 ## 2 Concepts {#concepts}
@@ -100,7 +100,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Revision: this is added automatically and is the revision number of the commit
 
 {{% alert color="info" %}}
-Tags are supported by Studio Pro Git ([BYO](/refguide9/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix version 9.8.0.
+Tags are supported by Studio Pro Git ([BYO](/refguide9/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix 9.8.0.
 {{% /alert %}}
 
 ### 2.11 Repository Service

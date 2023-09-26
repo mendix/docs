@@ -29,7 +29,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install Mendix Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating an App {#createapp} 
 

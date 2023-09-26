@@ -59,7 +59,7 @@ The [Team Server](/refguide7/team-server/) is implemented using Subversion, and 
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](/refguide7/mysql/) 8.0
 * [Oracle Database](/refguide7/oracle/) 19, 21c
-* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro version 7.23.35)
+* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro 7.23.35)
 * [SAP HANA](/refguide7/saphana/) 2.00.040.00.1545918182
 
 ### 4.4 Java

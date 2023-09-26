@@ -9,7 +9,7 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 {{% alert color="info" %}}
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. It is applicable to Mendix versions 7.4 and above. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix 7.2](/refguide7/navigation-before-72/). For 7.2 and 7.3, see [Navigation in Mendix 7.2 and 7.3](/refguide7/navigation-in-72-and-73/).
+This document describes the concept of navigation in Mendix applications and the properties of a profile. It is applicable to Mendix 7.4 and above. For details on how this works in Mendix 7.0 and 7.1, see [Navigation Before Mendix 7.2](/refguide7/navigation-before-72/). For 7.2 and 7.3, see [Navigation in Mendix 7.2 and 7.3](/refguide7/navigation-in-72-and-73/).
 
 {{% /alert %}}
 

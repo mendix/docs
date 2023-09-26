@@ -85,7 +85,7 @@ For more details, refer to the Gradle documentation on [Declaring repositories](
 
 ## 7 Marketplace Modules
 
-Dependency information is included per module and included in Marketplace Modules. The actual dependency artifacts are not included, as these are automatically synchronized upon import.
+Dependency information is included per module and included in Marketplace Modules. The actual artifacts (`.jar` files) are not part of the module. They are downloaded to the `vendorlib` folder automatically when synchronization is run when the module is imported.
 
 If you have an issue with the managed dependencies of a Marketplace module, you can revert to an earlier version by removing the new version and downloading an earlier version from the Marketplace.
 

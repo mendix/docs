@@ -100,20 +100,14 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
     * Check whether you specified the correct **Group ID**, **Artifact ID**, and **Version**. These are case-sensitive.
     * If you are using a [custom repository](#custom-repos), check whether the dependency exists in the repository.
 
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/unknown-dependency.png" >}}
-
 2. CE9806 – Unable to reach repository / mis-configuration of custom repository.
 
     * Check that **Repositories** are configured if [**Use custom repositories**](#custom-repos) is set to *Yes*.
-
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/unknown-repositories.png" >}}
 
 3. CE9805 – Network connection failure.
 
     * Check that you have a working internet connection.
     * If you are using a [custom repository](#custom-repos), check that the repository can be reached.
-
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/unknown-host.png" >}}
 
 4. CE9803 – Any failure which is not covered in the above scenarios.
 

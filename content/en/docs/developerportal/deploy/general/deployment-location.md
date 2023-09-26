@@ -18,7 +18,7 @@ For apps deployed to the Mendix Cloud, you can customize a URL by adding [custom
 
 ## 2 Paths
 
-If you specify an app URL location on a (sub)path, the Mendix runtime needs to know the public URL of your application. This can be done by setting the [custom runtime setting](/refguide/custom-settings/#applicationrooturl) `ApplicationRootUrl`. 
+If you specify an app URL location on a (sub)path, the Mendix runtime needs to know the public URL of your application. This can be done by setting the [custom runtime setting](/refguide/custom-settings/#applicationrooturl-section) `ApplicationRootUrl`. 
 
 {{% alert color="info" %}}
 For Mendix version 9 or below, it is not possible to a use a path to your app. Your app should always be at the root of your subdomain. In other words at a location `https://subdomain.domain/`.

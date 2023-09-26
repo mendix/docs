@@ -276,7 +276,7 @@ You can generate and reuse generated validation microflows. The following exampl
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/insert-microflow.png" >}} 
 
-     If validation fails, the *show validation message* texts are provided automatically in the response payload. See the following `POST` request:
+     If validation fails, the show validation message texts are provided automatically in the response payload. See the following `POST` request:
 
      ```
      POST http://localhost:8080/odata/CustomerApi/v1/Customers

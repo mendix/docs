@@ -48,7 +48,7 @@ Your colleague's new document layout is shown below:
 
 You make the following changes on a branch line:
 
-* You change the text *Home* to *My homepage*
+* You change the text *Home* to *My home page*
 * You add a data grid inside the bottom layout grid
 
 Your page is now laid out as shown below:

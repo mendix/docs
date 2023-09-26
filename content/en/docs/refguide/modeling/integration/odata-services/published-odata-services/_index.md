@@ -12,9 +12,9 @@ In Studio Pro, entities can be exposed as [OData resources](/refguide/published-
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
-The standard used for OData in Mendix is [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
+The standard used for OData in Mendix is [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
 
-The option to publish [OData version 3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+The option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
@@ -63,7 +63,7 @@ This list gives an overview of all published attributes and associations.
 
 ### 2.6 Enumerations
 
-This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
+This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData v4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
 
 Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
 

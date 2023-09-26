@@ -30,7 +30,7 @@ When you create an app from a Mendix template, there is one language available. 
 To create your app, do the following:
 
 1. Create a new app using the **Blank App** template. If given the option, leave the default language as **English, United States**.
-2. Open the app in Studio Pro (images here are from Studio Pro version 8.10).
+2. Open the app in Studio Pro (images here are from Studio Pro 8.10).
 3. Create a domain model in MyFirstModule with two entities:
     * **Order** with the integer attribute **OrderNumber**
     * **Product** with the string attribute **ProductName**

@@ -116,7 +116,9 @@ The following settings are available:
 
 * **Import from** – select **URL** or **File** for the location of the metadata:
     * **URL** – specify the URL for the metadata
-    * **File** – click **Browse** to select an XML metadata file
+    * **File** – click **Browse** to select a metadata file
+
+        You can use the URL of a file that contains the metadata, such as `https://services.odata.org/V4/Northwind/Northwind.svc/$metadata`. You can also click [Share Data Source](/catalog/manage/search/#service-details) in the details of a data source in the [Catalog](https://catalog.mendix.com/) and paste that value.
 
 When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used.
 
@@ -139,7 +141,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Service ID** – The unique identifier of the service in the Catalog.
 * **Application ID** – The unique identifier of the application that the service was published from in the Catalog.
 * **Metadata** – The contents of the metadata file defining the service.
-* **OData version** – The OData version: can be OData 3 or OData 4.
+* **OData version** – The OData version (can be v3 or v4).
 * **Use QuerySegment** – When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. When set to `Yes`, then a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
 
 ## 3 Updating or Switching a Consumed OData Service {#updating}

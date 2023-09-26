@@ -2,12 +2,10 @@
 title: "SAP Fiori UI Resources"
 url: /appstore/modules/sap-ui-resources/sap-fiori-3-0/
 category: "SAP"
-weight: 70
 description: "Information on how to make an SAP Fiori version 3.0 themed app"
 tags: ["SAP", "Fiori", "Building Block", "Page Design", "Layout", "UI", "UX", "3.0"]
 aliases:
     - /partners/sap/sap-fiori-3-0/
-
 ---
 
 <!-- NOTES
@@ -180,7 +178,7 @@ On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a numb
 
 If you want to include the Web UI Package for SAP Fiori theme in an existing app perform the following steps:
 
-1. Ensure that your app is using Mendix version 9.6.11 or above. 
+1. Ensure that your app is using Mendix 9.6.11 or above. 
 2. [Import](/appstore/general/app-store-content/) the  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module into your app.
 3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
 4. Look in the **Theme** tab of the app settings. This must contain the `SAP_Fiori_Web_UI_Resources` module below the `Atlas_Core` module.

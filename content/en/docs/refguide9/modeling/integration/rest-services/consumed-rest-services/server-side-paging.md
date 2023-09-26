@@ -23,7 +23,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * If you are not familiar with using data from REST services, read [Consume a REST Service](/howto9/integration/consume-a-rest-service/)
-* Install Studio Pro version [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install Studio Pro [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating a Microflow Data Source
 

@@ -323,7 +323,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* The **Capabilities** filter will now be reset when returning to the homepage.
+* The **Capabilities** filter will now be reset when returning to the home page.
 
 ### July 28, 2022
 

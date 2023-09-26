@@ -391,7 +391,7 @@ With Mendix Studio Pro 8.0.0, Mendix has released support for developing native 
 
 ### 9.6 Progressive Web Applications
 
-Mendix Studio Pro version 9 introduced support for developing [progressive web apps (PWAs)](/refguide/progressive-web-app/). PWAs are not supported for *Mendix on MindSphere*.
+Mendix Studio Pro 9 introduced support for developing [progressive web apps (PWAs)](/refguide/progressive-web-app/). PWAs are not supported for *Mendix on MindSphere*.
 
 ## 10 Read More
 

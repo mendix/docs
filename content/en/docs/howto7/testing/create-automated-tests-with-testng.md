@@ -58,7 +58,7 @@ In this chapter you will install the TestNG plug-in and create a Java project in
 
 9. Enter *MyFirstTestNGProject* as the project name and click **Next**.
 10. Select the **Libraries** tab.
-11. Click **Add Library...**.
+11. Click **Add Library**.
 12. Select **TestNG** and click **Next**.
 13. Click **Finish** to set the default TestNG library to this project.
 14. Click **Add External JARs...** and navigate to where you saved the Selenium JAR files.

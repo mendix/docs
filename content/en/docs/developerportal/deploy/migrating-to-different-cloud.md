@@ -33,7 +33,7 @@ You will need to take the following into account when migrating your app:
 
 ## 3 Prerequisites
 
-* Ensure that your app is on a supported version of Mendix, Mendix version 7.0 and above. For the best level of support, we recommend that you use version 7.23 which is the [long term support](/releasenotes/studio-pro/lts-mts/) version of Mendix version 7.
+* Ensure that your app is on a supported version of Mendix, Mendix 7.0 and above. For the best level of support, we recommend that you use version 7.23 which is the [long term support](/releasenotes/studio-pro/lts-mts/) version of Mendix 7.
 * Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available (to request a licensed Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app)
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both your cloud nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink)

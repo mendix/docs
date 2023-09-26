@@ -62,7 +62,7 @@ On top of open-source community-supported content, we are introducing an additio
 * Partners are free to select an existing open-source license, or they can select a commercial option with the corresponding license and present that.
 * Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
 
-You can find and use partner-supported components on the [Marketplace homepage](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/general/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
+You can find and use partner-supported components on the [Marketplace home page](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/general/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
 
 ## 2022
 
@@ -255,7 +255,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes
 
-* As of Studio Pro version [8.10.0](/releasenotes/studio-pro/8.10/#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
+* As of Studio Pro [8.10.0](/releasenotes/studio-pro/8.10/#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro 8.7 to 8.9.
 
 ### May 6, 2020
 
@@ -265,7 +265,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes
 
-* As of Studio Pro version [8.6.4](/releasenotes/studio-pro/8.6/#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
+* As of Studio Pro [8.6.4](/releasenotes/studio-pro/8.6/#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
 
 ### May 4, 2020
 

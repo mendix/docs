@@ -141,6 +141,18 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
+#### 6.2.6 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
+
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.2.
+{{% /alert %}}
+
+Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
+
+#### 6.2.7 Fetch Interval, Minutes
+
+The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}

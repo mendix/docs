@@ -17,6 +17,31 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+
+### September 19, 2023
+
+#### Improvements
+
+* We introduced a timeout limit for Free Apps where idle connections are actively running a transaction. This change enhances system efficiency by automatically releasing resources from idle, ongoing, transactions to optimize overall performance.
+
+### September 18, 2023
+
+#### Improvements
+
+* To improve the security of [Team Server](/developerportal/general/team-server/) for apps versioned with SVN, we have dropped support for TLS v1.0 and TLS v1.1 when connecting to the SVN Team Server.
+
+### September 14, 2023 
+
+#### Improvements
+
+* We added the AWS Middle East (UAE) region as a new deployment target.
+
+### September 8, 2023 
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with pg_dump version 14.8.
+
 ### September 4, 2023 
 
 #### Improvements

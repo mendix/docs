@@ -63,9 +63,9 @@ If your application is accessible without signing in, those anonymous users will
 
 ## 6 To Localize or Not to Localize
 
-Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value. Use non-localized attributes if you are not interested in the time component (for example, birthdays) or if you want a date to look exactly the same all over the world.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized when displaying (or picking) their value. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value (for example, in the client or in generated documents). Use non-localized attributes if you are not interested in the time component of a date and you want the date to be exactly the same all over the world (for example, a birthday).
 
-See the documentation of the Localize property of [Attributes](/refguide/attributes/) for more information.
+For more information, see the [Localize](/refguide/attributes/#localize) section in *Attributes*.
 
 ## 7 Tokens
 

@@ -73,7 +73,7 @@ If you want a microflow to call a Java action to run in the background using a t
 
 1. Check **Execute this Java action in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
-3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
+3. (optionally – in Mendix 9.10.0 and above) Select an automatic retry strategy.
 
 For more information about task queues, see [Task Queue](/refguide9/task-queue/).
 

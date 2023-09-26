@@ -17,7 +17,7 @@ AWS IoT SiteWise is a managed service that simplifies collecting, organizing, an
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The AWS IoT SiteWise connector requires Mendix Studio Pro version 9.18.0 or above.
+The AWS IoT SiteWise connector requires Mendix Studio Pro 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 

@@ -14,7 +14,7 @@ Typically, these commands require a path to the *.mpr* file as a parameter.
 
 ## 2 mx create-project Command {#create-project}
 
-The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 10.0.0, `mx create project` will create a new app in that version. 
+The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 10.0.0, `mx create project` will create a new app in that version. 
 
 ### 2.1 Usage
 
@@ -94,7 +94,7 @@ These are the return codes:
 
 ## 4 mx convert Command {#convert}
 
-The `mx convert` command converts the *.mpk* file(s) of the app(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro version 10.0.0,  `mx convert` will convert the app to that version. 
+The `mx convert` command converts the *.mpk* file(s) of the app(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 10.0.0,  `mx convert` will convert the app to that version. 
 
 The input can be a single file, directory, or multiple files.
 

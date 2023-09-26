@@ -4,13 +4,13 @@ linktitle: "Desktop Modeler 7 to Studio Pro 8"
 url: /refguide8/moving-from-7-to-8/
 category: "General Info"
 weight: 20
-description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro version 8 , including sections on converting your project and deprecated features."
+description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro 8 , including sections on converting your project and deprecated features."
 tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-When converting your Mendix app from Desktop Modeler version 7 to Studio Pro version 8, there is a recommended series of steps you need to take. These are documented in [Converting Your App](#converting), below.
+When converting your Mendix app from Desktop Modeler version 7 to Studio Pro 8, there is a recommended series of steps you need to take. These are documented in [Converting Your App](#converting), below.
 
 For information about new features in Mendix 8, see [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
@@ -69,7 +69,7 @@ In particular, it is easier to fix deprecations in Java actions (see [Java Versi
 
 ### 3.4 Save Version 7 Project
 
-Your app is now ready to be upgraded to Mendix Version 8.
+Your app is now ready to be upgraded to Mendix 8.
 
 It is recommended that you backup/commit your project at this point so that you can return to it if necessary.
 
@@ -79,7 +79,7 @@ You can now close the project in Desktop Modeler version 7.
 
 Mendix will upgrade your app for you.
 
-Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 8.
+Open the project in Mendix Studio Pro 8 and allow Studio Pro to update your app to version 8.
 
 ### 3.6 Review Errors, Warnings, and Deprecations in Studio Pro
 
@@ -107,7 +107,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 ## 4 Elements of Type Float and Currency {#float-currency}
 
-The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
+The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix 8. 
 
 The following elements of type Float or Currency will report errors in version 8:
 
@@ -155,7 +155,7 @@ Mendix Studio Pro is a 64-bit application which will **only** run on 64-bit vers
 
 ## 7 Java Code Generation {#java-code-generation}
 
-In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
+In Mendix Studio Pro 8, we are changing the way we generate Java code for Java actions and datasets.
 
 Mendix Desktop Modeler version 7 sometimes appended a postfix (for example, `Parameter1`) to the names of parameters of Java actions and datasets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Desktop Modeler 7, we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
 

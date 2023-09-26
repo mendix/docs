@@ -44,6 +44,7 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 | Singapore | Sydney | 17:00 | 01:00 | 1 hour |
 | Sydney | Melbourne | 07:00 | 17:00 | 1 hour |
 | Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
+| UAE | Mumbai | 00:00 | 04:00 | 1 hour |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 

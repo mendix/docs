@@ -25,7 +25,7 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Rekognition connector requires Mendix Studio Pro version 9.18.0 or above.
+The Amazon Rekognition connector requires Mendix Studio Pro 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 

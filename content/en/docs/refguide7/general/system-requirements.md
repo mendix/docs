@@ -59,7 +59,7 @@ The [Team Server](/refguide7/team-server/) is implemented using Subversion, and 
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](/refguide7/mysql/) 8.0
 * [Oracle Database](/refguide7/oracle/) 19, 21c
-* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro version 7.23.35)
+* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro 7.23.35)
 * [SAP HANA](/refguide7/saphana/) 2.00.040.00.1545918182
 
 ### 4.4 Java
@@ -116,12 +116,12 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](/refguide7/mxbuild/) for more information.
 
-### 7.1 Mendix Version 7.1 and Above
+### 7.1 Mendix 7.1 and Above
 
 * Mono v4.6.x or .NET v4.6.2
 * JDK 8.
 
-### 7.2 Mendix Version 7.0.2
+### 7.2 Mendix 7.0.2
 
 * Mono v3.1.0 or .NET v4.5
 * JDK 8

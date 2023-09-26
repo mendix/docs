@@ -32,7 +32,7 @@ This page also has a message feature for the user to communicate with your team 
 
 {{% alert color="warning" %}}Do not share the link to your feedback details with someone unless it is necessary. Anyone who has this link can access your feedback details, including the title and the description of the feedback item as well as the screenshot if there is one.{{% /alert %}}
 
-If the user does not want to receive notifications anymore, they can clear the check box for the notification on the page, as shown in the image below: 
+If the user does not want to receive notifications anymore, they can clear the checkbox for the notification on the page, as shown in the image below: 
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/user-notification.png" >}}
 

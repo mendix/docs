@@ -636,7 +636,7 @@ Alternatively, click **Download Configuration File** to create the file which yo
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert color="info" %}}
-You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
+You can only use SAP HANA as the Mendix database for Mendix 7.23.3 and above.
 
 There are also some differences in the way that Mendix can be used with SAP HANA compared to a PostgreSQL, Hyperscaler Option database – see [SAP HANA – Known Issues](/refguide/saphana/).
 {{% /alert %}}

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "process queue", "queue overview"
 ---
 
 {{% alert color="warning" %}}
-This module is deprecated from Studio Pro version 9.0.3. It is replaced by the [Task Queue](/refguide/task-queue/), which is part of Studio Pro and also supports horizontally-scaled environments.
+This module is deprecated from Studio Pro 9.0.3. It is replaced by the [Task Queue](/refguide/task-queue/), which is part of Studio Pro and also supports horizontally-scaled environments.
 {{% /alert %}}
 
 ## 1 Introduction

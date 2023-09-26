@@ -40,7 +40,7 @@ The following custom settings can be configured:
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| <a id="ApplicationRootUrl" href="#ApplicationRootUrl">ApplicationRootUrl</a> | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
+| <a id="ApplicationRootUrl" href="#ApplicationRootUrl">ApplicationRootUrl</a> | see [ApplicationRootUrl](#applicationrooturl-section), below | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
 | <a id="CACertificates" href="#CACertificates">CACertificates</a> | A comma-separated list of paths to CA certificates. Example: `D:\App\CA1.pem, D:\App\CA2.pem, D:\App\CA3.pem, D:\App\CA4.pem` |   |
 | <a id="ClientCertificatePasswords" href="#ClientCertificatePasswords">ClientCertificatePasswords</a> | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
 | <a id="ClientCertificates" href="#ClientCertificates">ClientCertificates</a> | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |   |
@@ -72,6 +72,30 @@ The following custom settings can be configured:
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | <a id="EnableFileDocumentCaching" href="#EnableFileDocumentCaching">EnableFileDocumentCaching</a> | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. | false |
 | <a id="ObjectManagementStrictChangeBehavior" href="#ObjectManagementStrictChangeBehavior">ObjectManagement.<wbr>StrictChangeBehavior</a> | Defines the behavior when changing values of Enums and Calculated attributes.<br/>When set to true, setting an invalid value for an Enum attribute and/or setting a value for a Calculated attribute will result in an InvalidEnumerationValueException and/or ReadOnlyAttributeException respectively.<br/>When set to false, changes to the values of Enums and/or Calculated attributes will be allowed.<br/>We plan to remove this setting in Mendix 11, after which, an exception will always be raised when setting an invalid value. | true |
+
+### 2.1 ApplicationRootUrl {#applicationrooturl-section}
+
+The ApplicationRootUrl setting is used to specify the domain and path to your application. This can be used within Java actions to get the public location of the application, for example when including a URL to the application when sending e-mails from a scheduled event. 
+
+There are two main ways that you might use to host multiple applications.
+
+* Routing based on a (sub)domain
+* Routing based on a subpath (supported since Mendix 10.3.0)
+
+Say we are hosting two apps, App1 and App2. In domain-based routing, every app gets its own domain (for example. `app1.domain.com` and `app2.domain.com`). In subpath-based routing, this would be on a subpath, for example `domain.com/app1` and `domain.com/app2`.
+
+When setting up either routing variant, most content is correctly served automatically as it is relative to the path in which it is being served. Exceptions to this include:
+
+1. Client components that automatically forward/route you to a top-level domain
+1. Content that specifies a full path to your public domain/path
+
+For the first case, domain-based routing is generally more stable, although path-based routing is possible with Mendix version 10.3.0 or above.
+
+Examples of the second case are OData contracts, sending mails to your organization, and any place you want to render a static URL in your application. For this case it is possible to specify the ApplicationRootURL.
+
+#### 2.1.1 Multiple External Domains
+
+Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (e.g. by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port` ,  `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootURL` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
 
 ## 3 Log File Settings
 

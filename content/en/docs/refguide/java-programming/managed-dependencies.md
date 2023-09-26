@@ -47,7 +47,7 @@ After finding the package of your choice, locate the Snippets part, containing t
 
 ## 3 Dependency Synchronization
 
-When a change is made to a specified dependency, for example, the dependency is removed or the module is updated in the Marketplace, dependency synchronization will automatically run in the background.
+When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background.
 
 Dependency synchronization also occurs when you open your app in Studio Pro.
 
@@ -69,7 +69,7 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 ## 6 Custom Repositories{#custom-repos}
 
-By default, dependencies are downloaded from the [Maven Central](https://maven.apache.org/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
+By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
 Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For example, to resolve dependencies from a directory `lib`, enter the following:
 

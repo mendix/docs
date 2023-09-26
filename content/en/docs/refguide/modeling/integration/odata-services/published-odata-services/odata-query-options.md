@@ -3,7 +3,7 @@ title: "OData Query Options"
 url: /refguide/odata-query-options/
 description: "Lists the query options for OData."
 weight: 20
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "create", "update", "delete", "actions"]
+tags: ["OData", "filter", "count", "sort", "select", "page", "insert", "create", "update", "delete", "actions"]
 ---
 
 ## 1 Introduction
@@ -67,12 +67,12 @@ Mendix supports the following comparison operators:
 
 | Operator | Meaning                  | Example                             |
 | -------- | ------------------------ | ----------------------------------- |
-| `eq`     | equals                   | `/Employees?$filter=Name eq 'John'` |
-| `ne`     | does not equal           | `/Employees?$filter=Name ne 'John'` |
-| `gt`     | greater than             | `/Employees?$filter=Age gt 15`      |
-| `lt`     | less than                | `/Employees?$filter=Age lt 15`      |
-| `ge`     | greater than or equal to | `/Employees?$filter=Age ge 15`      |
-| `le`     | less than or equal to    | `/Employees?$filter=Age le 15`      |
+| `eq`     | Equals                   | `/Employees?$filter=Name eq 'John'` |
+| `ne`     | Does not equal           | `/Employees?$filter=Name ne 'John'` |
+| `gt`     | Greater than             | `/Employees?$filter=Age gt 15`      |
+| `lt`     | Less than                | `/Employees?$filter=Age lt 15`      |
+| `ge`     | Greater than or equal to | `/Employees?$filter=Age ge 15`      |
+| `le`     | Less than or equal to    | `/Employees?$filter=Age le 15`      |
 
 ### 4.3 Functions
 
@@ -104,7 +104,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. Here is an example: `
 
 ### 4.5 Filtering by Association
 
-You can filter on attributes of an associated entity. The syntax depends on whether the association exposes one object or a list of objects:
+You can filter on the attributes of an associated entity. The syntax depends on whether the association exposes one object or a list of objects:
 
 | Type                           | Example                                               |
 | ------------------------------ | ----------------------------------------------------- |
@@ -133,7 +133,7 @@ To select which attributes and associations to return, specify the `$select` que
 
 ## 7 Paging {#paging}
 
-Paging allows you to load data incrementally to better handle large amounts of data. Paging occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+Paging enables loading data incrementally to better handle large amounts of data. Paging occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
 
 ### 7.1 Top (Limit)
 
@@ -141,7 +141,7 @@ To limit the number of returned objects, use the `$top` query option. The limit�
 
 ### 7.2 Skip (Offset)
 
-To skip a number of objects before retrieving the result, use the `$skip` query option. The offset—the number of objects to skip—must be a positive integer. For example, `?$skip=100` returns objects starting with the one-hundred-and-first object in the list.
+To skip a number of objects before retrieving the result, use the `$skip` query option. The offset—the number of objects to skip—must be a positive integer. For example, `?$skip=100` returns objects starting with the 101st object in the list.
 
 ## 8 Null Literals
 
@@ -158,7 +158,7 @@ When you filter against associations, null literals can be quite useful. For exa
 If the OData query is too long to be sent as a `GET` request, you can send the query as a `POST` request to the `/$query` endpoint. For example, `POST /Products/$query` with `$select=Name,Price` in the request body gives the same result as `GET /Products?$select=Name,Price`. These `POST` requests must specify the header `Content-Type: text/plain`. 
 
 {{% alert color="info" %}}
-The request body must adhere to URL encoding principles. So, for example, spaces, tabs, and new line characters (`\n`) are not allowed.
+The request body must adhere to URL encoding principles; that means that everything must be written in [ASCII characters](https://www.w3schools.com/tags/ref_urlencode.asp).
 {{% /alert %}}
 
 ## 10 Updating Objects {#updating-objects}
@@ -251,7 +251,7 @@ When a published resource has the [Deletable](/refguide/published-odata-resource
 
 To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL. Here is an example: `POST /odata/myservice/v1/OnboardNewEmployee`.
 
-The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/) dialog and look at the **Example of location** property.
+The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/#edit-microflow) dialog box and look at the **Example of location** property.
 
 The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. Here is an example:
 
@@ -287,5 +287,5 @@ An object passed to a microflow will not be committed automatically. If you want
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Functionality for publishing microflows was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+The functionality for [publishing microflows in your OData service](/refguide/published-odata-microflow/) was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
 {{% /alert %}}

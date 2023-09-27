@@ -88,7 +88,7 @@ Here is a list of key changes pertaining to the web environment:
     * Widget borders
 * Some design properties have been removed:
     * Info and Inverse brand styles for all widgets
-* ⚠ Some design properties have been deprecated:
+*  Some design properties have been deprecated:
     * List View widgets’ **styleless** option
 * Design properties such as **Style**, **Color**, and **Background color** that had a **Brand Default** option are now called **Brand Secondary**
 

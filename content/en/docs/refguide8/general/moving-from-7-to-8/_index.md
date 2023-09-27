@@ -85,7 +85,7 @@ Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update y
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
-⚠If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float and Currency](#float-currency) below for more information.
+If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float and Currency](#float-currency) below for more information.
 
 ### 3.7 Upgrade All Widgets
 
@@ -107,7 +107,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 ## 4 Elements of Type Float and Currency {#float-currency}
 
-⚠The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix 8. 
+The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix 8. 
 
 The following elements of type Float or Currency will report errors in version 8:
 

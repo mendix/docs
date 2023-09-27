@@ -106,7 +106,7 @@ See the corresponding data source for specific properties:
 
 {{% alert color="info" %}}
 
-⚠ This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
+ This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
 
 {{% /alert %}}
 

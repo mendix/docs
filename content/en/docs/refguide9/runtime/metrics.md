@@ -371,7 +371,7 @@ The name must adhere to the following rules:
 It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
-### 5.2 ⚠Deprecated usages 
+### 5.2 Deprecated usages 
 
 The following deprecated usages will be removed in the future releases,
 
@@ -395,7 +395,7 @@ The Runtime Server produces the following metrics out-of-the-box:
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>handler_requests** | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that were received by a node (`XASId`) since it was started. |
-| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that were received by a node;<br/>⚠ deprecated, use `mx.runtime.stats.handler_requests` instead. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that were received by a node;<br/> deprecated, use `mx.runtime.stats.handler_requests` instead. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_users** | gauge | | The current number of active, named users in the database. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_user_sessions** | gauge | | The current number of sessions in the database for named users. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>anonymous_sessions** | gauge | | The current number of sessions in the database for anonymous users. |

@@ -112,7 +112,7 @@ Support for `dojo.require` has been dropped. It never worked in hybrid apps, and
 
 Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. Use these at your own risk, or better yet, don't use them at all!
 
-## 5 ⚠Deprecated Features
+## 5 Deprecated Features
 
 The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.
 
@@ -131,7 +131,7 @@ The `MxContext` methods `setTrackId` and `setTrackEntity` have been deprecated. 
 | `exportStream(IContext context, String exportMappingName, IMendixObject objectToExport, Boolean shouldValidate)` | `com.mendix.core.integration().exportStream(IContext context, String exportMappingName, IMendixObject objectToExport,Boolean shouldValidate)` |
 | `importStream(IContext context,InputStream stream,String importMappingName,IMendixObject mappingParameter,Boolean shouldValidate)` | `com.mendix.core.integration().importStream(IContext context, InputStream stream, String importMappingName, IMendixObject mappingParameter, Boolean shouldValidate)` |
 
-## 6 ⚠Removed Deprecated Functionality
+## 6 Removed Deprecated Functionality
 
 The following features were deprecated in Mendix 6 and have been removed in Mendix 7.
 

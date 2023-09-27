@@ -40,9 +40,9 @@ The return type defines what information the nanoflow returns. The caller of the
 
 You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Nanoflows that are only called from JavaScript code will be listed as unused, because Studio Pro cannot look inside the source code.
 
-By setting the property **Mark as used** to **Yes**, you explicitly specify that the nanoflow is used and Studio Pro will no longer list it when searching for unused items.
+By enabling the property **Mark as used**, you explicitly specify that the nanoflow is used and Studio Pro will no longer list it when searching for unused items.
 
-Default: *No*
+Default: *disabled*
 
 ### 2.4 Security Section {#security}
 

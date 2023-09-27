@@ -1,5 +1,5 @@
 ---
-title: "Hybrid Mobile"
+title: "Hybrid Mobile (Deprecated)"
 url: /refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/
 weight: 30
 description: Learn how to set up hybrid apps.

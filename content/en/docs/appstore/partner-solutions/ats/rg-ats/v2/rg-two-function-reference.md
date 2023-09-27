@@ -11,16 +11,16 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Set BooleanSlider Value          | BooleanSlider                    | ⚠  in favor of **Set Value**.<br /> Checks if the given value is available for the BooleanSlider and sets the value. |
-| Set BootstrapRTE Value           | BootstrapRTE                     | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code. |
+| Set BooleanSlider Value          | BooleanSlider                    | ⚠in favor of **Set Value**.<br /> Checks if the given value is available for the BooleanSlider and sets the value. |
+| Set BootstrapRTE Value           | BootstrapRTE                     | ⚠Deprecated in favor of **Set Value**.<br /> Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code. |
 | Set Checkbox Set Selector Value  | Checkbox Set Selector            | Checks/clears the **Select all** checkbox. |
 | Set Checkbox Set Selector Value (all) | Checkbox Set Selector       | Checks/clears the **Select all** checkbox. |
 | Set Checkbox Value               | Checkbox                         | Sets the value of a checkbox. |
-| Set CKEditor Value               | CKEditor                         | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the CKEditor content value. |
+| Set CKEditor Value               | CKEditor                         | ⚠Deprecated in favor of **Set Value**.<br /> Sets the CKEditor content value. |
 | Set File Manager                 | FileManager                      | Sets the file manager to the given file path to upload a file. |
 | Set Grid Selector Checkbox Value | Grid Selector                    | Checks/clears the checkbox for a given column and row caption in a grid selector widget. |
 | Set Grid Selector Radiobutton checked  | Grid Selector              | Selects the radio button for the given column and row caption. |
-| Set InputReferenceSelector Value | InputReferenceSelector            | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the input reference selector to the given value. |
+| Set InputReferenceSelector Value | InputReferenceSelector            | ⚠Deprecated in favor of **Set Value**.<br /> Sets the input reference selector to the given value. |
 | Set Row Cell Value               | DataGrid                         | Set the cell value for a particular column in a data grid row. |
 | Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Checks/clears the checkbox found by a given entity attribute value. |
 | Set Value¹ | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker², ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List, Switch³, AutoComplete. | Sets the value of all supported widgets. |

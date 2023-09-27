@@ -6,7 +6,7 @@ url: /appstore/partner-solutions/ats/ht-two-guidelines-custom-action/
 ## 1 Introduction
 
 For details on custom actions, please see [Custom Actions](/appstore/partner-solutions/ats/rg-one-custom-actions/) in the ATS 1 Reference Guide.
-
+ 
 These are the definitions of Mendix actions and core actions:
 
 * Mendix actions include [Mendix actions](/appstore/partner-solutions/ats/rg-one-mendix-actions/) and [Mendix Marketplace widget actions](/appstore/partner-solutions/ats/rg-one-appstore-widg-acts/)

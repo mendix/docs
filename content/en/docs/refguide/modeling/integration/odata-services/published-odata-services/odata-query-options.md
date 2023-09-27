@@ -42,7 +42,7 @@ You can find out how many objects there are by passing the `$count` query option
 
 For OData 4, by setting the `$count` query option to `true`, a count of the number of items returned will be included in the result. For example: `?$count=true`.
 
-For OData 3 (deprecated), by setting the `$inlinecount` query option to `allpages`, a count of the number of items returned will be included in the result. For example: `?$inlinecount=allpages`.
+For OData 3 (⚠deprecated), by setting the `$inlinecount` query option to `allpages`, a count of the number of items returned will be included in the result. For example: `?$inlinecount=allpages`.
 
 ## 4 Filtering
 

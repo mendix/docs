@@ -62,13 +62,13 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Assert Active Tab Caption | TabContainer | Asserts a certain value for the caption of an active tab page. |
-| Assert BooleanSlider Value | BooleanSlider | Deprecated in favor of **Assert Value**.<br /> Asserts that the BooleanSlider is set to the given value. |
-| Assert BootstrapRTE Value | BootstrapRTE | Deprecated in favor of **Assert Value**.<br /> Asserts that the BootstrapRTE value is equal to the given value. |
+| Assert BooleanSlider Value | BooleanSlider | ⚠Deprecated in favor of **Assert Value**.<br /> Asserts that the BooleanSlider is set to the given value. |
+| Assert BootstrapRTE Value | BootstrapRTE | ⚠Deprecated in favor of **Assert Value**.<br /> Asserts that the BootstrapRTE value is equal to the given value. |
 | Assert Checkbox Set Selector Value | Checkbox Set Selector | Finds the checkbox-by-entity attribute and asserts that the checkbox is set to the given value. |
 | Assert Checkbox Value | CheckBox | Asserts the value of a checkbox. |
-| Assert CKEditor Value | CKEditor | Deprecated in favor of **Assert Value**.<br /> Compares the CKEditor value with the given value. |
+| Assert CKEditor Value | CKEditor | ⚠Deprecated in favor of **Assert Value**.<br /> Compares the CKEditor value with the given value. |
 | Assert Grid Selector Value | Grid Selector | Asserts the value of checkbox/radio button for a given column and row captions in a grid selector. |
-| Assert InputReferenceSelector Value | InputReferenceSelector | Deprecated in favor of **Assert Value**.<br /> Asserts that the input reference selector has the given value. |
+| Assert InputReferenceSelector Value | InputReferenceSelector | ⚠Deprecated in favor of **Assert Value**.<br /> Asserts that the input reference selector has the given value. |
 | Assert Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Asserts that the checkbox found by the given entity attribute value is checked/cleared. |
 | Assert Validation Message | All widgets | Asserts a validation message with a certain text. |
 | Assert Value | Standard widgets: Text Box, Text Area, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label input reference set selector.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList, Switch¹, AutoComplete, Format String, Custom String. | Asserts the current value of all supported widgets. |
@@ -153,13 +153,13 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Is Element Displayed | Returns true if the supplied element is displayed (visible). |
 | Is Selected | Checks whether the checkbox is selected. |
 | Maximize | Maximizes the current browser window. |
-| Open Application | Deprecated in favor of **Open Mendix Application**.<br /> Opens an application at the application's URL in a browser. |
-| Open Website | Deprecated in favor of **Open Mendix Application**. |
-| Select Option | Deprecated in favor of **Select Option by Index**, **Select Option by Text**, and **Select Option by Value**. |
+| Open Application | ⚠Deprecated in favor of **Open Mendix Application**.<br /> Opens an application at the application's URL in a browser. |
+| Open Website | ⚠Deprecated in favor of **Open Mendix Application**. |
+| Select Option | ⚠Deprecated in favor of **Select Option by Index**, **Select Option by Text**, and **Select Option by Value**. |
 | Select Option by Index | Select the option at the given index. |
 | Select Option by Text | Select all options that display text matching the argument. |
 | Select Option by Value | Select all options that have a value matching the argument. |
-| Set Browser Dimensions | Deprecated in favor of **Set Size**. |
+| Set Browser Dimensions | ⚠Deprecated in favor of **Set Size**. |
 | Set Page Load Timeout | Sets the amount of time (in milliseconds) to wait for a page load to complete before throwing an error. If the timeout is negative, page loads can be indefinite. |
 | Set Size | Sets the size of the current browser window. This will change the outer window dimension, not just the view port. |
 | Switch to Default Frame | Selects either the first frame on the page, or the main document when a page contains iframes. |
@@ -191,8 +191,8 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Assert | N/A | Deprecated.<br /> A hamcrest assert. |
-| Assert 1 | N/A | Deprecated in favor of **Assert equalTo**.<br /> Asserts that the value is 1. `([null]=0)`. |
+| Assert | N/A | ⚠Deprecated.<br /> A hamcrest assert. |
+| Assert 1 | N/A | ⚠Deprecated in favor of **Assert equalTo**.<br /> Asserts that the value is 1. `([null]=0)`. |
 | Assert all not null | N/A | Fails if one of the objects is null. |
 | Assert at least one not null | N/A | Fails if all the objects are null. |
 | Assert Both not null | N/A | Fails if one or both objects are null. |
@@ -200,11 +200,11 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert containsNoString | N/A | Asserts false that the subject contains a string that is equal to matcher parameter (for example, `testcasetool` contains `case`, it fails `case`). |
 | Assert containsString | N/A | Asserts that the subject contains a string that is equal to the matcher parameter (for example, `testcasetool` contains `case`). |
 | Assert endsWith | N/A | Asserts that the subject ends with a string that is equal to the matcher parameter (for example, `testcase` ends with `case`). |
-| Assert Equals | N/A | Deprecated in favor of **Assert equalTo**.<br /> Asserts that the two values are equal. |
+| Assert Equals | N/A | ⚠Deprecated in favor of **Assert equalTo**.<br /> Asserts that the two values are equal. |
 | Assert equalTo | N/A | Asserts that the subject is equal to matcher parameter (for example, `100` is equal to `100` or `house` is equal to `house`). |
 | Assert equalToIgnoringCase | N/A | Asserts that the subject is equal to the matcher parameter while ignoring the case (for example, `house` is equal to `House`). |
 | Assert equalToIgnoringWhiteSpace | N/A | Asserts that the subject is equal to the matcher parameter while ignoring whitespaces (for example, `testcase` is equal to `' testcase '`). |
-| Assert false | N/A | Deprecated in favor of **Assert equalTo**.<br /> Asserts the Boolean value to be false. |
+| Assert false | N/A | ⚠Deprecated in favor of **Assert equalTo**.<br /> Asserts the Boolean value to be false. |
 | Assert greaterThan | N/A | Asserts that the subject is greater than the matcher parameter (for example, `1000` is greater than `100`). |
 | Assert greaterThanOrEqualTo | N/A | Asserts that the subject is either greater than or equal to the matcher parameter (for example, `1000` is greater than `100`, `1000` is equal to `1000`). |
 | Assert lessThan | N/A | Asserts that the subject is less than the matcher parameter (for example, `100` is less than `1000`). |
@@ -214,20 +214,20 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert not true | N/A | Either false or null. |
 | Assert null | N/A | Fails if the object is not null. |
 | Assert null (internal) | N/A | The internal Assert null functions that allows a Boolean parameter to invert the result. |
-| Assert Property Value | N/A | Deprecated in favor of **Assert element attribute equals**.<br /> Gets the property/attribute from the web element and asserts that it equals the given value. |
+| Assert Property Value | N/A | ⚠Deprecated in favor of **Assert element attribute equals**.<br /> Gets the property/attribute from the web element and asserts that it equals the given value. |
 | Assert startsWith | N/A | Asserts that the subject starts with a string that is equal to the matcher parameter (for example, `testcase` starts with `test`). |
-| Assert true | N/A | Deprecated in favor of **Assert equalTo**. |
+| Assert true | N/A | ⚠Deprecated in favor of **Assert equalTo**. |
 | Assert XML equivalent | N/A | Asserts that two XMLs are equivalent. |
 | Concatenate String | String | Concatenate strings. Any number of the arguments can be null. |
-| If Null Then 0 (Integer) | N/A | Deprecated.<br /> Checks the input value and sets it to 0 if it is null. |
+| If Null Then 0 (Integer) | N/A | ⚠Deprecated.<br /> Checks the input value and sets it to 0 if it is null. |
 | Is not Null | N/A | Returns true if object is not null, false otherwise. |
-| Push ATS Scripts | N/A | Deprecated as it only served an internal purpose.<br /> Pushes generic ATS scripts to the client (jQuery, helpers functions). |
+| Push ATS Scripts | N/A | ⚠Deprecated as it only served an internal purpose.<br /> Pushes generic ATS scripts to the client (jQuery, helpers functions). |
 | RegExp Match | String | Return the n'th match of the given regular expression in the search string (uses JS `string.match`). |
 | Return First Valid Boolean | Boolean | Returns the first Boolean from the parameter list that is not null. |
 | Return First Valid Integer | Integer | Returns the first integer from the parameter list that is not null. |
 | Return First Valid String | String | Returns the first string from the parameter list that is not null. |
 | Return First Valid WebElement | WebElement | Returns the first web element from the parameter list that is not null. |
-| Set Implicit Wait | N/A | Deprecated as it only served an internal purpose. |
+| Set Implicit Wait | N/A | ⚠Deprecated as it only served an internal purpose. |
 | Set Return Value | N/A | Use this function in custom actions to set the return value of the custom action. When using the "extract action" feature this function call will be added automatically, where applicable. |
 | Sleep | N/A | The waits "sleep time" in milliseconds. |
 

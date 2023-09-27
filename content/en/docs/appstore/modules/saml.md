@@ -180,7 +180,7 @@ You can choose what you want to enter for the **Entity Id**, **Organization**, a
 * **Log available days** – If **Log SAML Requests** is checked in the IdP configuration, all login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This setting configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. If it is set to 0, all records will be removed daily.
 * **Use Encryption** *Versions of the SAML module below 3.5* – This setting controls the encryption and signing of messages being exchanged between your app (as an SP) and the IdP.
     {{% alert color="info" %}}
-    From version 3.5 of the SAML module, this functionality can be set independently for each IdP you configure and has been moved to the IdP-specific settings.
+From version 3.5 of the SAML module, this functionality can be set independently for each IdP you configure and has been moved to the IdP-specific settings.
 
 See [Encryption Settings](#encryption-settings), below, for additional information and options related to encryption and signing keys.
     {{% /alert %}}

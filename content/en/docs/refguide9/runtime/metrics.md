@@ -371,7 +371,7 @@ The name must adhere to the following rules:
 It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
-### 5.2 Deprecated usages 
+### 5.2 Deprecated usages
 
 The following deprecated usages will be removed in the future releases,
 

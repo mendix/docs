@@ -1,13 +1,13 @@
 ---
-title: "Backups API – Version 1 ⚠"
-linktitle: "Backups API v1 ⚠"
+title: "⚠Backups API – Version 1"
+linktitle: "⚠Backups API v1"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 11
 ---
 
 {{% alert color="warning" %}}
-⚠ The Backups API version 1 is deprecated and will be retired by the end of 2023.
+⚠The Backups API version 1 is deprecated and will be retired by the end of 2023.
 
 You are advised to use the [Backups API version 2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support long-running tasks.
 {{% /alert %}}

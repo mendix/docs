@@ -1,5 +1,5 @@
 ---
-title: "Format String ⚠"
+title: "⚠Format String"
 url: /appstore/widgets/format-string/
 category: "Widgets"
 description: "Describes the configuration and usage of the Format String widget, which is available in the Mendix Marketplace."

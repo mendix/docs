@@ -263,7 +263,7 @@ From version 9.18.0, Mendix Studio Pro uses the system browser for signing in to
 
 ### 9.4 IdP Does Not Allow Untrusted Devices
 
-Mendix Studio Pro version 9.18.0 and above uses your system browser to login.
+Mendix Studio Pro 9.18.0 and above uses your system browser to login.
 
 Versions of Studio Pro lower than 9.18.0 use an embedded browser for login. This may not work when your IdP only allows trusted devices and doesn't recognize the embedded browser as a trusted device.
 

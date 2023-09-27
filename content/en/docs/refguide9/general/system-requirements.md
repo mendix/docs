@@ -199,9 +199,9 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.0
 * [Oracle Database](/refguide9/oracle/): 19, 21c
-* PostgreSQL: 11, 12, 13, 14, 15
+* PostgreSQL: 11, 12, 13, 14, 15, 16
 * [SAP HANA](/refguide9/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
+* [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.

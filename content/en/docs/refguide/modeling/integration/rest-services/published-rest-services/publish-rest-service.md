@@ -99,7 +99,7 @@ To create the mapping, follow these steps:
 
 The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Creating an export mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/); in other words, the REST services let you select which media type you want to be returned to the server.
 
-{{% alert color="info"}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the **Accept** header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](/howto/integration/publish-rest-service/#viewing).{{% /alert %}}
+{{% alert color="info" %}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the **Accept** header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](#viewing).{{% /alert %}}
 
 To build an export mapping, follow these steps:
 

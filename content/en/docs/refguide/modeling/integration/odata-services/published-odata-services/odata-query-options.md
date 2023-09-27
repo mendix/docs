@@ -151,7 +151,7 @@ You can compare values against the `null` literal. For example, given a string a
 Keep in mind that `null` is different from an empty string; a null attribute has no value, but an empty string (`''`) is a string of length 0.
 {{% /alert %}}
 
-When you filter against associations, null literals can be quite useful. For example, with `?$filter=Association_A_B ne null`, you can query for objects of entity type `A` that have at least one association set to objects of entity type `B`.
+Null literals are especially useful when you filter against associations. For example, with `?$filter=Association_A_B ne null`, you can query for objects of entity type `A` that have at least one association set to objects of entity type `B`.
 
 ## 9 Passing Query Options in the Request Body
 

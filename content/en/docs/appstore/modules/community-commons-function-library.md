@@ -128,7 +128,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ### 4.1 Deprecated Function Removal
 
-⚠ The `RegexTest` function had been deprecated, because you could use the `isMatch()` function in microflow expressions instead. In version 8.0.1 of this module, this function was removed.
+⚠The `RegexTest` function had been deprecated, because you could use the `isMatch()` function in microflow expressions instead. In version 8.0.1 of this module, this function was removed.
 
 ### 4.2 Deleting Obsolete Dependencies First
 

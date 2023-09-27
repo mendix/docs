@@ -185,7 +185,7 @@ Example 2
 * `step` – the step size or reporting frequency to use.
 * `protocol` – the protocol of the connection.
 * `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
-
+ 
 Example 1
 
 ```json

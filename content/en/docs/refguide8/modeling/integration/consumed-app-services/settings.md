@@ -1,5 +1,5 @@
 ---
-title: "⚠Settings"
+title: "Settings"
 url: /refguide8/settings/
 tags: ["studio pro"]
 ---
@@ -9,7 +9,7 @@ tags: ["studio pro"]
 {{% /alert %}}
 
 {{% alert color="info" %}}
-⚠App services are deprecated and were removed in Studio Pro 9. Use a [consumed web service](/refguide8/consumed-web-services/) to consume existing app services.
+⚠App services are deprecated and were removed in Studio Pro 9. Use a[consumed web service](/refguide8/consumed-web-services/) to consume existing app services.
 {{% /alert %}}
 
 In the settings screen, you see the version of the app service, its icon and a short description. Three tabs are selectable: 'Actions', 'Settings' and 'Documentation'.

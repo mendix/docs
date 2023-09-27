@@ -1,5 +1,5 @@
 ---
-title: ⚠Select App Service"
+title: Select App Service"
 url: /refguide8/select-app-service/
 tags: ["studio pro"]
 ---
@@ -9,7 +9,7 @@ tags: ["studio pro"]
 {{% /alert %}}
 
 {{% alert color="info" %}}
-⚠App services are deprecated and were removed in Studio Pro 9. Use a [consumed web service](/refguide8/consumed-web-services/) to consume existing app services.
+App services are deprecated and were removed in Studio Pro 9. Use a [consumed web service](/refguide8/consumed-web-services/) to consume existing app services.
 {{% /alert %}}
 
 ## Source

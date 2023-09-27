@@ -35,16 +35,16 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Get Active Tab Caption  | TabContainer                       | Returns the caption of the active tab page. |
-| Get BooleanSlider Value | BooleanSlider                      | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the current value of the BooleanSlider as a string. |
-| Get BootstrapRTE Value | BootstrapRTE | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the current BootstrapRTE value as an HTML string. |
+| Get BooleanSlider Value | BooleanSlider                      | ⚠Deprecated in favor of **Get Value**.<br /> Returns the current value of the BooleanSlider as a string. |
+| Get BootstrapRTE Value | BootstrapRTE | ⚠Deprecated in favor of **Get Value**.<br /> Returns the current BootstrapRTE value as an HTML string. |
 | Get Checkbox Set Selector Value | Checkbox Set Selector | Finds the checkbox by column caption and cell value and returns its value. |
 | Get Checkbox Set Selector Value (all) | Checkbox Set Selector | Returns the **Select all** checkbox value. |
 | Get Checkbox Value | Checkbox | Returns true if the checkbox is checked. |
-| Get CKEditor Value | CKEditor | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the CKEditor value. |
+| Get CKEditor Value | CKEditor | ⚠Deprecated in favor of **Get Value**.<br /> Returns the CKEditor value. |
 | Get Dialog Message Text | ConfirmationDialog, DialogMessage | Get the text from message and confirmation dialogs. |
 | Get Grid Selector Box Value | Grid Selector Box | Returns the current checkbox/radio button value. |
 | Get Index | DropDown, ReferenceSelector, SearchInput DropDown | Gets the index of selected values in a drop-down menu (for example, an EnumSelect or ReferenceSelector). |
-| Get InputReferenceSelector Value | InputReferenceSelector | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the current value of the InputReferenceSelector. |
+| Get InputReferenceSelector Value | InputReferenceSelector | ⚠Deprecated in favor of **Get Value**.<br /> Returns the current value of the InputReferenceSelector. |
 | Get Item/Row Index | DataGrid, TemplateGrid, ListView | Gets the index of a row in a data grid or an item in a template grid or list view. |
 | Get Row Cell Value | DataGrid | Gets the cell value of a data grid row for a given column name. |
 | Get Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Returns the current value of the checkbox found by the entity attribute value. |

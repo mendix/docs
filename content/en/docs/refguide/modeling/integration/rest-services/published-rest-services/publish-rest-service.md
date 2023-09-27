@@ -23,13 +23,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
-## 3 Setting Up the Example Project
+## 3 Setting Up the Example App
 
-To create the example project that you will use in the next sections for publishing your REST service, follow these steps:
+To set up the example app that you will use in the next sections for publishing your REST service, follow these steps:
 
 1. Create a new app and rename the **MyFirstModule** module to **RESTExample**.
 2. Open the domain model of the **RESTExample** module.
-3. Create **Order** and **OrderItem** entities with a one-to-many association, like this:
+3. Create **OrderItem** and **Order** entities with a many-to-one association, like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/domainmodel.png" alt="Many-to-one association from OrderItem to Order" >}}
 
@@ -42,13 +42,15 @@ Your completed **Order_Overview** page should look like this:
 
 {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/order_NewEdit_Page.png" alt="Structure mode view of the Order_NewEdit page with data grid" >}}
 
-Add the overview page to your app navigation. Then run the application and create a couple of orders and order items.
+Add the overview page to your app navigation. Then, run the application and create a couple of orders and order items.
 
 ## 4 Publishing the Service
 
 To use the data from your model in the REST service, you need to create a message definition.
 
 ### 4.1 Creating the Mapping
+
+To create the mapping, follow these steps:
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Message definitions**.
 2. In the **Add Message Definitions** dialog box, enter *MD_Orders* in the **Name** field. Press **OK** to create and start editing the new message definition.
@@ -81,11 +83,11 @@ To use the data from your model in the REST service, you need to create a messag
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/OperationsDialogSettings.png" alt="Operation path, microflow, and parameter settings" >}}
 
-8. <a id="eight"></a>Click **OK** to close out the **Operation** dialog box, and then click **Show** to start editing the newly created microflow. Add two parameters: **httpRequest** and **OrderID**.
+8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box, and then click **Show** to start editing the newly created microflow. Add two parameters: **httpRequest** and **OrderID**.
 
-    {{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** parameter. If you create an export mapping in steps 11-19 below, you must remove the **httpResponse** parameter to avoid getting errors.{{% /alert %}}
+    {{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** parameter. If you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the **httpResponse** parameter to avoid getting errors.{{% /alert %}}
 
-9. Add a **Create variable** activity to the microflow to convert the **OrderID** variable from **String** data type to **Integer/Long**. This makes it possible to search for the **OrderID** (an **AutoNumber** data type).
+9. Add a **Create variable** activity to the microflow to convert the **OrderID** variable from data type **String** to **Integer/Long**. This makes it possible to search for the **OrderID** (an **AutoNumber** data type).
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ConvertOrderID.png" alt="Create Variable dialog box used to parse OrderID as an integer variable" >}}
 
@@ -93,37 +95,43 @@ To use the data from your model in the REST service, you need to create a messag
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RetrieveOrder.png" alt="Range and XPath constraint settings in the Retrieve Objects dialog box" >}}
 
-    {{% alert color="info" %}}The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building an export mapping. Creating an export mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability to select which media type you want to be returned to the server.<br><br>You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the **Accept** header. You can then specify if you want to receive XML or JSON.{{% /alert %}}
+#### 4.2.1 Building an export mapping (optional){#export-mapping}
 
-11. <a id="eleven"></a> Right-click the **RESTExample** module on the **App Explorer** and select **Add other** > **Export Mapping** to add a new export mapping named **EM_ExportOrder**.
+The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Creating an export mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/); in other words, the REST services let you select which media type you want to be returned to the server.
+
+{{% alert color="info"}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the **Accept** header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](/howto/integration/publish-rest-service/#viewing).{{% /alert %}}
+
+To build an export mapping, follow these steps:
+
+1. Right-click the **RESTExample** module on the **App Explorer** and select **Add other** > **Export Mapping** to add a new export mapping named *EM_ExportOrder*.
     
-12. In the **Select schema elements for export mapping** dialog box, select **Message definition**. Then use the **Select** button to select **Orders** from the **MD_Orders** mapping you created earlier. Select all the attributes, as shown below, and click **OK**.
+2. In the **Select schema elements for export mapping** dialog box, select **Message definition**. Then use the **Select** button to select **Orders** from the **MD_Orders** mapping you created earlier. Select all the attributes, as shown below, and click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/SelectSchemaForExport.png" alt="All attribute checkboxes selected in the Select schema elements for export mapping dialog" >}}
 
-13. In the export mapping that is shown, map the schema object elements to the matching entities from the domain model (either by double-clicking the schema object elements or dragging the entities from the **Connector** pane). Make sure to map the attributes with the same names. Your mapping should look like this:
+3. In the export mapping that is shown, map the schema object elements to the matching entities from the domain model (either by double-clicking the schema object elements or dragging the entities from the **Connector** pane). Make sure to map the attributes with the same names. Your mapping should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ExportMappingResult.png" alt="Mapping Order to Order and OrderItem to OrderItem" >}}
 
-14. Go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
-15. In the **Mapping** field of the dialog box, select the **EM_ExportOrder** mapping. For the **Parameter** field, select the **Order** object that was retrieved with the **Retrieve** action in the microflow.
-16. <a id="sixteen"></a>Select **JSON** for the result, and store the output in a **String Variable**. Enter *Order_JSON* for the **Variable name**.
+4. Go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
+5. In the **Mapping** field of the dialog box, select the **EM_ExportOrder** mapping. For the **Parameter** field, select the **Order** object that was retrieved with the **Retrieve** action in the microflow.
+6. Select **JSON** for the result, and store the output in a **String Variable**. Enter *Order_JSON* for the **Variable name**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MFExportWithMapping.png" alt="Export With Mapping dialog box settings" >}}
 
-17. Add a **Create object** activity to the microflow to create an object of type **HttpResponse**. Create three new members: a **StatusCode** that returns the value `200` to indicate success, **Content** mapped to the exported JSON from [step 16](#sixteen), and the **HttpVersion** that you will be using (`'HTTP/1.1'` in this case). It should look like this: 
+7. Add a **Create object** activity to the microflow to create an object of type **HttpResponse**. Create three new members: a **StatusCode** that returns the value `200` to indicate success, **Content** mapped to the exported JSON from the previous step, and the **HttpVersion** that you will be using (`'HTTP/1.1'` in this case). It should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponse.png" alt="Create Object dialog box for HttpResponse object" >}}
 
-18. Add a **Create object** activity to the microflow for adding a header to the response. Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json'` (or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response. It should look like this:
+8. Add a **Create object** activity to the microflow for adding a header to the response. Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json'` (or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response. It should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponseHeader.png" alt="Create Object dialog for HttpHeader" >}}
 
-19. Open the **End Event** in your microflow and enter `$NewHttpResponse` as the return value. Your completed microflow should look like this:
+9. Open the **End Event** in your microflow and enter `$NewHttpResponse` as the return value. Your completed microflow should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/CompleteMFNoErrorHandling.png" alt="Completed PRS_GetGetOrderByID microflow" >}}
 
-    {{% alert color="info" %}}You should have no errors. If you have error CE0346, check if an **httpResponse** parameter was automatically created in [step 8](#eight). If there is one, remove it.{{% /alert %}}
+    {{% alert color="info" %}}You should have no errors. If you have error CE0346, check if an **httpResponse** parameter was automatically created when you [started editing the microflow](#edit-microflow). If there is one, remove it.{{% /alert %}}
 
 ### 4.3 Viewing the App {#viewing}
 

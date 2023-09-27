@@ -269,7 +269,7 @@ The use of a ZIP file to configure a project's theme is deprecated. A [UI resour
 
 {{% /alert %}}
 
-Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder.  Note that this practice is deprecated and will be removed in a future version.
+Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
 Switching from a ZIP file to a UI resources package is straightforward:
 

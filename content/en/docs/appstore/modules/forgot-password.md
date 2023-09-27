@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## 1 Introduction/intro
 
 The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix app. These are the best choice when you do not want to use a Single Sign On (SSO) solution to integrate with your existing Identity and Access Management (IAM) infrastructure.
 

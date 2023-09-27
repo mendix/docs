@@ -32,7 +32,7 @@ To get more information, double-click or right-click the warning.
 
 {{% alert color="warning" %}}
 
-Using the main placeholder contents for pop-ups is deprecated. This potion will be removed in a future version.  Please use a separate pop-up layout instead.
+Using the main placeholder contents for pop-ups is deprecated. This potion will be removed in a future version. Please use a separate pop-up layout instead.
 
 {{% /alert %}}
 

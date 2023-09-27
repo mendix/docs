@@ -57,7 +57,7 @@ These are possible trigger actions:
 
 These are only visible with special permissions:
 
-* **Run microflow** ***(⚠ Deprecated)***. You can use this to run a microflow with parameters that depend on the trigger type. This was used in the past to notify, but the notify option has been simplified.
+* **Run microflow** ***(⚠Deprecated)***. You can use this to run a microflow with parameters that depend on the trigger type. This was used in the past to notify, but the notify option has been simplified.
 * **Create heap dump**. You can only see this option if you have special permissions. (**USE WITH CAUTION**: creating a heap dump pauses the system for a certain period of time depending on the amount of heap space assigned to the Java process running the Mendix server. This can freeze the app for many seconds).
 
 ### 3.3 Trigger Continuation Tab

@@ -1,6 +1,6 @@
 ---
-title: "Deploy API – Version 3 ⚠"
-linktitle: "Deploy API v3 ⚠"
+title: "⚠Deploy API – Version 3"
+linktitle: "⚠Deploy API v3"
 url: /apidocs-mxsdk/apidocs/deploy-api-3/
 type: swagger
 category: "API Documentation"

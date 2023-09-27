@@ -79,7 +79,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 9 and you can
 
 ## 3 Mendix Runtime API Changes
 
- Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Runtime API** link in our [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
+Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Runtime API** link in our [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
 
 Additionally, refer to the Mendix Studio Pro 9.02 Release notes for more Mendix Runtime API change details.
 
@@ -108,7 +108,7 @@ For best results with native apps, make sure you have updated the [Native Mobile
 
 ## 5 Client API Changes
 
- Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
+Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
 
 ## 6 Native Dependencies
 

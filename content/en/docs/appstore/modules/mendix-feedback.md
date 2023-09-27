@@ -10,7 +10,8 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-This document is for the Mendix Feedback module, compatible with Studio Pro v.9.18.6 and above. ⚠ If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro v.8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
+This document is for the Mendix Feedback module, compatible with Studio Pro v.9.18.6 and above.
+⚠If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro v.8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

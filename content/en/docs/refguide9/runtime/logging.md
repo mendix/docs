@@ -51,7 +51,7 @@ The following log nodes are used by Mendix when writing log messages.
 This list is currently incomplete and is being updated.
 {{% /alert %}}
 
-| Log Node | Description|
+| Log Node | Description
 | --- | --- |
 | ActionManager | Logs messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |

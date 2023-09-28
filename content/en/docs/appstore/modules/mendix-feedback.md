@@ -31,7 +31,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
 
@@ -192,7 +192,7 @@ If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-r
 
 ### 6.1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px">}}
 

@@ -254,7 +254,7 @@ Here is the outcome after migration:
 
 Beside the story details above, the remaining details for your stories are migrated according to their equivalents in the [Project Management](/developerportal/project-management/) section in the Developer Portal.
 
-{{% alert color="warning" %}}In [Stories](/developerportal/project-management/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
+{{% alert color="warning" %}}In Stories, files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
 ### 6.3 Migration Report {#migration-report}
 

@@ -24,7 +24,7 @@ You can import and export initiatives as an Excel file in the [Portfolio Managem
 
 2. Click the following icon on the upper-right corner:
 
-   {{< figure src="/attachments/developerportal/portfolio-management/import-export-initiatives/import-export-icon.png"  width="600"  >}}
+   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  width="600"  >}}
 
 3. Select **Export Initiatives**. The **Export Initiatives** dialog box opens:
 

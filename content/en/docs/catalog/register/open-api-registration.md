@@ -22,8 +22,6 @@ OpenAPI automatic registration registers all your OpenAPI and OData APIs in the 
 
 For OpenAPI, your app needs to be made using Mendix Studio Pro version 10.0 or above.
 
-For OData, your app needs to be made using Mendix Studio Pro version 8.14 or above.
-
 If your data sources are not hosted on Mendix Cloud, see [Register Data Sources](/catalog/register/) to explore alternative methods to register them.
 
 ## 3 Who Can Discover My APIs?

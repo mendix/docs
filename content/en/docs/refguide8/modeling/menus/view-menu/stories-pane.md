@@ -90,6 +90,5 @@ To change the status of a task, tick or clear the checkbox in the **Status** col
 
 ## 3 Read More
 
-* Stories
 * [Feedback Management](/developerportal/app-insights/feedback/)
 * [View Menu](/refguide8/view-menu/)

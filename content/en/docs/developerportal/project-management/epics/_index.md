@@ -20,17 +20,9 @@ Epics is a replacement of Stories, which has been retired on October 1, 2023. Fo
 
 Epics is the default tool for you to manage the development process of new apps.  The Epics tool enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
 
-## 2 Getting Your Team Access to an App in Epics
+## 2 Opening an App in Epics
 
-Only a Scrum Master can give the team access to an app in Epics. To do so, the Scrum Master must open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **Settings** page, and click **Switch to Epics**:
-
-{{< figure src="/attachments/developerportal/project-management/epics/project-management.png" width="600px" >}}
-
-This gives everyone in the team access to this app in Epics. To give the team access to another app in Epics, the Scrum Master must repeat this procedure.
-
-## 3 Opening an App in Epics
-
-Once you have access to an app in Epics, open it in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
+Open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
 
 * [Board](/developerportal/project-management/epics/board/)
 * [Planning](/developerportal/project-management/epics/planning/)

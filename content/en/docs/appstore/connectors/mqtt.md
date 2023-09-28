@@ -72,7 +72,7 @@ To publish data to the MQTT broker, follow these steps:
 3. Edit the event to include the following details:
     * **Topic** – Define the topic to which the payload is published.
     * **Payload** – Pick a string message to be published.
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choosean attribute of each message being published
+    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute of each message that is being published.
     * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
         * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
         *  **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
@@ -82,19 +82,18 @@ To publish data to the MQTT broker, follow these steps:
 To subscribe to the MQTT broker, follow these steps:
 
 1. Search for *Subscribe MQTT* in the **Toolbox**.
-2. Drag the *Subscribe MQTT* event into your microflow.
+2. Drag the **Subscribe MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to subscribe to
-    * **OnMessageMicroflow** – microflow to be executed when a message is received on a subscribed topic
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
+    * **Topic** – Define the topic to subscribe to.
+    * **OnMessageMicroflow** – Identify the microflow to be executed when a message is received on a subscribed topic
+    * QoS (Quality of Service) – Choose an attribute of each message that is being published.
 
-When subscribing to a topic, in the subscribe action, define which microflow is triggered for each message, and check that the topic and payload is passed on into that microflow.
+When subscribing to a topic, in the **Subscribe** action, define which microflow is triggered for each message and check that the topic and payload is passed on into that microflow.
 
 #### 3.2.3 Unsubscribe
 
 To unsubscribe from the MQTT broker, follow these steps:
 
 1. Search for *Unsubscribe MQTT* in the **Toolbox**.
-2. Drag the *Unsubscribe MQTT* event into your microflow.
-3. Edit the event to include the following details:
-    * **Topic** – topic to unsubscribe from
+2. Drag the **Unsubscribe MQTT** event into your microflow.
+3. Edit the event to include the **Topic** to unsubscribe from.

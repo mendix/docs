@@ -27,7 +27,7 @@ The new features were divided into these major themes, which are described in th
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
 | App Insights | Released for GA [Aug 12, 2023](/releasenotes/developer-portal/#august-12-2023) |
 | Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q4 2023 |
-| Community spaces | Currently in Private Beta<br>GA: Q3 2023 [**UPDATE**] |
+| Community spaces | Currently in Private Beta<br>GA: TBD [**VERIFY**] |
 
 ## 3 Developer Experience
 
@@ -59,7 +59,7 @@ The new features were divided into these major themes, which are described in th
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Mendix Connect – new database connector | GA: Q3 2023 [**UPDATE**] |
+| Mendix Connect – new database connector | Currently in Private Beta<br>GA: Q3 2023 [**UPDATE**] |
 | Mendix Connect – REST connector | GA: Q4 2023 |
 | Studio Pro extensibility | Private Beta (partners & ISVs): Q3 2023<br>GA: TBD [**UPDATE**] |
 | Solutions Kit – adaptation insights | Private Beta: Q4 2023<br>GA: TBD |

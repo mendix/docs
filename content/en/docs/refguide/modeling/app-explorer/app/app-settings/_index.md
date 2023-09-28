@@ -242,14 +242,14 @@ The look and feel of a Mendix application is governed by the [UI resources packa
 ### 6.2 ⚠ Theme ZIP File
 
 {{% alert color="warning" %}}
-
 ⚠ The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
-
 {{% /alert %}}
 
 Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. 
 
-⚠ Note that this practice is deprecated and will be removed in a future version.
+{{% alert color="warning" %}}
+⚠ This practice is deprecated and will be removed in a future version.
+{{% /alert %}}
 
 Switching from a ZIP file to a UI resources package is straightforward:
 

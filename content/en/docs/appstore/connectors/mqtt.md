@@ -61,7 +61,7 @@ You can build microflows that use the connection details from the domain model t
 
 ### 3.2 Microflow Actions
 
-After you have set up the connection with the broker in the [Configuration](#configuration) section or in a microflow, you can **Publish**, **Subscribe**, or **Unsubscribe**. These actions are used in microflows. The **SampleUses** microflow displays a sample setup for you to reference.
+After you have set up the broker connection in the [Configuration](#configuration) section or in a microflow, you can **Publish**, **Subscribe**, or **Unsubscribe**. These actions are used in microflows. The **SampleUses** microflow displays a sample setup for you to reference.
 
 #### 3.2.1 Publish
 
@@ -71,7 +71,7 @@ To publish data to the MQTT broker, follow these steps:
 2. Drag the **Publish MQTT** event into your microflow.
 3. Edit the event to include the following details:
     * **Topic** – Define the topic to which the payload is published.
-    * **Payload** – Pick a string message to be published.
+    * **Payload** – Choose a string message to be published.
     * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute of each message that is being published.
     * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
         * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.

@@ -68,14 +68,14 @@ After you have set up the connection with the broker in the [Configuration](#con
 To publish data to the MQTT broker, follow these steps:
 
 1. Search for *Publish MQTT* in the **Toolbox**.
-2. Drag the *Publish MQTT* event into your microflow.
+2. Drag the **Publish MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to which the payload is published
-    * **Payload** – string message to be published
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
-    * **Retained** – the retained setting serves two purposes depending on whether the message it is associated with is being published or received:
-        * **Retained** set to **Yes** – For messages being published, setting Retained to Yes indicates that the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, the flag being true indicates that the received message is not a new one, but one that has been retained by the MQTT server.
-        * **Retained** set to **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message, received as a result of it being published to the server.
+    * **Topic** – Define the topic to which the payload is published.
+    * **Payload** – Pick a string message to be published.
+    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choosean attribute of each message being published
+    * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
+        * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
+        *  **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
 
 #### 3.2.2 Subscribe
 

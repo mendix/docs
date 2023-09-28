@@ -110,6 +110,18 @@ The following steps will change the permissions of a team member to an environme
 
 1. Call `PATCH /apps/{appId}/environments/{environmentId}/permissions` to update the Team Members' permissions for this {environmentId} of this {appId}.
 
-## 4 API Reference
+## 4 Troubleshooting
+
+### 4.1 Unexpected Apps Listed by API
+
+This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.
+
+In the Developer Portal:
+
+* The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
+
+* The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps which are deployed to other platforms (for example, Mendix for Private Cloud or SAP BTP) and Free Apps which have not yet been deployed and therefore have no environments set up for them.
+
+## 5 API Reference
 
 {{< swaggerui src="/openapi-spec/cloud-portal-v4.yaml"  >}}

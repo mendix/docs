@@ -1,5 +1,5 @@
 ---
-title: "⚠Google Maps"
+title: "Google Maps ⚠"
 url: /appstore/widgets/google-maps/
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix Marketplace."
@@ -10,7 +10,7 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-⚠This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
+⚠ This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
 {{% /alert %}}
 
 ## 1 Introduction

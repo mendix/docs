@@ -156,12 +156,12 @@ These are the different data types in ATS:
 | Text | A piece of text that can contain letters, numbers, spaces, and other characters. | "ATS123", "Helloworld!" |
 | Number | A whole number. | 123, 4423 |
 | Boolean | A truth value. | true, false |
-| Date/Time | ⚠**The Date/Time type is deprecated and should not be used.** | N/A |
+| Date/Time | ⚠ **The Date/Time type is deprecated and should not be used.** | N/A |
 | Page Element | Represents a DOM element. | (See the image below this table.)|
 | Any | Lets the user choose the data type. | Choose String for "Helloworld!" |
 | Drop-Down | One of the values of the given drop-down menu. | Red, Green, Blue; Todo, Running, Done |
-| Float | ⚠**The Float type is deprecated and should not be used.** | N/A |
-| Currency | ⚠**The Currency type is deprecated and should not be used** | N/A |
+| Float | ⚠ **The Float type is deprecated and should not be used.** | N/A |
+| Currency | ⚠ **The Currency type is deprecated and should not be used** | N/A |
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/datatype-web-element.png" >}}
 

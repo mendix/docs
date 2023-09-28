@@ -96,8 +96,8 @@ On the **Advanced** tab, there are these settings:
 * **Do not force a login action** – If selected, anonymous users will be able to access the deep link. If unselected, anonymous user sessions will be redirected to the location specified in the **LoginLocation** constant.
 * **Language** – The selected language will be associated to the anonymous user session.
 * **Keep the deep link the entire session** – If selected, the deep link will be the home page for the session. For example, when the user goes to `/link/article/1`, the deep link handler microflow is executed and the user is navigated to the page specified in handler microflow. This handler microflow now will be executed every time user reloads the Mendix app or calls the **DeepLink.DeepLinkHome** microflow. Ending current session will stop this behavior until this deep link is called again.
-* **Process an argument as an Object** – ⚠This is deprecated.
-* **Process an argument as a String** – ⚠This is deprecated.
+* **Process an argument as an Object** – ⚠ This is deprecated.
+* **Process an argument as a String** – ⚠ This is deprecated.
 * **Alternative Index Page** – If selected, the default index location (`index.html`) and the **DeepLink.IndexPage** constant will be overridden by this value. This is useful for theme-related use cases, for example, `index-dark.html`.
 * **Track hit count** - If selected, Deeplink will track the number of hits on this link in the `HitCount` attribute. This tracking can be disabled if performance issues occur. This option is only available in Deep Link module version 9 or higher.
 

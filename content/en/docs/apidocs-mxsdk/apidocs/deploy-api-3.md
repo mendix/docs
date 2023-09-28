@@ -1,6 +1,6 @@
 ---
-title: "⚠Deploy API – Version 3"
-linktitle: "⚠Deploy API v3"
+title: "Deploy API – Version 3 ⚠"
+linktitle: "Deploy API v3 ⚠"
 url: /apidocs-mxsdk/apidocs/deploy-api-3/
 type: swagger
 category: "API Documentation"
@@ -10,7 +10,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
 {{% alert color="warning" %}}
-⚠The Deploy API version 3 is deprecated and will be removed in March 2024. Please use [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/) which contains all the v3 endpoints, plus additional endpoints.
+⚠ The Deploy API version 3 is deprecated and will be removed in March 2024. Please use [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/) which contains all the v3 endpoints, plus additional endpoints.
 
 The Deploy API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}

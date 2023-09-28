@@ -187,7 +187,7 @@ We would therefore suggest that you do one of the following:
 
 The Mendix Runtime does not use the Spring framework. Look at the section [Why Are Vulnerabilities Reported in Some Java Libraries?](#java-libraries), above for information about why you may be receiving this report.
 
-For example, the old version of the [LDAP Synchronization module](https://marketplace.mendix.com/link/component/24) (⚠currently deprecated) had the spring-beans-4.3.9.RELEASE.jar, but the version the developer released in January 2020 removed that dependency, as noted in the release notes for the module:
+For example, the old version of the [LDAP Synchronization module](https://marketplace.mendix.com/link/component/24) (⚠ currently deprecated) had the spring-beans-4.3.9.RELEASE.jar, but the version the developer released in January 2020 removed that dependency, as noted in the release notes for the module:
 
 > * Updated all Java libraries used by the module to the latest version. In case of Java compilation or Runtime errors you can try deleting the following libraries from your userlib folder (will require a new deployment to take effect): 
 > 
@@ -206,7 +206,7 @@ The Mendix Client is bundled with the full dojo library. However, not all functi
 
 #### 8.6.2 Prototype Pollution Vulnerability - CVE-2021-23450
 
-Mendix 9.11.0 and above uses Dojo 1.16.4. ⚠The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
+Mendix 9.11.0 and above uses Dojo 1.16.4. ⚠ The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
 
 ### 8.7 BREACH Attacks
 

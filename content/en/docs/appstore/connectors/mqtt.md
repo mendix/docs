@@ -9,19 +9,16 @@ tags: ["marketplace", "marketplace component", "mqtt", "iot"]
 
 ## 1 Introduction
 
-You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. [MQTT](https://mqtt.org/) is a lightweight Internet of things (IoT) messaging protocol. 
+You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. MQTT is a lightweight Internet of Things (IoT) messaging protocol. 
 
 ### 1.1 Typical Use Cases
 
-The MQTT Connector consists of microflow actions that enable doing the following:
+The MQTT connector consists of microflow actions that enable you to do the following:
 
-* Publishing data to the MQTT broker
-* Subscribing to the MQTT broker 
-* Unsubscribing from the MQTT broker
+* Publish data to the MQTT broker
+* Subscribe to the MQTT broker 
+* Unsubscribe from the MQTT broker
 
-### 1.2 Features
-
-The MQTT connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
 
 ## 2 Broker Configuration {#configuration}
 
@@ -29,18 +26,18 @@ The MQTT connector allows you to publish to, subscribe to, and unsubscribe from 
 
 Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
-If the broker needs basic authentication for connection, then you can set up a username and password that will be stored in the domain model. See the [Authentication](#auth) section below.
+If the broker needs basic authentication for connection, you can set up a user name and password that will be stored in the domain model. For more information, see the [Authentication](#auth) section below.
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
-You can set up a broker connection in a microflow directly if you do not want it to be [stored in the domain model](#configuration). To do this, follow these steps:
+You can set up a broker connection in a microflow directly if you do not want it to be stored in the domain model. To do this, follow these steps:
 
 1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object by providing the required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
 #### 2.2 Setting Up Authentication {#auth}
 
-If an MQTT broker needs a username and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, and then set the values for **UserName** and **Password**.
+If an MQTT broker needs a user name and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
 
@@ -51,10 +48,10 @@ The **Password** is encrypted using the **EncryptionKey** constant. For better s
 Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
-2. Copy all content of the file and paste it to the **CA Certificate** and **Client Certificate** fields. Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
+2. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
 3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
-    * Currently supported certificate types are X.509 format (*.crt*, *.cer*)
-    * Currently supported key types are X.509 format (*.pem*, *.pkcs*)
+    * Currently supported certificate types are *X.509* format (*.crt*, *.cer*)
+    * Currently supported key types are *X.509* format (*.pem*, *.pkcs*)
 
 ## 3 Usage
 
@@ -64,7 +61,7 @@ Build microflows that use the connection details from the domain model to connec
 
 ### 3.2 Microflow Actions
 
-After you have set up the connection with the broker (in the [Configuration](#configuration) section or in a microflow), you can use the actions Publish, Subscribe, or Unsubscribe. These actions are used in microflows. The **SampleUses** microflow gives a sample setup for your reference.
+After you have set up the connection with the broker in the [Configuration](#configuration) section or in a microflow, you can **Publish**, **Subscribe**, or **Unsubscribe**. These actions are used in microflows. The **SampleUses** microflow displays a sample setup for you to reference.
 
 #### 3.2.1 Publish
 
@@ -88,10 +85,10 @@ To subscribe to the MQTT broker, follow these steps:
 2. Drag the *Subscribe MQTT* event into your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to subscribe to
-    * **OnMessageMicroflow** – microflow to be executed when a message is received on subscribed topic
+    * **OnMessageMicroflow** – microflow to be executed when a message is received on a subscribed topic
     * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
 
-When subscribing to a topic, define in the subscribe action which microflow is triggered for each message, and that the topic and payload is passed on into that microflow.
+When subscribing to a topic, in the subscribe action, define which microflow is triggered for each message, and check that the topic and payload is passed on into that microflow.
 
 #### 3.2.3 Unsubscribe
 

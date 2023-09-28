@@ -244,7 +244,7 @@ These are the new details of migrated stories:
 | Story **Status** | Tag with this format: **status:Status**                      | **status:To-do**    |
 | **Assignee**     | Story is assigned unless the assignee is not a member of the app team. |                     |
 
-For example, here is a Sprint with three stories from [Stories](/developerportal/project-management/stories/):
+For example, here is a Sprint with three stories from Stories:
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-example-stories.png" >}}
 
@@ -273,5 +273,5 @@ The **Migration Configuration** section presents what you have selected to migra
 The **Not Finished** status means that you can use the **Continue Migration** button option (this button is only available if a migration has failed or there is still some stories data left to migrate).
 
 {{% alert color="info" %}}
-If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/project-management/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
+If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from Stories to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}

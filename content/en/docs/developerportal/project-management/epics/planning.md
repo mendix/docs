@@ -198,7 +198,7 @@ On this tab, you can enable or disable the toast notifications that appear like 
 
 ## 6 Migrating Stories to Epics {#data-migration}
 
-Mendix recommends you migrate your stories to Epics as soon as possible, as [Stories](/developerportal/project-management/stories/) will be retired on October 1, 2023. For apps that were still using Stories, Epics will automatically become the default project management tool. However, you can still migrate stories to Epics after October 1, 2023.
+Mendix recommends you migrate your stories to Epics as soon as possible, as Stories has been retired on October 1, 2023. For apps that were using Stories, Epics is now the default project management tool. However, you can now still migrate stories to Epics.
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 

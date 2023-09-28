@@ -27,7 +27,7 @@ The new features were divided into these major themes, which are described in th
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
 | App Insights | Released for GA [Aug 12, 2023](/releasenotes/developer-portal/#august-12-2023) |
 | Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q4 2023 |
-| Community spaces | Currently in Private Beta<br>GA: Q3 2023 |
+| Community spaces | Currently in Private Beta<br>GA: Q3 2023 [**UPDATE**] |
 
 ## 3 Developer Experience
 
@@ -44,8 +44,8 @@ The new features were divided into these major themes, which are described in th
 | Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
 | Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
-| Insights into commits by peers| GA: Q3 2023 |
-| Rich design properties | GA: Q3 2023 |
+| Insights into commits by peers| GA: Q3 2023 [**UPDATE**] |
+| Rich design properties | GA: Q3 2023 [**UPDATE**] |
 | Visual data filters | GA: Q4 2023 |
 | Mendix Chat | GA: Q4 2023 |
 | Mixed online and offline data | GA: Q4 2023 |
@@ -59,9 +59,9 @@ The new features were divided into these major themes, which are described in th
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Mendix Connect – new database connector | GA: Q3 2023 |
+| Mendix Connect – new database connector | GA: Q3 2023 [**UPDATE**] |
 | Mendix Connect – REST connector | GA: Q4 2023 |
-| Studio Pro extensibility | Private Beta (partners & ISVs): Q3 2023<br>GA: TBD |
+| Studio Pro extensibility | Private Beta (partners & ISVs): Q3 2023<br>GA: TBD [**UPDATE**] |
 | Solutions Kit – adaptation insights | Private Beta: Q4 2023<br>GA: TBD |
 | Mendix Connect – external actions | GA: TBD |
 
@@ -71,7 +71,7 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Mendix on AWS EKS (Private Cloud) | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8-2023) |
 | Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
-| Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q3 2023 |
+| Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q3 2023 [**UPDATE**] |
 | Private Mendix Platform | Currently in Private Beta<br>GA: Q4 2023   |
 | Pipelines (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
 | Pipelines (Private Cloud) | GA: TBD |

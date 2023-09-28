@@ -170,7 +170,7 @@ You can export your stories on the **Planning** page to an Excel file as follows
 
 ## 5 Board Settings {#settings}
 
-When you click **...** on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, **Toast Settings**, and **Data Migration**. These tabs are described in the sections below.
+When you click **...** on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, and **Toast Settings**. These tabs are described in the sections below.
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/board-settings.png" >}}
 
@@ -195,10 +195,6 @@ On this tab, you can switch between a Scrum workflow and Kanban workflow. The wo
 On this tab, you can enable or disable the toast notifications that appear like this:
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/toast-notification.png" width="500px" >}}
-
-### 5.4 Data Migration 
-
-On this tab, you can migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Migrating Stories to Epics](#data-migration) section below.
 
 ## 6 Migrating Stories to Epics {#data-migration}
 

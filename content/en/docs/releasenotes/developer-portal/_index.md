@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+
+### September 28, 2023
+
+#### Fixes 
+
+* We fixed an issue in [Feedback](/developerportal/app-insights/feedback/) where a feedback item with other feedback Items linked to it could not move between inbox and archive.
+* We fixed an issue for the legacy Feedback widget in Feedback, where it would error if you had too many user roles.
+* We fixed an issue in Feedback where the Feedback widget could not send items due to the incorrect pre-populated app ID value.
+
+
 ### September 21, 2023
 
 #### New Features

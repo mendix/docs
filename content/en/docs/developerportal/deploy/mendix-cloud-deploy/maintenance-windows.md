@@ -11,6 +11,7 @@ aliases:
 ---
 
 ## 1 Introduction
+
 In Mendix Cloud Professional and Enterprise plans, you can set a preferred maintenance window. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has planned maintenance operations, they are run within your preferred maintenance window.
 
 ### 1.1 Preferred Maintenance Window

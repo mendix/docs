@@ -32,7 +32,7 @@ If the broker needs basic authentication for connection, you can set up a user n
 
 You can set up a broker connection in a microflow directly if you do not want it to be stored in the domain model. To do this, follow these steps:
 
-1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object by providing the required parameters.
+1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object and provide required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
 #### 2.2 Setting Up Authentication {#auth}
@@ -48,7 +48,9 @@ The **Password** is encrypted using the **EncryptionKey** constant. For better s
 Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
-2. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
+2. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. 
+    *   Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. 
+    * Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
 3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
     * Currently supported certificate types are *X.509* format (*.crt*, *.cer*)
     * Currently supported key types are *X.509* format (*.pem*, *.pkcs*)

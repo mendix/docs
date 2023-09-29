@@ -27,7 +27,7 @@ The new features were divided into these major themes, which are described in th
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
 | App Insights | Released for GA [Aug 12, 2023](/releasenotes/developer-portal/#august-12-2023) |
 | Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q4 2023 |
-| Community spaces | Currently in Private Beta<br>GA: TBD [**VERIFY**] |
+| Community spaces | Currently in Private Beta<br>GA: TBD |
 
 ## 3 Developer Experience
 

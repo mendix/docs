@@ -74,7 +74,7 @@ To publish data to the MQTT broker, follow these steps:
 3. Edit the event to include the following details:
     * **Topic** – Define the topic to which the payload is published.
     * **Payload** – Choose a string message to be published.
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute of each message that is being published.
+    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute for each message that is being published.
     * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
         * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
         *  **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
@@ -88,7 +88,7 @@ To subscribe to the MQTT broker, follow these steps:
 3. Edit the event to include the following details:
     * **Topic** – Define the topic to subscribe to.
     * **OnMessageMicroflow** – Identify the microflow to be executed when a message is received on a subscribed topic
-    * QoS (Quality of Service) – Choose an attribute of each message that is being published.
+    * QoS (Quality of Service) – Choose an attribute for each message that is being published.
 
 When subscribing to a topic, in the **Subscribe** action, define which microflow is triggered for each message and check that the topic and payload is passed on into that microflow.
 

@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 1, 2023
+
+#### Improvements
+
+* We improved the migration flow, to make it as easy as possible for you to move your data from Stories to Epics.
+
+#### Deprecations
+
+* Stories is officially gone to a well deserved retirement and Epics is the only official Mendix agile planning tool now. You can still migrate all your data from Stories to Epics, all the steps are outlined in [our documentation](/developerportal/project-management/epics/planning/#54-data-migration).
+
 
 ### September 28, 2023
 

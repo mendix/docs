@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix allows you to publish REST web services natively from Studio Pro. This how-to demonstrates how to publish a REST service in an example project, and it demonstrates the `GET` operation for a published REST service.
+Mendix allows you to publish REST web services natively from Studio Pro. This how-to explains how to publish a REST service in an example project, and it demonstrates the `GET` operation for a published REST service.
 
 This how-to teaches you how to do the following:
 
@@ -53,7 +53,7 @@ To use the data from your model in the REST service, you need to create a messag
 To create the mapping, follow these steps:
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Message definitions**.
-2. In the **Add Message Definitions** dialog box, enter *MD_Orders* in the **Name** field. Press **OK** to create and start editing the new message definition.
+2. In the **Add Message Definitions** dialog box, enter *MD_Orders* in the **Name** field. Click **OK** to create and start editing the new message definition.
 3. Select **Add** to launch the **Message Definition** dialog box.
 4. You need to select the entity to use for the **MD_Orders** definition. Click **Select** and choose the **Order** entity from the list. Selecting the entity fills in the **Structure** part of the **Message Definition** dialog box. By default, only the **Order** checkbox is selected.
 5. Select the **OrderID** and **Customer** attributes.
@@ -95,11 +95,11 @@ To create the mapping, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RetrieveOrder.png" alt="Range and XPath constraint settings in the Retrieve Objects dialog box" >}}
 
-#### 4.2.1 Building an export mapping (optional){#export-mapping}
+#### 4.2.1 Building an Export Mapping (optional){#export-mapping}
 
 The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Creating an export mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/); in other words, the REST services let you select which media type you want to be returned to the server.
 
-{{% alert color="info" %}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the **Accept** header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](#viewing).{{% /alert %}}
+{{% alert color="info" %}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the `Accept` header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](#viewing).{{% /alert %}}
 
 To build an export mapping, follow these steps:
 
@@ -119,11 +119,17 @@ To build an export mapping, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MFExportWithMapping.png" alt="Export With Mapping dialog box settings" >}}
 
-7. Add a **Create object** activity to the microflow to create an object of type **HttpResponse**. Create three new members: a **StatusCode** that returns the value `200` to indicate success, **Content** mapped to the exported JSON from the previous step, and the **HttpVersion** that you will be using (`'HTTP/1.1'` in this case). It should look like this:
+7. Add a **Create object** activity to the microflow to create an object of type **HttpResponse**. Create three new members:
+    * A **StatusCode** that returns the value `200` to indicate success
+    * **Content** mapped to the exported JSON from the previous step
+    * The **HttpVersion** that you will be using (`'HTTP/1.1'` in this case)
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponse.png" alt="Create Object dialog box for HttpResponse object" >}}
 
-8. Add a **Create object** activity to the microflow for adding a header to the response. Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json'` (or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response. It should look like this:
+8. Add a **Create object** activity to the microflow for adding a header to the response. Create three new members:
+    * **Key**, set to `'Content-Type'`
+    * **Value**, set to `'application/json'` (or `'application/xml'` if your response contains XML rather than JSON)
+    * **System.HttpHeaders**, set to your HTTP response (`$NewHttpResponse`).
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponseHeader.png" alt="Create Object dialog for HttpHeader" >}}
 
@@ -138,19 +144,15 @@ To build an export mapping, follow these steps:
 To view and try out your app, follow these steps:
 
 1. Run your app and open it in the browser using this URL: [http://localhost:8080/rest-doc/](http://localhost:8080/rest-doc/).
-2. You will see a page with the documentation of all your published REST services:
-
-    {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestOverview.png" alt="REST Services page with link to PRS_OrderService" >}}
-
-3. Select the **PRS_OrderService** link to view the details:
+2. You will see a page with the documentation of all your published REST services. Select the **PRS_OrderService** link to view the details:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestDetails.png" alt="Details for the PRS_OrderService" >}}
 
-4. Click **GET**. Then click **Try it out** and fill in an **OrderID**.
+3. Click **GET**. Then click **Try it out** and fill in an **OrderID**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestExecute.png" alt="OrderID with Description input field" >}}
 
-5. Select **Execute** to run the request and return the result in the **Response body**.
+4. Click **Execute** to run the request and return the result in the **Response body**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestResponse.png" alt="Result in Response" >}}
 
@@ -158,7 +160,7 @@ Congratulations! You have published your first REST service from Mendix.
 
 ## 5 Error Handling
 
-You have not yet implemented error handling in this new service. For example, if you enter text instead of an integer in the **OrderID** parameter (or if you simply leave it blank) before clicking **Execute**, you will see a generic `500` or `404` error. So, to publish a more robust service, you should implement error handling.
+You have not yet implemented error handling in this new service. For example, if you enter text instead of an integer in the **OrderID** parameter (or if you leave it blank) before clicking **Execute**, you will see a generic `500` or `404` error. So, to publish a more robust service, you should implement error handling.
 
 ### 5.1 Adding Error Handling
 
@@ -185,7 +187,7 @@ You have not yet implemented error handling in this new service. For example, if
 
 ### 5.2 Additional Error Handling
 
-Now that you have covered the error handling of the **OrderID** parameter parsing, it's time to handle empty responses. Empty responses are not technically errors, but it is always a good idea to indicate what happened when nothing is returned. To add error handling for those situations when the **OrderID** parameter is filled with a valid integer but no corresponding **Order** result is found in the database, follow these steps:
+Now that you have covered the error handling of the **OrderID** parameter parsing, it is time to handle empty responses. Empty responses are not technically errors, but it is always a good idea to indicate what happened when nothing is returned. To add error handling for those situations when the **OrderID** parameter is filled with a valid integer but no corresponding **Order** result is found in the database, follow these steps:
 
 1. After the activity for retrieving from the database, add a decision activity with the following expression: `$Order != empty`. Connect the **true** exit to the activity for exporting to JSON. For the **false** exit, add a new **Create object** activity that creates a **NewHttpErrorNotFoundResponse** object.
 

@@ -28,7 +28,7 @@ If you want to join a team, you have to ask a current team member (with the **In
 
 Within a team, there are predefined roles that can be provisioned to team members. Each team role has access to permission areas based on the following factors:
 
-* Who can edit the backlog and current [Sprint](/developerportal/project-management/stories/)
+* Who can edit the backlog and current [Sprint](/developerportal/project-management/epics/planning/)
 * Who can edit the app model
 * Who has the correct [node permissions](/developerportal/deploy/node-permissions/) for access to the node information
     * Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)

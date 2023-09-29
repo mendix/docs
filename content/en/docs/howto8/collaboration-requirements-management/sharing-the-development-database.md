@@ -104,7 +104,6 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 ## 9 Read More
 
-* Stories
 * [Contributing to a GitHub repository](/howto8/collaboration-requirements-management/contribute-to-a-github-repository/)
 * [Starting your own repository](/howto8/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide8/version-control/)

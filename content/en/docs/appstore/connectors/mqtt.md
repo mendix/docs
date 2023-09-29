@@ -32,7 +32,7 @@ If the broker needs basic authentication for connection, you can set up a user n
 
 You can set up a broker connection in a microflow directly if you do not want it to be stored in the domain model. To do this, follow these steps:
 
-1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object and provide required parameters.
+1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object and provide the required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
 #### 2.2 Setting Up Authentication {#auth}

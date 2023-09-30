@@ -19,7 +19,7 @@ This document is created by and for the Mendix community. It collects performanc
 
 {{% /alert %}}
 
-A must-have for your app is that it performs well. Your users will not accept anything else, and they will choose alternatives if the performance is not good. This document describes some best practices to apply during development to in order to get a better performing app.
+A must-have for your app is that it performs well. Your users will not accept anything else, and they will choose alternatives if the performance is not good. This document outlines various best practises that should be used throughout development to produce an app that performs better.
 
 To put the best practices in perspective, let us quote some of the giants. First, Einstein's "Everything should be made as simple as possible, but no simpler." And next, programming giant Donald Knuth's "Premature optimization is the root of all evil." Both of these quotes suggest refraining from difficult constructs for the sake of performance unless you really need them and have already investigated simpler alternatives. You might need a load test and good measurement tooling, but that is out of the scope of this document.
 

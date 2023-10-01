@@ -23,7 +23,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 **Release date: February 24, 2023**
 
-* We added the possibility to add extra `logsubscribers` in the *Settings.yaml* file (for more information, see [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392). Compared to that information, the `Logging` property has to start with an upper-case letter (as in, `Logging:' instead of `logging:`). The `loglevel` setting as described is not supported for the Windows Service.
+* We added the possibility to add extra `logsubscribers` in the *Settings.yaml* file (for more information, see [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/v7.2.3/examples/full-documented-m2ee.yaml#L392). Compared to that information, the `Logging` property has to start with an upper-case letter (as in, `Logging:' instead of`logging:`). The`loglevel` setting as described is not supported for the Windows Service.
 * We replaced the modified YAML parser YamlSerializer 0.9.0.2 with YamlDotNet 12.3.1.
 * We updated the Newtonsoft Json.NET library from version 13.0.1 to 13.0.2.
 * We added build number information to the version information of the executables and the subject field of the MSI installer file.

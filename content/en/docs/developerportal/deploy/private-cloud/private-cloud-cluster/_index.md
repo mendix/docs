@@ -1184,7 +1184,6 @@ You can also see an activity log containing the following information for all na
 * When developer mode is enabled in the namespace
 * When developer mode is disabled in the namespace
 
-
 #### 7.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.

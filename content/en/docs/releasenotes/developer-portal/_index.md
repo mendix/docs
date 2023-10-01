@@ -17,7 +17,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-
 ### September 28, 2023
 
 #### Fixes 
@@ -26,21 +25,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue for the legacy Feedback widget in Feedback, where it would error if you had too many user roles.
 * We fixed an issue in Feedback where the Feedback widget could not send items due to the incorrect pre-populated app ID value.
 
-
 ### September 21, 2023
 
 #### New Features
 
 * We released a few new features for [Epics](/developerportal/project-management/epics/):
-  * We have added a new section named **Revisions** in the [story details](/developerportal/project-management/epics/board/#story-details) dialog box, which shows the revision history of a story. This feature is only available for apps that use Git for version control.
-  * On the **Planning** page, you can now [export stories](/developerportal/project-management/epics/planning/#export-stories) to an Excel file.
-  * If you [export archived stories](/developerportal/project-management/epics/archive/#export-archived-stories) on the **Archive** page, you can find two new columns in the Excel file: **Assigned to** and **Archived by**.
-  * On the [Planning](/developerportal/project-management/epics/planning/) page,  you can now type *bug* or *feature* in the search bar to filter on the story type so that it only shows bugs or features. More ways to filter out stories are coming soon.
+    * We have added a new section named **Revisions** in the [story details](/developerportal/project-management/epics/board/#story-details) dialog box, which shows the revision history of a story. This feature is only available for apps that use Git for version control.
+    * On the **Planning** page, you can now [export stories](/developerportal/project-management/epics/planning/#export-stories) to an Excel file.
+    * If you [export archived stories](/developerportal/project-management/epics/archive/#export-archived-stories) on the **Archive** page, you can find two new columns in the Excel file: **Assigned to** and **Archived by**.
+    * On the [Planning](/developerportal/project-management/epics/planning/) page,  you can now type *bug* or *feature* in the search bar to filter on the story type so that it only shows bugs or features. More ways to filter out stories are coming soon.
 
 #### Deprecations
 
 * We have done all the preparation work for retiring [Stories](/developerportal/project-management/stories/) (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
-
 
 ### September 7, 2023
 

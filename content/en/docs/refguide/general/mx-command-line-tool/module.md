@@ -108,7 +108,7 @@ If there are errors, the exit code consists of three digits: XYZ where:
 
     * 1 – parameter validation error
     * 2 – output-related * error
-    * 3 – errors related to the execution of * the operatio* n
+    * 3 – errors related to the execution of *the operatio* n
 
 * Y is the number of the parameter the error * is related to. If the error is not related to the parameters, this is zero.
 

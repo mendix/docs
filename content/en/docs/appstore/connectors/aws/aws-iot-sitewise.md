@@ -190,7 +190,6 @@ The domain model is a data model that describes the information in your applicat
 | --- | --- |
 | `ProjectID` | Describes the project ID. |
 
-
 ### 4.1.13 ListPortalsRequest {#list-portals-request}
 
 | Attribute | Description |

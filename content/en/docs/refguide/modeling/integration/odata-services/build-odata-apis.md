@@ -370,8 +370,6 @@ There are two ways to take an API-first approach, as explained in [API-First vs.
 * Define a contract, like an OpenAPI document. This is not something supported by Mendix OData services unless the contract is also based on OData.
 * Set the use case and developer experience of using your APIs first. This is not tied to a specific tool. You can start by defining your APIs on a whiteboard, in a text document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
 
-
-
 ### 6.1 Defining a Resource Model
 
 Define a resource model using [non-persistable entities](/refguide/persistability/), expose these as OData resources, then model microflows to map these resources to the actual source data. This will require you to handle the OData query options in the microflow. Using custom Java actions can simplify this process, as explained in the [Combining Data from Two Entities](#two-entities) section below.

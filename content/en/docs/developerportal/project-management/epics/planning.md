@@ -210,17 +210,17 @@ Mendix recommends you migrate your stories to Epics as soon as possible, as [Sto
 
 To migrate from Stories to Epics, follow these steps:
 
-1.  Click the **...** icon on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
+1. Click the **...** icon on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
 
     Alternatively, select **Board Settings** and then go to the **Data Migration** tab. 
 
-2.  Read the information and then click **Start Migration**:
+2. Read the information and then click **Start Migration**:
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 
-3.  Select the content you want to migrate.
+3. Select the content you want to migrate.
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 

@@ -143,7 +143,6 @@ You can change the internal name if you wish, but do not reuse one which has alr
 If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection.
 {{% /alert %}}
 
-
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
     {{% alert color="info" %}}
@@ -576,7 +575,6 @@ You will receive a warning that you have made some changes. Click **Apply Change
 On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/#private-cloud).
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/debuggerTab.png" >}}
-
 
 ## 6 Current Limitations{#limitations}
 

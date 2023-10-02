@@ -66,30 +66,30 @@ All the details of an initiative are exported, except the data of the following 
    | Department            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        |                                                              | `Finance`                              |
    | Country               | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page can be filled in. | `Netherlands`                          |
    | Use Case              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        |                                                              | `Innovation`                           |
-   | Intake Date           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | N/A        | Only years between 1900 and 9999 is allowed.                 | `28/Jul/2022`                          |
-   | Start Date            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | N/A        | Only years between 1900 and 9999 is allowed.<br>Start Date has to be sooner than Go-Live Date. | `30/Jul/2022`                          |
-   | Go-Live Date          | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | N/A        | Only years between 1900-9999.<br>Go-Live Date has to be later than Start Date. | `30/Jul/2023`                          |
+   | Intake Date           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | N/A        | The year must be between 1900 and 9999.                      | `28/Jul/2022`                          |
+   | Start Date            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | N/A        | The year must be between 1900 and 9999.<br>Start Date has to be sooner than Go-Live Date. | `30/Jul/2022`                          |
+   | Go-Live Date          | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | N/A        | The year must be between 1900 and 9999.<br>Go-Live Date has to be later than Start Date. | `30/Jul/2023`                          |
    | RICE Reach            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Integer                      | N/A        | Only a positive number is allowed.                           | `50`                                   |
-   | RICE Impact           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For information, check the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. | `Medium`                               |
-   | RICE Confidence       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For information, check the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. | `High`                                 |
+   | RICE Impact           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For more information, check the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. | `Medium`                               |
+   | RICE Confidence       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For more information, check the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. | `High`                                 |
    | RICE Effort           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Integer                      | N/A        | Only a positive number is allowed.                           | `12`                                   |
-   | WSJF Business Value   | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `Medium`                               |
-   | WSJF Time Criticality | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `Highest`                              |
-   | WSJF Risk Reduction   | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `Medium`                               |
-   | WSJF Job Size         | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `XS`                                   |
+   | WSJF Business Value   | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For more information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `Medium`                               |
+   | WSJF Time Criticality | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For more information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `Highest`                              |
+   | WSJF Risk Reduction   | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For more information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `Medium`                               |
+   | WSJF Job Size         | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | 200        | For more information, check the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. | `XS`                                   |
 
-{{% alert color="info" %}}
-If you use an Excel file [exported from a portfolio](#export-initiatives), the data from the following columns are not imported:
-
-*  **RICEScore**
-* **WSJF Score**
-* **ExpectedValue**
-* **CreationDate**
-{{% /alert %}}
-
-4. Drag your Excel file to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+4. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
 5. Click **Import**.
 
-All the initiatives are imported successfully. You can see them on the **Initiatives Overview** page.
+All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 
+
+{{% alert color="info" %}}
+If you import initiatives using an Excel file [exported from a portfolio](#export-initiatives), the data from the following columns are not imported:
+
+*  **RICEScore**
+*  **WSJF Score**
+*  **ExpectedValue**
+*  **CreationDate**
+{{% /alert %}}
 

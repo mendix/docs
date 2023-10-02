@@ -34,7 +34,7 @@ To set up the example app that you will use in the next sections for publishing 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/domainmodel.png" alt="Many-to-one association from OrderItem to Order" >}}
 
 4. [Generate overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/#3-creating-overview-and-detail-pages-automatically) for the **Order** and **OrderItem** entities.
-5. Add a data grid to the **Order_NewEdit** page. Set it to display the **OrderItem** objects from the database over an association, like this:
+5. [Add a data grid](/refguide/data-grid/) to the **Order_NewEdit** page. Set it to display the **OrderItem** objects from the database over an association, like this:
     
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/DataGridSettings.png" alt="Data grid settings for the Order_NewEdit page" >}}
 

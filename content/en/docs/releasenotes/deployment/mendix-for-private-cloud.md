@@ -13,6 +13,33 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### September 21, 2023
+
+#### Portal Improvements
+
+* We have improved the user experience for the Cluster Manager, Environment Overview and Environment details pages by revamping the UI and adding sorting, searching, and filtering.
+* We have added a feature which will allow the creation of customized core resource plans in the Cluster Manager page.
+
+#### Deploy API Improvements
+
+* We have fixed a bug which occurred when providing an extra space in the URL for the API.
+* We have improved the **Update Environment** and **Delete Environment** requests by adding the namespace parameter.
+
+### September 19th, 2023
+
+#### Mendix Operator v2.13.0 {#2.13.0}
+
+* We have added support for Azure Workload Identity authentication when pushing images to Azure Container Registry. To use this option, the `mxpc-cli` installation and configuration tool now has a dedicated `microsoft-acr` registry type.
+* We have added an option to specify additional custom pod labels for an environment (or all environments in the namespace).
+* To improve security, ECR will use IRSA authentication by default instead of static credentials.
+* We have updated documentation on configuring and using container registries.
+* When pushing an image to a non-existing ECR repository, the Operator will attempt to create it by calling the ECR API.
+* We have added support for Postgres 15.
+* We refactored registry authentication code to use library authentication instead of binary plugins. This allows the dependencies to be kept up to date, improves reliability of builds and allows improved logging of the authentication process.
+* When deploying an image to an environment, the Mendix Operator will now use the built image's sha256 digest to ensure that what was built will be deployed.
+* We have updated the list of supported platforms to include Kubernetes 1.28 and OpenShift 4.13.
+* Upgrading to Mendix Operator v2.13.0 from a previous version will restart environments managed by that version of the Operator.
+
 ### August 17, 2023
 
 #### Portal Improvements
@@ -160,8 +187,8 @@ This feature is currently in a Beta release.
 #### Deploy API Improvements
 
 * We have added a new API endpoint for updating the namespaces. This will allow cluster managers to do the following tasks:
-    * Add, edit or remove member permissions and members in a namespace. 
-    * Enable or disable the external secret store and development mode configurations. 
+    * Add, edit or remove member permissions and members in a namespace.
+    * Enable or disable the external secret store and development mode configurations.
     * Add, update, or clear the operational URLs.
     * Activate or deactivate database and storage plans.
 * We have improved the Update Cluster API endpoint by allowing cluster managers to add new cluster managers.
@@ -224,7 +251,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 #### Portal Improvements
 
-* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
+* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets.
 * We have added a new status field indicating whether custom runtime setting and MxApp constants were loaded from CSI Secrets Storage.
 * We have added a notification on top of the Model Options and Runtime Settings page to indicate whether CSI Secrets Storage is enabled for a namespace.
 * We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
@@ -339,7 +366,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We fixed an issue where users were unable to see all the environments on the environment details page. (Ticket 151698)
 
-### June 2, 2022 
+### June 2, 2022
 
 #### Portal Improvements
 
@@ -423,13 +450,13 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 * We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
 * We have added the ability to add metrics configuration to an environment.
-  
+
 ### January 13, 2022
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
 * We have added a new field to set the Kubernetes ingress class as an annotation in the installer.
-* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster/#customize-registry-imagenametemplate).
+* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-registry/#customize-registry-imagenametemplate).
 
 #### Portal Improvements
 
@@ -702,7 +729,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 #### Fixes
 

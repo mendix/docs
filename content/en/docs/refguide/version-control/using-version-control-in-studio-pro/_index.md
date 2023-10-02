@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide/version-control/).
+This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Control](/refguide/version-control/).
 
 ## 2 Starting an App with Version Control
 
@@ -126,6 +126,37 @@ Pushing is sending your local changes to the Team Server. After committing you n
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
+
+#### 4.3.1 Push Fast-Forward Only
+
+{{% alert color="info" %}}
+The features described in this section were introduced in Mendix version 10.3.
+{{% /alert %}}
+
+While you were working on your branch somebody may have pushed their changes to the same branch on the server already. In this case pushing isn’t possible and you will need to take further action first.
+
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this and **Also push changes to the remote server** will be set to **No** and disabled.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
+
+If the changes are discovered during the push, an information dialog with instructions will be shown.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
+
+Git prevents you from pushing your changes because it sees your changes and the remote changes as potentially conflicting. In this diagram you see that Git doesn’t know how to combine commits #3 and #5.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch.">}} 
+
+When you pull the changes, Studio Pro will merge the changes from the branch on the server into your local copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server.">}} 
+
+There are 2 possible scenarios when merging and needing to make a merge commit:
+
+1. No conflicts (for example, you added a microflow and somebody else added a module on the server)
+    In this case Studio pro can automatically resolve this and there is nothing for you to do.
+2. Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote)
+    In this case you will need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
 
 ### 4.4 Pulling
 

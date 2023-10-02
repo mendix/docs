@@ -108,7 +108,7 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
-5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
+5. Extract the contents of your **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
 6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More

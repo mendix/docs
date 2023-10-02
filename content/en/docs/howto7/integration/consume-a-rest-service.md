@@ -167,5 +167,3 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [How to Consume a Simple Web Service](/howto7/integration/consume-a-simple-web-service/)
 * [How to Export XML Documents](/howto7/integration/export-xml-documents/)
 * [How to Import XML Documents](/howto7/integration/importing-xml-documents/)
-* [How to Import Excel Documents](/howto7/integration/importing-excel-documents/)
-* [How to Expose a Web Service](/howto7/integration/expose-a-web-service/)

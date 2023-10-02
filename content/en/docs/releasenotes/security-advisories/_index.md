@@ -21,6 +21,7 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html)) | 5.3 | (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html)) | Fixed in [Forgot Password module v5.4.0, v4.1.3, and  v3.7.3](https://marketplace.mendix.com/link/component/1296) |
 | CVE-2023-29129 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
 | CVE-2023-25957 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
 | CVE-2023-27464 | 5.3 | [Observable Response Discrepancy in Mendix Forgot Password Module](https://cert-portal.siemens.com/productcert/html/ssa-699404.html) | See the SSA description for remediation details. |

@@ -42,6 +42,13 @@ The Forgot Password module has the following dependencies:
 
 ² Versions of the Forgot Password module below 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above), and those for Mendix 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. We recommend that if you are using Mendix 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
+### 1.2 Features and Limitations
+
+* Allows end-users to reset the password stored locally in your app.
+* Allows end-users to signup for your app. This validates that the end-user has access to the email address they enter by sending a password reset email.
+* Supports email aliases, in other words, the from address in email templates can be different from the SMTP account used to send the email.
+* Supports multi-language email templates for sending password reset emails.
+
 ## 2 Installing the Forgot Password Module{#installing}
 
 {{% alert color="info" %}}
@@ -98,14 +105,15 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
 1. Run the application.
 1. Login as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
-    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module).
-    * Choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). In version 5.4.0 and above this will create an SMTP configuration which you will need to select.
+    * In version 5.4.0 and above, select the SMTP configuration you want to use for sending this email.
+    * From the dropdown, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
 
-        For version 5.3.0 and above, you can **Create** and **Edit** several reset email templates, each of which is linked to a [language](/refguide/language-settings/) you have added to your app. The template linked to the language in which the end-user sees the app will be used to send the email. If there is no template explicitly associated with the end-user's language, the template which is not associated with any language will be used.
+        For version 5.3.0 and above, you can **Create** and **Edit** several reset email templates, each of which is linked to a [language](/refguide/language-settings/) you have added to your app. The template linked to the language in which the end-user sees the app will be used to send the email. If there is no template explicitly associated with the end-user's language, the template which is not associated with any language will be used. For versions below 5.3.0, you will only be able to set up a single template.
 
-        For versions below 5.3.0, you will only be able to set up a single template.
+        For version 5.4.0 and above, the `fromAddress` in the email template does not have to be the same as the address in your SMTP configuration. See [Using Email Aliases](#email-aliases), below, for more information.
 
-1. In the **Signup Email** tab, provide the details for the email sent when an end-user wants to sign up to use the app.
+1. In the **Signup Email** tab, provide the details for the email sent when an end-user wants to sign up to use the app. These options are described above, for the **Reset Password Email** tab.
 
     {{% alert color="info" %}}
 To disable the signup functionality and use the Forgot Password module only for resetting passwords, do the following:
@@ -116,6 +124,16 @@ To disable the signup functionality and use the Forgot Password module only for 
 
 1. In the **Deeplink** tab, configure the deeplink to use the `ForgotPassword.Step3_DL_SetNewPassword` microflow.
         {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
+
+### 2.1 Using Email Aliases{#email-aliases}
+
+From version 5.4.0 of the Forgot Password module, the `fromAddress` used in the email template does not have to be the same as the email address in the SMTP configuration. This provides flexibility, allowing you to send emails from different addresses while utilizing the same SMTP configuration for authentication.
+ 
+Say, for example, your SMTP username is `user@example.com` and you have configured this account in your SMTP configuration. You could set the `fromAddress` in your email template to be any email address or alias you have control over, such as `sales@example.com`, `support@example.com`, or `ceo@example.com`, and this is what the recipient will see in the email they receive.
+
+{{% alert color="info" %}}
+You may have to configure an email alias on your SMTP server if you are using a `fromAddress` in your email template that is different from the email address of your selected SMTP account. Some SMTP servers will not send emails if the fromAddress is not associated with the SMTP account.
+{{% /alert %}}
 
 ## 3 Testing the Forgot Password Module
 

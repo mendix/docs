@@ -31,7 +31,7 @@ Click **Select…** and check the modules you want to work on.
 
 The default is to work on all modules in the app.
 
-### 2.2 Source Text Contains
+### 2.2 Search
 
 To search for phrases that are similar, type what you want to search for.
 

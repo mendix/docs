@@ -223,7 +223,7 @@ When the association refers to multiple objects, use the `@delta` syntax to add 
 ```
 
 {{% alert color="info" %}}
-You can update an association only from the entity that is the [owner](/refguide/associations/associations/#ownership).
+You can update an association only from the entity that is the [owner](/refguide/associations/#ownership).
 {{% /alert %}}
 
 ## 11 Inserting Objects {#inserting-objects}

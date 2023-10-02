@@ -1326,12 +1326,12 @@ Disable the toggle button next to the name of the plan you wish to activate. The
 
 Here, you can create customized plan for your core resources. 
 
-1. Click **Add New Plan** 
-2. Provide a name to the plan under **Plan Name**
+1. Click **Add New Plan**.
+2. Provide a name to the plan under **Plan Name**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required CPU Limits, CPU Request, Memory Limit and Memory Request based on your choice 
+3. Provide the required CPU Limits, CPU Request, Memory Limit and Memory Request based on your choice. 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 

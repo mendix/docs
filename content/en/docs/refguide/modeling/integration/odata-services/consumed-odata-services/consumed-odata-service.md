@@ -175,7 +175,7 @@ Minor service updates can be deployed to the same service endpoints, which ensur
 
 #### 3.2.2 Major Service Updates
 
-Major service updates are, for example, when entities or attributes are removed, or input parameters are required. Such updates would be incompatible for the consuming apps and result in the consuming app "breaking".
+Major service updates are, for example, when entities or attributes are removed, or input parameters are required. Such updates would be incompatible for the consuming apps and result in the consuming app "breaking."
 
 When a major change has been made to a published service, Mendix recommends the service is deployed to a different endpoint with the new service version number that clearly indicates there has been a major change. With semantic numbering, this would be an incremental increase of a whole number.
 

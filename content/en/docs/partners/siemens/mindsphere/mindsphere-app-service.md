@@ -43,7 +43,7 @@ Contact your Customer Success Manager (CSM) or the Mendix Sales organization to 
 
 Once your order is processed, your entitlement to Insights Hub IIoT for Makers will be confirmed.
 
-### 2.2 Provisioning a Insights Hub Tenant
+### 2.2 Provisioning an Insights Hub Tenant
 
 On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/#company) for your company will need to initiate the creation of a dedicated tenant account within Insights Hub.
 
@@ -220,7 +220,7 @@ To extract data from Insights Hub, your calls to the Insights Hub API need to be
 
 Download the **Insights Hub IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
-In the **_Use me** folder of the *Insights HubIIotAuthenticator* module set the following constants:
+In the **_Use me** folder of the *InsightsHubIIotAuthenticator* module set the following constants:
 
 * **TokenURL** – this is the *TokenURL* from the binding keys you generated
 * **ClientID** – this is the *clientID* from the binding keys you generated
@@ -260,7 +260,7 @@ In the REST call, an HTTP Header is added called *Authorization* and this is giv
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/call-rest.png" alt="Authentication" >}}
 
-However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *Insights HubIIotAuthenticator* module:
+However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *InsightsHubIIotAuthenticator* module:
 
 * **TokenURL** – this is the *TokenURL* from the binding keys you generated
 * **ClientID** – this is the *clientID* from the binding keys you generated

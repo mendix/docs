@@ -77,7 +77,7 @@ For more information, see [SAP Business Technology Platform - deploy](/developer
 
 ### 3.3 Siemens Insights Hub
 
-To license a Insights Hub app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
+To license an Insights Hub app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
 
 ### 3.4 Mendix for Private Cloud
 

@@ -26,7 +26,7 @@ Finally, there is a section on some [Limitations](#limitations) which apply to M
 
 ## 2 Authorizing Insights Hub REST Calls{#mstoken}
 
-The **AccessToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to MindInsights HubSphere APIs.
+The **AccessToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to Insights Hub APIs.
 
 To improve security of your app, it is recommended that you delete the AccessToken object returned by the *Access token* action, provided by the Siemens Insights Hub SSO module, before showing a page or reaching the end of the microflow.
 
@@ -34,7 +34,7 @@ To improve security of your app, it is recommended that you delete the AccessTok
 
 ### 2.1 Authorizing Insights Hub REST Calls from within Scheduled Events
 
-The access token connector *cannot* be used for calling a Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the  right side:
+The access token connector *cannot* be used for calling an Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the  right side:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png" alt="DS_GetAccessTokenForScheduledEvents" >}}
 
@@ -102,7 +102,7 @@ Your app will define the default values for [constants](/refguide/constants/). Y
 
 ## 4 Licensing Your App {#licensing}
 
-When you initially deploy a Mendix App, it is treated as a *Free App*. For a Insights Hub app the most important restriction is that the app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
+When you initially deploy a Mendix App, it is treated as a *Free App*. For an Insights Hub app the most important restriction is that the app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
 
 To license your app, you need to obtain a license key from [Mendix Support](https://support.mendix.com).
 
@@ -195,7 +195,7 @@ This is the version of the Insights Hub app linked to the application credential
 
 Set this to *True* to enable a reverse proxy for Insights Hub API calls which are made directly from the html pages (for example, the calls from the Insights Hub OS Bar).
 
-This endpoint forwards all calls to \api… from within native HTML pages, and adds a Insights Hub token to them. For example, the calls from the Insights Hub OS Bar or the Siemens Insights Hub Widgets.
+This endpoint forwards all calls to \api… from within native HTML pages, and adds an Insights Hub token to them. For example, the calls from the Insights Hub OS Bar or the Siemens Insights Hub Widgets.
 
 **HostTenant**
 
@@ -246,7 +246,7 @@ You can select Insights Hub icons from Siemens Insights Hub Web Content to be di
 
 ### 6.2 Insights Hub Icons via CSS
 
-**Siemens Insights Hub Web Content** provides a font which contains icons. This means that you can use a Insights Hub icon in any page element where you can assign a class.
+**Siemens Insights Hub Web Content** provides a font which contains icons. This means that you can use an Insights Hub icon in any page element where you can assign a class.
 
 To do this:
 
@@ -270,7 +270,7 @@ You can only add one icon per element.
 
 In Insights Hub, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
 
-For a Insights Hub app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
+For an Insights Hub app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
 
 ### 7.1 Control Through Insights Hub APIs
 

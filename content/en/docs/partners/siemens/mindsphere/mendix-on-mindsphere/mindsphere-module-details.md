@@ -136,7 +136,7 @@ And in the Mendix app they will be mapped to these roles:
 
 ## 3 Insights Hub OS Bar {#msosbar}
 
-All Insights Hub apps must integrate the Insights Hub OS Bar. This unifies the UI of all Insights Hub apps. It is used for showing the app name, routing back to the Launchpad, and signing out from Insights Hub easily. Apps without the Insights Hub OS Bar will not be validated for deployment to a Insights Hub production environment.
+All Insights Hub apps must integrate the Insights Hub OS Bar. This unifies the UI of all Insights Hub apps. It is used for showing the app name, routing back to the Launchpad, and signing out from Insights Hub easily. Apps without the Insights Hub OS Bar will not be validated for deployment to an Insights Hub production environment.
 
 You can see how the Insights Hub OS Bar Integration works in [Insights Hub OS Bar](https://design.mindsphere.io/osbar/introduction.html), on the Insights Hub developer website.
 

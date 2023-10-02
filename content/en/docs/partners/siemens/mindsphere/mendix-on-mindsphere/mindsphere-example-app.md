@@ -16,7 +16,7 @@ You can write Mendix apps which analyze data held in Insights Hub, the open, clo
 
 This documentation provides more explanation of the Insights Hub example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/Insights Hub app.
 
-You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop a Insights Hub app with Mendix we recommend a visit to our learning path [Build a Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix).
+You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop an Insights Hub app with Mendix we recommend a visit to our learning path [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix).
 
 ## 2 Prerequisites
 
@@ -24,7 +24,7 @@ To run your app on Insights Hub, you need to complete the prerequisites describe
 
 ### 2.1 Roles
 
-You need a Insights Hub user account on a tenant including a Developer Cockpit - e.g. a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
+You need an Insights Hub user account on a tenant including a Developer Cockpit - e.g. a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
 
 * mdsp:core:Developer
 * mdsp:core:StandardUser
@@ -147,7 +147,7 @@ In addition, the auto registration process has created two Insights Hub applicat
 
 The example app has two Mendix user roles, *Admin* and *User*. These are mapped to the two application scopes *admin* and *user*.
 
-This means that a Insights Hub user who is given the **Admin Role** for the app will be given the *admin* scope and will therefore have the Mendix user roles *admin*.
+This means that an Insights Hub user who is given the **Admin Role** for the app will be given the *admin* scope and will therefore have the Mendix user roles *admin*.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/roles-and-scopes.png" alt="Relationship of Insights Hub App user roles with Mendix App user roles" >}}
 

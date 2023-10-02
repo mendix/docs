@@ -147,7 +147,7 @@ If you have trouble signing in to your application, it is a good idea to clear t
 
 ### 2.5 Next steps
 
-You now have a blank application which supports authentication for your specific Insights Hub application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for Insights Hub web applications [Build a Insights Hub app with Mendix](https://academy.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about Insights Hub application development in general.
+You now have a blank application which supports authentication for your specific Insights Hub application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for Insights Hub web applications [Build an Insights Hub app with Mendix](https://academy.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about Insights Hub application development in general.
 
 When you enhance your application with Insights Hub API calls to use the IoT capabilities of Insights Hub you must consider the following two steps:
 
@@ -232,7 +232,7 @@ As tokens can expire, there are some events in the lifecycle of a mobile app whi
 2. The access token, which is only valid for half an hour, is no longer valid but the refresh token is still valid. In this case refreshing your access token is sufficient.
 3. Both the access token and the refresh token have expired. In this case the user will be logged out and has to sign in again.
 
-As you need a valid Insights Hub token to call Insights Hub APIs, it is very important that these checks are done before you call a flow to access a Insights Hub API. The **Siemens Insights Hub Mobile Starter Application** helps you to ensure this by taking care of the following events:
+As you need a valid Insights Hub token to call Insights Hub APIs, it is very important that these checks are done before you call a flow to access an Insights Hub API. The **Siemens Insights Hub Mobile Starter Application** helps you to ensure this by taking care of the following events:
 
 * Application startup: The standard mobile homepage of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mentioned above.
 

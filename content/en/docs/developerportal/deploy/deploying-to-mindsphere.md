@@ -3,7 +3,7 @@ title: "Siemens Insights Hub"
 url: /developerportal/deploy/deploying-to-mindsphere/
 category: "Deployment"
 weight: 42
-description: "Describes how to deploy to Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
+description: "Describes how to deploy to Siemens Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
 tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -37,8 +37,8 @@ To help you with your first Insights Hub apps, there is also an example app whic
 
 To deploy and register your app within Insights Hub you need the following prerequisites.
 
-* A Insights Hub user account on a **Developer** or a **Start for Free** tenant
-* A Insights Hub developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` — these are already granted on Start for Free tenants.
+* An Insights Hub user account on a **Developer** or a **Start for Free** tenant
+* An Insights Hub developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` — these are already granted on Start for Free tenants.
 * [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 The following are also required if you want to deploy and run the Mendix app on Insights Hub Cloud Foundry:

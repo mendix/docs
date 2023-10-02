@@ -178,31 +178,13 @@ It is not possible to remove yourself as a Mendix Admin.
 
 ## 7 Company Brand {#company-brand}
 
-On this page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content and available for usage in your [company onboarding](#onboarding).
+On this page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
 {{< figure src="/attachments/developerportal/control-center/company-brand.png" >}}
 
-## 8 Onboarding {#onboarding}
-
-On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
-
-You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
-
-{{< figure src="/attachments/developerportal/control-center/onboarding-landing.png" >}}
-
-When you configure the landing page, if you turn on the **Include company logo** toggle and the **Include company header image** toggle on the left side, and then click the **Update Company Branding** button on the top, then the **Company Logo** and **Cover Image** currently set in the [Company Brand](#company-brand) page will be used on your landing page.
-
-{{< figure src="/attachments/developerportal/control-center/update-company-branding.png" >}}
-
-Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the upper-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
-
-On the **Onboarding Email** tab, you can customize the onboarding email that users of your domains receive when they join the Mendix Platform. You can provide a link to your company's onboarding page, share a welcome message, or present company guidelines for using Mendix. You can create a draft email before sending it.
-
-{{< figure src="/attachments/developerportal/control-center/onboarding-email.png" >}}
-
-## 9 Security {#security}
+## 8 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -212,7 +194,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 {{< figure src="/attachments/developerportal/control-center/security.jpg" >}}
 
-## 10 Cloud {#cloud}
+## 9 Cloud {#cloud}
 
 {{% alert color="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
@@ -236,7 +218,7 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Entitlements {#entitlements}
+## 10 Entitlements {#entitlements}
 
 {{% alert color="info" %}}
 This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
@@ -246,7 +228,7 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 {{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-## 12 Deployed Apps {#deployed-apps}
+## 11 Deployed Apps {#deployed-apps}
 
 {{% alert color="info" %}}
 This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
@@ -267,7 +249,7 @@ Click the icon in the top right corner to access the following pages that allow 
 * [Resize Environment](/developerportal/support/new-app-node-request-template/#resize) – requests a container size change
 * [Offboard Environment](/developerportal/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
 
-### 12.1 Adding a New Environment
+### 11.1 Adding a New Environment
 
 To add a new environment for your app, click the name of an app, and then click the **Add Environment** button. You must specify the following information:
 
@@ -277,7 +259,7 @@ To add a new environment for your app, click the name of an app, and then click 
 
 {{< figure src="/attachments/developerportal/control-center/new-environment.png" alt="adding a new environment" >}}
 
-### 12.2 Offboarding an Environment
+### 11.2 Offboarding an Environment
 
 To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
 
@@ -287,7 +269,7 @@ To offboard an environment, click **Offboard**, which is available for stopped e
 Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
 {{% /alert %}}
 
-### 12.3 Changing the Technical Contact of an App
+### 11.3 Changing the Technical Contact of an App
 
 To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
 
@@ -297,13 +279,13 @@ To quickly change the [Technical Contact](/developerportal/general/app-roles/#te
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 {{% /alert %}}
 
-## 13 Catalog {#catalog}
+## 12 Catalog {#catalog}
 
 An organization's Catalog requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
-## 14 Portfolios {#portfolios}
+## 13 Portfolios {#portfolios}
 
 The **Portfolios** page offers governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for changes of portfolio privacy settings. 
 
@@ -315,7 +297,7 @@ As a Mendix Admin, you cannot directly see the content of a portfolio. You need 
 
 {{% /alert %}}
 
-### 14.1 All Portfolios {#all-portfolios}
+### 13.1 All Portfolios {#all-portfolios}
 
 The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio). In the search box, you can search for a portfolio by its name.
 
@@ -341,11 +323,11 @@ In the list, you can see the following items:
 
 {{% alert color="info" %}}
 
-If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign new Portfolio Managers to the portfolio or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
+If a portfolio has an alert icon (**⚠ **), that means it no longer has a Portfolio Manager. You can assign new Portfolio Managers to the portfolio or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
 
 {{% /alert %}}
 
-#### 14.1.1 Access Management {#access-management}
+#### 13.1.1 Access Management {#access-management}
 
 After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
 
@@ -366,7 +348,7 @@ The list shows all users who have access to the portfolio as well as the pending
     * **Edit** – Selecting this allows you to change the role of the user.
     * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
-#### 14.1.2 Deleting a Portfolio {#delete-portfolio}
+#### 13.1.2 Deleting a Portfolio {#delete-portfolio}
 
 After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
 
@@ -378,7 +360,7 @@ Deleting a portfolio means that you permanently delete the portfolio, including 
 
 The **Delete Portfolio** dialog box opens. If you decide to continue, type *DELETE* in the text box, and click **Delete**.
 
-### 14.2 Alerts {#alerts}
+### 13.2 Alerts {#alerts}
 
 The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the ellipsis button (**...**) on the list and selecting the corresponding item.
 
@@ -403,7 +385,7 @@ In the list, you can see the following items:
 
     * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
-### 14.3 Privacy Requests {#privacy-requests}
+### 13.3 Privacy Requests {#privacy-requests}
 
 On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. You can use the toggle on the tab to turn it on or off. 
 
@@ -425,7 +407,7 @@ On the **Privacy Requests** tab, you can view all the pending requests. You can 
 After a request is either rejected or approved, a notification is sent to the requester. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
 {{% /alert %}}
 
-## 15 Application Health Dashboard {#application-health-dashboard}
+## 14 Application Health Dashboard {#application-health-dashboard}
 
 {{% alert color="info" %}}
 The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
@@ -457,7 +439,7 @@ The list shows the following information:
 
 * **Alerts** – This shows the types of the alerts of this production environment.
 
-### 15.1 Refreshing the Dashboard
+### 14.1 Refreshing the Dashboard
 
 The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every ten minutes, and newly-deployed production environments will be automatically added to the dashboard every six hours.
 
@@ -465,7 +447,7 @@ You can also manually refresh your alerts using the **Refresh Alerts** button on
 
 You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
 
-### 15.2 Environment Details
+### 14.2 Environment Details
 
 If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time the alerts have occurred. The **Environment details** and the Technical Contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
 
@@ -480,4 +462,4 @@ The **Environment Details** page also lists the alert information of this specif
     * An OK alert is indicated by the word **OK**.
 * **Timestamp** – This is the date and time this alert occurred.
 
-## 16 Documents in This Category
+## 15 Documents in This Category

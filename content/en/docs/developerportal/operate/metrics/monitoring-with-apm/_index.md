@@ -14,11 +14,11 @@ There are a number of application performance monitoring (APM) tools for cloud a
 Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
 
 {{% alert color="info" %}}
-[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
+[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 
-[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix version 9.7 and above, custom application runtime and database metrics are supported.
+[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix 9.7 and above, custom application runtime and database metrics are supported.
 
-[Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
+[Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix 7.15 and above.
 
 [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
 {{% /alert %}}

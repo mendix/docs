@@ -24,6 +24,10 @@ For iOS builds:
 * Have a Mac OS X machine 
 * Install [XCode 12.4](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
+{{% alert color="warning" %}}
+iOS17 and XCode 15 are not yet supported. Mendix will support them in the future.
+{{% /alert %}}
+
 For Android Builds:
 
 * Install [Android Studio](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
@@ -119,9 +123,14 @@ To build an iOS app with XCode, do the following:
 
 1. If you have not ran it yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Also run `npm run configure` to apply the configuration from the Mendix Native Mobile Builder to the app. 
-1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
+1. Change directory by running `cd ios` and run `pod install --repo-update` to install the iOS dependencies.
 
-    The iOS app is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
+    The iOS app is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install). If you are using an M1 machine, make sure to first [install Rosetta](https://support.apple.com/en-us/HT211861) and then [install CocoaPods via Homebrew](https://formulae.brew.sh/formula/cocoapods).
+
+{{% alert color="warning" %}}
+If you encounter the following error while executing CocoaPods on an M1, reinstall CocoaPods as described above and try again:
+`LoadError - dlsym(0x7f8926035eb0, Init_ffi_c): symbol not found`
+{{% /alert %}}
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:

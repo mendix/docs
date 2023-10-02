@@ -275,14 +275,14 @@ To avoid security issues when you want to embed the app in an iframe, we recomme
 
 ##### 4.2.2.2 Applying a Different SameSite Setting{#samesite}
 
-From Studio Pro version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
+From Studio Pro 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
-* For Studio Pro version 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
-* For Studio Pro version 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
+* For Studio Pro 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
+* For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
-For Mendix versions below 8.12, there was no SameSite value set on cookies, and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which sets `SameSite=None; Secure;` for all your cookies.
+For Mendix 8.11 and below, there was no SameSite value set on cookies, and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The **SAMESITE_COOKIE_PRE_MX812** setting is implemented the next time your app is deployed after you apply the change.
@@ -458,7 +458,6 @@ Click **Add** > **Supported** to choose from the following variables:
 
 * **APPMETRICS_TARGET** – enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints
 * **DD_API_KEY** – the API key used with Datadog
-* **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DD_SITE** – directs metrics to a specific Datadog region
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **JVM_GARBAGE_COLLECTOR** – overrides the automatic configuration of the Java garbage collector — accepted values are `Serial` or `G1`

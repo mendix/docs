@@ -147,7 +147,7 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-It is possible to migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Planning*.
+It is possible to migrate all or part of your content from Stories to Epics. For details, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
@@ -156,7 +156,7 @@ If you manage your projects in Jira, you can connect your apps in the Developer 
 ## 7 Webhooks {#webhooks}
 
 {{% alert color="warning" %}}
-This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
+⚠ This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -178,8 +178,8 @@ After clicking **New Webhook** to create a new webhook for stories and sprints, 
 * **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
 * **Events** – what types of data will be sent via the webhook for stories and Sprints (you must select at least one; this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
-    * [Sprints](/developerportal/project-management/stories/#story-actions)
-    * [Stories](/developerportal/project-management/stories/)
+    * **Sprints**
+    * **Stories**
 
 To edit the above details for an existing webhook for stories and Sprints, click **Edit**.
 
@@ -203,10 +203,10 @@ When you select a history item and click **Show item**, the details of the story
 
 ## 9 Story Archive {#story-archive}
 
-Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
+Once you have switched from Mendix Stories to Epics or Jira, Mendix archives any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
 
 {{% alert color="warning" %}}
-We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to download your work before that date.
+Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  >}}

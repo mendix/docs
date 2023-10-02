@@ -17,7 +17,7 @@ Memory can be added to the application container. This is called *vertical scali
 Apps built using supported versions of Mendix can be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances. This is called *horizontal scaling*.
 
 {{% alert color="info" %}}
-Before Mendix version 9.12.0, [Scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
+Before Mendix 9.12.0, [Scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
 {{% /alert %}}
 
 This how-to will teach you how to do the following:

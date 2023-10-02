@@ -132,7 +132,7 @@ You have successfully consumed a REST service and created a microflow to show th
 
 To create a page for this app, follow these steps:
 
-1. Open the **Homepage** and add a **Data view**.
+1. Open the **** and add a **Data view**.
 2. Right-click the **[Unknown]** bar and click, **Select entity**. Select the **Input** entity.
 3. For the **Data source – Type**, select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).

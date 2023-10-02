@@ -46,4 +46,4 @@ To submit changes, follow these guidelines:
 
 ## 5 Read More
 
-* [Stories](/developerportal/project-management/stories/)
+* [Epics](/developerportal/project-management/epics/)

@@ -10,10 +10,14 @@ aliases:
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide8/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide9/deploying-a-mendix-app-to-cloud-foundry.html
     - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
+    - /refguide8/deploying-a-mendix-app-to-cloud-foundry 
+    - /refguide9/deploying-a-mendix-app-to-cloud-foundry
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -156,7 +160,7 @@ Some trial accounts may not include object storage.
 You may need to configure your file store by using environment variables. See the [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack) for more information.
 {{% /alert %}}
 
-## 6 Deploy Your App to Cloud Foundry (Deprecated)
+## 6 ⚠ Deploy Your App to Cloud Foundry (Deprecated)
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
@@ -166,7 +170,7 @@ You may need to configure your file store by using environment variables. See th
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
 
-{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix version 11.{{% /alert %}}
+{{% alert color="warning" %}}⚠ Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix 11.{{% /alert %}}
 
 ## 7 Cloud Foundry Environment Variables
 

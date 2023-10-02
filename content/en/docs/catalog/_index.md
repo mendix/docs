@@ -58,7 +58,7 @@ From the **Home** screen, you can do the following:
 The Catalog is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
 
 {{% alert color="info" %}}
-The Catalog integration is available in Studio Pro version 8.14 and above. {{% /alert %}}
+The Catalog integration is available in Studio Pro 8.14 and above. {{% /alert %}}
 
 ## 4 Information Available in the Catalog {#available-info}
 

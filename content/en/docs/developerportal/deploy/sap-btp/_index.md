@@ -89,7 +89,7 @@ If you have already logged on to SAP and your SAP session has not expired, you w
 You may be asked to provide your credentials in one of two ways:
 
 * You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
-* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
+* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (⚠ please note this method is being deprecated)
 
 {{% alert color="info" %}}
 If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
@@ -636,7 +636,7 @@ Alternatively, click **Download Configuration File** to create the file which yo
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert color="info" %}}
-You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
+You can only use SAP HANA as the Mendix database for Mendix 7.23.3 and above.
 
 There are also some differences in the way that Mendix can be used with SAP HANA compared to a PostgreSQL, Hyperscaler Option database – see [SAP HANA – Known Issues](/refguide/saphana/).
 {{% /alert %}}

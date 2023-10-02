@@ -50,7 +50,7 @@ If you want to use TortoiseSVN in combination with Studio Pro, download the late
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ### 2.3 Graphics Card
@@ -85,14 +85,14 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 ### 6.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
-* Debian 8 (Jessie) and above
+* Debian OldOldStable (LTS), Debian OldStable, Debian Stable
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
 ### 6.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
-* Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
+* Nginx
 * Apache
 
 ### 6.3 Java

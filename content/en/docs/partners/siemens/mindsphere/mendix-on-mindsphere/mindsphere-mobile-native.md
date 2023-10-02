@@ -199,7 +199,7 @@ Authentication is based on the usage of **Anonymous** users and is enabled in th
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Security_Anonymous.png" alt="StudioPro" >}}
 
-When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name they want to authenticate against. To get this to work, the **Login** page is registered as the default homepage for the Anonymous role.
+When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name they want to authenticate against. To get this to work, the **Login** page is registered as the default home page for the Anonymous role.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png" alt="StudioPro" >}}
 
@@ -234,7 +234,7 @@ As tokens can expire, there are some events in the lifecycle of a mobile app whi
 
 As you need a valid Insights Hub token to call Insights Hub APIs, it is very important that these checks are done before you call a flow to access an Insights Hub API. The **Siemens Insights Hub Mobile Starter Application** helps you to ensure this by taking care of the following events:
 
-* Application startup: The standard mobile homepage of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mentioned above.
+* Application startup: The standard mobile home page of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mentioned above.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobile_OnSessionStartup.png" alt="StarterMobile" >}}
 

@@ -16,7 +16,7 @@ In the **App** menu, you can view and/or manipulate settings that are connected 
 
 Under **App** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.
 
-### 2.1 Batch Update Button Icons
+### 2.1 Batch Update Button Icons {#batch-update-button-icons}
 
 The **Batch Update Button Icons** option allows you to update many button icons in a single batch process.
 

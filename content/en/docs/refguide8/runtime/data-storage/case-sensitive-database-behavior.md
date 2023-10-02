@@ -92,5 +92,5 @@ Where the letters have the following meaning:
 * **I** – Case insensitive
 
 ¹Operation not supported on strings of unlimited length.
-²From Mendix version 8.11.0
-³From Mendix version 8.14.0
+²From Mendix 8.11.0
+³From Mendix 8.14.0

@@ -31,7 +31,7 @@ The **Environments** page has the following tabs:
     
 ## 2 Deploy
 
-In the **Deploy** tab, you can view information about your environment, as well as create, upload, delete, and deploy packages.
+In the **Deploy** tab, you can view information about your environment. You can also create, upload, delete, and deploy packages.
 
 ### 2.1 Deployment Package Repository{#package-repository}
 
@@ -75,7 +75,7 @@ The **Environments** section shows the following details:
     
     The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
     
-* Deployment package name – for example, Main line-1.0.0.18.mda
+* Deployment package name – for example, `Main line-1.0.0.18.mda`
 * Deployment package version – for example, 1.0.0.18
 * **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
 * The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
@@ -103,7 +103,7 @@ For flexible environments, the **Environments** section shows the following deta
     
     The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
     
-* Deployment package name – for example, Main line-1.0.0.18.mda
+* Deployment package name – for example, `Main line-1.0.0.18.mda`
 * Deployment package version – for example, 1.0.0.18
 * **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
 * **Plan** – this indicates the plan for this environment; for more information, see [Details](/developerportal/deploy/environments-details/)
@@ -121,7 +121,7 @@ You can perform the following actions in this section:
 
 ### 2.3 Activity
 
-In the **Activity** section, you can view a log of deployment activities performed on your environments. 
+In the **Activity** section, you can view a log of deployment activities performed on your environments.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" >}}
 
@@ -135,14 +135,14 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 3. Click **Download**.
 
 {{% alert color="info" %}}
-Operations performed on a customer's behalf through an authorized Mendix support ticket are not currently logged in the activity log.
+Currently, operations performed on a customer's behalf through an authorized Mendix support ticket are not logged in the activity log.
 {{% /alert %}}
 
 ## 3 Custom Domain
 
-In the **Custom Domain** tab, you can manage your custom domain certificates at the application level, as well as see an overview of linked custom domains.
+In the **Custom Domain** tab, you can manage your custom domain certificates at the application level. You can also see an overview of linked custom domains.
 
-When your Mendix app needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain, so that we can make your Mendix app accessible via a secure connection. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
+When your Mendix app needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This enables your Mendix app to be accessible via a secure connection. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
 
 ## 4 Access Restriction Profiles {#asp}
 
@@ -158,7 +158,7 @@ For more information on managing node permissions, see [Node Permissions](/devel
 
 ## 6 Services {#services}
 
-In the **Services** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
+In the **Services** tab, the Technical Contact can decide which custom services can be used in environments of this app.
 
 ### 6.1 Available Services
 
@@ -168,13 +168,13 @@ The custom services that are currently available on the app level, or the **Envi
 
 ### 6.2 Enabling Custom Services
 
-The Technical Contact can only see services which have been licensed for their company. If the Technical Contact cannot enable the service, this means that it has previously been licensed but the license has expired.
+The Technical Contact can only see services that have been licensed for their company. If the Technical Contact cannot enable the service, this means that it has previously been licensed but the license has expired.
 
 Team members who have the Deploy, Publish, and Monitor permission can see which services are enabled or disabled.
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
 
-## 7 Read More 
+## 7 Read More
 
 * [Deploy and Manage](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)

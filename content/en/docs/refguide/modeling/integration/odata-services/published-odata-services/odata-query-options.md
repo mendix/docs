@@ -34,7 +34,7 @@ For example, imagine that you have four entities in your domain model: **Employe
 * An association between **Employee** and **Address**
 * An association between **City** and **Address**
 
-In this case, you could retrieve associated objects by passing `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` in OData v4 or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` in OData v3 (deprecated).
+In this case, you could retrieve associated objects by passing `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` in OData v4 or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` in OData v3 (⚠ deprecated).
 
 ## 3 Counting the Number of Objects
 
@@ -44,7 +44,7 @@ To find out how many objects there are, pass the `$count` query option (for exam
 
 ### 3.2 (Inline) Count
 
-You can also adjust your query so that the result includes a count of the number of items returned. To do this in OData v4, set the `$count` query option to `true` (like this: `?$count=true`). To do this in OData v3 (deprecated), set the `$inlinecount` query option to `allpages` (like this: `?$inlinecount=allpages`).
+You can also adjust your query so that the result includes a count of the number of items returned. To do this in OData v4, set the `$count` query option to `true` (like this: `?$count=true`). To do this in OData v3 (⚠ deprecated), set the `$inlinecount` query option to `allpages` (like this: `?$inlinecount=allpages`).
 
 ## 4 Filtering
 
@@ -58,7 +58,7 @@ This table describes how to pass values for different attribute types:
 | -------------- | ----------------------------------------------------------- |
 | String         | Enclose the value in single quotes (for example, `'John'`). |
 | Enumeration    | Enclose the enumeration member name in single quotes, prefixed with the enumeration type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enumeration type name is not supported. |
-| Datetime       | For OData v4, use a plain value (for example, `2021-12-31`). For OData v3 (deprecated), enclose the value in single quotes and prefix `datetime` (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`). |
+| Datetime       | For OData v4, use a plain value (for example, `2021-12-31`). For OData v3 (⚠ deprecated), enclose the value in single quotes and prefix `datetime` (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`). |
 | Other          | Use a plain value (for example, `15`).                            |
 
 ### 4.2 Comparison Operators
@@ -89,7 +89,7 @@ Mendix supports the following comparison operators:
 | `minute`               | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour               |
 | `second`               | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<small><sup>1</sup> In OData v3 (deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
+<small><sup>1</sup> In OData v3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
 
 ### 4.4 Combining Filters
 

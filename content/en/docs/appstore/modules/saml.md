@@ -36,7 +36,7 @@ The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.or
 * Web browser SSO profile using one of the following bindings
     * HTTP redirect, 
     * HTTP POST bindings
-    * Artifact binding for SAML responses (Mendix version 8 and above)
+    * Artifact binding for SAML responses (Mendix 8 and above)
 * Single Logout profile
 
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
@@ -114,15 +114,15 @@ There are different versions of the SAML module, depending on which version of M
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
-    * For Mendix version 7 and version 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
-    * For Mendix version 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
+    * For Mendix 7 and 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
+    * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
     
-        * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix version 9.
-        * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix version 9 and are using the 3.0 version of Atlas UI. 
+        * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix 9.
+        * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix 9 and are using version 3.0 of Atlas UI. 
 
-    * For Mendix version 10, you should use the latest versions of the module that is compatible with the 3.0 version of Atlas UI (that is, the version for apps newly built on Mendix 9 or newer). These are currently the same as the odd-numbered releases mentioned above for Mendix version 9; in future releases of the SAML module, there will be separate versions of the module dedicated for Mendix version 10.
+    * For Mendix 10, you should use the latest versions of the module that is compatible with the 3.0 version of Atlas UI (that is, the version for apps newly built on Mendix 9 or newer). These are currently the same as the odd-numbered releases mentioned above for Mendix 9; in future releases of the SAML module, there will be separate versions of the module dedicated for Mendix 10.
 
-        Mendix version 10 does not support the 2.0 version of the Atlas UI, so you should never use the even-numbered (Atlas 2.0-compatible) SAML patch releases with your Mendix 10 app.
+        Mendix 10 does not support the 2.0 version of the Atlas UI, so you should never use the even-numbered (Atlas 2.0-compatible) SAML patch releases with your Mendix 10 app.
 
 3. To download the required release, in **Releases** tab, find the release that is compatible with your app per the guidelines in the **Documentation** tab, and then click the **Download** button by the number of the release.
 4. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAML module into your app.
@@ -145,7 +145,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
     
             Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](/appstore/modules/saml/#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
-        {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix version 10.{{% /alert %}}
+        {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix 10.{{% /alert %}}
 
 1. Sign in to the application and configure the SAML module as described in the [Configuration](#config) section.
 
@@ -154,7 +154,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
 You can use single sign on to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint. To do this, you need to add `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the `index.html` file.
 
 {{% alert color="info" %}}
-For Mendix versions 9 and 10, there is no `index.html` file, so you need to create this file first. You can find instructions on how to do this in the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
+For Mendix 9 and 10, there is no `index.html` file, so you need to create this file first. You can find instructions on how to do this in the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
 {{% /alert %}}
 
 If you use this method, do not forget to set the **SSOLandingPage** constant to a value different than `index.html`. Otherwise, the app will come back to `index.html` which will be redirected again to single sign on, resulting in an endless loop. **SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt. We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
@@ -236,7 +236,7 @@ The following settings control user provisioning:
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
 
-    {{% alert color="info" %}}In Mendix version 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.{{% /alert %}}
+    {{% alert color="info" %}}In Mendix 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.{{% /alert %}}
 
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
@@ -252,9 +252,9 @@ The following settings control user provisioning:
 {{% alert color="info" %}}
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.1.8/v3.1.9 and above for Mendix versions 9 and 10
-* v2.2.0 and above for Mendix version 8
-* v1.16.4 and above for Mendix version 7
+* v3.1.8/v3.1.9 and above for Mendix 9 and 10
+* v2.2.0 and above for Mendix 8
+* v1.16.4 and above for Mendix 7
 {{% /alert %}}
 
 * **Use custom logic for user provisioning** and **Use custom after sign-in logic**
@@ -266,7 +266,7 @@ These settings are only available in the following versions of the module (depen
         * the custom microflow name must begin with the string “Custom”, (for example, `CustomMyUserProvisioning`)
         * to see the latest custom microflows in the dropdown, refresh the modules in the *Model Reflection* of your application whenever you add/remove any custom microflow — see [Mx Model Reflection](/appstore/modules/model-reflection/) for information on how to do this
 
-* **Enable delegated authentication** *(deprecated)* - See [Enable Delegated Authentication](#delegated-auth), below, for information on when you might set this.
+* **Enable delegated authentication** (⚠ deprecated) - See [Enable Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 
 * **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
@@ -322,7 +322,7 @@ You also need to define where the user account will be stored within your app. P
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
 
-In Mendix version 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
+In Mendix 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
 
 ### 4.2 Provisioning
 
@@ -350,9 +350,9 @@ See [Custom Behavior](#customuserprovisioning), below, for more information.
 
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.1.8/v3.1.9 and above for Mendix versions 9 and 10
-* v2.2.0 and above for Mendix version 8
-* v1.16.4 and above for Mendix version 7
+* v3.1.8/v3.1.9 and above for Mendix 9 and 10
+* v2.2.0 and above for Mendix 8
+* v1.16.4 and above for Mendix 7
 
 #### 4.2.4 Just in Time Provisioning
 
@@ -374,9 +374,9 @@ Checking this box will force the SAML IdP  to (re)authenticate end-users, even i
 
 If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
-#### 4.3.4 Enable Delegated Authentication {#delegated-auth}
+#### 4.3.4 ⚠ Enable Delegated Authentication {#delegated-auth}
 
-This feature is deprecated.
+⚠ This feature is deprecated.
 
 When you use the SAML SSO module in your app, your app will typically be a front-end app that redirects the user to their IdP via the browser for login.
 Using SAML protocols to secure the APIs of your back-end app is more challenging. We advise you to use OAuth access tokens by installing the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead of the SAML module. This is a common, and a best, practice.
@@ -395,8 +395,8 @@ In-session authentication is a process that takes place within a session that wa
 
 In-session authentication at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
-* v2.3.0 and above for Mendix version 8
+* v3.3.0/v3.3.1 and above for Mendix 9 and 10
+* v2.3.0 and above for Mendix 8
 
 Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
 
@@ -453,8 +453,8 @@ To use artifact binding, select ARTIFACT_BINDING option for **Response protocol 
 
 Using artifact binding for SAML responses at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
-* v2.3.0 and above for Mendix version 8
+* v3.3.0/v3.3.1 and above for Mendix 9 and 10
+* v2.3.0 and above for Mendix 8
 
 #### 4.4.2 Use AssertionConsumerService Concept
 
@@ -489,8 +489,8 @@ Although the typical use case for requesting attributes is to obtain information
 
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
-* v3.3.0/v3.3.1 and above for Mendix versions 9 and 10
-* v2.3.0 and above for Mendix version 8
+* v3.3.0/v3.3.1 and above for Mendix 9 and 10
+* v2.3.0 and above for Mendix 8
 
 ### 4.6 Encryption Settings{#encryption-settings}
 
@@ -605,9 +605,9 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory).
 * **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
-### 6.2 Troubleshooting an Endless Redirect Loop in Mendix Versions 9 and 10
+### 6.2 Troubleshooting an Endless Redirect Loop in Mendix 9 and 10
 
-When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix versions 9 and 10, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
+When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and 10, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time.
 

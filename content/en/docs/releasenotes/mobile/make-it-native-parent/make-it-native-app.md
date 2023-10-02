@@ -61,7 +61,7 @@ From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to sy
 **Release date: April 28, 2020**
 
 {{% alert color="info" %}}
-Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. We recommend you upgrade to a Studio Pro version of 8.18 or higher and then download the most recent version of the Make It Native 8 app. 
+Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. We recommend you upgrade to Studio Pro 8.18 or higher and then download the most recent version of the Make It Native 8 app. 
 {{% /alert %}}
 
 ### New Features

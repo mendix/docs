@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "mx model reflection", "token con
 
 ## 1 Introduction
 
-The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
+The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model and about microflows of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
 
 ### 1.1 Typical Use Cases
 
@@ -17,7 +17,7 @@ The typical usage scenario is selecting and showing entities from your domain mo
 
 ## 2 Configuration {#configuration}
 
-After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
+After importing the module, add **\_USE_ME** > **MxObjects** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
 {{% alert color="info" %}}
 If you have a large app, the synchronization will take much longer.

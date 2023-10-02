@@ -15,9 +15,9 @@ The [OpenID Connect (OIDC) SSO](https://marketplace.mendix.com/link/component/12
 OIDC is an extension of OAuth2 that propagates the end-user's identity to your application.
 
 {{% alert color="warning" %}}
-This OIDC SSO module works with Mendix version 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
+This OIDC SSO module works with Mendix 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 
-If you are using Mendix version 9.20 and above, please use version 2.0.0 or above of the OIDC SSO module.
+If you are using Mendix 9.20 and above, please use version 2.0.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -128,7 +128,7 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 If you already have the [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529) (community edition) in your module, you can migrate to this, platform supported, version by following the instruction below.
 
-#### 3.2.1 Upgrading from Mendix Version 8 to Mendix Version 9
+#### 3.2.1 Upgrading from Mendix 8 to Mendix 9
 
 To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 
@@ -145,9 +145,9 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 11. Delete the “Atlas_UI_Resources” module from your app. Your app is now using themes from the Atlas Core Module.
 12. Update the “Administration” and “MendixSSO” modules to the latest version by importing them from the Marketplace.
 
-#### 3.2.2 Replacing Community Edition with Platform Edition on Mendix Version 9
+#### 3.2.2 Replacing Community Edition with Platform Edition on Mendix 9
 
-If your app is already developed using Mendix version 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
+If your app is already developed using Mendix 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
 
 1. Import the "OIDC" platform edition module from the Marketplace.
 2. Import the "Mx Model Reflection" Module from the Marketplace.

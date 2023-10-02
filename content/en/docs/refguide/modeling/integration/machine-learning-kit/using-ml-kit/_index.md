@@ -101,7 +101,7 @@ After importing a model, two [non-persistable](/refguide/persistability/) entiti
 
 In the image above, the attributes are mapped as closely as possible to data types in Studio Pro. 
 
-For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
+For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to encode the tensors to and from *ML Kit*.
 
 In the image below from the [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50), the inputs and outputs are multidimensional and need to be encoded:
 

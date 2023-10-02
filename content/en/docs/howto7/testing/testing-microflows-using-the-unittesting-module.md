@@ -49,7 +49,7 @@ In this chapter you will set up the unit testing module and run the example test
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580370.png" >}}
 
-8. Select the microflow **Startup** which can be found in the *USE ME folder of the UnitTesting module*.
+8. Select the microflow **Startup** which can be found in the **USE ME folder of the UnitTesting module**.
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580369.png" >}}
 

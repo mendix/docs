@@ -26,7 +26,7 @@ The SAP Destination Service replaces the SAP Cloud Connector flag which was used
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The OData Connector for SAP solutions connector requires an app built with the correct version of Mendix Studio Pro. The latest version of the OData Connector requires Mendix Studio Pro version 9.24.0 or above. Previous versions of the connector, compatible with earlier versions of Mendix Studio Pro, are available on the **Releases** tab of the connector page in the Mendix Marketplace.
+The OData Connector for SAP solutions connector requires an app built with the correct version of Mendix Studio Pro. The latest version of the OData Connector requires Mendix Studio Pro 9.24.0 or above. Previous versions of the connector, compatible with earlier versions of Mendix Studio Pro, are available on the **Releases** tab of the connector page in the Mendix Marketplace.
 
 To authenticate with SAP, you must also obtain authorization credentials for the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/).
 
@@ -275,7 +275,7 @@ The OData Connector for SAP solutions module gives you access to additional acti
 This section describes all the actions of the OData Connector for SAP solutions. They are categorized as being either for [entity and attribute manipulation](#EntityManipulation) or [helper actions](#HelperActions).
 
 {{% alert color="info" %}}
-Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
+Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData v4. Currently, only **Get List** and **Get Entry** are supported for services using OData v4.
 {{% /alert %}}
 
 Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to *empty*.

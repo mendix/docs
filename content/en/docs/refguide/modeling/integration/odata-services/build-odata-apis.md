@@ -31,7 +31,7 @@ REST API best practices usually include some of the following:
 
 This document uses the following domain model as an example: 
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/example-domain-model.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/example-domain-model.png" wdith="700" >}}
 
 REST APIs, and especially OData APIs, often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. For more information, see the [API-First](#api-first) section to learn about decoupling APIs from the domain model. 
 
@@ -58,15 +58,15 @@ You can also define other capabilities, such as if you can count results (using 
 
 When you start your app, you see the Swagger UI documentation and test page:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/swagger-doc.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/swagger-doc.png" wdith="800" >}} 
 
 The test page lists all accepted parameters and example payloads for regular responses and error payloads:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/test-page.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/test-page.png" wdith="500" >}} 
 
 It provides a JSON schema of all the payload types:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/json-schema.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/json-schema.png" wdith="500" >}} 
 
 And it provides an OpenAPI 3.0.1 contract:
 
@@ -86,7 +86,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-all-customers.png" wdith="500" >}} 
 
 ### 3.2 Getting a Resource by Identifier
 
@@ -98,7 +98,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/fetch-single-customer.png" wdith="500" >}} 
 
 OData also supports using multi-field IDs by providing the required attributes as a key value list between the brackets.
 
@@ -121,7 +121,7 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers?$filter=contains(Lastna
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/filter-sort-page-attribute.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/filter-sort-page-attribute.png" wdith="500" >}} 
 
 Alternatively, you can specify the query in the payload of a `POST` call, which is useful if you have a long complex query.
 
@@ -256,7 +256,7 @@ POST http://localhost:8080/odata/CustomerApi/v1/Customers
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/error-422.png" wdith="500" >}} 
 
 #### 4.2.2 Validation Microflows {#validation-microflows}
 
@@ -291,7 +291,7 @@ You can generate and reuse generated validation microflows. The following exampl
 
      The response is as follows:
 
-     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-response-payload.png" wdith="500" >}} 
 
 ### 4.3 Deleting Data
 
@@ -382,7 +382,7 @@ Refer to the [example domain model](#starting-domain-model) for this section.
 
 In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the **Firstname** and **Lastname** attributes into a single attribute, **Fullname**. Provide the home address information and exclude other address types:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" wdith="500" >}} 
 
 1. Add the **CustomerHomeAddress** entity as a resource to the OData service:
 
@@ -456,7 +456,7 @@ POST http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/call-send-email-logic.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/call-send-email-logic.png" wdith="500" >}} 
 
 When you `GET` the resource from the location provided, the status has the value *Sent*, indicating that the logic has completed. See the following `GET` request:
 

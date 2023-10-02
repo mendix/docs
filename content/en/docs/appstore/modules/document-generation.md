@@ -264,16 +264,16 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 2. Copy the font file *NotoSansSC-Regular.ttf* from the *static* folder of the downloaded font package into the *theme\web\fonts* folder of the app.
 3. In Studio Pro, go to **Styling** > **Web** > **main.scss** in **App Explorer**, and add the lines below to the *main.scss* file in the built-in styling editor:
 
-```css
-@font-face {
-    font-family: 'Noto Sans SC';
-    src: url(fonts/NotoSansSC-Regular.ttf);
-}
+    ```css
+    @font-face {
+        font-family: 'Noto Sans SC';
+        src: url(fonts/NotoSansSC-Regular.ttf);
+    }
 
-.font-noto-sans-sc {
-    font-family: 'Noto Sans SC', sans-serif;
-}
-```
+    .font-noto-sans-sc {
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    ```
 
 4. Add the class `font-noto-sans-sc` to all applicable text and widgets.
 

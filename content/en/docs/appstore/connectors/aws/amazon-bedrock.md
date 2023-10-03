@@ -9,11 +9,7 @@ tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
 
 ## 1 Introduction
 
-The [Amazon Bedrock]([#needs-link]) connector enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
-
-{{% alert color="info" %}}
-The Amazon Bedrock service is currently in preview, which means it is only available to selected users. For more information, refer to the Amazon service documentation.
-{{% /alert %}}
+The [Amazon Bedrock](https://marketplace.mendix.com/link/component/215042) connector enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
 
 ### 1.1 Typical Use Cases
 
@@ -47,6 +43,18 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 ## 3 Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+
+{{% alert color="info" %}}
+Amazon Bedrock has server-side validation for specific models. The Claude models require all prompts to be in the following format:
+    
+```text
+Human: <PROMPT>
+Assistant:
+```
+
+For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
+{{% /alert %}}
+
 
 ### 3.1 Configuring AWS Authentication
 

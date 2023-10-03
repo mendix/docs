@@ -160,6 +160,8 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
+As Java 11 approaches the end of support in October 2024, we will stop supporting Java 11 as of Mendix `10.17`. Compatibility with Java 17 is planned for the `10.7` release in January 2024 and compatibility with Java 21 is planned for the `10.10` release in April 2024. Switching to a Mendix version compatible with Java 17 can be considered optional. We recommend you to switch to a Mendix version compatible with Java 21 once it is available.
+
 ## 7 Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.

@@ -33,13 +33,13 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 | Type | Description |
 | --- | --- |
-| [Module](/appstore/modules/) | Software functionality which can include a data model, logic, and UI with a portable security model. |
+| [Module](/appstore/modules/) | Software functionality that can include a data model, logic, and UI with a portable security model. |
 | [Widget](/appstore/widgets/) | Single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
-| **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with by configuring a connection in the app’s module. |
-| <a id="industry"></a>**Solution** | Out-of-the-box solutions which are aimed at industry and domain problems, delivering instant value. These solutions are usually at least 80% ready for use and need minimal adaptation to make them work for the customer-specific use case. |
-| **Sample** | INSERT |
-| **Starter Template** | Sample projects that have certain capabilities in place to provide a basis for the user to start developing their own app. The user does not create an app from a blank template, but from a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
-| **Industry Template** | Accelerators for implementing industry-specific processes. Industry Templates increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Templates are starter templates which are intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They will usually cover around 20% of the process. |
+| **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that you can interact with by configuring a connection in the app’s module. |
+| <a id="industry"></a>**Solution** | Out-of-the-box solutions that are aimed at industry and domain problems, delivering instant value. These solutions are usually at least 80% ready for use and need minimal adaptation to make them work for a customer-specific use case. |
+| **Sample** | A project that provides an overview of the capabilities a product can perform. The project can act as an example, sales play, demo, or template. |
+| **Starter Template** | Sample projects that have certain capabilities in place to provide a basis for you to start developing your own app. You do not need to create an app from a blank template, as you can use a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
+| **Industry Template** | Accelerators for implementing industry-specific processes. Industry templates increase speed-to-value and time-to-market, and they are great starting points for common use cases within the relevant industry. Contrary to solutions, industry templates are starter templates intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They usually cover around 20% of the process. |
 
 The following filter options are also available:
 
@@ -62,7 +62,10 @@ The header for a component presents the following details:
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
 * <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](#my-marketplace) list
-* **Use in Studio Pro** – click this to copy the content ID so that you can [search for the component in Marketplace in Studio Pro](/appstore/general/app-store-content/#current-sp)
+* Depending on the content type:
+    * **Use in Studio Pro** for modules and widgets – click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/general/app-store-content/#current-sp)
+    * **Start with Template** for starter templates – click this to use the template
+    * **Download** for all other content types – click this to download the component
 * The partner icon is applied to components that are supported by a partner:
 
     {{< figure src="/attachments/appstore/general/app-store-overview/partner.png"  width="25"  >}}

@@ -125,7 +125,7 @@ Follow these steps to describe your content:
 4. Enter a **Name** for your component.
 5. Enter a **Description** of your component.
 
-    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
+    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as it will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
 
 #### 4.1.2 Providing License Details {#license}
 
@@ -165,18 +165,17 @@ Follow these steps to configure a proprietary license for a new public component
 A lead is a potential sales contact that expresses interest in your product or service. Lead routing is the end-to-end process of collecting the leads and distributing them to you. It is possible to configure lead routing for the following content types in the Marketplace:
 
 * Solutions
-* Solution templates
-* App services
-* Platform services
+* Industry templates
+* Services
 
 When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking a call-to-action button and filling in a form.
 
-You can configure the name of your **Call-to-action (CTA)** button from the following choices: 
+You can configure the name of your **Main call-to-action** button from the following choices: 
 
 * **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
 * **Download** – no lead routing is established, but customers can directly download your product.
 
-In the **Provide one or more emails** field, you must specify the email address(es) where notifications and information can be sent.
+In the **How would you like to receive information on new leads?** field, you must specify the email address(es) where notifications and information can be sent.
 
 #### 4.1.4 Finishing Up
 
@@ -186,10 +185,10 @@ To finish up configuring this page, click **Upload** to upload an icon for your 
 
 ### 4.2 Package {#package}
 
-On the **Package** page, select your content source. 
+On the **Package** page, you can **Upload Source FIle**: 
 
 {{% alert color="info" %}}
-If you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting a content source is optional.
+If you are using **Solutions**, you will not see the option to select your content source. If you are using **Industry Template**, selecting a content source is optional.
 {{% /alert %}}
 
 * If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import (for more information on the best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
@@ -277,7 +276,7 @@ Mendix does the following:
     * For more details, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above
 * Checks the *.mpk* files for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
 * Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
-* If the component is a widget, module, connector, or solution template, Mendix checks that it can be used without errors in a specific Studio Pro version
+* If the component is a widget, module, connector, or an industry template, Mendix checks that it can be used without errors in a specific Studio Pro version
 * Checks that the documentation mentions all the details per the template (for example, dependencies, configuration, and how to use the component)
 * Checks the grammar, alignment, and spelling for the component's description and documentation
 * Checks that the logo is related to the component's functionality

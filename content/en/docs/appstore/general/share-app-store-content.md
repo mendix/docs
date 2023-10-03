@@ -181,7 +181,7 @@ In the **How would you like to receive information on new leads?** field, you mu
 
 To finish up configuring this page, click **Upload** to upload an icon for your component.
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/general.png" >}}
 
 ### 4.2 Package {#package}
 
@@ -215,7 +215,7 @@ If the virus scan report is invalid or there is some issue with it, the [Marketp
 If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/package.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/package.png" >}}
 
 ### 4.3 Enable {#doc}
 
@@ -238,7 +238,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a id="screenshot"></a>Click **Upload Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/enable.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/enable.png"  >}}
 
 You can optionally add a **YouTube URL** and a **Demo URL**.
 
@@ -252,7 +252,7 @@ On the **Capabilities** page, you can provide the following details about an ind
 * A **Use Case** relevant to the content (enter a **Header** and **CTA URL**)
 * **External Links** relevant to the content
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/capabilities.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/capabilities.png"  >}}
 
 ### 4.5 Publish {#publish}
 

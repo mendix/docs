@@ -114,18 +114,18 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the content type in the initial version of your content. You cannot change this setting after the initial version is published.{{% /alert %}}
 
-2. You can add up to three **Categories** for your component, which will help other users find your component more easily.
-3. Enter a **Name** for your component.
-4. Enter a **Description** of your component.
-
-    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
-
-5. Select the location where you want to publish your component:
+2. Select the location **Visibility** where you want to publish your component:
 
     * <a id="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
     * <a id="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Private** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a content group can also be made available to [content group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
+    
+3. You can add one **Category** (up to three total) for your component, which will help other users find your component more easily.
+4. Enter a **Name** for your component.
+5. Enter a **Description** of your component.
+
+    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
 
 #### 4.1.2 Providing License Details {#license}
 

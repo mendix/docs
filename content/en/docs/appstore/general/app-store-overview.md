@@ -37,6 +37,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [Widget](/appstore/widgets/) | Single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 | **Service** | Software functionality that can be re-used for different use cases. Services usually include APIs that users can interact with by configuring a connection in the app’s module. |
 | <a id="industry"></a>**Solution** | Out-of-the-box solutions which are aimed at industry and domain problems, delivering instant value. These solutions are usually at least 80% ready for use and need minimal adaptation to make them work for the customer-specific use case. |
+| **Sample** | INSERT |
 | **Starter Template** | Sample projects that have certain capabilities in place to provide a basis for the user to start developing their own app. The user does not create an app from a blank template, but from a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
 | **Industry Template** | Accelerators for implementing industry-specific processes. Industry Templates increase speed-to-value and time-to-market. They are a great starting point for common use cases within the relevant Industry. Contrary to solutions, Industry Templates are starter templates which are intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They will usually cover around 20% of the process. |
 
@@ -61,9 +62,7 @@ The header for a component presents the following details:
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
 * <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](#my-marketplace) list
-* **Download** – click this to download the component
-    * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
-    * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
+* **Use in Studio Pro** – click this to copy the content ID so that you can [search for the component in Marketplace in Studio Pro](/appstore/general/app-store-content/#current-sp)
 * The partner icon is applied to components that are supported by a partner:
 
     {{< figure src="/attachments/appstore/general/app-store-overview/partner.png"  width="25"  >}}

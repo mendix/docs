@@ -35,7 +35,7 @@ There are three ways to install a Marketplace component, which are described in 
 
 ### 2.1 Downloading Content from Within Studio Pro {#downloading}
 
-#### 2.1.1 For Studio Pro 9.19 and Above
+#### 2.1.1 For Studio Pro 9.19 and Above {#current-sp}
 
 {{% alert color="info" %}}This procedure works for all types of Marketplace components, unless you are using Studio Pro China Edition.{{% /alert %}}
 

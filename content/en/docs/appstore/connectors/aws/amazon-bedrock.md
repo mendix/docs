@@ -73,6 +73,7 @@ In order to use the Amazon Bedrock service, you must authenticate with AWS. To d
     | Credentials type | Parameter | Value |
     | --- | --- | --- |
     | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | Any | **Timeout** | Specifies how long the Call REST service activity should wait for the REST endpoint to respond |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |

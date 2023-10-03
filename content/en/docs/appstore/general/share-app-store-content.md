@@ -191,17 +191,19 @@ On the **Package** page, you can **Upload Source FIle**:
 If you are using **Solutions**, you will not see the option to select your content source. If you are using **Industry Template**, selecting a content source is optional.
 {{% /alert %}}
 
-* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import (for more information on the best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
-    * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
-    * When you are finished, click **OK**
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
+* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
+    * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
+    * When you are finished, click **OK**
 
 Select the **Studio Pro Version** on which you built the content.
 
-If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. 
+If this is the first version of the component you are uploading, the number in the **Version** section will be automatically set to **1.0.0**. 
 
 Enter **Release Notes** for the component in the box provided describing what is new in that release.
+
+[**VERIFY: THIS IS STILL AVAILABLE?**]
 
 Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using a service (for example, [VirusTotal](https://www.virustotal.com/gui/home/upload)). This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF (via a screenshot, if necessary). Then, click **Upload** in the Marketplace to upload your report.
 
@@ -217,7 +219,7 @@ If this report is not attached and during our approval process we identify secur
 
 ### 4.3 Enable {#doc}
 
-On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). 
+On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that the documentation option is only available when the **Import Documentation** box has not been selected on the **Package** page above. 
 
 Follow the template for the recommended content:
 
@@ -229,33 +231,32 @@ Follow the template for the recommended content:
     * Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
     * The **Installation** steps and details
     * The **Configuration** steps and details
-    * Any **Compatibility** steps and details
     * Any **Known bugs**
     * Any **Frequently asked questions**
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-<a id="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
+<a id="screenshot"></a>Click **Upload Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/enable.jpg"   width="600"  >}}
 
-You can optionally add a **Video** and **Demo**.
+You can optionally add a **YouTube URL** and a **Demo URL**.
 
 ### 4.4 Capabilities {#capabilities}
 
-On the **Capabilities** page, you can provide the following details about a solutions template:
+On the **Capabilities** page, you can provide the following details about an industry template:
 
 * A category recommendation in the **Industry Cloud** section
 * A **Banner** that will be displayed on your content page
 * One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
-* A **Use Case** relevant to the content (enter a **Header** and **URL**)
-* **External links** relevant to the content
+* A **Use Case** relevant to the content (enter a **Header** and **CTA URL**)
+* **External Links** relevant to the content
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/capabilities.jpg"   width="600"  >}}
 
 ### 4.5 Publish {#publish}
 
-Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before clicking **Publish Content**.
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/publish.png"   width="600"  >}}
 

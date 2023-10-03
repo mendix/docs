@@ -13,6 +13,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### September __, 2023 [**VERIFY DATE**]
+
+#### Improvements
+
+In the past, downloading a component directly from the web Marketplace could lead to compatibility errors. We have changed this so that downloading a component can only happen directly from the Marketplace in Studio Pro. For that reason, we replaced the **Download** button on the [component details page](/appstore/general/app-store-overview/#details) with the **Use in Studio Pro** button. This new button allows you to copy the content ID so that you can [search for the component in Marketplace in Studio Pro](/appstore/general/app-store-content/#current-sp). This lowers the risk of introducing compatibility errors and improves the experience of installing the Marketplace content you need.
+
 ### August 5, 2023
 
 #### Improvements

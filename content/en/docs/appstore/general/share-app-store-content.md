@@ -256,7 +256,7 @@ On the **Capabilities** page, you can provide the following details about an ind
 
 ### 4.5 Publish {#publish}
 
-Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before publishing. You can also upload a **Cover Image** for your component details page.
+Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before publishing.
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/publish.png"   width="600"  >}}
 

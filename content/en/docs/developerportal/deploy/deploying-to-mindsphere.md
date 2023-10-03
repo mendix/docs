@@ -100,7 +100,7 @@ Now that you have your new app, or have imported the Insights Hub modules into a
 
 The following items in the SiemensInsightsHubSingleSignOn module need to be configured.
 
-{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image2.png" alt="Folder structure of the MindSphereSingleSignOn module" >}}
+{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image2.png" alt="Folder structure of the SiemensInsightsHubSingleSignOn module" >}}
 
 #### 4.1.1 CockpitApplicationName
 

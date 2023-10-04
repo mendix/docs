@@ -45,7 +45,7 @@ The **Password** is encrypted using the **EncryptionKey** constant. For better s
 
 #### 2.1.3 Enabling SSL
 
-Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
+Enabling SSL establishes a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
 2. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. 
@@ -76,8 +76,8 @@ To publish data to the MQTT broker, follow these steps:
     * **Payload** – Choose a string message to be published.
     * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute for each message that is being published.
     * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
-        * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
-        *  **No** – For publishers, selecting **No** indicates this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
+        * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message is transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
+        *  **No** – For publishers, selecting **No** indicates this message should not be retained by the MQTT server. For subscribers, this indicates it is a normal message that was received as a result of it being published to the server.
 
 #### 3.1.2 Subscribe
 

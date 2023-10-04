@@ -26,18 +26,18 @@ The MQTT connector consists of microflow actions that enable you to do the follo
 
 Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
-If the broker needs basic authentication for connection, you can set up a user name and password that will be stored in the domain model. For more information, see the [Authentication](#auth) section below.
+If the broker needs basic authentication for connection, you can set up a user name and password that is stored in the domain model. For more information, see the [Authentication](#auth) section below.
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
 You can set up a broker connection in a microflow directly if you do not want it to be stored in the domain model. To do this, follow these steps:
 
 1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object and provide the required parameters.
-2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
+2. Use the **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
 #### 2.1.2 Setting Up Authentication {#auth}
 
-If an MQTT broker needs a user name and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
+If an MQTT broker needs a user name and password for connection, set the credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
 
@@ -49,8 +49,8 @@ Enabling SSL will establish a secure connection to the broker. To input your SSL
 
 1. Open your certificates file in any text editor. 
 2. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. 
-    *   Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. 
-    * Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
+    *   Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`
+    * Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`
 3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
     * Currently supported certificate types are *X.509* format (*.crt*, *.cer*)
     * Currently supported key types are *X.509* format (*.pem*, *.pkcs*)
@@ -77,7 +77,7 @@ To publish data to the MQTT broker, follow these steps:
     * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute for each message that is being published.
     * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
         * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
-        *  **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
+        *  **No** – For publishers, selecting **No** indicates this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
 
 #### 3.1.2 Subscribe
 

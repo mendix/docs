@@ -140,7 +140,13 @@ When you select groups in the list or members or accessible apps in the group de
 
 ### 6.1 General Settings {#company-general-settings}
 
-On the **General Settings** tab of this page, you can edit your **Company Name** and **Description**.
+On the **General Settings** page, you can manage your company details, company email domains, and security contact, and disable or enable the digital signing of email.
+
+#### 6.1.1 Company Details
+
+You can edit your **Company Name** and **Description**. To do so, editing **Edit Company Details**.
+
+#### 6.1.2 Company Email Domains {#company-email-domains}
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
@@ -149,6 +155,8 @@ If you have [configured single sign on using BYOIDP](/developerportal/control-ce
 To export all the email domains, use the **Export to Excel** button.
 
 {{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
+
+#### 6.1.3 Security Contact
 
 You can also provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -163,6 +171,12 @@ Click **Edit** to edit the Security Contact's **Name**.
 Click **Delete** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
+
+#### 6.1.4 Disabling or Enabling the Digital Signing of Emails
+
+The Mendix Platform digitally signs the content of emails from senders [no-reply@notifications.mendix.com](mailto:no-reply@notifications.mendix.com) and [no-reply@platform-mail.mendix.com](mailto:no-reply@platform-mail.mendix.com). By digitally signing the content of an email, Mendix provides assurance to the recipient of the email that the content of an email has not been altered in transit. For reasons of security, this feature is enabled by default. However, in case digitally signing the content of an email interferes with the delivery of that email to the recipient, a Mendix Admin can disable this feature for emails sent to receivers in the company domains.
+
+To disable the digital signing of emails, turn on the toggle. To enable the digital signing of emails, turn off the toggle. This setting has an effect on the emails sent to all the [email domains claimed by your company](#company-email-domains).
 
 ### 6.2 Mendix Admins
 

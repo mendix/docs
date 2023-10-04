@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ov-introduction/
 weight: 1
 ---
 
-## 1 ATS Start Page
+## 1 ATS Home Page
 
 When you [log in to Application Test Suite (ATS)](https://ats.mendix.com), you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
 

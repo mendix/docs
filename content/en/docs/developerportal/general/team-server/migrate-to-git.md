@@ -75,7 +75,7 @@ After migration, existing local copies are no longer linked to a working version
 If the migration process failed, all changes are rolled back. This means access to SVN is restored and you can keep developing your app.
 You can check common causes of a failed migration below and resolve them. After that you can attempt to migrate your app again.
 
-The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix version 9.12. To resolve this, delete or upgrade these branches. 
+The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix 9.12. To resolve this, delete or upgrade these branches. 
 
 ## 6 Read More
 

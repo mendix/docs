@@ -10,6 +10,23 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
+## iOS 1.1.0 / Android 1.1.0
+
+**Release date: September 15th, 2023**
+
+### New Features
+
+* We added a new history integration feature for Android. Now you can easily see your most recent successful network connections.
+
+### Improvements
+
+* We introduced fresh visual designs for Make It Native 10.
+
+### Fixed
+
+* We upgraded `react-native-device-info` to version 8.7.1 to enhance device compatibility and performance.
+* We updated the Showcase Banking App.
+
 ## iOS 1.0.3
 
 **iOS Release date: July 22nd, 2023**
@@ -18,7 +35,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 * We made the **Launch App** screen consistently remember your previously used URL.
 * The **History** tab now automatically opens the launch screen to quickly launch your app.
-  
+
 ### Fixes
 
 * We fixed the **History** tab so it no longer saves duplicate entries.
@@ -29,7 +46,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 **Android Release date: July 7th, 2023**
 
-This is the official release of the Android version of the Make It Native 10 app, with support for Mendix Studio Pro 10.0. 
+This is the official release of the Android version of the Make It Native 10 app, with support for Mendix Studio Pro 10.0.
 
 Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.
 
@@ -43,10 +60,10 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 **iOS Release date: June 27th , 2023**
 
-This is the official release of the iOS version of the Make It Native 10 app, with support for Mendix Studio Pro 10.0. 
+This is the official release of the iOS version of the Make It Native 10 app, with support for Mendix Studio Pro 10.0.
 
 Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.
 
 ### New Features
 
-* We introduced the **History** tab, allowing you to access frequently visited URLs without retyping them. 
+* We introduced the **History** tab, allowing you to access frequently visited URLs without retyping them.

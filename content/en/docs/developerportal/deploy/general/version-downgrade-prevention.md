@@ -17,7 +17,7 @@ This issue applies when you are downgrading an app to a lower version of Mendix.
 
 During the migration phase, the data storage layer will first check whether any Mendix system tables have changed. It does this by comparing the migration version number in the database before the analysis stage with the same version number in the runtime. If the existing database version number is higher than the runtime version number to which you are downgrading, then the migration will be canceled, and an error message will be shown.
 
-For example, if you downgrade from Mendix version 9.0.5 to Mendix version 8.18.4, then the following log line is shown in the Mendix console: `The database version is of Mendix '9.0.5' which can not be downgraded to older Mendix versions.`
+For example, if you downgrade from Mendix 9.0.5 to Mendix 8.18.4, then the following log line is shown in the Mendix console: `The database version is of Mendix '9.0.5' which can not be downgraded to older Mendix versions.`
 
 ## 2 Solution
 

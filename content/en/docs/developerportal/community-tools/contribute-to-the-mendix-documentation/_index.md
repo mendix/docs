@@ -90,15 +90,14 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)
-* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
-* Document file names should always be lower-case with a hyphen (`-`) between each word
-* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-* Make sure the image files comply with these naming conventions:
-* Image file names should always be lower-case with a hyphen (`-`) between each word
-* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-* Make sure the image files have names that make sense so it is easy to find them
-* Save the image files in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
-* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
+* Make sure the Markdown file name reflects the the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
+* Name the Markdown and image files in lower-case with a hyphen (`-`) between each word, and do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* When creating screenshots:
+    * Make sure the resolution of your screen is 100% (or a multiple thereof) so that your images are sharp
+    * Focus on the part of screen that contains the information you need so that the browser does not have to shrink the image when it displays it, and crop the image closely
+    * Make sure the image file has a name that makes sense so it is easy to find it
+    * Save the image as a *.png* (preferred), *.jpg*, or *.gif* file
+    * Save the image file in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
 
 ### 5.3 Submitting Your Work
 

@@ -72,7 +72,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
 {{% alert color="warning" %}}
-The Model Creator for SAP Integrations will produce a module which is in Mendix version 8.18.10. To use the module you will have to create your app in, or upgrade your app to, Mendix version 8.18.10 or above.
+The Model Creator for SAP Integrations will produce a module which is in Mendix 8.18.10. To use the module you will have to create your app in, or upgrade your app to, Mendix 8.18.10 or above.
 {{% /alert %}}
 
 ## 3 Generating an OData Data Model

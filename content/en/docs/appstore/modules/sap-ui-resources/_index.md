@@ -2,12 +2,10 @@
 title: "SAP Fiori UI Resources"
 url: /appstore/modules/sap-ui-resources/sap-fiori-3-0/
 category: "SAP"
-weight: 70
 description: "Information on how to make an SAP Fiori version 3.0 themed app"
 tags: ["SAP", "Fiori", "Building Block", "Page Design", "Layout", "UI", "UX", "3.0"]
 aliases:
     - /partners/sap/sap-fiori-3-0/
-
 ---
 
 <!-- NOTES
@@ -20,7 +18,12 @@ Should we have a section on the "Shell Bar"?
 
 The SAP Fiori user experience creates a consistent UI across SAP products. SAP Fiori is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace allows you to create the same user experience in your Mendix apps.
 
-The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
+The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. Your Mendix app can be build with the following themes:
+
+* SAP Horizon Evening
+* SAP Horizon Morning
+* SAP Quartz Light
+* SAP Quartz Dark
 
 You can experience the SAP Fiori design by using the [SAP Fiori Web Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app.
 
@@ -159,18 +162,14 @@ You can use one of the available page templates to rapidly create a consistent U
 
 Note that these pages work best when combined with the appropriate **Navigation layout**. For example, the **Fiori Launchpad** page template works best with the *SAP_Launchpad (SAP_Fiori_Web_UI_Resources)* **Navigation Layout**.
 
-## 6 Theme Selector{#theme-selector}
+## 6 Theme Selector {#theme-selector}
 
-You can give the end-use the option to choose their own theme. There is an example of this on the **Home** page of the Web UI Package for SAP Fiori theme Marketplace Module. The end-user can click a button to switch between a *Dark Theme* or a *Light Theme*.
+In order to select the theme for your app, specify it in the *index.html* page as `html class="name-of-theme"`, for example, `html class="theme-horizon-morning"`. The following themes are available:
 
-To do this you need to trigger a nanoflow which passes a variable containing the name of the theme to the **ChangeTheme_JavaScript_Action** JavaScript action. This changes the theme and implements it directly on your app's pages.
-
-The themes available are:
-
-* **light** *(default)* – equivalent to the SAP Quartz Light theme
-* **dark** – equivalent to the SAP Quartz Dark theme
-* **belize**
-* **belizeDeep**
+* **theme-horizon-morning**
+* **theme-horizon-evening**
+* **theme-quartz-light**
+* **theme-quartz-dark**
 
 ## 7 Demo Apps
 
@@ -180,7 +179,7 @@ On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a numb
 
 If you want to include the Web UI Package for SAP Fiori theme in an existing app perform the following steps:
 
-1. Ensure that your app is using Mendix version 9.6.11 or above. 
+1. Ensure that your app is using Mendix 9.6.11 or above. 
 2. [Import](/appstore/general/app-store-content/) the  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module into your app.
 3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
 4. Look in the **Theme** tab of the app settings. This must contain the `SAP_Fiori_Web_UI_Resources` module below the `Atlas_Core` module.

@@ -80,7 +80,7 @@ Let’s begin by placing our page template inside the **UI_Resources** module un
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_moving_local.png" >}}
 
-In our example, the new page template has been added to the dashboard category. When we now create a new page in Mendix Studio Pro, the **Homepage Template** is available in the **Create Page** wizard under the **Dashboards** category:
+In our example, the new page template has been added to the dashboard category. When we now create a new page in Mendix Studio Pro, the **Template** is available in the **Create Page** wizard under the **Dashboards** category:
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_open_pt.png" >}}
 

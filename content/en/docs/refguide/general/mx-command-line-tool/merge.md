@@ -24,7 +24,7 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
+| `--help` | | Shows help for the `mx diff` command and exits. |
 | `--loose-version-check` | `-l` | Makes the version check loose (meaning, it auto-converts if possible before diffing). |
 
 `BASE` is the first  *.mpr* file, which is used as a base in comparison. 
@@ -67,9 +67,9 @@ Use the following command pattern for `mx merge`:
 
 These are the `OPTIONS`:
 
-| Option | Shortcut | Result |
-| --- | --- | --- |
-| `--help` | `-h` | Displays the help text and exits. |
+| Option | Result |
+| --- | --- |
+| `--help` | Shows help for the `mx merge` command and exits. |
 
 `BASE` is common base version of the app. If the app is version-controlled, this is the last common revision of the app (the revision that is present in the history of both branches).
 
@@ -92,7 +92,7 @@ In order to merge changes correctly, Studio Pro has to compare both **A"** and *
 This command works for any three *.mpr* files. This means you can try to merge different apps at your own risk.
 
 {{% alert color="info" %}}
-This command works differently than the normal version-controlled merges you can do in Studio Pro. While Studio Pro does a real merge of one branch into another, this command runs the merge algorithm over three *.mpr* files that do not even have to be version- controlled. {{% /alert %}}
+This command works differently than the normal version-controlled merges you can do in Studio Pro. While Studio Pro does a real merge of one branch into another, this command runs the merge algorithm over three *.mpr* files that do not even have to be version-controlled. {{% /alert %}}
 
 ### 3.2 Conflicts
 
@@ -139,25 +139,25 @@ Add the lines below to the *.gitconfig* file located in the *.git* folder of you
 
 At the end of the file, add a `[merge "custom"]` block like this:
 
-```ini
+```ini {linenos=false}
 [merge "custom"]
     name = custom merge driver for MPR files
     driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Replace `MX.EXE_PATH` with a full path to your *mx.exe* file in the Unix format (for example, `/c/Program\ Files/Mendix/10.0.0.8753/modeler/mx.exe`).
+Replace `MX.EXE_PATH` with a full path to your *mx.exe* file in the Unix format (for example, `'/c/Program Files/Mendix/10.0.0.8753/modeler/mx.exe'`).
 
 Under the `[core]` section, add the following:
 
-```ini
-    attributesfile = .git/.gitattributes`
+```ini {linenos=false}
+    attributesfile = .git/.gitattributes
 ```
 
 ### 4.2 .gitattributes File
 
 Create `.gitattributes` file in .git folder of your App on disk. Add the following line there to tell git to use `[merge "custom"]` driver from .gitconfig chapter of this page for merging *.mpr files.
 
-```ini
+```ini {linenos=false}
 *.mpr merge=custom
 ```
 

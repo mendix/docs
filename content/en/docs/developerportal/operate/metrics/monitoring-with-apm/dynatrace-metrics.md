@@ -13,7 +13,7 @@ tags: ["Dynatrace", "Mendix Cloud", "monitoring", "analysis"]
 
 For Dynatrace monitoring, [Dynatrace OneAgent](https://www.dynatrace.com/platform/oneagent/) is being used to collect metrics.
 
-In addition to auto-instrumented built-in metrics collected by OneAgent, we also collect custom application metrics. Custom application metrics are supported in Mendix version 9.7 and above.
+In addition to auto-instrumented built-in metrics collected by OneAgent, we also collect custom application metrics. Custom application metrics are supported in Mendix 9.7 and above.
 For more information on the custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
 ## 2 Prerequisites

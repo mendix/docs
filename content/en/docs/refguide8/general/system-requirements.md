@@ -50,7 +50,7 @@ If you want to use TortoiseSVN in combination with Studio Pro, download the late
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
 
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ### 2.3 Graphics Card
@@ -85,19 +85,23 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 ### 6.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
-* Debian 8 (Jessie) and above
+* Debian OldOldStable (LTS), Debian OldStable, Debian Stable
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
 ### 6.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
-* Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
+* Nginx
 * Apache
 
 ### 6.3 Java
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+{{% alert color="warning" %}}
+As Java 11 approaches the end of support in October, 2024, compatibility with Java 17 is planned for Q1 2024.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).

@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 {{% alert color="warning" %}}
 
-This how-to was written based on Studio Pro version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
+This how-to was written based on Studio Pro 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
 
 {{% /alert %}}
 

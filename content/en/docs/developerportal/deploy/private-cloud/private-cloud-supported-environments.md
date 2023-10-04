@@ -36,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.27
-* OpenShift 4.6 through 4.12
+* Kubernetes versions 1.19 through 1.28
+* OpenShift 4.6 through 4.19
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -90,7 +90,7 @@ The image builder doesn't build multiple architecture images at the moment.
 
 It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
 
-Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported. 
+Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported.
 
 ## 3 Container Registries
 
@@ -140,7 +140,7 @@ The OpenShift registry must be installed and enabled for use.
 
 ### 3.4 Amazon Elastic Container Registry (ECR)
 
-[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters. 
+[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters.
 
 To use an ECR registry, the Mendix Operator will need an AWS Identity and Access Management (IAM) account with permissions to push and pull images.
 
@@ -186,6 +186,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 12
 * PostgreSQL 13
 * PostgreSQL 14
+* PostgreSQL 15
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
@@ -197,7 +198,7 @@ A standard PostgreSQL database is an unmodified PostgreSQL database installed fr
 
 The following managed PostgreSQL databases are supported:
 
-* [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
+* [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 
@@ -217,7 +218,7 @@ For every Mendix app environment, a new database schema and user (role) will be 
 By default, the Mendix Operator will first connect to the database server with TLS enabled; if the database server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
+If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if:
 
 * the PostgreSQL server has an invalid certificate
 * or its certificate is signed by an unknown certificate authority
@@ -256,7 +257,7 @@ For every Mendix app environment, a new database, user and login will be created
 {{% alert color="info" %}}
 By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
 
-If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
+If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if
 
 * SQL Server doesn't support encryption
 * the SQL Server server has an invalid certificate
@@ -319,7 +320,7 @@ Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage 
 
 [Google Cloud Storage](https://cloud.google.com/storage) is supported with [Cloud Storage Interoperability](https://cloud.google.com/storage/docs/interoperability) mode.
 
-Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting. 
+Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting.
 
 ### 5.6 Ceph
 

@@ -25,7 +25,7 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Rekognition connector requires Mendix Studio Pro version 9.18.0 or above.
+The Amazon Rekognition connector requires Mendix Studio Pro 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
@@ -397,4 +397,13 @@ JavaScript actions provide an additional way to extend the functionality of your
 
 #### 4.5.1 JS_AddBoundingBox
 
-The `AddBoundingBox` JavaScript action can be used to draw a rectangle around the labels that have been found on an image.
+The `JS_AddBoundingBox` JavaScript action can be used to generate a rectangle around the labels that have been identified on an image. The image upon which the rectangles are to be generated must be contained in a container. As a result, the JavaScript action can only be executed after the page has been rendered.
+
+ 
+| Parameter | Description |
+| --- | --- |
+| `ClassName` (String) | A string representation of the container upon which a rectangle is to be generated. |
+| `BoundingBox` (Object) | An object of the type `BoundingBox`. The object must have the following attributes: `Top`, `Left`, `Height` and `Width`. |
+| `CustomLabel` (Object) | An object of the identification. The object must have the `Confidence` attribute. |
+| `HighConfidenceThreshold` (Decimal) | The minimum threshold of confidence for the rectangle to be considered of high confidence. This results in a green rectangle being rendered. Range: 0 - 100 |
+| `MediumConfidenceThreshold` (Decimal) | The bottom of the range of threshold of confidence for the rectangle to be considered of medium confidence, whereas the top is the `HighConfidenceThreshold` parameter. This results in an orange rectangle being rendered. All labels with a confidence below this value are considered of low confidence, which results in an red rectangle being rendered. Range: 0 - 100 |

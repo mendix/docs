@@ -21,7 +21,7 @@ You can use the connector to perform the following tasks:
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The following roles are required for the user to be able to configure the SAP Enterprise Messaging service:
+The following roles are required for the user to be able to configure the SAP Enterprise Messaging service. You must assign the roles to the user in the SAP BTP subaccount for which the SAP Enterprise Messaging service is being provisioned.
 
 * Enterprise Messaging Developer - developer role
 * Enterprise Messaging Display - read-only role
@@ -41,14 +41,14 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 After you install the connector, you can find it in the **App Explorer**, in the **SAPEventMeshConnector** section. The connector provides a [domain model](#domain-model) and several [actions](#actions) that you can use to connect your app to the SAP Event Mesh service. Each action can be implemented by using it in a microflow. 
 
-To ensure that your app can connect to the SAP service, you must also bind and configure the Enterprise Messaging service.
+The SAP Enterprise Messaging service (Event Mesh) instance must be created with the desired configuration and the service instance must be bound to the app.
 
 ### 3.1 Configuring the Enterprise Messaging Service
 
-The **Event Mesh Configurator** provides a user friendly interface to create the JSON required to configure the required Enterprise Messaging service. To bind and configure the service, perform the following steps:
+The **Event Mesh Configurator** provides a user friendly interface to create the JSON required to configure the required Enterprise Messaging service instance with the desired configuration. To bind and configure the service, perform the following steps:
 
 1. Ensure that the **enterprise-messaging** service is in the status **Services To Be Bound** in Developer Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
-2. Click **⚙️ Configurator** to open the configurator.
+2. Click **Available Services** > **⚙️ Configurator** to open the configurator.
 3. Provide the following information:
     * **EM Name** - enter a display name for the service.
     * **Namespace** - the namespace is a prefix that ensures that every message client within a subaccount is unique. It must consists of 3 segments and contain no more than 24 characters. As a best practice, use the format *orgName/clientName/uniqueId*.
@@ -77,6 +77,8 @@ The entities in the table below describe all generalizations. These are reused b
 | **PublishResponse** | Response to the `PublishMessage` action |
 | **Queue** | Queue details response |
 | **QueueSubscriptions** | Queue subscription response |
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/domain-model.png" >}}
 
 ### 4.2 Enumerations
 
@@ -117,12 +119,20 @@ The `PublishMessage` activity allows you to publish messages to queues or topics
 * Message
 * Message Or Content Type
 
+##### 4.3.1.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/publish-message.png" >}}
+
 #### 4.3.2 Consume Message from a Queue
 
 The `ConsumeMessage` activity allows you to consume a message from a queue. It requires the following parameters:
 
 * Credentials
 * Queue Name
+
+##### 4.3.2.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/consume-message.png" >}}
 
 #### 4.3.3 Publish Event
 
@@ -134,6 +144,10 @@ The `PublishCloudEvent` activity allows you to publish events that are compliant
 * EventType
 * MessageData
 
+##### 4.3.3.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/publish-event.png" >}}
+
 #### 4.3.4 Get All Queues
 
 The `GetQueueList` microflow allows you to retrieve a list of queues. It requires the Management Credentials parameter.
@@ -142,13 +156,25 @@ The `GetQueueList` microflow allows you to retrieve a list of queues. It require
 
 The `GetQueueDetails` microflow allows you to retrieve detailed information about a queue. It requires the Management Credentials and Queue Name as parameters.
 
+##### 4.3.5.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/get-queue-details.png" >}}
+
 #### 4.3.6 Get Queue Subscriptions
 
 The `GetQueueSubscriptions` microflow allows you to retrieve information about subscriptions to a queue. It requires the Management Credentials and Queue Name as parameters.
 
+##### 4.3.6.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/get-queue-subscriptions.png" >}}
+
 #### 4.3.7 Create or Update Queue
 
 The `CreateOrUpdateQueue` activity allows you to create a new queue or update an existing queue. It requires the Management Credentials and Queue Name as parameters.
+
+##### 4.3.7.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/create-queue.png" >}}
 
 #### 4.3.8 Delete Queue
 
@@ -161,6 +187,10 @@ The `CreateQueueSubscription` activity allows you to create a new subscription t
 * Management credentials
 * Topic or topics to be created
 * Queue or queues subscribed to the topic
+
+##### 4.3.9.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/create-queue-subscription.png" >}}
 
 #### 4.3.10 Delete Queue Subscription
 

@@ -35,7 +35,7 @@ You can set up a broker connection in a microflow directly if you do not want it
 1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object and provide the required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
-#### 2.2 Setting Up Authentication {#auth}
+#### 2.1.2 Setting Up Authentication {#auth}
 
 If an MQTT broker needs a user name and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
 
@@ -43,7 +43,7 @@ Setting the **Authentication method** to **NONE** indicates that authentication 
 
 The **Password** is encrypted using the **EncryptionKey** constant. For better security, it is advised to change the **EncryptionKey** constant after importing the MQTT connector.
 
-#### 2.1.2 Enabling SSL
+#### 2.1.3 Enabling SSL
 
 Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
 
@@ -61,11 +61,11 @@ To use the MQTT Connector, make sure you have [configured the broker connection]
 
 You can build microflows that use the connection details from the domain model to connect, and set up connection details using the domain model. Include microflows that first use the connection details from the domain model to connect, before the subscribe or publish actions can be performed.
 
-### 3.2 Microflow Actions
+### 3.1 Microflow Actions
 
 After you have set up the broker connection in the [Configuration](#configuration) section or in a microflow, you can **Publish**, **Subscribe**, or **Unsubscribe**. These actions are used in microflows. The **SampleUses** microflow displays a sample setup for you to reference.
 
-#### 3.2.1 Publish
+#### 3.1.1 Publish
 
 To publish data to the MQTT broker, follow these steps:
 
@@ -79,7 +79,7 @@ To publish data to the MQTT broker, follow these steps:
         * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
         *  **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message that was received as a result of it being published to the server.
 
-#### 3.2.2 Subscribe
+#### 3.1.2 Subscribe
 
 To subscribe to the MQTT broker, follow these steps:
 
@@ -92,7 +92,7 @@ To subscribe to the MQTT broker, follow these steps:
 
 When subscribing to a topic, in the **Subscribe** action, define which microflow is triggered for each message and check that the topic and payload is passed on into that microflow.
 
-#### 3.2.3 Unsubscribe
+#### 3.1.3 Unsubscribe
 
 To unsubscribe from the MQTT broker, follow these steps:
 

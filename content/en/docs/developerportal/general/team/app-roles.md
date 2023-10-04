@@ -25,7 +25,7 @@ The roles defined in Developer Portal for an [app](/developerportal/#my-apps) an
 If a user wants to join a team, they have to ask a current team member (with the **Invite** permission) to send an invitation.
 
 {{% alert color="info" %}}
-Since users outside a team cannot see current team members, and can only see who the [Technical Contact](#technical-contact) of the team is, it would be easy for them if they could ask the Technical Contact for an invitation. Therefore it is a good practice to give Technical Contact the correct permissions to manage the app (for example, the **Scrum Master** role).
+Since users outside a team cannot see current team members, and can only see who the [Technical Contact](#technical-contact) of the team is, it would be easy for them if they could ask the Technical Contact for an invitation. Therefore, it is a good practice to give Technical Contact the correct permissions to manage the app (for example, the **Scrum Master** role).
 {{% /alert %}}
 
 ## 3 Team Roles {#team-roles}

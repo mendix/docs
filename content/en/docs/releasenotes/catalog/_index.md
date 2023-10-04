@@ -13,6 +13,17 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### October 05, 2023
+
+### Features
+
+* We added a mini-survey on the catalog usefulness to search results page. Let us know how we're doing!
+
+### Improvement
+
+* We updated the link on the search results page to explain more clearly what OpenAPI beta means in the Catalog
+
+
 ### September 21, 2023
 
 #### Features

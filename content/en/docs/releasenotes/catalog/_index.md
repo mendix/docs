@@ -17,11 +17,11 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ### Features
 
-* We added a mini-survey on the catalog usefulness to search results page. Let us know how we're doing!
+* We added a mini survey about the Catalog's usefulness to the Search Results page so you can let us know how we're doing.
 
 ### Improvement
 
-* We updated the link on the search results page to explain more clearly what OpenAPI beta means in the Catalog
+* We updated the link on the Search Results page to give more details about what OpenAPI Beta means in the Catalog.
 
 
 ### September 21, 2023

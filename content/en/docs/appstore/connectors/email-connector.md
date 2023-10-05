@@ -139,7 +139,7 @@ The input parameters for receiving email are the following:
 * **EmailAccount** – This is an email account consisting of the incoming email configuration.
 * **onEmailFetchMicroflow** – This is a microflow that is triggered when **List of EmailMessage** is fetched from the email server, as per the batch size specified in the email account settings. You can process the list according to your needs.
 
-    {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter name or data type. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. (For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.){{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. (For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.){{% /alert %}}
 
 * **onFetchCompleteMicroflow** – This is a microflow that is triggered when the fetch action is successfully completed.
 * **onFetchErrorMicroflow** – This is a microflow that is triggered if there are errors while fetching from the email server.
@@ -148,7 +148,7 @@ The input parameters for receiving email are the following:
 
 You can create and use templates for a specific email account.
 
-#### 4.3.1 Creating an Email Template {#create-template}
+#### 4.3.1 Creating an Email Template{#create-template}
 
 You can create email templates in two ways:
 
@@ -195,7 +195,7 @@ Encryption for emails using the Email connector includes the following:
 * Supports SSL/TLS and non-SSL connection types
 * While encrypting email, the recipient's public certificate will be searched for on the Base DN
 
-### 4.5 Subscribing to Incoming Email {#subscribe-incoming-email}
+### 4.5 Subscribing to Incoming Email{#subscribe-incoming-email}
 
 When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java action to subscribe to incoming email from an account.
 
@@ -204,14 +204,14 @@ The input parameters are the following:
 * **EmailAccount** – This is an email account consisting of the incoming email configuration.
 * **onNewEmailReceivedMicroflow** – This is a microflow that is triggered when new email is received from the server. You can process the list of emails according to your needs.
 
-    {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. Make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. (For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.){{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow. (For reference, see the **OCH_Background_EmailFetchMicroflow** microflow.){{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – This is a microflow that is triggered when the subscription state is changed; the state can be any of the following values:
     * SUBSCRIPTIONFAILED
     * CONNECTIONTOSERVERLOST
     * CONNECTIONRETRYEXHAUSTED
 
-    {{% alert color="warning" %}}If duplicating the **onSubscriptionStateChangedMicroflow** microflow, do not change the input parameter names or data types. The microflow must accept the string parameters **State** and **Comment**. (For reference, see the sample microflow **OCH_Background_SubscriptionStateChanged**.){{% /alert %}}
+    {{% alert color="warning" %}}If duplicating the **onSubscriptionStateChangedMicroflow** microflow, do not change the input parameter names or data types. To prevent errors, the microflow must accept the string parameters **State** and **Comment**. (For reference, see the sample microflow **OCH_Background_SubscriptionStateChanged**.){{% /alert %}}
     
 #### 4.5.1 Enabling Subscription in Email Settings
 
@@ -233,13 +233,13 @@ There is one input parameter:
 
 * **EmailAccount** – email account consisting of the incoming email configuration
 
-### 4.7 Configuring Azure OAuth 2.0 {#create-oauth}
+### 4.7 Configuring Azure OAuth 2.0{#create-oauth}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
 If no email accounts are configured, you can create a new OAuth configuration from the **Add Email Account** wizard by selecting **Use Microsoft Azure AD**. Otherwise, select **OAuth Configurations** to add, delete, and edit OAuth configurations, as described below.
 
-#### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
+#### 4.7.1 OAuth Provider Configuration Details{#oauth-config-details}
 
 To configure an OAuth provider for the authentication code flow, provide the following details:
 
@@ -323,8 +323,8 @@ Configuring local clients, such as [Papercut](https://github.com/ChangemakerStud
 1. Follow the steps for [adding an email account](#adding-email-account). 
 2. Continue with manual configuration in the wizard. (Automatic configuration does not work for local clients.)
 3. Select the **Send emails** checkbox.
-4. Select **SMTP** for the **Protocol**, and enter `localhost` for the **Server host**. Enter the **Server port** number (for example, `25`).
-5. Enter a random email ID and password on the login screen, and it should be configured.
+4. Select **SMTP** for the **Protocol**, and enter *localhost* for the **Server host**. Enter the **Server port** number (for example, *25*).
+5. Enter a random email ID and password on the login screen, and it will be configured.
 
 ### 5.5 Adding Attachments
 

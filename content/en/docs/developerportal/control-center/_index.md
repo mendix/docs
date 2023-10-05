@@ -176,7 +176,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 The Mendix Platform digitally signs the content of emails from senders [no-reply@notifications.mendix.com](mailto:no-reply@notifications.mendix.com) and [no-reply@platform-mail.mendix.com](mailto:no-reply@platform-mail.mendix.com). By digitally signing the content of an email, Mendix provides assurance to the recipient of the email that the content of an email has not been altered in transit. For reasons of security, this feature is enabled by default. However, in case digitally signing the content of an email interferes with the delivery of that email to the recipient, a Mendix Admin can disable this feature for emails sent to receivers in the company domains.
 
-To disable the digital signing of emails, turn on the toggle. To enable the digital signing of emails, turn off the toggle. This setting has an effect on the emails sent to all the [email domains claimed by your company](#company-email-domains).
+To disable the digital signing of emails, turn off the toggle. To enable the digital signing of emails, turn on the toggle. This setting has an effect on the emails sent to all the [email domains claimed by your company](#company-email-domains).
 
 ### 6.2 Mendix Admins
 

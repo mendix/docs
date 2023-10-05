@@ -10,12 +10,9 @@ tags: ["initiatives", "import", "export", "Portfolio Management"]
 
 ## 1 Introduction
 
-You can import and export initiatives as an Excel file in the [Portfolio Management]() app. With import and export you can:
-* Move initiatives from one board to another.
-* Export initiatives to generate reporting.
-* Export the whole or a subset of a portfolio board.
+In [Portfolio Management](/developerportal/portfolio-management/), sometimes you need to move initiatives from one board to another, or export initiatives to generate reports. In scenarios like this, you need to export or import the whole or a subset of a portfolio board. 
 
-## 2 Prerequisite
+## 2 Prerequisites
 
 * You need to have at least the Contributor role for the portfolio.
 
@@ -36,7 +33,7 @@ You can import and export initiatives as an Excel file in the [Portfolio Managem
 5. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
 
    * Click **Export All** to export all initiatives of the portfolio.
-   * Click **Export Selection** to only export the selection of your currently filtered initiatives.
+   * Click **Export Selection** to only export the selection of your currently-filtered initiatives.
 
 The initiatives are exported to an Excel file.
 
@@ -72,14 +69,14 @@ All the details of an initiative are exported, except the data of the following 
    | --------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ | -------------------------------------- |
    | Name                  | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                           | `My first initiative`                  |
    | Stage                 | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                             | `Proposal`                             |
-   | Tags                  | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  *Character limit: 50 per tag.  *Multiple tags should be separated by commas.                                                          | `Important, Operational, Architecture` |
+   | Tags                  | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | `Important, Operational, Architecture` |
    | Description           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |                                                              | `<h1>A description of the initiative<h1/>`      |
    | Department            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              | `Finance`                              |
    | Country               | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page can be filled in. | `Netherlands`                          |
    | UseCase              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              | `Innovation`                           |
    | IntakeDate           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | The year must be between 1900 and 9999.                      | `28/Jul/2022`                          |
-   | StartDate            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | The year must be between 1900 and 9999.<br>Start Date has to be sooner than Go-Live Date. | `30/Jul/2022`                          |
-   | GoLiveDate          | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | The year must be between 1900 and 9999.<br>Go-Live Date has to be later than Start Date. | `30/Jul/2023`                          |
+   | StartDate            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Start Date has to be sooner than Go-Live Date.</li></ul> | `30/Jul/2022`                          |
+   | GoLiveDate          | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Go-Live Date has to be later than Start Date.</li></ul> | `30/Jul/2023`                          |
    | RICEReach            | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Integer                      | Only a positive number is allowed.                           | `50`                                   |
    | RICEImpact           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. | `Medium`                               |
    | RICEConfidence       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. | `High`                                 |

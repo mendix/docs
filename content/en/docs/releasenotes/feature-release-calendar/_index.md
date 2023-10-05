@@ -20,7 +20,7 @@ The new features were divided into these major themes, which are described in th
 "GA" means General Availability for all users. A GA release is different than a Beta release. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-## 2 Continuous Collaboration
+## 2 Continuous Collaboration {#continuous}
 
 | Capability or Feature | Expected Release |
 | --- | --- |
@@ -29,7 +29,7 @@ The new features were divided into these major themes, which are described in th
 | Jira integration | Released for Public Beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q4 2023 |
 | Community spaces | Currently in Private Beta<br>GA: TBD |
 
-## 3 Developer Experience
+## 3 Developer Experience {#dev-exp}
 
 | Capability or Feature | Expected Release |
 | --- | --- |
@@ -51,7 +51,7 @@ The new features were divided into these major themes, which are described in th
 | Mixed online and offline data | GA: Q4 2023 |
 | Mac support | Public Beta: Q4 2023<br>GA: TBD |
 
-## 4 Composability
+## 4 Composability {#composability}
 
 | Capability or Feature | Expected Release |
 | --- | --- |
@@ -65,7 +65,7 @@ The new features were divided into these major themes, which are described in th
 | Solutions Kit – adaptation insights | Private Beta: Q4 2023<br>GA: TBD |
 | Mendix Connect – external actions | GA: TBD |
 
-## 5 Multi-Cloud Deployment
+## 5 Multi-Cloud Deployment {#multi-cloud}
 
 | Capability or Feature | Expected Release |
 | --- | --- |
@@ -76,7 +76,7 @@ The new features were divided into these major themes, which are described in th
 | Pipelines (Mendix Cloud, Cloud Dedicated) | Public Beta: Q4 2023<br>GA: TBD |
 | Pipelines (Private Cloud) | GA: TBD |
 
-## 6 Governance and Control
+## 6 Governance and Control {#governance}
 
 | Capability or Feature | Expected Release |
 | --- | --- |

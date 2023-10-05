@@ -9,7 +9,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "h
 
 ## 1 Introduction
 
-Use the [Database Connector](https://marketplace.mendix.com/link/component/2888/) to incorporate your external data directly in your Mendix application. This connector lets you seamlessly connect to external databases without limiting your choice of database or SQL dialect.
+Use the [Database](https://marketplace.mendix.com/link/component/2888/) connector to incorporate your external data directly in your Mendix application. This connector lets you seamlessly connect to external databases without limiting your choice of database or SQL dialect.
 
 This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
@@ -19,9 +19,9 @@ The **Execute statement** action works internally in the same manner as the **Ex
 
 ### 1.1 Dependencies
 
-* [HikariCP](https://github.com/brettwooldridge/HikariCP), a high-performance JDBC connection pool
+This connector has one dependency: [HikariCP](https://github.com/brettwooldridge/HikariCP). HikariCP is a high-performance JDBC connection pool.
 
-## 2 Prerequisites {#prerequisites}
+## 2 Prerequisites{#prerequisites}
 
 These are the prerequisites for using this connector:
 
@@ -32,7 +32,7 @@ These are the prerequisites for using this connector:
     * For example, if you want to connect to the Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
     * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively). So in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query.
+    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively). So, to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query.
 
 {{% alert color="info" %}}
 Follow these prerequisites carefully to avoid connection errors. It is especially important to make sure that you add the *.jar* files for the database to which you want to connect into the *userlib* folder.
@@ -40,7 +40,7 @@ Follow these prerequisites carefully to avoid connection errors. It is especiall
 
 ## 3 Getting Started
 
-Once you have imported the Database Connector into your app, you will have the **Database connector** category available in the **Toolbox**. The connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
+Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
 
 {{< figure src="/attachments/appstore/connectors/database-connector/database-connector-in-toolbox.png" >}}
 
@@ -55,7 +55,7 @@ The **Execute query** and **Execute parameterized query** actions are used for q
 For both queries and statements, the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
 
 {{% alert color="info" %}}
-The parameterized actions are available only with Database Connector versions 3.0.0 and above. To use them, you must use Studio Pro [8.6.0](/releasenotes/studio-pro/8.6/#860) and above.
+The parameterized actions are available only with Database connector versions 3.0.0 and above. To use them, you must use Studio Pro [8.6.0](/releasenotes/studio-pro/8.6/#860) and above.
 {{% /alert %}}
 
 ##### 3.1.1.1 Execute Query Action {#execute-query}
@@ -75,33 +75,40 @@ These are the results of the actions:
 
 ### 3.2 Executing Callable Statements
 
-The **Execute callable statement** microflow action is used to execute stored procedures and functions in the database engine. In addition to **JDBC Url**, **Username**, and **Password**, this action expects an input object of type `DatabaseConnector.Statement`. This input object should define the contract to perform the execution and retrieve the results:
+The **Execute callable statement** microflow action is used to execute stored procedures and functions in the database engine. In addition to **JDBC Url**, **Username**, and **Password**, this action expects an input object of type **DatabaseConnector.Statement**. This input object should define the contract to perform the execution and retrieve the results:
 
 {{< figure src="/attachments/appstore/connectors/database-connector/callable-statement-action.png" >}}
 
-The `DatabaseConnector.Statement` type is a non-persistable entity defined as follows:
+The **DatabaseConnector.Statement** type is a non-persistable entity defined as follows:
 
 {{< figure src="/attachments/appstore/connectors/database-connector/statement-parameter-diagram.png" >}}
 
-The **Content** attribute of the `DatabaseConnector.Statement` type should contain the statement body (the SQL content). If applicable, you can also define the input and output parameters that the stored procedure expects using an association with a `DatabaseConnector.Parameter` type. 
+The **Content** attribute of the **DatabaseConnector.Statement** type should contain the statement body (the SQL content). If applicable, you can also define the input and output parameters that the stored procedure expects using an association with a **DatabaseConnector.Parameter** type. 
 
-The `DatabaseConnector.Parameter` type uses the **Name** and **Position** attributes to refer to either the parameter name or position in the stored procedure. All parameters within a statement should use one of the two options uniformly.
+The **DatabaseConnector.Parameter** type uses the **Name** and **Position** attributes to refer to either the parameter name or position in the stored procedure. All parameters within a statement should use one of the two options uniformly.
 
-The `DatabaseConnector.Parameter` type also has a **ParameterMode** attribute to indicate which parameter mode to use:
+The **DatabaseConnector.Parameter** type also has a **ParameterMode** attribute to indicate which parameter mode to use:
 
-* `DatabaseConnector.ParameterMode.INPUT` – for **IN** parameters
-* `DatabaseConnector.ParameterMode.OUTPUT` – for **OUT** parameters
-* `DatabaseConnector.ParameterMode.INOUT` – for **INOUT** parameters
+* **DatabaseConnector.ParameterMode.INPUT** – for **IN** parameters
+* **DatabaseConnector.ParameterMode.OUTPUT** – for **OUT** parameters
+* **DatabaseConnector.ParameterMode.INOUT** – for **INOUT** parameters
 
-Do not use the `DatabaseConnector.Parameter` type directly; use it through one of its type-specific specializations instead.
+Do not use the **DatabaseConnector.Parameter** type directly; use it through one of its type-specific specializations instead.
 
 #### 3.2.1 Supported Parameter Types
 
-For a type-safe representation of a stored procedure's **IN**, **OUT**, or **INOUT** parameters, use the `DatabaseConnector.Parameter` type's predefined specializations.
+For a type-safe representation of a stored procedure's **IN**, **OUT**, or **INOUT** parameters, use the **DatabaseConnector.Parameter** type's predefined specializations.
 
 ##### 3.2.1.1 Primitive Types
 
-Use the `DatabaseConnector.ParameterDecimal`, `DatabaseConnector.ParameterLong`, `DatabaseConnector.ParameterDateTime`, and `DatabaseConnector.ParameterString` specializations to refer to the SQL primitive types for decimals, natural numbers, dates, and character types, respectively.
+The following table outlines which specialization to use to refer to each SQL primitive type.
+
+| SQL Primitive Type | Specialization                          |
+| ------------------ | --------------------------------------- |
+| Decimals           | **DatabaseConnector.ParameterDecimal**  |
+| Natural numbers    | **DatabaseConnector.ParameterLong**     |
+| Dates              | **DatabaseConnector.ParameterDateTime** |
+| Character types    | **DatabaseConnector.ParameterString**   |
 
 {{< figure src="/attachments/appstore/connectors/database-connector/primitive-types-parameters.png" >}}
 
@@ -109,40 +116,40 @@ The **Value** attribute defined in these specializations is handled differently 
 
 ##### 3.2.1.2 ParameterObject Type
 
-Some database vendors support creating complex SQL object types, which can be referred to using the `DatabaseConnector.ParameterObject`. The **SQLTypeName** attribute should be set to the underlying SQL object type name.
+Some database vendors support creating complex SQL object types, which can be referred to using the **DatabaseConnector.ParameterObject**. The **SQLTypeName** attribute should be set to the underlying SQL object type name.
 
 {{< figure src="/attachments/appstore/connectors/database-connector/parameter-object-parameter.png" >}}
 
-Attributes of the object can be represented by associated `DatabaseConnector.Parameter` objects using the `ParameterObject_Parameter` association. You can use any specialization of `DatabaseConnector.Parameter` for the associated parameter objects. This also allows for flexibility defining the nested object hierarchies (as in, objects with attributes of the object type).
+Attributes of the object can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the associated parameter objects. This also allows for flexibility defining the nested object hierarchies (as in, objects with attributes of the object type).
 
 {{% alert color="info" %}}
 Attributes within an object are identified by their position in the object and not by their name. Therefore, it is necessary to set the **Position** attribute correctly for all object attributes.
 {{% /alert %}}
 
-##### 3.2.1.3 ParameterList Type {#parameterlist}
+##### 3.2.1.3 ParameterList Type{#parameterlist}
 
-List parameters are also supported and usable via the `DatabaseConnector.ParameterList` type. The **SQLTypeName** attribute should refer to the SQL list type:
+List parameters are also supported and usable via the **DatabaseConnector.ParameterList** type. The **SQLTypeName** attribute should refer to the SQL list type:
 
 {{< figure src="/attachments/appstore/connectors/database-connector/parameter-list-parameter.png" >}}
 
-List items can be represented by associated `DatabaseConnector.Parameter` objects using the `ParameterObject_Parameter` association. You can use any specialization of `DatabaseConnector.Parameter` for the list items.
+List items can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the list items.
 
 ##### 3.2.1.4 ParameterRefCursor Type
 
-To deal with **REF CURSOR** outputs, use the `DatabaseConnector.ParameterRefCursor` type:
+To deal with **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
 
 {{< figure src="/attachments/appstore/connectors/database-connector/parameter-ref-cursor-parameter.png" >}}
 
-The many-to-many-association with `DatabaseConnector.Parameter` is also used here for the same reasons mentioned in the [ParameterList Type](#parameterlist) section above.
+The many-to-many-association with **DatabaseConnector.Parameter** is also used here for the same reasons mentioned in the [ParameterList Type](#parameterlist) section above.
 
 ## 4 Best Practices
 
-When using the Database Connector, keep these best practices in mind:
+When using the Database connector, keep these best practices in mind:
 
 * Avoid having a user input as part of your dynamic SQL queries and statements. Use parameters instead.
 * Avoid fetching large amounts of data. Fetching too much data can lead to memory issues because all the **ResultSet** data is loaded into memory at once.
 
-## 5 Common JDBC Drivers {#links}
+## 5 Common JDBC Drivers{#links}
 
 * [Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html#download-jdbc-driver)
 * [Apache Derby](http://db.apache.org/derby/derby_downloads.html)
@@ -169,6 +176,8 @@ If you intend to connect to SQL Server using integrated security, be aware that 
 Errors can often be resolved by adding missing *JAR* dependencies to the **userlib** folder in the module. For more information, see the [Prerequisites](#prerequisites) section.
 
 ## 6 Developing This Marketplace Component
+
+To develop this component, follow these steps:
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.

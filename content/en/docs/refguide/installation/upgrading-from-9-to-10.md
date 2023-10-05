@@ -12,11 +12,13 @@ tags: ["studio pro", "upgrade", "runtime", "xpath"]
 
 Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#major-version) release that provides powerful tools for building your apps and brings a host of improvements and fixes. For the full list of changes, see the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/).
 
-### 1.1 Upgrading from Studio Pro 9 to 10
+### 1.1 Upgrading from Studio Pro 9 to 10 {#upgrade-prerecs}
 
 The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
 
 Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
+
+Before upgrading your app to Mendix 10, ensure that the app is successfully [migrated from your Team Server to Git](/developerportal/general/migrate-to-git/). Starting from Mendix 10, Git is the only supported Team Server. Mendix 10 will neither recognize nor open apps hosted on SVN Team Servers.
 
 ### 1.2 Upgrading from Older Versions of Studio Pro
 
@@ -40,7 +42,8 @@ To prepare your app in Studio Pro 9.24, follow these steps:
 4. Run your app, test all functionality, and ensure it works without error. 
 5. Fix any depreciation warnings you see both in development in Studio Pro as well as in the Mendix Runtime using your console and browser console.
 6. Review your app in combination with the sections below and assess if further action is needed before upgrading to Studio Pro 10.
-7. Back up or commit your 9.24 app so that you can return to it if necessary.
+7. Before upgrading to Mendix 10, ensure your app's Team Server is migrated to Git as [explained above](#upgrade-prerecs).
+8. Back up or commit your 9.24 app so that you can return to it if necessary.
 
 Your app is now ready to be upgraded to Mendix 10. You can now close the app in Studio Pro 9.
 

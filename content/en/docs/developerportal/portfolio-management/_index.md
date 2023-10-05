@@ -155,7 +155,7 @@ To create a new tag, do as follows:
 1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
 2. In the text box, enter the name for the new tag.
 3. If you want to change the color of the new tag, click the colored circle and select a different color.
-4. Click the checkmark icon to save the new tag.
+4. Click the check mark icon to save the new tag.
 
 To edit an existing tag, do as follows:
 

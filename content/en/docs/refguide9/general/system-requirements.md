@@ -184,6 +184,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
+{{% alert color="warning" %}}
+As Java 11 approaches the end of support in October, 2024, compatibility with Java 17 is planned for Q1 2024, and compatibility with Java 21 is planned for Q2 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
 {{% /alert %}}
@@ -199,7 +203,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.0
 * [Oracle Database](/refguide9/oracle/): 19, 21c
-* PostgreSQL: 11, 12, 13, 14, 15
+* PostgreSQL: 11, 12, 13, 14, 15, 16
 * [SAP HANA](/refguide9/saphana/): 2.00.040.00.1545918182
 * [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro 10)
 

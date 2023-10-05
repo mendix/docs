@@ -1184,7 +1184,6 @@ You can also see an activity log containing the following information for all na
 * When developer mode is enabled in the namespace
 * When developer mode is disabled in the namespace
 
-
 #### 7.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
@@ -1327,22 +1326,22 @@ Disable the toggle button next to the name of the plan you wish to activate. The
 
 Here, you can create customized plan for your core resources. 
 
-1. Click **Add New Plan** 
-2. Provide a name to the plan under **Plan Name**
+1. Click **Add New Plan**.
+2. Provide a name to the plan under **Plan Name**.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required CPU Limits, CPU Request, Memory Limit and Memory Request based on your choice 
+3. Provide the required CPU Limits, CPU Request, Memory Limit and Memory Request based on your choice. 
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 
 4. Click **OK** button to save the customized resource plan.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" >}}
 
 5. In order to make the customized plan available to the customer, make sure to enable the toggle button next **Use custom core resources plans**.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
 
 #### 7.2.6 Installation
 

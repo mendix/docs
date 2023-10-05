@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 2023
+
+#### Features
+
+* In [Control Center](#disable-enable-digital-signing-emails), Mendix Admins can now disable the digital signing of the content of emails from Mendix, if it interferes with other email safety measures.
+
 ### October 1, 2023
 
 #### Improvements

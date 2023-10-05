@@ -271,6 +271,8 @@ This enumeration indicates the selection status of the block. For more informati
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense. For more information, see [Activities](/refguide/activities/).
 
+To help working with PDF files with mulitple pages in a synchronous way, you can use the `JA_SplitPdfPages` helper action to split a PDF File with multiple pages into a list of single page PDFs. It also supports extracting only a subset of the pages (e.g. only pages 2 and 3, when page 1 is not relevant). 
+
 #### 4.3.1 AnalyzeDocument {#analyzedocument}
 
 The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region and `AnalyzeDocumentRequest` object. It additionally requires at least a `RequestQuery` object when the `GetQueries` attribute in `AnalyzeDocumentRequest` is set to true.

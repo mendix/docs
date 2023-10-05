@@ -35,8 +35,8 @@ Follow these prerequisites carefully. Missing a step might lead to errors.
 
 Before you use the Email connector in your app, do the following:
 
-* Download and configure the latest version of the [Mx Model Reflection](/appstore/modules/model-reflection) module. If you have the module already, ensure that it is up to date.
-* Download and configure the latest version of the [Encryption](/appstore/modules/encryption) module. If you have the module already, ensure that it is up to date.
+* Download and configure the latest version of the [Mx Model Reflection](/appstore/modules/model-reflection/) module. If you have the module already, ensure that it is up to date.
+* Download and configure the latest version of the [Encryption](/appstore/modules/encryption/) module. If you have the module already, ensure that it is up to date.
 * Remove any existing email modules (such as [IMAP/POP3](https://marketplace.mendix.com/link/component/1042/) and [Email Module with Templates](https://marketplace.mendix.com/link/component/259/)).
 * Remove any orphaned JAR files (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*) from any old email modules in the *userlib* subdirectory.
 * [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory).

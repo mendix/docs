@@ -311,6 +311,8 @@ In general, we recommend you perform the following steps in case of any issues d
 
 In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
+- When developing locally using Chrome or Chromium version 117, the scaling of your document might be different compared to previous versions and the cloud service, we are currently looking into this issue.
+
 #### 5.2.2 Local Service Errors
 
 In case you encounter the message "Local service exited with error" in your runtime logs, for example:

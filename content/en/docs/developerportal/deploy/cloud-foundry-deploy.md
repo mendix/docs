@@ -24,7 +24,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix apps can be deployed to a variety of different environments, for example Mendix Cloud, On-premises, or Kubernetes.
+Mendix apps can be deployed to a variety of different environments, for example Mendix Cloud, on-premises, or Kubernetes.
 
 Mendix apps can also be deployed to any cloud platform which supports a version of Cloud Foundry, database, and cloud storage at or above the minimum required version which supports Mendix. For specific version numbers see [Mendix System Requirements](/refguide/system-requirements/). 
 
@@ -41,7 +41,12 @@ The advantages of Cloud Foundry are:
 
 For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cloud Foundry BuildPack](https://github.com/mendix/cf-mendix-buildpack). This Git also explains how Mendix apps can also be deployed to Cloud Foundry environments using command line instructions.
 
-**In this how-to you will learn how to do the following using Studio Pro and browser-based configuration options:**
+{{% alert color="info" %}}
+Specific Mendix versions require specific versions of the buildpack. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
+{{% /alert %}}
+
+
+In this how-to you will learn how to do the following using Studio Pro and browser-based configuration options:
 
 * Configure Cloud Foundry in Studio Pro and the service providing it
 * Add services to the app

@@ -107,7 +107,7 @@ For flexible environments, the **Environments** section shows the following deta
 * **Name** of the deployment package (for example, Main line-1.0.0.20.mda)
 * **Version** of the deployment package (for example, 1.0.0.20)
 * **Runtime**, the Studio Pro version with which the app is built (for example, 7.6.0)
-* **Plan** for the environment; for more information, see [Details](/developerportal/deploy/environments-details/)
+* **Plan** for the environment; for more information, see [Environment Details](/developerportal/deploy/environments-details/)
 * **URL** of the app (for example, `https://mytestapp.mendixcloud.com`)
 
 You can perform the following actions in this section:

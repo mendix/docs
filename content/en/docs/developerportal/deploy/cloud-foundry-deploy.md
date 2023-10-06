@@ -45,7 +45,6 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 Specific Mendix versions require specific versions of the buildpack. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
 {{% /alert %}}
 
-
 In this how-to you will learn how to do the following using Studio Pro and browser-based configuration options:
 
 * Configure Cloud Foundry in Studio Pro and the service providing it

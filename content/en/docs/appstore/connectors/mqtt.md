@@ -24,7 +24,9 @@ The MQTT connector consists of microflow actions that enable you to do the follo
 
 ### 2.1 Configuring the Broker {#configure-broker}
 
-Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
+Configure your broker connection by adding the **ConnectionAdministration** page to your app. Input your broker information, then set up and run the app locally.
+
+The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
 If the broker needs basic authentication for connection, you can set up a user name and password that is stored in the domain model. For more information, see the [Authentication](#auth) section below.
 
@@ -48,10 +50,11 @@ The **Password** is encrypted using the **EncryptionKey** constant. For better s
 Enabling SSL establishes a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
-2. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. 
+2. Open the **ConnectionAdministration** page and enable the SSL toggle.
+3. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. 
     *   Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`
     * Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`
-3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
+4. Add the **Client Certificate Key** and the **Certificate password** if one was set.
     * Currently supported certificate types are *X.509* format (*.crt*, *.cer*)
     * Currently supported key types are *X.509* format (*.pem*, *.pkcs*)
 

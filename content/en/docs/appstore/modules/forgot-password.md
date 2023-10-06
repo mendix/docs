@@ -62,9 +62,9 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
     * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant `Encryption.EncryptionKey`
         {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}
-    * In the **Runtime** tab, add the microflow `Deeplink.StartDeeplink` as the **After startup** microflow or as a sub-microflow to an existing after startup microflow
-1. Open [App security](/refguide/app-security/) and do the following:
-    * In the **User roles** tab, add a new role, `Guest` in `MyFirstModule`
+    * In the **Runtime** tab, add the microflow `Deeplink.StartDeeplink` as the **After startup** microflow or as a sub-microflow to an existing **After startup** microflow
+1. Open [App Security](/refguide/app-security/) and do the following:
+    * In the **User roles** tab, add a new role- `Guest` in `MyFirstModule`
     * Set the following permissions for the user roles:
 
         * Administrator
@@ -91,7 +91,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
             * `System.User`
             * `MyFirstModule.User`
 
-            ³ `Email_Connector` permissions are needed if you are using version 4.1.0 or above (for Mendix 8) or version 5.1.0 or above (for Mendix 9 and above). `EmailTemplate` permissions are only needed if using a version which uses the deprecated Email Module with Templates module.
+            ³ `Email_Connector` permissions are needed if you are using version 4.1.0 or above (for Mendix 8) or version 5.1.0 or above (for Mendix 9 and above). `EmailTemplate` permissions are only needed if using a version which uses the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/)
 
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:

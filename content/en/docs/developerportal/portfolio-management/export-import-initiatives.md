@@ -10,13 +10,11 @@ tags: ["initiatives", "import", "export", "Portfolio Management"]
 
 ## 1 Introduction
 
-In [Portfolio Management](/developerportal/portfolio-management/), sometimes you need to move initiatives from one board to another, or export initiatives to generate reports. In scenarios like this, you can export the whole portfolio board or only a subset of initiatives to an Excel file, and import them again if needed.
+In [Portfolio Management](/developerportal/portfolio-management/), you can import initiatives to a portfolio using an Excel file. This enables you to import already-defined initiatives and thus rapidly get started. You can also export a whole portfolio board or a subset of initiatives to an Excel file. This allows you to move initiatives from one board to another, or export initiatives to generate reports.
 
 ## 2 Prerequisites
 
-* You need to have at least the Contributor role for the portfolio.
-
-## 3 Procedure
+* You need to have at least the [Contributor](/developerportal/portfolio-management/#access-management) role for the portfolio. 3 Procedure
 
 ### 3.1 Exporting Initiatives {#export-initiatives}
 

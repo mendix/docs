@@ -311,7 +311,7 @@ In general, we recommend you perform the following steps in case of any issues d
 
 In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
-- When developing locally using Chrome or Chromium version 117, the scaling of your document might be different compared to previous versions and the cloud service, we are currently looking into this issue.
+* When developing locally using Chrome or Chromium version 117, the scaling of your document might be different compared to previous versions and the cloud service, we are currently looking into this issue.
 
 #### 5.2.2 Local Service Errors
 
@@ -341,3 +341,4 @@ If you encounter the message "Failed to load page: TimeoutError: waiting for sel
 * Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.
 * A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.
+* Make sure that the module role `User` is assigned to the user who is passed in the `Generate as user` property of the `Generate PDF from page` action.

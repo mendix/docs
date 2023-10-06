@@ -14,7 +14,9 @@ In [Portfolio Management](/developerportal/portfolio-management/), you can impor
 
 ## 2 Prerequisites
 
-* You need to have at least the [Contributor](/developerportal/portfolio-management/#access-management) role for the portfolio. 3 Procedure
+* You need to have at least the [Contributor](/developerportal/portfolio-management/#access-management) role for the portfolio.
+
+## 3 Procedure
 
 ### 3.1 Exporting Initiatives {#export-initiatives}
 

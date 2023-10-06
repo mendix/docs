@@ -110,6 +110,6 @@ The following steps will change the permissions of a team member to an environme
 
 1. Call `PATCH /apps/{appId}/environments/{environmentId}/permissions` to update the Team Members' permissions for this {environmentId} of this {appId}.
 
-## 4  API Reference
+## 4 API Reference
 
 {{< swaggerui src="/openapi-spec/cloud-portal-v4.yaml"  >}}

@@ -11,70 +11,9 @@ info:
   termsOfService: 'https://www.mendix.com/terms-of-use/'
   description: The API to manage apps deployed to the Mendix Cloud.
 paths:
-  /apps:
-    get:
-      tags:
-        - apps
-      summary: Get list of apps
-      parameters:
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/hasLicenseType'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/apps'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-      operationId: get-apps
-      description: 'Get an array of all applications for which the authorized user is a team member. This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
   '/apps/{appId}':
-    get:
-      tags:
-        - apps
-      summary: Get an app
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/app'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-app
-      description: Get information about a single app.
     parameters:
       - $ref: '#/components/parameters/appId'
-    delete:
-      summary: Delete an app
-      operationId: delete-app
-      responses:
-        '204':
-          description: No Content
-        '400':
-          $ref: '#/components/responses/error400'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      description: |-
-        Delete the specified app.
-
-        **Note**: _Deleting free apps is supported. Deleting licensed apps is not currently supported._
-      tags:
-        - apps
     patch:
       summary: Change technical contact for an app
       operationId: patch-apps-technicalContact
@@ -114,185 +53,6 @@ paths:
                   technicalContact:
                     userId: jane.doe@domain.tld
       description: Update app
-  '/apps/{appId}/environments':
-    get:
-      tags:
-        - environments
-      summary: Get an array of environments of an app
-      parameters:
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/sort'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/environments'
-              examples:
-                example-1:
-                  value:
-                    environments:
-                      - id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
-                        appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-                        name: Test
-                        hasState: running
-                        isProduction: false
-                        url: 'http://example.com'
-                        dbVersion: string
-                        javaVersion: string
-                        package:
-                          id: 3bda6b5b-f038-4c09-8697-d065446b7084
-                          appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-                          modelVersion: 1.3.0.623
-                          runtimeVersion: 9.12.0.41679
-                          createdOn: '2019-08-24T14:15:22Z'
-                          expiresOn: '2019-08-24T14:15:22Z'
-                          description: string
-                          fileName: MainLine-1.3.0.623.mda
-                          fileSize: 42364523
-                          url: 'http://example.com'
-                        plan:
-                          name: XL21-PREMIUM
-                    pagination:
-                      offset: 60
-                      limit: 20
-                      size: 17
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          description: 'The app could not be found. Either the user does not have access to the app, the app does not exist (check the Developer Portal), the app is a free app and is not deployed, or the app is provisioned in another cloud (for example, SAP BTP or Mendix for Private Cloud).'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/error'
-      operationId: get-app-environments
-      description: Get all environments of the app.
-    parameters:
-      - $ref: '#/components/parameters/appId'
-  '/apps/{appId}/packages':
-    get:
-      tags:
-        - packages
-      summary: Get an array of packages of an app
-      parameters:
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/limit'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/packages'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-app-packages
-      description: Get the packages of the application.
-    parameters:
-      - $ref: '#/components/parameters/appId'
-  '/companies/{companyId}/apps':
-    get:
-      summary: Get an array of apps for a company
-      tags:
-        - companies
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/apps'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-company-apps
-      description: Get all apps of the specified company.
-      parameters:
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/hasLicenseType'
-    parameters:
-      - $ref: '#/components/parameters/companyId'
-  '/environments/{environmentId}':
-    get:
-      tags:
-        - environments
-      summary: Get an environment
-      parameters: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/environment'
-              examples:
-                example-1:
-                  value:
-                    id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
-                    appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-                    name: Test
-                    hasState: running
-                    isProduction: false
-                    url: 'http://example.com'
-                    dbVersion: string
-                    javaVersion: string
-                    package:
-                      id: 3bda6b5b-f038-4c09-8697-d065446b7084
-                      appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-                      modelVersion: 1.3.0.623
-                      runtimeVersion: 9.12.0.41679
-                      createdOn: '2019-08-24T14:15:22Z'
-                      expiresOn: '2019-08-24T14:15:22Z'
-                      description: string
-                      fileName: MainLine-1.3.0.623.mda
-                      fileSize: 42364523
-                      url: 'http://example.com'
-                    plan:
-                      name: XL21-PREMIUM
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-environment
-      description: Get information about the specified environment.
-    delete:
-      summary: Delete an environment
-      operationId: delete-environment
-      responses:
-        '204':
-          description: No Content
-        '400':
-          $ref: '#/components/responses/error400'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      description: |-
-        Delete the specified environment.
-
-        To delete all the environments of an app, get a list of all app environments and then make a DELETE request for each environment.
-
-        **Note**: _Deleting environments of free apps is supported. Deleting licensed environments is not currently supported._
-      tags:
-        - environments
-    parameters:
-      - $ref: '#/components/parameters/environmentId'
   '/apps/{appId}/environments/{environmentId}/permissions':
     parameters:
       - $ref: '#/components/parameters/appId'
@@ -414,100 +174,15 @@ paths:
                       canManagePrivileges: true
       tags:
         - permissions
-  '/packages/{packageId}':
-    get:
-      tags:
-        - packages
-      summary: Get information about a package
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/package'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-package
-      description: 'Get information about the selected package, including a URL from which it can be downloaded.'
-    parameters:
-      - schema:
-          type: string
-        name: packageId
-        in: path
-        required: true
 tags:
   - name: apps
-  - name: companies
-  - name: environments
-  - name: packages
   - name: permissions
 servers:
   - url: 'https://cloud.home.mendix.com/api/v3'
     description: Production
-  - url: 'https://cloud.home-test.mendix.com/api/v3'
-    description: Test
 components:
   requestBodies: {}
   schemas:
-    app:
-      description: An app is identified by a unique App ID. This can be seen on the **General** page of the app in the Developer Portal. Additional information is added to manage the deployment of the app to the Mendix Cloud.
-      type: object
-      title: app
-      properties:
-        id:
-          $ref: '#/components/schemas/appId'
-        name:
-          type: string
-          example: My fabulous app
-          description: The name of the app.
-        licenseType:
-          type: string
-          enum:
-            - free
-            - licensed
-          description: The type of license. Free apps are created directly from Studio (Pro).
-        subdomain:
-          type: string
-          example: myfabulousapp
-          description: The environment URLs are based on this value. It is set when the app is created and cannot be changed. The value is unique in the Mendix Cloud.
-        technicalContact:
-          $ref: '#/components/schemas/membership'
-        region:
-          type: string
-          example: prod2-eu-central-1
-          description: The region or cluster where the app's environments are running.
-      required:
-        - id
-        - name
-        - licenseType
-        - subdomain
-        - technicalContact
-        - region
-    apps:
-      description: An array of apps.
-      type: object
-      properties:
-        apps:
-          type: array
-          description: The array of apps.
-          items:
-            $ref: '#/components/schemas/app'
-        pagination:
-          $ref: '#/components/schemas/pagination'
-      required:
-        - apps
-        - pagination
-    appId:
-      type: string
-      title: appId
-      format: uuid
-      example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: The unique App ID of the app. This can be seen on the **General** page of the app in the Developer Portal. It is a UUID format.
     error:
       description: An error object explaining what happened.
       type: object
@@ -572,121 +247,9 @@ components:
         - offset
         - limit
         - size
-    environment:
-      description: 'Information about a specific environment, identified by its unique ID'
-      type: object
-      title: environment
-      x-examples:
-        example-1:
-          id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
-          appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-          name: Test
-          hasState: stopped
-          isProduction: false
-          url: 'http://example.com'
-          dbVersion: string
-          javaVersion: string
-          package:
-            id: 3bda6b5b-f038-4c09-8697-d065446b7084
-            appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-            modelVersion: 1.3.0.623
-            runtimeVersion: 9.12.0.41679
-            createdOn: '2019-08-24T14:15:22Z'
-            expiresOn: '2019-08-24T14:15:22Z'
-            description: string
-            fileName: MainLine-1.3.0.623.mda
-            fileSize: 42364523
-            url: 'http://example.com'
-          plan:
-            name: XL21-PREMIUM
-      properties:
-        id:
-          $ref: '#/components/schemas/environmentId'
-        appId:
-          $ref: '#/components/schemas/appId'
-        name:
-          type: string
-          description: The name of the environment.
-          example: Test
-        hasState:
-          type: string
-          enum:
-            - stopped
-            - running
-            - notdeployed
-          description: The state of the environment.
-          example: running
-        isProduction:
-          type: boolean
-          default: false
-          description: Indicates if the environment is marked as Production.
-        url:
-          type: string
-          format: uri
-          description: The full URL to access the app running in the environment.
-        dbVersion:
-          type: string
-          description: The database version used.
-        javaVersion:
-          type: string
-          description: The Java version used by the runtime.
-        package:
-          $ref: '#/components/schemas/package'
-        plan:
-          $ref: '#/components/schemas/plan'
-      required:
-        - id
-        - appId
-        - name
-        - hasState
-        - isProduction
-        - url
-    environments:
-      title: environments
-      type: object
-      properties:
-        environments:
-          type: array
-          items:
-            $ref: '#/components/schemas/environment'
-        pagination:
-          $ref: '#/components/schemas/pagination'
-      required:
-        - environments
-        - pagination
-      x-examples:
-        example-1:
-          environments:
-            - id: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
-              appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-              name: Test
-              hasState: running
-              isProduction: false
-              url: 'http://example.com'
-              dbVersion: string
-              javaVersion: string
-              package:
-                id: 3bda6b5b-f038-4c09-8697-d065446b7084
-                appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-                modelVersion: 1.3.0.623
-                runtimeVersion: 9.12.0.41679
-                createdOn: '2019-08-24T14:15:22Z'
-                expiresOn: '2019-08-24T14:15:22Z'
-                description: string
-                fileName: MainLine-1.3.0.623.mda
-                fileSize: 42364523
-                url: 'http://example.com'
-          pagination:
-            offset: 60
-            limit: 20
-            size: 17
-    environmentId:
-      type: string
-      title: environmentId
-      format: uuid
-      example: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
     permission:
       type: object
+      x-examples: {}
       properties:
         member:
           type: object
@@ -728,119 +291,11 @@ components:
           type: boolean
         canManagePrivileges:
           type: boolean
-    package:
-      title: package
-      type: object
-      properties:
-        id:
-          $ref: '#/components/schemas/packageId'
-        appId:
-          $ref: '#/components/schemas/appId'
-        modelVersion:
-          type: string
-          example: 1.3.0.623
-          description: The version of the model. This is added by the developer when the package is created.
-        runtimeVersion:
-          type: string
-          example: 9.12.0.41679
-          description: The Mendix runtime version.
-        createdOn:
-          type: string
-          format: date-time
-        expiresOn:
-          type: string
-          format: date-time
-          description: The date the package will expire when not in use. This is set only for packages that are unused.
-        description:
-          description: 'The Tag description of the package, added by the developer when the package is created.'
-          type: string
-        fileName:
-          type: string
-          example: MainLine-1.3.0.623.mda
-          description: The file name of the package (MDA) file.
-        fileSize:
-          type: integer
-          minimum: 0
-          example: 42364523
-          description: The size of the package file (MDA) in bytes.
-        url:
-          type: string
-          format: uri
-          description: Direct download URL of the package (MDA) file. This URL is valid for a limited time.
-      required:
-        - id
-        - appId
-        - modelVersion
-        - runtimeVersion
-        - createdOn
-        - fileName
-        - fileSize
-        - url
-      x-examples:
-        example-1:
-          id: 3bda6b5b-f038-4c09-8697-d065446b7084
-          appId: c533ee0b-f7db-4e62-868b-1192d392ccec
-          modelVersion: 1.3.0.623
-          runtimeVersion: 9.12.0.41679
-          createdOn: '2019-08-24T14:15:22Z'
-          expiresOn: '2019-08-24T14:15:22Z'
-          description: string
-          fileName: MainLine-1.3.0.623.mda
-          fileSize: 42364523
-          url: 'http://example.com'
-    packages:
-      title: packages
-      type: object
-      properties:
-        package:
-          type: array
-          items:
-            $ref: '#/components/schemas/package'
-        pagination:
-          $ref: '#/components/schemas/pagination'
-      required:
-        - package
-        - pagination
-    packageId:
-      type: string
-      title: packageId
-      format: uuid
-      example: 3bda6b5b-f038-4c09-8697-d065446b7084
-      description: The ID of the package.
-    membership:
-      title: membership
-      type: object
-      description: A Mendix user who is a team member of an app.
-      properties:
-        userId:
-          $ref: '#/components/schemas/userId'
-        name:
-          type: string
-          description: The full name of the user.
-          example: Jane Doe
-        status:
-          type: string
-          enum:
-            - active
-            - inactive
-          description: The user's status in this membership. A user can have an active status in the Mendix platform but has an inactive status for an app.
-      required:
-        - userId
-        - name
-        - status
     userId:
       type: string
       title: userId
       description: The ID of the user.
       example: jane.doe@domain.tld
-    plan:
-      type: object
-      properties:
-        name:
-          type: string
-      x-examples:
-        example-1:
-          name: XL21-PREMIUM
   parameters:
     offset:
       name: offset
@@ -874,49 +329,7 @@ components:
         type: string
         format: uuid
       description: The ID of an environment.
-    companyId:
-      name: companyId
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
-      description: The ID of a company.
-    hasLicenseType:
-      name: hasLicenseType
-      in: query
-      required: false
-      schema:
-        type: string
-        enum:
-          - free
-          - licensed
-    sort:
-      name: sort
-      in: query
-      required: false
-      schema:
-        type: string
-      description: 'Defines sort attribute and order of response objects. Possible values are ''name'', ''index'', ''+name'', ''-name'', ''+index'' and ''-index'', where ''+'' is ascending and ''-'' stands for descending. If order is not provided (e.g ''name'') the default order is ascending(+). If query param is empty, the default sort attribute and order is ''+name''.'
   responses:
-    error400:
-      description: |-
-        The request probably contains invalid data or there is data missing from the request.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
-          examples:
-            example-1:
-              value:
-                error:
-                  code: 400
-                  message: Request validation errors
-                  invalid-params:
-                    - name: query-parameter
-                      reason: Value 'license' is not supported
     error400_Patch_App:
       description: |-
         The request probably contains invalid data or there is data missing from the request.
@@ -987,15 +400,6 @@ components:
                   invalid-params:
                     - name: Authentication
                       reason: Missing or invalid Authorization header
-    error403:
-      description: |-
-        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
     error403_Patch_App:
       description: |-
         Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
@@ -1106,15 +510,6 @@ components:
                   invalid-params:
                     - name: Authentication
                       reason: Only technical contact can change manage permission
-    error404:
-      description: |-
-        The requested item could not be found.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
     error404_Patch_App:
       description: |-
         The requested item could not be found.
@@ -1217,13 +612,10 @@ components:
                     - name: ''
                       reason: ''
   securitySchemes:
-    MxID3 Token:
-      type: http
-      scheme: bearer
     Personal Access Token:
       name: Authorization
       type: apiKey
       in: header
-      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
 security:
   - Personal Access Token: []

@@ -68,17 +68,17 @@ key can be used in a policy to allow principals (Mendix apps and end-users) to m
 
 ## 3 Frequently Asked Questions
 
-### 3.1 Why does the IP address need to change?
+### 3.1 Why Does the IP Address Need to Change?
 
 Because Mendix provides a platform, the infrastructure needs to remain flexible. As a result, even though Mendix servers use static IP addresses, those IP addresses are occasionally subject to change. These are manual changes. Mendix provides a 48-hour notice of these changes; providing a longer notice period would hinder operational capabilities.
 
-### 3.2 In the past, we have received the same IP address for multiple environments and applications. How is that possible?
+### 3.2 In the Past, We Have Received the Same IP Address for Multiple Environments and Applications. How Is That Possible?
 
 The incoming IP address is the same for multiple environments and applications because it is the IP address of a front-facing web server. The web server serves multiple applications.
 
 The outgoing IP address is the same for multiple environments and applications because Mendix uses network address translation (NAT) on its routers.
 
-### 3.3 Which IP address should be safelisted on our firewall?
+### 3.3 Which IP Address Should Be Safelisted on Our Firewall?
 
 Usually, you configure your firewall with rules for incoming traffic to your network. Therefore, you need to use the outgoing IP address of the Mendix application.
 

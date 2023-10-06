@@ -1289,6 +1289,6 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
+      description: 'See [Create a Personal Access Token](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
 security:
   - Personal Access Token: []

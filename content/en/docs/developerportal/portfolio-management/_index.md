@@ -528,3 +528,5 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
 * [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)
+* [Make Strategic Decisions with Portfolio Management](https://academy.mendix.com/link/paths/145/Make-Strategic-Decisions-With-Portfolio-Management)
+* [Why Portfolio Management is Crucial to App Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to-app-development-at-scale/)

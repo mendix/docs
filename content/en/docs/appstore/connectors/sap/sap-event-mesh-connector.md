@@ -15,9 +15,9 @@ The [SAP Event Mesh connector](#needs-link) connector enables you to connect you
 
 You can use the connector to perform the following tasks: 
 
-* Management of processes for all queues and topics 
+* Management of queues and queue subscriptions 
 * Publishing of messages to a queue or topic, consumption of message from queue
-* Publishing an event to a queue
+* Publishing a cloud event
 
 ### 1.2 Prerequisites {#prerequisites}
 

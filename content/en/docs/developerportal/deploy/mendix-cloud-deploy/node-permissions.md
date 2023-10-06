@@ -33,7 +33,7 @@ In the *Permissions* section, you can manage access to your environments for eac
 
 ### 3.1 User Roles for Managing Permissions
 
-Users with the Technical Contact role and any team members specifically allowed to manage permissions can manage the permission settings for the cloud node.
+Users with the Technical Contact role and any team members with **Manage Permissions** enabled can manage the permission settings for the cloud node.
 
 {{% alert color="info" %}}
 Mendix Admins can manage permissions using the Deploy API v4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).

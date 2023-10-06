@@ -36,7 +36,7 @@ paths:
         '500':
           $ref: '#/components/responses/error500'
       operationId: get-apps
-      description: Get an array of all applications for the authorized user
+      description: 'Get an array of all applications for the authorized user. This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
   '/apps/{appId}':
     get:
       tags:
@@ -58,7 +58,7 @@ paths:
         '500':
           $ref: '#/components/responses/error500'
       operationId: get-app
-      description: Get information about a single app.
+      description: 'Get information about a single app. This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
     parameters:
       - $ref: '#/components/parameters/appId'
     patch:

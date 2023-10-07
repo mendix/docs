@@ -25,7 +25,7 @@
     "autoprefixer": "^10.4.13",
     "docsy": "github:google/docsy#semver:0.6.0",
     "hugo-extended": "^0.109.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.31",
     "postcss-cli": "^8.3.1"
   },
   "dependencies": {

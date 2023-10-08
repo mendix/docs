@@ -104,7 +104,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
 1. Run the application.
 1. Login as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
-    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). 
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). 
     * In version 5.4.0 and above this will create an SMTP configuration which you want to use for sending Reset Password Email.
     * From the dropdown, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
 
@@ -138,8 +138,8 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 1. Logout of the app.
 1. On the sign in page, click `Signup`.
-1. Enter your name and mail ID and click `Send`.
-    You will get confirmation that a password recovery email has been sent         {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
+1. Enter your name and email ID and click `Send`.
+    You will get confirmation that a password recovery email has been sent.         {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
     You will receive an email containing a link to reset your password.
         {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
 1. Open the link in the browser.
@@ -148,7 +148,7 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 ## 4 Upgrading from Mendix 8 to Mendix 9 {#upgrade8-9}
 
-To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below from within Studio Pro:
+To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 
 1. Upgrade all the [dependencies](#dependencies) of the Forgot Password module to the latest version compatible with Mendix 8.
 1. Open your app in Mendix 9.12.5 or above and allow it to be upgraded.
@@ -156,15 +156,20 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below 
 
     You will see four errors in the [Errors Pane](/refguide/errors-pane/).
     {{< figure src="/attachments/appstore/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" >}}
-1. Open the page of one of the errors (for example, by double-clicking the error) and change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
-    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}}
-1. This will resolve two of the errors. Open the page of error and again change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
+1. Double click on one of the errors to open the error page and change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
+    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}} This will resolve two of the errors.
+1. Open the error page and again change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix 9.
 
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
-Versions 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above) and above of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. There is a community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to help with your upgrade to these versions.
+Below versions of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+* Version 4.1.0 (for Mendix 8)
+* Version 5.1.0 (for Mendix 9 and above)
+* Version above 5.1.0 
+
+There is a community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to assist with the upgrade to these versions.
 
 {{% alert color="warning" %}}
 Use these instructions before you upgrade the Forgot Password module. The point at which you should get the new version is included in the steps below.
@@ -172,9 +177,9 @@ Use these instructions before you upgrade the Forgot Password module. The point 
 
 ### 5.1 Dependencies
 
-* An app using Mendix 8 or above.
+* An app that uses Mendix 8 or above.
 
-    The Forgot Password module versions compatible with Mendix 7 (3.xx) continue to use the Email Module with Templates module as the Email Connector module is not compatible with Mendix 7.
+    The Forgot Password module versions compatible with Mendix 7 (3.xx) continue to use the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) as the [Email Connector](/appstore/connectors/email-connector/) module is not compatible with Mendix 7.
 * The email templates must be set up as follows:
 
     * The reset password template must contain *_Reset* in the template name

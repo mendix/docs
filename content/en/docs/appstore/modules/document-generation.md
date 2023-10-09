@@ -85,7 +85,7 @@ The PDF Document Generation module automatically tries to find the Chrome execut
 
 If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** folder. 
 
-#### 3.1.2 Chromium
+#### 3.1.2 Chromium {#chromium}
 
 If you use Chromium, only use stable releases. The currently supported stable release is [112.0.5615.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). 
 
@@ -311,7 +311,7 @@ In general, we recommend you perform the following steps in case of any issues d
 
 In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
-* When developing locally using Chrome or Chromium version 117, the scaling of your document might be different compared to previous versions and the cloud service, we are currently looking into this issue.
+* When developing locally using Chrome or Chromium version 117 or above, the scaling of your document might be different compared to previous versions and to the cloud service. We are currently looking into this issue, please refer section [3.1.2 Chromium](#chromium) for more details.
 
 #### 5.2.2 Local Service Errors
 

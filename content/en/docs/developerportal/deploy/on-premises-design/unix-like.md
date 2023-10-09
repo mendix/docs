@@ -28,6 +28,10 @@ Installation on other Unix-like operating systems is possible, but these have no
 
 The documentation describing the installation and basic configuration of the Mendix software on a Unix-like system is available as part of the m2ee-tools helper program: [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md).
 
+{{% alert color="info" %}}
+Specific Mendix versions require specific versions of the buildpack. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
+{{% /alert %}}
+
 ## 3 License Key Activation on Linux
 
 To activate your license key, follow these steps:

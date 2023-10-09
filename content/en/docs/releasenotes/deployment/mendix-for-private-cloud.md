@@ -15,14 +15,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### October ???, 2023
 
-#### Data migration tool (preview) v0.0.2
+#### Data Migration Tool (Preview) v0.0.2
 
-* We have updated the data transfer tool's error handling code to provide more meaningful error messages.
-* If the data transfer tool fails to access or export a file, it will print an error and continue with the process, instead of failing the process immediately.
-* The data transfer tool will now only export files that are in use by the app (are referenced by a `System.FileDocument` entity).
+* We have updated the data transfer tool's error-handling code to provide more meaningful error messages.
+* If the data transfer tool fails to access or export a file, it will return an error and continue with the process, instead of failing the process immediately.
+* The data transfer tool will now only export files which are in use by the app (that is, which are referenced by a `System.FileDocument` entity).
 * We have updated the data transfer tool's dependencies to the latest versions.
 
-This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer/).
+This tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
 
 ### September 21, 2023
 

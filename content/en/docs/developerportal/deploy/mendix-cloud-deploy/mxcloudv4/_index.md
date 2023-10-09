@@ -63,9 +63,9 @@ You can also consider running your Mendix app using your own AWS account, with c
 There are certain limits and behaviors that apply to your app when running in Mendix Cloud. Keep the following considerations in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application.
-* It is not possible to deploy a model (`.mda`) larger than 1 GB when uncompressed or a model that contains approximately 64,000 or more files.
-* You can't upload files bigger than 1 GB to your app.
-* You can't download files bigger than 1 GB from your app.
+* It is not possible to deploy a model (MDA file) that is larger than 1 GB when uncompressed or that contains more than about 64,000 files.
+* You cannot upload files bigger than 1 GB to your app.
+* You cannot download files bigger than 1 GB from your app.
 * To use the debugger, you need to scale down to one instance.
 * Metrics for multi-instance nodes are not reported correctly. The information reported on the app's **Metrics** and **Alerts** pages represents only one instance of a multi-instance node.
 * Due to the behavior of one of the Cloud Foundry routing components, HTTP headers sent to Mendix Cloud do not always preserve their case. For example, `X-SharedSecret` may be transformed to `X-Sharedsecret`. This has no practical effect because HTTP headers are defined as case insensitive.
@@ -77,11 +77,10 @@ There are certain limits and behaviors that apply to your app when running in Me
 
     To resolve this, do the following:
     * Update all Marketplace modules to the latest version. Older versions may not close file connections correctly.
-    * If you are using Mendix 7, upgrade to version 7.16 or above.
     * Increase the number of available file connections (the default is 50) by adding the **com.mendix.storage.s3.MaxConnections** setting in the environment's Custom Runtime Settings. You can access this by going to the **Runtime** tab on the [Environment Details](/developerportal/deploy/environments-details) page. For more information, see the [S3 Storage Service Settings](/refguide/custom-settings/#amazon-s3-storage-service-settings) section of the *Runtime Customization* page.
-* **Call REST** connections are eventually closed by the cloud infrastructure if left idle.
-    * Mendix Cloud uses AWS NAT gateways for outgoing traffic. These gateways drop connections that are idle for more than 350 seconds. This can result in your outgoing REST or web service connection getting dropped if there is no traffic for 350 seconds. Therefore, it is recommended to [set the timeout](/refguide/call-rest-action/#timeout) for calls to consumed REST or web services to less than 350. Only set it to a higher value if you are sure that traffic will go back and forth at least every 350 seconds.
-        
-        {{% alert color="info" %}}If you have a REST or web service call that will be idle (waiting) for 350 seconds or more, try to minimize the wait time. For example, you could make multiple requests for smaller amounts of data instead of a single request for a large amount of data, or you could make the call asynchronously.{{% /alert %}}
-* The platform automatically restarts application instances due to routine platform updates, which can occur several times a week. If you review logs for an app that is functioning normally, and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and OK! The platform usually starts a new instance of your application before stopping the old one, thus ensuring that there is no downtime. You can verify this in your application logs.
+* **Call REST** connections are eventually closed by the cloud infrastructure if left idle. This is because Mendix Cloud uses AWS NAT gateways for outgoing traffic, and these gateways drop connections that are idle for more than 350 seconds.
+    * Mendix recommends [setting the timeout](/refguide/call-rest-action/#timeout) for calls to consumed REST or web services to less than 350. Set the timeout to a higher value only if you are sure that traffic will go back and forth at least every 350 seconds.
+    * If you have a REST or web service call that will be idle (waiting) for 350 seconds or more, try to minimize the wait time. For example, you could make multiple requests for smaller amounts of data instead of a single request for a large amount of data, or you could make the call asynchronously.
+
+* The platform automatically restarts application instances during routine platform updates, which can occur several times a week. If your application logs indicate a series of instance restarts for no apparent reason, the restarts are probably due to platform updates. This is normal and OK! The platform usually starts a new instance of your application before stopping the old one, thus ensuring that there is no downtime. You can verify this in your application logs.
 * The Mendix Cloud web server replaces any custom `ReasonPhrase` on an HTTP response (returned by, for example, a published REST service) with a standard reason phrase. For example, for status code `200`, any custom `ReasonPhrase` that you set will be replaced by `OK`.

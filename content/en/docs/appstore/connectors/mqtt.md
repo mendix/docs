@@ -19,12 +19,13 @@ The MQTT connector consists of microflow actions that enable you to do the follo
 * Subscribe to the MQTT broker 
 * Unsubscribe from the MQTT broker
 
-
 ## 2 Broker Configuration {#configuration}
 
 ### 2.1 Configuring the Broker {#configure-broker}
 
 Configure your broker connection by adding the **ConnectionAdministration** page to your app. Input your broker information, then set up and run the app locally.
+
+{{< figure src="/attachments/appstore/connectors/mqtt-connector/authentication-method.png" >]]
 
 The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 

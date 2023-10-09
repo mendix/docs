@@ -62,9 +62,9 @@ The consequences of deactivating and deleting an app are as below:
 | | Deactivating an App | Deleting an App |
 | --- | --- | --- |
 | App code repository stays persistent | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App members can access the project code repository | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App team members can access the app code repository | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | App stays persistent | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App team members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Cloud environment stays persistent | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
 #### 3.1.2 App Details {#app-details}
@@ -83,7 +83,7 @@ The app details page has the following tabs:
 * **Members** – This tab presents the internal members and external members of the app.
     * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
-* **Environments** – This tab shows all the Mendix Cloud environments. You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed. However, the app members can still access the associated app repository in the Developer Portal.
+* **Environments** – This tab shows all the Mendix Cloud environments. You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 ### 3.2 Default App Roles

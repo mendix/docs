@@ -175,8 +175,8 @@ Importing data into a running environment might cause the environment to stop wo
 Backing up a running app (that is, an app that has active users or other activity) could mean that some files might be deleted while the backup is in progress. For example, if an app generates PDF reports or deletes uploaded files after processing them, these files could exist for only a few seconds and be automatically deleted. Attempting to back up those files might fail if this happens after the file is deleted; this is expected behavior for temporary files. To prevent warnings when running a backup process, you must enable the [Prevent data deletion](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) option in the Storage Plan.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-These instructions have been validated in Windows Subsystem for Linux and macOS and might not work in the Windows commandline terminal, Git Bash or Powershell.
+{{% alert color="info" %}}
+These instructions have been validated in Windows Subsystem for Linux and macOS, and might not work in the Windows commandline terminal, Git Bash or Powershell.
 {{% /alert %}}
 
 To export data from an environment into a backup file, run the following commands (replace `{namespace}` with the environment's namespace, and `{environment}` with the environment's internal name):

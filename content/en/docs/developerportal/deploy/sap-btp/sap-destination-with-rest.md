@@ -1,5 +1,5 @@
 ---
-title: "Use an SAP Connectivity Service with REST and SOAP"
+title: "Use SAP Connectivity Service with REST and SOAP"
 linktitle: "Use SAP Connectivity Service with REST and SOAP"
 url: /developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/
 category: "SAP"
@@ -14,15 +14,15 @@ aliases:
 
 The SAP Destination Service is part of the OData Connector for SAP solutions and enables OData calls to be made using SAP destinations configured on SAP Business Technology Platform (SAP BTP). However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
 
-This how-to will teach you how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
+This document describes how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app which can be deployed to SAP BTP
-* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP BTP account; see [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more information
-* Imported an **OData Connector for SAP solutions** version higher than 4.0.0 into your app
+* Configured a **PrincipalPropagation** destination to an on-premise REST or SOAP service in your SAP BTP account; see [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more information
+* Imported an [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
 
@@ -30,7 +30,7 @@ In your microflow which is making a REST or SOAP call, perform a **Get Destinati
 
 {{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" >}}
 
-This will return a **Destination** object. This is named *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
+**Get Destination** action will return a **Destination** object. This is named as *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
 
 The Destination object has the properties shown in the image below:
 
@@ -56,11 +56,11 @@ The following entries are required in the **General** tab:
 
 #### 3.1.2 HTTP Headers Tab
 
-The following HTTP Headers do the following:
+In below HTTP Headers, do the following:
 
-* authenticate the app to perform the action via the Connectivity service
-* authenticate the user to access the endpoint defined by the destination
-* request that data is returned in JSON format
+* Authenticate the app to perform the action via the Connectivity service
+* Authenticate the user to access the endpoint defined by the destination
+* Request to return the data in JSON format
 
 |Key|Value|
 |---|---|
@@ -93,9 +93,9 @@ The following entries are required in the **Operation** tab:
 
 The same HTTP Headers are required as for a REST call. They do the following:
 
-* authenticate the app to perform the action via the Connectivity service
-* authenticate the user to access the endpoint defined by the destination
-* request that data is returned in JSON format
+* Authenticate the app to perform the action via the Connectivity service
+* Authenticate the user to access the endpoint defined by the destination
+* Request to return the data in JSON format
 
 |Key|Value|
 |---|---|

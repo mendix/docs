@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "mqtt", "iot"]
 
 You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. MQTT is a lightweight Internet of Things (IoT) messaging protocol. 
 
-### 1.1 Typical Use Cases
+### 1.1 Features
 
 The MQTT connector consists of microflow actions that enable you to do the following:
 
@@ -32,9 +32,9 @@ If the broker needs basic authentication for connection, you can set up a user n
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
-You can set up a broker connection in a microflow directly if you do not want it to be stored in the domain model. To do this, follow these steps:
+You can set up a broker connection directly in a microflow if you do not want it to be stored in the domain model. To do this, follow these steps:
 
-1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object and provide the required parameters.
+1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectionDetail** object and provide the required parameters.
 2. Use the **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
 #### 2.1.2 Setting Up Authentication {#auth}

@@ -276,10 +276,6 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ### 5.4 Using the Continuation URL Parameter
 
-{{% alert color="info" %}}
-Continuation URLs were introduced in version 4.2.0 of the Mendix SSO module.
-{{% /alert %}}
-
 You can add a continuation URL parameter to the `/openid/login` and `/openid/logoff` endpoints. This parameter specifies the URL to which the end-user is redirected after successfully completing the login or logoff process. This feature can be particularly useful when you want to show a specific page after the end-user logs off, trigger a process after the end-user logs in, or redirect to another Mendix application in your portfolio that the end-user also needs to be logged into.
 
 The URL (for example `{myURL}`) is added as the `continuation={myURL}` parameter to the endpoint.
@@ -288,19 +284,22 @@ For example, if your app "myapp" contains a profile page (`myprofile`) which has
 
 #### 5.4.1 Continuation URL Validation
 
+{{% alert color="info" %}}
+Validation of continuation URLs was introduced in version 4.2.0 of the Mendix SSO module.
+{{% /alert %}}
+
 To protect against bad actors, the Mendix SSO module validates the continuation url and ensures the end-user will only be redirected to an approved location. By default the approved locations include only the default app Url, which can be found on the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.
 
 If your Mendix application has registered any custom domains, or if you want to redirect the end-user to a different application, the host names need to be specifically supplemented for your deployed application. This can be configured in the **Runtime** settings tab of the Developer Portal as described below.
 
-#### 5.4.2 Supplementing Allowed Continuation URLs
+##### 5.4.1.1 Supplementing Allowed Continuation URLs
 
 On the **Runtime** tab of your app environment's [Environment Details](/developerportal/deploy/environments-details/#runtime-tab) you can set Custom Environment Variables. Here you can specify a comma-separated list of URLs that can be used as continuation URLs in your Mendix application.
 
 To add a list of allowed continuation URLs, do the following:
 
 1. Click **Add** for **Custom Environment Variables**.
-1. Select **Unsupported**.
-1. Give the variable the **Name** *MendixSSO_AllowedContinuationURLs*. (If this already exists, then **Edit** the existing variable).
+1. Select **MendixSSO_AllowedContinuationURLs**.
 1. Set **Value** to  the list of URLs separated by a comma (",").
 1. Click **Save** to save the variable.
 1. Restart your application to apply the changes.

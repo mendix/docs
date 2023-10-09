@@ -90,10 +90,6 @@ To submit a request with Mendix Support, follow these steps:
 
 5. Make sure all your attachments have finished uploading before clicking **Next**.
 
-The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
-
-{{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
-
 If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.    
 
 ## 4 Request Priority {#request-priority}

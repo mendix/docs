@@ -276,7 +276,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ### 5.4 Using the Continuation URL Parameter
 
-You can add a continuation URL parameter to the `/openid/login` and `/openid/logoff` endpoints. This parameter specifies the URL to which the end-user is redirected after successfully completing the login or logoff process. This feature can be particularly useful when you want to show a specific page after the end-user logs off, trigger a process after the end-user logs in, or redirect to another Mendix application in your portfolio that the end-user also needs to be logged into.
+You can use a continuation URL parameter with the `/openid/login` and `/openid/logoff` endpoints. This parameter specifies the URL to which the end-user is redirected after successfully completing the login or logoff process. This feature can be particularly useful when you want to show a specific page after the end-user logs off, trigger a process after the end-user logs in, or redirect to another Mendix application in your portfolio that the end-user also needs to be logged into.
 
 The URL (for example `{myURL}`) is added as the `continuation={myURL}` parameter to the endpoint.
 

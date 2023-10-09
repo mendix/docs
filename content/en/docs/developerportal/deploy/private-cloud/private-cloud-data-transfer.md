@@ -172,10 +172,7 @@ Importing data into a running environment might cause the environment to stop wo
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Backing up a running app (with active users or other activity) could mean that some files might be deleted while the backup is in progress.
-For example, if an app generates PDF reports or deletes uploaded files after processing them, these files could exist for only a few seconds and are automatically deleted.
-Attempting to backup those files might fail if this happens after the file is deleted; this is expected behavior for temporary files.
-To prevent warnings when running a backup process, the [Prevent data deletion](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) option needs to be enabled in the Storage Plan.
+Backing up a running app (that is, an app that has active users or other activity) could mean that some files might be deleted while the backup is in progress. For example, if an app generates PDF reports or deletes uploaded files after processing them, these files could exist for only a few seconds and be automatically deleted. Attempting to back up those files might fail if this happens after the file is deleted; this is expected behavior for temporary files. To prevent warnings when running a backup process, you must enable the [Prevent data deletion](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) option in the Storage Plan.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

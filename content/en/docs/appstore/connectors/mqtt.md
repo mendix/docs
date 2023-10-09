@@ -25,7 +25,7 @@ The MQTT connector consists of microflow actions that enable you to do the follo
 
 Configure your broker connection by adding the **ConnectionAdministration** page to your app. Input your broker information, then set up and run the app locally.
 
-{{< figure src="/attachments/appstore/connectors/mqtt-connector/authentication-method.png" >]]
+{{< figure src="/attachments/appstore/connectors/mqtt-connector/connection-administration.png" >}}
 
 The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
@@ -41,6 +41,8 @@ You can set up a broker connection directly in a microflow if you do not want it
 #### 2.1.2 Setting Up Authentication {#auth}
 
 If an MQTT broker needs a user name and password for connection, set the credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
+
+{{< figure src="/attachments/appstore/connectors/mqtt-connector/authentication-method.png" >}}
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
 
@@ -59,6 +61,8 @@ Enabling SSL establishes a secure connection to the broker. To input your SSL ce
     * Currently supported certificate types are *X.509* format (*.crt*, *.cer*)
     * Currently supported key types are *X.509* format (*.pem*, *.pkcs*)
 
+{{< figure src="/attachments/appstore/connectors/mqtt-connector/ssl-input.png" >}}
+
 ## 3 Usage
 
 To use the MQTT Connector, make sure you have [configured the broker connection](#configure-broker), or [create a broker connection directly in a microflow](#broker-microflow). 
@@ -68,6 +72,8 @@ You can build microflows that use the connection details from the domain model t
 ### 3.1 Microflow Actions
 
 After you have set up the broker connection in the [Configuration](#configuration) section or in a microflow, you can **Publish**, **Subscribe**, or **Unsubscribe**. These actions are used in microflows. The **SampleUses** microflow displays a sample setup for you to reference.
+
+{{< figure src="/attachments/appstore/connectors/mqtt-connector/sample-microflow.png" >}}
 
 #### 3.1.1 Publish
 

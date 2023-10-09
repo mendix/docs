@@ -133,9 +133,9 @@ Normally, when you are merging branches with Git, it compares the changes in fil
 
 However, if the files in conflict are Mendix apps the conflict is in two *.mpr* files, both the files and the conflict are more complex, which is why we need Studio Pro to resolve the conflicts. For such cases, Git has an option to delegate conflict resolution for a certain file type to an external tool. The `mx merge` command is compatible with this mechanism and allows Git to try to merge the *.mpr* files as if Studio Pro did it. Then, if there are still conflicts, you can open Studio Pro and resolve those manually.
 
-### 4.1 .gitconfig File
+### 4.1 config File
 
-Add the lines below to the *.gitconfig* file located in the *.git* folder of your app on disk.
+Add the lines below to the *config* file located in the **.git** folder of your app on disk.
 
 At the end of the file, add a `[merge "custom"]` block like this:
 
@@ -145,13 +145,17 @@ At the end of the file, add a `[merge "custom"]` block like this:
     driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Replace `MX.EXE_PATH` with a full path to your *mx.exe* file in the Unix format (for example, `'/c/Program Files/Mendix/10.0.0.8753/modeler/mx.exe'`).
+Replace `[MX.EXE_PATH]` with a full path to your *mx.exe* file in the Unix format (for example, `'/c/Program Files/Mendix/10.0.0.8753/modeler/mx.exe'`).
 
 Under the `[core]` section, add the following:
 
 ```ini {linenos=false}
     attributesfile = .git/.gitattributes
 ```
+
+{{% alert color="info" %}}
+The **.git** folder is a hidden folder in a computer file management system. You can view it when hidden items are visible.
+{{% /alert %}}
 
 ### 4.2 .gitattributes File
 
@@ -196,3 +200,7 @@ Now, if you open you app on the **Main** branch, you should see the following:
 
 * Both the **branch** and **main** microflows ( this is a non-conflicting change, so `mx merge` sorted this out automatically, just like Studio Pro would do)
 * A conflict on the **Home_Web** page concerning the renaming of home page caption (this is a conflicting change, as you changed the same caption to different values on both branches, so you can resolve this manually)
+
+{{% alert color="info" %}}
+When you get a different output, the custom merge drive is not configured correctly. Abort the merge using the command `$git merge --abort` and close the Git command line tool before making changes to the configuration. Changes made to the configuration *config* and *.gitattributes* files are picked up by reopening the Git command line tool.
+{{% /alert %}}

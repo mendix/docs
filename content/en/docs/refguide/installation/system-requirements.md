@@ -146,7 +146,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 * Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
-    * Debian 10 and later
+    * Debian [OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), Debian OldStable, Debian Stable
     * Red Hat Enterprise Linux 8 and later
     * CentOS 7
     * CentOS Stream 8 and later

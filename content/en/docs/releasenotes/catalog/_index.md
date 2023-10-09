@@ -696,7 +696,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all applications
     * `GET` all environments for an application
     * `GET` all consumed endpoints
-* A change was made to the `POST` application API call to also allow for the `Opcenter` and `Insights Hub` application types.
+* A change was made to the `POST` application API call to also allow for the `Opcenter` and `Mindsphere` application types.
 * We added Catalog integration with [Control Center](/developerportal/control-center/#catalog). For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ### August 19, 2021
@@ -776,7 +776,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* **Insights Hub** applications are now indicated with the display of the Insights Hub logo for all associated assets in the Catalog.
+* **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
 * In the [Search result](/catalog/manage/search/#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
 
 ### May 12, 2021

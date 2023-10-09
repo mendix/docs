@@ -62,7 +62,7 @@ The **Environments** section has an overview of all the available environments. 
 
 #### 2.2.1 Standard Environments
 
-For standard environments, your node has production and acceptance environments. Optionally, it can also include a test environment.
+For standard plans, your node has production and acceptance environments. It can also include a test environment.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section for standard environments" >}}
 
@@ -72,7 +72,7 @@ The **Environments** section shows the following details:
 * Environment status, indicated by the icon next to the environment name:
     * Green check mark – there are no alerts
     * Orange exclamation mark – there is at least one warning alert, but no critical alerts
-    * Red x – there is at least one critical alert
+    * Red cross – there is at least one critical alert
     
     {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
     
@@ -100,7 +100,7 @@ For flexible environments, the **Environments** section shows the following deta
 * Environment status, indicated by the icon next to the environment name:
     * Green check mark – there are no alerts
     * Orange exclamation mark – there is at least one warning alert, but no critical alerts
-    * Red x – there is at least one critical alert
+    * Red cross – there is at least one critical alert
     
     {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
     

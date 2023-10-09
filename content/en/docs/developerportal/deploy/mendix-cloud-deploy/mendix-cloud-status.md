@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix hosts a variety of services in the cloud. These include the environments for apps that are deployed to Mendix Cloud, as well as various online services (such as Buzz Project Management).
+Mendix hosts a variety of services in the cloud. These include the environments for apps that are deployed to Mendix Cloud, as well as various online services (such as app Buzz).
 
 The status of all these services is reported on the [Mendix Platform Status](https://status.mendix.com/) page.
 

@@ -11,6 +11,10 @@ aliases:
     - /developerportal/company-app-roles/users
 ---
 
+{{% alert color="info" %}}
+In general, a "member" in Control Center means a Mendix Platform user who participates in the development, deployment, and maintenance of an app, and does not mean the end-user of a Mendix app built on the Mendix Platform. The only exception is the  [Groups](#groups) page where a "member" means the end-user of a Mendix app.
+{{% /alert %}}
+
 ## 1 Introduction
 
 When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.

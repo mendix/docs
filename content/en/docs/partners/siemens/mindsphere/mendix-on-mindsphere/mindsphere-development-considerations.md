@@ -235,7 +235,7 @@ The **Siemens Insights Hub Web Content** module includes two ways of including I
 
 ### 6.1 Insights Hub Icons as 'glyphicons'
 
-You can select Insights Hub icons from Siemens Insights Hub Web Content to be displayed as SVGs in your application.
+You can select Insights Hub icons from Siemens Insights Hub Web Content to be displayed in your application.
 
 1. Open the properties of a widget which can display an icon (for example a button).
 2. Click **Select...** next to *Icon*.

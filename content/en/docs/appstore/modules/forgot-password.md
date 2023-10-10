@@ -98,17 +98,17 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
     * Set **Role-based home pages** so the target of user role `Guest` is `ForgotPassword.Nav_GuestHomePage`
         {{< figure src="/attachments/appstore/modules/forgot-password/role-based-home.png" >}}
         The `Nav_GuestHomePage` microflow is the home page for an anonymous user. This microflow either shows the Login Page or triggers the deep link process which performs the reset password function.
-    * Add the menu item `ForgotPasswordConfiguration` to the app navigation. Link this item to `ForgotPassword.ForgotPasswordConfiguration_Edit` page and assign it to the `Administrator` user role.
+    * Add the menu item `ForgotPasswordConfiguration` to the app navigation. Link this item to the `ForgotPassword.ForgotPasswordConfiguration_Edit` page and assign it to the `Administrator` user role.
         {{% alert color="warning" %}}The `ForgotPasswordConfiguration` page should be accessible to the administrator only. It allows the administrator to configure the email template and deep link, and it shows all the open password reset requests.{{% /alert %}}
-1. If you are using version 5.3.0 or above of the Forgot Password module, open [Module Security](/refguide/module-security/#entity-access) of the **Email_Connector** module in the Marketplace. On the **Entity Access** tab, assign read-only access to the `Email_Connector.EmailConnectorAdmin` module role on `EmailTemplateLanguage_EmailTemplate` template.
+1. If you are using version 5.3.0 or above of the Forgot Password module, open [Module Security](/refguide/module-security/#entity-access) for the **Email_Connector** module in the Marketplace. On the **Entity Access** tab, assign read-only access to the `Email_Connector.EmailConnectorAdmin` module role on the `EmailTemplateLanguage_EmailTemplate` template.
 1. Run the application.
-1. Login as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
+1. Sign in as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
     * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](https://marketplace.mendix.com/link/component/120739) or [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). 
     * In version 5.4.0 and above this will create an SMTP configuration which you want to use for sending Reset Password Email.
-    * From the dropdown, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
+    * From the drop-down menu, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
 
-        For version 5.3.0 and above, you can **Create** and **Edit** several reset email templates. Each template is linked to a [language](/refguide/language-settings/) you have added to your app. Based on the language in which end-user sees the app, associated template will be used to send the reset email. If no template explicitly associated with the end-user's language, the template which is not associated with any language will be used. For versions below 5.3.0, you can set up only a single template.
+        For version 5.3.0 and above, you can **Create** and **Edit** several reset email templates. Each template is linked to a [language](/refguide/language-settings/) you have added to your app. Based on the language in which end-user sees the app, the associated template will be used to send the reset email. If no template is explicitly associated with the end-user's language, the template which is not associated with any language will be used. For versions below 5.3.0, you can only set up a single template.
 
         For version 5.4.0 and above, the `fromAddress` in the email template does not have to be the same as the address in your SMTP configuration. See [Using Email Aliases](#email-aliases) section below, for more information.
 

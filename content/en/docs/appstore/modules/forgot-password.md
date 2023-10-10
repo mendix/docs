@@ -60,11 +60,11 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
     {{% alert color="info" %}}You can accept any warnings about files being overwritten.{{% /alert %}}
 
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
-    * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant `Encryption.EncryptionKey`
+    * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant **Encryption.EncryptionKey**
         {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}
-    * In the **Runtime** tab, add the microflow `Deeplink.StartDeeplink` as the **After startup** microflow or as a sub-microflow to an existing **After startup** microflow
+    * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow
 1. Open [App Security](/refguide/app-security/) and do the following:
-    * In the **User roles** tab, add a new role- `Guest` in `MyFirstModule`
+    * In the **User roles** tab, add a new role called *Guest* in **MyFirstModule**
     * Set the following permissions for the user roles:
 
         * Administrator

@@ -39,14 +39,14 @@ The Forgot Password module has the following dependencies:
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-² Versions of the Forgot Password module 3.x.x (for Mendix 7), below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, we recommend upgrading to later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email) section, below.
+² Versions of the Forgot Password module 3.x.x (for Mendix 7), below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, we recommend upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
 
 ### 1.2 Features
 
-* Allows end-users to reset the password stored locally in your app.
-* Allows end-users to signup for your app. This validates that the end-user has access to the email address they enter by sending a password reset email.
-* Supports email aliases, in other words, the from address in email templates can be different from the SMTP account used to send the email.
-* Supports multi-language email templates for sending password reset emails.
+* Allows end-users to reset the password stored locally in your app
+* Allows end-users to sign up for your app by validating that the end-user has access to the email address they enter by sending a password reset email
+* Supports email aliases, in other words, the from address in email templates can be different from the SMTP account used to send the email
+* Supports multi-language email templates for sending password reset emails
 
 ## 2 Installing the Forgot Password Module{#installing}
 

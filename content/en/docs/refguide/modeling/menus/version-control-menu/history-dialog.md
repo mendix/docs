@@ -75,7 +75,7 @@ This tab shows a list of stories that are related to the changes.
 
 ### 3.3 Changes in Model
 
-This tab shows a list of documents that were changed in the selected revision. From here you can jump to the currently selected changed document by clicking **Go to**, assuming it still exists in the current version.
+This tab shows a list of documents that were changed in the selected revision. From here you can jump to the currently selected changed document by clicking **Go to**, assuming the document still exists in the current version.
 
 The **Mendix version** that was used to commit the revision to the model is also shown. 
 

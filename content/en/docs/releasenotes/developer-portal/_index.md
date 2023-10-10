@@ -23,14 +23,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) using an Excel file.
 
-### Improvements
-
-* In Portfolio Management, external users can no longer unlink an app.
-
-### Fixes
-
-* We fixed an issue where the invitation widget occasionally failed to render.
-* We fixed an issue with dark mode when switching apps.
 
 ### October 1, 2023
 

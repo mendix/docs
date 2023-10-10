@@ -119,6 +119,8 @@ You can perform the following actions in this section:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif" alt="Reordering environments in a list" >}}
 
+    {{% alert color="info %}}The **Transport to** button is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section.{{% /alert %}}
+
 ### 2.3 Activity
 
 In the **Activity** section, you can view a log of deployment activities performed on your environments.

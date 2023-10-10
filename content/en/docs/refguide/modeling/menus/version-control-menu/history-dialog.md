@@ -14,26 +14,26 @@ Use the **History** dialog box to look at all the changes that have been committ
 
 Each line in the grid represents a revision in the repository. For each revision the following information is shown:
 
-* [**Revision**](#21-revision)
-* [**Changes**](#22-changes)
-* [**Author**](#23-author)
-* [**Date**](#24-date)
-* [**Time**](#25-time)
-* [**Message**](#26-message)
+* [**Revision**](#revision)
+* [**Changes**](#changes)
+* [**Author**](#author)
+* [**Date**](#date)
+* [**Time**](#time)
+* [**Message**](#message)
 
 By selecting a revision in this grid, the tab pages below it will be filled with information about this revision.
 
-### 2.1 Revision
+### 2.1 Revision{#revision}
 
 A unique alphanumeric identifier of the revision in the repository. Revision is unique for a whole repository.
 
-### 2.2 Changes
+### 2.2 Changes{#changes}
 
 A visual summary of the changes in the selected revision, each icon represents different type of change:
 
 | Icon | Change Type | Notes |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/MergeRevision.png" width=32 alt="Merge commit icon" >}} | Merge commit | Indicates that commit is a merge of two different commits.<br/>Hover over will show both of parents [revisions](#21-revision). |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/MergeRevision.png" width=32 alt="Merge commit icon" >}} | Merge commit | Indicates that commit is a merge of two different commits.<br/>Hover over will show both of parents [revisions](#revision). |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesModel.png" width=32 alt="Model changes icon" >}} | Model changes | Indicates that there were some changes done to domain model.<br/>In example new entity was added, attribute renamed or connection changed. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesDisk.png" width=32 alt="Changes on disk icon" >}} | Changes on disk | Inidactes that there were changes on disk.<br/>In example a new file was added or removed. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesVersion.png" width=32 alt="Studio Pro changes icon" >}} | Studio Pro changes | Indicates that there was a change of Studio Pro version used for working with solution.<br/>In example when converting solution from previous version to the newest one. |
@@ -41,11 +41,11 @@ A visual summary of the changes in the selected revision, each icon represents d
 
 Hover over this column in Studio Pro to get a textual summary.
 
-### 2.3 Author
+### 2.3 Author{#author}
 
 The person who committed that change.
 
-### 2.4 Date
+### 2.4 Date{#date}
 
 The date of the revision creation, it can have of of below values:
 
@@ -53,11 +53,11 @@ The date of the revision creation, it can have of of below values:
 * **Yesterday** - shown when revision was created yesterday.
 * **date** - shown when above options do not apply.
 
-### 2.5 Time
+### 2.5 Time{#time}
 
 The time of the revision creation.
 
-### 2.6 Message
+### 2.6 Message{#message}
 
 The user entered message of the revision. If the message is long, you can more easily read it in the Message tab page below.
 

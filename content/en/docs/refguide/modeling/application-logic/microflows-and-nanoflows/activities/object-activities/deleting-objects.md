@@ -13,7 +13,7 @@ The **Delete object(s)** activity can be used to delete one or more objects.
 
 An example of delete object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" width="650px" >}}
 
 This activity cannot be used to delete [external objects](/refguide/external-entities/). Use the [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
@@ -107,7 +107,7 @@ In detail, the following graph shows what happens during deletions:
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" >}}
 
 {{% alert color="info" %}}
-The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+⚠ The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

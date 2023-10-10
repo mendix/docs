@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-A drop-down is an [input widget](/refguide7/input-widgets/) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select a object with which to fill an [association](/refguide7/associations/).
+A drop-down is an [input widget](/refguide7/input-widgets/) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select an object with which to fill an [association](/refguide7/associations/).
 
 {{% alert color="info" %}}
 

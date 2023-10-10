@@ -14,11 +14,11 @@ There are a number of application performance monitoring (APM) tools for cloud a
 Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
 
 {{% alert color="info" %}}
-[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
+[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 
-[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix version 9.7 and above, custom application runtime and database metrics are supported.
+[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix 9.7 and above, custom application runtime and database metrics are supported.
 
-[Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
+[Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix 7.15 and above.
 
 [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
 {{% /alert %}}
@@ -31,8 +31,6 @@ For details on how to add a specific APM tool to your app, see one of the follow
 * [Datadog for the Mendix Cloud](/developerportal/operate/datadog-metrics/)
 * [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
 * [Splunk for the Mendix Cloud](/developerportal/operate/splunk-metrics/)
-
-A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
 {{% alert color="info" %}}
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
@@ -272,18 +270,39 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must *redeploy* your application to apply the changes.
 
-## 5 Summary of Mendix Metrics{#summary}
+## 5 Filtering Metrics Ingestion 
 
-| Metric | Description |
-| --- | --- |
-| jmx.com.mendix.\* | JMX metrics for the `com.mendix` domain (core runtime). |
-| mx.database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
-| mx.activity.time | How long a microflow activity takes to run |
-| mx.client.time | The time to handle a request to a request handler that is used by the web ui |
-| mx.microflow.time | How long a microflow takes to run |
-| mx.odata.time | The time to handle an OData request |
-| mx.rest.time | The time to handle a REST request |
-| mx.soap.time | The time to handle a SOAP request |
+{{% alert color="info" %}}
+The metrics collected by APM vendors' agents are not affected by this feature, only runtime metrics collected by Mendix can be filtered.
+{{% /alert %}}
+
+To filter the ingestion of metrics to APM vendors, environment variables listed below can be used.
+
+* [APM_METRICS_FILTER_ALLOW](#app-metrics-filter-allow)
+* [APM_METRICS_FILTER_DENY](#app-metrics-filter-deny)
+* [APM_METRICS_FILTER_DENY_ALL](#app-metrics-filter-deny-all)
+
+{{% alert color="info" %}}
+Database metrics (`postgresql.*` and `mx.database.diskstorage_size`) cannot be filtered by name, to turn them off, the `APPMETRICS_INCLUDE_DB` environment variable can be set to false. 
+{{% /alert %}}
+
+### 5.1 APM_METRICS_FILTER_ALLOW{#app-metrics-filter-allow}
+
+Comma-separated list of prefixes for the metrics to be allowed. By default, all metrics are allowed, even if they are not specified via this environment variable.
+
+For example, to allow only the session and the jvm metrics, the environment variable should be set to `mx.runtime.stats.sessions,jvm`.
+
+### 5.2 APM_METRICS_FILTER_DENY{#app-metrics-filter-deny}
+
+Comma-separated list of prefixes for the metrics to be denied. 
+
+For example, to filter out only metrics starting with jetty or mx.runtime, the environment variable should be set to `jetty,mx.runtime`.
+
+### 5.3 APM_METRICS_FILTER_DENY_ALL{#app-metrics-filter-deny-all}
+
+This environment variable can be used to stop ingestion of all metrics at once.
+
+If it is set to `true`, all metrics will be denied regardless of the values of `APM_METRICS_FILTER_ALLOW`, `APM_METRICS_FILTER_DENY`, and `APPMETRICS_INCLUDE_DB`.
 
 ## 6 Read More
 

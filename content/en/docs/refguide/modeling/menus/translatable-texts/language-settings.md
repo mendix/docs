@@ -123,6 +123,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | English | United Kingdom | en_GB | 9.0.5 |
 | English | United States | en_US | 9.0.5 |
 | Estonian | Estonia | et_EE | 9.0.5 |
+| Euskera | Basque | eu_ES | 10.1.0 |
 | Finnish | Finland | fi_FI | 9.0.5 |
 | French | Belgium | fr_BE | 9.0.5 |
 | French | Canada | fr_CA | 9.0.5 |
@@ -217,7 +218,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Vietnamese | Vietnam | vi_VN | 9.0.5 |
 | Welsh | Wales | cy_GB | 9.0.5 |
 
-## 6 List of Deprecated Languages
+## 6 ⚠ List of Deprecated Languages
 
 You can find the list of deprecated languages in the table below:
 

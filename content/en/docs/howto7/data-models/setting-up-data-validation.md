@@ -21,7 +21,7 @@ This section will explain how you can add validation rules to the domain model o
 
     {{< figure src="/attachments/howto7/data-models/setting-up-data-validation/18582148.png" >}}
 
-5. Select the **attribute** of which the value should be validated.
+5. Select the **attribute** for which the value should be validated.
 6. Enter an **error message** that is shown to the user if the validation fails.
 7. Select the **rule type**.
 8. Click **OK** to save this validation rule.
@@ -115,4 +115,3 @@ Validating user input can also be achieved by overriding the default save button
 * [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/)
 * [How to Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/collaborate/stories/)

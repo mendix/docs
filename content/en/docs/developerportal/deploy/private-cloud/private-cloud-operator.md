@@ -43,9 +43,9 @@ You can obtain the deployment package in a number of ways:
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
 
-### 3.2 Editing the CR{#edit-cr}
+### 3.2 Editing the CR {#edit-cr}
 
-You need to create a file containing the following yml code and then configure it to create the CR for your app:
+You need to create a file containing yml code and then configure it to create the CR for your app. Below is an example which can be used a reference purpose to create a mendix CR yaml file. Adapt this example as required for your own application.
 
 ```yml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -76,7 +76,7 @@ spec:
       [...]
       -----END PRIVATE KEY-----
   replicas: 1 # Number of replicas, set to 0 to stop all replicas
-  resources: # Optional, can be omitted : set resources for Mendix Runtime container 
+  resources: # Optional, can be omitted : set resources for Mendix Runtime container
     limits: # Upper limit - process will be stopped if it tries to use more
       cpu: 500m # 500 millicores - half of a vCPU
       memory: 512Mi # 512 megabytes - suitable for small-scale non-production apps
@@ -111,6 +111,7 @@ spec:
     logLevels: # Optional, can be omitted : set custom log levels for specific nodes
       NodeOne: CRITICAL
       NodeTwo: DEBUG
+    logFormatType: json # Optional, can be omitted : specify the log format
     microflowConstants: # Optional, can be omitted : set values for microflow constants
       MyFirstModule.Constant: "1234"
       Atlas_UI_Resources.Atlas_UI_Resources_Version: "2.5.4"
@@ -135,7 +136,7 @@ spec:
         value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
     clientCertificates: # Optional, can be omitted : set client certificates for TLS authentication
       - key: Q0VSVElGSUNBVEU= # base64-encoded PKCS12 certificate
-        password: # base64-encoded password for the certificate, cannot be empty
+        password: Q2hhbmdlLW1lNDI= # base64-encoded password for the certificate, cannot be empty
         pinTo: # Optional, list of web services or domain names where this certificate should be used
         - "www.example.com"
         - "service.www.example.com"
@@ -155,6 +156,10 @@ spec:
       {
         …
       }
+  runtimeLeaderSelection: assigned # Optional, can be omitted : specify how the leader node will be selected
+  customPodLabels: # Optional: custom pod labels
+    general: # Optional: general pod labels (applied to all app-related pods)
+      azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
 ```
 
 You need to make the following changes:
@@ -197,14 +202,18 @@ You need to make the following changes:
           key: LicenseKey # Offline LicenseKey value provided by Mendix Support
     ```
 
-* **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
-* **microflowConstants**: – set values for microflow constants
-* **scheduledEventExecution**: – choose which scheduled events should be enabled – valid values are: `ALL`, `NONE` and `SPECIFIED`
-* **myScheduledEvents**: – list scheduled events which should be enabled – can only be used when **scheduledEventExecution** is set to `SPECIFIED`
-* **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
-* **environmentVariables**: – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
-* **clientCertificates**: – specify client certificates to be used for TLS calls to Web Services and REST services
-* **runtimeMetricsConfiguration**: – specify how metrics should be collected — any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration` — see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment
+* **logLevels** – set custom logging levels for specific log nodes in your app; valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
+* **logFormatType** – allows to specify the log format of Mendix apps; valid values are `plain` (default) and `json`; for more information, see the [runtime log format](/developerportal/deploy/private-cloud-cluster/#runtime-log-format) documentation.
+* **microflowConstants** – set values for microflow constants
+* **scheduledEventExecution** – choose which scheduled events should be enabled; valid values are: `ALL`, `NONE` and `SPECIFIED`
+* **myScheduledEvents** – list scheduled events which should be enabled – can only be used when **scheduledEventExecution** is set to `SPECIFIED`
+* **jettyOptions** and **customConfiguration** – if you have any custom Mendix Runtime parameters, they need to be added to this section; options for the Mendix runtime have to be provided in JSON format; see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
+* **environmentVariables** – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
+* **clientCertificates** – specify client certificates to be used for TLS calls to Web Services and REST services
+* **runtimeMetricsConfiguration** – specify how metrics should be collected; any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration`; see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment
+* **runtimeLeaderSelection** – specify how the leader replica should be selected - valid options are `assigned` (default mode: the `master` deployment will run one leader replica) and `none` (do not run any leader replicas, `master` deployment is scaled down to zero; this mode requires a specific infrastructure configuration, please consult with Mendix Expert Services before using this feature)
+* **customPodLabels** - specify additional pod labels (please avoid using labels that start with the `privatecloud.mendix.com/` prefix)
+    * **general** - specify additional labels for all pods of the app
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 
@@ -299,7 +308,7 @@ To build and deploy your app using the OpenShift Console, do the following:
 
 4. In the **Import YAML** page, enter/paste the YML you prepared in [Editing the CR}(#edit-cr), above.
 5. Click the **Create** button.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" >}}
 
 Mendix Operator will now pick up the YAML and deploy your app.
@@ -342,7 +351,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#general) in `customConfiguration` to the app's URL. For example: 
+For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#general) in `customConfiguration` to the app's URL. For example:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

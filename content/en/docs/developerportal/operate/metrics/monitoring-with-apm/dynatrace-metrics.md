@@ -13,7 +13,7 @@ tags: ["Dynatrace", "Mendix Cloud", "monitoring", "analysis"]
 
 For Dynatrace monitoring, [Dynatrace OneAgent](https://www.dynatrace.com/platform/oneagent/) is being used to collect metrics.
 
-In addition to auto-instrumented built-in metrics collected by OneAgent, we also collect custom application metrics. Custom application metrics are supported in Mendix version 9.7 and above.
+In addition to auto-instrumented built-in metrics collected by OneAgent, we also collect custom application metrics. Custom application metrics are supported in Mendix 9.7 and above.
 For more information on the custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
 ## 2 Prerequisites
@@ -25,7 +25,7 @@ To use Dynatrace, and to send data to Dynatrace from your Mendix app, you will n
     * The Dynatrace environment url
     * The Dynatrace environment id - see [Dynatrace Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id)
     * An access token for integrating your Dynatrace environment with your Mendix app — you can find out how to obtain this in the Dynatrace documentation [Generate an access token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token)
-* A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
+* A licensed Mendix app of which you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact)
 
 ## 3 Connect Node to Dynatrace {#connect-node}
 

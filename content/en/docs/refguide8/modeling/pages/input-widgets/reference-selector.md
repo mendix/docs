@@ -148,7 +148,7 @@ See the [Show a Page](/refguide8/on-click-event/#show-page) section of *On Click
 
 You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-This is activated by checking the **Override page title** check box.
+This is activated by checking the **Override page title** checkbox.
 
 #### 2.7.4 Go-To Page
 
@@ -168,7 +168,7 @@ It is recommended that you generate a new go-to page by right-clicking the widge
 
 You can override the title of the page you open to, for example, indicate where you are opening it from.
 
-This is activated by checking the **Override page title** check box.
+This is activated by checking the **Override page title** checkbox.
 
 ### 2.8 Label Section{#label}
 
@@ -221,7 +221,7 @@ Imagine you have an ordering system where the products are sorted into categorie
 *Example Domain model*
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
 
-In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
+In the domain model the order line has one-to-many associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
 {{% alert color="info" %}}
 Such a triangle-shaped part of the domain model is what makes using **constrained by** possible.

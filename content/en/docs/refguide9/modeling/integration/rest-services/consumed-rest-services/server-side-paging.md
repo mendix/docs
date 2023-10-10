@@ -23,7 +23,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * If you are not familiar with using data from REST services, read [Consume a REST Service](/howto9/integration/consume-a-rest-service/)
-* Install Studio Pro version [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install Studio Pro [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating a Microflow Data Source
 
@@ -104,7 +104,7 @@ This generates a data view around your data grid, creates the necessary widgets 
 
 In the previous section, you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section, you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
 
-1. Open the the **CallREST** microflow.
+1. Open the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
 4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:

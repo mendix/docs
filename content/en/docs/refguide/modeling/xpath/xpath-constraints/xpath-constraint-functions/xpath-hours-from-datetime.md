@@ -1,6 +1,7 @@
 ---
 title: "XPath hours-from-dateTime"
 url: /refguide/xpath-hours-from-datetime/
+weight: 9
 tags: ["studio pro"]
 ---
 
@@ -28,12 +29,24 @@ hours-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where the hours part of `DateAttribute` is 8 in the local time zone (for example, "2011-12-30 08:00:00"):
 
-```java {linenos=false}
-//Logging.Log[hours-from-dateTime(DateAttribute) = 8]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [hours-from-dateTime(DateAttribute) = 8]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[hours-from-dateTime(DateAttribute) = 8]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the hours part of `DateAttribute` is 8 in the New York time zone (for example, "2011-12-30 08:00:00"):
 
-```java {linenos=false}
-//Logging.Log[hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
+    {{% /tab %}}
+{{< /tabpane >}}

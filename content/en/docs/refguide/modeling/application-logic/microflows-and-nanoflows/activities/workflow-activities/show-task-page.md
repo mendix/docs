@@ -14,13 +14,11 @@ This activity can only be used in **Microflows**.
 
 The **Show user task page** activity can be used to open a user task page defined in the user task properties. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page.jpg" alt="Show user task page" >}}
-
 ## 2 Properties
 
 An example of show user task page properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page-properties.jpg" alt="Show user task page Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page-properties.jpg" alt="Show user task page Properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -41,9 +39,14 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 The user task object of the System.WorkflowUserTask entity available from the microflow parameters.
 
-### 3.2 Auto-Assign
+### 3.2 Auto-Assign {#auto-assign}
 
-With this option, you can automatically assign the user task to the user who has opened the task page, if the user task has not been assigned to anyone yet.
+With this option, you can automatically assign the user task to the user who has opened the task page.
+
+For a [single user task](/refguide/user-task/), the auto assignment happens only if the user task has not been assigned to anyone yet.
+
+For a [multi-user task](/refguide/multi-user-task/), the auto assignment happens irrespective of whether the task was assigned before (to another user) or not.
+
 This option is enabled by default.
 
 {{% alert color="info" %}}
@@ -58,6 +61,10 @@ This option specifies who is able to open the user task page when a user has alr
 | --- | --- |
 | Assigned user *(default)* | Only the user who is currently assigned to the task is able to open the user task page. |
 | Users with access  | All users who have access to the user task can open the user task page.<br />Note that this option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a **Save** button. This button saves data, but does not complete the task. <br />Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user. |
+
+{{% alert color="info" %}}
+For a multi-user task, this setting has no effect if the [Auto-Assign](#auto-assign) is enabled.
+{{% /alert %}}
 
 ## 4 Common Section {#common}
 

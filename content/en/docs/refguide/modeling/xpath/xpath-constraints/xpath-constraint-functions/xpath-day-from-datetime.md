@@ -1,6 +1,7 @@
 ---
 title: "XPath day-from-dateTime"
 url: /refguide/xpath-day-from-datetime/
+weight: 8
 tags: ["studio pro"]
 ---
 
@@ -28,12 +29,24 @@ day-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where `DateAttribute` is the 30th day of the month in the local time zone (for example, "2011-12-30"):
 
-```java {linenos=false}
-//Logging.Log[day-from-dateTime(DateAttribute) = 30]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [day-from-dateTime(DateAttribute) = 30]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[day-from-dateTime(DateAttribute) = 30]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where `DateAttribute` is the 30th day of the month in the New York time zone (for example, "2011-12-30"):
 
-```java {linenos=false}
-//Logging.Log[day-from-dateTime(DateAttribute, 'America/New_York') = 30]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [day-from-dateTime(DateAttribute, 'America/New_York') = 30]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[day-from-dateTime(DateAttribute, 'America/New_York') = 30]
+    {{% /tab %}}
+{{< /tabpane >}}

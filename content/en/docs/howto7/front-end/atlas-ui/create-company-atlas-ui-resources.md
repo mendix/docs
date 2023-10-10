@@ -80,7 +80,7 @@ Let’s begin by placing our page template inside the **UI_Resources** module un
 
 {{< figure src="/attachments/howto7/front-end/atlas-ui/create-company-atlas-ui-resources/creating_moving_local.png" >}}
 
-In our example, the new page template has been added to the dashboard category. When we now create a new page in the Mendix Desktop Modeler, the **Homepage Template** is available in the **Create Page** wizard under the **Dashboards** category:
+In our example, the new page template has been added to the dashboard category. When we now create a new page in the Mendix Desktop Modeler, the **Home Page Template** is available in the **Create Page** wizard under the **Dashboards** category:
 
 {{< figure src="/attachments/howto7/front-end/atlas-ui/create-company-atlas-ui-resources/creating_open_pt.png" >}}
 
@@ -100,6 +100,5 @@ The module can now be imported in other apps or uploaded to the [Mendix Marketpl
 
 * [How to Get Started with Atlas UI](/howto7/front-end/get-started-with-atlasui/)
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
-* [How to Extend Design Properties to Customize the Web Modeler Experience](/howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/)
 * [How to Migrate Existing Apps to Atlas UI](/howto7/front-end/migrate-existing-projects-to-atlasui/)
 * [How to Share Company Atlas UI Resources](/howto7/front-end/share-company-atlas-ui-resources/)

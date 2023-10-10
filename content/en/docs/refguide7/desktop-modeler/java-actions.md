@@ -64,9 +64,7 @@ The Import mapping parameter type was introduced in Mendix 7.2.0.
 The **Export mapping** parameter type allows users of Java Actions to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
 
 {{% alert color="info" %}}
-
 The Export mapping parameter type was introduced in version 7.2.0.
-
 {{% /alert %}}
 
 #### 2.2.5 Return Type
@@ -83,7 +81,7 @@ A Java action has zero or more type parameters. Each type parameter should have 
 
 ## 4 Expose as Microflow Action
 
-By selecting the **Expose as microflow action** option, it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the the **Toolbox** window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
+By selecting the **Expose as microflow action** option, it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the **Toolbox** window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
 The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default Java action icon is used.
 

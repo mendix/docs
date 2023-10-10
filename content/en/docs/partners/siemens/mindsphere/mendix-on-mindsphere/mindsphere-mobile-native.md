@@ -187,7 +187,7 @@ As of now your application has the user roles **admin** and **user**, but none o
 
 ### 2.6 Deploying your app
 
-Just simply press the **Run** button within your Mendix Studio Pro to use the [Free App](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy) feature. Deployment of a Mendix Mobile native application to the MindSphere Cloud Foundry environment is currently not supported, so please use always one of the Mendix cloud environments.
+Just simply press the **Run** button within your Mendix Studio Pro to use the [Free App](/developerportal/deploy/mendix-cloud-deploy/) feature. Deployment of a Mendix Mobile native application to the MindSphere Cloud Foundry environment is currently not supported, so please use always one of the Mendix cloud environments.
 
 ## 3 Module Details{#moduledetails}
 
@@ -199,7 +199,7 @@ Authentication is based on the usage of **Anonymous** users and is enabled in th
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Security_Anonymous.png" alt="StudioPro" >}}
 
-When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name they want to authenticate against. To get this to work, the **Login** page is registered as the default homepage for the Anonymous role.
+When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name they want to authenticate against. To get this to work, the **Login** page is registered as the default home page for the Anonymous role.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png" alt="StudioPro" >}}
 
@@ -234,7 +234,7 @@ As tokens can expire, there are some events in the lifecycle of a mobile app whi
 
 As you need a valid MindSphere token to call MindSphere APIs, it is very important that these checks are done before you call a flow to access a MindSphere API. The **Siemens MindSphere Mobile Starter Application** helps you to ensure this by taking care of the following events:
 
-* Application startup: The standard mobile homepage of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mentioned above.
+* Application startup: The standard mobile home page of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mentioned above.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobile_OnSessionStartup.png" alt="StarterMobile" >}}
 

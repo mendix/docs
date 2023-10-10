@@ -1,6 +1,7 @@
 ---
 title: "XPath weekday-from-dateTime"
 url: /refguide/xpath-weekday-from-datetime/
+weight: 15
 tags: ["studio pro"]
 ---
 
@@ -32,12 +33,24 @@ weekday-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 in the local time zone (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java {linenos=false}
-//Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [weekday-from-dateTime(DateAttribute) = 6]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 in the New York time zone (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java {linenos=false}
-//Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
+    {{% /tab %}}
+{{< /tabpane >}}

@@ -14,13 +14,11 @@ This activity can only be used in **Microflows** that run in an offline-first ap
 
 The **Synchronize to device** activity can be used to selectively synchronize one or more objects or lists to a device and store them in the offline database. It is meant to be used in offline apps and does nothing when used in online ones.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/action.png" alt="Synchronize to device"   width="200"  >}}
-
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" width="650px" >}}
 
 The **Synchronize to device** activity properties consists of the following sections:
 

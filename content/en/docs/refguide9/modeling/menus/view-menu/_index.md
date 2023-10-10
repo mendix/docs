@@ -55,7 +55,7 @@ The [App Explorer](/refguide9/app-explorer/) pane displays the complete structur
 
 ### 3.2 Changes
 
-For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server/) or other SVN servers), the [Changes pane](/refguide9/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/general/team-server/) or other SVN servers), the [Changes pane](/refguide9/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
@@ -71,7 +71,7 @@ The **Console** pane displays the output of the [Mendix Runtime](/refguide9/runt
 
 ### 3.5 Data Hub {#data-hub}
 
-The [Data Hub pane](/refguide9/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide9/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
+The [Data Hub pane](/refguide9/data-hub-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide9/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 
@@ -105,7 +105,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide9/stories-pane/). 
+For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the Stories of the current [Sprint](/developerportal/project-management/epics/planning/).
 
 ### 3.14 Toolbox {#toolbox}
 
@@ -115,7 +115,7 @@ The **Toolbox** has a tile view showing larger icons and a list view showing a l
 
 ### 3.15 Widget Developer Console
 
-This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and Structure mode preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
+This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and **Structure mode** preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
 
 ### 3.16 Debug Windows
 

@@ -22,7 +22,7 @@ When service is initially created, service name is used in the creation of the d
 
 ### 2.2 Version
 
-Version is used to display version information in [OpenAPI (Swagger) documentation page](/refguide9/open-api/). You can set any string in the version field, but it is recomended to follow [semantic versioning](https://semver.org/) scheme.
+Version is used to display version information in [OpenAPI (Swagger) documentation page](/refguide9/open-api/). You can set any string in the version field, but it is recommended to follow [semantic versioning](https://semver.org/) scheme.
 
 By default, version is set to "1.0.0".
 
@@ -38,7 +38,7 @@ Example:
 http://localhost:8080/rest/my_service_name/v1
 ```
 
-You can change the the default location to almost any valid URL.
+You can change the default location to almost any valid URL.
 
 #### 2.3.1 Reserved Prefixes
 
@@ -62,7 +62,7 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 
 ### 2.5 Export swagger.json {#export-swagger-json}
 
-To save a service's [OpenAPI (Swagger) documentation](/refguide9/open-api/) somewhere on your machine, simply right-click the service in the **App Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
+To save a service's [OpenAPI (Swagger) documentation](/refguide9/open-api/) somewhere on your machine, simply right-click the service in the **App Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md). Most API tools support this format.
 
 When the app is running, this file is available under */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service, for instance *rest/myservice/v1*.
 

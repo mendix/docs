@@ -17,7 +17,7 @@ Mendix supports the following data types:
 | Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Thursday, 12 February 2015, 14:50:36 |
 | Decimal | A high-precision fractional number. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. | 3.14, 738000000000.00000001 |
 | Enumeration | One of the values of the given [enumeration](/refguide7/enumerations/). | Red, Green, Blue; Todo, Running, Done |
-| Integer/Long | A whole number between -(2^63) and 2^63 - 1. The attribute types AutoNumber, Integer and Long map to this data type. | -42, 0, 123 |
+| <a id="integer-long"></a>Integer/Long | A whole number between -(2^63) and 2^63 - 1. The attribute types AutoNumber, Integer and Long map to this data type. | -42, 0, 123 |
 | Float | ***The Float type is deprecated. Use the high-precision Decimal type instead.*** A fractional number. The attribute types Float and Currency both map to this data type. | -3.45, 0.0, 43.21 |
 | List | A list of objects of a specific [entity](/refguide7/entities/). |   |
 | Nothing | No value. Can only be used as the return type of a [microflow](/refguide7/microflows/). |   |

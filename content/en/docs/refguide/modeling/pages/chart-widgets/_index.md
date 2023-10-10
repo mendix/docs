@@ -2,6 +2,8 @@
 title: "Charts"
 url: /refguide/chart-widgets/
 weight: 70
+no_list: false
+description_list: true 
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
@@ -55,11 +57,3 @@ The [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/) lists the most co
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
 ## 5 Documents in This Section
-
-The following documents explain how to use charts in more detail:
-
-* [Chart Configuration](/refguide/charts-configuration/)
-* [Chart Advanced Cheat Sheet](/refguide/charts-advanced-cheat-sheet/)
-* [Any Chart Widgets](/refguide/charts-any-configuration/)
-* [Any Chart Building Blocks](/refguide/charts-any-building-blocks/)
-* [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/)

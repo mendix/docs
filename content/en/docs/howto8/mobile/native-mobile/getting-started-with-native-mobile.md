@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For information on device requirements, see [System Requirements](/refguide8/system-requirements/)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
+## 3 Creating a New App Based on the Quickstarter App {#quickstartapp}
 
 For details on making a Mendix app using the Blank Native Mobile App template, download the Make It Native 8 app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module containing widgets and nanoflow actions for native mobile apps. For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path). Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
@@ -52,7 +52,7 @@ To view your app on an Android device (or emulator), you must download and insta
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 8 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
+To view your app on an iOS device, you must download and install the Make It Native 8 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
 
 {{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
 

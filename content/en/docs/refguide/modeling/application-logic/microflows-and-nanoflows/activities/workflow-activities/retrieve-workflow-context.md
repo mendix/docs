@@ -13,24 +13,22 @@ This activity can only be used in **Microflows**.
 
 A **Retrieve workflow context** activity can be used to retrieve the selected Workflow Context entity.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/retrieve.png" alt="Retrieve Workflow Context Activity" >}}
-
-It needs the System.Workflow entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). It will break at Runtime if the passed workflow object is not of the right type.
+It needs the **System.Workflow** entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). It will break at Runtime if the passed workflow object is not of the right type.
 
 ## 2 Properties
 
+An example of retrieve workflow context properties is presented in the image below:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/properties.png" alt="retrieve Workflow Context Properties" width="650px" >}}
+
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The retrieve properties pane consists of the following sections:
+The **Retrieve workflow context** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
 
 ## 3 Action Section{#action}
-
-An example of retrieve workflow context properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/properties.png" alt="retrieve Workflow Context Properties" >}}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 

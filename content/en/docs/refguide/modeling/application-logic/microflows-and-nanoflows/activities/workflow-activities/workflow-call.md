@@ -1,8 +1,8 @@
 ---
-title: "Workflow Call"
+title: "Call Workflow"
 url: /refguide/workflow-call/
 weight: 10
-tags: ["studio pro", "call workflow", "workflow call"]
+tags: ["microflow", "microflows", "call workflow", "workflow call", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,21 +10,23 @@ tags: ["studio pro", "call workflow", "workflow call"]
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+This page describes the **Call workflow** activity you can use in your [microflow](/refguide/workflow-activities/). Looking for information on the **Call workflow** activity for [workflows](/refguide/workflow-elements/) instead? See [Call workflow](/refguide/call-workflow/).
+{{% /alert %}}
+
 ## 1 Introduction
 
-The **Workflow call** activity can be used to call and trigger a [workflow](/refguide/workflows/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call.jpg" >}}
+The **Call workflow** activity in microflows can be used to call and trigger a [workflow](/refguide/workflows/). 
 
 ## 2 Properties
 
-An example of Workflow call properties is represented in the image below:
+An example of Call workflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call-properties.jpg" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call-properties.jpg" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The **Workflow call** properties pane consists of the following sections:
+The **Call workflow** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -45,9 +47,13 @@ The workflow that is called by this activity.
 
 The object which you want to use as a context. It should be of the entity type set in the [Workflow](#workflow) property.
 
-### 3.3 Variable Name, Object Name, or List Name {#name}
+### 3.3 Use Return Value 
 
-The name of the variable, list, or object returned by the activity.
+This property determines if the returned value from the called workflow should be available in the rest of the current microflow. If **Use return value** is set to **Yes**, you will need to fill in the [variable name](/refguide/microflow-call/#name) of the workflow object returned by the activity.
+
+### 3.4 Variable Name {#name}
+
+The name of the variable returned by the activity.
 
 ## 4 Common Section {#common}
 

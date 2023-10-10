@@ -10,7 +10,7 @@ tags: ["CORS", "security", "origin", "domain", "access"]
 
 {{% alert color="info" %}}
 
-The CORS settings feature was introduced in Mendix version 7.18.0.
+The CORS settings feature was introduced in Mendix 7.18.0.
 
 {{% /alert %}}
 

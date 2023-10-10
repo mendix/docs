@@ -16,7 +16,7 @@ In the **App** menu, you can view and/or manipulate settings that are connected 
 
 Under **App** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.
 
-### 2.1 Batch Update Button Icons
+### 2.1 Batch Update Button Icons {#batch-update-button-icons}
 
 The **Batch Update Button Icons** option allows you to update many button icons in a single batch process.
 
@@ -58,7 +58,9 @@ The **Deploy for Eclipse** option deploys the app to the deployment directory. T
 
 Shortcut key: <kbd>F6</kbd>
 
-## 6 Create Deployment Package
+For more information on how write Java actions from Eclipse, see [Using Eclipse](/refguide/using-eclipse/).
+
+## 6 Create Deployment Package{#create-package}
 
 The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the app. This can be used if you want to deploy your app on a Windows server or on a custom Mendix Cloud.
 

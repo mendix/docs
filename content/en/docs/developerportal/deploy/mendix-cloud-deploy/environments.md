@@ -84,11 +84,11 @@ You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
 * **Transport to** – stage an environment to acceptance or production
-* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
+* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
-#### 2.2.2 Flexible Environments
+#### 2.2.2 Flexible Environments {#flexible-environments}
 
-If your node supports flexible environments, you can define the number and type of environments that you have. For example, you can have multiple staging environments if your deployment process requires it.
+If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment or environments may be designated according to your requirements; for example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
 
@@ -112,10 +112,10 @@ For flexible environments, the **Environments** section shows the following deta
 You can perform the following actions in this section:
 
 * **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
-* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
+* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
 * **Search** – you can use the **Search** box to find a specific environment
-* Reordering environments - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:
+* Reordering environments - the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif" alt="Reordering environments in a list" >}}
 
@@ -125,7 +125,7 @@ In the **Activity** section, you can view a log of deployment activities perform
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" >}}
 
-If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact), you can download a copy of the activity log by performing the following steps:
+If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download a copy of the activity log by performing the following steps:
 
 1. Click **Download to CSV**.
 2. Select the period for which you want to download log entries. For **Custom Period**, you must enter a valid period using **Start Date** and **End Date**.
@@ -152,13 +152,13 @@ For more information on setting up access restriction profiles, see [Restrict Ac
 
 ## 5 Permissions {#permissions}
 
-In the **Permissions** tab, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) and other team members who have the Manage Permissions permission can manage various permissions to the environments for each team member. Team members who have the Deploy, Publish, and Monitor permission can view the permissions.
+In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have the Manage Permissions permission can manage various permissions to the environments for each team member. Team members who have the Deploy, Publish, and Monitor permission can view the permissions.
 
 For more information on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## 6 Services {#services}
 
-In the **Services** tab, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
+In the **Services** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
 
 ### 6.1 Available Services
 

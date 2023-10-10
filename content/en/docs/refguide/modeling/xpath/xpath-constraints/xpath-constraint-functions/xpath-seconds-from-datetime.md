@@ -1,6 +1,7 @@
 ---
 title: "XPath seconds-from-dateTime"
 url: /refguide/xpath-seconds-from-datetime/
+weight: 11
 tags: ["studio pro"]
 ---
 
@@ -28,12 +29,24 @@ seconds-from-dateTime ( attribute [, timezone ] )
 
 This query returns all the logs where the seconds part of `DateAttribute` is 30 in the local time zone (for example, "2011-12-30 08:08:30"):
 
-```java {linenos=false}
-//Logging.Log[seconds-from-dateTime(DateAttribute) = 30]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [seconds-from-dateTime(DateAttribute) = 30]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[seconds-from-dateTime(DateAttribute) = 30]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the seconds part of `DateAttribute` is 30 in the New York time zone (for example, "2011-12-30 08:08:30"):
 
-```java {linenos=false}
-//Logging.Log[seconds-from-dateTime(DateAttribute, 'America/New_York') = 30]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [seconds-from-dateTime(DateAttribute, 'America/New_York') = 30]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[seconds-from-dateTime(DateAttribute, 'America/New_York') = 30]
+    {{% /tab %}}
+{{< /tabpane >}}

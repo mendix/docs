@@ -33,7 +33,7 @@ The **Close page** activity properties consists of the following sections:
 
 * [Common](#common)  
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/close-page/close-page-properties.png" alt="Close Page Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/close-page/close-page-properties.png" alt="Close Page Properties" width="650px" >}}
 
 ## 3 Action Section {#action}
 

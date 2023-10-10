@@ -3,7 +3,7 @@ title: "Customize Styling"
 url: /howto9/front-end/customize-styling-new/
 weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
-tags: ["build", "app", "studio", "studio pro", "style", "styling"]
+tags: ["build", "app", "studio pro", "style", "styling"]
 ---
 
 ## 1 Introduction
@@ -12,15 +12,13 @@ This page describes how developers can change the styling of apps and create re-
 
 ## 2 Changing the App Look and Feel
 
-Developers have several options to change an app's look and feel. Depending on whether you are a Studio or Studio Pro user, there are different options.
+Developers have several options to change an app's look and feel.
 
 ### 2.1 Changing the Default Theme Settings
 
 When tailoring your app's look, a simple first step is to change the theme settings. This quickly adjusts the theme to a company's brand by changing the colors.
 
-For Studio users, use the [Theme Customizer](/studio/theme-customizer/) to change the basic look and feel of your app. The differences will become visible immediately.
-
-For Studio Pro users there are more options to change the default theme settings. To customize the default theme settings, you can open and edit the *custom-variables* file from the App Explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
+To customize the default theme settings, you can open and edit the *custom-variables* file from the App Explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
@@ -162,7 +160,7 @@ To create a re-usable theme module, do the following:
     {{% alert color="info" %}}To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.{{% /alert %}}
 
 3. Copy the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*. Remove all the variables from the *theme/web/custom-variables.scss*. The *theme/web/custom-variables.scss* file should now be empty.
-4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name. The *theme/web/custom-variables.scss* file should only contain an import statement to your "mytheme" custom variables.
+4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss"` to the top of the file, replacing “mytheme” with your module name. The *theme/web/custom-variables.scss* file should only contain an import statement to your "mytheme" custom variables.
 
 The two files should end up looking like this:
 
@@ -189,10 +187,6 @@ $brand-danger: #e33f4e;
 You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/).
-
-{{% alert color="info" %}}
-Note: if this is done, the Theme customizer in Studio will not work any more as it depends on the custom variables in the **theme** folder.
-{{% /alert %}}
 
 #### 4.3.2 Native Mobile
 
@@ -307,14 +301,14 @@ The bullets below describe the file structure for the theme folder and for modul
 
 ## 7 Styling output {#styling-output}
 
-With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio (Pro) automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
+With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio Pro automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
 
 ### 7.1 Web Apps
 
-Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
+Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
 {{% alert color="info" %}}
-The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
+The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. 
 {{% /alert %}}
 
 If a module contains styling, such as a design system module, it is generally best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings. For more information, see the [Create a Theme Module](#create-theme-mod) section above.
@@ -567,6 +561,22 @@ excludeHelpers
 ## 9 Customizing index.html (Web) {#custom-web}
 
 By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
+
+### 9.1 Cache Busting in Mendix
+
+Cache busting is where a browser is told by the web server to re-download page resources (such as images, stylesheets, or JavaScript) because of changes in those resources. Mendix automatically takes care of this by adding dynamic query parameters on top of the resources in *login.html* and *index.html*. Here is an example of the auto-generated cachebust query parameters in a line from */deployment/web/index.html*:
+
+```html {lineos=false}
+<script src="mxclientsystem/mxui/mxui.js?638184496048312490"></script>
+```
+
+Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
+
+```html {lineos=false}
+<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
+```
+
+To ensure cache busting keeps working, whenever you need to customize *index.html* or *login.html*, make sure these files are copied according to the recommendations in [Customizing index.html](#custom-web). Whenever cache busting breaks, it is likely that the query parameters have become hard coded (for example `?638184496048312490`) instead of dynamic (for example `?{{cachebust}}`) due to copying */deployment/web/index.html* instead of the correct filename  */deployment/web/index-example.html*.
 
 ## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 

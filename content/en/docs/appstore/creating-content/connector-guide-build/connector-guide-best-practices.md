@@ -2,7 +2,7 @@
 title: "Best Practices for Building Connectors"
 url: /appstore/creating-content/connector-guide-best-practices/
 weight: 7
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best practices"]
+tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "best practices"]
 ---
 
 ## 1 Introduction
@@ -65,7 +65,7 @@ Use as few dependency modules as possible. When you must use one, make sure they
 
 Add the app to [Team Server](/refguide/version-control/#team-server) (or GitHub) version control, if you have not already done so when creating the app. 
 
-We recommend that you have a separate public Git repository next to your private Team Server SVN/Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
+We recommend that you have a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
 ### 2.4 Working with Java-Intensive Apps
 
@@ -174,7 +174,7 @@ If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you
 
 Use a **ConnectionDetails** entity for all general connection and security settings for the call. Use a **ConnectionDetails_Get** microflow in all your Operations. This way it is easy to change all the settings in one location. The individual settings can be stored in a constant or in the database and set in the create. Using constants are recommended because this avoids a dependency on the Encryption module.  
 
-{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
+{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
 
 If you do need to store sensitive information in the database, then always use the [Encryption](/appstore/modules/encryption/) module to encrypt and store and to retrieve and decrypt the information.
 
@@ -405,7 +405,7 @@ Gradle can handle managing Java dependencies and running [JUnit](http://junit.or
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
+Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
 Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 
@@ -432,7 +432,6 @@ When calling a REST service, you can run into an error. This can be one of two t
 1. Error with a response
 2. Error without a response
    
-
 If there is no response, the default error handling is enough. This will typically occur when the endpoint is down or when you get a timeout.
 
 If there is a response the error message will contain the error code and the reason, but not the message. For that reason, add an additional log message with the response and then rethrow the error. Add details about the request that will help the developer.

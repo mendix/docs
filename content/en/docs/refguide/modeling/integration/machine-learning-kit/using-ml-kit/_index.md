@@ -6,7 +6,6 @@ weight: 15
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
@@ -82,7 +81,7 @@ When importing your model, you might encounter error CE1790 like in this [BERT](
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
 
-In this case, the -1 dimensions should be configured before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
+In this case, configure the **?** dimensions before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled in, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in the [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
 The editor for the BERT model is below:
 
@@ -102,7 +101,7 @@ After importing a model, two [non-persistable](/refguide/persistability/) entiti
 
 In the image above, the attributes are mapped as closely as possible to data types in Studio Pro. 
 
-For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
+For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to encode the tensors to and from *ML Kit*.
 
 In the image below from the [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50), the inputs and outputs are multidimensional and need to be encoded:
 
@@ -112,7 +111,7 @@ See [Integrating Models with Pre-processors and Post-processors](#pre-post-proce
 
 ##### 2.2.3.1 Converting to Persistable Entities
 
-You can convert non-persistable entities into [peristable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
+You can convert non-persistable entities into [persistable](/refguide/persistability/) ones and use other types, such as **Binary**. This can be done to decrease inference latency of ML mappings document used in the [Call ML model](/refguide/call-ml-model/) activity. 
 
 To convert an entity, do the following:
 
@@ -160,7 +159,6 @@ This [Random Forest example](https://www.kaggle.com/code/prashant111/random-fore
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
 
 See the following pre-processor example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
-
 
 ```
     @java.lang.Override
@@ -217,7 +215,7 @@ Once you import your model, the **Call ML Model** activity allows you to add you
 
 For information on design patterns that include pre-processors and post-processors, see [Pre/Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/).
 
-{{% alert color="info" %}}Check out pre- and post-processor sample files in our [Mendix ML Kit Demo Respository](https://github.com/mendix/mlkit-example-app/tree/main/javasource). In **Actions** folders, look for Java files named `PreProcessor.java` and `PostProcessor.java`.{{% /alert %}}
+{{% alert color="info" %}}Check out pre- and post-processor sample files in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/javasource). In **Actions** folders, look for Java files named `PreProcessor.java` and `PostProcessor.java`.{{% /alert %}}
 
 ## 4 Supported Frameworks and Libraries {#supported-frameworks}
 
@@ -235,7 +233,7 @@ The ONNX community develops and maintains the converters for many ML frameworks.
 
 {{% alert color="info" %}}Once you build a model, see examples of notebooks that show you how to export them to ONNX in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/notebooks).{{% /alert %}}
 
-### 4.3 Versioning {#versioning}
+### 4.2 Versioning {#versioning}
 
 Use [ONNX versioning schemes](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) while creating and integrating ONNX computation graphs with Mendix apps. Mendix Studio Pro guides developers to comply with the suggested internal representation, and package OpSets.
 
@@ -304,7 +302,7 @@ For more information, see [Debug Java Actions](/howto/monitoring-troubleshooting
 
 ### 6.1 I/O Data Types
 
-ONNX values could be in multiple I/O types. The most common type is a Tensor. As mentioned in the examples, a Tensor could represent a primitive value, string, a boolean, or multi-dimensional form of those data types. Additionally, ONNX allows the creation of a value that actually a sequence or a map of tensors for inputs and outputs. However, these types are currently not supported. 
+ONNX values could be in multiple I/O types. The most common type is a Tensor. As mentioned in the examples, a Tensor could represent a primitive value, string, a Boolean, or multi-dimensional form of those data types. Additionally, ONNX allows the creation of a value that actually a sequence or a map of tensors for inputs and outputs. However, these types are currently not supported. 
 
 Below are the common types and their support status in *ML Kit*:
 
@@ -333,6 +331,10 @@ To integrate a pre-trained model with an unsupported type from model repositorie
 ### 6.3 GPU Inference
 
 This is currently not supported.
+
+### 6.4 ML Kit in Mendix Apps
+
+You can only call the ML model via the MLKit from Microflows.
 
 ## 7 FAQs
 

@@ -23,7 +23,7 @@ Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/refguide9/mobile/distributing-mobile-apps/overtheair-updates/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
+Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/howto8/mobile/how-to-ota/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
 {{% /alert %}}
 
 This guide will teach you how to do the following:
@@ -75,7 +75,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The initial release of your app
 * A Studio Pro version upgrade that requires a new [Native Template](/refguide9/native-template/) version
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
-* A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide9/modules/)
+* A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide9/modules/))
 * The app has been renamed
 * The app's launcher icons have been changed
 * The splash screen has been changed

@@ -4,11 +4,11 @@ url: /refguide7/parse-integer/
 ---
 
 
-Try to convert a string to a long integer.
+Try to convert a string to a value that is of data type [Integer/Long](/refguide7/data-types/#integer-long).
 
 ## parseInteger
 
-Take a string and try to parse it to a long integer.
+Take a string and try to parse it to an Integer/Long.
 
 ### Input parameters
 
@@ -19,7 +19,10 @@ Take a string and try to parse it to a long integer.
 
 ### Output
 
-The long integer, if it is possible to parse it from the string. If it is not a valid parsable string, for example the string is not a number or the parsed value is too great to be assigned to a long integer, the default value will be returned. If no default value is provided, an error will occur.
+ An Integer/Long if it is possible to parse it from the string. 
+ 
+ If the string cannot be parsed to an Integer/Long, for example, if the string is not a number or if the parsed value is not within [the range of the valid values for an Integer/Long](/refguide7/data-types/#integer-long), the default value will be returned. If no default value is provided, an error will occur.
+
 Type: Integer/Long
 
 ```java

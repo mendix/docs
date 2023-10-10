@@ -17,13 +17,14 @@ Add-on and solution modules are special types of modules that are developed to a
 The main *difference* between an add-on and a solution module is their purpose. An add-on module is developed to be a *stand-alone functionality* that other users can consume in the their apps, for example, an add-on can be a connector. 
 
 Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
+
 ## 2 Configuring Add-on and Solution Modules
 
 You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
 
 All content of add-on and solution modules is set to be hidden from consumers by default (modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
-### 2.1 Changing Export Level of a Document/Element
+### 2.1 Changing Export Level of a Document/Element{#export-level}
 
 Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers will be able to use a certain document/element in their app. For more information on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
 

@@ -24,21 +24,31 @@ For example, the image below shows an edit page derived from a layout with a hea
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-page.png"   width="350"  >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of header properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Header properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-properties.png"   width="250"  >}}
-
-Header properties consist of the following sections:
+Properties:
 
 * [Common](#common)
-* [Design Properties](#design-properties)
 
-### 2.1 Common Section{#common}
+Styling:
+
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
+
+## 3 Properties
+
+### 3.1 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 2.2 Design Properties Section{#design-properties}
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

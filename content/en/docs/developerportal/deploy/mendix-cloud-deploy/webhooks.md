@@ -7,10 +7,6 @@ description: "Creating a Webhook to trigger actions from the Mendix cloud"
 tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
-{{% alert color="warning" %}}
-This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Webhooks allow you to send information about your licensed Mendix app deployed to the Mendix Cloud or Mendix for Private Cloud to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
@@ -19,6 +15,7 @@ Mendix provides webhooks to send project information when the following events h
 
 * On package upload – when a deployment package is available in the Developer Portal — this includes creating a package from the Team Server
 * Team Server push – when a new commit is pushed to the Team Server — this will only be triggered if your app is stored in a Git repository
+* Alerts - when an alert is triggered for your Mendix app
 
 The webhooks contain a retry mechanism if an error response is received from the endpoint to ensure that the trigger reaches the endpoint.
 
@@ -88,7 +85,7 @@ You will want to verify that your endpoint has received a payload from Mendix an
 
 This verification is enabled through the `webhook-signature` which is sent in the webhook header. It is generated using the **Validation Secret** you provided when you set up the webhook in combination with the payload of the trigger using [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) authentication.
 
-To verify the the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. This is done as follows:
+To verify the signature, you need to reconstruct it and then compare it with the **webhook-signature** in the webhook header. In general, this is done as follows:
 
 1. Construct a string containing the signed content which is the `{webhook-id}.{webhook-timestamp}.{webhook payload}`. Note the full-stop (`.`) between the three elements.
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
@@ -114,6 +111,22 @@ When verifying your webhook signature, bear the following in mind:
 * You should use a constant-time string comparison method in order to prevent timing attacks.
 * You should also verify that **webhook-timestamp** is within your tolerance for the current system time, to ensure you are not receiving timestamp attacks where old webhook payloads are being sent to your endpoint.
 
+### 3.1.1 Verifying Your Webhook Using Mendix
+
+You can use Mendix to verify your webhook, using functions available in the [Community Commons](/appstore/modules/community-commons-function-library/) module. To do this, follow the steps below:
+
+1. Ensure that your app contains the Community Commons module.
+1. Retrieve a list of `System.HttpHeader` objects over the association `$HttpRequest/HttpHeaders` using the HttpRequest from the webhook.
+1. Obtain the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers by using a *Find by expression* **List operation** on the list of `System.HttpHeader` objects. You can use an expression like `toLowerCase($currentObject/Key) = 'webhook-id'` and extract the `/Value` attribute.
+1. Create a string variable consisting of the `webhook-id`, `webhook-timestamp`, and the `Content` attribute of the `$HttpRequest` separated by points (`.`). For example `$WebhookId + '.'+ $WebhookTimestamp + '.' + $HttpRequest/Content`.
+1. Hash the string variable you just created using the Community Commons action **Generate HMAC SHA256 hash** and the validation secret you set when creating the webhook.
+1. Prefix this hashed string with the prefix from the webhook signature, for example `v1,`.
+1. Compare the string you have created (the hash plus the prefix) with the `webhook-signature` you retrieved from the list of `System.HttpHeader` objects earlier.
+
+    If the two strings match, then the webhook call is valid.
+
+{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" >}}
+
 ## 4 Package Upload to Developer Portal
 
 When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Teamserver), and the webhook responds to the event **On package upload**, request content containing a payload with the following format will be sent to the configured endpoint:
@@ -138,7 +151,7 @@ Ensure you use the correct key names if using this payload information to call o
 
 ## 5 Teamserver Push (Git)
 
-When you push a model change to the [Git Team Server](/developerportal/collaborate/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
+When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content containing a payload with the following format will be sent to the configured endpoint:
 
 ```json {linenos=false}
 {
@@ -172,7 +185,27 @@ The **after**, **before**, and **id** values are git commit hashes. In most case
 Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labelled differently in the API.
 {{% /alert %}}
 
-## 6 Logging
+## 6 Alerts Webhooks
+
+When an alert is triggered for your Mendix app, a payload with the following format will be sent to the configured endpoint:
+
+```json {linenos=false}
+{ 
+  "app_name": "your-app-name",
+  "environment": "your-environment-name",
+  "environment_id": "n90c72er-344e-4a26-8efd-e0695234b465",
+  "id": "73eb456a-10d4-4821-ae58-31e4a49753ca",
+  "message": "INFORMATIONAL: Runtime heartbeat is okay.",
+  "service": "Application Status",
+  "severity": "Recovery",
+  "timestamp": "2023-08-18T08:11:22.586000+00:00",
+  "url": "https://your-mendix-app.mendixcloud.com"
+}
+```
+
+See [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/) for detailed information on receiving alerts.
+
+## 7 Logging
 
 You will see [log messages](/developerportal/operate/logs/) in the Developer Portal from the creation or update of your webhooks.
 

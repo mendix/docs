@@ -51,7 +51,7 @@ The examples below illustrate which value the expression returns:
     the output is:
 
     ```java
-    The date May 21st, 2015\. The time will be 12 o'clock at night  because it is not specified.
+    The date May 21, 2015\. The time will be 12 o'clock at night  because it is not specified.
     ```
     
 * If you use the following input:
@@ -177,7 +177,7 @@ the output is:
 
 ## 6 dateTimeToEpoch
 
-{{% alert color="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+{{% alert color="warning" %}}This expression is only available in Mendix 8.15 and above.{{% /alert %}}
 
 Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT to the date.
 
@@ -213,7 +213,7 @@ The output is:
 
 ## 7 epochToDateTime
 
-{{% alert color="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+{{% alert color="warning" %}}This expression is only available in Mendix 8.15 and above.{{% /alert %}}
 
 Creates a Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
 

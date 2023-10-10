@@ -19,13 +19,19 @@ Either of these keywords can be used to check whether an attribute has a value (
 
 This query returns all the customers whose name is not known to the system:
 
-```java {linenos=false}
-//Sales.Customer[Name = NULL]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [Name = NULL]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[Name = NULL]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
 
-## 3 System Variables
+## 3 System Variables {#system-variables}
 
 System variables can be used to obtain system or date related values. The available tokens are described below.
 
@@ -46,7 +52,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" width="500px" >}}
 
 ### 3.3 Time-Related
 
@@ -88,6 +94,10 @@ The following tokens can be used to obtain a date and time value:
 | `[%EndOfCurrentYear%]` | The date and time at the end of the current year. |
 | `[%EndOfCurrentYearUTC%]` | The date and time at the end of the current year in UTC. |
 
+{{% alert color="info" %}}
+Do not use the UTC variants of these tokens (for example, `[%BeginOfCurrentDayUTC%]`) in client-side expressions if you want to assign the output to (or compare the output with) an attribute of type **Date and time** where **Localize** is disabled. In the client, the localization functionality is built into the attribute type itself, and using UTC functions causes the time zone conversion to be handled twice.
+{{% /alert %}}
+
 The following tokens can be used to add or subtract a period of time from a date and time token value:
 
 | Token | Description |
@@ -108,27 +118,51 @@ These variables must be used as string values and placed between two quotes. Tim
 
 This query returns only customers who have registered since the beginning of this week:
 
-```java {linenos=false}
-//Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [DateRegistered >= '[%BeginOfCurrentWeek%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns only customers who have registered this week:
 
-```java {linenos=false}
-//Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns only customers who have registered in the past three years:
 
-```java {linenos=false}
-//Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [DateRegistered > '[%BeginOfCurrentDay%] - 3 *[%YearLength%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3* [%YearLength%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns users with the role "Administrator":
 
-```java {linenos=false}
-//System.User[System.UserRoles = '[%UserRole_Administrator%]']
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [System.UserRoles = '[%UserRole_Administrator%]']
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+    //System.User[System.UserRoles = '[%UserRole_Administrator%]']
+    {{% /tab %}}
+{{< /tabpane >}}
 
 {{% alert color="info" %}}
 Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.

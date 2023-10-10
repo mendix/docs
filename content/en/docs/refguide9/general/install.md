@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide9/system-requirements/). 
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing **Studio Pro 9.24 LTS**. For the full list of supported systems and required frameworks, see [System Requirements](/refguide9/system-requirements/). 
 
 If you use a Mac device, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
@@ -27,7 +27,8 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
+2. Go to the **LTS/MTS Releases** tab and find the latest **9.24** patch.
+3. Click **Download** for the latest 9.24 LTS patch version of Mendix Studio Pro.
 
 ## 3 Installing Mendix Studio Pro {#install}
 
@@ -65,14 +66,19 @@ The prerequisites are the following:
 * [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
 * Java JDK
 
-    * For Mendix Studio Pro version 9.18.0 and above – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
-    * For Mendix Studio Pro versions above 9.14.0 but below 9.18.0 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
-    * For Mendix Studio Pro versions below 9.14.0 – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
+    * For Mendix Studio Pro 9.18.0 and above – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
+    * For Mendix Studio Pro 9.14 to 9.17 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
+    * For Mendix Studio Pro 9.13 and below – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
-* [Git for Windows (x64)](https://git-scm.com/download/win)
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
+
+    | 9.18.0 - 9.24.5 | 9.24.6 - onwards | 
+    | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
+
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
-* For Mendix Studio Pro version 9.24.0 and above – [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
+* For Mendix Studio Pro 9.24.0 and above – [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
@@ -107,7 +113,23 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-## 6 Read More
+## 6 Signing In
+
+When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
+
+You can sign in with your Mendix account, or with your own company account if this has been set up as an Identify Provider in the Mendix platform.
+
+In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
+
+{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" >}}
+
+To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
+
+{{% alert color="warning" %}}
+Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
+{{% /alert %}}
+
+## 7 Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)
 * [App Modeling](/refguide9/modeling/)

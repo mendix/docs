@@ -16,7 +16,7 @@ For support on other cloud deployment options, such as Private Cloud, refer to t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-AppDynamics is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
+AppDynamics is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 {{% /alert %}}
 
 For more information on the data you can send to AppDynamics, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
@@ -29,7 +29,7 @@ To use AppDynamics, and to send data to AppDynamics from your Mendix app, you wi
 * The following information about AppDynamics
     * The account name and access key for your AppDynamics account
     * The hostname or IP address of your AppDynamics controller
-* A licensed Mendix app of which you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)
+* A licensed Mendix app of which you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact)
 
 ## 3 Connect Node to AppDynamics{#connect-node}
 

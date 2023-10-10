@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
+When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
 
 The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company).
 
@@ -47,7 +47,7 @@ These are some examples of what you can find on the dashboard:
 
 On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an overview of the active and deactivated apps that belong to your company.
 
-When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
+When you select one or more apps via the checkboxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on the Mendix Cloud.
@@ -82,13 +82,13 @@ The app details page has the following tabs:
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
 * **Members** – This tab presents the internal members and external members of the app.
     * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
-    * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
+    * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all the Mendix Cloud environments. You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed. However, the app members can still access the associated app repository in the Developer Portal.
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 ### 3.2 Default App Roles
 
-The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** and **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
+The **Default App Roles** tab shows the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** and **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/general/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 
 {{< figure src="/attachments/developerportal/control-center/roles.jpg" >}}
 
@@ -138,13 +138,15 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 Company Details {#company-details}
+### 6.1 General Settings {#company-general-settings}
 
-On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
+On the **General Settings** tab of this page, you can edit your **Company Name** and **Description**.
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
+
+To export all the email domains, use the **Export to Excel** button.
 
 {{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
 
@@ -176,31 +178,13 @@ It is not possible to remove yourself as a Mendix Admin.
 
 ## 7 Company Brand {#company-brand}
 
-On this page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content and available for usage in your [company onboarding](#onboarding).
+On this page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
 {{< figure src="/attachments/developerportal/control-center/company-brand.png" >}}
 
-## 8 Onboarding {#onboarding}
-
-On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
-
-You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
-
-{{< figure src="/attachments/developerportal/control-center/onboarding-landing.png" >}}
-
-When you configure the landing page, if you turn on the **Include company logo** toggle and the **Include company header image** toggle on the left side, and then click the **Update Company Branding** button on the top, then the **Company Logo** and **Cover Image** currently set in the [Company Brand](#company-brand) page will be used on your landing page.
-
-{{< figure src="/attachments/developerportal/control-center/update-company-branding.png" >}}
-
-Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the upper-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
-
-On the **Onboarding Email** tab, you can customize the onboarding email that users of your domains receive when they join the Mendix Platform. You can provide a link to your company's onboarding page, share a welcome message, or present company guidelines for using Mendix. You can create a draft email before sending it.
-
-{{< figure src="/attachments/developerportal/control-center/onboarding-email.png" >}}
-
-## 9 Security {#security}
+## 8 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -210,17 +194,17 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 {{< figure src="/attachments/developerportal/control-center/security.jpg" >}}
 
-## 10 Cloud {#cloud}
+## 9 Cloud {#cloud}
 
 {{% alert color="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
 {{% /alert %}}
 
-The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option has been purchased as part of a Premium plan.   
+The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 
 {{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
 
-When you select one or more environments via the check boxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
+When you select one or more environments via the checkboxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 
 There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting) to do the following:
 
@@ -234,7 +218,7 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Entitlements {#entitlements}
+## 10 Entitlements {#entitlements}
 
 {{% alert color="info" %}}
 This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
@@ -244,7 +228,7 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 {{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
 
-## 12 Deployed Apps {#deployed-apps}
+## 11 Deployed Apps {#deployed-apps}
 
 {{% alert color="info" %}}
 This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
@@ -252,7 +236,7 @@ This feature is currently in Beta. For more information about Beta features, see
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, technical contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
 {{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
@@ -265,7 +249,7 @@ Click the icon in the top right corner to access the following pages that allow 
 * [Resize Environment](/developerportal/support/new-app-node-request-template/#resize) – requests a container size change
 * [Offboard Environment](/developerportal/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
 
-### 12.1 Adding a New Environment
+### 11.1 Adding a New Environment
 
 To add a new environment for your app, click the name of an app, and then click the **Add Environment** button. You must specify the following information:
 
@@ -275,7 +259,7 @@ To add a new environment for your app, click the name of an app, and then click 
 
 {{< figure src="/attachments/developerportal/control-center/new-environment.png" alt="adding a new environment" >}}
 
-### 12.2 Offboarding an Environment
+### 11.2 Offboarding an Environment
 
 To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
 
@@ -285,9 +269,9 @@ To offboard an environment, click **Offboard**, which is available for stopped e
 Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
 {{% /alert %}}
 
-### 12.3 Changing the Technical Contact of an App
+### 11.3 Changing the Technical Contact of an App
 
-To quickly change the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
+To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
 
 {{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
 
@@ -295,33 +279,187 @@ To quickly change the [Technical Contact](/developerportal/collaborate/app-roles
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 {{% /alert %}}
 
+## 12 Catalog {#catalog}
 
-## 13 Data Hub {#data-hub}
+An organization's Catalog requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
-An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
+For details on these tasks, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
-For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
+## 13 Portfolios {#portfolios}
 
-## 14 Marketplace Content {#marketplace-content}
+The **Portfolios** page offers governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for changes of portfolio privacy settings. 
+
+The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
 
 {{% alert color="info" %}}
-This page will be removed in June 2023.
+
+As a Mendix Admin, you cannot directly see the content of a portfolio. You need to have [portfolio access](#access-management) for this. You can give yourself portfolio access if needed.
+
 {{% /alert %}}
 
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
+### 13.1 All Portfolios {#all-portfolios}
 
-The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
+The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio). In the search box, you can search for a portfolio by its name.
 
-The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
+In the list, you can see the following items:
 
-The list has the following columns:
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Managers** – This shows the number of Portfolio Managers in this portfolio.
+* **Members** – This shows the number of users who have access to this portfolio.
+* **Privacy** – This shows the current privacy settings of the portfolio.
+  
+    * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+  
+* **Created** – This shows the date on which the portfolio was created.
 
-* **Product Name** – This shows the component name. Clicking the name opens the Marketplace page of this component.
-* **Content Type** – This shows the type of the component.
+* **Last Modified** – This shows the date on which the portfolio was last modified.
 
-    {{% alert color="info" %}}Currently, you can only configure the visibility of widgets. Therefore, you can only find widgets in this list.{{% /alert %}}
+* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
 
-* **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
-* **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
+    * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
+
+    * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
+
+{{% alert color="info" %}}
+
+If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign new Portfolio Managers to the portfolio or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
+
+{{% /alert %}}
+
+#### 13.1.1 Access Management {#access-management}
+
+After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
+
+In the search box, you can search for a user by the user name, email, company, status, or role.
+
+The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
+
+The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
+
+* **User Name** – This shows the user name.
+* **Email** – This shows the email of the user.
+* **Company** – This shows the company where the user works.
+* **Status** – This shows the status of the portfolio access of the user.
+    * **Active** – The user has access to the portfolio.
+    * **Pending** – The user still needs to accept the invitation to the portfolio.
+* **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
+* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
+    * **Edit** – Selecting this allows you to change the role of the user.
+    * **Remove** – Selecting this allows you to remove the user from the portfolio.
+
+#### 13.1.2 Deleting a Portfolio {#delete-portfolio}
+
+After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
+
+{{% alert color="warning" %}}
+
+Deleting a portfolio means that you permanently delete the portfolio, including all the data in the portfolio. This change cannot be reverted. 
+
+{{% /alert %}}
+
+The **Delete Portfolio** dialog box opens. If you decide to continue, type *DELETE* in the text box, and click **Delete**.
+
+### 13.2 Alerts {#alerts}
+
+The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the ellipsis button (**...**) on the list and selecting the corresponding item.
+
+In the list, you can see the following items:
+
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+
+* **Managers** – This shows the number of Portfolio Managers in this portfolio.
+
+* **Members** – This shows the number of users who have access to the portfolio.
+
+* **Privacy** – This shows the current privacy settings of the portfolio.
+    * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+
+* **Created** – This shows the date on which the portfolio was created.
+* **Last Modified** – This shows the date on which the portfolio was last modified.
+
+* Ellipsis (**...**) – Clicking the icon opens a menu with the following items:
+
+    * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
+
+    * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
+
+### 13.3 Privacy Requests {#privacy-requests}
+
+On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. You can use the toggle on the tab to turn it on or off. 
+
+{{< figure src="/attachments/developerportal/control-center/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" >}}
+
+The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/#notifications) whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. 
+
+On the **Privacy Requests** tab, you can view all the pending requests. You can approve or reject a request here. Every request contains the following items:
+
+* **Portfolio Name** – This shows the name of the portfolio.
+* **Requested By** – This shows the name of the user who made the request.
+* **From** – This shows the current privacy settings.
+* **To** – This shows the new privacy settings that are being requested.
+* **Date** – This shows the date on which the request was made.
+* **Reject** – Clicking this rejects the request. When you reject a request, optionally you can fill in a reason to inform the requester.
+* **Approve** – Clicking this approves the request.
+
+{{% alert color="info" %}}
+After a request is either rejected or approved, a notification is sent to the requester. If the Mendix Admin fills in the reason for the rejection, the reason is also shown to the requester.
+{{% /alert %}}
+
+## 14 Application Health Dashboard {#application-health-dashboard}
+
+{{% alert color="info" %}}
+The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
+{{% /alert %}}
+
+The **Application Health Dashboard** gives an overview of the alert status of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps.
+
+On the top of the page, you can see the following numbers:
+
+* **Environment down** – This is the number of the environments for which a runtime heartbeat has not been received for over five minutes. 
+* **Environments with critical alerts** – This is the number of the environment with critical alerts.
+* **Environments with warning alerts** – This is the number of the environments with warning alerts. 
+
+On the list below, apps are ordered in the following order: environments with the most critical alerts are placed at the top, followed by environments with the most warning alerts, and then environments with no alerts. 
+
+You can use the search box to search for an app in the list using the app name or app ID. The list can also be filtered on **Alert Type** and **Alert Level**.
+
+The list shows the following information:
+
+* **App Name** – This is the name of the app. 
+
+* **Environment** – This shows the name of the app's production environment.
+
+* **Latest Alert Date** – This is the date and time the latest alert occurred.
+
+* **Critical** – This shows the number of critical alerts of this production environment.
+
+* **Warnings** – This shows the number of warning alerts of this production environment.
+
+* **Alerts** – This shows the types of the alerts of this production environment.
+
+### 14.1 Refreshing the Dashboard
+
+The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every ten minutes, and newly-deployed production environments will be automatically added to the dashboard every six hours.
+
+You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. After the refreshing is completed, you need to wait one minute before you can refresh it again.
+
+You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
+
+### 14.2 Environment Details
+
+If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time the alerts have occurred. The **Environment details** and the Technical Contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
+
+If you click **Go to Cloud Portal** on the upper-right corner of the page, you are taken to the [Environments](/developerportal/deploy/environments/) page of the application in the Developer Portal. If you have access, you can take action on the alerts here; otherwise you can look up the team members who manage this app and contact them.
+
+The **Environment Details** page also lists the alert information of this specific production environment. In the list, you can see the following details:
+
+* **Alert Type** – This shows the name of the alert type.
+* **Status** – This shows the status of the specific alert, indicated by an icon:
+    * A critical alert is indicated by a circle icon with a cross in the middle.
+    * A warning alert is indicated by a triangle icon with an exclamation mark in the middle.
+    * An OK alert is indicated by the word **OK**.
+* **Timestamp** – This is the date and time this alert occurred.
 
 ## 15 Documents in This Category

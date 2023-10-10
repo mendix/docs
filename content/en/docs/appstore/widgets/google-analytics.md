@@ -7,9 +7,13 @@ tags: ["marketplace", "marketplace component", "widget", "google analytics", "ev
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="danger" %}}
+The Google Analytics widgets set has been removed from our Marketplace. These widgets were exclusively compatible with Universal Analytics. As of July 1, 2023, Universal Analytics has been discontinued and succeeded by Google Analytics 4. For guidance on transitioning to Google Analytics 4, we recommend referring to Google's official documentation. To integrate Google Analytics 4 with your Mendix applications, please use the [Google Tag](/appstore/modules/google-tag/) module.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [Google Analytics](https://marketplace.mendix.com/link/component/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
+The Google Analytics widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
 ### 1.1 Typical Usage Scenario
 

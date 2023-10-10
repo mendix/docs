@@ -107,7 +107,7 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 #### 3.9.1 BCrypt Cost {#bcrypt-cost}
 
-**BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 10, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
+**BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 12, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
 #### 3.9.2 Performance
 
@@ -239,15 +239,17 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 The look and feel of a Mendix application is governed by the [UI resources package](/refguide/ui-resources-package/). This package supplies the app with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
-### 6.2 Theme ZIP File
+### 6.2 ⚠ Theme ZIP File
 
 {{% alert color="warning" %}}
-
-[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
-
+⚠ The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
 {{% /alert %}}
 
-Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. 
+
+{{% alert color="warning" %}}
+⚠ This practice is deprecated and will be removed in a future version.
+{{% /alert %}}
 
 Switching from a ZIP file to a UI resources package is straightforward:
 
@@ -275,7 +277,7 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 ### 7.1 User Entity
 
-**User entity** defines the entity which is used in [assigning a user task](/refguide/user-task/#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
+**User entity** defines the entity which is used in [target-users-using](/refguide/user-task/#target-users). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [Targeted Users Section](/refguide/user-task/#users) section in *User Task*.
 
 ### 7.2 Optimization
 
@@ -321,9 +323,9 @@ This tab allows you to exclude libraries from deployment. For example, you can e
 
 ## 9 Solution Tab {#solution}
 
-Settings on the **Solution** tab allow you to configure application distribution as an [adaptive solution](/appstore/creating-content/sol-solutions-guide/). 
+Settings on the **Solution** tab allow you to configure application distribution as an [adaptable solution](/appstore/creating-content/sol-solutions-guide/). 
 
-If you want to distribute your app as an adaptive solution package and allow upgrading it from the [implementer's side](/appstore/creating-content/sol-solutions-impl/), you need to **Enable solution adaptation** on this tab. The title of your app in the App Explorer will change to *Solution* and the solution version will be displayed after the app name.
+If you want to distribute your app as an adaptable solution package and allow upgrading it from the [implementer's side](/appstore/creating-content/sol-solutions-impl/), you need to **Enable solution adaptation** on this tab. The title of your app in the App Explorer will change to *Solution* and the solution version will be displayed after the app name.
 
 A distributable app must have a **Solution version** that you can set on this tab.
 

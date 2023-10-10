@@ -123,7 +123,7 @@ The `test` directory contains a fully prepared Mendix test app for testing your 
 
 To package the widget source into an *.mpk* file, follow these steps:
 
-1. Create an *.mpk* file by pressing **F4** or clicking the the play button on the right side of the editor:
+1. Create an *.mpk* file by pressing **F4** or clicking the play button on the right side of the editor:
 
     {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579908.png" >}}
 

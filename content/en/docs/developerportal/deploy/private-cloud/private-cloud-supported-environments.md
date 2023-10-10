@@ -36,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.26
-* OpenShift 4.6 through 4.11
+* Kubernetes versions 1.19 through 1.28
+* OpenShift 4.6 through 4.19
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -90,7 +90,7 @@ The image builder doesn't build multiple architecture images at the moment.
 
 It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
 
-Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported. 
+Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported.
 
 ## 3 Container Registries
 
@@ -140,7 +140,7 @@ The OpenShift registry must be installed and enabled for use.
 
 ### 3.4 Amazon Elastic Container Registry (ECR)
 
-[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters. 
+[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters.
 
 To use an ECR registry, the Mendix Operator will need an AWS Identity and Access Management (IAM) account with permissions to push and pull images.
 
@@ -171,7 +171,7 @@ It doesn't require any external database or provider and is great for quick test
 {{% alert color="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
 
-An app with an ephemeral database cannot have more than one replica. Only the first (master) replica will be able to start.
+An app with an ephemeral database cannot have more than one replica. Only the first (leader) replica will be able to start.
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
@@ -186,6 +186,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 12
 * PostgreSQL 13
 * PostgreSQL 14
+* PostgreSQL 15
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
@@ -197,7 +198,7 @@ A standard PostgreSQL database is an unmodified PostgreSQL database installed fr
 
 The following managed PostgreSQL databases are supported:
 
-* [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
+* [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 
@@ -208,7 +209,7 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a PostgreSQL database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}
@@ -217,10 +218,10 @@ For every Mendix app environment, a new database schema and user (role) will be 
 By default, the Mendix Operator will first connect to the database server with TLS enabled; if the database server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
+If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if:
 
 * the PostgreSQL server has an invalid certificate
-* or its certificate is signed by an unknown Certificate Authority
+* or its certificate is signed by an unknown certificate authority
 * or the PostgreSQL server doesn't support TLS connections.
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
@@ -247,7 +248,7 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
 {{% alert color="info" %}}
-To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
+To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
 
@@ -256,11 +257,11 @@ For every Mendix app environment, a new database, user and login will be created
 {{% alert color="info" %}}
 By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
 
-If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
+If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if
 
 * SQL Server doesn't support encryption
 * the SQL Server server has an invalid certificate
-* or its certificate is signed by an unknown Certificate Authority
+* or its certificate is signed by an unknown certificate authority
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
@@ -297,7 +298,7 @@ For every Mendix app environment, a new bucket and user will be created so that 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If MinIO is installed in [Gateway](https://github.com/minio/minio/tree/master/docs/gateway) mode, it needs to be configured to use etcd.
+If MinIO is installed in the deprecated Gateway mode, it needs to be configured to use etcd.
 MinIO uses etcd to store its configuration.
 Without etcd, MinIO will disable its admin API – which is required by the Mendix Operator to create new users for each environment.
 {{% /alert %}}
@@ -319,7 +320,7 @@ Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage 
 
 [Google Cloud Storage](https://cloud.google.com/storage) is supported with [Cloud Storage Interoperability](https://cloud.google.com/storage/docs/interoperability) mode.
 
-Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting. 
+Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting.
 
 ### 5.6 Ceph
 

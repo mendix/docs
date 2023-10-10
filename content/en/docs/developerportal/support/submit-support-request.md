@@ -22,7 +22,7 @@ For critical production incidents, please contact Mendix Support by [phone](http
 Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
-* [Mendix Documentation](https://docs.mendix.com/)
+* [Mendix Documentation](/)
 * [Mendix Platform status](https://status.mendix.com)
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
@@ -59,8 +59,8 @@ To submit a request with Mendix Support, follow these steps:
         {{% alert color="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
 
     * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
-    * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
-    * **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/))
+    * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/appstore/partner-solutions/ats/))
+    * **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/appstore/partner-solutions/apd/))
     * **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication/) (for example, when you get a new phone)
     * **Standard Change** – other changes which can be made on the platform, but for which you do not have access
     * **Non-Standard Change** – any other changes not covered by other issues above
@@ -71,28 +71,24 @@ To submit a request with Mendix Support, follow these steps:
         * **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
         * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
         * **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
-        * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
+        * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/appstore/partner-solutions/ats/), [APD](/appstore/partner-solutions/apd/), or [AQM](/addons/aqm-addon/))
         * **App - Security** - issues/questions regarding the security of your Mendix app
             Please read the section [Requirements for Security Support Tickets](#security-tickets) before raising an app security ticket. Following these guidelines ensures that your ticket can be progressed as efficiently as possible.
         * **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
     * **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
         * **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
         * **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
-        * **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/collaborate/stories/) or start a Sprint)
+        * **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/project-management/epics/) or start a Sprint)
         * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
         * **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
         * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
-        * **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
-        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
+        * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
+        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
         * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
     * **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
 
 5. Make sure all your attachments have finished uploading before clicking **Next**.
-
-The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
-
-{{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
 
 If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.    
 
@@ -151,7 +147,7 @@ If you are reporting a security finding or other security-related issue, for exa
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
     * A description of the issue found — please submit only one finding per support ticket.
-    * Where the issue was found — for example, which url, which Mendix version, the app id?
+    * Where the issue was found — for example, which URL, which Mendix version, the App ID?
     * How the issue was found — for example, was it from scanning an app and, if so, which tool was used?
     * A copy of an app containing the reported issue — see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
     * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit a vulnerability.

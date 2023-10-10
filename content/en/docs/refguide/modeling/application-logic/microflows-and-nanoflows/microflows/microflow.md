@@ -11,25 +11,51 @@ This document describes the properties of a microflow. If you want to see what m
 
 ## 2 Properties
 
-An example of microflow properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-properties.png" alt="Microflow Properties"   width="250"  >}}
-
 Microflow properties consist of the following sections:
 
+* [General](#general)
 * [Common](#common)
-* [Concurrent execution](#concurrent)
-* [Output](#output)
-* [Security](#security)
 * [Usage](#usage)
+* [Security](#security)
+* [Concurrent execution](#concurrent)
 
-### 2.1 Common Section {#common}
+### 2.1 General Section {#general}
 
-#### 2.1.1 Name
+#### 2.1.1 Return Type {#returntype}
+
+The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
+
+{{% alert color="info" %}}
+To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
+{{% /alert %}}
+
+#### 2.1.2 URL {#url}
+
+Microflow URLs allow you to execute a microflow when the end-user navigates to a specific URL within your application. The microflow is executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) activity, its page is the first page shown to the end-user. The microflow's full URL starts with the base URL of your application, followed by `/p/`, and then by the microflow's configured URL. For example, `http://example.mendixcloud.com/p/microflow` is the full URL for the microflow's configured URL `microflow`.
+
+Microflows with parameters can also have URLs. Such cases require that all parameters are present in the URL. You should include the parameters in the URL by writing their names between brackets, for example, `my-microflow/{Name}` where `Name` is the parameter's name. 
+
+For object parameters, the name of the parameter and the name of the attribute are used, for example, `my-microflow/{Product/Name}`. For primitive parameters, they are parsed from the URL and their values are directly passed to the microflow. However, for object parameters, an XPath query is used to retrieve the object by the value of the attribute.
+
+For example, in the URL `product/{Product/Name}`, the `Name` attribute of the parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute or primitive parameter of types `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
+
+You can also use `Id` as an attribute to include the entity's identifier in the URL. This would appear as `product/{Product/Id}` for example. 
+
+In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
+
+{{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog"  width="550" >}}
+
+{{% alert color="warning" %}}
+URLs are not supported for microflows that have non-persistable entities or lists as parameters.
+{{%/alert %}}
+
+### 2.2 Common Section {#common}
+
+#### 2.2.1 Name
 
 **Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
 
-#### 2.1.2 Export Level 
+#### 2.2.2 Export Level 
 
 {{% alert color="info" %}}
 
@@ -44,40 +70,19 @@ This property is only available for add-on and solution modules. For more inform
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
 | Usable             | Consumers can see the API and use the microflow in their app. They will not be able to see the contents of the microflow and how it is built. |
 
-#### 2.1.3 Documentation
+#### 2.2.3 Documentation
 
 **Documentation** allows you to describe your microflow to make it easier for people to use and modify it.
 
-### 2.2 Concurrent Execution Section {#concurrent}
+### 2.3 Usage Section {#usage}
 
-#### 2.2.1 Disallow
+#### 2.3.1 Mark as Used
 
-The **Disallow** property allows you to specify whether the microflow can be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
+You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
 
-Disallowing concurrent execution of a microflow can be useful if a microflow would interfere with another running instance (for example, if it accesses a global resource).
+By enabling the property **Mark as used**, you explicitly specify that the microflow is used and Studio Pro will no longer list it when searching for unused items.
 
-| Option | Description |
-| --- | --- |
-| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
-| Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
-
-#### 2.2.2 Error Message
-
-**Error message** defines the message the user gets when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. This will not be shown if there is an **Error microflow** defined.
-
-#### 2.2.3 Error Microflow
-
-**Error microflow** defines another microflow to execute when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. When set, there will be no further message shown to the user.
-
-### 2.3 Output Section {#output}
-
-#### 2.3.1 Return Type
-
-The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
-
-{{% alert color="info" %}}
-To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
-{{% /alert %}}
+Default: *disabled*
 
 ### 2.4 Security Section {#security}
 
@@ -108,19 +113,32 @@ These roles are only checked when the microflow is executed from the client. A m
 
 For more information, see [Module Security](/refguide/module-security/).
 
-### 2.5 Usage Section {#usage}
+### 2.5 Concurrent Execution Section {#concurrent}
 
-#### 2.5.1 Mark as Used
+#### 2.5.1 Disallow
 
-You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
+The **Disallow** property allows you to specify whether the microflow can be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
 
-By setting the property **Mark as used** to **Yes**, you explicitly specify that the microflow is used and Studio Pro will no longer list it when searching for unused items.
+Disallowing concurrent execution of a microflow can be useful if a microflow would interfere with another running instance (for example, if it accesses a global resource).
 
-Default: *No*
+| Option | Description |
+| --- | --- |
+| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
+| Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
+
+#### 2.5.2 Error Message
+
+**Error message** defines the message the user gets when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. This will not be shown if there is an **Error microflow** defined.
+
+#### 2.5.3 Error Microflow
+
+**Error microflow** defines another microflow to execute when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. When set, there will be no further message shown to the user.
 
 ## 3 Expose as Microflow Action {#expose-as-microflow}
 
-This property is accessible by right-clicking in the microflow and selecting **Properties**.
+You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as microflow action**.
+
+It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" >}}
 
@@ -130,7 +148,7 @@ The **Caption** and **Category** of the workflow action are required, but the **
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 
@@ -142,7 +160,9 @@ If only icon is specified, the icon image will be used for the toolbox tile view
 
 ## 4 Expose as Workflow Action {#expose-as-workflow-action}
 
-This property is accessible by right-clicking in the microflow and selecting **Properties**.
+You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as workflow action**.
+
+It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" >}}
 
@@ -152,7 +172,7 @@ The **Caption** and **Category** of the workflow action are required, but the **
 
 The required size for the icon is 64x64 pixels, and 256x192 pixels for the image; the required image format for both is PNG. 
 
-A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
 

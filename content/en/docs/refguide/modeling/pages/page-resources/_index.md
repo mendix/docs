@@ -13,10 +13,11 @@ You can add the following page resources:
 
 * [Image collection](/refguide/image-collection/)
 * [Layout](/refguide/layout/)
-* [Page template](/refguide/page-templates/)
-* [Snippet](/refguide/snippet/)
-* [Building block](/refguide/building-block/) 
 * [Menu](/refguide/menu/)
+* [Snippet](/refguide/snippet/)
+* [Building block](/refguide/building-block/)
+* [Page template](/refguide/page-templates/)
+* [Icon collection](/refguide/icon-collection/)
 
 ## 2 Adding Page Resources
 

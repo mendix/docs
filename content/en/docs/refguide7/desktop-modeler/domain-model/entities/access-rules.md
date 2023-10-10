@@ -34,11 +34,11 @@ In this property you can describe the intention of the access rule. This helps t
 
 ### Rule applies to the following module roles
 
-The module roles to which this access rule applies have a checkmark in the box before them. All users that have at least one of the checked module roles get the access rights that the rule defines.
+The module roles to which this access rule applies have a check mark in the box before them. All users that have at least one of the checked module roles get the access rights that the rule defines.
 
 ### Allow creating new objects
 
-If this check box is checked, users are allowed to create new objects of this entity.
+If this checkbox is checked, users are allowed to create new objects of this entity.
 
 ### Allow deleting existing objects
 

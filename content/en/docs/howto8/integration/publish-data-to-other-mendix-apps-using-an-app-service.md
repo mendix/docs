@@ -37,7 +37,7 @@ To create pages that allows users to create, edit, and delete products, follow t
 
     {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/edit-product-page.png" >}}
 
-5. Open the **Homepage** and add a data grid.
+5. Open the **Home page** and add a data grid.
 6. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
 7. On the dialog box that appears, click **OK**.
 8. From the **Project Explorer**, drag the **EditUser** page onto the **New** button.
@@ -97,8 +97,8 @@ Before you publish our app, you need to make sure it is protected with a usernam
 1. In **Project explorer**, double-click **Project** > **Security**.
 2. For **Security level**, select **Prototype/demo**.
 3. Click **Edit module security**.
-4. Go to the **Page access** tab and check all the check boxes.
-5. Go to the **Microflow access** tab and check all the check boxes, then click **OK**.
+4. Go to the **Page access** tab and check all the checkboxes.
+5. Go to the **Microflow access** tab and check all the checkboxes, then click **OK**.
 6. Go to the **Administrator** tab.
 7. Type a password, and then click **OK**.
 

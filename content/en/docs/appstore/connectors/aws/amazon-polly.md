@@ -23,9 +23,19 @@ Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Polly connector requires Mendix Studio Pro version 9.18.0 or above.
+The Amazon Polly connector requires Mendix Studio Pro 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+
+### 1.3 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 ## 2 Installation
 
@@ -145,7 +155,7 @@ The `SynthesizeSpeechRequest` entity is used when calling the [SynthesizeSpeech]
 | `Text` | Text to synthesize (string)|
 | `TextType` | It is used to specify whether the input text is plain text or SSML. If left empty, the default value is 'plain text' (enum)|
 | `OutputFormat` | The format that the output should be encoded (enum)|
-| `SampleRate` | The sample rate for speech syhthesis (string)|
+| `SampleRate` | The sample rate for speech synthesis (string)|
 | `Engine` | The engine that will be used during speech synthesis (enum)|
 | `VoiceID` | The ID of the voice (string)|
 | `LanguageCode` | The language code of the voice (string)|
@@ -184,7 +194,7 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 
 | Name | Caption |
 | --- | --- |
-| us_east_2 | US Easth (Ohio) |
+| us_east_2 | US East (Ohio) |
 | us_east_1 | US East (N. Virginia) |
 | us_west_1 | US West (N. California) |
 | us_west_2 | US West (Oregon) |

@@ -11,7 +11,7 @@ The reference selector is an [input widget](/refguide7/input-widgets/) that can 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png" >}}
 This reference selector allows you to select a product for your orderline.
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector-domain-model.png" >}}
-To use a reference selector you need a many-to-one association in the domain model.
+To use a reference selector you need a one-to-many association in the domain model.
 
 {{% /alert %}}
 
@@ -167,7 +167,7 @@ Order_Customer/Customer/Name will allow the end user to select a user from a lis
 
 {{% /alert %}}{{% alert color="warning" %}}
 
-Keep in mind that even though you connect an attribute to the reference selector you are actually selecting an object. The attribute is just there to provide a visualization of the object. In this respect, the reference selector is different from other widgets like check boxes and text boxes. In those widgets you edit the value of the attribute. In the reference selector you edit an association of type reference.
+Keep in mind that even though you connect an attribute to the reference selector you are actually selecting an object. The attribute is just there to provide a visualization of the object. In this respect, the reference selector is different from other widgets like checkboxes and text boxes. In those widgets you edit the value of the attribute. In the reference selector you edit an association of type reference.
 
 {{% /alert %}}
 

@@ -12,18 +12,20 @@ In Studio Pro, entities can be exposed as [OData resources](/refguide/published-
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
-The standard used for OData in Mendix is [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
+The standard used for OData in Mendix is [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
 
-The option to publish [OData version 3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+⚠ The option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
 This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
 
 {{% alert color="info" %}}
-Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/).{{% /alert %}}
+Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
 
 ## 2 General
+
+To create a Published OData Service, right-click on the module in your app and choose **Add other** > **Published OData service**. You can also edit an existing published OData service by double-clicking on it, or right-clicking on it and selecting **Open**.
 
 ### 2.1 Service Name
 
@@ -35,6 +37,12 @@ Use the **Version** field to assign a version number to the service. This number
 
 {{% alert color="info" %}}
 It is recommended to use [semantic versioning](https://semver.org/) for services that you publish.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Once a version is released to production, any further changes should be made to a new version of the service.
+
+This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
 {{% /alert %}}
 
 ### 2.3 Location
@@ -49,17 +57,17 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
 
-### 2.5.1 Entity Details
+#### 2.5.1 Entity Details
 
 This list gives an overview of all published attributes and associations.
 
 ### 2.6 Enumerations
 
-This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
+This list gives an overview of all [enumerations](/refguide/enumerations/) that are published by the service (for OData v4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
 
 Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
 
-### 2.6.1 Enumeration Details
+#### 2.6.1 Enumeration Details
 
 This list gives an overview of the values of the published enumeration.
 
@@ -67,15 +75,23 @@ Click **Edit** to change the exposed name of the enumeration value (the name as 
 
 Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
+### 2.7 Microflows
+
+This list gives an overview of all microflows published as [OData actions](/refguide/published-odata-microflow/).
+
+### 2.8 Parameters
+
+This list gives an overview of the [parameters](/refguide/published-odata-microflow/#pub-odata-mflow-parameters) of a selected microflow.
+
 ## 3 Settings
 
 ### 3.1 Configuration
 
-### 3.1.1 OData Version
+#### 3.1.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
-### 3.1.2 Associations
+#### 3.1.2 Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
 
@@ -231,3 +247,11 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 * `200`, `201`, `204` – [Successful responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
 * `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+## 8 Publishing OData Services
+
+To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) these resources using [External Object activities](/refguide/external-object-activities/). 
+
+## 9 Limitations
+
+Studio Pro currently does not support publishing media entities with OData services. To learn about consuming media entities with OData, see the [Binary Attributes](/refguide/consumed-odata-service-requirements/#binary-attributes) section of *Consumed OData Service Requirements*. You can also [Publish and Retrieve Images and Files with REST](/refguide/send-receive-files-rest/).

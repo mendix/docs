@@ -58,7 +58,7 @@ The [data type](/refguide/data-types/) of the constant. This determines what kin
 
 ## 4 Value Properties
 
-### 4.1 Default Value
+### 4.1 Default Value {#default-value}
 
 This property is the default value of the constant. This value is used when running locally or in a Free App environment. When running locally, the value can be overridden in the currently selected [configuration](/refguide/configuration/).
 

@@ -311,7 +311,7 @@ In general, we recommend you perform the following steps in case of any issues d
 
 In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
-* When developing locally using Chrome or Chromium version 117 or above, the scaling of your document might be different compared to previous versions and to the cloud service. We are currently looking into this issue, please refer section [3.1.2 Chromium](#chromium) for more details.
+* When testing the PDF document generation locally using Chrome or Chromium version 117 or higher, the scaling of your PDF document might be different compared to generated document from the PDF document generation service in the Mendix Public Cloud. We are currently looking into this issue and we advice to use the Chromium version mention in the Chromium paragraph to guarantee locally the same result as from our PDF document generation service. Please refer section [3.1.2 Chromium](#chromium) for more details.
 
 #### 5.2.2 Local Service Errors
 

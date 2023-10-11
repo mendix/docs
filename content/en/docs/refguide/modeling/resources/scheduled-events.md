@@ -177,3 +177,7 @@ This limit cannot be overridden.
 ### 5.3 Unsupported Intervals
 
 Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to run every seven minutes as this does not divide precisely into sixty minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue executing at that particular time.
+
+### 5.4 Cleaning completed intervals of scheduled events
+
+Every run interval of a scheduled event produces an entry in the `System.ProcessedQueueTask` table in the database. Over time these accumulate and the table can grow large. Refer to the documentation on [Cleaning up old processed tasks](/refguide/task-queue/#cleanup) to learn how to remove processed entries.

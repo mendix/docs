@@ -23,6 +23,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We moved the **Running Now** interface from the **Metrics** page to the [Environment Details](/developerportal/deploy/environments-details/) page. This interface now displays as a dialog box, accessed by clicking the **Show Running Now** action button when the environment is running.
 
+#### Fixes
+
+* We fixed some inconsistencies that appeared in the UI during MDA package uploads. 
+
 ### September 19, 2023
 
 #### Improvements

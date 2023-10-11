@@ -136,12 +136,14 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 ## 3 Testing the Forgot Password Module
 
-1. Logout of the app.
+1. Sign out of the app.
 1. On the sign in page, click `Signup`.
-1. Enter your name and email ID and click `Send`.
-    You will get confirmation that a password recovery email has been sent.         {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
+1. Enter your name and email ID and click `Send`. You will get confirmation that a password recovery email has been sent.
+{{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
     You will receive an email containing a link to reset your password.
+
         {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
+
 1. Open the link in the browser.
     You can now reset your password.
         {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
@@ -155,9 +157,14 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app.
 
     You will see four errors in the [Errors Pane](/refguide/errors-pane/).
+
     {{< figure src="/attachments/appstore/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" >}}
-1. Double click on one of the errors to open the error page and change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
-    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}} This will resolve two of the errors.
+
+1. Double click one of the errors to open the error page and change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
+
+    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}} 
+    
+    This will resolve two of the errors.
 1. Open the error page and again change the (primary) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix 9.

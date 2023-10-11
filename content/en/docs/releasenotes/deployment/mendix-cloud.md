@@ -11,11 +11,17 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
 
-There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+There are separate release notes for other deployment targets; see the [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
 
-For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2023
+
+### October 12, 2023
+
+#### Portal Enhancements
+
+* We moved the **Running Now** interface from the **Metrics** page to the [Environment Details](/developerportal/deploy/environments-details/) page. This interface now displays as a dialog box, accessed by clicking the **Show Running Now** action button when the environment is running.
 
 ### September 19, 2023
 

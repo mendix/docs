@@ -107,7 +107,7 @@ In the previous section, you added the **Paging** input parameter to your microf
 1. Open the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
-4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:
+4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?_limit=5&_page={1}`:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/template-param-one.png" alt="add page bit to template"   width="500"  >}}
 

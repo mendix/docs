@@ -12,7 +12,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-In general, a "member" in Control Center means a Mendix Platform user who participates in the development, deployment, and maintenance of an app, and does not mean the end-user of a Mendix app built on the Mendix Platform. The only exception is the  [Groups](#groups) page where a "member" means the end-user of a Mendix app.
+In general, a "member" in Control Center means a user of the Mendix Platform who participates in the development process, as a developer or another . It is not an end-user of a Mendix app built on the Mendix Platform. The only exception is the  [Groups](#groups) page where a "member" means the end-user of a Mendix app.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -128,9 +128,9 @@ You cannot activate/deactivate external members, because they belong to a differ
 
 ## 5 Groups {#groups}
 
-A Mendix Admin can set up **App Access Groups**, which consist of end-users (who are active members of your company) who will have access to [Mendix SSO](/appstore/modules/mendix-sso/)-enabled apps with specific environments and roles. Click **Add Access Group** to create a new group with a **Name** and **Description**.
+A Mendix Admin can set up **App Access Groups**, which consist of end-users (who are active users of Mendix Platform in your company) who will have access to [Mendix SSO](/appstore/modules/mendix-sso/)-enabled apps with specific environments and roles. Click **Add Access Group** to create a new group with a **Name** and **Description**.
 
-Click a group name to bring up the group details pop-up window, and click **Add Member** to add members to the group. When you add members to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
+Click a group name to bring up the group details pop-up window, and click **Add Member** to add a Mendix Platform user in your company to the group. When you add someone to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
 
 {{< figure src="/attachments/developerportal/control-center/access-group.jpg" >}}
 
@@ -138,7 +138,7 @@ Click a group name to bring up the group details pop-up window, and click **Add 
 You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso/) to App Access Groups.
 {{% /alert %}}
 
-When you select groups in the list or members or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing members from access groups, and removing accessible apps.
+When you select groups in the list, Mendix Platform users in your company, or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing the Mendix Platform users in your company from access groups, and removing accessible apps.
 
 ## 6 Company Settings {#company}
 

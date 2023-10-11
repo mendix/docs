@@ -646,7 +646,6 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-
 ### 8.5 Use ACR to Request Authentication Method
 
 By default, the OIDC SSO module does not care how users are signed in at your IDP, that is left to the discretion of the IDP. In some cases your IDP may support different methods for end-users to be authenticated and your app may want to indicate a preference.

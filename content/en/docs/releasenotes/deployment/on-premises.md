@@ -11,13 +11,19 @@ These release notes cover changes to On-premises deployments based on Virtual Ma
 
 For information on the current status of Mendix deployment see [Mendix Status](https://status.mendix.com/).
 
+## 2023
+
+### September 15, 2023
+
+* We have updated our product documentation to include a list of supported buildpack versions for each version of Mendix. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
+
 ## 2022
 
 ### December 12, 2022
 
 #### IBM Cloud Portal Deployment
 
-Deployment on IBM Cloud Portal is no longer officially supported by Mendix. We have updated our product documentation accordingly.
+* Deployment on IBM Cloud Portal is no longer officially supported by Mendix. We have updated our product documentation accordingly.
 
 ## 2020
 

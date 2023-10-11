@@ -341,7 +341,7 @@ In the list, you can see the following items:
 
 {{% alert color="info" %}}
 
-If a portfolio has an alert icon (**⚠ **), that means it no longer has a Portfolio Manager. You can assign new Portfolio Managers to the portfolio or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
+If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfolio Manager. You can assign new Portfolio Managers to the portfolio or delete the portfolio. All the portfolios that no longer have a Portfolio Manager are also listed on the [Alerts](#alerts) tab.
 
 {{% /alert %}}
 

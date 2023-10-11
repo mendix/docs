@@ -304,6 +304,11 @@ This environment variable can be used to stop ingestion of all metrics at once.
 
 If it is set to `true`, all metrics will be denied regardless of the values of `APM_METRICS_FILTER_ALLOW`, `APM_METRICS_FILTER_DENY`, and `APPMETRICS_INCLUDE_DB`.
 
-## 6 Read More
+## 6 Tuning Log Levels
+
+If desired, you can adjust the log levels for your integrations. For details on how to configure the log levels, see
+[Set Log Levels](/howto/monitoring-troubleshooting/log-levels/).
+
+## 7 Read More
 
 * [Metrics](/developerportal/operate/metrics/)

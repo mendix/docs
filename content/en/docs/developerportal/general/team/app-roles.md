@@ -86,5 +86,5 @@ If you are the current Technical Contact for an app, you can give away your Tech
 The Technical Contact will be changed for all environments.
 
 {{% alert color="info" %}}
-Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).
 {{% /alert %}}

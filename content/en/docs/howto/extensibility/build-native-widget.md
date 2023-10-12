@@ -14,7 +14,7 @@ Pluggable widgets enable developers to create new widgets beyond the core widget
 
 In this how-to, you will learn to create a group box pluggable widget for native mobile applications with React Native.
 
-This how-to will teach you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/).
+This how-to teaches you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/).
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
 

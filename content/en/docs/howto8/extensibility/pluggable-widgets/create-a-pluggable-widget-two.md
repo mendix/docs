@@ -3,7 +3,7 @@ title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
 linktitle: "2. Build Pluggable Web Widget"
 url: /howto8/extensibility/create-a-pluggable-widget-two/
 weight: 20
-description: "This how-to will teach you how to add advanced features to your TextBox input widget."
+description: "This how-to teaches you how to add advanced features to your TextBox input widget."
 tags: ["mobile", "javascript", "widget"]
 ---
 

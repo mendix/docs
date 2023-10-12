@@ -14,7 +14,7 @@ aliases:
 
 The SAP Destination Service is part of the OData Connector for SAP solutions and enables OData calls to be made using SAP destinations configured on SAP Business Technology Platform (SAP BTP). However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
 
-This how-to will teach you how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
+This how-to teaches you how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
 
 ## 2 Prerequisites
 

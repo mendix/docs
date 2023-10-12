@@ -8,7 +8,7 @@ tags: ["widget", "develop widget", "scaffold", "yeoman"]
 
 ## 1 Introduction
 
-This how-to will teach you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
+This how-to teaches you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
 
 This how-to teaches you how to do the following:
 

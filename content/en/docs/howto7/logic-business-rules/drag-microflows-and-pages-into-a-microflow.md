@@ -9,7 +9,7 @@ tags: ["microflow", "logic", "page"]
 
 ## 1 Introduction
 
-Coming home with sore hands from using the mouse too much during the day is uncomfortable. This how-to will teach you how to use the mouse more efficiently while modeling a Mendix app.
+Coming home with sore hands from using the mouse too much during the day is uncomfortable. This how-to teaches you how to use the mouse more efficiently while modeling a Mendix app.
 
 This how-to teaches you how to do the following:
 

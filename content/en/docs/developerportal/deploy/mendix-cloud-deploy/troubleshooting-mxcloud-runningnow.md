@@ -15,15 +15,15 @@ The **Running Now** dialog box can be accessed by clicking the **Show Running No
 
 This dialog box shows all actions currently running in the environment. It also shows some general information about each action.
 
-{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/dialog-box.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/troubleshooting-mxcloud-runningnow/dialog-box.png" >}}
 
 The **Details** button lets you zoom in on a selected action:
 
-{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/running-request-details.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/troubleshooting-mxcloud-runningnow/running-request-details.png" >}}
 
 You can also zoom in on a stack: 
 
-{{< figure src="/attachments/developerportal/operate/metrics/troubleshooting-mxcloud-runningnow/stack.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/troubleshooting-mxcloud-runningnow/stack.png" >}}
 
 **Kill request** lets you try to stop the action. If successful, that leads to an error for the user executing the action.
 

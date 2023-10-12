@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+## October 12, 2023
+
+### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) using an Excel file.
+
+
 ### October 1, 2023
 
 #### Improvements

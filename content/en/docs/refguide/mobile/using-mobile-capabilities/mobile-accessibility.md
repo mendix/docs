@@ -16,11 +16,11 @@ This guide only applies to native mobile apps.
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro [9.22.0](/releasenotes/studio-pro/9.22/) or above
+* Install [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/)
 
-## 3 Setting up Accessibility for Mendix Native Widgets
+## 3 Setting Up Accessibility for Mendix Native Widgets
 
 Mendix provides accessible widgets by default when possible, and also provides configurable properties to customize the accessibility experience.
 

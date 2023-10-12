@@ -25,7 +25,7 @@ By selecting a revision in this grid, the tabs below the grid will be filled wit
 
 ### 2.1 Revision{#revision}
 
-A unique alphanumeric identifier of the revision in the repository. The revision identifier is unique for a whole repository.
+A unique alphanumeric identifier of the revision in the repository. The revision identifier is the Git hash for the commit and is unique for a whole repository.
 
 ### 2.2 Changes{#changes}
 
@@ -34,7 +34,7 @@ A visual summary of the changes in the selected revision, each icon represents d
 | Icon | Change Type | Notes |
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/MergeRevision.png" width=32 alt="Merge commit icon" >}} | Merge commit | Indicates that the commit is a merge of two different commits.<br/>Hovering over will show both the parent [revisions](#revision). |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesModel.png" width=32 alt="Model changes icon" >}} | Model changes | Indicates that there were some changes made to the domain model.<br/>For example, a new entity was added, an attribute renamed,  or an association changed. |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesModel.png" width=32 alt="Model changes icon" >}} | Model changes | Indicates that there were some changes made to the app model.<br/>For example, changes to the domain model, microflows, or pages. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesDisk.png" width=32 alt="Changes on disk icon" >}} | Changes on disk | Indicates that there were changes on disk.<br/>For example, a file was added or removed. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesVersion.png" width=32 alt="Studio Pro changes icon" >}} | Studio Pro changes | Indicates that there was a change to the Studio Pro version used to work with the app.<br/>For example, when upgrading the app from a previous version to the latest one. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/Solution.png" width=32 alt="Solution version changes icon" >}} | Solution version changes| Indicates that there was an upgrade of based on solution. |

@@ -56,8 +56,9 @@ On the right side of the screen, you can find the following action buttons:
 * **Change Admin Password** – This changes the password for the built-in [administrator](/refguide/administrator/) account. The new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package.
 * **View Live Log**
 * **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+* **Show Running Now** – This can be used to monitor all actions that are currently running in your environment. It is visible only when your application is running.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions">}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.

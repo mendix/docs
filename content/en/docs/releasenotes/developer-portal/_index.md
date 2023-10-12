@@ -17,12 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-## October 12, 2023
+### October 12, 2023
 
-### New Features
+#### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) using an Excel file.
 
+* In Control Center, Mendix Admins can now [disable the digital signing](/developerportal/control-center/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
 
 ### October 1, 2023
 

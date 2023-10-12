@@ -11,6 +11,10 @@ aliases:
     - /developerportal/company-app-roles/users
 ---
 
+{{% alert color="info" %}}
+A member in Control Center means a user of the Mendix platform who participates in the development process. It does not mean an end-user of an app built in the Mendix Platform.
+{{% /alert %}}
+
 ## 1 Introduction
 
 When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
@@ -62,9 +66,9 @@ The consequences of deactivating and deleting an app are as below:
 | | Deactivating an App | Deleting an App |
 | --- | --- | --- |
 | App code repository stays persistent | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App members can access the project code repository | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App team members can access the app code repository | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | App stays persistent | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App team members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Cloud environment stays persistent | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
 #### 3.1.2 App Details {#app-details}
@@ -83,7 +87,7 @@ The app details page has the following tabs:
 * **Members** – This tab presents the internal members and external members of the app.
     * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
-* **Environments** – This tab shows all the Mendix Cloud environments. You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed. However, the app members can still access the associated app repository in the Developer Portal.
+* **Environments** – This tab shows all the Mendix Cloud environments. You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 ### 3.2 Default App Roles
@@ -124,9 +128,9 @@ You cannot activate/deactivate external members, because they belong to a differ
 
 ## 5 Groups {#groups}
 
-A Mendix Admin can set up **App Access Groups**, which consist of end-users (who are active members of your company) who will have access to [Mendix SSO](/appstore/modules/mendix-sso/)-enabled apps with specific environments and roles. Click **Add Access Group** to create a new group with a **Name** and **Description**.
+A Mendix Admin can set up **App Access Groups**, which consist of end-users (who are active users of Mendix Platform in your company) who will have access to [Mendix SSO](/appstore/modules/mendix-sso/)-enabled apps with specific environments and roles. Click **Add Access Group** to create a new group with a **Name** and **Description**.
 
-Click a group name to bring up the group details pop-up window, and click **Add Member** to add members to the group. When you add members to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
+Click a group name to bring up the group details pop-up window, and click **Add Member** to add a Mendix Platform user in your company to the group. When you add someone to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
 
 {{< figure src="/attachments/developerportal/control-center/access-group.jpg" >}}
 
@@ -134,7 +138,7 @@ Click a group name to bring up the group details pop-up window, and click **Add 
 You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso/) to App Access Groups.
 {{% /alert %}}
 
-When you select groups in the list or members or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing members from access groups, and removing accessible apps.
+When you select groups in the list, Mendix Platform users in your company, or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing the Mendix Platform users in your company from access groups, and removing accessible apps.
 
 ## 6 Company Settings {#company}
 
@@ -186,9 +190,23 @@ You can upload, edit, or remove a **Cover image**. The cover image uploaded here
 
 ## 8 Security {#security}
 
-On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
+### 8.1 Security Settings
+
+#### 8.1.1 Password Policy
+
+With the **Password Policy** setting, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
+
+#### 8.1.2 Email Signing {#disable-enable-digital-signing-emails}
+
+The Mendix Platform digitally signs the content of emails from senders [no-reply@notifications.mendix.com](mailto:no-reply@notifications.mendix.com) and [no-reply@platform-mail.mendix.com](mailto:no-reply@platform-mail.mendix.com). By digitally signing the content of an email, Mendix provides assurance to the recipient of the email that the content of an email has not been altered in transit. For reasons of security, this feature is enabled by default. However, in case digitally signing the content of an email interferes with the delivery of that email to the recipient, a Mendix Admin can disable this feature for emails sent to receivers in the company domains.
+
+To disable the digital signing of emails, turn off the toggle. To enable the digital signing of emails, turn on the toggle. This setting has an effect on the emails sent to all the [email domains claimed by your company](#company-general-settings).
+
+### 8.2 Single Sign-On
 
 On the **Single Sign-On** tab, you can set up an identity federation between the Mendix Platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/).
+
+### 8.3 Security History
 
 On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 

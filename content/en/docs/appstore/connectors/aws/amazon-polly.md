@@ -89,7 +89,7 @@ After you configure the authentication profile for Amazon Polly, you can impleme
     
     For the `SynthesizeSpeech` activity, you must add your own entity that inherits from `System.FileDocument` to store the contents of the audio in and specify the AWS Region. You must then add your `SynthesizeSpeechRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
 
-    * `Text` - The actual string of text that needs to be translated.
+    * `Text` - The actual string of text that needs to be synthesized.
     * `OutputFormat` - MP3, OGG_VORBIS, or PCM. JSON is not yet supported by the connector.
     * `Engine` - The enumeration parameter that specifies which engine (*standard* or *neural*) will be used by Amazon Polly during speech synthesis. It is set automatically to *standard* in the connector when a `SynthesizeSpeechRequest` object is created, but can be modified by the user.
     * `VoiceID` - The selected voice for the output of the text.
@@ -109,7 +109,7 @@ After you configure the authentication profile for Amazon Polly, you can impleme
     
 ## 4 Technical Reference
 
-To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, activities, and enumerations that you can use in your application.
+To help you work with the Amazon Polly connector, the following sections of this document list the available entities, constants, activities, and enumerations that you can use in your application.
 
 ### 4.1 Constants
 

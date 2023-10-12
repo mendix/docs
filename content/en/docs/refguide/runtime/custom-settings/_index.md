@@ -75,7 +75,7 @@ The following custom settings can be configured:
 
 ### 2.1 ApplicationRootUrl {#applicationrooturl-section}
 
-The ApplicationRootUrl setting is used to specify the domain and path to your application. This can be used within Java actions to get the public location of the application, for example when including a URL to the application when sending e-mails from a scheduled event. 
+The ApplicationRootUrl setting is used to specify the domain and path to your application. This can be used within Java actions to get the public location of the application, for example when including a URL to the application when sending emails from a scheduled event. 
 
 There are two main ways that you might use to host multiple applications.
 

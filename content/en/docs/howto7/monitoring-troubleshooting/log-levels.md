@@ -28,7 +28,7 @@ Log messages are notes that appear in the log of your Mendix application that pr
 
 #### 2.1.1 Log Node
 
-The log node name defines the source of the log message. For example, in a log message from the e-mail module, the log name would appear as **Email Module**.
+The log node name defines the source of the log message. For example, in a log message from the email module, the log name would appear as **Email Module**.
 
 #### 2.1.2 Message
 

@@ -28,7 +28,7 @@ Log messages appear in the log of your Mendix application and present contextual
 
 #### 2.1.1 Log Node
 
-The log node describes the source of the log message. For example, in a log message from the e-mail module, the log node could be set to **Email Module**.
+The log node describes the source of the log message. For example, in a log message from the email module, the log node could be set to **Email Module**.
 
 #### 2.1.2 Message
 

@@ -194,7 +194,7 @@ Especially when interacting with other systems, you need to think about how you 
 
 | Color | Description |
 | --- | --- |
-| {{< figure src="/attachments/howto8/logic-business-rules/set-up-error-handling/orange.png" >}} | *Initial transaction* – nothing will be reverted. The only difference compared to successful execution is that no e-mail will be sent, and the process will finish using the error flow instead of the normal process flow.
+| {{< figure src="/attachments/howto8/logic-business-rules/set-up-error-handling/orange.png" >}} | *Initial transaction* – nothing will be reverted. The only difference compared to successful execution is that no email will be sent, and the process will finish using the error flow instead of the normal process flow.
 | {{< figure src="/attachments/howto8/logic-business-rules/set-up-error-handling/blue.png" >}}  | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. All the changes in this transaction will be kept, because the 'SendEmail' subflow is configured to continue without rollback. Even though the exception is re-thrown, the initial microflow call is configured for custom without rollback; therefore, none of the changes will be reverted. The process will just take the error flow instead of the default flow.
 | {{< figure src="/attachments/howto8/logic-business-rules/set-up-error-handling/green.png" >}} | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. Any changes made in this transaction will be reverted, because the activities in the 'SendEmail' subflow use default error handling.
 
@@ -206,7 +206,7 @@ Consider the following best practices for error handling:
 
 * Always use a log activity to print the error message and stack trace
 * Never use the continue option, since that doesn't give you the option to print any info (the platform will just ignore the error)
-* Always add custom error handling on integration or e-mail activities
+* Always add custom error handling on integration or email activities
 * Don’t over-do it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the platform to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception
 
 ## 7 Read More

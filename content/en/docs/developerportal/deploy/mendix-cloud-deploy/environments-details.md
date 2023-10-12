@@ -154,7 +154,6 @@ The license overview contains the following information:
     * **Amount type**
     * **Number of allowed users**
 
-
 ## 3 The Model Options Tab {#model-options}
 
 On this tab, you can edit the model options described below.

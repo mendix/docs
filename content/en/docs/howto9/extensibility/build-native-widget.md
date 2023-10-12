@@ -20,7 +20,7 @@ A group box can be used to visually group related widgets together. Group boxes 
 
 {{< figure src="/attachments/howto9/extensibility/build-native-widget/group-box-tease.png" alt="final widget" >}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Generate a widget structure
 * Put a pluggable widget into a Mendix app

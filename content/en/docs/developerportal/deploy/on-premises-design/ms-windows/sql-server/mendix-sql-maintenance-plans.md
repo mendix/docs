@@ -13,7 +13,7 @@ weight: 50
 
 This how-to will present guidelines for setting up Mendix SQL maintenance plans.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up SQL basic maintenance plans
 * Set up notifications

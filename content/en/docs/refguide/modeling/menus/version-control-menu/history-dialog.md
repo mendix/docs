@@ -59,7 +59,7 @@ The time the revision was created.
 
 ### 2.6 Message{#message}
 
-The user-entered message saved with the commit. If the message is long, you can read it more easily in the Message tab page, below.
+The message saved with the commit. If the message is long, you can read it more easily in the Message tab page, below.
 
 ## 3 Details of Revisions
 

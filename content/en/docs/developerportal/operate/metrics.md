@@ -1,9 +1,11 @@
 ---
-title: "Trends in the Mendix Cloud"
-url: /developerportal/operate/trends-v4/
+title: "Metrics"
+url: /developerportal/operate/metrics/
+category: "Operations"
 weight: 10
-description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
-tags: ["Trends","Mendix Cloud","Developer Portal"]
+alias: /developerportal/operate/trends-v4/
+description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."
+tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
@@ -11,46 +13,55 @@ tags: ["Trends","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
+The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or you can debug performance problems.
 
-## 2 Access to Monitoring Trends
+The graphs show the following types of information:
 
-To view the **Trends**, you must have permission to **Access the Monitoring**.
+* Application Statistics 
+* Database Statistics
+* Application Node Statistics
+* Database Node Statistics
+
+These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
+
+## 2 Access the Metrics Graphs
+
+To view the graphs on the **Metrics** page, you must have permission to **Access the Monitoring**.
 
 {{% alert color="info" %}}
-Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is allowed to grant node permissions.
+Metrics are included in all paid editions of Mendix Cloud. Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
-Assign permission by following these steps:
+If you are the Technical Contact, assign permission by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Collaborate** > **Security** on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
-5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.
+5. Select **Access to Monitoring** next to the name of the person you want to grant this permission for.
 
     {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/nodepermission.jpg" >}}
 
-## 3 Viewing the Trends
+## 3 Viewing the Graphs
 
-### 3.1 Finding the Trends
+### 3.1 Finding the Graphs
 
-You can find the trends by following these steps:
+You can find the graphs by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics**.
-3. Select the environment you want to monitor under the tab **Trends**.
+3. Select the environment you want to monitor.
 4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/environment.png" >}}
 
 ### 3.2 Interpreting the Graphs
 
-As with all complex IT systems, there are many interrelated components which can cause performance issues. This document cannot cover all possibilities, but is intended as a general introduction to the information which is displayed and a few ideas about where to look for possible areas of concern.
+As with all complex IT systems, there are many interrelated components that can cause performance issues. This document cannot cover all possibilities, but is intended as a general introduction to the information that is displayed. It also suggests a few ideas about where to look for possible areas of concern.
 
 #### 3.2.1 Combining Information{#combine-info}
 
-You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
+You can often get more information about the performance of your app by combining the information from several graphs. Here are some useful graphs for this:
 
 * [Database Node CPU Usage](#Trends-dbcpu)
 * [Database Node Disk I/Os](#Trends-dbdiskstatsiops)
@@ -60,7 +71,7 @@ For example, a combination of a moderate number of IO operations, low disk throu
 
 ## 4 Application Statistics
 
-This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it is integrated as well as Java Virtual Machine-related statistics and the Jetty Web server it uses.
+This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it is integrated as well as statistics related to Java Virtual Machine and the Jetty Web server it uses.
 
 ### 4.1 Number of Handled External Requests{#Trends-appmxruntimerequests}
 
@@ -68,7 +79,7 @@ The **Number of handled external requests** graph shows the number of requests t
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/no-ext-reqs.png" >}}
 
-The number of requests per second is split up by request handlers. The key ones are:
+The number of requests per second is split up by request handlers. These are the key ones:
 
 * **xas/** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
 * **ws/** shows the number of web service calls that were done
@@ -113,7 +124,7 @@ The **JVM Object Heap** graph shows the internal distribution of allocated memor
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/jvm-heap.png" >}}
 
-One of the most important things to know, in order to be able to interpret the values in this graph, is that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find that out when it actually runs.
+One of the most important things to know, in order to be able to interpret the values in this graph, is that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find that out when it actually runs.
 
 These are the types of object:
 
@@ -134,7 +145,7 @@ This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM O
 
 This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
-More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://www.mendix.com/blog/whats-jvm-memory/).
+For more information on this graph, see [What's in my JVM memory?](https://www.mendix.com/blog/whats-jvm-memory/).
 
 These are the types:
 
@@ -197,9 +208,9 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
-This graph is normalized so that 100% is the full capacity of a single CPU. If you have 2 CPUs, you would expect your graph to peak at 200%.
+This graph is normalized so that 100% is the full capacity of a single CPU. If you have two CPUs, you would expect your graph to peak at 200%.
 
-Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
+Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with two CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
 If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
 
@@ -233,7 +244,7 @@ The **Application Size of Files** graph shows the size of files (in bytes) that 
 
 ## 5 Database Statistics
 
-In this section you will find the statistics about the database that the application uses.
+In this section, you will find the statistics about the database that the application uses.
 
 {{% alert color="warning" %}}
 If you are using the [Basic License](/developerportal/deploy/basic-package/) you will only see the first three graphs as these are the ones which show information specific to your app.
@@ -381,10 +392,10 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 There are two sets of values:
 
-Value | Explanation
------------- | -------------
-**read** | Read ops on the disk holding the database. 
-**write** | Write ops on the disk holding the database. 
+Value | Explanation|
+------------ | -----------|
+**read** | Read ops on the disk holding the database. |
+**write** | Write ops on the disk holding the database. |
 
 ### 5.10 Database Node Disk Latency{#Trends-dbdiskstatslatency}
 
@@ -412,22 +423,20 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance will not affect their performance.
+Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance does not affect their performance.
 {{% /alert %}}
 
 The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as percentage; 100% means that the volume has accumulated the maximum number of credits.
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-burst-balance.png" >}}
 
-Apps running on the Mendix Cloud use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
+Apps running on Mendix Cloud use AWS databases to store their data. These databases are burstable, which means that that have a specified performance baseline. Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when it is idle), the unspent IOPS credits are accrued until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
 
-Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when it is idle), the unspent IOPS credits are accrued until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
+For more information, see the AWS document [Overview of Monitoring Metrics in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html).
 
-You can find more details about the credit system in the official AWS documentation: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html.
+If your database uses a high level of IOPS over a sustained period, this may impact your app's performance. If your database burst balance reduces consistently, you need to ensure that there are periods when there is less activity so that the database burst balance can be restored.
 
-If your database uses a high level of IOPS over a sustained period, this may impact your app's performance. If your database burst balance reduces consistently, you will need to ensure that there are periods when there is less activity so that the database burst balance can be restored.
-
-For more information, see the *AWS Database blog* [Understanding Burst vs. Baseline Performance with Amazon RDS and GP2](https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/).
+For more information, see the AWS Database blog [Understanding Burst vs. Baseline Performance with Amazon RDS and GP2](https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/).
 
 ## 6 Read More
 

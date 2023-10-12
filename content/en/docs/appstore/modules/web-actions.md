@@ -43,7 +43,9 @@ To take a picture, follow these steps:
 
     {{< figure src="/attachments/appstore/modules/web-actions/check.png" alt="Check" >}}
 
-{{% alert color="info" %}} The storage of pictures is managed by the browser's memory cache. This cache is responsible for temporarily storing image files, allowing the browser to retrieve them quickly upon subsequent requests. {{% /alert %}}
+{{% alert color="info" %}}
+The storage of pictures is managed by the browser's memory cache. This cache is responsible for temporarily storing image files, allowing the browser to retrieve them quickly upon subsequent requests.
+{{% /alert %}}
 
 ## 3 Strict CSP Compatibility
 

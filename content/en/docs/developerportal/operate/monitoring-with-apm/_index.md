@@ -306,8 +306,7 @@ If it is set to `true`, all metrics will be denied regardless of the values of `
 
 ## 6 Tuning Log Levels
 
-If desired, you can adjust the log levels for your integrations. For details on how to configure the log levels, see
-[Set Log Levels](/howto/monitoring-troubleshooting/log-levels/).
+If desired, you can adjust the log levels. If you configure your app's log levels via [The Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) on the **Environment Details** page, the log levels that you set there are also reflected in your APM integrations.
 
 ## 7 Read More
 

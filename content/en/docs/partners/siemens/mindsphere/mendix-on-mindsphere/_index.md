@@ -14,7 +14,7 @@ If you want to have full integration with MindSphere, incorporating your applica
 
 With Mendix on MindSphere, a Mendix app can be fully integrated into Siemens MindSphere's application lifecycle. This includes the capability to provide your app to third parties in the MindSphere eco system. To find out how to develop and deploy your app to Siemens MindSphere, see [Siemens MindSphere – Deployment](/developerportal/deploy/deploying-to-mindsphere/) or have a look at the Mendix Academy Learning paths:
 
-* [Build a MindSphere app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this Learning Path will teach you how to develop an app for MindSphere with Mendix
+* [Build a MindSphere app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path teaches you how to develop an app for MindSphere with Mendix
 * [Build a MindSphere App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this Learning Path is for everyone who wants to dive more deeply into how to build a MindSphere App with the Mendix Platform
 
 Once your app is registered in MindSphere, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following two documents:

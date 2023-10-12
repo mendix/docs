@@ -131,7 +131,7 @@ To add these restrictions, follow the instructions below:
 
 ### 3.2 Adding Validation Feedback
 
-This section will teach you to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
+This section teaches you how to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
 
 1. Drag a **call microflow button** widget below your TextBox widget and drop it there. On the subsequent dialog box, click **New** to assign a new microflow to your button, name it *Validation_Microflow*, and click **OK**:
 

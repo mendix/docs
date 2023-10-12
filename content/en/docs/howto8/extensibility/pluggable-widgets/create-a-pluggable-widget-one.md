@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a TextBox Input Widget
 
-The following steps will teach you to build a pluggable input widget, and show you how to use the new pluggable widget API.
+The following steps teach you how to build a pluggable input widget, and show you how to use the new pluggable widget API.
 
 ### 3.1 Creating a Test Project{#creating-a-test-project}
 

@@ -2,7 +2,7 @@
 title: "Location and Maps"
 url: /refguide/mobile/using-mobile-capabilities/location-and-maps/
 weight: 30
-description: This guide will teach you how to set up native mobile maps capabilities for Android and Apple devices.
+description: This guide teaches you how to set up native mobile maps capabilities for Android and Apple devices.
 aliases:
     - /howto/mobile/how-to-maps/
 ---

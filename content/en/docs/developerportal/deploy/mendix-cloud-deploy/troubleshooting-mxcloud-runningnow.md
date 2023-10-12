@@ -1,6 +1,6 @@
 ---
 title: "Running Now"
-url: /developerportal/operate/troubleshooting-mxcloud-runningnow/
+url: /developerportal/deploy/mxcloud-runningnow/
 weight: 20
 description: "Explains how to access, navigate, and troubleshoot Running Now in your node."
 tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]

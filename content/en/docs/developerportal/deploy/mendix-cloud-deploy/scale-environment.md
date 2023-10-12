@@ -75,7 +75,7 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 
 ## 5 Read More
 
-* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
+* [Metrics](/developerportal/operate/metrics/)
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)

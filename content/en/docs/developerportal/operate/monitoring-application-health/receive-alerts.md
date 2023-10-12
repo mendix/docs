@@ -79,7 +79,7 @@ If you cannot resolve the issue in the instance reporting the critical error, yo
 ## 5 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
+* [Metrics](/developerportal/operate/metrics/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/general/app-roles/)

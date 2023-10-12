@@ -377,7 +377,7 @@ Save and apply the changes.
 
 ## 4 Setting up a Grafana Dashboard
 
-Mendix for Private Cloud offers a reference dashboard that looks similar to [Mendix Cloud metrics](/developerportal/operate/trends-v4/).
+Mendix for Private Cloud offers a reference dashboard that looks similar to Mendix Cloud [Metrics](/developerportal/operate/metrics/).
 
 In addition, this dashboard will display Mendix app and Runtime logs.
 
@@ -781,7 +781,7 @@ The following Mendix *request handler* calls will be passed to Prometheus:
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 
-You can find help in analyzing some of these values in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
+You can find help in analyzing some of these values in [Metrics](/developerportal/operate/metrics/).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**

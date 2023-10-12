@@ -87,7 +87,7 @@ The following metrics are useful when monitoring the performance of your Mendix 
 * postgresql.max_connections
 * postgresql.percent_usage_connections
 
-Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
+Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Metrics](/developerportal/operate/metrics/).
 
 ## 4 App Metrics {#app-metrics}
 
@@ -200,7 +200,7 @@ The following Mendix *request handler* calls will be passed:
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 
-You can find help in analyzing some of these values in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
+You can find help in analyzing some of these values in [Metrics](/developerportal/operate/metrics/).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**

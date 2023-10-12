@@ -309,9 +309,11 @@ In general, we recommend you perform the following steps in case of any issues d
 
 #### 5.2.1 Rendering/Styling Issues
 
-In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
+In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
-* When testing the PDF document generation locally using Chrome or Chromium version 117 or higher, the scaling of your PDF document might be different compared to generated document from the PDF document generation service in the Mendix Public Cloud. We are currently looking into this issue and we advice to use the Chromium version mention in the Chromium paragraph to guarantee locally the same result as from our PDF document generation service. Please refer section [3.1.2 Chromium](#chromium) for more details.
+{{% alert color="warning" %}}
+When testing the PDF document generation locally using Chrome or Chromium version 117 or above, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. Mendix is currently looking into this issue, and we advise using the Chromium version cited in the [Chromium](#chromium) section above to guarantee the same result locally as from our PDF document generation service.
+{{% /alert %}}
 
 #### 5.2.2 Local Service Errors
 

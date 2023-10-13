@@ -383,4 +383,4 @@ This activity returns a `GetDocumentAnalysisResponse` object with objects from t
 | Name | Generalization | Documentation |
 | --- | --- | --- |
 | `GetDocumentAnalysisResponse` | `AbstractDocumentAnalysisResponse`| This entity is the response for the Amazon Textract `GetDocumentAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a NextToken that can be used to retrieve the next batch of results. |
-| `GetDocumentAnalysisWarning` | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|
+| `GetDocumentAnalysisWarning` | | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|

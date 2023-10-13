@@ -47,13 +47,13 @@ The SAP Enterprise Messaging service (Event Mesh) instance must be created with 
 
 The **Event Mesh Configurator** provides a user friendly interface to create the JSON required to configure the required Enterprise Messaging service instance with the desired configuration. To bind and configure the service, perform the following steps:
 
-1. Ensure that the **enterprise-messaging** service is in the status **Services To Be Bound** in Developer Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
+1. Ensure that the **enterprise-messaging** service is in the status **Available Services** in Developer Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
 2. Click **Available Services** > **⚙️ Configurator** to open the configurator.
-3. Provide the following information:
-    * **EM Name** - enter a display name for the service.
-    * **Namespace** - the namespace is a prefix that ensures that every message client within a subaccount is unique. It must consists of 3 segments and contain no more than 24 characters. As a best practice, use the format *orgName/clientName/uniqueId*.
-    * **Options** - select **Messaging**.
-    * **Rules** - this section defines the publish or consume privileges for a message client. In order to allow access to a queue or topic, you must include the namespace of the corresponding owner message client. Instead of a defined namespace, you can use the placeholder *$(namespace)*.
+3. Provide the required information. For more information about the parameter syntax, see [Syntax for Service Descriptor](https://help.sap.com/docs/event-mesh/event-mesh/syntax-for-service-descriptor?locale=en-US).
+    * **EM Name** - Enter a display name for the service.
+    * **Namespace** - The namespace is a prefix that ensures that every message client within a subaccount is unique. It must consists of 3 segments and contain no more than 24 characters. As a best practice, use the format *orgName/clientName/uniqueId*.
+    * **Options** - Select **Messaging**.
+    * **Rules** - This section defines the publish or consume privileges for a message client. In order to allow access to a queue or topic, you must include the namespace of the corresponding owner message client. Instead of a defined namespace, you can use the placeholder *$(namespace)*.
 4. Click **Upload Configuration To Service** to upload the configuration automatically. The configuration will be applied when your app is restarted.
 
     Alternatively, click **Download Configuration File** to save the file locally so that you can review it, or reuse it. You can upload it manually to the Enterprise Messaging service by clicking **Browse…** next to the **Configurator JSON** option, and then choosing the file that you downloaded.
@@ -136,7 +136,7 @@ The `ConsumeMessage` activity allows you to consume a message from a queue. It r
 
 #### 4.3.3 Publish Event
 
-The `PublishCloudEvent` activity allows you to publish events that are compliant with the Cloud Events specification. It requires the following parameters:
+The `PublishCloudEvent` activity allows you to publish events that are compliant with the [Cloud Events specification](https://github.com/cloudevents/spec/tree/v1.0). It requires the following parameters:
 
 * Credentials
 * EventId

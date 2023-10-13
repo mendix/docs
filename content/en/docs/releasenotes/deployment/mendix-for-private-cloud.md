@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### October ???, 2023
+### October 13, 2023
 
 #### Data Migration Tool (Preview) v0.0.2
 

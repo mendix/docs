@@ -35,7 +35,8 @@ As we further develop this feature, we may lift these limitations with future re
 
 * Feedback issues, and stories from Epics are not migrated to Jira.
 * The Stories pane in Studio Pro does not show the status and story points of a story correctly.
-* You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
+* You cannot change the status of a story from the [Stories](/refguide/stories-pane/) pane in Studio Pro.
+* When converting a feedback item to an issue, the story type, title, and description will be set. If your Jira configuration requires additional mandatory fields, this process might not work.
 
 ## 4 Prerequisites
 

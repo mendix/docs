@@ -335,7 +335,7 @@ A customer asked if it was possible to collect information when a certain messag
 
 Many customers have asked to receive notifications, so a new notify action on triggers has been introduced. This action will call a microflow with three string parameters: **To**, **Subject**, and **Message**. Several replaces can be done to ease the configuration of the strings. A sample microflow has been added that logs on this action.
 
-The idea is to call your own microflow that sends out an e-mail. The APMAgent module will not include an email facility itself, in order to prevent conflicts with existing e-mail, so this is the way to get notifications out.
+The idea is to call your own microflow that sends out an email. The APMAgent module will not include an email facility itself, in order to prevent conflicts with existing email, so this is the way to get notifications out.
 
 ### Trigger Log Action with Level
 
@@ -636,7 +636,7 @@ With this feature during a performance analysis you can see if a microflow is ta
 
 ### New Beta Feature: Trigger on Microflow Statistics
 
-Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (hence BETA) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an e-mail.
+Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (hence BETA) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an email.
 This feature will change in the future.
 
 ### New feature: Reporting Support with OData

@@ -85,7 +85,7 @@ The PDF Document Generation module automatically tries to find the Chrome execut
 
 If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** folder. 
 
-#### 3.1.2 Chromium
+#### 3.1.2 Chromium {#chromium}
 
 If you use Chromium, only use stable releases. The currently supported stable release is [112.0.5615.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). 
 
@@ -263,16 +263,18 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 1. Download the font [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC).
 2. Copy the font file *NotoSansSC-Regular.ttf* from the *static* folder of the downloaded font package into the *theme\web\fonts* folder of the app.
 3. In Studio Pro, go to **Styling** > **Web** > **main.scss** in **App Explorer**, and add the lines below to the *main.scss* file in the built-in styling editor:
-```css
-@font-face {
-    font-family: 'Noto Sans SC';
-    src: url(fonts/NotoSansSC-Regular.ttf);
-}
 
-.font-noto-sans-sc {
-    font-family: 'Noto Sans SC', sans-serif;
-}
-```
+    ```css
+    @font-face {
+        font-family: 'Noto Sans SC';
+        src: url(fonts/NotoSansSC-Regular.ttf);
+    }
+
+    .font-noto-sans-sc {
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    ```
+
 4. Add the class `font-noto-sans-sc` to all applicable text and widgets.
 
 #### 4.4.4 Advanced Styling
@@ -307,7 +309,11 @@ In general, we recommend you perform the following steps in case of any issues d
 
 #### 5.2.1 Rendering/Styling Issues
 
-In case of issues regarding styling, we recommend you temporarily add the page microflow to your app navigation (See step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. We recommend you use Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
+In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
+
+{{% alert color="warning" %}}
+When testing the PDF document generation locally using Chrome or Chromium version 117 or above, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. Mendix is currently looking into this issue, and we advise using the Chromium version cited in the [Chromium](#chromium) section above to guarantee the same result locally as from our PDF document generation service.
+{{% /alert %}}
 
 #### 5.2.2 Local Service Errors
 
@@ -337,3 +343,4 @@ If you encounter the message "Failed to load page: TimeoutError: waiting for sel
 * Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.
 * A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.
+* Make sure that the module role `User` is assigned to the user who is passed in the `Generate as user` property of the `Generate PDF from page` action.

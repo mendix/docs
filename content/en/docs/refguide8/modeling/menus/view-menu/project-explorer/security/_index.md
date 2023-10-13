@@ -38,7 +38,7 @@ An end-user in a Mendix application has one or more user roles. These roles can 
 
 See [User Roles](/refguide8/user-roles/).
 
-Each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An e-mail module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules.
+Each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An email module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules.
 
 See [Module Role](/refguide8/module-security/#module-role).
 

@@ -29,7 +29,7 @@ The following custom settings can be configured:
 | --- | --- | --- |
 | TempPath | The location of the temporary files. | [deployment folder]\data\tmp |
 | UploadedFilesPath | The location of the uploaded files. A valid path can be: \\FileServer\CustomerPortalFiles. | [deployment folder]\data\files |
-| ApplicationRootUrl | Can be used within Java Actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
+| ApplicationRootUrl | Can be used within Java Actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending emails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
 | ScheduledEventExecution | Specify which scheduled events should be executed. Choices are 'ALL', 'NONE' or 'SPECIFIED'. In case of 'SPECIFIED' enumerate the scheduled events using the 'MyScheduledEvents' configuration option described below. | NONE |
 | MyScheduledEvents | A comma-separated string with the names of the events. Please don't forget the name of the module. A name can be CRM.UpdateCustomerStatistics. |   |
 | PersistentSessions | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to log in again. However, making sessions persistent can have a negative influence on the speed of the application: the value can be true or false. | true |

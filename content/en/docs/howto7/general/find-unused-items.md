@@ -8,7 +8,7 @@ tags: ["unused", "item", "usage"]
 
 ## 1 Introduction
 
-During the development of your application it might occur that specific functionality, pages, microflows etc. aren't applicable anymore for the final version of your application. In order to keep your model clean, clear and easy to maintain it is advised to cleanup any unused items. This How-To will teach you how you can find unused items and what you have to keep in mind dealing with unused items.
+During the development of your application it might occur that specific functionality, pages, microflows etc. aren't applicable anymore for the final version of your application. In order to keep your model clean, clear and easy to maintain it is advised to cleanup any unused items. This how-to teaches you how you can find unused items and what you have to keep in mind dealing with unused items.
 
 ## 2 Finding Unused Items
 

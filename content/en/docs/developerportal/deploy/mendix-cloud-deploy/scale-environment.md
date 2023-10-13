@@ -20,7 +20,7 @@ Apps built using supported versions of Mendix can be run in multiple runtime con
 Before Mendix 9.12.0, [Scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Scale your environment in the Mendix Cloud
 

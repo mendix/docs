@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/ats/ht-one-custom-action-basics/
 
 This how-to explains the basics of creating a custom action. You must complete this how-to before proceeding with [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a custom action
 * Add parameters

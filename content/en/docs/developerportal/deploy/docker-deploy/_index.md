@@ -16,7 +16,7 @@ We suggest that, if you are planning to deploy to your own cloud platform at sca
 
 This page explains how to build a Docker image from your Mendix App. Every time you make changes to your app, you must create a new  Docker image that can be pushed through the different stages of your application pipeline.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Build the image
 * Push the image

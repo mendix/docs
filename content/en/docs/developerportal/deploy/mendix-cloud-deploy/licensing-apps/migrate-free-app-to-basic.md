@@ -10,7 +10,7 @@ tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Ba
 
 ## 1 Introduction
 
-This how-to will teach you how to migrate your app and its database from a Free App environment to a paid Mendix Basic node. For more information on the Mendix Basic Package, see [Mendix Basic Package](/developerportal/deploy/basic-package/).
+This how-to teaches you how to migrate your app and its database from a Free App environment to a paid Mendix Basic node. For more information on the Mendix Basic Package, see [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
 You can also see these steps by watching this video:
 

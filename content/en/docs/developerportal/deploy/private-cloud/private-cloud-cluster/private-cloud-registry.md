@@ -107,7 +107,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
                     "ecr:GetDownloadUrlForLayer",
                     "ecr:InitiateLayerUpload",
                     "ecr:PutImage",
-                    "ecr:List",
+                    "ecr:ListImages",
                     "ecr:UploadLayerPart",
                     "ecr:DescribeRepositories",
                     "ecr:CreateRepository"

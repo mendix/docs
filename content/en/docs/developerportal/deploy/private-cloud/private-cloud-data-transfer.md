@@ -18,6 +18,8 @@ The Private Cloud data migration tool allows you to:
 
 The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from the Mendix Cloud, allowing you to transfer application data between the Mendix Cloud and Mendix for Private Cloud.
 
+When exporting files from an environment, the export only includes files which are in use (that is, which are referenced by a `System.FileDocument` entity). Any files that are not used by the app are ignored.
+
 {{% alert color="info" %}}
 Although this tool can also be used to backup and restore your Mendix for Private Cloud databases and files regularly, we recommend that you implement your own backup and restore processes which take advantage of the tools provided by your database vendor or cloud provider.
 {{% /alert %}}
@@ -28,7 +30,7 @@ Although this tool can also be used to backup and restore your Mendix for Privat
 
 The following database is supported:
 
-* PostgreSQL (any version [supported by Mendix for Private Cloud](/developerportal/deploy/private-cloud-supported-environments/))  
+* PostgreSQL (any version [supported by Mendix for Private Cloud](/developerportal/deploy/private-cloud-supported-environments/))
 
 {{% alert color="warning" %}}
 To remain compatible with Mendix Cloud backups, other databases types (such as SQL Server) are not supported.
@@ -58,15 +60,15 @@ The data transfer tool needs the following:
 
 In most cases, this means the data transfer tool cannot run from a local machine and needs to run in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a [jump pod(#jump-pod)).
 
-## 3 Using the Data Transfer Tool 
+## 3 Using the Data Transfer Tool
 
 ### 3.1 Downloading the Data Transfer tool
 
 Download and extract the tool for your operating system. If you are planning to run the data transfer tool in a Pod, download the Linux version.
 
-* [Linux](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.1-linux-amd64.tar.gz)
-* [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.1-macos-amd64.tar.gz)
-* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.1-windows-amd64.zip)
+* [Linux](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.2-linux-amd64.tar.gz)
+* [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.2-macos-amd64.tar.gz)
+* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.2-windows-amd64.zip)
 
 ### 3.2 Running the Data Transfer Tool Locally
 
@@ -97,6 +99,8 @@ To restore a backup file into your environment, use the following command:
 * `-n <namespace>` - the namespace containing the environment
 * `-e <environment>` - the environment where the data should be restored
 * `-f <file>` - backup file (in a [Mendix Cloud format](/developerportal/operate/restore-backup/#format-of-backup-file)) that should be restored into the destination environment
+
+If the database or file storage use self-signed TLS certificates from a private CA, provide the path to the custom root CA `pem` file or directory through the `SSL_CERT_FILE` or `SSL_CERT_DIR` environment variable.
 
 ### 3.3 Running the Data Transfer in a Jump Pod{#jump-pod}
 
@@ -168,7 +172,11 @@ Importing data into a running environment might cause the environment to stop wo
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-These instructions have been validated in Windows Subsystem for Linux and macOS and might not work in the Windows commandline terminal, Git Bash or Powershell. 
+Backing up a running app (that is, an app that has active users or other activity) could mean that some files might be deleted while the backup is in progress. For example, if an app generates PDF reports or deletes uploaded files after processing them, these files could exist for only a few seconds and be automatically deleted. Attempting to back up those files might fail if this happens after the file is deleted; this is expected behavior for temporary files. To prevent warnings when running a backup process, you must enable the [Prevent data deletion](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) option in the Storage Plan.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+These instructions have been validated in Windows Subsystem for Linux and macOS, and might not work in the Windows commandline terminal, Git Bash or Powershell.
 {{% /alert %}}
 
 To export data from an environment into a backup file, run the following commands (replace `{namespace}` with the environment's namespace, and `{environment}` with the environment's internal name):
@@ -214,11 +222,11 @@ rm /tmp/mendix-backup-restore.yaml
 ## 3 Known Limitations
 
 * It is not possible to export/import only the database or only files. The import/export process will always export or import the database together with any files.
-* When exporting data, all files from the bucket will be included. This may include:
+* In version 0.0.1 of the tool, when exporting data, all files from the bucket will be included. This may include:
     * files from other environments (in case of a shared bucket),
     * files deleted from the Mendix app, but which still exist in the bucket.
 * The export/import tool needs access to the Kubernetes API to get credentials for a specific environment.
 * If `pg_restore` fails for any reason, the data import process is terminated immediately with an error.
-* It is not possible to configure TLS trust settings.
+* It is not possible to enforce TLS options.
     * For PostgreSQL, the tool will try to use SSL, but will trust any server certificate. If the database doesn't support SSL, the tool will switch to an unencrypted connection.
     * For Minio and S3, TLS will be used if the environment's storage plan has an `https://` endpoint URL.

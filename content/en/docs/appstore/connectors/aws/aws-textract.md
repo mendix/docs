@@ -174,6 +174,14 @@ The domain model is a data model that describes the information in your applicat
 | `GroupProperty` | This entity holds information for showing the group that a certain key belongs to. The attribute it contains is `_id` which describes the group identification number which will be the same for each member of the group. Additionally, it contains a list of `ExpenseGroupPropertyType` objects. |
 | `ExpenseGroupPropertyType` | This entity holds information for distinguishing whether the expense group is a name or an address. The attribute it contains is `_Type`. |
 | `ExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `Geometry` object (`AnalyzeExpenseGeometry`). |
+| `AbstractFeatureType` | This entity holds information about the type of analysis that should be executed. it contains the attribute `Value` which specifies the feature type value of type enumeration. |
+| `AbstractWarning` | This entity holds information about the warnings that have been sent along with a `GetDocumentAnalysisResponse` or a `GetExpenseAnalysisResponse`. It contains an ErrorCode attribute which specifies the error code of the warning. It has a list of `PageNumber` objects associated.|
+| `PageNumber` | This entity holds information about the PageNumber the associated `AbstractWarning` object refers to. |
+| `AbstractRequestQuery` | This entity holds information about the question Textract should apply to the document. The Text attribtue holds the question. It has a list of `PagesToSearch` objects associated. |
+| `PagesToSearch` | This entity holds information about the StartPage and EndPage the associated `Query` will be applied to. |
+| `AbstractDocumentAnalysisResponse` | This entity is the generalization of the response entities of the `AnalyzeDocument` and `GetDocumentAnalysis` actions. It contains the part of the responses that are shared between those actions. Most importantly, it has a list of type `DocumentAnalysisBlock` associated. A spcialization of this object should be used as an input parameter of the `AbstractDocumentAnalysisResponse_ProcessResults` microflow. This way, the responses from both the `AnalyzeDocument` and the `GetDocumentAnalysis` actions can be used by as input parameters.|
+| `DocumentAnalysisBlock` | This entity is a specialization of the `Block` entity and holds the Blocks returned by `AnalyzeDocument` and the `GetDocumentAnalysis` actions. |
+ 
 
 ### 4.2 Enumerations {#enumerations}
 
@@ -267,6 +275,29 @@ This enumeration indicates the selection status of the block. For more informati
 | `SELECTED` | SELECTED |
 | `NOT_SELECTED` | NOT_SELECTED |
 
+#### 4.2.7 FeatureTypes
+
+This enumeration holds the available types of analysis to perform, see
+
+| Name | Caption |
+| --- | --- |
+| `FORMS` | FORMS |
+| `TABLES` | TABLES |
+| `QUERIES` | QUERIES |
+| `SIGNATURES` | SIGNATURES |
+| `LAYOUT` | LAYOUT |
+
+#### 4.2.8 JobStatus
+
+This enumeration indicates the status of the document analysis job as part of the `GetDocumentAnalysisResponse`, see
+
+| Name | Caption |
+| --- | --- |
+| `IN_PROGRESS` | IN_PROGRESS |
+| `SUCCEEDED` | SUCCEEDED |
+| `FAILED` | FAILED |
+| `PARTIAL_SUCCESS` | PARTIAL_SUCCESS |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense. For more information, see [Activities](/refguide/activities/).
@@ -277,7 +308,7 @@ To help you work with multi-page PDF files in a synchronous way, you can use the
 
 The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region and `AnalyzeDocumentRequest` object. It additionally requires at least a `RequestQuery` object when the `GetQueries` attribute in `AnalyzeDocumentRequest` is set to true.
 
-Additionally, you can use the `AnalyzeDocumentResponse_ProcessResults` sub-flow. This will process the response from Amazon Textract into the specialized `BlockItem` model.
+Additionally, you can use the `AbstractDocumentAnalysisResponse_ProcessResults` sub-flow. This will process the response from Amazon Textract into the specialized `BlockItem` model.
 
 The input and output for this service are shown in the table below:
 
@@ -316,3 +347,40 @@ This activity returns an `AnalyzeExpenseResponse` object with objects from the f
 | `LineItemField` | | This entity holds information for a line within the given document's table. |
 | `LineItemExpenseField` | `AmazonTextractConnector.ExpenseField` | This specialized entity holds information for the detected expense-related information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber`, which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object, and a `Currency` object. |
 | `AnalyzeExpenseBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attributes it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten or printed). Additionally, this entity contains a list of `Relationship` objects and a specialized Geometry object (`BlockGeometry`). |
+
+#### 4.3.3 StartDocumentAnalysis {#startdocumentanalysis}
+
+The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the Feature Type 'QUERIES' is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.  
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `StartDocumentAnalysisRequest` (Object) | `StartDocumentAnalysisResponse` (Object) |
+| `AWS_Region` (Enumeration) | |
+| `Credentials` (object) | |
+
+This activity returns a `AnalyzeDocumentResponse` object with objects from the following entities, as shown in the table below:
+
+| Name | Generalization | Documentation |
+| --- | --- | --- |
+| `StartDocumentAnalysisResponse` | | This entity is the response for the Amazon Textract `StartDocumentAnalyis` action. It contains a JobId attribute, which can be used by the `GetDocumentAnalysis` action to retrieve the results once they have been processed by the Textract service|
+
+#### 4.3.4 GetDocumentAnalysis {#getdocumentanalysis}
+
+The `GetDocumentAnalysis` Amazon Textract action allows you to retrieve the analysis results that have been invoked by the `StartDocumentAnalysis` action. It requires a valid AWS region, a `Credentials` object, and a `GetDocumentAnalysisRequest` object.
+
+Additionally, you can use the `AbstractDocumentAnalysisResponse_ProcessResults` sub-flow. This will process the response from Amazon Textract into the specialized `BlockItem` model.
+
+| Input | Output |
+| --- | --- |
+| `GetDocumentAnalysisRequest` (Object) | `GetDocumentAnalysisResponse` (Object) |
+| `AWS_Region` (Enumeration) | |
+| `Credentials` (object) | |
+
+This activity returns a `GetDocumentAnalysisResponse` object with objects from the following entities, as shown in the table below:
+
+| Name | Generalization | Documentation |
+| --- | --- | --- |
+| `GetDocumentAnalysisResponse` | `AbstractDocumentAnalysisResponse`| This entity is the response for the Amazon Textract `GetDocumentAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a NextToken that can be used to retrieve the next batch of results. |
+| `GetDocumentAnalysisWarning` | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|

@@ -152,6 +152,10 @@ The `PublishCloudEvent` activity allows you to publish events that are compliant
 
 The `GetQueueList` microflow allows you to retrieve a list of queues. It requires the Management Credentials parameter.
 
+##### 4.3.4.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/get-queue-list.png" >}}
+
 #### 4.3.5 Get Queue Details
 
 The `GetQueueDetails` microflow allows you to retrieve detailed information about a queue. It requires the Management Credentials and Queue Name as parameters.
@@ -180,6 +184,10 @@ The `CreateOrUpdateQueue` activity allows you to create a new queue or update an
 
 The `DeleteQueue` activity allows you to delete a queue. It requires the Management Credentials and Queue Name as parameters.
 
+##### 4.3.8.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/delete-queue.png" >}}
+
 #### 4.3.9 Create Queue Subscription
 
 The `CreateQueueSubscription` activity allows you to create a new subscription to a queue. It requires the following parameters:
@@ -199,3 +207,7 @@ The `DeleteQueueSubscription` activity allows you to delete a subscription to a 
 * Management credentials
 * Topic to be deleted
 * Queue or queues subscribed to the topic that you want to delete
+
+##### 4.3.10.1 Sample Microflow
+
+{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/delete-queue-subscription.png" >}}

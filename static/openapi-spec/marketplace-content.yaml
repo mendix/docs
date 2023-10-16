@@ -276,6 +276,12 @@ components:
 
     specificContent:
       type: object
+      required:
+        - contentId
+        - publisher
+        - type
+        - isPrivate
+        - latestVersion
       properties:
         contentId:
           type: integer

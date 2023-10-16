@@ -12,7 +12,7 @@ This how-to takes you through the process of deploying a Docker image of your Me
 
 Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away much of the heavy lifting. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Deploy and run a Mendix app on Kubernetes using Minikube
 * Separate the database deployment from your app 

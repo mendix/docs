@@ -28,9 +28,9 @@ For apps deployed to the Mendix Cloud you must setup a third-party mail provider
 
 ## 2 External Email Providers
 
-In general we recommend external services as these offer specialized tools for sending e-mail, working with spam filters, keeping track of sent e-mail and giving insights into your target reach via analytics tools.
+In general we recommend external services as these offer specialized tools for sending email, working with spam filters, keeping track of sent email and giving insights into your target reach via analytics tools.
 
-The [Email](/appstore/connectors/email-connector/) connector from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
+The [Email](/appstore/connectors/email-connector/) connector from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending email using an external service, such as REST APIs or creating your own Java actions to send email.
 
 To use an external provider, you will need to sign up for an account with them and use their SMTP settings which include:
 

@@ -42,7 +42,7 @@ The following custom settings can be configured:
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| <a id="ApplicationRootUrl" href="#ApplicationRootUrl">ApplicationRootUrl</a> | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
+| <a id="ApplicationRootUrl" href="#ApplicationRootUrl">ApplicationRootUrl</a> | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending emails from a scheduled event. | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
 | <a id="CACertificates" href="#CACertificates">CACertificates</a> | A comma-separated list of paths to CA certificates. |   |
 | <a id="ClientCertificatePasswords" href="#ClientCertificatePasswords">ClientCertificatePasswords</a> | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
 | <a id="ClientCertificates" href="#ClientCertificates">ClientCertificates</a> | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |   |

@@ -298,8 +298,11 @@ components:
           example: "Community"
           enum:
           - Community
-          - Plaform
+          - Platform
           - Partner
+          - Extended
+          - Deprecated
+          - Siemens
           description: "Support for this content. For more information - https://docs.mendix.com/appstore/general/app-store-content-support/"
         licenseUrl:
           type: string

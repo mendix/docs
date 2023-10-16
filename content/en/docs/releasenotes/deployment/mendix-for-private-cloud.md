@@ -13,6 +13,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### October 19, 2023
+
+#### Portal Improvements
+
+* We have added an option to specify additional custom pod labels for an environment in the portal
+* We have added an option to configure the Ephemeral storage in Core resources. 
+* In order to be consistent with Mendix Cloud portal, the number of constants visible per page are increased from 5 to 10 now. Similar implementation is also done on Scheduled Events, Custom Runtime Settings, Custom Environment variable, Scheduled Events, Client certificate. For log levels, this has been increased to 20 entries per page. (Ticket 196963) 
+* We have fixed the issue where user was able to select custom plans created for other namespaces.
+* We have added a warning message when user tries to switch from default to custom core resource plans.
+
+
 ### October 13, 2023
 
 #### Data Migration Tool (Preview) v0.0.2

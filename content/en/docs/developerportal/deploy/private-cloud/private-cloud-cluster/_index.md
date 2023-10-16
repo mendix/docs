@@ -1157,7 +1157,87 @@ If there are any environments associated with the namespace, you cannot delete t
 
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
+
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
+
+In order to delete the namespace from the cluster, you need to follow the below steps:
+
+* Ensure that all the environments under this namespaces are removed. You can check the list of environments under this namespace using below command:
+
+
+For OpenShift:
+
+```shell
+oc -n {namespace} get mendixApp
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} get mendixApp
+```
+
+If there are any mendix app still existing in the namespace, you can delete the corresponding environment using below command:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} delete mendixApp {internalId}
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} delete mendixApp {internalId}
+```
+
+{{% alert color="info" %}}
+The internalId is the id for the environment.
+{{% /alert %}}
+
+Once, you run the above command, ensure to wait until Storage Provisioner cleanly completes the process of deleting the corresponding Storage Instance related to the environment. You can check if there are any existing Storage instances by running the below command:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} get StorageInstance
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} get StorageInstance
+```
+
+* If there are any existing Storage Instances, you can delete then using below command:
+
+For OpenShift:
+
+```shell
+oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+```
+
+For Kubernetes:
+
+```shell
+kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+```
+
+After manually removing the StorageInstance, you’ll need to manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account in the cluster.
+
+* Once all the storage instances are deleted successfully, yon can now delete the namespace from the cluster using below command:
+
+
+```shell
+oc delete ns {namespace}
+```
+
+For Kubernetes:
+
+```shell
+kubectl delete ns {namespace}
+```
+
 
 You can also see an activity log containing the following information for all namespaces within the cluster:
 
@@ -1219,7 +1299,9 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
-You can also configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
+You can configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
+
+You can also configure the pod labels for the environment in the Labels section. For more details, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels)
 
 #### 7.2.2 Members
 
@@ -1331,7 +1413,7 @@ Here, you can create customized plan for your core resources.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required CPU Limits, CPU Request, Memory Limit and Memory Request based on your choice. 
+3. Provide the required CPU Limits, CPU Request, Memory Limit, Memory Request, Ephemeral Storage Request and Ephemeral Storage Limit based on your choice. 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 
@@ -1342,6 +1424,16 @@ Here, you can create customized plan for your core resources.
 5. In order to make the customized plan available to the customer, make sure to enable the toggle button next **Use custom core resources plans**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
+
+
+{{% alert color="info" %}}
+Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hence, with the deletion of pod, the data stored in the ephemeral storage is also lost.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Once you enable the **Use custom core resources plans** button, you cant swicth back to the default core plans until you delete all the environments using the custom core plans and diable **Use custom core resources plans** button
+{{% /alert %}}
+
 
 #### 7.2.6 Installation
 

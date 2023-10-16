@@ -190,6 +190,10 @@ You can also set **Mask** to **Yes**. This changes the display settings for **Cu
 For the changes to take effect, you must restart your application.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+The first time a constant is introduced to the cloud deployment the value will be taken over from the Studio Pro configuration. Afterward, any changes to the constant value in Studio Pro will not be copied on a new deployment.
+{{% /alert %}}
+
 For more information, see [Constants](/refguide/constants/).
 
 ## 4 The Network Tab {#network-tab}

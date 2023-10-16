@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "SAP", "SAP Event Mesh", "connect
 
 ## 1 Introduction
 
-The [SAP Event Mesh connector](#needs-link) connector enables you to connect your app to [SAP Event Mesh](https://discovery-center.cloud.sap/serviceCatalog/event-mesh) and connect your Mendix app to applications, services, and systems across hybrid environments.
+The [SAP Event Mesh connector](https://marketplace.mendix.com/link/component/217434) connector enables you to connect your app to [SAP Event Mesh](https://discovery-center.cloud.sap/serviceCatalog/event-mesh) and connect your Mendix app to applications, services, and systems across hybrid environments.
 
 ### 1.1 Typical Use Cases
 

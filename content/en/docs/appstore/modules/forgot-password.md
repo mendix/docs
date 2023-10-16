@@ -99,7 +99,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
 1. Run the application.
 1. Sign in as **demo_administrator** from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
-    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](https://marketplace.mendix.com/link/component/120739) or [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). In version 5.4.0 and above this will create a SMTP configuration which you will need to select.
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) or [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). In version 5.4.0 and above this will create a SMTP configuration which you will need to select.
     * In version 5.4.0 and above, select the SMTP configuration you want to use for sending reset password email.
     * From the drop-down menu, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
 
@@ -169,7 +169,7 @@ You have now successfully upgraded the Forgot Password Module to work with Mendi
 
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
-Below versions of the Forgot Password module use the [Email Connector](https://marketplace.mendix.com/link/component/120739) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+Below versions of the Forgot Password module use the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 * Version 4.1.0 (for Mendix 8)
 * Version 5.1.0 (for Mendix 9 and above)
 * Version above 5.1.0 
@@ -186,7 +186,7 @@ Migrating to Email Connector Module has the following dependencies:
 
 * An app that uses Mendix 8 or above.
 
-    Email connector Module is not compatible with Mendix 7 and thus the Forgot Password Module version compatible with mendix 7 (3.xx) continue to use the [Email Module with Templates] module.
+    [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) Module is not compatible with Mendix 7 and thus the Forgot Password Module version compatible with mendix 7 (3.xx) continue to use the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 * The email templates must be set up as follows:
 
     * The reset password template must contain *_Reset* in the template name.
@@ -198,10 +198,10 @@ Migrating to Email Connector Module has the following dependencies:
 
 Import the modules which are needed for the migration process.
 
-1. Import the [Email Connector](https://marketplace.mendix.com/link/component/120739) module.
+1. Import the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module.
 2. Import the [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module.
 
-Troubleshoot any Atlas UI issues related to the [Email Connector](https://marketplace.mendix.com/link/component/120739) and [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) modules that may arise due to your Studio Pro version.
+Troubleshoot any Atlas UI issues related to the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) and [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) modules that may arise due to your Studio Pro version.
 
 See the documentation for the [Email Connector](/appstore/connectors/email-connector/) and the [Email Connector Migration Utility](https://github.com/mendixlabs/EmailConnectorMigrationUtility) (on GitHub) for more information.
 
@@ -221,12 +221,12 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 
 #### 5.2.4 Actions After the Migration
 
-1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix 9 and above). This will have the Email Connector module as a dependency.
-1. Delete the Email Module with Templates module.
-1. Delete the Email Connector Migration Utility module.
+1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix 9 and above). This will have the [Email Connector](/appstore/connectors/email-connector/) module as a dependency.
+1. Delete the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+1. Delete the [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module.
 1. Remove the Administrator user roles for `EmailTemplate` and `MigrationUtility`.
 1. Remove any module roles related to `EmailTemplate` and `MigrationUtility`.
-1. Check the **userlib** folder in your app directory and remove the Java *.jars* related to the Email Module with Templates module as indicated by a *.EmailTemplate.RequiredLib* file (for example, *activation-1.1.1.jar* and the related *activation-1.1.1.jar.EmailTemplate.RequiredLib*).
+1. Check the **userlib** folder in your app directory and remove the Java*.jars* related to the Email Module with Templates module as indicated by a *.EmailTemplate.RequiredLib* file (for example, *activation-1.1.1.jar* and the related *activation-1.1.1.jar.EmailTemplate.RequiredLib*).
 1. Use the [Clean Deployment Directory](/refguide/app-menu/#clean-deployment-directory) in Studio Pro.
 1. Run the application and test the functionality.
 
@@ -246,4 +246,4 @@ Your data will be migrated multiple times and duplicate records will be created 
 
 #### 5.3.4 What Should I Do If My Email Templates Are Not Available after Migration?
 
-You will have to create templates again using the ForgotPassword configuration page, as described in [Installing the Forgot Password Module](#installing) section above.
+You will have to create templates again using the Forgot Password configuration page, as described in [Installing the Forgot Password Module](#installing) section above.

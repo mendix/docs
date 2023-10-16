@@ -130,7 +130,7 @@ components:
       description: "Allows to filter on public or private content. Supported values are 'true' or 'false' . In case filter is 'true', it will return only private last published versions of content belonging to the company of the personal access token’s owner. In case filter is 'false',  it will return only public last published versions of the content. If no value is passed, then last published versions of both public content and private content belonging to the company of the personal access token’s owner will be returned."
       required: false
       schema:
-        type: boolean
+        type: string
     publishedSince:
       name: publishedSince
       in: query

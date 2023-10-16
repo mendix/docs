@@ -16,7 +16,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ### Fixed
 
-* We have fixed an issue related to Firebase integration. This ensures improved stability and a smoother experience in our application.
+* We fixed an issue related to Firebase integration. This fix ensures improved stability and a smoother experience while using the Make It Native app.
 
 ## iOS 1.1.0 / Android 1.1.0
 

@@ -732,7 +732,7 @@ By specifying a value for `mxAgentConfig`, you can enable the Mendix [Java instr
 MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
-<!-- BEGIN snippet This should be kept in sync with Section 4.2.1 Format of Metrics Agent Configuration in /developerportal/operate/metrics/monitoring-with-apm/_index.md, updating relative links -->
+<!-- BEGIN snippet This should be kept in sync with Section 4.2.1 Format of Metrics Agent Configuration in /developerportal/operate/monitoring-with-apm/_index.md, updating relative links -->
 
 You can specify which request handlers, microflows, and activities are reported to Prometheus using a JSON configuration with the following format (note that this is the syntax and not an example of this custom setting):
 

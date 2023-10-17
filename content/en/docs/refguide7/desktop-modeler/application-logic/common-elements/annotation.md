@@ -10,7 +10,7 @@ An annotation is an element that can be used to put comments in a flow.
 
 {{% alert color="info" %}}
 
-Currently you warn users of unpaid orders with a pop-up message in the client. Later you want to extend this warning with an e-mail message send to the user. To remember this you can use an annotation and put it beside the current activity that warns the user.
+Currently you warn users of unpaid orders with a pop-up message in the client. Later you want to extend this warning with an email message send to the user. To remember this you can use an annotation and put it beside the current activity that warns the user.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/annotation/918060.png" >}}
 

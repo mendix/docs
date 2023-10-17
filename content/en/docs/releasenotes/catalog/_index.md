@@ -13,6 +13,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### October 12, 2023
+
+### Improvement
+
+* We have decreased the number of clicks required to reach the discoverability setting of a data source. We have also included more information relating to the data source on the **My Assets** page in the Technology field form. 
+
+
 ### October 5, 2023
 
 ### Features

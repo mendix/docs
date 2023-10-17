@@ -12,7 +12,7 @@ tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", 
 
 ## 1 Introduction
 
-This how-to will teach you how to manually set up a new SQL Server database.
+This how-to teaches you how to manually set up a new SQL Server database.
 
 {{% alert color="info" %}}
 You only need to follow these steps if the database user used by Mendix does not have enough permission to create the database for you.

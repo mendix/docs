@@ -268,6 +268,48 @@ You will get a report of the results of your import operation:
 
 If a license has previously been imported, you will be told that it is `[Duplicated]`.
 
+### 6.1 Listing the Runtime License
+
+Once the license bundle is installed, you can see the list of Runtime license in the bundle using following command:
+
+```bash {linenos=false}
+mx-pclm-cli license runtime list \
+   -s <pclm-http-url> \
+   -u <admin-user> \
+   -p <admin-password>
+```   
+
+You will receive the result in below format:
+
+| LICENSE-ID                           | TYPE       | EXPIRATION-DATE      | CREATED-AT           | PRODUCTS |
+|--------------------------------------|------------|----------------------|----------------------|----------|
+| 5025defa-a442-47c3-ae2e-2ac6628926e3 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
+| c823eeb1-7eb2-471c-a818-7be132c9cdb1 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
+
+The PRODUCTS field represents the Product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the mendix app CR for  which license is required. For more information, check how runtimeLicenseProduct is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
+
+{{% alert color="info" %}}
+In order to update the product type in Mendix App CR, kindly ensure you are using Operator version 2.12 and onwards.
+{{% /alert %}}
+
+### 6.2 Listing the Operator License
+
+Once the license bundle is installed, you can see the list of Runtime license in the bundle using following command:
+
+```bash {linenos=false}
+mx-pclm-cli license operator list \
+   -s <pclm-http-url> \
+   -u <admin-user> \
+   -p <admin-password>
+```   
+
+You will receive the result in below format:
+
+| LICENSE-ID                           | TYPE       | EXPIRATION-DATE      | CREATED-AT           | PRODUCTS |
+|--------------------------------------|------------|----------------------|----------------------|----------|
+| c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
+
+
 ## 7 Applying Licenses to Your Operator and Apps
 
 To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation.
@@ -448,7 +490,7 @@ This will indicate that licenses have been applied to the operator and apps in t
 
 | License-ID                           | Namespace  | App-ID   | Type        |
 | ------------------------------------ | ---------- | -------- | ----------- |
-| `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
+| `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator | 
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
 
 ## 9 Troubleshooting

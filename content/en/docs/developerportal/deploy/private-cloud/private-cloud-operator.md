@@ -160,6 +160,7 @@ spec:
   customPodLabels: # Optional: custom pod labels
     general: # Optional: general pod labels (applied to all app-related pods)
       azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
+   runtimeLicenseProduct: # Optional: Specify the type of product required for Runtime License. This is applicable when PCLM is used for Licensing. By default, the value is set to Standard, if left empty   
 ```
 
 You need to make the following changes:
@@ -183,6 +184,7 @@ You need to make the following changes:
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
+* **runtimeLicenseProduct** - This is applicable for PCLM licenses. If the product type for the license, is anything other than Standard, then the value of the Product type needs to be set here. For more infornmation, kindly check [PCLM Runtime License Product](/developerportal/deploy/private-cloud/private-cloud-license-manager/)
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 

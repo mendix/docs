@@ -26,6 +26,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have an app ready using the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template.
 
+    * ⚠ The [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template is deprecated and was created in Studio Pro 8.14.0. To be able to use it in Studio Pro 9, you need to upgrade this app template. To do so, follow these steps:
+        1. Open the **Asset Manager App** template with any Studio Pro 9 version.
+        2. Click **Convert in-place** in the pop-up **Warning** dialog box and Mendix upgrades the app automatically to a Studio Pro 9 app.
+
+        You can now use the upgraded **Asset Manager App** template to continue with the how-to in Studio Pro 9. For more information, see [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/).
+
 ## 3 Adding a Java Action in Studio Pro
 
 1. Right-click the **AssetManager** module and select **Add other** > **Java action**.

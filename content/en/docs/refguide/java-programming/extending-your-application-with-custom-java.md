@@ -27,6 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have an app ready using the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template. 
 
     * ⚠ The [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template is deprecated and was created in Studio Pro 8.14.0. You cannot open it directly in Studio Pro 10 versions. To be able to use it in Studio Pro 10, you need to upgrade this app template. To do so, follow these steps:
+
         1. Open the **Asset Manager App** template with any Studio Pro 9 version.
         2. Click **Convert in-place** in the pop-up **Warning** dialog box and Mendix upgrades the app automatically to a Studio Pro 9 app.
         3. Open the upgraded app with any Studio Pro 10 version.

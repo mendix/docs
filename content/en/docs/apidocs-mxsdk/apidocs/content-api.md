@@ -9,7 +9,7 @@ tags: ["API", "content"]
 ---
 
 {{% alert color="info" %}}
-This API is only available via a private beta program. If you want to be part of this program, kindly reach out to [Marketplace_Team@Mendix.com](mailto:Marketplace_Team@Mendix.com) to get access
+This API is only available via a private beta program. If you want to be part of this program, kindly reach out to [<u>Marketplace_Team@Mendix.com</u>](mailto:Marketplace_Team@Mendix.com) to get access
 {{% /alert %}}
 
 ## 1 Introduction

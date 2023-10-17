@@ -220,9 +220,9 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Tigrinya | Eritrea | ti_ER | 9.23.0 |
 | Tsonga | South Africa | ts_ZA | 10.4.0 |
 | Tsonga | Zimbabwe | ts_ZW | 10.4.0 |
-| Tswana | Botswana | ts_BW | 10.4.0 |
-| Tswana | South Africa | ts_ZA | 10.4.0 |
-| Tswana | Zimbabwe | ts_ZW | 10.4.0 |
+| Tswana | Botswana | tn_BW | 10.4.0 |
+| Tswana | South Africa | tn_ZA | 10.4.0 |
+| Tswana | Zimbabwe | tn_ZW | 10.4.0 |
 | Turkish | Turkey | tr_TR | 9.0.5 |
 | Ukrainian | Ukraine | uk_UA | 9.0.5 |
 | Urdu | India | ur_IN | 9.2.0 |

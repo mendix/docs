@@ -255,7 +255,7 @@ To configure an OAuth provider for the client credentials grant flow, provide th
 * **Client Secret**
 * **Tenant ID**
 
-With EC 5.2.0 onwards, it is now possible to send emails using a client credentials flow.
+With Email Connector version 5.2.0 and newer, it is now possible to send emails using a client credentials flow.
  
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
@@ -343,9 +343,9 @@ To add attachments to the email message, do the following:
 
 If the **Email connector** page styling is affected as you select and view email messages, that is likely due to errors in the email message CSS. To resolve the errors, turn on **Sanitize email to prevent XSS attacks** in [Account Settings](#other-account-settings).
 
-### 5.7 Importing emails with Long attachment names
+### 5.7 Importing Emails with Long Attachment Names
 
-Some email clients (e.g. Gmail) break down the name of attached files if it is longer and also add the file name in the Content Type for attachment. This can cause an error while fetching or importing emails having long attachment names. The error can be *"ERROR - Email_Connector: Attribute 'Email_Connector.Attachment.attachmentContentType' has a maximum length of 200, tried setting a value of length xxx."*. This issue is resolved in EC 5.3.0 
+Some email clients (for example Gmail) break down the name of attached files if it is longer than a specific value, and also add the file name in the **Content Type** for an attachment. This can cause an error while fetching or importing emails with long attachment names, for example, *"ERROR - Email_Connector: Attribute 'Email_Connector.Attachment.attachmentContentType' has a maximum length of 200, tried setting a value of length xxx."*. This issue is resolved in version 5.3.0 of the Email Connector.
 
 ## 6 Known Errors
 

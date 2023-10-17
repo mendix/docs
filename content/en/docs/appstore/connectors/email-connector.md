@@ -20,7 +20,7 @@ The Email connector includes the following features:
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
 * Email templates
-* Send and Receive emails with OAuth 2.0 Auth code grant and/or client credentials flow.
+* Sending and receiving emails with OAuth 2.0 Auth code grant or client credentials flow.
 
 The Email connector supports the following protocols:
 

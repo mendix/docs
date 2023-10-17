@@ -7,7 +7,6 @@ info:
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
-    email: support@mendix.com
 servers:
   - url: "https://marketplace-api.mendix.com/v1"
 paths:

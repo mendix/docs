@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "platfor
 
 ## 1 Introduction
 
-The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using template, sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using template, or sending signed and encrypted emails.
 
 ### 1.1 Features
 

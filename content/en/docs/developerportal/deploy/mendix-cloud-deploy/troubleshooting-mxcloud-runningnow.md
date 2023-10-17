@@ -31,13 +31,12 @@ You can also zoom in on a stack:
 
 You can use the information displayed in the **Running Now** dialog box for various purposes:
 
-* To see if any actions are currently running in your application – this can be useful if you want to shut down the application to perform maintenance
-* If you fear two actions are blocking one another, you might be able to prevent the deadlock by stopping one of the two actions using the **Kill request** button
-* If you have a performance or memory problem, the listed actions (and their **Details** pages) might help you pinpoint the most likely cause of the problem
-* If the above alone is not enough, you can combine the information in this page with the information in the **Cache** page, the [Logs](/developerportal/operate/logs/) page, and the **Metrics** page.
+* If you want to shut down the application to perform maintenance, you can check **Running Now** to see if any actions are currently running in your application.
+* If you fear two actions are blocking one another, you might be able to prevent the deadlock by stopping one of the two actions using the **Kill request** button.
+* If you have a performance or memory problem, the listed actions (and their **Details** pages) might help you pinpoint the cause of the problem.
+* If the above alone is not enough, you can combine the information on this page with the information on the **Cache** page, the [Logs](/developerportal/operate/logs/) page, and the [Metrics](/developerportal/operate/metrics/) page.
 
 ## 4 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Metrics](/developerportal/operate/metrics/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

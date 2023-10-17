@@ -14,7 +14,8 @@ The Mendix Content API allows you to retrieve the Marketplace content and its ve
 
 This means if you are using marketplace content, the API can help you get the following information:
 - The latest version of the content used. You can keep track of outdated content on your side and check for newly added versions including release notes.
-- The latest version which is compatible with your Mendix Studio Pro version. The information on the content, such as content type, category, license, etc.
+- The latest version which is compatible with your Mendix Studio Pro version.
+- The information on the content, such as content type, category, license, etc.
 
 ## 2 Authentication{#authentication}
 

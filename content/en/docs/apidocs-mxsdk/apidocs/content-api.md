@@ -29,7 +29,7 @@ Authentication for the Content API uses a personal access token (PAT).
 
 To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 
-Select the following as **Marketplace** scopes:
+Select the following as **Marketplace** scope:
 
 * `mx:marketplace-content:read` – to perform `GET` operations
 

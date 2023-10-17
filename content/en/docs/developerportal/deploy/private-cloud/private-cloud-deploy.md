@@ -139,18 +139,20 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
-    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the core resource plan is enabled, environments cant be created using the default plans until all the associated environments using the custom core resource plan are deleted and custom resource plan is disabled on the Cluster manager page.
+    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments can't be created using the default plans until all the associated environments using the custom core resource plan are deleted and custom resource plan is disabled on the Cluster manager page.
     {{% /alert %}}
 
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+    {{% alert color="info" %}}
+    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
     {{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+    {{% alert color="info" %}}
+    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
     {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}

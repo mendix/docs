@@ -1168,13 +1168,13 @@ In order to delete the namespace from the cluster, you need to follow the below 
 For OpenShift:
 
 ```shell
-oc -n {namespace} get mendixApp
+oc -n {namespace} get mendixapp
 ```
 
 For Kubernetes:
 
 ```shell
-kubectl -n {namespace} get mendixApp
+kubectl -n {namespace} get mendixapp
 ```
 
 If there are any mendix app still existing in the namespace, you can delete the corresponding environment using below command:
@@ -1182,13 +1182,13 @@ If there are any mendix app still existing in the namespace, you can delete the 
 For OpenShift:
 
 ```shell
-oc -n {namespace} delete mendixApp {internalId}
+oc -n {namespace} delete mendixapp {internalId}
 ```
 
 For Kubernetes:
 
 ```shell
-kubectl -n {namespace} delete mendixApp {internalId}
+kubectl -n {namespace} delete mendixapp {internalId}
 ```
 
 {{% alert color="info" %}}
@@ -1200,13 +1200,27 @@ Once, you run the above command, ensure to wait until Storage Provisioner cleanl
 For OpenShift:
 
 ```shell
-oc -n {namespace} get StorageInstance
+oc -n {namespace} get storageinstance
 ```
 
 For Kubernetes:
 
 ```shell
-kubectl -n {namespace} get StorageInstance
+kubectl -n {namespace} get storageinstance
+```
+
+In case if there are any failed storage instances, you can check the logs of the storage instances by running below command:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} log {storageinstance-name}
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} log {storageinstance-name}
 ```
 
 * If there are any existing Storage Instances, you can delete then using below command:
@@ -1431,7 +1445,7 @@ Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hen
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Once you enable the **Use custom core resources plans** button, you cant swicth back to the default core plans until you delete all the environments using the custom core plans and diable **Use custom core resources plans** button
+Once you enable the **Use custom core resources plans** button, you can't switch back to the default core plans until you delete all the environments using the custom core plans and disable **Use custom core resources plans** button. A warning message with the same information is displayed when trying to enable this feature.
 {{% /alert %}}
 
 

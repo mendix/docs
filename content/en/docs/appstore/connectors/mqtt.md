@@ -29,7 +29,7 @@ Configure your broker connection by adding the **ConnectionAdministration** page
 
 The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
-If the broker needs basic authentication for connection, you can set up a user name and password that is stored in the domain model. For more information, see the [Authentication](#auth) section below.
+If the broker needs basic authentication to connect, you can set up a user name and password that is stored in the domain model. For more information, see the [Setting Up Authentication](#auth) section below.
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
@@ -82,7 +82,7 @@ To publish data to the MQTT broker, follow these steps:
 1. Search for *Publish MQTT* in the **Toolbox**.
 2. Drag the **Publish MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Connection detail** - Select the **ConnectionDetail** object to publish.
+    * **Connection detail** - Select the **ConnectionDetail** object to specify where to publish to.
     * **Topic** – Define the topic to which the payload is published.
     * **Payload** – Choose a string message to be published.
     * [Qo S (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose a value for each message that is being published.
@@ -95,7 +95,7 @@ To publish data to the MQTT broker, follow these steps:
 To subscribe to the MQTT broker, follow these steps:
 
 1. Search for *Subscribe MQTT* in the **Toolbox**.
-2. Drag the **Subscribe MQTT** event into your microflow.
+2. Drag the **Subscribe to MQTT** event into your microflow.
 3. Edit the event to include the following details:
     * **Connection detail** - Select the **ConnectionDetail** entity to subscribe to. 
     * **Topic** – Define the topic to subscribe to.
@@ -109,7 +109,7 @@ When subscribing to a topic, in the **Subscribe** action, define which microflow
 To unsubscribe from the MQTT broker, follow these steps:
 
 1. Search for *Unsubscribe MQTT* in the **Toolbox**.
-2. Drag the **Unsubscribe MQTT** event into your microflow.
+2. Drag the **Unsubscribe from MQTT** event into your microflow.
 3. Edit the event to include the following details:
    * **Connection detail** - Select the **ConnectionDetail** entity to unsubscribe from.
    * **Topic** - Define the topic to unsubscribe from.

@@ -2,10 +2,10 @@
 title: "Metrics"
 url: /developerportal/operate/metrics/
 category: "Operations"
-weight: 10
+weight: 30
 alias: /developerportal/operate/trends-v4/
 description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."
-tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
+tags: ["Operate","App","Trends","Cache","Metrics","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
@@ -24,7 +24,7 @@ The graphs show the following types of information:
 
 These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
 
-## 2 Access the Metrics Graphs
+## 2 Accessing the Metrics Graphs
 
 To view the graphs on the **Metrics** page, you must have permission to **Access the Monitoring**.
 
@@ -32,13 +32,13 @@ To view the graphs on the **Metrics** page, you must have permission to **Access
 Metrics are included in all paid editions of Mendix Cloud. Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
-If you are the Technical Contact, assign permission by following these steps:
+If you are the Technical Contact, you can assign permission by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Collaborate** > **Security** on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
-5. Select **Access to Monitoring** next to the name of the person you want to grant this permission for.
+5. Select **Access to Monitoring** next to the name of the person for whom you want to grant this permission.
 
     {{< figure src="/attachments/developerportal/operate/metrics/nodepermission.jpg" >}}
 
@@ -52,8 +52,6 @@ You can find the graphs by following these steps:
 2. Click **Metrics**.
 3. Select the environment you want to monitor.
 4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
-
-{{< figure src="/attachments/developerportal/operate/metrics/environment.png" >}}
 
 ### 3.2 Interpreting the Graphs
 
@@ -71,7 +69,10 @@ For example, a combination of a moderate number of IO operations, low disk throu
 
 ## 4 Application Statistics
 
-This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it is integrated as well as statistics related to Java Virtual Machine and the Jetty Web server it uses.
+This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes the following:
+
+* Requests that the application processes from the services/clients with which it is integrated
+* Statistics related to Java Virtual Machine and the Jetty web server that the application uses
 
 ### 4.1 Number of Handled External Requests{#Trends-appmxruntimerequests}
 
@@ -81,10 +82,10 @@ The **Number of handled external requests** graph shows the number of requests t
 
 The number of requests per second is split up by request handlers. These are the key ones:
 
-* **xas/** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
-* **ws/** shows the number of web service calls that were done
-* **file** shows the number of file uploads and downloads
-* The **default** request handler handles all requests which are not handled by the standard request handlers (such as `/xas/` or `/file`) or request handlers installed by the user application — requests handled by the default handler are usually for the static resources of application (for example, `/login.html` and `/mxui.js`).
+* **xas/** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows.
+* **ws/** shows the number of web service calls that were done.
+* **file** shows the number of file uploads and downloads.
+* The **default** request handler handles all requests that are not handled by the standard request handlers (such as `/xas/` or `/file`) or request handlers installed by the user application. Requests handled by the default handler are usually for the static resources of application (for example, `/login.html` and `/mxui.js`).
 
 These are the commonly used types:
 
@@ -102,11 +103,14 @@ These are the commonly used types:
 | **ws/**        | SOAP webservice call request handler                      |
 | **xas/**       | Request handler used by the Mendix Runtime itself         |
 
-Additional information about request handlers is available in the *Requests* section of [Monitoring Mendix Runtime](/refguide/monitoring-mendix-runtime/#request-handlers) and the *Applying Access Restrictions to Unnecessary Request Handlers* section of [How To Implement Best Practices for App Security](/howto/security/best-practices-security/#request-handlers).
+Additional information about request handlers is available on the following pages:
+
+* The [Requests](/refguide/monitoring-mendix-runtime/#request-handlers) section of *Monitoring Mendix Runtime*
+* The [Applying Access Restrictions to Unnecessary Request Handlers](/howto/security/best-practices-security/#request-handlers) section of *How To Implement Best Practices for App Security*
 
 ### 4.2 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
 
-The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application.
+The **User Accounts and Login Sessions** graph shows the number of logged-in user sessions for your application. It includes both named and anonymous users accounts.
 
 {{< figure src="/attachments/developerportal/operate/metrics/user-accounts-logins.png" >}}
 
@@ -124,7 +128,7 @@ The **JVM Object Heap** graph shows the internal distribution of allocated memor
 
 {{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" >}}
 
-To be able to interpret the values in this graph, it is important to know that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
+Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
 
 These are the types of objects:
 
@@ -132,20 +136,20 @@ These are the types of objects:
 |------------------------|---------------------------------------------------------------------|
 | **tenured generation** |  As objects "survive" repeated garbage collections in the eden space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM. |
 | **native memory**      | The native memory is the memory available to the operating system.  |
-| **eden space**         | The pool from which memory is initially allocated for most objects. |
-| **unused**             | Unused JVM heap memory.                                             |
+| **eden space**         | The eden space is the pool from which memory is initially allocated for most objects. |
+| **unused**             | This is the unused JVM heap memory.                                             |
 
-For example, if the **tenured generation** is shown as 65% of the complete heap size, this may change to 0% if a garbage collection is triggered when the percentage reaches two-thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
+{{% alert color="warning" %}}It is difficult to base conclusions on JVM heap memory graphs. Imagine, for example, a scenario where the tenured generation is shown as 65% of the complete heap size.<br><br>If a garbage collection is triggered when the percentage reaches two-thirds of the total heap size, then the tenured generation could drop to 0%. However, it could stay at 65% if all data in this memory part is still referenced by running actions in the application.{{% /alert %}}
 
 ### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
-This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM Object Heap*. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
+The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](/developerportal/operate/metrics/#Trends-appmxruntimejvmheap/) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
 {{< figure src="/attachments/developerportal/operate/metrics/jvm-process-memory.png" >}}
 
-This graph is primarily present to provide more insight into situations where the part of the real used memory outside the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
+This graph is included to provide more insight into situations where the part of the real used memory outside the JVM Object Heap is growing too much and causing problems with memory shortage in the operating system.
 
-For more information on this graph, see [What's in my JVM memory?](https://www.mendix.com/blog/whats-jvm-memory/).
+For more information about this graph, see [What's in my JVM memory?](https://www.mendix.com/blog/whats-jvm-memory/).
 
 These are the types:
 
@@ -153,14 +157,14 @@ These are the types:
 |----------------------|-------------------------------------------------------------------------------------------------------|
 | **code cache**       | JVM includes a code cache, containing memory that is used for compilation and storage of native code. |
 | **native code**      | JVM allocates a certain amount of memory space for native bytecode.                                   |
-| **jar files**        | JAR files necessary for JVM itself to run.                                                            |
+| **jar files**        | These are JAR files necessary for JVM itself to run.                                                            |
 | **tenured generation** | As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM. |
-| **survivor space**   | The pool containing objects that have survived the garbage collection of the Eden space.              |
-| **eden space**       | The pool from which memory is initially allocated for most objects.                                   |
-| **unused java heap** | Unused JVM heap memory.                                                                               |
-| **permanent generation** | The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas. |
-| **other**            | Virtual or reserved memory space.                                                                     |
-| **thread stacks**    | Stacks that are reserved for unique threads.                                                          |
+| **survivor space**   | This is the pool containing objects that have survived the garbage collection of the Eden space.              |
+| **eden space**       | This is the pool from which memory is initially allocated for most objects.                                   |
+| **unused java heap** | This is unused JVM heap memory.                                                                               |
+| **permanent generation** | This is the pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas. |
+| **other**            | This is virtual or reserved memory space.                                                                     |
+| **thread stacks**    | This is stacks that are reserved for unique threads.                                                          |
 
 ### 4.5 Application Node Operating System Memory{#Trends-appmemory}
 
@@ -168,27 +172,27 @@ The **Application node operating system memory** graph shows the distribution of
 
 {{< figure src="/attachments/developerportal/operate/metrics/node-os-memory.png" >}}
 
-Performance issues can arise if the app's memory takes up too large a proportion of the operating system memory.
+Performance issues can arise if the app's memory takes up too much of the operating system memory.
 
 ### 4.6 Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
 
 The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime. The requests are counted in two circumstances:
 
-* they are initiated by a remote API – the way the normal web-based client communicates
-* they are initiated by calling web services
+* When they are initiated by a remote API (the way the normal web-based client communicates)
+* When they are initiated by calling web services
 
 {{< figure src="/attachments/developerportal/operate/metrics/threadpool-external-reqs.png" >}}
 
-Because creating a new thread that can concurrently process a request is an expensive operation, Mendix holds a pool of threads that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+Creating a new thread that can concurrently process a request is an expensive operation. So, Mendix holds a pool of threads that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
-The values shown by the graph are:
+The values shown by the graph are as follows:
 
-| Value               | Explanation                                                     |
-|---------------------|-----------------------------------------------------------------|
-| **min threads**     | Minimum bound of threads to be used by the Jetty threadpool.    |
-| **max threads**     | Maximum bound of threads to be used by the Jetty threadpool.    |
-| **active threads**  | Active threads that are being used within the Jetty threadpool. |
-| **threadpool size** | The current total size of the Jetty threadpool.                 |
+| Value               | Explanation                                                    |
+|---------------------|----------------------------------------------------------------|
+| **min threads**     | Minimum bound of threads to be used by the Jetty threadpool    |
+| **max threads**     | Maximum bound of threads to be used by the Jetty threadpool    |
+| **active threads**  | Active threads that are being used within the Jetty threadpool |
+| **threadpool size** | The current total size of the Jetty threadpool                 |
 
 ### 4.7 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
 
@@ -212,13 +216,11 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
-This graph is normalized so that 100% is the full capacity of a single CPU. If you have two CPUs, you would expect your graph to peak at 200%.
+This graph is normalized so that 100% is the full capacity of a single CPU. If you have two CPUs, you would expect your graph to peak at 200%. 
 
-Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with two CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
+Your app can always access at least the amount of CPU specified for your container. However, because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with two CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
-If your app consistently uses more CPU than specified for your container, your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
-
-Your app will always have access to at least the amount of CPU specified for your container when it needs it.
+ If your app consistently uses more CPU than specified for your container, your app could suffer from performance issues. This is because there may be periods when there are insufficient CPU resources for the app to burst above the level specified for the container.
 
 ### 4.9 Application Node Disk Usage in Percentage (%){#Trends-appdf}
 
@@ -226,20 +228,20 @@ The **Application node disk usage (percentage)** graph shows the relative amount
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage-pct.png" >}}
 
-This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
+Interpret this graph in combination with other graphs. For more information, see [Combining Information](#combine-info), above.
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
 
 ### 4.10 Application Number of Files{#Trends-appnumberoffiles}
 
-The **Application Number of Files** graph shows the number of files created by entities which are based on `FileDocument` generalizations, that are stored in S3 file storage.
+The **Application Number of Files** graph shows the number of files created by entities that are based on `FileDocument` generalizations. These are stored in S3 file storage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-number-of-files.png" >}}
 
 ### 4.11 Application Size of Files (in bytes){#Trends-appsizeoffiles}
 
 {{% alert type="info" %}}
-This metric was added on 21 January 2022 in release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. The data is only visible once you deploy your Mendix app after that date. Before you redeploy, the graph shows **No Data Available**. After the deployment, data is only shown on the graph from that date onward.
+This metric was added on 21 January 2022 in release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. If you have not deployed your Mendix app since that date, the graph will show **No Data Available**. In that case, redeploy your app to see the data. The graph will then show data from that date onward.
 {{% /alert %}}
 
 The **Application Size of Files** graph shows the size of files (in bytes) that are stored in file storage.
@@ -251,7 +253,7 @@ The **Application Size of Files** graph shows the size of files (in bytes) that 
 In this section, you will find the statistics about the database that the application uses.
 
 {{% alert color="warning" %}}
-If you are using the [Basic License](/developerportal/deploy/basic-package/), you will only see the first three graphs because these are the ones that show information specific to your app.
+If you are using the [Basic License](/developerportal/deploy/basic-package/), you will only see the first three graphs described in this section. These are the graphs that show information specific to your app.
 {{% /alert %}}
 
 ### 5.1 Number of Database Queries Being Executed{#Trends-dbmxruntimeconnectionbus}
@@ -260,7 +262,7 @@ The **Number of database queries being executed** graph shows the number of data
 
 {{< figure src="/attachments/developerportal/operate/metrics/no-db-queries.png" >}}
 
-The queries are broken down into queries that actually modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**).
+The queries are broken down into queries that modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**).
 
 These are the types of queries:
 
@@ -278,7 +280,7 @@ The **Database table vs. index size** graph shows the distribution between disk 
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-table-vs-index.png" >}}
 
-Remember, indexes actually occupy memory space and disk storage, as they are just copies of parts of your data stored and sorted in another way! Besides the data you are processing, the relevant parts of the indexes also have to be read into system memory to be able to use them.
+Remember, indexes actually occupy memory space and disk storage. This is because they are just copies of parts of your data stored and sorted in another way! Besides the data you are processing, the relevant parts of the indexes also have to be read into system memory to be able to use them.
 
 These are the values:
 
@@ -321,19 +323,21 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 The number of connections goes up and down with the usage of the application. The database can reuse open connections and will not open more connections than it needs.
 
-The standard configuration sets a maximum of 50 connections per instance. You can change this through [The Number of Database Connections](/refguide/tricky-custom-runtime-settings/#num-connections) described in *Advanced Custom Settings in Mendix Runtime*. The graph displays the total number of connections for all instances in a multi-instance scaled runtime. 
+The standard configuration sets a maximum of 50 connections per instance. You can change this through [The Number of Database Connections](/refguide/tricky-custom-runtime-settings/#num-connections), as described in *Advanced Custom Settings in Mendix Runtime*. The graph displays the total number of connections for all instances in a multi-instance scaled runtime. 
 
 ### 5.5 Database Node Operating System Memory{#Trends-dbmemory}
 
 The **Database node operating system memory** graph shows the distribution of operating system memory that is available for this server.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) as you are using a private schema on a shared database server.
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-os-memory.png" >}}
 
-It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always available in the working memory of the server. A lack of Freeable memory on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application. This may indicate that you have a large number of concurrent database connections from your app and that the environment is not large enough to support these.
+Parts of the database data and indexes that are referenced frequently must always be available in the working memory of the server. This is crucial for application performance.
+
+A lack of freeable memory on a busy application results in continuous re-reads of data from disk. This takes several orders of magnitude more time and slows down the entire application. This may indicate that you have a large number of concurrent database connections from your app and that the environment is not large enough to support these.
 
 These are the types:
 
@@ -347,7 +351,7 @@ These are the types:
 
 The **Database node CPU usage** graph shows the amount of CPU usage over time, as a percentage.
 
-This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself, so however many CPUs the database node has, the graph will peak at 100%.
+This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself. So, however many CPUs the database node has, the graph will peak at 100%.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -365,21 +369,21 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-disk-throughput.png" >}}
 
-If you see large values here that do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries; for example, it could be cause by queries that require sorting within the app.
+If you see large values here that do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries; for example, it could be caused by queries that require sorting within the app.
 <a id="Trends-dbdf"></a>
 
 ### 5.8 Database Node Disk Usage (in Bytes){#Trends-dbdfabs}
 
-The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+The **Database node disk usage (in bytes)** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 
-The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2GiB. 
+The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 GiB. 
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The units on the graph are mebibytes. One gibibyte is 1024 mebibytes. So, if the total storage of your database is 10 GiB, it is 10,240 MiB; this is how it appears on the graph.
+The units on the graph are mebibytes. One gibibyte is 1,024 mebibytes. So, if the total storage of your database is 10 GiB, you will see 10,240 MiB displayed on the graph.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-disk-usage-bytes.png" >}}
@@ -396,10 +400,10 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 There are two sets of values:
 
-|   | Value     | Explanation                                 |
-|---|-----------|---------------------------------------------|
-|   | **read**  | Read ops on the disk holding the database.  |
-|   | **write** | Write ops on the disk holding the database. |
+|   | Value     | Explanation                                |
+|---|-----------|--------------------------------------------|
+|   | **read**  | Read ops on the disk holding the database  |
+|   | **write** | Write ops on the disk holding the database |
 
 ### 5.10 Database Node Disk Latency{#Trends-dbdiskstatslatency}
 
@@ -411,14 +415,14 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-disk-latency.png" >}}
 
-Interpreting the values in this graph should be done in combination with the other disk stats graphs, together with the type of requests that were made. Sequential or random reads and writes can create a different burden for disk storage.
+Interpret the values in this graph in combination with the other disk stats graphs and the type of requests that were made. Sequential or random reads and writes can create a different burden for disk storage.
 
 There are two sets of values:
 
-| Value     | Explanation                                 |
-|-----------|---------------------------------------------|
-| **read**  | Read ops on the disk holding the database.  |
-| **write** | Write ops on the disk holding the database. |
+| Value     | Explanation                                |
+|-----------|--------------------------------------------|
+| **read**  | Read ops on the disk holding the database  |
+| **write** | Write ops on the disk holding the database |
 
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
@@ -430,11 +434,11 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance does not affect their performance.
 {{% /alert %}}
 
-The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as percentage; 100% means that the volume has accumulated the maximum number of credits.
+The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as a percentage; 100% means that the volume has accumulated the maximum number of credits.
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-burst-balance.png" >}}
 
-Apps running on Mendix Cloud use AWS databases to store their data. These databases are burstable, which means that they have a specified performance baseline. Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when it is idle), the unspent IOPS credits are accrued until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
+Apps running on Mendix Cloud use AWS databases to store their data. These databases are burstable, which means that they have a specified performance baseline. Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when the app is idle), the unspent IOPS credits accrue until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
 
 For more information, see the AWS document [Overview of Monitoring Metrics in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html).
 
@@ -445,7 +449,7 @@ For more information, see the AWS Database blog [Understanding Burst vs. Baselin
 ## 6 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
+* [Maintenance Windows](/developerportal/deploy/maintenance-windows/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
 * [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
-* [Mendix Cloud - FAQ](/developerportal/deploy/mxcloudv4/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)

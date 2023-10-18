@@ -41,7 +41,7 @@ paths:
     get:
       tags:
         - content
-      summary: Gets a specific content.
+      summary: Returns the specific content for the given content id.
       description: "The content metadata would be from the last published version of the content. Public content and content belonging to the company of the personal access token's owner can be queried."
       operationId: getSpecificContent
       parameters:
@@ -67,7 +67,7 @@ paths:
       tags:
         - content
       summary: Returns all versions of the content.
-      description: "Public content and content belonging to the company of the personal access token's owner can be queried."
+      description: "Returns all versions of the content. Public content and content belonging to the company of the personal access token’s owner can be queried."
       operationId: getContentVersions
       parameters:
         - $ref: '#/components/parameters/contentId'

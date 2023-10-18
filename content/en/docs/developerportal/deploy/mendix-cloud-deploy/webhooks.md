@@ -35,7 +35,7 @@ To set up a webhook, do the following:
 1. Open the **Webhooks** page from the menu on the left. You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:
-    * **Webhook Name** – This is a name, so you can identify the webhook.
+    * **Webhook Name** – This is a name, which you can use to identify the webhook.
     * **URL** – This is the endpoint that will receive the payload when one of the event types selected in **Available Events** occurs.
     * **Validation Secret** – This is a secret that is shared with the endpoint to verify that it has been triggered by this webhook. For more information, see [Verifying Your Webhook](#verify-webhook) below. If you leave this blank, a secret will be generated automatically for you; you can see the generated value if you return to edit the webhook.
     * **Available Events** – This is the event (or events) that will trigger the webhook to send information to the endpoint. You can see more information about these events in the sections below.
@@ -104,11 +104,11 @@ When verifying your webhook signature, bear the following in mind:
 
 * The signature list **webhook-signature** usually contains a single signature. If there is more than one signature, use the first signature, which is calculated using the latest validation secret.
 * To prevent timing attacks, use a constant-time string comparison method.
-* To protect against timestamp attacks, where old webhook payloads are sent to your endbpoint, verify that **webhook-timestamp** is within your tolerance for the current system time.
+* To protect against timestamp attacks, where old webhook payloads are sent to your endpoint, verify that **webhook-timestamp** is within your tolerance for the current system time.
 
 ### 3.1.1 Verifying Your Webhook Using Mendix
 
-You can use Mendix to verify your webhook, using functions available in the [Community Commons](/appstore/modules/community-commons-function-library/) module. To do this, follow the steps below:
+You can use Mendix to verify your webhook; the [Community Commons](/appstore/modules/community-commons-function-library/) module has functions that you can use for this. To make use of this functionality, follow the steps below:
 
 1. Confirm that your app contains the Community Commons module.
 1. Retrieve a list of `System.HttpHeader` objects over the association `$HttpRequest/HttpHeaders` using the HttpRequest from the webhook.
@@ -139,7 +139,7 @@ When you [upload a package to the Developer Portal](/developerportal/deploy/envi
 If you need a specific package id for an API call, you will need to use the **Retrieve Packages** call of the [Build API](/apidocs-mxsdk/apidocs/build-api/) to find all the packages and then use the **name** value to find the latest package information for the package you want.
 
 {{% alert color="info" %}}
-Ensure you use the correct key names if using this payload information to call other Mendix APIs. The data may be labeled differently in the API.
+Make sure to use the correct key names if using this payload information to call other Mendix APIs. The data may be labeled differently in the API.
 {{% /alert %}}
 
 ## 5 Teamserver Push (Git)
@@ -172,7 +172,7 @@ When you push a model change to the [Git Team Server](/developerportal/general/t
 }
 ```
 
-The **after**, **before**, and **id** values are git commit hashes. In most cases, you will want to use the **after** hash (the last commit on the branch).
+The **after**, **before**, and **id** values are Git commit hashes. In most cases, you will want to use the **after** hash (the last commit on the branch).
 
 {{% alert color="info" %}}
 Make sure to use the correct key names if using this payload information to call other Mendix APIs. The data may be labeled differently in the API.

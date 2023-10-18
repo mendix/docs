@@ -41,12 +41,12 @@ Mendix Admins can manage permissions using the Deploy API v4. For more informati
 
 The permissions are set independently for each environment. You can choose the environment at the top of the **Permissions** tab. Changing the permissions for a production environment requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
-Team members who have permission to **Deploy, Publish, and Monitor** can view the permissions.
+Team members with a user role that includes **Cloud Access**** can view the permissions.
 
 {{% alert color="info" %}}
-Team members with a user role that includes permission to **Deploy, Publish, and Monitor** the app are listed in the **Node Permissions** tab. This tab also shows deactivated users who have been given these permissions, even though these users no longer have access to your project. 
+Team members with a user role that includes **Cloud Access** are listed in the **Permissions** tab. This tab also shows deactivated users who have been given these permissions, even though these users no longer have access to your project. 
 
-You can change permissions for team members in [Team](/developerportal/general/team/).
+You can change user roles for team members in [Team](/developerportal/general/team/).
 {{% /alert %}}
 
 ### 3.2 Accessing Node Permissions
@@ -54,7 +54,7 @@ You can change permissions for team members in [Team](/developerportal/general/t
 To access the node permissions, do the following:
 
 1. Click **Environments** for your app.
-2. Open the **Permissions** tab.
+2. Switch to the **Permissions** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permissions.png" >}}
 

@@ -144,7 +144,7 @@ For details on setting up access restriction profiles, see [Restrict Access for 
 
 ## 5 Permissions{#permissions}
 
-In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have the **Manage Permissions** permission can manage various permissions to the environments for each team member. Team members who have the **Deploy, Publish, and Monitor** permission can view the permissions.
+In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have the **Manage Permissions** permission can manage various permissions to the environments for each team member. Team members who have a role with **Cloud Access** can view the permissions.
 
 For details on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
@@ -162,7 +162,7 @@ The custom services that are available on the app level, or the **Environments**
 
 The Technical Contact can only see services that have been licensed for their company. If the Technical Contact cannot enable the service, this means that the service has previously been licensed, but the license has expired.
 
-Team members who have **Deploy, Publish, and Monitor** permission can see which services are enabled or disabled.
+Team members who have a role with **Cloud Access** can see which services are enabled or disabled.
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
 

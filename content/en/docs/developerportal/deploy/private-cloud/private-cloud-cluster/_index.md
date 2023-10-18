@@ -1305,9 +1305,9 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
-You can configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
+You can configure the runtime metrics for the environment in the **Runtime** section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
 
-You can also configure the pod labels for the environment in the Labels section. For more details, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels)
+You can also configure the pod labels for the environment in the **Labels** section. For more details, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels)
 
 #### 7.2.2 Members
 

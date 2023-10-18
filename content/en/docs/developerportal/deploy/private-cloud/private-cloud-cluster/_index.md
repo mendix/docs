@@ -1419,7 +1419,7 @@ Here, you can create customized plan for your core resources.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required CPU Limits, CPU Request, Memory Limit, Memory Request, Ephemeral Storage Request and Ephemeral Storage Limit based on your choice. 
+3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice. 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 

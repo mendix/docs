@@ -281,14 +281,14 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ## 6 Tokens
 
-Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.
+Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users have issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to [Mendix Support](https://docs.mendix.com/developerportal/support/).
 
 {{% alert color="info" %}}
-Tokens contain personal information, as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).
+Tokens contain personal information as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).
 
-Expired tokens are periodically and automatically deleted. Bear in mind that some tokens might have been revoked by the user.
+Expired tokens are periodically and automatically deleted. Bear in mind that some tokens might have been revoked by the users.
 
-Local users don't have tokens as they don't sign in via SSO.
+Local users do not have tokens as they do not sign in via SSO.
 {{% /alert %}}
 
 ### 6.1 Tokens in Mendix SSO v3 and Above
@@ -305,12 +305,12 @@ For example, you can create a data grid sourced from the database entity `Mendix
 
 If you implement a page like this, ensure that security is set up to prevent unauthorized users accessing the page.
 
-The **SessionID** which is associated with a **TokenType** of `ID_TOKEN` is held in jwt format, so you can decrypt it and then paste it into a [jwt decoder](https://jwt.io) to confirm what information it holds. To decrypt the token you can use the `Decrypt` microflow in the **Internal/Encryption/Implementation** folder of the MendixSSO module.
+The **Session ID** which is associated with a **Token type** of `ID_TOKEN` is held in *JWT* format, so you can decrypt it and then paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds. To decrypt the token you can use the `Decrypt` microflow in the **Internal/Encryption/Implementation** folder of the MendixSSO module.
 
 ### 6.2 Tokens in Mendix SSO v2
 
 {{% alert color="warning" %}}
-This rest of this section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
+The rest of this section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
 {{% /alert %}}
 
 Versions of Mendix SSO below v3.0 contained a default Mendix SSO administration module with a number of pages set up to enable you to see tokens. They also contained snippets to allow you to create your own token display and administration pages. The rest of this section explains how these could be used.
@@ -331,21 +331,21 @@ The TokensOverview page allows administrators to see all tokens which have been 
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/token-administration.png" alt="List of all Mendix SSO tokens issued to the app" >}}
 
-The page can be used for troubleshooting – you can see the creation and expiry dates of the tokens and, by clicking **View**, you can view the values held in the tokens.
+The page can be used for troubleshooting – you can see the creation and expiry dates of the tokens and by clicking **View**, you can view the values held in the tokens.
 
-The **ID Token** is held in jwt format, so you can paste it into a [jwt decoder](https://jwt.io) to confirm what information it holds.
+The **ID Token** is held in *JWT* format, so you can paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds.
 
-The page can also be used for administration. You can delete tokens which have expired, and you can also delete current tokens if they are causing unwanted issues.
+The page can also be used for administration. You can delete tokens which are expired and you can also delete current tokens if they are causing unwanted issues.
 
-Deleting tokens from the TokensOverview page will cause end-users to lose access to the app. However, they will be able to sign in again if they are still end-users of the app.
+Deleting tokens from the **TokensOverview** page will cause end-users to lose access to the app. However, they will be able to sign in again if they are still end-users of the app.
 
 ##### 6.2.1.2 MyTokensOverview Page 
 
-The MyTokensOverview page allows end-users to see their own access tokens.
+The **MyTokensOverview** page allows end-users to see their own access tokens.
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/my-tokens.png" alt="List of all my Mendix SSO tokens" >}}
 
-The page can be used for troubleshooting – the end-user can see the creation and expiry dates of the tokens and, by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
+The page can be used for troubleshooting – the end-user can see the creation and expiry dates of the tokens and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
 #### 6.2.2 Displaying Tokens using Snippets
 

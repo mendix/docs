@@ -1159,97 +1159,91 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
-In order to delete the namespace from the cluster, you need to follow the below steps:
+In order to delete the namespace from the cluster, perform the following steps:
 
-* Ensure that all the environments under this namespaces are removed. You can check the list of environments under this namespace using below command:
+1. Ensure that all the environments under this namespaces are removed. You can check the list of environments under this namespace using the following command:
 
-For OpenShift:
+    For OpenShift:
 
-```shell
-oc -n {namespace} get mendixapp
-```
+    ```shell
+    oc -n {namespace} get mendixapp
+    ```
 
-For Kubernetes:
+    For Kubernetes:
 
-```shell
-kubectl -n {namespace} get mendixapp
-```
+    ```shell
+    kubectl -n {namespace} get mendixapp
+    ```
 
-If there are any mendix app still existing in the namespace, you can delete the corresponding environment using below command:
+2. If any Mendix apps still exist in the namespace, you can delete them by using the following command, where *internalId* is the ID of the environment:
 
-For OpenShift:
+    For OpenShift:
 
-```shell
-oc -n {namespace} delete mendixapp {internalId}
-```
+    ```shell
+    oc -n {namespace} delete mendixapp {internalId}
+    ```
 
-For Kubernetes:
+    For Kubernetes:
 
-```shell
-kubectl -n {namespace} delete mendixapp {internalId}
-```
+    ```shell
+    kubectl -n {namespace} delete mendixapp {internalId}
+    ```
 
-{{% alert color="info" %}}
-The internalId is the id for the environment.
-{{% /alert %}}
+3. Wait until the storage provisioner completes the process of deleting the storage instance related to the environment. You can check if there are any existing storage instances by running the following command:
 
-Once, you run the above command, ensure to wait until Storage Provisioner cleanly completes the process of deleting the corresponding Storage Instance related to the environment. You can check if there are any existing Storage instances by running the below command:
+    For OpenShift:
 
-For OpenShift:
+    ```shell
+    oc -n {namespace} get storageinstance
+    ```
 
-```shell
-oc -n {namespace} get storageinstance
-```
+    For Kubernetes:
 
-For Kubernetes:
+    ```shell
+    kubectl -n {namespace} get storageinstance
+    ```
 
-```shell
-kubectl -n {namespace} get storageinstance
-```
+4. If there are any failed storage instances, you can check their logs by running the following command:
 
-In case if there are any failed storage instances, you can check the logs of the storage instances by running below command:
+    For OpenShift:
 
-For OpenShift:
+    ```shell
+    oc -n {namespace} log {storageinstance-name}
+    ```
 
-```shell
-oc -n {namespace} log {storageinstance-name}
-```
+    For Kubernetes:
 
-For Kubernetes:
+    ```shell
+    kubectl -n {namespace} log {storageinstance-name}
+    ```
 
-```shell
-kubectl -n {namespace} log {storageinstance-name}
-```
+5. If there are any remaining storage instances, you can delete then by using the following command:
 
-* If there are any existing Storage Instances, you can delete then using below command:
+    For OpenShift:
 
-For OpenShift:
+    ```shell
+    oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+    ```
 
-```shell
-oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
-```
+    For Kubernetes:
 
-For Kubernetes:
+    ```shell
+    kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+    ```
 
-```shell
-kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
-```
+6. After manually removing the storage instance, manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account in the cluster.
 
-After manually removing the StorageInstance, you’ll need to manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account in the cluster.
+7. Once all the storage instances are deleted successfully, yon can now delete the namespace from the cluster by using the following command:
 
-* Once all the storage instances are deleted successfully, yon can now delete the namespace from the cluster using below command:
+    ```shell
+    oc delete ns {namespace}
+    ```
 
+    For Kubernetes:
 
-```shell
-oc delete ns {namespace}
-```
-
-For Kubernetes:
-
-```shell
-kubectl delete ns {namespace}
-```
-
+    ```shell
+    kubectl delete ns {namespace}
+    ```
 
 You can also see an activity log containing the following information for all namespaces within the cluster:
 

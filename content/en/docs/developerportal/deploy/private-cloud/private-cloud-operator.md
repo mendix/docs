@@ -160,7 +160,7 @@ spec:
   customPodLabels: # Optional: custom pod labels
     general: # Optional: general pod labels (applied to all app-related pods)
       azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
-   runtimeLicenseProduct: # Optional: Specify the type of product required for Runtime License. This is applicable when PCLM is used for Licensing. By default, the value is set to Standard, if left empty   
+   runtimeLicenseProduct: # Optional: Specify the type of product required for the Runtime License. This is applicable when PCLM is used for licensing. By default, the value is set to Standard, if left empty   
 ```
 
 You need to make the following changes:

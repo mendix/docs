@@ -64,7 +64,7 @@ Where the Mendix SSO module has been added to a Mendix app templates, all you ha
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/mxsso-app-store-module.png" >}}
 
-If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up) section below.
+If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import it into your app and then follow the instructions in the [Setting Up Mendix Single Sign-On](#setting-up) section below.
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
@@ -76,6 +76,7 @@ In addition, the Mendix SSO module has a default implementation for user adminis
 
 ## 3 Removing Mendix Single Sign-On
 
+By default, the Mendix SSO is not enabled for new apps or apps which do not have Mendix SSO module. In such scenarios, follow the instructions in the [Setting Up Mendix Single Sign-On](#setting-up) section below.
 If you have an app which already has Mendix SSO activated, you can remove it using one of the methods below.
 
 ### 3.1 Deactivating Mendix Single Sign-On{#deactivating}
@@ -93,36 +94,34 @@ To deactivate Mendix SSO, follow these two steps:
     
     {{< figure src="/attachments/appstore/modules/mendix-sso/theme-folder-remove.png" alt="File explorer showing two login files" >}}
 
-2. Follow the instructions below to remove the microflow **MendixSSO_AfterStartup** as the **After startup** microflow.
+2. Follow the instructions below to remove the microflow **AfterStartup_MendixSSO** as the **After startup** microflow.
     1. Open **App Settings** from the **App Explorer**.
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
     4. Click **None**.
         {{< figure src="/attachments/appstore/modules/mendix-sso/after-startup-remove.png" alt="Setting after startup microflow to none" >}}
     5. Click **OK** to close the **App Settings**.
-    {{% alert color="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the MendixSSO_AfterStartup microflow which is an action in the existing microflow{{% /alert %}}
+
+    {{% alert color="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the AfterStartup_MendixSSO microflow which is an action in the existing microflow.{{% /alert %}}
 
 Mendix SSO will be deactivated the next time you deploy your app. You can still use Mendix SSO for local end-user administration.
 
 ### 3.2 Removing Mendix Single Sign-On
 
-You can completely remove Mendix Single Sign-On from your app if you want to use a different method for end-user administration. However, in most cases you can just leave the module in your app and deactivate it as described above.
+You can completely remove Mendix SSO from your app if you want to use a different method for end-user administration. However, in most cases you can just leave the module in your app and deactivate it as described above.
 
-To completely remove Mendix SSO. do the following:
+To completely remove Mendix SSO, do the following:
 
-1. Perform the two steps described above in [Deactivating Mendix Single Sign-On](#deactivating).
-
+1. Perform the two steps described in the [Deactivating Mendix Single Sign-On](#deactivating) section above.
 2. Remove any references to the Mendix SSO module in the navigation profiles, accessed through the **Navigation** page of the **App Explorer**.
-
 3. Delete the **MendixSSO** module from **Marketplace modules**.
-
 4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if the Mendix SSO module been modified.
 
 ### 3.3 Removing Mendix SSO Java Libraries
 
 The steps above will not remove any of the Java libraries associated with Mendix SSO.
 
-All files installed by Mendix SSO are marked with `.MendixSSO.RequiredLib`. Once you have removed Mendix SSO from your app, files marked with `.MendixSSO.RequiredLib` can be removed safely, provided you have not created new dependencies on them by using them in your custom code.
+All files installed by Mendix SSO are marked with *.MendixSSO.RequiredLib*. Once you have removed Mendix SSO from your app, files marked with *.MendixSSO.RequiredLib* can be removed safely, provided you have not created new dependencies on them by using them in your custom code.
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 

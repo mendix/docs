@@ -19,11 +19,14 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### October 19, 2023
 
+#### Improvements
+
+* We improved the Sprint filter in [Story Archive](/developerportal/collaborate/general-settings/#story-archive) so that you can now type the Sprint name in a text box.
+
 #### Fixes
 
-* We fixed an issue where last scrum masters could be removed from projects if those projects had API Keys
-* We fixed an issue that allowed new members to accept a project invitation multiple times
-* The sprint filter on the story archive page did not perform well. We fixed that issue and now it does not show a list of sprints anymore, but a text box where you can type the sprint name.
+* We fixed an issue where the last Scrum Master could be removed from an app if the app has an API key.
+* We fixed an issue that allowed new members to accept an invitation to an app multiple times.
 
 ### October 12, 2023
 

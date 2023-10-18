@@ -1157,13 +1157,11 @@ If there are any environments associated with the namespace, you cannot delete t
 
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
-
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
 In order to delete the namespace from the cluster, you need to follow the below steps:
 
 * Ensure that all the environments under this namespaces are removed. You can check the list of environments under this namespace using below command:
-
 
 For OpenShift:
 

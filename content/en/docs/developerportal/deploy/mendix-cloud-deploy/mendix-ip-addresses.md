@@ -8,7 +8,7 @@ tags: ["Mendix Cloud", "IP address", "Cloud Portal"]
 
 ## 1 Introduction
 
-An IP address is the address of a device on an internet or local network, in a format that other devices can understand. The IP address can be used to locate, identify, and communicate with that device on the network.
+An IP address is the address of a device on an internet or local network, written in a format that other devices can understand. The IP address can be used to locate, identify, and communicate with that device on the network.
 
 ## 2 Definitions
 
@@ -22,15 +22,15 @@ Mendix maintains the current outgoing IP addresses as much as possible. However,
 
 ### 2.1 Incoming IP
 
-This is the IP address of one of Mendix's front-facing web servers. This is the IP address your browser connects to when you visit your application in the Mendix Cloud (for example, when you go to `yourapplication.mendixcloud.com`).
+This is the IP address of one of Mendix's front-facing web servers. It is the IP address your browser connects to when you visit your application in Mendix Cloud (for example, when you go to `yourapplication.mendixcloud.com`).
 
-You can retrieve this IP address by performing a DNS lookup for this domain. For example, you could  go to http://ping.eu/nslookup/ (not 127.0.0.1).
+You can retrieve this IP address by performing a DNS lookup for the domain. To do so, you can use a free DNS lookup service such as http://ping.eu/nslookup/.
 
 ### 2.2 Outgoing IP {#outgoing}
 
 This is the IP address other servers see when the Mendix application initiates the connection. You normally need to add it to your firewall if you want your Mendix application to contact one of your firewalled servers.
 
-Mendix uses the following static IP addresses. If you need further information, file a support ticket with Mendix Support.
+Mendix uses the following static IP addresses. If you need more information, file a support ticket with Mendix Support.
 
 #### 2.2.1 Mendix Cloud
 
@@ -55,7 +55,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 ##### 2.2.1.1 Accessing AWS Services in Mendix Cloud
 
-The Mendix Cloud uses [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html) to privately access AWS services.
+Mendix Cloud uses [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html) to privately access AWS services.
 
 AWS API requests can, therefore, originate from the following IP ranges:
 

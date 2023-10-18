@@ -21,27 +21,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* In [Epics](/developerportal/project-management/epics/)
-   * We added a new section to the story details page called "Audit Trail". There you can find information on all the updates related to that specific story, including who updated them and when. Currently we log the following:
-      * Story assigned to {user name}
-      * Story assigned to {user name} from {user name}
-      * Story unassigned from {user name}
-      * Changed Status to {status}
-      * Story type changed to {story type}
-      * Task {task name} added
-      * Task {task name} completed
-      * Task {task name} deleted
-      * Epic {epic name} linked
-      * Epic {epic name} unlinked
-      * Tag(s) {tag names} added
-      * Tag(s) {tag names} removed
-      * Story points changed to {story points}
-      * File attached {file name}
-      * File removed {file name}
-      * Story archived
-      * Comment Deleted
-      * Comment Edited
-   * We enabled filtering both on the board and on the planning page. You can filter stories by story title, story ID, epic name or assignee. You can also filter by any tag and combine the results.
+* We added the following features to [Epics](/developerportal/project-management/epics/): 
+   * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
+   * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name or assignee. You can also filter by any tag and combine the results.
 
 #### Fixes 
 

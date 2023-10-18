@@ -130,7 +130,7 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit |  **Ephemeral Storage (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request | **Ephemeral Storage (Gb)**: Request |
+    | **Name** | **CPU cores**: Limit | **Memory (GB)**: Limit |  **Ephemeral Storage (GB)**: Limit | **CPU cores**: Request | **Memory (GB)**: Request | **Ephemeral Storage (GB)**: Request |
     | --- | --- | --- | --- | --- | --- | --- |
     | Small | 1 | 0.5 | 1 | 0.1 |0.5 | 1 |
     | Medium | 2 | 2 | 1 | 1 | 1 | 1 |

@@ -190,7 +190,6 @@ The domain model is a data model that describes the information in your applicat
 | --- | --- |
 | `ProjectID` | Describes the project ID. |
 
-
 ### 4.1.13 ListPortalsRequest {#list-portals-request}
 
 | Attribute | Description |
@@ -868,7 +867,7 @@ The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to re
 | --- | --- | 
 | `GetAssetPropertyValueHistoryRequest` | `GetAssetPropertyValueHistoryResponse` |
 
-#### 4.3.13 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+#### 4.3.14 GetAssetPropertyValueHistory {#get-asset-property-value-history}
 
 The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retrieve aggregated values for an asset property. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyAggregatesRequest` object and returns a `GetAssetPropertyAggregatesResponse` object.
 
@@ -876,7 +875,7 @@ The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retr
 | --- | --- | 
 | `GetAssetPropertyAggregatesRequest` | `GetAssetPropertyAggregatesResponse` |
 
-#### 4.3.14 BatchGetAssetPropertyValue {#batch-get-asset-property-value}
+#### 4.3.15 BatchGetAssetPropertyValue {#batch-get-asset-property-value}
 
 The `BatchGetAssetPropertyValue` Amazon Iot SiteWise activity allows you to get the current value for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueRequest` object and returns a `BatchGetAssetPropertyValueResponse` object.
 
@@ -884,7 +883,7 @@ The `BatchGetAssetPropertyValue` Amazon Iot SiteWise activity allows you to get 
 | --- | --- | 
 | `BatchGetAssetPropertyValueRequest` | `BatchGetAssetPropertyValueResponse` |
 
-#### 4.3.15 BatchGetAssetPropertyValueHistory {#batch-get-asset-property-value-history}
+#### 4.3.16 BatchGetAssetPropertyValueHistory {#batch-get-asset-property-value-history}
 
 The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to get the historical values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueHistoryRequest` object and returns a `BatchGetAssetPropertyValueHistoryResponse` object.
 

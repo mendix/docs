@@ -89,10 +89,10 @@ If you have already logged on to SAP and your SAP session has not expired, you w
 You may be asked to provide your credentials in one of two ways:
 
 * You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
-* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
+* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (⚠ please note this method is being deprecated)
 
 {{% alert color="info" %}}
-If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
 {{% /alert %}}
 
 You will now be asked to provide the final details for the SAP BTP development environment.
@@ -772,4 +772,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 11 Read More
 
-* [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)
+* [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)

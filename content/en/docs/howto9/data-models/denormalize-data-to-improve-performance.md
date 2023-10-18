@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 This how-to explains how you can improve performance by denormalizing data in Mendix.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Denormalize data
 * Keep denormalized data in sync
@@ -148,7 +148,6 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/)
 * [Setting Up Data Validation](/refguide9/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/project-management/stories/)
 * [Defining Access Rules Using XPath](/refguide9/define-access-rules-using-xpath/)
 * [Attributes](/refguide9/attributes/)
 * [Event Handlers](/refguide9/event-handlers/)

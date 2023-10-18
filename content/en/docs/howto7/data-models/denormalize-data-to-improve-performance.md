@@ -10,7 +10,7 @@ tags: []
 
 This how-to explains how you can improve performance by de-normalizing data in Mendix.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Denormalize data
 * Keep denormalized data in sync
@@ -150,7 +150,6 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [How to Work with Object Events](/howto7/data-models/working-with-object-events/)
 * [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-* [Stories](/developerportal/project-management/stories/)
 * [How to Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
 * [Attributes](/refguide7/attributes/)
 * [Event Handlers](/refguide7/event-handlers/)

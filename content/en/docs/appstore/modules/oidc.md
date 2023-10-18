@@ -24,7 +24,7 @@ If you are using Mendix 9.20 and above, please use version 2.0.0 or above of the
 The OIDC SSO module works with web/responsive applications only.
 {{% /alert %}}
 
-Alternatives to using OIDC SSO for managing single sign on are:
+Alternatives to using OIDC SSO for managing single sign-on are:
 
 * [SAML](https://marketplace.mendix.com/link/component/1174) – if your IdP supports the SAML protocol but not the OIDC protocol
 * [MendixSSO](https://marketplace.mendix.com/link/component/111349) – if your app is targeted at end-users that have signed up to the Mendix platform
@@ -645,7 +645,6 @@ To use OIDC SSO module in conjunction with the DeepLink module, you can choose b
 A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
-
 
 ### 8.5 Use ACR to Request Authentication Method
 

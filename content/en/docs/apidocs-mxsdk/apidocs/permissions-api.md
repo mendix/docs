@@ -1,5 +1,5 @@
 ---
-title: "Permissions API"
+title: "Permissions API ⚠"
 url: /apidocs-mxsdk/apidocs/permissions-api/
 category: "API Documentation"
 description: "With this API, you can retrieve the user roles of your app users so that you can grant them specific access levels."
@@ -9,7 +9,7 @@ weight: 75
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-The AppCloudServices module has now been removed from the Mendix Marketplace and this API is therefore deprecated.
+⚠ The AppCloudServices module has now been removed from the Mendix Marketplace and this API is therefore deprecated.
 {{% /alert %}}
 
 The Permissions API enables retrieving the [user roles](/refguide/user-roles/) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:

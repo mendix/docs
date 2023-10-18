@@ -11,7 +11,7 @@ tags: ["Backup","Restore","Local","Developer Portal"]
 
 Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environment. In this way you can see locally how your app behaves when using data in your cloud environment. By using Mendix Studio Pro and a PostgreSQL database, you can debug your app using backups of your cloud test/acceptance/production data.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Download a backup from your cloud environment
 * Create a new database
@@ -108,7 +108,7 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
-5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
+5. Extract the contents of your **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
 6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More

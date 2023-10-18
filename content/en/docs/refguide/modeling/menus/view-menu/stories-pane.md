@@ -8,13 +8,11 @@ tags: ["Studio Pro", "stories", "stories pane"]
 
 ## 1 Introduction 
 
-For version control-enabled apps (apps with Team Server or other Git servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Stories](/developerportal/project-management/stories/) or [Epics](/developerportal/project-management/epics/) in the Developer Portal or connected to your [Jira board](/developerportal/project-management/jira-connector/).
+For version control-enabled apps (apps with Team Server or other Git servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Epics](/developerportal/project-management/epics/) in the Developer Portal or connected to your [Jira board](/developerportal/project-management/jira-connector/).
 
-In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
+In the **Stories** pane, you can view the stories of the current Sprint, link commits to the stories, show or hide done stories, and open their details.
 
-{{% alert color="info" %}}If you use Stories, both stories and tasks of the current Sprint are shown in the **Stories** pane. For more information on tasks, see the [Adding a Task to a Story](/developerportal/project-management/stories/#adding-task) section in *Stories*.
-
-If you use Epics, only the stories of the current Sprint will be shown in the **Stories** pane; the tasks of each story will not be shown. You also cannot change the status of the stories in the **Stories** pane.{{% /alert %}}
+{{% alert color="info" %}}Only the stories of the current Sprint are shown in the **Stories** pane; the tasks of each story are not shown. You cannot change the status of the stories in the **Stories** pane.{{% /alert %}}
 
 The **Stories** pane consists of the top bar with various buttons and a table:
 
@@ -90,6 +88,6 @@ To change the status of a task, tick or clear the checkbox in the **Status** col
 
 ## 3 Read More
 
-* [Stories](/developerportal/project-management/stories/)
+* [Epics](/developerportal/project-management/epics/)
 * [Feedback Management](/developerportal/app-insights/feedback/)
 * [View Menu](/refguide/view-menu/)

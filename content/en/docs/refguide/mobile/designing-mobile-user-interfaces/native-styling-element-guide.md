@@ -136,6 +136,7 @@ export const Text = {
   },
   text: {
     // All TextStyle properties
+    numberOfLines: 0 // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.
   },
 };
 ```
@@ -144,7 +145,7 @@ export const Text = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
-
+| `text`     | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
 The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
@@ -158,6 +159,7 @@ export const PageTitle = {
   },
   text: {
     // All TextStyle properties
+    numberOfLines: 0 // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.
   },
 };
 ```
@@ -166,7 +168,7 @@ export const PageTitle = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
-
+| `text`      | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
 The default class to style all page titles is named `PageTitle`.
 
 ## 5 Structure Widgets

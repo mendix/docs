@@ -107,7 +107,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
                     "ecr:GetDownloadUrlForLayer",
                     "ecr:InitiateLayerUpload",
                     "ecr:PutImage",
-                    "ecr:List",
+                    "ecr:ListImages",
                     "ecr:UploadLayerPart",
                     "ecr:DescribeRepositories",
                     "ecr:CreateRepository"
@@ -145,10 +145,10 @@ Use the following configuration options:
 * **Registry name** - specify the repository name you created on step 1, for example: `mendixapps/mynamespace`
 * **Region** - specify the ECR region, for example `eu-west-1`
 * **Authentication** - choose the authentication mode, *Kubernetes Service Account* (recommended) or *AWS Static Credentials* (not recommented by AWS)
-   * **IAM Role ARN** - the role ARN you created on step 3
-   * **K8s Service Account** - the Kubernetes service account that the Mendix Operator should use for authentication; it should match the service account name specified on step 4; the account will be created automatically when you apply the changes
-   * **Access Key ID** - the IAM access key to use for static authentication (only when using the _AWS Static Credentials_ mode)
-   * **Access Secret Key** - the IAM secret key to use for static authentication (only when using the _AWS Static Credentials_ mode)
+    * **IAM Role ARN** - the role ARN you created on step 3
+    * **K8s Service Account** - the Kubernetes service account that the Mendix Operator should use for authentication; it should match the service account name specified on step 4; the account will be created automatically when you apply the changes
+    * **Access Key ID** - the IAM access key to use for static authentication (only when using the *AWS Static Credentials* mode)
+    * **Access Secret Key** - the IAM secret key to use for static authentication (only when using the *AWS Static Credentials* mode)
 
 {{% alert color="info" %}}
 ECR authentication will only work `amazon-ecr` option in the CLI. Other options (for example, generic registry) will not enable the pod annotations required for the ECR authentication plugin to work correctly. Only the `amazon-ecr` option is validated and supported when using the Elastic Container Registry on AWS.
@@ -197,7 +197,7 @@ To access the GCR registry, the Mendix Operator will use its Kubernetes Service 
 To use GCR with the Mendix Operator, you will need to:
 
 1. Create a GCP Service Account (note that this is not the same as a Kubernetes Service Account).
-2. Assign the _Artifact Registry Writer_ (`roles/artifactregistry.writer`) role to the GCR Service Account.
+2. Assign the *Artifact Registry Writer* (`roles/artifactregistry.writer`) role to the GCR Service Account.
 3. Allow the Mendix Operator to use the GCR Service Account by running:
 
     ```shell
@@ -224,6 +224,7 @@ Use the following configuration options:
 This option works with most other registries - if the registry supports Basic authentication, this option should be compatible.
 
 Use the following configuration options:
+
 * **Push URL** - the registry domain name where the registry can be reached by pods inside the cluster.
     * If the registry is running outside the cluster, this would be the registry domain name, such as `registry.example.com`.
     * If the registry is hosted inside the cluster, this would be the internal Kubernetes domain name, for example `registry.namespace.svc` or `registry.container-registry.svc.cluster.local:5000` (for MicroK8s).

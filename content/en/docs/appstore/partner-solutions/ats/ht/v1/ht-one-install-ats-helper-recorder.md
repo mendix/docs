@@ -11,7 +11,7 @@ tags: ["ATS", "testing"]
 
 ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). The recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step.
 
-**This how-to will teach you  how to do the following:**
+This how-to teaches you how to do the following:
 
 * Install the ATS Helper
 * Install the [ATS Recorder](/appstore/partner-solutions/ats/rg-one-recorder/)

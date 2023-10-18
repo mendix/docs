@@ -11,7 +11,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * View warning messages
 * Clear warning messages
@@ -32,7 +32,7 @@ To get more information, double-click or right-click the warning.
 
 {{% alert color="warning" %}}
 
-[Deprecated] Using the main placeholder contents for pop-ups is deprecated.  This potion will be removed in a future version.  Please use a separate pop-up layout instead.
+⚠ Using the main placeholder contents for pop-ups is deprecated.  This option will be removed in a future version.  Please use a separate pop-up layout instead.
 
 {{% /alert %}}
 

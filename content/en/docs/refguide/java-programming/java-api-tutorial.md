@@ -2,7 +2,7 @@
 title: "Using the Mendix Runtime Java API"
 url: /refguide/java-api-tutorial/
 category: "Java Programming"
-weight: 4
+weight: 40
 description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
 tags: ["microflow", "logic", "java", "API"]
 ---
@@ -15,7 +15,7 @@ To avoid cluttering the tutorial, only the relevant code is shown, not the entir
 
 When you look at these examples, often an IContext is used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you are working will determine whether you have these rights and can perform that action.
 
-This tutorial will teach you how to do the following:
+This tutorial teaches you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments

@@ -1,7 +1,9 @@
 ---
 title: "OData Query Options"
 url: /refguide/odata-query-options/
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "insert", "create", "update", "delete", "actions"]
+description: "Lists the query options for OData."
+weight: 20
+tags: ["OData", "filter", "count", "sort", "select", "page", "insert", "create", "update", "delete", "actions"]
 ---
 
 ## 1 Introduction
@@ -9,107 +11,107 @@ tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro", "inse
 This is a list of query options for OData.
 
 {{% alert color="info" %}}
-We currently only support the options described here.
+Mendix currently supports only the options described here.
 {{% /alert %}}
 
 ## 2 Retrieving Objects
 
 ### 2.1 Retrieving All Objects
 
-All objects can be retrieved by specifying the URI. For example: `/odata/myservice/v1/Employees`. You can see this if you specify the URI in a browser.
+To retrieve all objects, specify the URI (for example, `/odata/myservice/v1/Employees`). You can see this if you specify the URI in a browser.
 
 ### 2.2 Retrieving a Single Object
 
-A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/v1/Employees(8444249301330581)`.
+To retrieve a single object, pass the object identifier in the URI. Here is an example: `/odata/myservice/v1/Employees(8444249301330581)`.
 
 ### 2.3 Retrieving Associated Objects
 
-For this example, imagine that you have four entities in your domain model: **Employee**, **Car**, **Address**, and **City**. They include the following:
+To retrieve associated objects, pass the `$expand` query parameter.
+
+For example, imagine that you have four entities in your domain model: **Employee**, **Car**, **Address**, and **City**. They include the following associations:
 
 * An association between **Employee** and **Car**
 * An association between **Employee** and **Address**
 * An association between **City** and **Address**
 
-Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` (OData 3 (deprecated)).
+In this case, you could retrieve associated objects by passing `/odata/myservice/v1/Employees?$expand=Cars,Address($expand=City)` in OData v4 or `/odata/myservice/v1/Employees?$expand=Cars,Address/City` in OData v3 (⚠ deprecated).
 
 ## 3 Counting the Number of Objects
 
 ### 3.1 Retrieving a Count of Objects
 
-You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/v1/Employees/$count`.
+To find out how many objects there are, pass the `$count` query option (for example, `/odata/myservice/v1/Employees/$count`). This returns an integer representing the number of objects.
 
 ### 3.2 (Inline) Count
 
-For OData 4, by setting the `$count` query option to `true`, a count of the number of items returned will be included in the result. For example: `?$count=true`.
-
-For OData 3 (deprecated), by setting the `$inlinecount` query option to `allpages`, a count of the number of items returned will be included in the result. For example: `?$inlinecount=allpages`.
+You can also adjust your query so that the result includes a count of the number of items returned. To do this in OData v4, set the `$count` query option to `true` (like this: `?$count=true`). To do this in OData v3 (⚠ deprecated), set the `$inlinecount` query option to `allpages` (like this: `?$inlinecount=allpages`).
 
 ## 4 Filtering
 
-Filters are applied by appending a `$filter=...` parameter to the request. For example: `/Employees?$filter=Name eq 'John'`.
+To apply a filter, append a `$filter=...` parameter to the request, like this: `/Employees?$filter=Name eq 'John'`.
 
 ### 4.1 Passing attributes
 
 This table describes how to pass values for different attribute types:
 
-| Type | How to Pass |
-| --- | --- |
-| String | Enclosed in single quotes (for example, `'John'`) |
-| Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enum type name is not supported |
-| Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3 (deprecated): Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
-| Other | Plain value (for example, 15) |
+| Attribute Type | How to Pass                                                 |
+| -------------- | ----------------------------------------------------------- |
+| String         | Enclose the value in single quotes (for example, `'John'`). |
+| Enumeration    | Enclose the enumeration member name in single quotes, prefixed with the enumeration type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enumeration type name is not supported. |
+| Datetime       | For OData v4, use a plain value (for example, `2021-12-31`). For OData v3 (⚠ deprecated), enclose the value in single quotes and prefix `datetime` (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`). |
+| Other          | Use a plain value (for example, `15`).                            |
 
 ### 4.2 Comparison Operators
 
-We support the following comparison operators:
+Mendix supports the following comparison operators:
 
-| Operator | Meaning | Example |
-| --- | --- | --- |
-| eq | equals | `/Employees?$filter=Name eq 'John'` |
-| ne | does not equal | `/Employees?$filter=Name ne 'John'` |
-| gt | greater than | `/Employees?$filter=Age gt 15` |
-| lt | less than | `/Employees?$filter=Age lt 15` |
-| ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
-| le | less than or equal to | `/Employees?$filter=Age le 15` |
+| Operator | Meaning                  | Example                             |
+| -------- | ------------------------ | ----------------------------------- |
+| `eq`     | Equals                   | `/Employees?$filter=Name eq 'John'` |
+| `ne`     | Does not equal           | `/Employees?$filter=Name ne 'John'` |
+| `gt`     | Greater than             | `/Employees?$filter=Age gt 15`      |
+| `lt`     | Less than                | `/Employees?$filter=Age lt 15`      |
+| `ge`     | Greater than or equal to | `/Employees?$filter=Age ge 15`      |
+| `le`     | Less than or equal to    | `/Employees?$filter=Age le 15`      |
 
 ### 4.3 Functions
 
-| Function     | Example                                 | Returns |
-| ---          | ---                                     | ---     |
-| contains<sup>1</sup> | `/Employees?$filter=contains(Name, 'f')`     | All employees with names that contain an 'f' |
-| startswith   | `/Employees?$filter=startswith(Name, 'f')`      | All employees with names that start with 'f' |
-| endswith     | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with 'f' |
-| length       | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5 |
-| year         | `/Employees?$filter=year(DateOfBirth) eq 1990`  | All employees born in the year 1990 |
-| month        | `/Employees?$filter=month(DateOfBirth) eq 5`    | All employees born in May |
-| day          | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31 day of the month |
-| hour         | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1 PM) and 13:59 (1:59 PM) |
-| minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
-| second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
+| Function               | Example                                         | Returns                                                               |
+| ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
+| `contains`<sup>1</sup> | `/Employees?$filter=contains(Name, 'f')`        | All employees with names that contain an `f`                          |
+| `startswith`           | `/Employees?$filter=startswith(Name, 'f')`      | All employees with names that start with `f`                          |
+| `endswith`             | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with `f`                            |
+| `length`               | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5                      |
+| `year`                 | `/Employees?$filter=year(DateOfBirth) eq 1990`  | All employees born in the year 1990                                   |
+| `month`                | `/Employees?$filter=month(DateOfBirth) eq 5`    | All employees born in May                                             |
+| `day`                  | `/Employees?$filter=day(DateOfBirth) eq 31`     | All employees born on the 31st day of the month                       |
+| `hour`                 | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1:00 PM) and 13:59 (1:59 PM)     |
+| `minute`               | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour               |
+| `second`               | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<small><sup>1</sup> In OData 3 (deprecated), the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
+<small><sup>1</sup> In OData v3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
 
 ### 4.4 Combining Filters
 
-Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`.
+Filters can be combined with `and`, `or`, `not`, and `()`. Here is an example: `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`.
 
-| Combination | Example |
-| --- | --- |
-| and | `/Employees?$filter=Name eq 'John' and Age gt 65` |
-| or | `/Employees?$filter=Age gt 65 or Age lt 11` |
-| not | `/Employees?$filter=not(Name eq 'John')` |
-| ( ) | `/Employees?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)` |
+| Combination | Example                                                          |
+| ----------- | ---------------------------------------------------------------- |
+| `and`       | `/Employees?$filter=Name eq 'John' and Age gt 65`                |
+| `or`        | `/Employees?$filter=Age gt 65 or Age lt 11`                      |
+| `not`       | `/Employees?$filter=not(Name eq 'John')`                         |
+| `()`        | `/Employees?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)` |
 
 ### 4.5 Filtering by Association
 
-You can filter on attributes of an associated entity. The way you do this depends on whether the association exposes one object or a list of objects.
+You can filter on the attributes of an associated entity. The syntax depends on whether the association exposes one object or a list of objects:
 
-| Type | Example |
-| --- | --- |
-| Filter on an associated object | `People?$filter=BirthPlace/CityName eq 'Rotterdam'` |
-| Filter on an associated list  | `City?$filter=BornIn/any(person:person/Year le 1919)` |
+| Type                           | Example                                               |
+| ------------------------------ | ----------------------------------------------------- |
+| Filter on an associated object | `People?$filter=BirthPlace/CityName eq 'Rotterdam'`   |
+| Filter on an associated list   | `City?$filter=BornIn/any(person:person/Year le 1919)` |
 
-Filtering on an associated object or list in this way is possible when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you [expose associations as an associated object ID](/refguide/odata-representation/#associations).
+Filtering on an associated object or list in this way is possible only when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you expose associations as an associated object ID.
 
 ### 4.6 Arithmetic Operators
 
@@ -117,51 +119,53 @@ The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in
 
 ## 5 Sorting
 
-You can sort the result using the `$orderby` query option. For example: `?$orderby=Name` or `?$orderby=BirthPlace/CityName`.
+To sort the result, use the `$orderby` query option. Here are some examples: `?$orderby=Name` and `?$orderby=BirthPlace/CityName`.
 
-The default direction is ascending, and you can make this explicit. For example: `?$orderby=Name asc`.
+The default sort direction is ascending. You can make this explicit as follows: `?$orderby=Name asc`.
 
-You can also order the result in a descending direction. For example: `?$orderby=Name desc`.
+You can also order the result in descending direction. Here is an example: `?$orderby=Name desc`.
 
-It is possible to sort on multiple attributes, which have to be comma-separated. For example: `?$orderby=Name asc,Age desc`.
+To sort on multiple attributes, separate each attribute with a comma. Here is an example: `?$orderby=Name asc,Age desc`.
 
 ## 6 Selecting fields
 
-You can select which attributes and associations to return by specifying the `$select` query option. For example: `?$select=Name,Age`.
+To select which attributes and associations to return, specify the `$select` query option (for example, `?$select=Name,Age`).
 
 ## 7 Paging {#paging}
 
-Paging allows you to load data incrementally to better handle large amounts of data. Paging occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+Paging enables loading data incrementally to better handle large amounts of data. Paging occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
 
 ### 7.1 Top (Limit)
 
-You can limit the number of returned objects using the `$top` query option, where the limit is a positive integer. For example: `?$top=100`.
+To limit the number of returned objects, use the `$top` query option. The limit (the number of objects to return) must be a positive integer. For example, `?$top=100` returns the top 100 objects in the list.
 
 ### 7.2 Skip (Offset)
 
-You can skip a number of objects before retrieving the result using the `$skip` query option, where the offset is a positive integer. For example: `?$skip=100` will return objects starting with the 101 object in the list.
+To skip a number of objects before retrieving the result, use the `$skip` query option. The offset (the number of objects to skip) must be a positive integer. For example, `?$skip=100` returns objects starting with the 101st object in the list.
 
 ## 8 Null Literals
 
-You can compare values against the `null` literal. For example: `?$filter=Name eq null`.
+You can compare values against the `null` literal. For example, given a string attribute `Name`, you can use `?$filter=Name eq null` to query for the objects that have no value assigned to the `Name` attribute.
 
-In this example, `Name` is a string attribute that can have no assigned value in the database. Note that `null` means *no value* as opposed to `''` (which is an empty string).
+{{% alert color="info" %}}
+Keep in mind that `null` is different from an empty string; a null attribute has no value, but an empty string (`''`) is a string of length 0.
+{{% /alert %}}
 
-When you filter against associations, null literals can be quite useful. For example: `?$filter=Association_A_B ne null`. In this example, you query for objects of entity type `A` that have at least one association set to objects of entity type `B`.
+Null literals are especially useful when you filter against associations. For example, with `?$filter=Association_A_B ne null`, you can query for objects of entity type `A` that have at least one association set to objects of entity type `B`.
 
 ## 9 Passing Query Options in the Request Body
 
-If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. 
+If the OData query is too long to be sent as a `GET` request, you can send the query as a `POST` request to the `/$query` endpoint. For example, `POST /Products/$query` with `$select=Name,Price` in the request body gives the same result as `GET /Products?$select=Name,Price`. These `POST` requests must specify the header `Content-Type: text/plain`. 
 
 {{% alert color="info" %}}
-The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
+The request body must adhere to URL encoding principles; that means that everything must be written in [ASCII characters](https://www.w3schools.com/tags/ref_urlencode.asp).
 {{% /alert %}}
 
 ## 10 Updating Objects {#updating-objects}
 
 ### 10.1 Updating Attributes
 
-When a published resource has the [Updatable](/refguide/published-odata-resource/#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+When a published resource has the [Updatable](/refguide/published-odata-resource/#updatable) capability, you can update the resource's attributes and associations by sending a `PATCH` request to the URL of the object. Here is an example: `PATCH /odata/myservice/v1/Employees(8444249301330581)`.
 
 Specify new values for attributes in the body of the request. Here is an example:
 
@@ -175,8 +179,9 @@ Specify new values for attributes in the body of the request. Here is an example
 
 #### 10.1.1 Updating Attributes of Enumeration Type
 
-Attributes of an enumeration type can be updated by specifying the exposed value of the enumeration, without the prefix of the enumeration type, in the body of the `PATCH` request.
-For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR` and `MyModule.Country.JP`, exposed as `France`, `Brazil`, and `Japan` respectively, you can update your object as follows:
+To update attributes of an enumeration type, specify the exposed value of the enumeration in the body of the `PATCH` request. Do not include the prefix of the enumeration type.
+
+So, for an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR`, and `MyModule.Country.JP` (exposed as `France`, `Brazil`, and `Japan`, respectively), you can update your object as follows:
 
 ```json
 {
@@ -199,7 +204,7 @@ When the association refers to a single object, use the [`@id` syntax](https://d
 }
 ```
 
-When the association refers to multiple objects, add objects to or remove objects from the association by using the `@delta` syntax:
+When the association refers to multiple objects, use the `@delta` syntax to add objects or remove objects from the association.
 
 ```json
 {
@@ -217,13 +222,15 @@ When the association refers to multiple objects, add objects to or remove object
 }
 ```
 
-Clients can only update an association from the entity that is the [owner](/refguide/associations/).
+{{% alert color="info" %}}
+You can update an association only from the entity that is the [owner](/refguide/associations/#ownership).
+{{% /alert %}}
 
 ## 11 Inserting Objects {#inserting-objects}
 
-When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, clients can create new objects by sending a `POST` request to the URL of the entity set (for example, `POST /odata/myservice/v1/Employees`). 
+When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, you can create new objects by sending a `POST` request to the URL of the entity set. Here is an example: `POST /odata/myservice/v1/Employees`.
 
-The body of the request may specify attribute and association values just as with updates. There is one difference: when the association refers to multiple objects, objects are specified without using `@delta`. For example:
+The body of the request may specify attribute and association values, just as with updates. However, unlike with updates, the `@delta` syntax is not used to specify objects, even when the association refers to multiple objects. Here is an example:
 
 ```json
 {
@@ -234,17 +241,19 @@ The body of the request may specify attribute and association values just as wit
 }
 ```
 
-Clients can only set values for an association from the entity that is the [owner](/refguide/associations/).
+You can set values for an association only from the entity that is the [owner](/refguide/associations/#ownership).
 
 ## 12 Deleting Objects {#deleting-objects}
 
-When a published resource has the [Deletable](/refguide/published-odata-resource/#capabilities) capability, clients can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+When a published resource has the [Deletable](/refguide/published-odata-resource/#deletable) capability, you can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
 ## 13 Calling Microflows {#actions}
 
-Microflows that are published in your OData service can be called by sending a `POST` request to the action's endpoint URL, which is defined by the base URL of the OData service and the exposed name of the microflow. For example: `POST /odata/myservice/v1/OnboardNewEmployee`. An example URL can be found when opening the [Edit published microflow](/refguide/published-odata-microflow/) dialog; on the bottom you will find the **example of location** property.
+To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL. Here is an example: `POST /odata/myservice/v1/OnboardNewEmployee`.
 
-The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. For example:
+The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/#edit-microflow) dialog box and look at the **Example of location** property.
+
+The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. Here is an example:
 
 ```json
 {
@@ -255,7 +264,9 @@ The request body is always a JSON object, with a property for each parameter tha
 }
 ```
 
-If a parameter has type *object* or *list*, the value of the parameter's property is a JSON object or array respectively, similar to what is expected when [inserting objects](#inserting-objects) for that entity. It is possible to pass an existing object by using the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the existing object. It is also possible to pass both an `@id` reference *and* attributes of the object combined, which results in the existing object having the additional attributes' values. For example:
+If a parameter's data type is object, the value of the parameter's property is a JSON object. If a parameter's data type is list, the value of the parameter's property is a JSON array. This is similar to what is expected when [inserting objects](#inserting-objects) for that entity.
+
+To pass an existing object, use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the object. When you pass an object using the `@id` reference, you can also pass attributes of the object; this assigns the specified attribute values to the existing object. Here is an example that passes the `Employees(1783)` object while specifying a value for the `Email` attribute:
 
 ```json
 {
@@ -272,9 +283,9 @@ If the referenced object cannot be found, the action will fail.
 If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 
 {{% alert type="info" %}}
-Note that an object that is passed to a microflow will not be committed automatically. If you want the passed object to be saved, you will have to implement this in the microflow. 
+An object passed to a microflow will not be committed automatically. If you want the passed object to be saved, you must implement this in the microflow.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-The *publish microflows* functionality was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
+The functionality for [publishing microflows in your OData service](/refguide/published-odata-microflow/) was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
 {{% /alert %}}

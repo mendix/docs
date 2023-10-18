@@ -16,23 +16,21 @@ These release notes cover changes made to the [Catalog](/catalog/).
 ### October 19, 2023
 
 ### Features
-* We have added a short personalised tour to educate users (who have registered an endpoint), on key features that are available for maintaining their assets, within Catalog.
-* We have introduced a Notification feature to alert users when REST APIs are registered.
+* We have added a short personalised tour to educate users (who have registered an endpoint) on key features that are available for maintaining their assets within the Catalog.
+* We have introduced a notification feature to alert users when REST APIs are registered.
 
 ### Improvement
-* We have refreshed the homepage (balancing familiarity for existing users and clarity for newcomers), to align with our app's growth, in terms of new data sources that are now accommodated (and that will continue to be expanded in the future).
-* We have added the ability to filter on technology type (OData, OpenAPI) on the Curate Page.
+* We have refreshed the home page to align with our app’s growth and accommodate for new data sources. 
+* We have added the ability to filter technology type (OData, OpenAPI) on the **Curate** page.
 
 #### Fixes
-* We have resolved the issue where OpenAPI endpoints were not displaying on the Curation page.
-
+* We have resolved the issue where OpenAPI endpoints were not displaying on the **Curate** page.
 
 ### October 12, 2023
 
 ### Improvement
 
 * We have decreased the number of clicks required to reach the discoverability setting of a data source. We have also included more information relating to the data source on the **My Assets** page in the Technology field form. 
-
 
 ### October 5, 2023
 

@@ -14,7 +14,7 @@ With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) mod
 This module allows end-users to sign in with their Mendix account with the click of a button, instead of requiring their local user credentials. This avoids having to deal with local user management or password reset flows for the test and acceptance phases of your app development.
 
 {{% alert color="warning" %}}
-End-users of the app need to [sign up for a Mendix account](https://signup.mendix.com/) before they sign in to your app.
+The end-users of the app need to [sign up for a Mendix account](https://signup.mendix.com/) before they sign in to your app.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -64,15 +64,15 @@ Where the Mendix SSO module has been added to a Mendix app templates, all you ha
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/mxsso-app-store-module.png" >}}
 
-If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up) section below.
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
 {{% alert color="info" %}}
-For Mendix 9.20 and above, you will need to use version 4.0.1 or above of the Mendix SSO module.
+For Mendix 9.20 and above, you need to use version 4.0.1 or above of the Mendix SSO module.
 {{% /alert %}}
 
-In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing Mendix SSO](#customizing), below, for more information.
+In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. For more information, see [Customizing Mendix SSO](#customizing)section below.
 
 ## 3 Removing Mendix Single Sign-On
 

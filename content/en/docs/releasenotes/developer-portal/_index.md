@@ -17,6 +17,14 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 19, 2023
+
+#### Fixes
+
+* We fixed an issue where last scrum masters could be removed from projects if those projects had API Keys
+* We fixed an issue that allowed new members to accept a project invitation multiple times
+* The sprint filter on the story archive page did not perform well. We fixed that issue and now it does not show a list of sprints anymore, but a text box where you can type the sprint name.
+
 ### October 12, 2023
 
 #### New Features

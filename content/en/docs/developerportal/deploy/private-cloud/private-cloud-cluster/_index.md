@@ -1431,23 +1431,17 @@ Here, you can create customized plan for your core resources.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
 
-
 {{% alert color="info" %}}
 Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hence, with the deletion of pod, the data stored in the ephemeral storage is also lost.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Once you enable the **Use custom core resources plans** button, you can't switch back to the default core plans until you delete all the environments using the custom core plans and disable **Use custom core resources plans** button. A warning message with the same information is displayed when trying to enable this feature.
+Once you enable the **Use custom core resources plans** button, you cannot switch back to the default core plans until you delete all the environments using the custom core plans and disable **Use custom core resources plans** button. A warning message with the same information is displayed when trying to enable this feature.
 {{% /alert %}}
-
 
 #### 7.2.6 Installation
 
-The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
-
-You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
-
-You can also download the Configuration Tool again, if you wish.
+The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
 #### 7.2.7 Additional Information
 

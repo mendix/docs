@@ -29,7 +29,7 @@ Click **Environments** to go to the [Environments](/developerportal/deploy/envir
 
 ## 3 Permissions
 
-In the *Permissions* section, you can manage access to your environments for each team member.
+In the **Permissions** tab of the **Environments** page, you can manage access to your environments for each team member.
 
 ### 3.1 User Roles for Managing Permissions
 

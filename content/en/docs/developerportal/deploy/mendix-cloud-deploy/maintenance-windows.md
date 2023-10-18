@@ -36,7 +36,7 @@ To view maintenance windows, you need to have access to monitor or back up your 
 
 ## 3 Configuring Maintenance for Your Application {#configuring}
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 Maintenance windows and planned maintenance are defined in Coordinated Universal Time. When selecting a time period, remember to convert to Coordinated Universal Time from your local time.
 {{% /alert %}}
 

@@ -13,7 +13,7 @@ aliases:
 
 Mendix hosts a variety of services in the cloud. These include the environments for apps that are deployed to Mendix Cloud, as well as various online services (such as app Buzz).
 
-The status of all these services is reported on the [Mendix Platform Status](https://status.mendix.com/) page.
+The status of each of these services is reported on the [Mendix Platform Status](https://status.mendix.com/) page.
 
 ## 2 Mendix Cloud Statuses
 

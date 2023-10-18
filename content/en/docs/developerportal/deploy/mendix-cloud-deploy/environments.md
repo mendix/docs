@@ -14,20 +14,10 @@ You can use the **Environments** page to access information about your environme
 The **Environments** page has the following tabs:
 
 * **Deploy**
-    * Deployment Package Repository
-    * Environments 
-    * Activity
 * **Custom Domains**
-    * Certificates
-    * Linked Custom Domains
 * **Access Restriction Profiles**
-    * Access Restriction Profiles, including TLS Certificate Profiles and IP Filtering Profiles
 * **Permissions**
-    * [Node Permissions](/developerportal/deploy/node-permissions/)
-    * Activity
 * **Services**
-    * Services
-    * Activity
     
 ## 2 Deploy
 

@@ -41,4 +41,4 @@ The following headers are set by the Mendix Cloud. If any of these are present i
 | **SSL-Client-Fingerprint**                  | `74e034c13a38003b433605f5a13062eb816e467e`                   | The SHA1 fingerprint of the client certificate for an established TLS connection. |
 | **SSL-Client-Serial**                       | `02`                                                         | The serial number of the client certificate for an established TLS connection. |
 
-There may be additional headers that are set by Mendix Cloud but not documented in the table above. Do not rely on the presence of these headers and their values. They are for internal use only and are not subject to the deprecation handling described below.
+There may be additional headers that are set by Mendix Cloud but not documented in the table above. Do not rely on the presence of these headers and their values. They are for internal use only.

@@ -17,6 +17,37 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 19, 2023
+
+#### New Features
+
+* In [Epics](/developerportal/project-management/epics/)
+   * We added a new section to the story details page called "Audit Trail". There you can find information on all the updates related to that specific story, including who updated them and when. Currently we log the following:
+      * Story assigned to {user name}
+      * Story assigned to {user name} from {user name}
+      * Story unassigned from {user name}
+      * Changed Status to {status}
+      * Story type changed to {story type}
+      * Task {task name} added
+      * Task {task name} completed
+      * Task {task name} deleted
+      * Epic {epic name} linked
+      * Epic {epic name} unlinked
+      * Tag(s) {tag names} added
+      * Tag(s) {tag names} removed
+      * Story points changed to {story points}
+      * File attached {file name}
+      * File removed {file name}
+      * Story archived
+      * Comment Deleted
+      * Comment Edited
+   * We enabled filtering both on the board and on the planning page. You can filter stories by story title, story ID, epic name or assignee. You can also filter by any tag and combine the results.
+
+#### Fixes 
+
+ * In [Epics](/developerportal/project-management/epics/) We fixed an issue that stories were not getting removed from the board after completing a sprint
+ * In [Epics](/developerportal/project-management/epics/) We fixed an issue regarding dark mode where the screen would flicker
+
 ### October 12, 2023
 
 #### New Features

@@ -57,4 +57,6 @@ After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/
 
 Persistable objects are persisted by using the [commit](/refguide/committing-objects/) activity. External entities cannot be committed. Use this activity instead.
 
-The [Save](/refguide/button-widgets/) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has this activity.
+{{% alert color="info" %}}
+Support for saving changes to [external entities](/refguide/external-entities/) by using a [Save button](/refguide/button-widgets/) was introduced in Studio Pro [10.4.0](/releasenotes/studio-pro/10.4/). In earlier versions, you can use the [Call a microflow](#call-microflow) event in combination with this activity to save changes to external entities.
+{{% /alert %}}

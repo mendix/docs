@@ -185,9 +185,10 @@ Learn more about adding authentication information to a consumed OData service:
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the [Integration Pane](/refguide/integration-pane/). The datasets associated with the entities are maintained in the originating apps.
 
-External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
+External entities cannot be committed, and the **Commit** activity cannot be used with external entities. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities.
 
-* The **Commit** activity does not work. Use **Send External Object** instead.
-* On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
+{{% alert color="info" %}}
+Support for saving changes to external entities by using a [Save button](/refguide/button-widgets/) was introduced in Studio Pro [10.4.0](/releasenotes/studio-pro/10.4/). In earlier versions, you can use the [Call a microflow](#call-microflow) event in combination with the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
+{{% /alert %}}
 
 For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.

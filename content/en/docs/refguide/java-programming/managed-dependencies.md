@@ -71,7 +71,7 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. The configured repositories are also used to resolve Gradle plugins. For example, to resolve dependencies from a directory `lib`, enter the following:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage, Studio Pro uses Gradle plugins which are also resolved using the configured repositories. For example, to resolve dependencies from a directory `lib`, enter the following:
 
 ```groovy {linenos=false}
 flatDir {
@@ -93,7 +93,7 @@ For more details, refer to the Gradle documentation on [Declaring repositories](
 
 There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies.
 
-1. The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), used for Software Bill of Material generation.
+- The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), used for Software Bill of Material generation.
 
 ## 7 Marketplace Modules
 

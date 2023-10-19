@@ -76,12 +76,12 @@ In order to use the Amazon Bedrock service, you must authenticate with AWS. To d
     | Any | **Timeout** | Specifies how long the Call REST service activity should wait for the REST endpoint to respond |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
-    | **SessionCredentials** | **Session Name** | An identifier for the session |
+    | **TemporaryCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **TemporaryCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **TemporaryCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **TemporaryCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **TemporaryCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **TemporaryCredentials** | **Session Name** | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
@@ -92,11 +92,11 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 3. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **ListFoundationModels** activity.
 4. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 5. Double-click the **ListFoundationModels** activity to configure the required parameters.
-6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. For a list of available AWS regions, see [ENUM_Region](#enum-region).
+6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of type ENUM_Region of the AWS Authentication connector.
 7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
-    1. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **Credentials_GenerateFromConstants** action under > **Resources** > **Authentication**.
-    2. Drag the **Credentials_GenerateFromConstants** to the beginning of your microflow.
-    3. Double-click the **Credentials_Generate** activity to configure the required parameters and provide a value for the AWS Region.
+    1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
+    2. Drag the **Generate Credentials** to the beginning of your microflow.
+    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
 7. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
 8. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 9. Double-click the **Retrieve** activity and make sure **By Association** is selected.
@@ -135,6 +135,9 @@ This is the request entity of the `InvokeModelGeneric` action.
 | `Accept` | The `Accept` attribute describes the desired MIME type of the inference body in the response. The default value is `application/json`.|
 | `ContentType` | The `ContentType` attribute describes the MIME type of the input data in the request. The default value is `application/json`.|
 | `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**.|
+| `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke.|
+| `InvokeRuntimeApi` | The `InvokeRuntimeApi` attribute describes whether the runtime API endpoint should be called, to which the Invoke action has been moved. The default value is **true**.|
+
 
 #### 4.1.4 InvokeModelGenericResponse {#invokemodelgenericresponse}
 
@@ -146,44 +149,11 @@ This is the response entity of the `InvokeModelGeneric` action.
 | `ProomptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved.|
 | `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model.|
 
-### 4.2 Enumerations
-
-An enumeration is a predefined list of values that can be used as an attribute type. For the more information, see [Enumerations](https://docs.mendix.com/refguide/enumerations/).
-
-#### 4.2.1 ENUM_Region {#enum-region}
-
-This enumeration provides a list of available AWS regions.
-
-| Name | Caption |
-| --- | --- |
-| `us_east_2` | **US East (Ohio)** |
-| `us_east_1` | **US East (N. Virginia)** |
-| `us_west_1` | **US West (N. California)** |
-| `us_west_2` | **US West (Oregon)** |
-| `af_south_1` | **Africa (Cape Town)** |
-| `ap_east_1` | **Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` | **Asia Pacific (Jakarta)** |
-| `ap_south_1` | **Asia Pacific (Mumbai)** |
-| `ap_northeast_3` | **Asia Pacific (Osaka)** |
-| `ap_northeast_2` | **Asia Pacific (Seoul)** |
-| `ap_southeast_1` | **Asia Pacific (Singapore)** |
-| `ap_southeast_2` | **Asia Pacific (Sydney)** |
-| `ap_northeast_1` | **Asia Pacific (Tokyo)** |
-| `ca_central_1` | **Canada (Central)** |
-| `eu_central_1` | **Europe (Frankfurt)** |
-| `eu_west_1` | **Europe (Ireland)** |
-| `eu_west_2` | **Europe (London)** |
-| `eu_south_1` | **Europe (Milan)** |
-| `eu_west_3` | **Europe (Paris)** |
-| `eu_north_1` | **Europe (Stockholm)** |
-| `me_south_1` | **Middle East (Bahrain)** |
-| `sa_east_1` | **South America (São Paulo)** |
-
-### 4.3 Activities {#activities}
+### 4.2 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
 
-#### 4.3.1 List Foundation Models {#list-foundation-models}
+#### 4.2.1 List Foundation Models {#list-foundation-models}
 
 The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires a **Credentials** object and an `ENUM_Region` value (like **us_west_2**).
 
@@ -193,7 +163,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Credentials`, `ENUM_Region` | `ListFoundationModelsResponse`, `ListFoundationalModelsResponse` |
 
-#### 4.3.2 Invoke Model Generic {#invoke-model-generic}
+#### 4.2.2 Invoke Model Generic {#invoke-model-generic}
 
 The `InvokeModel Generic` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `RequestBody` and `InvokeModelGenericRequest` as input parameters.
 

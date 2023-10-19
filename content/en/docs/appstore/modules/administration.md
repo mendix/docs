@@ -29,7 +29,13 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Administration module into your app.
 
-## 3 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
+## 3 Usage
+
+### 3.1 Adding the `adminstration_overview` Page to the Navigation
+
+### 3.2 Add users as an Administrator
+
+## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. To use the supporting microflows with Mendix SSO, perform the following steps:
 

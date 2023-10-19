@@ -12,9 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-The **Application Autoscaler** service for SAP Business Technology Platform (SAP BTP) enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
+The **Application Autoscaler** service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
 
-For more information on the Application AutoScaler see [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) on the *SAP Help Portal*.
+For more information on the Application Autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the *SAP Help Portal*.
 
 ## 2 Binding the Application Autoscaler{#binding}
 

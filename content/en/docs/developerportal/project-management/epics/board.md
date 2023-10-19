@@ -14,7 +14,7 @@ On the upper-right corner of the page, you can find the following items:
 * **Create Story** – Clicking this enables you to create a new story.
 * **Create Epic**  – Clicking this enables you to create a new epic.
   
-* Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID.
+* Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
 
 ## 2 Swimlanes {#swimlane}
 

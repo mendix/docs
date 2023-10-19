@@ -35,7 +35,12 @@ The following are recommended practices:
 
 1. Use the library and foundations on your app.  
 1. Use the global local variables for changing the colors from your components.
+1. Prioritize designing components from this kit, because they are already supported on Atlas and Studio Pro.
+1. Use typographies that are supported by Atlas and are in the Figma UI Kit.
 
 The following are *not* recommended practices:
+
+1. Do not change the components' names (doing so will de-link them from the library).
+1. Do not change the component layers' names.
 
 ## 5 Read More

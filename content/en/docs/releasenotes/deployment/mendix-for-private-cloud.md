@@ -533,7 +533,7 @@ To see more details about supported databases and Kubernetes versions, see the [
 #### Prometheus Metrics
 
 * We have documented how to collect logs and metrics in Mendix for Private Cloud.
-* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud v4 metrics](/developerportal/operate/trends-v4/) users.
+* We have created a reference Grafana dashboard that offers a familiar experience for Mendix Cloud v4 [Metrics](/developerportal/operate/metrics/) users.
 
 To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor/).
 

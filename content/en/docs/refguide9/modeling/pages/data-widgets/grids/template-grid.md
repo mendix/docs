@@ -54,7 +54,7 @@ The data source determines which objects will be shown in the template grid. For
 
 #### 3.2.1 Type
 
-The list view supports the following types of data sources: 
+The template grid supports the following types of data sources: 
 
 * [Database source](/refguide9/database-source/) – objects are retrieved directly form the database
 * [XPath source](/refguide9/xpath-source/) – objects are retrieved directly form the database

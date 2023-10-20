@@ -17,6 +17,25 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 19, 2023
+
+#### New Features
+
+* We added the following features to [Epics](/developerportal/project-management/epics/): 
+   * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
+   * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name, or assignee. You can also filter by any tag and combine the results.
+
+#### Improvements
+
+* We improved the Sprint filter in [Story Archive](/developerportal/collaborate/general-settings/#story-archive) so that you can now type the Sprint name in a text box.
+
+#### Fixes 
+
+ * In [Epics](/developerportal/project-management/epics/), we fixed the following issues:
+   * We fixed an issue that stories were not getting removed from the board after a Sprint is completed.
+   * We fixed an issue regarding dark mode where the screen would flicker.
+* We fixed an issue where the last Scrum Master could be removed from an app with API keys.
+* We fixed an issue that allowed new members to accept an invitation to an app multiple times.
 ### October 12, 2023
 
 #### New Features

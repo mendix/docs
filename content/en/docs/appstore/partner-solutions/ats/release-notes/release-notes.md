@@ -12,7 +12,7 @@ weight: 100
 ### Improvements
 
 * We have added support for Mendix 10.
-* We have added support for Selenium version 4 (BETA).
+* We have added support for Selenium version 4 (beta)).
 * We have added support for the latest compatible browser versions for Chrome, Firefox, and Edge for Selenium 4.
 * We have removed support for the Internet Explorer browser.
 

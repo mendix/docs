@@ -190,6 +190,10 @@ You can also set **Mask** to **Yes**. This changes the display settings for **Cu
 For the changes to take effect, you must restart your application.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+When a constant is first introduced to a cloud deployment, its value is taken from the Studio Pro configuration. Any later changes to the constant value in Studio Pro will not be copied to the new deployment.
+{{% /alert %}}
+
 For more information, see [Constants](/refguide/constants/).
 
 ## 4 The Network Tab {#network-tab}
@@ -516,7 +520,7 @@ In the **Services** tab, the [Technical Contact](/developerportal/general/app-ro
 
 ### 9.1 Available Services
 
-One custom service is available: the **Event Broker service**. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: **Mendix Event Broker****. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
 
 ### 9.2 Enabling Custom Services
 

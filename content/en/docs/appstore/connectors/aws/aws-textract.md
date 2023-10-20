@@ -354,7 +354,7 @@ This activity returns an `AnalyzeExpenseResponse` object with objects from the f
 
 #### 4.3.3 StartDocumentAnalysis {#startdocumentanalysis}
 
-The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the Feature Type 'QUERIES' is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.  
+The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the `Queries` feature type is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.  
 
 The input and output for this service are shown in the table below:
 
@@ -362,13 +362,13 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `StartDocumentAnalysisRequest` (Object) | `StartDocumentAnalysisResponse` (Object) |
 | `AWS_Region` (Enumeration) | |
-| `Credentials` (object) | |
+| `Credentials` (Object) | |
 
 This activity returns a `AnalyzeDocumentResponse` object with objects from the following entities, as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `StartDocumentAnalysisResponse` | | This entity is the response for the Amazon Textract `StartDocumentAnalyis` action. It contains a JobId attribute, which can be used by the `GetDocumentAnalysis` action to retrieve the results once they have been processed by the Textract service|
+| `StartDocumentAnalysisResponse` | | This entity is the response for the Amazon Textract `StartDocumentAnalyis` action. It contains a `JobId` attribute, which can be used by the `GetDocumentAnalysis` action to retrieve the results once they have been processed by the Textract service |
 
 #### 4.3.4 GetDocumentAnalysis {#getdocumentanalysis}
 
@@ -386,5 +386,5 @@ This activity returns a `GetDocumentAnalysisResponse` object with objects from t
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `GetDocumentAnalysisResponse` | `AbstractDocumentAnalysisResponse`| This entity is the response for the Amazon Textract `GetDocumentAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a NextToken that can be used to retrieve the next batch of results. |
-| `GetDocumentAnalysisWarning` | | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|
+| `GetDocumentAnalysisResponse` | `AbstractDocumentAnalysisResponse`| This entity is the response for the Amazon Textract `GetDocumentAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a `NextToken` that can be used to retrieve the next batch of results. |
+| `GetDocumentAnalysisWarning` | | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply. |

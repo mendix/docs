@@ -276,7 +276,7 @@ This enumeration indicates the selection status of the block. For more informati
 
 #### 4.2.7 FeatureTypes
 
-This enumeration holds the available types of analysis to perform, see [Feature Types](https://docs.aws.amazon.com/textract/latest/dg/API_StartDocumentAnalysis.html#Textract-StartDocumentAnalysis-request-FeatureTypes) in the AWS API documentation.
+This enumeration holds the available types of analysis to perform. For more information, see [Feature Types](https://docs.aws.amazon.com/textract/latest/dg/API_StartDocumentAnalysis.html#Textract-StartDocumentAnalysis-request-FeatureTypes) in the AWS API documentation.
 
 | Name | Caption |
 | --- | --- |
@@ -288,7 +288,7 @@ This enumeration holds the available types of analysis to perform, see [Feature 
 
 #### 4.2.8 JobStatus
 
-This enumeration indicates the status of the document analysis job as part of the `GetDocumentAnalysisResponse`, see [Job Status](https://docs.aws.amazon.com/textract/latest/dg/API_GetExpenseAnalysis.html#Textract-GetExpenseAnalysis-response-JobStatus) in the AWS API documentation.
+This enumeration indicates the status of the document analysis job as part of the `GetDocumentAnalysisResponse`. For more information, see [Job Status](https://docs.aws.amazon.com/textract/latest/dg/API_GetExpenseAnalysis.html#Textract-GetExpenseAnalysis-response-JobStatus) in the AWS API documentation.
 
 | Name | Caption |
 | --- | --- |

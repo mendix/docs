@@ -37,13 +37,13 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 
 ## 3 Using the Autoscaler Configurator
 
-The **autoscaler configurator** provides a user friendly interface to create the JSON required to configure the application autoscaler.
+The **Autoscaler Configurator** provides a user-friendly interface to create the JSON required to configure the application autoscaler.
 
 {{% alert color="info" %}}
-The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP BTP, and you cannot import an existing JSON files.
+The configurator only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
 {{% /alert %}}
 
-There three options available:
+There are three options available:
 
 * Scheduled Scaling – the app is scaled according to a fixed schedule
 * Dynamic Scaling – the app is scaled depending on the value of a metric
@@ -51,48 +51,48 @@ There three options available:
 
 The metrics you can use to trigger dynamic scaling are as follows:
 
-* Memory consumed: monitors memory consumption in megabytes (memoryconsumed) or in percentage (memoryutil)
+* Memory consumed - monitors memory consumption in megabytes (memoryconsumed) or in percentage (memoryutil)
 * CPU Utilization in percentage
-* Response time: monitors response time in milliseconds
-* Throughput: monitors requests per seconds (RPS)
+* Response time - monitors response time in milliseconds
+* Throughput - monitors requests per seconds (RPS)
 
 {{% alert color="info" %}}
 The configurator does not support adding custom metrics as triggers.
 {{% /alert %}}
 
-Open the autoscaler configurator by clicking **Configurator** next to the autoscaler service in the Services tab of Environment Details.
+Open the autoscaler configurator by clicking the **Configurator** next to the autoscaler service in the Services tab of the Environment Details.
 
-You will first need to decide the sort of scaling you want to apply.
+You first need to decide the sort of scaling you want to apply.
 
-For **Scaling** select one of:
+For **Scaling**, select one of the following:
 
-* Schedule-based scaling – scaling based on a schedule, see [Scheduled Scaling](#schedule), below
-* Dynamic scaling – scaling based on the values of metrics, see [Dynamic Scaling](#dynamic), below
-* Custom – you will need to set up both [Dynamic Scaling](#dynamic) and [Scheduled Scaling](#schedule) as described in the sections below
+* Schedule-based scaling – scaling based on a schedule. See [Scheduled Scaling](#schedule) section below
+* Dynamic scaling – scaling based on the values of metrics. See [Dynamic Scaling](#dynamic)section below
+* Custom – you need to set up both [Dynamic Scaling](#dynamic) and [Scheduled Scaling](#schedule) as described in the sections below
 
-You will then be asked to set up the requested type of scaling. A summary of the information required is shown in the sections below and more information is available in [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) documentation on the *SAP Help Portal*.
+You then need to set up the requested type of scaling. The section below show a summary of the required information. For more information, see the [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) documentation on the SAP Help Portal.
 
 When you have added all the rules, you can do one of the following:
 
 * Click **Upload Configuration To Service** to upload your autoscaler configuration directly to the autoscaler service.
-* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration. You can then upload this file as the configuration of your autoscaler service.
+* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration; you can then upload this file as the configuration of your autoscaler service.
 
 ### 3.1 Scheduled Scaling{#schedule}
 
 {{% alert color="warning" %}}
-Do not attempt to enter overlapping schedules as this will cause the scaling to fail.
+Do not attempt to enter overlapping schedules, as this will cause the scaling to fail.
 {{% /alert %}}
 
 Firstly you need to choose whether to set up a [Recurring Schedule](#recurring) or a schedule based on a [Specific Date](#specific). You can also choose to set up a **Custom** combination of the two.
 
-For all the types of schedule you will need to set the following:
+For all the types of schedule you need to set the following:
 
 * **Min Instances** – minimum number of application instances that always run
-* **Max Instances** – maximum number of application instances that can be provisioned as part of application scaling
+* **Max Instances** – maximum number of application instances that can be provisioned as a part of the application scaling
 * **Timezone** – the time zone in which to run the schedule
 
 {{% alert color="info" %}}
-For custom schedules you will see these values on the screen more than once, but changing them in one place will automatically set them in the others.
+For custom schedules, you can see these values on the screen more than once, but changing them in one place will automatically set them in the others.
 {{% /alert %}}
 
 Other information will depend on the type of schedule you are making. You can add multiple rules and all the rules you have already set up in the configurator will be displayed. See the sections below for more information.
@@ -101,7 +101,7 @@ Other information will depend on the type of schedule you are making. You can ad
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
-You will need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
+You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-specific-date.png" alt="Add specific date rule dialog" >}}
 

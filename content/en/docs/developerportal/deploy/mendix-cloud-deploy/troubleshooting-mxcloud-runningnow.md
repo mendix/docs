@@ -22,7 +22,7 @@ The **Details** button lets you zoom in on a selected action:
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/troubleshooting-mxcloud-runningnow/running-request-details.png" >}}
 
 {{% alert color="warning" %}}
-The text shown in the screenshot above has an error and will be updated shortly. The current action is actually the top action, which was triggered by the action below it, and so forth.
+The text shown in the screenshot above is correct: the current action is the top action, which was triggered by the action below it, and so forth. If your dialog box says something different, you can disregard it; that is an error and will be updated shortly.
 {{% /alert %}}
 
 You can also zoom in on a stack: 

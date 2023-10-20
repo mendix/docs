@@ -174,15 +174,14 @@ The domain model is a data model that describes the information in your applicat
 | `GroupProperty` | This entity holds information for showing the group that a certain key belongs to. The attribute it contains is `_id` which describes the group identification number which will be the same for each member of the group. Additionally, it contains a list of `ExpenseGroupPropertyType` objects. |
 | `ExpenseGroupPropertyType` | This entity holds information for distinguishing whether the expense group is a name or an address. The attribute it contains is `_Type`. |
 | `ExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `Geometry` object (`AnalyzeExpenseGeometry`). |
-| `AbstractFeatureType` | This entity holds information about the type of analysis that should be executed. it contains the attribute `Value` which specifies the feature type value of type enumeration. |
-| `AbstractWarning` | This entity holds information about the warnings that have been sent along with a `GetDocumentAnalysisResponse` or a `GetExpenseAnalysisResponse`. It contains an ErrorCode attribute which specifies the error code of the warning. It has a list of `PageNumber` objects associated.|
-| `PageNumber` | This entity holds information about the PageNumber the associated `AbstractWarning` object refers to. |
-| `AbstractRequestQuery` | This entity holds information about the question Textract should apply to the document. The Text attribtue holds the question. It has a list of `PagesToSearch` objects associated. |
-| `PagesToSearch` | This entity holds information about the StartPage and EndPage the associated `Query` will be applied to. |
+| `AbstractFeatureType` | This entity holds information about the type of analysis that should be executed. It contains the attribute `Value` which specifies the feature type value of type enumeration. |
+| `AbstractWarning` | This entity holds information about the warnings that have been sent along with a `GetDocumentAnalysisResponse` or a `GetExpenseAnalysisResponse`. It contains an `ErrorCode` attribute which specifies the error code of the warning. It has a list of `PageNumber` objects associated. |
+| `PageNumber` | This entity holds information about the `PageNumber` to which the associated `AbstractWarning` object refers. |
+| `AbstractRequestQuery` | This entity holds information about the question which Textract should apply to the document. The `Text` attribtue holds the question. It has a list of `PagesToSearch` objects associated. |
+| `PagesToSearch` | This entity holds information about the `StartPage` and `EndPage` to which the associated `Query` will be applied. |
 | `AbstractDocumentAnalysisResponse` | This entity is the generalization of the response entities of the `AnalyzeDocument` and `GetDocumentAnalysis` actions. It contains the part of the responses that are shared between those actions. Most importantly, it has a list of type `DocumentAnalysisBlock` associated. A spcialization of this object should be used as an input parameter of the `AbstractDocumentAnalysisResponse_ProcessResults` microflow. This way, the responses from both the `AnalyzeDocument` and the `GetDocumentAnalysis` actions can be used by as input parameters.|
-| `DocumentAnalysisBlock` | This entity is a specialization of the `Block` entity and holds the Blocks returned by `AnalyzeDocument` and the `GetDocumentAnalysis` actions. |
+| `DocumentAnalysisBlock` | This entity is a specialization of the `Block` entity and holds the blocks returned by `AnalyzeDocument` and the `GetDocumentAnalysis` actions. |
  
-
 ### 4.2 Enumerations {#enumerations}
 
 An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).

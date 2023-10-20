@@ -33,7 +33,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ### 3.1 Adding the `adminstration_overview` Page to the Navigation
 
-### 3.2 Add users as an Administrator
+### 3.2 Adding a User as an Administrator
 
 ## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 

@@ -102,7 +102,9 @@ To subscribe to the MQTT broker, follow these steps:
     * **On message microflow** – Identify the microflow to be executed when a message is received on a subscribed topic.
     * Qo S (Quality of Service) – Choose an attribute for each message that is being published.
 
-When subscribing to a topic, in the **Subscribe** action, define which microflow is triggered for each message and check that the topic and payload is passed on into that microflow.
+When subscribing to a topic, in the **Subscribe** action, define which microflow is triggered for each message and check that the topic and payload is passed to the microflow as string parameters.
+
+{{< figure src="/attachments/appstore/connectors/mqtt-connector/on-message-microflow.png" >}}
 
 #### 3.1.3 Unsubscribe
 

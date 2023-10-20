@@ -31,9 +31,23 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Usage
 
-### 3.1 Adding the `adminstration_overview` Page to the Navigation
+### 3.1 Adding the `Administration.Account_Overview` Page to the Navigation
+
+The `Administration.Acount_Overview` page offers you an overview to view all the accounts in the app. To add the page to the navigation of the app, do as follows:
+
+1. In App Explorer, open **Navigation**.
+2. In **Menu**, click **New item**. The **New Menu Item** dialog box opens.
+3. Enter a caption.
+4. Select an icon.
+5. In the On click drop-list, select **Show a page**. The **Select web page** dialog box opens.
+6. Find **Account_Overview** using the search box on the top and select it. The **Select web page** dialog box closes.
+7. Click **OK** to save the settings for the new menu item.
+
+If you run the app, you can see the new page in the navigation.
 
 ### 3.2 Adding a User as an Administrator
+
+
 
 ## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 

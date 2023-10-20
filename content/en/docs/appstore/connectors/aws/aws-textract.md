@@ -302,7 +302,12 @@ This enumeration indicates the status of the document analysis job as part of th
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense. For more information, see [Activities](/refguide/activities/).
 
-To help you work with multi-page PDF files in a synchronous way, you can use the `JA_SplitPdfPages` helper action to split a PDF File with multiple pages into a list of single-page PDFs. The action also supports extracting only a subset of the pages (for example only pages 2 and 3, when page 1 is not relevant). 
+To faciliate working with multi-page PDF files the `JA_SplitPdfPages` helper action can be used to split a PDF File with multiple pages into a list of single-page PDFs. The action also supports extracting only a subset of the pages.
+Use cases could for example the following:
+- Splitting up a two-pager into to one-pagers and using the synchronous `AnalyzeDocument` action on both. 
+- Removing the coverpage that does not contain information of interest from a document.
+- When working with a large PDF-file, extracting a small subset of pages, which contains the information to analyse, e.g. only pages 10-12. 
+
 
 #### 4.3.1 AnalyzeDocument {#analyzedocument}
 

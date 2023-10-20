@@ -18,20 +18,20 @@ For more information on the Application Autoscaler, see [Application Autoscaler 
 
 ## 2 Binding the Application Autoscaler{#binding}
 
-The autoscaler service can be found on the [services tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment.
+The autoscaler service can be found on the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment.
 
-Selecting the autoscaler service will expand the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
+Selecting the autoscaler service expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" >}}
 
 You will need to specify the following:
 
 * **Plan** – the plan you wish to use for the autoscaler, either *Lite* or *Standard*
-* **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) on the *SAP Help Portal*
+* **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) on the *SAP Help Portal*
 
 Having provided this information, you can click **Connect Services** to connect the autoscaler to your app.
 
-You will see from the documentation on the SAP website that the structure of the configuration file can get quite complex. Mendix therefore provides you with a tool to help you create the correct configuration.
+The structure of the configuration file can get quite complex, as described in the documentation of SAP website. Mendix therefore provides you with a tool to help you create the correct configuration.
 
 Click **Configurator** to start the **Autoscaler Configurator**.
 

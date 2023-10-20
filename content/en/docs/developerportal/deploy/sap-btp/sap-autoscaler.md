@@ -118,9 +118,9 @@ You can also edit an existing rule by clicking **Edit** and delete an existing r
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
-Select whether you want to add a rule for days of the week (for example every Monday) or days of the month (for example on the 4th of every month). You can change this on the next screen if necessary.
+Select whether you want to add a rule for days of the week (for example, every Monday) or days of the month (for example, on the fourth day of every month). You can change this on the next screen if necessary.
 
-You will need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
+You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-recurring-date.png" alt="Add recurring date rule dialog" >}}
 
@@ -128,7 +128,7 @@ Click **Add Day** to add the days to which this recurring schedule applies. If i
 
 Click **Add Rule** to add this rule.
 
-The new rule, and any existing rules will be shown in the configurator as shown below.
+The new rule and any existing rules are shown in the configurator as shown below.
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/recurring-date.png" alt="Existing recurring date rule" >}}
 
@@ -137,24 +137,24 @@ You can also edit an existing rule by clicking **Edit** and delete an existing r
 
 ### 3.2 Dynamic Scaling{#dynamic}
 
-First you will need to set the following:
+First, you need to set the following:
 
-* **Min Instances** – minimum number of application instances that always run
-* **Max Instances** – maximum number of application instances that can be provisioned as part of application scaling
+* **Min Instances** – minimum number of the application instances that always run
+* **Max Instances** – maximum number of the application instances that can be provisioned as a part of the application scaling
 
 {{% alert color="info" %}}
-For custom schedules you will see these values on the screen more than once, but changing them in one place will automatically set them in the others.
+For custom schedules, you can see these values on the screen more than once, but changing them in one place will automatically set them in the others.
 {{% /alert %}}
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
-You will need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
+You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-dynamic.png" alt="Add recurring date rule dialog" >}}
 
 Click **Add Rule** to add this rule.
 
-The new rule, and any existing rules will be shown in the configurator as shown below.
+The new rule, and any existing rules are shown in the configurator as shown below.
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/dynamic.png" alt="Existing recurring date rule" >}}
 

@@ -12,22 +12,22 @@ aliases:
 
 ## 1 Introduction
 
-The **Application Autoscaler** service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
+The **Application Autoscaler** service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. This service can be based on a schedule, or based on the value of a metric.
 
-For more information on the Application Autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the *SAP Help Portal*.
+For more information on the Application Autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the SAP Help Portal.
 
 ## 2 Binding the Application Autoscaler{#binding}
 
-The autoscaler service can be found on the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment.
+The **autoscaler** service can be found on the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment.
 
-Selecting the autoscaler service expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
+Selecting the **autoscaler** service, expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" >}}
 
-You will need to specify the following:
+You need to specify the following:
 
 * **Plan** – the plan you wish to use for the autoscaler, either *Lite* or *Standard*
-* **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) on the *SAP Help Portal*
+* **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) on the SAP Help Portal
 
 Having provided this information, you can click **Connect Services** to connect the autoscaler to your app.
 
@@ -37,10 +37,10 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 
 ## 3 Using the Autoscaler Configurator
 
-The **Autoscaler Configurator** provides a user-friendly interface to create the JSON required to configure the application autoscaler.
+The **Autoscaler Configurator** provides a user-friendly interface to create the JSON file required to configure the **Application Autoscaler**.
 
 {{% alert color="info" %}}
-The configurator only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
+The **Configurator** only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
 {{% /alert %}}
 
 There are three options available:
@@ -52,38 +52,38 @@ There are three options available:
 The metrics you can use to trigger dynamic scaling are as follows:
 
 * Memory consumed - monitors memory consumption in megabytes (memoryconsumed) or in percentage (memoryutil)
-* CPU Utilization in percentage
+* CPU utilization in percentage
 * Response time - monitors response time in milliseconds
 * Throughput - monitors requests per seconds (RPS)
 
 {{% alert color="info" %}}
-The configurator does not support adding custom metrics as triggers.
+The **Configurator** does not support adding custom metrics as triggers.
 {{% /alert %}}
 
-Open the autoscaler configurator by clicking the **Configurator** next to the autoscaler service in the Services tab of the Environment Details.
+Open the **Autoscaler Configurator** by clicking the **Configurator** next to the autoscaler service in the [Services tab](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) of the Environment Details.
 
 You first need to decide the sort of scaling you want to apply.
 
 For **Scaling**, select one of the following:
 
-* Schedule-based scaling – scaling based on a schedule. See [Scheduled Scaling](#schedule) section below
-* Dynamic scaling – scaling based on the values of metrics. See [Dynamic Scaling](#dynamic)section below
+* Schedule-based scaling – scaling based on a schedule, see [Scheduled Scaling](#schedule) section below
+* Dynamic scaling – scaling based on the values of metrics, see [Dynamic Scaling](#dynamic)section below
 * Custom – you need to set up both [Dynamic Scaling](#dynamic) and [Scheduled Scaling](#schedule) as described in the sections below
 
-You then need to set up the requested type of scaling. The section below show a summary of the required information. For more information, see the [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) documentation on the SAP Help Portal.
+You then need to set up the requested type of scaling. The sections below show a summary of the required information. For more information, see the [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) documentation on the SAP Help Portal.
 
 When you have added all the rules, you can do one of the following:
 
 * Click **Upload Configuration To Service** to upload your autoscaler configuration directly to the autoscaler service.
-* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration; you can then upload this file as the configuration of your autoscaler service.
+* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration; you can then upload this file as a configuration of your autoscaler service.
 
 ### 3.1 Scheduled Scaling{#schedule}
 
 {{% alert color="warning" %}}
-Do not attempt to enter overlapping schedules, as this will cause the scaling to fail.
+Do not attempt to enter overlapping schedules, as it causes the scaling to fail.
 {{% /alert %}}
 
-Firstly you need to choose whether to set up a [Recurring Schedule](#recurring) or a schedule based on a [Specific Date](#specific). You can also choose to set up a **Custom** combination of the two.
+First, you need to choose whether to set up a [Recurring Schedule](#recurring) or a schedule based on a [Specific Date](#specific). You can also choose to set up a **Custom** combination of the two.
 
 For all the types of schedule you need to set the following:
 
@@ -95,7 +95,7 @@ For all the types of schedule you need to set the following:
 For custom schedules, you can see these values on the screen more than once, but changing them in one place will automatically set them in the others.
 {{% /alert %}}
 
-Other information will depend on the type of schedule you are making. You can add multiple rules and all the rules you have already set up in the configurator will be displayed. See the sections below for more information.
+Other information will depend on the type of schedule you are making. You can add multiple rules and all the rules you have already set up in the **Configurator** will be displayed. For more information, see the sections below.
 
 #### 3.1.1 Specific Date{#specific}
 
@@ -107,7 +107,7 @@ You need to enter the information requested on the following screen. A tooltip e
 
 Click **Add Rule** to add this rule.
 
-The new rule, and any existing rules will be shown in the configurator as shown below.
+The new rule, and any existing rules will be shown in the **Configurator** as shown below.
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/specific-date.png" alt="Existing specific date rule" >}}
 
@@ -124,7 +124,7 @@ You need to enter the information requested on the following screen. A tooltip e
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-recurring-date.png" alt="Add recurring date rule dialog" >}}
 
-Click **Add Day** to add the days to which this recurring schedule applies. If it is a rule for days of the week, day 1 is always Monday irrespective of any local conventions. You can add several days by using **Add Day** multiple times.
+Click **Add Day** to add the days to which this recurring schedule applies. If it is a rule for days of the week, day one is always Monday irrespective of any local conventions. You can add several days by using **Add Day** multiple times.
 
 Click **Add Rule** to add this rule.
 

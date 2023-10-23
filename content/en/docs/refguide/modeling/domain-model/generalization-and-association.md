@@ -20,7 +20,7 @@ The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/
 
 {{< figure src="/attachments/refguide/modeling/domain-model/generalization-and-association/generalization-indication.png" alt="example of generalization notation" >}}
 
-UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers/) or [delete behavior/prevention](/refguide/association-properties/#delete-behavior).
+UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers/) or [on delete behavior/prevention](/refguide/association-properties/#delete-behavior).
 
 ### 2.1 Performance
 

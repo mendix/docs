@@ -9,9 +9,13 @@ tags: ["beta", "logic bot", "mendix assist", "assist", "mx assist", "logic", "lo
 
 ## 1 Introduction
 
-We are redesigning the logic editors (microflows, nanoflows, and rules) to bring the user journey to the next level. In the Beta versions of the logic editors, we have enhanced the usability of the [MxAssist Logic Bot](#logic-bot), added more support for [keyboard navigation](#keyboard-navigation), and invested in [smaller details](#miscellaneous) to ensure an even smoother developer experience with Mendix. For more information on these functionalities, see the sections below. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
+{{% alert color="info" %}}
+The Beta versions of the logic editors are available to try out in Studio Pro 10.4.0. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
 
-The Beta editors are available to try out in Studio Pro 10.4.0 and can be activated in two ways:
+We are redesigning the logic editors (microflows, nanoflows, and rules) to bring the user journey to the next level. In the Beta versions of the logic editors, we have enhanced the usability of the [MxAssist Logic Bot](#logic-bot), added more support for [keyboard navigation](#keyboard-navigation), and invested in [smaller details](#miscellaneous) to ensure an even smoother developer experience with Mendix. For more information on those functionalities, see the sections below. 
+
+The Beta editors can be activated in two ways:
 
 * To try out the Beta version once, use the toggle in the top toolbar of the editor to switch from the **Classic version** to the **Beta version**. This only affects the current document. Other microflow and nanoflow editors will still start with the **Classic version**.
 

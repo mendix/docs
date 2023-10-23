@@ -119,6 +119,8 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
+When trying out the beta microflow editor, please refer to [Beta Microflow Editor](/refguide/microflows-and-nanoflows/beta-microflow-nanoflow-editor#keyboard) for the keyboard shortcuts.
+
 ## 4 Microflow Debugging
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:

@@ -19,6 +19,8 @@ The key features of MxAssist Logic Bot are the following:
 * **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in a microflow when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
 * **High accuracy** – continuous improvement and training of the model has elevated the accuracy level from 95%.
 
+We are currently rewriting MxAssist Logic Bot to enhance its usability. For more information, see the [Modeling Using MxAssist Logic Bot](/refguide/logic-editors-beta#logic-bot) section in Logic Editors Beta.
+
 ## 2 MxAssist Logic Bot Settings
 
 You can switch MxAssist Logic Bot on and off using the **On-Off** button in the top right corner of the microflow editor:

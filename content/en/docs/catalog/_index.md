@@ -21,7 +21,7 @@ The [Catalog](https://catalog.mendix.com) is a development tool provided in the 
 
 {{< figure src="/attachments/catalog/catalog-home.png" >}}
 
-REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/)/Published OpenAPI REST Service, are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData, OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
+REST services provided by Mendix Apps running in the Mendix Cloud, published [OData](/refguide/published-odata-services/)/OpenAPI REST Service, are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData, OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
 Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) release notes.
 

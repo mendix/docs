@@ -16,7 +16,7 @@ This is only available for local and on-premises deployments of your app.
 
 For deployments to other platforms (for example, Mendix for Private Cloud) you do not have access to the m2ee admin handler to make these requests.
 
-For deployments to Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information, see [Metrics](/developerportal/operate/metrics/) and [Running Now](developerportal/deploy/mxcloud-runningnow/).
+For deployments to Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information, see [Metrics](/developerportal/operate/metrics/) and [Running Now](/developerportal/deploy/mxcloud-runningnow/).
 {{% /alert %}}
 
 You can change the admin port from Studio Pro by navigating to **App** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.

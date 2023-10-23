@@ -63,7 +63,7 @@ If you have chosen to register a standalone cluster, then all communication with
 
 ## 3 Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
+The table below shows the differences between the capabilities for apps deployed to Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
 
 | Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |

@@ -1,16 +1,16 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud"
-linktitle: "Scaling in the Mendix Cloud"
+linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
 weight: 25
-description: "Describes how to scale your environments in the Mendix Cloud."
+description: "Describes how to scale your environments in Mendix Cloud."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-There are various ways to scale licensed apps in the Mendix Cloud.
+There are various ways to scale licensed apps in Mendix Cloud.
 
 Memory can be added to the application container. This is called vertical scaling.
 
@@ -22,13 +22,13 @@ Before Mendix 9.12.0, [scheduled events](/refguide/scheduled-events/) are always
 
 This how-to demonstrates how to do the following:
 
-* Scale your environment in the Mendix Cloud
+* Scale your environment in Mendix Cloud
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a licensed app hosted in the Mendix Cloud
+* Have a licensed app hosted in Mendix Cloud
 * Have a plan that provides more than 1 GiB of memory
 
 {{% alert color="info" %}}
@@ -37,7 +37,7 @@ Details of your plan are displayed on the environment details page.
 
 ## 3 Scaling Your Environment
 
-If you want to scale your licensed app in the Mendix Cloud, follow these steps:
+If you want to scale your licensed app in Mendix Cloud, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
@@ -79,6 +79,6 @@ For example, you can use one instance with 4 GiB RAM. The remaining 12 GiB in yo
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/general/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

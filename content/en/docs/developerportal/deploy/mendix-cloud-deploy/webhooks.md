@@ -3,13 +3,13 @@ title: "Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
-description: "Creating a webhook to trigger actions from the Mendix cloud"
-tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
+description: "Creating a webhook to trigger actions from Mendix Cloud"
+tags: ["Mendix Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction
 
-Webhooks allow you to send information about your licensed Mendix app deployed to the Mendix Cloud or Mendix for Private Cloud to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
+Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix for Private Cloud to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
@@ -20,7 +20,7 @@ Mendix provides webhooks to send project information when the following events h
 The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 
 {{% alert color="info" %}}
-Webhooks are only available for licensed Mendix apps that are deployed to the Mendix Cloud or Mendix for Private Cloud.
+Webhooks are only available for licensed Mendix apps that are deployed to Mendix Cloud or Mendix for Private Cloud.
 
 They are set up and work independently of the deprecated [webhooks for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
 {{% /alert %}}

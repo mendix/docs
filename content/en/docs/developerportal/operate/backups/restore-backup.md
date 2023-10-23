@@ -9,9 +9,9 @@ tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file for
 
 ## 1 Introduction
 
-This page describes how to restore a backup to the Mendix Cloud.
+This page describes how to restore a backup to Mendix Cloud.
 
-The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, for licensed nodes it can be a backup which has been stored locally, for example by downloading a backup from the Mendix Cloud (see [Download a Backup](/developerportal/operate/download-backup/)) for more information.
+The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, for licensed nodes it can be a backup which has been stored locally, for example by downloading a backup from Mendix Cloud. For more information, see [Download a Backup](/developerportal/operate/download-backup/).
 
 {{% alert color="info" %}}
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions/) for more information.
@@ -60,7 +60,7 @@ You can choose to restore only the database by selecting **DB only restore**. Do
 
 ## 3 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
 
-To transfer backups between environments, you will need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup which has expired and been deleted from the Mendix Cloud.
+To transfer backups between environments, you will need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup which has expired and been deleted from Mendix Cloud.
 
 {{% alert color="warning" %}}
 You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.
@@ -78,7 +78,7 @@ The app previously deployed to the node does not, however, need to have had the 
     The upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application.
 
 4. Upload the *.db* or *.gz* backup file.
-5. You will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
+5. You will now need to restore your backup which is held in Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 4 Restoring a Backup for a Free App
 
@@ -105,7 +105,7 @@ Please contact [Mendix Support](https://support.mendix.com/) if you need further
 
 ## 6 Format of a Backup File{#format-of-backup-file}
 
-You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case you will have to construct the backup file which the Mendix Cloud will recognize.
+You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case, you will have to construct the backup file which Mendix Cloud will recognize.
 
 ### 6.1 .tar.gz Archive
 

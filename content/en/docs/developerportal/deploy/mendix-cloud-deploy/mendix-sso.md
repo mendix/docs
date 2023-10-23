@@ -12,12 +12,12 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 
 ## 1 Introduction
 
-The [Mendix SSO](/appstore/modules/mendix-sso/) module enables your app end-users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
+The [Mendix SSO](/appstore/modules/mendix-sso/) module enables your app end-users to sign in with their Mendix account when your app is deployed to Mendix Cloud.
 
 {{% alert color="warning" %}}
 Because your app end-users are signing in with a Mendix account, they will all need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 
-Mendix Single Sign-On (SSO) is only activated when your app is deployed to the Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
+Mendix Single Sign-On (SSO) is only activated when your app is deployed to Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
 
 Mendix SSO is not recommended for Production deployments because the Mendix SSO screens are Mendix branded.
 {{% /alert %}}
@@ -32,7 +32,7 @@ For information on installing and configuring the Mendix SSO module, see [Mendix
 ## 2 Using Mendix SSO
 
 {{% alert color="warning" %}}
-Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
+Mendix Single Sign-On is only activated when your app is deployed to Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
 {{% /alert %}}
 
 ### 2.1 Signing On as an End-User

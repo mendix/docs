@@ -190,7 +190,7 @@ The following shortcut keys are available in the page editor:
 
 ### 7.4 Microflow and Nanoflow Editor Shortcut Keys
 
-For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow,  nanoflow, and rules editors. 
+For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow,  nanoflow, and rule editors. 
 
 ### 7.5 Debugger Shortcut Keys {#debugger-shortcuts}
 

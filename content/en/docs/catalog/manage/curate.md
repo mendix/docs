@@ -32,7 +32,7 @@ Owners and curators of registered assets can click **Curate** from the **Data Hu
 
 In both cases, the list includes registered data sources and also individual datasets that are exposed for the data source.
 
-You can search for specific assets by entering a search string in the search bar or **Filter By:** **Environment** or **Validated** assets.
+You can search for specific assets by entering a search string in the search bar or **Filter By:** **Asset Type**, **Environment Type**, **Technology**, or **Discoverable** assets.
 
 The list can also be sorted by any of the columns by clicking on the column header.
 

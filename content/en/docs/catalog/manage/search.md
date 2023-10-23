@@ -267,6 +267,7 @@ From the **Catalog** home page, you can search the Catalog in the following ways
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the search suggestions
+Click one of the services under **Most Recent Changes**
 * Click one of the services under **Popular Data Sources**
 * Click the **Catalog** tab
 
@@ -293,6 +294,8 @@ You can filter search results by environment type. The **Production** environmen
 To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
+
+You can filter by Technology OData or OpenAPI.
 
 You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
 
@@ -333,9 +336,9 @@ When a data source is selected in the search results, the following details are 
 
 You can perform the following actions from this screen:
 
-* **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
-* **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
-* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
+* **Copy URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
+* **Share** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
+* **[Download Contract](#download-contract)** – retrieve and save the OData contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
 #### 3.5.2 Details for a Selected Dataset {#entity-details}
@@ -355,8 +358,8 @@ The source and endpoint details of the dataset are displayed:
 
 You can perform the following actions from this screen:
 
-* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
-* **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
+* **Copy URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
+* **Share** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
 * **Edit** – click to access the dataset edit screen
 
 #### 3.5.2.2 Dataset Information
@@ -431,17 +434,17 @@ For further details, see the [Discoverable and Validated](/catalog/manage/curate
 
 The data source URI is the location of the service contract of the data source, also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the data source and dataset, you can copy the URIs to the clipboard by clicking the **Copy Data Source URI** and **Copy Dataset URI** respectively. These URIs can be used for directly accessing the contract and resource in BI applications.
 
-### 3.9 Download the Metadata Contract of a Data Source {#download-contract}
+### 3.9 Download the Contract of a Data Source {#download-contract}
 
-For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full metadata contract is generated and downloaded.
+For a selected data source, you can click **Download Contract** to download the service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
 
-The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the OData version (`v3` or `v4`) in the file name.
+The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the service protocol.
 
 Here is an example:
 
 {{< figure src="/attachments/catalog/search/download_example.png" alt="download example" >}}
 
-When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
+When you click **Download Contract**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 
 ### 3.10 Viewing Search Results in the Landscape
 

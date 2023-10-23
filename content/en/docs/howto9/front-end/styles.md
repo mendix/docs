@@ -1,5 +1,5 @@
 ---
-title: "Implement Styles"
+title: "Implement Classes"
 url: /howto9/front-end/styles/
 category: "Front End"
 description: "Describes details on using class names for text colors, buttons, and other style elements."

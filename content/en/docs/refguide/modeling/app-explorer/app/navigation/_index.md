@@ -17,11 +17,14 @@ A user's home page can vary based on their [user roles](/refguide/user-roles/).
 
 ## 2 Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, these are the available profiles:
+The core of Mendix's navigation model is founded on the following profiles:
 
 * Responsive web
+    *  Responsive web offline
 * Tablet web
+    *  Tablet web offline
 * Phone web
+    *  Phone web offline
 * Native mobile (tablet & phone)
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
@@ -30,27 +33,29 @@ The device type of the currently logged-in user is available in [microflows](/re
 
 ### 2.1 Responsive web
 
-Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
+Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications. This profile also has an offline version.
 
 ### 2.2 Tablet Web
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
 ### 2.3 Phone Web
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
 ### 2.5 Native Mobile {#native-phone}
 
 A Mendix app can be installed on a phone as a native application which offers several advantages:
 
-- **Enhanced Performance**: Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
-- **Access to Device Features**: Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
-- **Offline Functionality**: Native apps store data locally on the phone, ensuring that users can access content even without an internet connection.
+* **Enhanced Performance** — Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
+* **Access to Device Features** — Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
+* **Offline Functionality** — Native apps store data locally on the phone, ensuring that users can access content even without an internet connection. 
 
 The Mendix app will run in [offline-first](/refguide/offline-first/) mode. This means that all the data is stored on the phone and only synchronized with the server on request.
 
-**Please note**: you are required to enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+{{% alert color="info" %}}
+You are required to enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+{{% /alert %}}
 
 ## 3 Redirection to Profiles {#redirection}
 

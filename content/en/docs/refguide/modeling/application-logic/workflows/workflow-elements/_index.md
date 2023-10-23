@@ -7,7 +7,7 @@ tags: ["workflow", "workflow elements", "Studio Pro"]
 
 ## 1 Introduction
 
-A workflow is composed of elements that you can drag on a path from the **Toolbox** or that you can see in the working area of the editor (. Below is a categorized overview of all elements. The following categories are used:
+A workflow is composed of elements that you can drag on a path from the **Toolbox** or that you can see in the working area of the editor. Below is a categorized overview of all elements. The following categories are used:
 
 * [Parameters](#parameters)
 * [General](#general)

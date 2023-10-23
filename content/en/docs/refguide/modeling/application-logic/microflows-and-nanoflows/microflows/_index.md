@@ -100,7 +100,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow-nanoflow-example.png" >}}
 
-## 3 Keyboard Support{#keyboard}
+## 3 Keyboard Support {#keyboard}
 
 The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the keys that can be used.
 
@@ -119,7 +119,9 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
-When trying out the beta microflow editor, please refer to [Beta Microflow Editor](/refguide/microflows-and-nanoflows/beta-microflow-nanoflow-editor#keyboard) for the keyboard shortcuts.
+{{% alert color="info" %}}
+The Beta version of the redesigned microflow editor is now available to try out in Studio Pro 10.4.0. In the Beta microflow editor, keyboard navigation has been improved. For more information on what keyboard shortcuts are supported and their respective functions in the Beta microflow editor, see the [Keyboard Navigation](/refguide/logic-editors-beta/#keyboard-navigation) section in *Logic Editors Beta*.
+{{% /alert %}}
 
 ## 4 Microflow Debugging
 

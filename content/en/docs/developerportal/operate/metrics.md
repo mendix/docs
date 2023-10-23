@@ -143,7 +143,7 @@ These are the types of objects:
 
 ### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
-The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](/developerportal/operate/metrics/#Trends-appmxruntimejvmheap/) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
+The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](#Trends-appmxruntimejvmheap) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
 {{< figure src="/attachments/developerportal/operate/metrics/jvm-process-memory.png" >}}
 

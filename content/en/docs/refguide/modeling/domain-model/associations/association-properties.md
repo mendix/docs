@@ -96,9 +96,17 @@ One-way navigable associations are represented by a dashed arrow in Domain model
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-delete-both.png" >}}
 
+{{% alert color="info" %}}
+This option is not available for associations that involve an external entity.
+{{% /alert %}}
+
 <sup><small>[2]</small></sup> This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-prevent-delete.png" >}}
+
+{{% alert color="info" %}}
+This option is not available for the on delete behaviour of an external entity that is the child of an association to a local entity.
+{{% /alert %}}
 
 ## 3 Read More
 

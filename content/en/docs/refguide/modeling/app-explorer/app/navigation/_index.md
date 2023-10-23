@@ -19,16 +19,16 @@ A user's home page can vary based on their [user roles](/refguide/user-roles/).
 
 At the heart of the navigation model in Mendix, these are the available profiles:
 
-* Responsive
+* Responsive web
 * Tablet web
 * Phone web
-* Native phone
+* Native mobile (tablet & phone)
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
 
 The device type of the currently logged-in user is available in [microflows](/refguide/microflows/) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](/refguide/enumerations/) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 
-### 2.1 Responsive
+### 2.1 Responsive web
 
 Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
 
@@ -40,11 +40,17 @@ All the users accessing a Mendix app from a browser on a tablet will automatical
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
-### 2.5 Native Phone {#native-phone}
+### 2.5 Native Mobile {#native-phone}
 
-A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](/refguide/offline-first/), which means all the data is stored on the phone and only synchronized with the server on request.
+A Mendix app can be installed on a phone as a native application which offers several advantages:
 
-You are required to enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+- **Enhanced Performance**: Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
+- **Access to Device Features**: Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
+- **Offline Functionality**: Native apps store data locally on the phone, ensuring that users can access content even without an internet connection.
+
+The Mendix app will run in [offline-first](/refguide/offline-first/) mode. This means that all the data is stored on the phone and only synchronized with the server on request.
+
+**Please note**: you are required to enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
 
 ## 3 Redirection to Profiles {#redirection}
 

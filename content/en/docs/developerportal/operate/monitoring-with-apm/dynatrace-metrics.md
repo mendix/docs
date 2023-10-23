@@ -1,8 +1,8 @@
 ---
-title: "Dynatrace for the Mendix Cloud"
+title: "Dynatrace for Mendix Cloud"
 url: /developerportal/operate/dynatrace-metrics/
 weight: 25
-description: "How to configure the Mendix Cloud to enable monitoring and analysis with Dynatrace."
+description: "How to configure Mendix Cloud to enable monitoring and analysis with Dynatrace."
 tags: ["Dynatrace", "Mendix Cloud", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

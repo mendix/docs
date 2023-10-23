@@ -9,7 +9,7 @@ tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
 
 ## 1 Introduction
 
-Usually, the database of a Mendix application in the Mendix Cloud will grow over time, as shown in this chart:
+Usually, the database of a Mendix application in Mendix Cloud will grow over time, as shown in this chart:
 
 {{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" >}}
 

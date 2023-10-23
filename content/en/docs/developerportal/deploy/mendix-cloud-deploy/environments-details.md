@@ -83,7 +83,7 @@ To clear your environment, follow these steps:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
 
-### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
+### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 

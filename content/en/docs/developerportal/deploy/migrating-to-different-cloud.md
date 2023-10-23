@@ -40,7 +40,7 @@ You will need to take the following into account when migrating your app:
 
 ## 4 Migrating the App
 
-To manually migrate your app to a different node in the Mendix Cloud, follow the steps in the sections below.
+To manually migrate your app to a different node in Mendix Cloud, follow the steps in the sections below.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" >}}
 

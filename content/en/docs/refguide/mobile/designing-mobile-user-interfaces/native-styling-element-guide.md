@@ -68,7 +68,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-  text: {
+  caption: {
     // TextStyle properties
     color: "#00FF00",
   }
@@ -924,7 +924,7 @@ export const com_mendix_widget_native_badge_Badge = {
   container: {
     // This has all ViewStyle properties.
   },
-  text: {
+  caption: {
     // This has all TextStyle properties.
   }
 };
@@ -933,7 +933,7 @@ export const com_mendix_widget_native_badge_Badge = {
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `text` | This has all TextStyle properties. |      |
+| `caption` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 

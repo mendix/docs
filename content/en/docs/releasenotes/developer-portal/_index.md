@@ -17,6 +17,26 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 26, 2023
+
+#### New Features
+
+* We added Tag Management to [Feedback](/developerportal/app-insights/feedback/). You can now do the following:
+  * Create a new tag
+  * Delete a tag
+  * Rename a tag
+  * Give a tag a color
+
+#### Improvements
+
+* There is now a warning message notifying users that they should not share the Feedback URL when recieving an email notification.
+* The 'Convert to Story' button has been re-designed for clarity
+* We have improved the formatting on all feedback notifications
+
+#### Fixes 
+
+ * We fixed a bug where a small number of users were experiencing an error when converting a feedback item to a story
+
 ### October 19, 2023
 
 #### New Features

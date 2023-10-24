@@ -66,11 +66,11 @@ This group displays the general properties of the external entity. These values 
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
 
-* **Name** – the name of the entity in the local app.
-* **Original name** – shows the name of the entity as defined in the originating app.
-* **Capabilities** - indicates whether the service supports creating, reading, updating and/or deleting objects.
-* **Create and change locally** - when switched off, the app can only create and update objects when the server supports it. When switched on, the app can create and update objects, but will not be able to [/refguide/send-external-object/](send) them to the server.
-* **Summary** – shows the description for the entity in the originating app (shown only when there is a description).
+* **Name** – the name of the entity in the local app
+* **Original name** – shows the name of the entity as defined in the originating app
+* **Capabilities** - indicates whether the service supports creating, reading, updating, and/or deleting objects
+* **Create and change locally** - when switched off, the app can only create and update objects when the server supports it; when switched on, the app can create and update objects, but will not be able to [/refguide/send-external-object/](send) them to the server
+* **Summary** – shows the description for the entity in the originating app (shown only when there is a description)
 
 ### 3.2 Attributes {#attributes}
 

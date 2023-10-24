@@ -30,7 +30,7 @@ Actions that require 2FA are indicated by a padlock symbol.
 There are two methods for performing 2FA in the Developer Portal:
 
 * Ask Mendix to send an SMS message containing an authentication code
-* Enable Google Authenticator
+* Enable Google Authenticator (or another authenticator app)
 
 Once 2FA is set up, you can use your chosen method to receive an authentication code. You will need to provide this code to the Developer Portal in order to complete certain operations.
 
@@ -67,14 +67,18 @@ You will need to enter the authentication code from the SMS message to unlock 2F
 
 ### 3.2 Google Authenticator
 
-For more information on how Google Authenticator works, see Google's documentation on [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects). To set up 2FA with Google Authenticator, follow this process:
+{{% alert color="info" %}}
+For more information on how Google Authenticator works, see Google's documentation on [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
+{{% /alert %}}
+
+To set up 2FA with Google Authenticator, follow this process:
 
 1. Click **Use Google Authenticator** in the dialog box that opens when you use 2FA for the first time.
-2. Install and open the **Google Authenticator** app on your smartphone.
+2. Install and open the Google Authenticator app on your smartphone. Alternatively, you can use another authenticator app, such as Windows Authenticator.
 3. Select **Set up account** on the main page.
 4. Select **Scan a barcode** or **Enter provided key**.
 5. Scan the barcode or enter the six-digit time-based code.
-6. Once Google Authenticator is set up, you will be asked to confirm by entering the Google Authenticator code.
+6. Once your authenticator app is set up, you will be asked to confirm by entering the code from your authenticator app.
 
     {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator.png"   width="400"  >}}
 

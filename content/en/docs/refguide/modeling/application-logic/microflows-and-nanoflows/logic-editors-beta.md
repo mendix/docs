@@ -21,7 +21,7 @@ The Beta editors can be activated in two ways:
 
   {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/logic-editors-beta/beta-toggle.png" >}}
 
-* To edit microflows, nanoflows, or rules in the Beta editors by default, open the Studio Pro preferences and check **Use the Beta Version as the default editor** on the **New Features** tab.
+* To edit microflows, nanoflows, or rules in the Beta editors by default, open the Studio Pro preferences and check **Use the Beta Version as the default editor** on the **New features** tab.
 
 ## 2 Modeling Using MxAssist Logic Bot {#logic-bot}
 
@@ -47,7 +47,7 @@ You can also use the search to call microflows or nanoflows with a concrete docu
 
 Choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and the Logic Bot will open on the next flow so that you can continue adding activities.
 
-To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift+Enter</kbd>. After closing the properties dialog box, the Logic Bot will open on the next flow.
+To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click). After closing the properties dialog box, the Logic Bot will open on the next flow.
 
 When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue circle or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 
@@ -57,7 +57,7 @@ When you want to view recommendations on a particular flow, you can hover the mo
 
 In the Beta logic editors, keyboard navigation has been improved. You can now also select flows with the keyboard. Pressing <kbd>Enter</kbd> when a flow is selected will open the Logic Bot dialog box, from which you can insert activities.
 
-The tables in the following sub-sections present the keys that can be used for navigating and manipulating microflows, nanoflows, and rules.
+The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows, nanoflows, and rules.
 
 ### 3.1 Selection
 

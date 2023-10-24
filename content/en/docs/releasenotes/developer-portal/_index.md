@@ -29,8 +29,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* The 'Convert to Story' button has been re-designed for clarity
-* We have improved the formatting on all feedback notifications
+* We released some improvements for [Feedback](/developerportal/app-insights/feedback/):
+  * The 'Convert to Story' button has been re-designed for clarity
+  * We have improved the formatting on all feedback notifications
 
 #### Fixes 
 

@@ -29,8 +29,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We released some improvements for [Feedback](/developerportal/app-insights/feedback/):
-  * We have improved the formatting on all feedback notifications
+* We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications
 
 #### Fixes 
 

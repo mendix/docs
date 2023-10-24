@@ -29,7 +29,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* There is now a warning message notifying users that they should not share the Feedback URL when recieving an email notification.
 * The 'Convert to Story' button has been re-designed for clarity
 * We have improved the formatting on all feedback notifications
 

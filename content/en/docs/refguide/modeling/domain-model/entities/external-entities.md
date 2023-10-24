@@ -19,7 +19,7 @@ To add an external entity to your app model, follow these steps:
 
 1. In the Domain model of your app, use the Integration pane to search for the entity or data source you want to use. 
 
-    {{% alert color="info" %}}In the [Catalog](/catalog/search/), a service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
 2. Drag the entity into the Domain model. 
 
@@ -47,7 +47,7 @@ When a new version of a consumed service becomes available in the Catalog, this 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the originating app and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the originating app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Data Hub App pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
+If you delete an external entity from the Domain model, the service documents remain in the App Explorer list and the service aryA listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
 {{% /alert %}}
 
 For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.

@@ -7,28 +7,26 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities can be added to the Domain Model through the [Integration Pane](/refguide/integration-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) in published in OData services. 
+External entities can be added to the Domain model through the [Integration pane](/refguide/integration-pane/). They are displayed as purple entity containers in the Domain model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) in published OData services. 
 
 Datasets are maintained and updated in the originating app. You can consume these datasets through external entities in your app development. When the app uses the data, it retrieves it from the originating app.
 
 External entities can be used like local entities. However, as the datasets are maintained in the originating apps, not all properties can be changed in the consuming app.
 
-Follow how to add external entities from the [Integration Pane](/refguide/integration-pane/) in the next section.
-
 ## 2 Adding an External Entity to an App {#adding-external-entities}
 
 To add an external entity to your app model, follow these steps:
 
-1. In the Domain Model of your app model search in the [Integration Pane](/refguide/integration-pane/) for the entity or data source that you want to use in your app. 
+1. In the Domain model of your app, use the [Integration pane](/refguide/integration-pane/) to search for the entity or data source you want to use. 
 
-    {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Catalog](/catalog/search/), a service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
-1. Drag the entity into the Domain Model. 
-1. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
+2. Drag the entity into the Domain model. 
 
-    * a **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service.
-    * a **Location** constant that specifies the URL of the service
+The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
 
+* A [Consumed OData Service](refguide/consumed-odata-service/) document that contains details of the OData service and the metadata. The logo displayed identifies the originating app of the service.
+* A **Location** constant that specifies the URL of the service.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
 

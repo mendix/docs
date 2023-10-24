@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 26, 2023
+
+#### Improvements
+
+* We added the ability to directly remove App members from Control Center.
+
+#### 
+
+* We fixed an issue that for some apps, deactivation were leading to unexpected errors.
+
 ### October 19, 2023
 
 #### New Features

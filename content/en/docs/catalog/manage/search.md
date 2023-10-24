@@ -289,15 +289,12 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 
 #### 3.4.2 Filters {#filter}
 
-You can filter search results by environment type. The **Production** environment filter is active by default.
+You can filter search results by 
+* Environment type. The **Production** environment filter is active by default.
+* Technology.
+* [CRUD](/catalog/write-data/#view-capabilities). (Creatable, Readable, Updatable, or Deletable) capabilities.
 
-To change the environment type filter, click **Filter**.
-
-In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
-
-You can filter by Technology OData or OpenAPI.
-
-You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+In the **Filters** dialog box, check the **Filters** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected filters.
 
 You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
@@ -349,6 +346,8 @@ When a **Dataset** is selected in the search results, the following details are 
 
 The source and endpoint details of the dataset are displayed:
 
+{{< figure src="/attachments/catalog/search/dataset-details.png" alt="associations info" >}}
+
 * Dataset name
 * **Part of** – a link to the data source details page that the dataset is exposed in
 * **Version** number of the data source that the dataset is exposed in
@@ -372,6 +371,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
+* **Multiplicity** – indicates the multiplicity.
 
 ### 3.6 Metadata Panel {#metadata}
 
@@ -422,11 +422,13 @@ The environment type indicates the quality and the status of the data that the e
 * **Non-Production**
 * **Sandbox** (the Mendix Free App environment)
 
-### 3.7 Curation Bar {#curation-bar}
+### 3.7 Curation Option {#curation-option}
 
-The **Curation Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
+The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset:
 
-* For the selected data source, you can edit [Application Details](/catalog/manage/curate/#curate-application) and [Data Source Details](/catalog/manage/curate/#service-details)
+{{< figure src="/attachments/catalog/search/curation-option.png" alt="curation option"   width="300"  >}}
+
+* For the selected data source, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Data Source Details](/catalog/manage/curate/#service-details) and Authentication
 
 For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
@@ -436,7 +438,7 @@ The data source URI is the location of the service contract of the data source, 
 
 ### 3.9 Download the Contract of a Data Source {#download-contract}
 
-For a selected data source, you can click **Download Contract** to download the service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
+For a selected data source, you can click **Download** to download the service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
 
 The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the service protocol.
 
@@ -444,7 +446,7 @@ Here is an example:
 
 {{< figure src="/attachments/catalog/search/download_example.png" alt="download example" >}}
 
-When you click **Download Contract**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
+When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
 
 ### 3.10 Viewing Search Results in the Landscape
 

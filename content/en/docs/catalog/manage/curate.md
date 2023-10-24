@@ -59,11 +59,14 @@ When a dataset is selected in the **Search Results**, the **Edit Dataset Details
 
 ## 4 Editing the Metadata of an App {#curate-application}
 
-The curate functions that are available for a selected data source are to change **Application Details** or **Data Source Details**. This section describes the application details that can be changed: changing owners or changing the application icon.
+The curate functions that are available for a selected data source are to change **Application Details**, **Data Source Details** and **Authentication**. This section describes the application details that can be changed: changing owners or changing the application icon.
 
-You can curate Application Details from the **Application Details** screen as follows:
+You can curate Application Details from the **Application** screen as follows:
 
 1. Click **Edit** > **Application** tab.
+
+{{< figure src="/attachments/catalog/search/curation-option.png" alt="app edit screen" >}}
+
 2. The **Application** tab is displayed:
 
     {{< figure src="/attachments/catalog/curate/edit-application.png" alt="app edit screen" >}}
@@ -83,7 +86,7 @@ Curators and Mendix Admins can manage the lists of custom owners as part of **Ad
 
 #### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
-To change the **Business Owner** or **Technical Owner**, from the **Application Edit** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
+To change the **Business Owner** or **Technical Owner**, from the **Application** tab, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
 The **Technical Owner** can only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
@@ -95,7 +98,7 @@ Curators can manage the lists of custom owners as an **Administration** task. Fo
 
 To add a custom **Business Owner**, follow these steps:
 
-1. On the **Application Edit** screen, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed.
+1. On the **Application** tab, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed.
 
 1. Enter the **Name** and **Email** of the owner and click **Save**.
 
@@ -154,30 +157,26 @@ You can curate data sources to add a Catalog description and add tags.
 
 ### 5.1 Adding or Editing a Catalog Description
 
-If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
-
-You can specify if the OData service **Contract Description** or the **Catalog Description** is displayed in the Catalog.
+If a description was included in the contract, this will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
 {{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
 
 To edit the asset metadata, follow these steps:
 
-1. In the **Curation Bar**, click **Edit** > **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
+1. In the **Curation Option**, click **Edit** to display the **Edit** box:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
 
-2. The description from the OData service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the OData service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
-
-    {{< figure src="/attachments/catalog/curate/service-metadata-description.png" alt="edit description" >}}
+2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in **Description** box.
 
 3. Add a catalog description. This will be stored with the service details in the Catalog.
-4. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
+4. Click **Save** to save the changes that you have made to the **Edit DataSource** screen and return to the **Asset Details** screen, which will now display the selected description.
 
 ### 5.2 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
-1. In the **Search Details** screen of a selected service, click **Edit** > **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
+1. In the **Search Details** screen of a selected service, click **Edit** to display the **DataSource Metadata** box.
 2. To add tags, click the empty **Tag** input area:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" >}}

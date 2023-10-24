@@ -38,9 +38,9 @@ The list can also be sorted by any of the columns by clicking on the column head
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
 
-## 3 Curation Bar {#curation-bar}
+## 3 Curation Option {#curation-option}
 
-Curation is performed from the [asset details screen](/catalog/manage/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item.
+Curation is performed from the [asset details screen](/catalog/manage/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Edit Button** for the selected item.
 
 {{% alert color="info" %}}
 Owners of registered assets can only curate their services.
@@ -52,6 +52,7 @@ When a data source is selected in the **Search Results**, you can do the followi
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
     * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Catalog; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
     * **Validate** – indicates that the data source and datasets have been validated
+* **Tags** - Add new tags to your datasource
 * **Remove Data Source** – allows Owners to remove their own data sources, while Curators or Admins can remove any data sources in the company
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
@@ -62,14 +63,14 @@ The curate functions that are available for a selected data source are to change
 
 You can curate Application Details from the **Application Details** screen as follows:
 
-1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
-2. The **Application Metadata** screen is displayed:
+1. Click **Edit** > **Application** tab.
+2. The **Application** tab is displayed:
 
-    {{< figure src="/attachments/catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
+    {{< figure src="/attachments/catalog/curate/edit-application.png" alt="app edit screen" >}}
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
-The **Business Owners** and **Technical Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them through the email that is provided for them.
+The **Business Owners** and **Technical Owners** are displayed as a link in the asset **Edit** pane so that users can contact them through the email that is provided for them.
 
 By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Catalog Home and also when registering assets using the Catalog API. 
 
@@ -82,7 +83,7 @@ Curators and Mendix Admins can manage the lists of custom owners as part of **Ad
 
 #### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
-To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
+To change the **Business Owner** or **Technical Owner**, from the **Application Edit** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
 The **Technical Owner** can only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
@@ -94,7 +95,7 @@ Curators can manage the lists of custom owners as an **Administration** task. Fo
 
 To add a custom **Business Owner**, follow these steps:
 
-1. On the **Application Metadata** screen, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed.
+1. On the **Application Edit** screen, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed.
 
 1. Enter the **Name** and **Email** of the owner and click **Save**.
 

@@ -191,4 +191,5 @@ For more information on building and deploying apps with Mendix, see [Building N
 * [Studio Pro Overview](/refguide/studio-pro-overview/) – describes Studio Pro tabs, menus, and shortcut keys
 * [Mendix Best Practices for Development](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps
 * [Starting with App from a Spreadsheet](/refguide/app-from-spreadsheet/) – describes importing a Microsoft Excel spreadsheet and building an app using your data
+* [Mendix Academy Rapid Developer Course](https://academy.mendix.com/link/rapiddeveloper) – the course we recommend for new Mendix users who want to create their first app using low-code
 * [Mendix Academy Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new Mendix users who are also experienced developers

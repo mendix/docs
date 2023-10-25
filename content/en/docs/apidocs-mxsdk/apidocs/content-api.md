@@ -8,10 +8,6 @@ weight: 47
 tags: ["API", "content"]
 ---
 
-{{% alert color="info" %}}
-This API is only available via a private beta program. If you want to be part of this program, kindly reach out to [Marketplace team](mailto:Marketplace_Team@Mendix.com) to get access.
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Mendix Content API allows you to retrieve the Marketplace content and its versions for both public and company-specific private content.

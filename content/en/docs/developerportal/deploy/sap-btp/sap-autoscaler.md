@@ -12,9 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-The **Application Autoscaler** service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. This service can be based on a schedule, or based on the value of a metric.
+The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. This service can be based on a schedule, or based on the value of a metric.
 
-For more information on the Application Autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the SAP Help Portal.
+For more information on the application autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the SAP Help Portal.
 
 ## 2 Binding the Application Autoscaler{#binding}
 
@@ -37,7 +37,7 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 
 ## 3 Using the Autoscaler Configurator
 
-The **Autoscaler Configurator** provides a user-friendly interface to create the JSON file required to configure the **Application Autoscaler**.
+The **Autoscaler Configurator** provides a user-friendly interface to create the JSON file required to configure the application autoscaler.
 
 {{% alert color="info" %}}
 The **Configurator** only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
@@ -118,7 +118,7 @@ You can also edit an existing rule by clicking **Edit** and delete an existing r
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
-Select whether you want to add a rule for days of the week (for example, every Monday) or days of the month (for example, on the fourth day of every month). You can change this on the next screen if necessary.
+Select whether you want to add a rule for days of the week (for example, every Monday) or days of the month (for example, on the fourth day of every month). You can change this **Schedule Type** on the next screen if necessary.
 
 You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 

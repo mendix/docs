@@ -18,7 +18,7 @@ aliases:
 
 ## 1 Introduction
 
-You can run Mendix apps in production on Mendix Cloud only if they are linked to a licensed node.
+You can only run Mendix apps in production on Mendix Cloud if they are linked to a licensed node.
 
 Without a licensed node, you can still deploy your app and test it, but it will have several limitations:
 

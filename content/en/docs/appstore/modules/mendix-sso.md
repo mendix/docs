@@ -5,6 +5,7 @@ category: "Modules"
 description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "sso", "single sign on", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#Please do not rename the anchor #supplements in this document as it is used in links from the module release notes.
 ---
 
 ## 1 Introduction
@@ -292,7 +293,7 @@ To protect against bad actors, the Mendix SSO module validates the continuation 
 
 If your Mendix application has registered any custom domains, or if you want to redirect the end-user to a different application, the host names need to be specifically supplemented for your deployed application. This can be configured in the **Runtime** settings tab of the Developer Portal as described below.
 
-##### 5.4.1.1 Supplementing Allowed Continuation URLs
+##### 5.4.1.1 Supplementing Allowed Continuation URLs{#supplements}
 
 On the **Runtime** tab of your app environment's [Environment Details](/developerportal/deploy/environments-details/#runtime-tab) you can set Custom Environment Variables. Here you can specify a comma-separated list of URLs that can be used as continuation URLs in your Mendix application.
 

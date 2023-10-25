@@ -55,32 +55,30 @@ To order your Mendix Basic package, do the following:
 
 3. Configure the Basic Package by choosing the following:
 
-    * **Select the application you would like to upgrade** – This defaults to the current Free App, but you can choose another of your Free Apps using the drop-down menu.
-    * **URL you want to use to access your app** – Choose your preferred subdomain of `.mendixcloud.com`. This is where users can find your app.
-    * **Select the region to deploy your app** – Choose your preferred region. Mendix recommends selecting the region where you expect to receive the most visitors. The available regions correspond to AWS regions.
-    * **Fill in the number of Users** – The cost of your Basic package depends on the number of users.
+    * **App Name** – This defaults to the current Free App, but you can choose another of your Free Apps using the drop-down list.
+    * **App URL** – Choose your preferred subdomain of `.mendixcloud.com`. This is where users can find your app.
+    * **Deployment Region** – Choose your preferred region. Mendix recommends selecting the region where you expect to receive the most visitors. The available regions correspond to AWS regions.
+    * **Number of Users** – The cost of your Basic package depends on the number of users.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/configure-basic-package.png" alt="Configuration screen" >}}
 
     You can see a summary of your Basic package on the right side of the screen.
 
-4. Click **Continue**
+4. Click **Continue**.
 
-5. Enter the invoice details.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/invoice-details.png" alt="Invoice details entry screen" >}}
+5. Enter your account and billing details.
 
     {{% alert color="info" %}}Enter an email address that you monitor. Mendix uses this email address to send further information about your Mendix Basic package.{{% /alert %}}
 
 6. Click **Continue**.
 
-7. Review your order and make any changes needed.
-
-8. Click to agree to the **Terms & Conditions**.
+7. Review your order and make any changes needed. Review and accept the **Terms & Conditions**.
 
     {{% alert color="info" %}}The license takes 48 hours to provision. You will receive your invoice 7-14 days after you submit your order.{{% /alert %}}
 
-9. Click **Order Now** to complete your order.
+8. Make the payment.
+
+9. Click **Purchase** to complete your order.
 
 10. Read the confirmation details and click **Done** to return to the Developer Portal. You will also receive a confirmation email at the email address entered in your order.
 

@@ -74,9 +74,9 @@ This group displays the general properties of the external entity. These values 
 
 ### 3.2 Attributes {#attributes}
 
-The [attributes](/refguide/attributes/) that have been exposed in the OData service for the external entity are listed here. You can choose to remove attributes that the app does not need. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, these changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
+The [attributes](/refguide/attributes/) that have been exposed in the OData service for the external entity are listed here. You can choose to remove attributes that the app does not need. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, the changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
 
-{{% alert color="info" %}}In the [Integration Pane](/refguide/integration-pane/#association-attributes) the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model or be included in the entity properties. For more information see [Integration Pane](/refguide/integration-pane/#association-attributes).{{% /alert %}}
+{{% alert color="info" %}}In the Integration pane, the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included in the entity properties or when you drag them into the Domain model. For more information, see [Integration Pane](/refguide/integration-pane/#association-attributes).{{% /alert %}}
 
 The following operations can be done on the attribute list:
 
@@ -86,16 +86,16 @@ The following operations can be done on the attribute list:
 
 #### 3.2.1 Edit Attribute {#edit-attribute}
 
-The **Edit Attribute** dialog can be used for specifying a local name for the attribute and adding a local description.
+The **Edit Attribute** dialog can be used to specify a local name and add a local description.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
 
 * **General**
-    * **Name** – a local name for the attribute can be specified
+    * **Name** – a local name for the attribute
     * **Original Name** – a read-only value that displays the original name of the attribute in the originating app
-    * **Summary** – a read-only summary displaying the description for the attribute in the originating app. To enter a local description, add this in the [Documentation tab](#documentation)
-    * **Type** – read-only vlues for the **Type** and **Length** and **Max length** of the attribute as defined in the originating app
-    * **Default value** - the default value for this attribute when the app creates an object. Visible only when the entity is creatable
+    * **Summary** – a read-only summary that displays the description for the attribute in the originating app; local descriptions are entered in the [Documentation tab](#documentation)
+    * **Type** – read-only values for the **Type**, **Length**, and **Max length** of the attribute as defined in the originating app
+    * **Default value** - the default value for this attribute when the app creates an object (visible only when the entity is creatable)
 * **Documentation** – a description for the attribute as defined in the originating app
 
 ### 3.3 Associations {#associations}

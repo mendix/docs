@@ -80,9 +80,9 @@ The [attributes](/refguide/attributes/) that have been exposed in the OData serv
 
 The following operations can be done on the attribute list:
 
-* **Add** – add attributes that were exposed in the OData service for the entity and were previously removed from this entity.
-* **Edit** – edit the selected attribute from the [Edit Attribute](#edit-attribute) dialog.
-* **Remove** – remove an attribute from the list.
+* **Add** – add attributes that were exposed in the OData service for the entity and were previously removed from this entity
+* **Edit** – edit the selected attribute from the [Edit Attribute](#edit-attribute) dialog
+* **Remove** – remove an attribute from the list
 
 #### 3.2.1 Edit Attribute {#edit-attribute}
 
@@ -91,12 +91,12 @@ The **Edit Attribute** dialog can be used for specifying a local name for the at
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
 
 * **General**
-    * **Name** – a local name for the attribute can be specified.
-    * **Original Name** – this is a read-only value that displays the original name of the attribute in the originating app
-    * **Summary** – a read-only summary displaying the description for the attribute in the originating app. To enter a local description, add this in the [Documentation tab](#documentation).
-    * **Type** – read-only vlues for the **Type** and **Length** and **Max length** of the attribute as defined in the originating app.
-    * **Default value** - the default value for this attribute when the app creates an object. Visible only when the entity is creatable.
-* **Documentation** – a description for the attribute as defined in the originating app.
+    * **Name** – a local name for the attribute can be specified
+    * **Original Name** – a read-only value that displays the original name of the attribute in the originating app
+    * **Summary** – a read-only summary displaying the description for the attribute in the originating app. To enter a local description, add this in the [Documentation tab](#documentation)
+    * **Type** – read-only vlues for the **Type** and **Length** and **Max length** of the attribute as defined in the originating app
+    * **Default value** - the default value for this attribute when the app creates an object. Visible only when the entity is creatable
+* **Documentation** – a description for the attribute as defined in the originating app
 
 ### 3.3 Associations {#associations}
 

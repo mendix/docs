@@ -18,7 +18,7 @@ aliases:
 
 ## 1 Introduction
 
-You can only run Mendix apps in production on Mendix Cloud if they are linked to a licensed node.
+You can only run a Mendix app in production on Mendix Cloud if the app is linked to a licensed node.
 
 Without a licensed node, you can still deploy your app and test it, but it will have several limitations:
 
@@ -95,11 +95,7 @@ When you remove an app from its environment, you may want to take the data (data
 
 For more details on downloading a backup, see [Download a Backup](/developerportal/operate/download-backup/). 
 
-{{% alert color="warning" %}}
-When you unlink your Free App from its environment, the environment is permanently deleted. You will not be able to recover any data once the Free App is unlinked.
-
-If you unlink an app from a licensed node, the node is not deleted. Data is retained in the node.
-{{% /alert %}}
+{{% alert color="warning" %}}When you unlink your Free App from its environment, the environment is permanently deleted. You will not be able to recover any data once the Free App is unlinked.<br><br>If you unlink an app from a licensed node, that does not delete the node. Data is retained in the node.{{% /alert %}}
 
 ### 4.2 Unlinking From Current Environment{#unlink}
 
@@ -126,8 +122,6 @@ To unlink a Free App, do the following:
 5. Click **Yes, delete all data and unlink this app** to confirm.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" >}}
-
-    {{% alert color="warning" %}}Your Data will be deleted.{{% /alert %}}
 
 6. Validate with your [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 

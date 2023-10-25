@@ -70,7 +70,7 @@ key can be used in a policy to allow principals (Mendix apps and end-users) to m
 
 ### 3.1 Why Does the Outgoing IP Address Need to Change?
 
-Because Mendix provides a platform, the infrastructure needs to remain flexible. Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may change for operational reasons. Any changes are subject to a 48-hour notice period; providing a longer notice period would hinder operational capabilities.
+Because Mendix provides a platform, the infrastructure needs to remain flexible. Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
 
 ### 3.2 In the Past, We Have Received the Same IP Address for Multiple Environments and Applications. How Is That Possible?
 

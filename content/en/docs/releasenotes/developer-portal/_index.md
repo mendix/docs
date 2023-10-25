@@ -21,19 +21,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We added Tag Management to [Feedback](/developerportal/app-insights/feedback/). You can now do the following:
-  * Create a new tag
-  * Delete a tag
-  * Rename a tag
-  * Give a tag a color
+* We released a feature in [Feedback](/developerportal/app-insights/feedback/) to allow you manage tags there. You can now create, delete, and rename a tag, and change the color of a tag.
 
 #### Improvements
 
-* We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications
+* We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
 
 #### Fixes 
 
- * We fixed a bug in [Feedback](/developerportal/app-insights/feedback/) where a small number of users were experiencing an error when converting a feedback item to a story
+ * We fixed a bug in [Feedback](/developerportal/app-insights/feedback/) where a small number of users were experiencing an error when converting a feedback item to a story.
 
 ### October 19, 2023
 

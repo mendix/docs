@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We added support for an `Origin-Trials` HTTP header in the Developer Portal. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers/).
+* We added support for an `Origin-Trials` HTTP header in the Developer Portal. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
 
 ### October 12, 2023
 

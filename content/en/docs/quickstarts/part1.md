@@ -248,7 +248,7 @@ Implement custom logic with a microflow by doing the following:
 
 Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
 
-1. Add the additional path and make sure to select the **False** path as the one which goes down. 
+1. Add the additional path (by clicking the activity's red dot and dragging a connection out of it) and make sure to select the **False** path as the one which goes down. 
 1. You should also add the **Validation feedback** action to the false path to provide feedback to the user.
 1. Double-click your validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, **Member** > **Title**, and in **Template** add some error text such as *Please provide a title for your picture.*.
 1. Repeat these steps for the **Description** attribute until your microflow looks like this:

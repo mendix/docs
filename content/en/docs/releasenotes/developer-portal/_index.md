@@ -21,9 +21,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added the ability to directly remove app members from Control Center.
+* We added the ability to directly [remove app members](/developerportal/control-center/#members) from Control Center.
 
-#### 
+#### Fixes
 
 * We fixed an issue where deactivation of some apps led to unexpected errors.
 
@@ -112,7 +112,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
 
-    * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+    * In Feedback, we added a new filter called "status" on the **Inbox** page and the **Archive** page.
     * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
     * We added documentation links on the home page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 

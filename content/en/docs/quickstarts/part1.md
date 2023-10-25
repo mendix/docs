@@ -189,7 +189,7 @@ Now it is time to build your photo album app:
 
 Next we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
 
-1. Delete all the display widgets inside the grid.
+1. Delete all the display widgets inside the grid (ensure you have switched from **Design** mode to **Structure** mode so you can delete the widgets easily).
 1. Right-click in the empty space and select **Add building block**.
 1. Search for and select **Card action with image**.
 

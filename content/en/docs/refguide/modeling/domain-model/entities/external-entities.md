@@ -50,7 +50,7 @@ You can make local changes to the properties of external entities that only affe
 If you delete an external entity from the Domain model, the service documents remain in the App Explorer list and the service aryA listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
 {{% /alert %}}
 
-For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more information on using published OData services and entities through the Catalog, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/).
 
 ## 3 Properties of External Entities {#properties}
 

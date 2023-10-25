@@ -1088,6 +1088,7 @@ Alternatively, for Standalone clusters, pod labels can be specified in the `Mend
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
 
+
 ## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.

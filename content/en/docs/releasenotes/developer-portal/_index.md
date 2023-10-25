@@ -21,11 +21,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added the ability to directly remove App members from Control Center.
+* We added the ability to directly remove app members from Control Center.
 
 #### 
 
-* We fixed an issue that for some apps, deactivation were leading to unexpected errors.
+* We fixed an issue where deactivation of some apps led to unexpected errors.
 
 ### October 19, 2023
 

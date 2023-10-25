@@ -35,7 +35,7 @@ You can also type in the search box to search for the elements that you want to 
 
 The search is based on your microflow or nanoflow parameters, domain model entities, or the documents in your app. You can search for generic activities or elements from the toolbox:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/logic-editors-beta/search-toolbox.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/logic-editors-beta/search-toolbox.png" width="500px" >}}
 
 You can search for sub-actions of an aggregate list or list operation activity, such as sum, count, or average:
 

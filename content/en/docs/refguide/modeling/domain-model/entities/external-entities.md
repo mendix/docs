@@ -129,15 +129,15 @@ You cannot connect two external entities that are not connected in the originati
 
 ### 3.3.1 Association Properties
 
-When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be made is the local Name:
+When you **Edit** an association that is included in two entities exposed in the same OData service, the following properties are displayed and the only local change that can be made is the local name:
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
 
 * **Name** – local name of the association
-* **Original Name** – read-only name of the association given to it in the originating app
+* **Original Name** – read-only name of the association given in the originating app
 * **Summary** – read-only description of the association from the originating app
 * **Multiplicity** – read-only multiplicity values from the originating app
-* **Documentation** – go to this tab to add a local description for the external entity association
+* **Documentation** – a local description for the external entity association
 
 If the association is [one-way navigable](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
 
@@ -165,7 +165,7 @@ For details on the types of authentication methods and how to set them up, see t
 
 ### 4.2 Consuming External Entities with Authentication
 
-When an external entity is used in an app module through the Integration Pane, a [consumed OData service](/refguide/consumed-odata-service/) document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity is used in an app module through the Integration pane, a [consumed OData service](/refguide/consumed-odata-service/) document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 If the service you are consuming requires authentication, you will need to add authentication credentials. Consumers of an OData service in an external entity can contact the owner of the data source to check the required authentication method and credentials. 
 
@@ -177,7 +177,7 @@ Learn more about adding authentication information to a consumed OData service:
 
 ## 5 External Entity Limitations {#limitations}
 
-External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the [Integration Pane](/refguide/integration-pane/). The datasets associated with the entities are maintained in the originating apps.
+External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the Integration pane. The datasets associated with the entities are maintained in the originating apps.
 
 External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
 

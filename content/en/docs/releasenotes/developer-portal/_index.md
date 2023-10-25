@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We released a feature in [Feedback](/developerportal/app-insights/feedback/) to allow you manage tags there. You can now create, delete, and rename a tag, and change the color of a tag.
+* We released a feature in Feedback to allow you [manage tags](/developerportal/app-insights/feedback/#manage-tags) there. You can now create, delete, and rename a tag, and change the color of a tag.
 
 #### Improvements
 

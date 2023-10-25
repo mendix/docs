@@ -100,7 +100,7 @@ The **Edit Attribute** dialog can be used to specify a local name and add a loca
 
 ### 3.3 Associations {#associations}
 
-This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide/association-member-properties/).
+This tab displays the associations the external entity has with other entities that are exposed in the same service, and any associations that have been made with local entities. For more information on association properties in Studio Pro, see [Association Tab Properties](/refguide/association-member-properties/).
 
 If the entity contains [one-way navigable associations](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
 
@@ -115,16 +115,16 @@ The following apply for all associations with the external entity:
 * **Parent** – read-only for associations between two external entities
 * **Child** – read-only for associations between two external entities
 
-You can **Add** and **Edit** associations to the external entity with a local entity. However, the association cannot be made *from* an external entity to a local entity: the local entity must be the owner of the association.
+You can **Add** and **Edit** associations to the external entity with a local entity. However, the association cannot be made from an external entity to a local entity; the local entity must be the owner of the association.
 
-If you use an external entity in your app and this entity is associated with other external entities from the same OData service in your app, the association will automatically be added in the domain model and be listed here.
+If you use an external entity in your app that is associated with other external entities from the same OData service in your app, the association will automatically be added in the Domain model and be listed here.
 
 {{% alert color="info" %}}
-It is possible to **Remove** an association between two external entities in the domain model that has been automatically added. If at a later stage you want to restore the association, you can do this in the domain model by right-clicking one of the external entities and clicking **Add** > **Association**.
+It is possible to **Remove** an association between two external entities in the Domain model that has been automatically added. If at a later stage you want to restore the association, you can do this in the Domain model by right-clicking one of the external entities and clicking **Add** > **Association**.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
+You cannot connect two external entities that are not connected in the originating app, as the relationship to the data cannot be influenced locally. However, consider adding a local entity and connect this local entity with both external entities. In this case, the local entity must be the owner of both associations.
 {{% /alert %}}
 
 ### 3.3.1 Association Properties

@@ -305,7 +305,7 @@ For example, you can create a data grid sourced from the database entity `Mendix
 
 If you implement a page like this, ensure that security is set up to prevent unauthorized users accessing the page.
 
-The **Session ID** which is associated with a **Token type** of `ID_TOKEN` is held in *JWT* format, so you can decrypt it and then paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds. To decrypt the token you can use the `Decrypt` microflow in the **Internal/Encryption/Implementation** folder of the MendixSSO module.
+The **Session ID** which is associated with a **Token type** of `ID_TOKEN` is held in the *JWT* format, so you can decrypt it and then paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds. To decrypt the token, you can use the **Decrypt** microflow in the **Internal/Encryption/Implementation** folder of the MendixSSO module.
 
 ### 6.2 Tokens in Mendix SSO v2
 
@@ -331,7 +331,7 @@ The TokensOverview page allows administrators to see all tokens which have been 
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/token-administration.png" alt="List of all Mendix SSO tokens issued to the app" >}}
 
-The page can be used for troubleshooting – you can see the creation and expiry dates of the tokens and by clicking **View**, you can view the values held in the tokens.
+The page can be used for troubleshooting — you can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
 
 The **ID Token** is held in *JWT* format, so you can paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds.
 
@@ -345,7 +345,7 @@ The **MyTokensOverview** page allows end-users to see their own access tokens.
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/my-tokens.png" alt="List of all my Mendix SSO tokens" >}}
 
-The page can be used for troubleshooting – the end-user can see the creation and expiry dates of the tokens and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
+The page can be used for troubleshooting — the end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
 #### 6.2.2 Displaying Tokens using Snippets
 

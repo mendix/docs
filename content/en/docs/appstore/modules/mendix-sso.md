@@ -96,7 +96,7 @@ To enable Mendix SSO in your app, follow these steps:
 
     5. Click **OK** to close the app **Settings**.
 
-    {{% alert color="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow.{{% /alert %}}
+    {{% alert color="info" %}}If there is already an **After startup** microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow.{{% /alert %}}
 
 3. Add your own administration pages to monitor usage, if required.
 
@@ -111,22 +111,22 @@ To enable Mendix SSO in your app, follow these steps:
     6. Select the **Administrator** module role for **Marketplace modules** > **MendixSSO**.
         {{< figure src="/attachments/appstore/modules/mendix-sso/set-module-role.png" alt="Set Administrator module role" >}}
     7. Click **OK** twice to return to **Project Security**.
-    8. Repeat the steps above to add the MendixSSO.User module role to the *User* **User roles**.
+    8. Repeat the steps above to add the **MendixSSO.User** module role to the **User** User roles.
 
-        The **App Security** settings now contains these two additional module roles:
+        The app **Security** settings now contains these two additional module roles:
 
         {{< figure src="/attachments/appstore/modules/mendix-sso/module-user-roles.png" alt="Confirmation of user roles" >}}
 
-5. Change the page that Mendix uses to sign you in (`login.html`) to allow signing in using SSO. To do this, perform the following steps:
+5. Change the page that Mendix uses to sign you in (`login.html`) to allow for signing in using SSO. To do this, perform the following steps:
 
     1. Go to **App** > **Show App Directory in Explorer** in Studio Pro to open the app directory in your file explorer.
     2. Go to the **theme/web** folder (for Mendix versions below 9.0.0, this is the **theme** folder).
-    3. Rename *login.html* to  *login-without-sso.html*.
-    4. Rename *login-with-mendixsso-button.html* or *login-with-mendixsso-automatically.html* to *login.html*. The differences between two versions of the files which you can use to replace *login.html* are as follows:
-        * *login-with-mendixsso-button.html* – adds a button to the standard sign in page which the end-user can click to initiate the single sign-on process — this gives the end-user the possibility to sign in using a user name and password if desired
+    3. Rename *login.html* to *login-without-sso.html*.
+    4. Rename *login-with-mendixsso-button.html* or *login-with-mendixsso-automatically.html* to *login.html*. The differences between the two versions of the files which you can use to replace *login.html* are as follows:
+        * *login-with-mendixsso-button.html* – adds a button to the standard sign-in page which the end-user can click to initiate the single sign-on process; this gives the end-user the possibility to sign in using a user name and password if desired
         * *login-with-mendixsso-automatically.html* – automatically initiates the single sign-on process without needing to click a button
 
-Your app is now configured to use Mendix single sign-on when it is deployed to the cloud.
+Your app is now configured to use Mendix single sign-on when it is deployed to the Mendix Cloud.
 
 ## 4 Removing Mendix Single Sign-On
 

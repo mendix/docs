@@ -49,7 +49,7 @@ Owners of registered assets can only curate their services.
 When a data source is selected in the **Search Results**, you can do the following after clicking **Edit**:
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
-* [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
+* [Discoverable/Validated](#discoverability) – **Discoverable** setting is on the Edit page and on the My Asstes/Company Assets list. Validated setting is on the Edit page.
     * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Catalog; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
     * **Validate** – indicates that the data source and datasets have been validated
 * **Tags** - Add new tags to your datasource
@@ -167,7 +167,7 @@ To edit the asset metadata, follow these steps:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
 
-2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in **Description** box.
+2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in the **Description** box.
 
 3. Add a catalog description. This will be stored with the service details in the Catalog.
 4. Click **Save** to save the changes that you have made to the **Edit DataSource** screen and return to the **Asset Details** screen, which will now display the selected description.

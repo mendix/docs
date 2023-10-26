@@ -446,7 +446,7 @@ Here is an example:
 
 {{< figure src="/attachments/catalog/search/download_example.png" alt="download example" >}}
 
-When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains the all the metadata files that define the service.
+When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains all the metadata files that define the service.
 
 ### 3.10 Viewing Search Results in the Landscape
 

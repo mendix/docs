@@ -20,7 +20,7 @@ Without a licensed node, you can still deploy your app and test it, but it will 
 If you have an app that you want to license, you can do this simply and cost-effectively by ordering the [Mendix Basic](https://www.mendix.com/pricing/basic-package/) package.
 
 {{% alert color="info" %}}
-When you order the Mendix Basic package, your order goes through immediately. However, the provisioning of your licensed node takes 48 hours.
+After you order the Mendix Basic package, it may take up to 48 hours before your licensed node is ready for use.
 {{% /alert %}}
 
 ## 2 Features of the Basic Package
@@ -68,15 +68,15 @@ To order your Mendix Basic package, do the following:
 
 5. Enter your account and billing details.
 
-    {{% alert color="info" %}}Enter an email address that you monitor. Mendix uses this email address to send further information about your Mendix Basic package.{{% /alert %}}
+    {{% alert color="info" %}}Enter an email address that you monitor. Mendix uses this email address to send important information about your Mendix Basic package.{{% /alert %}}
 
 6. Click **Continue**.
 
 7. Review your order and make any changes needed. Review and accept the **Terms & Conditions**.
 
-    {{% alert color="info" %}}The license takes 48 hours to provision. You will receive your invoice 7-14 days after you submit your order.{{% /alert %}}
+    {{% alert color="info" %}}The license may take 48 hours to provision. You will receive your invoice about 14 days after you submit your order.{{% /alert %}}
 
-8. Make the payment.
+8. Depending on your payment method, you will be asked to enter your credit card details or to continue with the payment on your account. 
 
 9. Click **Purchase** to complete your order.
 
@@ -93,7 +93,9 @@ To link your app to your licensed node, follow the same process as for any other
 
 ## 5 Invoicing for your Basic Package
 
-It takes 7-14 days to prepare your invoice. The invoice is sent to the address that you entered as the **invoice Email Address**. Payment is due within 30 days.
+It takes about 14 days to prepare your invoice. The invoice is sent to the **Invoice Email** that you provide. 
+
+For automatic orders, payment occurs when the package is ordered. For manual orders, payment is due within 30 days.
 
 ## 6 Renewing Your Payment Method
 

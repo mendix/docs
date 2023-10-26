@@ -32,7 +32,7 @@ The elements of this category are described in the table below:
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/decision.png" alt="Decision" >}} | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/jump.png" alt="Jump Activity" >}} | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification.png" alt="Jump Activity" >}} | [Wait for notification](/refguide/wait-for-notification/)             | Allows you to suspend a workflow’s execution until the workflow is notified.      |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification.png" alt="Wait for notification activity" >}} | [Wait for notification](/refguide/wait-for-notification/)             | Allows you to suspend a workflow’s execution until the workflow is notified.      |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/end-event.png" alt="End event" >}} | End event                      | Ends the path of the workflow                                |
 
 {{% alert color="info" %}}

@@ -256,7 +256,7 @@ If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and hybrid apps built with Mendix the following operating system versions are supported:
+For native and hybrid apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android

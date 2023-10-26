@@ -87,7 +87,7 @@ After you configure the authentication profile for Amazon S3, you can implement 
 2. Enter a name for your microflow, for example, *DS_CreateBucket*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonS3Connector** > **Operations** section, find the **CreateBucket** activity.
 4. Drag the **CreateBucket** activity onto the microflow you are working on.
-5. Double-click the **CreateBucket** activity and configure the **ENUM_Region** parameter by doing the following steps:
+5. Double-click the **CreateBucket** activity and configure the **AWS_Region** parameter by doing the following steps:
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
     2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.

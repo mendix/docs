@@ -116,11 +116,21 @@ The following settings are specific for this event:
 
 The [microflow](/refguide/microflow/) that should be executed.
 
+You can either select an existing microflow or create a new microflow by clicking the **New** button from the **Select Microflow** dialog box.
+
+In Studio Pro 10.4.0 and above, when creating a new microflow, a dialog box is shown where you can set the name and select parameters for the new microflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new microflow:
+
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-with-parameter.png" >}}
+
+If there is nothing to pass to the new microflow, then a dialog box is shown where you can only specify the name of the microflow:
+
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-no-parameter.png" >}}
+
 #### 3.3.2 Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" width="500px" >}}
 
 ##### 3.3.2.1 Microflow
 
@@ -209,7 +219,15 @@ For microflows that are used within a data widget, setting **Abort on Validation
 
 The **Call a nanoflow** event executes the specified nanoflow. 
 
+#### 3.4.1 Nanoflow
+
 Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that should be executed.
+
+You can either select an existing nanoflow or create a new nanoflow by clicking the **New** button from the **Select Nanoflow** dialog box.
+
+In Studio Pro 10.4.0 and above, when creating a new nanoflow, a dialog box is shown where you can set the name and select parameters for the new nanoflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new nanoflow.
+
+If there is nothing to pass to the new nanoflow, then a dialog box is shown where you can only specify the name of the nanoflow.
 
 ### 3.5 Open Link {#open-link}
 

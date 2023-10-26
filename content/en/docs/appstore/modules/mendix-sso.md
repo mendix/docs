@@ -18,7 +18,7 @@ The end-users of the app need to [sign up for a Mendix account](https://signup.m
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For Mendix 9.20 and above, you need to use version 4.0.1 or above of the Mendix SSO module.
+For Mendix 9.20 and above, you need to use v4.0.1 or above of the Mendix SSO module.
 {{% /alert %}}
 
 ### 1.1 Typical Usage Scenarios{#typical-usage}
@@ -69,7 +69,7 @@ If your app does not have the Mendix SSO module, it is available from the Mendix
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
 {{% alert color="info" %}}
-For Mendix 9.20 and above, you need to use version 4.0.1 or above of the Mendix SSO module.
+For Mendix 9.20 and above, you need to use v4.0.1 or above of the Mendix SSO module.
 {{% /alert %}}
 
 In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration, this is also possible. For more information, see [Customizing Mendix SSO](#customizing)section below.
@@ -100,7 +100,7 @@ To enable Mendix SSO in your app, follow these steps:
 
 3. Add your own administration pages to monitor usage, if required.
 
-    {{% alert color="info" %}}If you are using Mendix SSO version 2, you can use the *default* user administration pages. For more information, see the [Customizing Mendix SSO](#customizing) section below.{{% /alert %}}
+    {{% alert color="info" %}}If you are using Mendix SSO v2, you can use the *default* user administration pages. For more information, see the [Customizing Mendix SSO](#customizing) section below.{{% /alert %}}
 
 4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open **Project Security** from the **App Explorer**.
@@ -180,43 +180,43 @@ All files installed by Mendix SSO are marked with *.MendixSSO.RequiredLib*. Once
 ## 5 Customizing Mendix SSO {#customizing}
 
 {{% alert color="info" %}}
-In version 2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a default implementation of end-user administration. This had dependencies on specific versions of [Atlas UI](https://docs.mendix.com/howto8/front-end/atlas-ui/) and was removed so that Mendix SSO v3.0 and above retains compatibility with all Mendix apps, whichever UI they are using.
+In v2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a default implementation of end-user administration. This had dependencies on specific versions of [Atlas UI](https://docs.mendix.com/howto8/front-end/atlas-ui/) and was removed so that Mendix SSO v3.0 and above retains compatibility with all Mendix apps, whichever UI they are using.
 {{% /alert %}}
 
 This section explains how to customize Mendix SSO in your apps and how to base your own user administration module on this section if you want to do things in a different way.
 
-There are three ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, you can modify the Mendix SSO module in any way you like to support your end-user administration requirements, or you can use the microflows available in the [Administration](https://docs.mendix.com/appstore/modules/administration/) module.
+There are three ways you can modify the Mendix SSO module. You can use snippets from the Mendix SSO Marketplace module in your pages; you can modify the Mendix SSO module in any way you like to support your end-user administration requirements, or you can use the microflows available in the [Administration](https://docs.mendix.com/appstore/modules/administration/) module.
 
 These three ways are described below.
 
 ### 5.1 Using Snippets
 
 {{% alert color="warning" %}}
-This section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
+This section only applies to v2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
 {{% /alert %}}
 
 The default Mendix SSO implementation is based on snippets. You can use these snippets in your own pages to customize the administration of the end-users. If you look at how they are used in the default implementation, you can see how to use them in your own pages. The snippets are:
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/snippets.png" alt="List of snippets in Mendix SSO" >}}
 
-* In folder **Admin**
+* In the **Admin** folder
     * **TokensOverviewSnippet** – an overview of all the tokens issued to end-users of the app
-    * **UserOverviewSnippet** – an overview of all the end-users who have used the app. This will not include end-users who have been given access through the developer portal but have not yet signed in
+    * **UserOverviewSnippet** – an overview of all the end-users who have used the app; This will not include end-users who have been given access through the developer portal but have not yet signed in
     * **UserViewEditSnippet** – a page where details of an end-user can be seen and where the current end-user has access, edited
-* In folder **Common**
+* In the **Common** folder
     * **AccountDetailsNotEditableSnippet** – text explaining that details of SSO end-users come from Mendix and are not editable in the app
     * **EnvironmentCredentialsSecurityWarningSnippet** – text warning that sharing credentials is a security risk
     * **TokensAreExpiredPeriodicallySnippet** – text explaining that expired tokens are deleted automatically after a period of time
     * **TokenSecurityWarningSnippet** – text explaining that tokens give access to the app for SSO end-users, and that local end-users will not have tokens
     * **TokenViewSnippet** – displays details of a token
-* In folder **User**
+* In the **User** folder
     * **MyAccountDetailsSnippet** – a page where details of an end-user can be seen—similar to **UserViewEditSnippet** but without the additional administration capabilities
     * **MyTokensOverviewSnippet** – an overview of all the tokens issued to the current end-user of the app
 
 ### 5.2 Modifying Mendix SSO
 
 {{% alert color="warning" %}}
-Mendix recommends that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your app. In future, you may wish to import a newer version of the module and this overwrites any changes you make.
+Mendix recommends that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your app. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
 The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new [Administration](https://docs.mendix.com/appstore/modules/administration/) module.
@@ -225,15 +225,15 @@ The Mendix SSO module is written so that you can create a user entity in another
 
 To make a copy of the module, do the following:
 
-1. Add a new module to your app. In these examples it is called *CustomMendixSSO*.
+1. Add a new module to your app. In these examples it is called **CustomMendixSSO**.
 
 2. Create the **Module roles** *User* and *Administrator* for the new module.
 
-3. Copy the **MendixSSOUser** entity from the **MendixSSO** module **Domain model**, to the **Domain model** of your new module. In these examples it is called *CustomMendixSSOUser*.
+3. Copy the **MendixSSOUser** entity from the **MendixSSO** module domain model, to the domain model of your new module. In these examples, this is called *CustomMendixSSOUser*.
 
     {{% alert color="info" %}}You can also create an entity from scratch, provided it uses **System.User** as its generalization.{{% /alert %}}
 
-4. Set the entity **Access rules** for the *User* and *Administrator* module roles.
+4. Set the entity **Access rules** for the **User** and **Administrator** module roles.
 
 5. Move the **MOVE_THIS** folder from **MendixSSO** to existing module containing your customized user administration entity.
 
@@ -257,7 +257,7 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
-4. Change the parameter of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser
+4. Change the **Parameter** of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser.
 
 5. Change the **Change Object** action to set the correct members of the object.
 
@@ -277,7 +277,7 @@ Remember that data which comes from the end-user's Mendix ID via SSO (for exampl
 
 ### 5.3 Using the Administration module
 
-The [Administration](https://marketplace.mendix.com/link/component/23513) module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. Follow the instructions in [Using the Administration Module with Mendix SSO](/appstore/modules/administration/#use-with-mendix-sso) to use the Administration module with Mendix SSO.
+The [Administration](https://marketplace.mendix.com/link/component/23513) module v1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. Follow the instructions in [Using the Administration Module with Mendix SSO](/appstore/modules/administration/#use-with-mendix-sso) to use the Administration module with Mendix SSO.
 
 ## 6 Tokens
 
@@ -310,7 +310,7 @@ The **Session ID** which is associated with a **Token type** of `ID_TOKEN` is he
 ### 6.2 Tokens in Mendix SSO v2
 
 {{% alert color="warning" %}}
-The rest of this section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
+The rest of this section only applies to v2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
 {{% /alert %}}
 
 Versions of Mendix SSO below v3.0 contained a default Mendix SSO administration module with a number of pages set up to enable you to see tokens. They also contained snippets to allow you to create your own token display and administration pages. The rest of this section explains how these could be used.

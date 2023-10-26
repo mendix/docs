@@ -97,6 +97,8 @@ It takes 7-14 days to prepare your invoice. The invoice is sent to the address t
 
 ## 6 Renewing Your Payment Method
 
+Your plan automatically renews 12 months from the date of provision. You can opt out of auto-renewal 60 days before the period ends.
+
 Before renewing the licenses for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" >}}

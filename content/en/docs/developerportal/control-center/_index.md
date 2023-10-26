@@ -104,7 +104,7 @@ Members are users who can view and/or edit an app.
 
 On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
 
-When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click **Remove** to remove the member from the app. Click an app name to go to the [details page](#app-details) of this app.
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating (on the **Active Members** tab) or activating (on the **Deactivated Members** tab) members.
 

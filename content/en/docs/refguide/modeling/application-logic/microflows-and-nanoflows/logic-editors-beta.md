@@ -13,7 +13,7 @@ tags: ["beta", "logic bot", "mendix assist", "assist", "mx assist", "logic", "lo
 The Beta versions of the logic editors are available to try out in Studio Pro 10.4.0. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-We are redesigning the logic editors (microflows, nanoflows, and rules) to bring the user journey to the next level. In the Beta versions of the logic editors, we have enhanced the usability of the [MxAssist Logic Bot](#logic-bot), added more support for [keyboard navigation](#keyboard-navigation), and invested in [smaller details](#miscellaneous) to ensure an even smoother developer experience with Mendix. For more information on those functionalities, see the sections below. 
+We are redesigning the logic editors (microflows, nanoflows, and rules) to bring the user journey to the next level. In the Beta versions of the logic editors, we have enhanced the usability of the [MxAssist Logic Bot](#logic-bot), added more support for [keyboard navigation](#keyboard-navigation), and also invested in more [developer experience details](#miscellaneous) to make sure the interaction with the canvas even more fluent. For more information on those functionalities, see the sections below. 
 
 The Beta editors can be activated in two ways:
 
@@ -95,7 +95,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 
 ## 4 Miscellaneous Improvements {#miscellaneous}
 
-We have also invested in the smaller details to make the editor even smoother to use. You can use now common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
+We have also invested in more developer experience details to make sure the interaction with the canvas even more fluent. You can use now common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
 
 ## 5 Read More
 

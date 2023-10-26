@@ -14,7 +14,7 @@ With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) mod
 This module allows end-users to sign in with their Mendix account with the click of a button, instead of requiring their local user credentials. This module avoids having to deal with local user management or password reset flows for the test and acceptance phases of your app development.
 
 {{% alert color="warning" %}}
-The end-users of the app need to [sign up for a Mendix account](https://signup.mendix.com/) before they sign in to your app.
+The end-users of the app need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -72,7 +72,7 @@ If you need a newer version of the Mendix SSO module (for example, to use a new 
 For Mendix 9.20 and above, you need to use version 4.0.1 or above of the Mendix SSO module.
 {{% /alert %}}
 
-In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. For more information, see [Customizing Mendix SSO](#customizing)section below.
+In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration, this is also possible. For more information, see [Customizing Mendix SSO](#customizing)section below.
 
 ## 3 Removing Mendix Single Sign-On
 

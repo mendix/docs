@@ -22,6 +22,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We added the ability to directly [remove app members](/developerportal/control-center/#members) from Control Center.
+* In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
 
 #### Fixes
 

@@ -31,8 +31,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes 
 
- * We fixed a bug in [Feedback](/developerportal/app-insights/feedback/) where a small number of users were experiencing an error when converting a feedback item to a story.
+ * We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
  * We fixed an issue where deactivation of some apps led to unexpected errors.
+   
 ### October 19, 2023
 
 #### New Features

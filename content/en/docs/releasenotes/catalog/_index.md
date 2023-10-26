@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ### Improvement
 
-* We have added **View More** buttons to the home page to allow users to access an extended view of the **Most Recent Changes** or **Popular Data Sources**.
+* We have added **View More** buttons to the home page.
 * We have enhanced the Search page to include a sort functionality that aligns with the revised home page.
 
 #### Fixes

@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "sso", "single sign on", "platfor
 
 With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) module, you can utilize single sign-on functionality by directly integrating with the Mendix identity provider and leveraging the [OpenID Connect](https://openid.net/connect/) framework.
 
-This module allows end-users to sign in with their Mendix account with the click of a button, instead of requiring their local user credentials. This avoids having to deal with local user management or password reset flows for the test and acceptance phases of your app development.
+This module allows end-users to sign in with their Mendix account with the click of a button, instead of requiring their local user credentials. This module avoids having to deal with local user management or password reset flows for the test and acceptance phases of your app development.
 
 {{% alert color="warning" %}}
 The end-users of the app need to [sign up for a Mendix account](https://signup.mendix.com/) before they sign in to your app.
@@ -26,15 +26,15 @@ For Mendix 9.20 and above, you need to use version 4.0.1 or above of the Mendix 
 The Mendix SSO module is typically used when you are collaborating in a small team to prepare the functionality of your app for production. During such an interactive development process, this brings two benefits:
 
 * The end-users get a single sign-on experience using their Mendix account and are not burdened with yet another set of credentials
-* You do not have to connect your app immediately to the identity provider (IdP) for your target group of end-users.
+* You do not have to connect your app immediately to the identity provider (IdP) for your target group of end-users
 
-Once your app is ready to be released into production with a wider group of end-users, you may want to switch from using Mendix SSO to another authentication method such as [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
+Once your app is ready to be released into production with a wider group of end-users, you may want to switch from using Mendix SSO to another authentication method, such as [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
 
-Mendix SSO is also a good choice when you develop a Mendix app that is targeted at Mendix developers, since those end-users already have Mendix account.
+Mendix SSO is also a good choice when you develop a Mendix app that is targeted at Mendix developers, since those end-users already have a Mendix account.
 
 ### 1.2 Features
 
-The Mendix SSO module has following features:
+The Mendix SSO module has the following features:
 
 * Simple steps for adding the module to your app, no more configuration required
 * Single sign-on with your Mendix account for any application that implements this module
@@ -46,17 +46,17 @@ The Mendix SSO module has following features:
 
 ### 1.3 Limitations
 
-The Mendix SSO module has following limitations:
+The Mendix SSO module has the following limitations:
 
-* Using Mendix SSO will present end-users with screens that are Mendix branded. Meaning, the module is not suitable for use beyond the [Typical Usage Scenarios](#typical-usage) described above.
+* Using Mendix SSO will present end-users with screens that are Mendix-branded. This means that the module is not suitable for use beyond the [typical usage scenarios](#typical-usage) described above.
 * This module does not work for [native mobile](/refguide/native-mobile/) apps.
 * The default app **Logout** action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again.
 
 ### 1.4 Dependencies
 
-Your app has to be deployed on the Mendix Cloud in order to use this module. Mendix single sign-on is only activated when your app is deployed to the Mendix Cloud.
+Your app has to be deployed on the Mendix Cloud in order to use this module. Mendix SSO is only activated when your app is deployed to the Mendix Cloud.
 
-When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix for Private Cloud](https://docs.mendix.com/releasenotes/developer-portal/mendix-for-private-cloud/) or [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/)) you can use the Mendix [administration](/appstore/modules/administration/) module, or connect to a central Identity Provider (IdP) using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
+When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix for Private Cloud](https://docs.mendix.com/releasenotes/developer-portal/mendix-for-private-cloud/) or [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/)), you can use the Mendix [Administration](/appstore/modules/administration/) module, or connect to a central IdP using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
 
 ## 2 Installation and Configuration
 

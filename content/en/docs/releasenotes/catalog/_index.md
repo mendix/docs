@@ -13,6 +13,17 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### October 26, 2023
+
+### Improvement
+
+* We have added **View More** buttons to the home page.
+* We have enhanced the Search page to include a sort functionality that aligns with the revised home page.
+
+#### Fixes
+
+* We have disabled the ability to modify endpoints that have been automatically registered.
+
 ### October 19, 2023
 
 ### Features

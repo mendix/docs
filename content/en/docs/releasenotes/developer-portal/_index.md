@@ -26,11 +26,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
+* We added the ability to directly [remove app members](/developerportal/control-center/#members) from Control Center.
+* In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
 
 #### Fixes 
 
  * We fixed a bug in [Feedback](/developerportal/app-insights/feedback/) where a small number of users were experiencing an error when converting a feedback item to a story.
-
+ * We fixed an issue where deactivation of some apps led to unexpected errors.
 ### October 19, 2023
 
 #### New Features
@@ -116,7 +118,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
 
-    * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+    * In Feedback, we added a new filter called "status" on the **Inbox** page and the **Archive** page.
     * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
     * We added documentation links on the home page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 

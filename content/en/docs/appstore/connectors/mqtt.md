@@ -53,7 +53,7 @@ The **Password** is encrypted using the **EncryptionKey** constant. For better s
 Enabling SSL establishes a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
-2. Open the **ConnectionAdministration** page and enable the SSL toggle.
+2. Open the **ConnectionAdministration** page and use the toggle to enable SSL.
 3. Copy all file content and paste it to the **CA Certificate** and **Client Certificate** fields. 
     * Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`
 4. Add the **Client Certificate Key** and the **Certificate password** if one was set.
@@ -87,8 +87,8 @@ To publish data to the MQTT broker, follow these steps:
     * **Payload** – Choose a string message to be published.
     * [Qo S (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose a value for each message that is being published.
     * **Retained** – The retained setting serves two purposes depending on whether the message it is associated with is being published or received:
-        * **Yes** – For published messages, selecting **Yes** indicates  the MQTT server should retain a copy of the message. The message is transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
-        *  **No** – For publishers, selecting **No** indicates this message should not be retained by the MQTT server. For subscribers, this indicates it is a normal message that was received as a result of it being published to the server.
+        * **true** – For published messages, selecting **true** indicates the MQTT server should retain a copy of the message. The message is transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, this indicates the received message has been retained by the MQTT server.
+        *  **false** – For publishers, selecting **false** indicates this message should not be retained by the MQTT server. For subscribers, this indicates it is a normal message that was received as a result of it being published to the server.
 
 #### 3.1.2 Subscribe
 

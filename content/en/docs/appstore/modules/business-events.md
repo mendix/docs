@@ -81,7 +81,7 @@ A **Published Business Event Service** contains a definition of the business eve
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 2. Provide the name for your service and **OK** to create it.
-3. If needed, select an **Event Name Prefix**. Use this to distinguish events from other ones in your company, like in a different department. This ensures that your events are uniquely named. This field is empty by default. 
+3. If needed, select an **Event Name Prefix**. Use this to distinguish events from other ones in your company, like in a different department. This ensures that your events are uniquely named. This field is empty by default.
 4. Once you have the Service created, click **Add** to link your modelled **PublishedBusinessEvent** entity as an event.
 5. Either select an existing **PublishedBusinessEvent** entity, or click **New** to create a new published entity there.
 6. Once you have all of your entities linked into the **Published Business Event Service**, export it to be shared as an AsyncAPI document in YAML format.
@@ -237,7 +237,7 @@ Once you have created a service in [Studio Pro 9.18 through 9.23](#one-way-be) o
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module.
 
 1. In your [Domain Model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
-2. In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity. 
+2. In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity.
 
 The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations and Inheritance](/refguide/generalization-and-association/).
 
@@ -259,7 +259,7 @@ Do this using the **Publish business event** activity:
 4. Double-click **Publish business event** to display the **Publish Business Event** property box.
 5. Enter the following information:
     * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
-    * **Event Data**: Enter the entity representing the business event that you want to publish. 
+    * **Event Data**: Enter the entity representing the business event that you want to publish.
     * **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged.
 
 {{% alert color="info" %}}
@@ -414,11 +414,11 @@ For further explanation on topics and channels, see [Topics and Channels](#topic
 
 #### 6.4.2 DevOps tasks not covered when running Own Kafka Cluster
 
-As operating Own Kafka Cluster is outside of the scope of the Mendix Cloud environment, the following `DevOps` tasks should be taken into consideration (this list is not an extensive list of items):
+As operating your own Kafka cluster falls outside of the scope of the Mendix Cloud environment, the following `DevOps` tasks should be taken into consideration (this list is not extensive):
 
 * Client username and password provision on Kafka - The creation of usernames and password on the Kafka cluster will need to be managed but the customer
-* Topic creation on Kafka - Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true, topics will need to be created by the customer.
-* Access Control - Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` set to true, the ACLs need to be maintained by the customer
+* Topic creation on Kafka - Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true (default setting in Apache Kafka), topics will need to be created by the customer. See [Topics and Channels](#topics-channels)
+* Access Control - Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` set to true (default setting in Apache Kafka), the ACLs need to be maintained by the customer
 
 ## 7 Local Testing {#local-testing}
 

@@ -81,18 +81,18 @@ The table below shows the differences between the capabilities for apps deployed
 
 ## 4 Memory Allocation
 
-Each Mendix app/environment pod has 3 containers:
-* Mx Runtime + the Mendix app itself
+Each Mendix app or environment pod has the following containers:
+* Mx Runtime and the Mendix app itself
 * The m2ee sidecar container
-* The metrics sidecar container (only used when "compatibility" mode metrics are enabled)
+* The metrics sidecar container (only used when compatibility mode metrics are enabled)
 
-All of those containers have specified resource requests and limits (including the sidecar containers), so each Mendix app Pod will request a certain amount of CPU cores and memory.
+All of those containers, including the sidecar containers, have specific resource requests and limits, so each Mendix app pod will request a certain amount of CPU cores and memory.
 
-The mendix container is specified per-app in the portal. You can update the resource allocation in the [Mendix App CR](https://docs.mendix.com/developerportal/deploy/private-cloud-operator/#edit-cr).
+The Mendix container is specified per app in the portal. You can update the resource allocation in the [Mendix App CR](https://docs.mendix.com/developerportal/deploy/private-cloud-operator/#edit-cr).
 The m2ee-sidecar container's resources are specified in the [OperatorConfiguration CR](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#635-resource-definition-via-operator-configuration-manifest).
 
 {{% alert color="info" %}}
-If the app is running in Standalone mode and its MendixApp CR doesn't have any resources assigned in the MendixApp CR spec resources, then the Operator will use the value of OperatorConfiguration CR's spec.runtimeResources instead.
+If the app is running in Standalone mode and its MendixApp CR does not have any resources assigned in the MendixApp CR specification resources, the Mendix Operator will use the value of OperatorConfiguration CR's spec.runtimeResources instead.
 {{% /alert %}}
 
 If the customer decided to use a [Vertical Pod autoscaler](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#663-vertical-pod-autoscaling), the autoscaler can override any pod/container resources.
@@ -100,7 +100,6 @@ If the customer decided to use a [Vertical Pod autoscaler](https://docs.mendix.c
 When a user sets CPU and memory limits, the JVM (JRE 8u191+) will automatically detect the container requests/limits and automatically set Java memory limits based on the container details.
 However by default, the JVM will limit the heap memory to 25% of the container's memory limit. Mx4PC just sets the container limits, but doesn't go further into configuring the JVM. 
 This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](https://docs.mendix.com/developerportal/deploy/private-cloud-deploy/#54-runtime-tab) in the Private Cloud Portal. Example: -XX:MaxRAMPercentage=75.0.
-
 
 ## 5 Licensing Mendix for Private Cloud{#licensing}
 

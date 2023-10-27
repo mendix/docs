@@ -704,7 +704,7 @@ For more information, see https://github.com/istio/istio/pull/24737.
 
 ### 7.7 Out of Memory Killed error
 
-"OOM killed" refers to a situation where a running pod is terminated because it has exhausted the available memory resources on the node where it's running. This can occur when a pod consumes more memory than it has been allocated or when a node runs out of resources (memory), it will kill random pods that are using more memory than their requests value.
+"OOM killed" refers to a situation where a running pod is terminated because it has exhausted the available memory resources on the node where it's running. This can occur when a pod consumes more memory than it has been allocated or when a node runs out of resources (memory), it will kill random pods that are using more memory than their requests value. In Kubernetes, this is called overcommitment; to find out more, see documentation from Red Hat [here](https://docs.okd.io/4.13/post_installation_configuration/node-tasks.html#nodes-cluster-overcommit-resource-requests_post-install-node-tasks)
 
 In order to fix this issue, you can raise memory requests to match the memory limit. You can follow below steps:
 

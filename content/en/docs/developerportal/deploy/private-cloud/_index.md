@@ -84,7 +84,7 @@ The table below shows the differences between the capabilities for apps deployed
 Each Mendix app/environment pod has 3 containers:
 * Mx Runtime + the Mendix app itself
 * The m2ee sidecar container
-* The metrics sidecar container.
+* The metrics sidecar container (only used when "compatibility" mode metrics are enabled)
 
 All of those containers have specified resource requests and limits (including the sidecar containers), so each Mendix app Pod will request a certain amount of CPU cores and memory.
 

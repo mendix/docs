@@ -175,7 +175,7 @@ A Mendix based application for Insights Hub can be deployed to Mendix or to Insi
 **Auto Registration** process is only available on region Europe 1.
 {{% /alert %}}
 
-### 5.1 Option A: Deploy with Mendix Studio Pro to the Mendix Cloud
+### 5.1 Option A: Deploy with Mendix Studio Pro to Mendix Cloud
 
 Just click the Publish Button in Mendix Studio Pro.
 
@@ -302,12 +302,12 @@ You have to register your application for it to work and appear on the Insights 
 #### 5.3.1 Option A: Using the Auto Registration Process
 
 {{% alert color="info" %}}
-This method is recommended if your app is deployed to the Mendix Cloud.
+This method is recommended if your app is deployed to Mendix Cloud.
 
 However, the Auto Registration process is only available on region Europe 1.
 {{% /alert %}}
 
-To start the **Auto Registration** process click the **View** Button in Mendix Studio Pro once your app is deployed to the Mendix Cloud. Your default browser will open and your app will start the process.
+To start the **Auto Registration** process click the **View** Button in Mendix Studio Pro once your app is deployed to Mendix Cloud. Your default browser will open and your app will start the process.
 
 {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/AutoRegistrationExplanation.png" alt="AutoRegistrationExplanation" >}}
 

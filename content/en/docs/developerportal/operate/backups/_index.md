@@ -10,7 +10,7 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 ## 1 Introduction
 
-Backup snapshots for apps running in the Mendix Cloud are created every night or on demand, as described in the [Backups](#backups) section, below.
+Backup snapshots for apps running in Mendix Cloud are created every night or on demand, as described in the [Backups](#backups) section, below.
 
 Backup snapshots contain both the database and file documents referred to in the database.
 

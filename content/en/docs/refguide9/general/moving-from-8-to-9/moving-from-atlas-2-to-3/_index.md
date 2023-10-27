@@ -35,7 +35,7 @@ Before you start the upgrade process, it may help if you consult the folder stru
 
 To upgrade your theme directory to Atlas 3 specifications, please complete the following steps:
 
-1. Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*:
+1. Rename you Atlas 2 **theme** directory. Mendix suggests naming it *theme_atlas2*:
 
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas2-themefolder.png" alt="Atlas2 folder" >}}
 

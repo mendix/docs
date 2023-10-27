@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### October 26, 2023
+
+#### Improvements
+
+* We added support for an `Origin-Trials` HTTP header in the Developer Portal. To use this header, the customer must first deploy (or redeploy) their app sometime after 26 October, 12:00 PM. If the customer has deployed since this date, then they can simply set the header and restart their app to use the header. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
+
 ### October 12, 2023
 
 #### Portal Enhancements
@@ -134,7 +140,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fix
 
-* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/metrics/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/metrics/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
 
 ### January 13, 2023
 
@@ -274,7 +280,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 #### Improvements
 
-* We have added two new graphs on the [Metrics page for Cloud v4](/developerportal/operate/trends-v4/):
+* We have added two new graphs on the [Metrics page for Cloud v4](/developerportal/operate/metrics/):
     * Number of files in storage
     * Size of files in storage (in bytes)
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
@@ -703,7 +709,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 #### Improvements
 
-* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in the Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
+* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Metrics](/developerportal/operate/metrics/#Trends-dbdfabs) for more information.
 
 ### August 28, 2020
 
@@ -769,8 +775,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
-* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4/#Trends-appmxruntimejvmheap)
-* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4/#Trends-appmxruntimejvmprocessmemory)
+* as **unused** in [JVM Object Heap](/developerportal/operate/metrics/#Trends-appmxruntimejvmheap)
+* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/metrics/#Trends-appmxruntimejvmprocessmemory)
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -789,14 +795,14 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 #### Improvements
 
 * We introduced new alerts for Mendix Cloud v4.
-    * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance)
-    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4/#Trends-dbmemory)
+    * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance)
+    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/metrics/#Trends-dbmemory)
 
 ### June 4, 2020
 
 #### Improvements
 
-* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
 * In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path

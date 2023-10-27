@@ -56,8 +56,9 @@ On the right side of the screen, you can find the following action buttons:
 * **Change Admin Password** – This changes the password for the built-in [administrator](/refguide/administrator/) account. The new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package.
 * **View Live Log**
 * **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+* **Show Running Now** – This can be used to monitor all actions that are currently running in your environment. It is visible only when your application is running.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions">}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
@@ -82,7 +83,7 @@ To clear your environment, follow these steps:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
 
-### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
+### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 
@@ -153,7 +154,6 @@ The license overview contains the following information:
     * **Amount type**
     * **Number of allowed users**
 
-
 ## 3 The Model Options Tab {#model-options}
 
 On this tab, you can edit the model options described below.
@@ -190,6 +190,10 @@ You can also set **Mask** to **Yes**. This changes the display settings for **Cu
 For the changes to take effect, you must restart your application.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+When a constant is first introduced to a cloud deployment, its value is taken from the Studio Pro configuration. Any later changes to the constant value in Studio Pro will not be copied to the new deployment.
+{{% /alert %}}
+
 For more information, see [Constants](/refguide/constants/).
 
 ## 4 The Network Tab {#network-tab}
@@ -222,10 +226,11 @@ Earlier versions of Mendix Cloud had a setting that let you prevent embedding yo
 
 Mendix Cloud supports the following HTTP headers in the Developer Portal:
 
-| Header                        | Description | Additional Information |
-| ----------------------------- | ----------- | ---------------------- |
+| Header                        | Description |
+| ----------------------------- | ----------- |
 | `Access-Control-Allow-Origin` | Indicates whether the response can be shared with requesting code from the given origin. |
 | `Content-Security-Policy`     | Allows website administrators to control resources the user agent is allowed to load for a given page. Requires a string value.<br/>For more information, see [Content Security Policy](#csp), below. |
+| `Origin-Trial`                | Used to enable experimental web platform features for your environment as part of Google's [Origin Trials](https://developer.chrome.com/docs/web-platform/origin-trials/) program. |
 | `Referrer-Policy`             | Governs which referrer information should be included with requests made. |
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
@@ -516,7 +521,7 @@ In the **Services** tab, the [Technical Contact](/developerportal/general/app-ro
 
 ### 9.1 Available Services
 
-One custom service is available: the **Event Broker service**. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: **Mendix Event Broker****. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
 
 ### 9.2 Enabling Custom Services
 

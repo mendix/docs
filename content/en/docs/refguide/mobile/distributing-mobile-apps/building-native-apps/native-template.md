@@ -633,14 +633,14 @@ Mendix Studio Pro includes Native Dependency resolution for pluggable widgets an
 
 As you develop, you may add more Mendix Studio Pro compatible modules, widgets, and actions to your app. This means and more dependencies will be added that will also need be declared in your app's Native Template prior to building the native apps. 
 
-As this dependency management is required for your app's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your app. The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
+As this dependency management is required for your app's initial setup, Mendix suggests you use the Mendix Native Mobile Builder to configure your app. The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
 
 ## 8 Continuous Integration Testing Guidelines
 
 In some advanced cases you might consider setting up continuous integration (CI) testing. This could be useful if you have multiple environments and prefer testing
 any nightly changes in acceptance before pushing to production.
 
-We suggest you initially develop your app using the Mendix Native Mobile Builder until the native dependencies are stable. Having a CI in the early stages will lead to frustration, and flux dependencies will lead to unexpected crashes. 
+Mendix suggests you initially develop your app using the Mendix Native Mobile Builder until the native dependencies are stable. Having a CI in the early stages will lead to frustration, and flux dependencies will lead to unexpected crashes. 
 
 A CI environment needs to be able to do the following to successfully configure a Native Template for builds:
 

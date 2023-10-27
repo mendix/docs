@@ -7,7 +7,7 @@ description: A tutorial for making your push notifications trigger actions when 
 
 ## 1 Introduction
 
-Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you how to make a tapped notification show a specific page.
+Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide teaches you how to make a tapped notification show a specific page.
 
 {{% alert color="warning" %}}
 The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and use that app to test local notification actions.

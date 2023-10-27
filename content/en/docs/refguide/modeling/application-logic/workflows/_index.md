@@ -61,12 +61,43 @@ The **WorkflowInstance** entity that was generated when the workflow was created
 
 ### 3.4 Adding Elements to a Workflow 
 
-To add an element to a workflow, do the following:
+There are several ways to add an element to a workflow:
 
-1. Open the **Toolbox**.
-2. Select an element you would like to add and drag this element into the working area.
+* You can add an element via the **Toolbox**:
 
-The selected element is added.
+    1. Open the **Toolbox**.
+    2. Select an element you would like to add and drag this element into the working area.
+
+* You can add an element via an path in your workflow (available from Studio Pro 10.4.0):
+
+    1. Place your mouse on any path you would like to add an element to. A plus icon appears to indicate that a new element can be added.
+    2. Click the plus icon and select an element from the pop-up menu.
+
+* You can also add an element by right-clicking an existing element (available from Studio Pro 10.4.0):
+
+    1. Right-click an existing element and go to **Insert after**.
+    2. Select an element from the menu.
+
+When adding elements, note the following:
+
+* It is not possible to add an **End** or **Jump** activity after an element as this makes the next element unreachable.
+* It is not possible to add an **End** or **Jump** activity before an **End** or **Jump** activity as this makes the next element unreachable.
+* An **End** activity cannot be placed in paths of a parallel split. This is the same for placing an **End** activity on, for example, an outcome of a user task if this user task is placed on a path of a parallel split. 
+
+### 3.5 Moving Elements on a Workflow
+
+There are several elements that can be moved around in the working area:
+
+* Activities
+* Outgoing paths of an activity
+
+### 3.5.1 Moving Activities
+
+To move an activity on a workflow, drag and drop an element to another path on the working area. This will move the whole structure of the dragged element, meaning that the element and its underlying elements will be moved.
+
+### 3.5.2 Moving outgoing paths
+
+To move an outgoing path of an activity, drag and drop a path to another path of the same activity. This will swap the dragged path and its content with the target path. Note that you can only swap paths that come from the same activity.
 
 ### 3.5 Cutting/Coping/Pasting Elements in a Workflow
 

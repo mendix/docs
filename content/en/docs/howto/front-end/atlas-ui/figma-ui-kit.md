@@ -13,7 +13,7 @@ To start creating your designs with a UI kit, you must download [Mendix's Figma 
 
 Inside the kit you will find the following:
 
-* Components that can be used as a library or copying and paste 
+* Components that can be used as a library or copy/pasted 
 * Widgets and layouts on the first version 
 * Building blocks and templates in the next one ( to be finished yet ) 
 * You can design using the components that are up-to-date with the most recent Atlas Mendix framework

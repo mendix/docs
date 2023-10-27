@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### October 30, 2023
+
+#### Data Migration Tool (Preview) v0.0.3
+
+* We've fixed an issue that prevented backups from completing: if the database contained a System.FileDocument entity with a NULL filename, that would cause an exception.
+
+This tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+
 ### October 19, 2023
 
 #### Portal Improvements

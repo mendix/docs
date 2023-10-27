@@ -67,7 +67,7 @@ Enabling SSL establishes a secure connection to the broker. To input your SSL ce
 
 To use the MQTT Connector, make sure you have [configured the broker connection](#configure-broker), or [created a broker connection directly in a microflow](#broker-microflow). 
 
-You can build microflows that use the connection details from the domain model to connect, and set up connection details using the domain model. Include microflows that first use the connection details from the domain model to connect, before the subscribe or publish actions can be performed.
+You can build microflows that use the connection details provided by the domain model, or set up connection details within the domain model itself. The microflows should use the connection details from the domain model to establish a connection with the broker before completing subscribe or publish actions. 
 
 ### 3.1 Microflow Actions
 

@@ -742,7 +742,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all applications
     * `GET` all environments for an application
     * `GET` all consumed endpoints
-* A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
+* A change was made to the `POST` application API call to also allow for the `Opcenter` and `Mindsphere` application types.
 * We added Catalog integration with [Control Center](/developerportal/control-center/#catalog). For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ### August 19, 2021

@@ -17,9 +17,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Data Migration Tool (Preview) v0.0.3
 
-* We've fixed an issue that prevented backups from completing: if the database contained a System.FileDocument entity with a NULL filename, that would cause an exception.
+* We have fixed an issue that prevented backups from completing. Previously, if the database contained a *System.FileDocument* entity with a NULL filename, it would cause an exception during the backup process.
 
-This tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
 
 ### October 19, 2023
 

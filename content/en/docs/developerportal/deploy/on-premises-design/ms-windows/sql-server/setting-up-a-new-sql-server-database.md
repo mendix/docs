@@ -56,64 +56,7 @@ ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
 You need to replace `MySchema` with the name of your schema.
 {{% /alert %}}
 
-## 4 Configuring the necessary SQL Server extensions
-
-{{% alert color="info" %}}
-You do not have to configure these extensions for Mendix 8.0.0 and above.
-
-For Mendix 7, you only need to perform these steps if the following are true:
-
-* your SQL server version is older than SQL Server 2014
-* the database user used by Mendix does not have permission to issue the commands in this section
-{{% /alert %}}
-
-### 4.1 Installing SQL Server Extensions
-
-For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved with the following command, which requires a `sysadmin` or administrator role. Remember to set the file path to the correct location of your Mendix installation:
-
-```sql
-CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
-```
-
-The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
-
-```sql
-EXEC sp_configure 'clr enabled' , '1';
-RECONFIGURE;
-```
-
-### 4.2 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
-
-#### 4.2.1 Create Function mx_toLocalDateTime
-
-If you are not working in the same time zone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. A function needs to be created for time zone handling. Also, for this function, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance (see above). 
-
-You can create the time zone handling function using the following command:
-
-```sql
-CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
-```
-
-#### 4.2.2 Create Procedure usp_nextsequencevalue
-
-{{% alert color="info" %}}
-This is normally executed automatically by the Mendix Runtime so long as the database user used by Mendix has permission to create procedures.
-{{% /alert %}}
-
-```sql
-CREATE PROCEDURE [dbo].[usp_nextsequencevalue]
-@SeqName nvarchar(128)
-AS
-BEGIN
-DECLARE @NewSeqVal bigintSET NOCOUNT ON
-UPDATE [mendixsystem$sequence]
-SET @NewSeqVal = [current_value] = [current_value] + 1
-WHERE [name] = @SeqName
-RETURN @NewSeqVal
-END;
-```
-
-## 5 Read More
+## 4 Read More
 
 * [How to Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/)
 * [How to Set Up the Database User](/developerportal/deploy/setting-up-the-database-user/)

@@ -26,14 +26,13 @@ If you need to upgrade your runtime version, ensure that it is fully tested and 
 
 You will need to take the following into account when migrating your app:
 
-* If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](/developerportal/deploy/sending-email/)
 * If you use an FTP server in your app, you will need to use a third-party FTP provider
 * If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/) instead
 
 ## 3 Prerequisites
 
-* Ensure that your app is on a supported version of Mendix, Mendix 7.0 and above. For the best level of support, we recommend that you use version 7.23 which is the [long term support](/releasenotes/studio-pro/lts-mts/) version of Mendix 7.
+* Ensure that your app is on a [supported version](/releasenotes/studio-pro/lts-mts/) of Mendix. For the best level of support, use a long-term support version.
 * Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available (to request a licensed Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app)
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both your cloud nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink)

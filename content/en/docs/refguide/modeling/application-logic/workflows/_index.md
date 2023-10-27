@@ -80,24 +80,25 @@ There are several ways to add an element to a workflow:
 
 When adding elements, note the following:
 
-* It is not possible to add an **End** or **Jump** activity after an element as this makes the next element unreachable.
-* It is not possible to add an **End** or **Jump** activity before an **End** or **Jump** activity as this makes the next element unreachable.
-* An **End** activity cannot be placed in paths of a parallel split. This is the same for placing an **End** activity on, for example, an outcome of a user task if this user task is placed on a path of a parallel split. 
+* It is not possible to add an **End** event or a **Jump** activity after an element as this makes the next element unreachable.
+* It is not possible to add an **End** event or a **Jump** activity before an **End** event or a **Jump** activity as this makes the next element unreachable.
+* An **End** event cannot be placed in paths of a parallel split. This is the same for placing an **End** event on, for example, an outcome of a user task if this user task is placed on a path of a parallel split. 
 
-### 3.5 Moving Elements on a Workflow
+### 3.5 Moving Elements and Paths in a Workflow
 
-There are several elements that can be moved around in the working area:
+#### 3.5.1 Moving Elements in a Workflow
 
-* Activities
-* Outgoing paths of an activity
+You can move elements around in your workflow. To do so, drag and drop an element to another path in the working area. 
 
-### 3.5.1 Moving Activities
+This will move the whole structure of the dragged element, meaning that the element and its underlying elements will be moved too. 
 
-To move an activity on a workflow, drag and drop an element to another path on the working area. This will move the whole structure of the dragged element, meaning that the element and its underlying elements will be moved.
+You cannot move the first (and only) start event and the last end event.
 
-### 3.5.2 Moving outgoing paths
+#### 3.5.2 Moving Outgoing Paths in a Workflow
 
-To move an outgoing path of an activity, drag and drop a path to another path of the same activity. This will swap the dragged path and its content with the target path. Note that you can only swap paths that come from the same activity.
+You can swap the outgoing paths from different outcomes specified in a parallel split, a user task, or a decision. To do so,  drag and drop a path to another path of the same element. 
+
+This swaps the dragged path and its content with the targeted path. You can only swap paths that come from the same element.
 
 ### 3.5 Cutting/Coping/Pasting Elements in a Workflow
 

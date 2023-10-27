@@ -17,7 +17,7 @@ This how-to will start with preparing a data structure and some example data. Af
 
 This how-to compares two different ways of filtering data and emphasizes how to use XPath to filter data.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Prepare the data structure
 * Prepare the GUI

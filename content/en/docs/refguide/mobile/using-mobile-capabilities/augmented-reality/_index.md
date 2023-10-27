@@ -7,7 +7,7 @@ aliases:
     - /howto/mobile/ar-parent/
 ---
 
-These step-by-step guides will teach you to set up and use augmented reality (AR) using Mendix Studio Pro and your native mobile device.
+These step-by-step guides teach you how to set up and use augmented reality (AR) using Mendix Studio Pro and your native mobile device.
 
 The following guides are available here:
 

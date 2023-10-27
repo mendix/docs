@@ -23,7 +23,7 @@ If you do not create these files, the default error page will be used for each s
 
 {{< figure src="/attachments/howto/front-end/custom-error-page/custom-error-page.png" >}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a custom error page
 
@@ -32,7 +32,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a local repository of the app
-* Have your app *hosted in the Mendix Cloud*
+* Have your app hosted in Mendix Cloud
 * Identify which version of the Atlas module you are using
 
 ## 3 Creating a Custom Error Page {#create-custom-error}

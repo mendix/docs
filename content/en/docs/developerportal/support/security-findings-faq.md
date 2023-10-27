@@ -114,12 +114,12 @@ For more information, please see the [Cookies](/refguide/mendix-client/#cookies)
 
 ### 5.2 Cookie Missing ‘HTTPOnly’ Attribute
 
-In the Mendix cloud, [almost all] cookies will have the ‘HttpOnly’ attribute set to true by default. 
+In Mendix Cloud, (almost all) cookies have the ‘HttpOnly’ attribute set to true by default. 
 We have the cookies set by default in Mendix applications described in the [Cookies](/refguide/mendix-client/#cookies) section of *Mendix Client*. 
 
 For Mendix applications, the Cookies have the ‘HTTPOnly’ attribute set to true when they are set by the Mendix Runtime. Cookies which are set by the Mendix Client can't have the 'HttpOnly’ attribute set to true, as those cookies are not available to JavaScript, which is the language used by the Mendix Client.
 
-Cookies set by the Mendix Runtime, which may contain sensitive information such as the session id, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
+Cookies set by the Mendix Runtime, which may contain sensitive information such as the session ID, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
 
 ## 6 Why Are Some Security-Related HTTP Headers Not Set for My App?
 
@@ -155,11 +155,11 @@ Scanning your app, or the Mendix platform, with a security scanner will occasion
 
 ### 8.1 Weak Ciphers Supported in Mendix Cloud
 
-In the Mendix Cloud, security is of the highest priority, and we try to improve this constantly. The Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
+In Mendix Cloud, security is of the highest priority, and we try to improve this constantly. Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
 
 ### 8.2 No/Long Session Timeout
 
-The default timeout for sessions in Mendix is 10 minutes. This timeout can be changed by configuring the **SessionTimeout** [runtime setting](/refguide/custom-settings/#general). By default, the Mendix client sends keepalive messages to keep sessions alive when there is no activity. This can be changed by changing the value of the **EnableKeepAlive** runtime setting. In the Mendix Cloud, you can set custom runtime settings on the *Runtime* tab of the *Environment Details* page. 
+The default timeout for sessions in Mendix is 10 minutes. This timeout can be changed by configuring the **SessionTimeout** [runtime setting](/refguide/custom-settings/#general). By default, the Mendix client sends keepalive messages to keep sessions alive when there is no activity. This can be changed by changing the value of the **EnableKeepAlive** runtime setting. In Mendix Cloud, you can set custom runtime settings on the *Runtime* tab of the *Environment Details* page. 
 
 ### 8.3 Concurrent Login for Admin Accounts
 

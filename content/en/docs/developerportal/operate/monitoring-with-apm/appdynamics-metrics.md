@@ -1,8 +1,8 @@
 ---
-title: "AppDynamics for the Mendix Cloud"
+title: "AppDynamics for Mendix Cloud"
 url: /developerportal/operate/appdynamics-metrics/
 weight: 10
-description: "How to configure the Mendix Cloud to enable monitoring and analysis with AppDynamics."
+description: "How to configure Mendix Cloud to enable monitoring and analysis with AppDynamics."
 tags: ["AppDynamics", "Mendix Cloud", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

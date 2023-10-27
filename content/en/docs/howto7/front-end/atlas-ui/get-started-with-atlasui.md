@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Choose an app template
 * Choose a page template

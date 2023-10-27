@@ -47,7 +47,7 @@ The new features were divided into these major themes, which are described in th
 | Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
 | Rich design properties | GA: Q4 2023 |
 | Visual data filters | GA: Q4 2023 |
-| Mendix Chat | GA: Q4 2023 |
+| Mendix Chat | Public Beta: Q4 2023<br>GA: TBD |
 | Mixed online and offline data | GA: Q4 2023 |
 | Mac support | Public Beta: Q4 2023<br>GA: TBD |
 

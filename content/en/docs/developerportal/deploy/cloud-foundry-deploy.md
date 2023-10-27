@@ -34,7 +34,7 @@ The advantages of Cloud Foundry are:
 * Horizontal scaling
 * Applications run inside stateless containers
 * Applications are only reachable over HTTP, HTTPS, or WebSockets
-* Binding services to applications for persistence, monitoring, e-mail, etc.
+* Binding services to applications for persistence, monitoring, email, etc.
 * Source code as input, running application as output
 * Extending to more software architectures via custom buildpacks
 * Automatic health monitoring and recovery

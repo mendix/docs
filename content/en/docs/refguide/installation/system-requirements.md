@@ -227,7 +227,7 @@ Internet Explorer is not supported in Studio Pro 10.
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and progressive web apps built with Mendix the following operating system versions are supported:
+For native and progressive web apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android

@@ -3,7 +3,7 @@ title: "Figma UI Kit"
 url: /howto/front-end/figma-ui-kit/
 category: "Front End"
 weight: 70
-description: "Explains the basics of setting up your Figma UI Kit for styling in Mendix."
+description: "Learn how to set up and use the Figma UI Kit to Mendix apps."
 tags: ["Figma", "UI", "Kit", "design"]
 ---
 
@@ -29,14 +29,14 @@ To install the Figma desktop app, go to the [Figma website](https://www.figma.co
 
 ## 4 Recommended Practices
 
-The following are recommended practices:
+The following practices are recommended:
 
 1. Use the library and foundations on your app.  
 1. Use the global local variables for changing the colors from your components.
 1. Prioritize designing components from this kit, because they are already supported on Atlas and Studio Pro.
 1. Use typographies that are supported by Atlas and are in the Figma UI Kit.
 
-The following are *not* recommended practices:
+The following practices are *not* recommended:
 
 1. Do not change the components' names (doing so will de-link them from the library).
 1. Do not change the component layers' names.

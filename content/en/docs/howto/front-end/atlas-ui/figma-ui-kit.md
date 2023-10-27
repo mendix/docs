@@ -9,25 +9,23 @@ tags: ["Figma", "UI", "Kit", "design"]
 
 ## 1 Introduction
 
-To start creating your designs with a UI kit, you must download [Mendix's Figma UI Kit](https://www.figma.com/community/file/1291681319513425134).
+To start creating your designs with a UI kit, you must download [Mendix's Figma UI Kit](https://www.figma.com/community/file/1291681319513425134). You can design using any components that are up-to-date with the most recent [Atlas framework](https://atlasdesignsystem.mendixcloud.com/p/dashboard).
 
 Inside the kit you will find the following:
 
 * Components that can be used as a library or copy/pasted 
-* Widgets and layouts on the first version 
-* Building blocks and templates in the next one ( to be finished yet ) 
-* You can design using the components that are up-to-date with the most recent Atlas Mendix framework
+* Widgets and layouts 
 
 ## 2 Prerequisites 
 
 To use the Figma UI Kit to its fullest potential you will need the following:
 
-* To use the kit's file as a library you will need a Figma subscription
-* To take advantage of Figma's best features, download the Figma desktop app
+* A Figma subscription (required to use the kit's file as a library)
+* The Figma desktop app (download it to take advantage of Figma's best features)
 
 ## 3 Basics
 
-To install the Figma desktop app, go to the Figma website, download the app, and install it.
+To install the Figma desktop app, go to the [Figma website](https://www.figma.com/), download the app, and install it.
 
 ## 4 Recommended Practices
 
@@ -44,3 +42,7 @@ The following are *not* recommended practices:
 1. Do not change the component layers' names.
 
 ## 5 Read More
+
+* [Customize Styling](/howto/front-end/customize-styling-new/)
+* [Implement Best Practices for UX Design](/howto/front-end/ux-best-practices/)
+* [Configure Your Theme](/howto/front-end/configuring-your-theme/)

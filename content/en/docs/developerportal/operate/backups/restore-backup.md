@@ -105,13 +105,18 @@ Please contact [Mendix Support](https://support.mendix.com/) if you need further
 
 ## 6 Format of a Backup File{#format-of-backup-file}
 
-You may want to restore a backup which has been created on another platform, for example an on-premises deployment. In this case, you will have to construct the backup file which Mendix Cloud will recognize.
+You may want to restore a backup that has been created on another platform, for example, an on-premises deployment. In this case, you will have to construct the backup file which Mendix Cloud will recognize. It is possible to upload a **Backup-only** or **Full snapshot** backup file.
 
-### 6.1 .tar.gz Archive
+### 6.1 Backup-only format
+A **Backup-only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
+
+### 6.2 Full snapshot format
+
+### 6.2.1 .tar.gz Archive
 
 A **Full snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
-### 6.2 .tar Archive
+### 6.2.2 .tar Archive
 
 The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
@@ -133,7 +138,7 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-### 6.3 .metadata File
+### 6.2.3 .metadata File
 
 This contains json describing the backup. For example:
 

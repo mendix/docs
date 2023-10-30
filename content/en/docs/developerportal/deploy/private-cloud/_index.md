@@ -153,7 +153,7 @@ You can request a Runtime license by doing the following:
 
 You will receive your Runtime license(s) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
 
-### 5.3 Request Both Operator and Runtime license
+### 5.3 Request Both Operator and Runtime License
 
 You can also request for both the Operator and Runtime license within the same request following the steps below:
 

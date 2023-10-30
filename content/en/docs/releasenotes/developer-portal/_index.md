@@ -111,7 +111,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
+* We have released the beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 
 ### August 24, 2023
 

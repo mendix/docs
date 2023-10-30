@@ -240,7 +240,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* You are now able to download Studio Pro versions marked as [Beta](/releasenotes/beta-features/) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
+* You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
 
 #### Fixes
 

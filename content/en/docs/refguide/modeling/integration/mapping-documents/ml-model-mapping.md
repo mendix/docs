@@ -5,7 +5,7 @@ category: Mapping Documents
 tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 ---
 
-{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
+{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 

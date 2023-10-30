@@ -477,7 +477,7 @@ Click **Add** and select **Supported** to choose from the following variables:
     * The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app that contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user.
     * If you have multiple specializations of `System.User`, you can specify the values in comma-separated format (that is, `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`). In the following example, there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
-To support features that are in Beta, click **Add** and select **Unsupported**. Then you can add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix Beta features. If you are involved in using a Beta feature, you will be informed what **Name** and **Value** to enter.
+To support features that are in beta, click **Add** and select **Unsupported**. Then you can add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix beta features. If you are involved in using a beta feature, you will be informed what **Name** and **Value** to enter.
 
 ## 7 The Maintenance Tab {#maintenance-tab}
 

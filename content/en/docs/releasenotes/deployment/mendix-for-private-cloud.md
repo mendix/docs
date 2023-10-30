@@ -117,7 +117,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
 
 {{% alert color="info" %}}
-This feature is currently in a Beta release. For more information on what Beta release means, see [Beta Releases](/releasenotes/beta-features/).
+This feature is currently in a [beta release](releasenotes/beta-features/).
 {{% /alert %}}
 
 #### Portal Improvements
@@ -189,7 +189,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 {{% alert color="info" %}}
-This feature is currently in a Beta release.
+This feature is currently in a beta release.
 {{% /alert %}}
 
 ### March 17, 2023
@@ -983,4 +983,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.

@@ -54,14 +54,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ### Improvement
 
-* We updated the link on the search results page to give more details about what [OpenAPI Beta](/catalog/register/openapi-automatic-registration/) means in the Catalog.
-
+* We updated the link on the search results page to give more details about what [OpenAPI beta](/catalog/register/openapi-automatic-registration/) means in the Catalog.
 
 ### September 21, 2023
 
 #### Features
 
-* We added [Beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. See [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/) for more information. Have a look and [let us know what you think](https://forum.mendix.com/link/space/catalog).
+* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://forum.mendix.com/link/space/catalog).
 
 #### Improvements
 

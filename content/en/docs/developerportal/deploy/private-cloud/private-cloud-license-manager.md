@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "Licens
 ---
 
 {{% alert color="warning" %}}
-Private Cloud License Manager is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
+Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction

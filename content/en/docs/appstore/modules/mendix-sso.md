@@ -56,7 +56,7 @@ The Mendix SSO module has the following limitations:
 
 Your app has to be deployed on the Mendix Cloud in order to use this module. Mendix SSO is only activated when your app is deployed to the Mendix Cloud.
 
-When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix for Private Cloud](https://docs.mendix.com/releasenotes/developer-portal/mendix-for-private-cloud/) or [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/)), you can use the Mendix [Administration](/appstore/modules/administration/) module, or connect to a central IdP using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
+When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) or [SAP BTP](/developerportal/deploy/sap-cloud-platform/)), you can use the Mendix [Administration](/appstore/modules/administration/) module, or connect to a central IdP using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
 
 ## 2 Installation and Configuration
 
@@ -185,7 +185,7 @@ In v2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a def
 
 This section explains how to customize Mendix SSO in your apps and how to base your own user administration module on this section if you want to do things in a different way.
 
-There are three ways you can modify the Mendix SSO module. You can use snippets from the Mendix SSO Marketplace module in your pages; you can modify the Mendix SSO module in any way you like to support your end-user administration requirements, or you can use the microflows available in the [Administration](https://docs.mendix.com/appstore/modules/administration/) module.
+There are three ways you can modify the Mendix SSO module. You can use snippets from the Mendix SSO Marketplace module in your pages; you can modify the Mendix SSO module in any way you like to support your end-user administration requirements, or you can use the microflows available in the [Administration](/appstore/modules/administration/) module.
 
 These three ways are described below.
 
@@ -219,7 +219,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 Mendix recommends that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your app. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
-The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new [Administration](https://docs.mendix.com/appstore/modules/administration/) module.
+The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new [Administration](/appstore/modules/administration/) module.
 
 #### 5.2.1 Copying the Mendix SSO Module{#copying}
 
@@ -281,7 +281,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ## 6 Tokens
 
-Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users have issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to [Mendix Support](https://docs.mendix.com/developerportal/support/).
+Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users have issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to [Mendix Support](/developerportal/support/).
 
 {{% alert color="info" %}}
 Tokens contain personal information as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).

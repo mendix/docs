@@ -168,7 +168,35 @@ To delete an existing tag, do as follows:
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
-#### 3.1.3 Adding Planning Information {#add-planning-information}
+#### 3.1.3 Linking an Epic to an Initiative
+
+An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, where epics are related to a single app only and bundle user stories together. To learn more about the difference between initiatives, epics and user stories, please check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
+
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+
+{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
+
+When linking an epic to an initiative, an app should be linked first. Then, the related epic(s) from [Epics](https://docs.mendix.com/developerportal/project-management/epics/) can be linked to the initiative. Epics is the Mendix tool that can be used to manage your stories and collaborate during the app development process. 
+
+If you want to link an epic to an initiative, you can click on **+ Link Epics** at the bottom of the **Epics** section to add them.
+
+A popup will appear where you can select the epics you want to link to the initiative. You can search by epic code or name. After selecting, click on **Add** to link the selected epics to an initiative. 
+
+Once an epic is added, its code, name, owner, and progress with be displayed. Users can access the epic from this list if they have rights to the app the epic belongs to.
+
+Note: you can only link epics to an initiative, if the related app is linked to the initiative. Only users from the same company as the portfolio with Portfolio Manager or Contributor rights are allowed to perform this action. External members or users with Viewer rights cannot link an epic to an initiative.
+
+{{% alert color="info" %}}
+
+To delete an existing linked epic, do as follows:
+
+1. Hover over the row where the epic is listed. A cross icon will appear at the end of the row.
+2. Click on the cross to delete a linked epic. A **Confirmation** dialog box opens.
+3. Click on **Delete Epic.** 
+
+{{% /alert %}}
+
+#### 3.1.4 Adding Planning Information {#add-planning-information}
 
 In the **Edit Initiative** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
 
@@ -178,7 +206,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
-#### 3.1.4 Adding Prioritization Information {#add-prioritization-information}
+#### 3.1.5 Adding Prioritization Information {#add-prioritization-information}
 
 In the **Edit Initiative** side pane, click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
@@ -188,7 +216,7 @@ The title of this section can be **Prioritization: WSJF Model** or **Prioritizat
 
 Now you can proceed to [add estimated value](#add-estimated-value).
 
-#### 3.1.5 Adding Estimated Value {#add-estimated-value}
+#### 3.1.6 Adding Estimated Value {#add-estimated-value}
 
 In the **Edit Initiative** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Add information in the following fields in this section:
 
@@ -204,13 +232,13 @@ If the initiative creates more than one type of value, click **Add Value** to ad
 
 Now you can proceed to [add comments](#add-comments).
 
-#### 3.1.6 Adding Comments {#add-comments}
+#### 3.1.7 Adding Comments {#add-comments}
 
 If you want to add a comment, click **Comments** in the **Edit Initiative** side pane, and then click **Post Comment** after you add the comment.
 
 Now you can proceed to [save initiative details](#save-details).
 
-#### 3.1.7 Saving Initiative Details {#save-details}
+#### 3.1.8 Saving Initiative Details {#save-details}
 
 At the bottom of the **Edit Initiative** side pane, click **Save**. Now all the details are saved for the new initiative that you just created.
 

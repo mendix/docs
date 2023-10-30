@@ -148,7 +148,7 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 ### 3.5 Google Artifact Registry
 
-[Google Cloud Platform](https://cloud.google.com/) provides [artifact registry](https://cloud.google.com/artifact-registry)
+[Google Cloud Platform](https://cloud.google.com/) provides the [artifact registry](https://cloud.google.com/artifact-registry).
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
 

@@ -704,7 +704,7 @@ An object with the following key-value pairs:
 }
 ```
 
-## 5 Downloading a Backup of Your Data
+## 4 Downloading a Backup of Your Data
 
 If you want to download a backup of your data, do as follows:
 

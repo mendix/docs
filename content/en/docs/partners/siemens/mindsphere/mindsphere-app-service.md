@@ -202,7 +202,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/binding-keys.png" alt="Binding" >}}
 
-You can find more information about managing binding keys in the [My Subscriptions](/appstore/overview/app-store-overview/#my-subscriptions) and [Company Subscriptions](/appstore/overview/app-store-overview/#company-subscriptions) sections of *Marketplace Overview*.
+You can find more information about managing binding keys in the [My Subscriptions](/appstore/overview/my-marketplace/#my-subscriptions) and [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions) sections of *Marketplace Overview*.
 
 ## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 

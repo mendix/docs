@@ -17,13 +17,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-In the past, downloading a component directly from the web Marketplace could lead to compatibility errors. Now, downloading a component can only happen directly from the Marketplace in Studio Pro. For that reason, we replaced the **Download** button on the [component details page](/appstore/overview/app-store-overview/#details) for widgets and modules with the **Use in Studio Pro** button. This new button allows you to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/app-store-content/#current-sp). This lowers the risk of introducing compatibility errors and improves the experience of installing the Marketplace content you need.
+In the past, downloading a component directly from the web Marketplace could lead to compatibility errors. Now, downloading a component can only happen directly from the Marketplace in Studio Pro. For that reason, we replaced the **Download** button on the [component details page](/appstore/overview/overview/#details) for widgets and modules with the **Use in Studio Pro** button. This new button allows you to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/app-store-content/#current-sp). This lowers the risk of introducing compatibility errors and improves the experience of installing the Marketplace content you need.
 
 ### August 5, 2023
 
 #### Improvements
 
-* Categories are now **Content Types**. We have reduced the number of content types and made them consistent across the platform. To learn more about the different content types available, visit the [Marketplace Guide](/appstore/overview/app-store-overview/).
+* Categories are now **Content Types**. We have reduced the number of content types and made them consistent across the platform. To learn more about the different content types available, visit the [Marketplace Guide](/appstore/overview/overview/).
 * Sub-categories have been replaced with **Categories**. When submitting a new component, you can apply between one and three categories. When searching in the Marketplace, you can use categories to filter the content and find the right component for your use case.
 
 ### June 29, 2023
@@ -46,7 +46,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 #### Fixes
 
 * We fixed an issue with the notifications that are sent when a component update becomes available.
-* If a user's email address contained an upper-case letter, they did not have access to private components in [content groups](/appstore/overview/app-store-overview/#content-groups). This issue has been fixed.
+* If a user's email address contained an upper-case letter, they did not have access to private components in [content groups](/appstore/overview/my-marketplace/#content-groups). This issue has been fixed.
 
 ### April 20, 2023
 
@@ -57,7 +57,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 #### Improvements
 
 * The **Compatibility** filter now only allows for major Mendix versions.
-* The **Support** section of the [component details page](/appstore/overview/app-store-overview/#details) now includes a link to [Marketplace Content Support](/appstore/overview/app-store-content-support/).
+* The **Support** section of the [component details page](/appstore/overview/overview/#details) now includes a link to [Marketplace Content Support](/appstore/overview/app-store-content-support/).
 
 ### March 23, 2023
 
@@ -66,7 +66,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 On top of open-source community-supported content, we are introducing an additional layer of support through our [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partner members can now bring their components to the Mendix Marketplace under terms that guarantee full support to customers:
 
 * Partners are free to select an existing open-source license, or they can select a commercial option with the corresponding license and present that.
-* Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/overview/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
+* Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/overview/overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
 
 You can find and use partner-supported components on the [Marketplace home page](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/overview/app-store-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
 
@@ -91,7 +91,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/overview/app-store-overview/#my-drafts) section of *Marketplace Overview*.
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/overview/my-marketplace/#my-drafts) section of *Marketplace Overview*.
 
 ### August 11, 2022
 
@@ -112,7 +112,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 #### New Features
 
 * There are now user trials available for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
-* User trial subscriptions are now listed under [My Subscriptions](/appstore/overview/app-store-overview/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/overview/app-store-overview/#company-subscriptions).
+* User trial subscriptions are now listed under [My Subscriptions](/appstore/overview/my-marketplace/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions).
 * For new uploads of public components, you can now optionally share a [virus scan report](/appstore/overview/share-app-store-content/#package) to speed up the governance process.
 * For solutions and solution templates, you can now add a [use case](/appstore/overview/share-app-store-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
 
@@ -156,9 +156,9 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/overview/app-store-overview/#types), and Studio Pro **Compatibility**. 
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/overview/overview/#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** app services, and we now support a self-service [subscription](/appstore/overview/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** app services, and we now support a self-service [subscription](/appstore/overview/my-marketplace/#company-subscriptions) experience using credit card for two app services in supported regions.
 
 ### August 12, 2021
 
@@ -170,7 +170,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* We have implemented a UX refresh of [My Marketplace](/appstore/overview/app-store-overview/#my-marketplace) to be in-line with other Marketplace pages.
+* We have implemented a UX refresh of [My Marketplace](/appstore/overview/my-marketplace) to be in line with other Marketplace pages.
 
 ### June 3, 2021
 
@@ -196,7 +196,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service/)):
     * Automatic provisioning of the app service on subscription.
-    * The [Service Management Dashboard](/appstore/overview/app-store-overview/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+    * The [Service Management Dashboard](/appstore/overview/my-marketplace/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4, 2021
 
@@ -226,7 +226,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My Marketplace](/appstore/overview/app-store-overview/#my-marketplace) section of the of Marketplace.
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of the notifications in [My Marketplace](/appstore/overview/my-marketplace).
 * Developers can now reply to reviews of their components.
 
 ### February 9, 2021
@@ -253,7 +253,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 #### Improvements
 
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/app-store-overview/#home), [catalog](/appstore/overview/app-store-overview/), [component details](/appstore/overview/app-store-overview/#details), and Studio Pro download pages.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/overview/#home), [catalog](/appstore/overview/overview/), [component details](/appstore/overview/overview/#details), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/overview/share-app-store-content/) to the Marketplace.
 
@@ -267,7 +267,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* You can now download previous versions of App Store components from the [Mendix Marketplace](https://marketplace.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/overview/app-store-overview/#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+* You can now download previous versions of App Store components from the [Mendix Marketplace](https://marketplace.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/overview/overview/#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
 
 #### Fixes
 
@@ -285,7 +285,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * Downloading [private content](/appstore/overview/share-app-store-content/#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
     * You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and [7.23.x](/releasenotes/studio-pro/7.23/) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
-    * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/overview/app-store-overview/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
+    * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/overview/my-marketplace/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 
 ### February 26, 2020
 
@@ -307,23 +307,23 @@ For more information on these support levels, see [App Store Content Support](/a
 
 #### Improvements
 
-* You can now subscribe to receive emails when new versions of your [favorite](/appstore/overview/app-store-overview/#saved) App Store content are published.
+* You can now subscribe to receive emails when new versions of your [favorite](/appstore/overview/overview/#saved) App Store content are published.
 
 ### October 23, 2019
 
 #### New Features
 
-You can now create [user groups](/appstore/overview/app-store-overview/#content-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/overview/app-store-overview/#guests) users to these groups and allow them to download selected private company content.
+You can now create [user groups](/appstore/overview/my-marketplace/#content-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/overview/my-marketplace/#guests) users to these groups and allow them to download selected private company content.
 
-The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members](/appstore/overview/app-store-overview/#members), and former “external downloaders” have been added as [guests](/appstore/overview/app-store-overview/#guests).
+The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members](/appstore/overview/my-marketplace/#members), and former “external downloaders” have been added as [guests](/appstore/overview/my-marketplace/#guests).
 
-Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/overview/app-store-overview/#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
+Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/overview/my-marketplace/#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
 ### October 1, 2019
 
 #### Improvements
 
-* We now display the UUID of an App Store component in the [Usage](/appstore/overview/app-store-overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
+* We now display the UUID of an App Store component in the [Usage](/appstore/overview/overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
 
 ### September 11, 2019
 

@@ -10,18 +10,7 @@ tags: ["marketplace",  "my marketplace", "widget", "connector", "module", "partn
 
 At the top of your Marketplace page, you can choose a category to [share new Marketplace content](/appstore/overview/share-app-store-content/#adding), such as **Widgets** or **Solutions**.
 
-Click an item in the sidebar to go to the page for that content:
-
-* [My Drafts](#my-drafts)
-* [My Content](#my-content)
-* [My Subscriptions](#my-subscriptions)
-* [Shared with Me](#shared-with-me)
-* [Saved Content](#saved-components)
-* [My Reviews](#my-reviews)
-* [Company Content](#company-content)
-* [Company Subscriptions](#company-subscriptions)
-* [Company Reviews](#company-reviews)
-* [Content Groups](#content-groups)
+The pages for the sidebar menu items are described below.
 
 ## 2 My Drafts {#my-drafts}
 
@@ -224,7 +213,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-### 11.4 Settings Tab
+### 11.4 Settings Tab {#settings}
 
 {{% alert color="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).

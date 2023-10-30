@@ -8,7 +8,7 @@ description: "Presents overview information on the Mendix Marketplace."
 tags: ["marketplace",  "marketplace component", "marketplace content", "widget", "connector", "module", "partner"]
 aliases:
     - /appstore/overview/
-    - /appstore/overview/app-store-overview/
+    - /appstore/overview/overview/
     - /community/app-store/
     - /community/app-store/index.html
     - /community/app-store/app-store-overview/

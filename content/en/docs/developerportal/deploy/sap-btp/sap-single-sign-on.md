@@ -11,35 +11,35 @@ aliases:
 
 ## 1 Introduction
 
-Mendix has Single Sign-On for SAP users (*for some SAP regions*). This means that you are authenticated to Mendix using SAP credentials.
+Mendix has single sign-on for SAP users (for some SAP regions). This means that you are authenticated to Mendix using SAP credentials.
 
 One implication of this is that you must use the same username (in the form of an email address) for both SAP and Mendix.
 
-## 2 Logging on to Mendix Using SSO
+## 2 Signing in to Mendix Using SSO
 
-When you log on to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
-
-{{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/sign-in.png" >}}
+When you sign in to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
 
 {{% alert color="warning" %}}
 
-For SAP authentication, your SAP and Mendix usernames must be the same.
+For SAP authentication, your SAP and Mendix username must be the same.
 
-Your password can be different in your Mendix credentials and your SAP credentials
+Your password can be different in your Mendix credentials and your SAP credentials.
 
 {{% /alert %}}
 
 ### 2.1 Signing in Using Mendix Credentials
 
-You can enter your **Username** and Mendix **Password** and click **Sign in**. This will authenticate you with the credentials held by Mendix.
+Enter your **Username** and Mendix **Password**. Click **Sign in**. This will authenticate you with the credentials held by Mendix.
+
+{{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/sign-in.png" >}}
 
 ### 2.2 Signing in Using SAP Credentials
 
-You can click **SAP** to ask to use your SAP credentials. These are region based, so you will be asked to select a region:
+Click **SAP** to use your SAP credentials. These credentials are region-specific, so you need to choose a region first.
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/select-sap-region.png" >}}
 
-Select the region and you will be asked for your **SAP credentials**.
+Click **Select region** and you will be asked for your SAP credentials.
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/sap-login-screen.png" >}}
 

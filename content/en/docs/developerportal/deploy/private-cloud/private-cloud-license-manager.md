@@ -288,7 +288,7 @@ You will receive the result in the following format:
 
 {{% alert color="info" %}}
 The **PRODUCTS** field represents the product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the Mendix app CR. For more information, see how *runtimeLicenseProduct* is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
-In order to update the *product type* in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
+In order to update the **product type** in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
 {{% /alert %}}
 
 ### 6.2 Listing the Operator License

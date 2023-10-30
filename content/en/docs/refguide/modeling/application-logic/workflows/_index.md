@@ -59,7 +59,7 @@ The selected workflow is deleted.
 The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
 {{% /alert %}}
 
-### 3.4 Adding Elements to a Workflow 
+### 3.4 Adding Elements to a Workflow {#add-elements-to-workflow}
 
 There are several ways to add an element to a workflow:
 

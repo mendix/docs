@@ -22,7 +22,10 @@ You can perform the following basic functions when working on workflows:
 * Create a workflow
 * Delete a workflow
 * Add elements to a workflow
+* Move elements in a workflow
+* Cut, copy, or paste elements in a Workflow
 * View element properties
+* Trigger a workflow from a page or via a microflow
 * Export a workflow to an image
 
 ### 3.1 Opening a Workflow
@@ -100,7 +103,7 @@ You can swap outgoing paths from a parallel split, a user task, or a decision in
 
 This swaps the dragged path and its content with the targeted path. You can only swap paths that come from the same element.
 
-### 3.5 Cutting/Coping/Pasting Elements in a Workflow
+### 3.6 Cutting/Coping/Pasting Elements in a Workflow
 
 To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
 
@@ -117,7 +120,7 @@ When using cut/copy/paste, note the following:
 * Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
 * Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
 
-#### 3.5.1 Elements that Cannot be Cut, Copied or Pasted
+#### 3.6.1 Elements that Cannot be Cut, Copied or Pasted
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
@@ -127,7 +130,7 @@ The following elements cannot be cut, copied or pasted in the workflow editor:
 * End activity (the final **End activity** which is at the end of the workflow)
 * Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
 
-### 3.6 Viewing Element Properties 
+### 3.7 Viewing Element Properties 
 
 To view properties of an element, do one of the following:
 
@@ -135,11 +138,11 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 3.7 Triggering a Workflow
+### 3.8 Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 3.7.1 Triggering a Workflow from a Page {#trigger-page}
+#### 3.8.1 Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide/on-click-event/).
 
@@ -154,7 +157,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-#### 3.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### 3.8.2 Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Call Workflow](/refguide/workflow-call/).  
 
@@ -173,7 +176,7 @@ Do the following:
 
 Now when you run this microflow, it will trigger the selected workflow. 
 
-### 3.8 Exporting a Workflow to an Image
+### 3.9 Exporting a Workflow to an Image
 
 There are two ways to export a workflow to an image: 
 

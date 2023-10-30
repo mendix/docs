@@ -7,13 +7,13 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities can be added to the Domain Model through the [Integration Pane](/refguide/integration-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
+External entities can be added to the domain model through the [Integration pane](/refguide/integration-pane/). They are displayed as purple entity containers in the domain model. External entities represent the link to the datasets that are made available through the shared data sources registered in the [Mendix Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) and are published in OData services. 
 
-Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
+Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development. Any changes to the data in the originating app is automatically updated in the consuming apps. 
 
 External entities can be used with local entities. However, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
 
-To follow how to add external entities from the [Integration Pane](/refguide/integration-pane/), see [Adding External Entities](#adding-external-entities).
+To follow how to add external entities from the [Integration pane](/refguide/integration-pane/), see [Adding External Entities](#adding-external-entities).
 
 ## 2 Adding an External Entity to an App {#adding-external-entities}
 

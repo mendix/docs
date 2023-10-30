@@ -96,7 +96,7 @@ You cannot move the first (and only) start event and the last end event.
 
 #### 3.5.2 Moving Outgoing Paths in a Workflow
 
-You can swap the outgoing paths from different outcomes specified in a parallel split, a user task, or a decision. To do so,  drag and drop a path to another path of the same element. 
+You can swap outgoing paths from a parallel split, a user task, or a decision in a workflow. To do so, drag and drop a path to another path of the same element.
 
 This swaps the dragged path and its content with the targeted path. You can only swap paths that come from the same element.
 

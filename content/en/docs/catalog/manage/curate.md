@@ -18,7 +18,7 @@ Users who can curate assets in the Catalog are as follows:
 * Owners of a registered service – can curate their own services which include those that have been set to non-**Discoverable**
 * [Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
-Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in the Catalog.
 
 {{% alert color="info" %}}
 Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
@@ -26,7 +26,7 @@ Information that is added or changed during curation is stored in the Catalog fo
 
 ## 2 Curate List {#curatelist}
 
-Owners and curators of registered assets can click **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
+Owners and curators of registered assets can click **Curate** from the Catalog home page to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
 {{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" >}}
 

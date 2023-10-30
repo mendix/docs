@@ -60,7 +60,7 @@ When you run your app locally, you will need to use local credentials. If it is 
 
 ## 2 Installation and Configuration
 
-Where the Mendix SSO module has been added to a Mendix app templates, all you have to do is to set your security level to **Production** and your end-users will be able to sign in. You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
+Where the Mendix SSO module has been added to a Mendix app templates, all you have to do is set your security level to **Production** and your end-users will be able to sign in. You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/mxsso-app-store-module.png" >}}
 
@@ -103,14 +103,14 @@ To enable Mendix SSO in your app, follow these steps:
     {{% alert color="info" %}}If you are using Mendix SSO v2, you can use the *default* user administration pages. For more information, see the [Customizing Mendix SSO](#customizing) section below.{{% /alert %}}
 
 4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
-    1. Open **Project Security** from the **App Explorer**.
+    1. Open app **Security** from the **App Explorer**.
     2. Set **Security level** to **Production**.
     3. Switch to the **User roles** tab.
     4. Select the **Administrator** user role and click **Edit**.
     5. Click **Edit** next to **Module roles**.
     6. Select the **Administrator** module role for **Marketplace modules** > **MendixSSO**.
         {{< figure src="/attachments/appstore/modules/mendix-sso/set-module-role.png" alt="Set Administrator module role" >}}
-    7. Click **OK** twice to return to **Project Security**.
+    7. Click **OK** twice to return to app **Security**.
     8. Repeat the steps above to add the **MendixSSO.User** module role to the **User** User roles.
 
         The app **Security** settings now contains these two additional module roles:
@@ -219,7 +219,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 Mendix recommends that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your app. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
-The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new [Administration](/appstore/modules/administration/) module.
+The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information. You can also use this entity as the basis of a new [Administration](/appstore/modules/administration/) module.
 
 #### 5.2.1 Copying the Mendix SSO Module{#copying}
 

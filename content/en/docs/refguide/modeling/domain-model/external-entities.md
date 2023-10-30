@@ -19,12 +19,12 @@ To follow how to add external entities from the [Integration pane](/refguide/int
 
 To add an external entity to your app model, follow these steps:
 
-1. In the Domain Model of you app model search in the [Integration Pane](/refguide/integration-pane/) for the entity or data source that you want to use in your app. 
+1. In the domain model of you app mode, search in the Integration pane for the entity or data source you want to use in your app. 
 
-    {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
-1. Drag the entity into the Domain Model. 
-1. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
+2. Drag the entity into the domain model. 
+3. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
 
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
@@ -32,26 +32,26 @@ To add an external entity to your app model, follow these steps:
         {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
-When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
+When you drag an entity that is associated with an entity from the same service already in your domain model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
 {{% /alert %}}
 
 For further information, see [Consumed OData Service](/refguide/consumed-odata-service/).
 
-The consumed entities of the current app are listed in the **Used in your App** section of the [Integration Pane](/refguide/integration-pane/):
+The consumed entities of the current app are listed in the **Used in your App** section of the [Integration pane](/refguide/integration-pane/):
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
-When a new version of a consumed service becomes available in the Catalog, this will be indicated in the [Integration Pane](/refguide/integration-pane/) by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
+When a new version of a consumed service becomes available in the Catalog, it be indicated in the Integration pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
 {{% /alert %}}
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Data Hub App pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
+If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service continues to be listed in the Integration pane. You can delete the two service documents if you are no longer going to be using any entities from the consumed service.
 {{% /alert %}}
 
-For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Catalog Guide*.
 
 ## 3 Properties of External Entities {#properties}
 

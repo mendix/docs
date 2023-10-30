@@ -14,7 +14,7 @@ Some Mendix Platform releases contain beta features or products that can be used
 * When a new product or product version is introduced and made available to early adopters so that they can try it
 * When individual features are introduced within a non-beta product which are, in principle, production-ready but are either subject to change or need to be reviewed by a broader audience; these features are disabled by default
 
-We collect feedback on the implementation and use of these beta features and products so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product. This also helps us prepare for the General Availability (GA) release.
+We collect feedback on the implementation and use of these beta features and products so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product. This also helps us prepare for the general availability (GA) release.
 
 An example is a new major version of Mendix Studio Pro. We release this product in beta, as the feature sets may not be complete and developers may find gaps in functionality that Mendix is still working on.
 

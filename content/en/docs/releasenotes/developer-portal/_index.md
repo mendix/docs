@@ -447,7 +447,7 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 
 #### Improvements
 
-We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for General Availability!
+We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability!
 
 We made the following improvements:
 

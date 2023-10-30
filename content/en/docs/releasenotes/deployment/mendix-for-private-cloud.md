@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### October 30, 2023
+
+#### Data Migration Tool (Preview) v0.0.3
+
+* We have fixed an issue that prevented backups from completing. Previously, if the database contained a *System.FileDocument* entity with a NULL filename, it would cause an exception during the backup process.
+
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
+
 ### October 19, 2023
 
 #### Portal Improvements
@@ -117,7 +127,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
 
 {{% alert color="info" %}}
-This feature is currently in a [beta release](releasenotes/beta-features/).
+This feature is currently in a [beta release](/releasenotes/beta-features/).
 {{% /alert %}}
 
 #### Portal Improvements

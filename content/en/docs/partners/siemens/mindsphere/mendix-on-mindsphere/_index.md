@@ -30,4 +30,4 @@ Once your app is registered in Insights Hub, there are a number of things you ne
 
 If you want to work with an example application, look at the following document:
 
-* [How to  Use the Siemens Insights Hub Operations Insight Example App](/partners/siemens/mindsphere-example-app/) – this contains documentation and assistance in using the Operations Insight Example App available in the Marketplace
+* [How to Use the Siemens Insights Hub Monitor Example](/partners/siemens/mindsphere-example-app/) – this contains documentation and assistance in using the Siemens Insights Hub Monitor Example available in the Marketplace

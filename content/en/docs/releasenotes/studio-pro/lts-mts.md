@@ -17,7 +17,7 @@ In the 9.24.1 example, the first number (**9**) indicates the major version.
 
 Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 8, 9, and 10. Version 7 is only supported via the Extended Support product.
 
-As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Beta releases.
+As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two beta releases.
 
 For Mendix 10 and 11, we are planning to follow this release timeline:
 

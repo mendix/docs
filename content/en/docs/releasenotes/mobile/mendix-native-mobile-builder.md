@@ -344,7 +344,7 @@ Dependency management and auto-linking are not included as part of the Native Mo
 
 #### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
 
-With the Mendix Studio Pro 9.0.3 Beta, we introduced native dependency management. Using native dependency management, widgets 
+With the Mendix Studio Pro 9.0.3 beta release, we introduced native dependency management. Using native dependency management, widgets 
 and JavaScript actions can now define their native dependency requirements and let the Mendix Native Mobile Builder link them in apps.
 The result is a lighter project template that only includes the dependencies it actually needs.
 

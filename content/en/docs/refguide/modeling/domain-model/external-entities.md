@@ -91,10 +91,12 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 * **General Tab**
     * **Name** – a local name for the attribute can be specified.
-    * **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
+    * **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app ¹
     * **Summary** – a read-only summary displaying the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
     * **Type** – read-only vlues for the **Type** and **Length** and **Max. Length** of the attribute as defined in the originating app
 * **Documentation** – a description for the attribute that is displayed for users of the current app
+
+¹ For attributes that represent a property of a complex attribute, a forward slash separates the name of the attribute of the entity and the name of the property of the complex type.
 
 ### 2.3 Associations {#associations}
 

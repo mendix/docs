@@ -54,6 +54,8 @@ The list above for supported key fields does not include `Date` or `DateTime` da
 
 ### 3.2 Attributes
 
+### 3.2.1 Supported Attribute Types
+
 {{% alert color="warning" %}}
 Attributes marked as `FC_KeepInContent=false` cannot be used.
 {{% /alert %}}
@@ -72,11 +74,19 @@ The most commonly used attribute types can be used in your app. The types of the
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
+<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
+
+#### 3.2.2 Attributes of Complex Types
+
+Complex types are not supported by Mendix' domain model. Mendix does however allow reading external entities that contain attributes of a complex type, by importing the properties of the complex type as attributes of the containing entity. By default, the attributes' names consist of the name of the complex attribute and the name of the property that is part of the complex type, separated by an underscore. For example, if your entity `Employee` contains an attribute `HomeAddress` of type `Lato.Address` with properties `Street`, `PostcalCode` and `City`, Studio Pro allows you to add these as attributes of external entity `Employee` with default names `HomeAddress_Street`, `HomeAddress_PostalCode` and `HomeAddress_City`, respectively. Note that only the properties of the types described in the previous paragraph are supported.
+
 {{% alert color="warning" %}}
-When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations.
+External entities that contain attributes of complex types can only be read or deleted, they cannot be created or updated. They cannot be used in external actions either.
 {{% /alert %}}
 
-<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
+{{% alert color="warning" %}}
+Support for consuming attributes of complex types has been introduced in Mendix version 10.5.
+{{% /alert %}}
 
 ### 3.3 Generalizations
 
@@ -122,10 +132,10 @@ Supported types, and their corresponding type in Mendix, are:
 | ---                               | ---                                   |
 | Boolean                           | Boolean ¹ |
 | Byte, SByte, Int16, Int32, Int64  | Integer/Long |
-| Collection of Entities            | List of objects|
+| Collection of Entities            | List of objects ³ |
 | DateTime, DateTimeOffset, Time    | Date and time |
 | Decimal, Double, Single           | Decimal ² |
-| Entity                            | Object |
+| Entity                            | Object ³ |
 | Enumeration                       | Enumeration |
 | String, Guid                      | String |
 
@@ -134,3 +144,9 @@ Note that the only supported Collection type is a Collection of Entities, and th
 ¹ In Mendix, Booleans cannot be null. If the action returns null, the value will be false in Mendix.
 
 ² Decimal values outside of the range of a Mendix [Decimal](/refguide/attributes/#type) are currently not supported. If the action returns a value outside of the range, the action will return an error.
+
+³ Objects that contain attributes of complex types are not currently supported in actions.
+
+{{% alert color="warning" %}}
+When the OData endpoint contains functions, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these functions.
+{{% /alert %}}

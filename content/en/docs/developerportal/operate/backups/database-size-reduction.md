@@ -1,5 +1,5 @@
 ---
-title: "Database Size Reduction"
+title: "Reducing Database Size"
 url: /developerportal/operate/database-size-reduction/
 weight: 50
 description: "Describes how to restore physical disk space by creating and restoring a database backup."

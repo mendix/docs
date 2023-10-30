@@ -331,6 +331,6 @@ For more information on how to use the imported data model together with the ODa
 
 ## 6 Read More
 
-* [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
+* [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/)
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
 * [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/odata)

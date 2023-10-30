@@ -85,9 +85,9 @@ If you want to scan uploaded files for malicious content, you have to implement 
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
-* The jar is coming from a platform supported module. For more information about support categories see [Marketplace Content Support](/appstore/general/app-store-content-support/).
+* The jar is coming from a platform supported module. For more information about support categories see [Marketplace Content Support](/appstore/overview/app-store-content-support/).
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/general/app-store-content/#update-module) in *Use Marketplace Content in Studio Pro* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/app-store-content/#update-module) in *Use Marketplace Content in Studio Pro* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 

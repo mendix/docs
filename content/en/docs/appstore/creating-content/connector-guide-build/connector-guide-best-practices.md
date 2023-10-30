@@ -453,7 +453,7 @@ Ensure a new release includes the following:
 
 ### 8.2 Versioning {#versioning}
 
-The [Update Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
+The [Update Existing Marketplace Content](/appstore/overview/share-app-store-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
 
 * *Major version* — This is the first digit. This number goes up when you release major breaking changes, or at the very least a major new feature, as part of your connector. Determining what is major is up to you. You can deploy minor/patch versions for older major versions when you have bugs that need resolving.
 

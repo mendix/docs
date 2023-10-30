@@ -1,6 +1,6 @@
 ---
 title: "Marketplace Content Support"
-url: /appstore/general/app-store-content-support/
+url: /appstore/overview/app-store-content-support/
 category: "General Info"
 weight: 4
 tags: ["marketplace", "support", "platform support", "community support", "deprecated"]
@@ -58,7 +58,7 @@ The level of support depends on the availability and effort of the developer and
 
 ### 2.4 Partner Category
 
-Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](/appstore/general/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
+Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](/appstore/overview/app-store-overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
 
 ## 3 Feedback Process Summary
 
@@ -86,6 +86,6 @@ Partner-supported content is created and maintained by partners as part of the [
 
 ## 4 Read More
 
-* [Marketplace Overview](/appstore/general/app-store-overview/)
-* [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
-* [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
+* [Marketplace Overview](/appstore/overview/app-store-overview/)
+* [How to Share Marketplace Content](/appstore/overview/share-app-store-content/)
+* [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/)

@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) is a part of the [OData Connector for SAP solutions](https://docs.mendix.com/appstore/connectors/sap/sap-odata-connector/) and enables OData calls to be made using SAP destinations configured on SAP Business Technology Platform ([SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/)). However, you can also use the destination information provided by the [SAP Destination Service](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/sap-destination-service/) to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
+The [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) is part of the [OData Connector for SAP solutions](https://docs.mendix.com/appstore/connectors/sap/sap-odata-connector/) and enables OData calls to be made using SAP destinations configured on SAP Business Technology Platform ([SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/)). However, you can also use the destination information provided by the [SAP Destination Service](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/sap-destination-service/) to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
 
 This document describes how to configure a REST or SOAP call to use the configuration obtained from the [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/).
 
@@ -21,7 +21,7 @@ This document describes how to configure a REST or SOAP call to use the configur
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app which can be deployed to SAP BTP
-* Configured a **PrincipalPropagation** destination to an on-premise REST or SOAP service in your SAP BTP account; For more information, see [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/)
+* Configured a **PrincipalPropagation** destination to an on-premises REST or SOAP service in your SAP BTP account; For more information, see [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/)
 * Imported an [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
@@ -30,7 +30,7 @@ In your microflow which is making a REST or SOAP call, perform a **Get Destinati
 
 {{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" >}}
 
-**Get Destination** action returns a **Destination** object. This is named as *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
+The **Get Destination** action returns a **Destination** object. This is named as *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
 
 The Destination object has the properties shown in the image below:
 
@@ -58,7 +58,7 @@ The following entries are required in the **General** tab:
 
 #### 3.1.2 HTTP Headers Tab
 
-Below HTTP Headers do the following:
+The HTTP Headers do the following:
 
 * Authenticate the app to perform the action via the connectivity service
 * Authenticate the user to access the endpoint defined by the destination

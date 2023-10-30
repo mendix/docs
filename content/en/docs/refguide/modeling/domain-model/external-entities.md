@@ -7,7 +7,7 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities can be added to the Domain Model through the [Integration Pane](/refguide/integration-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in the [Mendix Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
+External entities can be added to the Domain Model through the [Integration Pane](/refguide/integration-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in the [Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
 Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 

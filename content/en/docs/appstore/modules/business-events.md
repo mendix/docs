@@ -333,10 +333,6 @@ Events published by Free Apps are published to one shared company channel on a m
 
 For information on setting topics and channels for your own Kafka clusters ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
 
-The channel UUID can be retrieved by inspecting the exported AsyncAPI document under the channels section of the document.
-
-A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
-
 #### 5.2.3 Error Handling
 
 Event publishing is part of the transaction where the publishing occurs. This means that if you decide that something has gone wrong in your microflow logic, and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
@@ -397,7 +393,7 @@ When this occurs, please execute the following steps:
 
 Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker). If you wish to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
 
-#### 6.4.1 Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
+#### 6.4.1 Configuring Deployment Constants for own Kafka cluster {#deployment-constants}
 
 Business Events module exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster.
 
@@ -412,13 +408,19 @@ All the constants are part of the Mendix Business Events module.
 
 For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
 
-#### 6.4.2 DevOps tasks not covered when running Own Kafka Cluster
+#### 6.4.2 DevOps tasks not covered when running own Kafka cluster
 
 As operating your own Kafka cluster falls outside of the scope of the Mendix Cloud environment, the following `DevOps` tasks should be taken into consideration (this list is not extensive):
 
 * Client username and password provision on Kafka - The creation of usernames and password on the Kafka cluster will need to be managed but the customer
 * Topic creation on Kafka - Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true (default setting in Apache Kafka), topics will need to be created by the customer. See [Topics and Channels](#topics-channels)
 * Access Control - Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` set to true (default setting in Apache Kafka), the ACLs need to be maintained by the customer
+
+#### 6.4.3 Managing topics on own Kafka cluster
+
+The channel UUID can be retrieved by inspecting the exported AsyncAPI document under the channels section of the document.
+
+A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
 
 ## 7 Local Testing {#local-testing}
 
@@ -458,7 +460,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 2. Can I publish my own events from other software directly to a Kafka topic?
 
-    No, that is currently not supported when using Mendix Cloud Event Broker.  This can be achieved by using Own Kafka Cluster.
+    No, that is currently not supported when using Mendix Cloud Event Broker.  This can be achieved on [your own Kafka cluster](#byok).
 
 3. Can I send related or associated objects as a single business event?
 

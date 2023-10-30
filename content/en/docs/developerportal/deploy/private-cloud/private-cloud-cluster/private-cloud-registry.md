@@ -200,15 +200,6 @@ To use Google Artifact registry with the Mendix Operator, perform the following 
 2. Assign the *Artifact Registry Writer* (`roles/artifactregistry.writer`) role to the GCR Service Account.
 3. Allow the Mendix Operator to use the GCR Service Account by running the following command, where `PROJECT_ID` is the Google Cloud project ID, `K8S_NAMESPACE` is the Kubernetes namespace name where the Operator is installed, `KSA_NAME` is the Kubernetes Service Account name, and `GSA_NAME` is the GCP Service Account name from step 1:
 
-    ```shell
-    gcloud iam service-accounts add-iam-policy-binding \
-        --role roles/iam.workloadIdentityUser \
-        --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
-        GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
-    ```
-
-On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, we recommend using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides. For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
-
 Use the following configuration options:
 
 * **Registry Name** - Google Artifact Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.

@@ -90,7 +90,7 @@ When adding elements, note the following:
 
 You can move elements around in your workflow. To do so, drag and drop an element to another path in the working area. 
 
-This will move the whole structure of the dragged element, meaning that the element and its underlying elements will be moved too. 
+This moves the whole structure of the dragged element, meaning that the element and its underlying elements are moved too.
 
 You cannot move the first (and only) start event and the last end event.
 

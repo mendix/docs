@@ -108,7 +108,6 @@ If the restore takes too long, the system shows a timeout message. In this case,
 
 For more information, see [Restoring a Backup](/developerportal/operate/restore-backup/).
  
-
 ### 3.5 Details
 
 When you click **Details**, you can view the following details:

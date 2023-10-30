@@ -11,10 +11,12 @@ tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file for
 
 This page describes how to restore a backup to Mendix Cloud.
 
-You can restore a backup that has been stored in Mendix Cloud, associated with the environment from which it was made. For licensed nodes, it is also possible to restore a backup that has been stored locally (for example, a backup that has been [downloaded from Mendix Cloud](/developerportal/operate/download-backup/)).
+You can restore a backup that has been stored in Mendix Cloud, associated with the environment from which it was made.
+
+For licensed nodes, it is also possible to restore a backup that has been stored locally. For example, you can restore a backup that has been [downloaded from Mendix Cloud](/developerportal/operate/download-backup/).
 
 {{% alert color="info" %}}
-You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions/) for more information.
+You can only restore a backup if you have **Access to Backups** permissions for the target node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/) for more information.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -87,7 +89,7 @@ For a Free App, you can only restore available backups that are made from the ap
 
 3. Click **Yes** to confirm the restoration.
 
-## 5 Restoring After a Backup Fails {#restore-after-fail}
+## 5 Restoring After a Backup Fails{#restore-after-fail}
 
 If a backup restore fails, you will be notified via your app's **Backup Activity** log (found in the **Backups** page of the Developer Portal). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
 

@@ -37,7 +37,7 @@ A visual summary of the changes in the selected revision, each icon represents d
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesModel.png" width=32 alt="Model changes icon" >}} | Model changes | Indicates that there were some changes made to the app model.<br/>For example, changes to the domain model, microflows, or pages. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesDisk.png" width=32 alt="Changes on disk icon" >}} | Changes on disk | Indicates that there were changes on disk.<br/>For example, a file was added or removed. |
 | {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/RevChangesVersion.png" width=32 alt="Studio Pro changes icon" >}} | Studio Pro changes | Indicates that there was a change to the Studio Pro version used to work with the app.<br/>For example, when upgrading the app from a previous version to the latest one. |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/Solution.png" width=32 alt="Solution version changes icon" >}} | Solution version changes| Indicates that there was an upgrade of based on solution. |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/Solution.png" width=32 alt="Solution version changes icon" >}} | Solution version changes | Indicates that a [solution module](https://docs.mendix.com/refguide/configure-add-on-and-solution-modules/) used in the app was updated. |
 
 Hover over this column in Studio Pro to get a textual summary of the changes.
 

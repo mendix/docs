@@ -28,7 +28,7 @@ The Backups API requires authentication via API keys that are bound to your Mend
 
 To download a backup of your data, do as follows:
 
-1. Set up your authentication PAT. You must have permission to manage backups.
+1. Make sure that you have an API key and the **API Access** and **Backups** permissions.
 
 2. If the snapshot already exists, find the [snapshot ID](/developerportal/operate/backups/#backups-details).
 

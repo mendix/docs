@@ -91,7 +91,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/overview/my-marketplace/#my-drafts) section of *Marketplace Overview*.
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/overview/my-marketplace/#my-drafts) section of *My Marketplace*.
 
 ### August 11, 2022
 

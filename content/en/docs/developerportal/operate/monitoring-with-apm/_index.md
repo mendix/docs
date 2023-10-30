@@ -4,14 +4,14 @@ linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
 description: "How to use an APM (application performance monitoring) tool to monitor your Mendix Cloud app."
-tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "SaaS", "AppDynamics", "APM", "Splunk", "Dynatrace"]
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "SaaS", "AppDynamics", "APM", "Splunk", "Dynatrace", "New Relic"]
 ---
 
 ## 1 Introduction
 
 There are several application performance monitoring (APM) tools for cloud applications available through a software as a service (SaaS) based data analytics platform. These APM tools provide comprehensive monitoring of servers, databases, tools, and services.
 
-Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
+Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, and New Relic to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
 
 {{% alert color="info" %}}
 [AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
@@ -21,6 +21,8 @@ Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatr
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix 7.15 and above.
 
 [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
+
+[New Relic](https://www.newrelic.com/) logging and application metrics are supported in Mendix 9.7 and above, custom application runtime and database metrics are supported.
 {{% /alert %}}
 
 This document explains what information can be provided to a SaaS-based data analytics platform.
@@ -31,6 +33,7 @@ For details on how to add a specific APM tool to your app, see one of the follow
 * [Datadog for Mendix Cloud](/developerportal/operate/datadog-metrics/)
 * [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
 * [Splunk for Mendix Cloud](/developerportal/operate/splunk-metrics/)
+* [New Relic for Mendix Cloud](/developerportal/operate/newrelic-metrics/)
 
 {{% alert color="info" %}}
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).

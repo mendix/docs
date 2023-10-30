@@ -105,19 +105,19 @@ Please contact [Mendix Support](https://support.mendix.com/) if you need further
 
 ## 6 Format of a Backup File{#format-of-backup-file}
 
-You may want to restore a backup that has been created on another platform, for example, an on-premises deployment. In this case, you will have to construct the backup file which Mendix Cloud will recognize. It is possible to upload a **Backup-only** or **Full snapshot** backup file.
+You may want to restore a backup that has been created on another platform (for example, an on-premises deployment). In this case, you will have to construct a backup file that Mendix Cloud will recognize. It is possible to upload a **Backup-Only** or **Full Snapshot** backup file.
 
-### 6.1 Backup-only format
+### 6.1 Backup-Only Format
 
-A **Backup-only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
+A **Backup-Only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
 
-### 6.2 Full snapshot format
+### 6.2 Full Snapshot Format
 
-### 6.2.1 .tar.gz Archive
+#### 6.2.1 .tar.gz Archive
 
-A **Full snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
+A **Full Snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
-### 6.2.2 .tar Archive
+#### 6.2.2 .tar Archive
 
 The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
@@ -125,7 +125,7 @@ Here is an example:
 
 {{< figure src="/attachments/developerportal/operate/backups/restore-backup/tar-gz-structure.png" >}}
 
-contains the following files:
+This contains the following files:
 
 ```shell
 .metadata
@@ -139,9 +139,9 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-### 6.2.3 .metadata File
+#### 6.2.3 .metadata File
 
-This contains json describing the backup. For example:
+This contains JSON describing the backup. Here is an example:
 
 ```json
 {
@@ -153,19 +153,19 @@ This contains json describing the backup. For example:
 }
 ```
 
-### db Folder {#db-folder}
+#### 6.2.4 DB Folder {#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
 {{% alert color="warning" %}}
-If the dump does not use the *custom format* then the restore will fail.
+If the dump does not use the custom format, then the restore will fail.
 
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
-### tree Folder
+#### 6.2.5 Tree Folder
 
-This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource. They are also stored in the following tree structure where each file is stored in a second level location:
+This contains the files that are stored in external file storage. Each file has the name of the UUID used within Mendix to identify the resource. They are also stored in the following tree structure, where each file is stored in a second-level location:
 
 ```shell
 /tree
@@ -174,11 +174,11 @@ This contains the files which are stored in external file storage. Each file has
                  |---/file
 ```
 
-The file has the name of the uuid used within Mendix to identify the resource.
+The file has the name of the UUID used within Mendix to identify the resource.
 
-The directory [xx] is the first two characters of uuid.
+The directory [xx] is the first two characters of UUID.
 
-The directory [yy] is the third and fourth characters of the uuid.
+The directory [yy] is the third and fourth characters of the UUID.
 
 So, for example, the first file in the example file above (0d3e301f-5551-46f8-ad44-8de2be084c95) is stored in the following structure:
 

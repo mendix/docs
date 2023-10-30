@@ -32,19 +32,14 @@ To download a backup of your data, do as follows:
 
 2. If the snapshot already exists, find the [snapshot ID](/developerportal/operate/backups/#backups-details).
 
-3. If the snapshot does not exist, call `POST /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots` to create a snapshot, for example:
+3. If the snapshot does not exist, call `POST /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots` to create a snapshot. For more information, see the [Request Creation of an Environment Snapshot](#request-creation-snapshot) section below.
 
-   ```
-   POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots
-   ```
+4. Use the value of `snapshot_id`  in the output to create an archive file from the snapshot. To do so, call `POST /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives`. For more information, see the [Request Creation of a Snapshot Archive](#request-creation-archive) section below.
 
-4. Use the value of `snapshot_id`  in the output to create an archive file from the snapshot. To do so, call `POST /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives`, for example:
+5. Use the value of `archive_id` in the output to check whether the creation of the archive is completed. To do so, call `GET /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives/<ArchiveId>`. For more information, see the [Request Status of Creation of an Archive](#request-status-archive) section below.
 
-   ```
-   POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots/5f8ace23-19df-4134-bd67-c338142a6097/archives?data_type=database_only
-   ```
+7. Use the value of `url`  in the output to download to the backup archive.
 
-5. Use the value of `url`  in the output to download to the backup archive.
 
 ## 4 API Calls
 
@@ -135,7 +130,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.2 Request Creation of an Environment Snapshot
+### 4.2 Request Creation of an Environment Snapshot {#request-creation-snapshot}
 
 #### 4.2.1 Description
 
@@ -287,7 +282,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.4 Request Creation of a Snapshot Archive
+### 4.4 Request Creation of a Snapshot Archive {#request-creation-archive}
 
 #### 4.4.1 Description
 
@@ -364,7 +359,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.5 Request Status of Creation of an Archive
+### 4.5 Request Status of Creation of an Archive {#request-status-archive}
 
 #### 4.5.1 Description
 

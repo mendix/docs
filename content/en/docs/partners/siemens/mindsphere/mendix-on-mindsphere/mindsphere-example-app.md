@@ -1,6 +1,6 @@
 ---
-title: "Use the Siemens Insights Hub Operations Insight Example App"
-linktitle: "Siemens Insights Hub Operations Insight App"
+title: "Use the Siemens Insights Hub Monitor Example "
+linktitle: "Insights Hub Monitor Example"
 url: /partners/siemens/mindsphere-example-app/
 weight: 110
 tags: ["Siemens", "MindSphere", "Insights Hub", "Example", "Operations Insight", "Time Series", "REST", "API"]
@@ -9,10 +9,10 @@ tags: ["Siemens", "MindSphere", "Insights Hub", "Example", "Operations Insight",
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is for the Siemens Insights Hub Operations Insight Example App. This app cannot be used with Insights Hub IIoT for Makers.
+This information is for the Siemens Insights Hub Monitor Example. This app cannot be used with Insights Hub IIoT for Makers.
 {{% /alert %}}
 
-You can write Mendix apps which analyze data held in Insights Hub, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens Insights Hub Operations Insight Example](https://marketplace.mendix.com/link/component/117954) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
+You can write Mendix apps which analyze data held in Insights Hub, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens Insights Hub Monitor Example](https://marketplace.mendix.com/link/component/117954) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the Insights Hub example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/Insights Hub app.
 
@@ -38,11 +38,11 @@ Open Studio Pro without opening an app and follow these steps:
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/app-store-icon.png" >}}
 
-2. Enter *Insights Hub Operations* in the search box and select **Siemens Insights Hub Operations Insight** from the search results:
+2. Enter *Insights Hub Monitor* in the search box and select **Siemens Insights Hub Monitor Example** from the search results:
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/app-store-search.png" >}}
 
-3. Click **Download**, and store the **Siemens_Insights_Hub_Operations_Insight_Example.mpk** on your local machine.
+3. Click **Download**, and store the **SiemensInsightsHubMonitorExample_V2_0_0.mpk** on your local machine.
 
 4. Go back to your Studio Pro and select **Import App Package…** from the **File** menu to import the downloaded app package.
 
@@ -95,7 +95,7 @@ All apps running within Insights Hub need to be registered. When you open your a
 
     {{% alert color="warning" %}}Do **not** launch your application directly.{{% /alert %}}
 
-    The Insights Hub Operations Insight app uses quite a lot of Insights Hub APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore, you have to do this for the Operations Insight application.
+    The Siemens Insights Hub Monitor Example app uses quite a lot of Insights Hub APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore, you have to do this for the Operations Insight application.
 
 5. Click **Developer Cockpit** to take you to grant access to the APIs.
 

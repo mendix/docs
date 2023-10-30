@@ -283,7 +283,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes {#private-fix}
 
-* Downloading [private content](/appstore/overview/share-content/#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
+* Downloading [private content](/appstore/overview/share-content/#private) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
     * You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and [7.23.x](/releasenotes/studio-pro/7.23/) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
     * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/overview/my-marketplace/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 

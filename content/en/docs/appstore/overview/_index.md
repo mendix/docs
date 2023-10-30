@@ -56,10 +56,10 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 The following filter options are also available:
 
 * **Category**
-* **Support** – **Platform**, **Partner**, **Siemens**, or **Community**
+* **Support** – for details, see the [Marketplace Content Support](#support) section below
 * **Industry**
 * **Compatibility**
-* **Visibility** – **Public** or **Private** content
+* **Visibility** – [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
 * **Rating**
 
 ## 3 Component Details Page {#details}

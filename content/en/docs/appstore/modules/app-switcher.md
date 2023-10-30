@@ -18,7 +18,7 @@ The [App Switcher](https://marketplace.mendix.com/link/component/119451) is a mo
 
 ## 3 Configuration
 
-1. [Install](/appstore/overview/app-store-content/) the App Switcher module.
+1. [Install](/appstore/overview/use-content/) the App Switcher module.
 2. Configure the [user roles](/refguide/user-roles/) to have access to the user AppSwitcherModule module role.
 3. Add the App Switcher widget to the desired page or layout. You can find the widget in the **Add-ons** category in the **Toolbar**.
 4. Make sure the end-user has to log in to Mendix SSO before accessing the page with the App Switcher widget.

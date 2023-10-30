@@ -173,14 +173,14 @@ In order to select the theme for your app, specify it in the *index.html* page a
 
 ## 7 Demo Apps
 
-On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a number of [community-supported](/appstore/overview/app-store-content-support/#category) demo apps, which you can review or use to help you develop your own apps.
+On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a number of [community-supported](/appstore/overview/use-content-support/#category) demo apps, which you can review or use to help you develop your own apps.
 
 ## 8 Add Fiori to Your App{#add-fiori}
 
 If you want to include the Web UI Package for SAP Fiori theme in an existing app perform the following steps:
 
 1. Ensure that your app is using Mendix 9.6.11 or above. 
-2. [Import](/appstore/overview/app-store-content/) the  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module into your app.
+2. [Import](/appstore/overview/use-content/) the  [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module into your app.
 3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
 4. Look in the **Theme** tab of the app settings. This must contain the `SAP_Fiori_Web_UI_Resources` module below the `Atlas_Core` module.
 

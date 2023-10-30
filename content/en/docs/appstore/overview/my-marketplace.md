@@ -8,7 +8,7 @@ tags: ["marketplace",  "my marketplace", "widget", "connector", "module", "partn
 
 ## 1 Introduction
 
-At the top of your Marketplace page, you can choose a category to [share new Marketplace content](/appstore/overview/share-app-store-content/#adding), such as **Widgets** or **Solutions**.
+At the top of your Marketplace page, you can choose a category to [share new Marketplace content](/appstore/overview/share-content/#adding), such as **Widgets** or **Solutions**.
 
 The pages for the sidebar menu items are described below.
 
@@ -25,7 +25,7 @@ These are the possible **Status** entries for each item:
 * **Incomplete draft** – the draft is incomplete and requires additional information before you can submit it
 * **Submit for approval** – the draft for the first version of the component is ready to be submitted for review by Mendix 
 * **Ready to publish**  – the draft of the new version of the component is ready to be published to the Mendix Marketplace
-* **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/overview/share-app-store-content/#approval) 
+* **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/overview/share-content/#approval) 
 * **Declined** – the draft was declined after review by Mendix; you can find specific feedback in the email notification and on the draft edit page
 
 On this page, click the ellipsis (**...**) button  for a component to access the following options:
@@ -49,14 +49,14 @@ Click the context menu to access various options for managing your content:
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
     * If there is a draft version in progress, you will see options to **Edit Draft** or **Delete Draft**
     * If there is a draft version in progress assigned to another user, you will see an option to **Reassign Draft** to yourself 
-    * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/overview/share-app-store-content/#updating) section of *How to Share Marketplace Content*
-* **Edit a Version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/overview/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
+    * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/overview/share-content/#updating) section of *How to Share Marketplace Content*
+* **Edit a Version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/overview/share-content/#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a Version** – click this to remove one version or all versions of the component
     * If the component is [protected content](#group-content) from a [content group](#content-groups), a [group member](#members) can unpublish any version
     * If the component is not the protected content of a content group, you can only unpublish a version that you have published yourself
     * Select **Unpublish All My Versions** to remove all your versions of the component
 
-You may see the **Private** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](/appstore/overview/share-app-store-content/#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
+You may see the **Private** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](/appstore/overview/share-content/#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
 
 In addition, you may see a label on a component name for the [content group](#content-groups) to which the component is assigned as group [group content](#group-content).
 

@@ -24,7 +24,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace]() and [Use Marketplace Content](/appstore/overview/app-store-content/).
+This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace]() and [Use Marketplace Content](/appstore/overview/use-content/).
 
 ## 2 Marketplace Home Page {#home}
 
@@ -32,7 +32,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
-* Click **Add Content** to [share new Marketplace content](/appstore/overview/share-app-store-content/) you have developed
+* Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
 * Explore various [industry solutions](#industry) and [content types](#types).
 
 {{< figure src="/attachments/appstore/overview/overview/home-page.png" >}}
@@ -71,7 +71,7 @@ The header for a component presents the following details:
 * The number of times the component has been downloaded
 * <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](#my-marketplace) list
 * Depending on the content type:
-    * **Use in Studio Pro** for modules and widgets – click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/app-store-content/#current-sp)
+    * **Use in Studio Pro** for modules and widgets – click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/use-content/#current-sp)
     * **Start with Template** for starter templates – click this to use the template
     * **Download** for all other content types – click this to download the component
 * The partner icon is applied to components that are supported by a partner:
@@ -85,18 +85,18 @@ The header for a component presents the following details:
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
-* The type of [license](/appstore/overview/share-app-store-content/#license) for the component
+* The type of [license](/appstore/overview/share-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-The **Support** section presents the category of support Mendix offers for the component (for more details, see [Marketplace Content Support](/appstore/overview/app-store-content-support/)).
+The **Support** section presents the category of support Mendix offers for the component (for more details, see [Marketplace Content Support](/appstore/overview/use-content-support/)).
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
 The component details page also presents the following tabs:
 
 * **Overview** – contains a description and screenshot of the components
-* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/overview/app-store-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
+* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/overview/use-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*)
 * **Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which opens a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
 * **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)

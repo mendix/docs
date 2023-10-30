@@ -75,7 +75,7 @@ The LDAP module has the following limitations:
 
 The following instructions assume that you want the Administrator role in your app to be the administrator of the LDAP functionality. You can choose a different role if you wish to separate this role from other administration roles.
 
-1. [Add the](/appstore/overview/app-store-content/) [LDAP](/appstore/overview/app-store-content/) [module to your app.](/appstore/overview/app-store-content/)
+1. [Add the](/appstore/overview/use-content/) [LDAP](/appstore/overview/use-content/) [module to your app.](/appstore/overview/use-content/)
 1. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
 1. Select the **Ldap.ASu_StartLdap** microflow as your **After startup** microflow. If there is already an after startup microflow, do not replace it, but add the **Ldap.ASu_StartLdap** microflow as a sub-microflow in the existing microflow.
 1. Add the **Ldap.OpenLdapServersOverview** microflow to your app's navigation. Only give access to administrators.

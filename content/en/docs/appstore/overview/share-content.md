@@ -1,13 +1,13 @@
 ---
 title: "Share Marketplace Content"
-url: /appstore/overview/share-app-store-content/
-category: "General Info"
-weight: 2
+url: /appstore/overview/share-content/
+weight: 3
 description: "Describes how to create and share Mendix Marketplace content."
 tags: ["marketplace", "public app store", "private app store", widget", "module"]
 aliases:
-    - /developerportal/app-store/share-app-store-content/
-    - /developerportal/app-store/share-app-store-content.html
+    - /appstore/general/share-app-store-content/
+    - /developerportal/app-store/share-content/
+    - /developerportal/app-store/share-content.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,7 +24,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/overview/overview/) and [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/overview/overview/) and [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)
 
 ## 3 Marketplace Content Development Guidelines {#guidelines}
 
@@ -76,7 +76,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
 * If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
 
-    {{< figure src="/attachments/appstore/overview/share-app-store-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
+    {{< figure src="/attachments/appstore/overview/share-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
 
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments/))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
@@ -137,11 +137,11 @@ These are the open-source software license options available and their requireme
 
 | | **Notes** | **Commercial use allowed?** | **Component code needs to be in public repo?** | **License text required with copyright info in code and distribution artifact?** | **Can modify?** (Mention modifications to code) | **Can consuming apps use without making their code public?** | **Notice files should be distributed with artifact?** | **Original component source code to be distributed with consuming app?** | **Can sub-license?** |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
-| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} |
-| **BSD 2.0, 3.0** | | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} |
-| **Apache 1.0** | | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} |
-| [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}}  |
-| **Creative Commons CC0 1.0 Universal (CC-0)** (Public Domain) | | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-app-store-content/check-mark.svg" >}} |
+| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
+| **BSD 2.0, 3.0** | | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
+| **Apache 1.0** | | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
+| [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}}  |
+| **Creative Commons CC0 1.0 Universal (CC-0)** (Public Domain) | | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
 
 {{% alert color="info" %}}
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
@@ -151,7 +151,7 @@ The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/g
 
 You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
 
-This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/overview/share-app-store-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
+This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/overview/share-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
 
 Follow these steps to configure a proprietary license for a new public component:
 
@@ -181,7 +181,7 @@ In the **How would you like to receive information on new leads?** field, you mu
 
 To finish up configuring this page, click **Upload** to upload an icon for your component.
 
-{{< figure src="/attachments/appstore/overview/share-app-store-content/general.png" >}}
+{{< figure src="/attachments/appstore/overview/share-content/general.png" >}}
 
 ### 4.2 Package {#package}
 
@@ -206,14 +206,14 @@ Enter **Release Notes** for the component in the box provided describing what is
 Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using a service (for example, [VirusTotal](https://www.virustotal.com/gui/home/upload)). This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF (via a screenshot, if necessary). Then, click **Upload** in the Marketplace to upload your report.
 
 {{% alert color="warning" %}}
-If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/overview/share-app-store-content/#approval) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
+If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/overview/share-content/#approval) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/overview/share-app-store-content/package.png" >}}
+{{< figure src="/attachments/appstore/overview/share-content/package.png" >}}
 
 ### 4.3 Enable {#doc}
 
@@ -236,7 +236,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a id="screenshot"></a>Click **Upload Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-{{< figure src="/attachments/appstore/overview/share-app-store-content/enable.png"  >}}
+{{< figure src="/attachments/appstore/overview/share-content/enable.png"  >}}
 
 You can optionally add a **YouTube URL** and a **Demo URL**.
 
@@ -250,13 +250,13 @@ On the **Capabilities** page, you can provide the following details about an ind
 * A **Use Case** relevant to the content (enter a **Header** and **CTA URL**)
 * **External Links** relevant to the content
 
-{{< figure src="/attachments/appstore/overview/share-app-store-content/capabilities.png"  >}}
+{{< figure src="/attachments/appstore/overview/share-content/capabilities.png"  >}}
 
 ### 4.5 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before publishing.
 
-{{< figure src="/attachments/appstore/overview/share-app-store-content/publish.png"   width="600"  >}}
+{{< figure src="/attachments/appstore/overview/share-content/publish.png"   width="600"  >}}
 
 After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. See the next section on details for the approval process.
 
@@ -272,7 +272,7 @@ Mendix does the following:
 
 * Checks the licenses used in the uploaded *.mpk* files using the [Fossology](https://fossology.osuosl.org/repo/) tool
     * There should be no use of GPL, LGPL, or MPL licenses
-    * For more details, see the [Providing License Details](/appstore/overview/share-app-store-content/#license) section above
+    * For more details, see the [Providing License Details](/appstore/overview/share-content/#license) section above
 * Checks the *.mpk* files for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
 * Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
 * If the component is a widget, module, connector, or an industry template, Mendix checks that it can be used without errors in a specific Studio Pro version
@@ -295,7 +295,7 @@ Review and approval by Mendix is required only for the first version of a public
 
 After you publish a component in the Mendix Marketplace, it is your responsibility to make sure that components are updated on a regular cadence. This is important so that components work with the latest versions of dependencies (especially Mendix Studio Pro), and it is required so Mendix can ensure the quality of components in the Marketplace. This means you need to monitor, maintain, and evolve the component so that the Marketplace listing is more noticeable, you can build user loyalty, and you can maintain the good reputation of your company. If the component is not updated regularly, the Marketplace listing will be analyzed for removal from public visibility.
 
-Mendix expects the following updates for comoponents in the Platform, Community, and Premium [support categories](/appstore/overview/app-store-content-support/#category):
+Mendix expects the following updates for comoponents in the Platform, Community, and Premium [support categories](/appstore/overview/use-content-support/#category):
 
 * Bug fixes
 * New features
@@ -341,4 +341,4 @@ For a component that is outdated based on the above points, this is the review a
 
 * [Marketplace Overview](/appstore/overview/overview/)
 * [Mendix Partner Program](/appstore/creating-content/partner-program/)
-* [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/)
+* [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)

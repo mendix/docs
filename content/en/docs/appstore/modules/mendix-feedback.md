@@ -62,7 +62,7 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 
 ## 2 Installation
 
-You should install the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/) to import the latest version of the module into your app.
+You should install the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/) to import the latest version of the module into your app.
 
 ## 3 Usage
 
@@ -279,7 +279,7 @@ When you have left your feedback, you need to exit the feedback mode by clicking
 
 #### 6.3.3 Upgrading the Widget 
 
-To upgrade your Mendix Feedback widget, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/#update-module). You can encounter the following error: 
+To upgrade your Mendix Feedback widget, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/#update-module). You can encounter the following error: 
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/install-error.png" >}}
 

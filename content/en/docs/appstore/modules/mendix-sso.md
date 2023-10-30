@@ -60,7 +60,7 @@ Where the Mendix SSO module has been added to a Mendix app templates, all you ha
 
 {{< figure src="/attachments/appstore/modules/mendix-sso/mxsso-app-store-module.png" >}}
 
-If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://marketplace.mendix.com/link/component/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 

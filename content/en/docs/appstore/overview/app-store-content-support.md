@@ -1,15 +1,13 @@
 ---
 title: "Marketplace Content Support"
-url: /appstore/overview/app-store-content-support/
-category: "General Info"
-weight: 4
+url: /appstore/overview/use-content-support/
 tags: ["marketplace", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using Marketplace content in your Mendix apps."
 aliases:
-    - /community/app-store-content-support/
-    - /developerportal/app-store/app-store-content-support/
-    - /community/app-store-content-support.html
-    - /developerportal/app-store/app-store-content-support.html
+    - /community/use-content-support/
+    - /developerportal/app-store/use-content-support/
+    - /community/use-content-support.html
+    - /developerportal/app-store/use-content-support.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -87,5 +85,5 @@ Partner-supported content is created and maintained by partners as part of the [
 ## 4 Read More
 
 * [Marketplace Overview](/appstore/overview/overview/)
-* [How to Share Marketplace Content](/appstore/overview/share-app-store-content/)
-* [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/)
+* [How to Share Marketplace Content](/appstore/overview/share-content/)
+* [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)

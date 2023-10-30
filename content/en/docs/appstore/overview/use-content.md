@@ -1,12 +1,12 @@
 ---
 title: "Use Marketplace Content in Studio Pro"
-url: /appstore/overview/app-store-content/
+url: /appstore/overview/use-content/
 linktitle: "Use Marketplace Content"
-category: "General Info"
-weight: 3
+weight: 2
 tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 aliases:
+    - /appstore/general/app-store-content/
     - /community/app-store/use-app-store-content-in-the-modeler/
     - /developerportal/app-store/app-store-content/
     - /developerportal/app-store/use-app-store-content-in-the-modeler/
@@ -47,11 +47,11 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
     * Click the **View** menu in the top-bar and select **Marketplace**
     * Click the Marketplace icon on the right side of the top-bars
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/toolbar.png" alt="Marketplace icon" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/toolbar.png" alt="Marketplace icon" >}}
 
     The **Marketplace** pane opens.
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/marketplace.png" alt="Search result for rating" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/marketplace.png" alt="Search result for rating" >}}
 
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
@@ -61,7 +61,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
 5. Select a component from the pane to see its details:
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/component-details.png" alt="Details of Blank App example component" >}}
 
     The details presented here correspond to what you see on the [component details page](/appstore/overview/overview/#details) in the online Mendix Marketplace.
 
@@ -102,7 +102,7 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
 
     The **Import Module** dialog box opens. 
 
@@ -154,7 +154,7 @@ To add a widget  from the **Toolbox**, follow these steps:
 1. Open the page where you want to add the widget.
 2. In the **Toolbox**, search for the name of the widget (for example, *Rating* to find the widget):
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
 
 3. Drag the widget to the place on the page where you want it to be.
 
@@ -162,16 +162,16 @@ To add a widget using the **Add widget** option from the toolbar, follow these s
 
 1. Click **Add widget** on the toolbar on the page where you want to add the widget. The **Select Widget** dialog box opens.
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/add-widget.png" alt="Add widget" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/add-widget.png" alt="Add widget" >}}
 
 2. In the **Filter** bar, enter the name of the widget, for example *Rating*, to find the widget.
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/select-widget.png" alt="Rating widget highlighted in Select Widget dialog box" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/select-widget.png" alt="Rating widget highlighted in Select Widget dialog box" >}}
 
 3. Click the widget and then click **Select**. 
 4. In the page, click where you want to drop the widget. The widget is added to the location where the mouse pointer is.
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/widget-dropped-in-page.png" alt="Rating widget in the page" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/widget-dropped-in-page.png" alt="Rating widget in the page" >}}
 
 #### 3.1.2 Updating the Widget to a Newer Version
 
@@ -193,15 +193,15 @@ To configure the widget, follow these steps:
 
 1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/widget-errors.png" alt="Errors pane" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/widget-errors.png" alt="Errors pane" >}}
 
 2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens and the **Attribute** field shows **(none)** – this means that no attribute is assigned, which causes the error.
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/edit-rating.png" alt="Edit Rating dialog box" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/edit-rating.png" alt="Edit Rating dialog box" >}}
 
 3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
-    {{< figure src="/attachments/appstore/overview/app-store-content/select-attribute.png" alt="ProductRating selected in Select Attribute dialog box" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/select-attribute.png" alt="ProductRating selected in Select Attribute dialog box" >}}
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane disappears.
 
@@ -221,7 +221,7 @@ To update the module in your app to a newer version, follow these steps::
 
    {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
-   {{< figure src="/attachments/appstore/overview/app-store-content/import-module.png" alt="Import Module dialog box" >}}
+   {{< figure src="/attachments/appstore/overview/use-content/import-module.png" alt="Import Module dialog box" >}}
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 

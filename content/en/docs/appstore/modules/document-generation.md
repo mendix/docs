@@ -63,7 +63,7 @@ The PDF document generation service does not store pages or documents at any tim
 
 ## 2 Installation {#installation}
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/) to import the Documentation Generation module into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/) to import the Documentation Generation module into your app.
 
 ## 3 Configuration {#configuration}
 

@@ -218,7 +218,7 @@ Drag the [entities](/refguide/external-entities/) you need into your domain mode
 
 To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/app-store-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
 In the **_Use me** folder of the *MindSphereIIotAuthenticator* module set the following constants:
 
@@ -240,7 +240,7 @@ Set the **Error handling microflow** to be *MindsphereIIoTAuthenticator.DH_Error
 
 To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/app-store-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
 ### 5.3 Authenticating MindSphere REST Calls {#authenticating}
 

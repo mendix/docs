@@ -40,7 +40,7 @@ This connector is an [add-on module](/refguide/consume-add-on-modules-and-soluti
 
 ## 2 Installation
 
-Follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Microsoft Teams Connector into your app. After the connector is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
+Follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Microsoft Teams Connector into your app. After the connector is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
 
 {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connector-in-protected-module.png" >}}
 
@@ -183,7 +183,7 @@ Nex to the **Send Message to Webhook** activity, you can also find the **Send Me
 #### 3.3.3 Configuring the Microflows
 
 1. Go to the Marketplace and log in with your Mendix account.
-2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/app-store-content/) to install the [Deep Link](https://marketplace.mendix.com/link/component/43) module to your app.
+2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/) to install the [Deep Link](https://marketplace.mendix.com/link/component/43) module to your app.
 3. Give your user role access to the Deep Link module roles.
 4. In the **App Explorer**, click **Settings** to open the **App Settings** dialog box.
 5. Go to the **Runtime** tab, and set **After startup** to the **StartupMicroflow** from the **MicrosoftTeamsConnector** module.

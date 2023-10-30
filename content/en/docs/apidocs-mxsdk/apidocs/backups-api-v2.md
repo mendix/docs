@@ -38,7 +38,7 @@ To download a backup of your data, do as follows:
 
 5. Use the value of `archive_id` in the output to check whether the creation of the archive is completed. To do so, call `GET /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives/<ArchiveId>`. For more information, see the [Request Status of Creation of an Archive](#request-status-archive) section below.
 
-7. After the archive is created, use the value of `url`  in the output to download to the backup archive.
+7. After the archive is created, use the value of `url` in the output to download to the backup archive.
 
 
 ## 4 API Calls

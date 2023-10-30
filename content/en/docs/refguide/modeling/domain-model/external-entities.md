@@ -7,7 +7,7 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities can be added to the Domain Model through the [Integration Pane](/refguide/integration-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
+External entities can be added to the Domain Model through the [Integration Pane](/refguide/integration-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in the [Mendix Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
 Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 
@@ -48,10 +48,10 @@ When a new version of a consumed service becomes available in the Catalog, this 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Data Hub App pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
+If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Integration pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
 {{% /alert %}}
 
-For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Catalog Guide*.
 
 ## 2 Properties of External Entities {#properties}
 
@@ -186,4 +186,4 @@ External entities cannot be committed. Use the [Send External Object activity](/
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
 
-For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/catalog/consume/) in the *Catalog Guide*.

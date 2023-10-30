@@ -10,12 +10,6 @@ weight: 10
 
 The **Backups API v2** allows you to manage backups of the data in your app hosted in the Mendix Cloud.
 
-If you want to download a backup of your data, you need to perform three steps:
-
-1. Create a *snapshot*, or find the `snapshot-id` of an existing one
-2. Create an *archive* file from a snapshot
-3. Download the archive using the URL provided 
-
 Data **snapshots** consist of a PostgreSQL database dump and all the file objects referenced from the database.
 
 Database **archives** are a zip file which contains all the data in the snapshot, or the database and files separately if you prefer. 
@@ -117,7 +111,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 3.2 Request Creation of an Environment Snapshot
+### 3.2 Request Creation of an Environment Snapshot {#request-creation-snapshot}
 
 #### 3.2.1 Description
 
@@ -269,7 +263,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 3.4 Request Creation of a Snapshot Archive
+### 3.4 Request Creation of a Snapshot Archive {#request-creation-archive}
 
 #### 3.4.1 Description
 
@@ -709,3 +703,11 @@ An object with the following key-value pairs:
    "source_environment_id":"d436e0cd-6200-4ac5-b858-849a6ddbb56a"
 }
 ```
+
+## 5 Downloading a Backup of Your Data
+
+If you want to download a backup of your data, do as follows:
+
+1. [Create a snapshot](#request-creation-snapshot), or find the `snapshot-id` of an existing one.
+2. [Create an archive file](#request-creation-archive) from a snapshot.
+3. Download the archive using the URL provided.

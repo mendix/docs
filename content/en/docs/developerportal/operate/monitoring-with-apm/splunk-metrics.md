@@ -55,9 +55,11 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 
         To create a new token on the Splunk Cloud dashboard, open the Splunk Cloud dashboard in a browser and go to **Settings** > **Data Input** > **HTTP Event Collector** and click **New Token** (on the top-right corner of the page). 
 
-    4. SPLUNK_LOGS_REDACTION
+    4. LOGS_REDACTION
 
-        Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set **SPLUNK_LOGS_REDACTION** to *false*.
+        Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set **LOGS_REDACTION** to *false*.
+        
+        The environment variable **SPLUNK_LOGS_REDACTION** is still supported, but is now **deprecated** and will be removed in a later version. Its use is not recommended.
 
         *Default: `true`*
 

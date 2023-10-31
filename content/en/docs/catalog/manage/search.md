@@ -266,8 +266,8 @@ When searching in the Catalog, the following fields are searched:
 From the **Catalog** home page, you can search the Catalog in the following ways:
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
-* Click one of the *tags* given in the search suggestions
-Click one of the services under **Most Recent Changes**
+* Click one of the tags provided in the search suggestions
+* Click one of the services under **Most Recent Changes**
 * Click one of the services under **Popular Data Sources**
 * Click the **Catalog** tab
 
@@ -289,12 +289,14 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 
 #### 3.4.2 Filters {#filter}
 
-You can filter search results by 
-* Environment type. The **Production** environment filter is active by default.
-* Technology.
-* [CRUD](/catalog/write-data/#view-capabilities). (Creatable, Readable, Updatable, or Deletable) capabilities.
+You can filter search results by: 
+* Environment type (the **Production** environment filter is active by default)
+* Technology
+* [CRUD](/catalog/write-data/#view-capabilities) (Creatable, Readable, Updatable, or Deletable) capabilities
+* Ownership
 
-In the **Filters** dialog box, check the **Filters** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected filters.
+
+In the **Filter** dialog box, check the filters you want to include in your search, then click **Apply**. The search results will only display results in the selected filters.
 
 You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
@@ -428,7 +430,7 @@ The **Curation Option** is displayed in the asset detail screen if you are the o
 
 {{< figure src="/attachments/catalog/search/curation-option.png" alt="curation option"   width="300"  >}}
 
-* For the selected data source, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Data Source Details](/catalog/manage/curate/#service-details) and Authentication
+* For the selected data source, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Data Source Details](/catalog/manage/curate/#service-details), and Authentication
 
 For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 

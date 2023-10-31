@@ -15,7 +15,7 @@ A robust ecosystem is crucial to supporting the flow of value to Mendix Makers, 
 
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/overview/share-content/) your content in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. 
 
-The process is simple: Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/), design and build your content, edit your listing, and submit it to the Marketplace for the [Partner](/appstore/overview/use-content-support/#category) support category.
+The process is simple: Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/), design and build your content, edit your listing, and submit it to the Marketplace for the [Partner](/appstore/overview/#category) support category.
 
 In return, you will gain the following benefits:
 

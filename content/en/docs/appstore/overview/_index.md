@@ -7,15 +7,14 @@ description_list: true
 description: "Presents overview information on the Mendix Marketplace."
 tags: ["marketplace",  "marketplace component", "marketplace content", "widget", "connector", "module", "partner", "support", "platform support", "community support", "deprecated"]
 aliases:
-    - /appstore/overview/
-    - /appstore/overview/overview/
+    - /appstore/general/app-store-overview/
+    - /appstore/general/app-store-content-support/
     - /community/app-store/
     - /community/app-store/index.html
     - /community/app-store/app-store-overview/
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview/
     - /developerportal/app-store/app-store-overview.html
-    - /appstore/general/app-store-content-support/
     - /community/use-content-support/
     - /community/use-content-support.html
     - /developerportal/app-store/use-content-support/
@@ -28,13 +27,13 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace]() and [Use Marketplace Content](/appstore/overview/use-content/).
+This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Use Marketplace Content](/appstore/overview/use-content/).
 
 ## 2 Marketplace Home Page {#home}
 
 The home page is your entry point to the various parts of the Mendix Marketplace. Here you can perform actions such as the following:
 
-* Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
+* Click **My Marketplace** to go to pages presenting your [Marketplace activity](/appstore/overview/my-marketplace/) as well as your company's [private content](/appstore/overview/my-marketplace/#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
 * Explore various [industry solutions](#industry) and [content types](#types).
@@ -60,7 +59,7 @@ The following filter options are also available:
 * **Industry** – 
 * **Compatibility** – for Studio Pro major versions
 * **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
-* **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
+* **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/appstore/overview/my-marketplace/#my-reviews) by users
 
 ## 3 Component Details Page {#details}
 
@@ -73,7 +72,7 @@ The header for a component presents the following details:
 * The name of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](#my-marketplace) list
+* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](/appstore/overview/my-marketplace/) list
 * Depending on the content type:
     * **Use in Studio Pro** for modules and widgets – click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/use-content/#current-sp)
     * **Start with Template** for starter templates – click this to use the template
@@ -83,7 +82,7 @@ The header for a component presents the following details:
     {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  >}}
 
     * These components have a **Contact Us** button for setting up your subscription with the partner
-    * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
+    * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions) page
 
 <a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -93,16 +92,16 @@ The header for a component presents the following details:
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-The **Support** section presents the category of support Mendix offers for the component (for more details, see the [Marketplace Content Support](#support/) section below).
+The **Support** section presents the category of support Mendix offers for the component (for more details, see the [Marketplace Content Support](#support) section below).
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
 The component details page also presents the following tabs:
 
 * **Overview** – contains a description and screenshot of the components
-* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/overview/use-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
+* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/overview/#category) components are documented in the various categories of this *Marketplace Guide*
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*)
-* **Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which opens a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
+* **Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which opens a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
 * **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)
 
 ## 4 Marketplace Content Support {#support}
@@ -150,7 +149,7 @@ The level of support depends on the availability and effort of the developer and
 
 #### 4.2.4 Partner Category
 
-Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](/appstore/overview/overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
+Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](#details) contains a reference to the partner's support portal or the partner's support contact email.
 
 ### 4.3 Feedback Process Summary
 

@@ -17,13 +17,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-In the past, downloading a component directly from the web Marketplace could lead to compatibility errors. Now, downloading a component can only happen directly from the Marketplace in Studio Pro. For that reason, we replaced the **Download** button on the [component details page](/appstore/overview/overview/#details) for widgets and modules with the **Use in Studio Pro** button. This new button allows you to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/use-content/#current-sp). This lowers the risk of introducing compatibility errors and improves the experience of installing the Marketplace content you need.
+In the past, downloading a component directly from the web Marketplace could lead to compatibility errors. Now, downloading a component can only happen directly from the Marketplace in Studio Pro. For that reason, we replaced the **Download** button on the [component details page](/appstore/overview/#details) for widgets and modules with the **Use in Studio Pro** button. This new button allows you to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/use-content/#current-sp). This lowers the risk of introducing compatibility errors and improves the experience of installing the Marketplace content you need.
 
 ### August 5, 2023
 
 #### Improvements
 
-* Categories are now **Content Types**. We have reduced the number of content types and made them consistent across the platform. To learn more about the different content types available, visit the [Marketplace Guide](/appstore/overview/overview/).
+* Categories are now **Content Types**. We have reduced the number of content types and made them consistent across the platform. To learn more about the different content types available, visit the [Marketplace Guide](/appstore/overview/).
 * Sub-categories have been replaced with **Categories**. When submitting a new component, you can apply between one and three categories. When searching in the Marketplace, you can use categories to filter the content and find the right component for your use case.
 
 ### June 29, 2023
@@ -57,7 +57,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 #### Improvements
 
 * The **Compatibility** filter now only allows for major Mendix versions.
-* The **Support** section of the [component details page](/appstore/overview/overview/#details) now includes a link to [Marketplace Content Support](/appstore/overview/use-content-support/).
+* The **Support** section of the [component details page](/appstore/overview/#details) now includes a link to [Marketplace Content Support](/appstore/overview/use-content-support/).
 
 ### March 23, 2023
 
@@ -66,9 +66,9 @@ In the past, downloading a component directly from the web Marketplace could lea
 On top of open-source community-supported content, we are introducing an additional layer of support through our [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partner members can now bring their components to the Mendix Marketplace under terms that guarantee full support to customers:
 
 * Partners are free to select an existing open-source license, or they can select a commercial option with the corresponding license and present that.
-* Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/overview/overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
+* Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/overview/#details) contains a reference to the partner's support portal or the partner's support contact email.
 
-You can find and use partner-supported components on the [Marketplace home page](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/overview/use-content-support/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
+You can find and use partner-supported components on the [Marketplace home page](https://marketplace.mendix.com/) under **From our partners** and by selecting the [Partner](/appstore/overview/#category) **Support** level in the search box. A partner-supported component details page has an explicit indicator (a crown), which makes it easy to distinguish from community-supported content.
 
 ## 2022
 
@@ -156,7 +156,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/overview/overview/#types), and Studio Pro **Compatibility**. 
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/overview/#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
 * We have listed 10+ **Premium** app services, and we now support a self-service [subscription](/appstore/overview/my-marketplace/#company-subscriptions) experience using credit card for two app services in supported regions.
 
@@ -170,7 +170,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* We have implemented a UX refresh of [My Marketplace](/appstore/overview/my-marketplace) to be in line with other Marketplace pages.
+* We have implemented a UX refresh of **My Marketplace** to be in line with other Marketplace pages.
 
 ### June 3, 2021
 
@@ -226,7 +226,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of the notifications in [My Marketplace](/appstore/overview/my-marketplace).
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of the notifications in **My Marketplace**.
 * Developers can now reply to reviews of their components.
 
 ### February 9, 2021
@@ -253,7 +253,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 #### Improvements
 
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/overview/#home), [catalog](/appstore/overview/overview/), [component details](/appstore/overview/overview/#details), and Studio Pro download pages.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/#home), [catalog](/appstore/overview/), [component details](/appstore/overview/#details), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/overview/share-content/) to the Marketplace.
 
@@ -267,7 +267,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* You can now download previous versions of App Store components from the [Mendix Marketplace](https://marketplace.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/overview/overview/#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+* You can now download previous versions of App Store components from the [Mendix Marketplace](https://marketplace.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/overview/#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
 
 #### Fixes
 
@@ -307,7 +307,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 #### Improvements
 
-* You can now subscribe to receive emails when new versions of your [favorite](/appstore/overview/overview/#saved) App Store content are published.
+* You can now subscribe to receive emails when new versions of your favorite App Store content are published.
 
 ### October 23, 2019
 
@@ -323,7 +323,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvements
 
-* We now display the UUID of an App Store component in the [Usage](/appstore/overview/overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
+* We now display the UUID of an App Store component in the [Usage](/appstore/overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
 
 ### September 11, 2019
 

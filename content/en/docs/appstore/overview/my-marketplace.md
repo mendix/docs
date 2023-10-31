@@ -39,7 +39,7 @@ On this page, click the ellipsis (**...**) button  for a component to access the
 
 On this page, you can see the Marketplace content for which you have created at least one version. 
 
-Click the name of the component to go its [component details page](#details).
+Click the name of the component to go its [component details page](/appstore/overview/#details).
 
 Click the context menu to access various options for managing your content:
 
@@ -76,9 +76,9 @@ This page contains private content shared with you by other companies who have m
 
 ## 6 Saved Content {#saved-components}
 
-This page presents the Marketplace content you have [saved](#saved). 
+This page presents the Marketplace content you have [saved](/appstore/overview/#saved). 
 
-Click the name of the component to go its [component details page](#details).
+Click the name of the component to go its [component details page](/appstore/overview/#details).
 
 Click the context menu to access various options for managing this content:
 
@@ -95,7 +95,7 @@ This page contains reviews of [My Content](#my-content) by other users as well a
 
 On this page, you can see all the content your company has published. 
 
-Click the name of the component to go its [component details page](#details).
+Click the name of the component to go its [component details page](/appstore/overview/#details).
 
 Click the context menu to access various options for managing this content:
 

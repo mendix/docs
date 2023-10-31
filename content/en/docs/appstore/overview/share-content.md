@@ -24,7 +24,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/overview/overview/) and [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)
 
 ## 3 Marketplace Content Development Guidelines {#guidelines}
 
@@ -156,7 +156,7 @@ This license can be created for a new **Public Marketplace (all Mendix users)** 
 Follow these steps to configure a proprietary license for a new public component:
 
 1. Click **Request New License**.
-2. Add a **License Name**, which is the name that will be displayed on the [component details page](/appstore/overview/overview/#details).
+2. Add a **License Name**, which is the name that will be displayed on the [component details page](/appstore/overview/#details).
 3. Add a **License URL**, which should lead the user to a web page that lists the terms and conditions for using the component. Users can navigate to this web page by clicking the license name on the component details page.
 4. Add a **Reason** for the new license. This is for the purpose of the Mendix review only, and it will not be displayed on the component details page.
 
@@ -262,7 +262,7 @@ After you click **Publish Content**, your draft will be reviewed by Mendix befor
 
 ### 4.6 Approval Process {#approval}
 
-All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission.
+All components that are to be listed in the [Public Marketplace](#public) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission.
 
 {{% alert color="warning" %}}
 Mendix strongly recommends performing the checks below before you submit your component for approval. This will also speed up the approval process.
@@ -288,14 +288,14 @@ Review and approval by Mendix is required only for the first version of a public
 {{% /alert %}}
 
 {{% alert color="info" %}}
-[Private Marketplace](#private-app-store) content does not require any review or approval.
+[Private Marketplace](#private) content does not require any review or approval.
 {{% /alert %}}
 
 ## 5 Updating Existing Marketplace Content {#updating}
 
 After you publish a component in the Mendix Marketplace, it is your responsibility to make sure that components are updated on a regular cadence. This is important so that components work with the latest versions of dependencies (especially Mendix Studio Pro), and it is required so Mendix can ensure the quality of components in the Marketplace. This means you need to monitor, maintain, and evolve the component so that the Marketplace listing is more noticeable, you can build user loyalty, and you can maintain the good reputation of your company. If the component is not updated regularly, the Marketplace listing will be analyzed for removal from public visibility.
 
-Mendix expects the following updates for comoponents in the Platform, Community, and Premium [support categories](/appstore/overview/use-content-support/#category):
+Mendix expects the following updates for comoponents in the Platform, Community, and Premium [support categories](/appstore/overview/#category):
 
 * Bug fixes
 * New features
@@ -339,6 +339,6 @@ For a component that is outdated based on the above points, this is the review a
 
 ## 7 Read More
 
-* [Marketplace Overview](/appstore/overview/overview/)
+* [Marketplace Overview](/appstore/overview/)
 * [Mendix Partner Program](/appstore/creating-content/partner-program/)
 * [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)

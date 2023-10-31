@@ -173,7 +173,7 @@ In order to select the theme for your app, specify it in the *index.html* page a
 
 ## 7 Demo Apps
 
-On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a number of [community-supported](/appstore/overview/use-content-support/#category) demo apps, which you can review or use to help you develop your own apps.
+On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a number of [community-supported](/appstore/overview/#category) demo apps, which you can review or use to help you develop your own apps.
 
 ## 8 Add Fiori to Your App{#add-fiori}
 

@@ -32,7 +32,7 @@ Owners and curators of registered assets can click **Curate** from the **Data Hu
 
 In both cases, the list includes registered data sources and also individual datasets that are exposed for the data source.
 
-You can search for specific assets by entering a search string in the search bar or **Filter By:** **Asset Type**, **Environment Type**, **Technology**, or **Discoverable** assets.
+You can search for specific assets by entering a search string in the search bar or **Filter By:** **Asset Type**, **Application**, **Environment Type**, **Technology**, or **Discoverable** assets.
 
 The list can also be sorted by any of the columns by clicking on the column header.
 
@@ -59,7 +59,7 @@ When a dataset is selected in the **Search Results**, the **Edit Dataset Details
 
 ## 4 Editing the Metadata of an App {#curate-application}
 
-The curate functions that are available for a selected data source are to change **Application Details**, **Data Source Details** and **Authentication**. This section describes the application details that can be changed: changing owners or changing the application icon.
+The curate functions that are available for a selected data source are to change **Application Details**, **Data Source Details**, and **Authentication**. This section describes the application details that can be changed: changing owners or changing the application icon.
 
 You can curate Application Details from the **Application** screen as follows:
 
@@ -157,7 +157,7 @@ You can curate data sources to add a Catalog description and add tags.
 
 ### 5.1 Adding or Editing a Catalog Description
 
-If a description was included in the contract, this will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
+If a description was included in the contract, it be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
 {{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
 

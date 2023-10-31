@@ -75,6 +75,9 @@ You do not need to clear your environment if you are restoring an existing backu
 To clear your environment, follow these steps:
 
 1. Click **Clear Environment**.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details-buttons.png" alt=""   width="150"  >}}
+
 2. Select one of the following options:
     * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
@@ -417,7 +420,7 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## 6 The Runtime Tab {#runtime-tab}
 
-On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**
+On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" >}}   
 

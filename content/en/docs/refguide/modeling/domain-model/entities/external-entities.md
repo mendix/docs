@@ -69,7 +69,7 @@ This group displays the general properties of the external entity. These values 
 * **Name** – the name of the entity in the local app
 * **Original name** – shows the name of the entity as defined in the originating app
 * **Capabilities** - indicates whether the service supports creating, reading, updating, and/or deleting objects
-* **Create and change locally** - when switched off, the app can only create and update objects when the server supports it; when switched on, the app can create and update objects, but will not be able to [/refguide/send-external-object/](send) them to the server
+* **Create and change locally** - when switched off, the app can only create and update objects when the server supports it; when switched on, the app can create and update objects, but will not be able to [send](/refguide/send-external-object/) them to the server
 * **Summary** – shows the description for the entity in the originating app (shown only when there is a description)
 
 ### 3.2 Attributes {#attributes}
@@ -173,7 +173,7 @@ Learn more about adding authentication information to a consumed OData service:
 
 * Configuring [username and password](/refguide/consumed-odata-service/#authentication) consuming apps
 * Using [HTTP headers](/refguide/consumed-odata-service/#http-headers) for consuming custom authentication methods
-* Consuming a service that uses [Mendix SSO][/refguide/consumed-odata-service/#authenticate-mendix-sso]
+* Consuming a service that uses [Mendix SSO](/refguide/consumed-odata-service/#authenticate-mendix-sso)
 
 ## 5 External Entity Limitations {#limitations}
 

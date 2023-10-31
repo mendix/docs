@@ -179,7 +179,7 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 * Reproducible steps
 
 {{% alert color="info" %}}
-Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/overview/use-content-support/).
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 {{% /alert %}}
 
 ### 5.7 Mobile Problems

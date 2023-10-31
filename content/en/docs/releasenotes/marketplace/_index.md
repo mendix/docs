@@ -57,7 +57,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 #### Improvements
 
 * The **Compatibility** filter now only allows for major Mendix versions.
-* The **Support** section of the [component details page](/appstore/overview/#details) now includes a link to [Marketplace Content Support](/appstore/overview/use-content-support/).
+* The **Support** section of the [component details page](/appstore/overview/#details) now includes a link to [Marketplace Content Support](/appstore/overview/#support).
 
 ### March 23, 2023
 
@@ -301,7 +301,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 We are invested in maintaining Mendix Marketplace content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
-For more information on these support levels, see [App Store Content Support](/appstore/overview/use-content-support/).
+For more information on these support levels, see the [Marketplace Content Support](/appstore/overview/#support/) section of *Marketplace Overview*.
 
 ### November 6, 2019
 

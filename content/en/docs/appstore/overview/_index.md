@@ -59,7 +59,7 @@ The following filter options are also available:
 * **Industry** – 
 * **Compatibility** – for Studio Pro major versions
 * **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
-* **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/appstore/overview/my-marketplace/#my-reviews) by users
+* **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
 ## 3 Component Details Page {#details}
 

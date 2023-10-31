@@ -119,7 +119,7 @@ We have the cookies set by default in Mendix applications described in the [Cook
 
 For Mendix applications, the Cookies have the ‘HTTPOnly’ attribute set to true when they are set by the Mendix Runtime. Cookies which are set by the Mendix Client can't have the 'HttpOnly’ attribute set to true, as those cookies are not available to JavaScript, which is the language used by the Mendix Client.
 
-Cookies set by the Mendix Runtime, which may contain sensitive information such as the session id, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
+Cookies set by the Mendix Runtime, which may contain sensitive information such as the session ID, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
 
 ## 6 Why Are Some Security-Related HTTP Headers Not Set for My App?
 

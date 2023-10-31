@@ -43,7 +43,7 @@ All the users accessing a Mendix app from a browser on a tablet will automatical
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
-### 2.5 Native Mobile {#native-phone}
+### 2.4 Native Mobile {#native-phone}
 
 A Mendix app can be installed on a phone as a native application which offers several advantages:
 
@@ -129,7 +129,7 @@ Allows for changing the [profile type](/refguide/navigation/).
 
 This deletes the profile. If [Menus and Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.5.2 Synchronization Configuration {#customize}
+#### 4.5.3 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

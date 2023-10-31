@@ -12,7 +12,7 @@ weight: 100
 ### Improvements
 
 * We have added support for Mendix 10.
-* We have added support for Selenium version 4 (beta)).
+* We have added support for Selenium version 4 (beta).
 * We have added support for the latest compatible browser versions for Chrome, Firefox, and Edge for Selenium 4.
 * We have removed support for the Internet Explorer browser.
 
@@ -889,7 +889,7 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 * You can use the ATS recorder even if you have different pages for desktop and mobile.
 
 {{% alert color="warning" %}}
-This Beta feature has been discontinued.
+This beta feature has been discontinued.
 {{% /alert %}}
 
 ### Option

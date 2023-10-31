@@ -146,7 +146,7 @@ Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the
 
 ## 5 Retrieving Objects Using SQL (Beta - Mendix 7 and Above)
 
-As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database. (This feature is currently in Beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
+As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database (this feature is in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
 
 The definition of the Java action resembles the OQL action, but instead of an OQL parameter you have an SQL parameter.
 

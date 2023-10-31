@@ -284,7 +284,13 @@ The **Close page** event closes a pop-up window (for pop-up pages) or navigates 
 
 ### 3.10 Delete object(s) {#delete-objects}
 
-The **Delete object(s) event** behavior depends if it is placed on a data container or not. When placed in a data grid, template grid, or reference set selector control bar, it deletes the selected object(s). When placed in a data view or without a data container it allows you to select any available object in scope to be deleted.
+When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object(s) event** will delete the selected objects.
+
+In other situations, the user can select which objects to delete. It can be any surrounding data container, [snippet parameter](/refguide/snippet/), [page parameter](/refguide/page-properties/#parameters) or selections of [pluggable widgets](/refguide/mendix-client/#pluggable-widgets) (for example a [Data Grid 2](/appstore/modules/data-grid-2/) or [Gallery](/appstore/modules/gallery/) widget).
+
+{{% alert color="info" %}}
+The option to configure which objects to delete was introduced in Studio Pro 10.4.0.
+{{% /alert %}}
 
 This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 

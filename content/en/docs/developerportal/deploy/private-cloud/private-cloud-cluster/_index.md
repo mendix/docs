@@ -1325,9 +1325,12 @@ The following rights are available to the cluster creator, and members of a name
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 
-* Manage environment
-* Deploy App – user can deploy a new app to the environment or start and stop existing apps
+* Manage environment- user can navigate to the environment details section and edit environment name and core resources
+* Deploy App – user can deploy a new app to the environment
 * Scale App – user can change the number of replicas
+* Start App
+* Stop App
+* Modify MxAdmin Password
 * Edit App Constants
 * Manage App Scheduled Events
 * View App Logs
@@ -1361,6 +1364,7 @@ You can invite additional members to the namespace, and configure their role dep
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
     With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+    Along with this, we have also decoupled the permission for modifying the MxAdmin password and Manage environment permissions.
 
 5. Click **Send Invite** to send an invite to this person.
 
@@ -1409,6 +1413,32 @@ Enable the toggle button next to the name of the plan you wish to deactivate. Yo
 ##### 7.2.4.2 Activating a Plan
 
 Disable the toggle button next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
+
+##### 7.2.4.3 Deleting a Plan
+
+The following condition govern the deletion of database and storage plans:
+
+* Deletion of Storage/Database plans is permitted if they are not utilized in any of the environments, regardless of whether they are enabled or disabled.
+
+{{% alert color="warning" %}}
+After you delete the plan, the action cannot be reversed or undone through the portal. Deleting the plan does not remove it from the cluster. To delete the plan from the cluster, a separate action is required, which can be accomplished by executing the following command:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} get storageplan
+oc -n {namespace} delete storageplan {StoragePlanName}
+
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} get storageplan
+kubectl -n {namespace} delete storageplan {StoragePlanName}
+```
+{{% /alert %}}
+
 
 #### 7.2.5 Custom Core Resource Plan
 

@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-As of Studio Pro 9.12 users can choose whether to start a new app with SVN or Git version control. Git offers [several advantages](/refguide9/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate, as well as some downsides when working with large repositories. This document describes the most prominent changes between Git and SVN.
+With Studio Pro version 9.12 and above, users can choose whether to start a new app with SVN or Git version control. Git offers [several advantages](/refguide9/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate, as well as some downsides when working with large repositories. This document describes the most prominent changes between Git and SVN.
 
 For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*.
 
@@ -50,9 +50,11 @@ In Git, committing is done locally at first. Then commits are sent to other repo
 
 ## 4 Local copy of entire repository
 
-Git's local copy of the entire history is a core feature of its distributed version control system. Every user who clones a Git repository essentially creates a full copy of the entire project, including its entire history. 
+To support Git's distributed version control system, every user who clones a Git repository essentially creates a full copy of the entire project. This includes its entire history. 
 
-This local history allows for complete independence, enabling users to work offline, commit changes, and explore the project's history seamlessly without the need for a constant connection to a central server. A downside of this is that a fresh checkout (called 'clone' in Git), will taker longer compared to SVN. Where a checkout in SVN meant downloading the last revision (for example 100MB), doing a clone in Git means downloading the entire repository (for example 1.2GB). 
+This local history allows for complete independence, enabling users to work offline, commit changes, and explore the project's history seamlessly without the need for a constant connection to a central server.
+
+A downside of this is that a fresh checkout (called a 'clone' in Git), will taker longer compared to SVN. Where a checkout in SVN only downloads the last revision (which might be, for example, 100MB), doing a clone in Git means downloading the entire repository (which could be 1.2GB for the same repository). 
 
 ## 5 Proxy Support {#proxy-support}
 
@@ -73,6 +75,6 @@ You can also use `--global` modifier for applying the changes system-wise, but i
 
 It is possible to [set up a third-party tool to connect to the Team Server](/refguide9/version-control-faq/#third-party-tools) for both SVN and Git. However, migrating to Git requires a different tool: instead of TortoiseSVN you can use tools like TortoiseGit or GitHub Desktop.
 
-## 6 Read More
+## 7 Read More
 
 * [Migrate to Git](/developerportal/general/migrate-to-git/)

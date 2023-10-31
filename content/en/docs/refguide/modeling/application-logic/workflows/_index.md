@@ -23,7 +23,7 @@ You can perform the following basic functions when working on workflows:
 * Delete a workflow
 * Add elements to a workflow
 * Move elements in a workflow
-* Cut, copy, or paste elements in a Workflow
+* Cut, copy, or paste elements in a workflow
 * View element properties
 * Trigger a workflow from a page or via a microflow
 * Export a workflow to an image

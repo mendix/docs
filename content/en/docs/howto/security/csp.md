@@ -34,7 +34,7 @@ window.dojoConfig = {
 	async: true,
 	baseUrl: "mxclientsystem/dojo/",
 	cacheBust: "{{cachebust}}",
-	#{OTHER_DIR}Redirect: "#{RTL_REDIRECT}",
+	rtlDirect: "index-rtl.html",
 
     // CSP Dojo config
 	has: {

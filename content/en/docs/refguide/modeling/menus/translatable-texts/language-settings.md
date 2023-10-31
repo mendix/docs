@@ -75,6 +75,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 
 | Language | Region | Locale | Available Since |
 | --- | --- | --- | --- |
+| Afrikaans | South Africa| af_ZA | 10.4.0 |
 | Albanian | Albania | sq_AL | 9.0.5 |
 | Amharic | Ethiopia | am_ET | 9.2.0 |
 | Arabic | Algeria | ar_DZ | 9.0.5 |
@@ -178,6 +179,10 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Slovak | Slovakia | sk_SK | 9.0.5 |
 | Slovenian | Slovenia | sl_SI | 9.0.5 |
 | Somali | Somalia | so_SO | 9.2.0|
+| Southern Ndebele | South Africa | nr_ZA | 10.4.0 |
+| Southern Sotho | Lesotho | st_LS | 10.4.0 |
+| Southern Sotho | South Africa | st_ZA | 10.4.0 |
+| Southern Sotho | Zimbabwe | st_ZW | 10.4.0 |
 | Spanish | Argentina | es_AR | 9.0.5 |
 | Spanish | Bolivia | es_BO | 9.0.5 |
 | Spanish | Chile | es_CL | 9.0.5 |
@@ -198,11 +203,13 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Spanish | United States | es_US | 9.0.5 |
 | Spanish | Uruguay | es_UY | 9.0.5 |
 | Spanish | Venezuela | es_VE | 9.0.5 |
-| Swedish | Sweden | sv_SE | 9.0.5 |
 | Swahili | Kenya | sw_KE | 9.2.0 |
 | Swahili | Rwanda | sw_RW | 9.2.0 |
 | Swahili | Tanzania | sw_TZ | 9.2.0 |
 | Swahili | Uganda | sw_UG | 9.2.0 |
+| Swati | Eswatini | ss_SZ | 10.4.0 |
+| Swati | South Africa | ss_ZA | 10.4.0 |
+| Swedish | Sweden | sv_SE | 9.0.5 |
 | Tagalog | Philippines | tl_PH | 9.2.0 |
 | Tamazight | Morocco | tzm_MA | 9.18.0 |
 | Tamil | India | ta_IN | 9.3.0 |
@@ -211,12 +218,22 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Thai (Western digits) | Thailand | th_TH | 9.0.5 |
 | Thai (Thai digits) | Thailand | th_TH_TH | 9.0.5 |
 | Tigrinya | Eritrea | ti_ER | 9.23.0 |
+| Tsonga | South Africa | ts_ZA | 10.4.0 |
+| Tsonga | Zimbabwe | ts_ZW | 10.4.0 |
+| Tswana | Botswana | tn_BW | 10.4.0 |
+| Tswana | South Africa | tn_ZA | 10.4.0 |
+| Tswana | Zimbabwe | tn_ZW | 10.4.0 |
 | Turkish | Turkey | tr_TR | 9.0.5 |
 | Ukrainian | Ukraine | uk_UA | 9.0.5 |
 | Urdu | India | ur_IN | 9.2.0 |
 | Urdu | Pakistan | ur_PK | 9.2.0 |
+| Venda | South Africa | ve_ZA | 10.4.0 |
+| Venda | Zimbabwe | ve_ZW | 10.4.0 |
 | Vietnamese | Vietnam | vi_VN | 9.0.5 |
 | Welsh | Wales | cy_GB | 9.0.5 |
+| Xhosa | South Africa | xh_ZA | 10.4.0 |
+| Xhosa | Zimbabwe | xh_ZW | 10.4.0 |
+| Zulu | South Africa | zu_ZA | 10.4.0 |
 
 ## 6 ⚠ List of Deprecated Languages
 

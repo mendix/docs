@@ -1,5 +1,5 @@
 ---
-title: "Database Size Reduction"
+title: "Reducing Database Size"
 url: /developerportal/operate/database-size-reduction/
 weight: 50
 description: "Describes how to restore physical disk space by creating and restoring a database backup."
@@ -9,30 +9,24 @@ tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
 
 ## 1 Introduction
 
-Usually, the database of a Mendix application in the Mendix Cloud will grow over time, as shown in this chart:
+Usually, the database of a Mendix application in Mendix Cloud grows over time. Here is a typical example:
 
 {{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" >}}
 
-The data grows in a steady fashion. If entities are removed in a major releases, you may see a temporary decrease in the size of the database, but on average the direction will be upwards.
+The data grows in a steady fashion. If entities are removed in a major release, you may see a temporary decrease in the size of the database—but on average, the database size tends to increase over time.
 
-One reason for this growth is that the physical space on the hard disk is not freed up, even when you delete records from the database. Instead, the now empty records are kept in place so that the space can be reused if new records are inserted (created) into the database. This is helpful because it means database records on the hard disk remain physically close to each other, which in turn means disk read operations should perform better.
+One reason for this growth is that the physical space on the hard disk is not freed up, even when you delete records from the database. Instead, the now-empty records are kept in place so that the space can be reused if new records are inserted into (created) the database. This is helpful because it means database records on the hard disk remain physically close to each other—which in turn means that disk read operations should perform better.
 
-However, there may be times where physically reclaiming the lost space is important. For example, if you are alerted that 90% of your disk space is used, you may want to reduce your disk usage.
-
-Let’s explore how to reclaim this space.
+However, there may be times when physically reclaiming the lost space is important. For example, if you get an alert that 90% of your disk space is in use, you may want to reduce your disk usage.
 
 ## 2 Recovering Physical Disk Space
 
-Physical disk space can be recovered by creating a database backup, and then restoring it.
+You can recover physical disk space by creating a database backup and then restoring it.
 
-A database restore does a full physical rewrite of the database. It will compress the database to contain just the current records, and fully optimize the physical placement of files on the actual hard disk to maximize the performance of disk read operations.
+A database restore does a full physical rewrite of the database. It compresses the database to contain just the current records. It also fully optimizes the physical placement of files on the actual hard disk to maximize the performance of disk read operations.
 
-You can create and restore a backup in the Mendix Developer Portal on the Deploy -> Backup page.
+In the Developer Portal, you can create and restore a backup on your app's **Backups** page. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
 
 ## 3 Summary
 
-To physically reclaim currently unused space that was created by deleting records from the database, you can execute a backup and restore of the database in the Mendix Developer Portal. However, keep in mind that, unless the database is not expected to grow back to its previous size, the benefit of this action might be limited.
-
-## 4 Read More
-
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+To physically reclaim unused space that was created by deleting records from the database, you can use the Developer Portal to back up and restore your database. However, keep in mind that this action might have limited benefits unless the database is not expected to grow back to its previous size.

@@ -170,9 +170,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 * Microsoft Windows Server 2008 SP2 and above
 * The following Unix-like operating systems:
-    * Debian OldOldStable (LTS), Debian OldStable, Debian Stable
-    * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
-    * CentOS 6, CentOS 7
+    * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
+    * Red Hat Enterprise Linux 6 and later
+    * CentOS 7
+    * CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
@@ -255,7 +256,7 @@ If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and hybrid apps built with Mendix the following operating system versions are supported:
+For native and hybrid apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android

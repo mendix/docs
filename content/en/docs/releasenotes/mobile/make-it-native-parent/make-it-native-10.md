@@ -10,6 +10,14 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
+## iOS 1.2.0 / Android 1.2.0
+
+**Release date: October 16, 2023**
+
+### Fixed
+
+* We fixed an issue related to Firebase integration. This fix ensures improved stability and a smoother experience while using the Make It Native app.
+
 ## iOS 1.1.0 / Android 1.1.0
 
 **Release date: September 15th, 2023**

@@ -9,11 +9,11 @@ tags: ["security", "secure app"]
 
 ## 1 Introduction
 
-Each application must have a proper security configuration in order to have its data secured. This how-to will teach you how to turn the security on and configure it.
+Each application must have a proper security configuration in order to have its data secured. This how-to teaches you how to turn the security on and configure it.
 
 You will start with the configuration of user and module roles for access to pages and microflows, so we’ll turn on the prototype/demo security. Next you will deal with production security.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure prototype/demo security
 * Configure production security
@@ -65,7 +65,7 @@ To see the results of this how-to, you must set up a test project with test data
 
 ## 4 Setting the Security Level to Prototype/Demo {#prototype}
 
-In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
+In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to Mendix Cloud, production security is mandatory.
 
 To set the security level to prototype/demo, follow these steps:
 
@@ -148,7 +148,7 @@ To configure the page and microflow access of a module, follow these steps:
 
 ## 5 Setting the Security Level to Production {#production}
 
-In this section of the how-to, you will configure the security at the production level. At this level, all security settings must be configured. In addition to prototype/demo security, you have to configure the entity (data) access. Production security is mandatory when deploying to the Mendix cloud.
+In this section of the how-to, you will configure the security at the production level. At this level, all security settings must be configured. In addition to prototype/demo security, you have to configure the entity (data) access. Production security is mandatory when deploying to Mendix Cloud.
 
 To set the security level to production, follow these steps:
 

@@ -278,7 +278,9 @@ To pass an existing object, use the [`@id` syntax](https://docs.oasis-open.org/o
 }
 ```
 
-If the referenced object cannot be found, the action will fail.
+If the referenced object cannot be found, the action will fail. 
+
+When you pass a value for an attribute that is not writable—such as AutoNumber, Binary attributes, calculated attributes, and system attributes—the value is ignored and the object is passed to the microflow with the default value (for new objects) or the previous value (for existing objects). If it is an attribute that is writable but the current user does not have write rights for that member, the request will fail.
 
 If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 

@@ -1,7 +1,7 @@
 ---
 title: "App Node Requests"
 url: /developerportal/support/new-app-node-request-template/
-description: "Describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud."
+description: "Describes how to deploy a new licensed node in Mendix Cloud or on-premises/virtual private cloud."
 category: "Mendix Support"
 weight: 30
 tags: ["Support", "app node", "node", "license", "subscription secret"]
@@ -23,7 +23,7 @@ These functions, listed below, are described in this document.
 
 ## 2 Requesting a New Licensed App Node{#new-node}
 
-If you want to deploy your app to a new licensed node in the Mendix Cloud, Mendix Cloud Dedicated, or on-premises/virtual private cloud, you can request one from Mendix Support.
+If you want to deploy your app to a new licensed node in Mendix Cloud, Mendix Cloud Dedicated, or on-premises/virtual private cloud, you can request one from Mendix Support.
 
 Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app.
 

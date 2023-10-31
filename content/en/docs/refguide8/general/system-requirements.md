@@ -85,9 +85,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 ### 6.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
-* Debian OldOldStable (LTS), Debian OldStable, Debian Stable
-* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
+* [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
+* Red Hat Enterprise Linux 6 and later
 * CentOS 6, CentOS 7
+* CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
@@ -119,7 +120,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide8/mysql/) 8.0
 * [Oracle Database](/refguide8/oracle/) 19, 21c
-* PostgreSQL 11, 12, 13, 14, 15
+* PostgreSQL 11, 12, 13, 14, 15, 16
 * [SAP HANA](/refguide8/saphana/) 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}

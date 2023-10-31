@@ -107,7 +107,7 @@ isNew($object1)
 
 ## 5 Checking Whether an Object Is Synced {#synced}
 
-This function is available only in expressions for [conditional visibility or editability](/refguide/common-widget-properties/), as only they are evaluated on client side.
+This function is available only in expressions for [conditional visibility or editability](/refguide/common-widget-properties/) and [nanoflows](/refguide/nanoflows/), as they are only evaluated on client side.
 
 ### 5.1 Input Parameters
 

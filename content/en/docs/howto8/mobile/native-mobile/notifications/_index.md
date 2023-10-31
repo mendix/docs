@@ -8,7 +8,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 ## 1 Introduction {#intro}
 
-These guides will teach you to configure push notifications (also known as remote notifications) for your Mendix apps. The guides are meant to be completed in order, and will teach you to **send a test push notification to a single device**. Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
+These guides teach you how to configure push notifications (also known as remote notifications) for your Mendix apps. The guides are meant to be completed in order, and they teach you how to send a test push notification to a single device. Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
 
 * [Add Module Dependencies](/howto8/mobile/notif-add-module-depends/) — Install the required dependency modules so your app can use push notifications.
 * [Implement the Push Notifications Module](/howto8/mobile/notif-implement-module/) — Learn to implement the Push Notifications Connector module.

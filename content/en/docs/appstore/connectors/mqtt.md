@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "mqtt", "iot"]
 
 ## 1 Introduction
 
-You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. [MQTT](https://mqtt.org/) is a lightweight Internet of things (IoT) messaging protocol. 
+You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. [MQTT](https://mqtt.org/) is a lightweight internet of things (IoT) messaging protocol. 
 
 ### 1.1 Typical Use Cases
 

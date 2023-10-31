@@ -66,9 +66,9 @@ In most cases, this means the data transfer tool cannot run from a local machine
 
 Download and extract the tool for your operating system. If you are planning to run the data transfer tool in a Pod, download the Linux version.
 
-* [Linux](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.2-linux-amd64.tar.gz)
-* [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.2-macos-amd64.tar.gz)
-* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.2-windows-amd64.zip)
+* [Linux](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.3-linux-amd64.tar.gz)
+* [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.3-macos-amd64.tar.gz)
+* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.3-windows-amd64.zip)
 
 ### 3.2 Running the Data Transfer Tool Locally
 

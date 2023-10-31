@@ -104,7 +104,7 @@ Members are users who can view and/or edit an app.
 
 On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
 
-When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click an app name to go to the [details page](#app-details) of this app.
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click **Remove** to remove the member from the app. Click an app name to go to the [details page](#app-details) of this app.
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating (on the **Active Members** tab) or activating (on the **Deactivated Members** tab) members.
 
@@ -148,7 +148,7 @@ On the **General Settings** tab of this page, you can edit your **Company Name**
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
-If you have [configured single sign-on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
+If you have [configured single sign-on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), BYOIDP will automatically adopt it, without further actions from the Mendix Admins.
 
 To export all the email domains, use the **Export to Excel** button.
 
@@ -243,7 +243,7 @@ The **Free Environments** tab presents details on your company's free environmen
 ## 10 Entitlements {#entitlements}
 
 {{% alert color="info" %}}
-This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Entitlements** page is a self-service tool that displays the transactions (such as purchases of cloud credits, or provisioning of new environments) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
@@ -253,7 +253,7 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 ## 11 Deployed Apps {#deployed-apps}
 
 {{% alert color="info" %}}
-This feature is currently in Beta. For more information about Beta features, see [Beta Releases](/releasenotes/beta-features/).
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
@@ -432,7 +432,7 @@ After a request is either rejected or approved, a notification is sent to the re
 ## 14 Application Health Dashboard {#application-health-dashboard}
 
 {{% alert color="info" %}}
-The **Application Health Dashboard** is in Beta. For more information on Beta products, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
+The **Application Health Dashboard** is in beta. For more information, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
 {{% /alert %}}
 
 The **Application Health Dashboard** gives an overview of the alert status of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps.

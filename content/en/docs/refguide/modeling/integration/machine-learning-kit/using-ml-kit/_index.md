@@ -243,7 +243,7 @@ The released versions of the *ML Kit* and supported ONNX Runtime versions can be
 
 | Mendix Studio Pro | ML Kit   | ONNX Runtime |
 | ----------------- | -------- | ------------ |
-| 9.23              | Public Beta | 1.11.0       |
+| 9.23              | Public beta | 1.11.0       |
 
 ## 5 Monitoring and Troubleshooting
 

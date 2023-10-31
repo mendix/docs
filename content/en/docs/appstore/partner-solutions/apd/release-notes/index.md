@@ -636,7 +636,7 @@ With this feature during a performance analysis you can see if a microflow is ta
 
 ### New Beta Feature: Trigger on Microflow Statistics
 
-Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (hence beta) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an email.
+Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (beta) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an email.
 This feature will change in the future.
 
 ### New feature: Reporting Support with OData

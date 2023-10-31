@@ -12,7 +12,7 @@ Workflows are processes that can potentially run for a long time. While a workfl
 ## 2 Workflow Versioning
 
 Workflow instances have functional value for the business. Therefore, when a new workflow version is deployed, the system should decide how to handle running instances. 
-Some workflow engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
+Some Workflow Engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
 The Mendix Workflow Engine uses a different approach. Mendix Studio Pro validates the app when it is being deployed using the model in that particular moment. Older versions of a workflow may refer to artifacts that are no longer available, such as roles, pages, workflows, or microflows that were deleted in the latest version (or require a different input or have a different output). As such, the model of the latest app version may no longer be compatible with older workflow versions. Mendix Studio Pro validates whether a workflow instance is compatible with the latest workflow version. 
 
 ## 3 Workflow Versioning Conflict Detection

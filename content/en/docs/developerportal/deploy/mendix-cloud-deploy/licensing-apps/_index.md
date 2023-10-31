@@ -119,7 +119,7 @@ To unlink a Free App, do the following:
 
 5. Click **Yes, delete all data and unlink this app** to confirm.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" width=250 >}}
 
     {{% alert color="warning" %}}Your Data will be deleted.{{% /alert %}}
 

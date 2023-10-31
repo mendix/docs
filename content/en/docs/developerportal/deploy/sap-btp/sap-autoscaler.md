@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. This service can be based on a schedule, or based on the value of a metric.
+The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. These changes can be based on a schedule, or based on the value of a metric.
 
 For more information on the application autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the SAP Help Portal.
 
@@ -20,7 +20,7 @@ For more information on the application autoscaler, see [Application Autoscaler 
 
 The **autoscaler** service can be found on the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment.
 
-Selecting the **autoscaler** service, expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
+Selecting the **autoscaler** service expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
 
 {{< figure src="/attachments/developerportal/deploy/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" >}}
 
@@ -51,10 +51,10 @@ There are three options available:
 
 The metrics you can use to trigger dynamic scaling are as follows:
 
-* Memory consumed - monitors memory consumption in megabytes (memoryconsumed) or in percentage (memoryutil)
+* Memory consumed – monitors memory consumption in megabytes (memoryconsumed) or in percentage (memoryutil)
 * CPU utilization in percentage
-* Response time - monitors response time in milliseconds
-* Throughput - monitors requests per seconds (RPS)
+* Response time – monitors response time in milliseconds
+* Throughput – monitors requests per seconds (RPS)
 
 {{% alert color="info" %}}
 The **Configurator** does not support adding custom metrics as triggers.
@@ -66,8 +66,8 @@ You first need to decide the sort of scaling you want to apply.
 
 For **Scaling**, select one of the following:
 
-* Schedule-based scaling – scaling based on a schedule, see [Scheduled Scaling](#schedule) section below
-* Dynamic scaling – scaling based on the values of metrics, see [Dynamic Scaling](#dynamic)section below
+* Schedule-based scaling – scaling based on a schedule, see the [Scheduled Scaling](#schedule) section below
+* Dynamic scaling – scaling based on the values of metrics, see [Dynamic Scaling](#dynamic) section below
 * Custom – you need to set up both [Dynamic Scaling](#dynamic) and [Scheduled Scaling](#schedule) as described in the sections below
 
 You then need to set up the requested type of scaling. The sections below show a summary of the required information. For more information, see the [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) documentation on the SAP Help Portal.
@@ -75,12 +75,12 @@ You then need to set up the requested type of scaling. The sections below show a
 When you have added all the rules, you can do one of the following:
 
 * Click **Upload Configuration To Service** to upload your autoscaler configuration directly to the autoscaler service.
-* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration; you can then upload this file as a configuration of your autoscaler service.
+* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration; you can then upload this file as the configuration of your autoscaler service.
 
 ### 3.1 Scheduled Scaling{#schedule}
 
 {{% alert color="warning" %}}
-Do not attempt to enter overlapping schedules, as it causes the scaling to fail.
+Do not attempt to enter overlapping schedules as it causes the scaling to fail.
 {{% /alert %}}
 
 First, you need to choose whether to set up a [Recurring Schedule](#recurring) or a schedule based on a [Specific Date](#specific). You can also choose to set up a **Custom** combination of the two.

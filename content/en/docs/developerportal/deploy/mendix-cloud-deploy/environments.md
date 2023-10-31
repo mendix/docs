@@ -122,7 +122,7 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 1. Click **Download to CSV**.
 2. Select the period for which you want to download log entries. For **Custom Period**, you must enter a valid period using **Start Date** and **End Date**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/download-activity-log.png" alt="Sample custom period with a validation error" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/download-activity-log.png" alt="Sample custom period with a validation error" width=400 >}}
 
 3. Click **Download**.
 

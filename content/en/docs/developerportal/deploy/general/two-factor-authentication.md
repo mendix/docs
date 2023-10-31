@@ -23,7 +23,7 @@ Two-factor authentication requires you to identify yourself using your password 
 
 Actions that require 2FA are indicated by a padlock symbol.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" width=150 >}}
 
 ## 3 How It Works
 

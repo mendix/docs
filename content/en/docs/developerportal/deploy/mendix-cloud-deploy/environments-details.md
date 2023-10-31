@@ -58,7 +58,7 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 * **Show Running Now** – This can be used to monitor all actions that are currently running in your environment. It is visible only when your application is running.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions" width=250 >}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
@@ -75,6 +75,9 @@ You do not need to clear your environment if you are restoring an existing backu
 To clear your environment, follow these steps:
 
 1. Click **Clear Environment**.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details-buttons.png" alt=""   width="250"  >}}
+
 2. Select one of the following options:
     * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
@@ -103,7 +106,7 @@ After you rename an environment, it may take up to 15 minutes before you can acc
 
 To see the options for changing scaling, go to the **Instances** section of the **General** tab and click **Change scaling**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/scale.png" alt="A sample view of the Scaling page">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/scale.png" alt="A sample view of the Scaling page" width=400 >}}
 
 In **Scaling**, there are two sliders that you can control:
 
@@ -184,7 +187,7 @@ In the **Edit Constant** dialog box, you can change the constant value using the
 
 You can also set **Mask** to **Yes**. This changes the display settings for **Current value** and **New value**; if masking is enabled, all screens in the Developer Portal (and in Excel if you export the constants) conceal these values and display a string of asterisks in their place. This lets you keep your constants secret from users who do not have edit rights.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/edit-constant.png" alt="Edit Constants Pop-up window"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/edit-constant.png" alt="Edit Constants Pop-up window"   width="60%"  >}}
 
 {{% alert color="info" %}}
 For the changes to take effect, you must restart your application.
@@ -418,7 +421,7 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## 6 The Runtime Tab {#runtime-tab}
 
-On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**
+On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" >}}   
 

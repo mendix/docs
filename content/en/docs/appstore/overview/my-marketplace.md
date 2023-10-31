@@ -93,7 +93,7 @@ This page contains reviews of [My Content](#my-content) by other users as well a
 
 ## 8 Company Content {#company-content}
 
-On this page, you can see all the content your company has published. 
+On this page, you can see all the content your company has published as a private Marketplace.
 
 Click the name of the component to go its [component details page](/appstore/overview/#details).
 

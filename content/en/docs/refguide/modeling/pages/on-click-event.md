@@ -116,11 +116,21 @@ The following settings are specific for this event:
 
 The [microflow](/refguide/microflow/) that should be executed.
 
+You can either select an existing microflow or create a new microflow by clicking the **New** button from the **Select Microflow** dialog box.
+
+In Studio Pro 10.4.0 and above, when creating a new microflow, a dialog box is shown where you can set the name and select parameters for the new microflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new microflow:
+
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-with-parameter.png" width="650px" >}}
+
+If there is nothing to pass to the new microflow, then a dialog box is shown where you can only specify the name of the microflow:
+
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-no-parameter.png" >}}
+
 #### 3.3.2 Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" width="550px" >}}
 
 ##### 3.3.2.1 Microflow
 
@@ -209,7 +219,15 @@ For microflows that are used within a data widget, setting **Abort on Validation
 
 The **Call a nanoflow** event executes the specified nanoflow. 
 
+#### 3.4.1 Nanoflow
+
 Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that should be executed.
+
+You can either select an existing nanoflow or create a new nanoflow by clicking the **New** button from the **Select Nanoflow** dialog box.
+
+In Studio Pro 10.4.0 and above, when creating a new nanoflow, a dialog box is shown where you can set the name and select parameters for the new nanoflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new nanoflow.
+
+If there is nothing to pass to the new nanoflow, then a dialog box is shown where you can only specify the name of the nanoflow.
 
 ### 3.5 Open Link {#open-link}
 
@@ -266,7 +284,13 @@ The **Close page** event closes a pop-up window (for pop-up pages) or navigates 
 
 ### 3.10 Delete object(s) {#delete-objects}
 
-The **Delete object(s) event** behavior depends if it is placed on a data container or not. When placed in a data grid, template grid, or reference set selector control bar, it deletes the selected object(s). When placed in a data view or without a data container it allows you to select any available object in scope to be deleted.
+When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object(s) event** will delete the selected objects.
+
+In other situations, the user can select which objects to delete. It can be any surrounding data container, [snippet parameter](/refguide/snippet/), [page parameter](/refguide/page-properties/#parameters) or selections of [pluggable widgets](/refguide/mendix-client/#pluggable-widgets) (for example a [Data Grid 2](/appstore/modules/data-grid-2/) or [Gallery](/appstore/modules/gallery/) widget).
+
+{{% alert color="info" %}}
+The option to configure which objects to delete was introduced in Studio Pro 10.4.0.
+{{% /alert %}}
 
 This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 

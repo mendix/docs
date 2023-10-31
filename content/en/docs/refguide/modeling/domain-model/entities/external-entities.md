@@ -25,7 +25,7 @@ To add an external entity to your app model, follow these steps:
 
 The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
 
-* A [Consumed OData Service](refguide/consumed-odata-service/) document that contains details of the OData service and the metadata. The logo displayed identifies the originating app of the service.
+* A [Consumed OData Service](/refguide/consumed-odata-service/) document that contains details of the OData service and the metadata. The logo displayed identifies the originating app of the service.
 * A **Location** constant that specifies the URL of the service.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}

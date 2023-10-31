@@ -80,25 +80,27 @@ When an app developer changes the **Workflow Context** entity of a workflow, exi
 You can do one of the following: 
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
-   * Here is an example of an possible Java Action set up within Mendix, which in this case, sets a new $History object as context: ![Alt text](/content/en/docs/refguide/modeling/application-logic/workflows/JavaActionWorkflowContextReplacement.jpg?raw=true "An example of the Java Action Set Up Necessary to Replace a Workflow Context Object")
-   * Here is the example code to be used for the Java action:
+* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. See below a Java action example set up within Mendix. It sets a new `$History` object as the workflow context:
+    
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-versioning-and-conflict-mitigation/Java-action-example.png" alt="Expose as Workflow Action Settings" >}}
 
-```java
-import com.mendix.workflows.Workflow;   //add this import up top
+    Here is the code of the Java action example:
 
-// BEGIN USER CODE
-		try {
-			Workflow myWorkflow =  com.mendix.core.Core.workflows().getWorkflow(getContext(), __WorkflowInput);    //get the proper type Workflow object to work with from the input parameter __WorkflowInput
-			myWorkflow.setWorkflowContext(__ContextReplacement);                                                   //now we have the proper type, we can call the setWorkflowContext() function, that replaces the context with __ContextReplacement
-			return true;
-		}catch (Exception e){
-			return false;
-		}
-// END USER CODE
-``` 
+    ```java
+    import com.mendix.workflows.Workflow;   // add this import to the top
 
+    // BEGIN USER CODE
+    try {
+      var workflow = com.mendix.core.Core.workflows().getWorkflow(getContext(), __WorkflowInput); // get the Workflow interface object
+      workflow.setWorkflowContext(__ContextReplacement); // replace the current context object with the new one
+      return true;
+    } catch (Exception e) {
+      return false;
+    }
+    // END USER CODE
+    ``` 
 
+    For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
 To prevent this issue, you need to make sure that context objects cannot be deleted while they are still being used in running workflow instances.

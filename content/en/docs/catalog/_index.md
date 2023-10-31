@@ -21,7 +21,7 @@ The [Catalog](https://catalog.mendix.com) is a development tool provided in the 
 
 {{< figure src="/attachments/catalog/catalog-home.png" >}}
 
-REST services provided by Mendix Apps running in the Mendix Cloud, published [OData](/refguide/published-odata-services/)/OpenAPI REST Service, are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData, OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
+REST services provided by Mendix Apps running in the Mendix Cloud (published [OData](/refguide/published-odata-services/) and OpenAPI REST Services) are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData and OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
 Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) release notes.
 
@@ -44,7 +44,7 @@ In addition to the Catalog, Mendix Connect functionalities include:
 
 From the Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
-* **Home** – search in the Catalog, manually register a service from different applications, select from the most recently changed or most popular services
+* **Home** – search in the Catalog, manually register a service from different applications, or select from the most recently changed or most popular services
 * **Browse** – [search](/catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset, either with the **Data View** or [Landscape View](/catalog/manage/landscape/)
 * **Curate** – carry out [curate](/catalog/manage/curate/) functions on registered assets to enrich the registered metadata and increase discoverability
 
@@ -53,8 +53,8 @@ From the **Home** screen, you can do the following:
 * **Search** – search in the Catalog using the **Search** box or by clicking the suggested **Tags**
 * **Register a new data source** – manually register an OData service from your enterprise business application to the Catalog (for more details, see [How to Register OData Resources in the Catalog](/catalog/register/register-data/))
 
-* **Most Recent Changes** – click on the most recently changed data sources
-* **Popular Data Sources** – click on the most popular data sources
+* **Most Recent Changes** – view the most recently changed data sources
+* **Popular Data Sources** – view the most popular data sources
 
 The Catalog is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
 

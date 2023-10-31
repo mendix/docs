@@ -36,7 +36,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](/appstore/overview/my-marketplace/) as well as your company's [private content](/appstore/overview/my-marketplace/#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
-* Explore various [industry solutions](#industry) and [content types](#types).
+* Search for content via the **Search Marketplace** box on the right side of the header
 
 {{< figure src="/attachments/appstore/overview/overview/home-page.png" >}}
 

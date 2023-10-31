@@ -19,6 +19,8 @@ One implication of this is that you must use the same username (in the form of a
 
 When you sign in to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
 
+{{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/sign-in.png" >}}
+
 {{% alert color="warning" %}}
 
 For SAP authentication, your SAP and Mendix username must be the same.
@@ -30,8 +32,6 @@ Your password can be different in your Mendix credentials and your SAP credentia
 ### 2.1 Signing in Using Mendix Credentials
 
 Enter your **Username** and Mendix **Password**. Click **Sign in**. This will authenticate you with the credentials held by Mendix.
-
-{{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/sign-in.png" >}}
 
 ### 2.2 Signing in Using SAP Credentials
 
@@ -47,7 +47,7 @@ Enter the correct credentials and you will be signed in to Studio Pro.
 
 ## 3 Creating and Deploying Apps Using SSO
 
-When you create an SAP app or a new SAP Business Technology Platform (SAP BTP) environment, you may be asked to sign in to SAP. For more information, see [Create a New Environment](/developerportal/deploy/sap-cloud-platform/#create) section in *SAP BTP*
+When you create an SAP app or a new SAP Business Technology Platform (SAP BTP) environment, you may be asked to sign in to SAP. For more information, see the [Create a New Environment](/developerportal/deploy/sap-cloud-platform/) section in *SAP BTP*.
 
 SAP SSO is triggered if you do not already have an active session in the SAP region you have selected.
 
@@ -65,7 +65,7 @@ Enter the correct credentials and click **SIGN IN** to continue the creation of 
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/go-back.png" >}}
 
-This error occures when you work with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you use different usernames for signing in to Mendix platform and SAP region which you are working on.
+This error occurs when you work with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you use different usernames for signing in to Mendix platform and SAP region which you are working on.
 
 Click **Go back to where you originally came from**, and you will see another error message. Click **OK** to clear it.
 

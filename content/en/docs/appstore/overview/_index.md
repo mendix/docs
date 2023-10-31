@@ -55,12 +55,12 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 The following filter options are also available:
 
-* **Category**
+* **Category** – 
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
-* **Industry**
-* **Compatibility**
-* **Visibility** – [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
-* **Rating**
+* **Industry** – 
+* **Compatibility** – for Studio Pro major versions
+* **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
+* **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
 ## 3 Component Details Page {#details}
 

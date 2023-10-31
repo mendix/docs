@@ -17,7 +17,7 @@ When you complete Part 1, you will have a photo album app that will allow users 
 
 ### 1.1 Getting to Know Mendix
 
-This tutorial will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
+This tutorial teaches you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
 
 A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
@@ -189,7 +189,7 @@ Now it is time to build your photo album app:
 
 Next we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
 
-1. Delete all the display widgets inside the grid.
+1. Delete all the display widgets inside the grid (ensure you have switched from **Design** mode to **Structure** mode so you can delete the widgets easily).
 1. Right-click in the empty space and select **Add building block**.
 1. Search for and select **Card action with image**.
 
@@ -248,7 +248,7 @@ Implement custom logic with a microflow by doing the following:
 
 Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
 
-1. Add the additional path and make sure to select the **False** path as the one which goes down. 
+1. Add the additional path (by clicking the activity's red dot and dragging a connection out of it) and make sure to select the **False** path as the one which goes down. 
 1. You should also add the **Validation feedback** action to the false path to provide feedback to the user.
 1. Double-click your validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, **Member** > **Title**, and in **Template** add some error text such as *Please provide a title for your picture.*.
 1. Repeat these steps for the **Description** attribute until your microflow looks like this:

@@ -29,7 +29,7 @@ Automatic mapping is currently not possible.
 
 This document will focus on executing an SQL on relational external databases.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Execute SQL statements on relational external databases with the help of the Database Connector
 * Configure the **Execute statement** action

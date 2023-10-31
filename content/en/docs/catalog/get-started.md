@@ -2,7 +2,7 @@
 title: "Get Started with the Catalog"
 url: /catalog/get-started/
 category: "Catalog"
-linktitle: "Get Started"
+linktitle: "Get Started with the Catalog"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
 tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "integration pane", "studio pro"]

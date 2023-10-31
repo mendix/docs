@@ -17,17 +17,17 @@ If you have any additional useful resources, feel free to mention them in the co
 
 ## 2 Books
 
-* [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/content/index.html) - available in a web version as well as e-book formats.
+* [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/content/index.html) – available in a web version as well as e-book formats.
 * [Pro TypeScript](https://www.stevefenton.co.uk/publications/pro-typescript/) by Steve Fenton
 * [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do) by Douglas Crockford, O'Reilly
 
 ## 3 Websites
 
-* [Official TypeScript website](http://www.typescriptlang.org/Handbook) - Tutorial, handbook, samples
-* [Definitive Guide to TypeScript](https://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/) - covers TypeScript 1.5,slightly older than the current release, but still useful
+* [Official TypeScript website](http://www.typescriptlang.org/Handbook) – tutorial, handbook, and samples
+* [Definitive Guide to TypeScript](https://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/) – covers TypeScript 1.5 (slightly older than the current release, but still useful)
 * [Editing TypeScript](https://code.visualstudio.com/docs/languages/typescript) with Visual Studio Code
 * Debugging your app with [Node Inspector](https://www.npmjs.com/package/node-inspector)
 
 ## 4 Other
 
-* [Node.js refcard](https://dzone.com/refcardz/nodejs) - Node.js is the JavaScript engine we use to run our scripts
+* [Node.js refcard](https://dzone.com/refcardz/nodejs) – Node.js is the JavaScript engine we use to run our scripts

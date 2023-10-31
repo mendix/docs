@@ -17,7 +17,7 @@ The typical usage scenario is selecting and showing entities from your domain mo
 
 ## 2 Configuration {#configuration}
 
-After importing the module, add **\_USE_ME** > **MxObjects** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
+After importing the module, add **\_USE_ME** > **MxObjects** to one of your pages (you can directly use **\_USE_ME** > **MxObjects_Overview** which contains **MxObjects**, and add the page to the navigation of your app). Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
 {{% alert color="info" %}}
 If you have a large app, the synchronization will take much longer.

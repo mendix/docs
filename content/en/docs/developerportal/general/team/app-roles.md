@@ -22,7 +22,11 @@ The roles defined in Developer Portal for an [app](/developerportal/#my-apps) an
 
 ## 2 Team Member
 
-If you want to join a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Since team members are not visible to users outside that team, you can ask the [Technical Contact](#technical-contact) to send the invite. This means it is important that the Technical Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
+If a user wants to join a team, they have to ask a current team member (with the **Invite** permission) to send an invitation.
+
+{{% alert color="info" %}}
+Since users outside a team cannot see current team members, and can only see who the [Technical Contact](#technical-contact) of the team is, it would be easy for them if they could ask the Technical Contact for an invitation. Therefore, it is a good practice to give Technical Contact the correct permissions to manage the app (for example, the **Scrum Master** role).
+{{% /alert %}}
 
 ## 3 Team Roles {#team-roles}
 
@@ -48,11 +52,11 @@ You should provide Technical Contact with the Scrum Master role. Since the Techn
 
 The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) or various [deployment](/developerportal/deploy/) platforms. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact for a free App is assigned when the app is deployed for the first time. The Technical Contact needs an MxID before Mendix can activate a license for an application.
 
-The responsibilities of a Technical Contact depend on whether you are hosting your app in the Mendix Cloud or on premises.
+The responsibilities of a Technical Contact depend on whether you are hosting your app in Mendix Cloud or on premises.
 
 ### 4.1 Mendix Cloud Responsibilities
 
-For apps in the Mendix Cloud, the Technical Contact is the first point of contact for the app. In this scenario, the Technical Contact does the following:
+For apps in Mendix Cloud, the Technical Contact is the first point of contact for the app. In this scenario, the Technical Contact does the following:
 
 * Receives notifications for upcoming maintenance operations on the application
 * Can configure the alert settings in the **Monitoring** tab of the cloud node
@@ -82,5 +86,5 @@ If you are the current Technical Contact for an app, you can give away your Tech
 The Technical Contact will be changed for all environments.
 
 {{% alert color="info" %}}
-Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 3. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+Mendix Admins can also give the Technical Contact role to another team member using the Deploy API Version 4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).
 {{% /alert %}}

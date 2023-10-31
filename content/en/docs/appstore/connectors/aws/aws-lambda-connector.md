@@ -95,9 +95,12 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description | Specializations |
 | --- | --- | --- |
-| `Function` | Name of a Lambda function, used to invoke a function | `InvokeFunctionRequest`; `FunctionResponse`; `DeleteFunctionRequest` |
+| `ListFunctionRequest` | Stores the request for a `ListFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 | `ListFunctionResponse` | Stores the response for a `ListFunctions` call |  |
+| `FunctionResponse` | Stores the response containing a list of available lambda functions for a `ListFunctions` call |  |
+| `InvokeFunctionRequest` | Stores the request for a `InvokeFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 | `InvokeFunctionResponse` | Stores the response for an `InvokeFunction` call |  |
+| `DeleteFunctionRequest` | Stores the request for a `DeleteFunctions` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
 
 ### 4.2 Activities {#activities}
 
@@ -107,6 +110,10 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 This activity lists all the Lambda functions which are available for the supplied AWS credentials.
 
+**Parameters**
+
+* Parameter of the type `ListFunctionsRequest` – Requesting a list of available Lambda functions
+
 **Returns**
 
 * List of objects of entity type `FunctionResponse`
@@ -114,7 +121,7 @@ This activity lists all the Lambda functions which are available for the supplie
 #### 4.2.2 InvokeFunction
 
 This activity invokes a [Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-functions.html).
-By default, this function invokes Lambda functions synchronously. To invoke an asynchronous Lambda function, make sure to update the `InvokeAsynchronous` attribute of the `InvokeFunctionRequest` entity to `true`.
+By default, this function invokes Lambda functions synchronously. To invoke a Lambda function, make sure to set the `InvocationType` attribute of the `InvokeFunctionRequest` entity to the preferred value. See section 4.3.1 for more information on the available options.
 
 **Parameters**
 
@@ -138,23 +145,13 @@ This activity deletes a single Lambda function.
 
 ### 4.3 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the AWS Lambda connector, the list of available AWS regions is provided as an enumeration.
+An enumeration is a predefined list of values that can be used as an attribute type. For the AWS Lambda connector, the list of available invocation types is provided as an enumeration.
 
-#### 4.3.1 `AWS_Region`
+#### 4.3.1 `ENUM_InvocationType`
 
-| **Name**         | **Caption**    |
-| ---------------- | -------------- |
-| `us_east_2`      | us-east-2      |
-| `us_east_1`      | us-east-1      |
-| `us_west_1`      | us-west-1      |
-| `us_west_2`      | us-west-2      |
-| `ap_south_1`     | ap-south-1     |
-| `ap_northeast_2` | ap-northeast-2 |
-| `ap_southeast_1` | ap-southeast-1 |
-| `ap_southeast_2` | ap-southeast-2 |
-| `ap_northeast_1` | ap-northeast-1 |
-| `ca_central_1`   | ca-central-1   |
-| `eu_central_1`   | eu-central-1   |
-| `eu_west_1`      | eu-west-1      |
-| `eu_west_2`      | eu-west-2      |
-| `us_gov_west_1`  | us-gov-west-1  |
+| **Name**         | **Caption**    | **Information** |
+| ---------------- | -------------- | --------------- |
+| `EVENT` | EVENT | Should use when one wants to invoke a lambda function asynchronously |
+| `REQUEST_RESPONSE` | REQUEST_RESPONSE | Should use when one wants to invoke a lambda function synchronously |
+| `DRY_RUN` | DRY_RUN | Should use when one wants to validate parameter values and verify that the user or role has permission to invoke the function |
+

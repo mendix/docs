@@ -349,10 +349,10 @@ This is implemented as follows:
 
 Business Events offers four different deployment models:
 
-1. Deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
-2. Free apps use a free multi-tenant Event Broker
-3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-4. Apps running own Kafka cluster (Bring your own Kafka) [Currently in [Beta](/releasenotes/beta-features/)]
+* Deploying locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
+* Free apps using a free multi-tenant event broker
+* Production apps using the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
+* Apps running their own Kafka cluster (bring your own Kafka; currently in [beta](/releasenotes/beta-features/))
 
 ### 6.1 Local Deployment
 
@@ -394,7 +394,7 @@ When this occurs, please execute the following steps:
 ### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 
 {{% alert color="info" %}}
-This deployment method is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
+This deployment method is currently in [beta](/releasenotes/beta-features/).{{% /alert %}}
 
 Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker). If you wish to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
 

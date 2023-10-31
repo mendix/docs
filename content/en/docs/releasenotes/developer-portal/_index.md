@@ -17,6 +17,50 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### October 26, 2023
+
+#### New Features
+
+* We released a feature in Feedback to allow you [manage tags](/developerportal/app-insights/feedback/#manage-tags) there. You can now create, delete, and rename a tag, and change the color of a tag.
+
+#### Improvements
+
+* We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
+* We added the ability to directly [remove app members](/developerportal/control-center/#members) from Control Center.
+* In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
+
+#### Fixes 
+
+ * We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
+ * We fixed an issue where deactivation of some apps led to unexpected errors.
+   
+### October 19, 2023
+
+#### New Features
+
+* We added the following features to [Epics](/developerportal/project-management/epics/): 
+   * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
+   * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name, or assignee. You can also filter by any tag and combine the results.
+
+#### Improvements
+
+* We improved the Sprint filter in [Story Archive](/developerportal/collaborate/general-settings/#story-archive) so that you can now type the Sprint name in a text box.
+
+#### Fixes 
+
+ * In [Epics](/developerportal/project-management/epics/), we fixed the following issues:
+   * We fixed an issue that stories were not getting removed from the board after a Sprint is completed.
+   * We fixed an issue regarding dark mode where the screen would flicker.
+* We fixed an issue where the last Scrum Master could be removed from an app with API keys.
+* We fixed an issue that allowed new members to accept an invitation to an app multiple times.
+### October 12, 2023
+
+#### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) using an Excel file.
+
+* In Control Center, Mendix Admins can now [disable the digital signing](/developerportal/control-center/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
+
 ### October 1, 2023
 
 #### Improvements
@@ -67,7 +111,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have released the Beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
+* We have released the beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 
 ### August 24, 2023
 
@@ -75,7 +119,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We added the following features to [Feedback](/developerportal/app-insights/feedback/) and [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights:
 
-    * In [Feedback](/developerportal/app-insights/feedback/), we added a new filter called "status" on the **Inbox** page and the **Archive** page.
+    * In Feedback, we added a new filter called "status" on the **Inbox** page and the **Archive** page.
     * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
     * We added documentation links on the home page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 
@@ -197,7 +241,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a Beta version and welcome your feedback. Read all about the features and how to set it up in [Jira connector](/developerportal/project-management/jira-connector/).
+* Jira is here! You can now assign your Studio Pro commits to user stories in your Jira board. We offer this functionality as a beta version and welcome your feedback. Read all about the features and how to set it up in [Jira connector](/developerportal/project-management/jira-connector/).
 
 #### Improvements
 
@@ -215,7 +259,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have released [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for Beta usage.
+* We have released [Webhooks API](/apidocs-mxsdk/apidocs/webhooks-api/) for beta usage.
 
 ### June 1, 2023
 
@@ -393,17 +437,17 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### New Features
 
-We have released the Beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+We have released the beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 
 A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
 
-This feature is in Beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
+This feature is in beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
 
 ### December 1, 2022
 
 #### Improvements
 
-We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for General Availability!
+We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability!
 
 We made the following improvements:
 
@@ -451,7 +495,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Beta).
+* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (beta).
 
 ### October 6, 2022
 
@@ -525,7 +569,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Notifications](/developerportal/#notifications) for Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21, 2022
 
@@ -551,7 +595,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Epics](/developerportal/project-management/epics/), our brand new tool for Agile planning, for Beta usage. Epics has many features. For example, you can:
+* We released [Epics](/developerportal/project-management/epics/), our brand new tool for Agile planning, for beta usage. Epics has many features. For example, you can:
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
@@ -884,7 +928,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released the Control Center [Dashboard](/developerportal/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
+* We released the Control Center [Dashboard](/developerportal/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
 
 ### March 30, 2021
 
@@ -1048,7 +1092,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We redesigned the story details page and made it available for Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage labels with the new UI; this functionality will be released in the future.
+* We redesigned the story details page and made it available for beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage labels with the new UI; this functionality will be released in the future.
 * When you add a task to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
@@ -1140,13 +1184,13 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* The Stories template functionality has been replaced with the **Clone** functionality in the new UI option (Beta).
+* The Stories template functionality has been replaced with the **Clone** functionality in the new UI option (beta).
 
 ### May 7, 2020
 
 #### Improvements
 
-* We added a new story action called **Clone** to the new Beta UI. For more information, see the New UI Option (Beta) section of *Stories*.
+* We added a new story action called **Clone** to the new beta UI. For more information, see the New UI Option (beta) section of *Stories*.
 
 ### February 21, 2020
 
@@ -1180,13 +1224,13 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We made some minor improvements to the style of the Stories Beta version. This release fixes issues regarding batch actions.
+* We made some minor improvements to the style of the Stories beta version. This release fixes issues regarding batch actions.
 
 ### December 13, 2019 
 
 #### Improvements
 
-* We redesigned the **Stories** page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [Beta version](/releasenotes/beta-features/).
+* We redesigned the **Stories** page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [beta version](/releasenotes/beta-features/).
 
 ### December 5, 2019
 
@@ -1243,7 +1287,7 @@ In Portfolio Management, you can do the following
 
 #### UI Improvements
 
-* With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
+* With the beta release of Mendix Studio and Mendix Studio Pro (Mendix 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
 
 ### April 8, 2019
 

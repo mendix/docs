@@ -185,7 +185,7 @@ You can decide whether a metric for the disk storage size available to the datab
 
 Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **LOGS_REDACTION** to *false*.
 
-The environment variable **DATADOG_LOGS_REDACTION** is still supported, but is now **deprecated** and will be removed in a later version. Its use is not recommended.
+The environment variable **DATADOG_LOGS_REDACTION** is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended.
 
 *Default value: true*
 

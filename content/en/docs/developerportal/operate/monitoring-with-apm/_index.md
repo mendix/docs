@@ -22,7 +22,7 @@ Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatr
 
 [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
 
-[New Relic](https://www.newrelic.com/) logging and application metrics are supported in Mendix 9.7 and above, custom application runtime and database metrics are supported.
+[New Relic](https://www.newrelic.com/) logging and application metrics are supported in Mendix 9.7 and above. Custom application runtime and database metrics are supported.
 {{% /alert %}}
 
 This document explains what information can be provided to a SaaS-based data analytics platform.

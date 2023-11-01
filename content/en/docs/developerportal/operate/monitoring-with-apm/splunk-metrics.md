@@ -57,13 +57,13 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 
     4. LOGS_REDACTION
 
-        Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set **LOGS_REDACTION** to *false*.
+        Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set **LOGS_REDACTION** to `false`.
         
-        The environment variable **SPLUNK_LOGS_REDACTION** is still supported, but is now **deprecated** and will be removed in a later version. Its use is not recommended.
+        The environment variable **SPLUNK_LOGS_REDACTION** is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended.
 
         *Default: `true`*
 
-5. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+5. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
     {{% alert color="warning" %}}Your app must be **redeployed** the first time you set up the Splunk Cloud Platform integration as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Splunk Cloud Platform.{{% /alert %}}
 

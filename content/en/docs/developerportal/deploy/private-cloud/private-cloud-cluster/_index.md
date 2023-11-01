@@ -1364,7 +1364,7 @@ You can invite additional members to the namespace, and configure their role dep
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
     With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
-    Along with this, we have also decoupled the permission for modifying the MxAdmin password and Manage environment permissions.
+    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
 
 5. Click **Send Invite** to send an invite to this person.
 

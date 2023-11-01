@@ -11,14 +11,14 @@ aliases:
 
 ## 1 Introduction
 
-Owners of data sources, Curators, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevant or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in the Catalog include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
+Curators, owners of data sources, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevant or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in the Catalog include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
 
 Users who can curate assets in the Catalog are as follows:
 
-* Owners of a registered service – can curate their own services which include those that have been set to non-**Discoverable**
+* Owners of a registered service – can curate their own services which include those that have been set to **Not discoverable**
 * [Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
-Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) page in the Catalog.
 
 {{% alert color="info" %}}
 Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
@@ -26,21 +26,21 @@ Information that is added or changed during curation is stored in the Catalog fo
 
 ## 2 Curate List {#curatelist}
 
-Owners and curators of registered assets can click **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
+Owners and curators of registered assets can click **Curate** from the Catalog home page to see the curation list screen. This page provides an overview of all the registered assets you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
 {{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" >}}
 
-In both cases, the list includes registered data sources and also individual datasets that are exposed for the data source.
+These lists include registered data sources and also individual datasets that are exposed for the data source.
 
-You can search for specific assets by entering a search string in the search bar or **Filter By:** **Asset Type**, **Application**, **Environment Type**, **Technology**, or **Discoverable** assets.
+You can search for specific assets by entering a search string in the search bar or **Filter** by: **Asset Type**, **Application**, **Environment Type**, **Technology**, or **Discoverable** assets.
 
-The list can also be sorted by any of the columns by clicking on the column header.
+The list can be sorted by any of the columns by clicking on the column header.
 
-Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
+Click **View** to display the asset details. You can then perform curate actions to add Catalog-specific information to the asset metadata.
 
-## 3 Curation Option {#curation-option}
+## 3 Curate Page {#curation-option}
 
-Curation is performed from the [asset details screen](/catalog/manage/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Edit Button** for the selected item.
+Curation is performed on the [asset details screen](/catalog/manage/search/#search-details). If you are a curator or  owner of an asset, you will see the option to **Edit** the selected item.
 
 {{% alert color="info" %}}
 Owners of registered assets can only curate their services.

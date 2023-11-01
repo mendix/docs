@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support", 
 
 The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
 
-The data source determines which objects will be shown in a Data Grid 2 module. Selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
+The data source determines which objects will be shown in a Data Grid 2 module. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
 The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 

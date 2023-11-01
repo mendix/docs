@@ -21,7 +21,7 @@ aliases:
 
 This how-to covers the basics of accessing the Marketplace from Studio Pro and provides examples of how to add a widget and a module to your application.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Download content from the Marketplace via Studio Pro
 * Use content (for example, widgets, modules, and others) downloaded from the Marketplace in Studio Pro
@@ -35,7 +35,7 @@ There are three ways to install a Marketplace component, which are described in 
 
 ### 2.1 Downloading Content from Within Studio Pro {#downloading}
 
-#### 2.1.1 For Studio Pro 9.19 and Above
+#### 2.1.1 For Studio Pro 9.19 and Above {#current-sp}
 
 {{% alert color="info" %}}This procedure works for all types of Marketplace components, unless you are using Studio Pro China Edition.{{% /alert %}}
 
@@ -55,6 +55,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
+        * You can paste the content ID here if you copied it via the [Use in Studio Pro button](/appstore/general/app-store-overview/#details) in the web Marketplace
     * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home)
     * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**
 
@@ -64,7 +65,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details) in the online Mendix Marketplace.
 
-6. <a id="step-six"></a>Click **Download** to download the latest version of the component (for widgets, version compatibility is not applicable). Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+6. <a id="step-six"></a>Click **Download** to download the component. The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application (for widgets, version compatibility is not applicable). By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
     * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:

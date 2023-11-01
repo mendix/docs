@@ -15,7 +15,7 @@ aliases:
 
 The Mendix Marketplace is driven by contributions from members of the community who share the connectors, modules, and apps they have built with the Mendix Platform. This how-to shows how to add and update Marketplace content.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add new content and promotions to share in the Marketplace
 * Update existing Marketplace content
@@ -114,18 +114,18 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the content type in the initial version of your content. You cannot change this setting after the initial version is published.{{% /alert %}}
 
-2. You can add up to three **Categories** for your component, which will help other users find your component more easily.
-3. Enter a **Name** for your component.
-4. Enter a **Description** of your component.
-
-    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
-
-5. Select the location where you want to publish your component:
+2. Select the location **Visibility** where you want to publish your component:
 
     * <a id="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
     * <a id="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Private** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a content group can also be made available to [content group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
+    
+3. You can add one **Category** (up to three total) for your component, which will help other users find your component more easily.
+4. Enter a **Name** for your component.
+5. Enter a **Description** of your component.
+
+    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as it will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
 
 #### 4.1.2 Providing License Details {#license}
 
@@ -147,7 +147,7 @@ These are the open-source software license options available and their requireme
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
 {{% /alert %}}
 
-##### 4.1.2.2 Proprietary License {#proprietary-license}
+##### 4.1.2.2 Proprietary Licenses {#proprietary-license}
 
 You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
 
@@ -165,42 +165,41 @@ Follow these steps to configure a proprietary license for a new public component
 A lead is a potential sales contact that expresses interest in your product or service. Lead routing is the end-to-end process of collecting the leads and distributing them to you. It is possible to configure lead routing for the following content types in the Marketplace:
 
 * Solutions
-* Solution templates
-* App services
-* Platform services
+* Industry templates
+* Services
 
 When prospective customers are interested in your product, they can leave their contact information using the Marketplace product listing. This is done by clicking a call-to-action button and filling in a form.
 
-You can configure the name of your **Call-to-action (CTA)** button from the following choices: 
+You can configure the name of your **Main call-to-action** button from the following choices: 
 
 * **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
 * **Download** – no lead routing is established, but customers can directly download your product.
 
-In the **Provide one or more emails** field, you must specify the email address(es) where notifications and information can be sent.
+In the **How would you like to receive information on new leads?** field, you must specify the email address(es) where notifications and information can be sent.
 
 #### 4.1.4 Finishing Up
 
 To finish up configuring this page, click **Upload** to upload an icon for your component.
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/general.png" >}}
 
 ### 4.2 Package {#package}
 
-On the **Package** page, select your content source. 
+On the **Package** page, you can **Upload Source FIle**: 
 
 {{% alert color="info" %}}
-If you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting a content source is optional.
+If you are using **Solutions**, you will not see the option to select your content source. If you are using **Industry Template**, selecting a content source is optional.
 {{% /alert %}}
 
-* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import (for more information on the best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
-    * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
-    * When you are finished, click **OK**
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
+* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
+    * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
+    * When you are finished, click **OK**
 
 Select the **Studio Pro Version** on which you built the content.
 
-If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. 
+If this is the first version of the component you are uploading, the number in the **Version** section will be automatically set to **1.0.0**. 
 
 Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
@@ -214,11 +213,11 @@ If the virus scan report is invalid or there is some issue with it, the [Marketp
 If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/package.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/package.png" >}}
 
 ### 4.3 Enable {#doc}
 
-On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). 
+On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that the documentation option is only available when the **Import Documentation** box has not been selected on the **Package** page above. 
 
 Follow the template for the recommended content:
 
@@ -230,33 +229,32 @@ Follow the template for the recommended content:
     * Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
     * The **Installation** steps and details
     * The **Configuration** steps and details
-    * Any **Compatibility** steps and details
     * Any **Known bugs**
     * Any **Frequently asked questions**
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-<a id="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
+<a id="screenshot"></a>Click **Upload Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/enable.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/enable.png"  >}}
 
-You can optionally add a **Video** and **Demo**.
+You can optionally add a **YouTube URL** and a **Demo URL**.
 
 ### 4.4 Capabilities {#capabilities}
 
-On the **Capabilities** page, you can provide the following details about a solutions template:
+On the **Capabilities** page, you can provide the following details about an industry template:
 
 * A category recommendation in the **Industry Cloud** section
 * A **Banner** that will be displayed on your content page
 * One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
-* A **Use Case** relevant to the content (enter a **Header** and **URL**)
-* **External links** relevant to the content
+* A **Use Case** relevant to the content (enter a **Header** and **CTA URL**)
+* **External Links** relevant to the content
 
-{{< figure src="/attachments/appstore/general/share-app-store-content/capabilities.jpg"   width="600"  >}}
+{{< figure src="/attachments/appstore/general/share-app-store-content/capabilities.png"  >}}
 
 ### 4.5 Publish {#publish}
 
-Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before publishing.
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/publish.png"   width="600"  >}}
 
@@ -277,7 +275,7 @@ Mendix does the following:
     * For more details, see the [Providing License Details](/appstore/general/share-app-store-content/#license) section above
 * Checks the *.mpk* files for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
 * Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
-* If the component is a widget, module, connector, or solution template, Mendix checks that it can be used without errors in a specific Studio Pro version
+* If the component is a widget, module, connector, or an industry template, Mendix checks that it can be used without errors in a specific Studio Pro version
 * Checks that the documentation mentions all the details per the template (for example, dependencies, configuration, and how to use the component)
 * Checks the grammar, alignment, and spelling for the component's description and documentation
 * Checks that the logo is related to the component's functionality

@@ -6,11 +6,13 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support", 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## 1 Introduction {#introduction}
 
 [Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. 
 
 The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
+
+The data source determines which objects will be shown in a Data Grid 2 module. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
 The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 
@@ -346,7 +348,7 @@ Here is an example of **Number Filter** with **Adjustable by user** set as **No*
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
-To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
 
 #### 7.3.1 Configurations
 
@@ -393,7 +395,7 @@ Here is an example of Text Filter with **Adjustable by user** set to **No**:
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
-To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
 
 #### 7.4.1 Configurations
 

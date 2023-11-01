@@ -29,7 +29,7 @@ All documentation contributions may be edited to conform to our internal style g
 For a details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add to and edit existing documentation
 * Create new documentation

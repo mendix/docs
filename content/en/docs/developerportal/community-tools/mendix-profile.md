@@ -240,6 +240,10 @@ These are the prerequisites for the profile merge actions:
 * Have platform access with at least one of these user accounts
 * Be able to receive emails for the user profiles that will be merged (this can be your email address used to log in or a profile email address)
 
+{{% alert color="warning" %}}
+You should also prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this so that you do not lose access to the apps of your old account, and also so you do not need a new invitation to those apps to gain access.
+{{% /alert %}}
+
 Before you start with a new profile merge action, it is important to understand what scenarios are possible and what it means for the profile merge process. The following starting scenarios are possible:
 
 * **All user accounts give you access to the Mendix Platform** – If you have access to the platform with all your user accounts, you are able to initiate a merge after signing in with any of the accounts. For the other profile, a confirmation email message is sent that enables starting the merge action.

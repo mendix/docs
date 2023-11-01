@@ -12,7 +12,7 @@ tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single 
 The Mendix Platform contains an Identity Provider (IdP) that allows users to sign in to:
 
 * Mendix Platform services
-* Applications in the Mendix Cloud that have been built using [Mendix SSO](/appstore/modules/mendix-sso/)
+* Applications in Mendix Cloud that have been built using [Mendix SSO](/appstore/modules/mendix-sso/)
 
 You can use this to provide your end-users with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 
 

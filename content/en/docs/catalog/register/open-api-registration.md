@@ -2,7 +2,7 @@
 title: "OpenAPI Automatic Registration"
 linktitle: "OpenAPI Beta Functionality"
 url: /catalog/register/openapi-automatic-registration
-description: "Provides explanation of OpenAPI Beta functionality in Catalog"
+description: "Provides explanation of OpenAPI beta functionality in Catalog"
 weight: 50
 tags: ["Catalog", "external entities", "register", "published REST service" ,"registration", "OpenAPI"]
 aliases:
@@ -11,7 +11,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -32,7 +32,7 @@ You can manage API discoverability on a per-API basis, either from the curation 
 
 ## 4 What Does “Beta” Mean?
 
-This feature is currently in beta, which means we are actively testing and improving it to better meet your needs.
+This feature is currently in [beta](/releasenotes/beta-features/), which means we are actively testing and improving it to better meet your needs.
 
 We value your feedback, so don’t hesitate to share your thoughts with us on the [Mendix Forum](https://forum.mendix.com/link/space/catalog).
 

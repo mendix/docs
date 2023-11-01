@@ -170,9 +170,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 * Microsoft Windows Server 2008 SP2 and above
 * The following Unix-like operating systems:
-    * Debian OldOldStable (LTS), Debian OldStable, Debian Stable
-    * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
-    * CentOS 6, CentOS 7
+    * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
+    * Red Hat Enterprise Linux 6 and later
+    * CentOS 7
+    * CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
@@ -183,6 +184,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 ### 6.3 Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+{{% alert color="warning" %}}
+As Java 11 approaches the end of support in October, 2024, compatibility with Java 17 is planned for Q1 2024, and compatibility with Java 21 is planned for Q2 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
@@ -251,7 +256,7 @@ If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and hybrid apps built with Mendix the following operating system versions are supported:
+For native and hybrid apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android

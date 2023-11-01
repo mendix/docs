@@ -12,7 +12,7 @@ Workflows are processes that can potentially run for a long time. While a workfl
 ## 2 Workflow Versioning
 
 Workflow instances have functional value for the business. Therefore, when a new workflow version is deployed, the system should decide how to handle running instances. 
-Some workflow engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
+Some Workflow Engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
 The Mendix Workflow Engine uses a different approach. Mendix Studio Pro validates the app when it is being deployed using the model in that particular moment. Older versions of a workflow may refer to artifacts that are no longer available, such as roles, pages, workflows, or microflows that were deleted in the latest version (or require a different input or have a different output). As such, the model of the latest app version may no longer be compatible with older workflow versions. Mendix Studio Pro validates whether a workflow instance is compatible with the latest workflow version. 
 
 ## 3 Workflow Versioning Conflict Detection
@@ -80,7 +80,27 @@ When an app developer changes the **Workflow Context** entity of a workflow, exi
 You can do one of the following: 
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
+* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. See below a Java action example set up within Mendix. It sets a new `$History` object as the workflow context:
+    
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-versioning-and-conflict-mitigation/Java-action-example.png" alt="Expose as Workflow Action Settings" >}}
+
+    Here is the code of the Java action example:
+
+    ```java
+    import com.mendix.workflows.Workflow;   // add this import to the top
+
+    // BEGIN USER CODE
+    try {
+      var workflow = com.mendix.core.Core.workflows().getWorkflow(getContext(), __WorkflowInput); // get the Workflow interface object
+      workflow.setWorkflowContext(__ContextReplacement); // replace the current context object with the new one
+      return true;
+    } catch (Exception e) {
+      return false;
+    }
+    // END USER CODE
+    ``` 
+
+    For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
 To prevent this issue, you need to make sure that context objects cannot be deleted while they are still being used in running workflow instances.

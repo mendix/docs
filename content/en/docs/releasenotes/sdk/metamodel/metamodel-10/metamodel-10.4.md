@@ -1,172 +1,58 @@
 ---
 title: "10.4"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.4/
+weight: 96
 ---
 
 ## 10.4.0
 
+**Release date: October 26th, 2023**
+
 ### DomainModels
 
 #### MappedValue (Element)
+
+* We introduced the `defaultValueDesignTime` and `defaultValueRuntime` properties.
 * We deleted the `defaultValue` property. 
-* We introduced the `defaultValueDesignTime` property. 
-* We introduced the `defaultValueRuntime` property. 
 
 ### Microflows
 
-#### FormDataRequestHandling (Element)
+#### GetWorkflowActivityRecordsAction and GetWorkflowsAction (Elements)
 
-
-#### FormDataPart (Element)
-
-
-#### CallExternalAction (Element)
-
-
-#### GetWorkflowActivityRecordsAction (Element)
-* We introduced this element. 
-
-#### GetWorkflowsAction (Element)
-* We introduced this element. 
+* We introduced these elements.
 
 ### Mappings
 
 #### MappingDocument (ModelUnit)
-* We introduced the `supportedContentTypesRuntime` property. Info: "Stores the content types supported by the mapping."
+
+* We introduced the `supportedContentTypesRuntime` property for storing the content types supported by the mapping.
 
 ### ODataPublish
 
 #### PublishedODataService2 (ModelUnit)
-* We introduced this modelunit. 
 
-#### EntityType (Element)
-* We introduced this element. 
+* We introduced this model unit. 
 
-#### EntitySet (Element)
-* We introduced this element. 
+#### Various Introduced Elements 
 
-#### ChangeMode (Element)
-* We introduced this element. 
-
-#### ChangeNotSupported (Element)
-* We introduced this element. 
-
-#### ChangeSource (Element)
-* We introduced this element. 
-
-#### CallMicroflowToChange (Element)
-* We introduced this element. 
-
-#### ReadMode (Element)
-* We introduced this element. 
-
-#### ReadSource (Element)
-* We introduced this element. 
-
-#### CallMicroflowToRead (Element)
-* We introduced this element. 
-
-#### QueryOptions (Element)
-* We introduced this element. 
-
-#### PublishedMicroflow (Element)
-* We introduced this element. 
-
-#### PublishedMicroflowParameter (Element)
-* We introduced this element. 
-
-#### PublishedEnumeration (Element)
-* We introduced this element. 
-
-#### PublishedEnumerationValue (Element)
-* We introduced this element. 
-
-#### PublishedContract (Element)
-* We introduced this element. 
-
-#### ServiceFeed (Element)
-* We introduced this element. 
-
-#### PublishedMember (Element)
-* We introduced this element. 
-
-#### PublishedId (Element)
-* We introduced this element. 
-
-#### PublishedAttribute (Element)
-* We introduced this element. 
-
-#### PublishedAssociationEnd (Element)
-* We introduced this element. 
+* We introduced the `EntityType, `EntitySet`, `ChangeMode`, `ChangeNotSupported`, `ChangeSource`, `CallMicroflowToChange`, `ReadMode`, `ReadSource`, `CallMicroflowToRead`, `QueryOptions`, `PublishedMicroflow`, `PublishedMicroflowParameter`, `PublishedEnumeration`, `PublishedEnumerationValue`, `PublishedContract`, `ServiceFeed`, `PublishedMember`, `PublishedId`, `PublishedAttribute`, and `PublishedAssociationEnd` elements.
 
 ### Rest
 
-#### PublishedODataService (ModelUnit)
-* We deleted this modelunit. 
-
-#### PublishedRestResource (Element)
-* We deleted this element. 
-
-#### ChangeMode (Element)
-* We deleted this element. 
-
-#### ChangeNotSupported (Element)
-* We deleted this element. 
-
-#### ChangeSource (Element)
-* We deleted this element. 
-
-#### CallMicroflowToChange (Element)
-* We deleted this element. 
-
-#### ReadMode (Element)
-* We deleted this element. 
-
-#### ReadSource (Element)
-* We deleted this element. 
-
-#### CallMicroflowToRead (Element)
-* We deleted this element. 
-
-#### QueryOptions (Element)
-* We deleted this element. 
-
-#### PublishedODataMicroflow (Element)
-* We deleted this element. 
-
-#### PublishedODataMicroflowParameter (Element)
-* We deleted this element. 
-
-#### PublishedODataEnumeration (Element)
-* We deleted this element. 
-
-#### PublishedODataEnumerationValue (Element)
-* We deleted this element. 
-
-#### PublishedRestService (ModelUnit)
-
-
-#### PublishedRestServiceOperation (Element)
-
-
-#### ConsumedODataService (ModelUnit)
-
-
 #### ODataRemoteEntitySource (Element)
-* We introduced the `createChangeLocally` property. Info: "Allows creating and changing even when the service will not accept changes"
 
-#### MetadataReference (Element)
+* We introduced the `createChangeLocally` property for creating and changing even when the service will not accept changes.
 
+#### PublishedODataService (ModelUnit)
 
-#### PublishedODataContract (Element)
-* We deleted this element. 
+* We deleted this model unit.
 
-#### ServiceFeed (Element)
-* We deleted this element. 
+#### Various Deleted Elements
+
+* We deleted the `PublishedRestResource`, `ChangeMode`, `ChangeNotSupported`, `ChangeSource`, `CallMicroflowToChange`, `ReadMode`, `ReadSource`, `CallMicroflowToRead`, `QueryOptions`, `PublishedODataMicroflow`, `PublishedODataMicroflowParameter`, `PublishedODataEnumeration`, `PublishedODataEnumerationValue`, `PublishedODataContract`, and `ServiceFeed` elements.
 
 ### Pages
 
 #### DeleteClientAction (Element)
-* We introduced the `sourceVariable` property. 
 
-This page has been generated automatically.
+* We introduced the `sourceVariable` property. 

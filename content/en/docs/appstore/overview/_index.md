@@ -32,12 +32,13 @@ This document describes the different sections of the Mendix Marketplace. More i
 
 ## 2 Marketplace Home Page {#home}
 
-The home page is your entry point to the various parts of the Mendix Marketplace. Here you can perform actions such as the following:
+The [Marketplace home page](https://marketplace.mendix.com/)  is your entry point to the various parts of the Mendix Marketplace. Here you can perform actions such as the following:
 
+* Search for content via the **Search Marketplace** box on the right side of the header
+* Explore content via the **Content Types** and filters described below
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](/appstore/overview/my-marketplace/) as well as your company's [private content](/appstore/overview/my-marketplace/#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
-* Search for content via the **Search Marketplace** box on the right side of the header
 
 {{< figure src="/attachments/appstore/overview/overview/home-page.png" >}}
 
@@ -57,7 +58,7 @@ The following filter options are also available:
 
 * **Category** – for specific organized groups/classifications of components or services that share common characteristics, functions, or purposes
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
-* **Industry** – for specific sectors/fields of economic activity in which components are used or services are conducted
+* **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
 * **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users

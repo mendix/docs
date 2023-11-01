@@ -1416,19 +1416,16 @@ Disable the toggle button next to the name of the plan you wish to activate. The
 
 ##### 7.2.4.3 Deleting a Plan
 
-The following condition govern the deletion of database and storage plans:
-
-* Deletion of Storage/Database plans is permitted if they are not utilized in any of the environments, regardless of whether they are active/inactive.
+You can only delete storage or database plans if they are not used in any of your environments, regardless of whether they are active or inactive.
 
 {{% alert color="warning" %}}
-After you delete the plan, the action cannot be reverted or undone through the portal. Deleting the plan does not remove it from the cluster. To delete the plan from the cluster, a separate action is required, which can be accomplished by executing the following command:
+After you delete a plan, the action cannot be reverted or undone through the portal. Deleting the plan does not remove it from the cluster. To delete the plan from the cluster, a separate action is required, which can be accomplished by executing the following command:
 
 For OpenShift:
 
 ```shell
 oc -n {namespace} get storageplan
 oc -n {namespace} delete storageplan {StoragePlanName}
-
 ```
 
 For Kubernetes:

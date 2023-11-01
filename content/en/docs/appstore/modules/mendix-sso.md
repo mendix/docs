@@ -153,7 +153,7 @@ To deactivate Mendix SSO, follow these two steps:
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
     4. Click **None**.
-        {{< figure src="/attachments/appstore/modules/mendix-sso/after-startup-remove.png" alt="Setting after startup microflow to none" >}}
+        {{< figure src="/attachments/appstore/modules/mendix-sso/after-startup-remove-updated.png" alt="Setting after startup microflow to none" >}}
     5. Click **OK** to close the app **Settings**.
 
     {{% alert color="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the AfterStartup_MendixSSO microflow which is an action in the existing microflow.{{% /alert %}}
@@ -169,7 +169,7 @@ To completely remove Mendix SSO, do the following:
 1. Perform the two steps described in the [Deactivating Mendix Single Sign-On](#deactivating) section above.
 2. Remove any references to the Mendix SSO module in the navigation profiles, accessed through the **Navigation** page of the **App Explorer**.
 3. Delete the **MendixSSO** module from **Marketplace modules**.
-4. Review the **Errors** pane for any other references to **MendixSSO** — there will only be additional errors if the Mendix SSO module been modified. 
+4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if the Mendix SSO module been modified.
 
 ### 4.3 Removing Mendix SSO Java Libraries
 
@@ -202,7 +202,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 * In the **Admin** folder
     * **TokensOverviewSnippet** – an overview of all the tokens issued to end-users of the app
     * **UserOverviewSnippet** – an overview of all the end-users who have used the app; This will not include end-users who have been given access through the developer portal but have not yet signed in
-    * **UserViewEditSnippet** – a page where details of an end-user can be seen and where the current end-user has access, edited
+    * **UserViewEditSnippet** – a page where details of an end-user can be seen
 * In the **Common** folder
     * **AccountDetailsNotEditableSnippet** – text explaining that details of SSO end-users come from Mendix and are not editable in the app
     * **EnvironmentCredentialsSecurityWarningSnippet** – text warning that sharing credentials is a security risk

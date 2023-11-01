@@ -55,9 +55,9 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 The following filter options are also available:
 
-* **Category** – 
+* **Category** – for specific organized groups/classifications of components or services that share common characteristics, functions, or purposes
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
-* **Industry** – 
+* **Industry** – for specific sectors/fields of economic activity in which components are used or services are conducted
 * **Compatibility** – for Studio Pro major versions
 * **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users

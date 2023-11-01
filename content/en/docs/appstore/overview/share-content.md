@@ -124,7 +124,7 @@ Follow these steps to describe your content:
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
     
-3. You can add one **Category** (up to three total) for your component, which will help other users find your component more easily.
+3. You can add one **Category** (up to three total) for your component. A category groups similar components or services together that share common characteristics, functions, or purposes. Categories make it easier for Marketplace users to find what they are looking for.
 4. Enter a **Name** for your component.
 5. Enter a **Description** of your component.
 

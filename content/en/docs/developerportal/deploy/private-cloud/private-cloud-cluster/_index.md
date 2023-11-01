@@ -1325,7 +1325,7 @@ The following rights are available to the cluster creator, and members of a name
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 
-* Manage environment- user can navigate to the environment details section and edit environment name and core resources
+* Manage environment- user can navigate to the environment details section and edit the environment name and core resources
 * Deploy App – user can deploy a new app to the environment
 * Scale App – user can change the number of replicas
 * Start App

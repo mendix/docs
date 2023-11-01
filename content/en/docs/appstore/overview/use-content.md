@@ -33,7 +33,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 There are three ways to install a Marketplace component, which are described in the sections below.
 
-### 2.1 Downloading Content from Within Studio Pro {#downloading}
+### 2.1 Finding and Downloading Content in Studio Pro {#downloading}
 
 #### 2.1.1 For Studio Pro 9.19 and Above {#current-sp}
 

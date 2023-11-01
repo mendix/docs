@@ -56,7 +56,7 @@ The [Marketplace home page](https://marketplace.mendix.com/)  is your entry poin
 
 The following filter options are also available:
 
-* **Category** – for specific organized groups/classifications of components or services that share common characteristics, functions, or purposes
+* **Category** – for specific domains in which components or services share characteristics, functions, or purposes
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions

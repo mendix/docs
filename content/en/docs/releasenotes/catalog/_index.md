@@ -13,14 +13,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
-### November 02, 2023
+### November 2, 2023
 
 ### Improvement
-* We have added a deeplink that allows you directly navigate to the results of a search query.
+* We have added a deep link that allows you navigate directly to the results of a search query.
 
 #### Fixes
-* We fixed an issue that caused the ContractType of a Service to be empty in the response of some operations of API versions 3 and older.
-
+* We fixed an issue that caused the `ContractType` of a `Service` to be empty in the response of some operations of API versions 3 and older.
 
 ### October 26, 2023
 

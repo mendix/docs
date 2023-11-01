@@ -47,8 +47,8 @@ The new features were divided into these major themes, which are described in th
 | Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
 | Rich design properties | GA: Q4 2023 |
 | Visual data filters | GA: Q4 2023 |
-| Mendix Chat | Public beta: Q4 2023<br>GA: TBD |
 | Mixed online and offline data | GA: Q4 2023 |
+| Mendix Chat | Public beta: Q4 2023<br>GA: TBD |
 | Mac support | Public beta: Q4 2023<br>GA: TBD |
 
 ## 4 Composability {#composability}
@@ -60,9 +60,9 @@ The new features were divided into these major themes, which are described in th
 | Solutions Kit – protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Mendix Connect – new database connector | Currently in private beta<br>GA: Q4 2023 |
-| Mendix Connect – REST connector | Public beta: Q4 2023<br>GA: TBD |
+| Solutions Kit – adaptation insights | Currently in private beta<br>GA: TBD |
 | Studio Pro extensibility | Currently in private beta (partners & ISVs)<br>GA: TBD |
-| Solutions Kit – adaptation insights | Private beta: Q4 2023<br>GA: TBD |
+| Mendix Connect – REST connector | Public beta: Q4 2023<br>GA: TBD |
 | Mendix Connect – external actions | GA: TBD |
 
 ## 5 Multi-Cloud Deployment {#multi-cloud}

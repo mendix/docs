@@ -35,7 +35,7 @@ weight: 96
 
 #### Various Introduced Elements 
 
-* We introduced the `EntityType, `EntitySet`, `ChangeMode`, `ChangeNotSupported`, `ChangeSource`, `CallMicroflowToChange`, `ReadMode`, `ReadSource`, `CallMicroflowToRead`, `QueryOptions`, `PublishedMicroflow`, `PublishedMicroflowParameter`, `PublishedEnumeration`, `PublishedEnumerationValue`, `PublishedContract`, `ServiceFeed`, `PublishedMember`, `PublishedId`, `PublishedAttribute`, and `PublishedAssociationEnd` elements.
+* We introduced the `EntityType`, `EntitySet`, `ChangeMode`, `ChangeNotSupported`, `ChangeSource`, `CallMicroflowToChange`, `ReadMode`, `ReadSource`, `CallMicroflowToRead`, `QueryOptions`, `PublishedMicroflow`, `PublishedMicroflowParameter`, `PublishedEnumeration`, `PublishedEnumerationValue`, `PublishedContract`, `ServiceFeed`, `PublishedMember`, `PublishedId`, `PublishedAttribute`, and `PublishedAssociationEnd` elements.
 
 ### Rest
 

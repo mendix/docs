@@ -8,6 +8,7 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 ---
 
 ## 1 Introduction 
+
 The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix App. These accounts are the best choice when you do not want to use a single sign-on (SSO) solution to integrate with your existing identity and access management (IAM) infrastructure.
 
 This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (sign up and forgot password). In the sign up case, the end-user is also asked to provide their name. For version 5.3.0 and above of the module, you can specify different templates to be sent, depending on the language in which the end-user is seeing the app.
@@ -170,6 +171,7 @@ You have now successfully upgraded the Forgot Password Module to work with Mendi
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
 Below versions of the Forgot Password module use the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+
 * Version 4.1.0 (for Mendix 8)
 * Version 5.1.0 (for Mendix 9 and above)
 * Version above 5.1.0 

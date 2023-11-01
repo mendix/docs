@@ -175,7 +175,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
   
-  #### 2.3.1 Managing Tags {#manage-tags}
+#### 2.3.1 Managing Tags {#manage-tags}
   
   From the [feedback details](#feedback-details) page, you can manage tags by clicking the settings icon next to the **Tags** text box:
   

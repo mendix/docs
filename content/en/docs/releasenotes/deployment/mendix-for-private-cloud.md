@@ -33,7 +33,6 @@ The data migration tool is available as a technical preview. For documentation a
 * We have fixed the issue where a user was able to select custom plans created for other namespaces.
 * We have added an extra warning message when a user tries to switch from default to custom core resource plans.
 
-
 ### October 13, 2023
 
 #### Data Migration Tool (Preview) v0.0.2

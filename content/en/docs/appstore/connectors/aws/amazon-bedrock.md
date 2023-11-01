@@ -55,7 +55,6 @@ Assistant:
 For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
 {{% /alert %}}
 
-
 ### 3.1 Configuring AWS Authentication
 
 In order to use the Amazon Bedrock service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
@@ -202,5 +201,3 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `InvokeModelGenericResponse` |
-
-

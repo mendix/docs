@@ -304,6 +304,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 To help you work with multi-page PDF files, you can use the `JA_SplitPdfPages` helper action to split a PDF File with multiple pages into a list of single-page PDFs. The action also supports extracting only a subset of the pages.
 
 You can use the action for use cases such as the following:
+
 * Splitting a two-pager PDF into two one-pagers and using the synchronous `AnalyzeDocument` action on both. 
 * Removing a cover page that does not contain information of interest from a document.
 * When working with a large PDF file, extracting a small subset of pages (for example, only pages 10-12), which contain the information to analyse. 

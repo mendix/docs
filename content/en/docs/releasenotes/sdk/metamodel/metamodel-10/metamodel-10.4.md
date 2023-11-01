@@ -6,7 +6,7 @@ weight: 96
 
 ## 10.4.0
 
-**Release date: October 26th, 2023**
+**Release date: October 26, 2023**
 
 ### DomainModels
 

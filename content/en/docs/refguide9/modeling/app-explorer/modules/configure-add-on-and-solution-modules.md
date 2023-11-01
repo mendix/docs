@@ -7,7 +7,7 @@ tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+In Mendix 9, Add-on modules and Solution modules were previously available in preview for select customers and partners as part of an early access program. In Mendix 10, this functionality is generally available and ready for use by any customer or partner.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -64,7 +64,7 @@ If you plan to use AWS Authentication with a [platform-supported AWS connector](
 
 ## 3 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/) to import the AWS Authentication connector into your app.
+Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the AWS Authentication connector into your app.
 
 ## 4 Usage
 

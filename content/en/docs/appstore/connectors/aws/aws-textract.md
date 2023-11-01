@@ -37,7 +37,7 @@ Because of a synchronous invocation limitation of the Amazon Textract service, t
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/) to import the Amazon Textract connector into your app.
+Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the Amazon Textract connector into your app.
 
 ## 3 Configuration
 

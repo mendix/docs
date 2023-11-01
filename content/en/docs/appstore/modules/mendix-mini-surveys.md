@@ -12,7 +12,7 @@ After you have created a [mini survey](/developerportal/app-insights/mini-survey
 
 ## 2 Installation
 
-To import this module into your app, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/).
+To import this module into your app, follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Configuration {#configuration}
 

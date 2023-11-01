@@ -1,5 +1,5 @@
 ---
-title: "Use Marketplace Content in Studio Pro"
+title: "Use Marketplace Content"
 url: /appstore/overview/use-content/
 linktitle: "Use Marketplace Content"
 weight: 2

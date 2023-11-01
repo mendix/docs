@@ -82,7 +82,7 @@ The new view helps you to browse through Marketplace components and view compone
 
 Finally, we introduced UI changes for pagination and points of entry to the Marketplace for a better user experience.
 
-For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/).
+For more information, see [How to Use Marketplace Content](/appstore/overview/use-content/).
 
 {{% alert color="warning" %}}
 If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}

@@ -39,7 +39,7 @@ The Mendix Business Events module itself does not require a license, but it depe
 
 ## 3 Configuration
 
-To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module into your app. See the [Installing Marketplace Content](/appstore/overview/use-content/#install) section in *Use Marketplace Content in Studio Pro*.
+To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module into your app. See the [Installing Marketplace Content](/appstore/overview/use-content/#install) section in *Use Marketplace Content*.
 
 ### 3.1 Configuring Local Deployments {#config-local-deployment}
 

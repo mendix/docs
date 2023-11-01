@@ -24,7 +24,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [How to Use Marketplace Content](/appstore/overview/use-content/)
 
 ## 3 Marketplace Content Development Guidelines {#guidelines}
 
@@ -344,4 +344,4 @@ For a component that is outdated based on the above points, this is the review a
 
 * [Marketplace Overview](/appstore/overview/)
 * [Mendix Partner Program](/appstore/creating-content/partner-program/)
-* [How to Use Marketplace Content in Studio Pro](/appstore/overview/use-content/)
+* [How to Use Marketplace Content](/appstore/overview/use-content/)

@@ -180,21 +180,24 @@ In order to test the features requiring HTTPS protocol, use [ngrok](https://ngro
 
 ### 7.1 Clearing the Cache
 
-Progressive web apps (PWAs) cache resources such as pages, images, and their offline databases. This can interfere with local development or when updating your environment configuration, such as when adding HTTP Headers. 
+Progressive web apps (PWAs) cache resources such as pages, images, and their offline databases. This can interfere with local development or when updating your environment configuration, such as when adding HTTP headers. 
 
-If you are experiencing unexpected issues, it is a good idea to clear the cache and make your progressive web app download all resources again. To do so follow these steps on the affected client:
+If you are experiencing unexpected issues, it is a good idea to clear the cache and make your progressive web app download all resources again. To do so, follow these steps on the affected client:
 
-1. Open the Mendix progressive web app in Google Chrome or Microsoft Edge.
-1. Open the developer tools by pressing F12.
-1. Open the **Application** tab and click on **Storage** in the left side navigation.
-1. Configure which cached ressources you want to reset in the **Storage** section.
+1. Open the Mendix PWA in Google Chrome or Microsoft Edge.
+1.  Open the developer tools by pressing <kbd>{F12}</kbd>: 
+
+    {{< figure src="/attachments/refguide/mobile/progressive-web-app/pwa-cache.png" alt="Full PWA Cache" width="350">}}
+
+1. Open the **Application** tab and click on **Storage** in the left-side navigation.
+1. Configure which cached resources you want to reset in the **Storage** section (see below for guidance).
 1. Click **Clear site data**.
 1. Close the developer tools and reload the page.
  
-You can choose to clear the following ressources:
+You can choose to clear the following resources:
 
-* Local and session storage: clear anything stored using the Local storage Nanoflow actions from Community Commons
-* IndexDB: not used by Mendix
-* Web SQL: clear the offline database
-* Cookies: clear the session and sign out the user (Local and session storage must be checked as well)
-* Cache storage: clear all cached pages, images, and client JavaScript code (this will also refresh HTTP Headers sent from the Mendix deployment environment)
+* **Local and session storage**: clears anything stored using the local storage nanoflow actions from [Community Commons](/appstore/modules/community-commons-function-library/)
+* **IndexDB**: not used by Mendix
+* **Web SQL**: clears the offline database
+* **Cookies**: clears the session and sign out the user (local and session storage must be selected as well)
+* **Cache storage**: clears all cached pages, images, and client JavaScript code (this will also refresh HTTP headers sent from the Mendix deployment environment)

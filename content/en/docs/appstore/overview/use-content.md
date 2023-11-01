@@ -90,7 +90,7 @@ To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and bel
 5. Click the component (or the **Read more** button on the right side) to show the details of the component.
 6. Continue from [step 6](#step-six) above.
 
-### 2.2 Importing Content from App Explorer {#import}
+### 2.2 Importing Content from Studio Pro's App Explorer {#import}
 
 {{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), and [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)).{{% /alert %}}
 

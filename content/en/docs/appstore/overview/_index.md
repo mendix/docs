@@ -63,6 +63,8 @@ The following filter options are also available:
 * **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
+For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *How to Use Marketplace Content in Studio Pro*.
+
 ## 3 Component Details Page {#details}
 
 Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.

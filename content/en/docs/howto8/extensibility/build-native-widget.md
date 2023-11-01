@@ -14,13 +14,13 @@ Pluggable widgets, introduced in Mendix 8, enable developers to create new widge
 
 In this how-to, you will learn to create a group box pluggable widget for native mobile applications with React Native.
 
-This how-to teaches you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/).
+This how-to will teach you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/).
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
 
 {{< figure src="/attachments/howto8/extensibility/build-native-widget/group-box-tease.png" alt="final widget" >}}
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Generate a widget structure
 * Put a pluggable widget into a Mendix app

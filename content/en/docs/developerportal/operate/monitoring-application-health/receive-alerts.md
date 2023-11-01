@@ -8,16 +8,16 @@ tags: ["Technical Contact","Settings","Alerts","Developer Portal"]
 
 ## 1 Introduction
 
-You can receive alerts for Mendix application environments in two ways: via email or by using webhooks. You can find detailed information for both of these options below.
+You can receive alerts for Mendix application environments in two ways; via email or using webhooks. You can find detailed information for both of these options below.
 
 ## 2 Email Alerts
 
-There are two ways to set up email alerts for an environment:
+There are two ways to manage email alerts for an environment:
 
 * The Technical Contact can grant you the **Receive Alerts** permission in **Node Permissions**
-* You can select the **Email Alerts** checkbox yourself on the **Alerts** page
+* You can click the checkbox of **Email Alerts** on the **Alerts** page
 
-Both options are described below.
+These options are described below.
 
 ### 2.1 Node Permissions  
 
@@ -28,22 +28,24 @@ If you are the Technical Contact for an app, you can grant team members the **Re
 3. Open the app by clicking **Environments** under the app name.
 4. Click **Details** for the environment for which you want to set up alerts. It is possible to set this permission separately for each environment.
 5. Switch to the **Permissions** tab.
-6. Select the checkbox below **Receive Alerts** for the user (or users) who should receive alerts. Your changes will save automatically.
+6. Select the checkbox below **Receive Alerts** for the user(s) who should receive alerts. 
+
+    The changes will be automatically saved.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/receive-alerts.png" >}}
 
 ### 2.2 Alerts Page
 
-You can also manage the alerts by yourself. For this, you need an **Application Operator**, **Business Engineer**, or **Scrum Master** role. Or, if a [Mendix Admin](/developerportal/control-center/#members) has defined a new team role for you, that role must have **Cloud Access**.
+You can manage the alerts by yourself. For this you need an **Application Operator**, **Business Engineer**, or **Scrum Master** role. If a [Mendix Admin](/developerportal/control-center/#members) has defined a new team role for you, that role must have the  **Edit** permission for **Deploy, Publish, and Monitor**.
 
-To enable email alerts, follow these steps:
+To enable email alerts follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
 3. Open the app by clicking **Environments** under the app name.
-4. Click **Alerts** in the left-side menu.
-5. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
-6. Select the **Email Alerts** checkbox.  Your changes will save automatically.
+4. Click **Alerts** in the left-hand menu.
+5. Select the environment for which you want to set the alerts from the dropdown at the top of the page. It is possible to set this option separately for each environment.
+6. Select the checkbox of **Email Alerts**.  The changes will be automatically saved.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" >}}
 
@@ -53,33 +55,33 @@ As an alternative to alert emails, you can set a webhook to receive alerts.
 
 Webhooks are set on the application level.
 
-For details on webhooks, see the [Webhooks](/developerportal/deploy/webhooks/) page.
+See the [webhooks](/developerportal/deploy/webhooks/) page for more information on webhooks.
 
 ### 3.1 Setting Alerts Webhooks
 
-To set a new webhook in the Developer Portal, follow these steps:
+To set a new webhook in the Developer Portal:
 
 1. Go to the Developer Portal and open your app.
-1. On the left-side pane, click **Webhooks**.
+1. On the left panel, click **Webhooks**.
 1. Click **New Webhook**.
-1. Name your webhook and provide the webhook receiver URL and Validation Secret as described in the [Configuring a Webhook](/developerportal/deploy/webhooks/#setting-up) section of the *Webhooks* page.
+1. Name your webhook and provide the webhook receiver URL and Validation Secret as described in the [Configuring a Webhook](/developerportal/deploy/webhooks/#setting-up) section of *Webhooks*.
 1. Choose **Alerts** from **Available Events**.
 1. Click **Save**.
 
-After you set a new webhook, the receiver endpoint will start getting alerts when they are triggered. 
+After setting a new webhook, the receiver endpoint will start getting alerts when they triggered. 
 
 ## 4 Issue: Receiving Too Many Alerts
 
-Under some circumstances, a critical alert in one instance of a multi-instance app can cause emails to be sent out constantly. The other instances of your app will continue to run without reporting issues, so it will appear to be working.
+Under some circumstances, a critical alert in one instance of a multi-instance app will cause emails to be sent out constantly. The other instances of your app will continue to run without reporting issues, so it will appear to be working.
 
-If you cannot resolve the issue in the instance reporting the critical error, you will need to restart your app to ensure that all instances are healthy. Otherwise, you will continue to receive regular email alerts.
+If you cannot resolve the issue in the instance reporting the critical error, you will need to restart your app to ensure that all instances are healthy. Otherwise you will continue to receive regular email alerts.
 
 ## 5 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Metrics](/developerportal/operate/metrics/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/general/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/) 
 * [Technical Contact](/developerportal/general/app-roles/#technical-contact)

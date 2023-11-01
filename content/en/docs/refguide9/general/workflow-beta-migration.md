@@ -4,13 +4,13 @@ url: /refguide9/workflow-beta-migration/
 linktitle: "Migrate Workflow Apps"
 category: "General Info"
 weight: 25
-description: "Describes how to migrate existing Workflow applications to the new feedback-improved beta."
+description: "Describes how to migrate existing Workflow applications to the new feedback-improved Beta."
 tags: ["studio pro", "workflow", "migration", "beta"]
 ---
 
 ## 1 Introduction
 
-[Workflows](/refguide9/workflows/) were introduced as a beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
+[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
 
 This document explains how to migrate your existing workflow apps depending on the version you are migrating to. It is meant for advanced Mendix developers, so proceed with caution.
 

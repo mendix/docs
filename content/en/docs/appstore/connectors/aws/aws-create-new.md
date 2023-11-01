@@ -9,7 +9,7 @@ tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]
 
 ## 1 Introduction
 
-This how-to describes the process of developing an AWS connector. It teaches you the following:
+This how-to describes the process of developing an AWS connector. It will teach you the following:
 
 * Advantages of REST API-based development when creating your own AWS connector
 * Basic steps for building AWS connectors

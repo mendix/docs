@@ -8,7 +8,7 @@ tags: ["accessibility", "JavaScript", "native", "mobile"]
 
 ## 1 Introduction
 
-This guide teaches you how to make your native mobile application accessible. An accessible application ensures every user has a satisfactory experience regardless of their physical capabilities or how they use their devices. Specifically, this guide will explain the interactions between Mendix apps and mobile screen readers (VoiceOver for iOS and TalkBack for Android). 
+This guide will teach you how to make your native mobile application accessible. An accessible application ensures every user has a satisfactory experience regardless of their physical capabilities or how they use their devices. Specifically, this guide will explain the interactions between Mendix apps and mobile screen readers (VoiceOver for iOS and TalkBack for Android). 
 
 This guide only applies to native mobile apps.
 

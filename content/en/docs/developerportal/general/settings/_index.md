@@ -55,23 +55,7 @@ In this tab, you can find the following items:
 Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/general/leave-delete-app/).
 {{% /alert %}}
 
-## 3 Cloud Settings {#cloud-settings}
-
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can change cloud platforms.
-{{% /alert %}}
-
-On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
-
-If you select a non-Mendix Cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
-
-Specific steps for configuring different cloud platforms are provided here:
-
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
-* [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
-
-## 4 Access Management {#managing-app-users}
+## 3 Access Management {#managing-app-users}
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
@@ -88,7 +72,7 @@ When deploying your application to a non-production environment, the deploying u
 When deploying your application to a production environment, the Technical Contact is always assigned the Administrator user role. If you cannot see an environment, ask your Technical Contact to assign you a user role for that environment which allows you to manage other users. 
 {{% /alert %}}
 
-### 4.1 Managing Users {#manage-users}
+### 3.1 Managing Users {#manage-users}
 
 When you click **Manage Users** for your environment, a dialog box opens with a list of the current app users you can remove or edit:
 
@@ -100,7 +84,7 @@ To edit an app user's roles, click **Edit** by their name. Permissions for these
 If an app user has been granted access to an app environment through a [group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
-### 4.2 Inviting Users {#invite-users}
+### 3.2 Inviting Users {#invite-users}
 
 To invite new app users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
 
@@ -113,6 +97,22 @@ To invite new app users to your app, click **Invite Users** for that environment
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
 After they provide authorization, they will be brought to your deployed app.
+
+## 4 Cloud Settings {#cloud-settings}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can change cloud platforms.
+{{% /alert %}}
+
+On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
+
+If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
+
+Specific steps for configuring different cloud platforms are provided here:
+
+* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
+* [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
 ## 5 API Keys {#general-settings-api-keys}
 

@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Choose an app template
 * Choose a page template
@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Choosing Your App Template
 
-In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_your_starter_app.png" alt="App template in Developer Portal" >}}
 

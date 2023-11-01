@@ -16,7 +16,7 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 
 This how-to serves as a checklist for implementing security for your on-premises installation.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Use a Mendix version containing the latest security patches
 * Configure file system access
@@ -28,7 +28,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Use a Mendix version containing the latest security patches
-    * If your app runs in Mendix Cloud, it will automatically comply with this checklist once it is deployed
+    * If your app runs in the Mendix Cloud, it will automatically comply with this checklist once it is deployed
 
 ## 3 Using an Unprivileged Dedicated User Account for Every Application
 

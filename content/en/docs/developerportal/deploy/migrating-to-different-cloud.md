@@ -14,36 +14,35 @@ aliases:
 
 ## 1 Introduction
 
-This document explains how to migrate your licensed app from one Mendix Public Cloud region to another.
+This document explains how to migrate your licensed app from one Mendix public cloud region to another.
 
 ## 2 Migration considerations
 
 {{% alert color="warning" %}}
-Do not upgrade your runtime version at the same time that you migrate your app. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you choose to upgrade your runtime version at the same time as migrating your app, Mendix Support will not be able to assist you.
+Do not upgrade your runtime version at the same time as migrating your app. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you do choose to upgrade your runtime version at the same time as migrating your app, Mendix Support will not be able to assist you.
 
-If you need to upgrade your runtime version, ensure that your upgraded version is fully tested and ready before you start the migration process.
+If you need to upgrade your runtime version, ensure that it is fully tested and ready before attempting to migrate.
 {{% /alert %}}
 
-When migrating your app, keep the following considerations in mind:
+You will need to take the following into account when migrating your app:
 
-* If you use a mail server from your app, you need to use a third-party email provider. For more information, see [Sending Email](/developerportal/deploy/sending-email/).
-* If you use an FTP server in your app, you need to use a third-party FTP provider.
-* If you are currently using a VPN to secure your app, you must use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/) instead.
+* If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
+* If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](/developerportal/deploy/sending-email/)
+* If you use an FTP server in your app, you will need to use a third-party FTP provider
+* If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/) instead
 
 ## 3 Prerequisites
 
-Before following the steps described on this page, make sure that you have met the following prerequisites:
-
-* Ensure that your app is on a [supported version](/releasenotes/studio-pro/lts-mts/) of Mendix. For the best level of support, use a long-term support version.
-* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available. To request a licensed Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app.
-* Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both of your cloud nodes.
-* Create two new temporary Free Apps without Free App environments. For instructions on unlinking a Free App from its environment, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink).
+* Ensure that your app is on a supported version of Mendix, Mendix 7.0 and above. For the best level of support, we recommend that you use version 7.23 which is the [long term support](/releasenotes/studio-pro/lts-mts/) version of Mendix 7.
+* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available (to request a licensed Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app)
+* Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both your cloud nodes
+* Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink)
 
 ## 4 Migrating the App
 
-To manually migrate your app to a different node in Mendix Cloud, follow the steps in the sections below. Those steps are summarized in this graphic:
+To manually migrate your app to a different node in the Mendix Cloud, follow the steps in the sections below.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" >}}
 
 ### 4.1 Linking the New Free App to the Target Cloud Node
 
@@ -53,17 +52,17 @@ First, link one of the new temporary apps to the target node.
 
 2. Once you are in the app, go to the **Environments** tab in the left menu.
 
-3. Click **Select a node**.
+3. Click **select a node**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/select-a-node.png" >}}
 
-4. Select the target node by clicking **Use this Node**. Link it to your app.
+4. Select the target node by clicking **Use this Node** and link it to your app.
 
 For more information on how to do this, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#licensed-node).
 
 ### 4.2 Copying the Deployment Package and Data from the Source Node to the Target Node
 
-Before migrating, you need to deploy a copy of your app to the target node. You can then copy the data from the source node to the target node. After copying the data, you should test the app and correct errors if needed. Repeat this process until all the errors are solved.
+Before migrating, you need to deploy a copy of your app to the target node. You can then copy the data from the source node to the target node. After copying the data, you should test the app, and correct errors if needed. Repeat this until all the errors are solved.
 
 The following steps explain how to do this.
 
@@ -83,7 +82,7 @@ To download a deployment package, follow these steps:
 
 To upload the deployment package, follow these steps:
 
-1. Go to **Environments** of the target app.
+1. Go to **Environments** of the target App.
 
 2. Below the **Deployment Package Repository**, click **Upload**.
 
@@ -91,21 +90,21 @@ To upload the deployment package, follow these steps:
 
 3. Browse and select the downloaded deployment package from your device.
 
-4. Deploy the uploaded package and confirm that it starts successfully.
+4. Deploy the uploaded package and ensure that it starts.
 
 5. Stop the app so that you can upload the backup data.
 
 #### 4.2.2 Backing Up
 
 {{% alert color="warning" %}}
-Before backing up your data as described in this section, you must complete the steps above. In particular, make sure that you have already deployed, started, and stopped your app. Making a deployment prepares the environment and ensures that your data is restored to the correct locations.
+Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
 {{% /alert %}}
 
 Transfer the backup data from the source app to the target app by following these steps:
 
 1. Download a backup from your source app (for details, see [How to Download a Backup](/developerportal/operate/download-backup/)).
 
-    {{% alert color="info" %}}Mendix recommends downloading copies of all backups that you want to keep. Once you have offboarded the old environment, they will no longer be available.{{% /alert %}}
+    {{% alert color="info" %}}It is recommended that you download copies of all backups that you want to keep. Once you have offboarded the old environment, they will no longer be available.{{% /alert %}}
 
 2. Upload the downloaded backup to your app hosted in the target node (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup/)).
 
@@ -121,39 +120,39 @@ To learn how to do this, see [How to Deploy the App to an Environment](/develope
 
 ### 4.3 Unlink the App from the Source Node
 
-It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
+It is not possible to explicitly unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically. To do this, perform the following steps.
 
 1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the target node).
 
 2. Once you are in the app, go to the **Environments** tab in the left menu.
 
-3. Click **Select a node**.
+3. Click **select a node**.
 
-4. Select the source node containing your app by clicking **Use this Node**, and link it to your app. This unlinks the app that was deployed to the node, so you can link it to the target node as described in the next section.
+4. Select the source node containing your app by clicking **Use this Node**, and link it to your app. Your app which is currently deployed to this node will be unlinked automatically and you can now link it to the target node.
 
-For a detailed example of how this works, see the [Exchanging Linked Apps Between Nodes](/developerportal/deploy/licensing-apps/#exchange-apps) section of *Licensing Mendix Cloud Apps*.
+A more detailed example of how this works given in the [Exchanging Linked Apps Between Nodes](/developerportal/deploy/licensing-apps/#exchange-apps) section of *Licensing Mendix Cloud Apps*.
 
 ### 4.4 Linking the App to the Target Node
 
-Follow these steps to link the app you detached from the source node, above, to the target node.
+Follow these steps to link the app you detached from the source node, above, to the target node:
 
 {{% alert color="warning" %}}
 Make sure you have downloaded the latest backup and deployment package before linking your app to the target node.
 {{% /alert %}}
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that you detached from the source node.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that has been detached from the source node.
 
 2. Once you are in the app, go to the **Environments** tab in the left menu.
 
 3. Click **select a node**.
 
-4. Select the target node by clicking **Use this Node** and linking it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
+4. Select the target node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 
 For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 ### 4.5 Changing the App URL
 
-To change the App URL (if you are not using a custom domain), contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
+To change the App URL (if you are not using a custom domain) you will need to contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
 
 * **URL** for the new app, which is available from the *Environments* page for the new app
 * **URL** for the old app, which is available from the *Environments* page for the old app
@@ -162,34 +161,28 @@ To change the App URL (if you are not using a custom domain), contact [Mendix Su
 
 ### 4.6 Changing a Custom Domain{#custom-domain}
 
-If you have a custom domain that you want to transfer to your target deployment, keep the following information in mind.
+If you have a custom domain which you want to transfer to your target deployment, you will need to bear the following information in mind.
 
-The CNAME configuration in the DNS provider needs to have the following format: `{customdomain}.cname.mendix.net`.
+* The CNAME configuration in the DNS provider needs to have the following format: `{customdomain}.cname.mendix.net`
+* If you own the private key for your existing custom domain name, you can reuse it for your target deployment
+    * For a TLS certificate you uploaded yourself, you will have the private key
+    * If you made a certificate request to Mendix, the private key will be stored in the Mendix Secure Keystore and you will need to ask Mendix Support to arrange for the certificate to be migrated to the target node
 
-When you start the app on the target node, it can take some time for the DNS servers on the web to register the new target URL and redirect your custom domain name to it. So, if your TTL setting has a duration longer than a few minutes, Mendix recommends speeding up this process. To do so, set the TTL value to 300 seconds. Change this value a few days in advance to ensure the setting is propagated to all DNS servers.
+        The two certificate request options are shown below:
+        {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" >}}
 
-For example, if you have a TTL of 24 hours, it takes 24 hours before the new domain is active in the DNS. Customers who visit the custom domain through the browser will not end up at the target Mendix Cloud environment until 24 hours have passed. So, you should check the TTL value about a week before migration and change it to around 300 seconds (the recommended default value).
+* When you start the app on the target node, it can take some time for the DNS servers on the web to register the new target URL and redirect your custom domain name to it — therefore you must set the TTL value to 300 seconds to speed up this process, if your TTL setting has a longer duration. This should be done some days in advance to ensure the setting is propagated to all DNS servers.
 
-{{% alert color="info" %}}
-For more information about setting up custom domains, see [Custom Domains](/developerportal/deploy/custom-domains/).
-{{% /alert %}}
+    For example, if you have a TTL of 24 hours, it will take 24 hours before the new domain will be active in the DNS. Customers who visit the custom domain through the browser will not end up at the target Mendix Cloud environment until 24 hours have passed. You should therefore check the TTL value a week or so before migration and change it to around 300 seconds (this is the default value we recommend).
 
-#### 4.6.1 Custom Domain Certificates
-
-If you own the private key for your existing custom domain name, you can reuse it for your target deployment. For a TLS certificate you uploaded yourself, you have the private key.
-
-Or, if you made a certificate request to Mendix, the private key is stored in the Mendix Secure Keystore. In that case, ask Mendix Support to arrange for the certificate to be migrated to the target node.
-
-The two custom domain certificate options are shown below:
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" >}}
+You can find further information about setting up custom domains in [Custom Domains](/developerportal/deploy/custom-domains/).
 
 ### 4.7 Offboarding the Source Node
 
-If everything works correctly after the migration, submit a request to [Mendix Support](https://support.mendix.com) to offboard the old node.
+If everything works correctly after the migration, submit a request to [Mendix Support](https://support.mendix.com) to offboard the old node. This means that your previous node will no longer be available.
 
 {{% alert color="warning" %}}
-After your node is offboarded, it will no longer be available. Before asking for your node to be offboarded, ensure that you have downloaded any backups or other information that you need from the node.
+After your node is offboarded, it will no longer be accessible. Ensure that you have downloaded any backups or other information that you need from the node before asking for it to be offboarded.
 {{% /alert %}}
 
 ## 5 Read More

@@ -38,7 +38,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer under **{App name}** > **Marketplace modules** > **SAPODataConnector**.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure the OData Connector for SAP solutions
 * Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app

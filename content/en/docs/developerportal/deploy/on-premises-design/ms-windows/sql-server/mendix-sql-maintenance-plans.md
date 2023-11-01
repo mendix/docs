@@ -13,7 +13,7 @@ weight: 50
 
 This how-to will present guidelines for setting up Mendix SQL maintenance plans.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Set up SQL basic maintenance plans
 * Set up notifications
@@ -58,12 +58,12 @@ To configure notifications, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/mendix-sql-maintenance-plans/18580653.png" >}}
 
-4. Choose a valid email sender address (for example, *mendix_sql@yourdomainname.com*)
-5. Make sure the email profile is set to both **Public** and **Default Profile**:
+4. Choose a valid e-mail sender address (for example, *mendix_sql@yourdomainname.com*)
+5. Make sure the e-mail profile is set to both **Public** and **Default Profile**:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/mendix-sql-maintenance-plans/18580663.png" >}}
 
-6. Verify your email configuration by sending a test email:
+6. Verify your e-mail configuration by sending a test email:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/mendix-sql-maintenance-plans/18580662.png" >}}
 

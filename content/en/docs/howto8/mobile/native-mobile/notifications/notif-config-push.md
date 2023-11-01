@@ -8,7 +8,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 ## 1 Introduction 
 
-This how-to teaches you how to configure the runtime for using push notifications in native apps. 
+This how-to will teach you to configure the runtime for using push notifications in native apps. 
 
 ## 2 Configure Your Notifications
 

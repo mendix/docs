@@ -14,7 +14,7 @@ On the upper-right corner of the page, you can find the following items:
 * **Create Story** – Clicking this enables you to create a new story.
 * **Create Epic**  – Clicking this enables you to create a new epic.
   
-* Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
+* Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID.
 
 ## 2 Swimlanes {#swimlane}
 
@@ -78,68 +78,22 @@ The story details dialog box shows the following items:
     * You can type a person in the editor by typing *@*, and the person's name, and then selecting the right person from the list. Once you save the story, the system will send a notification to the tagged person.
 
 * **Created by** – This shows the person who created the story.
-
 * **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
-
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
-
 * **Tasks** – All the tasks are listed.
     * You can add a task by clicking **+ Add Task**.
+
     * You can move a task upwards or downwards by dragging them around.
-    
+
 * **Story Type** – You can set the story type to **Bug** or **Feature**.
-
 * **Linked Epic** – You can select an epic from the drop-down list.
-
 * **Tags** – You can add or remove tags.
     * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
     * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
-    
+
 * **Story Points** – You can set the story points to an integer.
-
 * **Attached Files** – You can add attached files by clicking **+**.
-
-* **Audit Trail** – This gives information on all the updates related to the story, including who did the update and when:
-    * Story assigned to {user name}
-    
-    * Story assigned to {user name} from {user name}
-    
-    * Story unassigned from {user name}
-    
-    * Changed Status to {status}
-    
-    * Story type changed to {story type}
-    
-    * Task {task name} added
-    
-    * Task {task name} completed
-    
-    * Task {task name} deleted
-    
-    * Epic {epic name} linked
-    
-    * Epic {epic name} unlinked
-    
-    * Tag(s) {tag names} added
-    
-    * Tag(s) {tag names} removed
-    
-    * Story points changed to {story points}
-    
-    * File attached {file name}
-    
-    * File removed {file name}
-    
-    * Story archived
-    
-    * Comment Deleted
-    
-    * Comment Edited
-    
-    {{< figure src="/attachments/developerportal/project-management/epics/board/audit-trail.png" >}}
-    
 * **Revision** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
-
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
     * You can sort the comments by clicking the **Newest** or **Oldest** button.
 

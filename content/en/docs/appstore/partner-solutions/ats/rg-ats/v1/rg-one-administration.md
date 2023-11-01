@@ -68,7 +68,7 @@ Field | Description
 --- | ---
 Full Name | The full name of the user.
 Name | The name the user logs in with.
-Email | The email address of the user.
+Email | The e-mail address of the user.
 Blocked | Mark the account as unblocked/blocked.
 Active | Set the account to active/inactive.
 Time Zone | Set the time zone the user works in.

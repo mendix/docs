@@ -11,7 +11,7 @@ tags: ["monitoring", "troubleshooting", "log level", "logging", "log"]
 
 Each application has a log to which it writes log messages to monitor the health of the running application. Log levels are used to label the log messages and to highlight the highest priority ones so that they can be easily identified and responded to.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure the log levels for the various types of logging within your app
 
@@ -29,7 +29,7 @@ Log messages appear in the log of your Mendix application and present contextual
 
 #### 2.1.1 Log Node
 
-The log node describes the source of the log message. For example, in a log message from the email module, the log node could be set to **Email Module**.
+The log node describes the source of the log message. For example, in a log message from the e-mail module, the log node could be set to **Email Module**.
 
 #### 2.1.2 Message
 
@@ -106,7 +106,7 @@ To set the log levels for standard log messages, follow these steps:
 {{< figure src="/attachments/howto/monitoring-troubleshooting/log-levels/set-log-levels.png" >}}
 
 {{% alert color="info" %}}
-You can override the log level for standard log messages in each environment when your app is deployed to Mendix Cloud. See the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section in *Environment Details* for more information.
+You can override the log level for standard log messages in each environment when your app is deployed to the Mendix cloud. See the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section in *Environment Details* for more information.
 {{% /alert %}}
 
 ### 3.3 Configuring the Log Levels for Custom Log Messages

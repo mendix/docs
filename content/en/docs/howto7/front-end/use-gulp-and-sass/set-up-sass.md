@@ -10,7 +10,7 @@ tags: ["gulp", "sass", "ux", "front end"]
 
 Styling in a Mendix app is easy to do once you get the hang of it. But before you can start using Sass for your app, you first need to install and download a few things.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Prepare your app
 * Set up your Sass files

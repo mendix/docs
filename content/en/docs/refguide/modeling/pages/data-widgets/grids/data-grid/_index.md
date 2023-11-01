@@ -47,11 +47,11 @@ Data grid properties consist of the following sections:
 
 ### 3.2 Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a data grid. For general information on data sources, see [Data Sources](/refguide/data-sources/).
+The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide/data-sources/).
 
 #### 3.2.1 Type
 
-The data grid supports the following types of data sources: 
+The list view supports the following types of data sources: 
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly from the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly from the database

@@ -68,7 +68,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-  caption: {
+  text: {
     // TextStyle properties
     color: "#00FF00",
   }
@@ -922,7 +922,7 @@ export const com_mendix_widget_native_badge_Badge = {
   container: {
     // This has all ViewStyle properties.
   },
-  caption: {
+  text: {
     // This has all TextStyle properties.
   }
 };
@@ -931,7 +931,7 @@ export const com_mendix_widget_native_badge_Badge = {
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `caption` | This has all TextStyle properties. |      |
+| `text` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -2446,7 +2446,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
-The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
+The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
 #### 11.33.1 Gallery Filtering
 

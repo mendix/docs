@@ -12,47 +12,45 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 
 ## 1 Introduction
 
-The [Mendix SSO](/appstore/modules/mendix-sso/) module enables your app end-users to sign in with their Mendix account when your app is deployed to Mendix Cloud.
+The [Mendix SSO module](/appstore/modules/mendix-sso/) enables your app end-users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 {{% alert color="warning" %}}
-Because your app end-users are signing in with a Mendix account, they will all need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
+Because your app end-users are signing in with a Mendix account, they will all need to [signup for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 
-Mendix Single Sign-On (SSO) is only activated when your app is deployed to Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
+Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
 
-Mendix SSO is not recommended for Production deployments because the Mendix SSO screens are Mendix branded.
+Mendix SSO is not recommended for Production deployments as the Mendix SSO sign in screens are Mendix branded.
 {{% /alert %}}
 
-Using Mendix accounts during development has the following benefits:
+Using Mendix accounts while developing has the following benefits:
 
 * You do not need a special authorization module to support resetting and changing passwords
-* It is easy to develop and test multiple applications that all use the same sign-on mechanism
+* It is easy to develop and test multiple applications which all use the same sign-on mechanism
 
-For information on installing and configuring the Mendix SSO module, see [Mendix SSO](/appstore/modules/mendix-sso/).
+For information on installing and configuring the Mendix SSO module, see [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ## 2 Using Mendix SSO
 
 {{% alert color="warning" %}}
-Mendix Single Sign-On is only activated when your app is deployed to Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
+Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
 {{% /alert %}}
 
 ### 2.1 Signing On as an End-User
 
-As an end-user, you will see the Mendix SSO screen when you open an app if this is your first time visiting the app environment or if you have not opened the app recently. From this screen, you can choose to sign in with local user credentials, or you can click **Mendix Account** to use your Mendix account with Mendix SSO.
+When you open an app as an end-user, and this is the first time visiting the app environment *or* you have not opened the app recently, you will see the Mendix SSO sign-on screen. You can still choose to sign-on with local user credentials, but to use your Mendix Account with Mendix SSO, click  the **Mendix Account** button.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/sso-sign-on.png" alt="Mendix SSO sign-on screen" >}}
 
-Apps implementing Mendix SSO require access to some of your profile information, such as your account identifier and your display name.
-
-So, the first time you sign in to an environment (for example, myapp running in acceptance) as an end-user using Mendix SSO, the app will ask you to authorize access. Authorizing access allows the app to access certain information from your Mendix profile, as specified on the authorization page.
+Every app implementing Mendix SSO needs some of your profile information (like your account identifier and your display name) to work. So for each environment (for example, myapp running in acceptance), the first time you sign in as an end-user using Mendix SSO the app will ask you to authorize access. This means that the app can access certain information held in your Mendix profile as specified on the authorization page.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/authorize-access.png" alt="Authorization screen" >}}
 
-Click **Authorize** to continue using Mendix SSO with the app. Authorizing the app automatically signs you in to the app.
+Click **Authorize** to continue using Mendix SSO with this app. After authorizing the app you are automatically signed in to the app.
 
 ### 2.2 Assigning End-User Roles
 
 Give end-users access to your app through the [Access Management](/developerportal/collaborate/general-settings/#managing-app-users) tab on the *Settings* page in the Developer Portal.
 
 {{% alert color="warning" %}}
-Do not attempt to add or delete Mendix SSO users using administration functions within the app. User access to your app can only be changed through the Developer Portal.
+Do not attempt to add or delete Mendix SSO users using administration functions within the app. If user access is not modified through the Developer Portal, then user access to your app will not be changed.
 {{% /alert %}}

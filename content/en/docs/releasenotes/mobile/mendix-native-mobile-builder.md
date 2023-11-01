@@ -11,11 +11,9 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ## 2022
 
-### Release 1.0.128
+### Release 1.0.127
 
 **Release date: October 6, 2022**
-
-This release was previously labeled as 1.0.127. Its release number has been corrected.
 
 #### Fixes
 
@@ -344,7 +342,7 @@ Dependency management and auto-linking are not included as part of the Native Mo
 
 #### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
 
-With the Mendix Studio Pro 9.0.3 beta release, we introduced native dependency management. Using native dependency management, widgets 
+With the Mendix Studio Pro 9.0.3 Beta, we introduced native dependency management. Using native dependency management, widgets 
 and JavaScript actions can now define their native dependency requirements and let the Mendix Native Mobile Builder link them in apps.
 The result is a lighter project template that only includes the dependencies it actually needs.
 

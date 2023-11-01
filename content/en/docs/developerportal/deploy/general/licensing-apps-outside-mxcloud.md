@@ -3,7 +3,7 @@ title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
-tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "MindSphere", "Insights Hub"]
+tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "Siemens MindSphere"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
@@ -14,11 +14,11 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 
 ## 1 Introduction
 
-On Mendix Cloud, you can build [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix.
+On the Mendix Cloud, you can build [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix.
 
 You can also deploy apps without a license to another public or private cloud of your choice, for example SAP Business Technology Platform (SAP BTP). This gives you the opportunity to try things out and to build and test apps using both the functionality of Mendix and your target cloud.
 
-Unlicensed apps, running outside Mendix Cloud, have a number of restrictions which are listed in the table below:
+Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions which are listed in the table below:
 
 | Feature | Unlicensed App | Licensed App |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ The app will check for a license each time it is started. If the license expires
 
 You can obtain a Mendix license from Mendix support. 
 
-If you want to create a new licensed node in Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
+If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
 For all other license requests and *Subscription Secrets* to deploy to SAP BTP and Mendix for Private Cloud, do the following:
 
@@ -65,7 +65,7 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 ### 3.1 Mendix Cloud
 
-To run Mendix apps in production on Mendix Cloud, they must be linked to a licensed node in Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
+To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 ### 3.2 SAP BTP
 
@@ -75,9 +75,9 @@ You can add this subscription secret as part of creating an environment on SAP B
 
 For more information, see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform/).
 
-### 3.3 Siemens Insights Hub
+### 3.3 Siemens MindSphere
 
-To license an Insights Hub app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
+To license a MindSphere app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
 
 ### 3.4 Mendix for Private Cloud
 

@@ -3,7 +3,7 @@ title: "Build JavaScript Actions: Part 2 (Advanced)"
 linktitle: "2. Build JavaScript Actions"
 url: /howto9/extensibility/write-javascript-github/
 weight: 20
-description: "This advanced how-to teaches you how to make a JavaScript action which can search for GitHub users."
+description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---
 
@@ -11,7 +11,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 Nanoflows are even more powerful with pluggable nanoflow actions — called JavaScript actions. [How to Build JavaScript Actions: Part 1 (Basic)](/howto9/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Create a JavaScript action
 * Configure input and output parameters

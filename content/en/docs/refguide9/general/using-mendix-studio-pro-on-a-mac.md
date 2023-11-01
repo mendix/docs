@@ -24,7 +24,7 @@ When using parallels, some users might experience slow network speed. For instan
 
 To start making Mendix apps on your Mac, follow this how-to.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure your Windows virtual machine for Mendix Studio Pro
 * Run a Mendix app on a test device using your Windows virtual machine

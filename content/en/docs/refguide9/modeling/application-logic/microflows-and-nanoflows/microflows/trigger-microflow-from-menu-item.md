@@ -10,7 +10,7 @@ tags: ["Studio Pro", "microflow", "create microflow", "menu item"]
 
 Mendix uses visual models called [microflows](/refguide9/microflows/) to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This document explains how you can create a very simple "Hello World" microflow and trigger it from a [menu item](/refguide9/menu/#menu-item).
 
-This document teaches you how to do the following:
+This document will teach you how to do the following:
 
 * Create a menu item
 * Create and edit a microflow

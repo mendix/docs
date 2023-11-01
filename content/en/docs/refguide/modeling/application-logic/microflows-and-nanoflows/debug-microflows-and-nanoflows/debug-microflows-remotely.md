@@ -22,7 +22,7 @@ If you are debugging in the cloud, be aware of other app end-users. Breakpoints 
 **It is currently not possible to debug nanoflows remotely.** If you are debugging in the cloud, any breakpoint added to a nanoflow will be disabled.
 {{% /alert %}}
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Connect the debugger in Studio Pro to your Mendix Cloud environment
 

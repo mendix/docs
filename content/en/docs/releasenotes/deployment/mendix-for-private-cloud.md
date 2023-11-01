@@ -13,38 +13,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### October 30, 2023
-
-#### Data Migration Tool (Preview) v0.0.3
-
-* We have fixed an issue that prevented backups from completing. Previously, if the database contained a *System.FileDocument* entity with a NULL filename, it would cause an exception during the backup process.
-
-{{% alert color="info" %}}
-The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
-{{% /alert %}}
-
-### October 19, 2023
-
-#### Portal Improvements
-
-* We have added an option to specify additional custom pod labels for an environment from the portal.
-* We have added an option to configure the ephemeral storage in the core resources selection flow.
-* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963) 
-* We have fixed the issue where a user was able to select custom plans created for other namespaces.
-* We have added an extra warning message when a user tries to switch from default to custom core resource plans.
-
-
-### October 13, 2023
-
-#### Data Migration Tool (Preview) v0.0.2
-
-* We have updated the data transfer tool's error-handling code to provide more meaningful error messages.
-* If the data transfer tool fails to access or export a file, it will return an error and continue with the process, instead of failing the process immediately.
-* The data transfer tool will now only export files which are in use by the app (that is, which are referenced by a `System.FileDocument` entity).
-* We have updated the data transfer tool's dependencies to the latest versions.
-
-This tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
-
 ### September 21, 2023
 
 #### Portal Improvements
@@ -127,7 +95,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
 
 {{% alert color="info" %}}
-This feature is currently in a [beta release](/releasenotes/beta-features/).
+This feature is currently in a Beta release. For more information on what Beta release means, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 #### Portal Improvements
@@ -199,7 +167,7 @@ This feature is currently in a [beta release](/releasenotes/beta-features/).
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 {{% alert color="info" %}}
-This feature is currently in a beta release.
+This feature is currently in a Beta release.
 {{% /alert %}}
 
 ### March 17, 2023
@@ -543,7 +511,7 @@ To see more details about supported databases and Kubernetes versions, see the [
 #### Prometheus Metrics
 
 * We have documented how to collect logs and metrics in Mendix for Private Cloud.
-* We have created a reference Grafana dashboard that offers a familiar experience for Mendix Cloud v4 [Metrics](/developerportal/operate/metrics/) users.
+* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud v4 metrics](/developerportal/operate/trends-v4/) users.
 
 To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor/).
 
@@ -993,4 +961,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.

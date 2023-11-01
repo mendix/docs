@@ -10,9 +10,15 @@ weight: 10
 
 The **Backups API v2** allows you to manage backups of the data in your app hosted in the Mendix Cloud.
 
-Data snapshots consist of a PostgreSQL database dump and all the file objects referenced from the database.
+If you want to download a backup of your data, you need to perform three steps:
 
-Database archives are a zip file which contains all the data in the snapshot, or the database and files separately if you prefer. 
+1. Create a *snapshot*, or find the `snapshot-id` of an existing one
+2. Create an *archive* file from a snapshot
+3. Download the archive using the URL provided 
+
+Data **snapshots** consist of a PostgreSQL database dump and all the file objects referenced from the database.
+
+Database **archives** are a zip file which contains all the data in the snapshot, or the database and files separately if you prefer. 
 
 You cannot currently upload an archive through this API. This function is currently only supported via the [Developer Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
 
@@ -22,30 +28,11 @@ The v2 of this API is focused on working with snapshots and archives asynchronou
 
 The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups.
 
-## 3 Examples
+## 3 API Calls
 
-### 3.1 Downloading a Backup of Your Data
+### 3.1 List Environment Snapshots
 
-To download a backup of your data, do as follows:
-
-1. Make sure that you have an API key and the **API Access** and **Backups** permissions.
-
-2. If the snapshot already exists, find the [snapshot ID](/developerportal/operate/backups/#backups-details).
-
-3. If the snapshot does not exist, call `POST /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots` to create a snapshot. For more information, see the [Request Creation of an Environment Snapshot](#request-creation-snapshot) section below.
-
-4. Use the value of `snapshot_id` in the output to create an archive file from the snapshot. To do so, call `POST /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives`. For more information, see the [Request Creation of a Snapshot Archive](#request-creation-archive) section below.
-
-5. Use the value of `archive_id` in the output to check whether the creation of the archive is completed. To do so, call `GET /api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives/<ArchiveId>`. For more information, see the [Request Status of Creation of an Archive](#request-status-archive) section below.
-
-6. After the archive is created, use the value of `url` in the output to download to the backup archive.
-
-
-## 4 API Calls
-
-### 4.1 List Environment Snapshots
-
-#### 4.1.1 Description
+#### 3.1.1 Description
 
 Lists the snapshots of an environments. By setting the `offset` parameter, you can page through the list of snapshots created for an environment.
 
@@ -54,7 +41,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots
 ```
 
-#### 4.1.2 Request
+#### 3.1.2 Request
 
 **Request Parameters**
 
@@ -77,7 +64,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.1.3 Output
+#### 3.1.3 Output
 
 An object with the following key-value pairs:
 
@@ -130,9 +117,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.2 Request Creation of an Environment Snapshot {#request-creation-snapshot}
+### 3.2 Request Creation of an Environment Snapshot
 
-#### 4.2.1 Description
+#### 3.2.1 Description
 
 Request the creation of a snapshot of an environment. The response is a JSON object containing the `snapshot_id` attribute which identifies a snapshot. Use the `snapshot_id` in an API request to check the progress of the creation this snapshot.
 
@@ -141,7 +128,7 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots
 ```
 
-#### 4.2.2 Request
+#### 3.2.2 Request
 
 **Request Parameters**
 
@@ -169,7 +156,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 4.2.3 Output
+#### 3.2.3 Output
 
 A JSON object with the following key-value pairs:
 
@@ -212,9 +199,9 @@ A JSON object with the following key-value pairs:
 }
 ```
 
-### 4.3 Request Status of Creation of a Snapshot
+### 3.3 Request Status of Creation of a Snapshot
 
-#### 4.3.1 Description
+#### 3.3.1 Description
 
 Check the current status of an ongoing snapshot creation.
 
@@ -223,7 +210,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>
 ```
 
-#### 4.3.2 Request
+#### 3.3.2 Request
 
 **Request Parameters**
 
@@ -242,7 +229,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.3.3 Output
+#### 3.3.3 Output
 
 An object with the following key-value pairs:
 
@@ -282,9 +269,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.4 Request Creation of a Snapshot Archive {#request-creation-archive}
+### 3.4 Request Creation of a Snapshot Archive
 
-#### 4.4.1 Description
+#### 3.4.1 Description
 
 Requests the creation of an archive of a backup snapshot. The response is a JSON object containing the `archive_id` attribute which identifies an archive. use this `archive_id` in an API request to check the progress of the creation of this archive, and obtain a URL to allow you to download it.
 
@@ -293,7 +280,7 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives
 ```
 
-#### 4.4.2 Request
+#### 3.4.2 Request
 
 **Request Parameters**
 
@@ -317,7 +304,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.4.3 Output
+#### 3.4.3 Output
 
 An object with the following key-value pairs:
 
@@ -359,9 +346,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.5 Request Status of Creation of an Archive {#request-status-archive}
+### 3.5 Request Status of Creation of an Archive
 
-#### 4.5.1 Description
+#### 3.5.1 Description
 
 After a request to create an archive is submitted, you can check the progress of the archive creation using the `archive_id`. The archive creation will eventually reach one of the following end states: *completed* or *failed*. When it is completed, the `url` attribute is populated with a direct link to your requested backup. This link is valid for eight hours after completion.
 
@@ -370,7 +357,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives/<ArchiveId>
 ```
 
-#### 4.5.2 Request
+#### 3.5.2 Request
 
 **Request Parameters**
 
@@ -391,7 +378,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.5.3 Output
+#### 3.5.3 Output
 
 An object with the following key-value pairs:
 
@@ -432,9 +419,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.6 Update an Existing Snapshot
+### 3.6 Update an Existing Snapshot
 
-#### 4.6.1 Description
+#### 3.6.1 Description
 
 Set a new comment for an existing snapshot. The *updated_at* attribute remains unchanged after this operation.
 
@@ -443,7 +430,7 @@ HTTP Method: PUT
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>
 ```
 
-#### 4.6.2 Request
+#### 3.6.2 Request
 
 **Request Parameters**
 
@@ -473,7 +460,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 4.6.3 Output
+#### 3.6.3 Output
 
 An object with the following key-value pairs:
 
@@ -514,9 +501,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.7 Delete an Existing Snapshot
+### 3.7 Delete an Existing Snapshot
 
-#### 4.7.1 Description
+#### 3.7.1 Description
 
 Delete an existing snapshot.
 
@@ -525,7 +512,7 @@ HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>
 ```
 
-#### 4.7.2 Request
+#### 3.7.2 Request
 
 **Request Parameters**
 
@@ -545,7 +532,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.7.3 Output
+#### 3.7.3 Output
 
 **Error Codes**
 
@@ -561,9 +548,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 No content is returned when a backup has been successfully removed.
 
-### 4.8 Request a Restore of a Snapshot to an Environment
+### 3.8 Request a Restore of a Snapshot to an Environment
 
-#### 4.8.1 Description
+#### 3.8.1 Description
 
 Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
 
@@ -572,7 +559,7 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/restores
 ```
 
-#### 4.8.2 Request
+#### 3.8.2 Request
 
 **Request Parameters**
 
@@ -607,7 +594,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.8.3 Output
+#### 3.8.3 Output
 
 An object with the following key-value pairs:
 
@@ -653,9 +640,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.9 Request Status of a Snapshot Restore
+### 3.9 Request Status of a Snapshot Restore
 
-#### 4.9.1 Description
+#### 3.9.1 Description
 
 Check the status of a restore request.
 
@@ -664,7 +651,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/restores/<RestoreId>
 ```
 
-#### 4.9.2 Request
+#### 3.9.2 Request
 
 **Request Parameters**
 
@@ -683,7 +670,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.9.3 Output
+#### 3.9.3 Output
 
 An object with the following key-value pairs:
 

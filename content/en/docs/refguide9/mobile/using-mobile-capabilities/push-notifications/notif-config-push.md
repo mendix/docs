@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This section teaches you how to configure the runtime for using push notifications in native apps. 
+This section will teach you to configure the runtime for using push notifications in native apps. 
 
 ### 2 Configuring Your Notifications
 

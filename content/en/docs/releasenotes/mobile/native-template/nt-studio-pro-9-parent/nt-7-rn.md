@@ -5,15 +5,7 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
-## 7.0.9 {#709}
-
-**Release date: October 13, 2023**
-
-### Fixes
-
-* We fixed build errors caused by the recent XCode 15 update.
-
-## 7.0.8 {#708}
+## 7.0.8 {#707}
 
 **Release date: September 25, 2023**
 
@@ -21,7 +13,7 @@ description: "Native Template 7 release notes."
 
 * We enhanced file encryption on Android.
 
-## 7.0.7 {#707}
+## 7.0.7 {#706}
 
 **Release date: September 22, 2023**
 

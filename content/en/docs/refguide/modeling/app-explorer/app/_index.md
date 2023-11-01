@@ -36,7 +36,7 @@ For more information, see [Navigation](/refguide/navigation/).
 
 For more information, see [System Texts](/refguide/system-texts/).
 
-## 6 Export Documentation {#export}
+## 6 Export Documentation
 
 Right-clicking the **App** allows you to export documentation. This exports an HTML file with all the documents in your app and their documentation.
 

@@ -12,7 +12,7 @@ tags: ["studio pro", "pages", "form", "how to"]
 
 This how-to explains how you can configure a page with a form and how to show items related to this form on the same page. For example, to show a page with a report and a checklist associated with this report and use the page for a [workflow user task](/refguide9/user-task/) afterwards. 
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure a form (a data view)
 * Show items related to this form in a table 

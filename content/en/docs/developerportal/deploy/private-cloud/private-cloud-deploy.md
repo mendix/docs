@@ -130,28 +130,26 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    | **Name** | **CPU cores**: Limit | **Memory (GB)**: Limit |  **Ephemeral Storage (GB)**: Limit | **CPU cores**: Request | **Memory (GB)**: Request | **Ephemeral Storage (GB)**: Request |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | Small | 1 | 0.5 | 1 | 0.1 |0.5 | 1 |
-    | Medium | 2 | 2 | 1 | 1 | 1 | 1 |
-    | Large | 4 | 4 | 1 | 2 | 2 | 1 |
-    | Custom | own choice | own choice | own choice | own choice | own choice | own choice |
+    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
+    | --- | --- | --- | --- | --- |
+    | Small | 1 | 0.5 | 0.1 | 0.5 |
+    | Medium | 2 | 2 | 1 | 1 |
+    | Large | 4 | 4 | 2 | 2 |
+    | Custom | own choice | own choice | own choice | own choice |
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
-    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments cannot be created using the default plans until all the associated environments using the custom core resource plan are deleted and the custom resource plan is disabled on the **Cluster manager** page.
+    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection.
     {{% /alert %}}
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
-    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+    {{% alert color="info" %}}If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
     {{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
-    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+    {{% alert color="info" %}}If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
     {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
@@ -701,88 +699,6 @@ When an Istio service mesh is enabled in a namespace, every pod's traffic is rou
 To fix this issue, enable the `holdApplicationUntilProxyStarts: true` setting in the Istio [proxy config](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig). With this option, containers are only started once the Istio sidecar is ready to accept network traffic.
 
 For more information, see https://github.com/istio/istio/pull/24737.
-
-### 7.7 Out of Memory Killed Error
-
-This error refers to a situation where a running pod is terminated because it has exhausted the available memory resources on the node where it is running. This can occur when a pod consumes more memory than it has been allocated, or when a node runs out of resources (memory). In this case, the node will kill random pods that are using more memory than their requests value. In Kubernetes, this is called overcommitment. For more information, refer to [Red Hat documentation](https://docs.okd.io/4.13/post_installation_configuration/node-tasks.html#nodes-cluster-overcommit-resource-requests_post-install-node-tasks).
-
-To fix this issue, you can raise memory requests to match the memory limit by performing the following steps:
-
-1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
-
-    1. To update the Mendix Operator configuration, use the following command:
-
-        For Kubernetes:
-
-        ```shell
-        kubectl -n {namespace} edit operatorconfiguration
-        ```
-
-        For Openshift:
-
-        ```shell
-        oc -n {namespace} edit operatorconfiguration
-        ```
-
-    2. To update the Mendix Agent, use the following command:
-
-        For Kubernetes:
-
-        ```shell
-        kubectl -n {namespace} edit deployment mendix-agent
-        ```
-
-        For Openshift:
-
-        ```shell
-        oc -n {namespace} edit deployment mendix-agent
-        ```
-
-    3. To update the Mendix Operator, use the following command:
-
-        For Kubernetes:
-
-        ```shell
-        kubectl -n {namespace} edit deployment mendix-operator
-        ```
-
-        For Openshift:
-
-        ```shell
-        oc -n {namespace} edit deployment mendix-operator
-        ```
-
-    4. Restart the Mendix operator by using the following command:
-
-        For Openshift:
-
-        ```shell
-        oc -n {namespace} scale deployment mendix-operator --replicas=0
-        oc -n {namespace} scale deployment mendix-operator --replicas=1
-        ```
-
-        For Kubernetes:
-
-        ```shell
-        kubectl -n {namespace} scale deployment mendix-operator --replicas=0
-        kubectl -n {namespace} scale deployment mendix-operator --replicas=1
-        ```
-
-2. When running the upgrade procedure in mxpc-cli, check that the memory request values for *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments are equal to the memory limit value.
-3. In the portal, update the default core environment sizes so that memory requests are at least equal to memory limits.
-4. For Mendix apps, edit the environment memory request by running the following command:
-
-    For Openshift:
-
-    ```shell
-    oc -n {namespace} edit mendixapp {environmentInternalId}
-    ```
-
-    For Kubernetes:
-
-    ```shell
-    kubectl -n {namespace} edit mendixapp {environmentInternalId}
-    ```
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 

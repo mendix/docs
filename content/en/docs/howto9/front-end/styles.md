@@ -1,5 +1,5 @@
 ---
-title: "Implement Classes"
+title: "Implement Styles"
 url: /howto9/front-end/styles/
 category: "Front End"
 description: "Describes details on using class names for text colors, buttons, and other style elements."
@@ -16,7 +16,7 @@ Class names can be entered in two locations:
 * The **Properties** panel of Studio Pro
 * The **Properties** pop-up window for the widget
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 

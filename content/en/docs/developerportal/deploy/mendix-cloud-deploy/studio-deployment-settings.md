@@ -9,10 +9,10 @@ tags: ["node","developer portal","deploy", "settings", "target", "Mendix Studio 
 
 ## 1 Introduction
 
-If you have a licensed app in Mendix Cloud that you want to deploy directly to an environment, you need to select a target environment where Mendix Studio Pro will deploy your app when you **Deploy to Licensed Cloud Node**. For more information on licensed apps and environments, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Environments](/developerportal/deploy/environments/).
+If you have a licensed app in the Mendix Cloud which you want to deploy directly to an environment, you need to select a target environment where Mendix Studio Pro will deploy your app when you **Deploy to Licensed Cloud Node**. For more information on licensed apps and environments, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Environments](/developerportal/deploy/environments/).
 
 {{% alert color="info" %}}
-By default, the target environment is set to **Build Only**. This means that your app will not be deployed directly to an environment from Studio Pro.
+By default the target environment is set to *Build Only*, which means that your app will not be deployed directly to an environment from Studio Pro.
 
 When you deploy to a target environment from Studio Pro, the deployment will also restart the target environment.
 {{% /alert %}}
@@ -31,7 +31,7 @@ To select the target environment, do the following:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/setup-studio-pro-deployment.png" alt="Select Studio Pro Target Dialog"   width="400"  >}}
 
-    {{% alert color="info" %}}If you do not want to deploy your app to an environment automatically from Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository**. Then you can deploy it from within the Developer Portal.<br /><br />If you choose **Build Only**, you will not be able to publish your app from Studio Pro; you will get a `No target selected` error.{{% /alert %}}
+    {{% alert color="info" %}}If you do not want to deploy your app to an environment automatically from Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository** and you can deploy it from within the Developer Portal.<br /><br />If you choose **Build Only**, you will not be able to publish your app from Studio Pro, but will get an error **No target selected**.{{% /alert %}}
 
 4. Click **Save**.
 

@@ -50,7 +50,7 @@ You can use this title structure: **[goal/problem to be solved]** + **[Mendix te
 
 The introduction should explain the business case of the how-to, what problems the document solves, and why end-users should read it.
 
-In the **This how-to teaches you . . .** section, sum up the key points that end-users will have learnt after reading the how-to (make this as clear and concrete as possible).
+In the **This how-to will teach you . . .** section, sum up the key points that end-users will have learnt after reading the how-to (make this as clear and concrete as possible).
 
 ### 3.3 Prerequisites Section
 

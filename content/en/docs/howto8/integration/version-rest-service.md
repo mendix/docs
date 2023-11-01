@@ -11,7 +11,7 @@ tags: ["rest", "rest service", "version", "integration"]
 
 You can have different versions of the same REST service published at the same time.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Utilize best practices on when and how to use different versions of the same REST service published at the same time
 * Deprecate old versions
@@ -24,7 +24,7 @@ Give each service a version number following the `MAJOR.MINOR.PATCH` format:
 * A service should get a new `MINOR` version when you add functionality that is backwards-compatible (such as adding an operation)
 * A service may get a new `PATCH` version when you make a bug fix that is backwards compatible
 
-To make versioning more explicit in your model, Mendix suggests creating a folder for each service. Call it *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in that folder.
+To make versioning more explicit in your model, we suggest creating a folder for each service. Call it *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in that folder.
 
 After you have published a service and users are using it, it is not advisable to change it anymore. 
 

@@ -346,7 +346,7 @@ Here is an example of **Number Filter** with **Adjustable by user** set as **No*
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
-To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
+To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
 
 #### 7.3.1 Configurations
 
@@ -393,7 +393,7 @@ Here is an example of Text Filter with **Adjustable by user** set to **No**:
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
-To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
+To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
 
 #### 7.4.1 Configurations
 

@@ -9,7 +9,7 @@ tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", 
 
 ## 1 Introduction
 
-This how-to teaches you how to go from a blank slate to an app running on a device.
+This how-to will teach you how to go from a blank slate to an app running on a device.
 
 The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all projects with a native mobile navigation profile.
 

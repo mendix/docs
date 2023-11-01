@@ -12,7 +12,7 @@ tags: ["JavaScript", "API", "nanoflow"]
 
 JavaScript actions can extend your app with several new functions. To implement JavaScript actions most effectively, be sure to follow these best practices.
 
-These best practices teach you how to do the following:
+**This best practices will teach you how to do the following:**
 
 * Create high-quality JavaScript actions
 * Learn common implementation patterns

@@ -12,7 +12,7 @@ tags: ["studio pro", "pages", "list", "how to"]
 
 This how-to explains how you can configure a list of items and view the item details selected in this list on one page. 
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Creating a new page
 * Configure a list view

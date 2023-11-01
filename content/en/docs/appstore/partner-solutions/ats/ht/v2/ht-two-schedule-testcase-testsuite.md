@@ -15,7 +15,7 @@ Scheduling tests can be useful for the following:
 * Investigate when the software runs slower 
 * Constant reassurance that some feature works 
 
-This how-to teaches you how to do the following:
+**This how-to will teach you  how to do the following**
 
 * Schedule test cases
 * Schedule test suites

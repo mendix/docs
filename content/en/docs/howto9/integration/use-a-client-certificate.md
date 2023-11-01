@@ -14,7 +14,7 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](/howto9/integration/consume-a-rest-service/) or [How to Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/).
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure to run locally
 * Configure in the Mendix Cloud

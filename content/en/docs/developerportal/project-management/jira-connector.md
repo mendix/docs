@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-{{% alert color="warning" %}}This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
+{{% alert color="warning" %}}This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
 
 ## 1 Introduction
 
@@ -35,8 +35,7 @@ As we further develop this feature, we may lift these limitations with future re
 
 * Feedback issues, and stories from Epics are not migrated to Jira.
 * The Stories pane in Studio Pro does not show the status and story points of a story correctly.
-* You cannot change the status of a story from the [Stories](/refguide/stories-pane/) pane in Studio Pro.
-* When a feedback item is being converted to an issue, the story type, title, and description of the issue will be set. If your Jira configuration requires additional mandatory fields, this process might not work.
+* You cannot change the status of a story from the [Stories](/refguide/stories-pane/)  pane in Studio Pro.
 
 ## 4 Prerequisites
 

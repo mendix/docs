@@ -53,8 +53,6 @@ const app = await client.createNewApp("My Asset Management", {
 });
 ```
 
-{{% alert color="info" %}}⚠ The [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template is deprecated and was created using Studio Pro 8.14.0. You cannot open it directly in Studio Pro 10 versions. To be able to use it in Studio Pro 10, you need to first upgrade it to a Studio Pro 9 app and then upgrade it to a Studio Pro 10 app. For more instructions, see the [Prerequisites](/refguide/extending-your-application-with-custom-java/#prerequisites) section in *Extending Your Application with Custom Java*.{{% /alert %}}
-
 ## 4 Opening an Existing App {#opening-existing-app}
 
 The platform client allows you to open an existing app using the app ID:

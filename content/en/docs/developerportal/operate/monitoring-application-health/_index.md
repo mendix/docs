@@ -16,7 +16,7 @@ aliases:
 
 ## 1 Introduction
 
-When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Developer Portal**, you can inspect your application's health in Mendix Cloud. 
+When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Developer Portal**, you can inspect your application's health in the Mendix Cloud. 
 
 Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
 If you [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
@@ -25,7 +25,7 @@ This document will explain how to access the application status page, what the i
 
 ## 2 Application Status
 
-Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
+The Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
 1. Go to the [Developer Portal](https://home.mendix.com).
 2. Open the app that you want to monitor.
@@ -174,7 +174,7 @@ To access the history of the alerts from your app, follow these steps:
 
 ## 6 Read More
 
-* [Metrics](/developerportal/operate/metrics/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
 * [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/)
 * [How to Submit Support Requests](/developerportal/support/submit-support-request/)

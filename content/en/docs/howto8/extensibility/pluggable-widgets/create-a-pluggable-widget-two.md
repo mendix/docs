@@ -3,7 +3,7 @@ title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
 linktitle: "2. Build Pluggable Web Widget"
 url: /howto8/extensibility/create-a-pluggable-widget-two/
 weight: 20
-description: "This how-to teaches you how to add advanced features to your TextBox input widget."
+description: "This how-to will teach you how to add advanced features to your TextBox input widget."
 tags: ["mobile", "javascript", "widget"]
 ---
 
@@ -11,7 +11,7 @@ tags: ["mobile", "javascript", "widget"]
 
 The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Build a Pluggable Web Widget: Part 1](/howto8/extensibility/create-a-pluggable-widget-one/) and teach you how to add advanced features to your TextBox input widget.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure widget edit permissions
 * Add validation feedback
@@ -132,7 +132,7 @@ To add these restrictions, follow the instructions below:
 
 ### 3.2 Adding Validation Feedback
 
-This section teaches you how to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
+This section will teach you to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
 
 1. Drag a **call microflow button** widget below your TextBox widget and drop it there. On the subsequent dialog box, click **New** to assign a new microflow to your button, name it *Validation_Microflow*, and click **OK**:
 

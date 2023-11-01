@@ -1,7 +1,7 @@
 ---
 title: "Studio Pro 8 How-tos"
 url: /howto8/
-description: "Step-by-step guides on various Mendix topics that teach you how to build and customize apps."
+description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
 tags: ["studio pro"]
 weight: 72
 no_list: false
@@ -18,7 +18,7 @@ cascade:
 
 ## 1 Introduction
 
-Browse the *Studio Pro 8 How-tos* to find step-by-step guides that teach you how to build and customize apps with Mendix.
+Browse the *Studio Pro 8 How-tos* to find step-by-step guides that will teach you how to build and customize apps with Mendix.
 
 ## 2 How-to Categories
 

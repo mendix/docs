@@ -68,7 +68,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-  caption: {
+  text: {
     // TextStyle properties
     color: "#00FF00",
   }
@@ -136,7 +136,6 @@ export const Text = {
   },
   text: {
     // All TextStyle properties
-    numberOfLines: 0 // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.
   },
 };
 ```
@@ -145,7 +144,7 @@ export const Text = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
-| `text`     | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
+
 The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
@@ -159,7 +158,6 @@ export const PageTitle = {
   },
   text: {
     // All TextStyle properties
-    numberOfLines: 0 // This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis.
   },
 };
 ```
@@ -168,7 +166,7 @@ export const PageTitle = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
-| `text`      | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
+
 The default class to style all page titles is named `PageTitle`.
 
 ## 5 Structure Widgets
@@ -924,7 +922,7 @@ export const com_mendix_widget_native_badge_Badge = {
   container: {
     // This has all ViewStyle properties.
   },
-  caption: {
+  text: {
     // This has all TextStyle properties.
   }
 };
@@ -933,7 +931,7 @@ export const com_mendix_widget_native_badge_Badge = {
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `caption` | This has all TextStyle properties. |      |
+| `text` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -2448,7 +2446,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
-The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
+The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
 #### 11.33.1 Gallery Filtering
 

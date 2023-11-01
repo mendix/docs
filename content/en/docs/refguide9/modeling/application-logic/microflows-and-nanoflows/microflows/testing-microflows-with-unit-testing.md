@@ -12,7 +12,7 @@ Verify that your [microflow](/refguide9/microflows/) works as expected by creati
 
 The Unit Testing module provides a user-friendly interface to manage and run unit tests that are created by using microflows, as well as unit tests that are by created using JUnit.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Set up the Unit Testing module
 * Unit-test a microflow

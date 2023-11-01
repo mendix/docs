@@ -25,7 +25,7 @@ This is the navigation menu for an administrator:
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-administrator-company-expenses-app.png" >}}
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following
 
 * Create a negative test case
 

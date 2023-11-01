@@ -18,7 +18,7 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | Link | Description |
 | :--- | :--- |
 | [w3schools JavaScript](https://www.w3schools.com/js/default.asp) | On this page, you can find information on JavaScript. They use a lot of examples and have a tutorial. |
-| [w3schools CSS](https://www.w3schools.com/css/default.asp) | On this page, you can find information on CSS. They use a lot of examples and have a tutorial. |
+| [w3schools CSS](https://www.w3schools.com/css/default.asp) | On this page, you can find information on CSS. They use a lot of examples and     have a tutorial. |
 | [w3schools jQuery](https://www.w3schools.com/jquery/default.asp) | On this page, you can find information on jQuery. They use a lot of examples and have a tutorial. |
 | [Official jQuery website](https://api.jquery.com/) | On this page, you can find all on jQuery. They also have examples. However, the W3schools page (above) is more understandable and has a tutorial. |
 | [Stack Overflow](https://stackoverflow.com/) | A massive forum for developers. If you have a question regarding code, look for the answer here. |

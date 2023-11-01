@@ -92,7 +92,7 @@ You may be asked to provide your credentials in one of two ways:
 * The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (⚠ please note this method is being deprecated)
 
 {{% alert color="info" %}}
-If you have issues using SAP authentication, please refer to the reference [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
 {{% /alert %}}
 
 You will now be asked to provide the final details for the SAP BTP development environment.
@@ -590,7 +590,7 @@ The variables beginning **DT_** set up Dynatrace. Setting these variables means 
 
 ##### 7.4.2.2 Unsupported Environment Variables
 
-You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
+You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" >}}
 
@@ -772,4 +772,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 11 Read More
 
-* [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)
+* [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)

@@ -64,7 +64,7 @@ There are three message options:
 
 For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter. Parameters should be entered using [expressions](/refguide8/expressions/) resulting in a string.
 
-With parameters you can customize your message with data specific to the situation. For example, the message "An email has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an email has been sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
 
 ### 3.4 Blocking
 

@@ -18,7 +18,7 @@ Selenium IDE is a Firefox plugin that records and plays back user interactions w
 
 ## 2 Prerequisites
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/)
 * Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) (when Selenium IDE is installed, it is then available as a Firefox plugin)

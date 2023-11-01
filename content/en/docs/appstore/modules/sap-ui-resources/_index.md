@@ -105,7 +105,7 @@ Some SAP Fiori styling requires you to add some additional CSS classes manually 
 ### 2.3 Unsupported SAP Fiori Components{#unsupported-components}
 
 * Avatar – you can mimic this using a **List 3** building block
-* Message Strip – Mendix suggests you use one of the **Notifications** building blocks 
+* Message Strip – we suggest you use one of the **Notifications** building blocks 
 * Message Toast/Short message on actions
 * Time
 * Timepicker

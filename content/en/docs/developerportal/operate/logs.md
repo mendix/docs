@@ -18,13 +18,13 @@ The page is accessed through the **Logs** menu item in the left-hand menu.
 You must have the **Access to Monitoring** permission to view logs. This needs to be set by the Technical Contact of the app. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how to do this.
 {{% /alert %}}
 
-## 2 Apps Deployed to Mendix Cloud
+## 2 Apps Deployed to the Mendix Cloud
 
 {{% alert color="info" %}}
 This is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
-For apps deployed to Mendix Cloud, you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+For apps deployed to the Mendix Cloud, you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
 You can view the live (current) log, download it, or view and download an archived log.
 
@@ -32,7 +32,7 @@ You can view the live (current) log, download it, or view and download an archiv
 The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
  
-Logs on Mendix Cloud are rotated and archived every day. The logs are kept for at least 6 months.
+Logs on the Mendix Cloud are rotated and archived every day. The logs are kept for at least 6 months.
 
 {{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page" >}}
 

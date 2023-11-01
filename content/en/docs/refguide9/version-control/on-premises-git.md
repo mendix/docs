@@ -55,8 +55,6 @@ Studio Pro is able to use the following Git server providers:
 * BitBucket Server
 * BitBucket Data Center
 
-{{% alert color="info" %}} Please note that some Git server providers have added additional limitations to their Git offering, such as a limit on filesize for individual files. In some cases the Mendix .MPR file can grow larger than 100MB. Please take this into account when choosing a provider. {{% /alert %}}
-
 You need to create a private repository in the selected provider and create a personal access token (PAT) to provide access to it. The PAT is used as a password.
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.

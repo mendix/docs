@@ -42,13 +42,11 @@ Only *Retrieve apps*, *Create Free App Environment* and *Retrieve app* API calls
 Retrieves all apps to which the authenticated user has access as a regular user which have environments created on the Mendix Cloud. This includes all licensed apps and any Free Apps which have been deployed.
 
 {{% alert color="info" %}}
-This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.
+This API call does not return the same results as you can see within the Developer Portal.
 
-In the Developer Portal:
+The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
 
-* The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
-
-* The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps which are deployed to other platforms (for example, Mendix for Private Cloud or SAP BTP) and Free Apps which have not yet been deployed and therefore have no environments set up for them.
+The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps which are deployed to other platforms (for example, Mendix for Private Cloud or SAP BTP) and Free Apps which have not yet been deployed and therefore have no environments set up for them.
 {{% /alert %}}
 
 ```bash

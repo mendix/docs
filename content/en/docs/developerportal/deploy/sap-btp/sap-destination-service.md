@@ -53,7 +53,7 @@ Set `XSUAAEnabled` to `true` if your application is using XSUAA for user authent
 
 If your destination uses `NoAuthentication` or `BasicAuthentication`, set `XSUAAEnabled` to `false` if one of the following conditions applies:
 
-* you use XSUAA for single sign-on, but do not need or want to use the user access token for your destination service authentication
+* you use XSUAA for single sign on, but do not need or want to use the user access token for your destination service authentication
 * if you are not using XSUAA for user authentication in your app.
 
 With `XSUAAEnabled` set to `false`, the destination will use the `VCAP` settings of the environment for authentication.

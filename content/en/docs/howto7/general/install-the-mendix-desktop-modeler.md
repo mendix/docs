@@ -10,7 +10,7 @@ description: "Follow this how-to to learn how to install the Mendix Desktop Mode
 
 The Mendix Desktop Modeler enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the Mendix Desktop Modeler.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Download the Mendix Desktop Modeler
 * Install the Mendix Desktop Modeler

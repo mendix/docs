@@ -19,7 +19,7 @@ With Mendix, you can create different channels (for example, responsive, native 
 
 ## 2 Getting Started with Mobile
 
-As you begin mobile development with Mendix, our [Getting Started with Mobile](/refguide9/mobile/getting-started-with-mobile/) guide can help you learn the basics. This how-to teaches you how to create a native mobile Mendix app. After you create it, you will view your app on a mobile device using our [Make It Native](/releasenotes/mobile/make-it-native-parent/) testing app. Getting Started with Mobile is a lean guide designed to show the basics of mobile development.
+As you begin mobile development with Mendix, our [Getting Started with Mobile](/refguide9/mobile/getting-started-with-mobile/) guide can help you learn the basics. This simple guide will teach you to create a native mobile Mendix app. After you create it, you will view your app on a mobile device using our [Make It Native](/releasenotes/mobile/make-it-native-parent/) testing app. Getting Started with Mobile is a lean guide designed to show the basics of mobile development.
 
 For a broader introduction to Mendix development, you may also use the [Quickstarts](/quickstarts/) to learn some Studio Pro fundamentals:
 

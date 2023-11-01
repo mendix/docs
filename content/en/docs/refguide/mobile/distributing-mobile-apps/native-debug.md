@@ -47,7 +47,7 @@ Other tools can help you debug Mendix apps, such as the [Using React Developer T
 
 React Developer Tools is [an app](https://github.com/facebook/react/tree/main/packages/react-devtools) which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
 
-You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document teaches you the basics of using React Developer Tools. 
+You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document will teach you the basics of using React Developer Tools. 
 
 To install React Developer Tools, do the following:
 

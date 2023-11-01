@@ -17,7 +17,7 @@ Client certificates for REST services were introduced in version 7.2.0.
 
 {{% /alert %}}
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Configure to run locally
 * Configure in the Mendix Cloud

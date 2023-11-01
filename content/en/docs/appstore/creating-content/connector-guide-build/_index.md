@@ -11,7 +11,7 @@ tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "how 
 
 Welcome to the world of Mendix connectors. Mendix connectors allow you to connect your Mendix application to other systems. You can find them on the [Mendix Marketplace](https://marketplace.mendix.com/), or add them to the Marketplace for others to use. 
 
-This how-to teaches you the following:
+**This how-to will teach you the following:**
 
 * What connectors are and how they work
 * Basic steps for building and publishing connectors

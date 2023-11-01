@@ -28,7 +28,7 @@ Each row shows the following information about a story:
 * Story points
 * To whom the story is assigned
 
-On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), story type (type *bug* or *feature*) and story ID. You can use the search box in combination with the filter.
+On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), story type (type *bug* or *feature*) and story ID.
 
 On the upper-right corner of the page, you can see two buttons:
 

@@ -2,7 +2,7 @@
 title: "Images, Icons, and Fonts"
 url: /refguide9/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/
 weight: 30
-description: "This how-to teaches you how to enrich the design of your native mobile app with images and custom fonts."
+description: "This tutorial will teach you to enrich the design of your native mobile app with images and custom fonts."
 tags: ["images", "svg", "custom fonts", "font"]
 aliases:
     - /refguide9/native-svg/
@@ -36,7 +36,7 @@ SVGs can contain several kinds of elements. However, not all of them are support
 * CDATA elements
 * `<style />` tags and `style` attributes (please use regular properties instead)
 
-Mendix suggests manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
+We suggest manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
 
 ### 2.3 Styling SVGs {#styling}
 

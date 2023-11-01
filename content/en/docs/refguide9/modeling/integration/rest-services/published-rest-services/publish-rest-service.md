@@ -13,7 +13,7 @@ aliases:
 
 Mendix allows you to publish REST web services natively from Studio Pro. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
-This how-to teaches you how to do the following:
+This how-to will teach you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 

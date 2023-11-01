@@ -58,7 +58,7 @@ When a data source is selected, click **Edit** to do the following:
 When a dataset is selected, click **Edit the dataset** to do the following:
 * Add or edit the description of the dataset
 * Set the dataset as **Validated**
-* Search for and add descriptions to the attributes
+* Search for and add descriptions of the attributes
 
 
 ## 4 Editing the Metadata of an App {#curate-application}
@@ -77,15 +77,15 @@ You can curate Application Details from the **Application** screen as follows:
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
-The **Business Owners** and **Technical Owners** are displayed as a link in the asset **Edit** pane so that users can contact them through the email that is provided for them.
+The **Business Owner** and **Technical Owner** are displayed as a link in the **Application** tab so users can contact them through the provided email.
 
-By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Catalog Home and also when registering assets using the Catalog API. 
-
-{{% alert color="info" %}}
-**Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in the Catalog or curate it.{{% /alert %}}
+By default, the **Technical Owner** for a registered asset is the user who registered the data source through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors on the Catalog home page and when registering assets using the Catalog API. 
 
 {{% alert color="info" %}}
-Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+**Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created using the process described in this section, the link to contact them will be displayed for the asset. It does not mean they are able to access or curate the asset in the Catalog .{{% /alert %}}
+
+{{% alert color="info" %}}
+Curators and Mendix Admins can manage the lists of custom owners as part of their administration functions. For more information, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 
 #### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}

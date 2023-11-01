@@ -48,7 +48,7 @@ In SVN, commits are done to a central server which enforces the commit order. Th
 
 In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
 
-## 4 Local copy of entire repository
+## 4 Support for Fully Distributed Version Control
 
 To support Git's distributed version control system, every user who clones a Git repository essentially creates a full copy of the entire project. This includes its entire history. 
 

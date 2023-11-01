@@ -21,11 +21,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/developerportal/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the Team Server page.
+* When your company has connected its own [Identity Provider](/developerportal/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
-* We fixed an issue where under certain circumstances some attributes were not exposed in the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/)
+* We fixed an issue where under certain circumstances some attributes were not exposed in the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
 ### October 26, 2023
 

@@ -59,10 +59,10 @@ The new features were divided into these major themes, which are described in th
 | Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Solutions Kit – solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Solutions Kit – adaptation insights | Currently in Private Beta<br>GA: TBD |
 | Mendix Connect – new database connector | GA: Q3 2023 |
 | Mendix Connect – REST connector | GA: Q4 2023 |
 | Studio Pro extensibility | Private Beta (partners & ISVs): Q3 2023<br>GA: TBD |
-| Solutions Kit – adaptation insights | Currently in Private Beta<br>GA: TBD |
 | Mendix Connect – external actions | GA: TBD |
 
 ## 5 Multi-Cloud Deployment

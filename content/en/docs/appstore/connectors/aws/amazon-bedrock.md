@@ -96,11 +96,11 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
     1. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **Credentials_GenerateFromConstants** action under > **Resources** > **Authentication**.
     2. Drag the **Credentials_GenerateFromConstants** to the beginning of your microflow.
     3. Double-click the **Credentials_Generate** activity to configure the required parameters and provide a value for the AWS Region.
-7. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
-8. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
-9. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-10. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
-11. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+8. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
+9. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
+10. Double-click the **Retrieve** activity and make sure **By Association** is selected.
+11. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
+12. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
 

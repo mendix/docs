@@ -201,25 +201,25 @@ For a description of supported authentication methods, see the [Selecting an Aut
 
 ## 6 Discoverable and Validated {#discoverability}
 
-The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.
+The discoverable and validated properties of registered assets can be set from the Data Source page for the selected asset.
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company's default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
-When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of the Catalog (also through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverability is turned off.
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service, curators, and the Mendix Admin. All other users of the Catalog (and through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverability is turned off.
 
-When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other discoverable services.
+When a data source is set to **Not discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other discoverable services.
 
-{{% alert color="info" %}}The **Share Data Source** and **Share Dataset** links will not be accessible to users for a not-discoverable data source and the exposed datasets (unless they are an owner or a curator).
+{{% alert color="info" %}}The **Share Data Source** and **Share Dataset** links will not be accessible to users for a **Not discoverable** data source and the exposed datasets unless they are an owner or curator.
 {{% /alert %}}
 
 To change the discoverability of a service, follow these steps:
 
-1. In the Catalog, select the service to display the **Search Details**.
-2. If you have curation rights, the **Curation Bar** is displayed. Click the drop-down **Edit** menu and then the **Discoverable** toggle to turn it on or off. 
+1. In the Catalog, select the desired data source.
+2. If you have curation rights, the **Edit** button is displayed. Click the **Discoverable** toggle to turn it on or off. 
 
-A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and the data source details.
+A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and data source details.
 
 ### 6.2 Validated {#validated}
 

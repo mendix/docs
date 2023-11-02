@@ -40,7 +40,7 @@ Click **View** to display the asset details. You can then perform curate actions
 
 ## 3 Curate Page {#curation-option}
 
-Curation is performed on the [asset details screen](/catalog/manage/search/#search-details). If you are a curator or  owner of an asset, you will see the option to **Edit** the selected item.
+Curation is performed on the Edit Data Source screen. If you are a curator or  owner of an asset, you will see the option to **Edit** the selected item.
 
 {{% alert color="info" %}}
 Owners of registered assets can only curate their services.
@@ -161,7 +161,7 @@ You can curate data sources to add a Catalog description and add tags.
 
 ### 5.1 Adding or Editing a Catalog Description
 
-If a description was included in the contract, it will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
+If a description was included in the contract, it will be displayed in the Data Source details page for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
 {{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the Data Source details page. {{% /alert %}}
 
@@ -223,7 +223,7 @@ A message is displayed to indicate the discoverability of the asset and the disc
 
 ### 6.2 Validated {#validated}
 
-The **Validated** property can be assigned to a data source or a dataset to indicate, for example, that it has been qualified and is a reliable asset. You can turn it on and off by clicking the **Validated** toggle. A validated data source or dataset is indicated by the validation shield on the data source details screen and in the search results pane.
+The **Validated** property can be assigned to a data source or a dataset to indicate, for example, that it has been qualified and is a reliable asset. You can turn it on and off by clicking the **Validated** toggle. A validated data source or dataset is indicated by the validation shield on the Data Source details page and in the search results pane.
 
 Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before unvalidated assets in the results.
 

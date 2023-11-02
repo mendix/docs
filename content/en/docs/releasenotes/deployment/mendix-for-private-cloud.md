@@ -13,6 +13,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 2, 2023
+
+#### Portal Improvements
+
+* We have introduced a feature within the **Plan** section that enables the deletion of plans from the portal.
+* We have separated the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. The **Modify MxAdmin Password** option must now be explicitly selected to enable the modification of the MxAdmin password. For existing users, if the **Manage Environment** option is already selected, the **Modify MxAdmin Password** option will be automatically enabled; otherwise, it will remain unselected.
+* We have added a new option to search environments based on the namespace on the **Environments Overview** page.
+
+#### Deploy API Improvements
+
+* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. 
+
 ### October 30, 2023
 
 #### Data Migration Tool (Preview) v0.0.3

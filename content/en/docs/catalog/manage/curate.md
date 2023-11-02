@@ -96,9 +96,9 @@ The **Technical Owner** can only be changed in **Control Center**, not within th
 
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 
-When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
+When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application (the **Technical Owner**) or the owner of the data that is made available in the app (the **Business Owner**). The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+Curators can manage the lists of custom owners as an administration task. For more details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 To add a custom **Business Owner**, follow these steps:
 
@@ -106,9 +106,9 @@ To add a custom **Business Owner**, follow these steps:
 
 1. Enter the **Name** and **Email** of the owner and click **Save**.
 
-    {{% alert color="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Asset Metadata** pane as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
+    {{% alert color="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Application** tab as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
-1. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
+2. Click **Save** to return to the **Application** tab. Click **Save** to return to the Edit Data Source page where the changes will be displayed in **Metadata** pane.
 
 ### 4.2 Changing the App Icon {#application-icon}
 

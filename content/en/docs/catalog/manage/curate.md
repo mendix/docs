@@ -145,11 +145,11 @@ To **Upload a different icon** for the app, follow these steps:
 
     {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="upload icon"   width="300"  >}}
 
-5. The **Application Metadata** screen will now show the selected icon for the application:
+5. The **Application** tab will now show the selected icon:
 
     {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
 
-6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
+6. Click **Save** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
 #### 4.2.2 Selecting an Icon from the Library
 
@@ -161,20 +161,20 @@ You can curate data sources to add a Catalog description and add tags.
 
 ### 5.1 Adding or Editing a Catalog Description
 
-If a description was included in the contract, it be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
+If a description was included in the contract, it will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
 {{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
 
 To edit the asset metadata, follow these steps:
 
-1. In the **Curation Option**, click **Edit** to display the **Edit** box:
+1. On the **Curate** page, click **Edit** to display the Edit Data Source box:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
 
 2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in the **Description** box.
 
-3. Add a catalog description. This will be stored with the service details in the Catalog.
-4. Click **Save** to save the changes that you have made to the **Edit DataSource** screen and return to the **Asset Details** screen, which will now display the selected description.
+3. Add a description. This will be stored with the service details in the Catalog.
+4. Click **Save** to save the changes and return to the Data Source page, which will now display the selected description.
 
 ### 5.2 Adding or Editing Tags to a Service {#tags}
 

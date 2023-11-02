@@ -7,7 +7,6 @@ tags: ["marketplace", "public marketplace", "private marketplace", widget", "mod
 aliases:
     - /appstore/general/share-app-store-content/
     - /developerportal/app-store/share-content/
-    - /developerportal/app-store/share-content.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

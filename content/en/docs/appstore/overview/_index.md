@@ -11,15 +11,10 @@ aliases:
     - /appstore/general/use-content-support/
     - /appstore/general/app-store-content-support/
     - /community/app-store/
-    - /community/app-store/index.html
     - /community/app-store/app-store-overview/
-    - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview/
-    - /developerportal/app-store/app-store-overview.html
     - /community/use-content-support/
-    - /community/use-content-support.html
     - /developerportal/app-store/use-content-support/
-    - /developerportal/app-store/use-content-support.html
 ---
 
 ## 1 Introduction

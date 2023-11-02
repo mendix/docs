@@ -388,3 +388,39 @@ This activity returns a `GetDocumentAnalysisResponse` object with objects from t
 | --- | --- | --- |
 | `GetDocumentAnalysisResponse` | `AbstractDocumentAnalysisResponse`| This entity is the response for the Amazon Textract `GetDocumentAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a `NextToken` that can be used to retrieve the next batch of results. |
 | `GetDocumentAnalysisWarning` | | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply. |
+
+#### 4.3.5 StartExpenseAnalysis {#startdocumentanalysis}
+
+The `StartExpenseAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract expense information from them. It requires a valid AWS region, a `Credentials` object, a `StartExpenseAnalysisRequest` object, and a `S3DocumentLocation` object.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `StartExpenseAnalysisRequest` (Object) | `StartExpenseAnalysisResponse` (Object) |
+| `AWS_Region` (Enumeration) | |
+| `Credentials` (object) | |
+
+This activity returns a `StartExpenseAnalysisResponse` object with objects from the following entities, as shown in the table below:
+
+| Name | Generalization | Documentation |
+| --- | --- | --- |
+| `StartExpenseAnalysisResponse` | | This entity is the response for the Amazon Textract `StartExpenseAnalyis` action. It contains a JobId attribute, which can be used by the `GetExpenseAnalysis` action to retrieve the results once they have been processed by the Textract service |
+
+#### 4.3.6 GetExpenseAnalysis {#getdocumentanalysis}
+
+The `GetExpenseAnalysis` Amazon Textract action allows you to retrieve the expense analysis results that have been invoked by the `StartExpenseAnalysis` action. It requires a valid AWS region, a `Credentials` object, and a `GetExpenseAnalysisRequest` object.
+
+| Input | Output |
+| --- | --- |
+| `GetExpenseAnalysisRequest` (Object) | `GetExpenseAnalysisResponse` (Object) |
+| `AWS_Region` (Enumeration) | |
+| `Credentials` (object) | |
+
+This activity returns a `GetExpenseAnalysisResponse` object with objects from the following entities, as shown in the table below:
+
+| Name | Generalization | Documentation |
+| --- | --- | --- |
+| `GetExpenseAnalysisResponse` | | This entity is the response for the Amazon Textract `GetExpenseAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a NextToken that can be used to retrieve the next batch of results. |
+| `AsyncExpenseDocument` | `ExpenseDocument` | This entity (and its associated entities) hold information about the extracted Expense data per page.|
+|`ExpenseAnalysisWarning`|`AbstractWarning`| This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|

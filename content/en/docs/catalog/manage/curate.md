@@ -63,9 +63,9 @@ When a dataset is selected, click **Edit the dataset** to do the following:
 
 ## 4 Editing the Metadata of an App {#curate-application}
 
-The curate functions that are available for a selected data source are to change **Application Details**, **Data Source Details**, and **Authentication**. This section describes the application details that can be changed: changing owners or changing the application icon.
+The curate functions that are available for a selected data source are to change **Data source**, **Application**, and **Authentication** details This section describes the application details that can be changed: changing owners or changing the application icon.
 
-You can curate Application Details from the **Application** screen as follows:
+You can curate Application details from the **Application** tab as follows:
 
 1. Click **Edit** > **Application** tab.
 
@@ -108,7 +108,7 @@ To add a custom **Business Owner**, follow these steps:
 
     {{% alert color="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Application** tab as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
-2. Click **Save** to return to the **Application** tab. Click **Save** to return to the Edit Data Source page where the changes will be displayed in **Metadata** pane.
+2. Click **Save** to return to the **Application** tab. Click **Save** to return to the Data Source details page where the changes will be displayed in the right-hand metadata pane.
 
 ### 4.2 Changing the App Icon {#application-icon}
 
@@ -149,7 +149,7 @@ To **Upload a different icon** for the app, follow these steps:
 
     {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
 
-6. Click **Save** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
+6. Click **Save** to return to the Data Source details page. The custom icon will be stored in the **Icon Library**.
 
 #### 4.2.2 Selecting an Icon from the Library
 
@@ -163,7 +163,7 @@ You can curate data sources to add a Catalog description and add tags.
 
 If a description was included in the contract, it will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
-{{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the Data source page. {{% /alert %}}
+{{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the Data Source details page. {{% /alert %}}
 
 To edit the asset metadata, follow these steps:
 
@@ -174,13 +174,13 @@ To edit the asset metadata, follow these steps:
 2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in the **Description** box.
 
 3. Add a description. This will be stored with the service details in the Catalog.
-4. Click **Save** to save the changes and return to the Data Source page, which will now display the selected description.
+4. Click **Save** to save the changes and return to the Data Source details page, which will now display the selected description.
 
 ### 5.2 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
-1. On the Data source page of a selected service, click **Edit** to display the Edit data source screen.
+1. On the Data Source details page of a selected service, click **Edit** to display the Edit Data Source screen.
 2. To add tags, click the empty **Tags** input area:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" >}}
@@ -191,7 +191,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **X**.
 
-5. When you are finished specifying the tags, click **Save** to register the changes. The tags will be shown on the Data source page.
+5. When you are finished specifying the tags, click **Save** to register the changes. The tags will be shown on the Data Source details page.
 
 ### 5.3 Adding Authentication to a Service {#authentication}
 
@@ -201,7 +201,7 @@ For a description of supported authentication methods, see the [Selecting an Aut
 
 ## 6 Discoverable and Validated {#discoverability}
 
-The discoverable and validated properties of registered assets can be set from the Data Source page for the selected asset.
+The discoverable and validated properties of registered assets can be set from the Edit Data Source page for the selected asset.
 
 ### 6.1 Discoverable
 
@@ -219,7 +219,7 @@ To change the discoverability of a service, follow these steps:
 1. In the Catalog, select the desired data source.
 2. If you have curation rights, the **Edit** button is displayed. Click the **Discoverable** toggle to turn it on or off. 
 
-A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and data source details.
+A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and Data Source details page.
 
 ### 6.2 Validated {#validated}
 
@@ -233,4 +233,4 @@ Owners of a data source can delete their own data sources. Anyone with curation 
 
 Deleting something from the Catalog only removes the metadata registration. It does not affect the publishing application or any applications that are consuming the data source.
 
-To delete a data source, click the delete icon (red trash can) on the Data source page, then click **Delete**.
+To delete a data source, click the delete icon (red trash can) on the Data Source details page, then click **Delete**.

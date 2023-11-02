@@ -223,14 +223,14 @@ A message is displayed to indicate the discoverability of the asset and the disc
 
 ### 6.2 Validated {#validated}
 
-The **Validated** property can be assigned to a data source or a dataset to indicate, for example, that it has been qualified and is a reliable asset. You can turn it on and off by clicking the **Validate** toggle. A validated data source or dataset is indicated by the validation shield on the data source details screen and also in the search results pane.
+The **Validated** property can be assigned to a data source or a dataset to indicate, for example, that it has been qualified and is a reliable asset. You can turn it on and off by clicking the **Validated** toggle. A validated data source or dataset is indicated by the validation shield on the data source details screen and in the search results pane.
 
-Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before unvalidated assets in the results. 
+Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before unvalidated assets in the results.
 
 ## 7 Deleting a Data Source {#delete-data-source}
 
-Owners of a data source can delete their own data sources. Anyone with curation rights (Mendix Admins or Curators) can delete any data sources within the company. This ensures that their Catalog is free of outdated or irrelevant data sources. 
+Owners of a data source can delete their own data sources. Anyone with curation rights (Mendix Admins or curators) can delete any data sources within the company. This ensures that their Catalog is free of outdated or irrelevant data sources.
 
-Deleting something from Catalog only removes the metadata registration. It does not affect the publishing application or any of the applications that are consuming the data source.
+Deleting something from the Catalog only removes the metadata registration. It does not affect the publishing application or any applications that are consuming the data source.
 
-To delete a data source, go to the [Curation Bar](#curation-bar) for the data source and click **Edit**, then click **Remove Data Source**.
+To delete a data source, click the delete icon (red trash can) on the Data source page, then click **Delete**.

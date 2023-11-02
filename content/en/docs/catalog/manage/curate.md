@@ -122,24 +122,24 @@ Currently, by default, the application icon is determined by the application typ
 
 When you want to upload a custom icon or image, the following apply:
 
-* The accepted file types are *.png*, *.jpg*, and *.jpeg*
-* The maximum accepted file size is 50 KB
-* The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and files, and select the area you want to display during the upload operation.
+* The accepted file types are *.png*, *.jpg*, and *.jpeg*.
+* The maximum accepted file size is 50 KB.
+* The minimum recommended image size is 64 pixels x 64 pixels. You can crop larger images and files, then select the area you want to display during the upload operation.
 
-    {{% alert color="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
+    {{% alert color="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in a loss of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
 
 * Custom icons that are uploaded will be saved to the **Icon Library** and can be used for other apps.
 
-To **upload a different icon** for the app follow these steps:
+To **Upload a different icon** for the app, follow these steps:
 
-1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
+1. In the **Application** tab of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
     {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
 
-    {{% alert color="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
+    {{% alert color="info" %}}For high-resolution images, there will be a warning if the selected area exceeds the size limit. Select a smaller area of the image to reduce the file size.{{% /alert %}}
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 

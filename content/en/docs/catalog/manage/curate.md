@@ -163,7 +163,7 @@ You can curate data sources to add a Catalog description and add tags.
 
 If a description was included in the contract, it will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
-{{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
+{{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the Data source page. {{% /alert %}}
 
 To edit the asset metadata, follow these steps:
 
@@ -180,18 +180,18 @@ To edit the asset metadata, follow these steps:
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
-1. In the **Search Details** screen of a selected service, click **Edit** to display the **DataSource Metadata** box.
-2. To add tags, click the empty **Tag** input area:
+1. On the Data source page of a selected service, click **Edit** to display the Edit data source screen.
+2. To add tags, click the empty **Tags** input area:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" >}}
 
-3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Catalog and displayed when you start typing in the **Tag** field. To separate multiple tags, use spaces.
+3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Catalog. To separate multiple tags, use spaces.
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
-4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**.
+4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **X**.
 
-5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
+5. When you are finished specifying the tags, click **Save** to register the changes. The tags will be shown on the Data source page.
 
 ### 5.3 Adding Authentication to a Service {#authentication}
 

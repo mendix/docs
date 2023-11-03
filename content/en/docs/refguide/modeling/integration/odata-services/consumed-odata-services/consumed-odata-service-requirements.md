@@ -74,7 +74,7 @@ The most commonly used attribute types can be used in your app. The types of the
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
-<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
+<small><sup>[1]</sup> In Studio Pro, Booleans cannot be null. If the service returns null, the app will use the value `false`.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
 
 #### 3.2.2 Attributes of Complex Types
 

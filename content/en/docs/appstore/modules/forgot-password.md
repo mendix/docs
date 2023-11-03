@@ -170,6 +170,7 @@ You have now successfully upgraded the Forgot Password Module to work with Mendi
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
 Below versions of the Forgot Password module use the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+
 * Version 4.1.0 (for Mendix 8)
 * Version 5.1.0 (for Mendix 9 and above)
 * Version above 5.1.0

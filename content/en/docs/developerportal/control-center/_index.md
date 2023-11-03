@@ -258,7 +258,7 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, number of environments, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
 {{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
@@ -293,7 +293,7 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 ### 11.3 Changing the Technical Contact of an App
 
-To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
+To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact, and then select the new contact from the list.
 
 {{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
 

@@ -190,7 +190,7 @@ Progressive web apps (PWAs) cache resources such as pages, images, and their off
 If you are experiencing unexpected issues, it is a good idea to clear the cache and make your progressive web app download all resources again. To do so, follow these steps on the affected client:
 
 1. Open the Mendix PWA in Google Chrome or Microsoft Edge.
-1.  Open the developer tools by pressing <kbd>{F12}</kbd>: 
+1. Open the developer tools by pressing <kbd>{F12}</kbd>: 
 
     {{< figure src="/attachments/refguide/mobile/progressive-web-app/pwa-cache.png" alt="Full PWA Cache" width="350">}}
 

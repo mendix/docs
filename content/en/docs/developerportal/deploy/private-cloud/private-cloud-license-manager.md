@@ -308,7 +308,6 @@ You will receive the result in the following format:
 |--------------------------------------|------------|----------------------|----------------------|----------|
 | c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 
-
 ## 7 Applying Licenses to Your Operator and Apps
 
 To use the licenses, you must add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation. Assume that the operator is running in the namespace `<operator-ns>`.

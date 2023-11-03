@@ -66,10 +66,10 @@ The **Environments** section shows the following details:
     
     {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
     
-* **Name** of the deployment package (for example, Main line-1.0.0.20.mda)
-* **Version** of the deployment package (for example, 1.0.0.20)
-* **Runtime**, the Studio Pro version with which the app is built (for example, 7.6.0)
-* **URL** of the app (for example, `https://mytestapp.mendixcloud.com`)
+* **Name** of the deployment package (for example, main-2.0.5.23fa784f.mda)
+* **Version** of the deployment package (for example, 2.0.5.23fa784f)
+* **Runtime**, the Studio Pro version with which the app is built (for example, 10.3.1)
+* **URL** of the app (for example, `https://documentation-v4.mendixcloud.com`)
 
 You can perform the following actions in this section:
 

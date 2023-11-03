@@ -1,8 +1,8 @@
 ---
-title: "Image"
+title: "Combobox"
 url: /appstore/widgets/combobox/
 category: "Widgets"
-description: "Describes the configuration and usage of the Image widget, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Combobox widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "combobox", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -31,8 +31,7 @@ The following sections will describe the different available widget properties a
 The **Data source** section (required) is used to configure the data for the widget. It has the following properties:
 
 * **Association** – 
-  
-* **Enumeration** - 
+* **Enumeration** – 
 * **Boolean** – 
 
 #### 2.1.2 General Section
@@ -41,20 +40,21 @@ The **General** sections allows you to configure general behaviour and captions 
 
 * **Placeholder text** – captions that will be displayed when there is no data being selected
 * **Filter type** – Allows the user to type into the input and filter displayable options on the combobox
-* **No options text** - captions that will be used when filter results is empty, or there is no data displayed in the combobox's options
-* **Clearable** - if turned on, then the selected data can be cleared
-* **Custom content** - allows custom widgets to be displayed in the combobox instead of normal text value (only for association data source).
+* **No options text** – captions that will be used when filter results is empty, or there is no data displayed in the combobox's options
+* **Clearable** – if turned on, then the selected data can be cleared
+* **Custom content** – allows custom widgets to be displayed in the combobox instead of normal text value (only for association data source).
 
 
 #### 2.1.3 Multi selection (reference set)
 
 The **Multi selection (reference set)** sections allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
-* **Selection Method** - configure the behavior for selecting options
+* **Selection Method** – configure the behavior for selecting options
         * **Checkbox** – display checkbox on the left side of each options. Selected items will be marked by check mark.
         * **Row click** – Each of selected items will be filtered out from the displayed options. Deselect item can be done by clicking on "x" button on each of the displayed selected items.
-* **Show selected item as** - You can choose to display selected item as labels with "x" button to unselect the items, or a simple comma separated text. Only available for Checkbox selection method.  
+* **Show selected item as** – You can choose to display selected item as labels with "x" button to unselect the items, or a simple comma separated text. Only available for Checkbox selection method.  
 
 #### 2.1.4 Label
+
 The **Label** sections allows you to displayed labels for the combobox.
 
 ### 2.1.5 Conditional visibility {#visibility-tab}

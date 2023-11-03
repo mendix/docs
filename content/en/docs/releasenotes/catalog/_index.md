@@ -13,14 +13,35 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### November 2, 2023
+
+#### Improvement
+
+* We have added a deep link that allows you navigate directly to the results of a search query.
+
+#### Fixes
+
+* We fixed an issue that caused the `ContractType` of a `Service` to be empty in the response of some operations of API versions 3 and older.
+
+### October 26, 2023
+
+#### Improvement
+
+* We have added **View More** buttons to the home page.
+* We have enhanced the Search page to include a sort functionality that aligns with the revised home page.
+
+#### Fixes
+
+* We have disabled the ability to modify endpoints that have been automatically registered.
+
 ### October 19, 2023
 
-### Features
+#### Features
 
 * We have added a short personalized tour to educate users (who have registered an endpoint) on key features that are available for maintaining their assets within the Catalog.
 * We have introduced a notification feature to alert users when REST APIs are registered.
 
-### Improvement
+#### Improvement
 
 * We have refreshed the home page to align with the Catalog's growth and accommodate for new data sources.
 * We have added the ability to filter technology type (OData, OpenAPI) on the **Curate** page.
@@ -31,26 +52,25 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ### October 12, 2023
 
-### Improvement
+#### Improvement
 
 * We have decreased the number of clicks required to reach the discoverability setting of a data source. We have also included more information relating to the data source on the **My Assets** page in the Technology field form. 
 
 ### October 5, 2023
 
-### Features
+#### Features
 
 * We added a mini survey about the Catalog's usefulness to the search results page so you can let us know how we are doing.
 
-### Improvement
+#### Improvement
 
-* We updated the link on the search results page to give more details about what [OpenAPI Beta](/catalog/register/openapi-automatic-registration/) means in the Catalog.
-
+* We updated the link on the search results page to give more details about what [OpenAPI beta](/catalog/register/openapi-automatic-registration/) means in the Catalog.
 
 ### September 21, 2023
 
 #### Features
 
-* We added [Beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. See [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/) for more information. Have a look and [let us know what you think](https://forum.mendix.com/link/space/catalog).
+* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://forum.mendix.com/link/space/catalog).
 
 #### Improvements
 
@@ -731,7 +751,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all applications
     * `GET` all environments for an application
     * `GET` all consumed endpoints
-* A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
+* A change was made to the `POST` application API call to also allow for the `Opcenter` and `Mindsphere` application types.
 * We added Catalog integration with [Control Center](/developerportal/control-center/#catalog). For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ### August 19, 2021

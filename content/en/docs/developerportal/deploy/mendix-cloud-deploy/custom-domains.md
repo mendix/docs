@@ -16,7 +16,7 @@ aliases:
 
 ## 1 Introduction
 
-The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
+Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks through the process.
 
 {{% alert color="info" %}}
 This option is provided for licensed apps. You cannot add custom domains to Free Apps.
@@ -31,7 +31,7 @@ You may not immediately see changes which affect DNS routing. This is because of
 This how-to teaches you how to do the following:
 
 * Generate a certificate request for your custom domain
-* Upload a custom domain certificate to the Mendix Cloud
+* Upload a custom domain certificate to Mendix Cloud
 * Renew a custom domain certificate
 * Configure a custom domain for your environment
 
@@ -52,7 +52,7 @@ Before starting this how-to, you will need to have the following prerequisites:
 
 ### 2.2 Create and Configure a CNAME Record{#DNS}
 
-Before configuring your custom domain in the Mendix Cloud, you will need to configure a DNS record for your custom domain with your domain registrar or DNS provider.
+Before configuring your custom domain in Mendix Cloud, you will need to configure a DNS record for your custom domain with your domain registrar or DNS provider.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168230.png" >}}
 
@@ -64,7 +64,7 @@ It is not possible to create a CNAME record for an apex/naked domain (meaning, a
 
 {{% /alert %}}
 
-## 3 Managing Custom Domains in the Mendix Cloud
+## 3 Managing Custom Domains in Mendix Cloud
 
 Custom domain certificates (or just "certificates") are managed at the *application* level while custom domains are managed per *environment*.
 
@@ -88,7 +88,7 @@ If you already have a signed SSL/TLS certificate, continue with [Uploading Your 
 
 ## 4 Obtaining a New Signed Certificate
 
-If you do not have an SSL/TLS certificate you can order one from a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a *certificate signing request (CSR)*. A private SSL/TLS key and a CSR tied to that key can be created in the Mendix Cloud for you.
+If you do not have an SSL/TLS certificate you can order one from a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a *certificate signing request (CSR)*. A private SSL/TLS key and a CSR tied to that key can be created in Mendix Cloud for you.
 
 ### 4.1 Generating a Certificate Request for your Custom Domain{#Generating}
 
@@ -108,7 +108,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
 4. Click **Generate**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" width=400 >}}
 
     An SSL/TLS private key and a certificate request is generated. The certificate request will be shown in PEM (Privacy-Enhanced Mail) format.
 
@@ -122,7 +122,7 @@ You can now go to your certificate authority to get a signed SSL/TLS certificate
 
 Once you have a signed SSL/TLS certificate, you can upload it by following these steps:
 
-1. Select the *custom domain certificate* you want to upload.
+1. Select the custom domain certificate that you want to upload.
 
 2. Click **Upload Signed Certificate**. 
 
@@ -134,7 +134,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 5. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is provided by your certificate authority.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168227.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168227.png" width=400 >}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
@@ -148,7 +148,7 @@ To upload a custom domain certificate, you need to have the following things pre
 
 To upload the custom domain certificate, follow these steps:
 
-1. Click **New** in the *Environments > Custom Domains* tab.
+1. Click **New** in the **Custom Domains** tab.
 
 2. Click **Upload Certificate, Chain and Key**.
 
@@ -162,9 +162,9 @@ To upload the custom domain certificate, follow these steps:
 
 6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is provided by your certificate authority.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168228.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168228.png" width=400 >}}
 
-7. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
+7. Click **Save** to save your new custom domain certificate. It will be uploaded to Mendix Cloud automatically.
 
     {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
@@ -186,9 +186,9 @@ Custom domain certificates have an expiry date. There are two methods for renewi
 
 You can handle an expiring domain certificate by replacing it with a new one. You can do this in one of two ways:
 
-* generate a new certificate request (for more information, see [Generating a Certificate Request for Your Custom Domain](#Generating))
+* Generate a new certificate request (for more information, see [Generating a Certificate Request for Your Custom Domain](#Generating))
 
-* upload a new custom domain certificate (for more information, see [Uploading Your Own Custom Domain Certificate](#Uploading))
+* Upload a new custom domain certificate (for more information, see [Uploading Your Own Custom Domain Certificate](#Uploading))
 
 You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
@@ -200,10 +200,10 @@ If you are rotating a certificate, you do not need to remove the current domain 
 
 You can also edit an existing custom domain certificate.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" width=400 >}}
 
 {{% alert color="warning" %}}
-For this you will need access to the certificate request that you created for the current certificate.
+For this, you need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
 ## 7 Configuring a Custom Domain {#Configuring}
@@ -244,7 +244,7 @@ Make sure you have configured a CNAME record for your custom domain with your do
 
 ### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate? {#wildcard}
 
-Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single app. This is because the private key is stored securely and is not accessible to you or Mendix Support, so you will not be able to reuse it in other apps.
+Yes. However, when you create the certificate request via Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single app. This is because the private key is stored securely and is not accessible to you or Mendix Support, so you will not be able to reuse it in other apps.
 
 If you have your own custom domain certificate, you can upload it to all of your apps and use it for all the environments of all of your apps.
 

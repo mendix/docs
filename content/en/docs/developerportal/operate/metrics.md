@@ -3,9 +3,10 @@ title: "Metrics"
 url: /developerportal/operate/metrics/
 category: "Operations"
 weight: 30
-alias: /developerportal/operate/trends-v4/
 description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."
 tags: ["Operate","App","Trends","Cache","Metrics","Developer Portal"]
+aliases:
+    - /developerportal/operate/trends-v4/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
@@ -143,7 +144,7 @@ These are the types of objects:
 
 ### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
-The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](/developerportal/operate/metrics/#Trends-appmxruntimejvmheap/) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
+The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](#Trends-appmxruntimejvmheap) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
 {{< figure src="/attachments/developerportal/operate/metrics/jvm-process-memory.png" >}}
 

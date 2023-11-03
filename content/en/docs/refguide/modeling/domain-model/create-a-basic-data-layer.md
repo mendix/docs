@@ -114,7 +114,7 @@ If you want to change the multiplicity, double-click the **Order_Customer** asso
 
 ## 6 Delete Behavior {#delete-behavior}
 
-You can configure the [delete behavior](/refguide/association-properties/#delete-behavior) for both sides of an association.
+You can configure the [on delete behavior](/refguide/association-properties/#delete-behavior) for both sides of an association.
 
 To configure the delete behavior, double-click the **Order_Customer** association to open its **Properties** dialog box:
 

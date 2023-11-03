@@ -11,13 +11,11 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-The **Environment Details** page shows information about a particular environment, such as production or acceptance. You can use this page to manage and debug several aspects of the environment.
-
 To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details button is on the right side of the row">}}
 
-The **Environment Details** page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
+The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
 ## 2 The General Tab
 
@@ -58,7 +56,7 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 * **Show Running Now** – This can be used to monitor all actions that are currently running in your environment. It is visible only when your application is running.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions" width=250 >}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
@@ -75,6 +73,9 @@ You do not need to clear your environment if you are restoring an existing backu
 To clear your environment, follow these steps:
 
 1. Click **Clear Environment**.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details-buttons.png" alt=""   width="250"  >}}
+
 2. Select one of the following options:
     * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
@@ -83,7 +84,7 @@ To clear your environment, follow these steps:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
 
-### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
+### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 
@@ -101,15 +102,17 @@ After you rename an environment, it may take up to 15 minutes before you can acc
 
 ### 2.3 Scaling {#scaling}
 
-To see the options for changing scaling, go to the **Instances** section of the **General** tab and click **Change scaling**.
+To see the options for changing scaling, scroll down to the **Instances** section of the **General** tab and click **Change scaling**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/scale.png" alt="A sample view of the Scaling page">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/change-scaling.png" alt="" >}}
 
-In **Scaling**, there are two sliders that you can control:
+In the **Change scaling** dialog box, there are two sliders that you can control:
 
-* Use the **Instances** slider to increase or decrease the number of instances from one to four
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/scale.png" alt="A sample view of the Scaling page" width=400 >}}
+
+* Use the **Instances** slider to increase or decrease the number of instances
     * The instances are meant for improved resiliency and increased processing power
-    * The minimum amount of RAM per instance is 1 GiB; you can spread the RAM among four instances if you have more than 1 GiB of RAM 
+    * The minimum amount of RAM per instance is 1 GiB; you can spread the RAM among four instances if you have more than 1 GiB of RAM
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
@@ -156,7 +159,7 @@ The license overview contains the following information:
 
 ## 3 The Model Options Tab {#model-options}
 
-On this tab, you can edit the model options described below.
+On this tab, you can edit the following model options: scheduled events and constants.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/model-options.png" >}}
 
@@ -184,7 +187,7 @@ In the **Edit Constant** dialog box, you can change the constant value using the
 
 You can also set **Mask** to **Yes**. This changes the display settings for **Current value** and **New value**; if masking is enabled, all screens in the Developer Portal (and in Excel if you export the constants) conceal these values and display a string of asterisks in their place. This lets you keep your constants secret from users who do not have edit rights.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/edit-constant.png" alt="Edit Constants Pop-up window"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/edit-constant.png" alt="Edit Constants Pop-up window"   width="60%"  >}}
 
 {{% alert color="info" %}}
 For the changes to take effect, you must restart your application.
@@ -200,7 +203,7 @@ For more information, see [Constants](/refguide/constants/).
 
 On the **Network** tab, you can manage the elements described below.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/network1.png"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/network1.png" alt="" >}}
 
 ### 4.1 Custom Domains {#custom-domains}
 
@@ -210,7 +213,7 @@ On the **Network** tab, you can manage the elements described below.
 
 You can perform the following actions:
 
-* **Create** – provide the domain name and select the certificate from a drop-down menu
+* **Add** – provide the domain name and select the certificate from a drop-down menu
 * **Edit**
 * **Delete**
 
@@ -226,10 +229,11 @@ Earlier versions of Mendix Cloud had a setting that let you prevent embedding yo
 
 Mendix Cloud supports the following HTTP headers in the Developer Portal:
 
-| Header                        | Description | Additional Information |
-| ----------------------------- | ----------- | ---------------------- |
+| Header                        | Description |
+| ----------------------------- | ----------- |
 | `Access-Control-Allow-Origin` | Indicates whether the response can be shared with requesting code from the given origin. |
 | `Content-Security-Policy`     | Allows website administrators to control resources the user agent is allowed to load for a given page. Requires a string value.<br/>For more information, see [Content Security Policy](#csp), below. |
+| `Origin-Trial`                | Used to enable experimental web platform features for your environment as part of Google's [Origin Trials](https://developer.chrome.com/docs/web-platform/origin-trials/) program. |
 | `Referrer-Policy`             | Governs which referrer information should be included with requests made. |
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
@@ -240,19 +244,19 @@ There are three types of values for these headers:
 
 * Choose a value from a drop-down menu:
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-dropdown.png" alt="Selecting a value" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-dropdown.png" alt="Selecting a value" width=350 >}}
 
 * Choose a value from a drop-down menu and specify a URL:
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-url.png"  alt="Specifying a URL" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-url.png"  alt="Specifying a URL" width=350 >}}
 
 * Enter the required values as a string:
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-string.png"  alt="Entering a value" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-string.png"  alt="Entering a value" width=350 >}}
 
 The changes to the headers are implemented when the app is redeployed.
 
-For more information, see [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
+For more information, see [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 #### 4.2.1 HTTP Response Headers Inserted Automatically
 
@@ -289,7 +293,7 @@ You can change this value in the `com.mendix.core.SameSiteCookies` [custom runti
 For Mendix 8.11 and below, there was no **SameSite** value set on cookies, and the behavior depended on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables); this sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
-The **SAMESITE_COOKIE_PRE_MX812** setting is implemented the next time your app is deployed after you apply the change.
+The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is deployed after you apply the change.
 {{% /alert %}}
 
 ##### 4.2.2.3 Using Custom Sign-In Pages
@@ -360,7 +364,7 @@ The top-level path (`/`) restricts access to the entire application. Settings fo
 
 Custom access restriction profiles are managed at the application level. They can be reused for all environments (acceptance, production, etc).
 
-The **Path based access restrictions** overview contains the following information:
+The **Path Based Access Restrictions** overview contains the following information:
 
 * **Path**
 * **Current Restriction Profile**
@@ -381,7 +385,7 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 ## 5 The Log Levels Tab {#log-levels}
 
-Log levels are used to distinguish the log messages. Log levels highlight the highest-priority log messages so that they can receive the immediate intervention they require. 
+Log levels are used to distinguish the log messages. Log levels highlight the highest-priority log messages so that they can be prioritized accordingly. 
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/loglevels-tab.png" alt="Viewing the log levels" >}}
 
@@ -389,11 +393,11 @@ Custom log nodes appear in the list only after a message has been logged to them
 
 On this tab, you can perform the following actions:
 
-* Change the log level type by clicking the specific level
+* Change the log level by double-clicking a node and launching the **Change log level** dialog box
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/loglevels.png" alt="Selecting the log level type" >}}
-* Click **Set all to INFO** to revert all the changes
+* Click **Set all to Info** to revert all the changes
 
-When using the **Log levels** tab, bear in mind the following considerations:
+When using the **Log Levels** tab, bear in mind the following considerations:
 
 * If your app is not running, the tab only shows log nodes that are set to a level other than Info. Log nodes that are set to the Info level become visible when your app is restarted.
     * For custom nodes, log nodes become visible when your app is restarted and after messages have been logged to them.
@@ -417,7 +421,7 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## 6 The Runtime Tab {#runtime-tab}
 
-On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**
+On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" >}}   
 
@@ -476,7 +480,7 @@ Click **Add** and select **Supported** to choose from the following variables:
     * The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app that contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user.
     * If you have multiple specializations of `System.User`, you can specify the values in comma-separated format (that is, `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`). In the following example, there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
-To support features that are in Beta, click **Add** and select **Unsupported**. Then you can add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix Beta features. If you are involved in using a Beta feature, you will be informed what **Name** and **Value** to enter.
+To support features that are in beta, click **Add** and select **Unsupported**. Then, you can add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix beta features. If you are involved in using a beta feature, you will be informed what **Name** and **Value** to enter.
 
 ## 7 The Maintenance Tab {#maintenance-tab}
 
@@ -508,7 +512,7 @@ You can set tags on your environment. Tags are arbitrary strings that are not in
 Tags serve two purposes:
 
 * Custom tags can be added to metrics for third-party metrics solutions
-* Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
+* Tags can serve as selection criteria for grouping environments into a landscape management dashboard, which can be used for third-party logging solutions
 
 For example, you may wish to use tags when logging with Datadog. For more information, see [Getting Started with Tags](https://docs.datadoghq.com/tagging/).
 
@@ -520,10 +524,8 @@ In the **Services** tab, the [Technical Contact](/developerportal/general/app-ro
 
 ### 9.1 Available Services
 
-One custom service is available: **Mendix Event Broker****. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: Mendix Event Broker. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
 
 ### 9.2 Enabling Custom Services
 
-Technical Contacts need to enable and disable custom services for individual environments of each app.
-
-The service must first be enabled for the app by its Technical Contact. For more information, see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation.
+Custom services are only available if the app's Technical Contact has enabled them. The custom services are enabled or disabled separately for each environment of each app. For more information, see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation.

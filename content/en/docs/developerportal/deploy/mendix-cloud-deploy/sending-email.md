@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-You may want to send email from your apps running in the Mendix Cloud via, for example, the [Email](/appstore/connectors/email-connector/) connector. After you have installed this, you will need to configure an SMTP server in your application. There are several options:
+You may want to send email from your apps running in Mendix Cloud via, for example, the [Email](/appstore/connectors/email-connector/) connector. After you have installed this, you will need to configure an SMTP server in your application. There are several options:
 
 | Service                        | Mendix Cloud | Free App environment |
 | ------------------------------ | ------------ | -------------------- |
@@ -24,7 +24,7 @@ You may want to send email from your apps running in the Mendix Cloud via, for e
 | Other SMTP-compatible services | &#x2713;     | &#x2713;             |
 | Mendix Mail Servers            | &#x2717;     | &#x2717;             |
 
-For apps deployed to the Mendix Cloud, you must set up a third-party mail provider to send emails from your app.
+For apps deployed to Mendix Cloud, you must set up a third-party mail provider to send emails from your app.
 
 ## 2 External Email Providers
 
@@ -55,7 +55,7 @@ Many users of free apps use the settings of their own Gmail account for convenie
 
 {{% alert color="info" %}}
 
-Note that you cannot send email from the Mendix Cloud over port 25. Although this port is open, it is heavily rate-limited by the infrastructure provider, so you will experience issues. This configuration cannot be changed.
+Note that you cannot send email from Mendix Cloud over port 25. Although this port is open, it is heavily rate-limited by the infrastructure provider, so you will experience issues. This configuration cannot be changed.
 
 Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
 

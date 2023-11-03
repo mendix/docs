@@ -163,6 +163,8 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
+    You can also filter the environment by the namespace name, environment ID, and environment name.
+
 {{% alert color="info" %}}
 The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
 {{% /alert %}}  
@@ -701,6 +703,88 @@ When an Istio service mesh is enabled in a namespace, every pod's traffic is rou
 To fix this issue, enable the `holdApplicationUntilProxyStarts: true` setting in the Istio [proxy config](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig). With this option, containers are only started once the Istio sidecar is ready to accept network traffic.
 
 For more information, see https://github.com/istio/istio/pull/24737.
+
+### 7.7 Out of Memory Killed Error
+
+This error refers to a situation where a running pod is terminated because it has exhausted the available memory resources on the node where it is running. This can occur when a pod consumes more memory than it has been allocated, or when a node runs out of resources (memory). In this case, the node will kill random pods that are using more memory than their requests value. In Kubernetes, this is called overcommitment. For more information, refer to [Red Hat documentation](https://docs.okd.io/4.13/post_installation_configuration/node-tasks.html#nodes-cluster-overcommit-resource-requests_post-install-node-tasks).
+
+To fix this issue, you can raise memory requests to match the memory limit by performing the following steps:
+
+1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
+
+    1. To update the Mendix Operator configuration, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit operatorconfiguration
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit operatorconfiguration
+        ```
+
+    2. To update the Mendix Agent, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit deployment mendix-agent
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit deployment mendix-agent
+        ```
+
+    3. To update the Mendix Operator, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit deployment mendix-operator
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit deployment mendix-operator
+        ```
+
+    4. Restart the Mendix operator by using the following command:
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} scale deployment mendix-operator --replicas=0
+        oc -n {namespace} scale deployment mendix-operator --replicas=1
+        ```
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+        kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+        ```
+
+2. When running the upgrade procedure in mxpc-cli, check that the memory request values for *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments are equal to the memory limit value.
+3. In the portal, update the default core environment sizes so that memory requests are at least equal to memory limits.
+4. For Mendix apps, edit the environment memory request by running the following command:
+
+    For Openshift:
+
+    ```shell
+    oc -n {namespace} edit mendixapp {environmentInternalId}
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} edit mendixapp {environmentInternalId}
+    ```
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 

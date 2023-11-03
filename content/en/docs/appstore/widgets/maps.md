@@ -27,6 +27,13 @@ For the easiest way to get started with a basic map in your application, follow 
 
 If you want to configure more of your map (for example, end-user interactions and styling) or use a different map provider, see the [Settings](#settings) section below.
 
+{{% alert color="info" %}}
+If you are using Google Maps, be sure to include an empty JSON array (specifically `{}`) in **Advanced** > **Map Styles** so your widget is successfully displayed in your app:
+
+{{< figure src="/attachments/appstore/widgets/maps/gmaps.png" >}}
+
+{{% /alert %}}
+
 ## 3 Settings {#settings}
 
 ### 3.1 Map Provider

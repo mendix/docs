@@ -92,11 +92,13 @@ The **Edit Attribute** dialog can be used to specify a local name and add a loca
 
 * **General**
     * **Name** – a local name for the attribute
-    * **Original Name** – a read-only value that displays the original name of the attribute in the originating app
+    * **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app ¹
     * **Summary** – a read-only summary that displays the description for the attribute in the originating app; local descriptions are entered in the [Documentation tab](#documentation)
     * **Type** – read-only values for the **Type**, **Length**, and **Max length** of the attribute as defined in the originating app
     * **Default value** - the default value for this attribute when the app creates an object (visible only when the entity is creatable)
 * **Documentation** – a description for the attribute as defined in the originating app
+
+¹ For attributes that represent a property of a complex attribute, a forward slash separates the name of the attribute of the entity and the name of the property of the complex type.
 
 ### 3.3 Associations {#associations}
 

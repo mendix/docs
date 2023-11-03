@@ -177,10 +177,10 @@ To delete an existing tag, do as follows:
 #### 3.1.3 Linking an Epic to an Initiative
 
 {{% alert color="info" %}}
-Only Portfolio Managers or Contributors from the company of the portfolio can link an epic to an initiative. External members or Viewers cannot do this action .
+Only Portfolio Managers and Contributors from the company of the portfolio can link an epic to an initiative. External members or Viewers cannot do this action .
 {{% /alert %}} 
 
-The epic can be any epic that belongs to an app in [Epics](#/developerportal/project-management/epics/). Before you link an epic to an initiative, make sure the app is already linked to the initiative. To link an epic to an initiative, do as follows:
+The epic that you link can be any epic that belongs to an app in [Epics](#/developerportal/project-management/epics/). Before you link an epic to an initiative, make sure the app is already linked to the initiative. To link an epic to an initiative, do as follows:
 
 1. Click **+ Link Epics** at the bottom of the **Epics** section to add them. The **Link Epics** dialog window opens.
 2. Select the epics you want to link to the initiative. You can search by the epic ID or name. 

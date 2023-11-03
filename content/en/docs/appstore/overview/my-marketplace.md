@@ -195,7 +195,7 @@ The options in this menu are the same as described for the context menu for the 
 
 ### 11.2 Members Tab {#members}
 
-On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a content group member. User group members can manage the [content](#group-content) assigned to the group.
+On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a content group member. Content group members can manage the [content](#group-content) assigned to the group.
 
 Once a member is added, you can select their permission level: **Group Member** or **Group Admin**.
 

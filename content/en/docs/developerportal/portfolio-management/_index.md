@@ -9,9 +9,15 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform.
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
 
-To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
+### 1.1 Differences Among Initiatives, Apps, and Epics 
+
+An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, where epics are related to a single app only and bundle user stories together. To learn more about the difference between initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
+
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+
+{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
@@ -170,30 +176,20 @@ To delete an existing tag, do as follows:
 
 #### 3.1.3 Linking an Epic to an Initiative
 
-An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, where epics are related to a single app only and bundle user stories together. To learn more about the difference between initiatives, epics and user stories, please check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
+{{% alert color="info" %}}
+Only Portfolio Managers or Contributors from the company of the portfolio can link an epic to an initiative. External members or Viewers cannot do this action .
+{{% /alert %}} 
 
-{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+The epic can be any epic that belongs to an app in [Epics](#/developerportal/project-management/epics/). Before you link an epic to an initiative, make sure the app is already linked to the initiative. To link an epic to an initiative, do as follows:
 
-{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
+1. Click **+ Link Epics** at the bottom of the **Epics** section to add them. The **Link Epics** dialog window opens.
+2. Select the epics you want to link to the initiative. You can search by the epic ID or name. 
+3. Click **Add** to link the selected epics to an initiative. 
 
-When linking an epic to an initiative, an app should be linked first. Then, the related epic(s) from [Epics](https://docs.mendix.com/developerportal/project-management/epics/) can be linked to the initiative. Epics is the Mendix tool that can be used to manage your stories and collaborate during the app development process. 
-
-If you want to link an epic to an initiative, you can click on **+ Link Epics** at the bottom of the **Epics** section to add them.
-
-A popup will appear where you can select the epics you want to link to the initiative. You can search by epic code or name. After selecting, click on **Add** to link the selected epics to an initiative. 
-
-Once an epic is added, its code, name, owner, and progress with be displayed. Users can access the epic from this list if they have rights to the app the epic belongs to.
-
-Note: you can only link epics to an initiative, if the related app is linked to the initiative. Only users from the same company as the portfolio with Portfolio Manager or Contributor rights are allowed to perform this action. External members or users with Viewer rights cannot link an epic to an initiative.
+Once an epic is added, its ID, name, owner, and progress are displayed. Users can access the epic from this list if they have rights to the app to which the epic belongs.
 
 {{% alert color="info" %}}
-
-To delete an existing linked epic, do as follows:
-
-1. Hover over the row where the epic is listed. A cross icon will appear at the end of the row.
-2. Click on the cross to delete a linked epic. A **Confirmation** dialog box opens.
-3. Click on **Delete Epic.** 
-
+To delete an existing linked epic, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
 {{% /alert %}}
 
 #### 3.1.4 Adding Planning Information {#add-planning-information}

@@ -5,10 +5,6 @@ weight: 10
 tags: ["studio pro", "cast object", "activity"]
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Cast object** activity is used in a microflow after an [object type decision](/refguide/object-type-decision/) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision.

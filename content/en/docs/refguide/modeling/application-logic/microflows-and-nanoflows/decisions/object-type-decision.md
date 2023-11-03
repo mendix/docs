@@ -13,7 +13,7 @@ aliases:
 
 An object type decision is an element that makes a choice based on the type of an object of a generalized entity. The output of the object type decision are the specialized entities that inherit from the generalized entity. For more information on specialization and generalization, see [Entities](/refguide/entities/).
 
-If you want to use the specialized type in the rest of the microflow you can use a [Cast](/refguide/cast-object/) activity.
+If you want to use the specialized type in the rest of the microflow or nanoflow you can use a [Cast](/refguide/cast-object/) activity.
 
 ## 2 Properties
 

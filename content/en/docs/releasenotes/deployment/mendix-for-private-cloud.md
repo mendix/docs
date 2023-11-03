@@ -13,6 +13,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 3, 2023
+
+#### Portal Fixes
+
+* Resolved the issue preventing updates to ephemeral storage limits/requests exceeding 1 GB. (Ticket- https://mendixsupport.zendesk.com/agent/tickets/200491)
+
+#### Private Cloud License Manager (Beta- Release 2)
+
+* Resolved the issue where user was unable to import a large bundle of licenses at one time.
+
+
 ### November 2, 2023
 
 #### Portal Improvements

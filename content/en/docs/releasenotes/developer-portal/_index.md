@@ -41,16 +41,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes 
 
- * We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
- * We fixed an issue where deactivation of some apps led to unexpected errors.
+* We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
+* We fixed an issue where deactivation of some apps led to unexpected errors.
    
 ### October 19, 2023
 
 #### New Features
 
 * We added the following features to [Epics](/developerportal/project-management/epics/): 
-   * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
-   * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name, or assignee. You can also filter by any tag and combine the results.
+    * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
+    * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name, or assignee. You can also filter by any tag and combine the results.
 
 #### Improvements
 
@@ -58,11 +58,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes 
 
- * In [Epics](/developerportal/project-management/epics/), we fixed the following issues:
-   * We fixed an issue that stories were not getting removed from the board after a Sprint is completed.
-   * We fixed an issue regarding dark mode where the screen would flicker.
+* In [Epics](/developerportal/project-management/epics/), we fixed the following issues:
+    * We fixed an issue that stories were not getting removed from the board after a Sprint is completed.
+    * We fixed an issue regarding dark mode where the screen would flicker.
 * We fixed an issue where the last Scrum Master could be removed from an app with API keys.
 * We fixed an issue that allowed new members to accept an invitation to an app multiple times.
+
 ### October 12, 2023
 
 #### New Features
@@ -80,7 +81,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Deprecations
 
 * Stories is officially retired and Epics is the only official Mendix agile planning tool now. You can still migrate all your data from Stories to Epics.
-
 
 ### September 28, 2023
 
@@ -103,7 +103,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Deprecations
 
 * We have done all the preparation work for retiring Stories (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
-
 
 ### September 7, 2023
 

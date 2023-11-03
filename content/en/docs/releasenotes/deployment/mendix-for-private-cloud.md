@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Fixes
 
-* Resolved the issue preventing updates to ephemeral storage limits/requests exceeding 1 GB. (Ticket- https://mendixsupport.zendesk.com/agent/tickets/200491)
+* Resolved an issue where ephemeral storage requests and limits were always set to 1 GB. (Ticket- https://mendixsupport.zendesk.com/agent/tickets/200491)
 
 #### Private Cloud License Manager (Beta- Release 2)
 

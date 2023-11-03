@@ -674,7 +674,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
-* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Administrators.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Admins.
 
 ### October 14, 2021
 

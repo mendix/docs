@@ -137,7 +137,7 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
 
-    You will receive an email containing a link to reset your password.
+1. You will receive an email containing a link to reset your password.
 
         {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
 

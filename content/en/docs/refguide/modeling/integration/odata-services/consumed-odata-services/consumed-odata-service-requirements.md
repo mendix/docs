@@ -54,7 +54,7 @@ The list above for supported key fields does not include `Date` or `DateTime` da
 
 ### 3.2 Attributes
 
-### 3.2.1 Supported Attribute Types
+#### 3.2.1 Supported Attribute Types {#supported-types}
 
 {{% alert color="warning" %}}
 Attributes marked as `FC_KeepInContent=false` cannot be used.
@@ -64,28 +64,32 @@ The most commonly used attribute types can be used in your app. The types of the
 
 | OData Type                     | Mendix Type                           |
 | ---                            | ---                                   |
-| Binary                         | Binary (but see 3.4) |
+| Binary                         | Binary (but see [Binary Attributes](#binary-attributes), below) |
 | Boolean                        | Boolean ¹ |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
-| Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
+| Decimal, Double, Single        | Decimal ² |
 | Enumeration                    | Enumeration |
 | Int64                          | Long |
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
 
-<small><sup>[1]</sup> In Studio Pro, Booleans cannot be null. If the service returns null, the app will use the value `false`.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
+¹ In Studio Pro, Booleans cannot be null. If the service returns null, the app will use the value `false`.
+
+² Decimal values outside of the range of a [Mendix Decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.
 
 #### 3.2.2 Attributes of Complex Types
 
-Complex types are not supported by Mendix' domain model. Mendix does however allow reading external entities that contain attributes of a complex type, by importing the properties of the complex type as attributes of the containing entity. By default, the attributes' names consist of the name of the complex attribute and the name of the property that is part of the complex type, separated by an underscore. For example, if your entity `Employee` contains an attribute `HomeAddress` of type `Lato.Address` with properties `Street`, `PostcalCode` and `City`, Studio Pro allows you to add these as attributes of external entity `Employee` with default names `HomeAddress_Street`, `HomeAddress_PostalCode` and `HomeAddress_City`, respectively. Note that only the properties of the types described in the previous paragraph are supported.
-
-{{% alert color="warning" %}}
-External entities that contain attributes of complex types can only be read or deleted, they cannot be created or updated. They cannot be used in external actions either.
+{{% alert color="info" %}}
+Support for consuming attributes of complex types was introduced in Mendix version 10.5.
 {{% /alert %}}
 
+Complex types are not supported by the Mendix domain model. Mendix does, however, allow you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.
+
+By default, the attribute names consist of the name of the complex attribute and the name of the property that is part of the complex type, separated by an underscore. For example, if your external entity `Employee` contains an attribute `HomeAddress` of type `Lato.Address` with properties `Street`, `PostcalCode`, and `City`, Studio Pro allows you to add these as attributes of external entity `Employee` with default names `HomeAddress_Street`, `HomeAddress_PostalCode`, and `HomeAddress_City`, respectively. Note that only the properties of the types described in [Supported Attribute Types](#supported-types) are supported.
+
 {{% alert color="warning" %}}
-Support for consuming attributes of complex types has been introduced in Mendix version 10.5.
+External entities that contain attributes of complex types can only be read or deleted. They cannot be created or updated or  used in external actions.
 {{% /alert %}}
 
 ### 3.3 Generalizations

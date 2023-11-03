@@ -98,7 +98,7 @@ The **Edit Attribute** dialog can be used to specify a local name and add a loca
     * **Default value** - the default value for this attribute when the app creates an object (visible only when the entity is creatable)
 * **Documentation** – a description for the attribute as defined in the originating app
 
-¹ For attributes that represent a property of a complex attribute, a forward slash separates the name of the attribute of the entity and the name of the property of the complex type.
+¹ For attributes that represent a property of a complex attribute, a forward slash (`/`) separates the name of the attribute of the entity and the name of the property of the complex type.
 
 ### 3.3 Associations {#associations}
 

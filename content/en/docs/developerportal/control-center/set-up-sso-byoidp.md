@@ -215,51 +215,51 @@ Access to Team Server through other mechanisms, such as via Studio Pro or using 
 
 ### 8.3 Changing the Client Secret {#client-secret}
 
-Once you have set up BYOIDP SSO, you may want to change the 'client secret' that is used by the Mendix Platform to communicate securely with the SSO.
+Once you have set up BYOIDP SSO, you may want to change the client secret that is used by the Mendix Platform to communicate securely with the SSO.
 
-If the client secret is still active or you (an administrator) still have an active session on the Mendix Platform, you can do one of the following:
+If the client secret is still active or you (as an administrator) still have an active session on the Mendix Platform, you can do one of the following:
 
-* Clone the existing active IdP configuration, update the secret in there and then activate the clone. This avoids updating all the users, etc. This is the preferred option.
-* Disable the IdP configuration, update the secret and then enable it again.
+* Clone the existing active IdP configuration, update the secret there and then activate the clone. This avoids updating all the users. This is the preferred option.
+* Disable the IdP configuration, update the secret, and then enable it again.
     
-If the client secret has expired, you can ask Mendix Support to update the client secret of your active IdP configuration.
+If the client secret has expired, ask [Mendix Support](https://support.mendix.com/hc/en-us) to update the client secret of your active IdP configuration.
 
 If this is unsuccessful, you can ask Mendix Support to deactivate the active IdP configuration. This means that you (and your users) without active sessions will no longer have access and will need to reset and then use your platform password. Once you have access to the platform, you can set up your IdP configuration again.
 
 ### 8.4 Mendix Version
 
-Single sign-on was introduced in Mendix 7.18. Your app will need to be this version or above to use BYOIDP. It is recommended that you use [LTS versions](/releasenotes/studio-pro/lts-mts/) of Mendix where possible.
+Single sign-on was introduced in [Studio Pro 7.18](/releasenotes/studio-pro/7.18/). Your app will need to be this version or above to use BYOIDP. It is recommended that you use [LTS versions](/releasenotes/studio-pro/lts-mts/) of Studio Pro where possible.
 
 ### 8.5 Multiple Email Domains for a Company
 
 When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company. If you add another email domain to your company, BYOIDP will automatically adopt it, without further actions from the Mendix administrator.
 
-## 9 Troubleshooting{#troubleshooting}
+## 9 Troubleshooting {#troubleshooting}
 
 If you have issues using BYOIDP, the following suggestions give an initial guide to resolving the issue.
 
 ### 9.1 Wrong Client Credentials
 
-Without proper exchange of `client_id` and `client_secret` between the IdP and Mendix Platform, Mendix cannot authenticate at the /token endpoint and delegated login will fail. This can happen when the wrong client credentials are supplied.
+Without proper exchange of `client_id` and `client_secret` between the IdP and Mendix Platform, Mendix cannot authenticate at the `/token` endpoint, and the delegated login fails. This can happen when the wrong client credentials are supplied.
 
 ### 9.2 Wrong Authentication Method
 
-If the wrong authentication method is configured for the Mendix Platform as a client to your IdP login will fail.
+If the wrong authentication method is configured for the Mendix Platform as a client to your IdP, login fails.
 
-Mendix supports two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication; credentials in http authorization header). If the IdP indicates support for both methods at the well-known endpoint, Mendix will use `client_secret_post`. If the client configuration at your IdP for the Mendix Platform sets a different client authentication method, the IdP may reject Mendix to authenticate itself as a client to the /token endpoint and delegated login will fail.
+Mendix supports two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication; credentials in the HTTP authorization header). If the IdP indicates support for both methods at the well-known endpoint, Mendix uses `client_secret_post`. If the client configuration at your IdP for the Mendix Platform sets a different client authentication method, the IdP may reject Mendix to authenticate itself as a client to the `/token` endpoint, and the delegated login fails.
 
 ### 9.3 Incorrect Conditional Access Policies
 
-Prior to Mendix 9.18.0, Studio Pro used an embedded browser for signing in. Conditional access policies in AzureAD could block this Studio Pro browser. For example, you could hit this limitation when using Microsoft's Intune for MDM/MAM with versions of Mendix below 9.18.
+In versions below Studio Pro 9.18, an embedded browser was used for signing in. Conditional access policies in AzureAD could block this Studio Pro browser. For example, you could hit this limitation when using Microsoft's Intune for MDM/MAM with versions below 9.18.
 
-From version 9.18.0, Mendix Studio Pro uses the system browser for signing in to overcome this limitation.
+For version 9.18 and above, Mendix Studio Pro uses the system browser for signing in to overcome this limitation.
 
 ### 9.4 IdP Does Not Allow Untrusted Devices
 
-Mendix Studio Pro 9.18.0 and above uses your system browser to login.
+Mendix Studio Pro 9.18 and above uses your system browser to log in.
 
-Versions of Studio Pro lower than 9.18.0 use an embedded browser for login. This may not work when your IdP only allows trusted devices and doesn't recognize the embedded browser as a trusted device.
+Versions of Studio Pro below 9.18 use an embedded browser for login. This may not work when your IdP only allows trusted devices and does not recognize the embedded browser as a trusted device.
 
 ### 9.5 IdP Does Not Have JWKS Endpoint
 
-If the IdP's well-known endpoint does not have a URL for the JWKS endpoint, Mendix cannot validate the signature on the received ID-token and the delegated authentication fails.
+If the IdP's well-known endpoint does not have a URL for the JWKS endpoint, Mendix cannot validate the signature on the received ID-token, and the delegated authentication fails.

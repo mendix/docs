@@ -11,7 +11,7 @@ Basic function to determine the length of a string or a list.
 
 ## 2 length
 
-Determines the length of a string or a list and outputs the length as an integer.
+Determines the length of a string or a list and outputs the value as an integer.
 
 ### 2.1 Input Parameters
 
@@ -38,4 +38,5 @@ The output is described in the table below:
 | `length('thisismystring')` | 14 |
 | `length($MyString)` and `MyString = 'qwer'` | 4 |
 | `length($MyString)` and `MyString` is empty | 0 |
-| `length($EntityAList)` | 12 |
+| `length($EntityAList)` and `EntityAList = '[MxObject, MxObject, MxObject]'`| 3 |
+| `length($EntityAList)` and `EntityAList = '[]'`| 0 |

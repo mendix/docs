@@ -89,7 +89,7 @@ Complex types are not supported by the Mendix domain model. Mendix does, however
 By default, the attribute names consist of the name of the complex attribute and the name of the property that is part of the complex type, separated by an underscore. For example, if your external entity `Employee` contains an attribute `HomeAddress` of type `Lato.Address` with properties `Street`, `PostcalCode`, and `City`, Studio Pro allows you to add these as attributes of external entity `Employee` with default names `HomeAddress_Street`, `HomeAddress_PostalCode`, and `HomeAddress_City`, respectively. Note that only the properties of the types described in [Supported Attribute Types](#supported-types) are supported.
 
 {{% alert color="warning" %}}
-External entities that contain attributes of complex types can only be read or deleted. They cannot be created or updated or  used in external actions.
+External entities that contain attributes of complex types can only be read or deleted. They cannot be created, updated, or used in external actions.
 {{% /alert %}}
 
 ### 3.3 Generalizations

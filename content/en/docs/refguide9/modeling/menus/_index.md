@@ -23,9 +23,9 @@ The top-bar of Studio Pro contains the following menus:
 * [Language](#language) – contains language and translation settings
 * [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
-## 2 Switch-to Menu {#switch-to}
+## 2 Global Navigation Menu {#switch-to}
 
-The **Switch-to** menu is located at the upper left of Studio Pro and is represented as a nine dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Switch-to** menu, see the [Navigation](/developerportal/#navigation) section in the *Developer Portal Guide*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Global Navigation Menu** menu, see the [Top Bar and Navigation](/developerportal/#navigation) section in the *Developer Portal Guide*.
 
 ## 3 File Menu {#file}
 

@@ -101,11 +101,12 @@ To create a new initiative and add details to it, do as follows:
 
 1. [Create the initiative.](#create-initiative)
 2. [Add general information.](#add-general-information)
-3. [Add planning information.](#add-planning-information)
-4. [Add prioritization information.](#add-prioritization-information)
-5. [Add estimated value.](#add-estimated-value)
-6. [Add comments.](#add-comments)
-7. [Save initiative details.](#save-details)
+3. Link Epics to an Initiative.
+4. [Add planning information.](#add-planning-information)
+5. [Add prioritization information.](#add-prioritization-information)
+6. [Add estimated value.](#add-estimated-value)
+7. [Add comments.](#add-comments)
+8. [Save initiative details.](#save-details)
 
 #### 3.1.1 Creating the Initiative {#create-initiative}
 

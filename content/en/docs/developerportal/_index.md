@@ -22,13 +22,33 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 ## 2 Top Bar and Navigation
 
-### 2.1 Profile, Notifications, and Help {#profile-notification-help}
+### 2.1 Global Navigation {#global-navigation}
+
+On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access this navigation menu:
+
+{{< figure src="/attachments/developerportal/navigation-menu.png" width="300" >}}
+
+The menu items open the following parts of the Mendix Platform:
+
+* **Home** – the [My Apps](/developerportal/#my-apps) page
+* **Apps** – the [My Apps](/developerportal/#my-apps) page
+* **Deployment**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
+* [Control Center](/developerportal/control-center/)
+* [Portfolio](/developerportal/portfolio-management/)
+* [Marketplace](/appstore/)
+* [Catalog](/catalog/)
+* [Academy](https://academy.mendix.com/link/home)
+* [Community](/developerportal/community-tools/)
+
+You can hover over the menu items above to expand the sections for further access.
+
+### 2.2 Profile, Notifications, and Help {#profile-notification-help}
 
 On the right side of the top bar, you can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 
 Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. To configure what types of notifications you receive, click the settings icon and configure the settings in **Notification Settings** page that opens:
 
-{{< figure src="/attachments/developerportal/notification-settings-icon.png" >}}
+{{< figure src="/attachments/developerportal/notification-settings-icon.png" width="300" >}}
 
 Note the following details on Mendix notifications:
 
@@ -49,26 +69,6 @@ The menu items open the following parts of the Mendix Platform:
 * **Contact Mendix Support** – the [Mendix Support](https://support.mendix.com/hc/en-us) page
 
 You can also search the Mendix Platform via the search box in the top bar.
-
-### 2.2 Global Navigation {#global-navigation}
-
-On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access this navigation menu:
-
-{{< figure src="/attachments/developerportal/navigation-menu.png" width="300" >}}
-
-The menu items open the following parts of the Mendix Platform:
-
-* **Home** – the [My Apps](/developerportal/#my-apps) page
-* **Apps** – the [My Apps](/developerportal/#my-apps) page
-* **Deployment**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
-* [Control Center](/developerportal/control-center/)
-* [Portfolio](/developerportal/portfolio-management/)
-* [Marketplace](/appstore/)
-* [Catalog](/catalog/)
-* [Academy](https://academy.mendix.com/link/home)
-* [Community](/developerportal/community-tools/)
-
-You can hover over the menu items above to expand the sections for further access.
 
 ## 3 Company Buzz and Apps {#my-company-apps}
 

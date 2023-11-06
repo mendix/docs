@@ -210,7 +210,7 @@ To migrate from Stories to Epics, follow these steps:
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
 
-2.  Read the information and then click **Start Migration**:
+2. Read the information and then click **Start Migration**:
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 

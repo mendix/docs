@@ -41,7 +41,7 @@ Mendix Admins can manage permissions using the Deploy API v4. For more informati
 
 The permissions are set independently for each environment. You can choose the environment at the top of the **Permissions** tab. Changing the permissions for a production environment requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
-Team members with a user role that includes **Cloud Access**** can view the permissions.
+Team members with a user role that includes **Cloud Access** can view the permissions.
 
 {{% alert color="info" %}}
 Team members with a user role that includes **Cloud Access** are listed in the **Permissions** tab. This tab also shows deactivated users who have been given these permissions, even though these users no longer have access to your project. 

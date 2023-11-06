@@ -25,6 +25,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We are deprecating `SPLUNK_LOGS_REDACTION` and `DATADOG_LOGS_REDACTION` environment variables.
 * We are introducing the `LOGS_REDACTION` variable, compatible with [Splunk](/developerportal/operate/splunk-metrics/), [Datadog](/developerportal/operate/datadog-metrics/) and [New Relic](/developerportal/operate/newrelic-metrics/).
 
+### October 26, 2023
+
+#### Improvements
+
+* We added support for an `Origin-Trials` HTTP header in the Developer Portal. To use this header, the customer must first deploy (or redeploy) their app sometime after 26 October, 12:00 PM. If the customer has deployed since this date, then they can simply set the header and restart their app to use the header. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
+
 ### October 12, 2023
 
 #### Portal Enhancements
@@ -108,7 +114,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or a new deployment package is available for deployment to the Mendix Cloud. See [Webhooks](/developerportal/deploy/webhooks/) for more information.
 
-    {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
+    {{% alert color="info" %}}This feature is currently in a [beta release](/releasenotes/beta-features/).{{% /alert %}}
 
 ### February 23, 2023
 
@@ -575,7 +581,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 17, 2020
 
-* We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
     For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 

@@ -29,7 +29,7 @@ You can find more information about the authorization level of the server roles 
 
 ## 3 User Mapping
 
-With the User Mapping properties you can grant the user access to the different database. We suggest you use one account per Mendix application. So this means that the user you are creating should only have access to one single application database. 
+With the User Mapping properties you can grant the user access to the different database. Mendix suggests you use one account per Mendix application. So this means that the user you are creating should only have access to one single application database. 
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/setting-up-the-database-user/18580672.png" >}}
 

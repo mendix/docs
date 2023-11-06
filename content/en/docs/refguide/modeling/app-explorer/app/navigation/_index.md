@@ -20,11 +20,11 @@ A user's home page can vary based on their [user roles](/refguide/user-roles/).
 The core of Mendix's navigation model is founded on the following profiles:
 
 * Responsive web
-    *  Responsive web offline
+    * Responsive web offline
 * Tablet web
-    *  Tablet web offline
+    * Tablet web offline
 * Phone web
-    *  Phone web offline
+    * Phone web offline
 * Native mobile (tablet & phone)
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
@@ -43,7 +43,7 @@ All the users accessing a Mendix app from a browser on a tablet will automatical
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
-### 2.5 Native Mobile {#native-phone}
+### 2.4 Native Mobile {#native-phone}
 
 A Mendix app can be installed on a phone as a native application which offers several advantages:
 
@@ -129,7 +129,7 @@ Allows for changing the [profile type](/refguide/navigation/).
 
 This deletes the profile. If [Menus and Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.5.2 Synchronization Configuration {#customize}
+#### 4.5.3 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

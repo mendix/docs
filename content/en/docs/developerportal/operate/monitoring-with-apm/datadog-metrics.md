@@ -9,14 +9,14 @@ tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis"]
 
 ## 1 Introduction
 
-[Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications. It is a SaaS-based data analytics platform that provides monitoring for servers, databases, tools, and services, and you can use it for additional monitoring for your apps running on Mendix Cloud.
+[Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications. It is a SaaS-based data analytics platform that provides monitoring for servers, databases, tools, and services. You can use Datadog for additional monitoring for your apps running on Mendix Cloud.
 
 This document explains how to configure your Mendix Cloud app to send data to Datadog.
 
 For more information on the data you can send to Datadog, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their documentation. For example, for Private Cloud deployment, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 Setting up Datadog for Your Mendix App
@@ -41,7 +41,7 @@ To set up a new Datadog account and access your API key as a new Datadog user, f
 
 1. Go to the [Datadog website](https://www.datadoghq.com/) and choose **Get Started Free**.
 2. Complete the account setup steps: enter your desired account details, describe your stack, and install a Datadog agent. You must set up an agent to continue, so select one of the installation options presented on the *Install Your First Datadog Agent* page.
-3. Copy the value of the API key shown in the installation script. The key name depends on the agent you are installing, but it will be something like `api-key`, `datadog_api_key`, or `DD_API_KEY`.
+3. Copy the value of the API key shown in the installation script. The key name varies depending on the agent you are installing, but it will be something like `api-key`, `datadog_api_key`, or `DD_API_KEY`.
 
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Agent script shows your API key" >}}
 
@@ -78,7 +78,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 7. Click **Save**.
 8. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
-    {{% alert color="warning" %}}To start sending data to Datadog, you must redeploy your app and then restart it. This is because additional dependencies need to be included. Just restarting the app is not sufficient.{{% /alert %}}
+    {{% alert color="warning" %}}To start sending data to Datadog, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
     
 ### 2.3 Install the Mendix Integration{#install-integration}
 

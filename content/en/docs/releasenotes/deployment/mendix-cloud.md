@@ -21,9 +21,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have added support to send application runtime logs and metrics to [New Relic](/developerportal/operate/newrelic-metrics/).
-* We are deprecating `SPLUNK_LOGS_REDACTION` and `DATADOG_LOGS_REDACTION` environment variables.
-* We are introducing the `LOGS_REDACTION` variable, compatible with [Splunk](/developerportal/operate/splunk-metrics/), [Datadog](/developerportal/operate/datadog-metrics/) and [New Relic](/developerportal/operate/newrelic-metrics/).
+* We added support for sending application runtime logs and metrics to [New Relic](/developerportal/operate/newrelic-metrics/).
+* We deprecated the `SPLUNK_LOGS_REDACTION` and `DATADOG_LOGS_REDACTION` environment variables.
+* We introduced the `LOGS_REDACTION` variable, which is compatible with [Splunk](/developerportal/operate/splunk-metrics/), [Datadog](/developerportal/operate/datadog-metrics/), and [New Relic](/developerportal/operate/newrelic-metrics/).
 
 ### October 26, 2023
 

@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### November  xx, 2023
+
+#### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+
 ### October 26, 2023
 
 #### New Features

@@ -28,7 +28,7 @@ In **Personal** > **Posts**, the following tabs are available:
 * **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section below)
 * **Commented** – the questions and ideas that you have commented on
 
-## 3 Questions  {#questions-tab}
+## 3 Questions {#questions-tab}
 
 In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
 
@@ -139,7 +139,7 @@ Below the answer(s), you can contribute to the Mendix Forum by writing your own 
 
 You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
 
-## 4 Ideas
+## 4 Ideas {#ideas-tab}
 
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 

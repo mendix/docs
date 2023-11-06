@@ -17,7 +17,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-### November xx, 2023
+### November 9, 2023
 
 #### New Features
 
@@ -49,7 +49,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
 * We fixed an issue where deactivation of some apps led to unexpected errors.
-   
+  
 ### October 19, 2023
 
 #### New Features

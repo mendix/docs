@@ -20,55 +20,63 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the key compone
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-## 2 Navigation {#navigation}
+## 2 Top Bar and Navigation {#navigation}
 
-To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
+On the right side of the top bar, you can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 
-{{< figure src="/attachments/developerportal/create-app.png" width="150" >}}
-
-On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
+To see your platform notifications, click the **Open Notification Menu** button (via the bell icon).
 
 {{% alert color="info" %}}
 A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
 {{% /alert %}}
 
-On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
+Click the **Open Support Menu** button (via the question icon) to access this resouce menu:
 
-{{< figure src="/attachments/developerportal/switcher.png" width="300" >}}
+{{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
 
-You can then access the following parts of the Mendix Platform:
+The menu items open the following parts of the Mendix Platform:
 
-* **Mendix Home** – the [My Apps](/developerportal/#my-apps) page
-* **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
-* **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
-    * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
-    * For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
+* **What's New?** – the [Mendix Platform Releases](https://www.mendix.com/releases/) page
+* **Ask the Community** – the **Questions** section of the [Mendix Forum](/developerportal/community-tools/mendix-forum/#questions-tab)
+* **Share an Idea** – the **Ideas** section of the [Mendix Forum](/developerportal/community-tools/mendix-forum/#ideas-tab)
+* **Check the Documentation** – the [Mendix Documentation](/) page
+* **Contact Mendix Support** – the [Mendix Support](https://support.mendix.com/hc/en-us) page
+
+You can also search the Mendix Platform via the field in the top bar.
+
+On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access this navigation menu:
+
+{{< figure src="/attachments/developerportal/navigation-menu.png" width="300" >}}
+
+The menu items open the following parts of the Mendix Platform:
+
+* **Home** – the [My Apps](/developerportal/#my-apps) page
+* **Apps** – the [My Apps](/developerportal/#my-apps) page
+* **Deployment**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
 * [Control Center](/developerportal/control-center/)
 * [Portfolio](/developerportal/portfolio-management/)
 * [Marketplace](/appstore/)
 * [Catalog](/catalog/)
 * [Academy](https://academy.mendix.com/link/home)
-* [Docs](/)
-* [Forum](/developerportal/community-tools/mendix-forum/)
 * [Community](/developerportal/community-tools/)
 
-You can also quickly access specific [Recent Apps](#my-apps) you have used.
-
-Click [Company Buzz](/developerportal/general/buzz/) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
-
-Click [Company Apps](/developerportal/#my-company-apps) to see all the apps created by members of your company.
-
-If you want to turn on the old navigation/header, click your avatar and toggle **New Navigation** to **Off**.
+You can hover over the menu items above to expand the sections for further access.
 
 ## 3 My Apps {#my-apps}
 
-The **My Apps** page shows you a summary of your apps:
+To get started with building a new app, click **Create App** to open a page where you can choose a starting point:
+
+{{< figure src="/attachments/developerportal/create-app.png" width="150" >}}
+
+The **My Apps** page shows you a summary of your current apps:
 
 {{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" >}}
 
 **All** displays all the apps for which you are a [Team](/developerportal/general/team/) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
-Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
+### 3.1 App Buzz
+
+Click an app tile to see the app [Buzz](/developerportal/general/buzz/#app-buzz).
 
 Using the drop-down menu, you can choose to sort the apps in the following ways:
 
@@ -90,9 +98,12 @@ To go to the [licensed environments](/developerportal/deploy/environments/) of y
 
 The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
 
-## 4 My Company's Apps and Buzz {#my-company-apps}
+### 4 My Company's Apps and Company Buzz {#my-company-apps}
 
-In the header, you can click links to see your **Company Apps** and **Company Buzz**:
+In the top bar of the Developer Portal, you can do the following:
+
+* Click [Company Buzz](/developerportal/general/buzz/) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company
+* Click [Company Apps](/developerportal/#my-company-apps) to see all the apps created by members of your company
 
 {{< figure src="/attachments/developerportal/company-links.png" >}}
 

@@ -30,7 +30,7 @@ To see your platform notifications, click the **Open Notification Menu** button 
 A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
 {{% /alert %}}
 
-Click the **Open Support Menu** button (via the question icon) to access this resouce menu:
+Click the **Open Support Menu** button (via the question mark icon) to access this resouce menu:
 
 {{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
 
@@ -39,7 +39,7 @@ The menu items open the following parts of the Mendix Platform:
 * **What's New?** – the [Mendix Platform Releases](https://www.mendix.com/releases/) page
 * **Ask the Community** – the **Questions** section of the [Mendix Forum](/developerportal/community-tools/mendix-forum/#questions-tab)
 * **Share an Idea** – the **Ideas** section of the [Mendix Forum](/developerportal/community-tools/mendix-forum/#ideas-tab)
-* **Check the Documentation** – the [Mendix Documentation](/) page
+* **Check the Documentation** – the [Welcome to Mendix Docs](/) page
 * **Contact Mendix Support** – the [Mendix Support](https://support.mendix.com/hc/en-us) page
 
 You can also search the Mendix Platform via the field in the top bar.

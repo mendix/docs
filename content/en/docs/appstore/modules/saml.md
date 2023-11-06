@@ -87,11 +87,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 
 If you need any of these features, contact your Mendix CSM to discuss inclusion of these features on the Mendix roadmap or customization of the SAML SSO module.
 
-{{% alert color="info" %}}
-Versions of the SAML module below 3.5.0 are limited to single keypair.
-{{% /alert %}}
-
-If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see [Use a Certificate Issued by a Certificate Authority](#use-ca) section below.
+Versions of the SAML module below 3.5.0 are limited to single keypair. If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see the [Use a Certificate Issued by a Certificate Authority](#use-ca) section below.
 
 If you use both the [OIDC SSO](/appstore/modules/oidc/) module and the SAML module in the same app, each end-user can only authenticate using one IdP.
 

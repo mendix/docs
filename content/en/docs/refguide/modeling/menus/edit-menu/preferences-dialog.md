@@ -177,6 +177,12 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-## 9 Read More
+## 9 New Features Tab
+
+### 9.1 Micro- And Nanoflow Editor
+
+Logic editors are currently being redesigned. The Beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the Beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors Beta](/refguide/logic-editors-beta/).
+
+## 10 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

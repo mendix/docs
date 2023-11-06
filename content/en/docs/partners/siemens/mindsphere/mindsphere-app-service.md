@@ -45,9 +45,9 @@ Once your order is processed, your entitlement to Insights Hub IIoT for Makers w
 
 ### 2.2 Provisioning an Insights Hub Tenant
 
-On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/#company) for your company will need to initiate the creation of a dedicated tenant account within Insights Hub.
+On receipt of your confirmation, a [Mendix Admin](/developerportal/control-center/#company) for your company will need to initiate the creation of a dedicated tenant account within Insights Hub.
 
-Once all the resources have been provisioned, the Mendix Administrator for your company will receive an email confirming that your Insights Hub account has been created. The email will also contain the following:
+Once all the resources have been provisioned, the Mendix Admin for your company will receive an email confirming that your Insights Hub account has been created. The email will also contain the following:
 
 * The name of your Insights Hub account – this is the client URI
 * A link to enable you to [create the binding keys](#binding-keys) – see below for more information

@@ -2,7 +2,7 @@
 title: "Control Center"
 url: /developerportal/control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
-tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
+tags: ["control center", "mendix admin", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 20
 no_list: false 
 description_list: true
@@ -258,7 +258,7 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, number of environments, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
 {{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
@@ -293,7 +293,7 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 ### 11.3 Changing the Technical Contact of an App
 
-To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact.
+To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact, and then select the new contact from the list.
 
 {{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
 
@@ -413,7 +413,7 @@ On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to 
 
 {{< figure src="/attachments/developerportal/control-center/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" >}}
 
-The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/#notifications) whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. 
+The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/#profile-notification-help) whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. 
 
 On the **Privacy Requests** tab, you can view all the pending requests. You can approve or reject a request here. Every request contains the following items:
 

@@ -1,15 +1,15 @@
 ---
-title: "Figma UI Kit"
+title: "Atlas UI Kit for Figma"
 url: /howto/front-end/figma-ui-kit/
 category: "Front End"
 weight: 70
-description: "Learn how to set up and use the Figma UI Kit to Mendix apps."
+description: "Learn how to set up and use the Atlas UI Kit for Figma."
 tags: ["Figma", "UI", "Kit", "design"]
 ---
 
 ## 1 Introduction
 
-To start creating your designs with a UI kit, you must download [Mendix's Figma UI Kit](https://www.figma.com/community/file/1291681319513425134). You can design using any components that are up-to-date with the most recent [Atlas framework](https://atlasdesignsystem.mendixcloud.com/p/dashboard).
+To start creating your designs with a UI kit, you must download [Atlas UI Kit for Figma](https://www.figma.com/community/file/1291681319513425134). You can design using any components that are up-to-date with the most recent [Atlas framework](https://atlasdesignsystem.mendixcloud.com/p/dashboard).
 
 Inside the kit you will find the following:
 
@@ -18,7 +18,7 @@ Inside the kit you will find the following:
 
 ## 2 Prerequisites 
 
-To use the Figma UI Kit to its fullest potential you will need the following:
+To use the Atlas UI Kit for Figma to its fullest potential you will need the following:
 
 * A Figma subscription (required to use the kit's file as a library)
 * The Figma desktop app (download it to take advantage of Figma's best features)
@@ -34,7 +34,7 @@ The following practices are recommended:
 1. Use the library and foundations on your app.  
 1. Use the global local variables for changing the colors from your components.
 1. Prioritize designing components from this kit, because they are already supported on Atlas and Studio Pro.
-1. Use typographies that are supported by Atlas and are in the Figma UI Kit.
+1. Use typographies that are supported by Atlas and are in the Atlas UI Kit for Figma.
 
 The following practices are *not* recommended:
 

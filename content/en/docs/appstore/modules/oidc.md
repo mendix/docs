@@ -263,7 +263,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
         * **Client secret** - Select **Generate a client secret**
         * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
         * **Authentication flow session duration** - Enter a value from *3* to *15*
-        * **Allowed callback URLs** - Enter a URL in the following format: `https://{your Mendix app URL}]/oauth/v2/callback`
+        * **Allowed callback URLs** - Enter a URL in the following format: `https://<your-app-url>/oauth/v2/callback`
         * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
         * **Identity providers** - Select **Cognito user pool**
         * **OAuth 2.0 grant types** - Select **Authorization code grant**

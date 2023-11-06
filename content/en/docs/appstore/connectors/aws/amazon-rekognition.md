@@ -399,7 +399,6 @@ JavaScript actions provide an additional way to extend the functionality of your
 
 The `JS_AddBoundingBox` JavaScript action can be used to generate a rectangle around the labels that have been identified on an image. The image upon which the rectangles are to be generated must be contained in a container. As a result, the JavaScript action can only be executed after the page has been rendered.
 
- 
 | Parameter | Description |
 | --- | --- |
 | `ClassName` (String) | A string representation of the container upon which a rectangle is to be generated. |

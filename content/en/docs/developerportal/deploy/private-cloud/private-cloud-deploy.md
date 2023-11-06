@@ -163,6 +163,8 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
+    You can also filter the environment by the namespace name, environment ID, and environment name.
+
 {{% alert color="info" %}}
 The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
 {{% /alert %}}  

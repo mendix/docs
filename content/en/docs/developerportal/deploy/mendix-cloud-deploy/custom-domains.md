@@ -16,7 +16,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
+Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks through the process.
 
 {{% alert color="info" %}}
 This option is provided for licensed apps. You cannot add custom domains to Free Apps.
@@ -108,7 +108,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
 4. Click **Generate**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" width=400 >}}
 
     An SSL/TLS private key and a certificate request is generated. The certificate request will be shown in PEM (Privacy-Enhanced Mail) format.
 
@@ -122,7 +122,7 @@ You can now go to your certificate authority to get a signed SSL/TLS certificate
 
 Once you have a signed SSL/TLS certificate, you can upload it by following these steps:
 
-1. Select the *custom domain certificate* you want to upload.
+1. Select the custom domain certificate that you want to upload.
 
 2. Click **Upload Signed Certificate**. 
 
@@ -134,7 +134,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 5. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is provided by your certificate authority.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168227.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168227.png" width=400 >}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
@@ -148,7 +148,7 @@ To upload a custom domain certificate, you need to have the following things pre
 
 To upload the custom domain certificate, follow these steps:
 
-1. Click **New** in the *Environments > Custom Domains* tab.
+1. Click **New** in the **Custom Domains** tab.
 
 2. Click **Upload Certificate, Chain and Key**.
 
@@ -162,7 +162,7 @@ To upload the custom domain certificate, follow these steps:
 
 6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is provided by your certificate authority.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168228.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168228.png" width=400 >}}
 
 7. Click **Save** to save your new custom domain certificate. It will be uploaded to Mendix Cloud automatically.
 
@@ -186,9 +186,9 @@ Custom domain certificates have an expiry date. There are two methods for renewi
 
 You can handle an expiring domain certificate by replacing it with a new one. You can do this in one of two ways:
 
-* generate a new certificate request (for more information, see [Generating a Certificate Request for Your Custom Domain](#Generating))
+* Generate a new certificate request (for more information, see [Generating a Certificate Request for Your Custom Domain](#Generating))
 
-* upload a new custom domain certificate (for more information, see [Uploading Your Own Custom Domain Certificate](#Uploading))
+* Upload a new custom domain certificate (for more information, see [Uploading Your Own Custom Domain Certificate](#Uploading))
 
 You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
@@ -200,10 +200,10 @@ If you are rotating a certificate, you do not need to remove the current domain 
 
 You can also edit an existing custom domain certificate.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" width=400 >}}
 
 {{% alert color="warning" %}}
-For this you will need access to the certificate request that you created for the current certificate.
+For this, you need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
 ## 7 Configuring a Custom Domain {#Configuring}

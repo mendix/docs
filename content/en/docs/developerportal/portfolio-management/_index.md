@@ -488,7 +488,7 @@ At the end of the row, click the ellipsis button (**...**), and then select the 
 
 ### 5.3 Access Requests {#access-requests}
 
-Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/#notifications) for a new access request. 
+Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/#profile-notification-help) for a new access request. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 

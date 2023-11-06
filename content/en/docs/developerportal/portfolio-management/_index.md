@@ -101,7 +101,7 @@ To create a new initiative and add details to it, do as follows:
 
 1. [Create the initiative.](#create-initiative)
 2. [Add general information.](#add-general-information)
-3. Link Epics to an Initiative.
+3. [Link Epics to an Initiative.](#link-epics)
 4. [Add planning information.](#add-planning-information)
 5. [Add prioritization information.](#add-prioritization-information)
 6. [Add estimated value.](#add-estimated-value)
@@ -175,7 +175,7 @@ To delete an existing tag, do as follows:
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
-#### 3.1.3 Linking Epics to an Initiative
+#### 3.1.3 Linking Epics to an Initiative {#link-epics}
 
 {{% alert color="info" %}}
 Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.

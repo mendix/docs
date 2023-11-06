@@ -174,19 +174,21 @@ To delete an existing tag, do as follows:
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
-#### 3.1.3 Linking an Epic to an Initiative
+#### 3.1.3 Linking Epics to an Initiative
 
 {{% alert color="info" %}}
-Only Portfolio Managers and Contributors from the company of the portfolio can link an epic to an initiative. External members or Viewers cannot do this action .
+Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.
 {{% /alert %}} 
 
-The epic that you link can be any epic that belongs to an app in [Epics](#/developerportal/project-management/epics/). Before you link an epic to an initiative, make sure the app is already linked to the initiative. To link an epic to an initiative, do as follows:
+The epics that you link here can be any epics in [Epics](/developerportal/project-management/epics/). However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. 
 
-1. Click **+ Link Epics** at the bottom of the **Epics** section to add them. The **Link Epics** dialog window opens.
-2. Select the epics you want to link to the initiative. You can search by the epic ID or name. 
-3. Click **Add** to link the selected epics to an initiative. 
+To link epics to an initiative, do as follows:
 
-Once an epic is added, its ID, name, owner, and progress are displayed. Users can access the epic from this list if they have rights to the app to which the epic belongs.
+1. At the bottom of the **Epics** section, click **+ Link Epics**. The **Link Epics** dialog window opens.
+2. Select the epics. You can search by the epic ID or name. 
+3. Click **Add** to link the selected epics to the initiative. 
+
+Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
 
 {{% alert color="info" %}}
 To delete an existing linked epic, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.

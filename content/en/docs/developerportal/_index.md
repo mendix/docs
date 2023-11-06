@@ -26,7 +26,7 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access this navigation menu:
 
-{{< figure src="/attachments/developerportal/navigation-menu.png" width="300" >}}
+{{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
 
 The menu items open the following parts of the Mendix Platform:
 
@@ -74,7 +74,7 @@ You can also search the Mendix Platform via the search box in the top bar.
 
 In the top bar of the Developer Portal, two additional menu items are available: 
 
-{{< figure src="/attachments/developerportal/company-links.png" >}}
+{{< figure src="/attachments/developerportal/company-links.png width="400"" >}}
 
 * Click **Company Buzz** to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company
     * For more details, see the [Company Buzz](/developerportal/general/buzz/#company-buzz) section of *Buzz*

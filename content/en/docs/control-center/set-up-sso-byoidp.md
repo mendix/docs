@@ -98,7 +98,7 @@ When adding a configuration, you will need to provide the information described 
 
 * **Configuration name** – A name for the IdP setup in the SSO configuration for your own reference.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-1.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/customer-idp-wizard-page-1.png" >}}
 
 * **Redirect URL** – The callback URL to the Developer Portal to which your IdP needs to send the authenticated user.
 * **OpenID Connect well-known endpoint URL** – The endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
@@ -107,13 +107,13 @@ When adding a configuration, you will need to provide the information described 
 * **Client secret** – The password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration, it will no longer be shown to you. For information about changing this value once your configuration is active, see the [Changing the Client Secret](#client-secret) section below.
 * **Scopes** – Selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. Typically the scopes `profile` and `email` are also needed to get the end-user's email address and name, which are required for SSO to fully map the end-user's identity. Your IdP may provide additional scopes you can use.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-2.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/customer-idp-wizard-page-2.png" >}}
 
 ### 3.2 Testing Your Configuration
 
 Once you have configured the endpoint and the scopes, you are ready to perform the first test of your configuration. This test will perform a round trip from the Mendix Platform to your IdP and back to the platform. The test will be performed in a new tab page of your browser so your browser must allow pop-up windows.
 
-{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-3.png" >}}
+{{< figure src="/attachments/control-center/set-up-sso-byoidp/customer-idp-wizard-page-3.png" >}}
 
 ### 3.3 Mapping Between IdP and Mendix
 
@@ -125,7 +125,7 @@ Configure which data from your IdP is mapped to the attributes of the Mendix ide
 The user name must be in the correct form for an email address.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-4.png" >}}
+{{< figure src="/attachments/control-center/set-up-sso-byoidp/customer-idp-wizard-page-4.png" >}}
 
 ## 4 Testing
 
@@ -155,39 +155,39 @@ Microsoft Azure AD is one of the most used IdPs, and it supports OIDC. To set up
 1. Sign in to your Azure Active Directory portal and follow **Azure Active Directory** > **App registrations**.
 2. Create a new app registration by clicking **New registration** in the top-left corner.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-overview.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-overview.png" >}}
 
 3. Enter a name for your configuration, and select the preferred account type. Under **Redirect URI**, paste the callback URL you were shown when setting up the IdP in the Developer Portal.
 4. Click **Register** to save the registration.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-1.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-step-1.png" >}}
 
 5. In the app registration details that open after you save your registration, hover over **Application (client) ID** and copy the ID to the clipboard with the button that appears.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-2.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-step-2.png" >}}
 
     You will need this Client ID when setting up your IdP in the Developer Portal.
 
 6. Click **Endpoints** in the top bar of the app registration details page. A sidebar with all available endpoints opens.
 7. Copy the **OpenID Connect metadata document** URL.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-3.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-step-3.png" >}}
 
 8. Close the sidebar with the **X** in the top-right corner. This returns you to the app registration details page.
 9. Click **Certificates & secrets** in the left-hand menu bar.
 10. Click **New client secret** in the page that opens.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-4.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-step-4.png" >}}
 
 11. In the dialog box that opens, enter a name for your certificate, select an expiration type, and click **Add**.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-5.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-step-5.png" >}}
 
     If you wish to let the certificate to expire, write down the date the certificate will expire.
 
 12. Copy the client secret. You need this to set up your IdP in the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-6.png" >}}
+    {{< figure src="/attachments/control-center/set-up-sso-byoidp/azure-app-registration-step-6.png" >}}
 
 That's it! You are now ready to resume your IdP setup in the Developer Portal.
 
@@ -221,7 +221,8 @@ If the client secret is still active or you (as an administrator) still have an 
 
 * Clone the existing active IdP configuration, update the secret there and then activate the clone. This avoids updating all the users. This is the preferred option.
 * Disable the IdP configuration, update the secret, and then enable it again.
-    
+  
+
 If the client secret has expired, ask [Mendix Support](https://support.mendix.com/hc/en-us) to update the client secret of your active IdP configuration.
 
 If this is unsuccessful, you can ask Mendix Support to deactivate the active IdP configuration. This means that you (and your users) without active sessions will no longer have access and will need to reset and then use your platform password. Once you have access to the platform, you can set up your IdP configuration again.

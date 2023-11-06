@@ -25,7 +25,7 @@ If your company does not already have a Mendix Admin, you will see a page that o
 
 If your company already has a Mendix Admin but you yourself are not a Mendix Admin, you will see this page:
 
-{{< figure src="/attachments/developerportal/control-center/admin-exists.jpg" >}}
+{{< figure src="/attachments/control-center/admin-exists.jpg" >}}
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described below.
 
@@ -33,7 +33,7 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) 
 
 The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
 
-{{< figure src="/attachments/developerportal/control-center/dashboard.png" >}}
+{{< figure src="/attachments/control-center/dashboard.png" >}}
 
 These are some examples of what you can find on the dashboard:
 
@@ -65,11 +65,11 @@ The consequences of deactivating and deleting an app are as below:
 
 | | Deactivating an App | Deleting an App |
 | --- | --- | --- |
-| App code repository stays persistent | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App team members can access the app code repository | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App stays persistent | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App team members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| Cloud environment stays persistent | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App code repository stays persistent | {{< figure src="/attachments/control-center/check-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
+| App team members can access the app code repository | {{< figure src="/attachments/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
+| App stays persistent | {{< figure src="/attachments/control-center/check-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
+| App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
+| Cloud environment stays persistent | {{< figure src="/attachments/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
 
 #### 3.1.2 App Details {#app-details}
 
@@ -94,7 +94,7 @@ The app details page has the following tabs:
 
 The **Default App Roles** tab shows the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** and **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/general/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 
-{{< figure src="/attachments/developerportal/control-center/roles.jpg" >}}
+{{< figure src="/attachments/control-center/roles.jpg" >}}
 
 ## 4 Members {#members}
 
@@ -132,7 +132,7 @@ A Mendix Admin can set up **App Access Groups**, which consist of end-users (who
 
 Click a group name to bring up the group details pop-up window, and click **Add Member** to add a Mendix Platform user in your company to the group. When you add someone to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
 
-{{< figure src="/attachments/developerportal/control-center/access-group.jpg" >}}
+{{< figure src="/attachments/control-center/access-group.jpg" >}}
 
 {{% alert color="warning" %}}
 You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso/) to App Access Groups.
@@ -152,7 +152,7 @@ If you have [configured single sign-on using BYOIDP](/developerportal/control-ce
 
 To export all the email domains, use the **Export to Excel** button.
 
-{{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="650px" >}}
+{{< figure src="/attachments/control-center/company-email-domains.png" width="650px" >}}
 
 You can also provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -160,7 +160,7 @@ After you click **Add security contact** and add the required **Name** and **Ema
 
 For an existing **Security Contact**, there are two menu options available:
 
-{{< figure src="/attachments/developerportal/control-center/security-contact.png" >}}
+{{< figure src="/attachments/control-center/security-contact.png" >}}
 
 Click **Edit** to edit the Security Contact's **Name**.
 
@@ -174,7 +174,7 @@ The **Mendix Admins** tab lists all the current Mendix Admins in your company. A
 
 To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over their name in the list and click **Remove**.
 
-{{< figure src="/attachments/developerportal/control-center/admin.jpg" >}}
+{{< figure src="/attachments/control-center/admin.jpg" >}}
 
 {{% alert color="info" %}}
 It is not possible to remove yourself as a Mendix Admin.
@@ -186,7 +186,7 @@ On this page, you can upload, edit, or remove a **Company Logo**. The company lo
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
-{{< figure src="/attachments/developerportal/control-center/company-brand.png" >}}
+{{< figure src="/attachments/control-center/company-brand.png" >}}
 
 ## 8 Security {#security}
 
@@ -214,7 +214,7 @@ On the **Single Sign-On** tab, you can set up an identity federation between the
 
 On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
-{{< figure src="/attachments/developerportal/control-center/security.jpg" >}}
+{{< figure src="/attachments/control-center/security.jpg" >}}
 
 ## 9 Cloud {#cloud}
 
@@ -224,7 +224,7 @@ This feature is not yet publicly available. Please talk to your Customer Success
 
 The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 
-{{< figure src="/attachments/developerportal/control-center/cloud.jpg" >}}
+{{< figure src="/attachments/control-center/cloud.jpg" >}}
 
 When you select one or more environments via the checkboxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 
@@ -248,7 +248,7 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 The **Entitlements** page is a self-service tool that displays the transactions (such as purchases of cloud credits, or provisioning of new environments) registered for your organization. You can use the page to monitor your resource entitlements and your consumption of cloud credits.
 
-{{< figure src="/attachments/developerportal/control-center/entitlements.png" alt="entitlements page" >}}
+{{< figure src="/attachments/control-center/entitlements.png" alt="entitlements page" >}}
 
 ## 11 Deployed Apps {#deployed-apps}
 
@@ -260,11 +260,11 @@ The **Deployed Apps Overview** page is a self-service tool that enables you to p
 
 The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, number of environments, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
-{{< figure src="/attachments/developerportal/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
+{{< figure src="/attachments/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
 You can click the name of an app to see a list of environments available for the app.
 
-{{< figure src="/attachments/developerportal/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
+{{< figure src="/attachments/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
 
 Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting):
 
@@ -279,13 +279,13 @@ To add a new environment for your app, click the name of an app, and then click 
 * **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
 * **Production Environment** – Indicate whether the environment will be used for production.
 
-{{< figure src="/attachments/developerportal/control-center/new-environment.png" alt="adding a new environment" >}}
+{{< figure src="/attachments/control-center/new-environment.png" alt="adding a new environment" >}}
 
 ### 11.2 Offboarding an Environment
 
 To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
 
-{{< figure src="/attachments/developerportal/control-center/offboarding.png" alt="confirming the offboarding" >}}
+{{< figure src="/attachments/control-center/offboarding.png" alt="confirming the offboarding" >}}
 
 {{% alert color="warning" %}}
 Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
@@ -295,7 +295,7 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact, and then select the new contact from the list.
 
-{{< figure src="/attachments/developerportal/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
+{{< figure src="/attachments/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
 
 {{% alert color="info" %}}
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
@@ -411,7 +411,7 @@ In the list, you can see the following items:
 
 On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. You can use the toggle on the tab to turn it on or off. 
 
-{{< figure src="/attachments/developerportal/control-center/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" >}}
+{{< figure src="/attachments/control-center/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" >}}
 
 The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/#profile-notification-help) whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. 
 

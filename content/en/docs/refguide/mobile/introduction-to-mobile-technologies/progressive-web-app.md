@@ -11,7 +11,7 @@ aliases:
 {{% alert color="info" %}}
 If you plan to build an offline-first progressive web app with Mendix, please consult [WebSQL Removal and How It Affects Your Mendix PWAs
 ](https://www.mendix.com/blog/websql-removal-and-how-it-affects-your-mendix-pwas/) first.
-{{$ /alert %}}
+{{% /alert %}}
 
 Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
 

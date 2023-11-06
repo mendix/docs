@@ -218,7 +218,7 @@ To migrate from Stories to Epics, follow these steps:
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
-A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
+A notification is sent in the Developer Portal's [top bar](/developerportal/##profile-notification-help) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
 {{% alert color="warning" %}}
 Once you have migrated your stories from Stories to Epics, Mendix archives any work you may have had in Stories. You can review your work in [Stories Archive](/developerportal/collaborate/general-settings/#story-archive) on the **Settings** page of the app, and download it if necessary. 

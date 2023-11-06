@@ -20,9 +20,9 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the key compone
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-## 2 Top Bar and Navigation {#navigation}
+## 2 Top Bar and Navigation
 
-### 2.1 Profile, Notifications, and Help
+### 2.1 Profile, Notifications, and Help {#profile-notification-help}
 
 On the right side of the top bar, you can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 
@@ -50,7 +50,7 @@ The menu items open the following parts of the Mendix Platform:
 
 You can also search the Mendix Platform via the search box in the top bar.
 
-### 2.2 Global Navigation
+### 2.2 Global Navigation {#global-navigation}
 
 On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access this navigation menu:
 

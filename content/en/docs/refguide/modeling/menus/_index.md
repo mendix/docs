@@ -25,7 +25,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 2 Global Navigation Menu {#global-navigation-menu}
 
-The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Global Navigation Menu** menu, see the [Top Bar and Navigation](/developerportal/#navigation) section in the *Developer Portal Guide*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Global Navigation Menu** menu, see the [Global Navigation](/developerportal/#global-navigation) section in the *Developer Portal Guide*.
 
 ## 3 File Menu {#file}
 

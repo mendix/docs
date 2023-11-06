@@ -192,7 +192,7 @@ To link epics to an initiative, do as follows:
 Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
 
 {{% alert color="info" %}}
-To delete an existing linked epic, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
+To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
 {{% /alert %}}
 
 #### 3.1.4 Adding Planning Information {#add-planning-information}

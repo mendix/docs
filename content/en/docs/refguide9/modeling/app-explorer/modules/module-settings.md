@@ -7,7 +7,7 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 ---
 
 {{% alert color="warning" %}}
-In Mendix 9, Add-on modules and Solution modules were previously available in preview for select customers and partners as part of an early access program. In Mendix 10, this functionality is generally available and ready for use by any customer or partner.
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/module-settings/).
 {{% /alert %}}
 
 ## 1 Introduction

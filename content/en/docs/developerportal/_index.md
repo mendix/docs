@@ -74,7 +74,7 @@ You can also search the Mendix Platform via the search box in the top bar.
 
 In the top bar of the Developer Portal, two additional menu items are available: 
 
-{{< figure src="/attachments/developerportal/company-links.png width="400"" >}}
+{{< figure src="/attachments/developerportal/company-links.png width="400" >}}
 
 * Click **Company Buzz** to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company
     * For more details, see the [Company Buzz](/developerportal/general/buzz/#company-buzz) section of *Buzz*

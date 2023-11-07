@@ -66,7 +66,7 @@ There are the following type of modules:
 | [Regular Expressions](/refguide9/regular-expressions/) | A regular expression is used by [validation rules](/refguide9/validation-rules/) on an entity to describe a set of criteria that a string can match. |
 | [Rules](/refguide9/rules/) | A rule defines a set of criteria, with a certain input the rule will result in a Boolean or enumeration depending on the criteria met. It can be called from a decision to determine the direction the microflow should go once the decision is reached. |
 | [Task Queue](/refguide9/task-queue/) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
-| [Scheduled Events](/refguide9/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
+| [Scheduled Events](/refguide9/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
 ## 6 Consumed Services
 

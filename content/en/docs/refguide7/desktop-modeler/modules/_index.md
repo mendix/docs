@@ -42,7 +42,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Java Actions](/refguide7/java-actions/) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](/refguide7/regular-expressions/) | A regular expression describes a set of criteria that a string can match. |
 | [Rules](/refguide7/rules/) | A rule defines a set of criteria, with a certain input the rule will result in a boolean or enumeration depending on the criteria met. It can be called from an exclusive split to determine the direction the microflow should go once the exclusive split is reached. |
-| [Scheduled Events](/refguide7/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
+| [Scheduled Events](/refguide7/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
 ## 5 Consumed Services
 

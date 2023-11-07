@@ -243,7 +243,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document displays the changed service details and the [Integration Pane](/refguide/integration-pane/) will display that you are consuming from the selected environment:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/integration-pane-2.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/integration-pane-2.png" >}}
 
 ## 4 Read More
 

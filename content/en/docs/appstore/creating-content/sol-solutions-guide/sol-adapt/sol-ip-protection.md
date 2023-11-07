@@ -9,7 +9,7 @@ tags: ["adaptable solutions", "ip protection"]
 
 ## 1 Introduction
 
-When selling solutions or components that are created in Mendix and the customer or partner will get access to the model, you as a publisher want to consider protecting the IP contained within the model that makes up the content you are selling. In addition, you want to ensure that developers use the implementation as intended and protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some intellectual property (IP) protection in your solutions and components.
+When selling solutions or components that are created in Mendix and the customer or partner will get access to the model, you as a publisher want to consider protecting the intellectual property (IP) contained within the model that makes up the content you are selling. In addition, you want to ensure that developers use the implementation as intended and protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your solutions and components.
 
 ## 2 Why IP Protection?
 

@@ -233,6 +233,9 @@ This enumeration describes the current block. For more information about the enu
 | `TABLE` | TABLE |
 | `TITLE` | TITLE |
 | `WORD` | WORD | |
+| `TABLE_TITLE` | WORD | |
+| `TABLE_FOOTER` | WORD | |
+| `SIGANTURE` | WORD | |
 
 #### 4.2.5 SelectionStatus
 

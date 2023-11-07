@@ -1305,6 +1305,25 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+When removing an **Ingress annotation** from the Private Cloud portal, it's important to note that the annotation will not be automatically removed from the Ingress.
+
+In the event that an ingress annotation is removed, please be aware that the annotation will persist within the Ingress object.
+
+In order to remove the annotation from the ingress object, you can run below commands:
+
+For retrieving the value of Ingress object:
+```shell
+kubectl -n {namespace} get ingress
+```
+
+For removing the annotation:
+
+```shell
+kubectl -n {namespace} annotate ingress {ingress-object} {annotationKey}-
+```
+{{% /alert %}}
+
 You can configure the runtime metrics for the environment in the **Runtime** section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
 
 You can also configure the pod labels for the environment in the **Labels** section. For more details, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels)

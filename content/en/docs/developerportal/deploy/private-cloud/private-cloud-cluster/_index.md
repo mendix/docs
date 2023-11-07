@@ -1088,6 +1088,51 @@ Alternatively, for Standalone clusters, pod labels can be specified in the `Mend
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
 
+### 6.9 GKE Autopilot Workarounds
+
+In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot meticulously verifies the resource allocations and limits for all containers and makes adjustments to Deployments when the resources are not as per its requirement. 
+
+As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to Deployments and pods.
+
+To address this issue, you can resolve it by configuring the Operator to align with GKE's requirements. This involves setting the resources—specifically, CPU, memory, and ephemeral storage—to be equal to the limits defined in the OperatorConfiguration for both the sidecar and metrics-sidecar containers. Along with this, it is essential to ensure that the resource limits for CPU, memory, and ephemeral storage should be set equal to the resource requests in the Private Cloud portal. For more information on setting the core resources on portal, refer [documentation](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan)
+
+You need to create a patch file for configuring the core resources in the OperatorConfiguration. See below example:
+
+```yaml
+spec:
+  buildResources:
+    limits:
+      cpu: "1"
+      memory: 256Mi
+    requests:
+      cpu: "1"
+      memory: 256Mi
+  metricsSidecarResources:
+    limits:
+      cpu: 100m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 32Mi
+```
+
+Run the following command in order to update the core resources in the Operator Configuration.
+
+```shell {linenos=false}
+kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration --type merge -p "$(cat <patchedFile>)"
+```
+
+{{% alert color="info" %}}
+Please note that Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory resources. If a container requests a substantial amount of memory, it should also correspondingly request more CPU cores. For detailed information on resource requests, you can refer to the [Resource Requests in Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests) documentation provided by Google Kubernetes Engine.
+{{% /alert %}}
+
+GKE will automatically set an autopilot.gke.io/resource-adjustment annotation in the Kubernetes Deployment for your application. This annotation serves as guidance for defining the recommended resource requests and limits for your containers. The autopilot.gke.io/resource-adjustment annotation allows you to customize or fine-tune this behavior for specific containers in your pods. You can set its value to one of the following options:
+
+* noop: This value tells Autopilot not to adjust the resource settings for the container. It effectively disables the automatic resource adjustment for that container.
+
+* unlimited: This value indicates that Autopilot should not set any resource limits for the container, effectively allowing the container to use resources without any bounds. Use this option with caution, as it can lead to resource contention and affect cluster stability.
+
+
 ## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.

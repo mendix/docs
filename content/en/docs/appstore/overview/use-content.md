@@ -21,10 +21,11 @@ This how-to covers the basics of accessing the Marketplace from Studio Pro and p
 This how-to teaches you how to do the following:
 
 * Download content from the Marketplace via Studio Pro
-* Use content (for example, widgets, modules, and others) downloaded from the Marketplace in Studio Pro
+* Use content (for example, widgets, modules, and connectors) downloaded from the Marketplace in Studio Pro
 
 {{% alert color="warning" %}}
-If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
+If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.
+{{% /alert %}}
 
 ## 2 Installing Marketplace Content {#install}
 
@@ -40,9 +41,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
-3. There are two ways to open the Marketplace in Studio Pro;
-    * Click the **View** menu in the top-bar and select **Marketplace**
-    * Click the Marketplace icon on the right side of the top-bars
+3. To open the Marketplace in Studio Pro, you can either click the **View** menu in the top bar and select **Marketplace**, or you can click the Marketplace icon on the right side of the top bar
 
     {{< figure src="/attachments/appstore/overview/use-content/toolbar.png" alt="Marketplace icon" >}}
 
@@ -76,7 +75,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#### 2.1.1 For Studio Pro 9.18 and Below
+#### 2.1.2 For Studio Pro 9.18 and Below
 
 To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and below, follow these steps:
 

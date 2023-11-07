@@ -17,17 +17,13 @@ Within a module you can define [module security](/refguide9/module-security/) vi
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables and grids. Below you see tables grouped by category of all the different kinds of documents you can create within a module.
 
 {{% alert color="info" %}}
-Mendix Modules are distinct from React Native modules. 
-
-Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. 
-
-React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
+Mendix Modules are distinct from React Native modules. Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps, you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
 {{% /alert %}}
 
 ## 2 Module Types {#module-types}
 
 {{% alert color="info" %}}
-In Mendix 9, Add-on modules and Solution modules were previously available in preview for select customers and partners as part of an early access program. In Mendix 10, this functionality is generally available and ready for use by any customer or partner.
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users.
 {{% /alert %}}
 
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide9/module-settings/). 

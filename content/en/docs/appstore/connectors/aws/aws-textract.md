@@ -31,10 +31,6 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-### 1.4 Limitations
-
-Because of a synchronous invocation limitation of the Amazon Textract service, the Amazon Textract connector only supports scanning a single page at a time. This limitation will be removed in future versions of the connector.
-
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Textract connector into your app.
@@ -48,32 +44,32 @@ After you install the connector, you can find it in the **App Explorer**, in the
 In order to use the Amazon Textract service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
-    The Amazon Textract connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+2. Decide whether you want to use static or temporary credentials to authenticate.
+    The Amazon Textract connector supports both static and temporary credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to temporary credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
     {{< figure src="/attachments/appstore/connectors/aws-textract/textract_open_settings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+    If you have multiple sets of AWS credentials, or if you want to use both static and temporary credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonTextractConnector** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AWSAuthentication** > **ConnectionDetails** section.
 
     {{< figure src="/attachments/appstore/connectors/aws-textract/textract_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **TemporaryCredentials**.
 
     | Credentials type | Constant | Value |
     | --- | --- | --- |
-    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for temporary credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
-    | **SessionCredentials** | **Session Name** | An identifier for the session |
+    | **TemporaryCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **TemporaryCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **TemporaryCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **TemporaryCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **TemporaryCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the temporary credentials expires |
+    | **TemporaryCredentials** | **Session Name** | An identifier for the session |
     
 ### 3.2 Configuring a Microflow for an AWS Service
 
@@ -113,11 +109,10 @@ After setting up the authentication, to analyze a document, implement the [Analy
 17. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
-    3. Add the members **GetForms** and **GetTables**, set the value to **true**, and then click **OK**.
-    The configured activity properties look like this: 
-    {{< figure src="/attachments/appstore/connectors/aws-textract/create-object-properties.png" >}}
+    3. Add another **Create object** activity, and select the **AnalyzeDocFeatureType** enitity.
+    4. Set it's Value attribute to **ENUM_FeatureType.FORMS** and the **AnalyzeDocFeatureType_AnalyzeDocumentRequest** association to the **AnalyzeDocumentRequest** object created in step 2.
 18. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
-19. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
+19. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activities and the microflow end event.
 20. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
     2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
@@ -160,27 +155,30 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description |
 | --- | --- |
-| `Block` | This generalization entity holds information for items that are recognized in a document within a group of pixels close to each other. The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the Confidence describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that is recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed). Additionally, this entity contains a list of `Relationship` objects, a specialized `Geometry` object (`BlockGeometry`) and if the action involved a query a `QueryBlock` object. |
-| `Geometry` | This generalization entity holds information for the location of identified information on a document page: detected page, text, key-value pairs, tables, table cells and selection elements. Additionally, it contains a list of `Point` objects and a `BoundingBox` object. |
+| `AbstractBlock` | This generalization entity holds information for items that are recognized in a document within a group of pixels close to each other. The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the Confidence describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that is recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed). Additionally, this entity contains a list of `Relationship` objects, a specialized `AbstractGeometry` object (`BlockGeometry`) and if the action involved a query a `QueryBlock` object. |
+| `AbstractGeometry` | This generalization entity holds information for the location of identified information on a document page: detected page, text, key-value pairs, tables, table cells and selection elements. Additionally, it contains a list of `Point` objects and a `BoundingBox` object. |
 | `Point` | This entity holds information of the location of a fine-grained polygon of a recognized item. The attribute it contains are X and Y. The X describes the X-coordinate for a point on a polygon and the Y describes the Y-coordinate for a point on a polygon. |
 | `BoundingBox` | This entity holds information for an axis-aligned coarse representation of the location of the recognized item on the document page. The attribute it contains are `Height`, `Left`, `Top` and `Width`. The `Height` describes height of the bounding box as a ratio of the overall document page height, the `Left` describes the left coordinate of the bounding box as a ratio of the overall document page width, the `Top` describes the top coordinate of the bounding box as a ratio of the overall document page height and `Width` describes the width of the bounding box as a ratio of the overall document page width. |
 | `Relationship` | Contains the relationship type of a block entity to another block entity This entity holds information about how blocks are related to each other. The attribute it contains is `RelationshipType` which describes the type of relationships for all blocks in the `BlockId`'s array. This is represented as a list of `BlockId` objects. |
 | `BlockId` | This entity holds information for blocks that are related by each other. The attribute it contains is `_Id` which reflects the identification of the block. |
 | `QueryBlock` | This entity holds information for the results of the search query. The attribute it contains is `Text` which describes the value matched to the search query. Additionally, it contains a list of `PagesSearched` objects. |
 | `PagesSearched` | This entity holds information for identifying which pages have been searched. |
-| `ExpenseField` | This generalization entity holds information for the detected information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber` which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object and a `Currency` object. |
+| `AbstractExpenseField` | This generalization entity holds information for the detected information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber` which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `AbstractExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object and a `Currency` object. |
 | `Currency` | This entity holds information for the detected currency. The attribute it contains are Code and Confidence. The `Code` describes the currency code for the detected currency (USD for dollars, EUR for euro, and so on) and the `Confidence` describes the percentual confidence of the detected currency. |
 | `ExpenseType` | This entity holds information about the detected expense type. The attribute it contains are `Text` and `Confidence`. The `Text` describes the detected word or line and the `Confidence` describes the percentual confidence in the detection. |
 | `GroupProperty` | This entity holds information for showing the group that a certain key belongs to. The attribute it contains is `_id` which describes the group identification number which will be the same for each member of the group. Additionally, it contains a list of `ExpenseGroupPropertyType` objects. |
 | `ExpenseGroupPropertyType` | This entity holds information for distinguishing whether the expense group is a name or an address. The attribute it contains is `_Type`. |
-| `ExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `Geometry` object (`AnalyzeExpenseGeometry`). |
+| `AbstractExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `AbstractGeometry` object (`AnalyzeExpenseGeometry`). |
 | `AbstractFeatureType` | This entity holds information about the type of analysis that should be executed. It contains the attribute `Value` which specifies the feature type value of type enumeration. |
 | `AbstractWarning` | This entity holds information about the warnings that have been sent along with a `GetDocumentAnalysisResponse` or a `GetExpenseAnalysisResponse`. It contains an `ErrorCode` attribute which specifies the error code of the warning. It has a list of `PageNumber` objects associated. |
 | `PageNumber` | This entity holds information about the `PageNumber` to which the associated `AbstractWarning` object refers. |
 | `AbstractRequestQuery` | This entity holds information about the question which Textract should apply to the document. The `Text` attribtue holds the question. It has a list of `PagesToSearch` objects associated. |
 | `PagesToSearch` | This entity holds information about the `StartPage` and `EndPage` to which the associated `Query` will be applied. |
 | `AbstractDocumentAnalysisResponse` | This entity is the generalization of the response entities of the `AnalyzeDocument` and `GetDocumentAnalysis` actions. It contains the part of the responses that are shared between those actions. Most importantly, it has a list of type `DocumentAnalysisBlock` associated. A spcialization of this object should be used as an input parameter of the `AbstractDocumentAnalysisResponse_ProcessResults` microflow. This way, the responses from both the `AnalyzeDocument` and the `GetDocumentAnalysis` actions can be used by as input parameters.|
-| `DocumentAnalysisBlock` | This entity is a specialization of the `Block` entity and holds the blocks returned by `AnalyzeDocument` and the `GetDocumentAnalysis` actions. |
+| `DocumentAnalysisBlock` | This entity is a specialization of the `AbstractBlock` entity and holds the blocks returned by `AnalyzeDocument` and the `GetDocumentAnalysis` actions. |
+|`AbstractNotificationChannel`|This entity holds information about the Amazon SNS topic ARN that you want Amazon Textract to publish the completion status of the operation to.|
+|`AbstractDocumentLocation`|This entity holds information about the S3 location of the document to be processed.|
+|`AbstractOutputConfig`|This entity holds information about if the output will go to a customer defined bucket. By default, Amazon Textract will save the results internally to be accessed by the GetDocumentAnalysis operation.|
  
 ### 4.2 Enumerations {#enumerations}
 
@@ -218,36 +216,7 @@ For more information about the enumeration members, see [EntityType](https://doc
 | `VALUE` | VALUE |
 | `COLUMN_HEADER` | COLUMN_HEADER |
 
-#### 4.2.4 AWS_Region
-
-This enumeration contains a list of supported AWS regions. For more information, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
-
-| Name | Caption |
-| --- | --- |
-| `us_east_2` | US East (Ohio) |
-| `us_east_1` | US East (N. Virginia) |
-| `us_west_1` | US West (N. California) |
-| `us_west_2` | US West (Oregon) |
-| `af_south_1` | Africa (Cape Town) |
-| `ap_east_1` | Asia Pacific (Hong Kong) |
-| `ap_southeast_3` | Asia Pacific (Jakarta) |
-| `ap_south_1` | Asia Pacific (Mumbai) |
-| `ap_northeast_3` | Asia Pacific (Osaka) |
-| `ap_northeast_2` | Asia Pacific (Seoul) |
-| `ap_southeast_1` | Asia Pacific (Singapore) |
-| `ap_southeast_2` | Asia Pacific (Sydney) |
-| `ap_northeast_1` | Asia Pacific (Tokyo) |
-| `ca_central_1` | Canada (Central) |
-| `eu_central_1` | Europe (Frankfurt) |
-| `eu_west_1` | Europe (Ireland) |
-| `eu_west_2` | Europe (London) |
-| `eu_south_1` | Europe (Milan) |
-| `eu_west_3` | Europe (Paris) |
-| `eu_north_1` | Europe (Stockholm) |
-| `me_south_1` | Middle East (Bahrain) |
-| `sa_east_1` | South America (São Paulo) |
-
-#### 4.2.5 BlockType
+#### 4.2.4 BlockType
 
 This enumeration describes the current block. For more information about the enumeration members, see [BlockType](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/blocktype.html) in the AWS API documentation.
 
@@ -265,7 +234,7 @@ This enumeration describes the current block. For more information about the enu
 | `TITLE` | TITLE |
 | `WORD` | WORD | |
 
-#### 4.2.6 SelectionStatus
+#### 4.2.5 SelectionStatus
 
 This enumeration indicates the selection status of the block. For more information about the enumeration members, see [SelectionStatus](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-textract/enums/selectionstatus.html) in the AWS API documentation. 
 
@@ -274,7 +243,7 @@ This enumeration indicates the selection status of the block. For more informati
 | `SELECTED` | SELECTED |
 | `NOT_SELECTED` | NOT_SELECTED |
 
-#### 4.2.7 FeatureTypes
+#### 4.2.6 FeatureTypes
 
 This enumeration holds the available types of analysis to perform. For more information, see [Feature Types](https://docs.aws.amazon.com/textract/latest/dg/API_StartDocumentAnalysis.html#Textract-StartDocumentAnalysis-request-FeatureTypes) in the AWS API documentation.
 
@@ -286,7 +255,7 @@ This enumeration holds the available types of analysis to perform. For more info
 | `SIGNATURES` | SIGNATURES |
 | `LAYOUT` | LAYOUT |
 
-#### 4.2.8 JobStatus
+#### 4.2.7 JobStatus
 
 This enumeration indicates the status of the document analysis job as part of the `GetDocumentAnalysisResponse`. For more information, see [Job Status](https://docs.aws.amazon.com/textract/latest/dg/API_GetExpenseAnalysis.html#Textract-GetExpenseAnalysis-response-JobStatus) in the AWS API documentation.
 
@@ -311,7 +280,8 @@ You can use the action for use cases such as the following:
 
 #### 4.3.1 AnalyzeDocument {#analyzedocument}
 
-The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region and `AnalyzeDocumentRequest` object. It additionally requires at least a `RequestQuery` object when the `GetQueries` attribute in `AnalyzeDocumentRequest` is set to true.
+The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region, a `AnalyzeDocumentRequest` object and a specialized `System.FileDocument` object in PNG, JPEG, PDF, or TIFF format.
+It additionally requires at least one `AnalyzeDocFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AnalyzeDocRequestQuery` object. 
 
 Additionally, you can use the `AbstractDocumentAnalysisResponse_ProcessResults` sub-flow. This will process the response from Amazon Textract into the specialized `BlockItem` model.
 
@@ -327,18 +297,19 @@ This activity returns a `AnalyzeDocumentResponse` object with objects from the f
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `AnalyzeDocumentResponse` | | This entity is the response for the Amazon Textract `AnalyzeDocument` action. It contains a list of specialized Block objects (`AnalyzeDocumentBlock`). |
-| `AnalyzeDocumentBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the Text describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed). Additionally, this entity contains a list of `Relationship` objects, a `QueryBlock` object and a specialized `Geometry` object (`BlockGeometry`). |
+| `AnalyzeDocumentResponse` | `AbstractDocumentAnalysisResponse` | This entity is the response for the Amazon Textract `AnalyzeDocument` action. It contains a list of specialized Block objects (`AnalyzeDocumentBlock`). |
+| `DocumentAnalysisBlock` | `AmazonTextractConnector.AbstractBlock` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the Text describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed). Additionally, this entity contains a list of `Relationship` objects, a `QueryBlock` object and a specialized `AbstractGeometry` object (`BlockGeometry`). |
 
 #### 4.3.2 AnalyzeExpense
 
-The AnalyzeExpense Amazon Textract action allows you to analyze expense documents and extract information from them. It requires a valid AWS region and a specialized `System.FileDocument` object in PNG, JPEG, PDF, or TIFF format.
+The AnalyzeExpense Amazon Textract action allows you to analyze expense documents and extract information from them. It requires a valid AWS region, a `AnalyzeExpenseRequest` object and a specialized `System.FileDocument` object in PNG, JPEG, PDF, or TIFF format.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region` (Enumeration) | `AnalyzeExpenseResponse` (Object) |
+| `AnalyzeExpenseRequest` (Object) | `AnalyzeDocumentResponse` (Object) |
+| `AWS_Region` (Enumeration) |
 | `FileDocument` (Object) | |
 
 This activity returns an `AnalyzeExpenseResponse` object with objects from the following entities, as shown in the table below:
@@ -347,15 +318,15 @@ This activity returns an `AnalyzeExpenseResponse` object with objects from the f
 | --- | --- | --- |
 | `AnalyzeExpenseResponse` | | This entity is the response for the Amazon Textract `AnalyzeExpense` action. The attribute it contains is `PageCount` which describes the number of pages that are detected in the document. Additionally, it contains a list of `ExpenseDocument`, each of which contains a list of `SummaryFields`, `LineItemGroups` and `AnalyzeExpenseBlocks`. |
 | `ExpenseDocument` | | This entity holds information for regarding the document. The attribute it contains is `ExpenseIndex`, which describes which invoice or receipt in the document the information is coming from (1 refers to the first document, 2 refers to the second document, and so on). |
-| `SummaryField` | `AmazonTextractConnector.ExpenseField` | This specialized entity holds information for the detected non-expense related information, separated into categories `Type`, L`abelDetection` and `ValueDetection`. The attribute it contains is `PageNumber` which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object and a `Currency` object. |
+| `SummaryField` | `AmazonTextractConnector.AbstractExpenseField` | This specialized entity holds information for the detected non-expense related information, separated into categories `Type`, L`abelDetection` and `ValueDetection`. The attribute it contains is `PageNumber` which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `AbstractExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object and a `Currency` object. |
 | `LineItemGroup` | | This entity holds information for a grouping of tables which contain `LineItems`. The attribute it contains is `LineItemGroupIndex` which describes which table was detected (1 represents the first encountered table, 2 represent the second encountered table, and so on). |
 | `LineItemField` | | This entity holds information for a line within the given document's table. |
-| `LineItemExpenseField` | `AmazonTextractConnector.ExpenseField` | This specialized entity holds information for the detected expense-related information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber`, which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object, and a `Currency` object. |
-| `AnalyzeExpenseBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attributes it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten or printed). Additionally, this entity contains a list of `Relationship` objects and a specialized Geometry object (`BlockGeometry`). |
+| `LineItemExpenseField` | `AmazonTextractConnector.AbstractExpenseField` | This specialized entity holds information for the detected expense-related information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber`, which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `AbstractExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object, and a `Currency` object. |
+| `AnalyzeExpenseBlock` | `AmazonTextractConnector.AbstractBlock` | This entity holds information for items that are recognized in a document within a group of pixels close to each other. The attributes it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes the score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or checkbox), the `Text` describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten or printed). Additionally, this entity contains a list of `Relationship` objects and a specialized `AbstractGeometry` object (`BlockGeometry`). |
 
 #### 4.3.3 StartDocumentAnalysis {#startdocumentanalysis}
 
-The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the `Queries` feature type is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.  
+The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.
 
 The input and output for this service are shown in the table below:
 
@@ -388,7 +359,7 @@ This activity returns a `GetDocumentAnalysisResponse` object with objects from t
 | Name | Generalization | Documentation |
 | --- | --- | --- |
 | `GetDocumentAnalysisResponse` | `AbstractDocumentAnalysisResponse`| This entity is the response for the Amazon Textract `GetDocumentAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a `NextToken` that can be used to retrieve the next batch of results. |
-| `GetDocumentAnalysisWarning` | | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply. |
+| `GetDocumentAnalysisWarning` | `AbstractWarning` | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply. |
 
 #### 4.3.5 StartExpenseAnalysis {#startdocumentanalysis}
 

@@ -11,10 +11,6 @@ tags: ["adaptable solutions", "ip protection"]
 
 When selling solutions or components that are created in Mendix and the customer or partner will get access to the model, you as a publisher want to consider protecting the IP contained within the model that makes up the content you are selling. In addition, you want to ensure that developers use the implementation as intended and protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some intellectual property (IP) protection in your solutions and components.
 
-{{% alert color="info" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
-{{% /alert %}}
-
 ## 2 Why IP Protection?
 
 Reusable solutions, app services, connectors, and other modules contain IP in the form of app model content (for example, microflows) that is reusable and can be monetized. When you build a business around these types of sellable content, there is a risk associated with the loss of your IP. If customers copy your IP without compensating you as the publisher, then you lose out on part of your potential revenue.

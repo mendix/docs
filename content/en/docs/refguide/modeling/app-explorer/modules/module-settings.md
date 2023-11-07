@@ -30,10 +30,6 @@ You can add managed dependencies for each module on the **Java Dependencies** ta
 
 ## 3 Export
 
-{{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
-{{% /alert %}}
-
 Select the **Export** tab:
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-export.png" >}}

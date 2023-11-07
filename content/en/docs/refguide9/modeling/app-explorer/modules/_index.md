@@ -23,7 +23,7 @@ Mendix Modules are distinct from React Native modules. Mendix modules are portio
 ## 2 Module Types {#module-types}
 
 {{% alert color="info" %}}
-In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users.
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/modules/).
 {{% /alert %}}
 
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide9/module-settings/). 

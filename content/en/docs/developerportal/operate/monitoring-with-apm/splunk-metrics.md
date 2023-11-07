@@ -12,10 +12,10 @@ tags: ["Splunk Cloud Platform", "Mendix Cloud", "monitoring", "analysis", "logs"
 
 [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is a monitoring and analysis tool for cloud applications. This document explains how to configure your Mendix Cloud app to send the runtime application logs to Splunk Cloud Platform to provide additional search, analysis, and visualization of your runtime application logs.
 
-
 Mendix provides integration with Splunk Cloud Platform; it does not currently integrate with other Splunk monitoring products. Mendix sends only the runtime application logs to Splunk.
 
-{{% alert color="info" %}}For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+{{% alert color="info" %}}
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 Prerequisites

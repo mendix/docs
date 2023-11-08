@@ -21,13 +21,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We added a rich text editor to team comments & feedback reporter messages in [Feedback](/developerportal/app-insights/feedback/).
+* You can use a rich text editor for Team Comments** and feedback reporter messages in [Feedback](/developerportal/app-insights/feedback/).
 * We added a new sidebar page to quickly view your survey responses in [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 
 #### Fixes
 
-* We fixed issue in Feedback where tags can be incorrectly duplicated.
-* We fixed issue in Feedback where deleting tags or statuses caused errors.  
+* We fixed issue in Feedback where tags could be incorrectly duplicated.
+* We fixed issue in Feedback where deleting tags or statuses caused errors. 
 
 ### November 2, 2023
 

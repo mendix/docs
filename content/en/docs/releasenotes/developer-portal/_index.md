@@ -21,8 +21,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* You can use a rich text editor for Team Comments** and feedback reporter messages in [Feedback](/developerportal/app-insights/feedback/).
-* We added a new sidebar page to quickly view your survey responses in [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+* In [Feedback](/developerportal/app-insights/feedback/), we implemented a rich text editor in the text box of **Team Comments** and the text box where the feedback reporter and team members send messages to each other.
+* In [Mini Surveys](/developerportal/app-insights/mini-surveys/), we added a new side panel for you to get a quick view of individual survey responses.
 
 #### Fixes
 

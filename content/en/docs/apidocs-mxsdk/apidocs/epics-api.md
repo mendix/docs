@@ -16,11 +16,11 @@ Epics is the default tool for you to manage the development process of new apps.
 
 The Mendix Epics API allows you to retrieve, create, and update stories as well as get all the statuses that can be possibly assigned to stories.
 
-## 2 Authentication{#authentication}
+## 2 Authentication {#authentication}
 
 Authentication for the Epics API uses a personal access token (PAT).
 
-### 2.1 Generating a PAT
+### 2.1 Generating a PAT {#generate}
 
 To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 

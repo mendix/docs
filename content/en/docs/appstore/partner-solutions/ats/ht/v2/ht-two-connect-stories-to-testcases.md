@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Set the Mendix API Key / Personal Access Token
+## 3 Set the Mendix API Key / Personal Access Token {#set}
 
 The following steps describe how you can set your Mendix API Key in ATS:
 

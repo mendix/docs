@@ -11,14 +11,6 @@ tags: ["Portfolio Management"]
 
 The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
 
-### 1.1 Differences Among Initiatives, Apps, and Epics 
-
-An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, where epics are related to a single app only and bundle user stories together. To learn more about the difference between initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
-
-{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
-
-{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
-
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
 When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
@@ -181,7 +173,7 @@ To delete an existing tag, do as follows:
 Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.
 {{% /alert %}} 
 
-The epics that you link here can be any epics in [Epics](/developerportal/project-management/epics/). However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. 
+The epics that you link here can be any epics in [Epics](/developerportal/project-management/epics/). However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. Fore more information about the differences among iniatives, apps, and epics, see the [Differences Among Initatives, Apps, and Epics]() section below.
 
 To link epics to an initiative, do as follows:
 
@@ -194,6 +186,16 @@ Once an epic is added, its ID, name, owner, and progress are displayed in this s
 {{% alert color="info" %}}
 To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
 {{% /alert %}}
+
+##### 3.1.3.1 Differences Among Initiatives, Apps, and Epics 
+
+An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the difference between initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
+
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+
+The following figure shows examples of three portfolios. The first portfolio is to add a feature to an app, the second example is a minimal viable product (MVP) of an app, and the last example is to build an integration between two apps.
+
+{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
 
 #### 3.1.4 Adding Planning Information {#add-planning-information}
 

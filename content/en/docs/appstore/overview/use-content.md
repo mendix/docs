@@ -116,8 +116,6 @@ You can find the imported module or connector in the **App Explorer**.
 
 ### 2.3 Manually Adding Content into App Directory {#add}
 
-{{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/module-settings/#module-type).{{% /alert %}}
-
 To manually add content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.

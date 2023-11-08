@@ -75,7 +75,8 @@ The header for a component presents the following details:
 * Depending on the content type:
     * **Use in Studio Pro** for modules and widgets – click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/overview/use-content/#current-sp)
     * **Start with Template** for starter templates – click this to use the template
-    * **Download** for all other content types – click this to download the component
+    * **Download** for other content types – click this to download the component
+    * **Contact Us** – click this to contact Mendix or the community supplier
 * The partner icon is applied to components that are supported by a partner:
 
     {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  >}}

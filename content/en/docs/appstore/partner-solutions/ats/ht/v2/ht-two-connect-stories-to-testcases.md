@@ -61,7 +61,7 @@ Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/pat-api-key-dialog.png" >}}
 
-1. Follow the steps in [Generating a PAT](/apidocs-mxsdk/apidocs/epics-api/generate) in the *Epics API*.
+1. Follow the steps in the [Generating a PAT](/apidocs-mxsdk/apidocs/epics-api/#generate) section in *Epics API*.
 2. Copy and paste the `{GENERATED_PAT}` into the **Personal Access Token** field in ATS.
 3. Click **Save**.
 

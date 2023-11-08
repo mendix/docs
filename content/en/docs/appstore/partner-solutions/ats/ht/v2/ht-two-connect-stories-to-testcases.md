@@ -11,9 +11,10 @@ tags: ["ATS", "testing"]
 
 Mendix ATS is a testing tool designed for automated testing of Mendix applications. With your automated tests, you want to test functionalities of the application. Descriptions of those functionalities are in your User Stories. As you want to test those functionalities, ATS has the ability to retrieve User Stories from the Mendix Developer Portal project. In ATS you can link the retrieved User Stories to test cases and test suites. This is useful for you and your team to see what can be tested automatically and which functionalities are covered by a test case. Additionally linking user stories to test cases and test suites is useful for stakeholders. By linking them, you can show that the functionalities build in the Sprint are tested.
 
-This how-to teaches you how to do the following:
+This how-to teaches you how to do the following
 
 * Set the Mendix API key
+* Set the Mendix PAT
 * Retrieve User Stories in ATS
 * Link test cases/test suites to User Stories
 * Link User Stories to test cases/test suites
@@ -25,35 +26,48 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Set the Mendix API Key
+## 3 Set the Mendix API Key / Personal Access Token {#set}
 
 The following steps describe how you can set your Mendix API Key in ATS:
 
 1. Go to ATS and login.
 2. Open the app where you want to add the Mendix API Key.
-3. Inside your app click the profile menu and click **Show Test Settings**.
+3. Inside your app click the profile menu and click **Show App Settings**.
 
-    {{% alert color="info" %}} **Show Test Settings** is only present if you have Scrum Master rights in the Mendix Developer Portal project {{% /alert %}}
-    
+   {{% alert color="info" %}} **Show App Settings** is only present if you have Scrum Master rights in the Mendix Developer Portal project {{% /alert %}}
+
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/show-test-settings.png" >}}
 
 4. On the **Settings** page click **Set API Key**.
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-api-key.png" >}}
 
-    Clicking **Set API Key** opens the **Mendix API Key** Dialog:
+### 3.1 Integrating with Mendix Stories
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-dialog.png" >}}
+Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
-5. To retrieve your Mendix API Key open the project in the Developer Portal and click **API Keys**.
-6. Click **Create API Key**
-7. Enter an API Key name in the **API key name** field and click Generate API Key. 
-8. Copy the API Key and paste it into the **Mendix API Key** field in ATS.
-9. Click **Save**:
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-dialog.png" >}}
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-filled-e.png" >}}
+1. To integrate with Mendix stories, set **Use Epics ?** to **No**.
+2. To retrieve your Mendix API key, open the app in Developer Portal and click [API Keys](/developerportal/collaborate/general-settings/#general-settings-api-keys).
+3. Click **Create API Key**.
+4. Enter a name in the **API key name** field and click **Generate API Key**.
+5. Copy the API key and paste it into the **Mendix API Key** field in ATS.
+6. Click **Save**.
 
-You have set the Mendix API Key. ATS can now retrieve the User Stories from the Mendix Developer Portal project.
+### 3.2 Integrating with Mendix Epics
+
+Clicking **Set API Key** opens this **Mendix API Key** dialog box:
+
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/pat-api-key-dialog.png" >}}
+
+1. Follow the steps in the [Generating a PAT](/apidocs-mxsdk/apidocs/epics-api/#generate) section in *Epics API*.
+2. Copy and paste the `{GENERATED_PAT}` into the **Personal Access Token** field in ATS.
+3. Click **Save**.
+
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-filled-e.png" >}}
+
+You have now set the Mendix API key or personal access token (PAT). ATS can now retrieve the user stories from your Mendix Developer Portal app.
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-mendix-api-key.png" >}}
 
@@ -70,6 +84,8 @@ The following steps explain how to retrieve user stories from the Mendix Develop
 If you filled in a correct Mendix API Key you can now see the User Stories in ATS:
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/user-stories-in-ats.png" >}}
+
+{{% alert color="danger" %}}If you are using Mendix Epics, stories that have already been archived are not shown in ATS. This is because the Epics API only returns non-archived stories as their response. Stories that have not been archived yet when retrieved via ATS are archived and shown in ATS. {{% /alert %}}
 
 ## 5 Linking Test Cases/Test Suites to User Stories
 
@@ -98,13 +114,14 @@ In the **Add Test Case/Suite to Story** dialog you can select to create a new te
 
 2. Set the type to **Test Case**.
 3. Enter a name in the **Name** field. Use the predefined naming structure.
-4. Enter a description in the **Description** field. 
+4. Enter a description in the **Description** field.
 5. Use the **Template** referenceSelector in case you have a test case that you want to use as a template. ATS copies all the test steps of the template to the new test case.
+
     * To add a template click the arrow icon. This opens the **Select item** Dialog box.
     * In the Dialog search and select the test case you want to add as template and click **Select**.
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/select-template.png" >}}
-    
+
 6. Click **Create & Open** to create and open your test case. This is useful if you want to edit your test case. Click **Create** to create the test case, but not open it:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/new-test-case-e.png" >}}
@@ -119,7 +136,7 @@ To see the added test case double-click the Story name. This opens the **Edit St
 
 On the **Edit Story** page you can do the following:
 
-* Add a new test case in the same way as described above by clicking **Add test** (1). 
+* Add a new test case in the same way as described above by clicking **Add test** (1).
 * Go to the **Test Case Details** page and edit the test case by clicking **Edit** (2).
 * Remove the linked test case by clicking **Remove** (3).
 
@@ -142,7 +159,7 @@ To see the added test case double-click the Story name. This opens the **Edit St
 
 On the **Edit Story** page you can do the following:
 
-* Add a new test case in the same way as described above by clicking **Add test** (1). 
+* Add a new test case in the same way as described above by clicking **Add test** (1).
 * Go to the **Test Case Details** page and edit the test case by clicking **Edit** (2).
 * Remove the linked test case by clicking **Remove** (3).
 

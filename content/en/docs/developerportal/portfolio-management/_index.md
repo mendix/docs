@@ -173,7 +173,7 @@ To delete an existing tag, do as follows:
 Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.
 {{% /alert %}} 
 
-The epics that you link here can be any epics in [Epics](/developerportal/project-management/epics/). However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. Fore more information about the differences among iniatives, apps, and epics, see the [Differences Among Initatives, Apps, and Epics]() section below.
+The epics that you link here can be any epics in [Epics](/developerportal/project-management/epics/). However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. Fore more information about the differences among initiatives, apps, and epics, see the [Differences Among Initiatives, Apps, and Epics](#differences-initiatives-apps-epics) section below.
 
 To link epics to an initiative, do as follows:
 
@@ -187,7 +187,7 @@ Once an epic is added, its ID, name, owner, and progress are displayed in this s
 To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
 {{% /alert %}}
 
-##### 3.1.3.1 Differences Among Initiatives, Apps, and Epics 
+##### 3.1.3.1 Differences Among Initiatives, Apps, and Epics {#differences-initiatives-apps-epics}
 
 An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the difference between initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
 

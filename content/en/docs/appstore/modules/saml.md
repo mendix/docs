@@ -62,6 +62,10 @@ The SAML module keeps a log/audit trail of login attempts. These can be download
 
 The SAML module allows you to have an SSO connection with multiple SAML IdPs. Each IdP can have its own keypair.
 
+{{% alert color="info" %}}
+SAML module versions 3.5.0 and above (compatible with Mendix version 9.22.0 and above) support multiple keypairs.
+{{% /alert %}}
+
 ### 1.3 Limitations {#limitations}
 
 The Mendix SAML SSO module does not support the following:
@@ -83,7 +87,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 
 If you need any of these features, contact your Mendix CSM to discuss inclusion of these features on the Mendix roadmap or customization of the SAML SSO module.
 
-If you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA) (see [Use a Certificate Issued by a Certificate Authority](#use-ca) for more details).
+Versions of the SAML module below 3.5.0 are limited to single keypair. If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see the [Use a Certificate Issued by a Certificate Authority](#use-ca) section below.
 
 If you use both the [OIDC SSO](/appstore/modules/oidc/) module and the SAML module in the same app, each end-user can only authenticate using one IdP.
 

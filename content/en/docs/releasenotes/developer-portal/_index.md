@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### November 2, 2023
+
+#### Improvements
+
+* When your company has connected its own [Identity Provider](/developerportal/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances some attributes were not exposed in the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
+
 ### October 26, 2023
 
 #### New Features
@@ -31,16 +41,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes 
 
- * We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
- * We fixed an issue where deactivation of some apps led to unexpected errors.
+* We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
+* We fixed an issue where deactivation of some apps led to unexpected errors.
    
 ### October 19, 2023
 
 #### New Features
 
 * We added the following features to [Epics](/developerportal/project-management/epics/): 
-   * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
-   * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name, or assignee. You can also filter by any tag and combine the results.
+    * We added the new section **Audit Trail** to the [story details](/developerportal/project-management/epics/board/#story-details) page to log the information on all the updates related to the story, including who updated the information and when.
+    * We enabled filtering both on the [Board](/developerportal/project-management/epics/board/) page and the [Planning](/developerportal/project-management/epics/planning/) page. You can filter stories by story title, story ID, epic name, or assignee. You can also filter by any tag and combine the results.
 
 #### Improvements
 
@@ -48,11 +58,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes 
 
- * In [Epics](/developerportal/project-management/epics/), we fixed the following issues:
-   * We fixed an issue that stories were not getting removed from the board after a Sprint is completed.
-   * We fixed an issue regarding dark mode where the screen would flicker.
+* In [Epics](/developerportal/project-management/epics/), we fixed the following issues:
+    * We fixed an issue that stories were not getting removed from the board after a Sprint is completed.
+    * We fixed an issue regarding dark mode where the screen would flicker.
 * We fixed an issue where the last Scrum Master could be removed from an app with API keys.
 * We fixed an issue that allowed new members to accept an invitation to an app multiple times.
+
 ### October 12, 2023
 
 #### New Features
@@ -70,7 +81,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Deprecations
 
 * Stories is officially retired and Epics is the only official Mendix agile planning tool now. You can still migrate all your data from Stories to Epics.
-
 
 ### September 28, 2023
 
@@ -93,7 +103,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Deprecations
 
 * We have done all the preparation work for retiring Stories (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
-
 
 ### September 7, 2023
 
@@ -398,7 +407,7 @@ For more information on security issues, see [Security Advisories](/releasenotes
 #### Fixes
 
 * We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
-* We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
+* We updated the text in the [notifications](/developerportal/#profile-notification-help) when a story is assigned to you in **Epics**.
 
 ### February 13, 2023 {#feb-13-23}
 
@@ -569,7 +578,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Notifications](/developerportal/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/#profile-notification-help) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21, 2022
 
@@ -715,7 +724,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We improved the platform navigation. The [Switch to](/developerportal/#navigation) menu on the left side of the top bar now also provides access to your recently used apps.  
+* We improved the platform navigation. The [Switch to](/developerportal/#global-navigation) menu on the left side of the top bar now also provides access to your recently used apps.  
 
 ## 2021
 
@@ -898,7 +907,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We added a tab on the [Cloud](/developerportal/control-center/#cloud) page in Control Center that displays details on **Free Environments**.
-* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the [Developer Portal](/developerportal/#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
 
 ### May 17, 2021
 

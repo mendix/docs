@@ -40,7 +40,6 @@ To download a backup of your data, do as follows:
 
 6. After the archive is created, use the value of `url` in the output to download the backup archive.
 
-
 ## 4 API Calls
 
 ### 4.1 List Environment Snapshots

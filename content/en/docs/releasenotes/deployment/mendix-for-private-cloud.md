@@ -13,6 +13,29 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 3, 2023
+
+#### Portal Fixes
+
+* Resolved an issue where ephemeral storage requests and limits were always set to 1 GB. (Ticket [200491](https://mendixsupport.zendesk.com/agent/tickets/200491).)
+
+#### Private Cloud License Manager (Beta- Release 2)
+
+* Resolved an issue where the user was unable to import a large bundle of licenses at the same time.
+
+
+### November 2, 2023
+
+#### Portal Improvements
+
+* We have introduced a feature within the **Plan** section that enables the deletion of plans from the portal.
+* We have separated the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. The **Modify MxAdmin Password** option must now be explicitly selected to enable the modification of the MxAdmin password. For existing users, if the **Manage Environment** option is already selected, the **Modify MxAdmin Password** option will be automatically enabled; otherwise, it will remain unselected.
+* We have added a new option to search environments based on the namespace on the **Environments Overview** page.
+
+#### Deploy API Improvements
+
+* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. 
+
 ### October 30, 2023
 
 #### Data Migration Tool (Preview) v0.0.3
@@ -32,7 +55,6 @@ The data migration tool is available as a technical preview. For documentation a
 * In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963) 
 * We have fixed the issue where a user was able to select custom plans created for other namespaces.
 * We have added an extra warning message when a user tries to switch from default to custom core resource plans.
-
 
 ### October 13, 2023
 

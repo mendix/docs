@@ -109,21 +109,21 @@ To unlink a Free App, do the following:
 
 2. Select the app that you want to unlink.
 
-3. Go to **Environments** in the left navigation panel.
+3. Go to [Environments](/developerportal/deploy/environments/) in the left navigation panel.
 
-    If the **Environments** tab shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
+4. If the page shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/link-node.png" >}}
    
-4. Click **Unlink your app**.
+5. Click **Unlink your app**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/unlink-free-app.png" >}}
 
-5. Click **Yes, delete all data and unlink this app** to confirm.
+6. Click **Yes, delete all data and unlink this app** to confirm.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" width=250 >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" width=400 >}}
 
-6. Validate with your [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+7. If prompted, validate with your [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
 Your app has now been unlinked from the Free App environment.
 
@@ -167,9 +167,9 @@ To connect your app to a licensed node, do the following:
 
 6. If there is already an app linked to the node, you will be prompted to confirm that you want to replace it. Click **Continue** to confirm.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-replace.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-replace.png" width=400 >}}
 
-7. Validate with your [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+7. If prompted, validate with your [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
 Your app is now connected to this node.
 
@@ -197,9 +197,9 @@ For example, take the following case:
 
 To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
-1. Create a new, blank app **App C** . Do not connect it to any environment.
+1. Create a new, blank app **App C**. Do not connect it to any environment.
 
-2. Link **App C** to **Node 1** (see the [Connecting Your App to a Licensed Node](#connect-app) section, above). This will unlink **App A**.
+2. Link **App C** to **Node 1** (see the [Connecting Your App to a Licensed Node](#connect-app) section, above). This unlinks **App A**.
 
 3. Now that **App A** is unlinked from **Node 1**, you can link it to **Node 2**.
 

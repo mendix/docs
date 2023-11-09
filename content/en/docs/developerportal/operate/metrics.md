@@ -27,7 +27,7 @@ These statistics are displayed as trends over time. You can adjust the view to d
 
 ## 2 Accessing the Metrics Graphs
 
-To view the graphs on the **Metrics** page, you must have permission to **Access the Monitoring**.
+To view the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions.
 
 {{% alert color="info" %}}
 Metrics are included in all paid editions of Mendix Cloud. Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is allowed to grant node permissions.
@@ -36,10 +36,10 @@ Metrics are included in all paid editions of Mendix Cloud. Only the [Technical C
 If you are the Technical Contact, you can assign permission by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Collaborate** > **Security** on the left.
-3. Go to the **Node Permissions** tab.
-4. Choose the environment for which you want to grant access.
-5. Select **Access to Monitoring** next to the name of the person for whom you want to grant this permission.
+2. Go to **Environments** and switch to the **Permissions** tab.
+3. Choose the environment for which you want to grant access.
+    {{< figure src="/attachments/developerportal/operate/metrics/environment.png" width=150 alt="" >}}
+4. Select the **Access to Monitoring** checkbox for the people you want to grant this permission to.
 
     {{< figure src="/attachments/developerportal/operate/metrics/nodepermission.jpg" >}}
 

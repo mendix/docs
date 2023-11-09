@@ -39,6 +39,8 @@ The menu items open the following parts of the Mendix Platform:
 * [Catalog](/catalog/)
 * [Academy](https://academy.mendix.com/link/home)
 * [Community](/developerportal/community-tools/)
+* [Create New App](https://new.mendix.com/link/overview/)
+* [mendix.com](https://www.mendix.com/)
 
 You can hover over the menu items above to expand the sections for further access.
 

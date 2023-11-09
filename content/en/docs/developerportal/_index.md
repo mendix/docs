@@ -28,7 +28,7 @@ On the left side of the top bar, click the **Open Global Navigation** button (vi
 
 {{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
 
-The menu items open the following parts of the Mendix Platform:
+Clicking the menu items opens the following parts of the Mendix Platform:
 
 * **Home** – the [My Apps](/developerportal/#my-apps) page
 * **Apps** – the [My Apps](/developerportal/#my-apps) page

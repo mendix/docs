@@ -3,7 +3,7 @@ title: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
 tags: ["control center", "release notes"]
-weight: 25
+weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -24,7 +24,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 #### Fixes 
 
 * We fixed an issue where deactivation of some apps led to unexpected errors.
-{{% todo %}}Double-check{{% /todo %}}
+  {{% todo %}}Double-check{{% /todo %}}
   
 ### October 19, 2023
 

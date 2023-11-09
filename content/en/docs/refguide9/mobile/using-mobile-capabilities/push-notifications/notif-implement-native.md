@@ -43,6 +43,8 @@ By default this widget is configured with an **Example** action. It uses a non-p
 
 ### 3.1 Configuring Custom Actions
 
+In certain situations, you may wish to configure your own custom actions. For example, if you want to promote a sales offer in a push notification and have a user tap the notification to bring them to the product page, you will require a custom action. 
+
 To configure your own actions, do the following:
 
 1. Copy or inline the snippet **NativeHomepage_Snippet** into your own module.

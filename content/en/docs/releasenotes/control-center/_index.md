@@ -13,7 +13,6 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 ## 2023
 
-
 ### October 26, 2023
 
 #### Improvements
@@ -191,7 +190,6 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 
 * We have released the company **Onboarding** functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
-
 ### September 6, 2021
 
 #### New Feature
@@ -255,7 +253,6 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 * We have updated the [App Projects](/control-center/#apps) tab of Control Center, where you can now do the following:
     * Open the [Team](/developerportal/general/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
     * Deactivate or delete an app or a team member
-
 
 ### February 5, 2021
 

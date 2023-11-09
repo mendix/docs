@@ -39,7 +39,16 @@ If you already had an **App events** widget on your home page, follow these step
 
 The snippet also adds the **Notifications** widget which lets users interact with the notifications the app receives.
 
-By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide9/persistability/#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
+By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide9/persistability/#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification.
+
+### 3.1 Configuring custom actions
+
+To configure your own actions:
+
+1. Copy or inline the snippet **NativeHomepage_Snippet** into your own module.
+1. Open the properties of the Notifications widget. In the General tab, add a new action and give it a unique name, this name should match the action name that is used when sending a notification.
+1. In the "On recieve" field, select the appropriate action you want to be triggered when the notification is recieved while the app is open. For example use a nanoflow and the Notification object as a parameter (see the **ORN_ExampleNotification** as a reference).
+1. In the "On open" field, select the appropriate action you want to be triggered when the user taps on the notification in the system tray. For example use a nanoflow and the Notification object as a parameter (see the **OON_ExampleNotification** as a reference).
 
 ## 4 Customizing Offline Synchronization
 

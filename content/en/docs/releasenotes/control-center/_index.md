@@ -280,7 +280,6 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 * We fixed a bug where a change of company name was not properly distributed along the platform.
 {{% todo %}}Double-check{{% /todo %}}
 
-
 ### October 4, 2020
 
 #### Improvements

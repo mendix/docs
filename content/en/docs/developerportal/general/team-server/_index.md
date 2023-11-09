@@ -31,7 +31,7 @@ The **Team Server URL** can be used to directly access your app content. On SVN 
 
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
-* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/developerportal/control-center/set-up-sso-byoidp/)
+* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/control-center/set-up-sso-byoidp/)
 
 If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 

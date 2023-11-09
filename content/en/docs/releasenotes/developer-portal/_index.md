@@ -33,7 +33,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/developerportal/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -48,7 +48,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
-* We added the ability to directly [remove app members](/developerportal/control-center/#members) from Control Center.
+* We added the ability to directly [remove app members](/control-center/#members) from Control Center.
 * In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
 
 #### Fixes 
@@ -82,7 +82,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) using an Excel file.
 
-* In Control Center, Mendix Admins can now [disable the digital signing](/developerportal/control-center/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
+* In Control Center, Mendix Admins can now [disable the digital signing](/control-center/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
 
 ### October 1, 2023
 
@@ -132,7 +132,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have released the beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
+* We have released the beta version of the [Application Health Dashboard](/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 
 ### August 24, 2023
 
@@ -166,8 +166,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* In Control Center, on the [Members](/developerportal/control-center/#members) page you can now sort members based on the number of apps to which they belong.
-* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/developerportal/control-center/#company-general-settings) tab of the [Company Settings](/developerportal/control-center/#company) page.
+* In Control Center, on the [Members](/control-center/#members) page you can now sort members based on the number of apps to which they belong.
+* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/#company-general-settings) tab of the [Company Settings](/control-center/#company) page.
 
 ### August 12, 2023
 
@@ -224,7 +224,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features 
 
-* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/developerportal/control-center/#41-active-and-deactivated-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
+* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/control-center/#41-active-and-deactivated-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
 * We introduced **Member ID** search functionality on the **Member** page in Control Center.
 
 #### Improvements
@@ -242,7 +242,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Deprecations
 
-* We removed the **Marketplace Content** section of [Control Center](/developerportal/control-center/), which had been deprecated since March, 2023.
+* We removed the **Marketplace Content** section of [Control Center](/control-center/), which had been deprecated since March, 2023.
 
 ### June 29, 2023
 
@@ -301,13 +301,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We have upgraded our [Portfolio Management](/developerportal/portfolio-management/) tool with new features:
     * You can now have multiple portfolios at the same time!
     * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
-* We have added the [Portfolios](/developerportal/control-center/#portfolios) page to Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
+* We have added the [Portfolios](/control-center/#portfolios) page to Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
 
 ### May 16, 2023{#byoidp}
 
 #### New Features
 
-* You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
+* You can now [set up an SSO (BYOIDP)](/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
 * You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
@@ -372,7 +372,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* In Control Center, we increased the limit of apps you can [activate or deactivate](/developerportal/control-center/#active-deactivated) to 100.
+* In Control Center, we increased the limit of apps you can [activate or deactivate](/control-center/#active-deactivated) to 100.
 * We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 #### Deprecations
@@ -394,7 +394,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+We have released a feature in Control Center where you can add and manage a [Security Contact](/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 With this feature, you can do the following:
 
@@ -509,7 +509,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We improved the way [Company Brand](/developerportal/control-center/#company-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
+* We improved the way [Company Brand](/control-center/#company-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
 * We removed the Brand Colors feature for Company Brand.
 
 ### October 20, 2022
@@ -652,11 +652,11 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* The free Mendix Cloud environment of an app can now be deleted from the [app details](/developerportal/control-center/#app-details) page in Control Center.
+* The free Mendix Cloud environment of an app can now be deleted from the [app details](/control-center/#app-details) page in Control Center.
 
 #### Improvements
 
-* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/developerportal/control-center/#app-details) page in Control Center.
+* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/control-center/#app-details) page in Control Center.
 * From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
 
 ### May 19, 2022
@@ -680,7 +680,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We removed the old Stories UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
-* We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/developerportal/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
+* We expanded the export-to-Excel functionality in [Control Center](/control-center/) for both the [Apps](/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
 
 #### Known Issues
 
@@ -846,7 +846,7 @@ In Portfolio Management, you can do the following
 
 #### New Feature
 
-* Mendix Admins can now configure their own [single sign-on](/developerportal/control-center/set-up-sso-byoidp/) configuration from the [Security](/developerportal/control-center/#security) tab of Control Center. 
+* Mendix Admins can now configure their own [single sign-on](/control-center/set-up-sso-byoidp/) configuration from the [Security](/control-center/#security) tab of Control Center. 
 
 ### September 2, 2021
 
@@ -865,7 +865,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We added a new menu item for Mendix Admins to access [Catalog Administration](/developerportal/control-center/#catalog) tasks in Control Center. For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
+* We added a new menu item for Mendix Admins to access [Catalog Administration](/control-center/#catalog) tasks in Control Center. For details, see [Catalog Administration](/control-center/catalog-admin/).
 
 ### August 19, 2021
 
@@ -877,13 +877,13 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/#company) could not add or remove team members.
 
 ### July 27, 2021
 
 #### Improvements
 
-* We improved the **External Members** overview on the Control Center [Dashboard](/developerportal/control-center/#dashboard) so that a list of external members from a specific company appears when you click a part of the pie chart.
+* We improved the **External Members** overview on the Control Center [Dashboard](/control-center/#dashboard) so that a list of external members from a specific company appears when you click a part of the pie chart.
 
 ### July 14, 2021
 
@@ -918,7 +918,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We added a tab on the [Cloud](/developerportal/control-center/#cloud) page in Control Center that displays details on **Free Environments**.
+* We added a tab on the [Cloud](/control-center/#cloud) page in Control Center that displays details on **Free Environments**.
 * We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
 
 ### May 17, 2021
@@ -941,7 +941,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where some graphs in the Control Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
+* We fixed an issue where some graphs in the Control Center [Dashboard](/control-center/#dashboard) were loading indefinitely. 
 * We fixed the page title of the Mendix Studio landing page.
 * Page links now open in the correct tab.
 
@@ -949,7 +949,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released the Control Center [Dashboard](/developerportal/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
+* We released the Control Center [Dashboard](/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
 
 ### March 30, 2021
 
@@ -995,15 +995,15 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/#groups) once it has been created.
-* Mendix Admins can now [deactivate](/developerportal/control-center/#members) Technical Contacts and the last Scrum Master in a team.
+* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/control-center/#groups) once it has been created.
+* Mendix Admins can now [deactivate](/control-center/#members) Technical Contacts and the last Scrum Master in a team.
 
 ### March 4, 2021
 
 #### Improvements
 
 * We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/collaborate/general-settings/) page.
-* We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/developerportal/control-center/) as a Mendix Admin, right?
+* We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/control-center/) as a Mendix Admin, right?
 * We made some preparations for Git support.
 * We improved the sharing of data across the Developer Portal so that it is more stable and secure.
 
@@ -1023,7 +1023,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We have updated the [App Projects](/developerportal/control-center/#apps) tab of Control Center, where you can now do the following:
+* We have updated the [App Projects](/control-center/#apps) tab of Control Center, where you can now do the following:
     * Open the [Team](/developerportal/general/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
     * Deactivate or delete an app or a team member
 
@@ -1048,7 +1048,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released the Mendix [Control Center](/developerportal/control-center/), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
+* We released the Mendix [Control Center](/control-center/), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
 
 #### Improvements
 

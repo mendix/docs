@@ -42,7 +42,7 @@ The Mendix SSO module has the following features:
 * App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/)
 
 {{% alert color="info" %}}
-[Mendix Admins](/developerportal/control-center/#company) can manage [groups](/developerportal/control-center/#groups) that grant app permissions to groups of users.
+[Mendix Admins](/control-center/#company) can manage [groups](/control-center/#groups) that grant app permissions to groups of users.
 {{% /alert %}}
 
 ### 1.3 Limitations

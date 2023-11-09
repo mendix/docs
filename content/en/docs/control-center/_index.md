@@ -1,12 +1,13 @@
 ---
 title: "Control Center"
-url: /developerportal/control-center/
+url: /control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 35
 no_list: false 
 description_list: true
 aliases:
+    - /developerportal/control-center
     - /developerportal/company-app-roles/users.html
     - /developerportal/company-app-roles/users
 ---
@@ -148,7 +149,7 @@ On the **General Settings** tab of this page, you can edit your **Company Name**
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
-If you have [configured single sign-on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), BYOIDP will automatically adopt it, without further actions from the Mendix Admins.
+If you have [configured single sign-on using BYOIDP](/control-center/set-up-sso-byoidp/), BYOIDP will automatically adopt it, without further actions from the Mendix Admins.
 
 To export all the email domains, use the **Export to Excel** button.
 
@@ -208,7 +209,7 @@ Digital signing of email content contributes to security, but why do you want to
 
 ### 8.2 Single Sign-On
 
-On the **Single Sign-On** tab, you can set up an identity federation between the Mendix Platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/).
+On the **Single Sign-On** tab, you can set up an identity federation between the Mendix Platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](/control-center/set-up-sso-byoidp/).
 
 ### 8.3 Security History
 
@@ -305,7 +306,7 @@ You may only have one Technical Contact per app. When you change the Technical C
 
 An organization's Catalog requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
-For details on these tasks, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
+For details on these tasks, see [Catalog Administration](/control-center/catalog-admin/).
 
 ## 13 Portfolios {#portfolios}
 

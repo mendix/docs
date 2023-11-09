@@ -1,6 +1,6 @@
 ---
 title: "Set Up an SSO (BYOIDP)"
-url: /developerportal/control-center/set-up-sso-byoidp/
+url: /control-center/set-up-sso-byoidp/
 category: "Control Center"
 weight: 10
 description: "Describes how you can use your company IdP to authenticate to Mendix."
@@ -86,7 +86,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 
 ## 3 Configuring Your BYOIDP Setup
 
-As a Mendix Admin, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/developerportal/control-center/#security) section.
+As a Mendix Admin, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/control-center/#security) section.
 
 In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will inform you of known limitations.
 

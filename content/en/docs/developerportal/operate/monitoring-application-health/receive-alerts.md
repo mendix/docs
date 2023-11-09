@@ -34,7 +34,7 @@ If you are the Technical Contact for an app, you can grant team members the **Re
 
 ### 2.2 Alerts Page
 
-You can also manage the alerts by yourself. For this, you need an **Application Operator**, **Business Engineer**, or **Scrum Master** role. Or, if a [Mendix Admin](/developerportal/control-center/#members) has defined a new team role for you, that role must have **Cloud Access**.
+You can also manage the alerts by yourself. For this, you need an **Application Operator**, **Business Engineer**, or **Scrum Master** role. Or, if a [Mendix Admin](/control-center/#members) has defined a new team role for you, that role must have **Cloud Access**.
 
 To enable email alerts, follow these steps:
 

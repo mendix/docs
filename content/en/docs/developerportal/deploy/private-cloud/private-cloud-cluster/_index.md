@@ -1126,13 +1126,6 @@ kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration
 Please note that Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory resources. If a container requests a substantial amount of memory, it should also correspondingly request more CPU cores. For detailed information on resource requests, you can refer to the [Resource Requests in Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests) documentation provided by Google Kubernetes Engine.
 {{% /alert %}}
 
-GKE will automatically set an autopilot.gke.io/resource-adjustment annotation in the Kubernetes Deployment for your application. This annotation serves as guidance for defining the recommended resource requests and limits for your containers. The autopilot.gke.io/resource-adjustment annotation allows you to customize or fine-tune this behavior for specific containers in your pods. You can set its value to one of the following options:
-
-* noop: This value tells Autopilot not to adjust the resource settings for the container. It effectively disables the automatic resource adjustment for that container.
-
-* unlimited: This value indicates that Autopilot should not set any resource limits for the container, effectively allowing the container to use resources without any bounds. Use this option with caution, as it can lead to resource contention and affect cluster stability.
-
-
 ## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.

@@ -163,6 +163,7 @@ The following databases are supported, and provide the features listed.
 | Standard PostgreSQL | Yes | Yes |
 | Microsoft SQL Server | Yes | Yes |
 | Dedicated JDBC | Yes | No |
+| AWS RDS Aurora | Yes | No |
 
 ### 4.1 Ephemeral Database
 

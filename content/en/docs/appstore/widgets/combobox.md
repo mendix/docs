@@ -22,30 +22,29 @@ The [Combobox](https://marketplace.mendix.com/link/component/xxx) widget display
 
 ## 2 Configuration
 
-The following sections will describe the different available widget properties and how to configure the widget using them.  
+The following sections will describe the different available widget properties and how to configure the widget using them.
 
 ### 2.1 General Tab {#general}
 
-#### 2.1.1 Data Source Section
+#### 2.1.1 Data Source Tab
 
-The **Data source** section (required) is used to configure the data for the widget. It has the following properties:
+The **Data source** section (required) is used to configure the data for the widget. It has the supports the following data types via these properties:
 
-* **Association** – 
-* **Enumeration** – 
-* **Boolean** – 
+* [Association](/refguide/association-source/)
+* [Enumeration](/refguide/enumerations/)
+* [Boolean](/refguide/boolean-expressions/)
 
-#### 2.1.2 General Section
+#### 2.1.2 General Tab
 
-The **General** sections allows you to configure general behaviour and captions for the combobox. The following configurations are available:
+The **General** sections allows you to configure general behavior and captions for the combobox. The following configurations are available:
 
 * **Placeholder text** – captions that will be displayed when there is no data being selected
-* **Filter type** – Allows the user to type into the input and filter displayable options on the combobox
-* **No options text** – captions that will be used when filter results is empty, or there is no data displayed in the combobox's options
-* **Clearable** – if turned on, then the selected data can be cleared
-* **Custom content** – allows custom widgets to be displayed in the combobox instead of normal text value (only for association data source).
+* **Filter type** – allows the user to type into the input and filter displayable options on the combobox
+* **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combobox's options
+* **Clearable** – if enabled, this allows selected data to be cleared
+* **Custom content** – allows custom widgets to be displayed in the combobox instead of normal text values (only for association data source)
 
-
-#### 2.1.3 Multi selection (reference set)
+#### 2.1.3 Multi Selection (reference set)
 
 The **Multi selection (reference set)** sections allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
 

@@ -48,16 +48,16 @@ The **General** sections allows you to configure general behavior and captions f
 
 The **Multi selection (reference set)** sections allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
 
-* **Selection Method** – configure the behavior for selecting options
-        * **Checkbox** – display checkbox on the left side of each options. Selected items will be marked by check mark.
-        * **Row click** – Each of selected items will be filtered out from the displayed options. Deselect item can be done by clicking on "x" button on each of the displayed selected items.
-* **Show selected item as** – You can choose to display selected item as labels with "x" buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
+* **Selection Method** – configures the behavior for selecting options
+        * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
+        * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the "x" button on each of the displayed selected items.
+* **Show selected item as** – you can choose to display selected item as labels with "x" buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
 
     {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
 
 #### 2.1.4 Label
 
-The **Label** sections allows you to displayed labels for the combobox.
+The **Label** sections allows you to display labels for the combobox.
 
 ### 2.1.5 Conditional visibility {#visibility-tab}
 
@@ -70,7 +70,6 @@ For more information, see [Editability Section](/refguide/common-widget-properti
 ### 2.2 Events Tab {#events-tab}
 
 **On change** – executes an action when the attribute value changes
-
 
 ### 2.3 Accessibility Tab {#accessibility-tab}
 

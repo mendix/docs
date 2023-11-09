@@ -9,7 +9,11 @@ tags: ["marketplace", "marketplace component", "widget", "combobox", "platform s
 
 ## 1 Introduction
 
-The [Combobox](https://marketplace.mendix.com/link/component/xxx) widget displays a list of options that users can select from.
+The [Combobox](https://marketplace.mendix.com/link/component/xxx) widget displays a list of options that users can select from. 
+
+A typical combobox can look like this:
+
+{{< figure src="/attachments/appstore/widgets/combobox/combobox.png" alt="Combobox Example" >}}
 
 ### 1.1 Features
 

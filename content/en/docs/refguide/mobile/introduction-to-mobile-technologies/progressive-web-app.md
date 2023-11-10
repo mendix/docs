@@ -183,7 +183,7 @@ In order to test the features requiring HTTPS protocol, use [ngrok](https://ngro
 
 ## 7 Troubleshooting
 
-### 7.1 Clearing the Cache
+### 7.1 Clear the Cache
 
 Progressive web apps (PWAs) cache resources such as pages, images, and their offline databases. This can interfere with local development or when updating your environment configuration, such as when adding HTTP headers. 
 
@@ -206,3 +206,14 @@ You can choose to clear the following resources:
 * **Web SQL**: clears the offline database
 * **Cookies**: clears the session and sign out the user (local and session storage must be selected as well)
 * **Cache storage**: clears all cached pages, images, and client JavaScript code (this will also refresh HTTP headers sent from the Mendix deployment environment)
+
+### 7.2 Enable WebSQL support in development
+
+Offline-first PWAs make use of WebSQL to store offline data. This was deprecated by Chromium and has since been disabled in several web browsers. To enable it for production environments, we have posted [this guide in our blog](https://www.mendix.com/blog/websql-removal-and-how-it-affects-your-mendix-pwas/).
+
+This solution should not be used for local development. Instead, it is recommended to test with Google Chrome and enable support for WebSQL locally. This can be done by following these simple steps:
+
+1. Open the URL `chrome://flags` in Google Chrome.
+1. Search for "WebSQL" in the search box at the top.
+1. Change the dropdown next to "Allow access to WebSQL APIs" from "Default" to "Enabled".
+1. Close the tab and start testing your offline-first PWA locally.

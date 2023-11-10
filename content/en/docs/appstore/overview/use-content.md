@@ -1,18 +1,15 @@
 ---
-title: "Use Marketplace Content in Studio Pro"
-url: /appstore/general/app-store-content/
+title: "Use Marketplace Content"
+url: /appstore/overview/use-content/
 linktitle: "Use Marketplace Content"
-category: "General Info"
-weight: 3
+weight: 2
 tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 aliases:
+    - /appstore/general/app-store-content/
     - /community/app-store/use-app-store-content-in-the-modeler/
     - /developerportal/app-store/app-store-content/
     - /developerportal/app-store/use-app-store-content-in-the-modeler/
-    - /community/app-store/use-app-store-content-in-the-modeler.html
-    - /developerportal/app-store/app-store-content.html
-    - /developerportal/app-store/use-app-store-content-in-the-modeler.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors "downloading", "widget", and "project-layout" below are mapped, so they should not be removed or changed.
 ---
@@ -24,16 +21,17 @@ This how-to covers the basics of accessing the Marketplace from Studio Pro and p
 This how-to teaches you how to do the following:
 
 * Download content from the Marketplace via Studio Pro
-* Use content (for example, widgets, modules, and others) downloaded from the Marketplace in Studio Pro
+* Use content (for example, widgets, modules, and connectors) downloaded from the Marketplace in Studio Pro
 
 {{% alert color="warning" %}}
-If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
+If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.
+{{% /alert %}}
 
 ## 2 Installing Marketplace Content {#install}
 
 There are three ways to install a Marketplace component, which are described in the sections below.
 
-### 2.1 Downloading Content from Within Studio Pro {#downloading}
+### 2.1 Finding and Downloading Content in Studio Pro {#downloading}
 
 #### 2.1.1 For Studio Pro 9.19 and Above {#current-sp}
 
@@ -43,27 +41,25 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
-3. There are two ways to open the Marketplace in Studio Pro;
-    * Click the **View** menu in the top-bar and select **Marketplace**
-    * Click the Marketplace icon on the right side of the top-bars
+3. To open the Marketplace in Studio Pro, you can either click the **View** menu in the top bar and select **Marketplace**, or you can click the Marketplace icon on the right side of the top bar
 
-    {{< figure src="/attachments/appstore/general/app-store-content/toolbar.png" alt="Marketplace icon" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/toolbar.png" alt="Marketplace icon" >}}
 
     The **Marketplace** pane opens.
 
-    {{< figure src="/attachments/appstore/general/app-store-content/marketplace.png" alt="Search result for rating" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/marketplace.png" alt="Search result for rating" >}}
 
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
-        * You can paste the content ID here if you copied it via the [Use in Studio Pro button](/appstore/general/app-store-overview/#details) in the web Marketplace
-    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home)
+        * You can paste the content ID here if you copied it via the [Use in Studio Pro button](/appstore/overview/#details) in the web Marketplace
+    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/overview/#home)
     * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**
 
 5. Select a component from the pane to see its details:
 
-    {{< figure src="/attachments/appstore/general/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/component-details.png" alt="Details of Blank App example component" >}}
 
-    The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details) in the online Mendix Marketplace.
+    The details presented here correspond to what you see on the [component details page](/appstore/overview/#details) in the online Mendix Marketplace.
 
 6. <a id="step-six"></a>Click **Download** to download the component. The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application (for widgets, version compatibility is not applicable). By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
@@ -79,30 +75,30 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#### 2.1.1 For Studio Pro 9.18 and Below
+#### 2.1.2 For Studio Pro 9.18 and Below
 
 To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and below, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
 3. Click the Marketplace icon in the top menu bar to open it in Studio Pro. The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
-4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issue.
+4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the online [Marketplace](/appstore/overview/) due to synchronization issue.
 5. Click the component (or the **Read more** button on the right side) to show the details of the component.
 6. Continue from [step 6](#step-six) above.
 
-### 2.2 Importing Content from App Explorer {#import}
+### 2.2 Importing Content from Studio Pro's App Explorer {#import}
 
 {{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), and [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)).{{% /alert %}}
 
 To import content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details).
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/overview/#details).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
 
-    {{< figure src="/attachments/appstore/general/app-store-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
 
     The **Import Module** dialog box opens. 
 
@@ -120,12 +116,10 @@ You can find the imported module or connector in the **App Explorer**.
 
 ### 2.3 Manually Adding Content into App Directory {#add}
 
-{{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/module-settings/#module-type).{{% /alert %}}
-
 To manually add content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details).
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/overview/#details).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. Open Studio Pro and sign in with your Mendix credentials.
@@ -154,7 +148,7 @@ To add a widget  from the **Toolbox**, follow these steps:
 1. Open the page where you want to add the widget.
 2. In the **Toolbox**, search for the name of the widget (for example, *Rating* to find the widget):
 
-    {{< figure src="/attachments/appstore/general/app-store-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
 
 3. Drag the widget to the place on the page where you want it to be.
 
@@ -162,16 +156,16 @@ To add a widget using the **Add widget** option from the toolbar, follow these s
 
 1. Click **Add widget** on the toolbar on the page where you want to add the widget. The **Select Widget** dialog box opens.
 
-    {{< figure src="/attachments/appstore/general/app-store-content/add-widget.png" alt="Add widget" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/add-widget.png" alt="Add widget" >}}
 
 2. In the **Filter** bar, enter the name of the widget, for example *Rating*, to find the widget.
 
-    {{< figure src="/attachments/appstore/general/app-store-content/select-widget.png" alt="Rating widget highlighted in Select Widget dialog box" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/select-widget.png" alt="Rating widget highlighted in Select Widget dialog box" >}}
 
 3. Click the widget and then click **Select**. 
 4. In the page, click where you want to drop the widget. The widget is added to the location where the mouse pointer is.
 
-    {{< figure src="/attachments/appstore/general/app-store-content/widget-dropped-in-page.png" alt="Rating widget in the page" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/widget-dropped-in-page.png" alt="Rating widget in the page" >}}
 
 #### 3.1.2 Updating the Widget to a Newer Version
 
@@ -193,15 +187,15 @@ To configure the widget, follow these steps:
 
 1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
-    {{< figure src="/attachments/appstore/general/app-store-content/widget-errors.png" alt="Errors pane" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/widget-errors.png" alt="Errors pane" >}}
 
 2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens and the **Attribute** field shows **(none)** – this means that no attribute is assigned, which causes the error.
 
-    {{< figure src="/attachments/appstore/general/app-store-content/edit-rating.png" alt="Edit Rating dialog box" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/edit-rating.png" alt="Edit Rating dialog box" >}}
 
 3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
-    {{< figure src="/attachments/appstore/general/app-store-content/select-attribute.png" alt="ProductRating selected in Select Attribute dialog box" >}}
+    {{< figure src="/attachments/appstore/overview/use-content/select-attribute.png" alt="ProductRating selected in Select Attribute dialog box" >}}
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane disappears.
 
@@ -221,7 +215,7 @@ To update the module in your app to a newer version, follow these steps::
 
    {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
-   {{< figure src="/attachments/appstore/general/app-store-content/import-module.png" alt="Import Module dialog box" >}}
+   {{< figure src="/attachments/appstore/overview/use-content/import-module.png" alt="Import Module dialog box" >}}
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 

@@ -202,7 +202,7 @@ To authenticate your calls you will need to provide the Insights Hub IIoT Authen
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/binding-keys.png" alt="Binding" >}}
 
-You can find more information about managing binding keys in the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) and [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) sections of *Marketplace Overview*.
+You can find more information about managing binding keys in the [My Subscriptions](/appstore/overview/my-marketplace/#my-subscriptions) and [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions) sections of *My Marketplace*.
 
 ## 4 Using Insights Hub IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 
@@ -218,7 +218,7 @@ Drag the [entities](/refguide/external-entities/) you need into your domain mode
 
 To extract data from Insights Hub, your calls to the Insights Hub API need to be authenticated. This is done through the [Insights Hub IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
-Download the **Insights Hub IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *How To Use Marketplace Content*.
 
 In the **_Use me** folder of the *InsightsHubIIotAuthenticator* module set the following constants:
 
@@ -240,7 +240,7 @@ Set the **Error handling microflow** to be *InsightsHubIIoTAuthenticator.DH_Erro
 
 To extract data from Insights Hub, your calls to the Insights Hub API need to be authenticated. This is done through the [Insights Hub IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
-Download the **Insights Hub IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content/#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *How To Use Marketplace Content*.
 
 ### 5.3 Authenticating Insights Hub REST Calls {#authenticating}
 

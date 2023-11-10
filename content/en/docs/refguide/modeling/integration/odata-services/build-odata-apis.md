@@ -372,7 +372,7 @@ There are two ways to take an API-first approach, as explained in [API-First vs.
 
 ### 6.1 Defining a Resource Model
 
-Define a resource model using [non-persistable entities](/refguide/persistability/), published them in an OData service, then model microflows to map these resources to the actual source data. This will require you to handle the OData query options in the microflow. Using custom Java actions can simplify this process, as explained in the [Combining Data from Two Entities](#two-entities) section below.
+Define a resource model using [non-persistable entities](/refguide/persistability/), publish them in an OData service, then model microflows to map these resources to the actual source data. This will require you to handle the OData query options in the microflow. Using custom Java actions can simplify this process, as explained in the [Combining Data from Two Entities](#two-entities) section below.
 
 ### 6.2 Combining Data from Two Entities {#two-entities}
 

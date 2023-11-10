@@ -11,7 +11,7 @@ tags: ["mobile", "native", "studio pro"]
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-It is not possible to target an Android API Level higher than 30 with native mobile apps built with Mendix 8.18. If you need to support newer Android versions, please upgrade your app to [Studio Pro 9.24](/releasenotes/studio-pro/9.24/). Note that this is required for apps published via the Google PlayStore.
+It is not possible to target an Android API level higher than 30 with native mobile apps built with Mendix 8.18. If you need to support newer Android versions, please upgrade your app to [Studio Pro 9.24](/releasenotes/studio-pro/9.24/). Note that this is required for apps published via the Google PlayStore.
 
 For more information on migrating from Mendix 8 to 9, see [Moving from Mendix Studio Pro 8 to 9
 ](/refguide9/moving-from-8-to-9/).

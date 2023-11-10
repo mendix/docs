@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Overview"
 url: /appstore/overview/
-weight: 10
+weight: 1
 no_list: false
 description_list: true
 description: "Presents overview information on the Mendix Marketplace."
@@ -116,7 +116,7 @@ Support for Marketplace content is determined by the content support category an
 | **Platform** | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Standard**, or **Premium**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
 | **Deprecated** | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
 | **Community** | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
-| **Partner** | The content in this category is provided and supported by a partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/). | 
+| **Partner** | The content in this category is provided and supported by a partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/partner-program/). | 
 | **Siemens** | The content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. | 
 
 ### 4.2 Feedback Process Details
@@ -150,7 +150,7 @@ The level of support depends on the availability and effort of the developer and
 
 #### 4.2.4 Partner Category
 
-Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](#details) contains a reference to the partner's support portal or the partner's support contact email.
+Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](#details) contains a reference to the partner's support portal or the partner's support contact email.
 
 ### 4.3 Feedback Process Summary
 
@@ -167,7 +167,7 @@ Partner-supported content is created and maintained by partners as part of the [
 | Support Category | Supplied by Individual Developer | Supplied by Partner Organization | Notes |
 | --- | --- | --- | --- |
 | **Community** | Mendix community supports | Options: No support from partner, or Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
-| **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) | Content in this category is provided and supported by a Mendix partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/). |
+| **Partner**  | N/A | Partner supports premium customers (allowed after Mendix Component Partner agreement is signed) | Content in this category is provided and supported by a Mendix partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/partner-program/). |
 
 #### 4.3.3 Siemens-Supplied Content
 

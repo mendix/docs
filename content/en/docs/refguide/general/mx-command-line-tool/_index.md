@@ -69,6 +69,7 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 | --- | --- |
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
+| [dump-mpr](/refguide/mx-command-line-tool/dump-mpr) | Export the app model of a Mendix App |
 
 ## 4 Undocumented Options
 

@@ -312,7 +312,7 @@ In general, we recommend you perform the following steps in case of any issues d
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
 {{% alert color="warning" %}}
-When testing the PDF document generation locally using Chrome or Chromium version 117 or above, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. Mendix is currently looking into this issue, and we advise using the Chromium version cited in the [Chromium](#chromium) section above to guarantee the same result locally as from our PDF document generation service.
+If the document generated locally is not matching with the one generated in the cloud, we advise using the Chromium version cited in the [Chromium](#chromium) section above to guarantee the same result locally as from our PDF document generation service.
 {{% /alert %}}
 
 #### 5.2.2 Local Service Errors
@@ -333,7 +333,7 @@ In case you encounter the message "Unable to generate document, service response
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
 
-In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
+In case you encounter the message "No configuration object available. For use in Mendix Cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
 
 #### 5.2.4 Timeout Errors
 

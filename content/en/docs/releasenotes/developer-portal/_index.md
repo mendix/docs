@@ -17,6 +17,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### November 9, 2023
+
+#### New Features
+
+* In [Feedback](/developerportal/app-insights/feedback/), we implemented a rich text editor in the text box of **Team Comments** and the text box where the feedback reporter and team members send messages to each other.
+* In [Mini Surveys](/developerportal/app-insights/mini-surveys/), if you now click an individual response in the list at the bottom of the **Responses** tab, you can see the details of the response on a side panel. 
+
+#### Fixes
+
+* We fixed issue in Feedback where tags could be incorrectly duplicated.
+* We fixed issue in Feedback where deleting tags or statuses caused errors. 
+
 ### November 2, 2023
 
 #### Improvements
@@ -43,7 +55,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed a bug in Feedback where a small number of users were experiencing an error when converting a feedback item to a story.
 * We fixed an issue where deactivation of some apps led to unexpected errors.
-   
+  
 ### October 19, 2023
 
 #### New Features

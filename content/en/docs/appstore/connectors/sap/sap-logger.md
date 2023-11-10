@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The SAP Logging Connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the *SAP Business Technology Platform Application Logging* service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
+The [SAP Logging](https://marketplace.mendix.com/link/component/110219/) connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the *SAP Business Technology Platform Application Logging* service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
 
 By using this connector, logs will be output in a JSON format with the following fields:
 

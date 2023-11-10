@@ -1,11 +1,11 @@
 ---
-title: "Merge Algorithm with Fine-Grained Conflict Resolution"
-linktitle: "Merge Algorithm and Conflict Resolution"
+title: "Combining Changes and Conflict Resolution"
+linktitle: "Combining Changes and Conflict Resolution"
 url: /refguide/merge-algorithm/
 category: "Version Control"
 weight: 10
-description: "Describes a merge algorithm and how it resolves conflicts."
-tags: ["merge", "algorithm", "conflict", "resolution"]
+description: "Describes combining changes with conflict resolution flow."
+tags: ["rebase", "mine", "theirs", "merge", "conflict"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 aliases:
     - /refguide/new-merge-algorithm
@@ -13,61 +13,172 @@ aliases:
 
 ## 1 Introduction
 
-A merge algorithm with fine-grained conflict resolution is used when you update your app or merge changes in it. The merge algorithm has the following features:
+While working on your changes it may happen that your current workspace won't have all the changes from the server that other members had done.
+In git terminology this is called being behind.
+
+When this happens you shall be introduced with two possibilities of combining your work with theirs.
+
+You can select [Merge](#merge) or [Rebase](#rebase), while both are used to combine changes they work slighlty differently.
+
+Both of those support the same features were it comes to [resolving the conflicts](#resolve) themself:
 
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
 
-## 2 Resolving Conflict Example
+## 2 Work Example 
 
-A page document in your app is designed as shown below:
+### 2.1 Starting point 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-base-page.png" alt="Original page" >}}
+Let's work on below example. Where we have two entities 'User' and 'Game'. This will be a starting point for your work.   
 
-Your colleague makes the following changes in the main line:
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Starting_State.png" alt="Domain Model Commit 1" >}} 
 
-* The text *Home* is changed to *Welcome!*
-* The subtitle *Welcome to your new app* is deleted
-* A text *Write some text here* is added to the bottom layout grid
+### 2.2 Your work 
 
-Your colleague's new document layout is shown below:
+During your work you make two changes, each one in separate commit. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-main-page.png" alt="Main line page" >}}
+In first commit you decide that 'E-mail' should be renamed to 'Email' 
 
-You make the following changes on a branch line:
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/First_Local_Commit.png" alt="Your Work Commit 4" >}} 
 
-* You change the text *Home* to *My home page*
-* You add a data grid inside the bottom layout grid
+In the next commit you rename 'Second E-mail' to be consistent with previous change. 
 
-Your page is now laid out as shown below:
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Second_Local_Commit.png" alt="Your Work Commit 5" >}}   
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-branch-page.png" alt="Branch line page" >}}
+### 2.3 Server Changes 
 
-## 3 Resolving Conflicts
+In the meantime, your colleague also decided to make some changes to both email fields. 
 
-When you merge changes, the new algorithm shows you the following conflicts:
+Renaming 'E-mail' to 'EmailAddress' and removing 'Second_E-mail' entirely and pushing those changes to the server.
 
-1. The text that both sides changed. 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Remote_State.png" alt="Remote Work Commit 2" >}} 
 
-2. A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
+### 2.4 Summary 
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-conflicts.png" alt="Merge algorithm conflicts" >}}
+Current situation could be represent as shown below: 
 
-To start solving conflicts first choose an approach for all conflicts that merge algorithm will apply:
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/rebase-mine-theirs/Step1.png" alt="Step 1" >}} 
 
-* **Interactive Merge** – combines both changes where possible
-* **Resolve using my whole document** – uses only changes from your branch and applies them to all conflicted documents
-* **Resolve using their whole document** – uses only changes from the other branch and applies them to all conflicted documents
+## 3 Combining Changes
 
-In this example, **Interactive Merge** was selected to resolve conflicts.
+### 3.1 Rebase {#rebase}
 
-### 3.1 Resolving the First Conflict
+Rebasing is one way to integrate your work with the server changes by moving your changes to the tip of the server.
 
-**Interactive Merge** described above was selected for conflict resolution. Changes were partially combined and you can revise each conflict individually. 
+Due to git framework, during rebase, there is a slight terminology change in Studio Pro compared to merge.   
 
-For the first conflict, you can inspect changes and decide which version to apply. Select one of the lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**.
+#### 3.1.1 Rebase started 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/merge-algorithm-resolve-mode.png" alt="Conflict resolution mode" >}}
+After starting to rebase your two commits shall be put aside, and Studio Pro will show changes from the tip of server. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_1.png" alt="Rebase Step 1" >}} 
+
+{{% alert color="info" %}}
+Your work shall be now referenced as 'Theirs', while server changes shall be 'Mine' 
+{{% /alert %}}
+
+#### 3.1.2 Resolving the First Conflict  
+
+Git will try to apply your first commit to the tip. During this process a conflict will be detected. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_First.png" alt="First conflict rebase" >}} 
+
+In the above example you can see that your work is represented in the 'Theirs' column while your colleague's work is 'Mine'. 
+
+After resolving conflicts, commit shall be applied. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_2.png" alt="Rebase Step 2" >}} 
+
+#### 3.1.3 Resolving the Second Conflict 
+
+Rebasing the next commit also detects conflict. During resolving it you decide to add another attribute 'Login', to the 'User' entity.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_Mine_Change.png" alt="New change during conflict rebase" >}} 
+
+Above you can see that your new change is represented as 'Mine', together with changes that were taken from the server. 
+
+After resolving conflicts, commit shall be applied. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_3.png" alt="Rebase Step 3" >}} 
+
+#### 3.1.4 Test Changes 
+
+After rebased process is finished your previous work that was put aside is now removed, and your rebased work is still local. 
+
+Now you have time to re-test all those changes, and later push it to the server. 
+ 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_4.png" alt="Rebase Step 4" >}}
+
+#### 3.1.5 Push Changes 
+
+After you pushed your work to the server state of it is represented below:
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_5.png" alt="Rebase Step 5" >}}
+
+### 3.2 Merge {#merge}
+
+Merge is another way you could use to integrate you work with remote changes by combining them using special merge commit.
+
+#### 3.2.1 Merge started 
+
+After starting merge process your two commits Studio Pro will start merging one commit at the time. 
+
+// NEED IMAGE MERGE_STEP_1 
+{{% alert color="info" %}}
+Your work shall be now referenced as 'Mine', while server changes shall be 'Theirs’. 
+{{% /alert %}}
+
+#### 3.2.2 Resolving the First Conflict
+
+Git will try to apply your first commit to the tip. During this process a conflict will be detected. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Merge_First.png" alt="First conflict merge" >}} 
+
+In the above example you can see that your work is represented in the 'Mine' column while your colleague's work is 'Theirs'. 
+
+After resolving conflicts, commit shall be applied. 
+
+// NEED IMAGE MERGE_STEP_2
+
+#### 3.2.3 Resolving the Second Conflict
+
+Merging the next commit also detects conflict. During resolving it you decide to add another attribute 'Login', to the 'User' entity.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Merge_Mine_Change.png" alt="New change during conflict merge" >}} 
+
+Above you can see that your new change is represented as 'Mine'. 
+
+After resolving conflicts, commit shall be applied. 
+
+// NEED IMAGE MERGE_STEP_3
+
+#### 3.2.4 Test Changes 
+
+After merge is finished you will need to test and commit all merged changes, and later push it to the server. 
+
+// NEED IMAGE MERGE_STEP_4
+
+#### 3.2.5 Push Changes 
+
+After you pushed your work to the server state of it is represented below:
+
+// NEED IMAGE MERGE_STEP_5
+
+## 4 Resolving conflicts {#resolve}
+
+Conflicts may arise when both you and your colleague change the same things, sometimes git and/or Studio Pro is able to resolve them automatically without anyone losing work but, in some cases, those must be resolved manually.
+
+Studio Pro enables you to resolve conflicts by choosing one of two ways: 
+* Interactive merge
+* Using whole documents
+
+While explaining resolving of conflicts we will be using [Merge](#merge) flow, besides changes about 'Mine' and 'Theirs' both look the same.
+
+#### 4.1 Using Interactive Merge
+
+For the conflict, you can inspect changes and decide which version to apply. Select one of the lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Interactive_Merge.png" alt="Interactive Merge" >}}
 
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
@@ -79,18 +190,21 @@ There is a third option to deal with a conflict: **Mark as Resolved**. This mean
 
 Once you have chosen one of the three options to resolve the conflict, green check marks will appear to indicate that this conflict has been dealt with.
 
-### 3.2 Resolving the Second Conflict
+Once all conflicts have been resolved, click the **Accept and Exit** button to finalize the results. The document will be saved and the conflict for that document will be gone. The result is the document that contains changes from both sides and possibly some manual edits.
 
-The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict. 
+At any time, you can also choose to abort conflict resolution by clicking the **Cancel** button. The conflict will remain, and you can resolve it later.
 
-You can also decide to delete one of the widgets or add a new one. The document is fully editable while resolving conflicts. 
+#### 4.2 Using Whole Documents 
 
-After resolving the second conflict, the bar at the top will turn green to indicate that all conflicts have been resolved.
+You can resolve conflicted documents also by using either:
 
-Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved.
+* Resolve conflict using my whole document - while merging it will resolve all conflicts in this document using your work
+* Resolve conflict using theirs whole document - while merging it will resolve all conflicts in this document using server changes
 
-### 3.3 Finishing Conflict Resolution
+{{% alert color="warning" %}}
+Remember that during rebase Mine and Theirs are switched.
+{{% /alert %}}
 
-Once all conflicts have been resolved, click the **Accept and Exit** button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is the document that contains changes from both sides and possibly some manual edits.
 
-At any time, you can also choose to abort conflict resolution by clicking the **Cancel** button. The conflict will remain and you can resolve it later.
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Interactive_Merge.png" alt="Interactive Merge" >}}
+

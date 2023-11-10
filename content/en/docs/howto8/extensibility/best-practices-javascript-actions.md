@@ -8,8 +8,6 @@ description: "This set of best practices will help you get the most out of your 
 tags: ["JavaScript", "API", "nanoflow"]
 ---
 
-## 1 Introduction
-
 JavaScript actions can extend your app with several new functions. To implement JavaScript actions most effectively, be sure to follow these best practices.
 
 These best practices teach you how to do the following:

@@ -99,6 +99,9 @@ To set up a template, follow these steps:
     {{% alert color="info" %}}The file name can always be changed when the template is used within a microflow.{{% /alert %}}
 
 6. Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
+
+    {{% alert color="info" %}}The **Input Object** is not mandatory. You can still export required entities by specifiying **Row Object** in Worksheet definition.{{% /alert %}}
+      
 7. Provide a **Description** for identifying and documenting what this template is for:
 
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/new-excel-template.png" >}}
@@ -135,8 +138,14 @@ To create the worksheet layout, follow these steps:
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template){{% /alert %}}
 
-3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used). Each object of this entity type will be saved as a row in the worksheet.
+3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object was specified earlier during Template creation). Each object of this entity type will be saved as a row in the worksheet.
 
+   Following figure depicts a template where worksheet is *without* Input Object and reference to **Input Object**
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_with_inputObj.png" >}}
+
+   Following figure depicts a template where worksheet is *with* Input Object and reference to **Input Object**
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_without_inputObj.png" >}}
+      
 4. Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 
     {{% alert color="info" %}}This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data{{% /alert %}}
@@ -215,9 +224,10 @@ To configure the custom formatting and styling for the cells, follow these steps
 
 ## 7 Calling the Excel Export Module via Microflow
 
-In this section, you will learn how to call the newly created Excel export template in your application. To retrieve the template and generate the document, follow these steps:
+In this section, you will learn how to call the newly created Excel export template in your application. Assuming you have used **Input Object**; follow these steps to retrieve the template and generate the document:
 
-1. Create a microflow that either takes an inbound parameter of the object that needs to be exported, or retrieve that object into your microflow.
+1. Create a microflow that takes an inbound parameter of the **Input Object** which is associated with objects that need to be exported.
+   
 2. In the microflow, retrieve a single object which is the template you set up earlier to use for the export.
 
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/retrieve-template.png" >}}
@@ -231,6 +241,8 @@ In this section, you will learn how to call the newly created Excel export templ
 Your microflow should look similar to this:
 
 {{< figure src="/attachments/howto/integration/using-the-excel-exporter/microflow-for-generate.png" >}}
+
+If your template definition does NOT have **Input Object**, then your microflow can directly retrieve the template object and also retrieve the **Row Object** from database for their export.
 
 ## 8 Running the Microflow
 
@@ -257,6 +269,10 @@ To run the microflow you created above, you will need to create another microflo
 Your new microflow should look similar to this:
 
 {{< figure src="/attachments/howto/integration/using-the-excel-exporter/associating-objects.png" >}}
+
+{{% alert color="info" %}}
+Please take a note of *DeleteAfterDownload* flag set for the PolicyDoc entity - this is to avoid having multiple PolicyDocs being associated with same set of policy entities.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 If you create a **PolicyDoc** with *no* associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.

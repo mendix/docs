@@ -41,6 +41,10 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 * Provide a colleague with a link to a certain object instead of describing the necessary navigation steps
 * Generate confirmation links that can be emailed to users
 
+### 1.3 Dependencies
+
+* [Data Widgets](https://marketplace.mendix.com/link/component/116540): required for the Deeplink module version 10.0.6 and above.
+
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Deep Link module into your app.

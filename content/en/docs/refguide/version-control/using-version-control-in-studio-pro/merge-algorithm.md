@@ -75,7 +75,9 @@ The current situation could be represent as shown below:
 
 ## 3 Combining Changes
 
-In this chapter we'll go through the [example](#example) with the different approaches.
+In this chapter we'll go through the [example](#example) with the different approaches. 
+
+TODO: adjust User Preference, also see docs.mendix.com/refguide/preferences-dialog/
 
 ### 3.1 Rebase {#rebase}
 
@@ -145,12 +147,6 @@ After you pushed your work to the server state of it is represented below:
 While you were completing the rebase process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #5') with the newest changes on the server.
 {{% /alert %}}
 
-#### 3.1.6 Summary
-
-While rebasing you have reapplied two local commits. As both contained conflicts with the state of the server, you had two rounds of conflict resolution. 
-
-There is now a linear commit history from #1-#5 without any merges, and you are in-sync with the server once again.
-
 ### 3.2 Merge commit {#merge}
 
 Making a merge commit is another way you could use to integrate you work with remote changes. The combined state is committed using a separate special merge commit.
@@ -191,6 +187,17 @@ By default Studio Pro will also Push your work to the server when making a commi
 {{% alert color="info" %}}
 While you were completing the merge process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #6) with the newest changes on the server.
 {{% /alert %}}
+
+#### 3.3 Summary
+
+We have merged your local work with the latest state from the server and resolved all conflicts. For Rebasing this meant two rounds of conflict resolution, where you had a single round of conflict resolution for the merge commit.
+
+In the end the history on the server will look like this:
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_State.png" alt="Rebase end state" width="500" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Commit_End_State.png" alt="Merge commit end state" width="500" >}}
+
+This illustrates that Rebasing results in a simpler commit history, while a Merge commit results in an additional commit that will always show as a branched off set of commits.
 
 ## 4 Resolving conflicts {#resolve}
 

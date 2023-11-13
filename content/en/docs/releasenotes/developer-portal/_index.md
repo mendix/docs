@@ -791,6 +791,10 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * We improved the way the Developer Portal shares data across its several components.
 * We made small improvements to the look and feel of the Developer Portal.
 
+#### Fixes
+
+* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/#company) could not add or remove team members.
+
 ### July 14, 2021
 
 #### Improvements

@@ -1,5 +1,5 @@
 ---
-title: "Private Mendix Platform Quickstart Guide"
+title: "Private Mendix Platform Administration Guide"
 url: /private-mendix-platform-administration/
 description: "Documents the business-as-usual administrator tasks for the Private Mendix Platform."
 weight: 40

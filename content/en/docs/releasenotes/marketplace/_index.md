@@ -63,7 +63,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 
 #### New Features
 
-On top of open-source community-supported content, we are introducing an additional layer of support through our [Mendix Component Partner program](/appstore/creating-content/partner-program/). Partner members can now bring their components to the Mendix Marketplace under terms that guarantee full support to customers:
+On top of open-source community-supported content, we are introducing an additional layer of support through our [Mendix Component Partner program](/appstore/partner-program/). Partner members can now bring their components to the Mendix Marketplace under terms that guarantee full support to customers:
 
 * Partners are free to select an existing open-source license, or they can select a commercial option with the corresponding license and present that.
 * Partners commit to providing support to customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support if something goes wrong. A partner-supported [component details page](/appstore/overview/#details) contains a reference to the partner's support portal or the partner's support contact email.

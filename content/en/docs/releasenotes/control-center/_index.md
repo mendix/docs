@@ -91,15 +91,17 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-We have released a feature in Control Center where you can add and manage a [Security Contact](/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+* We have released a feature in Control Center where you can add and manage a [Security Contact](/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
-With this feature, you can do the following:
+  With this feature, you can do the following:
 
-* Add a new Security Contact to your company
-* Remove an existing Security Contact and replace it with a newer one
-* Adjust the Security Contact’s name 
+  * Add a new Security Contact to your company
 
-For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
+  * Remove an existing Security Contact and replace it with a newer one
+
+  * Adjust the Security Contact’s name 
+
+  For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
 ## 2022
 

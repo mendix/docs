@@ -39,6 +39,8 @@ In **General** > **Questions**, there is an overview of the questions that have 
 
 Each question has the following details:
 
+[**IS ONE OF THESE THE SPACE? SEE BELOW**]
+
 * ① A descriptive title (clicking the question title opens the specific [Question Details](#question-details))
 * ② The beginning of the question description, which is taken from the [Question Details](#question-details)
 * ③ The type of post (**Question**, **Exchange**, or **Idea**)
@@ -51,14 +53,10 @@ Each question has the following details:
 * ⑥ The number of votes for the question
 * ⑦ The number of answers to the question
 * ⑧ The number of views the question has received
-* ⑨ The name, avatar, and level of the Mendix community member who asked the question
+* ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
 * ⑩ The avatars of the Mendix comminity members who have commented
 
-[**HOW TO DEFINE LEVEL? CROSS-REFERENCE HERE?**]
-
-Hovering over the developer name brings up the profile card with theMendix points for the developer:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_profile_card.png"   width="200"  >}}
+Hovering over the developer name brings up the profile card with theMendix points for the developer.
 
 Click the developer name on the card to go to their Mendix Profile.
 
@@ -68,25 +66,19 @@ To search for a question, enter your keywords in the **Search** text box.
 
 To filter the searching results, you can use the following filters:
 
-* **Status**
-    * **Unanswered** – the question has not been answered
-    * **Answered** – the question has been answered
-    * **Answer Accepted** – the question has been answered and the answer has been accepted)
-* **Last Updated** > **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Popular**
-* **Spaces** – the space set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
-* **Type in a Tag** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
-* **Version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-question) section)
-
-Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
-
-* The source is set to **Forum** by default; if you want to search other resources, you can switch the source
-* You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
-* You can filter by **Space** to get more refined results
+* **Status** > **Unanswered**, **Answered**, or **Answer Accepted**
+* **Last Updated** > **Last Updated** (default), **Newest**, or **Most Popular**
+* **Spaces** – the space set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
+* **Type in a Tag** – the tags set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
+* **Version** – the Mendix version to which the question is related (for details, see [Asking Your Question](#asking-question) below)
 
 ### 3.2 Question Details {#question-details}
 
+[**START; SCREENSHOT UPDATED, ADD NUMBERS**]
+
 Clicking the title of a question will bring you to the details page for that question:
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_specific_page.png" >}}
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_details.png" >}}
 
 On this page, you can read the full descriptive text of the question and do the following:
 
@@ -197,12 +189,6 @@ To filter the searching results, you can use the following filters:
 * **Last Updated** > **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Votes**
 * **Spaces** – the space set when the idea was submitted (for more information, see the [Posting Your Idea](#posting-idea) section below)
 * **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](#posting-idea) section below)
-
-Alternatively, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into the **Search** text box. Notice the following search details:
-
-* The source is set to **Forum** by default; if you want to search other resources, you can switch the source
-* You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
-* You can filter by **Space** to get more refined results
 
 ### 5.2 Idea Details {#idea-details}
 

@@ -65,6 +65,15 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 * We removed the **Marketplace Content** section of [Control Center](/control-center/), which had been deprecated since March, 2023.
 
+### May 17, 2023
+
+#### New Features
+
+* We have upgraded our [Portfolio Management](/developerportal/portfolio-management/) tool with new features:
+    * You can now have multiple portfolios at the same time!
+    * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
+* We have added the [Portfolios](/control-center/#portfolios) page to Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
+
 ### May 16, 2023
 
 #### New Features

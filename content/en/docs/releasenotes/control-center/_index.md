@@ -85,6 +85,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 #### Improvements
 
 * In Control Center, we increased the limit of apps you can [activate or deactivate](/control-center/#active-deactivated) to 100.
+* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### February 23, 2023
 

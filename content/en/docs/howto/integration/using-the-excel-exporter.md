@@ -100,7 +100,7 @@ To set up a template, follow these steps:
 
 6. Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
 
-    {{% alert color="info" %}}The **Input Object** is not mandatory. You can still export required entities by specifiying **Row Object** in Worksheet definition.{{% /alert %}}
+    {{% alert color="info" %}}The **Input Object** is not mandatory. You can still export required entities by specifiying **Row Object** in the worksheet definition.{{% /alert %}}
       
 7. Provide a **Description** for identifying and documenting what this template is for:
 
@@ -138,9 +138,9 @@ To create the worksheet layout, follow these steps:
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template){{% /alert %}}
 
-3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object was specified earlier during Template creation). Each object of this entity type will be saved as a row in the worksheet.
+3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object was specified earlier during template creation). Each object of this entity type will be saved as a row in the worksheet.
 
-   Following figure depicts a template where worksheet is *without* Input Object and reference to **Input Object**
+   The following figure depicts a template where worksheet is *without* Input Object and reference to **Input Object**
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_with_inputObj.png" >}}
 
    Following figure depicts a template where worksheet is *with* Input Object and reference to **Input Object**

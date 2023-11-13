@@ -160,7 +160,7 @@ To create the worksheet layout, follow these steps:
 
 8. Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
 
-9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
+9. Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
 
     {{% alert color="info" %}}Specifying styles are addressed in the section below.{{% /alert %}}
 
@@ -224,7 +224,7 @@ To configure the custom formatting and styling for the cells, follow these steps
 
 ## 7 Calling the Excel Export Module via Microflow
 
-In this section, you will learn how to call the newly created Excel export template in your application. Assuming you have used **Input Object**; follow these steps to retrieve the template and generate the document:
+In this section, you will learn how to call the newly created Excel export template in your application. If you have used **Input Object**, follow these steps to retrieve the template and generate the document:
 
 1. Create a microflow that takes an inbound parameter of the **Input Object** which is associated with objects that need to be exported.
    
@@ -242,7 +242,7 @@ Your microflow should look similar to this:
 
 {{< figure src="/attachments/howto/integration/using-the-excel-exporter/microflow-for-generate.png" >}}
 
-If your template definition does NOT have **Input Object**, then your microflow can directly retrieve the template object and also retrieve the **Row Object** from database for their export.
+If your template definition does not have **Input Object**, your microflow can directly retrieve the template object and **Row Object** from the database for the export.
 
 ## 8 Running the Microflow
 
@@ -271,7 +271,7 @@ Your new microflow should look similar to this:
 {{< figure src="/attachments/howto/integration/using-the-excel-exporter/associating-objects.png" >}}
 
 {{% alert color="info" %}}
-Please take a note of *DeleteAfterDownload* flag set for the PolicyDoc entity - this is to avoid having multiple PolicyDocs being associated with same set of policy entities.
+Take a note of the *DeleteAfterDownload* flag set for the PolicyDoc entity, which is shown to avoid having multiple PolicyDocs being associated with same set of policy entities.
 {{% /alert %}}
 
 {{% alert color="info" %}}

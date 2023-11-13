@@ -8,200 +8,264 @@ tags: ["private mendix platform",  "private platform", "private marketplace", "k
 
 ## 1 Introduction
 
-This document provides an overview of the initial configuration options for Private Mendix Platform.
+This article explains the configuration options available when configuring a Continuous Integration and Delivery (CI/CD) solution for Private Mendix Platform on a Kubernetes Cluster.
+
+### 1.1 Prerequisites
+
+To configure the CI/CD pipeline, prepare the following:
+
+* A namespace where you want to deploy the Mendix app.
+* An S3-compatible endpoint where you can store an MDA file.
+
+## 2 Configuring the CI/CD Pipeline
+
+If you have a Kubernetes cluster, you can set Kubernetes as your CI System in **Settings** > **DevOps** > **CI/CD**. You need to first obtain and configure a [CA certificate](#ca-certificate), and then configure the followings settings:
+
+* [Build Cluster Setting](#build-cluster)
+* [Build Images Setting](#build-images)
+* [S3 Bucket Setting](#s3-bucket)
+
+Finally, you must also [register your Kubernetes cluster](#register-cluster).
+
+{{< figure src="/attachments/private-platform/pmp-cicd1.png" >}}
+
+### 2.1 Obtaining and Configuring the CA Certificate {#ca-certificate}
+
+Most Kubernetes cluster API servers use self-signed certificates. In order to access the API server from Private Mendix Platform, you must add its CA certificate to the operator configuration of the namespace where Private Mendix Platform is installed. For more information, see [Creating a Private Cloud Cluster: Custom TLS](/developerportal/deploy/private-cloud-cluster/#custom-tls).
+
+You can obtain the CA certificate by running the following commands:
+
+```text
+export context=`kubectl config current-context`
+export cluster=`kubectl config view -o jsonpath="{.contexts[?(@.name == \"$context\")].context.cluster}"`
+kubectl config view --raw -o jsonpath="{.clusters[?(@.name == \"$cluster\")].cluster.certificate-authority-data}" | base64 -d > custom.crt
+```
+
+If you are configuring a custom CA certificate for the first time, you must also update the Mendix Operator configuration for Private Mendix Platform by running the following command:
+
+```text
+# update operator configuration
+# please switch kubeconfig file if PMP cluster is different with app cluster.
+export namespace=YOUR_PMP_NAMESPACE
+kubectl -n ${namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
+echo -e "spec:\n  trust:\n    customCASecretName: mendix-custom-ca" > patchfile
+kubectl -n ${namespace} patch operatorconfiguration mendix-operator-configuration --type merge --patch-file patchfile
+```
 
-### 1.1 Accessing the Configuration Settings
+If you have already configured a custom CA certificate, you must only add your new CA certificate to the secret and restart Private Mendix Platform.
 
-As a user with Administrator access rights, you can access the Private Mendix Platform configuration settings by performing the following steps:
+### 2.2 Configuring Build Cluster Setting {#build-cluster}
 
-1. Switch to Admin Mode by clicking the profile picture in the top right corner of the screen and selecting **Switch to Admin Mode**.
-2. Open the navigation menu by clicking the icon in the top left corner.
-3. Click **Settings**.
+The settings in this section configure the Kubernetes cluster.
 
-Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard]({/private-mendix-platform-quickstart/#wizard}). Administrators can also update them at any time after the initial configuration.
+**API Server** - Your Kubernetes API server.
 
-## 2 Configuring General Settings
+**Namespace** - The namespace used to create the Kubernetes pod.
 
-General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status.. The settings in this section are largely configured  when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
+**Token** - You must create a service account, role, and role binding in the above namespace, and then get the service account’s token. For reference, see the following shell script:
 
-### 2.1 Capabilities
+```text
+# create ServiceAccount, Role, and RoleBinding
+export NAMESPACE=default
+kubectl create namespace $NAMESPACE || true
+kubectl apply -f << EOF -
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mxplatform-cicd
+  namespace: $NAMESPACE
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mxplatform-cicd
+  namespace: $NAMESPACE
+  annotations:
+    kubernetes.io/service-account.name: mxplatform-cicd
+type: kubernetes.io/service-account-token
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: mxplatform-cicd
+  namespace: $NAMESPACE
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - pods/log
+  verbs:
+  - create
+  - get
+  - delete
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: mxplatform-cicd
+  namespace: $NAMESPACE
+subjects:
+- kind: ServiceAccount
+  name: mxplatform-cicd
+  namespace: $NAMESPACE
+roleRef:
+  kind: Role
+  name: mxplatform-cicd
+  apiGroup: rbac.authorization.k8s.io
+EOF
 
-The settings in this section allow you to configure the basic aspects of your Private Mendix Platform.
+# get service account token:
+kubectl get secret mxplatform-cicd -n$NAMESPACE -o jsonpath='{.data.token}'|base64 -d
+# for openshift cluster
+kubectl get secret mxplatform-cicd -n$NAMESPACE -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
+```
 
-#### 2.1.1 Use projects management?
+### 2.3 Configuring Build Images Setting {#build-images}
 
-Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+The settings in this section configure the images.
 
-#### 2.1.2 Enable Marketplace?
-
-Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
-
-#### 2.1.3 Use own IDP?
-
-Optional. Enable users to login using SSO by configuring your IdP integration.
-
-#### 2.1.4 Use Webhooks?
-
-Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
-
-#### 2.1.5 Use License Manager for app licensing?
-
-Recommended. Upload your license bundle to automatically provision app licenses through Private Cloud License Manager. For more information, see Private Cloud License Manager.
-
-### 2.2 Branding
-
-The settings in this section allow you to configure custom branding for your Private Mendix Platform. You can customize the title of the Platform as shown in the top bar, upload your logo, or change the image on the login page.
-
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
-
-### 2.3 License
-
-On this page, you can view the status of your Private Mendix Platform license, and upload a new license bundle if necessary.
-
-[Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) must be used to manage the Private Mendix Platform license. It can also be used to manage and provision your own app licenses.
-
-Private Mendix Platform licenses are either **valid** or **not found**; when not found, the Platform operates in developer mode, where access to some features and capabilities is restricted.
-
-{{< figure src="/attachments/private-platform/pmp-wizard2.png" >}}
-
-When valid, licenses can have the following statuses:
-
-* Active (shown in green)
-* About to expire (shown in yellow)
-* Expired (shown in red)
-
-## 3 Email Settings
-
-Email settings allow you to manage your the SMTP server settings used by Private Mendix Platform. These settings are necessary to ensure that your system can send out email notifications. You can also configure additional settings such as email templates, view your email queue, and manage recurring tasks.
-
-### 3.1 Templates
-
-In this tab, you can create and manage the templates for any standard notification emails that you want your app to send, such as automated reports, assigned tasks, or others. Templates created here can then be referenced in microflows.
-
-{{< figure src="/attachments/private-platform/pmp-wizard3.png" >}}
-
-### 3.2 Emails
-
-In this tab, you can view the following details about the emails sent from your system:
-
-* **Queued** - A list of all emails queued to be sent, regardless of delivery status.
-* **Sent** - A list of all emails that were successfully sent.
-* **Failed** - A list of emails that could not be sent after a maximum number of attempts defined in the Configuration tab.
-* **Logs** - Errors and other messages that were logged while attempting to send emails. You can search the list by date, message type and content, or the microflow that triggered the email.
-
-### 3.3 Configuration
-
-In this tab, you can configure SMTP server settings for your email account.
-
-{{< figure src="/attachments/private-platform/pmp-wizard4.png" >}}
-
-### 3.4 Administrative Tasks
-
-In this tab, you can trigger various scheduled tasks, such as sending queued emails or cleaning the email queue.
-
-## 4 Marketplace Settings
-
-For Private Mendix Platform, the Marketplace is also private and hosted entirely within the platform itself. The settings in this section allow you to configure the administrative settings for publishing and downloading content to and from the private Marketplace.
-
-### 4.1 Approvals
-
-In this tab, you can configure whether contents that users publish to the private Marketplace requires administrator approval before publishing.
-
-### 4.2 Content Import
-
-In this tab, you can specify the location of your import bundle from Marketplace by following these steps:
-
-1. Download the Marketplace contents available as a zip file.
-2. Unzip the files to an internal location which Private Mendix Platform can access via HTTP or HTTPS without authentication. Do not change the directory structure.
-3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#custom-tls).
-3. In the **Content Import** tab, in the **Connection Configuration** field, enter the root URL of the package.json file included in the Marketplace download. 
-
-    For example, if the package.json can be accessed at the URL `https://<your domain>/release/marketplace/Marketplace-1.0/package.json`, enter the following URL: `https://<your domain>/release/marketplace/Marketplace-1.0/`
-
-4. Set the toggle **Enable content import with external source** to **ON**.
-5. Click **Save**.
-
-## 5 Mx Version Settings
-
-In this section, you can view or disable the versions of Mendix Studio Pro that your users are allowed to download.
-
-## 6 Authentication
-
-In this section, you can configure SSO authentication for your users logging in to Private Mendix Platform. OIDC and SAML are supported as protocols.
-
-### 6.1 IdP Integration (OIDC)
-
-You can configure SSO authentication with the OIDC protocol. For more information, see [OIDC Client Configuration](/appstore/modules/oidc/#client-configuration).
-
-### 6.2 IdP Integration (SAML)
-
-To configure SSO authentication with the SAML protocol, first [configure the service provider](/appstore/modules/saml/#configure-sp) in the **SP Configuration** tab, and then [create the IdP-specific settings](/appstore/modules/saml/#idp-specific-settings) in the **IdP Configuration** tab.
-
-To [debug the configuration](/appstore/modules/saml/#6-debugging-the-configuration), you can view the log files in the **Log** tab.
-
-### 6.3 OIDC Provider
-
-The settings under this tab control the connection between Studio Pro and the platform. They should not be changed without advanced knowledge of the platform. Stop and restart the Private Platform portal if you are having trouble logging in with Studio Pro.
-
-### 6.4 Studio Pro Login
-
-If you have configured more than one authentication method (for example, SSO and local user), you can specify which method is used as the default one for the Studio Pro login.
-
-## 7 DevOps Settings
-
-In this section, you can configure settings related to managing your app projects and CI/CD capabilities.
-
-### 7.1 Version Control System
-
-To create applications and collaborate, configure the connection to your version control repository. Github, Gitlab and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
-
-### 7.2 CI/CD
-
-Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a custom template for your CI/CD capabilities.
-
-{{< figure src="/attachments/private-platform/pmp-wizard5.png" >}}
-
-## 8 Platform Log
-
-For auditing purposes, you can view a log of the most recent actions taken by users of the platform. 
-
-### 8.1 Recent Actions
-
-This tab contains a list of the recent actions, logged for the time period specified in the **Log Settings** tab. The following actions are logged:
-
-* Creating and editing user accounts
-* Creating and deleting apps
-* Creating app packages
-* Changing platform settings
-
-You can use the **Search** field to search for a specific action by name.
-
-### 8.2 Archived Actions
-
-This tab contains a list of actions that were archived after the period specified in the **Log Settings** tab has expired. You can download the archive if required for auditing purposes.
-
-### 8.3 Log Settings
-
-You can select how long the actions are kept in the logs, in days. The minimum number of days is 1, and the maximum is 365.
-
-## 9 Advanced Settings
-
-In this section, you can adjust the advanced configuration settings of your Private Mendix Platform.
-
-### 9.1 MxAdmin Settings
-
-By default, the platform has a default system administrator account called MxAdmin. You can disable the account by setting the **Disable MxAdmin** toggle to **Yes**.
-
-{{% alert color="info" %}}
-Ensure that you have at least one other user with the System Administrator role assigned before disabling MxAdmin.
-{{% /alert %}}
-
-### 9.2 MxAdmin Emails
-
-To help ensure that any issues are promptly reported and resolved, you can specify one or more root email addressed that should be notified in case of system issues.
-
-### 9.3 Scheduled Event
-
-This tab shows a list of all the scheduled tasks and actions in the system, together with start time, end time, and status.
-
-{{< figure src="/attachments/private-platform/pmp-wizard6.png" >}}
+**Auto Detect Mx Version** - Selecting this check box allows you to build any runtime version project. The CI pipeline will detect the Mendix runtime version of your project, and download the corresponding build package. If this setting is not selected, you must specify the Mendix runtime version before creating MDA package for the first time. Private Mendix Platform will then remember the version number, so that you do not need to specify it again for the next build.
+
+**Keep Build Pod** - Select this checkbox to keep the build pod after the build is completed. This is useful for troubleshooting if the build failed due to pod creation failure or build failure. You can describe the pod to see its status, or check the logs of the pod.
+
+**Run As User** - The default value is *1001110000*. For an OpenShift cluster, you must check the user ID range by using the below command, and check the annotations. For example, for `openshift.io/sa.scc.uid-range: 1001190000/10000`, you can choose one ID from the *1001190000 - 1001199999* range.
+
+```text
+export NAMESPACE=default
+kubectl get ns $NAMESPACE -oyaml
+```
+
+**Git Registry** - The default value is `bitnami/git`. If you want to build your own image, you must make sure that the `git`, `curl`, and `tar` commands are included. The downloaded build package will reuse this image.
+
+**Mx Version Detect Image** - This setting is only applicable if you selected the Auto Detect Mx Version check box. The default value is `private-cloud.registry.mendix.com/mxpc-pipeline-tools-cli:0.0.8`. This image is used to detect the Mendix runtime version for your project.
+
+**Mono Build Image** - This setting is only applicable if you selected the Auto Detect Mx Version check box. The default value is `public.ecr.aws/p2w4x6l6/mono520-jdk11-ubi8-1`.
+
+**Build Package Path** - This setting is only applicable if you selected the Auto Detect Mx Version check box. The default value is `https://cdn.mendix.com/runtime`. If you have your own file server, you must download the package from the Mendix Content Delivery Network, and then upload it to your file server. You can also use an S3 bucket for this purpose. The file name format is `mxbuild-9.24.1.4658.tar.gz`.
+
+**Mxbuild Image** - This setting is only applicable if you selected the Auto Detect Mx Version check box. The default value is `private-cloud.registry.mendix.com/mxbuild`. The full image is `private-cloud.registry.mendix.com/mxbuild:x.xx.x.xxxx`, where `x.xx.x.xxxx` is the Mendix runtime version for your project, for example, 9.24.1.4658. 
+
+**Upload Image** - The default value is `amazon/aws-cli`. With this image, the AWS CLI will be used to upload the MDA file and metadata.json to an S3 bucket.
+
+### 2.4 Configuring S3 Bucket Setting {#s3-bucket}
+
+The settings in this section configure the S3 bucket.
+
+**S3 Endpoint** - For example, `https://s3.ap-southeast-1.amazonaws.com`.
+
+**No Verify SSL** - Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds --no-verify-ssl to the AWS CLI command to avoid failure.
+
+**S3 Bucket Name** - Your S3 bucket name, for example, *mybucket*.
+
+**Mda Location** - Your S3 bucket name's domain, for example, `https://mybucket.s3.ap-southeast-1.amazonaws.com`. This URL is used to access build artifacts, the whole path is: `Mda Location + Appid + Mda/Meta file`. Please make sure it is publicly accessible without any authentication.
+
+**Region** - For example, `ap-southeast-1`.
+
+**Use K8S Secret** - Select whether you want to input the **Access Key ID** and **Secret Access Key**, or set them in a Kubernetes secret. Enable this setting to avoid showing sensitive credentials in a build pod.
+
+**Secret Name** - This setting is only applicable if you selected the **Use K8S Secret** check box. This is the secret name where you want to store the **Access Key ID** and **Secret Access Key**. Use the following command to create this secret, where your-namespace is the namespace that you specified in **Build Cluster Setting** > **Namespace**.
+
+```text
+kubectl create secret generic mxplatform-awssecret -n your-namespace --from-literal=aws_access_key_id=your-aws-access-key-id --from-literal=aws_secret_access_key=your-aws-secret-access-key
+```
+
+**Access Key ID** - This setting is only applicable if you did not select the Use K8S Secret check box. This value is used to access the S3 bucket.
+
+**Secret Access Key** - This setting is only applicable if you did not select the Use K8S Secret check box. This value is used to access the S3 bucket.
+
+### 2.5 Registering a Kubernetes Cluster {#register-cluster}
+
+Before creating any environments, you must register your Kubernetes clusters by doing the following steps:
+
+1. Click **Register New Cluster**.
+2. Configure the following values:
+    
+    * **Cluster Name** - Specify a name for the cluster.
+    * **API Server** - Specify your Kubernetes API server.
+    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and  then get the service account's token. For reference, see the following shell script:
+
+        ```text
+        # create ServiceAccount, ClusterRole, and ClusterRoleBinding
+        kubectl apply -f << EOF -
+        apiVersion: v1
+        kind: ServiceAccount
+        metadata:
+          name: mxplatform-cicd
+          namespace: kube-system
+        ---
+        apiVersion: v1
+        kind: Secret
+        metadata:
+          name: mxplatform-cicd
+          namespace: kube-system
+          annotations:
+            kubernetes.io/service-account.name: mxplatform-cicd
+        type: kubernetes.io/service-account-token
+        ---
+        apiVersion: rbac.authorization.k8s.io/v1
+        kind: ClusterRole
+        metadata:
+          name: mxplatform-cicd
+        rules:
+        - apiGroups:
+          - ""
+          resources:
+          - namespaces
+          verbs:
+          - list
+        - apiGroups:
+          - privatecloud.mendix.com
+          resources:
+          - storageplans
+          verbs:
+          - list
+        - apiGroups:
+          - privatecloud.mendix.com
+          resources:
+          - mendixapps
+          verbs:
+          - '*'
+        ---
+        apiVersion: rbac.authorization.k8s.io/v1
+        kind: ClusterRoleBinding
+        metadata:
+          name: mxplatform-cicd
+        subjects:
+        - kind: ServiceAccount
+          name: mxplatform-cicd
+          namespace: kube-system
+        roleRef:
+          kind: ClusterRole
+          name: mxplatform-cicd
+          apiGroup: rbac.authorization.k8s.io
+        EOF
+
+        # get service account token:
+        kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.data.token}'|base64 -d
+        # for openshift cluster
+        kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
+        ```
+
+3. Click **Save**.
+4. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans. 
+    
+    Namespaces without any storage plan are skipped. This step requires the Mendix Operator to be installed and configured. You can repeat this step as required to retrieve additional namespaces.
+
+5. After the cluster is registered, create environments with the cluster, namespace and plans.
+
+## 3 Architecture of the CI/CD Pipeline
+
+The diagrams in this section present the architecture and components of the pipeline. The architecture is different depending on whether you enabled the Auto Detect Mx Version build image setting.
+
+### 3.1 Architecture with the Auto Detect Mx Version Setting Enabled
+
+The following diagram shows the architecture of the pipeline if you enable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](#build-images) above.
+
+{{< figure src="/attachments/private-platform/pmp-cicd2.png" alt="Auto Detect Mx Runtime Version" >}}
+
+### 3.2 Architecture with the Auto Detect Mx Version Setting Disabled
+
+The following diagram shows the architecture of the pipeline if you disable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](#build-images) above.
+
+{{< figure src="/attachments/private-platform/pmp-cicd3.png" alt="User Input Mx Runtime Version" >}}

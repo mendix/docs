@@ -170,7 +170,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Complete a lecture in the Mendix Academy | 1 | N/A |
 | Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 
-### 7.6 Point Levels
+### 7.6 Point Levels {#level}
 
 When you earn enough points, you gain a level:
 

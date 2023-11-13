@@ -357,7 +357,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.2.1 Creating a PAT
+##### 10.4.2.1 Creating a PAT {#create-pat}
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 

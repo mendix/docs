@@ -101,7 +101,7 @@ The **Default App Roles** tab shows the default [team roles](/developerportal/ge
 
 Members are users who can view and/or edit an app.
 
-### 4.1 Active and Deactivated Members
+### 4.1 Active and Deactivated Members {#active-deactive-members}
 
 On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
 

@@ -331,11 +331,6 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ### March 16, 2023
 
-#### Improvements
-
-* In Control Center, we increased the limit of apps you can [activate or deactivate](/control-center/#active-deactivated) to 100.
-* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
-
 #### Deprecations
 
 * We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).

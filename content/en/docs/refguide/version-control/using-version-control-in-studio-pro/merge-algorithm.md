@@ -61,15 +61,35 @@ Current situation could be represent as shown below:
 
 ## 3 Combining Changes
 
-### 3.1 Rebase {#rebase}
+### 3.1 Combination strategies
 
-Rebasing is one way to integrate your work with the server changes by moving your changes to the tip of the server.
+Mendix Studio Pro supports two ways to combine your changes with changes from the server: Rebase and Merge commit. 
 
-Due to git framework, during rebase, there is a slight terminology change in Studio Pro compared to merge.   
+* Rebase (default): 
+    * Recommended when actively collaborating on the same branch.
+    * Treat changes from the server as leading, by first retrieving the server state and then reapplying your work on top of it. 
+    * This results in a simple commit history.
+    * Conflicts are resolved when reapplying your local commits. If you have 3 local commits, this could trigger conflict resolution 3 times.
+    * Rebasing can be aborted at any time. Studio Pro will continue from your latest local commit.
+* Merge commit: 
+    * Treat local and remote changes equally, and combine them in a separate 'merge commit'.
+    * This results in a more complicated commit history.
+    * Conflict resolution happens once, regardless of the number of local and remote commits being merged.
+    * Merging can be aborted at any time. Studio Pro will continue from your latest local commit.
 
-#### 3.1.1 Rebase started 
+In general we recommend users to use the Rebase strategy when combining changes. In exceptional cases, for example when you have a lot of local commits where you expect conflicts, a merge commit might be the better choice.
 
-After starting to rebase your two commits shall be put aside, and Studio Pro will show changes from the tip of server. 
+### 3.2 Rebase {#rebase}
+
+Rebasing is the default way to integrate your work with the server changes by moving your changes to the tip of the server.
+
+{{% alert color="info" %}}
+During the rebase process, there is a slight terminology change in Studio Pro compared to merge. The images below illustrate the process.  
+{{% /alert %}}
+
+#### 3.2.1 Rebase started 
+
+After starting to rebase your two commits are temporarily put aside, and Studio Pro will show the latests changes from the tip of server.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_1.png" alt="Rebase Step 1" >}} 
 
@@ -77,58 +97,66 @@ After starting to rebase your two commits shall be put aside, and Studio Pro wil
 Your work shall be now referenced as 'Theirs', while server changes shall be 'Mine' 
 {{% /alert %}}
 
-#### 3.1.2 Resolving the First Conflict  
+#### 3.2.2 Resolving the First Conflict  
 
-Git will try to apply your first commit to the tip. During this process a conflict will be detected. 
+Git will try to apply your first commit to the tip. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_2.png" alt="Rebase Step 2" >}} 
+
+If there are no conflicts when comparing your (commit #4) with the latest state from the server (commit #3), Studio Pro will automatically continue. A new commit will be created from your commit, which we'll call commit #4'.
+
+In our example there is a conflict however, as the 'Second_E_mail' attribute was changed both on the server, as well as in your local work.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_First.png" alt="First conflict rebase" >}} 
 
 In the above example you can see that your work is represented in the 'Theirs' column while your colleague's work is 'Mine'. 
 
-After resolving conflicts, commit shall be applied. 
+You need to resolve the conflict to proceed with the rebasing process. After resolving conflicts you can amend the commit message you previously defined, and Studio Pro will continue with the next local commit (#5).
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_2.png" alt="Rebase Step 2" >}} 
+#### 3.2.3 Resolving the Second Conflict 
 
-#### 3.1.3 Resolving the Second Conflict 
-
-Rebasing the next commit also detects conflict. During resolving it you decide to add another attribute 'Login', to the 'User' entity.
+Rebasing the next commit (#5) also detects a conflict. In this example we resolve this by adding another attribute 'Login', to the 'User' entity.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_Mine_Change.png" alt="New change during conflict rebase" >}} 
 
 Above you can see that your new change is represented as 'Mine', together with changes that were taken from the server. 
 
-After resolving conflicts, commit shall be applied. 
+Once the conflict is resolved and you continue the rebase, a new commit (#5') is created from your commit (#5), where you can optionally amend the commit message. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_3.png" alt="Rebase Step 3" >}} 
 
-#### 3.1.4 Test Changes 
+#### 3.2.4 Test Changes 
 
-After rebased process is finished your previous work that was put aside is now removed, and your rebased work is still local. 
-
-Now you have time to re-test all those changes, and later push it to the server. 
+When the rebase process is completed, the work that was put aside is now removed.
  
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_4.png" alt="Rebase Step 4" >}}
 
-#### 3.1.5 Push Changes 
+As you can see your work is still on your local machine. After testing whether the combined state works as expected, you can push the combined state to the server.
+
+#### 3.2.5 Push Changes 
 
 After you pushed your work to the server state of it is represented below:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_5.png" alt="Rebase Step 5" >}}
 
-### 3.2 Merge {#merge}
+{{% alert color="info" %}}
+While you were completing the rebase process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #5') with the newest changes on the server.
+{{% /alert %}}
 
-Merge is another way you could use to integrate you work with remote changes by combining them using special merge commit.
+### 3.3 Merge commit {#merge}
 
-#### 3.2.1 Merge started 
+Making a merge commit is another way you could use to integrate you work with remote changes. The combined state is committed using a separate special merge commit.
 
-After starting merge process your two commits Studio Pro will start merging one commit at the time. 
+#### 3.3.1 Merge started 
+
+After starting the merge process your two commits Studio Pro will start merging one commit at the time. 
 
 // NEED IMAGE MERGE_STEP_1 
 {{% alert color="info" %}}
 Your work shall be now referenced as 'Mine', while server changes shall be 'Theirs’. 
 {{% /alert %}}
 
-#### 3.2.2 Resolving the First Conflict
+#### 3.3.2 Resolving the First Conflict
 
 Git will try to apply your first commit to the tip. During this process a conflict will be detected. 
 
@@ -140,7 +168,7 @@ After resolving conflicts, commit shall be applied.
 
 // NEED IMAGE MERGE_STEP_2
 
-#### 3.2.3 Resolving the Second Conflict
+#### 3.3.3 Resolving the Second Conflict (TODO: clarify that this is not a second round of conflict resolution)
 
 Merging the next commit also detects conflict. During resolving it you decide to add another attribute 'Login', to the 'User' entity.
 
@@ -152,13 +180,13 @@ After resolving conflicts, commit shall be applied.
 
 // NEED IMAGE MERGE_STEP_3
 
-#### 3.2.4 Test Changes 
+#### 3.3.4 Test Changes 
 
 After merge is finished you will need to test and commit all merged changes, and later push it to the server. 
 
 // NEED IMAGE MERGE_STEP_4
 
-#### 3.2.5 Push Changes 
+#### 3.3.5 Push Changes 
 
 After you pushed your work to the server state of it is represented below:
 

@@ -130,13 +130,6 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 * We have introduced the **Marketplace Content** page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 
-### July 21, 2022
-
-#### Improvements
-
-* We removed **My Activity Overview** from the **Account Settings** page.
-* We redesigned the **Pending App Invites** section and added it as a new menu item to the **Account Settings** page.
-
 ### June 9, 2022
 
 #### New Features

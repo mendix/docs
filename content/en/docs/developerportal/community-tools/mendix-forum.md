@@ -13,20 +13,23 @@ The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community 
 
 The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/developerportal/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
 
+Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
+
 ## 2 Bookmarks
 
 In **Personal** > **Bookmarks**, the following tabs are available:
 
-* **Questions** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details](#question-details) section below)
-* **Ideas** – the ideas you have bookmarked (for details on how to bookmark an idea, see the [Idea Details](#idea-details) section below)
+* **Questions** – the questions you have bookmarked (for details, see [Question Details](#question-details) below)
+* **Exchanges** – the exchanges you have bookmarked (for details, see [Exchange Details](#exchange-details) below)
+* **Ideas** – the ideas you have bookmarked (for details, see [Idea Details](#idea-details) below)
 
 ## 2 Posts
 
 In **Personal** > **Posts**, the following tabs are available:
 
-* **Posted** – the questions and ideas you have posted (for more information, see the [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) sections below)
-* **Answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section below)
-* **Commented** – the questions and ideas that you have commented on
+* **Posted** – the questions and ideas you have posted (for details, see [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) below)
+* **Answered** – the questions you have answered (for details, see [Answering a Question](#answering-question) below)
+* **Commented** – the questions, exchanges, and ideas that you have commented on
 
 ## 3 Questions {#questions-tab}
 
@@ -34,20 +37,24 @@ In **General** > **Questions**, there is an overview of the questions that have 
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
 
-Each question has a descriptive title (①). Clicking the question title opens the specific [Question Details](#question-details).
+Each question has the following details:
 
-Each question specifies the following elements:
+* ① A descriptive title (clicking the question title opens the specific [Question Details](#question-details))
+* ② The beginning of the question description, which is taken from the [Question Details](#question-details)
+* ③ The type of post (**Question**, **Exchange**, or **Idea**)
+* ④ The category:
+    * This is set when asking a question (for details, see the [Asking Your Question](#asking-question) section)
+    * Clicking a category opens an overview page that lists all the posts in the same category
+* ⑤ Tags:
+    * These are set when asking a question (for details, see the [Asking Your Question](#asking-question) section)
+    * Clicking a tag opens an overview page that lists all the posts with the same tag
+* ⑥ The number of votes for the question
+* ⑦ The number of answers to the question
+* ⑧ The number of views the question has received
+* ⑨ The name, avatar, and level of the Mendix community member who asked the question
+* ⑩ The avatars of the Mendix comminity members who have commented
 
-* The beginning of the question description (②), which is taken from the [Question Details](#question-details)
-* The category (③)
-    * This is set when asking a question (for details, see the [Asking Your Question](#asking-question) section).
-    * Clicking a category opens an overview page that lists all the questions in the same category.
-* The tags applied to question (④) 
-    * These are set when asking a question (for details, see the [Asking Your Question](#asking-question) section).
-    * Clicking a tag opens an overview page that lists all the questions with the same tag.
-* The number of votes (⑤), answers (⑥), and views (⑦) the question has received
-* The name, avatar, and level of the Mendix community member who asked the question (⑧)
-* When the question was created (⑨)
+[**HOW TO DEFINE LEVEL? CROSS-REFERENCE HERE?**]
 
 Hovering over the developer name brings up the profile card with theMendix points for the developer:
 
@@ -139,7 +146,22 @@ Below the answer(s), you can contribute to the Mendix Forum by writing your own 
 
 You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
 
-## 4 Ideas {#ideas-tab}
+## 4 Exchanges {#exchanges-tab}
+
+
+
+
+
+
+
+
+
+
+### 4.2 Exchange Details {#exchange-details}
+
+
+
+## 5 Ideas {#ideas-tab}
 
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
@@ -161,7 +183,7 @@ Each idea specifies the following elements:
 * When the idea was created (⑨)
 * The status of the idea (⑩) (for descriptions of the statuses, see the [Idea Details](#idea-details) section below)
 
-### 4.1 Searching and Filtering Ideas
+### 5.1 Searching and Filtering Ideas
 
 To search for an idea, enter your keywords in the **Search** text box.
 
@@ -182,7 +204,7 @@ Alternatively, you can search the entire Mendix Forum (both for questions and id
 * You can set the **Type** of search results for the Mendix Forum to **Question**, **Idea**, or both (default)
 * You can filter by **Space** to get more refined results
 
-### 4.2 Idea Details {#idea-details}
+### 5.2 Idea Details {#idea-details}
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
@@ -217,7 +239,7 @@ If you want to follow the discussion on an idea via email notifications, click *
 The URL for each idea is unique.
 {{% /alert %}}
 
-### 4.3 Posting an Idea {#posting-idea}
+### 5.3 Posting an Idea {#posting-idea}
 
 {{% alert color="info" %}}
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
@@ -237,6 +259,6 @@ To submit your own idea to the idea forum, follow these steps:
 
 Mendix looks forward to hearing all of your ideas!
 
-## 5 Read More
+## 6 Read More
 
 * [How to Contribute to the Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation/)

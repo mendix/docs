@@ -22,14 +22,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 #### Fixes 
 
 * We fixed an issue where deactivation of some apps led to unexpected errors.
-  {{% todo %}}Double-check{{% /todo %}}
   
-### October 19, 2023
-
-* We fixed an issue where the last Scrum Master could be removed from an app with API keys.
-* We fixed an issue that allowed new members to accept an invitation to an app multiple times.
-{{% todo %}}Double-check{{% /todo %}}
-
 ### October 12, 2023
 
 #### New Features
@@ -54,13 +47,6 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 * In Control Center, on the [Members](/control-center/#members) page you can now sort members based on the number of apps to which they belong.
 * In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/#company-general-settings) tab of the [Company Settings](/control-center/#company) page.
-
-### August 10, 2023
-
-#### Fixes
-
-* We fixed an issue where under certain circumstances, it was possible to remove the last Scrum Master of an app.
-{{% todo %}}Double-check{{% /todo %}}
 
 ### July 13, 2023
 
@@ -141,7 +127,6 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 #### Fixes
 
 * We fixed an issue where Mendix Admins were not able to invite users to their company's apps. 
-{{% todo %}}Double-check{{% /todo %}}
 
 ### August 11, 2022
 
@@ -155,13 +140,6 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 
 * We removed **My Activity Overview** from the **Account Settings** page.
 * We redesigned the **Pending App Invites** section and added it as a new menu item to the **Account Settings** page.
-* We improved the warning messages when you leave or delete an app.
-{{% todo %}}Double-check{{% /todo %}}
-
-#### Fixes
-
-* We fixed an issue where apps on the **Company Apps** page would not be displayed properly.
-{{% todo %}}Double-check{{% /todo %}}
 
 ### June 9, 2022
 
@@ -172,14 +150,11 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 #### Improvements
 
 * The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/control-center/#app-details) page in Control Center.
-* From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
-{{% todo %}}Double-check{{% /todo %}}
 
 ### April 21, 2022
 
 #### Improvements
 
-* We removed the old Stories UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
 * We expanded the export-to-Excel functionality in [Control Center](/control-center/) for both the [Apps](/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
 
 ## 2021
@@ -259,7 +234,6 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 #### Fixes
 
 * We fixed an issue where new Mendix Admins did not get access to environment nodes. (Ticket 114913)
-{{% todo %}}Double-check{{% /todo %}}
 
 ### February 4, 2021
 
@@ -270,34 +244,3 @@ This feature is in beta, so we would very much appreciate your feedback. If you 
 #### Improvements
 
 * We moved the existing Company Admin features in the Developer Portal to Control Center.
-
-## 2020
-
-### November 4, 2020
-
-#### Fixes
-
-* We fixed a bug where a change of company name was not properly distributed along the platform.
-{{% todo %}}Double-check{{% /todo %}}
-
-### October 4, 2020
-
-#### Improvements
-
-* We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
-{{% todo %}}Double-check{{% /todo %}}
-
-## 2018
-
-### December 12, 2018
-
-#### Improvements
-
-* We updated the look and feel of the **My Company's Apps** page to be more in line with the **My Apps** page.
-{{% todo %}}Double-check{{% /todo %}}
-
-### May 23, 2018
-
-#### Improvements
-
-* Company Admins can now export three reports to Excel: active users, app permissions of active users, and apps. This enables managing users and their permissions at scale.

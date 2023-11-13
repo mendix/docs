@@ -80,10 +80,10 @@ For each IP range, you can specify a **Name** for the range and a range of addre
 
 To apply a restriction to a specific application environment, follow these steps:
 
-1. Open the **Environment** page for your app in the Developer Portal.
-2. Click the **Details** of the desired environment.
+1. In the Developer Portal, open the **Environment** page for your app.
+2. Click the **Details** icon on the desired environment.
 3. Go to the **Network** tab.
-4. The section **Path Based Access Restrictions** allows for applying access restrictions to a single environment.
+4. The **Path Based Access Restrictions** section allows for applying access restrictions to a single environment.
 
 {{% alert color="info" %}}
 
@@ -122,7 +122,7 @@ To restrict access to the app to an IP range, follow these steps:
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario1.png" alt="IP ranges added to the access restriction profile" >}}
 
 5. Save the access restriction profile.
-6. Go to the **Deploy** tab of the **Environments** page. Click the **Details** of the desired environment.
+6. Go to the **Deploy** tab of the **Environments** page. Click the **Details** icon on the desired environment.
 7. Select the **Network** tab of an application environment.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction.png" alt="The Edit Path Range Access Restriction dialog box" >}}
@@ -156,7 +156,7 @@ To add this additional access restriction profile, follow these steps:
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario2.png" alt="TLS Client Certificate Verification certificate" >}}
 
 4. Save the new access restriction profile.
-5. Go to the **Deploy** tab of the **Environments** page. Click **Details** for the desired environment.
+5. Go to the **Deploy** tab of the **Environments** page. Click **Details** icon on the desired environment.
 6. Select the **Network** tab of an application environment.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/environment-restriction-2.png" alt="The Edit Path Range Access Restriction dialog box" >}}

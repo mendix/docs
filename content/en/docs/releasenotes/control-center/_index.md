@@ -102,22 +102,6 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 ## 2022
 
-### December 21, 2022
-
-#### Fixes
-
-* We fixed an issue where some users were not able to open the **Sprint Status** page.
-
-### December 13, 2022
-
-#### New Features
-
-We have released the beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
-
-A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
-
-This feature is in beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
-
 ### November 10, 2022
 
 #### Improvements

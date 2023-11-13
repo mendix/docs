@@ -19,7 +19,7 @@ To learn more about the roles of team members, see [App Roles](/developerportal/
 
 ## 2 Viewing Your Nodes{#nodes}
 
-To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation](/developerportal/#global-navigation) menu and select **Deployment** > **Public Cloud**.
+To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation](/developerportal/#global-navigation) menu and click **Deployment**.
 
 You will see a list of all your licensed nodes:
 
@@ -60,7 +60,7 @@ To access the node permissions, do the following:
 
 3. From the drop-down menu, select the environment for which you want to change permissions.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-flexible-environments.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-flexible-environments.png" alt="" width=25% >}}
 
 4. Complete two-factor authentication, if required for the selected environment.
 
@@ -127,11 +127,11 @@ In addition, all changes to node permissions are logged on the activity log.
 
 ## 5 Technical Contact
 
-A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
+A cloud node has a single Technical Contact. The Technical Contact manages the cloud node and can edit the privileges of regular team members.
 
 The Technical Contact can give the Technical Contact role to another team member. To transfer the role from yourself to another user, click **Change to Technical Contact** under the other user's name. Note that only one user at a time can be the Technical Contact.
 
-For full details on this role, see the [Technical Contact](/developerportal/general/app-roles/#technical-contact) section of **App Roles**.
+For full details on this role, see the [Technical Contact](/developerportal/general/app-roles/#technical-contact) section of *App Roles*.
 
 {{% alert color="info" %}}
 Mendix Admins can also give the Technical Contact role to another team member using the Deploy API v4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).

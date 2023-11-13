@@ -1,5 +1,5 @@
 ---
-title: "Configuring Private Mendix Platform"
+title: "Configuring the Version Control System for Private Mendix Platform"
 url: /private-mendix-platform-version-control/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
@@ -8,200 +8,144 @@ tags: ["private mendix platform",  "private platform", "private marketplace", "v
 
 ## 1 Introduction
 
-This document provides an overview of the initial configuration options for Private Mendix Platform.
+Private Mendix Platform supports the following types of Git repositories as the Mendix app code repository:
 
-### 1.1 Accessing the Configuration Settings
+* GitLab (both SaaS and self-managed)
+* GitHub Enterprise Server
+* Bitbucket
+* Azure DevOps
 
-As a user with Administrator access rights, you can access the Private Mendix Platform configuration settings by performing the following steps:
+To select the repository type, click  **DevOps Settings** > **Version Control System** > **Git Host Type**. 
 
-1. Switch to Admin Mode by clicking the profile picture in the top right corner of the screen and selecting **Switch to Admin Mode**.
-2. Open the navigation menu by clicking the icon in the top left corner.
-3. Click **Settings**.
+## 2 GitLab
 
-Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard]({/private-mendix-platform-quickstart/#wizard}). Administrators can also update them at any time after the initial configuration.
+This section describes the configuration of a GitLab repository.
 
-## 2 Configuring General Settings
+### 2.1 DevOps Settings
 
-General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status.. The settings in this section are largely configured  when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
+{{< figure src="/attachments/private-platform/pmp-vc1.png" >}}
 
-### 2.1 Capabilities
+#### 2.1.1 Host URL
 
-The settings in this section allow you to configure the basic aspects of your Private Mendix Platform.
+This is the host URL of your GitLab server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your GitLab server host name is mygitlab.example.com, you should input `https://mygitlab.example.com` here.
 
-#### 2.1.1 Use projects management?
+#### 2.1.2 Group ID
 
-Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+All the apps on Private Mendix Platform are created under a GitLab group. You need to create a group in GitLab and then input the *Group ID* in this field.
 
-#### 2.1.2 Enable Marketplace?
+{{< figure src="/attachments/private-platform/pmp-vc2.png" >}}
 
-Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+#### 2.1.3 Group owner PAT
 
-#### 2.1.3 Use own IDP?
+This is the PAT from the above group owner. When generating the access token for group owner, select all scopes and set expiration date to never.
 
-Optional. Enable users to login using SSO by configuring your IdP integration.
+#### 2.1.4 Automatic Access Provisioning
 
-#### 2.1.4 Use Webhooks?
+If you use a self-managed GitLab server, you can enable this feature to automatically create GitLab user and PAT for private platform users. During logging in the platform, user email is used as unique key to search in GitLab server. If this email name is not registered in GitLab, Private Mendix Platform creates a GitLab user with this email. A PAT is then generated for this user. 
 
-Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+#### 2.1.5 Admin PAT
 
-#### 2.1.5 Use License Manager for app licensing?
+This is the PAT of the GitLab administrator, which is the root user access token with all scopes selected.
 
-Recommended. Upload your license bundle to automatically provision app licenses through Private Cloud License Manager. For more information, see Private Cloud License Manager.
+### 2.2 Normal User Credentials
 
-### 2.2 Branding
+When the **Automatic Access Provisioning** is disabled, private platform users need to manually input the GitLab user id and PAT at first login.
 
-The settings in this section allow you to configure custom branding for your Private Mendix Platform. You can customize the title of the Platform as shown in the top bar, upload your logo, or change the image on the login page.
+#### 2.2.1 User ID
 
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
+The user ID (integer number) of this GitLab user. It is not the user name. You can obtain the value from the user profile page.
 
-### 2.3 License
+#### 2.2.2 Personal Access Token
 
-On this page, you can view the status of your Private Mendix Platform license, and upload a new license bundle if necessary.
+The access token of this GitLab user.
 
-[Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) must be used to manage the Private Mendix Platform license. It can also be used to manage and provision your own app licenses.
+## 3 Github
 
-Private Mendix Platform licenses are either **valid** or **not found**; when not found, the Platform operates in developer mode, where access to some features and capabilities is restricted.
+This section describes the configuration of a Github repository.
 
-{{< figure src="/attachments/private-platform/pmp-wizard2.png" >}}
+### 3.1 DevOps Settings
 
-When valid, licenses can have the following statuses:
+{{< figure src="/attachments/private-platform/pmp-vc3.png" >}}
 
-* Active (shown in green)
-* About to expire (shown in yellow)
-* Expired (shown in red)
+#### 3.1.1 Host URL
 
-## 3 Email Settings
+This is the host URL of your GitHub server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your GitHub server host name is mygithub.example.com, you should input `https://mygithub.example.com` here.
 
-Email settings allow you to manage your the SMTP server settings used by Private Mendix Platform. These settings are necessary to ensure that your system can send out email notifications. You can also configure additional settings such as email templates, view your email queue, and manage recurring tasks.
+#### 3.1.2 Organization Name
 
-### 3.1 Templates
+All the apps on Private Mendix Platform are created under an organization. You need to create an organization to host all the Mendix apps. Type the organization name into this field.
 
-In this tab, you can create and manage the templates for any standard notification emails that you want your app to send, such as automated reports, assigned tasks, or others. Templates created here can then be referenced in microflows.
+#### 3.1.3 Organization Owner PAT
 
-{{< figure src="/attachments/private-platform/pmp-wizard3.png" >}}
+Input the classic PAT of this organization owner into this field.  You need select at least these scopes: `repo admin:org user delete_repo`. The expiration date is set to **No Expiration**.
 
-### 3.2 Emails
+#### 3.1.4 Automatic Access Provisioning
 
-In this tab, you can view the following details about the emails sent from your system:
+If you are running a self-managed GitHub enterprise server, you can enable this feature to automatically create GitHub user and PAT for private platform users. During logging in to the platform, the user email is used as unique key to search in GitHub server. If this email name is not registered in GitHub, Private Mendix Platform creates a GitHub user with this email. A PAT is then generated for this user. 
 
-* **Queued** - A list of all emails queued to be sent, regardless of delivery status.
-* **Sent** - A list of all emails that were successfully sent.
-* **Failed** - A list of emails that could not be sent after a maximum number of attempts defined in the Configuration tab.
-* **Logs** - Errors and other messages that were logged while attempting to send emails. You can search the list by date, message type and content, or the microflow that triggered the email.
+#### 3.1.5 AdminPAT
 
-### 3.3 Configuration
+This is the PAT of the GitHub enterprise instance administrator. When generating this PAT, all scopes should be selected.
 
-In this tab, you can configure SMTP server settings for your email account.
+### 3.2 Normal User Credentials
 
-{{< figure src="/attachments/private-platform/pmp-wizard4.png" >}}
-
-### 3.4 Administrative Tasks
-
-In this tab, you can trigger various scheduled tasks, such as sending queued emails or cleaning the email queue.
-
-## 4 Marketplace Settings
-
-For Private Mendix Platform, the Marketplace is also private and hosted entirely within the platform itself. The settings in this section allow you to configure the administrative settings for publishing and downloading content to and from the private Marketplace.
-
-### 4.1 Approvals
-
-In this tab, you can configure whether contents that users publish to the private Marketplace requires administrator approval before publishing.
-
-### 4.2 Content Import
-
-In this tab, you can specify the location of your import bundle from Marketplace by following these steps:
-
-1. Download the Marketplace contents available as a zip file.
-2. Unzip the files to an internal location which Private Mendix Platform can access via HTTP or HTTPS without authentication. Do not change the directory structure.
-3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#custom-tls).
-3. In the **Content Import** tab, in the **Connection Configuration** field, enter the root URL of the package.json file included in the Marketplace download. 
-
-    For example, if the package.json can be accessed at the URL `https://<your domain>/release/marketplace/Marketplace-1.0/package.json`, enter the following URL: `https://<your domain>/release/marketplace/Marketplace-1.0/`
-
-4. Set the toggle **Enable content import with external source** to **ON**.
-5. Click **Save**.
-
-## 5 Mx Version Settings
-
-In this section, you can view or disable the versions of Mendix Studio Pro that your users are allowed to download.
-
-## 6 Authentication
-
-In this section, you can configure SSO authentication for your users logging in to Private Mendix Platform. OIDC and SAML are supported as protocols.
-
-### 6.1 IdP Integration (OIDC)
-
-You can configure SSO authentication with the OIDC protocol. For more information, see [OIDC Client Configuration](/appstore/modules/oidc/#client-configuration).
-
-### 6.2 IdP Integration (SAML)
-
-To configure SSO authentication with the SAML protocol, first [configure the service provider](/appstore/modules/saml/#configure-sp) in the **SP Configuration** tab, and then [create the IdP-specific settings](/appstore/modules/saml/#idp-specific-settings) in the **IdP Configuration** tab.
-
-To [debug the configuration](/appstore/modules/saml/#6-debugging-the-configuration), you can view the log files in the **Log** tab.
-
-### 6.3 OIDC Provider
-
-The settings under this tab control the connection between Studio Pro and the platform. They should not be changed without advanced knowledge of the platform. Stop and restart the Private Platform portal if you are having trouble logging in with Studio Pro.
-
-### 6.4 Studio Pro Login
-
-If you have configured more than one authentication method (for example, SSO and local user), you can specify which method is used as the default one for the Studio Pro login.
-
-## 7 DevOps Settings
-
-In this section, you can configure settings related to managing your app projects and CI/CD capabilities.
-
-### 7.1 Version Control System
-
-To create applications and collaborate, configure the connection to your version control repository. Github, Gitlab and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
-
-### 7.2 CI/CD
-
-Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a custom template for your CI/CD capabilities.
-
-{{< figure src="/attachments/private-platform/pmp-wizard5.png" >}}
-
-## 8 Platform Log
-
-For auditing purposes, you can view a log of the most recent actions taken by users of the platform. 
-
-### 8.1 Recent Actions
-
-This tab contains a list of the recent actions, logged for the time period specified in the **Log Settings** tab. The following actions are logged:
-
-* Creating and editing user accounts
-* Creating and deleting apps
-* Creating app packages
-* Changing platform settings
-
-You can use the **Search** field to search for a specific action by name.
-
-### 8.2 Archived Actions
-
-This tab contains a list of actions that were archived after the period specified in the **Log Settings** tab has expired. You can download the archive if required for auditing purposes.
-
-### 8.3 Log Settings
-
-You can select how long the actions are kept in the logs, in days. The minimum number of days is 1, and the maximum is 365.
-
-## 9 Advanced Settings
-
-In this section, you can adjust the advanced configuration settings of your Private Mendix Platform.
-
-### 9.1 MxAdmin Settings
-
-By default, the platform has a default system administrator account called MxAdmin. You can disable the account by setting the **Disable MxAdmin** toggle to **Yes**.
+When the **Automatic Access Provisioning** is disabled, Private Mendix Platform users need to manually input the GitHub user name and PAT at first login.
 
 {{% alert color="info" %}}
-Ensure that you have at least one other user with the System Administrator role assigned before disabling MxAdmin.
+This user needs to be invited into this organization as a organization member.
 {{% /alert %}}
 
-### 9.2 MxAdmin Emails
+#### 3.2.1 User Name
+The user name (login name) of this GitHub user. 
 
-To help ensure that any issues are promptly reported and resolved, you can specify one or more root email addressed that should be notified in case of system issues.
+#### 3.2.2 Personal Access Token
 
-### 9.3 Scheduled Event
+The access token of this GitHub user. To make it easier, you can also select all the scopes. The expiration date is set to No Expiration.
 
-This tab shows a list of all the scheduled tasks and actions in the system, together with start time, end time, and status.
+## 4 Bitbucket
 
-{{< figure src="/attachments/private-platform/pmp-wizard6.png" >}}
+This section describes the configuration of a Bitbucket repository.
+
+### 4.1 DevOps Settings
+
+{{< figure src="/attachments/private-platform/pmp-vc4.png" >}}
+
+#### 4.1.1 Host URL
+
+This is the host URL of your Bitbucket enterprise server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your Bitbucket enterprise server host name is mybitbucket.example.com, you should input `https://mybitbucket.example.com` here.
+
+#### 4.1.2 Project key
+
+All the Mendix apps on private platform are created under a project. You need to create an project to host all the Mendix apps. Input the project key in this field. You can go to `https://mybitbucket.example.com/projects` to view the project key.
+
+#### 4.1.3 Project Admin PAT
+
+Input the access token of a project admin user.
+
+#### 4.1.4 Automatic Access Provisioning
+
+If you are running a self managed Bitbucket enterprise server, you can enable this feature to automatically create Bitbucket user and PAT for private platform users. During logging in to the platform, the user email is used as unique key to search in Bitbucket server. If this email name is not registered in Bitbucket, Private Mendix Platform creates a Bitbucket user with this email as the user name. A PAT is then generated for this user. 
+
+Bitbucket enterprise server allows to use same email for multiple users. To make the Bitbucket user unique by email, the email name is used to be the Bitbucket user name when doing the automatic provisioning.
+
+#### 4.1.5 Admin Username
+
+Bitbucket system admin user name.
+
+#### 4.1.6 Admin Password
+
+Bitbucket system admin user password.
+
+### 4.2 Normal User Credentials
+
+When the Automatic Access Provisioning is disabled, Private Mendix Platform users need to manually input the Bitbucket user name and PAT at first login. 
+
+This user needs to be invited into the project with the **Create repository** permission. You can go to `https://mybitbucket.example.com/projects/<PROJECT KEY>/permissions` to add a user and grant permission.
+
+#### 4.2.1 User Name
+
+The user name (login name) of this Bitbucket user. 
+
+#### 4.2.2 Personal Access Token
+
+The Access token of this Bitbucket user. The permission should be at least `Project Admin`. The expiration date is set to **No Expiration**.

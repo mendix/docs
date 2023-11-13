@@ -140,10 +140,10 @@ To create the worksheet layout, follow these steps:
 
 3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object was specified earlier during template creation). Each object of this entity type will be saved as a row in the worksheet.
 
-   The following figure depicts a template where worksheet is *without* Input Object and reference to **Input Object**
+   The following figure depicts a template where worksheet is without Input Object and reference to **Input Object**
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_with_inputObj.png" >}}
 
-   Following figure depicts a template where worksheet is *with* Input Object and reference to **Input Object**
+   The following figure depicts a template where worksheet is with Input Object and reference to **Input Object**
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_without_inputObj.png" >}}
       
 4. Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.

@@ -44,14 +44,14 @@ Each question has the following details:
 * ② The beginning of the question description, which is taken from the [Question Details](#question-details) page
 * ③ The type of post (**Question**, **Exchange**, or **Idea**)
 * ④ The space, which is set when [asking a question](#asking-question)
-    * Clicking a category opens an overview page that lists all the posts in the same category
+    * Clicking the space opens an overview page that lists all the posts in the same space
 * ⑤ Tags, which are set when [asking a question](#asking-question)
     * Clicking a tag opens an overview page that lists all the posts with the same tag
 * ⑥ The number of votes for the question
 * ⑦ The number of answers to the question
 * ⑧ The number of views the question has received
 * ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
-* ⑩ The avatars of the Mendix comminity members who have commented
+* ⑩ The avatars of the Mendix comminity members who have answered and commented
 
 Hovering over the developer name brings up the profile card with theMendix points for the developer.
 
@@ -130,7 +130,28 @@ Once a question you have asked receives several answers, you can accept an answe
 
 ## 4 Exchanges {#exchanges-tab}
 
+In **General** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchanges-example.png" >}}
+
+Each exchange has the following details:
+
+* ① A descriptive title (clicking the exchange title opens the specific [Exchange Details](#exchange-details) page)
+* ② The beginning of the exchange description, which is taken from the [Exchange Details](#exchange-details) page
+* ③ The type of post (**Question**, **Exchange**, or **Idea**)
+* ④ The space, which is set when [posting an exchange](#posting-exchange)
+    * Clicking the space opens an overview page that lists all the posts in the same space
+* ⑤ Tags, which are set when [posting an exchange](#posting-exchange)
+    * Clicking a tag opens an overview page that lists all the posts with the same tag
+* ⑥ The number of comments on the exchange
+* ⑦ The number of views the exchange has received
+* ⑧ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
+* ⑨ The avatars of the Mendix comminity members who have commented
+
+
+Hovering over the developer name brings up the profile card with theMendix points for the developer.
+
+Click the developer name on the card to go to their Mendix Profile.
 
 
 
@@ -140,6 +161,8 @@ Once a question you have asked receives several answers, you can accept an answe
 
 
 ### 4.2 Exchange Details {#exchange-details}
+
+### 4.3 Posting an Exchange {#posting-exchange}
 
 
 

@@ -71,7 +71,7 @@ Renaming 'E-mail' to 'EmailAddress' and removing 'Second_E-mail' entirely and pu
 
 The current situation could be represent as shown below: 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/rebase-mine-theirs/Step1.png" alt="Step 1" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="500" >}} 
 
 ## 3 Combining Changes
 
@@ -82,6 +82,10 @@ Every time changes can be combined, for example when Pulling changes from the se
 ### 3.1 Rebase {#rebase}
 
 Rebasing is the default way to integrate your work with the server changes by moving your changes to the tip of the server.
+
+We'll use this as the starting state, based on the [example](#example) above. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="500" >}} 
 
 {{% alert color="info" %}}
 During the rebase process, there is a slight terminology change in Studio Pro compared to merge. The images below illustrate the process.  
@@ -151,14 +155,23 @@ While you were completing the rebase process on your machine, other changes may 
 
 Making a merge commit is another way you could use to integrate you work with remote changes. The combined state is committed using a separate special merge commit.
 
+We'll use this as the starting state, based on the [example](#example) above. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Starting_state.png" alt="Starting point" width="500" >}} 
+
 #### 3.2.1 Merge started 
 
-After starting the merge process Studio Pro will combine your local work (#4 and #5) with the state of the server (#3). 
+After starting the merge process Studio Pro will combine your local work (#5) with the state of the server (#4). 
 
-// NEED IMAGE MERGE_STEP_1 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_1.png" alt="Merge Step 1" width="500" >}} 
+
 {{% alert color="info" %}}
 Your work shall be now referenced as 'Mine', while server changes shall be 'Theirs’. 
 {{% /alert %}}
+
+In the end you'll be creating a merge commit that merges commits #4 and #5. The history before that (#2 and #3) are also taken along.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_2.png" alt="Merge Step 2" width="500" >}} 
 
 #### 3.2.1 Conflict resolution: resolving the two conflicts
 
@@ -180,9 +193,13 @@ After resolving all conflicts you can proceed with testing the app.
 
 #### 3.2.2 Test Changes 
 
-When the combined state is tested, a 'merge commit' can be created for the new version of the app. This is a new commit (#6) which will always show that it merged commits #3 and #5.
+When the combined state is tested, a 'merge commit' can be created for the new version of the app. This is a new commit (#6) which will always show that it merged commits #4 and #5.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_3.png" alt="Merge Step 3" width="500" >}} 
 
 By default Studio Pro will also Push your work to the server when making a commit.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_4.png" alt="Merge Step 4" width="500" >}} 
 
 {{% alert color="info" %}}
 While you were completing the merge process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #6) with the newest changes on the server.
@@ -194,8 +211,8 @@ We have merged your local work with the latest state from the server and resolve
 
 In the end the history on the server will look like this:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_State.png" alt="Rebase end state" width="500" >}}
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Commit_End_State.png" alt="Merge commit end state" width="500" >}}
+* After a Rebase: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_state.png" alt="Rebase end state" width="500" >}}
+* After a Merge commit: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_End_state.png" alt="Merge commit end state" width="500" >}}
 
 This illustrates that Rebasing results in a simpler commit history, while a Merge commit results in an additional commit that will always show as a branched off set of commits.
 

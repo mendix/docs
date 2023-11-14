@@ -563,19 +563,16 @@ Here is an example of a **ToggleButtonGroup** property that was renamed from sev
     "options": [
         {
             "name": "Bold",
-            "text": "bold",
             "oldNames": ["Bold text"],
             "class": "text-bold"
         },
         {
             "name": "Italic",
-            "text": "italic",
             "oldNames": ["Italic text"],
             "class": "text-italic"
         },
         {
             "name": "Underline",
-            "text": "underline",
             "oldNames": ["Underline text"],
             "class": "text-underline"
         }

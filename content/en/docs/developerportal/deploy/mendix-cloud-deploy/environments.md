@@ -43,6 +43,8 @@ You can also see information and perform actions on the existing deployment pack
 * Creator account
 * Expiry date of the deployment package, if one is set
 
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package-options.png" alt="More Options" >}}
+
 If you click the **More Options ...** icon on a package, you can access the following options:
 
 * Deploy the package, transporting it from the Team Server to the selected environment

@@ -24,7 +24,7 @@ You can also create clusters and namespaces using the [Mendix for Private Cloud 
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A Kubernetes platform with a version from 1.13 through 1.20, or OpenShift version 3.11 or above (version 4.4 and above is recommended)
+* Supported Kubernetes platform are documented [here](/developerportal/deploy/private-cloud-supported-environments/#211-supported-versions)
 * An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
@@ -1094,7 +1094,7 @@ In GKE Autopilot, one of the key features is its ability to automatically adjust
 
 As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to Deployments and pods.
 
-To address this issue, you can resolve it by configuring the Operator to align with GKE's requirements. This involves setting the resources—specifically, CPU, memory, and ephemeral storage—to be equal to the limits defined in the OperatorConfiguration for both the sidecar and metrics-sidecar containers. Along with this, it is essential to ensure that the resource limits for CPU, memory, and ephemeral storage should be set equal to the resource requests in the Private Cloud portal. For more information on setting the core resources on portal, refer [documentation](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan)
+To address this issue, you can resolve it by configuring the Operator to align with GKE's requirements. This involves setting the resources—specifically, CPU, memory, and ephemeral storage—to be equal to the limits defined in the OperatorConfiguration for both the sidecar and metrics-sidecar containers. Along with this, it is essential to ensure that the resource limits for CPU, memory, and ephemeral storage should be set equal to the resource requests in the Private Cloud portal. For more information on setting the core resources on portal, refer [documentation](/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan)
 
 You need to create a patch file for configuring the core resources in the OperatorConfiguration. See below example:
 

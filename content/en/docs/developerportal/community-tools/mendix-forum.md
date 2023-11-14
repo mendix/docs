@@ -30,6 +30,7 @@ In **Personal** > **Posts**, the following tabs are available:
 * **Posted** – the questions and ideas you have posted (for details, see [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) below)
 * **Answered** – the questions you have answered (for details, see [Answering a Question](#answering-question) below)
 * **Commented** – the questions, exchanges, and ideas that you have commented on
+* **Drafts** – the post drafts you have started
 
 ## 3 Questions {#questions-tab}
 
@@ -39,16 +40,12 @@ In **General** > **Questions**, there is an overview of the questions that have 
 
 Each question has the following details:
 
-[**IS ONE OF THESE THE SPACE? MAYBE CATEGORY? SEE BELOW**]
-
-* ① A descriptive title (clicking the question title opens the specific [Question Details](#question-details))
-* ② The beginning of the question description, which is taken from the [Question Details](#question-details)
+* ① A descriptive title (clicking the question title opens the specific [Question Details](#question-details) page)
+* ② The beginning of the question description, which is taken from the [Question Details](#question-details) page
 * ③ The type of post (**Question**, **Exchange**, or **Idea**)
-* ④ The category:
-    * This is set when asking a question (for details, see the [Asking Your Question](#asking-question) section)
+* ④ The space, which is set when [asking a question](#asking-question)
     * Clicking a category opens an overview page that lists all the posts in the same category
-* ⑤ Tags:
-    * These are set when asking a question (for details, see the [Asking Your Question](#asking-question) section)
+* ⑤ Tags, which are set when [asking a question](#asking-question)
     * Clicking a tag opens an overview page that lists all the posts with the same tag
 * ⑥ The number of votes for the question
 * ⑦ The number of answers to the question
@@ -107,21 +104,21 @@ The URL for each question is unique.
 #### 3.3.1 Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
-It's never been easier to ask a question on the Mendix Forum! But before you submit a new question, be sure to search for similar questions that have already been asked. There may be someone else who has already posted the same question!
+It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
 {{% /alert %}}
 
 To ask your own question on the Mendix Forum, follow these steps:
 
-1. You can create a question by clicking **Create a Post** and selecting **Ask a Question**, or by clicking **Ask a Question** at the top of the **Questions** page. 
+1. Click **Ask a Question** on the upper-right corner of the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
-    * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
-    * The **Description** of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
-    * The **Space** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
-    * The **Studio Pro Version** that is relevant to your question (only available when you select a version-dependent **Space**)
-    * The **Tag(s)** that reflect the topic of your question (which other users can use to filter the list of questions)
+    * The **Space** that reflects your question (for example, **Connectors**, **Databases**, or **Security**)
+    * The question **Title** (this is how users will first see your question, so make it descriptive and interesting)
+    * The question **Description** (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
+    * The **Mendix Studio Pro Version** that is relevant to your question (only available when you select a version-dependent **Space**)
+    * The **Tags** that reflect the topic of your question (users can filter the list of questions by tag)
 
-3. Click **Ask your question**.
+3. Click **Ask Question** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
 #### 3.3.2 Accepting an Answer
 

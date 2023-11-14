@@ -21,6 +21,11 @@ Before starting the installation process, make sure that you have all the necess
 * File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#5-file-storage).
 * A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#3-container-registries).
 * A domain.
+* For the PCLM component:
+
+    * Mendix Operator in version 2.11.0 or above
+    * A dedicated Postgres or SQLServer database server with public accessibility set to **Yes**.
+
 * Optionally, if your Private Mendix Platform app requires its own certificate: a TLS certificate with HTTPS support.
 * An environment to run installer tools with the following requirements:
 
@@ -33,8 +38,6 @@ Before starting the installation process, make sure that you have all the necess
 
     * An existing PostgreSQL database instance
     * A Redis instance
-
-* Optionally, if you plan to install the PCLM component, refer to [Private Cloud License Manager: Prerequisites for additional requirements](/developerportal/deploy/private-cloud/private-cloud-license-manager/#2-prerequisites).
 
 ## 2 Installing and Configuring the Mendix Operator
 
@@ -128,6 +131,30 @@ To install and configure the Mendix Operator, perform the following steps:
     8. Click **Exit Installer** > **OK**.
     
         {{< figure src="/attachments/private-platform/pmp-install5.png" >}}
+    
+### 2.1 Installing Private Cloud License Manager {#install-pclm}
+
+Private Cloud License Manager is a required component of Private Mendix Platform. Before you install the Platform, install PCLM by doing the following steps:
+
+1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
+2. Select **PCLM** to install PCLM.
+3. Specify the following parameters:
+
+    * **Databasetype** – The database type, either **postgres** (default) or **sqlserver**.
+    * **Host** – The host name of the database service.
+    * **DBName** – The name of the database where you want to hold the PCLM data.
+    * **DBUser** – A database user with the rights described in the prerequisites section.
+    * **DBPassword** – The password for the database user.
+    * **port** – The port used to access the database. The default value is *5432*.
+    * **Strict TLS** – Whether the database uses strict TLS. The default value is *false*.
+    * **ssl Cert File** – If Strict TLS is set to *true*, provide the location of the SSL Root certificate file. If Strict TLS is set to *false*, leave this field blank.
+    * **ImageRepo** – The location of the image repo, for example, `private-cloud.registry.mendix.com/privatecloud-license-manager`
+    * **ImageTag** – The docker image tag, for example, `0.3.0`.
+    * **Admin password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
+    * **PCLM Operator User** – A new PCLM operator user.
+    * **PCLM Operator Password** – A new PCLM operator password.
+
+4. Click **Install PCLM**.
 
 ## 3 Installing the Private Mendix Platform
 
@@ -172,34 +199,18 @@ Install the Private Mendix Platform by doing the following steps:
 
 {{< figure src="/attachments/private-platform/pmp-install10.png" >}}
 
-## 4 Installing the PCLM and Svix Components {#install-pclm-svix}
+## 4 Optional: Installing the Svix Component {#install-svix}
 
-Install the PCLM and Svix components by doing the following steps:
+Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
 
-1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
-2. Click **Install Component** > **Svix** and specify the following parameters:
+1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you used for Private Mendix Platform.
+2. Select **Svix** and specify the following parameters:
 
     * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`
     * **REDIS_DSN** - A Redis DSN, for example, `redis://redis:6379`
     * **Image** - Svix server docker images which can access your cluster. The default value is set to the public registry `svix/svix-server:v0.75.0`. You can change it to your private image in a private cluster.
 
 3. Click **Install Svix**.
-4. After Svix is installed, click **PCLM** to install PCLM.
-5. Specify the following parameters:
-
-    * **Databasetype** – The database type, either **postgres** (default) or **sqlserver**.
-    * **Host** – The host name of the database service.
-    * **DBName** – The name of the database where you want to hold the PCLM data.
-    * **DBUser** – A database user with the rights described in the prerequisites section.
-    * **DBPassword** – The password for the database user.
-    * **port** – The port used to access the database. The default value is *5432*.
-    * **Strict TLS** – Whether the database uses strict TLS. The default value is *false*.
-    * **ssl Cert File** – If Strict TLS is set to *true*, provide the location of the SSL Root certificate file. If Strict TLS is set to *false*, leave this field blank.
-    * **ImageRepo** – The location of the image repo, for example, `private-cloud.registry.mendix.com/privatecloud-license-manager`
-    * **ImageTag** – The docker image tag, for example, `0.3.0`.
-    * **Admin password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
-    * **PCLM Operator User** – A new PCLM operator user.
-    * **PCLM Operator Password** – A new PCLM operator password.
 
 {{% alert color="info" %}}
 The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
@@ -210,20 +221,19 @@ The installer does not catch your pod's running status. In case of issues, verif
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
 1. Ensure that your Mendix Operator version is 2.12 or newer.
-2. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
-3. Click **Upgrade Namespace**.
+2. Reinstall PCLM as described in the [Installing Private Cloud License Manager](#install-pclm) section above.
+3. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
+4. Click **Upgrade Namespace**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade1.png" >}}
 
-4. Click **Run Upgrade**.
+5. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" >}}
 
-### 5.1 Upgrading Svix and PCLM
-
-If you want to reinstall or upgrade the PCLM component, first uninstall PCLM manually, and then reinstall it as described in the [Installing the PCLM and Svix Components](#install-pclm-svix) section above.
-
+{{% alert color="info" %}}
 For the Svix component, you can use the Svix panel to upgrade directly.
+{{% /alert %}}
 
 ## 6 Running the Private Platform Configuration Wizard {#wizard}
 

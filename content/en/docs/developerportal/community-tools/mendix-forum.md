@@ -28,7 +28,7 @@ In **Personal** > **Bookmarks**, the following tabs are available:
 In **Personal** > **Posts**, the following tabs are available:
 
 * **Posted** – the questions and ideas you have posted (for details, see [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) below)
-* **Answered** – the questions you have answered (for details, see [Answering a Question](#answering-question) below)
+* **Answered** – the questions you have answered (for details, see [Question Details](#question-details) below)
 * **Commented** – the questions, exchanges, and ideas that you have commented on
 * **Drafts** – the post drafts you have started
 
@@ -95,13 +95,15 @@ Below the question details are the answers to the question. Click the **▲** or
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
 
+In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png" >}}
+
 {{% alert color="info" %}}
 The URL for each question is unique.
 {{% /alert %}}
 
-### 3.3 Using a Question
-
-#### 3.3.1 Asking Your Question {#asking-question}
+### 3.3 Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
 It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
@@ -120,17 +122,11 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 3. Click **Ask Question** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
-#### 3.3.2 Accepting an Answer
+{{% alert color="info" %}}
+You can easily upload images in the Mendix Forum by dragging them directly into the text editor. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
+{{% /alert %}}
 
-Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer.
-
-You should accept the answer that properly and accurately responds to your question in the best way possible.
-
-### 3.4 Answering a Question {#answering-question}
-
-Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit Answer**.
-
-You can easily upload your images in the Mendix Forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
+Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer. You should accept the answer that properly and accurately responds to your question in the best way possible.
 
 ## 4 Exchanges {#exchanges-tab}
 

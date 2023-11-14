@@ -74,8 +74,6 @@ To filter the searching results, you can use the following filters:
 
 ### 3.2 Question Details {#question-details}
 
-[**START; SCREENSHOT UPDATED, ADD NUMBERS**]
-
 Clicking the title of a question will bring you to the details page for that question:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}

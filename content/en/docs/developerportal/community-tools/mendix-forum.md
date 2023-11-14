@@ -53,9 +53,9 @@ Each question has the following details:
 * ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
 * ⑩ The avatars of the Mendix comminity members who have answered and commented
 
-Hovering over the developer name brings up the profile card with theMendix points for the developer.
-
-Click the developer name on the card to go to their Mendix Profile.
+{{% alert color="info" %}}
+Hover over the developer name to see the profile card with their Mendix points. Click the developer name on the card to go to their Mendix Profile.
+{{% /alert %}}
 
 ### 3.1 Searching and Filtering Questions
 
@@ -71,7 +71,7 @@ To filter the searching results, you can use the following filters:
 
 ### 3.2 Question Details {#question-details}
 
-Clicking the title of a question will bring you to its details page:
+Clicking the title of a question brings you to its details page:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}
 
@@ -148,19 +148,50 @@ Each exchange has the following details:
 * ⑧ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
 * ⑨ The avatars of the Mendix comminity members who have commented
 
-
-Hovering over the developer name brings up the profile card with theMendix points for the developer.
-
-Click the developer name on the card to go to their Mendix Profile.
-
-
-
-
-
-
-
-
 ### 4.2 Exchange Details {#exchange-details}
+
+Clicking the title of an exchange brings you to its details page:
+
+
+
+
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}
+
+On this page, you do the following:
+
+* ① View the exchange details
+    * When the exchange was **Submitted**
+    * The **Last activity** date and time for when the exchange was updated
+    * How many times the exchange has been **Viewed**
+    * The **Space** of the exchange
+    * The **Tags** applied to the exchange (clicking a tag opens an overview page that lists exchange with the same tag)
+
+
+
+
+    * The **Version** set when the exchange was asked (for details, see [Asking Your Question](#asking-question) below)
+* ② Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness
+* ③ Click **Comment** to write and submit a comment on the question
+* ④ Click **Bookmark** to bookmark the question
+* ⑤ Click **Follow This Question** if you want to follow the discussion via email notifications
+    * You are automatically subscribed for email notifications on questions that you have asked
+    * If you want to unsubscribe from these notifications, click **Unfollow This Question**
+
+Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
+
+In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png" >}}
+
+{{% alert color="info" %}}
+The URL for each question is unique.
+{{% /alert %}}
+
+
+
 
 ### 4.3 Posting an Exchange {#posting-exchange}
 

@@ -77,7 +77,7 @@ The current situation could be represent as shown below:
 
 In this chapter we'll go through the [example](#example) with the different approaches. 
 
-TODO: adjust User Preference, also see docs.mendix.com/refguide/preferences-dialog/
+Every time changes can be combined, for example when Pulling changes from the server, you can choose the approach. The default can be changed by adjusting the [user preference](/refguide/preferences-dialog/#62-git).
 
 ### 3.1 Rebase {#rebase}
 

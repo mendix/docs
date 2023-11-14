@@ -153,6 +153,14 @@ Select **Enable automatic fetching from a remote repository** to enable the [Aut
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
 
+#### 6.2.8 Combine local and remote changes
+
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.5.
+{{% /alert %}}
+
+When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between Rebase and Merge commit. This preference allows setting the default choice.
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}

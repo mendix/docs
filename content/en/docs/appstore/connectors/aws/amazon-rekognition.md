@@ -27,7 +27,7 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 
 The Amazon Rekognition connector requires Mendix Studio Pro 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ### 1.3 Example
 
@@ -49,21 +49,21 @@ Follow the instructions in [How to Use Marketplace Content](/appstore/overview/u
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonRekognitionConnector** section. The connector provides a [domain model](#domain-model) and [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a microflow.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonRekognitionConnector** section. The connector provides a [domain model](#domain-model) and [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a Microflow.
 
 ### 3.1 Configuring AWS Authentication
 
 In order to use the Amazon Rekognition service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
-    The Amazon Rekognition connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+2. Decide whether you want to use temporary or static credentials to authenticate.
+    The Amazon Rekognition connector supports both temporary and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to temporary credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
     {{< figure src="/attachments/appstore/connectors/aws-rekognition/appsettings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+    If you have multiple sets of AWS credentials, or if you want to use both static and temporary credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
 6. In the **Select Constants** dialog, find and expand the **AmazonRekognitionConnector** > **ConnectionDetails** section.
 
@@ -73,58 +73,42 @@ In order to use the Amazon Rekognition service, you must authenticate with AWS. 
 
     | Credentials type | Constant | Value |
     | --- | --- | --- |
-    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for temporary credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
     | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the temporary credentials expires |
     | **SessionCredentials** | **Session Name** | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Rekognition, you can implement the functions of the connector by using the provided activities in microflows. For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
+After you configure the authentication profile for Amazon Rekognition, you can implement the functions of the connector by using the provided activities in Microflows. For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
 
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
-2. Enter a name for your microflow, for example, *ACT_DetectLabels*, and then click **OK**.
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add Microflow**.
+2. Enter a name for your Microflow, for example, *ACT_DetectLabels*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **DetectLabels** activity.
-4. Drag the **DetectLabels** activity onto the work area of your microflow.
-5. Double-click the **DetectLabels** microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image and specify an AWS region. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
-6. In the **Edit** parameters section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws_region).
-7. Click **OK**.
-8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-9. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.
-10. Double-click the **Retrieve** activity.
-11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
-12. Click **OK**.
-13. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+4. Drag the **DetectLabels** activity onto the work area of your Microflow.
+5. Double-click the **DetectLabels** Microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
+6. Click **OK**.
+7. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the Microflow area.
+8. Position the **Retrieve** activity between the **DetectLabels** activity and the Microflow end event.
+9. Double-click the **Retrieve** activity.
+10. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
+11. Click **OK**.
+12. Configure a method for triggering the **ACT_DetectLabels** Microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference
 
 To help you work with the Amazon Rekognition connector, the following sections of this document list the available [constants](#constants), [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
 
-### 4.1 Constants {#constants}
-
-Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
-
-For more information, see [Constants](/refguide/constants/).
-
-| Name | Value |
-| --- | --- |
-| `AWSRekognitionConnector.AWS_ClientCertificateID` | The ID for the ClientCertificate used to sign the authentication requests. (Link to Auth v2 docs) |
-| `AWSRekognitionConnector.HostPattern` | The endpoint URL for the AWS Rekognition Service, for example, `https://rekognition.us-east-1.amazonaws.com` |
-| `AWSRekognitionConnector.ProfileARN` | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
-| `AWSRekognitionConnector.Region` | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
-| `AWSRekognitionConnector.RoleARN` | The RoleARN of the IAM Role that has access to the Rekognition service. |
-| `AWSRekognitionConnector.AWS_TrustAnchorARN` | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured Role |
-
 ### 4.2 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are (re-)used by the different models for the specific microflow activities or for storing connection details.
+The entities in the table below describe all generalizations. These are (re-)used by the different models for the specific Microflow activities or for storing connection details.
 
 | Name | Description |
 | --- | --- |
@@ -156,30 +140,9 @@ This enumeration specifies how much filtering is applied, for example, to identi
 | `MEDIUM` | MEDIUM | A medium level of quality filtering is applied. |
 | `HIGH` | HIGH | A high level of quality filtering is applied. |
 
-#### 4.3.2 AWS_Region {#aws_region}
-
-This enumeration provides a list of available AWS regions.
-
-| **Name** | **Caption** |
-| --- | --- |
-| `us_east_2` | **us-east-2** |
-| `us_east_1` | **us-east-1** |
-| `us_west_1` | **us-west-1** |
-| `us_west_2` | **us-west-2** |
-| `ap_south_1` | **ap-south-1** |
-| `ap_northeast_2` | **ap-northeast-2** |
-| `ap_southeast_1` | **ap-southeast-1** |
-| `ap_southeast_2` | **ap-southeast-2** |
-| `ap_northeast_1` | **ap-northeast-1** |
-| `ca_central_1` | **ca-central-1** |
-| `eu_central_1` | **eu-central-1** |
-| `eu_west_1` | **eu-west-1** |
-| `eu_west_2` | **eu-west-2** |
-| `us_gov_west_1` | **us-gov-west-1** |
-
 ### 4.4 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
+Activities define the actions that are executed in a Microflow or a Nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.4.1 Compare Face
 
@@ -381,7 +344,7 @@ This activity returns a `RecognizeCelebrities` object with results as shown in t
 | `KnownGender` | | This entity contains the known gender identity for the celebrity that matches the provided ID. The known gender identity can be `Male`, `Female`, `Nonbinary`, or `Unlisted`. |
 | `URL` | | This entity contains an array of URLs pointing to additional information about the celebrity. If there is no additional information about the celebrity, this list is empty. |
 | `FaceCelebrity` | `AmazonRekognitionConnector.Face` | This entity holds the information of the face-unrecognized and face-recognized celebrities. Additionally, it is used to hold information over associations regarding the face properties such as the bounding box, face ID, image ID of the input image, and external image ID that you assigned. It is a specialization of the `Face` generalization entity. |
-| `BoundingBoxRecognizeCelebrity` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectrCelebrities` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
+| `BoundingBoxRecognizeCelebrity` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectCelebrities` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PoseRecognizeCelebrity` | `AmazonRekognitionConnector.Pose` | This entity contains the pose results for the `RecognizeCelebrities` activity. It includes the pitch, roll, and yaw of the image. It is a specialization of the `Pose` generalization entity. |
 | `ImageQualityRecognizeCelebrity` | `AmazonRekognitionConnector.ImageQuality` | This entity contains the image quality results for the `RecognizeCelebrity` activity. It includes the brightness and sharpness of the image. It is a specialization of the `ImageQuality` generalization entity. |
 | `SmileRecognizeCelebrity` | `AmazonRekognitionConnector.PhysicalProperty` | This entity contains the smile results for the `RecognizeCelebrities` activity. It includes a confidence and a value. It is a specialization of the `PhysicalProperty` generalization entity. |
@@ -395,14 +358,14 @@ This activity returns a `RecognizeCelebrities` object with results as shown in t
 
 JavaScript actions provide an additional way to extend the functionality of your application. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
 
-#### 4.5.1 JS_AddBoundingBox
+#### 4.5.1 Image_AddBoundingBox
 
-The `JS_AddBoundingBox` JavaScript action can be used to generate a rectangle around the labels that have been identified on an image. The image upon which the rectangles are to be generated must be contained in a container. As a result, the JavaScript action can only be executed after the page has been rendered.
+The `Image_AddBoundingBox` Nanoflow action can be used to generate a rectangle around the labels that have been identified on an image. It makes use of a JavaScript action inside the Nanoflow. The image upon which the rectangles are to be generated must be contained in a container. As a result, the Nanoflow action can only be executed after the page has been rendered.
 
 | Parameter | Description |
 | --- | --- |
 | `ClassName` (String) | A string representation of the container upon which a rectangle is to be generated. |
 | `BoundingBox` (Object) | An object of the type `BoundingBox`. The object must have the following attributes: `Top`, `Left`, `Height` and `Width`. |
-| `CustomLabel` (Object) | An object of the identification. The object must have the `Confidence` attribute. |
+| `Confidence` (Decimal) | A confidence score is a number between 0 and 100 that indicates the probability that a given prediction is correct. |
 | `HighConfidenceThreshold` (Decimal) | The minimum threshold of confidence for the rectangle to be considered of high confidence. This results in a green rectangle being rendered. Range: 0 - 100 |
 | `MediumConfidenceThreshold` (Decimal) | The bottom of the range of threshold of confidence for the rectangle to be considered of medium confidence, whereas the top is the `HighConfidenceThreshold` parameter. This results in an orange rectangle being rendered. All labels with a confidence below this value are considered of low confidence, which results in an red rectangle being rendered. Range: 0 - 100 |

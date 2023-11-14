@@ -187,15 +187,16 @@ Install the Private Mendix Platform by doing the following steps:
 
     {{< figure src="/attachments/private-platform/pmp-install8.png" >}}
 
-5. Click **Review and Apply** > **Evaluate Configuration**.
-6. Make any required changes or click **Run Test App**.
+5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable.
+6. Click **Review and Apply** > **Evaluate Configuration**.
+7. Make any required changes or click **Run Test App**.
 
     {{< figure src="/attachments/private-platform/pmp-install9.png" >}}
 
-7. After the test installation is completed, keep the installer open so you can reuse the settings and apply them to the installation later.
-8. Open the endpoint URL that you configured as the **AppURL** in step 3 above and verify that you can upload a test file.
-9. In the Private Mendix Platform installer, click **Apply Configuration**.
-10. Click **OK** to remove the test installation and install Private Mendix Platform.
+8. After the test installation is completed, keep the installer open so you can reuse the settings and apply them to the installation later.
+9. Open the endpoint URL that you configured as the **AppURL** in step 3 above and verify that you can upload a test file.
+10. In the Private Mendix Platform installer, click **Apply Configuration**.
+11. Click **OK** to remove the test installation and install Private Mendix Platform.
 
 {{< figure src="/attachments/private-platform/pmp-install10.png" >}}
 

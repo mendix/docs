@@ -78,7 +78,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of a question will bring you to the details page for that question:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_details.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}
 
 On this page, you can read the full descriptive text of the question and do the following:
 

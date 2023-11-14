@@ -27,7 +27,7 @@ If you want to deploy your app to Amazon EKS, consider using the Mendix for Amaz
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 * [Google Cloud Platform](https://cloud.google.com/)
-* [Google Kubernetes Engine- Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview)
+* [Google Kubernetes Engine- Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview). For further information, follow [documentation](/developerportal/deploy/private-cloud-cluster/#69-gke_autopilot_workarounds)
 
 {{% alert color="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
@@ -163,7 +163,6 @@ The following databases are supported, and provide the features listed.
 | Standard PostgreSQL | Yes | Yes |
 | Microsoft SQL Server | Yes | Yes |
 | Dedicated JDBC | Yes | No |
-| AWS RDS Aurora | Yes | No |
 
 ### 4.1 Ephemeral Database
 
@@ -203,8 +202,11 @@ The following managed PostgreSQL databases are supported:
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
+* [Amazon RDS Aurora for PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraPostgreSQL.html)
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
+
+Amazon Aurora PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
 Azure PostgreSQL databases require additional firewall configuration to allow connections from the Kubernetes cluster.
 

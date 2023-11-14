@@ -39,7 +39,7 @@ In **General** > **Questions**, there is an overview of the questions that have 
 
 Each question has the following details:
 
-[**IS ONE OF THESE THE SPACE? SEE BELOW**]
+[**IS ONE OF THESE THE SPACE? MAYBE CATEGORY? SEE BELOW**]
 
 * ① A descriptive title (clicking the question title opens the specific [Question Details](#question-details))
 * ② The beginning of the question description, which is taken from the [Question Details](#question-details)
@@ -74,26 +74,25 @@ To filter the searching results, you can use the following filters:
 
 ### 3.2 Question Details {#question-details}
 
-Clicking the title of a question will bring you to the details page for that question:
+Clicking the title of a question will bring you to its details page:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}
 
-On this page, you can read the full descriptive text of the question and do the following:
+On this page, you do the following:
 
-* View the following question details (①):
+* ① View the question details
     * When the question was **Submitted**
-    * The date and time of the **Last activity** on the question (meaning, when it was last updated)
+    * The **Last activity** date and time for when the question was updated
     * How many times the question has been **Viewed**
     * The **Space** of the question
     * The **Tags** applied to the question (clicking a tag opens an overview page that lists questions with the same tag)
-    * The **Version** set when the question was asked (for more information, see the [Asking Your Question](#asking-question) section)
-* Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness (②)
-* Click **Comment** to write and submit a comment on the question (③)
-* Click **Bookmark** to bookmark the question (④)
-
-{{% alert color="info" %}}
-If you want to follow the discussion on a question via email notifications, click **Follow This Question** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unfollow This Question** on a specific question you have asked or that you want to stop following.
-{{% /alert %}}
+    * The **Version** set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
+* ② Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness
+* ③ Click **Comment** to write and submit a comment on the question
+* ④ Click **Bookmark** to bookmark the question
+* ⑤ Click **Follow This Question** if you want to follow the discussion via email notifications
+    * You are automatically subscribed for email notifications on questions that you have asked
+    * If you want to unsubscribe from these notifications, click **Unfollow This Question**
 
 {{% alert color="info" %}}
 The URL for each question is unique.

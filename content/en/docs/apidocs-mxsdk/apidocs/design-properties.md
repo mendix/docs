@@ -273,7 +273,7 @@ Note: if you can not provide a value for the preview, it is recommended to inste
 
 Design properties of type **ToggleButtonGroup** have the following additional fields:
 
-* `multiSelect` (optional): When `true`, the user can set multiple options at the same time, meaning the CSS classes of all selected options will be applied to the widget. This cannot be `true` if any of the options uses a CSS variable. When `false` or if the field is not present, only a single option can be selected.
+* `multiSelect` (optional): When `false` or if the field is not present, only a single option can be selected. When `true`, the user can set multiple options at the same time, meaning the CSS classes of all selected options will be applied to the widget. This cannot be `true` if any of the options uses a CSS variable.
 * `options` (required): It should be an array of possible options. Every option must be an object with the following fields:
   * `name` (required): A string. The name is shown to the user on the button.
   * `class` or `variable` (one of these is required): A valid CSS class or CSS variable, respectively. When `multiSelect` is `true` the options must be defined using `class`.
@@ -281,7 +281,7 @@ Design properties of type **ToggleButtonGroup** have the following additional fi
 * `property` (required if any of the options uses a CSS variable): A CSS property.
 
 {{% alert color="warning" %}}
-Be careful when changing the value of the `multiSelect` field from `true` to `false` or removing the field entirely, as this results in a consistency error for any Widget that previously had multiple values selected.
+Be careful when adding, removing or changing the value of the `multiSelect` field. This results in a consistency error for any Widget that previously had multiple values selected.
 {{% /alert %}}
 
 Note that a **ToggleButtonGroup** allows you to define up to 9 different options. If you instead use `icon`, you can use up to 18 options.

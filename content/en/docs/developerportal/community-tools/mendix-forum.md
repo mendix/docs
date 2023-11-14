@@ -94,25 +94,25 @@ On this page, you do the following:
     * You are automatically subscribed for email notifications on questions that you have asked
     * If you want to unsubscribe from these notifications, click **Unfollow This Question**
 
-{{% alert color="info" %}}
-The URL for each question is unique.
-{{% /alert %}}
-
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
 
-### 3.3 Asking a Question
+{{% alert color="info" %}}
+The URL for each question is unique.
+{{% /alert %}}
+
+### 3.3 Using a Question
 
 #### 3.3.1 Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
-It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
+It's never been easier to ask a question on the Mendix Forum! But before you submit a new question, be sure to search for similar questions that have already been asked. There may be someone else who has already posted the same question!
 {{% /alert %}}
 
 To ask your own question on the Mendix Forum, follow these steps:
 
-1. Click **Ask a Question** on the upper-right corner of the **Questions** page. 
+1. You can create a question by clicking **Create a Post** and selecting **Ask a Question**, or by clicking **Ask a Question** at the top of the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
     * The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)

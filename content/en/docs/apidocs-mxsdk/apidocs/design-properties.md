@@ -13,7 +13,7 @@ The Mendix Design Properties API allows you to create or extend design propertie
 
 To use the API, you need to alter the *design-properties.json* file of a specific module in your application's **themesource** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
 
-Many apps can simply use the Atlas UI theme and its included set of design properties to statisfy their styling needs. However, if you want to customize your styling more deeply, you will have to create your own custom design properties. This guide outlines how design properties work and can help you create custom design properties. The design properties provided by Atlas UI have been build in the same way as outlined here.
+Many apps can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. However, if you want to customize your styling more deeply, you will have to create your own custom design properties. This guide outlines how design properties work and can help you create custom design properties. The design properties provided by Atlas UI have been build in the same way as outlined here.
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
@@ -24,6 +24,8 @@ In Studio Pro, you can see which design properties are available for a widget in
 While styling Mendix apps, users must often apply the same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and vulnerable to human error as you edit text fields in order to apply classes to a widget.
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
+
+### 2.1 Creating styles for your Design Properties
 
 You can define the styles that correspond to your design properties as CSS classes. Starting with Mendix 10, you can also use design properties to apply CSS variables (also known as CSS custom properties) to specified CSS properties. In this document, we will show examples of both ways.
 
@@ -109,7 +111,7 @@ Every design property in the array is also represented by a *JSON* object. The e
 
 #### 4.1.1 Common Fields
 
-The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are arbitrary string values naming and describing a design property. 
+The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are required string values naming and describing a design property. 
 
 Field `type` defines the type of a property and must be one of the design property types: `Toggle`, `Dropdown`, `Colorpicker`, `ToggleButtonGroup` or `Spacing`.
 
@@ -121,7 +123,7 @@ Name your design property and its options carefully. Those names cannot be chang
 
 Design properties of type **Toggle** have the following additional field:
 
-* `class` (required): This field defines an arbitrary class name to be applied if the option is toggled on for a widget.
+* `class` (required): This field defines a class name to be applied if the option is toggled on for a widget.
 
 Here is a full example of a **Toggle** design property:
 
@@ -211,7 +213,7 @@ Design properties of type **Colorpicker** have the following additional fields:
 * `options` (required): It should be an array of possible options. Every option must be an object with the following fields:
   * `name` (required): This field is required and should be a string. The name is shown to the user when selecting an option.
   * `class` or `variable` (one of these is required) These should be a valid CSS class or CSS variable, respectively.
-  * `preview` (required): The value should either be a CSS variable (such as `--brand-primary`), a hexademical color definition (such as `#00FF00`) or the name of a HTML color (such as `green`). You can use a CSS variable for the preview even if the option is based on a CSS class.
+  * `preview` (required): The value should either be a CSS variable (such as `--brand-primary`), a hexadecimal color definition (such as `#00FF00`) or the name of a HTML color (such as `green`). You can use a CSS variable for the preview even if the option is based on a CSS class.
 * `property` (required if any of the options uses a CSS variable): A CSS property.
 
 When the selected option defines a class, that class will be applied to the widget. When the selected option defines a variable, it will be applied to the specified `property`.
@@ -273,10 +275,14 @@ Design properties of type **ToggleButtonGroup** have the following additional fi
 
 * `multiSelect` (optional): When `true`, the user can set multiple options at the same time, meaning the CSS classes of all selected options will be applied to the widget. This cannot be `true` if any of the options uses a CSS variable. When `false` or if the field is not present, only a single option can be selected.
 * `options` (required): It should be an array of possible options. Every option must be an object with the following fields:
-  * `name` (required): An arbitrary string. The name is shown to the user on the button.
+  * `name` (required): A string. The name is shown to the user on the button.
   * `class` or `variable` (one of these is required): A valid CSS class or CSS variable, respectively. When `multiSelect` is `true` the options must be defined using `class`.
   * `icon` (optional): These should be a string. When using `icon` it must refer to an Icon from an Icon Collection: `[Module name].[IconCollection name].[Icon name]`. If you want to use an `icon`, all options must have an `icon` field.
 * `property` (required if any of the options uses a CSS variable): A CSS property.
+
+{{% alert color="warning" %}}
+Be careful when changing the value of the `multiSelect` field from `true` to `false` or removing the field entirely, as this results in a consistency error for any Widget that previously had multiple values selected.
+{{% /alert %}}
 
 Note that a **ToggleButtonGroup** allows you to define up to 9 different options. If you instead use `icon`, you can use up to 18 options.
 
@@ -332,21 +338,21 @@ Here is an example of a **ToggleButtonGroup** design property using CSS variable
 
 For design properties of type **Spacing**, in addition to the common fields, it has the following fields:
 
-* `margin` (required): These two fields must be an array of possible options. Every option must be an object with the following fields:
-  * `name` (required): An arbitrary string. It is recommended to use three characters or less for the names, as otherwise they will not be fully shown.
+* `margin` (required): This must be an array of possible options. Every option must be an object with the following fields:
+  * `name` (required): A string. It is recommended to use three characters or less for the names, as otherwise they will not be fully shown.
   * `top` (optional): An object which can specify:
     * `class`: An optional string. It represents a specific CSS class to apply the the of sizing (margin or padding) for the given direction (top, left, right, bottom)
   * `right` (optional): Same as `top`
   * `bottom` (optional): Same as `top`
   * `left` (optional): Same as `top`
-  * A `variable` (optional): A CSS variable. When using a variable, the option will automatically be availabe for all four directions. Therefore, a CSS variable can not be used if any of the four directions (`top`, `right`, `bottom` or `left`) specifies a class. 
+  * `variable` (optional): A CSS variable. When using a variable, the option will automatically be available for all four directions. Therefore, a CSS variable can not be used if any of the four directions (`top`, `right`, `bottom` or `left`) specifies a class. 
 * `padding` (required): same as `margin`
 
 Both margin and padding allow up to 12 options to be defined. If you define more options than that, some of them will not be able to be selected.
 
 The **Spacing** property also allows users to select the same option for all four directions at the same time. When doing so, they are only allowed to select options that are available for all four directions. This means that they need to have a CSS class defined for all four directions, or define a CSS variable.
 
-Here is an example of a **ToggleButtonGroup** design property using classes:
+Here is an example of a **Spacing** design property using classes:
 
 ```js
 {
@@ -420,7 +426,7 @@ Here is an example of a **ToggleButtonGroup** design property using classes:
 }
 ```
 
-Here is an example of a **ToggleButtonGroup** design property using CSS variables:
+Here is an example of a **Spacing** design property using CSS variables:
 
 ```js
 {
@@ -520,7 +526,7 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
-### 6.1 Renaming a Dropdown Option to a Toggle Property
+### 7.1 Renaming a Dropdown Option to a Toggle Property
 
 {{% alert color="info" %}}
 This feature was introduced in Mendix 9.
@@ -542,7 +548,7 @@ Here is an example of a **Toggle** property that was renamed from a **Dropdown**
 
 The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
 
-### 6.2 Renaming multiple Toggle properties to a multi-select ToggleButtonGroup Property
+### 7.2 Renaming multiple Toggle properties to a multi-select ToggleButtonGroup Property
 
 You can rename several **Toggle** properties to a multi-select **ToggleButtonGroup** property. To do this, use the `oldNames` field of an option to refer to the name of the corresponding **Toggle**. Make sure to set the `multiSelect` field of the **ToggleButtonGroup** to **true**.
 
@@ -579,9 +585,9 @@ Here is an example of a **ToggleButtonGroup** property that was renamed from sev
 
 The design property above is a replacement for the removed properties **Bold text**, **Italic text** and **Underline text**. An option will be turned on if that **Toggle** was previously turned on. The value of **Toggle** will then be turned off if that design property still exists.
 
-### 6.3 Renaming a Dropdown option to a Spacing option
+### 7.3 Renaming a Dropdown option to a Spacing option
 
-You can rename options of a **Dropdown**, **Colorpicker** or **ToggleButtonGroup** property to an option of a **Spacing** property. In this case, the old name of the renamed options consists of the **Dropdown**, **Colorpicker** or **ToggleButtonGroup** property's name and the option's name separated by two colons. It is not required for the original property to still exist — it may have been removed entirely.
+You can rename options of a **Dropdown** property to an option of a **Spacing** property. In this case, the old name of the renamed options consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the original property to still exist — it may have been removed entirely.
 
 Here is an example of a **Spacing** property that includes options that have been renamed from a **Dropdown** option:
 
@@ -604,7 +610,7 @@ Here is an example of a **Spacing** property that includes options that have bee
             "name": "S",
             "variable": "--size-s",
             "top": {
-                "oldnames": [
+                "oldNames": [
                     "spacing-top::inner small"
                 ]
             }
@@ -615,9 +621,9 @@ Here is an example of a **Spacing** property that includes options that have bee
 
 The design property above is a replacement for the removed options **small** and **inner small** of the **Spacing-top**. The appropriate option will be selected, depending on the option that was previously selected. The value of **Spacing-top** will then be set to empty if that design property still exists.
 
-## 7 CSS classes and CSS Variables{#class-variable}
+## 8 CSS classes and CSS Variables{#class-variable}
 
-### 7.1 CSS classes
+### 8.1 CSS classes
 
 When using CSS classes, you should keep a few things in mind:
 
@@ -638,7 +644,7 @@ In your apps theme, you can create CSS classes as such:
 }
 ```
 
-### 7.2 CSS variables
+### 8.2 CSS variables
 
 When using CSS variables, you should keep a few things in mind:
 
@@ -659,9 +665,9 @@ In your theme, you can create CSS variables as such:
 
 It is recommended to scope them to `:root`, like in the example, as this would make the CSS variables available for all widgets in your app.
 
-### 7.3 Using both CSS classes and CSS variables
+### 8.3 Using both CSS classes and CSS variables
 
-You might want to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your exisiting styling right away. In that case, you can combine **Dropdown**, **Colorpicker**, **TogleButtonGroup** and **Spacing** options using classes with ones that use CSS variables, as long as each individual option only defines a CSS class *or* a CSS variable, but not both. Also ensure that your design property defines a `property` field with the name of the CSS property you are targetting.
+You might want to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your existing styling right away. In that case, you can combine **Dropdown**, **Colorpicker**, **ToggleButtonGroup** and **Spacing** options using classes with ones that use CSS variables, as long as each individual option only defines a CSS class *or* a CSS variable, but not both. Also ensure that your design property defines a `property` field with the name of the CSS property you are targeting.
 
 ```js
 {
@@ -684,7 +690,7 @@ You might want to gradually update your design properties from using classes to 
 
 When the **Small** option is selected, the `borderRadiusSmall` class will be applied to the widget. On the other hand, when **Large** is selected, the `--radius-large` variable will be assigned to the `border-radius` property of the widget.
 
-## 8 Read More
+## 9 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/)

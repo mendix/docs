@@ -71,7 +71,7 @@ Renaming 'E-mail' to 'EmailAddress' and removing 'Second_E-mail' entirely and pu
 
 The current situation could be represent as shown below: 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="465" >}} 
 
 ## 3 Combining Changes
 
@@ -85,7 +85,7 @@ Rebasing is the default way to integrate your work with the server changes by mo
 
 We'll use this as the starting state, based on the [example](#example) above. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="465" >}} 
 
 {{% alert color="info" %}}
 During the rebase process, there is a slight terminology change in Studio Pro compared to merge. The images below illustrate the process.  
@@ -95,7 +95,7 @@ During the rebase process, there is a slight terminology change in Studio Pro co
 
 After starting to rebase your two commits (#4 and #5) are temporarily put aside, and Studio Pro will show the latests changes from the tip of server (up until #3).
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_1.png" alt="Rebase Step 1" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_1.png" alt="Rebase Step 1" width="465" >}} 
 
 {{% alert color="info" %}}
 Your work shall be now referenced as 'Theirs', while server changes shall be 'Mine' 
@@ -105,7 +105,7 @@ Your work shall be now referenced as 'Theirs', while server changes shall be 'Mi
 
 Git will try to apply your first commit (#4) to the tip. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_2.png" alt="Rebase Step 2" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_2.png" alt="Rebase Step 2" width="465" >}} 
 
 If there are no conflicts when comparing your commit (#4) with the latest state from the server (#3), Studio Pro will automatically continue. A new commit will be created from your commit, which we'll call commit #4'.
 
@@ -129,7 +129,7 @@ Above you can see that your new change is represented as 'Mine', together with c
 
 Once the conflict is resolved and you continue the rebase, a new commit (#5') is created from your commit (#5), where you can optionally amend the commit message. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_3.png" alt="Rebase Step 3" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_3.png" alt="Rebase Step 3" width="465" >}} 
 
 As this was the last local commit to reapply, the rebasing can now be completed.
 
@@ -137,7 +137,7 @@ As this was the last local commit to reapply, the rebasing can now be completed.
 
 When the rebase process is completed, the work that was put aside is now removed.
  
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_4.png" alt="Rebase Step 4" width="500" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_4.png" alt="Rebase Step 4" width="465" >}}
 
 As you can see your work is still on your local machine. After testing whether the combined state works as expected, you can push the combined state to the server.
 
@@ -145,7 +145,7 @@ As you can see your work is still on your local machine. After testing whether t
 
 After you pushed your work to the server state of it is represented below:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_5.png" alt="Rebase Step 5" width="500" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_5.png" alt="Rebase Step 5" width="465" >}}
 
 {{% alert color="info" %}}
 While you were completing the rebase process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #5') with the newest changes on the server.
@@ -157,13 +157,13 @@ Making a merge commit is another way you could use to integrate you work with re
 
 We'll use this as the starting state, based on the [example](#example) above. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Starting_state.png" alt="Starting point" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Starting_state.png" alt="Starting point" width="525" >}} 
 
 #### 3.2.1 Merge started 
 
 After starting the merge process Studio Pro will combine your local work (#5) with the state of the server (#4). 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_1.png" alt="Merge Step 1" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_1.png" alt="Merge Step 1" width="525" >}} 
 
 {{% alert color="info" %}}
 Your work shall be now referenced as 'Mine', while server changes shall be 'Theirs’. 
@@ -171,7 +171,7 @@ Your work shall be now referenced as 'Mine', while server changes shall be 'Thei
 
 In the end you'll be creating a merge commit that merges commits #4 and #5. The history before that (#2 and #3) are also taken along.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_2.png" alt="Merge Step 2" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_2.png" alt="Merge Step 2" width="525" >}} 
 
 #### 3.2.1 Conflict resolution: resolving the two conflicts
 
@@ -195,11 +195,11 @@ After resolving all conflicts you can proceed with testing the app.
 
 When the combined state is tested, a 'merge commit' can be created for the new version of the app. This is a new commit (#6) which will always show that it merged commits #4 and #5.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_3.png" alt="Merge Step 3" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_3.png" alt="Merge Step 3" width="525" >}} 
 
 By default Studio Pro will also Push your work to the server when making a commit.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_4.png" alt="Merge Step 4" width="500" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_4.png" alt="Merge Step 4" width="525" >}} 
 
 {{% alert color="info" %}}
 While you were completing the merge process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #6) with the newest changes on the server.
@@ -211,8 +211,8 @@ We have merged your local work with the latest state from the server and resolve
 
 In the end the history on the server will look like this:
 
-* After a Rebase: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_state.png" alt="Rebase end state" width="500" >}}
-* After a Merge commit: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_End_state.png" alt="Merge commit end state" width="500" >}}
+* After a Rebase: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_state.png" alt="Rebase end state" width="465" >}}
+* After a Merge commit: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_End_state.png" alt="Merge commit end state" width="525" >}}
 
 This illustrates that Rebasing results in a simpler commit history, while a Merge commit results in an additional commit that will always show as a branched off set of commits.
 

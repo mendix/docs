@@ -169,7 +169,7 @@ The domain model is a data model that describes the information in your applicat
 | `GroupProperty` | This entity holds information for showing the group that a certain key belongs to. The attribute it contains is `_id` which describes the group identification number which will be the same for each member of the group. Additionally, it contains a list of `ExpenseGroupPropertyType` objects. |
 | `ExpenseGroupPropertyType` | This entity holds information for distinguishing whether the expense group is a name or an address. The attribute it contains is `_Type`. |
 | `AbstractExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `AbstractGeometry` object (`AnalyzeExpenseGeometry`). |
-| `AbstractFeatureType` | This entity holds information about the type of analysis that should be executed. It contains the attribute `Value` which specifies the feature type value of type enumeration. |
+| `AbstractFeatureType` | This entity holds information about the type of analysis that should be executed. It contains the attribute `Value` which specifies the feature type value of type enumeration. The current version of the Amazon Textract Connector support the following Feature Types: TABLES, FORMS, QUERIES and SIGNATURES. Adding the Feature Type LAYOUT to the request is currently not supported and can cause errors. |
 | `AbstractWarning` | This entity holds information about the warnings that have been sent along with a `GetDocumentAnalysisResponse` or a `GetExpenseAnalysisResponse`. It contains an `ErrorCode` attribute which specifies the error code of the warning. It has a list of `PageNumber` objects associated. |
 | `PageNumber` | This entity holds information about the `PageNumber` to which the associated `AbstractWarning` object refers. |
 | `AbstractRequestQuery` | This entity holds information about the question which Textract should apply to the document. The `Text` attribtue holds the question. It has a list of `PagesToSearch` objects associated. |
@@ -233,9 +233,9 @@ This enumeration describes the current block. For more information about the enu
 | `TABLE` | TABLE |
 | `TITLE` | TITLE |
 | `WORD` | WORD | |
-| `TABLE_TITLE` | WORD | |
-| `TABLE_FOOTER` | WORD | |
-| `SIGANTURE` | WORD | |
+| `TABLE_TITLE` | TABLE_TITLE | |
+| `TABLE_FOOTER` | TABLE_FOOTER | |
+| `SIGANTURE` | SIGNATURE | |
 
 #### 4.2.5 SelectionStatus
 
@@ -256,7 +256,10 @@ This enumeration holds the available types of analysis to perform. For more info
 | `TABLES` | TABLES |
 | `QUERIES` | QUERIES |
 | `SIGNATURES` | SIGNATURES |
-| `LAYOUT` | LAYOUT |
+| `LAYOUT` | LAYOUT | 
+
+`LAYOUT` **is currently not supported by the Amazon Textract Connector**
+
 
 #### 4.2.7 JobStatus
 
@@ -284,7 +287,9 @@ You can use the action for use cases such as the following:
 #### 4.3.1 AnalyzeDocument {#analyzedocument}
 
 The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region, a `AnalyzeDocumentRequest` object and a specialized `System.FileDocument` object in PNG, JPEG, PDF, or TIFF format.
-It additionally requires at least one `AnalyzeDocFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AnalyzeDocRequestQuery` object. 
+It additionally requires at least one `AnalyzeDocFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AnalyzeDocRequestQuery` object.
+
+The current version of the Amazon Textract Connector support the following Feature Types: TABLES, FORMS, QUERIES and SIGNATURES. Adding the Feature Type LAYOUT to the request is currently not supported and can cause errors. 
 
 Additionally, you can use the `AbstractDocumentAnalysisResponse_ProcessResults` sub-flow. This will process the response from Amazon Textract into the specialized `BlockItem` model.
 
@@ -330,6 +335,8 @@ This activity returns an `AnalyzeExpenseResponse` object with objects from the f
 #### 4.3.3 StartDocumentAnalysis {#startdocumentanalysis}
 
 The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.
+
+The current version of the Amazon Textract Connector support the following Feature Types: TABLES, FORMS, QUERIES and SIGNATURES. Adding the Feature Type LAYOUT to the request is currently not supported and can cause errors. 
 
 The input and output for this service are shown in the table below:
 

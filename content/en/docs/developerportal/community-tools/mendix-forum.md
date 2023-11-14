@@ -36,7 +36,7 @@ In **Personal** > **Posts**, the following tabs are available:
 
 In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_example.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-example.png" >}}
 
 Each question has the following details:
 
@@ -73,11 +73,11 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of a question brings you to its details page:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-details.png" >}}
 
 On this page, you do the following:
 
-* ① View the question details
+* ① View the question details:
     * When the question was **Submitted**
     * The **Last activity** date and time for when the question was updated
     * How many times the question has been **Viewed**
@@ -93,7 +93,7 @@ On this page, you do the following:
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions-answer.png" >}}
 
 In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
 
@@ -132,7 +132,7 @@ Once a question you have asked receives several answers, you can accept an answe
 
 In **General** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchanges-example.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchange-example.png" >}}
 
 Each exchange has the following details:
 
@@ -152,48 +152,36 @@ Each exchange has the following details:
 
 Clicking the title of an exchange brings you to its details page:
 
-
-
-
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question_details.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchange-details.png" >}}
 
 On this page, you do the following:
 
-* ① View the exchange details
-    * When the exchange was **Submitted**
+* ① View the exchange details:
+    * When the exchange was **Shared**
     * The **Last activity** date and time for when the exchange was updated
     * How many times the exchange has been **Viewed**
     * The **Space** of the exchange
     * The **Tags** applied to the exchange (clicking a tag opens an overview page that lists exchange with the same tag)
+* ② Click **Comment** to write and submit a comment on the question
+* ③ Click **Bookmark** to bookmark the question
 
+Below the exchange details are comments on the exchange. 
 
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchange-comment.png" >}}
 
+In the **Your Comment** section, you can contribute to the Mendix Forum by writing your comment in the editor and then clicking **Submit Comment**:
 
-    * The **Version** set when the exchange was asked (for details, see [Asking Your Question](#asking-question) below)
-* ② Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness
-* ③ Click **Comment** to write and submit a comment on the question
-* ④ Click **Bookmark** to bookmark the question
-* ⑤ Click **Follow This Question** if you want to follow the discussion via email notifications
-    * You are automatically subscribed for email notifications on questions that you have asked
-    * If you want to unsubscribe from these notifications, click **Unfollow This Question**
-
-Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions_answer.png" >}}
-
-In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-comment.png" >}}
 
 {{% alert color="info" %}}
-The URL for each question is unique.
+The URL for each exchange is unique.
 {{% /alert %}}
 
-
-
-
 ### 4.3 Posting an Exchange {#posting-exchange}
+
+[**START**
+
+]
 
 
 
@@ -201,7 +189,7 @@ The URL for each question is unique.
 
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_example.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-example.png" >}}
 
 All the submitted ideas are publicly visible, and each idea has a descriptive title (①). Clicking the idea title opens the specific [Idea Details](#idea-details).
 
@@ -238,7 +226,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/ideas_specific_page.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-details.png" >}}
 
 On this page, you can read the full descriptive text of the idea and do the following:
 

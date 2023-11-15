@@ -1,12 +1,12 @@
 ---
-title: "Private Mendix Platform"
+title: "Private Mendix Platform Guide"
 url: /private-mendix-platform/
 description: "Presents documentation on configuring and using the Private Mendix Platform."
 weight: 40
 no_list: false 
 description_list: true 
 cascade:
-    - space: "Private Mendix Platform"
+    - space: "Private Mendix Platform Guide"
     - mendix_version: 10
 tags: ["private mendix platform",  "private platform", "private marketplace"]
 ---

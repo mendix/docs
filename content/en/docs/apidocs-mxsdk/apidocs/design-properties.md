@@ -123,7 +123,10 @@ Name your design property and its options carefully. Those names cannot be chang
 
 Design properties of type **Toggle** have the following additional field:
 
-* `class` (required): This field defines a class name to be applied if the option is toggled on for a widget.
+
+| Field   | Required   | Type   | Description                                                          |
+| ------- | ---------- | ------ | -------------------------------------------------------------------- |
+| `class` | Yes        | String | A class name to be applied if the option is toggled on for a widget. |
 
 Here is a full example of a **Toggle** design property:
 
@@ -144,10 +147,17 @@ This is how the **Toggle** design property appears:
 
 Design properties of type **Dropdown** have the following additional fields:
 
-* `options` (required): It should be an array of possible options. Every option must be an object with the following fields:
-  * `name` (required): This field is required and should be a string. The name is shown to the user when selecting an option.
-  * `class` or `variable` (one of these is required): These should be a valid CSS class or CSS variable, respectively. See [CSS classes and CSS variables](#class-variable) for more information.
-* `property` (required if any of the options uses a CSS variable): A CSS property.
+| Field      | Required                          | Type                                  | Description                 |
+| ---------- | --------------------------------- | ------------------------------------- | --------------------------- |
+| `options`  | Yes                               | Array of Dropdown options (see below) | A list of possible options. |
+| `property` | If any option uses a CSS variable | String | A CSS property.                                            |
+
+Dropdown options have the following fields:
+
+| Field                 | Required                 | Type   | Description                                                                                                                 |
+| --------------------- | ------------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `name`                | Yes                      | String | The name is shown to the user when selecting an option.                                                                     |
+| `class` or `variable` | One of these is required | String | A valid CSS class or CSS variable, respectively. See [CSS classes and CSS variables](#class-variable) for more information. |
 
 When the selected option defines a class, that class will be applied to the widget. When the selected option defines a variable, it will be applied to the specified `property`.
 
@@ -210,11 +220,18 @@ This is how the **Dropdown** design property appears:
 
 Design properties of type **Colorpicker** have the following additional fields:
 
-* `options` (required): It should be an array of possible options. Every option must be an object with the following fields:
-  * `name` (required): This field is required and should be a string. The name is shown to the user when selecting an option.
-  * `class` or `variable` (one of these is required) These should be a valid CSS class or CSS variable, respectively.
-  * `preview` (required): The value should either be a CSS variable (such as `--brand-primary`), a hexadecimal color definition (such as `#00FF00`) or the name of a HTML color (such as `green`). You can use a CSS variable for the preview even if the option is based on a CSS class.
-* `property` (required if any of the options uses a CSS variable): A CSS property.
+| Field      | Required                                  | Type                                      | Description                 |
+| ---------- | ----------------------------------------- | ----------------------------------------- | --------------------------- |
+| `options`  | Yes                                       |  Array of Colorpicker options (see below) | A list of possible options. |
+| `property` | If any of the options uses a CSS variable | String                                    | A CSS property.             |
+
+Colorpicker options have the following fields:
+
+| Field                 | Required                 | Type   | Description                                                                                                                                                                                                                          |
+| --------------------- | ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`                | Yes                      | String | Shown to the user when selecting a color.                                                                                                                                                                                            |
+| `class` or `variable` | One of these is required | String | A valid CSS class or CSS variable, respectively.                                                                                                                                                                                     |
+| `preview`             | Yes                      | String | A CSS variable (such as `--brand-primary`), a hexadecimal color definition (such as `#00FF00`) or the name of a HTML color (such as `green`). You can use a CSS variable for the preview even if the option is based on a CSS class. |
 
 When the selected option defines a class, that class will be applied to the widget. When the selected option defines a variable, it will be applied to the specified `property`.
 
@@ -273,12 +290,19 @@ Note: if you can not provide a value for the preview, it is recommended to inste
 
 Design properties of type **ToggleButtonGroup** have the following additional fields:
 
-* `multiSelect` (optional): When `false` or if the field is not present, only a single option can be selected. When `true`, the user can set multiple options at the same time, meaning the CSS classes of all selected options will be applied to the widget. This cannot be `true` if any of the options uses a CSS variable.
-* `options` (required): It should be an array of possible options. Every option must be an object with the following fields:
-  * `name` (required): A string. The name is shown to the user on the button.
-  * `class` or `variable` (one of these is required): A valid CSS class or CSS variable, respectively. When `multiSelect` is `true` the options must be defined using `class`.
-  * `icon` (optional): These should be a string. When using `icon` it must refer to an Icon from an Icon Collection: `[Module name].[IconCollection name].[Icon name]`. If you want to use an `icon`, all options must have an `icon` field.
-* `property` (required if any of the options uses a CSS variable): A CSS property.
+| Field         | Required                                  | Type                                           | Description                                                                                                                                                                                                                                                                                         |
+| ------------- | ----------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `multiSelect` | No                                        | Boolean                                        | When `false` or if the field is not present, only a single option can be selected. When `true`, the user can set multiple options at the same time, meaning the CSS classes of all selected options will be applied to the widget. This cannot be `true` if any of the options uses a CSS variable. |
+| `options`     | Yes                                       | Array of ToggleButtonGroup options (see below )| A list of possible options.                                                                                                                                                                                                                                                                         |
+| `property`    | If any of the options uses a CSS variable | String                                         | A CSS property.                                                                                                                                                                                                                                                                                     |
+
+ToggleButtonGroup options have the following fields:
+
+| Field                 | Required                 | Type   | Description                                                                                                                                                             |
+| --------------------- | ------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                | Yes                      | String | Shown to the user when not using any icons.                                                                                                                             |
+| `class` or `variable` | One of these is required | String | A valid CSS class or CSS variable, respectively. When `multiSelect` is `true`, the options must be defined using `class`.                                               |
+| `icon`                | No                       | String | A reference to an Icon from an Icon Collection: `[Module name].[IconCollection name].[Icon name]`. If you want to use an `icon`, all options must have an `icon` field. |
 
 {{% alert color="warning" %}}
 Be careful when adding, removing or changing the value of the `multiSelect` field. This results in a consistency error for any Widget that previously had multiple values selected.
@@ -338,15 +362,27 @@ Here is an example of a **ToggleButtonGroup** design property using CSS variable
 
 For design properties of type **Spacing**, in addition to the common fields, it has the following fields:
 
-* `margin` (required): This must be an array of possible options. Every option must be an object with the following fields:
-  * `name` (required): A string. It is recommended to use three characters or less for the names, as otherwise they will not be fully shown.
-  * `top` (optional): An object which can specify:
-    * `class`: An optional string. It represents a specific CSS class to apply the the of sizing (margin or padding) for the given direction (top, left, right, bottom)
-  * `right` (optional): Same as `top`
-  * `bottom` (optional): Same as `top`
-  * `left` (optional): Same as `top`
-  * `variable` (optional): A CSS variable. When using a variable, the option will automatically be available for all four directions. Therefore, a CSS variable can not be used if any of the four directions (`top`, `right`, `bottom` or `left`) specifies a class. 
-* `padding` (required): same as `margin`
+| Field      | Required   | Type                                 | Description                 |
+| ---------- | ---------- | ------------------------------------ | --------------------------- |
+| `margin`   | Yes        | Array of Spacing options (see below) | A list of possible options. |
+| `padding`  | Yes        | Array of Spacing options (see below) | A list of possible options. |
+
+Spacing options have the following fields:
+
+| Field      | Required   | Type                        | Description                                                                                                                                                                                                                                |
+| ---------- | ---------- | -------------------------   | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`     | Yes        | String                      | It is recommended to use three characters or less for the names, as otherwise they will not be fully shown.                                                                                                                                |
+| `top`      | No         | A Spacing value (see below) |                                                                                                                                                                                                                                            |
+| `right`    | No         | A Spacing value (see below) |                                                                                                                                                                                                                                            |
+| `bottom`   | No         | A Spacing value (see below) |                                                                                                                                                                                                                                            |
+| `left`     | No         | A Spacing value (see below) |                                                                                                                                                                                                                                            |
+| `variable` | No         | String                      | A CSS variable. When using a variable, the option will automatically be available for all four directions. Therefore, a CSS variable can not be used if any of the four directions (`top`, `right`, `bottom` or `left`) specifies a class. |
+
+Spacing values have the following fields:
+
+| Field      | Required   | Type                      | Description                                                                                                         |
+| ---------- | ---------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `class`    | No         | String                    | A specific CSS class to apply to the sizing (margin or padding) for the given direction (top, left, right, bottom.) |
 
 Both margin and padding allow up to 12 options to be defined. If you define more options than that, some of them will not be able to be selected.
 

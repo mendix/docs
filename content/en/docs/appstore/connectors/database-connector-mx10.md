@@ -28,7 +28,7 @@ This connector supports connections to the following database types:
 * PostgresSQL
 * Oracle
 
-If you are looking for another database type, follow the prompt to request support your database when you open the the []
+If you are looking for another database type, follow the prompt to request support your database when you open the []
 
 This connector supports the following statements:
 
@@ -65,11 +65,11 @@ With this connector, you can test database connections and add queries and param
 
 After [installing](#installation) the connector, get started by doing the following:
 
-1.  Right-click on the module where you would like to add the connection and click **Add other > External database connection**. This opens the **Connect to Database** wizard:
+1.  Right-click the module you would like to add the connection to and click **Add other > External database connection**. This opens the **Connect to Database** wizard:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-wizard-filled-in.png" >}}
 
-2.  Enter the information for the database to which you would like to connect. For detaild descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of the *External Database Connection* document entry in the Studio Pro guide.
+2.  Enter the information for the database to which you would like to connect. For detailed descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of *External Database Connection* in the Studio Pro guide.
 
 3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Succcessful** text pop-up, try checking your database details again.
 
@@ -85,17 +85,18 @@ To query the database, do the following:
 2. Enter your `SELECT`  **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * FROM Cars` selects all rows in the **Cars** table:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
-3. Click **Execute Query** to move to the **Response** screen and view the queried data.
+   
+4. Click **Execute Query** to move to the **Response** screen and view the queried data.
 
 #### 3.2.1 Adding Parameters {#parameters}
 
 Click **Add Parameter** to add parameters to your SQL queries to pass dynamic values to the query at runtime. 
 
-The example database in [Querying a Database](#query-database) is a table of cars with information like ID number, plate number, and model. Let's say you want to specify a certain car model while your app is running. You can add the following parameter:
+The example database in [Querying a Database](#query-database) is a table of cars with information such as ID number, plate number, and model. Let's say you want to specify a certain car model while your app is running. You can add the following parameter:
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/sample-parameter.png" >}}
 
-And then use the parameter in the query, like this:
+Then, use the parameter in the query:
 
 `select * from cars where model like {paramModelName}`
 
@@ -111,7 +112,7 @@ Click **Use Response** if you like what you see and want to move on to [creating
 
 ### 3.4 Creating an Entity from the Response {#create-entity}
 
-In the **Data Structure** screen you will see a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
+In the **Data Structure** screen, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/use-response.png" >}}
 
@@ -125,9 +126,9 @@ Use the [Query External Database](/refguide/query-external-database/) activity t
 
 1. Create a new microflow and drag the **Query External Database** activity into it.
 2. In the **Database** field, click **Select** to choose the database you want to query.
-3. Select the **Query** that you want to include in the activity (that you saved while [querying the database](#query-database)).
+3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. Specify whether you want **Return value** (for example, a list of `cars`).
+5. Specify if you want **Return value** (for example, a list of `cars`).
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 

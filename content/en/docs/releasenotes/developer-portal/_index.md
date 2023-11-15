@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
+### November 16, 2023
+
+#### Improvements
+
+* We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configurating popup when setting up your Jira connection more clear.
+
 ### November 9, 2023
 
 #### New Features

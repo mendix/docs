@@ -22,7 +22,7 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 * The main line ('main') branch in the app is Mendix version 9.24.11 or above
 * All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
-* The size of your `.mpr` file in the latest revision is less than 100MB
+* The size of the `.mpr` file for the latest revision of your app is less than 100MB
 
 {{% alert type="info" %}}
 

@@ -26,7 +26,7 @@ Before you delete or deactivate an app, make sure you have completed the followi
 
 * You need to have the **Scrum Master** role in your team (or a custom role with the **App Settings** permission).
 
-{{% alert color="info" %}}If you are a [Mendix Admin](/developerportal/control-center/#apps), you can delete, deactivate, and activate all the company's apps, with or without team members for the app.{{% /alert %}}
+{{% alert color="info" %}}If you are a [Mendix Admin](/control-center/#apps), you can delete, deactivate, and activate all the company's apps, with or without team members for the app.{{% /alert %}}
 
 ## 3 Leaving, Deleting, or Deactivating an App
 

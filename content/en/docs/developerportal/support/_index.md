@@ -82,9 +82,9 @@ During the start phase, and through part of the scale phase, of your digital tra
 
 ### 5.1 Mendix Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/#company).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/control-center/#company).
 
-Please read more about this in [Control Center](/developerportal/control-center/).
+Please read more about this in [Control Center](/control-center/).
 
 ### 5.2 Technical Contacts
 

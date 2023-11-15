@@ -2,7 +2,7 @@
 title: "Marketplace Guide"
 url: /appstore/
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
-weight: 35
+weight: 40
 no_list: false 
 description_list: true 
 cascade:

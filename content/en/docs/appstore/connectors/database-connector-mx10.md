@@ -71,7 +71,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 2.  Select the database to which you would like to connect and enter the required information. For detailed descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of *External Database Connection* in the Studio Pro guide.
 
-3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Succcessful** text pop-up, try checking your database details again.
+3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Successful** text pop-up, try checking your database details again.
 
 4.  Click **Save** to open the external database document for this database.
 

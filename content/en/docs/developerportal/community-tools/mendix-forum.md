@@ -23,7 +23,7 @@ In **Personal** > **Bookmarks**, the following tabs are available:
 * **Exchanges** – the exchanges you have bookmarked (for details, see [Exchange Details](#exchange-details) below)
 * **Ideas** – the ideas you have bookmarked (for details, see [Idea Details](#idea-details) below)
 
-## 2 Posts
+## 2 Posts {#posts}
 
 In **Personal** > **Posts**, the following tabs are available:
 
@@ -93,7 +93,7 @@ On this page, you do the following:
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/questions-answer.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-answer.png" >}}
 
 In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
 

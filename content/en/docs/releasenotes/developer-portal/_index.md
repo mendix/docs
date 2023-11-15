@@ -22,6 +22,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+
 ### November 9, 2023
 
 #### New Features
@@ -32,7 +33,8 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### Fixes
 
 * We fixed issue in Feedback where tags could be incorrectly duplicated.
-* We fixed issue in Feedback where deleting tags or statuses caused error
+* We fixed issue in Feedback where deleting tags or statuses caused errors.
+
 ### November 2, 2023
 
 #### Improvements

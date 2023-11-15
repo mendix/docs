@@ -55,7 +55,7 @@ This connector has no dependencies.
 
 ## 2 Installation {#installation}
 
-Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/component/2888](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/general/app-store-content/#install).
+Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/general/app-store-content/#install).
 
 ## 3 Configuration in Design Time {#configuration}
 

@@ -111,14 +111,14 @@ It has never been easier to ask a question on the Mendix Forum. But before you s
 
 To ask your own question on the Mendix Forum, follow these steps:
 
-1. Click **Ask a Question** on the upper-right corner of the **Questions** page. 
+1. Click **Create a Post** > **Ask a Question**, or click **Ask a Question** on the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
     * The **Space** that reflects your question (for example, **Connectors**, **Databases**, or **Security**)
     * The question **Title** (this is how users will first see your question, so make it descriptive and interesting)
     * The question **Description** (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
     * The **Mendix Studio Pro Version** that is relevant to your question (only available when you select a version-dependent **Space**)
-    * The **Tags** that reflect the topic of your question (users can filter the list of questions by tag)
+    * The **Tags** that reflect the question topic (users can filter the list of questions by tag)
 
 3. Click **Ask Question** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
@@ -147,6 +147,16 @@ Each exchange has the following details:
 * ⑦ The number of views the exchange has received
 * ⑧ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
 * ⑨ The avatars of the Mendix comminity members who have commented
+
+### 3.1 Searching and Filtering Exchanges
+
+To search for an exchange, enter your keywords in the **Search** text box.
+
+To filter the searching results, you can use the following filters:
+
+* **Last Updated** > **Last Updated** (default), **Newest**, or **Most Popular**
+* **Spaces** – the space set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
+* **Type in a Tag** – the tags set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
 
 ### 4.2 Exchange Details {#exchange-details}
 
@@ -179,13 +189,25 @@ The URL for each exchange is unique.
 
 ### 4.3 Posting an Exchange {#posting-exchange}
 
-[**START**
 
-]
+To ask your own question on the Mendix Forum, follow these steps:
+
+1. Click **Create a Post** > **Exchange with Community**, or click **Post Exchange** on the **Exchanges** page. 
 
 
+2. On the **Create a Post** page, fill in the following details in the editor:
+
+    * The **Space** that reflects your post
+    * The post **Title** (this is how users will first see your post, so make it descriptive and interesting)
+    * The post **Description** (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
+    * The **Tags** that reflect the post topic (users can filter the list of questions by tag)
+
+3. Click **Post Exchange** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
 ## 5 Ideas {#ideas-tab}
+
+
+
 
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 

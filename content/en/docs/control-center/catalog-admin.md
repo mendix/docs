@@ -7,6 +7,7 @@ description: "Describes the Mendix Admin functions for Mendix Admin and curators
 tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 aliases:
     - /control-center/data-hub-admin/
+    - /developerportal/control-center/catalog-admin/
 ---
 
 ## 1 Introduction

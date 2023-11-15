@@ -5,6 +5,8 @@ category: "Control Center"
 weight: 10
 description: "Describes how you can use your company IdP to authenticate to Mendix."
 tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on"]
+aliases:
+    - /developerportal/control-center/set-up-sso-byoidp/
 ---
 
 ## 1 Introduction

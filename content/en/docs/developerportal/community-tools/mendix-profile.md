@@ -228,7 +228,7 @@ To make your public profile private again, click **Make Profile Private**.
 
 You can also add a **Recover Email** address, which is useful if you lose access to your account or Mendix Profile. You can provide a non-business email address for this.
 
-#### 10.1.1 Merging Profiles
+#### 10.1.1 Merging Profiles {#merging-profiles}
 
 If you own two (or more) user accounts, Mendix recommendeds merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
 
@@ -297,9 +297,27 @@ This page is an overview of all the accounts you own and that are linked to your
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/#security).
 
-You can update the password of each of your accounts via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
+You can update the password of your logged in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that you can find by clicking the menu button of the logged in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
-If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the account you want to delete and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts.
+If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the logged in account and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts. You can only remove your account that are logged in with. If you don't have access to your account anymore, please reach out to Mendix Support to delete your account.
+
+#### 10.2.1 Create Account
+
+If you already have a profile and you want to add a new account to this profile, you can directly create a new account to this profile from the account overview. This action is a combination of signing up a new account to the mendix platform and [Merging Profiles](#merging-profiles). When succesfully completing the flow, the new account will appear in the account overview.
+
+Follow these steps to add a new account to your profile:
+
+1. Click **Create Account**.
+2. In the dialog box that appears, enter the email address of the account you want to create. Then click **Next**.
+3. In the next dialog box enter a secure password and indicate whether you want to receive Marketing communications from Mendix on this account. Then click **Next**.
+4. Enter the verification code you received via the selected email address.
+5. After clicking **Verify** you will see a loader. In the meantime your account will be created in the background.
+6. If all went well the new account is now visible in the list of account that are part of your profile!
+
+{{% alert color="warning" %}}
+Note that this feature is not available if your company enabled single sign on. If this is the case you will have to follow the regular sign up process and [merge the new account to your profile](#merging-profiles) when the sign up is completed.
+{{% /alert %}}
+
 
 ### 10.3 Notifications {#notifications}
 

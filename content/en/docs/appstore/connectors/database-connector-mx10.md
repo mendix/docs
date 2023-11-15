@@ -65,11 +65,11 @@ With this connector, you can test database connections and add queries and param
 
 After [installing](#installation) the connector, get started by doing the following:
 
-1.  Right-click the module you would like to add the connection to and click **Add other > External database connection**. This opens the **Connect to Database** wizard:
+1.  Right-click the module you would like to add the connection to and click **Add other > External database connection**. This opens the **Database Connection** wizard:
 
-    {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-wizard-filled-in.png" >}}
+    {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-connector-wizard.png" >}}
 
-2.  Enter the information for the database to which you would like to connect. For detailed descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of *External Database Connection* in the Studio Pro guide.
+2.  Select the database to which you would like to connect and enter the required information. For detailed descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of *External Database Connection* in the Studio Pro guide.
 
 3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Succcessful** text pop-up, try checking your database details again.
 

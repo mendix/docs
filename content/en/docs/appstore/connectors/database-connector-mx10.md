@@ -51,7 +51,7 @@ This connector currently has the following limitations:
 
 ### 1.5  Dependencies
 
-Hooray, this connector has no dependencies!
+This connector has no dependencies.
 
 ## 2 Installation {#installation}
 
@@ -59,7 +59,7 @@ Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/
 
 ## 3 Configuration in Design Time {#configuration}
 
-In this connector, you will test database connections and add queries and parameters during design time--before your app is running. This allows you to make sure everything works before deploying your app.
+With this connector, you can test database connections and add queries and parameters during design time--before your app is running. This allows you to make sure everything works before deploying your app.
 
 ### 3.1 Getting Started: Connecting to a Database {#connect-database}
 
@@ -86,8 +86,6 @@ To query the database, do the following:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
 3. Click **Execute Query** to move to the **Response** screen and view the queried data.
-
-
 
 #### 3.2.1 Adding Parameters {#parameters}
 

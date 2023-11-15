@@ -44,8 +44,8 @@ The following file storage options are supported:
 * Minio
 
 {{% alert color="warning" %}}
-The data transfer tool only supports static authentication.
-If the database or file storage relies on Kubernetes Service Accounts for authentication, or uses CSI Secrets Storage to store credentials, the data transfer tool will fail to authenticate.
+The data transfer tool only supports static and AWS IRSA authentication.
+If the database or file storage uses CSI Secrets Storage to store credentials, the data transfer tool will fail to authenticate.
 {{% /alert %}}
 
 ### 2.2 Environment Requirements
@@ -57,8 +57,9 @@ The data transfer tool needs the following:
     * If the database is running inside the cluster or on a Virtual Private Cloud (VPC), it might not be reachable from outside the cluster
 * Permissions to call the Kubernetes API
     * These calls are used to get the database and file storage credentials for an environment
+* For environments using AWS IRSA, an IAM Role that can access the environment's bucket and database.
 
-In most cases, this means the data transfer tool cannot run from a local machine and needs to run in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a [jump pod(#jump-pod)).
+In most cases, this means the data transfer tool cannot run from a local machine and needs to run in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a [jump pod](#jump-pod)).
 
 ## 3 Using the Data Transfer Tool
 
@@ -66,9 +67,9 @@ In most cases, this means the data transfer tool cannot run from a local machine
 
 Download and extract the tool for your operating system. If you are planning to run the data transfer tool in a Pod, download the Linux version.
 
-* [Linux](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.3-linux-amd64.tar.gz)
-* [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.3-macos-amd64.tar.gz)
-* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.3-windows-amd64.zip)
+* [Linux](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.4-linux-amd64.tar.gz)
+* [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.4-macos-amd64.tar.gz)
+* [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.4-windows-amd64.zip)
 
 ### 3.2 Running the Data Transfer Tool Locally
 
@@ -79,6 +80,7 @@ The tools will only work if you have access to the cluster. Setting up the netwo
 {{% /alert %}}
 
 The tool will use the current user’s kubeconfig and Kubernetes credentials (or the service account if it is running in the Pod) to retrieve database and file storage credentials from the environment.
+For environments that use AWS IRSA for authentication, the current user's AWS credentials will be used to connect to the database and S3 storage.
 
 To create a backup file, use the following command:
 
@@ -100,7 +102,9 @@ To restore a backup file into your environment, use the following command:
 * `-e <environment>` - the environment where the data should be restored
 * `-f <file>` - backup file (in a [Mendix Cloud format](/developerportal/operate/restore-backup/#format-of-backup-file)) that should be restored into the destination environment
 
-If the database or file storage use self-signed TLS certificates from a private CA, provide the path to the custom root CA `pem` file or directory through the `SSL_CERT_FILE` or `SSL_CERT_DIR` environment variable.
+If the database uses self-signed TLS certificates from a private CA, provide the path to the custom root CA `pem` file through the `PGSSLROOTCERT` environment variable.
+
+If the file storage uses self-signed TLS certificates from a private CA, provide the path to the custom root CA `pem` file or directory through the `SSL_CERT_FILE` or `SSL_CERT_DIR` environment variable.
 
 ### 3.3 Running the Data Transfer in a Jump Pod{#jump-pod}
 
@@ -113,6 +117,10 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: mendix-backup-restore
+  annotations:
+    # Optional, to access data from environments using IRSA:
+    # specify an IAM role ARN to use for connecting to the database and S3 storage
+    eks.amazonaws.com/role-arn: arn:aws:iam::<account_id>:role/<role-name>
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -162,6 +170,50 @@ spec:
         exec:
           command: ["/bin/sh","-c","killall -w sleep"]
 ```
+
+If you need to export or import data from an environment that uses AWS IRSA authentication, you also need to do the following:
+
+1. Create a "data-transfer" role with permissions to access the app's S3 bucket and RDS instance, for example:
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "rds-db:connect"
+                ],
+                "Resource": [
+                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:db-<database_id>/*"
+                ]
+            },
+            {
+                "Sid": "AllowAllS3ActionsInUserFolder",
+                "Effect": "Allow",
+                "Resource": [
+                    "arn:aws:s3:::<bucket_name>/*"
+                ],
+                "Action": [
+                    "s3:AbortMultipartUpload",
+                    "s3:DeleteObject",
+                    "s3:GetObject",
+                    "s3:ListMultipartUploadParts",
+                    "s3:PutObject"
+                ]
+            }
+        ]
+    }
+
+    ```
+
+    (replace `<aws_region>` with the database’s region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier, `<bucket_name>` with the S3 bucket name).
+
+    {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
+    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
+
+2. Configure the IAM role's trust policy to trust the `mendix-backup-restore` ServiceAccount.
+3. Add the `eks.amazonaws.com/role-arn` annotation to the ServiceAccount and set it to the role ARN value from the previous step.
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
 If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).
@@ -228,5 +280,6 @@ rm /tmp/mendix-backup-restore.yaml
 * The export/import tool needs access to the Kubernetes API to get credentials for a specific environment.
 * If `pg_restore` fails for any reason, the data import process is terminated immediately with an error.
 * It is not possible to enforce TLS options.
-    * For PostgreSQL, the tool will try to use SSL, but will trust any server certificate. If the database doesn't support SSL, the tool will switch to an unencrypted connection.
+    * If _Strict TLS_ was disabled in the Postgres storage plan, the tool will try to use SSL, but will trust any server certificate. If the database doesn't support SSL, the tool will switch to an unencrypted connection.
+    * If the Postgres storage has the _Strict TLS_ option enabled, the tool will use SSL and validate the server certificate. If the certificate is not valid, or database doesn't support SSL, the connection will fail.
     * For Minio and S3, TLS will be used if the environment's storage plan has an `https://` endpoint URL.

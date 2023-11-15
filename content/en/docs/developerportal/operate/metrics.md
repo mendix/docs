@@ -428,6 +428,19 @@ There are two sets of values:
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
+We are planning to migrate the databases of apps in the Mendix Cloud to `gp3` storage instances soon which will provide higher baseline storage performance compared to `gp2` and does not require any burst balance. This change is already available for new databases starting 25th of October, 2023. When a customer creates a new DB instance it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined below. This also includes the scenario where customer's database is recreated.
+
+| Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+|-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+| S and M           | gp2                   | Less than 20 GiB     | 100 IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+| L,XL,XXL and XXXL | gp3                   | Between 20 & 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+| XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
+Burst balance metrics will be unavailable for databases with `gp3` storage instance type.
+
+{{% /alert %}}
+
+{{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 

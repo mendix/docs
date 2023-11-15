@@ -17,15 +17,15 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 
 ## 2 Features
 
-* Supports connecting your Mendix app to Jira.
-* Supports Scrum, Kanban, and Next-gen boards.
-* Allows you to associate your commits in Studio Pro (version 7.19 or above) to Jira stories
+* Supports connecting your Mendix app to Jira
+* Supports Scrum, Kanban, and Next-gen boards
+* Allows you to associate your commits in Studio Pro (version 7.19 or above) to Jira stories:
 
-    * In case of a Scrum board, the Stories pane shows all stories from all your active Sprints, ordered by story key
-    * In case of Kanban board, the Stories pane shows all stories from your board, taking the sub-query of the board settings into account, ordered by story key
-    * In case of a Next-gen board, the Stories pane shows all stories from your board, which may include your backlog. If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog and use a separate board to manage your backlog.
+    * For a Scrum board, the **Stories** pane shows all stories from all your active Sprints, ordered by story key
+    * For a Kanban board, the **Stories** pane shows all stories from your board, taking the sub-query of the board settings into account, ordered by story key
+    * For a Next-gen board, the **Stories** pane shows all stories from your board, which may include your backlog; if you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog and use a separate board to manage your backlog
 
-* Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira.
+* Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira
 
 ## 3 Limitations
 
@@ -77,16 +77,16 @@ To connect your app to Jira, perform the following steps:
 
 Once the activation is completed, your app is connected to Jira. You can see the following:
 
-* In Studio Pro, you can see your Jira stories in the Stories pane:
-    * If you connect your app to a Scrum board in Jira, the Stories pane shows all stories from all your active Sprints.
-    * If you connect your app to a Kanban board, the Stories pane shows all stories from your board, taking the filter and sub-query of the board settings into account, ordered by story key
-        * You can find the filters and sub-query in the board settings in Jira. For more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/). 
-    * If you connect your app to a Next-gen board, the Stories pane shows all stories from your board, which may include your backlog.
-    * If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog and use a separate board to manage your backlog.
-    * The list of stories is ordered by the Jira story key.
+* In Studio Pro, you can see your Jira stories in the **Stories** pane:
+
+    * If you connect your app to a Scrum board in Jira, the **Stories** pane shows all stories from all your active Sprints
+    * If you connect your app to a Kanban board, the **Stories** pane shows all stories from your board, taking the filter and sub-query of the board settings into account, ordered by story key
+        * You can find the filters and sub-query in the board settings in Jira (for more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/))
+    * If you connect your app to a Next-gen board, the **Stories** pane shows all stories from your board, which may include your backlog
+    * If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog and use a separate board to manage your backlog
+    * The list of stories is ordered by the Jira story key
 
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
-
 * You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   >}}

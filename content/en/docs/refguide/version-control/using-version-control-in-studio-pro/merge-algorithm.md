@@ -205,7 +205,7 @@ By default Studio Pro will also Push your work to the server when making a commi
 While you were completing the merge process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #6) with the newest changes on the server.
 {{% /alert %}}
 
-#### 3.3 Summary
+### 3.3 Summary
 
 We have merged your local work with the latest state from the server and resolved all conflicts. For Rebasing this meant two rounds of conflict resolution, where you had a single round of conflict resolution for the merge commit.
 

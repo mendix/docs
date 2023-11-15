@@ -1090,13 +1090,13 @@ The Mendix Operator uses some labels for internal use. To avoid conflicts with t
 
 ### 6.9 GKE Autopilot Workarounds
 
-In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot meticulously verifies the resource allocations and limits for all containers and makes adjustments to Deployments when the resources are not as per its requirement. 
+In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements. 
 
-As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to Deployments and pods.
+As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to deployments and pods.
 
-To address this issue, you can resolve it by configuring the Operator to align with GKE's requirements. This involves setting the resources—specifically, CPU, memory, and ephemeral storage—to be equal to the limits defined in the OperatorConfiguration for both the sidecar and metrics-sidecar containers. Along with this, it is essential to ensure that the resource limits for CPU, memory, and ephemeral storage should be set equal to the resource requests in the Private Cloud portal. For more information on setting the core resources on portal, refer [documentation](/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan)
+To address this issue, you can configure the Mendix Operator to align with GKE's requirements. This involves setting the resources (specifically, the CPU, memory, and ephemeral storage) to be equal to the limits defined in the `OperatorConfiguration` for both the `sidecar` and `metrics-sidecar` containers. Along with this, you must ensure that the resource limits for the CPU, memory, and ephemeral storage are equal to the resource requests in the Private Cloud Portal. For more information on setting the core resources on the Portal, see [Custom Core Resource Plan](/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan).
 
-You need to create a patch file for configuring the core resources in the OperatorConfiguration. See below example:
+You must also create a patch file for configuring the core resources in the `OperatorConfiguration`, as in the following example:
 
 ```yaml
 spec:
@@ -1116,14 +1116,14 @@ spec:
       memory: 32Mi
 ```
 
-Run the following command in order to update the core resources in the Operator Configuration.
+Run the following command in order to update the core resources in the `OperatorConfiguration`:
 
 ```shell {linenos=false}
 kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration --type merge -p "$(cat <patchedFile>)"
 ```
 
 {{% alert color="info" %}}
-Please note that Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory resources. If a container requests a substantial amount of memory, it should also correspondingly request more CPU cores. For detailed information on resource requests, you can refer to the [Resource Requests in Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests) documentation provided by Google Kubernetes Engine.
+Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory resources. If a container requests a substantial amount of memory, it should also correspondingly request more CPU cores. For detailed information on resource requests, you can refer to the [Resource Requests in Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests) documentation provided by Google Kubernetes Engine.
 {{% /alert %}}
 
 ## 7 Cluster and Namespace Management

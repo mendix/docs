@@ -162,7 +162,7 @@ This activity returns a `CompareFaces` entity with associated entities as shown 
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `CompareFaces` | | This entity is the root object for Amazon's `CompareFaces` service. |
+| `CompareFacesResponse` | | This entity is the root object for Amazon's `CompareFaces` service. |
 | `FaceToBeCompared` | `AmazonRekognitionConnector.Face` | This entity contains the face results for the `CompareFace` activity. It includes a confidence. Additionally, it is used to hold information over associations regarding the face properties such as the bounding box, face ID, image ID of the input image, and external image ID that you assigned. It is a specialization of the `Face` generalization entity. |
 | `MatchedFace` | | This entity holds the information on the level of similarity of the matched face with the face to be compared. The similarity is the confidence level that the source image and target image are a match. |
 | `BoundingBoxCompareFace` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `CompareFaces` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
@@ -183,11 +183,11 @@ The input and output for this service are shown in the table below:
 
 | `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxResults` (Integer/Long, minimum value of 0); `ProjectARN` (String); `Image` (Image) | Custom label |
 
-This activity returns a list of `DetectCustomLabels` objects and associated objects as shown in the table below:
+This activity returns a `DetectCustomLabelsResponse` object and associated objects as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectCustomLabels` | `AmazonRekognitionConnector.Label` | This entity is the root object for Amazon's `DetectCustomLabels` service. It includes a confidence and a value. Additionally, it is used to hold information over associations about the detected label, including the name, detected instances, parent labels, and confidence level. It is a specialization of the `Label` generalization entity. |
+| `DetectCustomLabelsResponse` | `AmazonRekognitionConnector.Label` | This entity is the root object for Amazon's `DetectCustomLabels` service. It includes a confidence and a value. Additionally, it is used to hold information over associations about the detected label, including the name, detected instances, parent labels, and confidence level. It is a specialization of the `Label` generalization entity. |
 | `BoundingBoxDetectCustomLabel` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectCustomLabels` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonDetectCustomLabel` | `AmazonRekognitionConnector.Polygon` | This entity contains the polygon results for the `DetectCustomLabels` activity. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
@@ -201,11 +201,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Image` (Image) | An array or object of detected face(s) |
 
-This activity returns a list of `DetectFaces` object with results as shown in the table below:
+This activity returns a `DetectFacesResponse` object with results as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectFaces` | | This entity is the root object for Amazon's `DetectFaces` service. It includes the orientation correction. |
+| `DetectFacesResponse` | | This entity is the root object for Amazon's `DetectFaces` service. It includes the orientation correction. |
 | `BoundingBoxDetectFace` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectFaces` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PoseDetectFace` | `AmazonRekognitionConnector.Pose` | This entity contains the pose results for the `DetectFaces` activity. It includes the pitch, roll, and yaw of the image. It is a specialization of the `Pose` generalization entity. |
 | `ImageQualityDetectFace` | `AmazonRekognitionConnector.ImageQuality` | This entity contains the image quality results for the `DetectFaces` activity. It includes the brightness and sharpness of the image. It is a specialization of the `ImageQuality` generalization entity. |
@@ -221,11 +221,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Image` (Image) | An array or object of detected face(s) |
 
-This activity returns a list of `DetectFaces` object with results as shown in the table below:
+This activity returns a list of `DetectFacesResponse` object with results as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectFaces` | | This entity is the root object for Amazon's `DetectFaces` service. It includes the orientation correction. |
+| `DetectFacesResponse` | | This entity is the root object for Amazon's `DetectFaces` service. It includes the orientation correction. |
 | `FaceDetectFace` | `AmazonRekognitionConnector.Face` | This entity contains the face results for the `DetectFaces` activity. It includes a confidence. Additionally, it is used to hold information over associations regarding the face properties such as the bounding box, face ID, image ID of the input image, and external image ID that you assigned. It is a specialization of the `Face` generalization entity. |
 | `AgeRange` | | This entity contains the estimated age range, in years, for a detected face. This includes the high and low, where the high represents the ceiling of the range and low represents the floor of the range. Amazon Rekognition estimates an age range for faces detected in the input image. Estimated age ranges can overlap. A face of a five-year-old might have an estimated range of 4-6, while the face of a six-year-old might have an estimated range of 4-8. |
 | `Beard` | `AmazonRekognitionConnector.PhysicalProperty` | This entity contains the beard results for the `DetectFaces` activity. It includes a confidence and a value. It is a specialization of the `PhysicalProperty` generalization entity. |
@@ -252,11 +252,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label(s) |
 
-This activity returns a list of `DetectModerationLabels` objects and associated objects as shown in the table below:
+This activity returns a `DetectModerationLabelsResponse` objects and associated objects as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectModerationLabels` | | This entity is the root object for Amazon's `DetectModerationLabels` service. It includes the moderation model version. |
+| `DetectModerationLabelsResponse` | | This entity is the root object for Amazon's `DetectModerationLabels` service. It includes the moderation model version. |
 | `ModerationLabel` | | This entity provides information about a single type of inappropriate, unwanted, or offensive content found in an image or video. Each type of moderated content has a label within a hierarchical taxonomy. The confidence represents the confidence level of the label detection and the name represents the label content. |
 | `HumanLoopActivationOutput` | | This entity shows the results of the human in the loop evaluation. It includes two attributes: (1) `HumanLoopActivationCondition` and (2) `HumanLoopArn`. The former shows the result of condition evaluations, including those conditions which activated a human review, while the latter is the Amazon Resource Name (ARN) of the `HumanLoop` created. If there is no `HumanLoopArn`, the input did not trigger a human review. |
 | `HumanActivityReason` | | This entity includes the conditions which activated a human review. |
@@ -271,11 +271,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label(s) |
 
-This activity returns a list of `DetectLabels` objects with associated objects as shown in the table below:
+This activity returns a `DetectLabelsResponse` objects with associated objects as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectLabels` | | This entity is the root object for Amazon's `DetectLabels` service. It includes the label model version and orientation correction. |
+| `DetectLabelsResponse` | | This entity is the root object for Amazon's `DetectLabels` service. It includes the label model version and orientation correction. |
 | `Instance` | | This entity holds an instance of a label returned by Amazon Rekognition Image (`DetectLabels`) or by Amazon Rekognition Video (`GetLabelDetection`). |
 | `Parent` | | This entity contains a parent label for a label. A label can have zero, one, or more parents. |
 | `BoundingBoxDetectFace` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectFaces` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
@@ -291,11 +291,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Image` (Image) | An array or object of detected text |
 
-This activity returns a `DetectText` object with results as shown in the table below:
+This activity returns a `DetectTextResponse` object with results as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectText` | | This entity is the root object for Amazon's `DetectText` service. It includes the text model version. |
+| `DetectTextResponse` | | This entity is the root object for Amazon's `DetectText` service. It includes the text model version. |
 | `TextDetection` | | This entity contains information about a word or line of text detected by `DetectText`. This includes a confidence, the detected text, its (parental) ID, and type. The confidence is that of Amazon's Rekognition in its accuracy of the detected text and the accuracy of the geometry points around the detected text. The detected text is the word or line of text recognized by the service. The `DetectedText` field contains the text that Amazon Rekognition detected in the image. The ID is the identifier for the detected text, and the parent ID is for the detected text identified by the value of `_Id`.  Every word and line has an identifier (`Id`). The word `Id` is also an index for the word within a line of words. Each word belongs to a line and has a parent identifier (`ParentId`) that identifies the line of text in which the word appears. The type reflects the type of text that was detected (`Type` or `Line`). If the type of the detected text is `Line`, the value of `ParentId` is `null`. |
 | `Geometry` | | This entity contains information over associations about where an object (`DetectCustomLabels`) or text (`DetectText`) is located in an image. |
 | `BoundingBoxTextDetect` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectText` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
@@ -315,11 +315,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Image` (Image) | An array or object of detected person(s), including their status of protective equipment (with, without or indeterminate) |
 
-This activity returns a `DetectProtectiveEquipment` object with the results as shown in the table below:
+This activity returns a `DetectProtectiveEquipmentResponse` object with the results as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `DetectProtectiveEquipment` | | This entity is the root object for Amazon's `DetectProtectiveEquipment` service. It includes the protective equipment model version. |
+| `DetectProtectiveEquipmentResponse` | | This entity is the root object for Amazon's `DetectProtectiveEquipment` service. It includes the protective equipment model version. |
 | `ProtectiveEquipmentBodyPart` | | This entity contains information about a body part detected by `DetectProtectiveEquipment` that contains Personal Protective Equipment (PPE). This includes a confidence and a name. The confidence is that of Amazon Rekognition service in the detection accuracy of the detected body part and the name is that of a detected body part. An array of `ProtectiveEquipmentBodyPart` objects is returned for each person detected by `DetectProtectiveEquipment`. |
 | `EquipmentDetection` | | This entity contains information about an item of Personal Protective Equipment (PPE) detected by `DetectProtectiveEquipment`. It includes a confidence and a type. The confidence is that of Amazon Rekognition service that the bounding box contains an item of PPE and the type is the type of PPE. For more information, see `DetectProtectiveEquipment`. |
 | `ProtectiveEquipmentPerson` | | This entity detects a person by a call to `DetectProtectiveEquipment`. It includes a confidence and an identifier. The confidence is that of Amazon Rekognition service that the bounding box contains a person and the identifier is for the detected person. The API returns all persons detected in the input image in an array of `ProtectiveEquipmentPerson` objects. |
@@ -340,11 +340,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Image` (Image) | An array or object of detected celebrities |
 
-This activity returns a `RecognizeCelebrities` object with results as shown in the table below:
+This activity returns a `RecognizeCelebritiesResponse` object with results as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `RecognizeCelebrities` | | This entity is the root object for Amazon's `RecognizeCelebrities` service. It includes the orientation correction. |
+| `RecognizeCelebritiesResponse` | | This entity is the root object for Amazon's `RecognizeCelebrities` service. It includes the orientation correction. |
 | `KnownGender` | | This entity contains the known gender identity for the celebrity that matches the provided ID. The known gender identity can be `Male`, `Female`, `Nonbinary`, or `Unlisted`. |
 | `URL` | | This entity contains an array of URLs pointing to additional information about the celebrity. If there is no additional information about the celebrity, this list is empty. |
 | `FaceCelebrity` | `AmazonRekognitionConnector.Face` | This entity holds the information of the face-unrecognized and face-recognized celebrities. Additionally, it is used to hold information over associations regarding the face properties such as the bounding box, face ID, image ID of the input image, and external image ID that you assigned. It is a specialization of the `Face` generalization entity. |

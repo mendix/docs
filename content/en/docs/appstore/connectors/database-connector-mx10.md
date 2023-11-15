@@ -9,7 +9,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "mendix 10
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](https://marketplace.mendix.com/link/component/2888) connector.
+Connect to Microsoft SQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](https://marketplace.mendix.com/link/component/216121) connector.
 
 This connector is supported for Studio Pro [10.2](/releasenotes/studio-pro/10.2/) and above. 
 
@@ -55,7 +55,7 @@ This connector has no dependencies.
 
 ## 2 Installation {#installation}
 
-Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/component/2888) and [add it to your app](/appstore/general/app-store-content/#install).
+Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/component/2888](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/general/app-store-content/#install).
 
 ## 3 Configuration in Design Time {#configuration}
 

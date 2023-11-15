@@ -1,10 +1,11 @@
 ---
 title: "Mendix Component Partner Program"
-url: /appstore/creating-content/partner-program/
-category: "Creating Content"
-weight: 1
+url: /appstore/partner-program/
+weight: 2
 description: "Describes how to join the Mendix Component Partner Program to promote your content in the Mendix Marketplace."
 tags: ["marketplace", "partner", "partner program", "component partner program", "component"]
+aliases:
+    - /appstore/creating-content/partner-program/
 ---
 
 ## 1 Introduction
@@ -13,9 +14,7 @@ The Mendix Marketplace is at the heart of the Mendix developer community, which 
 
 A robust ecosystem is crucial to supporting the flow of value to Mendix Makers, and Mendix Partners are at the core of that ecosystem. We want you to be a part of the Mendix Marketplace so you can help other Makers see what is possible.
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/general/share-app-store-content/) your content in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. 
-
-The process is simple: Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/), design and build your content, edit your listing, and submit it to the Marketplace for the [Partner](/appstore/general/app-store-content-support/#category) support category.
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/overview/share-content/) your content in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. 
 
 In return, you will gain the following benefits:
 
@@ -25,6 +24,12 @@ In return, you will gain the following benefits:
 * Drive demand for your services
 
 ## 2 Joining the Marketplace Program
+
+The process is simple: 
+
+1. Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/)/.
+2. Design and build your content.
+3. Edit your listing and submit it to the Marketplace for the [Partner](/appstore/overview/#category) support category.
 
 As a partner in the Mendix Marketplace, you can offer your components to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
 

@@ -170,7 +170,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Complete a lecture in the Mendix Academy | 1 | N/A |
 | Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 
-### 7.6 Point Levels
+### 7.6 Point Levels {#level}
 
 When you earn enough points, you gain a level:
 
@@ -270,7 +270,7 @@ Follow these steps to merge your profiles:
 6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
 
 {{% alert color="info" %}} 
-With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
+With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/control-center/#members).
 {{% /alert %}}
 
 #### 10.1.3 Merge Result {#merge-profile-result}
@@ -295,7 +295,7 @@ It is not possible to separate profiles after they have been merged. Double-chec
 
 This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
-By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
+By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/#security).
 
 You can update the password of each of your accounts via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
 
@@ -357,7 +357,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.2.1 Creating a PAT
+##### 10.4.2.1 Creating a PAT {#create-pat}
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 

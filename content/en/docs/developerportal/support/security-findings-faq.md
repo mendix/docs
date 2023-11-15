@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 
@@ -85,9 +85,9 @@ If you want to scan uploaded files for malicious content, you have to implement 
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
-* The jar is coming from a platform supported module. For more information about support categories see [Marketplace Content Support](/appstore/general/app-store-content-support/).
+* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/general/app-store-content/#update-module) in *Use Marketplace Content in Studio Pro* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Use Marketplace Content* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 

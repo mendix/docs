@@ -13,7 +13,7 @@ These release notes cover changes to the app management functionality and other 
 For release notes on Mendix Cloud and deployment options, see [Deployment](/releasenotes/developer-portal/deployment/).
 {{% /alert %}}
 
-To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2023
 
@@ -22,12 +22,22 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+### November 9, 2023
 
+#### New Features
+
+* In [Feedback](/developerportal/app-insights/feedback/), we implemented a rich text editor in the text box of **Team Comments** and the text box where the feedback reporter and team members send messages to each other.
+* In [Mini Surveys](/developerportal/app-insights/mini-surveys/), if you now click an individual response in the list at the bottom of the **Responses** tab, you can see the details of the response on a side panel. 
+
+#### Fixes
+
+* We fixed issue in Feedback where tags could be incorrectly duplicated.
+* We fixed issue in Feedback where deleting tags or statuses caused error
 ### November 2, 2023
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/developerportal/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -42,7 +52,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
-* We added the ability to directly [remove app members](/developerportal/control-center/#members) from Control Center.
 * In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
 
 #### Fixes 
@@ -76,8 +85,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) using an Excel file.
 
-* In Control Center, Mendix Admins can now [disable the digital signing](/developerportal/control-center/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
-
 ### October 1, 2023
 
 #### Improvements
@@ -108,7 +115,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Deprecations
 
-* We have done all the preparation work for retiring Stories (remember it will happen on October 1). After that date, you will  still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
+* We have done all the preparation work for retiring Stories (remember it will happen on October 1). After that date, you will still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
 
 ### September 7, 2023
 
@@ -119,14 +126,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Deprecations
 
-* We have removed the **Onboarding** page from Control Center.
 * We deprecated the numerical 1-10 rating question option in [Mini Surveys](/developerportal/app-insights/mini-surveys/) in App Insights.
-
-### August 28, 2023
-
-#### New Features
-
-* We have released the beta version of the [Application Health Dashboard](/developerportal/control-center/#application-health-dashboard), which provides an overview of the alert status of the whole application landscape in your company.
 
 ### August 24, 2023
 
@@ -155,13 +155,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue where special characters in the email address of a feedback submitter would not be properly supported.
 * We fixed an issue where users would get an error when using the URL provided by the **Share Link** button on the [survey details page](/developerportal/app-insights/mini-surveys/#survey-details).
 * We fixed an issue where users would not be brought to the Developer Portal home Page when clicking **Developer Portal** within the MxDock.
-
-### August 17, 2023
-
-#### Improvements
-
-* In Control Center, on the [Members](/developerportal/control-center/#members) page you can now sort members based on the number of apps to which they belong.
-* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/developerportal/control-center/#company-general-settings) tab of the [Company Settings](/developerportal/control-center/#company) page.
 
 ### August 12, 2023
 
@@ -216,14 +209,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### July 13, 2023
 
-#### New Features 
-
-* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/developerportal/control-center/#41-active-and-deactivated-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
-* We introduced **Member ID** search functionality on the **Member** page in Control Center.
-
 #### Improvements
 
-* We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics in Control Center.
 * We have improved your ability to create stories within Epics. You can now add a new story directly from any [swimlane](/developerportal/project-management/epics/board/#swimlane).
 * To streamline your app editing process, we have added a new **Edit in Studio Pro** button in Epics. With a single click, you can open your app directly in Studio Pro, similar to the rest of the platform.
 * In Epics, you now have the ability to sort your [story](/developerportal/project-management/epics/board/#story-details) and [epic](/developerportal/project-management/epics/epics/#epic-details) comments based on their time of submission, either showing the newest or the oldest on top.
@@ -231,12 +218,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Fixes
 
 * We fixed a bug where we accidently tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
-
-### July 3, 2023
-
-#### Deprecations
-
-* We removed the **Marketplace Content** section of [Control Center](/developerportal/control-center/), which had been deprecated since March, 2023.
 
 ### June 29, 2023
 
@@ -288,20 +269,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We changed the default app logo.
 
-### May 17, 2023
-
-#### New Features
-
-* We have upgraded our [Portfolio Management](/developerportal/portfolio-management/) tool with new features:
-    * You can now have multiple portfolios at the same time!
-    * You can now create portfolios with different levels of visibility to people in your company: private or restricted.
-* We have added the [Portfolios](/developerportal/control-center/#portfolios) page to Control Center, which provides Mendix Admins with governance features for portfolio management in your company.
-
 ### May 16, 2023{#byoidp}
 
 #### New Features
 
-* You can now [set up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
 * You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
@@ -364,11 +335,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### March 16, 2023
 
-#### Improvements
-
-* In Control Center, we increased the limit of apps you can [activate or deactivate](/developerportal/control-center/#active-deactivated) to 100.
-* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
-
 #### Deprecations
 
 * We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
@@ -385,18 +351,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
 
 ### February 23, 2023
-
-#### New Features
-
-We have released a feature in Control Center where you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
-
-With this feature, you can do the following:
-
-* Add a new Security Contact to your company
-* Remove an existing Security Contact and replace it with a newer one
-* Adjust the Security Contact’s name 
-
-For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
 #### Fixes
 
@@ -452,59 +406,58 @@ For more information on security issues, see [Security Advisories](/releasenotes
 
 #### New Features
 
-We have released the beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+* We have released the beta version of [Product Insights](/developerportal/app-insights/mini-surveys/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/mendix-mini-surveys/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey. 
 
-A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
+  A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
 
-This feature is in beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
+  This feature is in beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
 
 ### December 1, 2022
 
 #### Improvements
 
-We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability!
+* We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability!
 
-We made the following improvements:
+  We made the following improvements:
 
-* It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
-* You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
-* If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
-* Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
-* We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
+  * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
 
-From this point on, Epics is the default project management tool for all new apps.
+  * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
+
+  * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
+
+  * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
+
+  * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
+
+  From this point on, Epics is the default project management tool for all new apps.
 
 ### November 30, 2022
 
 #### New Features
 
-The new [Portfolio Management](/developerportal/portfolio-management/) tool allows portfolio managers, business stakeholders, and developers to stay informed about projects and manage them in the different development stages. By providing everything you need to collaborate effectively in one place, it is now easier than ever to bring project ideas to the Mendix Platform.
+* The new [Portfolio Management](/developerportal/portfolio-management/) tool allows portfolio managers, business stakeholders, and developers to stay informed about projects and manage them in the different development stages. By providing everything you need to collaborate effectively in one place, it is now easier than ever to bring project ideas to the Mendix Platform.
 
-In Portfolio Management, you can do the following
+    In Portfolio Management, you can do the following:
 
-* Control and manage digital project initiatives in one overview (via Kanban and list views)
-* Prioritize project initiatives by industry standard prioritization methods:
-    * Weighted shortest jobs first (WSJF)
-    * Reach, impact, confidence, and effort (RICE)
-* Sort, filter, and search project initiatives on fields such as **Tags**, **Owners**, **Departments**, and **Dates**
-* Add attachments, link Mendix apps, and assign owners to a project initiative
-* Archive and restore project initiatives
-* Invite users to dedicated portfolio boards (both internal to your organization and external)
-* Easily manage portfolio users via **Access Management**
-* Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
+    * Control and manage digital project initiatives in one overview (via Kanban and list views)
+    * Prioritize project initiatives by industry standard prioritization methods:
+        * Weighted shortest jobs first (WSJF)
+        * Reach, impact, confidence, and effort (RICE)
+
+    * Sort, filter, and search project initiatives on fields such as **Tags**, **Owners**, **Departments**, and **Dates**
+    * Add attachments, link Mendix apps, and assign owners to a project initiative
+    * Archive and restore project initiatives
+    * Invite users to dedicated portfolio boards (both internal to your organization and external)
+    * Easily manage portfolio users via **Access Management**
+    * Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
+
 
 ### November 21, 2022
 
 #### New Features
 
 * We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/general/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide9/svn-git-differences/).
-
-### November 10, 2022
-
-#### Improvements
-
-* We improved the way [Company Brand](/developerportal/control-center/#company-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
-* We removed the Brand Colors feature for Company Brand.
 
 ### October 20, 2022
 
@@ -549,7 +502,6 @@ In Portfolio Management, you can do the following
 #### New Features
 
 * We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
-* We introduced the **Billing Accounts** page in Control Center where Mendix Admin can update the payment card information for their company at any time.
 
 #### Fixes
 
@@ -560,7 +512,6 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where Mendix Admins were not able to invite users to their company's apps.
 * We fixed a pagination issue on the [user management overview](/developerportal/collaborate/general-settings/#manage-users) in your **Access Management** settings.
 
 ### August 22, 2022
@@ -576,9 +527,8 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We have introduced the **Marketplace Content** page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 * We simplified the process of [inviting other users](/developerportal/general/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
-* We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the **Stories** page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
+* We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the **Stories** page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.
 
 ### August 9, 2022
 
@@ -644,13 +594,8 @@ In Portfolio Management, you can do the following
 
 ### June 9, 2022
 
-#### New Features
-
-* The free Mendix Cloud environment of an app can now be deleted from the [app details](/developerportal/control-center/#app-details) page in Control Center.
-
 #### Improvements
 
-* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/developerportal/control-center/#app-details) page in Control Center.
 * From now on, the free Mendix Cloud environment of an app will be deleted whenever the app is deactivated or deleted.
 
 ### May 19, 2022
@@ -674,7 +619,6 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We removed the old Stories UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
-* We expanded the export-to-Excel functionality in [Control Center](/developerportal/control-center/) for both the [Apps](/developerportal/control-center/#apps) tab (which includes the **App ID**) and the [Cloud](/developerportal/control-center/#cloud) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
 
 #### Known Issues
 
@@ -807,12 +751,6 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where you could not see the story details if one of the tasks had a title that was longer than 200 characters.
 
-### October 1, 2021 {#oct1}
-
-#### New Features
-
-* We have released the company **Onboarding** functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
-
 ### September 23, 2021
 
 #### Improvements
@@ -836,12 +774,6 @@ In Portfolio Management, you can do the following
 * Your [Mendix Profile](/developerportal/community-tools/mendix-profile/) got a visual update.
 * We removed the possibility to add a GitHub account to your profile.
 
-### September 6, 2021
-
-#### New Feature
-
-* Mendix Admins can now configure their own [single sign-on](/developerportal/control-center/set-up-sso-byoidp/) configuration from the [Security](/developerportal/control-center/#security) tab of Control Center. 
-
 ### September 2, 2021
 
 #### Improvements
@@ -852,14 +784,8 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed a bug where the pop-up window with pending invitations was shown twice.
+* We fixed a bug where the pop-up window with pending invitations shown twice.
 * We also fixed a layout bug on the invitation pop-up window that we accidentally introduced during the last release.
-
-### August 26, 2021
-
-#### Improvements
-
-* We added a new menu item for Mendix Admins to access [Catalog Administration](/developerportal/control-center/#catalog) tasks in Control Center. For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
 
 ### August 19, 2021
 
@@ -871,13 +797,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
-
-### July 27, 2021
-
-#### Improvements
-
-* We improved the **External Members** overview on the Control Center [Dashboard](/developerportal/control-center/#dashboard) so that a list of external members from a specific company appears when you click a part of the pie chart.
+* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/#company) could not add or remove team members.
 
 ### July 14, 2021
 
@@ -912,7 +832,6 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We added a tab on the [Cloud](/developerportal/control-center/#cloud) page in Control Center that displays details on **Free Environments**.
 * We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
 
 ### May 17, 2021
@@ -935,15 +854,8 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where some graphs in the Control Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
 * We fixed the page title of the Mendix Studio landing page.
 * Page links now open in the correct tab.
-
-### April 26, 2021
-
-#### New Features
-
-* We released the Control Center [Dashboard](/developerportal/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
 
 ### March 30, 2021
 
@@ -985,19 +897,11 @@ In Portfolio Management, you can do the following
 
 * We fixed a bug where selecting an IBM or SAP template in the **Create App** flow did not direct you to the right page. 
 
-### March 9, 2021
-
-#### Improvements
-
-* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/#groups) once it has been created.
-* Mendix Admins can now [deactivate](/developerportal/control-center/#members) Technical Contacts and the last Scrum Master in a team.
-
 ### March 4, 2021
 
 #### Improvements
 
 * We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/collaborate/general-settings/) page.
-* We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/developerportal/control-center/) as a Mendix Admin, right?
 * We made some preparations for Git support.
 * We improved the sharing of data across the Developer Portal so that it is more stable and secure.
 
@@ -1012,14 +916,6 @@ In Portfolio Management, you can do the following
 
 * We optimized the **App Templates** page for a better experience. We also improved the search function on this page.
 * There is now better performance for building your app after you select a template.
-
-### February 23, 2021
-
-#### Improvements
-
-* We have updated the [App Projects](/developerportal/control-center/#apps) tab of Control Center, where you can now do the following:
-    * Open the [Team](/developerportal/general/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
-    * Deactivate or delete an app or a team member
 
 ### February 9, 2021
 
@@ -1042,7 +938,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released the Mendix [Control Center](/developerportal/control-center/), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
+* We released the Mendix [Control Center](/control-center/), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
 
 #### Improvements
 
@@ -1068,7 +964,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview/#content-groups) in the Marketplace.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/my-marketplace/#content-groups) in the Marketplace.
 
 ## 2020
 

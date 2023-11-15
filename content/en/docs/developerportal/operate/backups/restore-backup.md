@@ -26,7 +26,7 @@ You cannot transfer data from one app to another by restoring a backup from one 
 {{% alert color="warning" %}}
 If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This leaves the database only partially restored. If this occurs, you will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete.
 
-Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25 GB used during the restoration process.
+Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25 GB used during the restoration process. The decompressed database size can be determined by [restoring the backup locally](/developerportal/operate/restore-backup-locally/) and using the pgAdmin statistics page.
 
 Contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
 {{% /alert %}}

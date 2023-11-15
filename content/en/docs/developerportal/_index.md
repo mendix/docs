@@ -28,17 +28,19 @@ On the left side of the top bar, click the **Open Global Navigation** button (vi
 
 {{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
 
-The menu items open the following parts of the Mendix Platform:
+Clicking the menu items opens the following parts of the Mendix Platform:
 
 * **Home** – the [My Apps](/developerportal/#my-apps) page
 * **Apps** – the [My Apps](/developerportal/#my-apps) page
 * **Deployment**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
-* [Control Center](/developerportal/control-center/)
+* [Control Center](/control-center/)
 * [Portfolio](/developerportal/portfolio-management/)
 * [Marketplace](/appstore/)
 * [Catalog](/catalog/)
 * [Academy](https://academy.mendix.com/link/home)
 * [Community](/developerportal/community-tools/)
+* [Create New App](https://new.mendix.com/link/overview/)
+* [mendix.com](https://www.mendix.com/)
 
 You can hover over the menu items above to expand the sections for further access.
 
@@ -78,7 +80,7 @@ In the top bar of the Developer Portal, two additional menu items are available:
 
 * Click **Company Buzz** to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company
     * For more details, see the [Company Buzz](/developerportal/general/buzz/#company-buzz) section of *Buzz*
-* Click **Company Apps** to see all the apps created by members of your [company](/developerportal/control-center/#company)
+* Click **Company Apps** to see all the apps created by members of your [company](/control-center/#company)
     * If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/general/buzz/#app-buzz)
     * If you click an app for which you are not an team member, you will see the app details
     * You can also sort the order of the apps here

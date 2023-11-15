@@ -271,4 +271,4 @@ Yes, you can configure multiple custom domains for the same application. Please 
 * [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
 * [App Roles](/developerportal/general/app-roles/)
-* [Control Center](/developerportal/control-center/)
+* [Control Center](/control-center/)

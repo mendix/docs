@@ -82,9 +82,9 @@ During the start phase, and through part of the scale phase, of your digital tra
 
 ### 5.1 Mendix Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/#company).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/control-center/#company).
 
-Please read more about this in [Control Center](/developerportal/control-center/).
+Please read more about this in [Control Center](/control-center/).
 
 ### 5.2 Technical Contacts
 
@@ -243,7 +243,7 @@ Mendix Support needs application logs to diagnose this component. Because Mendix
 
 Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace
 
-Read more about the levels of Support for Marketplace components in [Marketplace Content Support](/appstore/general/app-store-content-support/).
+For details about the levels of Support for Marketplace components, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 
 Mendix Support needs application logs to diagnose these components. Because Mendix has no control over the context in which the Marketplace content is run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 

@@ -149,3 +149,62 @@ The user name (login name) of this Bitbucket user.
 #### 4.2.2 Personal Access Token
 
 The Access token of this Bitbucket user. The permission should be at least `Project Admin`. The expiration date is set to **No Expiration**.
+
+## 5 AzureDevOps
+
+This section describes the configuration of an AzureDevOps repository.
+
+### 5.1 Microsoft Entra ID Configuration
+
+To use AzureDevOps as the repository, first make sure to register an app in [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application), and take note of the following information:
+
+* Application ID (client ID)
+* Directory ID (tenant ID)
+* Client Secret
+
+For the API permissions, select **user_impersonation**.
+
+For the web callback URL, enter a URL in the following format: `YOUR_APP_ROOT/oauth-callback/`.
+
+### 5.2 Azure DevOps Configuration
+
+In Azure DevOps, you must create an organization and a PAT for the admin user. You must also create the users that  will use the Azure DevOps with Private Mendix Platform, and assign them Basic access level.
+
+### 5.3 DevOps Settings
+
+{{< figure src="/attachments/private-platform/pmp-vc5.png" >}}
+
+#### 5.1.1 Host URL
+
+This is the host URL of your Azure DevOps enterprise server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your Azure DevOps enterprise server host name is myazure.example.com, you should input `https://myazure.example.com` here.
+
+#### 5.1.2 Org
+
+Input the name of the organization that you created in Azure DevOps.
+
+#### 5.1.3 Project Admin PAT
+
+Input the admin user PAT that you created in Azure DevOps.
+
+#### 5.1.4 Azure OAuth Config
+
+Click **New**, and then fill out the following information:
+
+* **Name** - Enter a meaningful name
+* **Client ID** - Enter the Application ID that you obtained from Microsoft Entra ID
+* **Tenant ID** - Enter the Directory ID that you obtained from Microsoft Entra ID
+* **Client Secret** - Enter the Client Secret that you obtained from Microsoft Entra ID
+* **Resource** - `499b84ac-1321-427f-aa17-267ca6975798/.default`
+* **Single O auth account** - **No**
+* **Default config** - **Yes**
+* **Active** - **Yes**
+
+### 5.2 Normal User Credentials
+
+Users must generate their own PAT to work with Azure DevOps by doing the following steps:
+
+1. Log in to Private Mendix Platform.
+2. Click **Manage My Account** > **Service Credentials**.
+3. Click **Register New Credentials** > **Azure DevOps**, then click **Get My Azure PAT**.
+4. On the Microsoft login screen, input you Azure user credentials to verify and authorize the app.
+5. Wait for the PAT and Azure user email to be displayed on the **Service Credentials** page in Private Mendix Platform.

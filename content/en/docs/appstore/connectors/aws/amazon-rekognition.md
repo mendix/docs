@@ -69,19 +69,19 @@ In order to use the Amazon Rekognition service, you must authenticate with AWS. 
 
     {{< figure src="/attachments/appstore/connectors/aws-rekognition/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **TemporaryCredentials**.
 
     | Credentials type | Constant | Value |
     | --- | --- | --- |
     | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for temporary credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the temporary credentials expires |
-    | **SessionCredentials** | **Session Name** | An identifier for the session |
+    | **TemporaryCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **TemporaryCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **TemporaryCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **TemporaryCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **TemporaryCredentials** | **Duration** | Duration for which the Token should be valid; after the duration passes, the validity of the temporary credentials expires |
+    | **TemporaryCredentials** | **Session Name** | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
@@ -92,19 +92,24 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **DetectLabels** activity.
 4. Drag the **DetectLabels** activity onto the work area of your Microflow.
 5. Double-click the **DetectLabels** Microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
-6. Click **OK**.
-7. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the Microflow area.
-8. Position the **Retrieve** activity between the **DetectLabels** activity and the Microflow end event.
-9. Double-click the **Retrieve** activity.
-10. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
-11. Click **OK**.
-12. Configure a method for triggering the **ACT_DetectLabels** Microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type ENUM_Region of the AWS Authentication connector.
+7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
+    1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
+    2. Drag the **Generate Credentials** to the beginning of your Microflow.
+    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
+8. The `DetectLabelResponse` object is returned by the **DetectLabels** activity.   
+9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the Microflow area.
+10. Position the **Retrieve** activity between the **DetectLabels** activity and the Microflow end event.
+11. Double-click the **Retrieve** activity.
+12. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
+13. Click **OK**.
+14. Configure a method for triggering the **ACT_DetectLabels** Microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference
 
-To help you work with the Amazon Rekognition connector, the following sections of this document list the available [constants](#constants), [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
+To help you work with the Amazon Rekognition connector, the following sections of this document list the available [entities](#domain-model), [enumerations](#enumerations), [activities](#activities), and [JavaScript actions](#js-actions) that you can use in your application.
 
-### 4.2 Domain Model {#domain-model}
+### 4.1 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
@@ -112,7 +117,6 @@ The entities in the table below describe all generalizations. These are (re-)use
 
 | Name | Description |
 | --- | --- |
-| `ConnectionDetails` | This entity holds information regarding the connection with Amazon's Rekognition service. |
 | `Face` | This entity includes a confidence. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 | `BoundingBox` | This entity identifies the bounding box around the label, face, text, object of interest, or Personal Protective Equipment (PPE). The left (x) coordinate and top (y) coordinate are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). The top and left values returned are ratios of the overall image size. For example, if the input image is 700 x 200 pixels, and the top-left coordinate of the bounding box is 350 x 50 pixels, the API returns a left value of 0.5 (350/700) and a top value of 0.25 (50/200). The width and height values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700 x 200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 | `Label` | This entity includes a confidence and a name. The confidence is that of Amazon Rekognition service's accuracy in recognizing a face and the name is that of the generated label. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
@@ -124,11 +128,11 @@ The entities in the table below describe all generalizations. These are (re-)use
 | `Emotion` | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 | `PersonsEquipment` | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 
-### 4.3 Enumerations {#enumerations}
+### 4.2 Enumerations {#enumerations}
 
 An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
 
-#### 4.3.1 QualityFilter
+#### 4.2.1 QualityFilter
 
 This enumeration specifies how much filtering is applied, for example, to identify faces. If the quality filter is applied, then low-quality results are filtered out.
 
@@ -140,11 +144,11 @@ This enumeration specifies how much filtering is applied, for example, to identi
 | `MEDIUM` | MEDIUM | A medium level of quality filtering is applied. |
 | `HIGH` | HIGH | A high level of quality filtering is applied. |
 
-### 4.4 Activities {#activities}
+### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a Microflow or a Nanoflow. For more information, see [Activities](/refguide/activities/).
 
-#### 4.4.1 Compare Face
+#### 4.3.1 Compare Faces {#compare-faces}
 
 The Amazon `CompareFaces` service compares a face in the source input image with each of the 100 largest faces detected in the target input image. If the source image contains multiple faces, the service detects the largest face and compares it with each face detected in the target image.
 
@@ -168,7 +172,7 @@ This activity returns a `CompareFaces` entity with associated entities as shown 
 | `EmotionCompareFace` | `AmazonRekognitionConnector.Emotion` | This entity contains the emotion results for the `CompareFaces` activity. It includes a confidence and a type. It is a specialization of the `Emotion` generalization entity. |
 | `PoseCompareFace` | `AmazonRekognitionConnector.Pose` | This entity contains the pose results for the `CompareFaces` activity. It includes the pitch, roll, and yaw of the image. It is a specialization of the `Pose` generalization entity. |
 
-#### 4.4.2 Detect Custom Labels
+#### 4.3.2 Detect Custom Labels {#detect-custom-labels}
 
 The Amazon `DetectCustomLabels` service detects custom labels in a supplied image by using an Amazon Rekognition Custom Labels model. You specify which version of a model version to use by using the `ProjectVersionArn` input parameter.
 
@@ -187,7 +191,7 @@ This activity returns a list of `DetectCustomLabels` objects and associated obje
 | `BoundingBoxDetectCustomLabel` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectCustomLabels` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonDetectCustomLabel` | `AmazonRekognitionConnector.Polygon` | This entity contains the polygon results for the `DetectCustomLabels` activity. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
-#### 4.4.3 Detect Faces – Default
+#### 4.3.3 Detect Faces – Default {#detect-faces-default}
 
 The Amazon `DetectFaces` service detects faces within an image that is provided as input.
 
@@ -207,7 +211,7 @@ This activity returns a list of `DetectFaces` object with results as shown in th
 | `ImageQualityDetectFace` | `AmazonRekognitionConnector.ImageQuality` | This entity contains the image quality results for the `DetectFaces` activity. It includes the brightness and sharpness of the image. It is a specialization of the `ImageQuality` generalization entity. |
 | `LandmarkDetectFace` | `AmazonRekognitionConnector.Landmark` | This entity contains the landmark results for the `DetectFaces` activity. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
 
-#### 4.4.4 Detect Faces – All Attributes
+#### 4.3.4 Detect Faces – All Attributes {#detect-faces-all}
 
 The Amazon `DetectFaces` service detects faces within an image that is provided as input.
 
@@ -238,7 +242,7 @@ This activity returns a list of `DetectFaces` object with results as shown in th
 | `SmileDetectFace` | `AmazonRekognitionConnector.PhysicalProperty` | This entity contains the smile results for the `DetectFaces` activity. It includes a confidence and a value. It is a specialization of the `PhysicalProperty` generalization entity. |
 | `LandmarkDetectFace` | `AmazonRekognitionConnector.Landmark` | This entity contains the landmark results for the `DetectFaces` activity. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
 
-#### 4.4.5 Detect Moderation Labels
+#### 4.3.5 Detect Moderation Labels {#detect-moderation-labels}
 
 The Amazon `DetectModerationLabels` service detects unsafe content in a specified image (JPEG or PNG). Use `DetectModerationLabels` to moderate images depending on your requirements. For example, you might want to filter images that contain nudity, but not images containing suggestive content.
 
@@ -257,7 +261,7 @@ This activity returns a list of `DetectModerationLabels` objects and associated 
 | `HumanLoopActivationOutput` | | This entity shows the results of the human in the loop evaluation. It includes two attributes: (1) `HumanLoopActivationCondition` and (2) `HumanLoopArn`. The former shows the result of condition evaluations, including those conditions which activated a human review, while the latter is the Amazon Resource Name (ARN) of the `HumanLoop` created. If there is no `HumanLoopArn`, the input did not trigger a human review. |
 | `HumanActivityReason` | | This entity includes the conditions which activated a human review. |
 
-#### 4.4.6 Detect Labels
+#### 4.3.6 Detect Labels {#detect-labels}
 
 The Amazon `DetectLabels` service detects instances of real-world entities within an image (JPEG or PNG) that is provided as input. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and nature. 
 
@@ -277,7 +281,7 @@ This activity returns a list of `DetectLabels` objects with associated objects a
 | `BoundingBoxDetectFace` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectFaces` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `LabelDetectLabel` | `AmazonRekognitionConnector.Label` | This entity contains the label results for the `DetectLabels` activity. It includes a confidence and a name. Additionally, it is used to hold information over associations about the detected label, including the name, detected instances, parent labels, and confidence level. It is a specialization of the `Label` generalization entity. |
 
-#### 4.4.7 Detect Text
+#### 4.3.7 Detect Text {#detect-text}
 
 The Amazon `DetectText` service detects text in the input image and converts it into machine-readable text.
 
@@ -297,7 +301,7 @@ This activity returns a `DetectText` object with results as shown in the table b
 | `BoundingBoxTextDetect` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectText` activity. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonTextDetect` | `AmazonRekognitionConnector.Polygon` | This entity contains the polygon results for the `DetectText` activity. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
-#### 4.4.8 Detect Protective Equipment
+#### 4.3.8 Detect Protective Equipment {#detect-protective-equipment}
 
 The Amazon `DetectProtectiveEquipment` service detects Personal Protective Equipment (PPE) worn by people detected in an image. Amazon Rekognition can detect the following types of PPE:
 
@@ -326,7 +330,7 @@ This activity returns a `DetectProtectiveEquipment` object with the results as s
 | `BoundingBoxEquipmentDetection` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectProtectiveEquipment` activity, specifically the `EquipmentDetection`. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `BoundingBoxPerson` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectProtectiveEquipment` activity, specifically the `ProtectiveEquipmentPerson`. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 
-#### 4.4.9 Recognize Celebrities
+#### 4.3.9 Recognize Celebrities {#recognize-celebrities}
 
 The Amazon `RecognizeCelebrities` service returns an array of celebrities recognized in the input image.
 
@@ -354,11 +358,11 @@ This activity returns a `RecognizeCelebrities` object with results as shown in t
 | `Celebrity` | | This entity provides information about a celebrity recognized by the `RecognizeCelebrities` operation. It includes an identifier, a confidence, and a name. The identifier is an unique identifier for the recognized celebrity. The confidence is that of Amazon Rekognition service that it recognizes a celebrity. The name is that of the recognized celebrity. |
 | `LandmarkRecognizeCelebrity` | `AmazonRekognitionConnector.Landmark` | This entity contains the landmark results for the `RecognizeCelebrities` activity. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
 
-### 4.5 JavaScript Actions {#js-actions}
+### 4.4 JavaScript Actions {#js-actions}
 
 JavaScript actions provide an additional way to extend the functionality of your application. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
 
-#### 4.5.1 Image_AddBoundingBox
+#### 4.4.1 Image_AddBoundingBox {#js-bounding-box}
 
 The `Image_AddBoundingBox` Nanoflow action can be used to generate a rectangle around the labels that have been identified on an image. It makes use of a JavaScript action inside the Nanoflow. The image upon which the rectangles are to be generated must be contained in a container. As a result, the Nanoflow action can only be executed after the page has been rendered.
 

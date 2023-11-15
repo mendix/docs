@@ -165,7 +165,7 @@ You can also deploy an app from the Team Server. To do this, follow these steps:
 2. Click **Apps** in the top navigation panel.
 3. Select your app.
 4. Go to **Environments**.
-5. Click **Create package from team server**.
+5. Click **Create Package from Teamserver**.
 6. Select your desired branch and revision and click **Next**.
 7. Give the build a version number and click **Build this revision**.
 

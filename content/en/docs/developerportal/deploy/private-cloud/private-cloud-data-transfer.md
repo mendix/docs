@@ -271,6 +271,11 @@ kubectl -n $NAMESPACE delete -f /tmp/mendix-backup-restore.yaml
 rm /tmp/mendix-backup-restore.yaml
 ```
 
+{{% alert color="warning" %}}
+The `kubectl cp` command can sometimes fail to copy files with a `.tar.gz` extension.
+In that case, changing the file extension can fix the issue, for example by changing the file extension from `.tar.gz` to `.tar.gz.backup`.
+{{% /alert %}}
+
 ## 3 Known Limitations
 
 * It is not possible to export/import only the database or only files. The import/export process will always export or import the database together with any files.

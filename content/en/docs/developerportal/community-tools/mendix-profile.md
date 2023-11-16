@@ -299,7 +299,7 @@ By default, you are requested to change your password every 90 days. A Mendix Ad
 
 You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking the menu button (**...**) of the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
-If you do not want to use an account anymore, you can remove it from this page. Click the menu button (**...**) for the logged-in account and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile is deleted when you delete all of your accounts. 
+If you do not want to use an account anymore, you can remove it from this page. Click the menu button (**...**) for the logged-in account and select **Delete this account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile is deleted when you delete all of your accounts. 
 
 You can only remove the account with which you are logged in. If you do not have access to your account anymore, please reach out to [Mendix Support](https://support.mendix.com/hc/en-us) to delete your account.
 

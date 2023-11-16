@@ -17,12 +17,17 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
-### November 16, 2023
+### November 23, 2023
 
 #### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
 
+### November 16, 2023
+
+#### Improvements
+
+* We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configuration pop-up window that appears when setting up your Jira connection more clear.
 ### November 9, 2023
 
 #### New Features
@@ -32,8 +37,8 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Fixes
 
-* We fixed issue in Feedback where tags could be incorrectly duplicated.
-* We fixed issue in Feedback where deleting tags or statuses caused errors.
+* We fixed an issue in Feedback where tags could be incorrectly duplicated.
+* We fixed an issue in Feedback where deleting tags or statuses caused errors.
 
 ### November 2, 2023
 

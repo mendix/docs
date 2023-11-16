@@ -62,7 +62,7 @@ To access the node permissions, do the following:
 
 ### 3.3 Permissions
 
-The Technical Contact and any team members with **Manage Permissions** enabled can set the following node permissions: **Manage Permissions**, **Transport Rights**, **Access to Backups**, **Receive Alerts**, **API Rights**, and **Access to Monitoring**.
+The Technical Contact can enable and disable **Manage Permissions** for the other team members. Any team members with **Manage Permissions** enabled can set the following node permissions: **Transport Rights**, **Access to Backups**, **Receive Alerts**, **API Rights**, and **Access to Monitoring**.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permission.png" alt="Node permissions dashboard" >}}
 
@@ -123,7 +123,7 @@ In addition, all changes to node permissions are logged on the activity log.
 
 ## 5 The Technical Contact
 
-A cloud node has a single Technical Contact. The Technical Contact manages the cloud node and can edit the privileges of regular team members.
+A cloud node has a single Technical Contact. The Technical Contact manages the cloud node and can control whether the other team members have access to **Manage Permissions**.
 
 The Technical Contact can give the Technical Contact role to another team member. To transfer the role from yourself to another user, click **Change to Technical Contact** under the other user's name. Note that only one user at a time can be the Technical Contact.
 

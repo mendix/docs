@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### November 16, 2023
+
+#### Fixes
+
+* We fixed an issue where some applications did not show up in the drop-down menu of the registration form.
+
 ### November 2, 2023
 
 #### Improvement

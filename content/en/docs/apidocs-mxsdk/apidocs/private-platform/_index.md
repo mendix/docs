@@ -16,4 +16,10 @@ The API documentation is divided into the sections described below.
 
 For more information, see [API (Application Programming Interface)](https://www.mendix.com/glossary/api/) in the *Technology Glossary*.
 
+## Prerequisites
+
+Authentication for the API uses a personal access token (PAT). You can generate a PAT in the **Personal Access Tokens** section of your [Private Mendix Platform Profile](/private-mendix-platform-user-guide/#profile).
+
+Each available API has its own set of scopes that define the access level for the token. As a best practice, consider restricting the token's scope to the lowest access level required to perform the necessary operations.
+
 ## 2 Documents in this Category

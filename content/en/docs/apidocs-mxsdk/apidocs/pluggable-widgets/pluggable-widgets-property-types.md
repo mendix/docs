@@ -756,20 +756,19 @@ Label property allows a pluggable widget to have labeling functionality similar 
 <systemProperty key="Label"/>
 ```
 
-#### setLabel {#setLabel}
+#### 5.2 setLabel {#setLabel}
+
 {{% alert color="info" %}}
-The setLabel attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
+The `setLabel` attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
 {{% /alert %}}
 
-You can use setLabel to specify that which properties can be used to set Label property value. 
+You can use `setLabel` to specify which properties can be used to set the `Label` property value. 
 
-Configuring the value of a property with setLabel attribute will automatically update the value of Label.
+Configuring the value of a property with the `setLabel` attribute will automatically update the value of `Label`.
 
-Only attribute and association properties can use setLabel attribute. 
+Only attribute and association properties can use the `setLabel` attribute. 
 
-Label value is set only if it does not have a non-default value already. If a property become hidden, Label value is reverted back to default. More than one properties can set the label, however if multiple properties with setLabel attribute is visible at the same time. First one updated can set the label. 
-
-For example, when properties are defined as follows:
+The `Label` value is set only if it lacks a non-default value when you set it. If a property become hidden, the `Label` value is reverted back to default. More than one property can set the label. However if multiple properties with the `setLabel` attribute are visible simultaneously, the first one updated sets the label. For example, when properties are defined as follows:
 
 ```xml
 <property key="myAttribute" setLabel="true" type="attribute">
@@ -793,7 +792,7 @@ For example, when properties are defined as follows:
     <description/>
 </property>
 ```
-Label property will be set by the first property configured. 
+Then the `Label` property will be set by the first property configured. 
 
 ### 5.2 Name {#name}
 

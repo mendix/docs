@@ -9,7 +9,7 @@ tags: ["API", "content"]
 
 ## 1 Introduction
 
-The Mendix Content API allows you to retrieve versions of both public and prviate company-specific Marketplace content. 
+The Mendix Content API allows you to retrieve versions of both public and private company-specific Marketplace content. 
 
 If you Marketplace content, this API can help you get the following information:
 

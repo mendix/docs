@@ -36,7 +36,7 @@ To create a backup archive of a licensed app, follow these steps:
 
     {{< figure src="/attachments/developerportal/operate/backups/create-backup/backupoptions.png" >}}
 
-{{% alert color="info" %}}Once you have created a backup archive, you can download it by clicking **Download Backup**. For more information, see [Downloading a Backup](/developerportal/operate/download-backup/).{{% /alert %}}
+{{% alert color="info" %}}Once you have created a backup archive, you can download it by clicking **More Options** > **Download**. For more information, see [Downloading a Backup](/developerportal/operate/download-backup/).{{% /alert %}}
 
 ## 4 Read More
 

@@ -173,7 +173,9 @@ spec:
 
 If you need to export or import data from an environment that uses AWS IRSA authentication, you also need to do the following:
 
-1. Create a "data-transfer" role with permissions to access the app's S3 bucket and RDS instance, for example:
+1. Create an **IAM Role** without any attached policies for that environment in the AWS console.
+    {{% alert color="info" %}}Use the environment internal name as the service account name.{{% /alert %}}
+2. In the IAM role, add an inline policy with the following JSON:
 
     ```json
     {
@@ -212,8 +214,21 @@ If you need to export or import data from an environment that uses AWS IRSA auth
     {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
     For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
 
-2. Configure the IAM role's trust policy to trust the `mendix-backup-restore` ServiceAccount.
-3. Add the `eks.amazonaws.com/role-arn` annotation to the ServiceAccount and set it to the role ARN value from the previous step.
+3. Allow a Kubernetes ServiceAccount (for example, `mendix-backup-restore`) to assume a role.
+
+    1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+
+        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+
+    2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
+
+        See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
+
+        The role ARN is required, you can use the **Copy** button next to the ARN name in the role details.
+
+        After this, the specified serviceaccount in the specified namespace will be able to assume this role.
+
+3. Add the `eks.amazonaws.com/role-arn` annotation to the `mendix-backup-restore` ServiceAccount and set it to the role ARN value from the previous step.
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
 If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).

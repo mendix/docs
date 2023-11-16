@@ -160,6 +160,7 @@ spec:
   customPodLabels: # Optional: custom pod labels
     general: # Optional: general pod labels (applied to all app-related pods)
       azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
+  runtimeLicenseProduct: # Optional: Specify the type of product required for the Runtime License. This is applicable when PCLM is used for licensing. By default, the value is set to Standard, if left empty   
 ```
 
 You need to make the following changes:
@@ -183,6 +184,7 @@ You need to make the following changes:
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
+* **runtimeLicenseProduct** - this setting is applicable to PCLM licenses. If the product type for the license is anything other than Standard, then the value of the Product type needs to be set here. For more information, see [PCLM Runtime License Product](/developerportal/deploy/private-cloud/private-cloud-license-manager/)
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 
@@ -213,7 +215,7 @@ You need to make the following changes:
 * **runtimeMetricsConfiguration** – specify how metrics should be collected; any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration`; see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment
 * **runtimeLeaderSelection** – specify how the leader replica should be selected - valid options are `assigned` (default mode: the `master` deployment will run one leader replica) and `none` (do not run any leader replicas, `master` deployment is scaled down to zero; this mode requires a specific infrastructure configuration, please consult with Mendix Expert Services before using this feature)
 * **customPodLabels** - specify additional pod labels (please avoid using labels that start with the `privatecloud.mendix.com/` prefix)
-   * **general** - specify additional labels for all pods of the app
+    * **general** - specify additional labels for all pods of the app
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 

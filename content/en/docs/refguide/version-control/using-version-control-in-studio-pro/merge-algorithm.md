@@ -77,7 +77,7 @@ To use keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>
 
 There is a third option to deal with a conflict: **Mark as Resolved**. This means that you do not choose any side to resolve the conflict and will keep things the way they were in the original. Neither of the new text changes will be applied.
 
-Once you have chosen one of the three options to resolve the conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
+Once you have chosen one of the three options to resolve the conflict, green check marks will appear to indicate that this conflict has been dealt with.
 
 ### 3.2 Resolving the Second Conflict
 

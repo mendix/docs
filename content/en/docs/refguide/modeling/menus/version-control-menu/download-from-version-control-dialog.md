@@ -23,7 +23,7 @@ You can also use the [Open App Dialog](/refguide/open-app-dialog/) to download a
 
 ## 2 Where Is Your App Stored?
 
-If **Enable private version control with Git** is set in the app [Preferences](/refguide/preferences-dialog/#enable), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
+If **Enable private version control with Git** is set in the app [Preferences](/refguide/preferences-dialog/#enable-with-Git), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
 
 ### 2.1 Mendix Team Server
 

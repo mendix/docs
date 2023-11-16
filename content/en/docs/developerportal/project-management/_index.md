@@ -14,6 +14,5 @@ The **Project Management** section provides you with fast access to the project 
 
 * [Epics](/developerportal/project-management/epics/)
 * [Jira](/developerportal/project-management/jira-connector/)
-* [Stories](/developerportal/project-management/stories/)
 
 {{% alert color="info" %}}If you are the Scrum Master of your app, you can select which tool your team uses for project management on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **Settings** page of your app. {{% /alert %}}

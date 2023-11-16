@@ -17,7 +17,7 @@ While developing Mendix apps, you will need to test and iterate to make the best
 * The [Troubleshooting Common Mobile Issues](#troubleshooting) section explains port forwarding, WiFi settings, and other common troubleshooting issues
 
 {{% alert color="warning" %}}
-Please note that instructions in this document reference Mendix 9 technologies. When using Mx10 Beta 1 or Beta 2, please use the Make it Native 9 app while testing.
+Please note that instructions in this document reference Mendix 9 technologies.
 
 After the Make It Native 10 app is published in app stores, this document will be rewritten to describe testing Mx10 apps.
 {{% /alert %}}

@@ -5,7 +5,15 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
-## 7.0.8 {#707}
+## 7.0.9 {#709}
+
+**Release date: October 13, 2023**
+
+### Fixes
+
+* We fixed build errors caused by the recent XCode 15 update.
+
+## 7.0.8 {#708}
 
 **Release date: September 25, 2023**
 
@@ -13,7 +21,7 @@ description: "Native Template 7 release notes."
 
 * We enhanced file encryption on Android.
 
-## 7.0.7 {#706}
+## 7.0.7 {#707}
 
 **Release date: September 22, 2023**
 
@@ -28,7 +36,7 @@ description: "Native Template 7 release notes."
 ### Additions
 
 * We added a `com.google.android.gms.permission.AD_ID` permission to the Android manifest file. This permission governs access to the advertising ID, facilitating more effective targeting and personalization within the app's advertisement services.
-  * Note that this permission is currently disabled with the `tools:node="remove"` attribute.
+    * Note that this permission is currently disabled with the `tools:node="remove"` attribute.
 
 ## 7.0.5 {#705}
 

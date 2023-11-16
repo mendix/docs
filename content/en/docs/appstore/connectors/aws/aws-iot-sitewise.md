@@ -33,7 +33,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS IoT SiteWise connector into your app.
+Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the AWS IoT SiteWise connector into your app.
 
 ## 3 Configuration
 
@@ -189,7 +189,6 @@ The domain model is a data model that describes the information in your applicat
 | Attribute | Description |
 | --- | --- |
 | `ProjectID` | Describes the project ID. |
-
 
 ### 4.1.13 ListPortalsRequest {#list-portals-request}
 
@@ -442,7 +441,7 @@ The domain model is a data model that describes the information in your applicat
 | --- | --- |
 | `Quality` | Describes the quality of the asset property value |
 
-### 4.1.47 TimeInNanos {#time-in-nanos}
+### 4.1.47 AbstractTimeInNanos {#abstract-time-in-nanos}
 
 | Attribute | Description |
 | --- | --- |
@@ -569,6 +568,55 @@ The domain model is a data model that describes the information in your applicat
 | Attribute | Description |
 | --- | --- |
 | `NextToken` | Describes the token for the next set of results, or null if there are no additional results. |
+
+### 4.1.63 BatchPutAssetPropertyValueRequest {#batch-put-asset-property-value-request}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes. |
+
+### 4.1.64 PutAssetPropertyValueEntry {#put-asset-property-value-entry}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractEntry` entity. |
+
+### 4.1.65 PutAssetPropertyValue {#put-asset-property-value}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractAssetPropertyValue` entity.|
+
+### 4.1.66 TimeInNanos_Response {#time-in-nanos-response}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractTimeInNanos` entity. |
+
+### 4.1.67 TimeInNanos {#time-in-nanos}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractTimeInNanos` entity. |
+
+### 4.1.68 BatchPutAssetPropertyValueResponse {#batch-put-asset-property-value-response}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes. |
+
+### 4.1.69 BatchPutAssetPropertyErrorEntry {#batch-put-asset-property-error-entry}
+
+| Attribute | Description |
+| --- | --- |
+| `EntrID` | The user specified ID for the entry. You can use this ID to identify which entries failed. |
+
+### 4.1.70 BatchPutAssetPropertyError {#batch-put-asset-property-error}
+
+| Attribute | Description |
+| --- | --- |
+| `ErrorCode` | Holds the returned error code. |
+| `ErrorMessage` | The associated error message. |
 
 ### 4.2 Enumerations
 
@@ -746,6 +794,21 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `SUCCESS` | SUCCESS | The entry was skipped because it was included in a prior batch retrieval call. |
 | `ERROR` | ERROR | The entry was skipped because it returned an error. |
 
+#### 4.2.20 ENUM_BatchPutAssetPropertyError_ErrorCode
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ACCESS_DENIED_EXCEPTION` | ACCESS_DENIED_EXCEPTION | The property value returned and error because access was denied. |
+| `CONFLICTING_OPERATION_EXCEPTION` | CONFLICTING_OPERATION_EXCEPTION | Your request has conflicting operations. This can occur if you're trying to perform more than one operation on the same resource at the same time. |
+| `INTERNAL_FAILURE_EXCEPTION` | INTERNAL_FAILURE_EXCEPTION | AWS IoT SiteWise can't process your request right now. Try again later. |
+| `INVALID_REQUEST_EXCEPTION` | INVALID_REQUEST_EXCEPTION | The property value returned an error because the request was invalid. |
+| `LIMIT_EXCEEDED_EXCEPTION` | LIMIT_EXCEEDED_EXCEPTION | You've reached the limit for a resource. For example, this can occur if you're trying to associate more than the allowed number of child properties for an asset. |
+| `RESOURCE_NOT_FOUND_EXCEPTION` | RESOURCE_NOT_FOUND_EXCEPTION | The property value you are trying to change was not found. |
+| `SERVICE_UNAVAILABLE_EXCEPTION` | SERVICE_UNAVAILABLE_EXCEPTION | The requested service is unavailable. |
+| `THROTTLING_EXCEPTION` | THROTTLING_EXCEPTION | Your request exceeded a rate limit. For example, you might have exceeded the number of AWS IoT SiteWise assets that can be created per second. |
+| `TIMESTAMP_OUT_OF_RANGE_EXCEPTION` | TIMESTAMP_OUT_OF_RANGE_EXCEPTION | You entered a faulty timestamp. |
+| `UNKNOWN_TO_SDK_VERSION` | UNKNOWN_TO_SDK_VERSION | Returned when the enumeration value is unknown in the SDK. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -868,7 +931,7 @@ The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to re
 | --- | --- | 
 | `GetAssetPropertyValueHistoryRequest` | `GetAssetPropertyValueHistoryResponse` |
 
-#### 4.3.13 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+#### 4.3.14 GetAssetPropertyValueHistory {#get-asset-property-value-history}
 
 The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retrieve aggregated values for an asset property. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyAggregatesRequest` object and returns a `GetAssetPropertyAggregatesResponse` object.
 
@@ -876,7 +939,7 @@ The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retr
 | --- | --- | 
 | `GetAssetPropertyAggregatesRequest` | `GetAssetPropertyAggregatesResponse` |
 
-#### 4.3.14 BatchGetAssetPropertyValue {#batch-get-asset-property-value}
+#### 4.3.15 BatchGetAssetPropertyValue {#batch-get-asset-property-value}
 
 The `BatchGetAssetPropertyValue` Amazon Iot SiteWise activity allows you to get the current value for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueRequest` object and returns a `BatchGetAssetPropertyValueResponse` object.
 
@@ -884,10 +947,18 @@ The `BatchGetAssetPropertyValue` Amazon Iot SiteWise activity allows you to get 
 | --- | --- | 
 | `BatchGetAssetPropertyValueRequest` | `BatchGetAssetPropertyValueResponse` |
 
-#### 4.3.15 BatchGetAssetPropertyValueHistory {#batch-get-asset-property-value-history}
+#### 4.3.16 BatchGetAssetPropertyValueHistory {#batch-get-asset-property-value-history}
 
 The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to get the historical values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchGetAssetPropertyValueHistoryRequest` object and returns a `BatchGetAssetPropertyValueHistoryResponse` object.
 
 | Input | Output | 
 | --- | --- | 
 | `BatchGetAssetPropertyValueHistoryRequest` | `BatchGetAssetPropertyValueHistoryResponse` |
+
+#### 4.3.17 BatchPutAssetPropertyValueRequest {#batch-put-asset-property-value-request}
+
+The `BatchPutAssetPropertyValueRequest` Amazon Iot SiteWise activity allows you to put values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchPutAssetPropertyValueRequest` object and returns a `BatchPutAssetPropertyValueResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `BatchPutAssetPropertyValueRequest` | `BatchPutAssetPropertyValueResponse` |

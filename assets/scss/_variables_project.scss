@@ -18,18 +18,18 @@ $td-enable-google-fonts: true !default;
 // NK - changed almost all colors to better match Mendix palette
 // Codes taken from https://www.mendix.design/guidelines
 
-$primary: #0CABF9 !default; // MX Blue NK - changed primary blues to be Mendix Blue
+$primary: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
 $primary-light: lighten($primary, 75%) !default;
 $secondary: #0A1325 !default; // MX Midnight 100 (MxDock color)
 $success: #77DD77 !default; // MX Green
-$info: #0CABF9 !default; // MX Blue
-$warning: #FACA4A !default; // MX Yellow
-$danger: #FF6161 !default; // MX Coral
+$info: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
+$warning: #FDC63A !default; // MX Disrupt
+$danger:  #FE601E !default; // MX Ignite
 $white: #fff !default;
 $light: #D3F3EE !default;
 
 $dark: #0A1325 !default; // MX Midnight 100 (MxDock color)
-$blue: #0CABF9 !default; // MX Blue
+$blue: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
 $gray-light: #F3F3F4 !default; // NK - added for design proposal
 $gray-100: #F8F8F8 !default; // NK - changed to better align to Figma Docs mockup
 $gray-200: #E7E7E9 !default; // NK - changed to better align to Figma Docs mockup

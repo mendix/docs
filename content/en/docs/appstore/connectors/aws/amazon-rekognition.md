@@ -45,7 +45,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Rekognition connector into your app.
+Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the Amazon Rekognition connector into your app.
 
 ## 3 Configuration
 
@@ -397,4 +397,12 @@ JavaScript actions provide an additional way to extend the functionality of your
 
 #### 4.5.1 JS_AddBoundingBox
 
-The `AddBoundingBox` JavaScript action can be used to draw a rectangle around the labels that have been found on an image.
+The `JS_AddBoundingBox` JavaScript action can be used to generate a rectangle around the labels that have been identified on an image. The image upon which the rectangles are to be generated must be contained in a container. As a result, the JavaScript action can only be executed after the page has been rendered.
+
+| Parameter | Description |
+| --- | --- |
+| `ClassName` (String) | A string representation of the container upon which a rectangle is to be generated. |
+| `BoundingBox` (Object) | An object of the type `BoundingBox`. The object must have the following attributes: `Top`, `Left`, `Height` and `Width`. |
+| `CustomLabel` (Object) | An object of the identification. The object must have the `Confidence` attribute. |
+| `HighConfidenceThreshold` (Decimal) | The minimum threshold of confidence for the rectangle to be considered of high confidence. This results in a green rectangle being rendered. Range: 0 - 100 |
+| `MediumConfidenceThreshold` (Decimal) | The bottom of the range of threshold of confidence for the rectangle to be considered of medium confidence, whereas the top is the `HighConfidenceThreshold` parameter. This results in an orange rectangle being rendered. All labels with a confidence below this value are considered of low confidence, which results in an red rectangle being rendered. Range: 0 - 100 |

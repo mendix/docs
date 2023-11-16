@@ -147,8 +147,9 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 * Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
     * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
-    * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
-    * CentOS 6, CentOS 7
+    * Red Hat Enterprise Linux 8 and later
+    * CentOS 7
+    * CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
@@ -159,6 +160,14 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 ### 6.3 Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+{{% alert color="warning" %}}
+As Java 11 approaches the end of support in October, 2024, Mendix will stop supporting Java 11 with the release of Studio Pro 10.17 in November, 2024.<br/>
+<br/>
+Compatibility with Java 17 is planned for the Studio Pro 10.7 release in January, 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional.<br/>
+<br/>
+Compatibility with Java 21 is planned for the Studio Pro 10.10 release in April, 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+{{% /alert %}}
 
 ## 7 Databases {#databases}
 
@@ -171,7 +180,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19, 21c
-* PostgreSQL: 11, 12, 13, 14, 15
+* PostgreSQL: 11, 12, 13, 14, 15, 16
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}
@@ -218,7 +227,7 @@ Internet Explorer is not supported in Studio Pro 10.
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and progressive web apps built with Mendix the following operating system versions are supported:
+For native and progressive web apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android

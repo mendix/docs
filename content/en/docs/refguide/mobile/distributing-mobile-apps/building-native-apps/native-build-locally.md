@@ -24,6 +24,10 @@ For iOS builds:
 * Have a Mac OS X machine 
 * Install [XCode 12.4](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
+{{% alert color="warning" %}}
+iOS17 and XCode 15 are not yet supported. Mendix will support them in the future.
+{{% /alert %}}
+
 For Android Builds:
 
 * Install [Android Studio](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)

@@ -13,13 +13,13 @@ aliases:
 
 This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and re-use functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is done in a microflow using the call web service action.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Import a web service using the **Import Web Service** wizard
 * Directly import a web service document into your app
 * Configure a web service call
 
-{{% alert color="warning" %}}The **Import Web Service** wizard is deprecated and will be removed in Studio Pro 10.6.{{% /alert %}}
+{{% alert color="warning" %}}⚠ The **Import Web Service** wizard is deprecated and will be removed in Studio Pro 10.6.{{% /alert %}}
 
 ## 2 Importing a Web Service Using the Wizard
 

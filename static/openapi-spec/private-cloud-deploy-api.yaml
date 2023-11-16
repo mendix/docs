@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.5.0
+  version: 4.6.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -1148,6 +1148,9 @@ components:
                       stopApp:
                         type: boolean
                         default: false
+                      modifyMxAdminPassword:
+                        type: boolean
+                        default: false
                       editAppConstants:
                         type: boolean
                         default: false
@@ -1783,6 +1786,7 @@ components:
                         scaleApp: true
                         startApp: true
                         stopApp: true
+                        modifyMxAdminPassword: true
                         editAppConstants: true
                         manageAppScheduledEvents: true
                         viewAppLogs: true
@@ -1858,6 +1862,7 @@ components:
                             scaleApp: true
                             startApp: true
                             stopApp: true
+                            modifyMxAdminPassword: true
                             editAppConstants: true
                             manageAppScheduledEvents: true
                             viewAppLogs: true
@@ -2155,6 +2160,7 @@ components:
                 scaleApp: true
                 startApp: true
                 stopApp: true
+                modifyMxAdminPassword: true
                 editAppConstants: true
                 manageAppScheduledEvents: true
                 viewAppLogs: true

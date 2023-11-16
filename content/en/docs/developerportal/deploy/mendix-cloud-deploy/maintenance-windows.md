@@ -12,64 +12,65 @@ aliases:
 
 ## 1 Introduction
 
-In the Mendix Cloud Professional and Enterprise plans you can configure a weekly time range (*Maintenance Window*) when system maintenance can occur. Whenever Mendix has planned maintenance operations, these will be executed within your preferred time window. Naturally, we will always inform you upfront on any upcoming maintenance operations in accordance with your SLA.
+In Mendix Cloud Professional and Enterprise plans, you can set a preferred maintenance window. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has planned maintenance operations, they are run within your preferred maintenance window.
 
 ### 1.1 Preferred Maintenance Window
 
-The **Preferred Maintenance Window** is a standard time range in a week where you would prefer system maintenance to occur. This is always shown as **UTC** so don't forget to convert it to your local time zone.
+The preferred maintenance window is a time range that you can set to specify what time and day of the week you prefer for system maintenance. For example, you could set the following maintenance window: Friday 12:00-15:00 UTC.
 
-This window will only be used when planned maintenance is being scheduled.
+{{% alert color="info" %}}The preferred maintenance window is always shown in Coordinated Universal Time (UTC); don't forget to convert it to your local time zone.{{% /alert %}}
+
+The preferred maintenance window is used only when planned maintenance is scheduled. Mendix will always inform you about any upcoming maintenance operations in accordance with your SLA.
 
 ### 1.2 Planned Maintenance
 
-**Planned Maintenance** is a maintenance operation that will be (or has been) carried out. This is shown in local time, together with an offset from UTC.
+Planned maintenance is a maintenance operation that will be (or has been) carried out. It is shown in local time, with the offset from Coordinated Universal Time noted. For example, if you are in a time zone two hours ahead of Coordinated Universal Time, you might see the following planned maintenance message: "Maintenance will be executed between Fri 09/08/2023, 14:00 +0200 and Fri 09/08/2023, 17:00 +0200."
 
-Where possible, planned maintenance will be carried out within your preferred maintenance window.
+Whenever possible, planned maintenance is carried out within your preferred maintenance window.
 
-Where infrastructure maintenance is needed, it is not always possible to do this within your preferred maintenance window. Infrastructure maintenance uses rolling updates, so multi-instance apps will continue to be available. Only apps with a single instance will see any downtime (~1-2 minutes) during infrastructure maintenance, as the instance will be restarted.
+{{% alert color="info" %}}Infrastructure maintenance uses rolling updates, so this type of maintenance may occur outside of your preferred maintenance window. During infrastructure maintenance, multi-instance apps continue to be available. However, apps with a single instance see brief downtime (~1-2 minutes) because the instance needs to be restarted.{{% /alert %}}
 
 ## 2 Prerequisites
 
-To view maintenance windows, you need to have monitor or backup access to your Mendix app. To configure them, you need to have transport rights to it. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+To view maintenance windows, you need to have access to monitor or back up your Mendix app. To configure maintenance windows, you need to have transport rights to your app. For details on how to configure access, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## 3 Configuring Maintenance for Your Application {#configuring}
 
 {{% alert color="warning" %}}
-Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.
+Maintenance windows and planned maintenance are defined in Coordinated Universal Time. When selecting a time period, remember to convert to Coordinated Universal Time from your local time.
 {{% /alert %}}
 
-Follow the instructions below to configure a maintenance window:
+Follow the instructions below to configure a maintenance window.
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Go to the **Environments** page for your app.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance1.png" alt="" >}}
 
-3. Click **Details** for the environment you want to configure:
+3. Click **Details** for the environment that you want to configure.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance2.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance2.png" alt="" >}}
 
-4. Go to the **Maintenance** tab:
+4. Go to the **Maintenance** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" alt="" >}}
     
-5. Click **Change** to modify the preferred maintenance window of your environment. Transport rights for this environment are required.
+5. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 
-6. Choose one of the maintenance windows suggested.
+6. Choose one of the maintenance windows from the drop-down menu.
 
-7. Click **Save** to confirm your new maintenance window.
+7. Click **Save** to confirm your new preferred maintenance window.
 
-{{% alert color="info" %}}
-If planned maintenance is already scheduled for the current week it will be moved to the new planned maintenance window if this is still in the same week. However, if you move your maintenance window to before the current day and time the planned maintenance window will not be moved.
+### 3.1 Configuring Maintenance Window in a Week with Planned Maintenance
 
-For example: imagine today is Tuesday, your maintenance window is currently Thursday, and there is planned maintenance for Thursday this week.
+If planned maintenance is already scheduled for the current week, it will be completed within the current week. So, if you move your maintenance window to before the current time and day of the week, the current week's planned maintenance will not be rescheduled. If you move your maintenance window to after the current time and day of the week, the week's planned maintenance will be rescheduled to your maintenance window.
 
-* If you change the maintenance window to Friday, the planned maintenance will move to Friday as it can still be done this week.
-* If you change the maintenance window to Monday, the planned maintenance remains on Thursday as it needs to be done this week and your next maintenance window is now next week.
-{{% /alert %}}
+For example, consider this scenario: today is Tuesday, your maintenance window is currently Thursday, and there is planned maintenance for Thursday this week.
+
+* If you change the maintenance window to Friday, the planned maintenance will move to Friday. This is because the maintenance can still be completed within the week.
+* If you change the maintenance window to Monday, the planned maintenance remains on Thursday. This is because the maintenance needs to be done within the week, and your next maintenance window is next week.
 
 ## 4 Read More
 
 * [App Roles](/developerportal/general/app-roles/)
-* [Node Permissions](/developerportal/deploy/node-permissions/) 

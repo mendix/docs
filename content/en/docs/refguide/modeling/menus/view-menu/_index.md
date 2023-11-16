@@ -89,7 +89,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 ### 3.9 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/overview/use-content/).
 
 ### 3.10 MxAssist Best Practice Bot {#mx-bot}
 
@@ -105,7 +105,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/stories/) of the current [Sprint](/developerportal/project-management/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
+For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/epics/planning/) of the current [Sprint](/developerportal/project-management/epics/planning/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
 
 ### 3.14 Toolbox {#toolbox}
 

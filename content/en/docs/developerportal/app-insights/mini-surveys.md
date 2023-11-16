@@ -202,19 +202,25 @@ To obtain an API key for the implementation, follow these steps:
 To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
 1. Open your app in Studio Pro.
-2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
+2. Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how many responses have been collected.
+When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#profile-notification-help) on how many responses have been collected.
 
 To check the responses that have been collected, follow these steps::
 
 1. Open the app in the Developer Portal.
+
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
+
 3. On the **Active** tab, click the mini survey to open the [survey details](#survey-details) page.
+
 4. Go to the **Responses** tab to see all the responses that have been collected.
+
+   To have a quick view of individual survey responses, click a response in the list at the bottom. A side panel opens and shows the details of the response.
+
 5. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.
 
 ### 3.5 Survey Opt-out Rules

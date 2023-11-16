@@ -14,7 +14,7 @@ Styling in a Mendix app is easy to do once you get the hang of it. For the major
 
 However, using Gulp and Sass can be better for certain users. If you already use a Gulp service worker in your development workflow, you may wish to style you Mendix app using Gulp and Sass instead of Calypso.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Prepare your app
 * Set up your Sass files

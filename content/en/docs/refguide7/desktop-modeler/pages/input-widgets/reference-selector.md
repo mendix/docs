@@ -11,7 +11,7 @@ The reference selector is an [input widget](/refguide7/input-widgets/) that can 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png" >}}
 This reference selector allows you to select a product for your orderline.
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector-domain-model.png" >}}
-To use a reference selector you need a many-to-one association in the domain model.
+To use a reference selector you need a one-to-many association in the domain model.
 
 {{% /alert %}}
 

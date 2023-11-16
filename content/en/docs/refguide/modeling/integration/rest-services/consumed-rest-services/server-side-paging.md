@@ -13,7 +13,7 @@ aliases:
 
 Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, however, you must model the logic for getting the correct data in the microflow itself.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a data grid with a microflow data source which retrieves data from a REST service
 * Add server-side paging and sorting to that data grid
@@ -107,7 +107,7 @@ In the previous section, you added the **Paging** input parameter to your microf
 1. Open the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
 3. Click **Location** > **Edit**.
-4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?limit=5&_page={1}`:
+4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?_limit=5&_page={1}`:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/template-param-one.png" alt="add page bit to template"   width="500"  >}}
 

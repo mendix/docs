@@ -49,4 +49,4 @@ These are the current limitations on recording:
 * Assertions are not recorded
 * Generating nice descriptions with labels only works if you use the label function in Mendix
 
-{{% alert color="info" %}}In the past, ATS also had a Web Recorder. However, due to changes in the Chrome store policy, we deprecated the Web Recorder in Q4 2019. Even though the Web Recorder might still work for some existing customers, the ATS Desktop recorder is the default choice.{{% /alert %}}
+{{% alert color="info" %}}⚠ In the past, ATS also had a Web Recorder. However, due to changes in the Chrome store policy, we deprecated the Web Recorder in Q4 2019. Even though the Web Recorder might still work for some existing customers, the ATS Desktop recorder is the default choice.{{% /alert %}}

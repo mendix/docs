@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to will teach you how to open and manage the data stored inside the built-in database.
+All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to teaches you how to open and manage the data stored inside the built-in database.
 
 {{% alert color="warning" %}}
 This document is about sharing a database between developers working on **the same app**. It is not possible to share one database between different apps. If you need to copy data to another app, use the [Database Replication](/appstore/modules/database-replication/) module.
@@ -121,5 +121,4 @@ Make sure the names of the databases are not the same or make a copy of your own
 
 ## 9 Read More
 
-* [Stories](/developerportal/project-management/stories/)
 * [Version Control](/refguide9/version-control/)

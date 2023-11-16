@@ -107,7 +107,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
                     "ecr:GetDownloadUrlForLayer",
                     "ecr:InitiateLayerUpload",
                     "ecr:PutImage",
-                    "ecr:List",
+                    "ecr:ListImages",
                     "ecr:UploadLayerPart",
                     "ecr:DescribeRepositories",
                     "ecr:CreateRepository"
@@ -130,7 +130,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
 
     1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
 
-      {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+       {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`. You can specify any serviceaccount name here (for simplicity, we recommend using `mendix-builder`). For example, if the Mendix Operator is installed into the `mynamespace` namespace, set the value to `system:serviceaccount:mynamespace:mendix-builder`.
 
@@ -145,10 +145,10 @@ Use the following configuration options:
 * **Registry name** - specify the repository name you created on step 1, for example: `mendixapps/mynamespace`
 * **Region** - specify the ECR region, for example `eu-west-1`
 * **Authentication** - choose the authentication mode, *Kubernetes Service Account* (recommended) or *AWS Static Credentials* (not recommented by AWS)
-   * **IAM Role ARN** - the role ARN you created on step 3
-   * **K8s Service Account** - the Kubernetes service account that the Mendix Operator should use for authentication; it should match the service account name specified on step 4; the account will be created automatically when you apply the changes
-   * **Access Key ID** - the IAM access key to use for static authentication (only when using the _AWS Static Credentials_ mode)
-   * **Access Secret Key** - the IAM secret key to use for static authentication (only when using the _AWS Static Credentials_ mode)
+    * **IAM Role ARN** - the role ARN you created on step 3
+    * **K8s Service Account** - the Kubernetes service account that the Mendix Operator should use for authentication; it should match the service account name specified on step 4; the account will be created automatically when you apply the changes
+    * **Access Key ID** - the IAM access key to use for static authentication (only when using the *AWS Static Credentials* mode)
+    * **Access Secret Key** - the IAM secret key to use for static authentication (only when using the *AWS Static Credentials* mode)
 
 {{% alert color="info" %}}
 ECR authentication will only work `amazon-ecr` option in the CLI. Other options (for example, generic registry) will not enable the pod annotations required for the ECR authentication plugin to work correctly. Only the `amazon-ecr` option is validated and supported when using the Elastic Container Registry on AWS.
@@ -188,33 +188,30 @@ Use the following configuration options:
 Azure Workload Identity authentication is supported in Mendix Operator 2.13.0 and later versions. Older versions can only authenticate with ACR using static credentials; upgrading to Mendix Operator and switching to workload identity authentication is highly recommended.
 {{% /alert %}}
 
-### 2.5 Google Container Registry
+### 2.5 Google Artifact Registry (Previously Google Container Registry)
 
-To improve security, Google Container Registry recommends using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication instead of static credentials.
+To improve security, Google Artifact Registry recommends using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication instead of static credentials.
 
-To access the GCR registry, the Mendix Operator will use its Kubernetes Service Account for authentication, using the [docker-credential-gcr](https://github.com/GoogleCloudPlatform/docker-credential-gcr) plugin.
+To access the Google Artifact registry, the Mendix Operator will use its Kubernetes Service Account for authentication, using the [docker-credential-gcr](https://github.com/GoogleCloudPlatform/docker-credential-gcr) plugin.
 
-To use GCR with the Mendix Operator, you will need to:
+To use Google Artifact registry with the Mendix Operator, perform the following steps:
 
 1. Create a GCP Service Account (note that this is not the same as a Kubernetes Service Account).
-2. Assign the _Artifact Registry Writer_ (`roles/artifactregistry.writer`) role to the GCR Service Account.
-3. Allow the Mendix Operator to use the GCR Service Account by running:
+2. Assign the *Artifact Registry Writer* (`roles/artifactregistry.writer`) role to the GCR Service Account.
+3. Allow the Mendix Operator to use the GCR Service Account by running the following command, where `PROJECT_ID` is the Google Cloud project ID, `K8S_NAMESPACE` is the Kubernetes namespace name where the Operator is installed, `KSA_NAME` is the Kubernetes Service Account name, and `GSA_NAME` is the GCP Service Account name from step 1:
 
     ```shell
     gcloud iam service-accounts add-iam-policy-binding \
-            --role roles/iam.workloadIdentityUser \
-            --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
-            GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
+        --role roles/iam.workloadIdentityUser \
+        --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
+        GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
     ```
 
-    (replace `PROJECT_ID` with the Google Cloud project ID, `K8S_NAMESPACE` with the Kubernetes namespace name where the Operator is installed, `KSA_NAME` with the Kubernetes Service Account name, and `GSA_NAME` with the GCP Service Account name from step 1).
-
-    On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, we recommend using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides.
-    For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
+On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, we recommend using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides. For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
 
 Use the following configuration options:
 
-* **Registry Name** - Google Container Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
+* **Registry Name** - Google Artifact Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
 * **Registry URL** - container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
 * **GCP Service Account** - the GCP account name created on step 1, for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the GCP service account on step 3; the Kubernetes Service Account will be created automatically when you apply the changes.
@@ -224,6 +221,7 @@ Use the following configuration options:
 This option works with most other registries - if the registry supports Basic authentication, this option should be compatible.
 
 Use the following configuration options:
+
 * **Push URL** - the registry domain name where the registry can be reached by pods inside the cluster.
     * If the registry is running outside the cluster, this would be the registry domain name, such as `registry.example.com`.
     * If the registry is hosted inside the cluster, this would be the internal Kubernetes domain name, for example `registry.namespace.svc` or `registry.container-registry.svc.cluster.local:5000` (for MicroK8s).

@@ -54,7 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
-4. Open the [Switch to menu](/developerportal/#navigation) and select **Cloud**.
+4. Open the the [Global Navigation Menu](/developerportal/#global-navigation) and select **Deployment**.
 5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
@@ -1159,6 +1159,92 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
+In order to delete the namespace from the cluster, perform the following steps:
+
+1. Ensure that all the environments under this namespaces are removed. You can check the list of environments under this namespace using the following command:
+
+    For OpenShift:
+
+    ```shell
+    oc -n {namespace} get mendixapp
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} get mendixapp
+    ```
+
+2. If any Mendix apps still exist in the namespace, you can delete them by using the following command, where *internalId* is the ID of the environment:
+
+    For OpenShift:
+
+    ```shell
+    oc -n {namespace} delete mendixapp {internalId}
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} delete mendixapp {internalId}
+    ```
+
+3. Wait until the storage provisioner completes the process of deleting the storage instance related to the environment. You can check if there are any existing storage instances by running the following command:
+
+    For OpenShift:
+
+    ```shell
+    oc -n {namespace} get storageinstance
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} get storageinstance
+    ```
+
+4. If there are any failed storage instances, you can check their logs by running the following command:
+
+    For OpenShift:
+
+    ```shell
+    oc -n {namespace} log {storageinstance-name}
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} log {storageinstance-name}
+    ```
+
+5. If there are any remaining storage instances, you can delete then by using the following command:
+
+    For OpenShift:
+
+    ```shell
+    oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+    ```
+
+6. After manually removing the storage instance, manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account in the cluster.
+
+7. Once all the storage instances are deleted successfully, yon can now delete the namespace from the cluster by using the following command:
+
+    ```shell
+    oc delete ns {namespace}
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl delete ns {namespace}
+    ```
+
 You can also see an activity log containing the following information for all namespaces within the cluster:
 
 * When a namespace has been added
@@ -1183,7 +1269,6 @@ You can also see an activity log containing the following information for all na
 * When Runtime Metrics configurations are added, updated, or deleted
 * When developer mode is enabled in the namespace
 * When developer mode is disabled in the namespace
-
 
 #### 7.2.1 Apps
 
@@ -1220,7 +1305,9 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
-You can also configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
+You can configure the runtime metrics for the environment in the **Runtime** section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
+
+You can also configure the pod labels for the environment in the **Labels** section. For more details, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels)
 
 #### 7.2.2 Members
 
@@ -1238,9 +1325,12 @@ The following rights are available to the cluster creator, and members of a name
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 
-* Manage environment
-* Deploy App – user can deploy a new app to the environment or start and stop existing apps
+* Manage environment- user can navigate to the environment details section and edit the environment name and core resources
+* Deploy App – user can deploy a new app to the environment
 * Scale App – user can change the number of replicas
+* Start App
+* Stop App
+* Modify MxAdmin Password
 * Edit App Constants
 * Manage App Scheduled Events
 * View App Logs
@@ -1274,6 +1364,7 @@ You can invite additional members to the namespace, and configure their role dep
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
     With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
 
 5. Click **Send Invite** to send an invite to this person.
 
@@ -1323,34 +1414,61 @@ Enable the toggle button next to the name of the plan you wish to deactivate. Yo
 
 Disable the toggle button next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
+##### 7.2.4.3 Deleting a Plan
+
+You can only delete storage or database plans if they are not used in any of your environments, regardless of whether they are active or inactive.
+
+{{% alert color="warning" %}}
+After you delete a plan, the action cannot be reverted or undone through the portal. Deleting the plan does not remove it from the cluster. To delete the plan from the cluster, a separate action is required, which can be accomplished by executing the following command:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} get storageplan
+oc -n {namespace} delete storageplan {StoragePlanName}
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} get storageplan
+kubectl -n {namespace} delete storageplan {StoragePlanName}
+```
+{{% /alert %}}
+
+
 #### 7.2.5 Custom Core Resource Plan
 
 Here, you can create customized plan for your core resources. 
 
-1. Click **Add New Plan** 
-2. Provide a name to the plan under **Plan Name**
+1. Click **Add New Plan**.
+2. Provide a name to the plan under **Plan Name**.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required CPU Limits, CPU Request, Memory Limit and Memory Request based on your choice 
+3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice. 
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 
 4. Click **OK** button to save the customized resource plan.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" >}}
 
 5. In order to make the customized plan available to the customer, make sure to enable the toggle button next **Use custom core resources plans**.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
+
+{{% alert color="info" %}}
+Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hence, with the deletion of pod, the data stored in the ephemeral storage is also lost.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Once you enable the **Use custom core resources plans** button, you cannot switch back to the default core plans until you delete all the environments using the custom core plans and disable **Use custom core resources plans** button. A warning message with the same information is displayed when trying to enable this feature.
+{{% /alert %}}
 
 #### 7.2.6 Installation
 
-The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
-
-You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
-
-You can also download the Configuration Tool again, if you wish.
+The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
 #### 7.2.7 Additional Information
 

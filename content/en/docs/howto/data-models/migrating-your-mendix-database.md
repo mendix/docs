@@ -112,7 +112,7 @@ Use the Developer Portal to upload the migrated, exported database backup to Men
 3. Click **Upload Backup** to upload your database.
 4. In the **Upload Archive** dialog box, select the exported database file from your local file system.
 5. After the upload is done, stop the application.
-6. Select the uploaded backup and click **Restore Backup** to restore the new backup.
+6. On the uploaded backup, click **More Options** > **Restore** to restore the new backup.
 7. Start the application.
 
 ## 5 Exporting a Mendix Cloud Database
@@ -124,8 +124,8 @@ Export the Mendix Cloud database via the Developer Portal. Follow these steps:
 1. Open your app from the Developer Portal.
 2. Click **Backups** in the left pane.
 3. Select your desired environment.
-4. Select an existing backup from the list, or click **Create Backup** to create a fresh backup with recent data.
-5. Click **Download Backup** to download the database to your local file system using the database URL shown in the dialog box.
+4. Optionally, click **Create Backup** to create a fresh backup with recent data.
+5. Click **More Options** > **Download** on the backup you want to download. This downloads the database to your local file system using the database URL shown in the dialog box.
 
 ### 5.1 Importing into an On-Premises PostgreSQL Database
 

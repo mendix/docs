@@ -303,23 +303,22 @@ If you do not want to use an account anymore, you can remove it from this page. 
 
 You can only remove the account with which you are logged in. If you do not have access to your account anymore, please reach out to [Mendix Support](https://support.mendix.com/hc/en-us) to delete your account.
 
-#### 10.2.1 Create Account
+#### 10.2.1 Creating an Account
 
-If you already have a profile and you want to add a new account to this profile, you can directly create a new account to this profile from the account overview. This action is a combination of signing up a new account to the mendix platform and [Merging Profiles](#merging-profiles). When succesfully completing the flow, the new account will appear in the account overview.
+If you already have a profile and want to add a new account to this profile, you can create the new account on your profile's **Accounts** overview. This action combines signing up for a new Mendix Platform account and [merging your profiles](#merging-profiles). After succesfully completing the flow, the new account appears in the **Accounts** overview.
 
-Follow these steps to add a new account to your profile:
+Follow these steps to add a new account to your Mendix Pofile:
 
 1. Click **Create Account**.
-2. In the dialog box that appears, enter the email address of the account you want to create. Then click **Next**.
-3. In the next dialog box enter a secure password and indicate whether you want to receive Marketing communications from Mendix on this account. Then click **Next**.
-4. Enter the verification code you received via the selected email address.
-5. After clicking **Verify** you will see a loader. In the meantime your account will be created in the background.
-6. If all went well the new account is now visible in the list of account that are part of your profile!
+2. In the dialog box that appears, enter the email address of the account you want to create, then click **Next**.
+3. In the next dialog box, enter a secure **Password** and indicate whether you want to receive Marketing communications from Mendix on this account. Then click **Next**.
+4. Enter the verification code you receive via the selected email address.
+5. Click **Verify**. You will see a loader while your account is created in the background.
+6. If all went well, the new account is visible in the list of accounts that are part of your Mendix Profile!
 
 {{% alert color="warning" %}}
-Note that this feature is not available if your company enabled single sign on. If this is the case you will have to follow the regular sign up process and [merge the new account to your profile](#merging-profiles) when the sign up is completed.
+This feature is not available if your company has enabled single sign-on. If this is the case, you have to follow the regular sign up process and then [merge the new account to your profile](#merging-profiles) when the sign-up is completed.
 {{% /alert %}}
-
 
 ### 10.3 Notifications {#notifications}
 

@@ -86,7 +86,7 @@ In this section, you will learn how to create a basic Excel export template with
 The Excel Exporter has many options that allow the configurations to be as simple or complex as the user desires. This how-to will go over the basics to get you started, but building the desired template will vary according to your requirements.        
 {{% /alert %}}
 
-### 6.1 Configuring the Basic Template Setup
+### 6.1 Configuring the Basic Template Setup {#basic-template-setup}
 
 To set up a template, follow these steps:
 
@@ -101,7 +101,7 @@ To set up a template, follow these steps:
 6. Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
 
     {{% alert color="info" %}}The **Input Object** is not mandatory. You can still export required entities by specifiying **Row Object** in the worksheet definition.{{% /alert %}}
-      
+    
 7. Provide a **Description** for identifying and documenting what this template is for:
 
     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/new-excel-template.png" >}}
@@ -138,45 +138,49 @@ To create the worksheet layout, follow these steps:
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template){{% /alert %}}
 
-3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object was specified earlier during template creation). Each object of this entity type will be saved as a row in the worksheet.
+3. Configure the **Row Object** that you want to export.
 
-   The following figure depicts a template where worksheet is with Input Object and reference to **Input Object**
-    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_without_inputObj.png" >}}
+4. If an input object was specified earlier when [template was created](#basic-template-setup), set the **Reference to the template input object**. Each object of this entity type will be saved as a row in the worksheet.
 
-   The following figure depicts a template where worksheet is without Input Object and reference to **Input Object**
-    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet_with_inputObj.png" >}}
-      
-4. Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
+    The following figure shows a template where worksheet has **Reference to the template input object** and **Sheet input Object** configured:
+
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet-without-input-object.png" >}}
+
+    The following figure shows a template where worksheet does not have **Reference to the template input object** and **Sheet input Object** configured:
+
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet-with-input-object.png" >}}
+
+5. Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 
     {{% alert color="info" %}}This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data{{% /alert %}}
 
-5. Select if the export should export distinct only or allow duplicate data
+6. Select if the export should export distinct only or allow duplicate data
 
-6. Specify the **Column default width** and **Row default height** (or leave them as defaults).
+7. Specify the **Column default width** and **Row default height** (or leave them as defaults).
 
-7. Specify if the extract will **Use Static Data** or not:
+8. Specify if the extract will **Use Static Data** or not:
 
     {{% alert color="info" %}}If static data is used, that will be configured below.{{% /alert %}}
 
-8. Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
+9. Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
 
-9. Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
+10. Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data:
 
     {{% alert color="info" %}}Specifying styles are addressed in the section below.{{% /alert %}}
 
-10. If you want to export multiple entities into separate sheets, do as follows:
+11. If you want to export multiple entities into separate sheets, do as follows:
 
-    1. Under the **Worksheets** section for the template, select **New** again to create a new sheet template.
+     1. Under the **Worksheets** section for the template, select **New** again to create a new sheet template.
 
-    2. Specify the **Name** that will be used by this sheet.
+     2. Specify the **Name** that will be used by this sheet.
 
-    3. Configure the **Row Object** which corresponds to the entity that needs to be exported into this new sheet.
+     3. Configure the **Row Object** which corresponds to the entity that needs to be exported into this new sheet.
 
-    4. In the **Worksheet**, add various columns that need to be exported. You can define the columns on the **Column data** tab. The columns can either come from an attribute of the entity or from a reference association.
+     4. In the **Worksheet**, add various columns that need to be exported. You can define the columns on the **Column data** tab. The columns can either come from an attribute of the entity or from a reference association.
 
-    Below you can find an example of the definition of a template and the corresponding exported Excel file: the two worksheets are defined as **Topic** and **PubMessage** in the template, and the corresponding Excel file has two sheets that have the same names.
+     Below you can find an example of the definition of a template and the corresponding exported Excel file: the two worksheets are defined as **Topic** and **PubMessage** in the template, and the corresponding Excel file has two sheets that have the same names.
 
-    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/multiple-sheets.png" >}} 
+     {{< figure src="/attachments/howto/integration/using-the-excel-exporter/multiple-sheets.png" >}} 
 
 ### 6.4 Configuring Dynamic Column Data {#dynamic-column-data}
 

@@ -19,7 +19,7 @@ It needs the [Workflow Context](/refguide/workflow-parameters/) object as its in
 
 An example of retrieve workflows properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflows/properties.png" alt="Retrieve Workflows properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflows/properties.png" alt="Retrieve Workflows properties" width="950px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

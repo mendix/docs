@@ -43,13 +43,16 @@ You can also see information and perform actions on the existing deployment pack
 * Creator account
 * Expiry date of the deployment package, if one is set
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package-options.png" alt="More Options" >}}
+To deploy a package, transporting it from the Team Server to the selected environment, click the **Deploy** icon.
 
-If you click the **More Options ...** icon on a package, you can access the following options:
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-icon.png" alt="" >}}
 
-* Deploy the package, transporting it from the Team Server to the selected environment
+If you click the **More Options** icon on a package, you can do the following:
+
 * View details, including the package size, description, build output, and an overview of the environments that are running the package
 * Delete the package
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package-options.png" alt="More Options" >}}
 
 ### 2.2 Environments
 

@@ -11,12 +11,11 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-A **Retrieve workflow activity records** activity can be used to retrieve a list of `System.WorkflowActivityRecord` objects sorted by activity start time.
+A **Retrieve workflow activity records** activity can be used to retrieve a list of **System.WorkflowActivityRecord** objects sorted by activity start time.
 
 It needs the **System.Workflow** instance object as its input. It will break at Runtime if the passed workflow object is empty.
 
-The `System.WorkflowActivityRecord` entity represents a snapshot of workflow activity attributes taken at the moment when the activity finished or the current attribute values if it's still in progress.
-The most common use case for the retrieved list of `System.WorkflowActivityRecord` objects is to build an activity timeline for a specific workflow. Each `System.WorkflowActivityRecord` object is linked with the previously executed activity through the `System.WorkflowActivityRecord_PreviousActivity` association (except for the Start activity). It can be used to visualize the order in which activities were finished.
+The **System.WorkflowActivityRecord** entity represents a snapshot of workflow activity attributes taken at the moment when the activity finishes or the current attribute values if it is still in progress. The most common use case for the retrieved list of **System.WorkflowActivityRecord** objects is to build an activity timeline for a specific workflow. Each **System.WorkflowActivityRecord** object is linked to the previously executed activity through the **System.WorkflowActivityRecord_PreviousActivity** association (except for the Start event). It can be used to visualize the order in which each activity finishes.
 
 ## 2 Properties
 
@@ -41,7 +40,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Workflow Object
 
-A workflow object of the System.Workflow entity available from the microflow parameters. 
+A workflow object of the **System.Workflow** entity available from the microflow parameters. 
 
 ### 3.2 Variable Name
 

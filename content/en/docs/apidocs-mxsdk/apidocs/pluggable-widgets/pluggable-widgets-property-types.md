@@ -592,7 +592,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
 | `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |
-| `setLabel`          | No       | Boolean        | `true` to enable setting [`Label`](#setLabel) value automatically with configured attribute, false `otherwise`                   |
+| `setLabel`          | No       | Boolean        | `true` to enable setting [`Label`](#setLabel) value automatically with configured entity, false `otherwise`                      |
 
 #### 4.5.2 XML Elements
 

@@ -22,7 +22,7 @@ The most common use case for the retrieved list of `System.WorkflowActivityRecor
 
 An example of retrieve workflow context properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/properties.png" alt="Retrieve Workflow Activity Records properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/properties.png" alt="Retrieve Workflow Activity Records properties" width="950px">}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

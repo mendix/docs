@@ -291,13 +291,13 @@ The following details may have conflicts, but these can easily be updated after 
 It is not possible to separate profiles after they have been merged. Double-check that the information from all of your profiles is valid.
 {{% /alert %}}
 
-### 10.2 Account
+### 10.2 Accounts
 
 This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/#security).
 
-You can update the password of your logged in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that you can find by clicking the menu button of the logged in account. You can also reach this screen using the **Forgot password?** link on the login screen.
+You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking the menu button of the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
 If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the logged in account and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts. You can only remove your account that are logged in with. If you don't have access to your account anymore, please reach out to Mendix Support to delete your account.
 

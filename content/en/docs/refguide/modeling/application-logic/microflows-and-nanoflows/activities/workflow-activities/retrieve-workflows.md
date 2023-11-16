@@ -2,7 +2,7 @@
 title: "Retrieve Workflows"
 url: /refguide/retrieve-workflows/
 weight: 40
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
+tags: ["studio pro", "retrieve workflow", "workflow retrieve", "workflow", "system.workflow"]
 ---
 
 {{% alert color="warning" %}}

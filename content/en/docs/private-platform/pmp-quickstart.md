@@ -43,7 +43,7 @@ Before starting the installation process, make sure that you have all the necess
 
 To install and configure the Mendix Operator, perform the following steps:
 
-1. Download the release binary. For more information, contact your Mendix partner.
+1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
 
 2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
 

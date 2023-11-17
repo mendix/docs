@@ -23,7 +23,7 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 [REMOVE] Developer Portal navigation is split up into global navigation (with the top bar), side navigation, and on-page navigation. 
 
-Global navigation works the same in the Developer Portal as it does in other parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)), and it is always accessible. 
+Global navigation works the same in the Developer Portal as it does in other parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). The global navigation is always accessible. 
 
 [REMOVE] The side navigation is context-dependent and changes through different parts of the platform.
 
@@ -39,7 +39,11 @@ You can click the menu items to navigate to different parts of the Mendix Platfo
 
 ### 2.3 Search {#search-menu}
 
-You can search the Developer Portal for (public) Marketplace Content, Forum posts, Academy Content and this documentation.
+In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
+
+Use the various filters to refine your search results.
+
+[**ADD IMAGE**]
 
 ### 2.4 Help {#help-menu}
 

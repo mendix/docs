@@ -27,7 +27,7 @@ Global navigation works the same in the Developer Portal as it does in other par
 
 [REMOVE] The side navigation is context-dependent and changes through different parts of the platform.
 
-### 2.2 Global Navigation {#global-navigation}
+### 2.1 Global Navigation {#global-navigation}
 
 [REMOVE] Global navigation includes the main menu (via the nine-dots icon), Search Menu, Help Menu, Notifications Menu, and Account Menu. From the Main Menu you can navigate anywhere. 
 
@@ -37,7 +37,7 @@ On the left side of the top bar, click the **Open Global Navigation** button (vi
 
 You can click the menu items to navigate to different parts of the Mendix Platform, or you can hover over the menu items to expand the sections for further access.
 
-### 2.3 Search
+### 2.2 Search
 
 In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
 
@@ -45,7 +45,7 @@ Use the various filters to refine your search results.
 
 [**ADD IMAGE**]
 
-### 2.4 Support Menu
+### 2.3 Support Menu
 
 Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support).
 
@@ -55,7 +55,7 @@ Click the **Open Support Menu** button (via the question mark icon) to read up o
 If you see **Get Started with Mendix** on this menu, a red dot next to this menu item will remain there for 30 days after your signup.
 {{% /alert %}}
 
-### 2.5 Notifications {#notifications-menu}
+### 2.4 Notifications
 
 Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
@@ -67,9 +67,9 @@ To configure what types of notifications you receive, click the settings button 
 To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.
 {{% /alert %}}
 
-### 2.6 Account {#account-menu}
+### 2.5 Account
 
-The account menu holds relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), access your settings, and enable Dark Mode for the Developer Portal.
+Click your avatar to access the account menu, which has relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [User Settings](/developerportal/community-tools/mendix-profile/#settings).
 
 ## 3 Company Buzz and Apps {#my-company-apps}
 

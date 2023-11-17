@@ -37,7 +37,7 @@ On the left side of the top bar, click the **Open Global Navigation** button (vi
 
 You can click the menu items to navigate to different parts of the Mendix Platform, or you can hover over the menu items to expand the sections for further access.
 
-### 2.3 Search {#search-menu}
+### 2.3 Search
 
 In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
 
@@ -45,14 +45,15 @@ Use the various filters to refine your search results.
 
 [**ADD IMAGE**]
 
-### 2.4 Help {#help-menu}
+### 2.4 Support Menu
 
-The Help Menu is accessible via the question mark icon. Here you can [contact support](/developerportal/support), read up on [What's New](https://www.mendix.com/releases/) page, ask questions to the [community](/developerportal/community-tools/mendix-forum/#questions-tab), or read the [documentation](/).
+Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support).
 
 {{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
 
-Note:
-* A red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
+{{% alert color="info" %}}
+If you see **Get Started with Mendix** on this menu, a red dot next to this menu item will remain there for 30 days after your signup.
+{{% /alert %}}
 
 ### 2.5 Notifications {#notifications-menu}
 

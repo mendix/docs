@@ -14,7 +14,7 @@ paths:
     get:
       tags:
         - content
-      summary: Get the list of content.
+      summary: Returns the list of content.
       description: "Returns both public and private content belonging to your company. This endpoint uses pagination."
       operationId: getContent
       parameters:
@@ -95,14 +95,14 @@ components:
     contentId:
       name: contentId
       in: path
-      description: Identifier of the content.
+      description: "This is the identifier of the content."
       required: true
       schema:
         type: integer
     versionId:
       name: versionId
       in: query
-      description: UUID of the published version.
+      description: "This is the UUID of the published version."
       required: false
       schema:
         type: string
@@ -126,7 +126,7 @@ components:
     isPrivate:
       name: isPrivate
       in: query
-      description: "Allows you to filter on public or private content. Supported values are 'true' or 'false'. If the value is 'true', it returns only the last published versions of the private content belonging to your company. If the value is 'false', it returns only the last published versions of the public content belonging to your company. If no value is passed, then it returns the last published versions of both public and private content belonging to your company."
+      description: "Allows you to filter on public or private content. Supported values are `true` or `false`. If the value is `true`, it returns only the last published versions of the private content belonging to your company. If the value is `false`, it returns only the last published versions of the public content belonging to your company. If no value is passed, then it returns the last published versions of both public and private content belonging to your company."
       required: false
       schema:
         type: string
@@ -152,7 +152,7 @@ components:
       name: limit
       in: query
       required: false
-      description: "This defines the maximum number of content that can be returned per request. If no limit is provided, the limit is 10 by default. The maximum limit that can be supplied is 100, if the value you provide is greater than 100, then the limit is set to 100 and no error message is given."
+      description: "This defines the maximum number of content that can be returned per request. If no limit is specified, the default value is 10. However, the limit cannot exceed 100. If the value provided exceeds 100, the limit is automatically set to 20 without generating an error message."
       schema:
         type: integer
         format: int64
@@ -163,8 +163,7 @@ components:
       name: limit
       in: query
       required: false
-      description: "The defines the maximum number of content version that can be returned per request. If no limit is provided, the limit is 10 by default. The maximum limit that can be supplied is 20, if the value you provide is greater than 20, then the limit is set to 20 and no error message is given."
-      schema:
+      description: "This defines the maximum number of content versions that can be returned per request. If no limit is specified, the default value is 10. However, the limit cannot exceed 20. If the value provided exceeds 20, the limit is automatically set to 20 without generating an error message."
       schema:
         type: integer
         format: int64
@@ -185,9 +184,9 @@ components:
   responses:
     error400:
       description: |-
-        The request likely contains invalid data or is missing data.
+        The request may contain invalid or missing data.
 
-        The error response gives additional feedback.
+        The error message gives additional information.
       content:
         application/json:
           schema:
@@ -201,9 +200,9 @@ components:
                   detail: "The request could not be processed by the server because the input parsing/processing failed."
     error401:
       description: |-
-        There were no usable authentication credentials found.
+        No usable authentication credentials were found.
 
-        The error response gives additional feedback.
+        The error message gives additional information.
       content:
         application/json:
           schema:
@@ -219,7 +218,7 @@ components:
       description: |-
         The required item could not be found.
 
-        The error response gives additional feedback.
+        The error message gives additional information.
       content:
         application/json:
           schema:
@@ -233,9 +232,9 @@ components:
                   detail: "The content is not found."
     error500:
       description: |-
-        An error occured while processing the request.
+        An error occurred during the processing of the request.
 
-        The error response gives additional feedback.
+        The error message gives additional information.
       content:
         application/json:
           schema:
@@ -287,7 +286,7 @@ components:
           type: integer
           format: int64
           example: 50
-          description: "The identifier of the content"
+          description: "This is the identifier of the content."
         publisher:
           type: string
           example: "Automation Company Ltd."
@@ -295,7 +294,7 @@ components:
         type:
           type: string
           example: "Module"
-          description: "This returns the type of the content selected during onboarding. The full list is present here: https://docs.mendix.com/appstore/general/app-store-overview/."
+          description: "This returns the type of the content selected during onboarding. For the full list of the content types, see: https://docs.mendix.com/appstore/general/app-store-overview/."
         categories:
           $ref: '#/components/schemas/appCategories'
           description: "This returns all the categories selected during onboarding of the content. If there is no category, no value is returned."
@@ -309,7 +308,7 @@ components:
           - Extended
           - Deprecated
           - Siemens
-          description: "Support for this content. For more information, see https://docs.mendix.com/appstore/general/app-store-content-support/"
+          description: "The type of support for this content. For more information, see https://docs.mendix.com/appstore/general/app-store-content-support/"
         licenseUrl:
           type: string
           format: url
@@ -340,16 +339,16 @@ components:
           name:
             type: string
             example: "3d Viewer"
-            description: "The name of the version of the content"
+            description: "This is the name of the version of the content."
           versionId:
             type: string
             format: uuid
-            description: "The UUID of the version."
+            description: "This is the UUID of the version."
           versionNumber:
             type: string
             pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})(?:-[a-zA-Z]+)?\\b$"
             example: '10.1.1'
-            description: "The version number. The format of the version number is major.minor.patch (example - 1.0.0)."
+            description: "This is the version number. The format of the version number is major.minor.patch, for example: `1.0.0`."
           minSupportedMendixVersion:
             type: string
             pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})\\b$"
@@ -371,7 +370,7 @@ components:
                 
       
   securitySchemes:
-    Personal Acces Token:
+    PersonalAccesToken:
       name: Authorization
       type: apiKey
       in: header

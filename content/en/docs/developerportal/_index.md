@@ -57,13 +57,15 @@ If you see **Get Started with Mendix** on this menu, a red dot next to this menu
 
 ### 2.5 Notifications {#notifications-menu}
 
-The Notifications Menu is accessible via the bell icon. It shows you the platform notifications you have received. To configure what types of notifications you receive, click the settings icon and configure the settings in **Notification Settings** page that opens. Clicking the notification itself takes you to the source.
+Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
+
+To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the configure the settings in [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
 
 {{< figure src="/attachments/developerportal/notification-settings-icon.png" width="300" >}}
 
-Note the following exceptions:
-* If you do not want to receive notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app, and then click **Stop Watching**.
-* If you want to disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.
+{{% alert color="info" %}}
+To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.
+{{% /alert %}}
 
 ### 2.6 Account {#account-menu}
 

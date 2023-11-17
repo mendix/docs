@@ -45,9 +45,6 @@ Use the various filters to refine your search results:
 
 {{< figure src="/attachments/developerportal/search-menu.png" width="300" >}}
 
-
-[**ADD IMAGE**]
-
 ### 2.3 Support Menu
 
 Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support).
@@ -64,7 +61,7 @@ Click the **Open Notification Menu** button (via the bell icon) to see the platf
 
 To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the configure the settings in [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
 
-{{< figure src="/attachments/developerportal/notification-settings-icon.png" width="300" >}}
+{{< figure src="/attachments/developerportal/notifications.png" width="300" >}}
 
 {{% alert color="info" %}}
 To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.

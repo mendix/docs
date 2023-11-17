@@ -11,9 +11,9 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click the **Details** icon by the environment you want to view.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details button is on the right side of the row">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row">}}
 
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
@@ -22,19 +22,18 @@ The **Environment Details** page shows information about the selected environmen
 In the **General** tab, you can find the following information about your environment:
 
 * **Status**
-    * White (blank) – the environment is stopped or was never deployed
-    * Green check mark – the environment is working correctly
-    * Orange dash – the environment has warnings
-    * Red cross – the environment is not working correctly
-        {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-status.png" alt="The symbol displaying the environment status is located under the name of the environment" >}}   
-* **Running since** – the date the app was started
-* **Name** – the type of environment (Test, Acceptance, Production, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
+    * Green check mark – the application in this environment is running
+    * Gray dash – no application has been started yet in this environment, or it has been turned off
+    * Red cross – the application in this environment is unstable and probably not usable anymore
+* **Running since** – the date the app was started, if it is runnning
+* **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
 * **Project ID** – the unique identifier of the app
 * **Environment ID** – the unique identifier of the environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 11
-* **Plan** – the type of plan covered by your license
+* **Studio Pro Target**
+* **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
 * **Database Version** – the PostgreSQL version supporting the database
 * **Region** – the region where the app is hosted
@@ -393,8 +392,8 @@ Custom log nodes appear in the list only after a message has been logged to them
 
 On this tab, you can perform the following actions:
 
-* Change the log level by double-clicking a node and launching the **Change log level** dialog box
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/loglevels.png" alt="Selecting the log level type" >}}
+* Change the log level by selecting a node, clicking **Change level**, and modifying the level in the **Change log level** dialog box
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/loglevels.png" alt="Selecting the log level type" width=50% >}}
 * Click **Set all to Info** to revert all the changes
 
 When using the **Log Levels** tab, bear in mind the following considerations:

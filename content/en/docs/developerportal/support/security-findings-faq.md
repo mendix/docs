@@ -21,7 +21,7 @@ This FAQ document is not updated in real time. For updates on current security i
 
 ### 1.2 Security Advisories
 
-Security Advisories for Mendix are published under [Security Advisories](/releasenotes/security-advisories/).
+Security Advisories for Mendix are published in [Security Advisories](/releasenotes/security-advisories/).
 
 ### 1.3 General Security Advice
 

@@ -41,7 +41,10 @@ You can click the menu items to navigate to different parts of the Mendix Platfo
 
 In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
 
-Use the various filters to refine your search results.
+Use the various filters to refine your search results:
+
+{{< figure src="/attachments/developerportal/search-menu.png" width="300" >}}
+
 
 [**ADD IMAGE**]
 

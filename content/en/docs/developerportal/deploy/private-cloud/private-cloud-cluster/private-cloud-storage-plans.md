@@ -254,7 +254,7 @@ This section provides technical details on how IAM authentication works with Pos
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When dealing with an Aurora PostgreSQL database, an additional procedural step is requisite. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated DB instance using either the master user or an alternative user with admin privileges. Once the connection is established, assign 'rds_iam' role to the user, as shown in below example:
+When dealing with an Aurora PostgreSQL database, an additional procedural step is required. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
 
 ```shell {linenos=false}
 GRANT rds_iam TO db_userx;

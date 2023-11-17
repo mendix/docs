@@ -15,7 +15,7 @@ paths:
       tags:
         - content
       summary: Get the list of content.
-      description: Returns Marketplace content. This endpoint uses pagination. Public content and content belonging to the company of the personal access token’s owner would be returned.
+      description: "Returns both public and private content belonging to your company. This endpoint uses pagination."
       operationId: getContent
       parameters:
         - $ref: '#/components/parameters/name'
@@ -42,7 +42,7 @@ paths:
       tags:
         - content
       summary: Returns the specific content for the given content id.
-      description: "The content metadata would be from the last published version of the content. Public content and content belonging to the company of the personal access token's owner can be queried."
+      description: "The content metadata is from the last published version of the content. You can query both public and private content belonging to your company."
       operationId: getSpecificContent
       parameters:
         - $ref: '#/components/parameters/contentId'
@@ -67,7 +67,7 @@ paths:
       tags:
         - content
       summary: Returns all versions of the content.
-      description: "Returns all versions of the content. Public content and content belonging to the company of the personal access token’s owner can be queried."
+      description: "The content metadata is from the last published version of the content. You can query both public and private content belonging to your company."
       operationId: getContentVersions
       parameters:
         - $ref: '#/components/parameters/contentId'
@@ -110,14 +110,14 @@ components:
     name:
       name: name
       in: query
-      description: "Allows to query on the name of the last published version of the content. This is can help in getting the Identifier of a content. This will do exact match for the value passed in the filter."
+      description: "Allows you to do a query on the name of the last published version of the content. This can help to get the identifier of the content. It does a precise match for the value passed in the filter."
       required: false
       schema:
         type: string
     supportedMendixVersion:
       name: supportedMendixVersion
       in: query
-      description: "Allows to find the version that is supported by the Mendix version passed in the filter. In case there are multiple supported versions matching the filter, it will return the most recent published version."
+      description: "Allows you to find the version that is supported by the Mendix version passed in the filter. If multiple supported versions match the value, it returns the most recent published version."
       required: false
       schema:
         type: string
@@ -126,14 +126,14 @@ components:
     isPrivate:
       name: isPrivate
       in: query
-      description: "Allows to filter on public or private content. Supported values are 'true' or 'false' . In case filter is 'true', it will return only private last published versions of content belonging to the company of the personal access token’s owner. In case filter is 'false',  it will return only public last published versions of the content. If no value is passed, then last published versions of both public content and private content belonging to the company of the personal access token’s owner will be returned."
+      description: "Allows you to filter on public or private content. Supported values are 'true' or 'false'. If the value is 'true', it returns only the last published versions of the private content belonging to your company. If the value is 'false', it returns only the last published versions of the public content belonging to your company. If no value is passed, then it returns the last published versions of both public and private content belonging to your company."
       required: false
       schema:
         type: string
     publishedSince:
       name: publishedSince
       in: query
-      description: "Allows to find the content whose last published version was published since the date passed the filter. Values are expected to be using the full-date format as specified in RFC 3339. This means the following format: 2023-09-01."
+      description: "Allows you to find the content whose last published version was published since the date passed the filter. You must provide a value in the full-date format as specified in RFC 3339, for example: 2023-09-01."
       required: false
       schema:
         type: string
@@ -152,7 +152,7 @@ components:
       name: limit
       in: query
       required: false
-      description: "The maximum number of content that can be returned per request. If no limit is provided, it shall be defaulted to 10, the maximum limit that can be supplied is 100, if a limit over 100 is supplied, it shall be defaulted to 100 and no error message shall be generated."
+      description: "This defines the maximum number of content that can be returned per request. If no limit is provided, the limit is 10 by default. The maximum limit that can be supplied is 100, if the value you provide is greater than 100, then the limit is set to 100 and no error message is given."
       schema:
         type: integer
         format: int64
@@ -163,7 +163,8 @@ components:
       name: limit
       in: query
       required: false
-      description: "The maximum number of content version that can be returned per request. If no limit is provided, it shall be defaulted to 10, the maximum limit that can be supplied is 20, if a limit over 20 is supplied, it shall be defaulted to 20 and no error message shall be generated."
+      description: "The defines the maximum number of content version that can be returned per request. If no limit is provided, the limit is 10 by default. The maximum limit that can be supplied is 20, if the value you provide is greater than 20, then the limit is set to 20 and no error message is given."
+      schema:
       schema:
         type: integer
         format: int64
@@ -213,7 +214,7 @@ components:
                 error:
                   code: 401
                   message: Unauthorized
-                  detail: "Credentials could not be authenticated or no credentials were provided."
+                  detail: "The credentials could not be authenticated or no credentials were provided."
     error404:
       description: |-
         The required item could not be found.
@@ -290,14 +291,14 @@ components:
         publisher:
           type: string
           example: "Automation Company Ltd."
-          description: "This is the company who owns the content."
+          description: "This is the company that owns the content."
         type:
           type: string
           example: "Module"
-          description: "This will return the type of the content selected during onboarding. The full list is present here. - https://docs.mendix.com/appstore/general/app-store-overview/."
+          description: "This returns the type of the content selected during onboarding. The full list is present here: https://docs.mendix.com/appstore/general/app-store-overview/."
         categories:
           $ref: '#/components/schemas/appCategories'
-          description: "This will return all the categories selected during onboarding of a content. In case there is no categories, this will not be returned."
+          description: "This returns all the categories selected during onboarding of the content. If there is no category, no value is returned."
         supportCategory:
           type: string
           example: "Community"
@@ -308,7 +309,7 @@ components:
           - Extended
           - Deprecated
           - Siemens
-          description: "Support for this content. For more information - https://docs.mendix.com/appstore/general/app-store-content-support/"
+          description: "Support for this content. For more information, see https://docs.mendix.com/appstore/general/app-store-content-support/"
         licenseUrl:
           type: string
           format: url
@@ -316,7 +317,7 @@ components:
           description: "The license selected during onboarding."
         isPrivate:
           type: boolean
-          description: "This shows if the content is public or private."
+          description: "This indicates whether the content is public or private."
         latestVersion:
           $ref: '#/components/schemas/version'
     content:
@@ -343,17 +344,17 @@ components:
           versionId:
             type: string
             format: uuid
-            description: "The uuid of the version."
+            description: "The UUID of the version."
           versionNumber:
             type: string
             pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})(?:-[a-zA-Z]+)?\\b$"
             example: '10.1.1'
-            description: "The version number of the version. this will be format of major.minor.patch (example - 1.0.0)."
+            description: "The version number. The format of the version number is major.minor.patch (example - 1.0.0)."
           minSupportedMendixVersion:
             type: string
             pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})\\b$"
             example: '10.1.1'
-            description: "This is the Studio Pro version number selected during the onboarding. This means any Studio Pro version equal to or greater than this version is compatible with the latest version of the content."
+            description: "This is the Studio Pro version selected during the onboarding. This means any Studio Pro version equal to or greater than this version is compatible with the latest version of the content."
           publicationDate:
             type: string
             format: yyyy-MM-ddTHH-mm-ssZ
@@ -364,13 +365,13 @@ components:
         properties:
           releaseNotes:
             type: string
-            example: "The is the release notes for this version."
-            description: "The is the release notes for the published versions."
+            example: "These are the release notes for this version."
+            description: "These are the release notes for the published versions."
         
                 
       
   securitySchemes:
-    PersonalAccessToken:
+    Personal Acces Token:
       name: Authorization
       type: apiKey
       in: header

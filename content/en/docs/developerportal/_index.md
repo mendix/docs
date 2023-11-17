@@ -21,13 +21,9 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 ## 2 Navigation
 
-[REMOVE] Developer Portal navigation is split up into global navigation (with the top bar), side navigation, and on-page navigation. 
+The global navigation top bar and menu work the same in the Developer Portal as they do in other browser-based parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). The global navigation is always accessible. 
 
-Global navigation works the same in the Developer Portal as it does in other parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). The global navigation is always accessible. 
-
-[REMOVE] The side navigation is context-dependent and changes through different parts of the platform.
-
-### 2.1 Global Navigation {#global-navigation}
+### 2.1 Global Navigation Menu {#global-navigation}
 
 [REMOVE] Global navigation includes the main menu (via the nine-dots icon), Search Menu, Help Menu, Notifications Menu, and Account Menu. From the Main Menu you can navigate anywhere. 
 

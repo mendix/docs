@@ -138,17 +138,17 @@ To create the worksheet layout, follow these steps:
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template){{% /alert %}}
 
-3. Configure the **Row Object** that you want to export.
+3. Configure the **Row Object** that you want to export. Each object of this entity type will be saved as a row in the worksheet.
 
-4. If an input object was specified earlier when [template was created](#basic-template-setup), set the **Reference to the template input object**. Each object of this entity type will be saved as a row in the worksheet.
+4. If an input object was specified earlier when [template was created](#basic-template-setup), set the **Reference to the template input object**. 
 
     The following figure shows a template where worksheet has **Reference to the template input object** and **Sheet input Object** configured:
 
-    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet-without-input-object.png" >}}
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet-with-input-object.png" >}}
 
     The following figure shows a template where worksheet does not have **Reference to the template input object** and **Sheet input Object** configured:
 
-    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet-with-input-object.png" >}}
+    {{< figure src="/attachments/howto/integration/using-the-excel-exporter/worksheet-without-input-object.png" >}}
 
 5. Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 

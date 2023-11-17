@@ -16,12 +16,13 @@ aliases:
 
 ## 1 Introduction
 
-When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Developer Portal**, you can inspect your application's health in Mendix Cloud. 
+When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the **Developer Portal**, you can inspect your application's health in Mendix Cloud. 
 
 Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
+
 If you [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
 
-This document will explain how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
+This document explainsxs how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
 ## 2 Application Status
 
@@ -29,19 +30,17 @@ Mendix Cloud automatically monitors the health and status of apps that are deplo
 
 1. Go to the [Developer Portal](https://home.mendix.com).
 2. Open the app that you want to monitor.
-3. Click **Alerts**. This will display the status of your app node in various categories.
+3. In the navigation panel, click **Alerts**. This displays the status of your app node in various categories.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18580000.png" >}}
 
-    {{% alert color="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.{{% /alert %}}
-
-4. If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
+4. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18579999.png" >}}
 
-This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page.
+You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Logs** page.
 
-Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
+Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users who are subscribed to alerts receive an email alert.
 
 ## 3 Mendix Cloud Alerting Categories and Thresholds
 
@@ -151,9 +150,9 @@ First actions to take | Check the log files and application metrics for a possib
 
 ### 4.1 Database Errors In the Log
 
-You might see database connection errors in your app logs. For example, something like: `ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed.` You do not have to do anything, your app will continue to work as expected.
+You might see database connection errors in your app logs. For example, you might see something like "ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed." You do not have to do anything; your app will continue to work as expected.
 
-The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you are given your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
+The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you get your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 
@@ -161,16 +160,13 @@ The autoscaling might occur when your app does not have high resource usage beca
 
 To access the history of the alerts from your app, follow these steps:
 
-1. Click the tab **History** on the **Alerts** page.
-2. You will see an overview of all alerts that have been sent for this application.
+1. Click the **History** tab on the **Alerts** page.
+2. Select the environment that you wish to see alert history for.
+3. You will see an overview of all alerts that have been sent for this application.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" >}}
 
-    The overview shows alert types and details including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
-
-    The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.
-
-3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
+    The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 
 ## 6 Read More
 

@@ -35,17 +35,17 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 ### 3.1 Obtain Debugging Credentials
 
-#### 3.1.1 Obtain Debugging Credentials from Mendix cloud
+#### 3.1.1 Obtain Debugging Credentials from Mendix Cloud
 
-When your application is in the Mendix cloud:
+When your application is in the Mendix Cloud, follow these steps:
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
 2. Click **Environments** in the left sidebar.
 
-3. In the **Deploy** tab, click **Details** for the environment which you want to debug:
+3. In the **Deploy** tab, click **Details** for the environment that you want to debug:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/18580051.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/environment-details.png" >}}
 
 4. In the **General** tab, click **Show Debugger Information**:
 
@@ -69,7 +69,7 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 2. Click **Environments** in the left sidebar.
 
-3. Click **Details** for the environment which you want to debug.
+3. Click **Details** for the environment that you want to debug.
 
 4. Open the **Debugger** tab:
 

@@ -37,6 +37,7 @@ Clicking the menu items opens the following parts of the Mendix Platform:
 * [Portfolio](/developerportal/portfolio-management/)
 * [Marketplace](/appstore/)
 * [Catalog](/catalog/)
+* [Docs](/)
 * [Academy](https://academy.mendix.com/link/home)
 * [Community](/developerportal/community-tools/)
 * [Create New App](https://new.mendix.com/link/overview/)

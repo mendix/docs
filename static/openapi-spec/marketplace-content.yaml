@@ -15,7 +15,7 @@ paths:
       tags:
         - content
       summary: Returns the list of content.
-      description: "Returns both public and private content belonging to your company. This endpoint uses pagination."
+      description: "Returns both public and private content belonging to your company. The content metadata is from the last published version of the content. This endpoint uses pagination."
       operationId: getContent
       parameters:
         - $ref: '#/components/parameters/name'

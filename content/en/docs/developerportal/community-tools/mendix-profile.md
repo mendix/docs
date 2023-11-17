@@ -320,7 +320,7 @@ Follow these steps to add a new account to your Mendix Pofile:
 This feature is not available if your company has enabled single sign-on. If this is the case, you have to follow the regular sign up process and then [merge the new account to your profile](#merging-profiles) when the sign-up is completed.
 {{% /alert %}}
 
-### 10.3 Notifications {#notifications}
+### 10.3 Notification Settings {#notifications}
 
 On this page, you can configure how you want to be notified of Mendix Platform activity.
 

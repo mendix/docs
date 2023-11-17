@@ -292,7 +292,7 @@ GRANT rds_iam TO db_userx;
     ```
 
     {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
-    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document. In case of Aurora db, ensure that the database_id is from the cluster and not the instance.{{% /alert %}}
+    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document. In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.{{% /alert %}}
 
 * An IAM-based S3 blob storage plan.
    

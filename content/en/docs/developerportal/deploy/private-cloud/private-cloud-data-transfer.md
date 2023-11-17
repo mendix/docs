@@ -208,7 +208,6 @@ If you need to export or import data from an environment that uses AWS IRSA auth
             }
         ]
     }
-
     ```
 
     (replace `<aws_region>` with the database’s region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier, `<bucket_name>` with the S3 bucket name).

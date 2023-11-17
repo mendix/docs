@@ -9,7 +9,6 @@ description_list: true
 cascade:
     - space: "Developer Portal Guide"
     - mendix_version: 10
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -20,12 +19,14 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the key compone
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-
 ## 2 Navigation
+
 ### 2.1 Navigation Overview {#navigation-overview}
+
 Developer Portal navigation is split up into the Global Navigation (top bar), Side Navigation and On-page Navigation. The Global Navigation works the same throughout the Developer Portal and other products and is always accessible. The Side Navigation is context dependent and changes through the different features.
 
 ### 2.2 Global Navigation {#global-navigation}
+
 The Global Navigation includes the Main Menu (via the nine-dots icon), Search Menu, Help Menu, Notifications Menu, and Account Menu. From the Main Menu you can navigate anywhere. 
 
 {{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
@@ -33,9 +34,11 @@ The Global Navigation includes the Main Menu (via the nine-dots icon), Search Me
 You can hover over the menu items above to expand the sections for further access or click them to directly navigate to the feature.
 
 ### 2.3 Search {#search-menu}
+
 You can search the Developer Portal for (public) Marketplace Content, Forum posts, Academy Content and this documentation.
 
 ### 2.4 Help {#help-menu}
+
 The Help Menu is accessible via the question mark icon. Here you can [contact support](/developerportal/support), read up on [What's New](https://www.mendix.com/releases/) page, ask questions to the [community](/developerportal/community-tools/mendix-forum/#questions-tab), or read the [documentation](/).
 
 {{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
@@ -44,6 +47,7 @@ Note:
 * A red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
 
 ### 2.5 Notifications {#notifications-menu}
+
 The Notifications Menu is accessible via the bell icon. It shows you the platform notifications you have received. To configure what types of notifications you receive, click the settings icon and configure the settings in **Notification Settings** page that opens. Clicking the notification itself takes you to the source.
 
 {{< figure src="/attachments/developerportal/notification-settings-icon.png" width="300" >}}
@@ -53,8 +57,8 @@ Note the following exceptions:
 * If you want to disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.
 
 ### 2.6 Account {#account-menu}
-The account menu holds relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), access your settings, and enable Dark Mode for the Developer Portal.
 
+The account menu holds relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), access your settings, and enable Dark Mode for the Developer Portal.
 
 ## 3 Company Buzz and Apps {#my-company-apps}
 

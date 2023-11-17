@@ -174,7 +174,9 @@ spec:
 If you need to export or import data from an environment that uses AWS IRSA authentication, you also need to do the following:
 
 1. Create an **IAM Role** without any attached policies for that environment in the AWS console.
+   
     {{% alert color="info" %}}Use the environment internal name as the service account name.{{% /alert %}}
+   
 2. In the IAM role, add an inline policy with the following JSON:
 
     ```json
@@ -228,7 +230,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
 
         After this, the specified serviceaccount in the specified namespace will be able to assume this role.
 
-3. Add the `eks.amazonaws.com/role-arn` annotation to the `mendix-backup-restore` ServiceAccount and set it to the role ARN value from the previous step.
+4. Add the `eks.amazonaws.com/role-arn` annotation to the `mendix-backup-restore` ServiceAccount and set it to the role ARN value from the previous step.
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
 If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).

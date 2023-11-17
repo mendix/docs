@@ -49,7 +49,7 @@ Mendix for Private Cloud Operator v2.*.*. extends support for Kubernetes version
 
 Existing clusters running Mendix for Private Cloud Operator v1.\*.\* will need to be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
 
-While EOLed components are expected to remain compatible, it's important to note that we do not actively test them. This is because vendors may remove End-of-Life (EOL) versions due to security vulnerabilities (CVEs).
+While EOLed components are expected to remain compatible, it is important to note that we do not actively test them. This is because vendors may remove End-of-Life (EOL) versions due to security vulnerabilities (CVEs).
 
 {{% /alert %}}
 

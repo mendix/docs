@@ -177,7 +177,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
    
     {{% alert color="info" %}}Use the environment internal name as the service account name.{{% /alert %}}
    
-2. In the IAM role, add an inline policy with the following JSON:
+2. In the IAM role, add an inline policy with the following JSON, where `<aws_region>` is the database's region, `<account_id>` is your AWS account number, `<database_id>` is the RDS database instance identifier, and `<bucket_name>` is the S3 bucket name:
 
     ```json
     {
@@ -209,11 +209,8 @@ If you need to export or import data from an environment that uses AWS IRSA auth
         ]
     }
     ```
-
-    (replace `<aws_region>` with the database’s region, `<account_id>` with your AWS account number, `<database_id>` with the RDS database instance identifier, `<bucket_name>` with the S3 bucket name).
-
-    {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
-    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
+    
+    {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID. For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
 
 3. Allow a Kubernetes ServiceAccount (for example, `mendix-backup-restore`) to assume a role.
 

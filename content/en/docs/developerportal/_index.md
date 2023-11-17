@@ -9,7 +9,6 @@ description_list: true
 cascade:
     - space: "Developer Portal Guide"
     - mendix_version: 10
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -20,58 +19,57 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the key compone
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-## 2 Top Bar and Navigation
+## 2 Navigation
+
+[REMOVE] Developer Portal navigation is split up into global navigation (with the top bar), side navigation, and on-page navigation. 
+
+Global navigation works the same in the Developer Portal as it does in other parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). The global navigation is always accessible. 
+
+[REMOVE] The side navigation is context-dependent and changes through different parts of the platform.
 
 ### 2.1 Global Navigation {#global-navigation}
 
-On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access this navigation menu:
+[REMOVE] Global navigation includes the main menu (via the nine-dots icon), Search Menu, Help Menu, Notifications Menu, and Account Menu. From the Main Menu you can navigate anywhere. 
+
+On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access the main menu:
 
 {{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
 
-Clicking the menu items opens the following parts of the Mendix Platform:
+You can click the menu items to navigate to different parts of the Mendix Platform, or you can hover over the menu items to expand the sections for further access.
 
-* **Home** – the [My Apps](/developerportal/#my-apps) page
-* **Apps** – the [My Apps](/developerportal/#my-apps) page
-* **Deployment**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
-* [Control Center](/control-center/)
-* [Portfolio](/developerportal/portfolio-management/)
-* [Marketplace](/appstore/)
-* [Catalog](/catalog/)
-* [Docs](/)
-* [Academy](https://academy.mendix.com/link/home)
-* [Community](/developerportal/community-tools/)
-* [Create New App](https://new.mendix.com/link/overview/)
-* [mendix.com](https://www.mendix.com/)
+### 2.2 Search
 
-You can hover over the menu items above to expand the sections for further access.
+In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
 
-### 2.2 Profile, Notifications, and Help {#profile-notification-help}
+Use the various filters to refine your search results.
 
-On the right side of the top bar, you can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
+[**ADD IMAGE**]
 
-Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. To configure what types of notifications you receive, click the settings icon and configure the settings in **Notification Settings** page that opens:
+### 2.3 Support Menu
 
-{{< figure src="/attachments/developerportal/notification-settings-icon.png" width="300" >}}
-
-Note the following details on Mendix notifications:
-
-* If you do not want to receive notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app, and then click **Stop Watching**
-* If you want to disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page
-* A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
-
-Click the **Open Support Menu** button (via the question mark icon) to access the **Help** resouce menu:
+Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support).
 
 {{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
 
-The menu items open the following parts of the Mendix Platform:
+{{% alert color="info" %}}
+If you see **Get Started with Mendix** on this menu, a red dot next to this menu item will remain there for 30 days after your signup.
+{{% /alert %}}
 
-* **What's New?** – the [Mendix Platform Releases](https://www.mendix.com/releases/) page
-* **Ask the Community** – the **Questions** section of the [Mendix Forum](/developerportal/community-tools/mendix-forum/#questions-tab)
-* **Share an Idea** – the **Ideas** section of the [Mendix Forum](/developerportal/community-tools/mendix-forum/#ideas-tab)
-* **Check the Documentation** – the [Welcome to Mendix Docs](/) page
-* **Contact Mendix Support** – the [Mendix Support](https://support.mendix.com/hc/en-us) page
+### 2.4 Notifications
 
-You can also search the Mendix Platform via the search box in the top bar.
+Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
+
+To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the configure the settings in [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
+
+{{< figure src="/attachments/developerportal/notification-settings-icon.png" width="300" >}}
+
+{{% alert color="info" %}}
+To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.
+{{% /alert %}}
+
+### 2.5 Account
+
+Click your avatar to access the account menu, which has relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [User Settings](/developerportal/community-tools/mendix-profile/#settings).
 
 ## 3 Company Buzz and Apps {#my-company-apps}
 

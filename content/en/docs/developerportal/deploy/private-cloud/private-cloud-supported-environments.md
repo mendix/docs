@@ -58,8 +58,6 @@ Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially s
 * Kubernetes versions 1.13 through 1.21
 * OpenShift 3.11 through 4.7
 
-
-
 ### 2.2 Cluster Requirements
 
 To install the Mendix Operator, the cluster administrator will need permissions to do the following:

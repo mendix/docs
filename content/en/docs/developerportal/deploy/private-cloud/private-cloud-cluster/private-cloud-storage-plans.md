@@ -1717,7 +1717,7 @@ In this template, replace:
 * `<bucket_name>` with the S3 **Bucket name**
 * `<aws_region>`, with the RDS Instance's AWS region
 * `<account_id>`, with the AWS account ID
-* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN). In case of Aurora db, ensure that the database_id is from the cluster and not the instance.
+* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN). In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.
 * `<database-user>` with the Postgres superuser account name
 
 This role allows the Mendix Operator to create and delete IAM roles for Mendix app environments.

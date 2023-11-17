@@ -428,7 +428,23 @@ There are two sets of values:
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
+
+Existing databases of apps on eligible plans in Mendix Cloud (as specified in the table below) will also be migrated to gp3 storage instances soon.
+
+| Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+|-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+| S and M           | gp2                   | Less than 20 GiB     | 100 IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+| L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+| XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
+Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
+
+Burst balance metrics are not available for databases with the gp3 storage instance type.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
 {{% alert color="info" %}}

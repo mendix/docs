@@ -25,8 +25,6 @@ The global navigation top bar and menu work the same in the Developer Portal as 
 
 ### 2.1 Global Navigation Menu {#global-navigation}
 
-[REMOVE] Global navigation includes the main menu (via the nine-dots icon), Search Menu, Help Menu, Notifications Menu, and Account Menu. From the Main Menu you can navigate anywhere. 
-
 On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access the main menu:
 
 {{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
@@ -43,7 +41,7 @@ Use the various filters to refine your search results:
 
 ### 2.3 Support Menu
 
-Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support).
+Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support/).
 
 {{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
 
@@ -51,7 +49,7 @@ Click the **Open Support Menu** button (via the question mark icon) to read up o
 If you see **Get Started with Mendix** on this menu, a red dot next to this menu item will remain there for 30 days after your signup.
 {{% /alert %}}
 
-### 2.4 Notifications
+### 2.4 Notifications {#notifications}
 
 Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 

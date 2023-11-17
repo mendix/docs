@@ -369,7 +369,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### Fixes
 
 * We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
-* We updated the text in the [notifications](/developerportal/#profile-notification-help) when a story is assigned to you in **Epics**.
+* We updated the text in the [notifications](/developerportal/#notification) when a story is assigned to you in **Epics**.
 
 ### February 13, 2023 {#feb-13-23}
 
@@ -536,7 +536,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* We released [Notifications](/developerportal/#profile-notification-help) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/#notification) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21, 2022
 

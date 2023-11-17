@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
+### November 17, 2023
+
+#### Improvements
+
+- In Epics, we added a filter on the [Epics](/developerportal/project-management/epics/epics/) page, allowing you to sort and view epics based on their status. We also add a mini survey on the filtering experience – tell us what you think!
+- In Epics, on the [Board](/developerportal/project-management/epics/board/) page you can now see the total number of stories in each swimlane – it is displayed right next to the name of the swimlane.
+
+#### Fixes
+
+- We fixed a bunch of bugs in Epics, mostly related to the dark mode
+
 ### November 16, 2023
 
 #### Improvements

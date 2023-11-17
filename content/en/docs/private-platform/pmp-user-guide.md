@@ -16,7 +16,8 @@ Your user account is created by the administrator of your Private Mendix Platfor
 
 {{< figure src="/attachments/private-platform/pmp-ug1.png" >}}
 
-### 2.1 Profile {#profile}
+### 2.1 Profile
+
 In the **Profile** tab, you can configure general information about yourself. This includes the following information:
 
 * Full name (for example, Jane Doe)

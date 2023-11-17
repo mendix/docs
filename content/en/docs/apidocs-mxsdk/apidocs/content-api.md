@@ -11,7 +11,7 @@ tags: ["API", "content"]
 
 The Mendix Content API allows you to retrieve versions of both public and private company-specific Marketplace content. 
 
-If you Marketplace content, this API can help you get the following information:
+If you have Marketplace content, this API can help you get the following information:
 
 * The latest version of the content used, allowing you to keep track of outdated content on your side and check for newly added versions including release notes
 * The latest version that is compatible with your Mendix Studio Pro version

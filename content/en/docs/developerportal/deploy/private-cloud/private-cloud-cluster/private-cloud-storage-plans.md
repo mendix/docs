@@ -1523,10 +1523,11 @@ To configure the required settings for an RDS database, do the following steps:
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
 
-    {{% alert color="info" %}}In case of Aurora Database, ensure that the rds_iam role is granted to master database user.
+    {{% alert color="info" %}}
+    In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
     {{% /alert %}}
 
-2. Navigate to the RDS instance details, and write down the following information:
+3. Navigate to the RDS instance details, and write down the following information:
 
     1. The database **Endpoint** from the **Connectivity & security** tab:
 
@@ -1536,7 +1537,7 @@ To configure the required settings for an RDS database, do the following steps:
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" >}}
 
-3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+4. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
 
 ```shell

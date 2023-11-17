@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 17, 2023
+
+#### Data Migration Tool (Preview) v0.0.4
+
+* We added support for backing up and restoring data in environments using [AWS IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/) authentication.
+
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
+
 ### November 3, 2023
 
 #### Portal Fixes
@@ -34,7 +44,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Deploy API Improvements
 
-* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. 
+* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized.
 
 ### October 30, 2023
 
@@ -52,7 +62,7 @@ The data migration tool is available as a technical preview. For documentation a
 
 * We have added an option to specify additional custom pod labels for an environment from the portal.
 * We have added an option to configure the ephemeral storage in the core resources selection flow.
-* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963) 
+* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963)
 * We have fixed the issue where a user was able to select custom plans created for other namespaces.
 * We have added an extra warning message when a user tries to switch from default to custom core resource plans.
 

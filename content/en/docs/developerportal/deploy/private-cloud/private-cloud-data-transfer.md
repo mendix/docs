@@ -220,13 +220,9 @@ If you need to export or import data from an environment that uses AWS IRSA auth
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
-        See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
+        See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details. The role ARN is required. You can use the **Copy** button next to the ARN name in the role details. After this, the specified service account in the specified namespace will be able to assume this role.
 
-        The role ARN is required, you can use the **Copy** button next to the ARN name in the role details.
-
-        After this, the specified serviceaccount in the specified namespace will be able to assume this role.
-
-4. Add the `eks.amazonaws.com/role-arn` annotation to the `mendix-backup-restore` ServiceAccount and set it to the role ARN value from the previous step.
+4. Add the `eks.amazonaws.com/role-arn` annotation to the `mendix-backup-restore` service account and set it to the role ARN value from the previous step.
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
 If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).

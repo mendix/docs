@@ -205,7 +205,8 @@ While you were completing the merge process on your machine, other changes may h
 
 ### 3.3 Summary
 
-We have merged your local work with the latest state from the server and resolved all conflicts. For Rebasing this meant two rounds of conflict resolution, where you had a single round of conflict resolution for the merge commit.
+We have merged your local work with the latest state from the server and resolved all conflicts. 
+For Rebasing this meant two small rounds of conflict resolution, where you had a single round with all of the conflicts being resolved at the same time for the merge commit.
 
 In the end the history on the server will look like this:
 

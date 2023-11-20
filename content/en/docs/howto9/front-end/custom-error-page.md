@@ -72,7 +72,7 @@ It might take up to an hour to before the custom error page is visible when the 
 
 ### 3.1 Example Offline Page
 
-An example `offline.html/404.html/403.html` page could look like this:
+An example `offline.html`, `404.html`, or `403.html` page could look like this:
 
 ```html
 <!doctype html>

@@ -124,11 +124,11 @@ Click **Save Query & Create Entity** to create the entity and add it to your dom
 
 Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
 
-1. Create a new microflow and drag the **Query External Database** activity into it.
+1. Create a new microflow and drag the **Query external database** activity into it.
 2. In the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. Specify if you want **Return value** (for example, a list of `cars`).
+5. Specify if you want to **Use return value** (for example, a list of `cars`).
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 

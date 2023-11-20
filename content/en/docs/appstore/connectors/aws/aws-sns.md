@@ -98,26 +98,32 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 4. Drag the **Subscribe** activity onto the microflow you are working on.
 5. Double-click the **Subscribe** activity and configure the **AWS_Region** parameter by doing the following steps:
 
-    1. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
-    3. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region**, then type *.* and select your AWS region from the list.
+    1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+    3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region">}}
 
-6. In the **App Explorer**, in the **AmazonSNSConnector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
-7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
+6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GenerateCredentials** activity.
+7. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity">}}
 
-8. Double-click the **Credentials_GenerateFromConstants** activity, and then configure the required **AWS_Region** parameter in the same way as described in step 5.
+8. Double-click the **GenerateCredentials** activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 9. Double-click the **Subscribe** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
-10. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
+10. From the Toolbox, drag a **CreateObject** activity to the microflow and position it before the **Subscribe** activity.
+11. Select **SubscribeRequest** as the object to create.
+12. Set the TopicARN attribute to the ARN of a SNS Topic to subscribe to.
+13. Drag another **CreateObject** activity next to the **SubscribeRequest** object and configure it to create an object of type **EmailEndpoint**.
+14. Set the EmailAdress attribute to a valid Email address that should receive messages.
+15. Set the **SubscribeRequest_AbstractEndpoint** association to the **SubscribeRequest** object you created in step 11.
+16. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **SubscribeRequest** parameter and let it auto-fill.
-11. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
-12. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+17. Open a page that contains a data view to show all the parameters of the `SubscribeResponse`, which is the response of the **Subscribe** activity.
+18. Configure a method to trigger the *ACT_Subscribe_Email* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 #### 3.2.2 Sending Messages to a Topic
 

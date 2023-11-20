@@ -21,7 +21,7 @@ When you deploy to a target environment from Studio Pro, the deployment will als
 
 To select the target environment, do the following:
 
-1. From the navigation pane in the Developer Portal, click **Environments**.
+1. From the [navigation pane](/developerportal/#navigation-pane) in the Developer Portal, click **Environments**.
 
 2. <a id="target"></a>In the **Deploy** tab, click **Setup Studio Pro Deployment**.
 

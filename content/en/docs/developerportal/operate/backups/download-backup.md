@@ -25,7 +25,7 @@ To download a backup of a Free App, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Select the app from which you want to download the backup.
-3. In the navigation pane, click **Backups**.
+3. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
 4. On the backup you want to download, click the **More Options** icon. Select **Download** from the drop-down list.
 5. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
 

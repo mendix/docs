@@ -130,7 +130,7 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal. In the navigation pane on the left, click **Mobile App**.
+1. Open your app in the Developer Portal. In the navigation pane, click **Mobile App**.
 2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}

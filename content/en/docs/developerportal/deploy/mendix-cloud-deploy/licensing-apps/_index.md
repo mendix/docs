@@ -155,7 +155,7 @@ To connect your app to a licensed node, do the following:
 
 2. Select the app you want to link to the node.
 
-3. Click **Environments** in the navigation pane on the left.
+3. Click **Environments** in the navigation pane.
 
 4. Click **Select a node**.
 

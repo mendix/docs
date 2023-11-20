@@ -30,7 +30,7 @@ Mendix Cloud automatically monitors the health and status of apps that are deplo
 
 1. Go to the [Developer Portal](https://home.mendix.com).
 2. Open the app that you want to monitor.
-3. In the navigation pane, click **Alerts**. This displays the status of your app node in various categories.
+3. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18580000.png" >}}
 

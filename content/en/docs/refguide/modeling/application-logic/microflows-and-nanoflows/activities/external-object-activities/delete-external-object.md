@@ -17,7 +17,7 @@ When the microflow has **Apply entity access** set to **Yes**, only users with *
 
 ## 2 Activity Properties
 
-To manage the properties of the activity, double click the **Delete external object** activity, or right-click the activity and select **Properties**. 
+To manage the properties of the activity, double-click the **Delete external object** activity, or right-click the activity and select **Properties**. 
 
 Single-clicking on the activity displays the properties in the **Properties** pane.
 

@@ -264,7 +264,7 @@ The input and output for this service are shown in the table below:
  
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | `ConfirmSubscriptionResponse` |
+| `ENUM_Region (Enumeration)` | `ConfirmSubscriptionResponse` |
 | `ConfirmSubscriptionRequest(Object)` | |
 | `Credentials (Object)` | |
 
@@ -276,7 +276,7 @@ The input and output for this service are shown in the table below:
  
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | `CreateTopicResponse` |
+| `ENUM_Region (Enumeration)` | `CreateTopicResponse` |
 | `CreateTopicRequest (Object)` | |
 | `Credentials (Object)` | |
  
@@ -290,7 +290,7 @@ The input and output for this service are shown in the table below:
  
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | `ListTopicsResponse (Object)` |
+| `ENUM_Region (Enumeration)` | `ListTopicsResponse (Object)` |
 | `ListTopicsRequest (Object)` | |
 | `Credentials (Object)` | |
  
@@ -309,7 +309,7 @@ The input and output for this service are shown in the table below:
  
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | `PublishBatchResponse` |
+| `ENUM_Region (Enumeration)` | `PublishBatchResponse` |
 | `PublishRequest (Object)` | 
 | `Credentials (Object)` | |
 
@@ -325,7 +325,7 @@ The input and output for this service are shown in the table below:
  
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | |
+| `ENUM_Region (Enumeration)` | |
 | `SubscribeRequest (Object)` | |
 | `Credentials (Object)` | |
  
@@ -339,6 +339,6 @@ The input and output for this service are shown in the table below:
  
 | Input | Output |
 | --- | --- |
-| `AWS_Region (Enumeration)` | |
+| `ENUM_Region (Enumeration)` | |
 | `UnsubscribeRequest (Object)` | |
 | `Credentials (Object)` | |

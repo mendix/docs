@@ -102,8 +102,9 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-If managed dependencies are used (in Mendix 10.3.0+) then you need to setup a custom repository that can be used to resolve the dependencies.
-Please see [the Custom Repositories section of the Managed Dependencies page](/refguide/managed-dependencies/#custom-repos) for more information on how to configure a custom repository.
+If managed dependencies are used (in Mendix 10.3.0 and above) then you need to set up a custom repository that can resolve the dependencies.
+
+For more information on how to configure a custom repository, see the *Custom Repositories* section of [Managed Dependencies](/refguide/managed-dependencies/#custom-repos).
 
 ## 6 Installing Mendix Studio Pro Without Admin Rights
 

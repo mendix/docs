@@ -89,11 +89,11 @@ For more details, refer to the Gradle documentation on [Declaring repositories](
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" >}}
 
-### 6.1 Required dependencies{#custom-repos-required-dependencies}
+### 6.1 Required Dependencies{#custom-repos-required-dependencies}
 
-There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies.
+There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies:
 
-- The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), used for Software Bill of Materials generation.
+* The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBoM) required in certain contexts
 
 ## 7 Marketplace Modules
 
@@ -113,7 +113,7 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 2. CE9805 – Network connection failure.
 
     * Check that you have a working internet connection.
-    * If you are using a [custom repository](#custom-repos), check that the repository can be reached.
+    * If you are using a [custom repository](#custom-repos), confirm that the repository can be reached.
 
 3. CE9806 – Unable to reach repository / mis-configuration of custom repository.
 

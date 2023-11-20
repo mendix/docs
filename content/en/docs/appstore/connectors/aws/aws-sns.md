@@ -243,20 +243,14 @@ The domain model is a data model that describes the information in your applicat
  
 An enumeration is a predefined list of values that can be used as an attribute type.
  
-#### 4.2.1 `LogNodes`
- 
-| Name | Caption |
-| --- | --- |
-| `AmazonSNSConnector` | **AmazonSNSConnector** |
- 
-#### 4.2.2 `ENUM_FilterPolicyScope`
+#### 4.2.1 `ENUM_FilterPolicyScope`
  
 | Name | Caption |
 | --- | --- |
 | `MESSAGE_ATTRIBUTES` | **MESSAGE-ATTRIBUTES SCOPE** |
 | `MESSAGE_BODY` | **MESSAGE-BODY SCOPE** |
  
-#### 4.2.3 `ENUM_AttributeFilterCompareOperator`
+#### 4.2.2 `ENUM_AttributeFilterCompareOperator`
  
 | Name | Caption |
 | --- | --- |

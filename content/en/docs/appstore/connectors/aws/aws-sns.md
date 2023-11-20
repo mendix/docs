@@ -115,9 +115,9 @@ To subscribe to a topic in your AWS environment and receive email notifications 
     2. Edit the **Credentials** parameter and let it auto-fill.
 10. From the Toolbox, drag a **CreateObject** activity to the microflow and position it before the **Subscribe** activity.
 11. Select **SubscribeRequest** as the object to create.
-12. Set the TopicARN attribute to the ARN of a SNS Topic to subscribe to.
+12. Set the **TopicARN** attribute to the ARN of a SNS Topic to subscribe to.
 13. Drag another **CreateObject** activity next to the **SubscribeRequest** object and configure it to create an object of type **EmailEndpoint**.
-14. Set the EmailAdress attribute to a valid Email address that should receive messages.
+14. Set the **EmailAdress** attribute to a valid Email address that should receive messages.
 15. Set the **SubscribeRequest_AbstractEndpoint** association to the **SubscribeRequest** object you created in step 11.
 16. Double-click the **Subscribe** activity and configure the **SubscribeRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.

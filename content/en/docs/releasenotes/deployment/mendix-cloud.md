@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### November 22, 2023
+
+#### Improvements
+
+* We improved the layout and display of the Metrics page. Metrics can now be filtered via drop-down menus that set the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs. We also updated the visual style of the graphs. For more information, see [Metrics](/developerportal/operate/metrics/).
+* We improved the layout and functionality of the Logs page. We added an activity log, which shows which logs have been interacted with, by whom, and when. The log archives now display file size for app and access logs, and they include an option to filter logs by date. For more information, see [Logs](/developerportal/operate/logs/).
+
 ### November 16, 2023
 
 #### Improvements

@@ -50,9 +50,9 @@ After you install the connector, you can find it in the **App Explorer**, in the
 In order to use the Amazon SNS service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
  
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
+2. Decide whether you want to use temporary or static credentials to authenticate.
 
-    The Amazon SNS connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The Amazon SNS connector supports both temporary and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to temporary credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 3. In the **App Explorer**, double-click the **Settings** for your app.
  
@@ -60,26 +60,26 @@ In order to use the Amazon SNS service, you must authenticate with AWS. To do so
  
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
 
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+    If you have multiple sets of AWS credentials, or if you want to use both static and temporary credentials for different use cases, create separate authentication profiles for each set of credentials.
 
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
 6. In the **Select Constants** dialog, find and expand the **AmazonSNSConnector** > **ConnectionDetails** section.
  
     {{< figure src="/attachments/appstore/connectors/aws-sns/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
  
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **TemporaryCredentials**.
  
  | Credentials type | Constant | Value |
  | --- | --- | --- |
- | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+ | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for temporary credentials |
  | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
  | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
- | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
- | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
- | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
- | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
- | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
- | **SessionCredentials** | **Session Name** | An identifier for the session |
+ | **TemporaryCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+ | **TemporaryCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+ | **TemporaryCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+ | **TemporaryCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+ | **TemporaryCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the temporary credentials expires |
+ | **TemporaryCredentials** | **Session Name** | An identifier for the session |
  
 ### 3.2 Configuring a Microflow for an AWS Service
 
@@ -228,7 +228,7 @@ The domain model is a data model that describes the information in your applicat
 
 ### 4.2 Enumerations {#enumerations}
  
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon SNS connector, enumerations list values such as the list of available AWS regions, the native data type of the content, and the category under which messages appear in error logs.
+An enumeration is a predefined list of values that can be used as an attribute type.
  
 #### 4.2.1 `LogNodes`
  
@@ -236,50 +236,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | --- | --- |
 | `AmazonSNSConnector` | **AmazonSNSConnector** |
  
-#### 4.2.2 `AWS_Region`
- 
-| Name | Caption |
-| --- | --- |
-| `us_east_2` |    **US East (Ohio)** |
-| `us_east_1` |    **US East (N. Virginia)** |
-| `us_west_1` |    **US West (N. California)** |
-| `us_west_2` |    **US West (Oregon)** |
-| `af_south_1` |    **Africa (Cape Town)** |
-| `ap_east_1` |    **Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` |    **Asia Pacific (Jakarta)** |
-| `ap_south_1` |    **Asia Pacific (Mumbai)** |
-| `ap_northeast_3` |    **Asia Pacific (Osaka)** |
-| `ap_northeast_2` |    **Asia Pacific (Seoul)** |
-| `ap_southeast_1` |    **Asia Pacific (Singapore)** |
-| `ap_southeast_2` |    **Asia Pacific (Sydney)** |
-| `ap_northeast_1` |    **Asia Pacific (Tokyo)** |
-| `ca_central_1` |    **Canada (Central)** |
-| `eu_central_1` |    **Europe (Frankfurt)** |
-| `eu_west_1` |    **Europe (Ireland)** |
-| `eu_west_2` |    **Europe (London)** |
-| `eu_south_1` |    **Europe (Milan)** |
-| `eu_west_3` |    **Europe (Paris)** |
-| `eu_north_1` |    **Europe (Stockholm)** |
-| `me_south_1` |    **Middle East (Bahrain)** |
-| `sa_east_1` |    **South America (São Paulo)** |
- 
-#### 4.2.3 `MessageAttributeType`
- 
-| Name | Caption |
-| --- | --- |
-| `String` | **String** |
-| `String_Array` | **String.Array** |
-| `Number` | **Number** |
-| `Binary` | **Binary** |
- 
-#### 4.2.4 `ENUM_FilterPolicyScope`
+#### 4.2.2 `ENUM_FilterPolicyScope`
  
 | Name | Caption |
 | --- | --- |
 | `MESSAGE_ATTRIBUTES` | **MESSAGE-ATTRIBUTES SCOPE** |
 | `MESSAGE_BODY` | **MESSAGE-BODY SCOPE** |
  
-#### 4.2.4 `ENUM_AttributeFilterCompareOperator`
+#### 4.2.3 `ENUM_AttributeFilterCompareOperator`
  
 | Name | Caption |
 | --- | --- |
@@ -319,8 +283,6 @@ The input and output for this service are shown in the table below:
 #### 4.3.3 ListTopics {#list-topics}
  
 The `ListTopics` Amazon SNS action allows you to retrieve a list of all Topics for a given Amazon SNS environment. It requires a valid AWS Region. The action returns a `ListTopicsResponse` object which contains a list of Topic objects.
-
-The ListTopicRequest input parameter can be set to `empty`. If this is the case, the first 100 objects will be retrieved.
  
 The request will return at most 100 topics. Pass the nextToken attribute onto a new request to retrieve the next set of topics
  

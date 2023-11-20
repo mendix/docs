@@ -10,37 +10,43 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "Mendix Cloud"]
 
 ## 1 Introduction
 
-From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
+From the **Logs** page, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-You can access the **Logs** page by selecting **Logs** in the navigation pane.
+To access the **Logs** page, open your app in the [Developer Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane.
 
 {{% alert color="warning" %}}
-You must have the **Access to Monitoring** permission to view logs. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how these permissions are controlled.
+To view logs, you must have the **Access to Monitoring** permission enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 {{% /alert %}}
 
 ## 2 Apps Deployed to Mendix Cloud
 
 {{% alert color="info" %}}
-This is the default Mendix deployment for a licensed app.
+Mendix Cloud is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
-For apps deployed to Mendix Cloud, you can select which environment you want logs for. Production logs require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. On the **Logs** page, you can view archived logs, view the live log, and view log access activity.
 
-You can view the live (current) log, download it, or view and download an archived log.
+{{< figure src="/attachments/developerportal/operate/logs/logs-archives.png" alt="Logs Page" >}}
+
+For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
+
+Logs on Mendix Cloud are rotated and archived every day. For each day, you can download the app log or the access log by clicking the corresponding **Download** icon. File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
+
+By default, archived logs are sorted by date; the current log is the first one listed. They are stored for six months. You can manually click through the archived logs or use the search field to find logs for a specific date.
+
+{{< figure src="/attachments/developerportal/operate/logs/logs-filter.png" alt="" >}}
+
+Click **View Live Log** to access your app's log in real time. You can use the drop-down menus to adjust the log sources and log levels that appear in the live log.
+
+{{< figure src="/attachments/developerportal/operate/logs/live-log.png" alt="" >}} 
 
 {{% alert color="info" %}}
-The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
+The live log displays in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
- 
-Logs on Mendix Cloud are rotated and archived every day. The logs are kept for at least 6 months.
 
-{{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page" >}}
+At the bottom of the **Logs** page, there is an activity log. This section reports data on who has viewed or downloaded the logs. You can see which log was interacted with, by whom, and when. This activity log records access by team members as well as members of Mendix Support, who may view your app's logs in connection with any support tickets you have open. If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download the activity log data as a CSV file. 
 
-| Action Button | Performs the Action |
-| :--- | :--- |
-| Download App Log | download an application log selected from the list underneath — the current log is the first one listed  |
-| Download Access Log | download a log of who has created a user session on the app on the date selected from the list underneath |
-| View Live Log | view today's log on the screen |
+{{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" >}}
 
 ## 3 Apps on SAP Business Technology Platform
 
@@ -74,11 +80,11 @@ The Kibana user guide is available here: [Kibana User Guide](https://www.elastic
 
 ## 4 Free App
 
-Logs are not available for Free Apps. You will see a sample screen on the logs page. You only have access to a live log of your deployed free app, on the **Environments** page, under **View Live Log**. 
+Archived logs are not available for Free Apps. The **Logs** page displays sample data instead of archived data for your app.
 
-{{% alert color="info" %}}
-If you have set up custom log messages, you will only be able to see messages up to Info log level. Debug and Trace log messages will not be shown in the live log.
-{{% /alert %}}
+{{< figure src="/attachments/developerportal/operate/logs/free-app.png" alt="" >}}
+
+You can still interact with the sample data, and you can click **View Live Log** to access a live log of your deployed Free App.
 
 ## 5 App Deployed to Other Clouds
 

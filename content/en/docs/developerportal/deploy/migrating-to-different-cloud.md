@@ -51,7 +51,7 @@ First, link one of the new temporary apps to the target node.
 
 1. In the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** and select one of your temporary apps.
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+2. Once you are in the app, go to the **Environments** page in the navigation pane.
 
 3. Click **Select a node**.
 
@@ -125,7 +125,7 @@ It is not possible to directly unlink an app from a licensed node. The only way 
 
 1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the target node).
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+2. Once you are in the app, go to the **Environments** page in the navigation pane.
 
 3. Click **Select a node**.
 
@@ -143,9 +143,9 @@ Make sure you have downloaded the latest backup and deployment package before li
 
 1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that you detached from the source node.
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+2. Once you are in the app, go to the **Environments** page in the navigation pane.
 
-3. Click **select a node**.
+3. Click **Select a node**.
 
 4. Select the target node by clicking **Use this Node** and linking it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 

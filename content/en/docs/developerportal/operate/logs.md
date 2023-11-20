@@ -12,10 +12,10 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "Mendix Cloud"]
 
 From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-The page is accessed through the **Logs** menu item in the left-hand menu.
+You can access the **Logs** page by selecting **Logs** in the navigation pane.
 
 {{% alert color="warning" %}}
-You must have the **Access to Monitoring** permission to view logs. This needs to be set by the Technical Contact of the app. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how to do this.
+You must have the **Access to Monitoring** permission to view logs. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how these permissions are controlled.
 {{% /alert %}}
 
 ## 2 Apps Deployed to Mendix Cloud
@@ -24,7 +24,7 @@ You must have the **Access to Monitoring** permission to view logs. This needs t
 This is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
-For apps deployed to Mendix Cloud, you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+For apps deployed to Mendix Cloud, you can select which environment you want logs for. Production logs require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
 You can view the live (current) log, download it, or view and download an archived log.
 

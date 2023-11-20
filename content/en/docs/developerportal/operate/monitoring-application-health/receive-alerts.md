@@ -41,7 +41,7 @@ To enable email alerts, follow these steps:
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open the [Global Navigation](/developerportal/#global-navigation) menu and click **Deployment**.
 3. Open the node by clicking **Environments** under the app name.
-4. Click **Alerts** in the left-side menu.
+4. Click **Alerts** in the navigation pane.
 5. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
 6. Select the **Email Alerts** checkbox.  Your changes will save automatically.
 
@@ -60,7 +60,7 @@ For details on webhooks, see the [Webhooks](/developerportal/deploy/webhooks/) p
 To set a new webhook in the Developer Portal, follow these steps:
 
 1. Go to the Developer Portal and open your app.
-1. On the left-side pane, click **Webhooks**.
+1. In the navigation pane, click **Webhooks**.
 1. Click **New Webhook**.
 1. Name your webhook and provide the webhook receiver URL and Validation Secret as described in the [Configuring a Webhook](/developerportal/deploy/webhooks/#setting-up) section of the *Webhooks* page.
 1. Choose **Alerts** from **Available Events**.

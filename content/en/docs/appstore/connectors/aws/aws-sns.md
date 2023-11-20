@@ -136,29 +136,36 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 2. Enter a name for your microflow, for example, *ACT_PublishBatch*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **PublishBatch** activity.
 4. Drag the **PublishBatch** activity onto the microflow you are working on.
-5. Double-click the **PublishBatch** activity y and configure the **AWS_Region** parameter by doing the following steps:
+5. Double-click the **PublishBatch** activity y and configure the **ENUM_Region** parameter by doing the following steps:
 
-    1. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
-    3. In the autocomplete dialog, select **AmazonSNSConnector.AWS_Region**, then type *.* and select your AWS region from the list.
+    1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
+    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+    3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
         {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region">}}
 
-6. In the **App Explorer**, in the **AmazonSNSConnector** > **ConnectionDetails** section, find the **Credentials_GenerateFromConstants** activity.
-7. Drag the **Credentials_GenerateFromConstants** activity onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.
+6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GenerateCredentials** activity.
+7. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_actions.png" alt="Adding the PublishBatch activity">}}
 
-8. Double-click the **Credentials_GenerateFromConstants** activity, and then configure the required **AWS_Region** parameter in the same way as described in step 5.
+8. Double-click the **GenerateCredentials** activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 9. Double-click the **PublishBatch** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
-10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **Credentials_GenerateFromConstants** and the **PublishBatch** activity.
-11. Double-click the **Create Object** activity and configure the **PublishBatchRequest** parameter by doing the following steps:
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GenerateCredentials** and the **PublishBatch** activity.
+11. Double-click the **CreateObject** activity and select **PublishBatchRequest** as the entity to create.
+12. Add another **CreateObject** activity before the **PublishBatchRequest** object and select **PublishBatchTopic** as the entity to create.
+13. Provide values for the **ARN** and **Name** attributes of the **PublishBatchTopic** object.
+14. Add another **CreateObject** activity after the **PublishBatchTopic** object and select **PublishBatchMessage** as the entity to create.
+15. Provide values for the **Subject**, **Body** and **_Id** attributes of the **PublishBatchMessage** object.
+16. Set the **PublishBatchMessage_PublishBatchTopic** association to the **PublishBatchTopic** object created in step 12.
+17. Double-click the **PublishBatchRequest** and set the **PublishBatchRequest_PublishBatchTopic** association also to the **PublishBatchTopic** object created in step 12.
+18. Double-click the **PublishBatch** activity and configure the **PublishBatchRequest** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **PublishBatchRequest** parameter and let it auto-fill.
-12. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **Subscribe** activity.
-13. Configure a method to trigger the *ACT_PublishBatch* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+19. Open a page that contains a data view to show all the parameters of the `PublishBatchResponse`, which is the response of the **PublishBatch** activity.
+20. Configure a method to trigger the *ACT_PublishBatch* microflow. For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
 ## 4 Technical Reference
  

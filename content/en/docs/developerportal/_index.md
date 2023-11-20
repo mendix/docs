@@ -20,7 +20,7 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the key compone
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-## 2 Top Bar and Navigation
+## 2 Top Bar and Global Navigation
 
 ### 2.1 Global Navigation {#global-navigation}
 
@@ -114,6 +114,12 @@ To stop watching an app and disable notifications for that app, click the eye ic
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-## 5 Guide Categories
+## 5 Navigation Pane {#navigation-pane}
+
+When you select an app in the Developer Portal, you can navigate between sections using the navigation pane on the left side of the screen. The navigation pane is divided into four categories: [General](/developerportal/general/), [Project Management](/developerportal/project-management/), [App Insights](/developerportal/app-insights/), and [Deployment](/developerportal/deploy/general/).
+
+{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="25%" >}}
+
+## 6 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:

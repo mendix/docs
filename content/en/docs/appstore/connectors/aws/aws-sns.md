@@ -52,7 +52,7 @@ In order to use the Amazon SNS service, you must authenticate with AWS. To do so
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
 2. Decide whether you want to use temporary or static credentials to authenticate.
 
-    The Amazon SNS connector supports both temporary and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to temporary credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    The AWS Authenticaton connector supports both temporary and static credentials. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 3. In the **App Explorer**, double-click the **Settings** for your app.
  
@@ -63,7 +63,7 @@ In order to use the Amazon SNS service, you must authenticate with AWS. To do so
     If you have multiple sets of AWS credentials, or if you want to use both static and temporary credentials for different use cases, create separate authentication profiles for each set of credentials.
 
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonSNSConnector** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AWSAuthentication** > **ConnectionDetails** section.
  
     {{< figure src="/attachments/appstore/connectors/aws-sns/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
  

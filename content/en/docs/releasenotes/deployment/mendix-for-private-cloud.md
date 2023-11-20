@@ -109,7 +109,7 @@ This tool is available as a technical preview. For documentation and download li
 #### Portal Improvements
 
 * We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
-* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with navigation panel in a sidebar to the left.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with the navigation pane in a sidebar to the left.
 
 #### Deploy API Improvements
 
@@ -560,7 +560,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have increased the deployment package size limit from 200 MB to 512 MB.
 * We have fixed an issue when the Runtime version was not visible on the transport package screen.
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
-* We have changed the left navigation panel to match the rest of the Developer Portal.
+* We have changed the navigation pane to match the rest of the Developer Portal.
 
 ### November 15, 2021
 

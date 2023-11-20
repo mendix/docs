@@ -204,7 +204,7 @@ On the **Activity** tab, you can see a list of the last 20 public events for you
 
 ## 10 User Settings {#settings}
 
-You can edit the information on your Mendix Profile by clicking the **User Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
+You can edit the information on your Mendix Profile by clicking **User Settings**. The **Settings** page has a navigation pane that allows you to edit the sections described below.
 
 ### 10.1 Profile {#profile}
 

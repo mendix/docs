@@ -238,7 +238,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/) , we will [archive all your work in Mendix Stories](/developerportal/collaborate/general-settings/#story-archive) and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page.
 * To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
-* With these changes, navigation in Epics works a bit differently than before: the navigation items are on the sidebar now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another (but if you need more space on the screen, you can always collapse the sidebar).
+* With these changes, navigation in Epics works a bit differently than before: the navigation items are on a panel on the left now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another. (If you need more space on the screen, you can always collapse the navigation pane.)
 * Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
 * We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
 
@@ -342,7 +342,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of Stories. We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.
-* The left-hand app sidebar menu is now collapsible, which makes for a far better experience on small screen resolutions.
+* The navigation pane is now collapsible, which makes for a far better experience on small screen resolutions.
 * You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
 
@@ -643,7 +643,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### Improvements
 
 * We introduced a new layout of the [Mendix Forum](/developerportal/community-tools/mendix-forum/) that features the following changes:
-    * The main navigation has been moved to the left sidebar
+    * The main navigation has been moved to a navigation pane on the left of the screen
     * There is a dedicated for page for your bookmarks
     * Breadcrumb navigation
     * Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)

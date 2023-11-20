@@ -81,12 +81,12 @@ Now you can start [querying the database](#query-database) to select data for us
 
 To query the database, do the following:
 
-1. Enter a **Query Name** so you can access the same query later. This will be saved once you click **Save Query & Create Entity** in the [Create an Entity from the Response](#create-entity) section.
+1. Enter a Query **Name** so you can access the same query later. This will be saved once you click **Save Query & Create Entity** in the [Create an Entity from the Response](#create-entity) section.
 2. Enter your `SELECT`  **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * FROM Cars` selects all rows in the **Cars** table:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
    
-4. Click **Execute Query** to move to the **Response** screen and view the queried data.
+4. Click **Run Query** to move to the **Response** screen and view the queried data.
 
 #### 3.2.1 Adding Parameters {#parameters}
 
@@ -106,13 +106,13 @@ To learn more about SQL queries and parameters, consult the documentation of the
 
 After [querying the database](#query-database), you can look at the response in the **Reponse** screen. 
 
-Click **Use Response** if you like what you see and want to move on to [creating an entity from the reponse](#create-entity).
+Click **Use Response** if you like what you see and want to [create an entity from the reponse](#create-entity).
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/execute-query.png" >}}
 
 ### 3.4 Creating an Entity from the Response {#create-entity}
 
-In the **Data Structure** screen, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
+In the **Response Structure** screen, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/use-response.png" >}}
 

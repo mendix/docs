@@ -163,7 +163,7 @@ You cannot create multiple database plans at the same time. Run the configuratio
 
 The following database types are supported:
 
-* [PostgreSQL](#database-postgres)
+* [PostgreSQL and Aurora PostgreSQL](#database-postgres)
 * [Ephemeral (non-persistent)](#database-ephemeral)
 * [SQL Server](#database-sqlserver)
 * [Dedicated JDBC](#database-jdbc)
@@ -253,6 +253,15 @@ The Postgres database is an automated, on-demand database. The Postgres plan off
 This section provides technical details on how IAM authentication works with Postgres. If you just need instructions to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide to set the Mendix Operator to manage an RDS database and S3 bucket.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+When dealing with an Aurora PostgreSQL database, an additional procedural step is required. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
+
+```shell {linenos=false}
+GRANT rds_iam TO db_userx;
+```
+
+{{% /alert %}}
+
 ##### 2.3.2.1 Prerequisites
 
 * An RDS Postgres server with IAM authentication enabled
@@ -283,7 +292,7 @@ This section provides technical details on how IAM authentication works with Pos
     ```
 
     {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
-    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
+    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document. In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.{{% /alert %}}
 
 * An IAM-based S3 blob storage plan.
    
@@ -1514,7 +1523,11 @@ To configure the required settings for an RDS database, do the following steps:
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
 
-2. Navigate to the RDS instance details, and write down the following information:
+    {{% alert color="info" %}}
+    In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
+    {{% /alert %}}
+
+3. Navigate to the RDS instance details, and write down the following information:
 
     1. The database **Endpoint** from the **Connectivity & security** tab:
 
@@ -1524,7 +1537,7 @@ To configure the required settings for an RDS database, do the following steps:
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" >}}
 
-3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+4. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
 
 ```shell
@@ -1599,7 +1612,7 @@ In this template, replace:
 * `<bucket_name>` with the S3 **Bucket name**
 * `<aws_region>` with the RDS Instance's AWS region
 * `<account_id>` with the AWS account ID
-* `<database_id>` with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is not the database name or ARN)
+* `<database_id>` with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is not the database name or ARN). In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.
 
 This environment template policy will be attached to every new environment's role. Write down its ARN.
 
@@ -1704,7 +1717,8 @@ In this template, replace:
 * `<bucket_name>` with the S3 **Bucket name**
 * `<aws_region>`, with the RDS Instance's AWS region
 * `<account_id>`, with the AWS account ID
-* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN)
+* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN). In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.
+* `<database-user>` with the Postgres superuser account name
 
 This role allows the Mendix Operator to create and delete IAM roles for Mendix app environments.
 

@@ -16,49 +16,28 @@ aliases:
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
-The graphs show the following types of information:
-
-* Application Statistics 
-* Database Statistics
-* Application Node Statistics
-* Database Node Statistics
-
 These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
 
 ## 2 Accessing the Metrics Graphs
 
-To view the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions.
+Metrics are included in all paid editions of Mendix Cloud.
 
-{{% alert color="info" %}}
-Metrics are included in all paid editions of Mendix Cloud. Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is allowed to grant node permissions.
-{{% /alert %}}
+To access the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-If you are the Technical Contact, you can assign permission by following these steps:
+If you meet the above conditions, you can find the graphs by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Go to **Environments** and switch to the **Permissions** tab.
-3. Choose the environment for which you want to grant access.
-    {{< figure src="/attachments/developerportal/operate/metrics/environment.png" width=150 alt="" >}}
-4. Select the **Access to Monitoring** checkbox for the people you want to grant this permission to.
-
-    {{< figure src="/attachments/developerportal/operate/metrics/nodepermission.jpg" >}}
-
-## 3 Viewing the Graphs
-
-### 3.1 Finding the Graphs
-
-You can find the graphs by following these steps:
-
-1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Metrics**.
+2. In the navigation panel, click **Metrics**.
 3. Select the environment you want to monitor.
-4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
+4. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
 
-### 3.2 Interpreting the Graphs
+    {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" >}}
+
+## 3 Interpreting the Graphs
 
 As with all complex IT systems, there are many interrelated components that can cause performance issues. This document cannot cover all possibilities; it is intended as a general introduction to the information that is displayed. It also suggests a few ideas about where to look for possible areas of concern.
 
-#### 3.2.1 Combining Information{#combine-info}
+#### 3.1 Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Here are some useful graphs for this:
 
@@ -167,9 +146,9 @@ These are the types:
 | **other**            | This is virtual or reserved memory space.                                                                     |
 | **thread stacks**    | This is stacks that are reserved for unique threads.                                                          |
 
-### 4.5 Application Node Operating System Memory{#Trends-appmemory}
+### 4.5 Memory Usage{#Trends-appmemory}
 
-The **Application node operating system memory** graph shows the distribution of operating system memory that is available for this server.
+The **Memory Usage** graph shows the distribution of operating system memory that is available for this server.
 
 {{< figure src="/attachments/developerportal/operate/metrics/node-os-memory.png" >}}
 
@@ -207,9 +186,9 @@ In addition to the threadpool that is used for external HTTP requests (described
 * Internal processes inside the Mendix Runtime
 * Optional extra threads created by the application itself (for example, using a threadpool in a custom module or custom Java code)
 
-### 4.8 Application Node CPU Usage{#Trends-appcpu}
+### 4.8 CPU Usage{#Trends-appcpu}
 
-The **Application node CPU usage** graph shows the CPU utilization in percentage.
+The **CPU Usage** graph shows the app CPU utilization in percentage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
 

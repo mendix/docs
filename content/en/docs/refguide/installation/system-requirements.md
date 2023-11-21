@@ -90,7 +90,7 @@ You can find a list of known limitations below, however, we advise you to check 
 | Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
 | Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
 
-¹ Currently you will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
+¹ You will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
 
 #### 2.5.1 Azure Repos and Azure DevOps Server 
 

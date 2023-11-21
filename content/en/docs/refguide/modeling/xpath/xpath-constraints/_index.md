@@ -7,13 +7,11 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-The syntax of XPath queries differs between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
-{{% /alert %}}
-
 A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide/xpath-operators/), [functions](/refguide/xpath-constraint-functions/), [keywords or system variables](/refguide/xpath-keywords-and-system-variables/).
 
-The following example shows how you should perform an XPath query in Studio Pro. You **Select** the entity `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
+The syntax of XPath queries differs between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
+
+The following example shows how you should perform an XPath query in Studio Pro. You **Select** the **Entity** `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
 {{< figure src="/attachments/refguide/modeling/xpath/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" >}}
 
@@ -24,7 +22,7 @@ Multiple constraints can be added to a single query for all queries except where
 If you need to query on `id` (for example `[id = $currentuser]`) as part of multiple constraints, you can create an `and` constraint by using the first format shown in the [Constraint One `and` Constraint Two](#and) section: `[id = …][{additional constraint}]`.
 
 {{% alert color="info" %}}
-For all the XPath constraints examples given for Studio Pro, it is assumed that you have already selected the relevant entity as the context of the XPath constraints before you type in the constraints. For all the examples given in Java environment, whole XPath queries are presented, including the double slashes (`//`) and the entity name.
+All the Studio Pro examples below assume that an entity `Sales.Customer` is selected for retrieval.
 {{% /alert %}}
 
 ### 2.1 Constraint One `and` Constraint Two{#and}

@@ -13,7 +13,7 @@ aliases:
  
 The [Amazon SNS connector](https://marketplace.mendix.com/link/component/204715) provides a way for you to enrich your Mendix app with app-to-app and app-to-person notifications by implementing [Amazon Simple Notification Service (SNS)](https://aws.amazon.com/sns/).
  
-### 1.1 Typical Use Cases
+### 1.1 Typical Use Cases {#use-cases}
  
 Amazon Simple Notification Service (SNS) can send app-to-app (A2A) and app-to-person (A2P) notifications. The A2A functionality provides high-throughput, push-based, many-to-many messaging between distributed systems, microservices, and event-driven serverless applications. These applications include Amazon Simple Queue Service (SQS), Amazon Kinesis Data Firehose, AWS Lambda, and other HTTPS endpoints. The A2P functionality lets you send messages to your customers with SMS, push notifications, and email.
  

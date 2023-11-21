@@ -12,15 +12,15 @@ The `mx dump-mpr` command enables you to export the app model of Mendix in the f
 
 ## 2 Usage
 
-Use the following command pattern: mx dump-mpr [MPR-FILE_NAME] [OPTIONS]
+Use the following command pattern: mx dump-mpr [OPTIONS] [TARGET-FILE] 
 
-The `MPR-FILE_NAME` is optional. If not supplied, it takes the first MPR it can find in the folder
+The `TARGET-FILE points to the location of the project file, this file has the extension '.mpr'`
 
 These are the `OPTIONS`:
 
 | Option | Value | Result |
 | --- | --- | --- |
-| `--unit-type` | Valid mpr unit types| Filters the results on the supplied unit types and limits the JSON export |
+| `--unit-type` | A single unit type, or a comma-separated list of unit types| Filters the results on the supplied unit types and limits the JSON export. |
 
 ### 2.2 Examples
 

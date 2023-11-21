@@ -8,7 +8,7 @@ tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "mp
 
 ## 1 Introduction
 
-The `mx dumpmpr` command enables you to export the app model of Mendix in the form of JSON
+The `mx dump-mpr` command enables you to export the app model of Mendix in the form of JSON. This command is available as of Mendix 10.4.
 
 ## 2 Usage
 

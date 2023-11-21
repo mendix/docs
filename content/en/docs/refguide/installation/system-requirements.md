@@ -27,8 +27,7 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
     * Eclipse Temurin JDK 11 (x64)
-    
-    Oracle JDK 11 can also be used if this is already installed.
+    * Oracle JDK 11 can also be used if this is already installed
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)

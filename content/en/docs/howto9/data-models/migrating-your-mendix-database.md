@@ -107,12 +107,12 @@ To export a PostgreSQL database, refer to either the [pg_dump](https://www.postg
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
+Use the Developer Portal to upload the migrated, exported database backup to Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal. Follow these steps:
 
 1. Select your app.
-2. Click **Backups** in the left-hand menu
-3. Click **Upload Backup** to upload your Database.
-4. Select the exported database file from your local file system using the file chooser
+2. Click **Backups** in the navigation pane.
+3. Click **Upload Backup** to upload your database.
+4. Select the exported database file from your local file system using the file chooser.
 5. After the upload is done, stop the application.
 6. On the backup you uploaded, click **More Options** > **Restore**.
 7. Finally, start the application.

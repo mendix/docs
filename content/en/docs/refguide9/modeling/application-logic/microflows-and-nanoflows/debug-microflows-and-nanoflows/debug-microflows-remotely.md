@@ -49,7 +49,7 @@ When your application is in Mendix Cloud, follow these steps:
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-2. Click **Environments** in the left sidebar.
+2. Click **Environments** in the navigation pane.
 
 3. In the **Deploy** tab, click **Details** for the environment that you want to debug:
 
@@ -75,7 +75,7 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-2. Click **Environments** in the left sidebar.
+2. Click **Environments** in the navigation pane.
 
 3. Click **Details** for the environment that you want to debug.
 

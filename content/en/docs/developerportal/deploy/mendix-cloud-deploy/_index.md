@@ -162,12 +162,11 @@ To deploy your app directly from Studio Pro, follow these steps:
 You can also deploy an app from the Team Server. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Apps** in the top navigation panel.
-3. Select your app.
-4. Go to **Environments**.
-5. Click **Create Package from Teamserver**.
-6. Select your desired branch and revision and click **Next**.
-7. Give the build a version number and click **Build this revision**.
+2. Select your app.
+3. Click **Environments**.
+4. Click **Create Package from Teamserver**.
+5. Select your desired branch and revision and click **Next**.
+6. Give the build a version number and click **Build this revision**.
 
 The package is now deployed to the cloud.
 

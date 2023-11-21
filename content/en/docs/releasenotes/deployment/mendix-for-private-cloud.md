@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 17, 2023
+
+#### Data Migration Tool (Preview) v0.0.4
+
+* We added support for backing up and restoring data in environments using [AWS IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/) authentication.
+
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
+
 ### November 3, 2023
 
 #### Portal Fixes
@@ -34,7 +44,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Deploy API Improvements
 
-* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. 
+* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized.
 
 ### October 30, 2023
 
@@ -52,7 +62,7 @@ The data migration tool is available as a technical preview. For documentation a
 
 * We have added an option to specify additional custom pod labels for an environment from the portal.
 * We have added an option to configure the ephemeral storage in the core resources selection flow.
-* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963) 
+* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963)
 * We have fixed the issue where a user was able to select custom plans created for other namespaces.
 * We have added an extra warning message when a user tries to switch from default to custom core resource plans.
 
@@ -99,7 +109,7 @@ This tool is available as a technical preview. For documentation and download li
 #### Portal Improvements
 
 * We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
-* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with navigation panel in a sidebar to the left.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with the navigation pane in a sidebar to the left.
 
 #### Deploy API Improvements
 
@@ -550,7 +560,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have increased the deployment package size limit from 200 MB to 512 MB.
 * We have fixed an issue when the Runtime version was not visible on the transport package screen.
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
-* We have changed the left navigation panel to match the rest of the Developer Portal.
+* We have changed the navigation pane to match the rest of the Developer Portal.
 
 ### November 15, 2021
 

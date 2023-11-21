@@ -24,7 +24,7 @@ You can also create clusters and namespaces using the [Mendix for Private Cloud 
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A Kubernetes platform with a version from 1.13 through 1.20, or OpenShift version 3.11 or above (version 4.4 and above is recommended)
+* A supported Kubernetes platform; for more information, see [Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#211-supported-versions)
 * An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
@@ -1088,6 +1088,44 @@ Alternatively, for Standalone clusters, pod labels can be specified in the `Mend
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
 
+### 6.9 GKE Autopilot Workarounds {#gke-autopilot-workarounds}
+
+In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements. 
+
+As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to deployments and pods.
+
+To address this issue, you can configure the Mendix Operator to align with GKE's requirements. This involves setting the resources (specifically, the CPU, memory, and ephemeral storage) to be equal to the limits defined in the `OperatorConfiguration` for both the `sidecar` and `metrics-sidecar` containers. Along with this, you must ensure that the resource limits for the CPU, memory, and ephemeral storage are equal to the resource requests in the Private Cloud Portal. For more information on setting the core resources on the Portal, see [Custom Core Resource Plan](/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan).
+
+You must also create a patch file for configuring the core resources in the `OperatorConfiguration`, as in the following example:
+
+```yaml
+spec:
+  buildResources:
+    limits:
+      cpu: "1"
+      memory: 256Mi
+    requests:
+      cpu: "1"
+      memory: 256Mi
+  metricsSidecarResources:
+    limits:
+      cpu: 100m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 32Mi
+```
+
+Run the following command in order to update the core resources in the `OperatorConfiguration`:
+
+```shell {linenos=false}
+kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration --type merge -p "$(cat <patchedFile>)"
+```
+
+{{% alert color="info" %}}
+Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory resources. If a container requests a substantial amount of memory, it should also correspondingly request more CPU cores. For detailed information on resource requests, you can refer to the [Resource Requests in Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests) documentation provided by Google Kubernetes Engine.
+{{% /alert %}}
+
 ## 7 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
@@ -1305,9 +1343,25 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
-You can configure the runtime metrics for the environment in the **Runtime** section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
+{{% alert color="info" %}}
+When removing an **Ingress annotation** from the Private Cloud Portal, it is important to note that the annotation will not be automatically removed from the Ingress. In the event that an ingress annotation is removed, please be aware that the annotation will persist within the Ingress object. In order to remove the annotation from the Ingress object, you can run the folllowing commands:
 
-You can also configure the pod labels for the environment in the **Labels** section. For more details, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels)
+To retrieve the value of the Ingress object:
+
+```shell
+kubectl -n {namespace} get ingress
+```
+
+To remove the annotation:
+
+```shell
+kubectl -n {namespace} annotate ingress {ingress-object} {annotationKey}-
+```
+{{% /alert %}}
+
+You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
+
+You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels).
 
 #### 7.2.2 Members
 

@@ -81,8 +81,8 @@ Now you can start [querying the database](#query-database) to select data for us
 
 To query the database, do the following:
 
-1. Enter a Query **Name** so you can access the same query later. This will be saved once you click **Save Query & Create Entity** in the [Create an Entity from the Response](#create-entity) section.
-2. Enter your `SELECT`  **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * FROM Cars` selects all rows in the **Cars** table:
+1. Enter a query **Name** so you can access the same query later.
+2. Enter your `SELECT` **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * FROM Cars` selects all rows in the **Cars** table:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
    
@@ -104,15 +104,15 @@ To learn more about SQL queries and parameters, consult the documentation of the
 
 ### 3.3 Using Query Response {#use-query-response}
 
-After [querying the database](#query-database), you can look at the response in the **Reponse** screen. 
+After [querying the database](#query-database), you can view the response in the **Reponse** screen. 
 
-Click **Use Response** if you like what you see and want to [create an entity from the reponse](#create-entity).
+Click **Use Response** if you want to [create an entity from the response](#create-entity).
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/execute-query.png" >}}
 
 ### 3.4 Creating an Entity from the Response {#create-entity}
 
-In the **Response Structure** screen, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
+In the **Response Structure** tab, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/use-response.png" >}}
 
@@ -125,7 +125,7 @@ Click **Save Query & Create Entity** to create the entity and add it to your dom
 Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
 
 1. Create a new microflow and drag the **Query external database** activity into it.
-2. In the **Database** field, click **Select** to choose the database you want to query.
+2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
 5. Specify if you want to **Use return value** (for example, a list of `cars`).

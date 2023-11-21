@@ -96,12 +96,12 @@ You can find a list of known limitations below, however, we advise you to check 
 
 | Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
 | ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
-| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB* (warning 50 MB)  | 5 GB                |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB)  | 5 GB                |
 | GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
 | Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
 | Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
 
-\* Currently you will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
+¹ You will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
 
 #### 2.6.1 Azure Repos and Azure DevOps Server 
 

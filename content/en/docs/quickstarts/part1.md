@@ -48,7 +48,7 @@ Here you will choose an app starting point. It is key that you choose a starting
     * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
     * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
 1. Name your app *Quickstart App* and click the **Create app** button.
-        {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="450px" alt="New app">}}
+        {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="450px" alt="Create app">}}
 1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
 
     {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
@@ -57,7 +57,7 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 * [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
 * [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
-    {{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="New app">}}
+    {{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
 
 
 ## 4 Exploring Studio Pro
@@ -76,17 +76,17 @@ The top bar contains the menus, buttons, and other UI elements you need for fund
 
 For more information on the top bar's menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
-{{< figure src="/attachments/quickstarts/part1/4.1-topbar1.png" width="450px" alt="New app">}}
+{{< figure src="/attachments/quickstarts/part1/4.1-topbar1.png" width="450px" alt="Studio Pro">}}
 
 ### 4.2 App Structure on the Left
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
 
-{{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="App Structure">}}
+{{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="Left dockable pane">}}
 
 Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
 
-{{< figure src="/attachments/quickstarts/part1/4.2-styles.png" alt="App Structure">}}
+{{< figure src="/attachments/quickstarts/part1/4.2-styles.png" alt="Modules">}}
 
 
 ### 4.3 Bottom Dockable Pane 
@@ -138,7 +138,7 @@ Mendix by default uses its own built-in HSSQL database, but Mendix also supports
 
     * There is already an entity here: **Login** (it is part of the template and is used only for native mobile authentication, so you can ignore it for now)
 
-    {{< figure src="/attachments/quickstarts/part1/5.2-loginentity.png" width="450px" alt="Create entity">}}
+    {{< figure src="/attachments/quickstarts/part1/5.2-loginentity.png" width="450px" alt="Login entity">}}
 
 1. Add an entity, *Picture*, to store all your uploaded images in the database. Drag a new **Entity** from the Toolbox and drop it into the domain model (or right-click anywhere in the domain model to add a new entity). 
 1. Double-click the new entity to open its properties window:
@@ -184,11 +184,9 @@ Now it is time to build your photo album app:
 
     {{< figure src="/attachments/quickstarts/part1/6-database1.png" width="450px" alt="Open data properties">}}
 
-    {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="450px" alt="Data source tab">}}
-
 1. Leave the **Datasource type** as **Database** and under **Entity** select the **Picture** entity we created earlier, then click **OK** to close the window:
 
-    {{< figure src="/attachments/quickstarts/part1/template-edits.png" width="450px" alt="Configure data source">}}
+    {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="450px" alt="Configure data source">}}
 
 1. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**.
 
@@ -206,7 +204,7 @@ Next we want to replace some of the auto-generated content inside the template g
 1. Right-click in the empty space and select **Add building block**.
 1. Search for and select **Card action with image**:
 
-    {{< figure src="/attachments/quickstarts/part1/6-card5.png" width="450px" alt="Connect page">}}
+    {{< figure src="/attachments/quickstarts/part1/6-card5.png" width="450px" alt="Card action">}}
 
 A building block is a collection of pre-styled display widgets. A building block is similar to a component in React.js. Building blocks are data agnostic, meaning they are created without data and you need to link the relevant data sources for the building block’s components when including them in the page.
 
@@ -217,7 +215,7 @@ To start, replace the static image with the image the user uploads to the databa
 1. Right-click on the static image viewer and click **Convert to dynamic image**. 
 1. Right-click on the image viewer again, click **Select data source**, and then search for your **Picture** entity (click **Yes** when prompted to automatically fill the contents of the widget).
 
-    {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="450px" alt="Connect page">}}
+    {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="450px" alt="Autofill">}}
 
 Your **Images** will now be displayed from the database, but the **Labels** on the page will still be displaying their default text. To fix this, do the following:
 

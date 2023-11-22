@@ -44,7 +44,11 @@ Click **View Live Log** to access your app's log in real time. You can use the d
 The live log displays in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
 
-At the bottom of the **Logs** page, there is an activity log. This section reports data on who has viewed or downloaded the logs. You can see which log was interacted with, by whom, and when. This activity log records access by team members as well as members of Mendix Support, who may view your app's logs in connection with any support tickets you have open. If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download the activity log data as a CSV file. 
+At the bottom of the **Logs** page, there is an activity log. This section reports data on who has viewed or downloaded the logs. You can see which log was interacted with, by whom, and when. If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download the activity log data as a CSV file.
+
+{{% alert color="info" %}}
+The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
+{{% /alert %}}
 
 {{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" >}}
 

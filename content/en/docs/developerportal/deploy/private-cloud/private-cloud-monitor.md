@@ -1,4 +1,4 @@
-	---
+---
 title: "Monitoring Environments in Mendix for Private Cloud"
 linktitle: "Monitor Environments"
 url: /developerportal/deploy/private-cloud-monitor/

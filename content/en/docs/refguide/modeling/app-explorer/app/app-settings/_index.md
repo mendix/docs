@@ -39,13 +39,23 @@ If this option is enabled (**true** by default), Mendix analyzes every microflow
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 URL Prefix
+### 3.3 URL Prefix{#url-prefix}
 
 Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" >}}
 
-The URL prefix must be alphanumeric and cannot be empty, whitespace, or be any of the following values: "ws", "ws-doc", "rest-doc", "odata", "odata-doc", "api-doc", "xas", "reload". Otherwise, you will get a consistency error.
+The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
+* "ws"
+* "ws-doc"
+* "rest-doc"
+* "odata"
+* "odata-doc"
+* "api-doc"
+* "xas"
+* "reload"
+
+If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 
 ### 3.4 After Startup{#after-startup}
 

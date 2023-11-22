@@ -17,7 +17,7 @@ To learn more about the roles of team members, see [App Roles](/developerportal/
 
 ## 2 Viewing Your Nodes{#nodes}
 
-To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation](/developerportal/#global-navigation) menu and click **Deployment**.
+To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment**.
 
 You will see a list of all your licensed nodes:
 

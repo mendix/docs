@@ -54,32 +54,32 @@ The activity log records access by team members as well as members of Mendix Sup
 
 ## 3 Apps on SAP Business Technology Platform
 
-For apps deployed to SAP Business Technology Platform (SAP BTP) you can see the logs using Kibana.
+For apps deployed to SAP Business Technology Platform (SAP BTP), you can see the logs using Kibana.
 
 {{% alert color="info" %}}
-To make full use of Kibana and see proper mapping of the log level, multiline log messages, and stack traces, you will need to configure the *SAP Logger Connector* in your app. For more information see [SAP Logger Connector](/appstore/connectors/sap/sap-logger/).
+To make full use of Kibana and see proper mapping of the log level, multi-line log messages, and stack traces, you need to configure the *SAP Logger Connector* in your app. For more information, see [SAP Logger Connector](/appstore/connectors/sap/sap-logger/).
 {{% /alert %}}
 
-The logs page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
+The **Logs** page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
 
 {{< figure src="/attachments/developerportal/operate/logs/log-sap.png" alt="Logs Page SAP" >}}
 
 You may be asked to provide your SAP credentials before you can see the log in Kibana.
 
-The Kibana user guide is available here: [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) and within Kibana. More information on how Kibana is integrated with SAP BTP is available on the SAP help site here: [Application Logging for the Cloud Foundry Environment](https://help.sap.com/viewer/ee8e8a203e024bbb8c8c2d03fce527dc/Cloud/en-US/68454d44ad41458788959485a24305e2.html).
+For more details about using Kibana, consult the [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html). For more details on how Kibana is integrated with SAP BTP, see [Application Logging for the Cloud Foundry Environment](https://help.sap.com/viewer/ee8e8a203e024bbb8c8c2d03fce527dc/Cloud/en-US/68454d44ad41458788959485a24305e2.html).
 
-{{% alert color="info" %}}For apps deployed to environments created before 22 October 2018, the *Application Logging (application-logs)* service will not have been bound to your app automatically. To resolve this you can either:
+{{% alert color="info" %}}If your app is deployed to an environment created before October 22, 2018, the **Application Logging (application-logs)** service will not have been bound to your app automatically. To resolve this, you can do one of the following:
 
-1. Create a new environment and deploy your app there.
+* Create a new environment and deploy your app there.
 
-2. Bind the service to your existing app by:
+* Bind the service to your existing app, as follows:
 
-    * Going to the SAP BTP cockpit
-    * Going to the space for your environment
-    * Finding *Application Logging* in the Service Marketplace
-    * Going to *Instances*
-    * Creating a *New Instance* and following the instructions, ensuring that you bind it to your app
-    * Stopping and starting the app
+    1. Go to the SAP BTP cockpit.
+    2. Go to the space for your environment.
+    3. Find **Application Logging** in the Service Marketplace.
+    4. Go to **Instances**.
+    5. Create a **New Instance** and follow the instructions, ensuring that you bind it to your app.
+    6. Restart the app.
 {{% /alert %}}
 
 ## 4 Free App
@@ -92,4 +92,4 @@ You can still interact with the sample data, and you can click **View Live Log**
 
 ## 5 App Deployed to Other Clouds
 
-Logs are not available in the Development Portal for apps running on clouds not mentioned above. You will need to go to the cloud management portal for the cloud to which your app is deployed.
+Logs are not available in the Development Portal for apps running on any clouds that are not mentioned above. To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For details on setting up Private Cloud logs, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).

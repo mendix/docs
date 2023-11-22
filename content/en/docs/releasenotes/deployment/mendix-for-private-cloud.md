@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 23, 2023
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor/#import-dashboard) for native metrics by enhancing the deduplication of metrics within your applications. This will further optimize the metric data and a consolidated metrics per application.
+* We have enhanced the readability of graphs for JVM process memory usage in our application by adjusting the Eden_space id.
+
 ### November 17, 2023
 
 #### Data Migration Tool (Preview) v0.0.4

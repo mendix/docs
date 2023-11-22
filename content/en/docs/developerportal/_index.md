@@ -19,53 +19,7 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the key compone
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-## 2 Navigation
-
-The global navigation top bar and menu work the same in the Developer Portal as they do in other browser-based parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). The global navigation is always accessible. 
-
-### 2.1 Global Navigation Menu {#global-navigation}
-
-On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access the main menu:
-
-{{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
-
-Click the menu items to navigate to different parts of the Mendix Platform, or hover over the menu items to expand the sections for further access.
-
-### 2.2 Search
-
-In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
-
-Use the various filters to refine your search results:
-
-{{< figure src="/attachments/developerportal/search-menu.png" width="500" >}}
-
-### 2.3 Support Menu
-
-Click the **Open Support Menu** button (via the question mark icon) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/developerportal/community-tools/mendix-forum/#questions-tab) to the Mendix community, [share an idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/developerportal/support/).
-
-{{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
-
-{{% alert color="info" %}}
-If you see **Get Started with Mendix**, a red dot next to this menu item will remain there for 30 days after your signup.
-{{% /alert %}}
-
-### 2.4 Notifications Menu {#notifications}
-
-Click the **Open Notifications Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
-
-To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
-
-{{< figure src="/attachments/developerportal/notifications.png" width="300" >}}
-
-{{% alert color="info" %}}
-To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](#my-apps) page.
-{{% /alert %}}
-
-### 2.5 Account
-
-Click your avatar to access the account menu, which has relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [User Settings](/developerportal/community-tools/mendix-profile/#settings).
-
-## 3 Company Buzz and Apps {#my-company-apps}
+## 2 Company Buzz and Apps {#my-company-apps}
 
 In the top bar of the Developer Portal, two additional menu items are available: 
 
@@ -78,7 +32,7 @@ In the top bar of the Developer Portal, two additional menu items are available:
     * If you click an app for which you are not an team member, you will see the app details
     * You can also sort the order of the apps here
 
-## 4 My Apps {#my-apps}
+## 3 My Apps {#my-apps}
 
 To get started with building a new app, click **Create App** to open a page where you can choose a starting point:
 
@@ -92,7 +46,7 @@ The **All** tab displays all the apps for which you are a [Team](/developerporta
 
 The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
 
-### 4.1 App Tiles
+### 3.1 App Tiles
 
 Click an app tile to see the app [Buzz](/developerportal/general/buzz/#app-buzz).
 
@@ -106,12 +60,12 @@ To stop watching an app and disable notifications for that app, click the eye ic
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-## 5 Navigation Pane {#navigation-pane}
+## 4 Navigation Pane {#navigation-pane}
 
 When you select an app in the Developer Portal, you can navigate between sections using the navigation pane on the left side of the screen. The navigation pane is divided into four categories: [General](/developerportal/general/), [Project Management](/developerportal/project-management/), [App Insights](/developerportal/app-insights/), and [Deployment](/developerportal/deploy/general/).
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="25%" >}}
 
-## 6 Guide Categories
+## 5 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:

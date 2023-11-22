@@ -181,7 +181,7 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ### 9.1 Micro- And Nanoflow Editor
 
-Logic editors are currently being redesigned. The Beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the Beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors Beta](/refguide/logic-editors-beta/).
+Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
 
 ## 10 Read More
 

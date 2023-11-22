@@ -37,7 +37,7 @@ In the **Search** box, you can search the platform for **Docs**, **Forum** posts
 
 Use the various filters to refine your search results:
 
-{{< figure src="/attachments/developerportal/search-menu.png" width="300" >}}
+{{< figure src="/attachments/developerportal/search-menu.png" width="500" >}}
 
 ### 2.3 Support Menu
 
@@ -49,9 +49,9 @@ Click the **Open Support Menu** button (via the question mark icon) to read up o
 If you see **Get Started with Mendix**, a red dot next to this menu item will remain there for 30 days after your signup.
 {{% /alert %}}
 
-### 2.4 Notifications {#notifications}
+### 2.4 Notifications Menu {#notifications}
 
-Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
+Click the **Open Notifications Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
 To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
 

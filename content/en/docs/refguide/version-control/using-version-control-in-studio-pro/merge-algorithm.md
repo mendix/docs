@@ -13,29 +13,33 @@ aliases:
 
 ## 1 Introduction
 
-While working on your changes it may happen that your current workspace won't have all the changes from the server that other members had done.
+While working on your changes you may find that your local copy of the app model doesn't have all the changes that other team members have [committed](/refguide/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/general/team-server/), or an [on-premises server](/refguide/on-premises-git/)).
 In Git terminology this is called 'being behind'.
 
 When this happens, Mendix Studio Pro offers two ways to combine your changes with changes from the server: [Rebase](#rebase) and [Merge commit](#merge). 
 
-Both options support the same features were it comes to [resolving the conflicts](#resolve):
+Both options support the following features when it comes to [resolving the conflicts](#resolve):
 
-* **Fine-grained conflict resolution:** When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
-* **No conflicts on parallel changes to lists of widgets:** When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
+* **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents, resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. All non-conflicting changes from both sides are accepted automatically.
+* **No conflicts on changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list.
+* Can be aborted at any time. Studio Pro will continue from your latest local commit.
 
-In general we recommend users to use the Rebase strategy when combining changes. In exceptional cases, for example when you have a lot of local commits where you expect conflicts, a merge commit might be the better choice. Below we have listed the differences between the two approaches:
+The differences between the two approaches are as follows:
 
-* Rebase (default): 
-    * Recommended when actively collaborating on the same branch.
-    * Treat changes from the server as leading, by first retrieving the server state and then reapplying your work on top of it. 
-    * This results in a simple commit history.
-    * Conflicts are resolved when reapplying your local commits. If you have 3 local commits, this could trigger conflict resolution 3 times.
-    * Rebasing can be aborted at any time. Studio Pro will continue from your latest local commit.
+* Rebase (*default*): 
+    * Treats changes from the server as leading, by first retrieving the server state and then reapplying your work to it. 
+    * Results in a simple commit history.
+    * Resolves conflicts when reapplying your local commits. If you have 3 local commits, this could trigger conflict resolution 3 times.
 * Merge commit: 
-    * Treat local and remote changes equally, and combine them in a separate 'merge commit'.
-    * This results in a more complicated commit history.
-    * Conflict resolution happens once, regardless of the number of local and remote commits being merged.
-    * Merging can be aborted at any time. Studio Pro will continue from your latest local commit.
+    * Treats local and remote changes equally, and combines them in a separate 'merge commit'.
+    * Results in a more complicated commit history with extra merge commits.
+    * Resolves conflicts once, regardless of the number of local and remote commits being merged.
+
+{{% alert color="info" %}}
+In general we recommend users to use the Rebase strategy when combining changes, especially when actively collaborating on the same branch.
+
+In exceptional cases, for example when you have a lot of local commits where you expect conflicts, a merge commit might be the better choice. 
+{{% /alert %}}
 
 ## 2 Work Example {#example}
 

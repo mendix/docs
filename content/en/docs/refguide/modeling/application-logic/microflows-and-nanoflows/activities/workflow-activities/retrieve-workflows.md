@@ -15,6 +15,12 @@ A **Retrieve workflows** activity can be used to retrieve a list of **System.Wor
 
 It needs the [Workflow Context](/refguide/workflow-parameters/) object as its input. A given Workflow Context object can be used to instantiate one or several workflow instances. It will break at Runtime if the passed Workflow Context object is empty.
 
+You can use this activity to check if the Workflow Context object is already used in a workflow, and if so, which workflow is used to process the Workflow Context object.
+
+{{% alert color="info" %}}
+All the workflow objects this activity returns are of type **System.Workflow**, but they can be related to different workflow definitions that are of type [System.WorkflowDefinition](/refguide/workflow-engine/#definition).
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of retrieve workflows properties is presented in the image below:

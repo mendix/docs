@@ -3,7 +3,7 @@ title: "Global Navigation"
 url: /developerportal/global-navigation/
 description: "Describes the global navigation and top bar that is available throughout the online Mendix Platform."
 tags: ["mendix", "developer portal", "global navigation", "search", "support menu", "notifications", "account"]
-weight: 40
+weight: 1
 ---
 
 ## 1 Introduction

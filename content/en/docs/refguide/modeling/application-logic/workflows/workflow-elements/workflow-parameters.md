@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "parameters", "workflow parameters"]
 
 A parameter is a special kind of variable that is used as input for the workflow. When a workflow is triggered, the parameter is filled with the current values.
 
-In the workflow editor, you can see the **WorkflowContext** parameter in the upper-left corner. In the picture below, the object is shown in *blue* and the parameter name is shown in *black*.
+In the workflow editor, you can see the **WorkflowContext** parameter in the upper-left corner. In the picture below, the parameter type is shown in *blue* and the parameter name is shown in *black*.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-parameters/workflow-parameters.png" >}}
 

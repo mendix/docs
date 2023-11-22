@@ -21,16 +21,15 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 ## 2 Company Buzz and Apps {#my-company-apps}
 
-In the top bar of the Developer Portal, two additional menu items are available: 
+In the top bar of the Developer Portal, an additional menu item is available for **Company Apps*:
 
-{{< figure src="/attachments/developerportal/company-links.png" width="400" >}}
+{{< figure src="/attachments/developerportal/company-apps.png" >}}
 
-* Click **Company Buzz** to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company
-    * For more details, see the [Company Buzz](/developerportal/general/buzz/#company-buzz) section of *Buzz*
-* Click **Company Apps** to see all the apps created by members of your [company](/control-center/#company)
-    * If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/general/buzz/#app-buzz)
-    * If you click an app for which you are not an team member, you will see the app details
-    * You can also sort the order of the apps here
+Click **Company Apps** to see all the apps created by members of your [company](/control-center/#company).
+
+If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/general/buzz/#app-buzz). If you click an app for which you are not a team member, you will see the app details.
+
+You can also sort the order of the apps here by **Most Recent** or **App Name**.
 
 ## 3 My Apps {#my-apps}
 

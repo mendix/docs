@@ -29,7 +29,7 @@ On the left side of the top bar, click the **Open Global Navigation** button (vi
 
 {{< figure src="/attachments/developerportal/navigation-menu.png" width="250" >}}
 
-You can click the menu items to navigate to different parts of the Mendix Platform, or you can hover over the menu items to expand the sections for further access.
+Click the menu items to navigate to different parts of the Mendix Platform, or hover over the menu items to expand the sections for further access.
 
 ### 2.2 Search
 
@@ -41,24 +41,24 @@ Use the various filters to refine your search results:
 
 ### 2.3 Support Menu
 
-Click the **Open Support Menu** button (via the question mark icon) to read up on [What's New](https://www.mendix.com/releases/), ask questions to the [Mendix community](/developerportal/community-tools/mendix-forum/#questions-tab), share an [idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [documentation](/), or contact [Mendix Support](/developerportal/support/).
+Click the **Open Support Menu** button (via the question mark icon) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/developerportal/community-tools/mendix-forum/#questions-tab) to the Mendix community, [share an idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/developerportal/support/).
 
 {{< figure src="/attachments/developerportal/help-menu.png" width="300" >}}
 
 {{% alert color="info" %}}
-If you see **Get Started with Mendix** on this menu, a red dot next to this menu item will remain there for 30 days after your signup.
+If you see **Get Started with Mendix**, a red dot next to this menu item will remain there for 30 days after your signup.
 {{% /alert %}}
 
 ### 2.4 Notifications {#notifications}
 
 Click the **Open Notification Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
-To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the configure the settings in [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
+To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
 
 {{< figure src="/attachments/developerportal/notifications.png" width="300" >}}
 
 {{% alert color="info" %}}
-To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.
+To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](#my-apps) page.
 {{% /alert %}}
 
 ### 2.5 Account

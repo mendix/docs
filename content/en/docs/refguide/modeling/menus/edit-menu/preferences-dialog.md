@@ -119,7 +119,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 6.2 Git 
+### 6.2 Git{#git}
 
 #### 6.2.1 Name
 

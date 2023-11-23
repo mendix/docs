@@ -41,91 +41,91 @@ In general we recommend users to use the Rebase strategy when combining changes,
 In exceptional cases, for example when you have a lot of local commits where you expect conflicts, a merge commit might be the better choice. 
 {{% /alert %}}
 
-## 2 Work Example {#example}
+## 2 Scenario {#scenario}
 
-To explain and illustrate the differences between Rebase and Merge commit when combining changes, we will work with this example. You can jump ahead to [Rebase](#rebase) or [Merge commit](#merge) for specifics of the two approaches.
+The clearest way to explain and illustrate the differences between Rebase and Merge commit when combining changes, is to examine an example scenario. The sections [Rebase](#rebase) and [Merge commit](#merge) show how the two approaches work.
 
 ### 2.1 Starting point 
 
-We start with two entities 'User' and 'Game'. This will be the starting point of your project.   
+There are two entities `User` and `Game` which you have added to the domain model of your project.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Starting_State.png" alt="Domain Model Commit 1" >}} 
+The User entity includes string attributes `E_mail` and `Second_E_mail`.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Starting_State.png" >}} 
 
 ### 2.2 Local changes, your work 
 
 During your work you make two changes, each one in separate commit. 
 
-In the first commit you decide that 'E-mail' should be renamed to 'Email' 
+In the first commit you rename `E_mail` to `Email` 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/First_Local_Commit.png" alt="Your Work Commit 4" >}} 
 
-In the next commit you rename 'Second E-mail' to be consistent with previous change. 
+In the next commit you rename `Second_E_mail` to `Second_Email` to be consistent with previous change. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Second_Local_Commit.png" alt="Your Work Commit 5" >}}   
 
 ### 2.3 Server Changes
 
-In the meantime, your colleague also decided to make some changes to both email fields. 
+In the meantime, your colleague also decided to make some changes to both email fields. They have renamed `E_mail` to `EmailAddress` and removed `Second_E_mail` entirely. These changes have been pushed to the server.
 
-Renaming 'E-mail' to 'EmailAddress' and removing 'Second_E-mail' entirely and pushing those changes to the server.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Remote_State.png" alt="Remote Work Commit 2" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/DomainModel/Remote_State.png" >}} 
 
 ### 2.4 Summary 
 
-The current situation could be represent as shown below: 
+The current situation could be represent as shown below. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Starting point" width="525" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Starting_state.png" alt="Team Server with three commits (1, 2, and 4), while in Studio Pro there are also three commits (1, 3, and 5)" width="525" >}} 
 
 ## 3 Combining Changes
 
-In this chapter we'll go through the [example](#example) with the different approaches. 
+This section goes through the [example scenario](#scenario) with the two different approaches: [Rebase](#rebase) and [Merge commit](#merge). 
 
-Every time changes can be combined, for example when Pulling changes from the server, you can choose the approach. The default can be changed by adjusting the [user preference](/refguide/preferences-dialog/#62-git).
+Every time changes can be combined, for example when pulling changes from the server, you can choose the approach. The default can be changed by adjusting the [user preference](/refguide/preferences-dialog/#git).
 
 ### 3.1 Rebase {#rebase}
 
-Rebasing is the default way to integrate your work with the server changes by moving your changes to the tip of the server.
-
-We'll use this as the starting state, based on the [example](#example) above. 
+Rebasing is the default way to integrate your work with the server changes. It moves your changes to the tip of the changes pulled from the server.
 
 {{% alert color="info" %}}
-During the rebase process, there is a slight terminology change in Studio Pro compared to merge. The images below illustrate the process.  
+During the rebase process, there is a slight terminology change in Studio Pro compared to merge.
 {{% /alert %}}
 
-#### 3.1.1 Rebase started 
+The rebase process is described below, starting with the state described in the [example scenario](#scenario), above.
 
-After starting to rebase your two commits (#3 and #5) are temporarily put aside, and Studio Pro will show the latests changes from the tip of server (which includes #2 and #4).
+#### 3.1.1 Rebase Started 
+
+After starting the rebase, your two commits (#3 and #5) are temporarily put aside, and Studio Pro shows the latest changes which were pulled from the server (which includes commits #2 and #4).
+
+{{% alert color="warning" %}}
+Your work will be now referenced as 'Theirs', while the server changes will be 'Mine'. This is opposite to the way that the work is labelled for a merge commit.
+{{% /alert %}}
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_1.png" alt="Rebase Step 1" width="525" >}} 
 
-{{% alert color="info" %}}
-Your work shall be now referenced as 'Theirs', while server changes shall be 'Mine' 
-{{% /alert %}}
-
 #### 3.1.2 Resolving the First Conflict  
 
-Git will try to apply your first commit (`#3`) to the tip (after `#4`). 
+Git tries to apply your first commit (`#3`) to the tip of the rebasing branch ('Mine'). The commit will come after commit `#4`. 
+
+If there were no conflicts when comparing your commit (`#3`) with the latest state from the server (`#4`), Studio Pro automatically continues. A new commit would be created from your commit, shown as commit `#3'` in the image below. The process would then continue with the next commit (`#5`).
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_2.png" alt="Rebase Step 2" width="525" >}} 
 
-If there are no conflicts when comparing your commit (`#3`) with the latest state from the server (`#4`), Studio Pro will automatically continue. A new commit will be created from your commit, which we'll call commit `#3'`.
+In our example, however, there is a conflict as the `E_mail` attribute was renamed both on the server, and in your local work.
 
-In our example there is a conflict however, as the 'Email' attribute was renamed both on the server, as well as in your local work.
+In the **Changes** pane you can see your change in the 'Theirs' column while your colleague's work is shown in the 'Mine' column. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_First.png" alt="First conflict rebase" >}} 
 
-In the above example you can see that your work is represented in the 'Theirs' column while your colleague's work is 'Mine'. 
-
-You need to resolve the conflict to proceed with the rebasing process. After resolving conflicts you can amend the commit message which you previously defined, and commit `#3'` is created. 
+You need to [resolve the conflict](#resolve) to proceed with the rebasing process. After resolving the conflict you can amend the current commit message and commit `#3'` is created. 
 
 Now Studio Pro will continue with rebasing the next local commit (`#5`).
 
 #### 3.1.3 Resolving the Second Conflict 
 
-While Rebasing the next commit (`#5`) another conflict is detected. In this example we resolve this by adding another attribute 'Login', to the 'User' entity.
+While Rebasing the next commit (`#5`) another conflict is detected. In this example we resolve this by adding another attribute `Login`, to the `User` entity.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_Mine_Change.png" alt="New change during conflict rebase" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_Mine_Change.png" >}} 
 
 Above you can see that your new change is represented as 'Mine', together with changes that were taken from the server. 
 
@@ -137,111 +137,108 @@ As this was the last local commit to reapply, the rebasing can now be completed.
 
 #### 3.1.4 Test Changes 
 
-When the rebase process is completed, the work that was put aside is now removed. As you can see in the image below, your work (`#3'` and `#5'`) is put after the state that was on the server.
+Once the rebase process is completed, the original commits (`#3` and `#5`) that were put aside are now removed. The final state of the branch has the commits `#1`, `#2`, `#4`, `#3'`, and `#5'`, while the server still only has commits `#1`, `#2`, and `#4`.
  
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_4.png" alt="Rebase Step 4" width="525" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_4.png" width="525" >}}
 
-As you can see your work is still on your local machine. After testing whether the combined state works as expected, you can push the combined state to the server.
+Your work is still on your local machine and you should test whether the combined state works as expected.
 
 #### 3.1.5 Push Changes 
 
-After you pushed your work to the server state of it is represented below:
+After testing the merged changes, push your work to the server to set the server state to the same as your local state.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_5.png" alt="Rebase Step 5" width="525" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_5.png" width="525" >}}
 
 {{% alert color="info" %}}
-While you were completing the rebase process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until `#5'`) with the newest changes on the server.
+If a colleague has pushed other changes to the server while you were working on the merge, Studio Pro will again ask how to combine your current work (including the new `#3'` and `#5'` commits) with the latest changes on the server.
 {{% /alert %}}
 
 ### 3.2 Merge commit {#merge}
 
-Making a merge commit is another way you could use to integrate you work with remote changes. The combined state is committed using a separate special merge commit.
+Merge commit is an alternative way to integrate your work with remote changes. The combined state is committed using a separate special merge commit.
 
-We'll use the same starting state from the [example](#example) above. 
+The merge commit process is described below, starting with the state described in the [example scenario](#scenario), above.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Starting_state.png" alt="Starting point" width="525" >}} 
+#### 3.2.1 Merge Started 
 
-#### 3.2.1 Merge started 
-
-After starting the merge process Studio Pro will combine your local work (`#5`) with the state of the server (`#4`). 
+After starting the merge process Studio Pro will combine your local work (`#3` and `#5`) with the state of the server (`#2` and `#4`). 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_1.png" alt="Merge Step 1" width="525" >}} 
 
-{{% alert color="info" %}}
-Your work shall be now referenced as 'Mine', while server changes shall be 'Theirs’. 
+{{% alert color="warning" %}}
+Your work shall be now referenced as 'Mine', while server changes shall be 'Theirs'. This is opposite to the way that the work is labelled for a rebase.
 {{% /alert %}}
 
-In the end you'll be creating a merge commit that merges commits `#4` and `#5`. The history before that (`#2` and `#3`) are also taken along.
+In the end you'll be creating a merge commit that merges commits `#2` and `#4` into your work. The changes already in your local work (`#3` and `#5`) are kept.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_2.png" alt="Merge Step 2" width="525" >}} 
 
-#### 3.2.1 Conflict resolution: resolving the two conflicts
+#### 3.2.2 Conflict resolution: resolving the two conflicts
 
-If conflicts arise between any local and remote commits, you must resolve them before creating a new commit for the combined state. Unlike rebasing, which requires conflict resolution for each local commit with conflicts, here you have only one round of conflict resolution.
+If conflicts arise between any local and remote commits, you must resolve them before creating the merge commit for the combined state. Unlike rebasing, which requires conflict resolution for each local commit with conflicts, here you have only one round of conflict resolution.
 
-**Renaming of 'Email' attribute**
+**Renaming of `E_mail` attribute**
 
-As the 'Email' attribute was renamed both on the server as well as in your local work, you need to decide which changes to retain, or make yet another version.
+As the `E_mail` attribute was renamed on both the server and in your local work, you need to decide which changes to retain, or make yet another version. In the **Changes** pane you can see your change in the 'Mine' column while your colleagues' work is shown in the 'Theirs' column. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Merge_First.png" alt="First conflict merge" >}} 
 
-In the above example you can see that your work is represented in the 'Mine' column while your colleague's work is 'Theirs'. 
+**Removal of `Second_E_mail` attribute on server**
 
-**Removal of 'Second_Email' attribute on server**
-
-Because the 'Second_Email' attribute was removed on the server, while renaming it in your local work, there is another conflict. In this example we resolve this by adding another attribute ‘Login’, to the ‘User’ entity.
+Because the `Second_E_mail` attribute was removed on the server, while renaming it in your local work, there is another conflict. In this example we resolve this by adding another attribute ‘Login’, to the ‘User’ entity.
 
 After resolving all conflicts you can proceed with testing the app.
 
-#### 3.2.2 Test Changes 
+#### 3.2.3 Test and Push Changes 
 
 When the combined state is tested, a 'merge commit' can be created for the new version of the app. This is a new commit (`#6`) which will always show that it merged commits `#4` and `#5`.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_3.png" alt="Merge Step 3" width="525" >}} 
 
-By default Studio Pro will also Push your work to the server when making a commit.
+By default Studio Pro will also push your work to the server when making a commit.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_4.png" alt="Merge Step 4" width="525" >}} 
 
 {{% alert color="info" %}}
-While you were completing the merge process on your machine, other changes may have been pushed to the server already. If that is the case, Studio Pro will again ask how to combine your work (until #6) with the newest changes on the server.
+If a colleague has pushed other changes to the server while you were working on the merge, Studio Pro will again ask how to combine your current work (including `#6`) with the latest changes on the server.
 {{% /alert %}}
 
 ### 3.3 Summary
 
-We have merged your local work with the latest state from the server and resolved all conflicts. 
-For Rebasing this meant two small rounds of conflict resolution, where you had a single round with all of the conflicts being resolved at the same time for the merge commit.
+You have merged your local work with the latest state from the server and resolved all conflicts. 
+For rebasing this meant two rounds of conflict resolution, while for a merge commit you had a single round with all of the conflicts being resolved at the same time.
 
 In the end the history on the server will look like this:
 
-* After a Rebase: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_state.png" alt="Rebase end state" width="525" >}}
-* After a Merge commit: {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_End_state.png" alt="Merge commit end state" width="525" >}}
+* After a Rebase:
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_End_state.png" alt="All commits in the order #1, #2, #4, #3', and #5'" width="525" >}}
+* After a Merge commit:
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_End_state.png" alt="Commits #1, #2, #4, and #6, with commit #6 including commits #3 and #5" width="525" >}}
 
-This illustrates that Rebasing results in a simpler commit history, while a Merge commit results in an additional commit that will always show as a branched off set of commits.
+So rebasing results in a simpler commit history, while a merge commit results in an additional commit that will always show as containing another commit or set of commits.
 
 ## 4 Resolving conflicts {#resolve}
 
-Conflicts may arise when both you and your colleague change the same things, sometimes git and/or Studio Pro is able to resolve them automatically without anyone losing work but, in some cases, those must be resolved manually.
+When you need to resolve conflicts, Studio Pro enables this in two ways: 
 
-Studio Pro enables you to resolve conflicts by choosing one of two ways: 
 * Interactive merge
 * Using whole documents
 
-While explaining resolving of conflicts we will be using [Merge](#merge) flow, besides changes about 'Mine' and 'Theirs' both look the same.
+While explaining resolving of conflicts we will be using [merge commit](#merge) flow. You can resolve conflicts during a rebase in the same way except that 'Mine' and 'Theirs' are reversed.
 
-#### 4.1 Using Interactive Merge
+### 4.1 Using Interactive Merge
 
-For the conflict, you can inspect changes and decide which version to apply. Select one of the lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**.
+For the conflict, you can inspect the changes and decide which version to apply. Select the line that represents the conflict and choose **Resolve using Mine** or **Resolve using Theirs**.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Interactive_Merge.png" alt="Interactive Merge" >}}
 
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
 {{% alert color="info" %}}
-To use keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> to undo your choice, click the document to focus it first.
+You must click the document to bring it into focus before you can use the keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> to undo or redo your choice.
 {{% /alert %}}
 
-There is a third option to deal with a conflict: **Mark as Resolved**. This means that you do not choose any side to resolve the conflict and will keep things the way they were in the original. Neither of the new text changes will be applied.
+There is a third option to deal with a conflict: **Mark as Resolved**. This means that you do not choose either side to resolve the conflict and keep things the way they were in the original. Neither of the new text changes will be applied.
 
 Once you have chosen one of the three options to resolve the conflict, green check marks will appear to indicate that this conflict has been dealt with.
 
@@ -249,16 +246,24 @@ Once all conflicts have been resolved, click the **Accept and Exit** button to f
 
 At any time, you can also choose to abort conflict resolution by clicking the **Cancel** button. The conflict will remain, and you can resolve it later.
 
-#### 4.2 Using Whole Documents 
+### 4.2 Using Whole Documents 
 
-You can resolve conflicted documents also by using either:
+You can resolve conflicted documents too. There are two cause for document conflicts:
 
-* Resolve conflict using my whole document - while merging it will resolve all conflicts in this document using your work
-* Resolve conflict using theirs whole document - while merging it will resolve all conflicts in this document using server changes
+1. One person deletes a document and the other makes a change inside that document.
+2. Both people move a document but to different places in the app tree.
+
+The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane. You can resolve the conflict by one of the following:
+
+* using my whole document - while merging it will resolve all conflicts in this document using your work
+* using theirs whole document - while merging it will resolve all conflicts in this document using server changes
 
 {{% alert color="warning" %}}
-Remember that during rebase Mine and Theirs are switched.
+Remember that Mine and Theirs are different, depending on whether you are using rebase or merge commit.
 {{% /alert %}}
 
-
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Interactive_Merge.png" alt="Interactive Merge" >}}
+
+{{% alert color="info" %}}
+If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
+{{% /alert %}}

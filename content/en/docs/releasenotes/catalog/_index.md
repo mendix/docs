@@ -13,6 +13,17 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### November 23, 2023
+
+#### Improvement
+
+* We have redirected the **Catalog** link in the Control Center to the **Curate** page instead of the Catalog home page.
+* We have displayed enumeration data types for the attributes of a data set in the Catalog UI.
+
+#### Fixes
+
+* We fixed an issue where the data source description did not display on the tile in the Popular Data Sources section.
+
 ### November 16, 2023
 
 #### Fixes

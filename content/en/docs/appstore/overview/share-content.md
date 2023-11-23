@@ -334,7 +334,7 @@ As the Mendix Marketplace grows, it is important for users to be able to find up
 
 For a component that is outdated based on the above points, this is the review and remediation process: 
 
-1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/control-center/#company), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
+1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/control-center/company-settings/), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
 2. Mendix sends two reminders during these 30 days: the first on the 15th day, and the second on the 25th day.
 3. If the component owner or Mendix Admin is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
 4. If the owner or Mendix Admin wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.

@@ -751,7 +751,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where updating a service version created a new endpoint instead of updating the existing one.
 * We fixed an issue that caused pagination URLs to be returned as *http* links rather than *https*.
-* We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/control-center/#catalog) page navigated to the Data Hub home page. Now, it navigates to Control Center.
+* We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/control-center/catalog-admin/) page navigated to the Data Hub home page. Now, it navigates to Control Center.
 
 ### September 2, 2021
 
@@ -769,7 +769,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `Mindsphere` application types.
-* We added Catalog integration with [Control Center](/control-center/#catalog). For details, see [Catalog Administration](/control-center/catalog-admin/).
+* We added Catalog integration with [Control Center](/control-center/catalog-admin/). For details, see [Catalog Administration](/control-center/catalog-admin/).
 
 ### August 19, 2021
 

@@ -163,7 +163,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 ## 11 Content Groups {#content-groups}
 
-The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/control-center/#company) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
+The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/control-center/company-settings/) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
 
 You can configure content groups for various levels of access to your company content. The available configuration tabs for each content group page are described in the sections below.
 
@@ -216,7 +216,7 @@ To remove a guest, click **Remove**.
 ### 11.4 Settings Tab {#settings}
 
 {{% alert color="info" %}}
-This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/control-center/#company).
+This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/control-center/company-settings/).
 {{% /alert %}}
 
 On this tab, you can enter a **Group Name** and a **Group Description**.

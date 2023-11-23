@@ -78,7 +78,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-* You can now [set up an SSO (BYOIDP)](/control-center/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
+* You can now [set up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/) to allow Mendix users to sign in to Mendix Platform services, including Studio Pro, using identity federation between the Mendix Platform and your corporate IdP.
 
 ### March 16, 2023
 
@@ -158,7 +158,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Feature
 
-* Mendix Admins can now configure their own [single sign-on](/control-center/set-up-sso-byoidp/) configuration from the [Security](/control-center/security/) tab of Control Center. 
+* Mendix Admins can now configure their own [single sign-on](/control-center/security/set-up-sso-byoidp/) configuration from the [Security](/control-center/security/) tab of Control Center. 
 
 ### August 26, 2021
 

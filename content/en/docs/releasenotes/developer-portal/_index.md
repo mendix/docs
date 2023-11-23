@@ -53,7 +53,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 

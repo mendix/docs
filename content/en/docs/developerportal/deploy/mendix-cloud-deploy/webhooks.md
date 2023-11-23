@@ -32,7 +32,7 @@ They are set up and work independently of the deprecated [webhooks for Sprints a
 To set up a webhook, do the following:
 
 1. Open your app in the Developer Portal.
-1. Open the **Webhooks** page from the menu on the left. You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
+1. From the navigation pane, open the **Webhooks** page. You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:
     * **Webhook Name** – This is a name, which you can use to identify the webhook.

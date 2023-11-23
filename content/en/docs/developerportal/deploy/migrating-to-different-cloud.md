@@ -16,12 +16,10 @@ aliases:
 
 This document explains how to migrate your licensed app from one Mendix Public Cloud region to another.
 
-## 2 Migration considerations
+## 2 Migration Considerations
 
 {{% alert color="warning" %}}
-Do not upgrade your runtime version at the same time that you migrate your app. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you choose to upgrade your runtime version at the same time as migrating your app, Mendix Support will not be able to assist you.
-
-If you need to upgrade your runtime version, ensure that your upgraded version is fully tested and ready before you start the migration process.
+Do not upgrade your runtime version at the same time that you migrate your app. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you choose to upgrade your runtime version at the same time as migrating your app, Mendix Support will not be able to assist you.<br><br>If you need to upgrade your runtime version, ensure that your upgraded version is fully tested and ready before you start the migration process.
 {{% /alert %}}
 
 When migrating your app, keep the following considerations in mind:
@@ -49,9 +47,9 @@ To manually migrate your app to a different node in Mendix Cloud, follow the ste
 
 First, link one of the new temporary apps to the target node.
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** and select one of your temporary apps.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), open one of your temporary apps.
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+2. From the navigation pane, go to the **Environments** page.
 
 3. Click **Select a node**.
 
@@ -63,7 +61,7 @@ For more information on how to do this, see [Licensing Mendix Cloud Apps](/devel
 
 ### 4.2 Copying the Deployment Package and Data from the Source Node to the Target Node
 
-Before migrating, you need to deploy a copy of your app to the target node. You can then copy the data from the source node to the target node. After copying the data, you should test the app and correct errors if needed. Repeat this process until all the errors are solved.
+Before migrating, you need to deploy a copy of your app to the target node. You can then copy the data from the source node to the target node. After copying the data, you should test the app and correct errors if needed. Repeat this process until all the errors are resolved.
 
 The following steps explain how to do this.
 
@@ -75,17 +73,17 @@ To download a deployment package, follow these steps:
 
 1. Go to **Environments** of the source app.
 
-2. Click **Details** for a **Deployment Package**.
+2. Click **More Options** > **Details** for a deployment package.
 
-3. Click **Download Package**.
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/deployment-details.png" alt="" >}}
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/download-package.png" >}}
+3. In the resulting **MDA Details** dialog box, click **Download**.
 
 To upload the deployment package, follow these steps:
 
 1. Go to **Environments** of the target app.
 
-2. Below the **Deployment Package Repository**, click **Upload**.
+2. In the **Deployment Package Repository** section, click **Upload**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/upload-package.png" >}}
 
@@ -103,7 +101,7 @@ Before backing up your data as described in this section, you must complete the 
 
 Transfer the backup data from the source app to the target app by following these steps:
 
-1. Download a backup from your source app (for details, see [How to Download a Backup](/developerportal/operate/download-backup/)).
+1. Download a backup from your source app. (For details, see [How to Download a Backup](/developerportal/operate/download-backup/).)
 
     {{% alert color="info" %}}Mendix recommends downloading copies of all backups that you want to keep. Once you have offboarded the old environment, they will no longer be available.{{% /alert %}}
 
@@ -123,9 +121,9 @@ To learn how to do this, see [How to Deploy the App to an Environment](/develope
 
 It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the target node).
+1. In the [Developer Portal](http://sprintr.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+2. Go to the app's **Environments** page.
 
 3. Click **Select a node**.
 
@@ -141,24 +139,24 @@ Follow these steps to link the app you detached from the source node, above, to 
 Make sure you have downloaded the latest backup and deployment package before linking your app to the target node.
 {{% /alert %}}
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that you detached from the source node.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), open the app that you detached from the source node.
 
-2. Once you are in the app, go to the **Environments** tab in the left menu.
+2. Go to the app's **Environments** page.
 
-3. Click **select a node**.
+3. Click **Select a node**.
 
-4. Select the target node by clicking **Use this Node** and linking it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
+4. Select the target node by clicking **Use this Node** and linking it to your app. The currently linked (temporary) app will unlink automatically and can be deleted.
 
 For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 ### 4.5 Changing the App URL
 
-To change the App URL (if you are not using a custom domain), contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
+To change the app URL (if you are not using a custom domain), contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
 
-* **URL** for the new app, which is available from the *Environments* page for the new app
-* **URL** for the old app, which is available from the *Environments* page for the old app
-* **App ID** for the new app, which is available from the *General* page for the new app
-* **App ID** for the old app, which is available from the *General* page for the old app
+* **URL** for the new app, which is available from the **Environments** page for the new app
+* **URL** for the old app, which is available from the **Environments** page for the old app
+* **App ID** for the new app, which is available from the **Settings** page for the new app
+* **App ID** for the old app, which is available from the **Settings** page for the old app
 
 ### 4.6 Changing a Custom Domain{#custom-domain}
 
@@ -182,7 +180,7 @@ Or, if you made a certificate request to Mendix, the private key is stored in th
 
 The two custom domain certificate options are shown below:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" alt="" width=75% >}}
 
 ### 4.7 Offboarding the Source Node
 

@@ -330,7 +330,7 @@ Follow the steps below:
 
 Congratulations! Your OData service is registered in the Catalog. 
 
-The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/catalog-admin/#settings) section of *Catalog Administration*.
+The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/control-center/catalog-admin/#settings) section of *Catalog Administration*.
 
 #### 4.2.1 Selecting an Authentication Method {#authentication}
 

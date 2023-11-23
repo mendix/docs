@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a plan that provides more than 1 GiB of memory
 
 {{% alert color="info" %}}
-Details of your plan are displayed on the environment details page.
+Details of your plan are displayed on the Environment Details page.
 {{% /alert %}}
 
 ## 3 Scaling Your Environment
@@ -43,19 +43,21 @@ If you want to scale your licensed app in Mendix Cloud, follow these steps:
 
 2. Click **Environments** to go to the Environments page.
 
-3. Click **Details** for a selected environment.
+3. Click the **Details** icon on your desired environment.
 
-4. Click **Change scaling** next to the current description of instances.
+4. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" >}}
 
 5. Set the number of **Instances** by dragging the indicator bar.
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert color="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values that exceed the memory provided by your plan, you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
+    {{% alert color="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br><br/>If you try to use scaling values that exceed the memory provided by your plan, you will get the following message "You do not have sufficient resources to configure this allocation."{{% /alert %}}    
 
 7. Click **Apply**. This restarts your environment to apply the changes.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" width=75% >}}
 
 ## 4 Examples
 

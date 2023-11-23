@@ -25,11 +25,8 @@ To download a backup of a Free App, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Select the app from which you want to download the backup.
-3. Click **Backups**.
-4. Select the backup you want to download and click **Download Backup**.
-
-    {{< figure src="/attachments/developerportal/operate/backups/download-backup/backupoptions-free.png" >}}
-
+3. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
+4. On the backup you want to download, click the **More Options** icon. Select **Download** from the drop-down list.
 5. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
 
 ## 4 Downloading a Licensed Cloud Node Backup
@@ -37,19 +34,21 @@ To download a backup of a Free App, follow these steps:
 To download a backup of a licensed app, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Open the [Global Navigation](/developerportal/#global-navigation) menu in the upper-right corner. Then click **Deployment** > **Public Cloud**.
+2. Open the [Global Navigation menu](/developerportal/global-navigation/) in the upper-left corner. Then click **Deployment** (or **Deployment** > **Public Cloud**).
 3. On the node that you want to download the backup from, click **Environments**.
-4. Click **Backups**.
+4. In the navigation pane, click **Backups**.
 5. Select the environment from which you want to download the backup.
 
-    {{< figure src="/attachments/developerportal/operate/backups/download-backup/environment.png" width="200" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/download-backup/environment.png" width="25%" >}}
 
 6. If you want to create a backup first, click **Create Backup**.
-7. Select a backup and click **Download Backup**.
+7. On the backup you want to download, click the **More Options** icon. Select **Download** from the drop-down list.
 
     {{< figure src="/attachments/developerportal/operate/backups/download-backup/backupoptions.png" >}}
 
 8. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
+
+    {{< figure src="/attachments/developerportal/operate/backups/download-backup/backup-choice.png" alt="" width=75% >}}
 
     {{% alert color="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active. In this case, you can download the backup archive immediately.{{% /alert %}}
     
@@ -60,6 +59,6 @@ To download a backup of a licensed app, follow these steps:
 
 ## 5 Read More
 
-* [How to Create a Backup](/developerportal/operate/create-backup/)
+* [Creating a Backup](/developerportal/operate/create-backup/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
-* [How to Restore a Backup](/developerportal/operate/restore-backup/)
+* [Restoring a Backup](/developerportal/operate/restore-backup/)

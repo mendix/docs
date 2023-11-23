@@ -46,7 +46,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 #### Improvements
 
 * In Control Center, on the [Members](/control-center/members/) page you can now sort members based on the number of apps to which they belong.
-* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/-general-settings) tab of the [Company Settings](/control-center/company-settings/) page.
+* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-general-settings) tab of the [Company Settings](/control-center/company-settings/) page.
 
 ### July 13, 2023
 
@@ -91,7 +91,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-* We have released a feature in Control Center where you can add and manage a [Security Contact](/control-center/company-settings/-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+* We have released a feature in Control Center where you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
   With this feature, you can do the following:
 
@@ -109,7 +109,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### Improvements
 
-* We improved the way [Company Brand](/control-center/company-settings/-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
+* We improved the way [Company Brand](/control-center/company-brand/) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
 * We removed the Brand Colors feature for Company Brand.
 
 ### September 15, 2022

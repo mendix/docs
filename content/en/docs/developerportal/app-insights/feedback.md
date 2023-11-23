@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to **Feedback** in the Developer Portal. **Feedback** enables your team to view and manage all the feedback items that users have sent from your app.
+If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. You can access this page by selecting your app in the Developer Portal and then clicking **Feedback** in the navigation pane. **Feedback** enables your team to view and manage all the feedback items that users have sent from your app.
 
 ### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
@@ -40,7 +40,7 @@ If the user does not want to receive notifications anymore, they can clear the c
 
 After a user submits a feedback item from your app, it goes automatically to **Feedback** in the Developer Portal. **Feedback** enables your team to view all the feedback items. It also allows team members with the right permissions to organize the feedback items, and add feedback items manually.
 
-{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/#profile-notification-help) in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
+{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
 
 **Feedback** contains two pages: **Inbox** and **Archive**.
 

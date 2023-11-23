@@ -98,16 +98,16 @@ If you also want to restore the **FileDocuments**, follow these steps:
 
 1. Download a **Full Snapshot**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png" width=75% alt="" >}}
 
-2. Select **App > Show App Directory in Explorer** from the Studio Pro menu:
+2. Select **App** > **Show App Directory in Explorer** from the Studio Pro menu:
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/project-directory.png" >}}
 
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
 5. Extract the contents of your **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
-6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
+6. Run the app by clicking the **Play** ▶ icon or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More
 

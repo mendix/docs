@@ -16,57 +16,36 @@ aliases:
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
-The graphs show the following types of information:
-
-* Application Statistics 
-* Database Statistics
-* Application Node Statistics
-* Database Node Statistics
-
 These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
 
 ## 2 Accessing the Metrics Graphs
 
-To view the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions.
+Metrics are included in all paid editions of Mendix Cloud.
 
-{{% alert color="info" %}}
-Metrics are included in all paid editions of Mendix Cloud. Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is allowed to grant node permissions.
-{{% /alert %}}
+To access the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-If you are the Technical Contact, you can assign permission by following these steps:
+If you meet the above conditions, you can find the graphs by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Go to **Environments** and switch to the **Permissions** tab.
-3. Choose the environment for which you want to grant access.
-    {{< figure src="/attachments/developerportal/operate/metrics/environment.png" width=150 alt="" >}}
-4. Select the **Access to Monitoring** checkbox for the people you want to grant this permission to.
+2. In the navigation panel, click **Metrics**.
+3. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
+4. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/nodepermission.jpg" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" >}}
 
-## 3 Viewing the Graphs
-
-### 3.1 Finding the Graphs
-
-You can find the graphs by following these steps:
-
-1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Metrics**.
-3. Select the environment you want to monitor.
-4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
-
-### 3.2 Interpreting the Graphs
+## 3 Interpreting the Graphs
 
 As with all complex IT systems, there are many interrelated components that can cause performance issues. This document cannot cover all possibilities; it is intended as a general introduction to the information that is displayed. It also suggests a few ideas about where to look for possible areas of concern.
 
-#### 3.2.1 Combining Information{#combine-info}
+### 3.1 Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Here are some useful graphs for this:
 
-* [Database Node CPU Usage](#Trends-dbcpu)
-* [Database Node Disk I/Os](#Trends-dbdiskstatsiops)
+* [CPU Utilization of the Database](#Trends-dbcpu)
+* [Database IOPS](#Trends-dbdiskstatsiops)
 * [Number of Handled External Requests](#Trends-appmxruntimerequests)
 
-For example, a combination of a moderate number of IO operations, low disk throughput, high CPU usage, full memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+For example, a combination of a moderate number of input/output operations (IOPs), low disk throughput, high CPU usage, full memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
 ## 4 Application Statistics
 
@@ -111,7 +90,7 @@ Additional information about request handlers is available on the following page
 
 ### 4.2 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
 
-The **User Accounts and Login Sessions** graph shows the number of logged-in user sessions for your application. It includes both named and anonymous users accounts.
+The **User accounts and login sessions** graph shows the number of logged-in user sessions for your application. It includes both named and anonymous users accounts.
 
 {{< figure src="/attachments/developerportal/operate/metrics/user-accounts-logins.png" >}}
 
@@ -167,9 +146,9 @@ These are the types:
 | **other**            | This is virtual or reserved memory space.                                                                     |
 | **thread stacks**    | This is stacks that are reserved for unique threads.                                                          |
 
-### 4.5 Application Node Operating System Memory{#Trends-appmemory}
+### 4.5 Memory Usage{#Trends-appmemory}
 
-The **Application node operating system memory** graph shows the distribution of operating system memory that is available for this server.
+The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gigabytes.
 
 {{< figure src="/attachments/developerportal/operate/metrics/node-os-memory.png" >}}
 
@@ -197,7 +176,7 @@ The values shown by the graph are as follows:
 
 ### 4.7 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
 
-The **Total Number of Threads in the JVM Process** graph shows the total number of threads that exist inside the running JVM process.
+The **Total number of threads in the JVM process** graph shows the total number of threads that exist inside the running JVM process.
 
 {{< figure src="/attachments/developerportal/operate/metrics/jvm-thread-count.png" >}}
 
@@ -207,9 +186,9 @@ In addition to the threadpool that is used for external HTTP requests (described
 * Internal processes inside the Mendix Runtime
 * Optional extra threads created by the application itself (for example, using a threadpool in a custom module or custom Java code)
 
-### 4.8 Application Node CPU Usage{#Trends-appcpu}
+### 4.8 CPU Usage{#Trends-appcpu}
 
-The **Application node CPU usage** graph shows the CPU utilization in percentage.
+The **CPU usage** graph shows the app CPU utilization, as a percentage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
 
@@ -223,9 +202,9 @@ Your app can always access at least the amount of CPU specified for your contain
 
  If your app consistently uses more CPU than specified for your container, your app could suffer from performance issues. This is because there may be periods when there are insufficient CPU resources for the app to burst above the level specified for the container.
 
-### 4.9 Application Node Disk Usage in Percentage (%){#Trends-appdf}
+### 4.9 Disk Usage {#Trends-appdf}
 
-The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
+The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed in percentage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage-pct.png" >}}
 
@@ -233,19 +212,19 @@ Interpret this graph in combination with other graphs. For more information, see
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
 
-### 4.10 Application Number of Files{#Trends-appnumberoffiles}
+### 4.10 Storage – Number of Files{#Trends-appnumberoffiles}
 
-The **Application Number of Files** graph shows the number of files created by entities that are based on `FileDocument` generalizations. These are stored in S3 file storage.
+The **Storage – Number of Files** graph shows the number of files created by entities that are based on `FileDocument` generalizations. These are stored in S3 file storage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-number-of-files.png" >}}
 
-### 4.11 Application Size of Files (in bytes){#Trends-appsizeoffiles}
+### 4.11 Storage – Size of Files{#Trends-appsizeoffiles}
 
 {{% alert type="info" %}}
-This metric was added on 21 January 2022 in release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. If you have not deployed your Mendix app since that date, the graph will show **No Data Available**. In that case, redeploy your app to see the data. The graph will then show data from that date onward.
+This metric was added on January 21, 2022, with the release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. If you have not deployed your Mendix app since that date, the graph will show **No Data Available**. In that case, redeploy your app to see the data. The graph will then show data from that date onward.
 {{% /alert %}}
 
-The **Application Size of Files** graph shows the size of files (in bytes) that are stored in file storage.
+The **Storage – Size of Files** graph shows the size of files (in bytes) that are stored in file storage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-size-of-files.png" >}}
 
@@ -259,11 +238,11 @@ If you are using the [Basic License](/developerportal/deploy/basic-package/), yo
 
 ### 5.1 Number of Database Queries Being Executed{#Trends-dbmxruntimeconnectionbus}
 
-The **Number of database queries being executed** graph shows the number of database queries that are executed by your Mendix application.
+The **Number of database queries being executed** graph shows the number of database queries per second that are executed by your Mendix application.
 
 {{< figure src="/attachments/developerportal/operate/metrics/no-db-queries.png" >}}
 
-The queries are broken down into queries that modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**).
+The queries are broken down into queries that modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**). It also includes the number of SQL transactions per second.
 
 These are the types of queries:
 
@@ -290,9 +269,9 @@ These are the values:
 | **tables**  | Total space taken by the database                    |
 | **indices** | Amount of space taken by the indices in the database |
 
-### 5.3 Number of Database Tuple Mutations{#Trends-dbpgstatdatabaseVERSIONmain}
+### 5.3 Database Transactions and Mutations{#Trends-dbpgstatdatabaseVERSIONmain}
 
-The **Number of database tuple mutations** graph shows the number of database objects that were actually changed by database queries from the application.
+The **Database transactions and mutations** graph shows the number of database objects that were actually changed by database queries from the application. It is measured in operations per second.
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-mutations.png" >}}
 
@@ -312,9 +291,9 @@ The most common cause of rollbacks is a (unexpected) reboot of the application.
 
 Rollbacks appearing during normal operation indicate a problem and should be investigated. A common cause is that two or more processes are attempting a mutation of the same object. If you have more than one instance, remember that these processes might be running on different instances.
 
-### 5.4 Number of Database Connections{#Trends-dbmxruntimepgstatactivity}
+### 5.4 Connections to the Database{#Trends-dbmxruntimepgstatactivity}
 
-The **Number of database connections** graph shows the number of connections to the PostgreSQL server.
+The **Connections to the database** graph shows the number of connections to the PostgreSQL server.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -326,9 +305,9 @@ The number of connections goes up and down with the usage of the application. Th
 
 The standard configuration sets a maximum of 50 connections per instance. You can change this through [The Number of Database Connections](/refguide/tricky-custom-runtime-settings/#num-connections), as described in *Advanced Custom Settings in Mendix Runtime*. The graph displays the total number of connections for all instances in a multi-instance scaled runtime. 
 
-### 5.5 Database Node Operating System Memory{#Trends-dbmemory}
+### 5.5 Database Memory{#Trends-dbmemory}
 
-The **Database node operating system memory** graph shows the distribution of operating system memory that is available for this server.
+The **Database memory** graph shows the distribution of operating system memory, in gigabytes, that is available for this server.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -348,9 +327,9 @@ These are the types:
 | **Freeable memory** | Memory that is allocated dynamically containing, for example, cached reads and indexes |
 | **Swap usage**      | The amount of swap space used on the database instance                                 |
 
-### 5.6 Database Node CPU Usage{#Trends-dbcpu}
+### 5.6 CPU Utilization of the Database{#Trends-dbcpu}
 
-The **Database node CPU usage** graph shows the amount of CPU usage over time, as a percentage.
+The **CPU Utilization of the Database** graph shows the amount of CPU usage over time as a percentage.
 
 This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself. So, however many CPUs the database node has, the graph will peak at 100%.
 
@@ -360,9 +339,9 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-cpu-usage.png" >}}
 
-### 5.7 Database Node Disk Throughput (in Bytes){#Trends-dbdiskstatsthroughput}
+### 5.7 Database Throughput{#Trends-dbdiskstatsthroughput}
 
-The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
+The **Database throughput** graph shows the amount of data that is being read from and written to disk.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -373,9 +352,9 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 If you see large values here that do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries; for example, it could be caused by queries that require sorting within the app.
 <a id="Trends-dbdf"></a>
 
-### 5.8 Database Node Disk Usage (in Bytes){#Trends-dbdfabs}
+### 5.8 Database Disk Usage{#Trends-dbdfabs}
 
-The **Database node disk usage (in bytes)** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 
 The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 GiB. 
 
@@ -383,15 +362,11 @@ The value for used storage also includes space that is used to store transaction
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-The units on the graph are mebibytes. One gibibyte is 1,024 mebibytes. So, if the total storage of your database is 10 GiB, you will see 10,240 MiB displayed on the graph.
-{{% /alert %}}
-
 {{< figure src="/attachments/developerportal/operate/metrics/db-disk-usage-bytes.png" >}}
 
-### 5.9 Database Node Disk I/Os{#Trends-dbdiskstatsiops}
+### 5.9 Database IOPS {#Trends-dbdiskstatsiops}
 
-The **Database node disk IO/s** graph shows the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
+The **Database IOPS** graph, also called the database input/output operations per second graph, shows the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -401,14 +376,14 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 There are two sets of values:
 
-|   | Value     | Explanation                                |
-|---|-----------|--------------------------------------------|
-|   | **read**  | Read ops on the disk holding the database  |
-|   | **write** | Write ops on the disk holding the database |
+| Value     | Explanation                                |
+|-----------|--------------------------------------------|
+| **read**  | Read ops on the disk holding the database  |
+| **write** | Write ops on the disk holding the database |
 
-### 5.10 Database Node Disk Latency{#Trends-dbdiskstatslatency}
+### 5.10 Database IO Latency{#Trends-dbdiskstatslatency}
 
-The **Database node disk latency** graph shows the average waiting times for disk operations to complete.
+The **Database IO latency** graph shows the average waiting times, in seconds, for disk operations to complete.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -428,7 +403,23 @@ There are two sets of values:
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
+
+Existing databases of apps on eligible plans in Mendix Cloud (as specified in the table below) will also be migrated to gp3 storage instances soon.
+
+| Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+|-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+| S and M           | gp2                   | Less than 20 GiB     | 100 IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+| L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+| XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
+Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
+
+Burst balance metrics are not available for databases with the gp3 storage instance type.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
 {{% alert color="info" %}}

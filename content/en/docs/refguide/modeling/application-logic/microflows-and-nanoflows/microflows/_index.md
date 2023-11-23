@@ -120,7 +120,7 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
 {{% alert color="info" %}}
-The Beta version of the redesigned microflow editor is now available to try out in Studio Pro 10.4.0. In the Beta microflow editor, keyboard navigation has been improved. For more information on what keyboard shortcuts are supported and their respective functions in the Beta microflow editor, see the [Keyboard Navigation](/refguide/logic-editors-beta/#keyboard-navigation) section in *Logic Editors Beta*.
+The beta version of the redesigned microflow editor is now available to try out in Studio Pro 10.4.0. In the beta microflow editor, keyboard navigation has been improved. For more information on what keyboard shortcuts are supported and their respective functions in the beta microflow editor, see the [Keyboard Navigation](/refguide/logic-editors-beta/#keyboard-navigation) section in *Logic Editors (Beta)*.
 {{% /alert %}}
 
 ## 4 Microflow Debugging

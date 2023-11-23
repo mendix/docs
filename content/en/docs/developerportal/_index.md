@@ -72,9 +72,9 @@ In the top bar of the Developer Portal, an additional menu item is available for
 
 {{< figure src="/attachments/developerportal/company-apps.png" >}}
 
-Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/#company).
+Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), the [Total Members](/control-center/#members) who can view and/or edit the app, a **Summary** description of the app, and the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app.
+There are also details on the app's [Target Cloud](/developerportal/deploy/), the [Total Members](/control-center/members/) who can view and/or edit the app, a **Summary** description of the app, and the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app.
 
 You can also sort the order of the apps here by **Most Recent** or **App Name**.
 

@@ -813,7 +813,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Fixes
 
-* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/#company) could not add or remove team members.
+* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/company-settings/) could not add or remove team members.
 
 ### July 14, 2021
 

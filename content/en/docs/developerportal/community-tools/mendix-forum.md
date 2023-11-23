@@ -40,8 +40,8 @@ In **General** > **Questions**, there is an overview of the questions that have 
 
 Each question has the following details:
 
-* ① A descriptive title (clicking the question title opens the specific [Question Details](#question-details) page)
-* ② The beginning of the question description, which is taken from the [Question Details](#question-details) page
+* ① A descriptive title (clicking the question title opens the specific [Question details](#question-details) page)
+* ② The beginning of the question description, which is taken from the [Question details](#question-details) page
 * ③ The type of post (**Question**, **Exchange**, or **Idea**)
 * ④ The space, which is set when [asking a question](#asking-question)
     * Clicking the space opens an overview page that lists all the posts in the same space
@@ -136,8 +136,8 @@ In **General** > **Exchanges**, there is an overview of the exchanges that have 
 
 Each exchange has the following details:
 
-* ① A descriptive title (clicking the exchange title opens the specific [Exchange Details](#exchange-details) page)
-* ② The beginning of the exchange description, which is taken from the [Exchange Details](#exchange-details) page
+* ① A descriptive title (clicking the exchange title opens the specific [Exchange details](#exchange-details) page)
+* ② The beginning of the exchange description, which is taken from the [Exchange details](#exchange-details) page
 * ③ The type of post (**Question**, **Exchange**, or **Idea**)
 * ④ The space, which is set when [posting an exchange](#posting-exchange)
     * Clicking the space opens an overview page that lists all the posts in the same space
@@ -189,12 +189,9 @@ The URL for each exchange is unique.
 
 ### 4.3 Posting an Exchange {#posting-exchange}
 
-
 To ask your own question on the Mendix Forum, follow these steps:
 
 1. Click **Create a Post** > **Exchange with Community**, or click **Post Exchange** on the **Exchanges** page. 
-
-
 2. On the **Create a Post** page, fill in the following details in the editor:
 
     * The **Space** that reflects your post
@@ -206,30 +203,33 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 ## 5 Ideas {#ideas-tab}
 
-
-
-
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-example.png" >}}
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (①). Clicking the idea title opens the specific [Idea Details](#idea-details).
+Each idea has the following details:
 
-Each idea specifies the following elements:
-
-* The beginning of the idea description (②) (this is taken from the [Idea Details](#idea-details))
-* The category (③)
-    * This is set when Posting Your Idea (for details, see the [Posting Your Idea](#posting-idea) section).
-    * Clicking a category opens an overview page that lists all the ideas in the same category.
-* Tags (④) (for example, **Native-widgets**)
-    * This is set when Posting Your Idea (for details, see the [Posting Your Idea](#posting-idea) section).
-    * Clicking a tag opens an overview page that lists all the ideas with the same tag.
-* The number of votes (⑤), comments (⑥), and views (⑦) for the idea
-* The name, avatar, and level of the Mendix community member who created the idea (⑧)
-* When the idea was created (⑨)
-* The status of the idea (⑩) (for descriptions of the statuses, see the [Idea Details](#idea-details) section below)
+* ① A descriptive title (clicking the idea title opens the specific [Idea details](#idea-details) page)
+* ② The beginning of the idea description, which is taken from the [Idea details](#idea-details) page
+* ③ The type of post (**Question**, **Exchange**, or **Idea**)
+* ④ The space, which is set when [posting an idea](#posting-idea)
+    * Clicking the space opens an overview page that lists all the posts in the same space
+* ⑤ Tags, which are set when [posting an idea](#posting-idea)
+* ⑥ The number of votes on the idea
+* ⑦ The number of comments on the idea
+* ⑧ The number of views the idea has received
+* ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
+* ⑩ The avatars of the Mendix comminity members who have commented
 
 ### 5.1 Searching and Filtering Ideas
+
+#### TEMPLATE
+
+
+
+
+
+#### NEW
 
 To search for an idea, enter your keywords in the **Search** text box.
 

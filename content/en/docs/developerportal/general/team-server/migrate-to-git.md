@@ -23,6 +23,7 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 * All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
 * The size of the `.mpr` file for the latest revision of your app is less than 100MB
+* The version control history consists of fewer than 1000 commits
 
 {{% alert type="info" %}}
 

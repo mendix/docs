@@ -153,7 +153,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 
 ### 9.3 Private Mendix Platform
 
-Private Mendix Platform provides a platform experience in on-premises or (virtual) private cloud environments. It is dependent on Mendix for Private Cloud and Kubernetes, and integrates with tooling in the customer's landscape. Please refer to [Private Mendix Platform](/private-mendix-platform/) documentation for [prerequisites](private-mendix-platform-prerequisites/) to install the platform and set up [configurations](/private-mendix-platform-configuration/), as well as [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation for [supported environments](/developerportal/deploy/private-cloud-supported-environments/). 
+Private Mendix Platform provides a platform experience in on-premises or (virtual) private cloud environments. It is dependent on Mendix for Private Cloud and Kubernetes, and integrates with tooling in the customer's landscape. Please refer to [Private Mendix Platform](/private-mendix-platform/) documentation for [prerequisites](/private-mendix-platform-prerequisites/) to install the platform and set up [configurations](/private-mendix-platform-configuration/), as well as [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation for [supported environments](/developerportal/deploy/private-cloud-supported-environments/). 
 
 This offering is delivered, managed and supported by Certified Partners (or Certified Customers). If you run into issues regarding your private platform, please contact your Certified Partner for support.
 

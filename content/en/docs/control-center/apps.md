@@ -16,6 +16,59 @@ A member in Control Center means a user of the Mendix platform who participates 
 
 The **Apps** page shows you all the apps belonging to your company and allows you to manage default app roles in your company.
 
+### 2 Mendix Cloud
+
+The **Mendix Cloud** tab gives an overview of all the apps that can be deployed on the Mendix Public Cloud.
+
+The list shows the following information of an app:
+
+- **App Name**: if  you click on this you go to the app details (reference)
+- **Technical Contact**: the technical contact of the app. Note you can also edit the technical contact here
+- **Environment**: name given to the production environment
+- **Deployed Status**: if the app has been deployed on this environment
+- **Mainline Version**: the mendix version of the app on the mainline in the repository
+- **Deployed Version**: the Mendix version of the deployed app
+- **Last Commit**: the last commit on the project repository (in any branch)
+
+#### 2.1 Filtering Apps in the List
+
+The three filters on the top enables you to filter apps using different criteria. 
+
+{{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
+
+With the left filter, you can filter apps by the app ID, name, Mendix versions, Technical Contact, environment name, envirionment ID, mainline version, and, deployed version. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**.
+
+{{< figure src="/attachments/control-center/apps/filter-left.png" >}}
+
+With the middle filter, you can filter apps by the date of last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**.
+
+{{< figure src="/attachments/control-center/apps/filter-middle.png" >}}
+
+The right filter allows you to filter apps by **Deployed Status**.
+
+The **Production** toggle on the upper-right corner enables you to only show apps that are deployed in the production environments.
+
+#### 2.2 Exporting Apps to an Excel file
+
+To export information about apps to an Excel file, select them in the list, and click **Selection Export** below the list. 
+
+To export information about all the apps in this list, click **Export All** on the upper-top corner. 
+
+The Excel file covers the following information: AppId, AppName, TechnicalContact, Environment, DeployedStatus, MendixVersionOnMainline, DeployedMendixVersion, LastCommit, Members, Production, AppCreatedDate, CloudLocation, Fallback, CloudResourcePack, AppRAM, DbRAM, DbStorage, DbStorageExtra, anc FileStorage.
+
+
+### 3 Mendix Free Cloud
+
+The Mendix Free Cloud tab shows all the apps that are deployed on the Mendix Free Cloud.
+
+### 4 Other Apps
+
+The Other Apps tab shows all the other apps. They are either deployed to other clouds or do not have an environment. 
+
+{{% alert color="info" %}}
+It is in our roadmap to give every cloud its own tab.
+{{% /alert %}}
+
 ## 2 Active and Deactivated Apps {#active-deactivated}
 
 ### 2.1 Overview {#overview}

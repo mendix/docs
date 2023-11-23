@@ -9,7 +9,7 @@ no_list: true
 ---
 
 {{% alert color="info" %}}
-The **Application Health Dashboard** is in beta. For more information, see [Beta Releases](https://github.com/mendix/docs/blob/development/releasenotes/beta-features).
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction

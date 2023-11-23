@@ -10,7 +10,7 @@ no_list: list
 
 ## 1 Introduction
 
-On this page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
+On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 

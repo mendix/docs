@@ -9,11 +9,11 @@ no_list: true
 
 ---
 
-## 1 Introduction
-
 {{% alert color="info" %}}
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
+
+## 1 Introduction
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 

@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The **Company Settings** page allows you to change company details, company email domains, and security contact as well as view and add Mendix Admins.
+The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreoever, you can view and add Mendix Admins of your company.
 
 ## 2 General Settings {#company-general-settings}
 

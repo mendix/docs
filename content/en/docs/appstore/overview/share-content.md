@@ -195,7 +195,7 @@ If you are using **Solutions**, you will not see the option to select your conte
 
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
-* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
+* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Component](/appstore/creating-content/set-up-repo/))
     * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
     * When you are finished, click **OK**
 

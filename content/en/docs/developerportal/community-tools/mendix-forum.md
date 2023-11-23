@@ -82,14 +82,14 @@ On this page, you do the following:
     * The **Last activity** date and time for when the question was updated
     * How many times the question has been **Viewed**
     * The **Space** of the question
-    * The **Tags** applied to the question (clicking a tag opens an overview page that lists questions with the same tag)
+    * The **Tags** applied to the question (clicking a tag opens an overview page that lists posts with the same tag)
     * The **Version** set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
 * ② Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness
 * ③ Click **Comment** to write and submit a comment on the question
 * ④ Click **Bookmark** to bookmark the question
-* ⑤ Click **Follow This Question** if you want to follow the discussion via email notifications
+* ⑤ Click **Follow this Question** if you want to follow the discussion via email notifications
     * You are automatically subscribed for email notifications on questions that you have asked
-    * If you want to unsubscribe from these notifications, click **Unfollow This Question**
+    * If you want to unsubscribe from these notifications, click **Unfollow this Question**
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
@@ -171,7 +171,7 @@ On this page, you do the following:
     * The **Last activity** date and time for when the exchange was updated
     * How many times the exchange has been **Viewed**
     * The **Space** of the exchange
-    * The **Tags** applied to the exchange (clicking a tag opens an overview page that lists exchange with the same tag)
+    * The **Tags** applied to the exchange (clicking a tag opens an overview page that lists posts with the same tag)
 * ② Click **Comment** to write and submit a comment on the question
 * ③ Click **Bookmark** to bookmark the question
 
@@ -234,11 +234,40 @@ To filter the searching results, you can use the following filters:
 
 ### 5.2 Idea Details {#idea-details}
 
+Clicking the title of an idea brings you to its details page:
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-details.png" >}}
+
+On this page, you do the following:
+
+* ① View the idea details:
+    * When the idea was **Shared**
+    * The **Last activity** date and time for when the idea was updated
+    * How many times the idea has been **Viewed**
+    * The **Space** of the idea
+    * The **Tags** applied to the idea (clicking a tag opens an overview page that lists posts with the same tag)
+* ② Click the **Vote** button to vote on the idea based on its usefulness
+* ③  Click **Bookmark** to bookmark the idea
+* ④ Click **Follow this Idea** if you want to follow the discussion via email notifications
+    * You are automatically subscribed for email notifications on ideas that you have asked
+    * If you want to unsubscribe from these notifications, click **Unfollow this Idea**
+
+Below the ideas details are the comments on the idea. 
 
 
 
 
 
+
+In the **Your Comment** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
+
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png" >}}
+
+{{% alert color="info" %}}
+The URL for each question is unique.
+{{% /alert %}}
+
+#### OLD
 
 Clicking the title of an idea will bring you to the details page for that idea:
 

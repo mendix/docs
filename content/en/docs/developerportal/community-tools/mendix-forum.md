@@ -209,17 +209,22 @@ In **General** > **Ideas**, you can see an overview of the ideas and feature req
 
 Each idea has the following details:
 
-* ① A descriptive title (clicking the idea title opens the specific [Idea details](#idea-details) page)
-* ② The beginning of the idea description, which is taken from the [Idea details](#idea-details) page
-* ③ The type of post (**Question**, **Exchange**, or **Idea**)
-* ④ The space, which is set when [posting an idea](#posting-idea)
+* ① A descriptive title (clicking the idea title opens the specific [Idea details](#idea-details) page) along with the status
+* ② The review status of the idea:
+    * **Planned** – the idea has been accepted by Mendix Product Managers and scheduled for implementation
+    * **Implemented** – the idea has been implemented
+    * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
+    * Note that if there is no **Status** listed, the idea is **Open**, meaning, it has not been reviewed yet
+* ③ The beginning of the idea description, which is taken from the [Idea details](#idea-details) page
+* ④ The type of post (**Question**, **Exchange**, or **Idea**)
+* ⑤ The space, which is set when [posting an idea](#posting-idea)
     * Clicking the space opens an overview page that lists all the posts in the same space
-* ⑤ Tags, which are set when [posting an idea](#posting-idea)
-* ⑥ The number of votes on the idea
-* ⑦ The number of comments on the idea
-* ⑧ The number of views the idea has received
-* ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
-* ⑩ The avatars of the Mendix comminity members who have commented
+* ⑥ Tags, which are set when [posting an idea](#posting-idea)
+* ⑦ The number of votes on the idea
+* ⑧ The number of comments on the idea
+* ⑨ The number of views the idea has received
+* ⑩ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
+* [**ADD NUMBER**] The avatars of the Mendix comminity members who have commented
 
 ### 5.1 Searching and Filtering Ideas
 
@@ -241,68 +246,36 @@ Clicking the title of an idea brings you to its details page:
 On this page, you do the following:
 
 * ① View the idea details:
+    * The review **Status** of the idea
     * When the idea was **Shared**
     * The **Last activity** date and time for when the idea was updated
     * How many times the idea has been **Viewed**
     * The **Space** of the idea
     * The **Tags** applied to the idea (clicking a tag opens an overview page that lists posts with the same tag)
-* ② Click the **Vote** button to vote on the idea based on its usefulness
-* ③  Click **Bookmark** to bookmark the idea
-* ④ Click **Follow this Idea** if you want to follow the discussion via email notifications
+* ② Click the **Vote** button to upvote the idea based on its usefulness
+    * By upvoting ideas, you can show the Mendix Product Managers and Mendix community what you would like to see added to the Mendix Platform
+    * The upvotes are used as input for the Mendix Product Managers and Mendix community MVPs to decide which features are nominated for implementation (please note that the level of impact also needs to be considered)
+* ③ If the review status of the idea has been **Planned**, a comment from the Mendix Product Manager about the planned implementation can appear here
+* ④ Click **Bookmark** to bookmark the idea
+* ⑤ Click **Follow this Idea** if you want to follow the discussion via email notifications
     * You are automatically subscribed for email notifications on ideas that you have asked
     * If you want to unsubscribe from these notifications, click **Unfollow this Idea**
 
 Below the ideas details are the comments on the idea. 
 
-
-
-
-
-
-In the **Your Comment** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png" >}}
-
-{{% alert color="info" %}}
-The URL for each question is unique.
-{{% /alert %}}
-
-#### OLD
-
-Clicking the title of an idea will bring you to the details page for that idea:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-details.png" >}}
-
-On this page, you can read the full descriptive text of the idea and do the following:
-
-* View the following idea details (①):
-
-    * The **Status** of the idea – these are the possible statuses:
-        * **Open** – the idea has not been reviewed yet
-        * **Planned** – the idea has been accepted by the Mendix Product Managers and scheduled for implementation
-        * **Implemented** – the idea has been implemented
-        * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
-    * When the ideas was **Submitted**
-    * The date and time of the **Last activity** on the idea (meaning, when it was last updated)
-    * How many times the idea has been **Viewed**
-    * The **Space** of the idea
-    * The **Tags** applied to the idea (clicking a tag opens an overview page that lists all the ideas with the same tag.)
-
-* Click **Vote** to upvote the idea (②)
-
-    * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform.
-
-    {{% alert color="info" %}}The upvotes will be used as input for the Product Managers and Mendix community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.{{% /alert %}}
-
-* Click **Bookmark** to bookmark the idea (③)
-
-If you want to follow the discussion on an idea via email notifications, click **Follow This Idea** below the idea details. Please note that you are automatically subscribed for email notifications on ideas that you have submitted; if you want to unsubscribe from these notifications, click **Unfollow This Idea** on a specific idea that you have submitted or that you want to stop following.
+In the **Your Comment** section, you can contribute to the Mendix Forum by writing your idea in the editor and then clicking **Submit Comment**.
 
 {{% alert color="info" %}}
 The URL for each idea is unique.
 {{% /alert %}}
 
 ### 5.3 Posting an Idea {#posting-idea}
+
+
+
+
+
+
 
 {{% alert color="info" %}}
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!

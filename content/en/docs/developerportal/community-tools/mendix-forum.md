@@ -223,28 +223,22 @@ Each idea has the following details:
 
 ### 5.1 Searching and Filtering Ideas
 
-#### TEMPLATE
-
-
-
-
-
-#### NEW
-
 To search for an idea, enter your keywords in the **Search** text box.
 
 To filter the searching results, you can use the following filters:
 
-* **Status**
-    * **Open** – the idea has not been reviewed yet
-    * **Planned** – the idea has been accepted by the Mendix Product Managers and scheduled for implementation
-    * **Implemented** – the idea has been implemented
-    * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
-* **Last Updated** > **Sort by** – the default is **Last Updated**; you can set it to **Newest** or **Most Votes**
-* **Spaces** – the space set when the idea was submitted (for more information, see the [Posting Your Idea](#posting-idea) section below)
-* **Type in a Tag** – the tags set when the idea was submitted (for more information, see the [Posting Your Idea](#posting-idea) section below)
+* **Status** > **Open**, **Planned**, **Implemented**, or **Closed**
+* **Last Updated** > **Last Updated** (default), **Most Votes**, or **Most Recent**
+* **Spaces** – the space set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
+* **Type in a Tag** – the tags set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
 
 ### 5.2 Idea Details {#idea-details}
+
+
+
+
+
+
 
 Clicking the title of an idea will bring you to the details page for that idea:
 

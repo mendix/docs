@@ -16,7 +16,9 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ### Features
 
-* We added new apps to Showcase.
+* We added new apps to Showcase:
+  * Citrus Grove Retail: a grocery store online shopping app
+  * New Garden County Inspection: an inspection and task assignment app
 
 ## iOS 1.2.0 / Android 1.2.0
 

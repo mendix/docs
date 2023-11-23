@@ -23,7 +23,7 @@ In **Personal** > **Bookmarks**, the following tabs are available:
 * **Exchanges** – the exchanges you have bookmarked (for details, see [Exchange Details](#exchange-details) below)
 * **Ideas** – the ideas you have bookmarked (for details, see [Idea Details](#idea-details) below)
 
-## 2 Posts {#posts}
+## 3 Posts {#posts}
 
 In **Personal** > **Posts**, the following tabs are available:
 
@@ -32,7 +32,7 @@ In **Personal** > **Posts**, the following tabs are available:
 * **Commented** – the questions, exchanges, and ideas that you have commented on
 * **Drafts** – the post drafts you have started
 
-## 3 Questions {#questions-tab}
+## 4 Questions {#questions-tab}
 
 In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
 
@@ -57,7 +57,7 @@ Each question has the following details:
 Hover over the developer name to see the profile card with their Mendix points. Click the developer name on the card to go to their Mendix Profile.
 {{% /alert %}}
 
-### 3.1 Searching and Filtering Questions
+### 4.1 Searching and Filtering Questions
 
 To search for a question, enter your keywords in the **Search** text box.
 
@@ -69,7 +69,7 @@ To filter the searching results, you can use the following filters:
 * **Type in a Tag** – the tags set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
 * **Version** – the Mendix version to which the question is related (for details, see [Asking Your Question](#asking-question) below)
 
-### 3.2 Question Details {#question-details}
+### 4.2 Question Details {#question-details}
 
 Clicking the title of a question brings you to its details page:
 
@@ -103,7 +103,7 @@ In the **Your Answer** section, you can contribute to the Mendix Forum by writin
 The URL for each question is unique.
 {{% /alert %}}
 
-### 3.3 Asking Your Question {#asking-question}
+### 4.3 Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
 It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
@@ -128,7 +128,7 @@ You can easily upload images in the Mendix Forum by dragging them directly into 
 
 Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer. You should accept the answer that properly and accurately responds to your question in the best way possible.
 
-## 4 Exchanges {#exchanges-tab}
+## 5 Exchanges {#exchanges-tab}
 
 In **General** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
@@ -148,7 +148,7 @@ Each exchange has the following details:
 * ⑧ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
 * ⑨ The avatars of the Mendix comminity members who have commented
 
-### 3.1 Searching and Filtering Exchanges
+### 5.1 Searching and Filtering Exchanges
 
 To search for an exchange, enter your keywords in the **Search** text box.
 
@@ -158,7 +158,7 @@ To filter the searching results, you can use the following filters:
 * **Spaces** – the space set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
 * **Type in a Tag** – the tags set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
 
-### 4.2 Exchange Details {#exchange-details}
+### 5.2 Exchange Details {#exchange-details}
 
 Clicking the title of an exchange brings you to its details page:
 
@@ -187,7 +187,7 @@ In the **Your Comment** section, you can contribute to the Mendix Forum by writi
 The URL for each exchange is unique.
 {{% /alert %}}
 
-### 4.3 Posting an Exchange {#posting-exchange}
+### 5.3 Posting an Exchange {#posting-exchange}
 
 To ask your own question on the Mendix Forum, follow these steps:
 
@@ -201,7 +201,7 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 3. Click **Post Exchange** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
-## 5 Ideas {#ideas-tab}
+## 6 Ideas {#ideas-tab}
 
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
@@ -224,9 +224,9 @@ Each idea has the following details:
 * ⑧ The number of comments on the idea
 * ⑨ The number of views the idea has received
 * ⑩ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
-* [**ADD NUMBER**] The avatars of the Mendix comminity members who have commented
+* ⑪ The avatars of the Mendix comminity members who have commented
 
-### 5.1 Searching and Filtering Ideas
+### 6.1 Searching and Filtering Ideas
 
 To search for an idea, enter your keywords in the **Search** text box.
 
@@ -237,7 +237,7 @@ To filter the searching results, you can use the following filters:
 * **Spaces** – the space set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
 * **Type in a Tag** – the tags set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
 
-### 5.2 Idea Details {#idea-details}
+### 6.2 Idea Details {#idea-details}
 
 Clicking the title of an idea brings you to its details page:
 
@@ -269,32 +269,26 @@ In the **Your Comment** section, you can contribute to the Mendix Forum by writi
 The URL for each idea is unique.
 {{% /alert %}}
 
-### 5.3 Posting an Idea {#posting-idea}
-
-
-
-
-
-
+### 6.3 Posting an Idea {#posting-idea}
 
 {{% alert color="info" %}}
-If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
+If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it. But please make sure you search the Mendix Forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
 {{% /alert %}}
 
 To submit your own idea to the idea forum, follow these steps:
 
-1. Click **Submit idea** on the upper-right corner of the **All Ideas** page.
-2. On the **Submit your idea** page, fill in the following details in the editor:
+1. Click **Create a Post** > **Share an Idea**, or click **Ask a Question** on the **Ideas** page. 
+2. On the **Share an Idea** page, fill in the following details in the editor:
 
-    * The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
-    * The **Description** of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)
-    * The **Space** that reflects your idea (for example, **Connectors** or **Microflows**)
-    * The **Tag(s)** that reflect your idea (which other users can use to filter their searches)
+    * The **Space** that reflects your idea (for example, **Catalog**, **Marketplace**, or **Usability**)
+    * The idea **Title** (this is how users will first see your idea, so make it descriptive and interesting)
+    * The idea **Description** (add all the details about your idea to make it searchable and so other users can can vote and comment on it)
+    * The **Tags** that reflect the idea topic (users can filter the list of questions by tag)
 
-3. Click **Submit your idea**.
+3. Click **Share Idea** to submit your idea or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
-Mendix looks forward to hearing all of your ideas!
+Mendix looks forward to hearing your ideas!
 
-## 6 Read More
+## 7 Read More
 
 * [How to Contribute to Mendix Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation/)

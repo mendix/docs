@@ -36,11 +36,11 @@ The consequences of deactivating and deleting an app are as below:
 
 | | Deactivating an App | Deleting an App |
 | --- | --- | --- |
-| App code repository stays persistent | {{< figure src="/attachments/control-center/check-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
-| App team members can access the app code repository | {{< figure src="/attachments/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
-| App stays persistent | {{< figure src="/attachments/control-center/check-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
-| App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
-| Cloud environment stays persistent | {{< figure src="/attachments/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/cross-mark.svg" >}} |
+| App code repository stays persistent | {{< figure src="/attachments/control-center/apps/check-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
+| App team members can access the app code repository | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
+| App stays persistent | {{< figure src="/attachments/control-center/apps/check-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
+| App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
+| Cloud environment stays persistent | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
 
 ### 2.2 App Details {#app-details}
 
@@ -65,4 +65,4 @@ The app details page has the following tabs:
 
 The **Default App Roles** tab shows the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** and **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/general/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
 
-{{< figure src="/attachments/control-center/roles.jpg" >}}
+{{< figure src="/attachments/control-center/apps/roles.jpg" >}}

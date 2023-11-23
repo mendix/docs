@@ -16,7 +16,7 @@ This feature is not yet publicly available. Please talk to your Customer Success
 
 The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 
-{{< figure src="/attachments/control-center/cloud.jpg" >}}
+{{< figure src="/attachments/control-center/cloud/cloud.jpg" >}}
 
 When you select one or more environments via the checkboxes on the **Paid Environments** or **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 

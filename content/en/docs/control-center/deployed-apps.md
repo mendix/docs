@@ -19,11 +19,11 @@ The **Deployed Apps Overview** page is a self-service tool that enables you to p
 
 The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, number of environments, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
-{{< figure src="/attachments/control-center/apps-overview.png" alt="Deployed Apps - apps overview" >}}
+{{< figure src="/attachments/control-center/deployed-app/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 
 You can click the name of an app to see a list of environments available for the app.
 
-{{< figure src="/attachments/control-center/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
+{{< figure src="/attachments/control-center/deployed-app/cloud-provisioning.png" alt="cloud provisioning page for an app" >}}
 
 Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request/#submitting):
 

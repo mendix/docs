@@ -20,11 +20,11 @@ On the **General Settings** tab of this page, you can edit your **Company Name**
 
 You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
-If you have [configured single sign-on using BYOIDP](/control-center/set-up-sso-byoidp/), BYOIDP will automatically adopt it, without further actions from the Mendix Admins.
+If you have [configured single sign-on using BYOIDP](/control-center/security/set-up-sso-byoidp/), BYOIDP will automatically adopt it, without further actions from the Mendix Admins.
 
 To export all the email domains, use the **Export to Excel** button.
 
-{{< figure src="/attachments/control-center/company-email-domains.png" width="650px" >}}
+{{< figure src="/attachments/control-center/company-settings/company-email-domains.png" width="650px" >}}
 
 You can also provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -32,7 +32,7 @@ After you click **Add security contact** and add the required **Name** and **Ema
 
 For an existing **Security Contact**, there are two menu options available:
 
-{{< figure src="/attachments/control-center/security-contact.png" >}}
+{{< figure src="/attachments/control-center/company-settings/security-contact.png" >}}
 
 Click **Edit** to edit the Security Contact's **Name**.
 
@@ -46,7 +46,7 @@ The **Mendix Admins** tab lists all the current Mendix Admins in your company. A
 
 To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over their name in the list and click **Remove**.
 
-{{< figure src="/attachments/control-center/admin.jpg" >}}
+{{< figure src="/attachments/control-center/company-settings/admin.jpg" >}}
 
 {{% alert color="info" %}}
 It is not possible to remove yourself as a Mendix Admin.

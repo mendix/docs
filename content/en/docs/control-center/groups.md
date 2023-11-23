@@ -18,7 +18,7 @@ A Mendix Admin can set up **App Access Groups**, which consist of end-users (who
 
 Click a group name to bring up the group details pop-up window, and click **Add Member** to add a Mendix Platform user in your company to the group. When you add someone to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments/) node to be accessible, in addition to specific [user roles](/refguide/user-roles/) that should be able to access the app.
 
-{{< figure src="/attachments/control-center/access-group.jpg" >}}
+{{< figure src="/attachments/control-center/groups/access-group.jpg" >}}
 
 {{% alert color="warning" %}}
 You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso/) to App Access Groups.

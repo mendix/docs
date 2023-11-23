@@ -50,6 +50,8 @@ To configure what types of notifications you receive, click the settings button 
 To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.
 {{% /alert %}}
 
-## 6 Account
+## 6 Profile Menu
 
-Click your avatar to access the account menu, which has relevant information about you and your settings. You can access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [User Settings](/developerportal/community-tools/mendix-profile/#settings).
+Click the **Open Profile Menu** button (via your avatar) to access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [User Settings](/developerportal/community-tools/mendix-profile/#settings). 
+
+You can also sign out from the Mendix Platform via this menu.

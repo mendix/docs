@@ -25,7 +25,7 @@ This document first describes all the pages in Mini Surveys in the Developer Por
 
 ### 2.1 Survey Overview {#survey-overview}
 
-When you click **Mini Surveys** in the sidebar for an app that already has existing mini surveys, the **Survey Overview** page opens first.
+When you click **Mini Surveys** in the [navigation pane](/developerportal/#navigation-pane) for an app that already has existing mini surveys, the **Survey Overview** page opens first.
 
 On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
 
@@ -207,7 +207,7 @@ To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) mod
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#profile-notification-help) on how many responses have been collected.
+When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/global-navigation/#notifications) on how many responses have been collected.
 
 To check the responses that have been collected, follow these steps::
 

@@ -195,7 +195,9 @@ You can decide whether a metric for the disk storage size available to the datab
 
 ### 5.4 Email Address Redaction{#redact-emails}
 
-Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, create a `DATADOG_LOGS_REDACTION` custom environment variable and set its value to `false`. (By default, this variable is set to `true`.)
+Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, create a `LOGS_REDACTION` custom environment variable and set its value to `false`. (By default, this variable is set to `true`.)
+
+The environment variable `DATADOG_LOGS_REDACTION` is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended.
 
 ### 5.5. Rate and Count Database Metrics{#database-metrics}
 

@@ -13,7 +13,7 @@ This activity can only be used in **Microflows**.
 
 A **Retrieve workflows** activity can be used to retrieve a list of **System.Workflow** objects.
 
-It needs a Workflow Context object as its input. The provided Workflow Context object here can be associated with one or several workflow instances. A Runtime error occurs if the [WorkflowContext parameter]((/refguide/workflow-parameters/)) contains no object.
+It needs a Workflow Context object as its input. The provided Workflow Context object here can be associated with one or several workflow instances. A Runtime error occurs if the [WorkflowContext parameter](/refguide/workflow-parameters/) contains no object.
 
 You can use this activity to check if the Workflow Context object is already used in a workflow, and if so, which workflows are used to process the Workflow Context object.
 

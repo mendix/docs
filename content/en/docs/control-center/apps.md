@@ -91,11 +91,9 @@ The description of the items that you can select are as follows:
 
 - **Created Date**: the date the app was created
 
-- **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App**.
+- **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
-  {{% alert color="info" %}}
-  For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
-  {{% /alert %}}
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for deactivate and delete apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
 ## 4 Other Apps
 
@@ -112,18 +110,12 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
-
 - **App Name**: if  you click on this you go to the app details (reference)
-
 - **Members**: the number of team members of the app
-
 - **Created Date**: the date the app was created
+- **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
-- **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App**.
-
-  {{% alert color="info" %}}
-  For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
-  {{% /alert %}}
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for deactivate and delete apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
 ## 5 Deactivated Apps
 
@@ -141,6 +133,8 @@ The description of the items that you can select are as follows:
 - **Mainline Version**: the Mendix version of the app on the mainline in the repository
 - **Last Commit**: the last commit in any branch of the repository
 - **Members**: the number of team members of the app
+
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, it shows on the cooresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
 ## 6 Default App Roles
 
@@ -185,10 +179,10 @@ The app details page has the following tabs:
 
 ## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
-If you select one or more apps via the checkboxes in the table, a context menu appears at the bottom of the screen with options for deactivating apps (on the tabs with active apps) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
+If you select one or more apps via the checkboxes in the table, a context menu can appear at the bottom of the screen with options for deactivating apps and deleting an app.
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab or on the **Other Apps** tab if you select apps that are deployed on other environments.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab or on the **Other Apps** tab if you select apps that are deployed on a different environment than Mendix Cloud.
 {{% /alert %}}
 
 {{% alert color="info" %}}

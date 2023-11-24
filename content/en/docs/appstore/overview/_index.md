@@ -35,7 +35,7 @@ The [Marketplace home page](https://marketplace.mendix.com/)  is your entry poin
 * Explore content via the **Content Types** and filters described below
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](/appstore/overview/my-marketplace/) as well as your company's [private content](/appstore/overview/my-marketplace/#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
-* Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
+* Click **Add Content** to [share new Marketplace content](/appstore/sharing-content/) you have developed
 
 {{< figure src="/attachments/appstore/overview/overview/home-page.png" >}}
 
@@ -57,7 +57,7 @@ The following filter options are also available:
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
-* **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
+* **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *How to Use Marketplace Content*.
@@ -90,7 +90,7 @@ The header for a component presents the following details:
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
-* The type of [license](/appstore/overview/share-content/#license) for the component
+* The type of [license](/appstore/sharing-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 

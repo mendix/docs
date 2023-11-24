@@ -18,13 +18,15 @@ The **Apps** page shows you all the apps belonging to your company and allows yo
 
 ## 2 Mendix Cloud
 
-The **Mendix Cloud** tab gives an overview of all the licensed apps on the Mendix Public Cloud.
+The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the public Mendix Cloud.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns.
+By default you only see apps from the production environments. Turn off the **Production** toggle above the table on the right side to see all the environments.
+
+You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items that you select are shown in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" >}}
 
-The description of these items are as follows:
+The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
 
@@ -54,8 +56,6 @@ The description of these items are as follows:
 
 - **Created Date**: the date the app was created
 
-The **Production** toggle on the upper-right corner enables you to only show apps that are deployed in the production environments.
-
 
 ## 3 Mendix Free Cloud
 
@@ -65,7 +65,7 @@ You can customize the columns of the table by clicking the column selector (the 
 
 {{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" >}}
 
-The description of these items are as follows:
+The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
 
@@ -102,14 +102,14 @@ The description of these items are as follows:
 The **Other Apps** tab shows all the other apps. They are either deployed to other clouds or do not have an environment. 
 
 {{% alert color="info" %}}
-We are working on giving give every cloud its own tab.
+Every cloud environment will have its exclusive tab soon. It is on our roadmap. Stay tuned.
 {{% /alert %}}
 
 You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns.
 
 {{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" >}}
 
-The description of these items are as follows:
+The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
 
@@ -133,13 +133,14 @@ You can customize the columns of the table by clicking the column selector (the 
 
 {{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" >}}
 
-The description of these items are as follows:
+The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
 - **App Name**: if  you click on this you go to the app details (reference)
-- **Members**: the number of team members of the app
 - **Created Date**: the date the app was created
-- **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App**.
+- **Mainline Version**: the Mendix version of the app on the mainline in the repository
+- **Last Commit**: the last commit in any branch of the repository
+- **Members**: the number of team members of the app
 
 ## 6 Default App Roles
 

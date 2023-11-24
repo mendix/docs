@@ -79,7 +79,7 @@ The header for a component presents the following details:
     * **Start with Template** for starter templates – click this to use the template
     * **Download** for other content types – click this to download the component
     * **Contact Us** – click this to contact Mendix or the community supplier
-* The partner icon is applied to components that are supported by a partner:
+* <a id="partner-icon"></a>The partner icon is applied to components that are supported by a partner:
 
     {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  >}}
 

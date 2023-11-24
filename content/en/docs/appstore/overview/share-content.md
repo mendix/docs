@@ -175,6 +175,9 @@ When prospective customers are interested in your product, they can leave their 
 You can configure the name of your **Main call-to-action** button from the following choices: 
 
 * **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
+
+    {{% alert color="warning" %}}If you choose to add one of these buttons, customers can contact you directly. If you start talking with the customer, it is your responsibility to provide access to the product for that customer. Mendix is not involved in such customer interactions. {{% /alert %}}
+
 * **Download** – no lead routing is established, but customers can directly download your product.
 
 In the **How would you like to receive information on new leads?** field, you must specify the email address(es) where notifications and information can be sent.

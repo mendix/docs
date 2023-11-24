@@ -183,6 +183,11 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
 
+### 9.2 Use the modernized text editor
+
+The modernized text editor is a new expression editor that works on both Windows and MacOS (cross platform). 
+The modernized control is set to be the default editor.
+
 ## 10 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

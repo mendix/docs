@@ -35,7 +35,7 @@ You can type your constraint by selecting the option **XPath expression**.
 
 #### 2.1.2 Mendix Versions Below 10.5
 
-For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **Xpath constraint**.
+For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" >}}
 
@@ -83,7 +83,7 @@ You can create groups of rules which should be applied in combination. Click **A
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/thomson-and-thompson.png" >}}
 
-You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots **⋮⋮**.
+You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
 #### 2.2.2 XPath Builder Limitations {#limitations}
 
@@ -211,10 +211,10 @@ This query retrieves all customers who live in New Amsterdam, Guyana (as opposed
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Adress_Country/Sales.Country/Name = 'Guyana']
+    [Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Address_Country/Sales.Country/Name = 'Guyana']
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-     //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Adress_Country/Sales.Country/Name = 'Guyana']
+     //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Address_Country/Sales.Country/Name = 'Guyana']
     {{% /tab %}}
 {{< /tabpane >}}
 

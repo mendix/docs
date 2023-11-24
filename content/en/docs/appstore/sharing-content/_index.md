@@ -1,10 +1,13 @@
 ---
 title: "Sharing Marketplace Content"
 url: /appstore/sharing-content/
-weight: 3
+weight: 4
+no_list: false
+description_list: true
 description: "Describes how to create and share Mendix Marketplace content."
 tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
 aliases:
+    - /appstore/overview/share-content/
     - /appstore/general/share-app-store-content/
     - /developerportal/app-store/share-content/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -342,8 +345,4 @@ For a component that is outdated based on the above points, this is the review a
 3. If the component owner or Mendix Admin is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
 4. If the owner or Mendix Admin wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.
 
-## 7 Read More
-
-* [Marketplace Overview](/appstore/overview/)
-* [Mendix Partner Program](/appstore/partner-program/)
-* [How to Use Marketplace Content](/appstore/overview/use-content/)
+## 7 Documents in This Category

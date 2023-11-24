@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "parameters", "workflow parameters"]
 
 ## 1 Introduction
 
-The **WorkflowContext** parameter provides the means by which you can pass business-related data to your workflow. An entity that stores the business-related data has to be selected as the parameter type. When a workflow is triggered, the parameter is filled with the current object of the specified entity.
+The **WorkflowContext** parameter provides the means by which you can pass business-related data to the workflow. An entity that stores the business-related data has to be selected as the parameter type. When a workflow is triggered, the parameter is filled with the current object of the specified entity.
 
 In the workflow editor, you can see the **WorkflowContext** parameter in the upper-left corner. In the image below, the parameter type (the specified entity) is shown in color blue and the parameter name is shown in color black.
 
@@ -17,8 +17,8 @@ In the workflow editor, you can see the **WorkflowContext** parameter in the upp
 
 ### 2.1 Entity {#entity}
 
-The entity that you select as the parameter type. What is passed through the parameter is the object of this entity. 
+The entity that you select as the parameter type. What is passed through the parameter is the object of this entity. The passed object is also called workflow context object or context object. 
 
 ### 2.2 Name
 
-**Name** is the name of the parameter and cannot be changed. 
+**Name** is the name of the parameter. The name is set as **WorkflowContext** and cannot be changed. 

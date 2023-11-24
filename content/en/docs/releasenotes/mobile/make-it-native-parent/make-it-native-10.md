@@ -12,7 +12,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 ## iOS 1.2.1 / Android 1.2.1
 
-**Release date: November -, 2023**
+**Release date: November 24, 2023**
 
 ### Features
 

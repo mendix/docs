@@ -27,8 +27,8 @@ These are the `OPTIONS`:
 These are valid examples:
 
 * `mx dump-mpr temp.mpr`
-* `mx dump-mpr temp.mpr --unit-type 'DomainModels$DomainModel'`
-* `mx dump-mpr --unit-type 'DomainModels$DomainModel,Texts$SystemTextCollection' temp.mpr`
+* `mx dump-mpr temp.mpr --unit-type DomainModels$DomainModel`
+* `mx dump-mpr --unit-type DomainModels$DomainModel,Texts$SystemTextCollection temp.mpr`
 
 ### 2.3 Return Codes
 

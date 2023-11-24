@@ -93,11 +93,11 @@ On this page, you do the following:
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-answer.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-answer.png"   width="65%" >}}
 
 In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png"  width="50%" >}}
 
 {{% alert color="info" %}}
 The URL for each question is unique.
@@ -177,11 +177,7 @@ On this page, you do the following:
 
 Below the exchange details are comments on the exchange. 
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchange-comment.png" >}}
-
-In the **Your Comment** section, you can contribute to the Mendix Forum by writing your comment in the editor and then clicking **Submit Comment**:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-comment.png" >}}
+In the **Your Comment** section, you can contribute to the Mendix Forum by writing your comment in the editor and then clicking **Submit Comment**.
 
 {{% alert color="info" %}}
 The URL for each exchange is unique.

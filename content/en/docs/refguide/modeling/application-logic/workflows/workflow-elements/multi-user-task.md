@@ -368,7 +368,7 @@ To view **Parameters**, click the ellipsis icon next to the **Task name** or **T
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an attribute from the context that will be displayed
 
 ##### 2.8.3.1 Adding New Parameters
 

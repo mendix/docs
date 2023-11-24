@@ -108,7 +108,21 @@ If you try to use an unsupported feature you will be warned and can choose to ed
 
 ## 3 Constraints in Java
 
-{{% todo %}}Planning to put a very short code example here for completeness{{% /todo %}}
+To apply XPath constraints in Java, you should use a complete XPath expression as described in [XPath](/refguide/xpath/). This includes the entity context plus your constraint expression and (optionally) an aggregate function and attribute to retrieve.
+
+The XPath should be used in a [core.createXPathQuery](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) call. You can then call [XPathQueryBase.execute](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/datastorage/XPathQueryBase.html#execute(com.mendix.systemwideinterfaces.core.IContext)) which will return the list of objects filtered using the XPath you provided.
+
+For example, to retrieve all customers named Jansen:
+
+{{% todo %}}Does this Java look like it might work?{{% /todo %}}
+
+```java {linenos = false}
+public getCustomersNameJansen(IContext context, ICore core, int value) {
+    List<IMendixObject> results = core.createXPathQuery("//Sales.Customer[Name='Jansen']")
+        .execute(context);
+    return results;
+}
+```
 
 ## 4 Simple Constraints
 

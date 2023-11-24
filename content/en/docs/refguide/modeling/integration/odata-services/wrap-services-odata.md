@@ -193,7 +193,7 @@ Set up a Twitter client module that allows users to input a Twitter ID and commu
 
 4. Add a new page to display the data, and create a ShowUserPage microflow.
 
-    The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
+    The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint `[Username=$TwitterClientInput/Username]` to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
 
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
 

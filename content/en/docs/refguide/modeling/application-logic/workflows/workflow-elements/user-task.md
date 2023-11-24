@@ -54,7 +54,7 @@ The **Due date** section properties are described in the table below:
 
 #### 2.4.1 Target Users Using {#target-users}
 
-**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow.
+**Target users using** allows you to manage what users will the task be assigned to. You can filter users using  or implement more flexible logic and add several checks using a microflow.
 
 Possible options of this property are described in the table below:
 
@@ -111,7 +111,7 @@ To view **Parameters**, click the ellipsis icon next to the **Task name** or **T
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an attribute from the context that will be displayed
 
 ##### 2.7.3.1 Adding New Parameters
 

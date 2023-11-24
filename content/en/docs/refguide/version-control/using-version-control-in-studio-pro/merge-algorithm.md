@@ -123,13 +123,13 @@ Now Studio Pro will continue with rebasing the next local commit (`#5`).
 
 #### 3.1.3 Resolving the Second Conflict 
 
-While Rebasing the next commit (`#5`) another conflict is detected. In this example we resolve this by adding another attribute `Login`, to the `User` entity.
+While Rebasing the next commit (`#5`) another conflict is detected. You can choose to resolve this conflict using either 'Theirs' or 'Mine' or reverting to the original.
+
+You can also make additional changes which are added to the same commit. For example you can add another attribute `Login`, to the `User` entity. These changes will be represented as 'Mine', together with changes that were taken from the server. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Conflicts/Rebase_Mine_Change.png" >}} 
 
-Above you can see that your new change is represented as 'Mine', together with changes that were taken from the server. 
-
-Once the conflict is resolved and you continue the rebase, a new commit (`#5'`) is created from your commit (`#5`), where you can optionally amend the commit message. 
+Once the conflict is resolved and you continue the rebase, a new commit (`#5'`) is created from your commit (`#5`), and you can optionally amend the commit message. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Rebase_Step_3.png" width="525" >}} 
 
@@ -185,13 +185,15 @@ As the `E_mail` attribute was renamed on both the server and in your local work,
 
 **Removal of `Second_E_mail` attribute on server**
 
-Because the `Second_E_mail` attribute was removed on the server, while renaming it in your local work, there is another conflict. In this example we resolve this by adding another attribute ‘Login’, to the ‘User’ entity.
+Because the `Second_E_mail` attribute was removed on the server, while renaming it in your local work, there is another conflict which needs to be resolved.
+
+You can also make additional changes which are added to the same commit. For example you can add another attribute `Login`, to the `User` entity.
 
 After resolving all conflicts you can proceed with testing the app.
 
 #### 3.2.3 Test and Push Changes 
 
-When the combined state is tested, a 'merge commit' can be created for the new version of the app. This is a new commit (`#6`) which will always show that it merged commits `#4` and `#5`.
+When the combined state is tested, you can commit the current state of the app. This is a new commit (`#6`) which will always show that it merged commits `#3` and `#5`.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/Steps/Merge_Step_3.png" width="525" >}} 
 

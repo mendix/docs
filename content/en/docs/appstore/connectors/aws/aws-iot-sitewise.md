@@ -809,6 +809,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `TIMESTAMP_OUT_OF_RANGE_EXCEPTION` | TIMESTAMP_OUT_OF_RANGE_EXCEPTION | You entered a faulty timestamp. |
 | `UNKNOWN_TO_SDK_VERSION` | UNKNOWN_TO_SDK_VERSION | Returned when the enumeration value is unknown in the SDK. |
 
+#### 4.2.20 ENUM_FindNearestSecond_Type {#find-nearest-second}
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ROUND` | ROUND | To round up to the nearest second. |
+| `CEILING` | CEILING | To round to nearest unit. |
+| `TRUNCATE` | TRUNCATE | To round down to the nearest second. |
+
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
@@ -931,7 +939,7 @@ The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to re
 | --- | --- | 
 | `GetAssetPropertyValueHistoryRequest` | `GetAssetPropertyValueHistoryResponse` |
 
-#### 4.3.14 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+#### 4.3.14 GetAssetPropertyAggregates {#get-asset-property-aggregates}
 
 The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retrieve aggregated values for an asset property. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyAggregatesRequest` object and returns a `GetAssetPropertyAggregatesResponse` object.
 
@@ -955,10 +963,18 @@ The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you 
 | --- | --- | 
 | `BatchGetAssetPropertyValueHistoryRequest` | `BatchGetAssetPropertyValueHistoryResponse` |
 
-#### 4.3.17 BatchPutAssetPropertyValueRequest {#batch-put-asset-property-value-request}
+#### 4.3.17 BatchPutAssetPropertyValue {#batch-put-asset-property-value}
 
-The `BatchPutAssetPropertyValueRequest` Amazon Iot SiteWise activity allows you to put values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchPutAssetPropertyValueRequest` object and returns a `BatchPutAssetPropertyValueResponse` object.
+The `BatchPutAssetPropertyValue` Amazon Iot SiteWise activity allows you to put values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchPutAssetPropertyValueRequest` object and returns a `BatchPutAssetPropertyValueResponse` object.
 
 | Input | Output | 
 | --- | --- | 
 | `BatchPutAssetPropertyValueRequest` | `BatchPutAssetPropertyValueResponse` |
+
+#### 4.3.18 JA_FindNearestSecond {#find-nearest-second}
+
+The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAssetPropertyAggregates](#get-asset-property-aggregates) and [BatchGetAssetPropertyValueHistory](#get-asset-property-value-history) Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attbibutes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created this JA_FindNearestSecond java action with three different enum variables for the `FindType` parameter. It requires a date and time `DateTime` parameter and a [`FindType`](#find-nearest-second) enum parameter and returns a date and time value.
+
+| Input | Output | 
+| --- | --- | 
+| `DateTime` , `FindType` | Date and time value |

@@ -89,7 +89,29 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module must include the English language
 
-### 3.5 Mendix Partner Program
+### 3.5 Using a GitHub Repo {#github}
+
+You can set up a GitHub repository to contain the development content for your Marketplace component, and you can share this repo URL as the component source on the [Package](#package) page in the submission process.
+
+When setting up the GitHub repo for your componen, follow these guidelines:
+
+* Make sure the repo name matches the name that will be used for the published Marketplace component
+* Use UpperCamelCase to replace the spaces in the name (for example, *MyFirstApp*)
+* Make sure the repo description states what the component does (this description can also be used in the Mendix Marketplace)
+* Add a *.gitignore* file to keep your repo clean
+
+To create a new component release for the Mendix Marketplace, follow these steps:
+
+1. Create a new tag on the appropriate commit on the production or release branch in your GitHub repo.
+2. From this tag, create a [new release in GitHub](https://help.github.com/articles/creating-releases). 
+3. In this GitHub release, provide an official name, and write the release notes. You can use these for the Marketplace release as well.
+4. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace automatically syncs the *.mpk* to your new draft:
+
+    {{< figure src="/attachments/appstore/creating-content/set-up-repo/github-releases.png" >}}
+
+5. Link this GitHub release to the upcoming Mendix Marketplace release by mentioning the GitHub release number in the description. For more details, see the [Package](#package) and [Updating Existing Marketplace Content](#updating) sections below.
+
+### 3.6 Mendix Partner Program
 
 For more information on what this program offers, see [Mendix Component Partner Program](/appstore/partner-program/) and [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 
@@ -193,15 +215,15 @@ To finish up configuring this page, click **Upload** to upload an icon for your 
 
 ### 4.2 Package {#package}
 
-On the **Package** page, you can **Upload Source FIle**: 
-
 {{% alert color="info" %}}
 If you are using **Solutions**, you will not see the option to select your content source. If you are using **Industry Template**, selecting a content source is optional.
 {{% /alert %}}
 
+On the **Package** page, you can **Upload Source File**: 
+
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
-* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Component](/appstore/creating-content/set-up-repo/))
+* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for details, see the [Using a GitHub Repo](#github) section above)
     * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
     * When you are finished, click **OK**
 

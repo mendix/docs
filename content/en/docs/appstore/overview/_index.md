@@ -25,7 +25,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Use Marketplace Content](/appstore/overview/use-content/).
+This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 2 Marketplace Home Page {#home}
 
@@ -35,7 +35,7 @@ The [Marketplace home page](https://marketplace.mendix.com/)  is your entry poin
 * Explore content via the **Content Types** and filters described below
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](/appstore/overview/my-marketplace/) as well as your company's [private content](/appstore/overview/my-marketplace/#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
-* Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
+* Click **Add Content** to [share new Marketplace content](/appstore/sharing-content/) you have developed
 
 {{< figure src="/attachments/appstore/overview/overview/home-page.png" >}}
 
@@ -57,10 +57,10 @@ The following filter options are also available:
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
-* **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
+* **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
-For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *How to Use Marketplace Content*.
+For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *Using Marketplace Content*.
 
 ## 3 Component Details Page {#details}
 
@@ -79,7 +79,7 @@ The header for a component presents the following details:
     * **Start with Template** for starter templates – click this to use the template
     * **Download** for other content types – click this to download the component
     * **Contact Us** – click this to contact Mendix or the community supplier
-* The partner icon is applied to components that are supported by a partner:
+* <a id="partner-icon"></a>The partner icon is applied to components that are supported by a partner:
 
     {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  >}}
 
@@ -90,7 +90,7 @@ The header for a component presents the following details:
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
-* The type of [license](/appstore/overview/share-content/#license) for the component
+* The type of [license](/appstore/sharing-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 

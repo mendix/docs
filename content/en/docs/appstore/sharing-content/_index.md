@@ -1,10 +1,13 @@
 ---
-title: "Share Marketplace Content"
-url: /appstore/overview/share-content/
-weight: 3
+title: "Sharing Marketplace Content"
+url: /appstore/sharing-content/
+weight: 4
+no_list: false
+description_list: true
 description: "Describes how to create and share Mendix Marketplace content."
 tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
 aliases:
+    - /appstore/overview/share-content/
     - /appstore/general/share-app-store-content/
     - /developerportal/app-store/share-content/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -23,7 +26,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [How to Use Marketplace Content](/appstore/overview/use-content/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [Using Marketplace Content](/appstore/overview/use-content/)
 
 ## 3 Marketplace Content Development Guidelines {#guidelines}
 
@@ -75,7 +78,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
 * If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
 
-    {{< figure src="/attachments/appstore/overview/share-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
+    {{< figure src="/attachments/appstore/sharing-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
 
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments/))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
@@ -86,7 +89,29 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module must include the English language
 
-### 3.5 Mendix Partner Program
+### 3.5 Using a GitHub Repo {#github}
+
+You can set up a GitHub repository to contain the development content for your Marketplace component, and you can share this repo URL as the component source on the [Package](#package) page in the submission process.
+
+When setting up the GitHub repo for your componen, follow these guidelines:
+
+* Make sure the repo name matches the name that will be used for the published Marketplace component
+* Use UpperCamelCase to replace the spaces in the name (for example, *MyFirstApp*)
+* Make sure the repo description states what the component does (this description can also be used in the Mendix Marketplace)
+* Add a *.gitignore* file to keep your repo clean
+
+To create a new component release for the Mendix Marketplace, follow these steps:
+
+1. Create a new tag on the appropriate commit on the production or release branch in your GitHub repo.
+2. From this tag, create a [new release in GitHub](https://help.github.com/articles/creating-releases). 
+3. In this GitHub release, provide an official name, and write the release notes. You can use these for the Marketplace release as well.
+4. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace automatically syncs the *.mpk* to your new draft:
+
+    {{< figure src="/attachments/appstore/sharing-content/github-releases.png" >}}
+
+5. Link this GitHub release to the upcoming Mendix Marketplace release by mentioning the GitHub release number in the description. For more details, see the [Package](#package) and [Updating Existing Marketplace Content](#updating) sections below.
+
+### 3.6 Mendix Partner Program
 
 For more information on what this program offers, see [Mendix Component Partner Program](/appstore/partner-program/) and [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 
@@ -139,11 +164,11 @@ These are the open-source software license options available and their requireme
 
 | | **Notes** | **Commercial use allowed?** | **Component code needs to be in public repo?** | **License text required with copyright info in code and distribution artifact?** | **Can modify?** (Mention modifications to code) | **Can consuming apps use without making their code public?** | **Notice files should be distributed with artifact?** | **Original component source code to be distributed with consuming app?** | **Can sub-license?** |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
-| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
-| **BSD 2.0, 3.0** | | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
-| **Apache 1.0** | | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
-| [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}}  |
-| **Creative Commons CC0 1.0 Universal (CC-0)** (Public Domain) | | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/overview/share-content/check-mark.svg" >}} |
+| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
+| **BSD 2.0, 3.0** | | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
+| **Apache 1.0** | | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
+| [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}}  |
+| **Creative Commons CC0 1.0 Universal (CC-0)** (Public Domain) | | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
 
 {{% alert color="info" %}}
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
@@ -153,7 +178,7 @@ The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/g
 
 You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
 
-This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/overview/share-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
+This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/sharing-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
 
 Follow these steps to configure a proprietary license for a new public component:
 
@@ -175,6 +200,9 @@ When prospective customers are interested in your product, they can leave their 
 You can configure the name of your **Main call-to-action** button from the following choices: 
 
 * **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
+
+    {{% alert color="warning" %}}If you choose to add one of these buttons, customers can contact you directly. If you start talking with the customer, it is your responsibility to provide access to the product for that customer. Mendix is not involved in such customer interactions. {{% /alert %}}
+
 * **Download** – no lead routing is established, but customers can directly download your product.
 
 In the **How would you like to receive information on new leads?** field, you must specify the email address(es) where notifications and information can be sent.
@@ -183,19 +211,19 @@ In the **How would you like to receive information on new leads?** field, you mu
 
 To finish up configuring this page, click **Upload** to upload an icon for your component.
 
-{{< figure src="/attachments/appstore/overview/share-content/general.png" >}}
+{{< figure src="/attachments/appstore/sharing-content/general.png" >}}
 
 ### 4.2 Package {#package}
-
-On the **Package** page, you can **Upload Source FIle**: 
 
 {{% alert color="info" %}}
 If you are using **Solutions**, you will not see the option to select your content source. If you are using **Industry Template**, selecting a content source is optional.
 {{% /alert %}}
 
+On the **Package** page, you can **Upload Source File**: 
+
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
-* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Component](/appstore/creating-content/set-up-repo/))
+* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for details, see the [Using a GitHub Repo](#github) section above)
     * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
     * When you are finished, click **OK**
 
@@ -208,14 +236,14 @@ Enter **Release Notes** for the component in the box provided describing what is
 Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using a service (for example, [VirusTotal](https://www.virustotal.com/gui/home/upload)). This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF (via a screenshot, if necessary). Then, click **Upload** in the Marketplace to upload your report.
 
 {{% alert color="warning" %}}
-If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/overview/share-content/#approval) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
+If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/sharing-content/governance-process/) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/overview/share-content/package.png" >}}
+{{< figure src="/attachments/appstore/sharing-content/package.png" >}}
 
 ### 4.3 Enable {#doc}
 
@@ -238,7 +266,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a id="screenshot"></a>Click **Upload Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-{{< figure src="/attachments/appstore/overview/share-content/enable.png"  >}}
+{{< figure src="/attachments/appstore/sharing-content/enable.png"  >}}
 
 You can optionally add a **YouTube URL** and a **Demo URL**.
 
@@ -252,46 +280,17 @@ On the **Capabilities** page, you can provide the following details about an ind
 * A **Use Case** relevant to the content (enter a **Header** and **CTA URL**)
 * **External Links** relevant to the content
 
-{{< figure src="/attachments/appstore/overview/share-content/capabilities.png"  >}}
+{{< figure src="/attachments/appstore/sharing-content/capabilities.png"  >}}
 
 ### 4.5 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before publishing.
 
-{{< figure src="/attachments/appstore/overview/share-content/publish.png"   width="600"  >}}
+{{< figure src="/attachments/appstore/sharing-content/publish.png"   width="600"  >}}
 
-After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. See the next section on details for the approval process.
+After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. 
 
-### 4.6 Approval Process {#approval}
-
-All components that are to be listed in the [Public Marketplace](#public) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission.
-
-{{% alert color="warning" %}}
-Mendix strongly recommends performing the checks below before you submit your component for approval. This will also speed up the approval process.
-{{% /alert %}}
-
-Mendix does the following:
-
-* Checks the licenses used in the uploaded *.mpk* files using the [Fossology](https://fossology.osuosl.org/repo/) tool
-    * There should be no use of GPL, LGPL, or MPL licenses
-    * For more details, see the [Providing License Details](/appstore/overview/share-content/#license) section above
-* Checks the *.mpk* files for malware using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool
-* Checks for third-party vulnerabilities using the [Snyk](https://snyk.io/) tool
-* If the component is a widget, module, connector, or an industry template, Mendix checks that it can be used without errors in a specific Studio Pro version
-* Checks that the documentation mentions all the details per the template (for example, dependencies, configuration, and how to use the component)
-* Checks the grammar, alignment, and spelling for the component's description and documentation
-* Checks that the logo is related to the component's functionality
-* Checks that the screenshots are related to the configuration required to use the component in the end-user's app
-
-It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you have followed the [content development guidelines](#guidelines) and have performed the checks above before you submit a component for approval.
-
-{{% alert color="info" %}}
-Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-[Private Marketplace](#private) content does not require any review or approval.
-{{% /alert %}}
+For details on the approval process, see [Governance Process](/appstore/sharing-content/governance-process/).
 
 ## 5 Updating Existing Marketplace Content {#updating}
 
@@ -324,23 +323,4 @@ To update content that has already been published, follow these steps:
 
 5. On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-## 6 Reviewing Outdated Components
-
-As the Mendix Marketplace grows, it is important for users to be able to find up-to-date and relevant components. In order to reduce the likelihood that users find outdated or obsolete components, we review Marketplace content and evaluate for the following points:
-
-* Whether the component supports the versions of Studio Pro that Mendix supports (meaning, the current major version plus two previous major versions – for more information, see [LTS, MTS, and Monthly Releases](/releasenotes/studio-pro/lts-mts/))
-* Whether the component has been updated recently or not for ages (for example, it was published in 2016 and has not been updated since)
-* Whether it is being actively used or if it has limited usage or very few downloads, reviews, or ratings
-
-For a component that is outdated based on the above points, this is the review and remediation process: 
-
-1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/control-center/company-settings/), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
-2. Mendix sends two reminders during these 30 days: the first on the 15th day, and the second on the 25th day.
-3. If the component owner or Mendix Admin is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
-4. If the owner or Mendix Admin wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.
-
-## 7 Read More
-
-* [Marketplace Overview](/appstore/overview/)
-* [Mendix Partner Program](/appstore/partner-program/)
-* [How to Use Marketplace Content](/appstore/overview/use-content/)
+## 6 Documents in This Category

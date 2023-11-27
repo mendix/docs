@@ -1,5 +1,5 @@
 ---
-title: "Set Up a GitHub Repo to Publish a Marketplace Item"
+title: "Set Up a GitHub Repo to Publish a Marketplace Component"
 linktitle: "Publish from GitHub to Marketplace"
 url: /appstore/creating-content/set-up-repo/
 category: "Creating Content"

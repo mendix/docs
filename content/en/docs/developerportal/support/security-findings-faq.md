@@ -21,7 +21,7 @@ This FAQ document is not updated in real time. For updates on current security i
 
 ### 1.2 Security Advisories
 
-Security Advisories for Mendix are published under [Security Advisories](/releasenotes/security-advisories/).
+Security Advisories for Mendix are published in [Security Advisories](/releasenotes/security-advisories/).
 
 ### 1.3 General Security Advice
 
@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 

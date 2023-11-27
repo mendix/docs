@@ -175,6 +175,9 @@ When prospective customers are interested in your product, they can leave their 
 You can configure the name of your **Main call-to-action** button from the following choices: 
 
 * **Contact Us**, **Notify Me**, and **Request Demo** – requires the email address that will receive the customer information
+
+    {{% alert color="warning" %}}If you choose to add one of these buttons, customers can contact you directly. If you start talking with the customer, it is your responsibility to provide access to the product for that customer. Mendix is not involved in such customer interactions. {{% /alert %}}
+
 * **Download** – no lead routing is established, but customers can directly download your product.
 
 In the **How would you like to receive information on new leads?** field, you must specify the email address(es) where notifications and information can be sent.
@@ -195,7 +198,7 @@ If you are using **Solutions**, you will not see the option to select your conte
 
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
     * When you are finished, click **Save**
-* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
+* If you select **GitHub URL**, follow the steps in the dialog box for copying the link of the release you want to import (for best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Component](/appstore/creating-content/set-up-repo/))
     * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
     * When you are finished, click **OK**
 
@@ -334,7 +337,7 @@ As the Mendix Marketplace grows, it is important for users to be able to find up
 
 For a component that is outdated based on the above points, this is the review and remediation process: 
 
-1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/control-center/#company), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
+1. Mendix sends a notification to the owner of the outdated component and the [Mendix Admin](/control-center/company-settings/), who then has to submit an update within 30 days in order for their component to remain active on the Marketplace. This update needs to be based on support for an active version of Studio Pro.
 2. Mendix sends two reminders during these 30 days: the first on the 15th day, and the second on the 25th day.
 3. If the component owner or Mendix Admin is unable to make the required update within the stipulated timeframe, Mendix unpublishes their component from the Marketplace. Unpublishing means the component is not listed on the Marketplace, but a copy of the component remains in the database.
 4. If the owner or Mendix Admin wants to restore their unpublished component on the Marketplace, they make the required update and create a [Mendix Support](/developerportal/support/) request.

@@ -1,31 +1,31 @@
 ---
-title: "Logic Editors Beta"
-linktitle: "Logic Editors Beta"
+title: "Logic Editors (Beta)"
+linktitle: "Logic Editors (Beta)"
 url: /refguide/logic-editors-beta/
 weight: 5
-description: "Describes the functionalities of the Beta version of the redesigned microflows, nanoflows, and rules editors."
+description: "Describes the functionalities of the beta version of the redesigned microflows, nanoflows, and rules editors."
 tags: ["beta", "logic bot", "mendix assist", "assist", "mx assist", "logic", "logic editors", "microflow", "nanoflow", "keyboard navigation", "shortcut"]
 ---
 
 ## 1 Introduction
 
 {{% alert color="info" %}}
-The Beta versions of the logic editors are available to try out in Studio Pro 10.4.0. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
+The beta versions of the logic editors are available to try out in Studio Pro 10.4.0. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-We are redesigning the logic editors (microflows, nanoflows, and rules) to bring the user journey to the next level. In the Beta versions of the logic editors, we have enhanced the usability of the [MxAssist Logic Bot](#logic-bot), added more support for [keyboard navigation](#keyboard-navigation), and also invested in more [developer experience details](#miscellaneous) to make the interaction with the canvas even more fluent. For more information on those functionalities, see the sections below. 
+We are redesigning the logic editors (microflows, nanoflows, and rules) to bring the user journey to the next level. In the beta versions of the logic editors, we have enhanced the usability of the [MxAssist Logic Bot](#logic-bot), added more support for [keyboard navigation](#keyboard-navigation), and also invested in more [developer experience details](#miscellaneous) to make the interaction with the canvas even more fluent. For more information on those functionalities, see the sections below. 
 
-The Beta editors can be activated in two ways:
+The beta editors can be activated in two ways:
 
-* To try out the Beta version once, use the toggle in the top toolbar of the editor to switch from the **Classic version** to the **Beta version**. This only affects the current document. Other microflow and nanoflow editors will still start with the **Classic version**.
+* To try out the beta version once, use the toggle in the top toolbar of the editor to switch from the **Classic version** to the **Beta version**. This only affects the current document. Other microflow and nanoflow editors will still start with the **Classic version**.
 
   {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/logic-editors-beta/beta-toggle.png" >}}
 
-* To edit microflows, nanoflows, or rules in the Beta editors by default, open the Studio Pro preferences and check **Use the Beta Version as the default editor** on the **New features** tab.
+* To edit microflows, nanoflows, or rules in the beta editors by default, open the Studio Pro preferences and check **Use the Beta Version as the default editor** on the **New features** tab.
 
 ## 2 Modeling Using MxAssist Logic Bot {#logic-bot}
 
-MxAssist Logic Bot menu has been refreshed completely in the Beta logic editors. It now provides better parametrized and AI-assisted suggestions, smart search, and keyboard-based navigation. Not only for microflows, it is now also available for nanoflows and rules.
+MxAssist Logic Bot menu has been refreshed completely in the beta logic editors. It now provides better parametrized and AI-assisted suggestions, smart search, and keyboard-based navigation. Not only for microflows, it is now also available for nanoflows and rules.
 
 When you create a microflow, a nanoflow, or a rule, a Logic Bot dialog box is shown with recommendations of objects or activities to insert. This list initially contains the top 10 contextual suggestions. You can select an element directly from the recommendation list:
 
@@ -55,7 +55,7 @@ When you want to view recommendations on a particular flow, you can hover the mo
 
 ## 3 Keyboard Navigation {#keyboard-navigation}
 
-In the Beta logic editors, keyboard navigation has been improved. You can now also select flows with the keyboard. Pressing <kbd>Enter</kbd> when a flow is selected will open the Logic Bot dialog box, from which you can insert activities.
+In the logic editors (beta), keyboard navigation has been improved. You can now also select flows with the keyboard. Pressing <kbd>Enter</kbd> when a flow is selected will open the Logic Bot dialog box, from which you can insert activities.
 
 The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows, nanoflows, and rules.
 

@@ -269,5 +269,5 @@ To prevent this type of attack from happening, you can take the following precau
 If that is not possible:
 
 * Always validate and sanitize the user inputs
-* Maintain a whitelist of the domains that should be accessible and use it to validate URLs
+* Maintain a safe list of the domains that should be accessible and use it to validate URLs
 * Do not allow the user to access an unprocessed response from the call (note that it might not be sufficient to make secret information invisible on a page. See also the section on [Communication Patterns](/refguide/communication-patterns/#security))

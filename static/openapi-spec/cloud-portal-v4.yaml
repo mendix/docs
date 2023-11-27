@@ -228,12 +228,12 @@ paths:
                     permissions:
                       - member:
                           userId: jane.doe@domain.tld
-                        canDeployApp: true
-                        canManageBackups: true
-                        canViewAlerts: true
-                        canAccessAPI: true
-                        canViewLogs: true
-                        canManagePrivileges: true
+                        canDeployApp: 'true'
+                        canManageBackups: 'true'
+                        canViewAlerts: 'true'
+                        canAccessAPI: 'false'
+                        canViewLogs: 'false'
+                        canManagePrivileges: 'false'
                     pagination:
                       offset: 60
                       limit: 20
@@ -561,17 +561,17 @@ components:
             userId:
               $ref: '#/components/schemas/userId'
         canDeployApp:
-          type: boolean
+          type: string
         canManageBackups:
-          type: boolean
+          type: string
         canViewAlerts:
-          type: boolean
+          type: string
         canAccessAPI:
-          type: boolean
+          type: string
         canViewLogs:
-          type: boolean
+          type: string
         canManagePrivileges:
-          type: boolean
+          type: string
     permission-patch:
       title: permission-patch
       x-stoplight:

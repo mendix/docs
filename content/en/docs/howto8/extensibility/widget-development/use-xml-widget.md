@@ -154,7 +154,7 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 <property key="constraint" type="entityConstraint" entityProperty="color">
  <caption>Color constraint</caption>
  <category>Data source</category>
- <description>The xpath constraint on the entity.</description>
+ <description>The XPath constraint on the entity.</description>
 </property>
 ```
 

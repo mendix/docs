@@ -77,21 +77,21 @@ The **Multi selection (reference set)** section allows you to configure combobox
 
 The **Label** section allows you to display labels for the combobox.
 
-#### 2.1.5 Conditional visibility {#visibility-tab}
+#### 2.1.5 Conditional Visibility {#visibility}
 
 For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.
 
-#### 2.1.6 Editability Tab {#editability-tab}
+#### 2.1.6 Editability Tab {#editability}
 
 For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
-### 2.2 Events Tab {#events-tab}
+### 2.2 Events Tab {#events}
 
 The following configurations are available:
 
 * **On change** – executes an action when the attribute value changes
 
-### 2.3 Accessibility Tab {#accessibility-tab}
+### 2.3 Accessibility Tab {#accessibility}
 
 The **Accessibility** tab allows you to configure settings for combobox accessibility features.
 

@@ -14,7 +14,7 @@ The Mendix Marketplace is at the heart of the Mendix developer community, which 
 
 A robust ecosystem is crucial to supporting the flow of value to Mendix Makers, and Mendix Partners are at the core of that ecosystem. We want you to be a part of the Mendix Marketplace so you can help other Makers see what is possible.
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/overview/share-content/) your content in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. 
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/sharing-content/) your content in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. 
 
 In return, you will gain the following benefits:
 

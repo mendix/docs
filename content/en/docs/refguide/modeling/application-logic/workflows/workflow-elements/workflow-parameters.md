@@ -17,7 +17,7 @@ In the workflow editor, you can see the **WorkflowContext** parameter in the upp
 
 ### 2.1 Entity {#entity}
 
-The entity that you select as the parameter type. What is passed through the parameter is the object of this entity. The passed object is often referred to as a workflow context object or a context object. 
+The entity that you select as the parameter type. What is passed through the parameter is the object of this entity. The passed object is often referred to as a workflow context object or a context object. The entity is often referred to as a workflow context entity.
 
 ### 2.2 Name
 

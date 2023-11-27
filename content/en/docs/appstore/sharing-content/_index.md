@@ -268,7 +268,7 @@ Finally, on the **Publish** page, you can review all the details of your compone
 
 After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. 
 
-For details on the approval process, see [Governance Process](/appstore/sharing-content/governance-process).
+For details on the approval process, see [Governance Process](/appstore/sharing-content/governance-process/).
 
 ## 5 Updating Existing Marketplace Content {#updating}
 

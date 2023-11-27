@@ -14,15 +14,21 @@ A member in Control Center means a user of the Mendix platform who participates 
 
 ## 1 Introduction
 
-The **Apps** page shows you all the apps belonging to your company and allows you to manage default app roles in your company.
+The **Apps** page shows you all the apps belonging to your company. It also allows you to manage default app roles in your company.
+
+The **Apps** page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, **Deactivated Apps**, and **Default App Roles**.
+
+{{% alert color="info" %}}
+We are working on giving apps an each environment a separate tab. Stay tuned.
+{{% /alert %}}
 
 ## 2 Mendix Cloud
 
 The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the public Mendix Cloud.
 
-By default you only see apps from the production environments. Turn off the **Production** toggle above the table on the right side to see all the environments.
+By default you only see apps from the production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items that you select are shown in the table.
+You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" >}}
 
@@ -30,7 +36,11 @@ The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
 
-- **App Name**: if  you click on this you go to the app details (reference)
+- **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
 
 - **Technical Contact**: the technical contact of the app. 
 
@@ -50,18 +60,22 @@ The description of the items that you can select are as follows:
 
 - **Last Commit**: the last commit in any branch of the repository
 
-- **Members**: the number of team members of the app
+- **Members**: the number of the team members of the app
 
 - **Production**: Whether the environment is a production environment
 
 - **Created Date**: the date the app was created
+
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+
+You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
 
 ## 3 Mendix Free Cloud
 
 The Mendix Free Cloud tab shows all the apps that are deployed on the Mendix Free Cloud.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns.
+You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" >}}
 
@@ -69,7 +83,11 @@ The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
 
-- **App Name**: if you click on this you go to the app details (reference)
+- **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
 
 - **Technical Contact**: the technical contact of the app. 
 
@@ -87,54 +105,74 @@ The description of the items that you can select are as follows:
 
 - **Last Commit**: the last commit in any branch of the repository
 
-- **Members**: the number of team members of the app
+- **Members**: the number of the team members of the app
 
 - **Created Date**: the date the app was created
 
 - **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for deactivate and delete apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the options for deactivating and deleting apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+
+You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
 ## 4 Other Apps
 
 The **Other Apps** tab shows all the other apps. They are either deployed to other clouds or do not have an environment. 
 
 {{% alert color="info" %}}
-Every cloud environment will have its exclusive tab soon. It is on our roadmap. Stay tuned.
+We are working on giving apps an each environment a separate tab. Stay tuned.
 {{% /alert %}}
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns.
+You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" >}}
 
 The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
-- **App Name**: if  you click on this you go to the app details (reference)
-- **Members**: the number of team members of the app
+- **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
+- **Members**: the number of the team members of the app
 - **Created Date**: the date the app was created
 - **Actions**: adding the ellipsis icon (**...**) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for deactivate and delete apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the options for deactivating and deleting apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+
+You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
 ## 5 Deactivated Apps
 
 The **Deactivated Apps** tab shows all the deactivated apps that belong to your company.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns.
+You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" >}}
 
 The description of the items that you can select are as follows:
 
 - **AppID**: the unique identifier of the app
-- **App Name**: if  you click on this you go to the app details (reference)
+- **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
 - **Created Date**: the date the app was created
 - **Mainline Version**: the Mendix version of the app on the mainline in the repository
 - **Last Commit**: the last commit in any branch of the repository
-- **Members**: the number of team members of the app
+- **Members**: the number of the team members of the app
+
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
 
 When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, it shows on the cooresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+
+You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
 ## 6 Default App Roles
 
@@ -142,19 +180,19 @@ The **Default App Roles** tab shows the default [team roles](/developerportal/ge
 
 {{< figure src="/attachments/control-center/apps/roles.jpg" >}}
 
-## 7 Filtering Apps in the Table
+## 7 Filtering Apps in the Table {#filter-apps}
 
-On each tab with an table of apps, different filters are available on the top, which allows you to filter apps using different criteria. 
+On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
-With the filter below, you can filter apps by the app ID, name, Mendix versions, Technical Contact, environment name, envirionment ID, mainline version, and, deployed version. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**.
+With the filter as shown below, you can filter apps by the app ID, name, Mendix versions, Technical Contact, environment name, envirionment ID, mainline version, and, deployed version. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 
 {{< figure src="/attachments/control-center/apps/filter-apps.png" >}}
 
-With the filter below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**.
+With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 
 {{< figure src="/attachments/control-center/apps/filter-last-commit.png" >}}
 
-On the **Mendix Cloud** tab, there is one extra filter that allows you to filter apps by **Deployed Status**.
+The filter shown as below allows you to filter apps by **Deployed Status**. (This filter is only available on the **Mendix Cloud** tab.)
 
 {{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
 
@@ -179,15 +217,7 @@ The app details page has the following tabs:
 
 ## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
-If you select one or more apps via the checkboxes in the table, a context menu can appear at the bottom of the screen with options for deactivating apps and deleting an app.
-
-{{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab or on the **Other Apps** tab if you select apps that are deployed on a different environment than Mendix Cloud.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-In the table, you can activate or deactivate up to 100 apps at a time and delete 1 app at a time.
-{{% /alert %}}
+If you select one or more apps via the checkboxes in the table, a context menu can appear at the bottom of the screen with options for deactivating apps and deleting an app. In the table, you can activate or deactivate up to 100 apps at a time and delete one app at a time.
 
 The consequences of deactivating and deleting an app are as below:
 
@@ -199,7 +229,11 @@ The consequences of deactivating and deleting an app are as below:
 | App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
 | Cloud environment stays persistent                          | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
 
-## 10 Exporting Apps to an Excel file
+{{% alert color="info" %}}
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab or on the **Other Apps** tab if you select apps that are deployed on a different environment than Mendix Cloud.
+{{% /alert %}}
+
+## 10 Exporting Apps to an Excel File {#export-to-excel}
 
 On each tab with an table of apps, you can export information about apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 

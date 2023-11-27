@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "widget", "combobox", "platform s
 
 ## 1 Introduction
 
-The [Combobox](https://marketplace.mendix.com/link/component/xxx) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different toppings on a pizza they are ordering.
+The [Combobox](https://marketplace.mendix.com/link/component/xxx) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
 
 A typical combobox can look like this:
 
-{{< figure src="/attachments/appstore/widgets/combobox/combobox.png" alt="Combobox Example" >}}
+{{< figure src="/attachments/appstore/widgets/combobox/combobox-demo.gif" width="300px" alt="Combobox Example" >}}
 
 ### 1.1 Features
 
@@ -24,7 +24,21 @@ A typical combobox can look like this:
 * Supports custom content rendering
 * Supports options filtering for quick selection
 
-## 2 Configuration
+## 2 Properties Pane
+
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Combobox properties consist of the following sections:
+
+Properties:
+
+* [General](#general)
+* [Events](#events)
+* [Accessibility](#accessibility)
+* [Common](#common)
+
+Styling
+
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
 The following sections will describe the different available widget properties and how to configure the widget using them.
 
@@ -40,7 +54,7 @@ The **Data source** section (required) is used to configure the data for the wid
 
 #### 2.1.2 General Tab
 
-The **General** sections allows you to configure general behavior and captions for the combobox. The following configurations are available:
+The **General** section allows you to configure general behavior and captions for the combobox. The following configurations are available:
 
 * **Placeholder text** – captions that will be displayed when there is no data being selected
 * **Filter type** – allows the user to type into the input and filter displayable options on the combobox
@@ -50,35 +64,49 @@ The **General** sections allows you to configure general behavior and captions f
 
 #### 2.1.3 Multi Selection (reference set)
 
-The **Multi selection (reference set)** sections allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
+The **Multi selection (reference set)** section allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
 
 * **Selection Method** – configures the behavior for selecting options
-        * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
-        * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the "x" button on each of the displayed selected items.
-* **Show selected item as** – you can choose to display selected item as labels with "x" buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
+    * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
+    * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the **X** button on each of the displayed selected items.
+* **Show selected item as** – you can choose to display selected item as labels with **X** buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
 
     {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
 
 #### 2.1.4 Label
 
-The **Label** sections allows you to display labels for the combobox.
+The **Label** section allows you to display labels for the combobox.
 
-### 2.1.5 Conditional visibility {#visibility-tab}
+#### 2.1.5 Conditional visibility {#visibility-tab}
 
 For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.
 
-### 2.1.6 Editability Tab {#editability-tab}
+#### 2.1.6 Editability Tab {#editability-tab}
 
 For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
 ### 2.2 Events Tab {#events-tab}
 
-**On change** – executes an action when the attribute value changes
+The following configurations are available:
+
+* **On change** – executes an action when the attribute value changes
 
 ### 2.3 Accessibility Tab {#accessibility-tab}
 
 The **Accessibility** tab allows you to configure settings for combobox accessibility features.
 
-### 2.4 Common Tab
+### 2.4 Common Tab {#common}
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
+
+## 3 Styling
+
+### 3.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 3.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+

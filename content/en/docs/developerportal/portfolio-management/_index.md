@@ -478,9 +478,9 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 The users that you invited receive a notification per email and now appear on the **Access Management** page. 
 
-For users outside your company, they need to accept their invitation. Once they accept, their **Status** will change from **Pending** to **Active**. 
+For users outside your company, they need to accept the invitation. They will appear on the **Pending Invites** tab until they accept the invitation. After they accept the invitation, they will appear in the **Members** tab.
 
-For users within your company, if they have a Mendix account, their **Status** will be **Active** immediately; and if they do not have an Mendix account, their **Status** will change from **Pending** to **Active** after they create a Mendix account.
+For users within your company, they do not need to accept their invitation. If the users have a Mendix  account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
 ### 5.2 Editing and Removing a User
 
@@ -501,6 +501,20 @@ The **Access Requests** page shows all open access requests for the portfolio wi
 * **Date** – This is the date when the request was made.
 * **Reject** – Clicking this rejects the request.
 * **Approve** – Clicking this approves the request and gives the user access to the portfolio.
+
+### 5.4 Pending Invites
+
+The **Pending Invites** tab shows all pending invites for the portfolio with the following items:
+
+* **Email** – This shows the email of the invited user
+
+* **Role** – This shows the access role of the invited user
+
+* **Invite date** – This shows the date the invite was sent
+
+* **Edit** – Clicking the button enables you to change the access role of the pending invite
+
+* **Delete** – Clicking the button enables you to delete pending invite
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

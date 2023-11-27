@@ -62,7 +62,7 @@ The **General** section allows you to configure general behavior and captions fo
 * **Clearable** – if enabled, this allows selected data to be cleared
 * **Custom content** – allows custom widgets to be displayed in the combobox instead of normal text values (only for association data source)
 
-#### 2.1.3 Multi Selection (reference set)
+#### 2.1.3 Multi Selection (Reference Set)
 
 The **Multi selection (reference set)** section allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
 

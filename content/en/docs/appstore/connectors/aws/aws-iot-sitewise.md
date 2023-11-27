@@ -813,8 +813,8 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| `ROUND` | ROUND | To round up to the nearest second. |
-| `CEILING` | CEILING | To round to nearest unit. |
+| `ROUND` | ROUND | To round to the nearest unit. |
+| `CEILING` | CEILING | To round up to the nearest second. |
 | `TRUNCATE` | TRUNCATE | To round down to the nearest second. |
 
 ### 4.3 Activities {#activities}

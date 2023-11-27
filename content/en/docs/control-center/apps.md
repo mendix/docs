@@ -170,7 +170,7 @@ The description of the items that you can select are as follows:
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
 
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, the app moves to the cooresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, the app will appear on the cooresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 

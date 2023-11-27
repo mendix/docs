@@ -492,7 +492,7 @@ The output is described in the table below:
 This input below tests to see whether the string contains only numbers:
 
 ```java {linenos=false}
-isMatch('234hello6432', '^([0-9]+)$')
+isMatch('234hello6432', '([0-9]+)')
 ```
 
 The output is:
@@ -501,7 +501,7 @@ The output is:
 False
 ```
 
-In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
+In `isMatch()`, the regex is implicitly anchored at `^` and `$`. This means that `isMatch()` will always match the entire input string instead of a substring.
 
 **Other Examples**
 

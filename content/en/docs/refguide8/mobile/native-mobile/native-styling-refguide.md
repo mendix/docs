@@ -66,7 +66,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-	text: {
+	caption: {
 		// TextStyle properties
 		color: "#00FF00",
 	}
@@ -677,14 +677,14 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-	<text>New</text>
+	<caption>New</caption>
 </container>
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `text` | This has all TextStyle properties. |      |
+| `caption` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -1102,7 +1102,7 @@ The widget’s style properties are as follows:
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### 11.22 List View Swipe
 

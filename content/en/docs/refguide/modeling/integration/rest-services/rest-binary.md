@@ -28,7 +28,7 @@ To publish or retrieve files with REST, do the following:
 We recommend reading the following for some more background:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
-* Working with [Images, Videos and Files](/refguide/image-and-file-widgets/) in Studio Pro
+* Working with [Images, Videos, and Files](/refguide/image-and-file-widgets/) in Studio Pro
 
 ## 2 Send Files with REST {#create-service}
 
@@ -68,7 +68,7 @@ The **Published REST service** document for the exposed image or file entity has
 
 After you run your app, click the URL in the **Location** field to view the OpenAPI specs.
 
-### 2.1.1 Understanding the Service Details {#service-details}
+#### 2.1.1 Understanding the Service Details {#service-details}
 
 Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
@@ -84,7 +84,7 @@ In the **GET_ByKey** microflow, specify the media type (or MIME type) in the con
 
 See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 
-#### 2.3.1 MIME Type for Images {#mime-images}
+#### 2.2.1 MIME Type for Images {#mime-images}
 
 In the **GET_ByKey** microflow, do the following: 
 
@@ -96,7 +96,7 @@ In the **GET_ByKey** microflow, do the following:
      * **Value (String (Unlimited))** – set the **Value** to `'image/png'`, or the image type that will be returned
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
-#### 2.3.2 MIME Type for PDFs
+#### 2.2.2 MIME Type for PDFs
 
 Follow the steps in the [MIME Type for Images](#mime-images) section, then set the three drop-down options to the following:
 
@@ -104,7 +104,7 @@ Follow the steps in the [MIME Type for Images](#mime-images) section, then set t
 * **Value (String (Unlimited))** – set the **Value** to `'application/pdf'` 
 * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
-### 2.4 Testing the Service {#test-service}
+### 2.3 Testing the Service {#test-service}
 
 Test the service to ensure that it works!
 

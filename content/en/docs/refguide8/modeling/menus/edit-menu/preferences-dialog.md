@@ -25,7 +25,7 @@ When enabled, **Project Explorer** automatically highlights the document that is
 
 #### 2.2.1 Enable MxAssist Logic Bot
 
-If **Enable MxAssist Logic Bot** is checked, then [Mx Assist Logic Bot](/refguide8/mx-assist-studio-pro/) is activated and can offer suggestions for activities in your microflows.
+If **Enable MxAssist Logic Bot** is checked, then [MxAssist Logic Bot](/refguide8/mx-assist-studio-pro/) is activated and can offer suggestions for activities in your microflows.
 
 #### 2.2.2 Show Suggestions for System Variables
 
@@ -78,7 +78,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 
 #### 4.2.1 Enable Private Version Control {#enable}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
 ## 5 Advanced Tab
 

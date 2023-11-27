@@ -28,6 +28,7 @@ For example, the following text box allows the end-user to see, and set, the **N
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text box properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -45,6 +46,7 @@ Styling:
 * [Common](#common-styling)
 
 Miscellaneous:
+
 * [Formatting](#formatting)
 
 ## 3 Properties
@@ -175,7 +177,7 @@ The On Change Behavior property lets users select how **on change** is handled v
 * When user leaves input field (Default)
 * While user is entering data
 
-##### 3.10.1 When user leaves input field (Default)
+#### 3.10.1 When user leaves input field (Default)
 
 This option will work as in previous versions of Studio Pro. Textbox will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
 

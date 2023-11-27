@@ -26,7 +26,7 @@ The **File** menu items are described in the table below:
 | **Save All**               | Saves the changes in all documents that are open.            | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> |
 | **Close**                  | Closes the current document. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>W</kbd>                    |
 | **Close All**              | Closes all document tabs. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> |
-| **Close App**          | Closes the currently open App and returns to the start page. |                                                   |
+| **Close App**          | Closes the currently open App and returns to the home page. |                                                   |
 | **Export as Image**        | Exports the current document as an image in the *.png* format. The following document types can be exported as images: domain models, workflows, document templates. |                                                   |
 | **Export App Package** | Exports the current app to a package (*.mpk*) file. This is useful for example when you want to give someone the entire app, or when you need to provide a test app when submitting a ticket. For more information, see [Export App Package](/refguide/export-app-package-dialog/). |                                                   |
 | **Import App Package** | Imports a package that was created with the **Export App Package** menu item. For more information, see [Import App Package](/refguide/import-app-package-dialog/). |                                                   |

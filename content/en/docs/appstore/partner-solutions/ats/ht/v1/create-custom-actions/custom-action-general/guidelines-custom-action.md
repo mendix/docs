@@ -26,7 +26,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Visibility checks | A Mendix action only searches for elements that are *visible*. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
-| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](/appstore/partner-solutions/ats/rg-one-mendix-wait/) action.<br> |
+| Waiting for background processes | A Mendix action waits until the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](/appstore/partner-solutions/ats/rg-one-mendix-wait/) action.<br> |
 
 However, there are reasons not to use the Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For example, when using a Mendix action, you have six input parameters:
 
@@ -150,8 +150,8 @@ These are the different data types in ATS:
 | Web Element | Represents a DOM element. | (*See the image below this table.*)|
 | Undefined | Lets the user choose the data type. | Choose *String* for "Helloworld!" |
 | Enumeration | One of the values of the given enumeration. | Red, Green, Blue; Todo, Running, Done |
-| Float | **The Float type is deprecated and should not be used.** | N/A |
-| Currency | **The Currency type is deprecated and should not be used** | N/A |
+| Float | ⚠ The Float type is deprecated and should not be used. | N/A |
+| Currency | ⚠ The Currency type is deprecated and should not be used. | N/A |
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/guidelines-custom-action/datatype-web-element.png" >}}
 

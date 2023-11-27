@@ -12,7 +12,7 @@ To make sure that your app is always consistent and properly built, Studio Pro d
 
 When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane. The errors and warnings in pages, microflows, domain models, and document templates will be highlighted: 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
 
 To display the **Errors** pane, there are two options:
 

@@ -2,7 +2,7 @@
 title: "Best Practices for Building Connectors"
 url: /appstore/creating-content/connector-guide-best-practices/
 weight: 7
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best practices"]
+tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "best practices"]
 ---
 
 ## 1 Introduction
@@ -204,7 +204,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.11 IP Protection
 
-For members of the [Mendix Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
+For members of the [Mendix Partner Program](/appstore/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 
@@ -453,7 +453,7 @@ Ensure a new release includes the following:
 
 ### 8.2 Versioning {#versioning}
 
-The [Update Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
+The [Update Existing Marketplace Content](/appstore/overview/share-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
 
 * *Major version* — This is the first digit. This number goes up when you release major breaking changes, or at the very least a major new feature, as part of your connector. Determining what is major is up to you. You can deploy minor/patch versions for older major versions when you have bugs that need resolving.
 

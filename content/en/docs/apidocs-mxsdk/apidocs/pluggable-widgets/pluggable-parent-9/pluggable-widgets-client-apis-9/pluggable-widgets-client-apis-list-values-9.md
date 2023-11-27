@@ -191,7 +191,7 @@ this.props.myDataSource.setSortOrder(undefined);
 The `setSort` method is supported for all [data sources](/refguide9/data-sources/#list-widgets). For `Database` and `XPath` data sources the sorting is done by the back end. For all the other data sources the sorting is done by the client.
 
 {{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.3.
+This feature was introduced in Mendix Studio Pro 9.3.
 {{% /alert %}}
 
 ### 2.4 Filtering {#listvalue-filtering}
@@ -219,7 +219,7 @@ interface MyListWidgetsProps {
 The `setFilter` method is supported for all [data sources](/refguide9/data-sources/#list-widgets). For `Database` and `XPath` data sources the filtering is done by the back end. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
 {{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.3.
+This feature was introduced in Mendix Studio Pro 9.3.
 {{% /alert %}}
 
 #### 2.4.1 Simple Filtering {#simple-filtering}
@@ -402,9 +402,9 @@ actionOnFirstItem.execute();
 In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-9/#actionvalue) for more information about the usage of `ActionValue`.
 
 {{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
+The `get` method was introduced in Mendix Studio Pro 9.0.
 
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+⚠ You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ### 3.2 ListAttributeValue {#listattributevalue}
@@ -453,9 +453,9 @@ const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataS
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-9/#editable-value) for more information about usage of `EditableValue`.
 
 {{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
+The `get` method was introduced in Mendix Studio Pro 9.0.
 
-You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+⚠ You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 #### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
@@ -580,9 +580,9 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property will be `undefined` (as in the example above`myWidgets`).
 
 {{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
+The `get` method was introduced in Mendix Studio Pro 9.0.
 
-You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+⚠ You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ### 3.5 ListExpressionValue {#listexpressionvalue}
@@ -614,9 +614,9 @@ const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(thi
 ```
 
 {{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
+The `get` method was introduced in Mendix Studio Pro 9.0.
 
-You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+⚠ You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ## 4 Filter Helpers{#filter-helpers}

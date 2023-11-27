@@ -9,9 +9,7 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix Cloud customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform.
-
-To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
@@ -65,7 +63,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 3. For **Privacy Settings**, select **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/developerportal/control-center/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -95,11 +93,12 @@ To create a new initiative and add details to it, do as follows:
 
 1. [Create the initiative.](#create-initiative)
 2. [Add general information.](#add-general-information)
-3. [Add planning information.](#add-planning-information)
-4. [Add prioritization information.](#add-prioritization-information)
-5. [Add estimated value.](#add-estimated-value)
-6. [Add comments.](#add-comments)
-7. [Save initiative details.](#save-details)
+3. [Link Epics to an Initiative.](#link-epics)
+4. [Add planning information.](#add-planning-information)
+5. [Add prioritization information.](#add-prioritization-information)
+6. [Add estimated value.](#add-estimated-value)
+7. [Add comments.](#add-comments)
+8. [Save initiative details.](#save-details)
 
 #### 3.1.1 Creating the Initiative {#create-initiative}
 
@@ -155,7 +154,7 @@ To create a new tag, do as follows:
 1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
 2. In the text box, enter the name for the new tag.
 3. If you want to change the color of the new tag, click the colored circle and select a different color.
-4. Click the checkmark icon to save the new tag.
+4. Click the check mark icon to save the new tag.
 
 To edit an existing tag, do as follows:
 
@@ -168,7 +167,37 @@ To delete an existing tag, do as follows:
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
-#### 3.1.3 Adding Planning Information {#add-planning-information}
+#### 3.1.3 Linking Epics to an Initiative {#link-epics}
+
+{{% alert color="info" %}}
+Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.
+{{% /alert %}} 
+
+You can link any epic from [Epics](/developerportal/project-management/epics/) to an initiative. However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. (Read more about the [differences among initiatives, apps, and epics](#differences-initiatives-apps-epics) in the section below.)
+
+To link epics to an initiative, do as follows:
+
+1. At the bottom of the **Epics** section, click **+ Link Epics**. The **Link Epics** dialog window opens.
+2. Select the epics. You can search by the epic ID or name. 
+3. Click **Add** to link the selected epics to the initiative. 
+
+Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
+
+{{% alert color="info" %}}
+To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
+{{% /alert %}}
+
+##### 3.1.3.1 Differences Among Initiatives, Apps, and Epics {#differences-initiatives-apps-epics}
+
+An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the differences among initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
+
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+
+The following figure shows examples of three portfolios. The first portfolio is to add a feature to an app, the second example is a minimal viable product (MVP) of an app, and the last example is to build an integration between two apps.
+
+{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
+
+#### 3.1.4 Adding Planning Information {#add-planning-information}
 
 In the **Edit Initiative** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
 
@@ -178,7 +207,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
-#### 3.1.4 Adding Prioritization Information {#add-prioritization-information}
+#### 3.1.5 Adding Prioritization Information {#add-prioritization-information}
 
 In the **Edit Initiative** side pane, click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
@@ -188,7 +217,7 @@ The title of this section can be **Prioritization: WSJF Model** or **Prioritizat
 
 Now you can proceed to [add estimated value](#add-estimated-value).
 
-#### 3.1.5 Adding Estimated Value {#add-estimated-value}
+#### 3.1.6 Adding Estimated Value {#add-estimated-value}
 
 In the **Edit Initiative** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Add information in the following fields in this section:
 
@@ -204,13 +233,13 @@ If the initiative creates more than one type of value, click **Add Value** to ad
 
 Now you can proceed to [add comments](#add-comments).
 
-#### 3.1.6 Adding Comments {#add-comments}
+#### 3.1.7 Adding Comments {#add-comments}
 
 If you want to add a comment, click **Comments** in the **Edit Initiative** side pane, and then click **Post Comment** after you add the comment.
 
 Now you can proceed to [save initiative details](#save-details).
 
-#### 3.1.7 Saving Initiative Details {#save-details}
+#### 3.1.8 Saving Initiative Details {#save-details}
 
 At the bottom of the **Edit Initiative** side pane, click **Save**. Now all the details are saved for the new initiative that you just created.
 
@@ -369,6 +398,10 @@ To archive an initiative, perform the following steps:
 
 A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archive](#archived-initiatives) page.
 
+### 3.6 Exporting and Importing Initiatives
+
+On the **Initiatives Overview** page, you can import and export initiatives. For details, see [Export and Import Initiatives](/developerportal/portfolio-management/export-import-initiatives/).
+
 ## 4 Archive {#archived-initiatives}
 
 The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. 
@@ -430,6 +463,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | Add initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Delete initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View and download initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
+| Export and import initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 
 ### 5.1 Adding New Users {#add-users}
 
@@ -440,7 +474,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
-7. Click **Send Invites**.
+6. Click **Send Invites**.
 
 The users that you invited receive a notification per email and now appear on the **Access Management** page. 
 
@@ -456,7 +490,7 @@ At the end of the row, click the ellipsis button (**...**), and then select the 
 
 ### 5.3 Access Requests {#access-requests}
 
-Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/#notifications) for a new access request. 
+Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
@@ -486,7 +520,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
 * **Privacy Settings** – You can set the settings to **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/developerportal/control-center/#privacy-requests) tab is turned on in the Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from the Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
     
 * **Stages** – Click the **^** button or the **v** button to move a stage upwards or downwards.
 
@@ -517,8 +551,11 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 3. If you decide to continue, type *DELETE* in the text box.
 4. Click **Delete**. The portfolio is permanently deleted.
 
-{{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portfolios](/developerportal/control-center/#delete-portfolio) section of the Control Center.{{% /alert %}}
+{{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portfolios](/control-center/portfolios/#delete-portfolio) section of Control Center.{{% /alert %}}
 
 ## 7 Read More
 
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
+* [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)
+* [Make Strategic Decisions with Portfolio Management](https://academy.mendix.com/link/paths/145/Make-Strategic-Decisions-With-Portfolio-Management)
+* [Why Portfolio Management is Crucial to App Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to-app-development-at-scale/)

@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide/version-control/).
+This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Control](/refguide/version-control/).
 
 ## 2 Starting an App with Version Control
 
@@ -30,7 +30,7 @@ The app is created on the Team Server, and a working copy is created in the **Ap
 
 ## 3 Joining an App
 
-If there is already a Team Server-enabled app, you can be invited to join it (see [Team](/developerportal/collaborate/team/)).
+If there is already a Team Server-enabled app, you can be invited to join it (see [Team](/developerportal/general/team/)).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
@@ -119,13 +119,44 @@ If you also changed Java source code, added widgets or made other changes that a
 
 Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
 
-### 4.3 Pushing
+### 4.3 Pushing {#pushing}
 
 Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
+
+#### 4.3.1 Push Fast-Forward Only
+
+{{% alert color="info" %}}
+The features described in this section were introduced in Mendix version 10.3.
+{{% /alert %}}
+
+While you were working on your branch somebody may have pushed their changes to the same branch on the server already. In this case pushing isn’t possible and you will need to take further action first.
+
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this and **Also push changes to the remote server** will be set to **No** and disabled.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
+
+If the changes are discovered during the push, an information dialog with instructions will be shown.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
+
+Git prevents you from pushing your changes because it sees your changes and the remote changes as potentially conflicting. In this diagram you see that Git doesn’t know how to combine commits #3 and #5.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch.">}} 
+
+When you pull the changes, Studio Pro will merge the changes from the branch on the server into your local copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server.">}} 
+
+There are 2 possible scenarios when merging and needing to make a merge commit:
+
+1. No conflicts (for example, you added a microflow and somebody else added a module on the server)
+    In this case Studio pro can automatically resolve this and there is nothing for you to do.
+2. Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote)
+    In this case you will need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
 
 ### 4.4 Pulling
 
@@ -263,7 +294,7 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
+Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
 #### 7.2.3 Reverse Merging
 
@@ -283,7 +314,7 @@ There are two methods for fully replacing your main line with a branch line.
 
 The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
-1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
+1. Select **Version Control** > **Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
 
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
@@ -408,7 +439,7 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 ### 9.6 Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
+When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, use the Git tool of your preference to revert the change.
 

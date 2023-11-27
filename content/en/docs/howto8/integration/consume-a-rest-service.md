@@ -13,7 +13,7 @@ Mendix applications frequently need to communicate with existing systems. Whethe
 
 This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto8/integration/consume-a-rest-service/WikipediaApi.mpk).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Integrate with an existing system using a REST service
 * Call the REST service in a microflow
@@ -46,7 +46,7 @@ We will start by providing to Studio Pro an example of what the REST service ret
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates to [entities](/refguide8/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates to [entities](/refguide8/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **Project Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -132,7 +132,7 @@ You have successfully consumed a REST service and created a microflow to show th
 
 To create a page for this app, follow these steps:
 
-1. Open the **Homepage** and add a **Data view**.
+1. Open the **** and add a **Data view**.
 2. Right-click the **[Unknown]** bar and click, **Select entity**. Select the **Input** entity.
 3. For the **Data source – Type**, select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).

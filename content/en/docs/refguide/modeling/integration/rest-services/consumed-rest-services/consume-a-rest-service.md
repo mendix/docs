@@ -14,7 +14,7 @@ aliases:
 
 In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/refguide/modeling/integration/consume-a-rest-service/WikipediaApi.mpk).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Call the REST service in a microflow
 
@@ -40,7 +40,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 ## 3 Creating an Import Mapping {#create-import-mapping}
 
-An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **App Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -169,3 +169,4 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [Import Excel Documents](/howto/integration/importing-excel-documents/)
 * [Expose a Web Service](/howto/integration/expose-a-web-service/)
 * [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)
+* [Security Considerations](/refguide/call-rest-action/#security)

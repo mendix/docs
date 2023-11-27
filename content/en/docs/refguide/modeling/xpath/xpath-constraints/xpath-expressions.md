@@ -75,7 +75,7 @@ As with the example above, it does not retrieve customers with no orders.
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    //Sales.Customer[Sales.Customer_Order/Sales.Order/Status = empty]
+    [Sales.Customer_Order/Sales.Order/Status = empty]
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
     //Sales.Customer[Sales.Customer_Order/Sales.Order/Status = empty]
@@ -100,7 +100,7 @@ The following query retrieves all the customers who have the same name as the ci
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    //Sales.Customer[Name = City]
+    [Name = City]
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
     //Sales.Customer[Name = City]
@@ -135,7 +135,7 @@ The following query retrieves the same customer as the previous query:
 
 If two sides of a comparison (`=`, `!=`, `<`, `<=`, `>`, `>=`) have different types, one of the sides may be converted implicitly to the type of the other side.
 
-If one of the sides is a plain value (a literal, a microflow variable or a [system variable](/refguide/xpath-keywords-and-system-variables/#3-system-variables)) and the other side is an attribute to be queried, the value is converted to the type of the attribute. For example, the line below will convert the string `'42'` to the number `42` before executing the query:
+If one of the sides is a plain value (a literal, a microflow variable or a [system variable](/refguide/xpath-keywords-and-system-variables/#system-variables)) and the other side is an attribute to be queried, the value is converted to the type of the attribute. For example, the line below will convert the string `'42'` to the number `42` before executing the query:
 
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}

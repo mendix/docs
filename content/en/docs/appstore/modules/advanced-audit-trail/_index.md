@@ -46,7 +46,7 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 
 ### 1.4 Prerequisites
 
-* You need to use Advanced Audit Trail with Studio Pro versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
+* You need to use Advanced Audit Trail with Studio Pro versions starting with [9.12](/releasenotes/studio-pro/9.12/).
 * You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
@@ -61,7 +61,7 @@ Advanced Audit Trail is a premium Mendix product that is subject to a purchase a
 
 ### 2.2 Installing the Components in Your app
 
-To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
+To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. Then follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Use Marketplace Content* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
 
 {{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
@@ -165,7 +165,7 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key), and then configure it.
 
-Before you deploy your app, configure the app **Constants** in the deployment package in the [Developer Portal](https://docs.mendix.com/developerportal/deploy/environments-details/).
+Before you deploy your app, configure the app **Constants** in the deployment package in the [Developer Portal](/developerportal/deploy/environments-details/).
 
 If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
 

@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control the Desktop Modeler. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide7/version-control/).
+This reference guide describes how to use version control the Desktop Modeler. The theory behind how version control works in Mendix and a definition of concepts can be found in [Version Contol](/refguide7/version-control/).
 
 ## 2 Starting a Project with Version Control
 
@@ -28,7 +28,7 @@ The app is created on the Team Server, and a working copy is created in the **Pr
 
 ## 3 Joining a Project
 
-If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/collaborate/team/).
+If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/general/team/).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 

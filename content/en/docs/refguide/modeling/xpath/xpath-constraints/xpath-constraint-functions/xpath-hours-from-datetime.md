@@ -1,6 +1,7 @@
 ---
 title: "XPath hours-from-dateTime"
 url: /refguide/xpath-hours-from-datetime/
+weight: 9
 tags: ["studio pro"]
 ---
 
@@ -49,4 +50,3 @@ This query returns all the logs where the hours part of `DateAttribute` is 8 in 
      //Logging.Log[hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
     {{% /tab %}}
 {{< /tabpane >}}
-

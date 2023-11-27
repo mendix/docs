@@ -8,7 +8,7 @@ aliases:
 ---
 ## 1 Introduction
 
-Owners of data sources, Data Hub Curators, and Mendix Admins can manage, or curate, registered assets.
+Owners of data sources, Curators, and Mendix Admins can manage, or curate, registered assets.
 
 Common tasks for managing data sources include the following:
 

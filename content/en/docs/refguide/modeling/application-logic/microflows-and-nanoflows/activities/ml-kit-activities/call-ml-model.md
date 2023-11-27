@@ -5,8 +5,6 @@ weight: 45
 tags: ["ml kit", "call model", "ML microflow", "machine learning", "models"]
 ---
 
-{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
-
 {{% alert color="warning" %}}
 These activities can only be used in **Microflows**.
 {{% /alert %}}

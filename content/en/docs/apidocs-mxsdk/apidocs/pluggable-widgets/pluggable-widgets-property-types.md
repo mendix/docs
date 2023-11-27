@@ -367,7 +367,7 @@ The return type of the expression must be defined using either the `type` or the
 ##### 4.1.2.1 Fixed Return Type
 
 {{% alert color="info" %}}
-The `type` attribute was required in Mendix versions [9.19](/releasenotes/studio-pro/9.19/) and below.
+The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19/) and below.
 {{% /alert %}}
 
 You can set a fixed return type for your expression property with one of the supported types from below.

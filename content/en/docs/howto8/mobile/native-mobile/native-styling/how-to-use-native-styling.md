@@ -112,7 +112,7 @@ When you have specific design requirements, you will need to build custom classe
 
     To alter a class on your own, consult the [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide/) to understand widget structures.
 
-6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
+6. Now you will edit the code you pasted. Apply a transparent background color to customize the default button widget:
 
     ```javascript
     export const className = {

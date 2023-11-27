@@ -20,3 +20,4 @@ The following how-to's are available here:
 * [Configure Module-Level Theme Settings](/howto/front-end/module-level-theme-settings/) — Use module-level theme settings to control theme system behavior. This allows you to control which elements your developers can and cannot use.
 * [Create a Company Design System](/howto/front-end/create-a-company-design-system/) — Create a company design system: a "UI kit" which  contains all the elements that a team needs to design, realize, and develop a product.
 * [Extend Design Properties](/howto/front-end/extend-design-properties/) — Learn the basics of design properties and how to make your own.
+* [Atlas UI Kit for Figma](/howto/front-end/figma-ui-kit/) — Learn how to set up and use the Atlas UI Kit for Figma.

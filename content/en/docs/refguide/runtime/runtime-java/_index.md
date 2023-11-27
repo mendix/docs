@@ -56,6 +56,8 @@ You can see this quite well in the following JVM Object Heap graph taken from th
 
 The purple and green spikes are minor garbage collections. The large drops in the red part are major garbage collections. This is a healthy looking Heap.
 
+The Java garbage collector is configured automatically based on best practices. You can override this and set the garbage collector to Serial or G1 using the [Custom Environment Variable](/developerportal/deploy/environments-details/#custom-environment-variables) `JVM_GARBAGE_COLLECTOR`.
+
 ### 2.4 Application Server
 
 And finally a Mendix Cloud graph where all of the above comes together:

@@ -82,6 +82,10 @@ The dynamic classes property was introduced in Mendix Studio Pro v8.14.
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
 
+{{% alert color="info" %}}
+On a DataGrid column, a dynamic class is only applied to the `<col>` element, not to the `<td>` element (in contrast to the class property). 
+{{% /alert %}}
+
 ### 3.6 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.

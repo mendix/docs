@@ -2,7 +2,7 @@
 title: "Consumed OData Service"
 url: /refguide8/consumed-odata-service/
 weight: 10
-tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
+tags: ["studio pro", "odata service", "consumed odata service"]
 ---
 
 {{% alert color="info" %}}
@@ -23,10 +23,10 @@ The **Consumed OData Service** document that is added to the project displays th
 * Version number of the consumed service
 * **View in Catalog** link to the **Service Details** where you can see the full service details that are registered
 * **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
-    * **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point.
+    * **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service endpoint. It is good practice that only minor, non-breaking changes are deployed to the same endpoint.
     * **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-    {{% alert color="info" %}}Studio Pro displays the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
+    {{% alert color="info" %}}Studio Pro displays the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service endpoint, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
     {{% alert color="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
     {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png" alt="update service data hub pane" >}}
@@ -83,7 +83,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/catalog/manage/security/#http-header-validation) in the *Data Hub Guide*.
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in the *Security and Shared Datasets* document in the Studio Pro 10 guide.
 {{% /alert %}}
 
 ## 3 Metadata Tab {#metadata}
@@ -127,7 +127,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Service ID** – the unique identifier of the service in the Catalog
 * **Application ID** – the unique identifier of the application that the service was published from in the Catalog
 * **Metadata** – the contents of the metadata file defining the service
-* **OData version** – the OData version: can be OData 3 or OData 4
+* **OData version** – the OData version (can be v3 or v4)
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 

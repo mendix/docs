@@ -23,11 +23,13 @@ If you start typing in any empty container, Studio Pro will automatically genera
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Visibility](#visibility)
 * [Common](#common)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

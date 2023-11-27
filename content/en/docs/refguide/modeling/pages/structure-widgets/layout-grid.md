@@ -26,9 +26,11 @@ For more information on row and column properties, see the [Rows and Their Prope
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**.Layout grid properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 
 Styling:
+
 * [Common](#common-styling)
 
 ## 3 Properties
@@ -130,7 +132,7 @@ Column width can be used to make your layout more flexible and adaptive to diffe
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
-For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
+For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-example-desktop.png" alt="Layout Example, Desktop" >}}
 

@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "mx model reflection", "token con
 
 ## 1 Introduction
 
-The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
+The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model and about microflows of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
 
 ### 1.1 Typical Use Cases
 
@@ -17,7 +17,7 @@ The typical usage scenario is selecting and showing entities from your domain mo
 
 ## 2 Configuration {#configuration}
 
-After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
+After importing the module, add **\_USE_ME** > **MxObjects** to one of your pages (you can directly use **\_USE_ME** > **MxObjects_Overview** which contains **MxObjects**, and add the page to the navigation of your app). Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
 {{% alert color="info" %}}
 If you have a large app, the synchronization will take much longer.
@@ -26,8 +26,6 @@ If you have a large app, the synchronization will take much longer.
 If you want the synchronization to get triggered automatically after your app starts up, use the microflow **ASu_CheckMetamodel** from the **Private** > **Event flows** folder as your after startup microflow, or make sure this microflow gets triggered from your own after startup microflow.
 
 ### 2.1 Token Configuration
-
-The token configuration used in the [Email Module with Templates](/appstore/modules/email-with-templates/) now also allows you to specify the display pattern. This allows you to configure how the attributes are shown rather than relying on the defaults of the module.
 
 The display pattern in the token is optional. If you do not specify a value, the module will use the original behavior. 
 

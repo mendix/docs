@@ -55,7 +55,7 @@ The [App Explorer](/refguide9/app-explorer/) pane displays the complete structur
 
 ### 3.2 Changes
 
-For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server/) or other SVN servers), the [Changes pane](/refguide9/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/general/team-server/) or other SVN servers), the [Changes pane](/refguide9/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
@@ -89,7 +89,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 ### 3.9 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/overview/use-content/).
 
 ### 3.10 MxAssist Performance Bot {#mx-bot}
 
@@ -105,7 +105,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide9/stories-pane/). 
+For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the Stories of the current [Sprint](/developerportal/project-management/epics/planning/).
 
 ### 3.14 Toolbox {#toolbox}
 

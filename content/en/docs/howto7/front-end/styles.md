@@ -1,5 +1,5 @@
 ---
-title: "Implement Styles"
+title: "Implement Classes"
 url: /howto7/front-end/styles/
 category: "Front End"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
@@ -16,7 +16,7 @@ Class names can be entered in two locations:
 * The **Properties** panel of the Modeler
 * The **Properties** pop-up window for the widget
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 
@@ -129,8 +129,8 @@ For more information on grid options, including suggestions and examples, see [B
 Change the way items appear in a list:
 
 * `listview-lined`: list view widget with only a bordered bottom in a list view item
-* `listview-striped`: list view widget with striped listview items
-* `listview-seperated`: list view widget with list view items seperated
+* `listview-striped`: list view widget with striped list view items
+* `listview-seperated`: list view widget with list view items separated
 * `listview-stylingless`: list view widget without spacing and background
 
 ## 8 Alerts
@@ -139,7 +139,7 @@ Create alerts with standard containers.
 
 * `alert`: makes an alert of a container; use in combination with the next classes
 * `alert-success`: creates a success alert
-* `alert-info`: creates a info alert
+* `alert-info`: creates an info alert
 * `alert-warning`: creates a warning alert
 * `alert-danger`: creates a danger alert
 

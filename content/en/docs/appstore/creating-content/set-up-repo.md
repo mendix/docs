@@ -1,5 +1,5 @@
 ---
-title: "Set Up a GitHub Repo to Publish a Marketplace Item"
+title: "Set Up a GitHub Repo to Publish a Marketplace Component"
 linktitle: "Publish from GitHub to Marketplace"
 url: /appstore/creating-content/set-up-repo/
 category: "Creating Content"
@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-In this document, you will learn best practices in how to set up a GitHub repository to publish an Marketplace item. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content/).
+In this document, you will learn best practices in how to set up a GitHub repository to publish an Marketplace item. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/overview/share-content/).
 
 ## 2 Prerequisites
 

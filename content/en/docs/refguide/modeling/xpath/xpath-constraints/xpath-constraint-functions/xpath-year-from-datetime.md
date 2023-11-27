@@ -1,6 +1,7 @@
 ---
 title: "XPath year-from-dateTime"
 url: /refguide/xpath-year-from-datetime/
+weight: 6
 tags: ["studio pro"]
 ---
 
@@ -49,4 +50,3 @@ This query returns all the logs where the amount of years in `DateAttribute` is 
      //Logging.Log[year-from-dateTime(DateAttribute, 'America/New_York') = 2011]
     {{% /tab %}}
 {{< /tabpane >}}
-

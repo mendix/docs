@@ -10,7 +10,7 @@ tags: ["studio pro", "translate app", "batch translate", "translate"]
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add a new language to your app
 * Change the working language
@@ -30,7 +30,7 @@ When you create an app from a Mendix template, there is one language available. 
 To create your app, do the following:
 
 1. Create a new app using the **Blank App** template. If given the option, leave the default language as **English, United States**.
-2. Open the app in Studio Pro (images here are from Studio Pro version 8.10).
+2. Open the app in Studio Pro (images here are from Studio Pro 8.10).
 3. Create a domain model in MyFirstModule with two entities:
     * **Order** with the integer attribute **OrderNumber**
     * **Product** with the string attribute **ProductName**

@@ -25,7 +25,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | Document type | Typical elements | Description |
 | --- | --- | --- |
 | [Pages](/refguide8/pages/) | [Data view](/refguide8/data-view/), [Data grid](/refguide8/data-grid/), [Table](/refguide8/table/), [Text box](/refguide8/text-box/) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
-| [Microflows](/refguide8/microflows/) | [Activities](/refguide8/activities/), [Sequence Flow](/refguide8/sequence-flow/) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
+| [Microflows](/refguide8/microflows/) | [Activities](/refguide8/activities/), [Sequence Flow](/refguide8/sequence-flow/) | Microflows describe the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide8/enumerations/) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
 ## 3 Page Resources
@@ -47,7 +47,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Java Actions](/refguide8/java-actions/) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](/refguide8/regular-expressions/) | A regular expression is used by [validation rules](/refguide8/validation-rules/) on an entity to describe a set of criteria that a string can match. |
 | [Rules](/refguide8/rules/) | A rule defines a set of criteria, with a certain input the rule will result in a Boolean or enumeration depending on the criteria met. It can be called from a decision to determine the direction the microflow should go once the decision is reached. |
-| [Scheduled Events](/refguide8/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
+| [Scheduled Events](/refguide8/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
 ## 5 Consumed Services
 

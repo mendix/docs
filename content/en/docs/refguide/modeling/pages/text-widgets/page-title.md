@@ -21,10 +21,12 @@ The page title widget makes it possible to embed the page title in a [layout](/r
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Page title properties consist of the following sections:
 
 Properties:
+
 * [Visibility](#visibility)
 * [Common](#common)
 
 Styling
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

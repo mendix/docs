@@ -2,7 +2,7 @@
 title: "Design Principles"
 url: /refguide/mobile/designing-mobile-user-interfaces/design-principles/
 weight: 10
-description: "This document will teach you how to build a native mobile app's UI."
+description: "This document teaches you how to build a native mobile app's UI."
 tags: ["design", "styling"]
 aliases:
     - /howto/mobile/ui-best-practices/
@@ -92,7 +92,7 @@ There are several cases in which an app's standard theme and content is not rich
 
 ### 3.5 Iterating and Discussing
 
-Mendix is a platform for Agile development environments, which also applies when creating a UI kit and the related Mendix themes and components. Keep iterating, discussing, and improving.
+Mendix is a platform for [Agile development](https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) environments, which also applies when creating a UI kit and the related Mendix themes and components. Keep iterating, discussing, and improving.
 
 ## 4 Best Practices 
 

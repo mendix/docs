@@ -196,12 +196,12 @@ You can specify join constraints. Each constraint specifies that two fields—on
 
 There are a number of settings that control the behavior of the table mapping as a whole. These are described below.
 
-### 7.1 Custom Constraints (Deprecated)
+### 7.1 ⚠ Custom Constraints
 
 You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint that will be appended as a `WHERE` clause to all queries. This means that any database rows that do not satisfy this constraint will be ignored by the replication module.
 
 {{% alert color="info" %}}
-This feature is deprecated and might be removed in a future version. We recommend configuring constraints using [import calls](#import-call) instead.
+⚠ This feature is deprecated and might be removed in a future version. We recommend configuring constraints using [import calls](#import-call) instead.
 {{% /alert %}}
 
 ### 7.2 Print Statistics and Not Found Messages

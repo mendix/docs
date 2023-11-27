@@ -46,6 +46,6 @@ ORDER BY LastName
 LIMIT 10 OFFSET 10
 ```
 
-This query retrieves the 11the to 20the customer, sorted by their last name.
+This query retrieves the 11th to 20th customer, sorted by their last name.
 
 {{% /alert %}}

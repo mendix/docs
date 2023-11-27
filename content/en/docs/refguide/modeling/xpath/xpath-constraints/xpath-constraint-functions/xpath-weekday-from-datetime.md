@@ -1,6 +1,7 @@
 ---
 title: "XPath weekday-from-dateTime"
 url: /refguide/xpath-weekday-from-datetime/
+weight: 15
 tags: ["studio pro"]
 ---
 
@@ -53,4 +54,3 @@ This query returns all the logs where the day of the week in `DateAttribute` is 
      //Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
     {{% /tab %}}
 {{< /tabpane >}}
-

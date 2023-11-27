@@ -76,7 +76,7 @@ In this example, the error handling in **Microflow 2** is set to **Custom withou
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are at this moment still kept because of the savepoint right before **GenerateError**. A custom error is logged using a **Log message** activity. After that, the error event throws an error to terminate **Microflow 2** and rolls back everything to the state of **savepoint 1** which is at the very beginning of **Microflow 1**. Hence, changes made in **Create Customer** and in **Create Order** are both reverted.
 
 {{% alert color="info" %}}
-Using custom error handling without rollback and ending the error handling flow with an error event here makes it possible to create a custom log message with details about the **NewOrder** (if you used error handling with rollback, this information would not be available). However, after logging this message, everything will still be rolled back.  
+Using custom error handling without rollback and ending the error handling flow with an error event here makes it possible to create a custom log message with details about the **NewOrder** (if you used error handling with rollback, the information about the **NewOrder** would not be available when creating the custom log message). However, after logging this message, everything will still be rolled back.  
 {{% /alert %}}
 
 #### 2.3.2 Error Handling Which Ends with an End Event
@@ -131,7 +131,7 @@ In microflows that apply entity access, you may not be able to inspect the attri
 
 ### 4.1 Inspecting REST Errors
 
-If the error is a REST fault (an error that occurs as a result of a REST call), the result of the the call will be stored in `$latestHttpResponseVariable` which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide/call-rest-action/#response) section in *Call REST Service*.
+If the error is a REST fault (an error that occurs as a result of a REST call), the result of the call will be stored in `$latestHttpResponseVariable` which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide/call-rest-action/#response) section in *Call REST Service*.
 
 ### 4.2 Inspecting SOAP Errors
 

@@ -11,9 +11,11 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ## 2022
 
-### Release 1.0.127
+### Release 1.0.128
 
-**Release date: October 6th, 2022**
+**Release date: October 6, 2022**
+
+This release was previously labeled as 1.0.127. Its release number has been corrected.
 
 #### Fixes
 
@@ -21,7 +23,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.126
 
-**Release date: September 19th, 2022**
+**Release date: September 19, 2022**
 
 #### Improvements
 
@@ -43,7 +45,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.125
 
-**Release date: September 8th, 2022**
+**Release date: September 8, 2022**
 
 #### Improvements
 
@@ -51,7 +53,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.123
 
-**Release date: August 29th, 2022**
+**Release date: August 29, 2022**
 
 #### Fixes
 
@@ -59,7 +61,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.121
 
-**Release date: July 21st, 2022**
+**Release date: July 21, 2022**
 
 #### Fixes
 
@@ -67,7 +69,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.120
 
-**Release date: May 25th, 2022**
+**Release date: May 25, 2022**
 
 #### Fixes
 
@@ -75,7 +77,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.113
 
-**Release date: March 18th, 2022**
+**Release date: March 18, 2022**
 
 #### New Features
 
@@ -113,7 +115,7 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 
 ### Release 1.0.111
 
-**Release date: December 21st, 2021**
+**Release date: December 21, 2021**
 
 #### Improvements
 
@@ -143,7 +145,7 @@ For more details, see [NSUserTrackingUsageDescription](https://developer.apple.c
 
 ### Release 1.0.109
 
-**Release date: October 25th, 2021**
+**Release date: October 25, 2021**
 
 #### Improvements
 
@@ -159,7 +161,7 @@ If the dialog is accepted the App Center option will then be disabled as it is c
 
 ### Release 1.0.107
 
-**Release date: July 26th, 2021**
+**Release date: July 26, 2021**
 
 #### Fixes
 
@@ -168,7 +170,7 @@ If the dialog is accepted the App Center option will then be disabled as it is c
 
 ### Release 1.0.105
 
-**Release date: July 16th, 2021**
+**Release date: July 16, 2021**
 
 #### Improvements
 
@@ -182,7 +184,7 @@ App Center's CodePush OTA page improvements:
 * We improved the UX of the App Center's CodePush OTA page.
 * The platform selector will now correctly represent available platforms. Platforms that do not yet have an App Center build setup will be disabled by default. 
 * We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile Builder does not target the expected apps.
-* The OTA button is now a callout button that visually summarizes the reasons why a OTA update might not currently be possible.
+* The OTA button is now a callout button that visually summarizes the reasons why an OTA update might not currently be possible.
 
 #### Fixes
 
@@ -192,7 +194,7 @@ App Center's CodePush OTA page improvements:
 
 ### Release 1.0.90
 
-**Release date: June 22nd, 2021**
+**Release date: June 22, 2021**
 
 #### Fixes
 
@@ -201,7 +203,7 @@ App Center's CodePush OTA page improvements:
 
 ### Release 1.0.89
 
-**Release date: May 28th, 2021**
+**Release date: May 28, 2021**
 
 #### New Features 
 
@@ -250,7 +252,7 @@ Every mobile app requires certain features, as well as certain permissions users
 
 ### Release 1.0.86
 
-**Release date: April 1st, 2021**
+**Release date: April 1, 2021**
 
 #### New Features
 
@@ -264,7 +266,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ### Release 1.0.84
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 #### New Features
 
@@ -286,7 +288,7 @@ still fail if the keystore values are invalid.
 
 ### Release v1.0.81
 
-**Release date: March 2nd, 2021**
+**Release date: March 2, 2021**
 
 #### Improvements 
 
@@ -298,7 +300,7 @@ still fail if the keystore values are invalid.
 
 ### Release v1.0.80
 
-**Release date: February 25th, 2021**
+**Release date: February 25, 2021**
 
 #### Local Notifications for Mendix 9 
 
@@ -338,11 +340,11 @@ Dependency management and auto-linking are not included as part of the Native Mo
 
 ### Release v1.0.79
 
-**Release date: February 12th, 2021**
+**Release date: February 12, 2021**
 
-#### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
+#### Native Dependency Management Beta (with Studio Pro 9.0.3 Beta)
 
-With the Mendix Studio Pro 9.0.3 Beta, we introduced native dependency management. Using native dependency management, widgets 
+With the Mendix Studio Pro 9.0.3 beta release, we introduced native dependency management. Using native dependency management, widgets 
 and JavaScript actions can now define their native dependency requirements and let the Mendix Native Mobile Builder link them in apps.
 The result is a lighter project template that only includes the dependencies it actually needs.
 
@@ -359,7 +361,7 @@ The Native Mobile Builder is now able to derive which files need to be kept or r
 
 ### Release v1.0.74
 
-**Release date: December 30th, 2020**
+**Release date: December 30, 2020**
 
 #### Signed iOS Builds Failing
 
@@ -372,7 +374,7 @@ We were made aware of a change in App Center resulting in signed iOS builds fail
 
 ### Release v1.0.71
 
-**Release date: December 23rd, 2020**
+**Release date: December 23, 2020**
 
 #### Multiple Configurations 
 
@@ -401,7 +403,7 @@ If you are working with multiple people on the same project please make sure the
 
 ### Release v1.0.51 
 
-**Release date: December 10th, 2020**
+**Release date: December 10, 2020**
 
 #### Improvements
 
@@ -425,7 +427,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 ### Release v1.0.49
 
-**Release date: October 27th, 2020**
+**Release date: October 27, 2020**
 
 This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15/) and higher.
 

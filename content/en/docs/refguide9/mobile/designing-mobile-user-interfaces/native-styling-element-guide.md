@@ -68,7 +68,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-  text: {
+  caption: {
     // TextStyle properties
     color: "#00FF00",
   }
@@ -634,11 +634,35 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 Images, Videos and Files
+## 7 Images, Videos, and Files
 
-Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide9/image-and-file-widgets/).
+Images, videos, and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide9/image-and-file-widgets/).
 
-### 7.1 Static Image {#image}
+### 7.1 Image (#new-image)
+
+The image widget can be used to show a static or dynamic image or an icon on a page, layout, or snippet.
+
+```javascript
+export const com_mendix_widget_native_image_Image = {
+  container: {
+    // All ViewStyle properties
+  },
+  image: {
+    // This has all ImageStyle properties.
+  },
+  backdrop: {
+    // All ViewStyle properties
+  }
+};
+```
+
+| Element             | Style Properties                    | Description                                                  |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| `container`         | This has all ViewStyle properties.  |                                                              |
+| `image`             | This has all ImageStyle properties. |                                                              |
+| `backdrop`          | This has all ViewStyle properties.  | Styles for the backdrop of an enlarged image view.           |
+
+### 7.2 Static Image {#image}
 
 The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide9/image/). 
 
@@ -672,7 +696,7 @@ export const Image = {
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
 
-### 7.2 Dynamic Image {#dynamic-image}
+### 7.3 Dynamic Image {#dynamic-image}
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 
@@ -898,7 +922,7 @@ export const com_mendix_widget_native_badge_Badge = {
   container: {
     // This has all ViewStyle properties.
   },
-  text: {
+  caption: {
     // This has all TextStyle properties.
   }
 };
@@ -907,7 +931,7 @@ export const com_mendix_widget_native_badge_Badge = {
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `text` | This has all TextStyle properties. |      |
+| `caption` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -1514,7 +1538,7 @@ export const com_mendix_widget_native_animation_Animation = {
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### 11.22 List View Swipe
 
@@ -2422,7 +2446,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
-The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
+The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
 #### 11.33.1 Gallery Filtering
 

@@ -22,7 +22,7 @@ If you are debugging in the cloud, be aware of other app end-users. Breakpoints 
 **It is currently not possible to debug nanoflows remotely.** If you are debugging in the cloud, any breakpoint added to a nanoflow will be disabled.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Connect the debugger in Studio Pro to your Mendix Cloud environment
 
@@ -43,15 +43,15 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 ### 3.1 Obtain Debugging Credentials
 
-#### 3.1.1 Obtain Debugging Credentials from Mendix cloud
+#### 3.1.1 Obtain Debugging Credentials from Mendix Cloud
 
-When your application is in the Mendix cloud:
+When your application is in Mendix Cloud, follow these steps:
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-2. Click **Environments** in the left sidebar.
+2. Click **Environments** in the navigation pane.
 
-3. In the **Deploy** tab, click **Details** for the environment which you want to debug:
+3. In the **Deploy** tab, click **Details** for the environment that you want to debug:
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debug-microflows-remotely/18580051.png" >}}
 
@@ -75,9 +75,9 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-2. Click **Environments** in the left sidebar.
+2. Click **Environments** in the navigation pane.
 
-3. Click **Details** for the environment which you want to debug.
+3. Click **Details** for the environment that you want to debug.
 
 4. Open the **Debugger** tab:
 

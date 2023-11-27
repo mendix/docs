@@ -24,8 +24,8 @@ To convert your Mendix app to an Industrial Edge App, the following are required
 * The Industrial Edge App Publisher UI/CLI installed on your development PC
 
     You need the following versions of the Industrial Edge App Publisher:
-    * IEAP UI: minimum V1.2.8
-    * IEAP CLI: minimum V1.3.3
+    * IEAP UI: minimum v1.2.8
+    * IEAP CLI: minimum v1.3.3
 * [Docker](https://docs.docker.com/get-docker/) with [tcp Socket enabled](https://docs.docker.com/engine/reference/commandline/dockerd/) for Docker daemon
 * An Industrial Edge Management (IEM) to deploy your app 
 

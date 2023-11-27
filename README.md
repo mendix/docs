@@ -7,16 +7,6 @@ Build status:
 * production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://app.travis-ci.com/github/mendix/docs)
 * development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://app.travis-ci.com/github/mendix/docs)
 
-## Working in the Mx10 Private Repo
-
-To make Mx10 Beta 1 updates here, please do the following:
-
-1. Create a separate branch off of the `mx-10-branch`.
-    1. Do not commit directly to `development` or `production`!
-2. Make your documentation changes.
-3. Create a pull request with those changes. Make sure you chose the `mx-10-branch` as the base branch.
-4. Your component’s dedicated technical writer will be assigned to review your work.
-
 ## Contribute
 
 Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
@@ -42,9 +32,12 @@ To clone the repo please keep in mind:
 
 To run a local version of the site: 
 
-1. Run cmd: `./node_modules/.bin/hugo server --environment development`
+1. Run one of the following commands:
 
-    The path syntax prefacing `hugo` may be different based on your operating system and terminal you use. 
+    * `npm run build`
+    * `./node_modules/.bin/hugo server --environment development` – in this case, you can use [different parameters](https://gohugo.io/commands/hugo_server/) to build the site in different ways—for example, build a copy of the production site and save it locally. 
+    
+        The path syntax prefacing `hugo` may be different based on your operating system and terminal you use.
 
     Once the site is built you will see a table indicating how many pages have been created. You will need to wait until the server is set up before you can see the site.
 

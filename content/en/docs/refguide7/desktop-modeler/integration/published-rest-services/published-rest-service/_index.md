@@ -42,7 +42,7 @@ By default, version is set to "1.0.0".
 
 {{% alert color="info" %}}
 
-**Location** is editable in Mendix versions 7.12.0 and above.
+**Location** is editable in Mendix 7.12.0 and above.
 
 {{% /alert %}}
 
@@ -56,7 +56,7 @@ Example:
 http//localhost:8080/rest/my_service_name/v1
 ```
 
-You can change the the default location to almost any valid URL.
+You can change the default location to almost any valid URL.
 
 #### 2.3.1 Reserved Prefixes
 

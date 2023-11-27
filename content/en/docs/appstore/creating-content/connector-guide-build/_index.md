@@ -4,14 +4,14 @@ url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
 weight: 5
 description: "Introduces the concept of connectors, how they work, and the basic steps for building and publishing connectors."
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how to"]
+tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "how to"]
 ---
 
 ## 1 Introduction
 
 Welcome to the world of Mendix connectors. Mendix connectors allow you to connect your Mendix application to other systems. You can find them on the [Mendix Marketplace](https://marketplace.mendix.com/), or add them to the Marketplace for others to use. 
 
-**This how-to will teach you the following:**
+This how-to teaches you the following:
 
 * What connectors are and how they work
 * Basic steps for building and publishing connectors
@@ -20,12 +20,12 @@ Welcome to the world of Mendix connectors. Mendix connectors allow you to connec
 For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-odata/).
 {{% /alert %}}
 
-### 1.1 Prerequisites  
+### 1.1 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
-* Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
+* Read [How to Share Marketplace Content](/appstore/overview/share-content/)
 * Read the Evaluation Guide page about [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration/)
 * Read [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/) 
 * Watch the [Build a Mendix Connector](https://www.youtube.com/watch?v=wTQJ1MiXAow) tutorial
@@ -37,7 +37,7 @@ Connectors can be used in your app to simplify connecting to existing third-part
 
 ### 2.1 Connecting to Other Systems
 
-Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Data Hub](/data-hub/). 
+Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Catalog](/catalog/). 
 
 They can also be used to package a Java library provided by the other system to make the connection. These Java library functions can be exposed via Java actions as custom microflow activities (see [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/)). This makes it simpler for Mendix developers without in-depth knowledge about third-party integrations to use these connectors in their business logic.
 
@@ -47,8 +47,8 @@ This chart shows the available solutions for when you want to connect Mendix app
 
 | Category | Solution |
 | --- | --- |
-| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](https://docs.mendix.com/refguide/published-web-services) and [Consumed Web Services](https://docs.mendix.com/refguide/consumed-web-services)), REST web services (see [Published REST Services](/refguide/published-rest-service/) and [Consumed REST Services](/refguide/consumed-rest-services/)), OData (see [Published OData Services](https://docs.mendix.com/refguide/published-odata-services) and [Consumed OData Services](https://docs.mendix.com/refguide/consumed-odata-services)), or Data Hub (see the [Data Hub Guide](https://docs.mendix.com/data-hub/)). | 
-| Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](https://docs.mendix.com/refguide/java-actions) or [JavaScript actions](https://docs.mendix.com/refguide/javascript-actions).  | 
+| Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> SOAP web services (see [Published Web Services](/refguide/published-web-services/) and [Consumed Web Services](/refguide/consumed-web-services/)), REST web services (see [Published REST Services](/refguide/published-rest-service/) and [Consumed REST Services](/refguide/consumed-rest-services/)), OData (see [Published OData Services](/refguide/published-odata-services/) and [Consumed OData Services](/refguide/consumed-odata-services/)), or Catalog (see the [Catalog Guide](/catalog/)). | 
+| Unsupported protocols   | Build a module to connect either with alternative protocols or by encapsulating one of the platform supported protocols. You can do this with [Java actions](/refguide/java-actions/) or [JavaScript actions](/refguide/javascript-actions/).  | 
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  
 
@@ -66,7 +66,7 @@ The [Catalog](/catalog/) is a hub for shared registered assets made available in
 
 ### 2.2 Getting Mendix Connectors
 
-Many existing Mendix [Connectors](/appstore/connectors/) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Getting Started](/appstore/general/share-app-store-content/#get-started) section of *Share Marketplace Content*.
+Many existing Mendix [Connectors](/appstore/connectors/) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Adding New Marketplace Content](/appstore/overview/share-content/#adding) section of *Share Marketplace Content*.
 
 Because connectors expose data via custom microflow activities, you can find them in the Studio Pro [Toolbox](/refguide/view-menu/#toolbox) to implement when building your application logic. Then, you can drag them to where you want to use the connector functionality.
 
@@ -122,13 +122,13 @@ Because Mendix connectors are like any other Mendix [module](/appstore/modules/)
 
 To export your connector as an *.mpk* file, do the following:
 
-1. Ensure your version is aligned with the version number that appears on the Marketplace version. Versioning in Marketplace starts at 1.0.0 (for more information, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section in *How to Share Marketplace Content*). You cannot use Marketplace to distribute your connector if it is below version 1.0.0.
+1. Ensure your version is aligned with the version number that appears on the Marketplace version. Versioning in Marketplace starts at 1.0.0 (for more information, see the [Adding New Marketplace Content](/appstore/overview/share-content/#adding) section in *How to Share Marketplace Content*). You cannot use Marketplace to distribute your connector if it is below version 1.0.0.
 2. Generate the export module package using your [Gradle script](https://github.com/ako/CsvServices/blob/cd219e71249c194bca26b374716b88628237a6dd/build.gradle#L72).
 3. Build and export release candidate with versioning and put it in the Marketplace **DIST** folder. You can create this folder to contain the releases of your module for reference.
 
 ### 3.4 Distributing the Connector {#distribute}
 
-To share your connector with other developers and the wider community, you can publish it in the Mendix Marketplace. While publishing, you may choose to publish it for everyone or just for your company. In case you choose the second option, it will only be available to other developers belonging to the same company. For more information on how to publish to the Marketplace, and the difference between public and private publishing, see the [Getting Started](/appstore/general/share-app-store-content/#get-started) section of *Share Marketplace Content*.
+To share your connector with other developers and the wider community, you can publish it in the Mendix Marketplace. While publishing, you may choose to publish it for everyone or just for your company. In case you choose the second option, it will only be available to other developers belonging to the same company. For more information on how to publish to the Marketplace, and the difference between public and private publishing, see the [Adding New Marketplace Content](/appstore/overview/share-content/#adding) section of *Share Marketplace Content*.
 
 Once you publish the connector and someone imports it in their Mendix app, all of these elements will be placed in the same location from which they are exported.
 
@@ -146,7 +146,7 @@ Because connectors are exported as modules and then published on the Marketplace
 
 ## 4 Read More
 
-* Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
+* Read [How to Share Marketplace Content](/appstore/overview/share-content/)
 * Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
 * See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
-* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#3rd-party)
+* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#third-party)

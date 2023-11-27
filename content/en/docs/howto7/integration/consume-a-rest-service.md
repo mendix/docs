@@ -11,7 +11,7 @@ description: "Describes how to get information from a REST service."
 
 In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto7/integration/consume-a-rest-service/WikipediaApi.mpk).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Call the REST service in a microflow
 
@@ -167,5 +167,3 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [How to Consume a Simple Web Service](/howto7/integration/consume-a-simple-web-service/)
 * [How to Export XML Documents](/howto7/integration/export-xml-documents/)
 * [How to Import XML Documents](/howto7/integration/importing-xml-documents/)
-* [How to Import Excel Documents](/howto7/integration/importing-excel-documents/)
-* [How to Expose a Web Service](/howto7/integration/expose-a-web-service/)

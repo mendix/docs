@@ -8,7 +8,7 @@ tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bo
 
 ## 1 Introduction 
 
-The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
+The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions.  [Validation rules](/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
 The main features of the Validation Assist are the following:
 
@@ -65,16 +65,16 @@ The dialog box consists of two sections:
     * **Duplicate** – duplicates selected validation
     * **Extract** **submicroflow** – extracts a list of validations and saves it as a new validation sub-microflow to reuse later
 
-## 3 Using Validation Assist to Build Data Validations
+## 3 Using Validation Assist to Build Data Validations {#data-validations}
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 
-For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, they have a customer profile and can schedule appointments. Your app has a validation microflow that checks the selected date and time: that the selected date is in the future, and that it is within the opening hours (from 8 a.m. till 5 p.m. and not on a weekend). 
+For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, they have a customer profile and can schedule appointments. Your app has a validation microflow that checks the selected date and time: that the selected date is in the future, and that it is within the opening hours (from 8 AM till 5 PM and not on a weekend). 
 
 Your app also has a form where customers can schedule a hairdresser’s appointment. They need to fill in their name, select the type of a treatment (haircut, haircoloring, etc.) and pick the date and time. You would like the **Save** button to show an error message when any of the following conditions are *not* met:
 
 * one or several fields in the form are not filled in
-* the selected date and time is in the future and it is within the opening hours (from 8 a.m. till 5 p.m. and not on a weekend)
+* the selected date and time is in the future and it is within the opening hours (from 8 AM till 5 PM and not on a weekend)
 * the name of the customer is valid (the name has only alphabetical symbols)
 
 To configure the **Save** button for the use case above, do the following:

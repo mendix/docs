@@ -117,7 +117,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 
 #### 5.2.1 Enable Private Version Control with Subversion {#enable}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
 ### 5.3 Git 
 
@@ -139,7 +139,7 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 #### 5.3.5 Enable Private Version Control with Git 
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
 ## 6 Advanced Tab
 
@@ -186,7 +186,7 @@ Default: *enabled*
 ### 8.2 Dark Mode Preview {#dark-mode}
 
 {{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
@@ -206,7 +206,7 @@ Default: *enabled*
 ### 8.4 Properties Pane {#properties}
 
 {{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **New Properties pane preview** option allows you to enable the overhauled UI for viewing and changing properties in Studio Pro.

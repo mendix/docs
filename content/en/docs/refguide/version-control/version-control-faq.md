@@ -9,11 +9,11 @@ tags: ["git", "teamserver", "byo-git"]
 
 ## 1 Introduction
 
-[Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates with the Team Server allowing you to create and update apps, commit changes, and merge model versions with one click.
+[Mendix Team Server](/developerportal/general/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates with the Team Server allowing you to create and update apps, commit changes, and merge model versions with one click.
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
-Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
+Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix 10, the Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 
@@ -33,7 +33,7 @@ We already do these housekeeping operations automatically on the Team Server, so
 
 ## 6 Can I Use the Subversion Version of the Team Server?
 
-No, in Mendix 10, we are supporting only Git-versioned apps. You need to migrate your SVN app to Git to use Mendix 10. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
+No, in Mendix 10, we are supporting only Git-versioned apps. You need to migrate your SVN app to Git to use Mendix 10. For more information on how to migrate, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*. 
 
 ## 7 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 

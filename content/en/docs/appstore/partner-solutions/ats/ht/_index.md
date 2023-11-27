@@ -10,7 +10,4 @@ description: "Presents a list of ATS how-tos for each ATS version."
 
 The *ATS How-tos* are organized according to the ATS version.
 
-## 2 Main Documents in This Section
-
-* [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/)
-* [ATS 1 How-tos](/appstore/partner-solutions/ats/ht-one/)
+## 2 Documents in This Section

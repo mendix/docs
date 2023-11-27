@@ -82,7 +82,7 @@ In Studio Pro, a [Call Microflow](/refguide9/microflow-call/) activity can start
 1. Edit the **Call Microflow** activity.
 2. Check the box **Execute this Microflow in a Task Queue**.
 3. Set **Select Task Queue** to the task queue in which the microflow should be executed.
-4. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy:
+4. (optionally – in Mendix 9.10.0 and above) Select an automatic retry strategy:
     * with "Fixed retry" the retries will be performed after the given delay, up to the given number of attempts.
     * with "Exponential retry" the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
 
@@ -123,7 +123,7 @@ The method `executeInBackground` takes two parameters: a context and a queue nam
 
 ### 2.5 Task scheduling {#scheduling}
 
-In Mendix version 9.12.0 and above, it is possible to schedule a task to be executed at a specified date/time. This can be done through the API, for instance:
+In Mendix 9.12.0 and above, it is possible to schedule a task to be executed at a specified date/time. This can be done through the API, for instance:
 
 ```java
 Calendar calendar = Calendar.getInstance();
@@ -141,7 +141,7 @@ Core.userActionCall("AModule.SomeJavaAction")
 
 ### 2.6 Retry on Failure {#retry}
 
-In Mendix version 9.9.0 and above, it is possible to automatically retry a task when it fails. The following options are available:
+In Mendix 9.9.0 and above, it is possible to automatically retry a task when it fails. The following options are available:
 
 1. Retry with a fixed delay – specify the maximum number of attempts and the wait time between each attempt.
 2. Retry with an exponentially increasing delay – specify the maximum number of attempts and the wait time before the first retry. The wait time will double after each failed retry up to a maximum. You can specify this maximum, if you don't specify a maximum the default is 1 day.
@@ -168,7 +168,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 | Configuration option                       | Example value | Explanation                                                                             |
 |--------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
-| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). <b/>*This setting was introduced in Mendix version 9.9.0* |   
+| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). <b/>*This setting was introduced in Mendix 9.9.0* |   
 
 {{% alert color="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
@@ -186,7 +186,7 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 2. Debug the application in case of errors.
 
 `System.ProcessedQueueTasks` objects are by default never deleted. The user is free to delete them when desired.
-If you are using Mendix version 9.9.0 or above, you can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.
+If you are using Mendix 9.9.0 or above, you can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.
 
 ### 2.9 Execution Context {#context}
 
@@ -242,7 +242,7 @@ Interrupting task threads may cause them to fail. These tasks will be marked as 
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
+In Mendix 9.9 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
 
 If `com.mendix.core.ProcessedTasksCleanupAge` is not specified, no cleanup is performed.
 
@@ -281,7 +281,7 @@ Task queues have the following limitations:
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
 * In versions of Mendix below 9.9.0, the total amount of parallelism per node is limited to 40. This means that at most 40 queues with parallelism 1 can be defined, or a single queue with parallelism 40, or somewhere in between, as long as the total does not exceed 40.
-* Queued actions that have failed can't be rescheduled out-of-the-box in Mendix versions below 9.9.0. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
+* Queued actions that have failed cannot be rescheduled out of the box in Mendix 9.8 and below. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
 
 ### 4.3 High-Level Implementation Overview
 

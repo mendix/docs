@@ -13,7 +13,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.14
 
-**Release date: May 17th, 2022**
+**Release date: May 17, 2022**
 
 ### Fixes
 
@@ -21,7 +21,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.12
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Fixes
 
@@ -29,7 +29,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.12 {#5012}
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 ### Fixes
 
@@ -37,7 +37,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.0.11
 
-**Release date: March 12th, 2021**
+**Release date: March 12, 2021**
 
 {{% alert color="warning" %}}
 We have decided to retract version 5.0.11 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.0.12](#5012). 
@@ -49,7 +49,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.10
 
-**Release date: February 15th, 2021**
+**Release date: February 15, 2021**
 
 ### Fixes
 
@@ -59,7 +59,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.9
 
-**Release date: February 4th, 2021**
+**Release date: February 4, 2021**
 
 ### Fixes
 
@@ -68,7 +68,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.8
 
-**Release date: December 22nd, 2020**
+**Release date: December 22, 2020**
 
 ### Fixes
 
@@ -76,7 +76,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.7
 
-**Release date: November 27th, 2020**
+**Release date: November 27, 2020**
 
 ### Improvements
 
@@ -88,7 +88,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.6
 
-**Release date: November 2nd, 2020**
+**Release date: November 2, 2020**
 
 ### Disclaimer
 
@@ -104,7 +104,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.5
 
-**Release date: October 19th, 2020**
+**Release date: October 19, 2020**
 
 ### Improvements
 
@@ -117,7 +117,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.4 and 5.0.3 
 
-**Release date: October 9th, 2020**
+**Release date: October 9, 2020**
 
 ### Improvements 
 
@@ -125,7 +125,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.2
 
-**Release date: September 2nd, 2020**
+**Release date: September 2, 2020**
 
 ### Fixes
 
@@ -133,13 +133,13 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ## 5.0.1
 
-**Release date: August 26th, 2020**
+**Release date: August 26, 2020**
 
 As of August 2020, Google Play requires apps to be built targeting SDK 29. This version of the Native Template complies with these requirements. For more information, see [Target API level requirements for the Play Console](https://support.google.com/googleplay/android-developer/answer/113469#targetsdk).
 
 ## 5.0.0
 
-**Release date: August 7th, 2020**
+**Release date: August 7, 2020**
 
 Mendix Studio Pro [8.12.1](/releasenotes/studio-pro/8.12/#8121) introduces better splash screen support for native mobile apps. As the new functionality requires new native dependencies, the changes are not backwards-compatible with previous Mendix Studio versions. 
 

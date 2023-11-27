@@ -6,6 +6,9 @@ category: "Version Control"
 weight: 10
 description: "Describes a merge algorithm and how it resolves conflicts."
 tags: ["merge", "algorithm", "conflict", "resolution"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+aliases:
+    - /refguide/new-merge-algorithm
 ---
 
 ## 1 Introduction
@@ -33,7 +36,7 @@ Your colleague's new document layout is shown below:
 
 You make the following changes on a branch line:
 
-* You change the text *Home* to *My homepage*
+* You change the text *Home* to *My home page*
 * You add a data grid inside the bottom layout grid
 
 Your page is now laid out as shown below:
@@ -74,7 +77,7 @@ To use keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>
 
 There is a third option to deal with a conflict: **Mark as Resolved**. This means that you do not choose any side to resolve the conflict and will keep things the way they were in the original. Neither of the new text changes will be applied.
 
-Once you have chosen one of the three options to resolve the conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
+Once you have chosen one of the three options to resolve the conflict, green check marks will appear to indicate that this conflict has been dealt with.
 
 ### 3.2 Resolving the Second Conflict
 

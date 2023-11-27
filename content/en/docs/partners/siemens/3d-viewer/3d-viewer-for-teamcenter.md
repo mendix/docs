@@ -47,7 +47,7 @@ Make sure you have the following prerequisites in place:
 
 ## 3 Installation
 
-To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) as necessary):
+To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) as necessary):
 
 * [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608)
 * [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service（v.2.0.0 or above). 
@@ -121,7 +121,7 @@ Follow these steps to get the list:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg" alt="teamcenter-wrapdataviews" >}}  
 
-9. Run your app locally, then log in to Teamcenter and open the the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
+9. Run your app locally, then log in to Teamcenter and open the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg" alt="teamcenter-samplesearch" >}}
 

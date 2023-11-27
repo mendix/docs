@@ -112,7 +112,7 @@ If a rollback is triggered for any reason (for example, if the user session is t
 
 If you end up with autocommitted objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.
 
-During commit the the following will occur:
+During commit the following will occur:
 
 * Events: For *explicitly committed* objects all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
     * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior

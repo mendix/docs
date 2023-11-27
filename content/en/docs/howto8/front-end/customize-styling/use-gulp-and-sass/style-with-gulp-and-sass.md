@@ -17,7 +17,7 @@ For the majority of styling needs, you can use Mendix's styling tool: Calypso. F
 
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up the Gulp project
 * Run Gulp
@@ -70,7 +70,7 @@ If you have [TortoiseSVN](/refguide8/using-version-control-in-studio-pro/#tortoi
 {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/style-with-gulp-and-sass/svn-ignore.jpg" >}}
 
 {{% alert color="warning" %}}
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ## 7 Troubleshooting

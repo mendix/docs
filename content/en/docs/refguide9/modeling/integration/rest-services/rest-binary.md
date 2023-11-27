@@ -28,7 +28,7 @@ To publish or retrieve files with REST, do the following:
 We recommend reading the following for some more background:
 
 * [Publishing](/howto9/integration/publish-rest-service/) and [consuming](/howto9/integration/consume-a-rest-service/) REST services
-* Working with [Images, Videos and Files](/refguide9/image-and-file-widgets/) in Studio Pro
+* Working with [Images, Videos, and Files](/refguide9/image-and-file-widgets/) in Studio Pro
 
 ## 2 Send Files with REST {#create-service}
 

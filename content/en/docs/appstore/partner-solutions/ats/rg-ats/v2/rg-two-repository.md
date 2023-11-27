@@ -29,7 +29,7 @@ With the type icons on the left side of the item name, you can identify at a gla
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/test-suite-icon.png" >}}
 
-* This is a action:
+* This is an action:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/action-icon.png" >}}
 

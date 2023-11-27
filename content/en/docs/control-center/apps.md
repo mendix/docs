@@ -19,12 +19,12 @@ The **Apps** page shows you all the apps belonging to your company. It also allo
 The **Apps** page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, **Deactivated Apps**, and **Default App Roles**.
 
 {{% alert color="info" %}}
-We are working on giving apps an each environment a separate tab. Stay tuned.
+We are working on giving each environment a separate tab. Stay tuned.
 {{% /alert %}}
 
 ## 2 Mendix Cloud
 
-The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the public Mendix Cloud.
+The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Public Cloud.
 
 By default you only see apps from the production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
 
@@ -73,7 +73,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 3 Mendix Free Cloud
 
-The Mendix Free Cloud tab shows all the apps that are deployed on the Mendix Free Cloud.
+The **Mendix Free** Cloud tab shows all the apps that are deployed on the Mendix Free Cloud.
 
 You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
 
@@ -119,10 +119,10 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 4 Other Apps
 
-The **Other Apps** tab shows all the other apps. They are either deployed to other clouds or do not have an environment. 
+The **Other Apps** tab shows the unlicensed apps that are not deployed as well as apps that are deployed to other environments than Mendix Cloud. They are either deployed to other clouds or do not have an environment. 
 
 {{% alert color="info" %}}
-We are working on giving apps an each environment a separate tab. Stay tuned.
+We are working on giving each environment a separate tab. Stay tuned.
 {{% /alert %}}
 
 You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
@@ -170,7 +170,7 @@ The description of the items that you can select are as follows:
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
 
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, it shows on the cooresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
+When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, the app moves to the cooresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
@@ -184,7 +184,7 @@ The **Default App Roles** tab shows the default [team roles](/developerportal/ge
 
 On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
-With the filter as shown below, you can filter apps by the app ID, name, Mendix versions, Technical Contact, environment name, envirionment ID, mainline version, and, deployed version. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
+With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app ID, app name, or environment name. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 
 {{< figure src="/attachments/control-center/apps/filter-apps.png" >}}
 
@@ -235,7 +235,7 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 
 ## 10 Exporting Apps to an Excel File {#export-to-excel}
 
-On each tab with an table of apps, you can export information about apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
+On each tab with an overview of apps, you can export information about apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 
 To export information about all the apps in the table, click **Export All** on the upper-top corner. 
 

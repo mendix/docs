@@ -26,7 +26,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [How to Use Marketplace Content](/appstore/overview/use-content/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [Using Marketplace Content](/appstore/overview/use-content/)
 
 ## 3 Marketplace Content Development Guidelines {#guidelines}
 

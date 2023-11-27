@@ -25,7 +25,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Use Marketplace Content](/appstore/overview/use-content/).
+This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 2 Marketplace Home Page {#home}
 
@@ -60,7 +60,7 @@ The following filter options are also available:
 * **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
-For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *How to Use Marketplace Content*.
+For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *Using Marketplace Content*.
 
 ## 3 Component Details Page {#details}
 

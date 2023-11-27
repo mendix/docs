@@ -432,13 +432,14 @@ There cannot be more than one filter of the same type in the data grid header. F
 
 ## 8 Export to Excel
 
-The data grid widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the "Export_To_Excel" JS action that is distributed as part of the Data Widgets module.
-To export data from the data grid, create a new Nanoflow that calls "Export_To_Excel". The "Export_To_Excel" action has a set of inputs:
+The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the *Export_To_Excel* JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
 
-* **Datagrid name** - the name of the data grid from which data should be exported. The name can be found and copied from the data grid settings (Properties>Common>Name).
-* **File name** - the file name to use for the exported document.
-* **Sheet name** - the name to use for the Excel sheet of the exported document.
-* **Include column names** - a boolean expression that, if true, tells action to include column captions as the first row in the exported document.
+To export data from the data grid, create a new nanoflow that calls *Export_To_Excel*. The *Export_To_Excel* action has a set of inputs:
+
+* **Datagrid name** - the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
+* **File name** - the file name to use for the exported document
+* **Sheet name** - the name to use for the Excel sheet of the exported document
+* **Include column names** - a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
 
 ## 9 Configuration
 

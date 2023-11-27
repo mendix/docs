@@ -155,8 +155,8 @@ The Amazon `CompareFaces` service compares a face in the source input image with
 The input and output for this service are shown in the table below:
 
 | Input | Output |
-| --- |
-| `SourceImage` (Image); `TargetImage` (Image); `SimilarityThreshold` (Decimal); `QualityFilter` (Enumeration) | Level of similarity among inputted images (Decimal) |
+| --- | --- |
+| `SourceImage` (Image); <br /> `TargetImage` (Image); <br /> `SimilarityThreshold` (Decimal); <br /> `QualityFilter` (Enumeration) | Level of similarity among inputted images (Decimal) |
 
 This activity returns a `CompareFaces` entity with associated entities as shown in the table below:
 
@@ -180,8 +180,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxResults` (Integer/Long, minimum value of 0); `ProjectARN` (String); `Image` (Image) | Custom label |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); <br /> `MaxResults` (Integer/Long, minimum value of 0); <br /> `ProjectARN` (String); <br /> `Image` (Image) | Custom label |
 
 This activity returns a `DetectCustomLabelsResponse` object and associated objects as shown in the table below:
 
@@ -250,7 +249,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); <br /> `Image` (Image) | An array or object of detected moderation label(s) |
 
 This activity returns a `DetectModerationLabelsResponse` objects and associated objects as shown in the table below:
 
@@ -269,7 +268,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); <br /> `MaxLabels` (Integer/Long, minimum value of 0); <br /> `Image` (Image) | An array or object of detected label(s) |
 
 This activity returns a `DetectLabelsResponse` objects with associated objects as shown in the table below:
 

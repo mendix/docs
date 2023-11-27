@@ -17,17 +17,17 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 
 ## 2 Constraints in Studio Pro
 
-### 2.1 Using XPath Builder
+### 2.1 Using Visual Builder
 
-In Mendix 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called XPath Builder.
+In Mendix 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints.
 
 {{% alert color="warning" %}}
-XPath Builder is beta in Mendix version 10.5 and has limitations which are listed in [XPath Builder Limitations](#limitations).
+Visual Builder for database constraints is beta in Mendix version 10.5 and has limitations which are listed in [Visual Builder Limitations](#limitations).
 {{% /alert %}}
 
-You can use the XPath Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
+You can use the Visual Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder (beta)** option is selected to use the XPath Builder. You can switch between the XPath Builder and the XPath expression to view them in different ways. 
+Ensure the **Builder (beta)** option is selected to use the Builder. You can switch between the Builder and the XPath expression to view them in different ways. 
 
 #### 2.1.1 Constructing an XPath Constraint
 
@@ -37,7 +37,7 @@ You then see a clause beginning **Where** where you can enter one or more condit
 
 1. Entity, attribute, or association.
 
-    Click the down arrow (▼) and select from the list of options. You will only be shown options that fit the current context and are supported by XPath Builder.
+    Click the down arrow (▼) and select from the list of options. You will only be shown options that fit the current context and are supported by Visual Builder for database constraints.
 
 2. Relational [operator](/refguide/xpath-operators/) or function.
 
@@ -59,9 +59,9 @@ You can create groups of rules which should be applied in combination. Click **A
 
 You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
-#### 2.1.2 XPath Builder Limitations {#limitations}
+#### 2.1.2 Visual Builder Limitations {#limitations}
 
-XPath Builder is still in beta and you cannot use it to make arbitrarily complex XPath expressions. XPath Builder has the following limitations:
+Visual Builder for database constraints is still in beta and you cannot use it to make arbitrarily complex XPath expressions. Builder has the following limitations:
 
 * It does not support all functions. It does support the following relational operators and functions:
 
@@ -74,7 +74,7 @@ XPath Builder is still in beta and you cannot use it to make arbitrarily complex
 
 * It does not support the `id` attribute of entities
 * It does not support nested expressions such as `[Sales.Customer_Address/Sales.Address[City = 'New York' or City = 'London']]`
-* If an existing expression starts with a variable it cannot be displayed in the XPath Builder (for example `[($CurrentAddress = Sales.Customer_Address)]`)—however you can still build the same expression in the XPath Builder the other way around (so `[(Sales.Customer_Address = $CurrentAddress)]` can be built and displayed in the XPath Builder)
+* If an existing expression starts with a variable it cannot be displayed in the Builder (for example `[($CurrentAddress = Sales.Customer_Address)]`)—however you can still build the same expression in the Builder the other way around (so `[(Sales.Customer_Address = $CurrentAddress)]` can be built and displayed in the Builder)
 
 If you try to use an unsupported feature you will be warned and can choose to edit your XPath expression in the expression editor.
 

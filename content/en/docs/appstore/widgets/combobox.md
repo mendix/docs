@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "widget", "combobox", "platform s
 
 ## 1 Introduction
 
-The [Combobox](https://marketplace.mendix.com/link/component/xxx) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
+The [Combobox](https://marketplace.mendix.com/link/component/219304) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
 
 A typical combobox can look like this:
 

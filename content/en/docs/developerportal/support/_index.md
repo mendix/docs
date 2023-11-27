@@ -157,8 +157,6 @@ Private Mendix Platform provides a platform experience in on-premises or (virtua
 
 This offering is delivered, managed and supported by Certified Partners (or Certified Customers). If you run into issues regarding your private platform, please contact your Certified Partner for support.
 
-{{< figure src="/attachments/developerportal/support/private-mendix-platform.png"   width="40%"  >}}
-
 ### 9.4 SAP Business Technology Platform
 
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).

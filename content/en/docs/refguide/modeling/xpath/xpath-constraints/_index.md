@@ -17,33 +17,7 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 
 ## 2 Constraints in Studio Pro
 
-### 2.1 Writing Constraints
-
-In all versions of Mendix you can write XPath constraints using the syntax explained below. As you enter your XPath you will be given assistance to help you choose the correct entities, attributes, variables, and associations. You will also see if there are any syntax errors.
-
-Depending on the version, you may have to use a different option to add your XPath constraint.
-
-#### 2.1.1 Mendix Version 10.5 and Above
-
-For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
-
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" >}}
-
-You can type your constraint by selecting the option **XPath expression**.
-
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" >}}
-
-#### 2.1.2 Mendix Versions Below 10.5
-
-For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
-
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" >}}
-
-For a **Data Source** of a page widget such as a [Data Grid](/refguide/data-grid/), you choose **Type: XPath**. You will then see an **XPath** field and click **Edit…** to open a dialog box where you can enter your constraint.
-
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" >}}
-
-### 2.2 Using XPath Builder
+### 2.1 Using XPath Builder
 
 In Mendix 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called XPath Builder.
 
@@ -55,7 +29,7 @@ You can use the XPath Builder in all places where you can retrieve data from the
 
 Ensure the **Builder (beta)** option is selected to use the XPath Builder. You can switch between the XPath Builder and the XPath expression to view them in different ways. 
 
-#### 2.2.1 Constructing an XPath Constraint
+#### 2.1.1 Constructing an XPath Constraint
 
 The entity you are retrieving from the database is already selected as the context and this is indicated in the dialog box as **Select records of {entity}**.
 
@@ -85,7 +59,7 @@ You can create groups of rules which should be applied in combination. Click **A
 
 You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
-#### 2.2.2 XPath Builder Limitations {#limitations}
+#### 2.1.2 XPath Builder Limitations {#limitations}
 
 XPath Builder is still in beta and you cannot use it to make arbitrarily complex XPath expressions. XPath Builder has the following limitations:
 
@@ -106,6 +80,32 @@ If you try to use an unsupported feature you will be warned and can choose to ed
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" >}}
 
+### 2.2 Writing XPath Expressions
+
+In all versions of Mendix you can write XPath constraints using the syntax explained below. As you enter your XPath you will be given assistance to help you choose the correct entities, attributes, variables, and associations. You will also see if there are any syntax errors.
+
+Depending on the version, you may have to use a different option to add your XPath constraint.
+
+#### 2.2.1 Mendix Version 10.5 and Above
+
+For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
+
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" >}}
+
+You can type your constraint by selecting the option **XPath expression**.
+
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" >}}
+
+#### 2.2.2 Mendix Versions Below 10.5
+
+For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
+
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" >}}
+
+For a **Data Source** of a page widget such as a [Data Grid](/refguide/data-grid/), you choose **Type: XPath**. You will then see an **XPath** field and click **Edit…** to open a dialog box where you can enter your constraint.
+
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" >}}
+
 ## 3 Constraints in Java
 
 To apply XPath constraints in Java, you should use a complete XPath expression as described in [XPath](/refguide/xpath/). This includes the entity context plus your constraint expression and (optionally) an aggregate function and attribute to retrieve.
@@ -113,8 +113,6 @@ To apply XPath constraints in Java, you should use a complete XPath expression a
 The XPath should be used in a [core.createXPathQuery](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) call. You can then call [XPathQueryBase.execute](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/datastorage/XPathQueryBase.html#execute(com.mendix.systemwideinterfaces.core.IContext)) which will return the list of objects filtered using the XPath you provided.
 
 For example, to retrieve all customers named Jansen:
-
-{{% todo %}}Does this Java look like it might work?{{% /todo %}}
 
 ```java {linenos = false}
 public getCustomersNameJansen(IContext context, ICore core, int value) {

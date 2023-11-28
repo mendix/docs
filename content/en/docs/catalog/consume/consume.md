@@ -46,7 +46,7 @@ Associations that are inherited from a generalization will be exposed and shown 
 
 Data for external entities is in the database of the app that publishes the service, not in the consuming app's database. The dataset that is associated with the consumed entity is maintained in the publishing app.
 
-Access to the data is through the published REST OData service, with reading, querying, and updating or inserting of the data by the consuming app.
+Access to the data is through the published REST service, with reading, querying, and updating or inserting of the data by the consuming app.
 
 ## 3 Operations Affected by Using External Entities
 
@@ -64,9 +64,9 @@ The following operations are affected by using external entities in a consuming 
     * Expressions with `reverse()` (as mentioned in [Querying Over Self-References](/refguide/query-over/))
 * [OQL](/refguide/oql/) – you cannot define OQL queries on external entities (for example, in datasets)
 
-## 4 Registered Datasets in OData Services from Non-Mendix Systems
+## 4 Registered Datasets in Services from Non-Mendix Systems
 
-For registered OData datasets from non-Mendix apps, the restrictions described below apply.
+For registered OData and OpenAPI datasets from non-Mendix apps, the restrictions described below apply.
 
 ### 4.1 Keys
 
@@ -80,10 +80,10 @@ The key attributes are not available as attributes of the external entity.
 
 ### 4.2 Supported Metadata Features
 
-When importing metadata in a consumed OData service in Studio Pro, all unsupported constructs are ignored. The following constructs are supported:
+When importing metadata in a consumed service in Studio Pro, all unsupported constructs are ignored. The following constructs are supported:
 
 * Only entities that are published in the service feed can be imported. Entities that only appear in the metadata file and not in the service feed cannot be imported as external entities.
-* Attribute types have to be primitive (not complex, collections, or enumerations). The types of the attributes in your app are based on the types of the attributes in the OData metadata:
+* Attribute types have to be primitive (not complex, collections, or enumerations). The types of the attributes in your app are based on the types of the attributes in the metadata:
 
     | OData Type | Mendix Type |
     | --- | --- |
@@ -98,7 +98,7 @@ When importing metadata in a consumed OData service in Studio Pro, all unsupport
 
 The following conditions apply:
 
-* When the OData endpoints contain operations, these are not imported in the consumed OData service; you can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations
+* When the service endpoints contain operations, these are not imported in the consumed service; you can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations
 * In Mendix, Booleans cannot be null; when the service returns a null, the value is false
 * Attributes marked as `FC_KeepInContent=false` are not supported
 * Decimal values outside the range of a Mendix decimal are currently not supported; when the service returns a value outside of the range, there is an error

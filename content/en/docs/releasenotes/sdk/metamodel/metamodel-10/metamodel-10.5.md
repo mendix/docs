@@ -1,49 +1,42 @@
 ---
 title: "10.5"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.5/
+weight: 95
 ---
 
 ## 10.5.0
 
+**Release date: November 22, 2023**
+
 ### DomainModels
 
 #### AccessRule (Element)
+
 * We introduced the `xPathConstraintCaption` property. 
 
 ### Settings
 
 #### WebUIProjectSettingsPart (Element)
+
 * We introduced the `urlPrefix` property. 
 
 ### CustomWidgets
 
 #### WidgetValueType (Element)
+
 * We introduced the `setLabel` property. 
 
 #### CustomWidgetDatabaseSource (Element)
+
 * We deleted this element. 
 
 ### Pages
 
-#### ListView (Element)
+#### ListView and Grid (Elements)
+
 * We changed the default value of the `dataSource` property.
 
-#### DatabaseSourceBase (Element)
-* We deleted this element. 
+#### DatabaseSourceBase, GridDatabaseSource, ListViewDatabaseSource, DatabaseConstraint, SelectorDatabaseSource (Elements)
 
-#### GridDatabaseSource (Element)
-* We deleted this element. 
+* We deleted these elements.
 
-#### ListViewDatabaseSource (Element)
-* We deleted this element. 
-
-#### DatabaseConstraint (Element)
-* We deleted this element. 
-
-#### Grid (Element)
-* We changed the default value of the `dataSource` property.
-
-#### SelectorDatabaseSource (Element)
-* We deleted this element. 
-
-This page has been generated automatically.

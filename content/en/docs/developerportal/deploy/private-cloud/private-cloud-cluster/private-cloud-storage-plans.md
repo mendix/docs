@@ -344,7 +344,7 @@ In the Postgres plan configuration, enter the following details:
 * **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Authentication** - select `aws-iam` from the dropdown.
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
-    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
@@ -647,7 +647,7 @@ For apps using Mendix 9.22 (or a later version), the [IRSA Mode](#s3-irsa-mode) 
 If you would like to simply share a bucket between environments, or to manually create a bucket and account per environment, use the [existing bucket and account](#s3-existing-bucket-account) option.
 
 {{% alert color="info" %}}
-Although we offer additional flexibility and provide other options, we recommend using one of the options listed above.
+Although we offer additional flexibility and provide other options, Mendix recommends using one of the options listed above.
 {{% /alert %}}
 
 #### 3.3.1 Create Account with Existing Policy {#s3-create-account-existing-policy}
@@ -959,7 +959,7 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Attach policy ARN** - The environment template policy ARN; this is the existing policy that will be attached to every environment's IAM role.
 * **EKS OIDC URL** - The OIDC URL of the EKS cluster; in most cases, the OIDC provider is [created automatically](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html), and its URL can be found in the AWS Management Console.
 * **IAM Role ARN** - the admin user role ARN.
-    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
 
   {{% alert color="warning" %}}
@@ -1060,7 +1060,7 @@ This automated, on-demand option will create an S3 bucket and IAM account for ev
 {{% alert color="warning" %}}
 We do not recommend using this option, as it is not possible to customize the bucket settings (encryption or default file access). In addition, this option needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments. This option is primarily here for historical reasons.
 
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+Instead, Mendix recommends using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
 ##### 3.3.4.1 Prerequisites
@@ -1145,7 +1145,7 @@ This automated, on-demand option will create an S3 bucket and IAM account for ev
 {{% alert color="warning" %}}
 We do not recommend using this option, as it is not possible to customize the bucket settings (encryption or default file access). This option is primarily available for historical reasons.
 
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+Instead, Mendix recommends using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
 ##### 3.3.5.1 Prerequisites
@@ -1288,7 +1288,7 @@ This automated, on-demand option allows the sharing of an existing bucket betwee
 {{% alert color="warning" %}}
 We do not recommend using this option, as it needs admin-like IAM permissions to create inline policies, which might not be acceptable in regulated environments. This option is primarily available for historical reasons.
 
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+Instead, Mendix recommends using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
 ##### 3.3.6.1 Prerequisites

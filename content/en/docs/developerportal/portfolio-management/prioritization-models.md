@@ -37,7 +37,7 @@ The job size of an initiative is the amount of effort that an initiative require
 
 During the calculation, **XL**, **L**, **M**, **S**, and **XS** translate to the numeric values 20, 13, 8, 5, and 1 respectively.
 
-If the job size of an initiative is too big, we recommend you to split it into multiple smaller initiatives.
+If the job size of an initiative is too big, Mendix recommends splitting it into multiple smaller initiatives.
 
 ## 3 RICE {#rice}
 

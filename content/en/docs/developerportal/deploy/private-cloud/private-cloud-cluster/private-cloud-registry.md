@@ -132,7 +132,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
-    2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`. You can specify any serviceaccount name here (for simplicity, we recommend using `mendix-builder`). For example, if the Mendix Operator is installed into the `mynamespace` namespace, set the value to `system:serviceaccount:mynamespace:mendix-builder`.
+    2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`. You can specify any serviceaccount name here (for simplicity, Mendix recommends using `mendix-builder`). For example, if the Mendix Operator is installed into the `mynamespace` namespace, set the value to `system:serviceaccount:mynamespace:mendix-builder`.
 
         See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
 
@@ -207,7 +207,7 @@ To use Google Artifact registry with the Mendix Operator, perform the following 
         GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
     ```
 
-On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, we recommend using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides. For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
+On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, Mendix recommends using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides. For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
 
 Use the following configuration options:
 

@@ -55,10 +55,11 @@ The data grid supports the following types of data sources:
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly from the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly from the database
+    {{% alert color="info" %}}From Mendix version 10.5, the data grid widget does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 ### 3.3 Design Properties Section {#design-properties}
 

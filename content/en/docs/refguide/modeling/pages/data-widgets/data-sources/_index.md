@@ -31,6 +31,7 @@ A data grid, template grid, and list view are list widgets. Also some [pluggable
 
 * [Database](/refguide/database-source/) – objects are retrieved from the database; database constraints can be used to limit which objects are shown. 
 * [XPath](/refguide/xpath-source/) – objects are retrieved from the database; an XPath constraint can be used to constrain which objects are shown.
+    {{% alert color="info" %}}From Mendix version 10.5, most widgets do not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow](/refguide/microflow-source/) – objects retrieved are determined by the result of calling the selected microflow. The microflow can take objects in the context as parameter and needs to return a list of objects.
 * [Nanoflow](/refguide/nanoflow-source/) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a list of objects. Nanoflow data source is only available for data views and list views. 
 * [Association](/refguide/association-source/) – the objects are retrieved from memory by following an association from the object in the context. So, this data source is only available when a widget is nested in another data container. 

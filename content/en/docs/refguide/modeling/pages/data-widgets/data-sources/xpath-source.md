@@ -7,6 +7,10 @@ weight: 20
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+In Mendix version 10.5 and above there is no separate XPath source. If you want to use an XPath in these versions, use the **Database** source.
+{{% /alert %}}
+
 If **XPath** is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. You can filter data with an [XPath constraint](#xpath-constraints).  
 
 The **XPath** data source is very similar to the [**Database** data source](/refguide/database-source/), except that XPath constraints are more flexible than the database ones. 

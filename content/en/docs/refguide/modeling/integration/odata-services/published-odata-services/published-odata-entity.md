@@ -1,36 +1,38 @@
 ---
-title: "Published OData Resource"
-url: /refguide/published-odata-resource/
+title: "Published OData Entity"
+url: /refguide/published-odata-entity/
 tags: ["studio pro", "OData"]
+alias:
+    - /refguide/published-odata-services/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 
 ---
 
 ## 1 Introduction
 
-This document describes the properties of a published OData resource. 
+This document describes the properties of an entity published in an OData service. 
 
 For an overview of OData services, see [Published OData Services](/refguide/published-odata-services/).
 
-## 2 Adding or Editing a Resource
+## 2 Adding or Editing an Entity
 
-### 2.1 Add a Resource
+### 2.1 Add an Entity
 
-Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
+Click **Add** in the **Entities** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-An alternative way to add a resource is by right-clicking an entity in the **Domain Model** and choosing **Expose as OData resource**. You will be asked to select a published OData service, or create a new one. 
+An alternative way to add an entity is by right-clicking an entity in the **Domain Model** and choosing **Publish in OData service**. You will be asked to select a published OData service, or create a new one. 
 
-### 2.2 Edit a Resource
+### 2.2 Edit a Published Entity
 
-In the **Entities** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
+In the **Entities** pane of the **Published OData Service** window, select an entity and click **Edit** to display the **Edit published entity** window. 
 
 It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**.
 
-You can see the location where the resource will be published in **Example of location**.
+You can see the location where the entity is published in **Example of location**.
 
-In the **Public documentation** tab, you can provide a summary and a description of the exposed entity.
+In the **Public documentation** tab, you can provide a summary and a description of the published entity.
 
-## 3 Selecting Exposed Attributes and Associations {#exatass}
+## 3 Selecting Published Attributes and Associations {#exatass}
 
 When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete and move these attributes and associations.
 
@@ -50,11 +52,11 @@ When the checkbox Can be empty is unselected, and there is no **Required** valid
 
 ## 4 Mapping from Internal Names to Exposed Names
 
-Use **Exposed entity name** in the **Edit published resource** window to customize the name of the resource that is exposed to the outside world. The default is the name of the exposed entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
+Use **Exposed entity name** in the **Edit published entity** window to customize the name of the entity that is exposed to the outside world. The default is the name of the published entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
 
 {{% alert color="info" %}}
 
-Location URIs must be unique. Exposing two different resources at the same location will result in a [consistency error](/refguide/consistency-errors/).
+Location URIs must be unique. Publishing two different entities at the same location will result in a [consistency error](/refguide/consistency-errors/).
 
 {{% /alert %}}
 
@@ -72,7 +74,7 @@ These features make it easier to refactor the domain model without affecting ext
 
 ## 5 Exposed Set Name
 
-It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published resource** window. This forms the last part of the URL of the resource as given in the **Example of location**.
+It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published entity** window. This forms the last part of the URL of the published entity as given in the **Example of location**.
 
 Default: *{Entity name}s*
 
@@ -94,7 +96,7 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that it is not recommended to use the ID as a key. A published entity should have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
@@ -112,7 +114,7 @@ Selecting more than one attribute as the key is only available for published ODa
 
 ## 9 Capabilities {#capabilities}
 
-The **Capabilities** section gives an overview of what operations the resource supports.
+The **Capabilities** section gives an overview of what operations the published entity supports.
 
 ### 9.1 Insertable
 
@@ -133,9 +135,9 @@ In the publishing app, you can use a validation message action to report a valid
 
 ### 9.2 Readable {#readable}
 
-A published OData resource is always readable.
+A published OData entity is always readable.
 
-There are two options to handle an incoming GET request for an OData resource:
+There are two options to handle an incoming GET request for a published entity:
 
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See the [Handle a GET Request with a Microflow](/refguide/wrap-services-odata/#handle-get-request) in *Wrap Services, APIs, or Databases with OData*.

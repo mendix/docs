@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide/xpath-operators/), [functions](/refguide/xpath-constraint-functions/), [keywords or system variables](/refguide/xpath-keywords-and-system-variables/).
+A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide/xpath-expressions/). This should consist of one or more entities, attributes, or associations combined with [operators](/refguide/xpath-operators/), [functions](/refguide/xpath-constraint-functions/), and [keywords or system variables](/refguide/xpath-keywords-and-system-variables/).
 
 The syntax of XPath queries differs between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 

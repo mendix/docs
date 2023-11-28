@@ -58,7 +58,7 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
+* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
 * [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)

@@ -46,13 +46,13 @@ Action call activities can be used to call another microflow or to call a Java a
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="java action call" link="/refguide/java-action-call/" width="120px" >}} | [Call Java action](/refguide/java-action-call/) *(only in microflows)* | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="javascript action call" link="/refguide/javascript-action-call/" width="120px" >}} | [Call JavaScript action](/refguide/javascript-action-call/) *(only in nanoflows)* | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="java action call" link="/refguide/java-action-call/" width="120px" >}} | [Call Java action](/refguide/java-action-call/) (microflows only) | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="javascript action call" link="/refguide/javascript-action-call/" width="120px" >}} | [Call JavaScript action](/refguide/javascript-action-call/) (nanoflows only) | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="microflow call" link="/refguide/microflow-call/" width="120px" >}} | [Microflow call](/refguide/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 
 ## 5 Variable Activities
 
-Variable activities can be used to create or change a variable within a microflow.
+Variable activities can be used to create or change a variable.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -65,17 +65,21 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-nanoflow.png" alt="nanoflow call" link="/refguide/nanoflow-call/" width="160px" >}} | [Call nanoflow](/refguide/nanoflow-call/) *(only in nanoflows)* | Calls another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/close-page.png" alt="close page" link="/refguide/close-page/" width="160px" >}} | [Close page](/refguide/close-page/) | Closes the page that was opened last by the user who called the microflow in which this activity is used. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/download-file.png" alt="download file" link="/refguide/download-file/" width="160px" >}} | [Download file](/refguide/download-file/) *(only in microflows)* | Can be used to enable the browser to download a specific file. The user who calls the microflow in which this activity is used gets a download pop-up window, or the file is shown directly in the browser. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/show-home-page.png" alt="show home page" link="/refguide/show-home-page/" width="160px" >}} | [Show home page](/refguide/show-home-page/) *(only in microflows)* | Navigates to the home page for the current user. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/show-message.png" alt="show message" link="/refguide/show-message/" width="160px" >}} | [Show message](/refguide/show-message/) | Allows you to show a blocking or non-blocking message to the user that calls the microflow in which this activity is used. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/show-page.png" alt="show page" link="/refguide/show-page/" width="160px" >}} | [Show page](/refguide/show-page/) | Allows you to show a page to the user that calls the microflow in which this activity is used. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/synchronize-to-device.png" alt="synchronize to device" link="/refguide/synchronize-to-device/" width="160px" >}} | [Synchronize to device](/refguide/synchronize-to-device/) *(only in microflows)* | Can be used to selectively synchronize one or more objects or lists to a device and store them in the offline database. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/synchronize.png" alt="synchronize" link="/refguide/synchronize/" width="160px" >}} | [Synchronize](/refguide/synchronize/)  *(only in nanoflows)* | Synchronizes data. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-nanoflow.png" alt="nanoflow call" link="/refguide/nanoflow-call/" width="160px" >}} | [Call nanoflow](/refguide/nanoflow-call/) (nanoflows only) | Calls another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/close-page.png" alt="close page" link="/refguide/close-page/" width="160px" >}} | [Close page](/refguide/close-page/) | Closes the page that was opened last by the user who called the microflow or nanoflow in which this activity is used. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/download-file.png" alt="download file" link="/refguide/download-file/" width="160px" >}} | [Download file](/refguide/download-file/) (microflows only) | Can be used to enable the browser to download a specific file. The user who calls the microflow in which this activity is used gets a download pop-up window, or the file is shown directly in the browser. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/show-home-page.png" alt="show home page" link="/refguide/show-home-page/" width="160px" >}} | [Show home page](/refguide/show-home-page/) (microflows only) | Navigates to the home page for the current user. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/show-message.png" alt="show message" link="/refguide/show-message/" width="160px" >}} | [Show message](/refguide/show-message/) | Allows you to show a blocking or non-blocking message to the user that calls the microflow or nanoflow in which this activity is used. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/show-page.png" alt="show page" link="/refguide/show-page/" width="160px" >}} | [Show page](/refguide/show-page/) | Allows you to show a page to the user that calls the microflow or nanoflow in which this activity is used. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/synchronize-to-device.png" alt="synchronize to device" link="/refguide/synchronize-to-device/" width="160px" >}} | [Synchronize to device](/refguide/synchronize-to-device/) (microflows only) | Can be used to selectively synchronize one or more objects or lists to a device and store them in the offline database. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/synchronize.png" alt="synchronize" link="/refguide/synchronize/" width="160px" >}} | [Synchronize](/refguide/synchronize/)  (nanoflows only) | Synchronizes data. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/validation-feedback.png" alt="validation feedback" link="/refguide/validation-feedback/" width="160px" >}} | [Validation feedback](/refguide/validation-feedback/) | Allows you to display a red text below a widget that displays an attribute or association. |
 
 ## 7 Integration Activities
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
 
 Integration activities can be used to integrate with other systems, for example by calling a web service.
 
@@ -97,9 +101,13 @@ Integration activities can be used to integrate with other systems, for example 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" link="/refguide/generate-document/" width="120px" >}} | [Generate document](/refguide/generate-document/) *(only in microflows)* | Allows you to create a document of a certain type based on a [template](/refguide/document-templates/). |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" link="/refguide/generate-document/" width="120px" >}} | [Generate document](/refguide/generate-document/) (microflows only) | Allows you to create a document of a certain type based on a [template](/refguide/document-templates/). |
 
 ## 10 Metrics Activities
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -111,9 +119,13 @@ Integration activities can be used to integrate with other systems, for example 
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ML-model.png" alt="call ml model" link="/refguide/call-ml-model/" width="100px" >}} | [Call ML model](/refguide/call-ml-model/) *(only in microflows)* | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ML-model.png" alt="call ml model" link="/refguide/call-ml-model/" width="100px" >}} | [Call ML model](/refguide/call-ml-model/) (microflows only) | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
 
 ## 12 Workflow Activities
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
 
 Workflow activities are used in relation to workflows and their user tasks. 
 
@@ -132,6 +144,10 @@ Workflow activities are used in relation to workflows and their user tasks.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/unlock-workflow.png" link="/refguide/unlock-workflow/" width="160px" >}} | [Unlock Workflow](/refguide/unlock-workflow/) | Allows you to unlock a workflow. |
 
 ## 13 External Object Activities
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
 
 | Graphic | Name | Description |
 | --- | --- | --- |

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "platform support", "hybrid mobil
 ---
 
 {{% alert color="warning" %}}
-⚠ This module is deprecated. We recommend you build a native or progressive web app instead. For more information, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
+⚠ This module is deprecated. Mendix recommends building a native or progressive web app instead. For more information, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
 {{% /alert %}}
 
 ## 1 Introduction

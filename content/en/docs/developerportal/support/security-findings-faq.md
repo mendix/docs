@@ -21,7 +21,7 @@ This FAQ document is not updated in real time. For updates on current security i
 
 ### 1.2 Security Advisories
 
-Security Advisories for Mendix are published under [Security Advisories](/releasenotes/security-advisories/).
+Security Advisories for Mendix are published in [Security Advisories](/releasenotes/security-advisories/).
 
 ### 1.3 General Security Advice
 
@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 
@@ -87,7 +87,7 @@ Security scanning tools can report vulnerabilities in Java libraries. These can 
 
 * The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Use Marketplace Content* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Using Marketplace Content* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 
@@ -239,4 +239,4 @@ The Mendix Runtime implements a number of mitigation methods which mean that the
 
 If you see entries saying `ERROR - Connector: 404 - file not found for file` in your Application Access Logs, these may originate from internal security scans or external attacks. We actively try to block attacks from crawlers.
 
-To investigate further, we recommend [downloading the access logs](/developerportal/operate/logs/). This will enable you to review IP addresses, identify locations, and determine where requests are originating from. If you suspect a potential malicious attack, you can enhance security by adding an [Access Restriction Profile](/developerportal/deploy/access-restrictions/) which allows two IP ranges and excludes the IP address which you suspect.
+To investigate further, Mendix recommends [downloading the access logs](/developerportal/operate/logs/). This will enable you to review IP addresses, identify locations, and determine where requests are originating from. If you suspect a potential malicious attack, you can enhance security by adding an [Access Restriction Profile](/developerportal/deploy/access-restrictions/) which allows two IP ranges and excludes the IP address which you suspect.

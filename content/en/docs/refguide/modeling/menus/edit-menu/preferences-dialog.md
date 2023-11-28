@@ -119,7 +119,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 6.2 Git 
+### 6.2 Git{#git}
 
 #### 6.2.1 Name
 
@@ -153,6 +153,14 @@ Select **Enable automatic fetching from a remote repository** to enable the [Aut
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
 
+#### 6.2.8 Combine Local and Remote Changes
+
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.5.
+{{% /alert %}}
+
+When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}
@@ -177,11 +185,11 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-## 9 New Features Tab
+## 9 New Features Tab {#new-features}
 
 ### 9.1 Micro- And Nanoflow Editor
 
-Logic editors are currently being redesigned. The Beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the Beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors Beta](/refguide/logic-editors-beta/).
+Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
 
 ## 10 Read More
 

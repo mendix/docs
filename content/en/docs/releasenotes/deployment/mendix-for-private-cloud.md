@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 23, 2023
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor/#import-dashboard) for native metrics to deduplicate labels in case the app is restarted. When the app restarts, it will no longer create a new set of metrics.
+* We have rearranged JVM heap memory graphs for the G1 Garbage Collector so that *Eden Space* is always on top of other graphs, just like it was with the previous garbage collector.
+
 ### November 17, 2023
 
 #### Data Migration Tool (Preview) v0.0.4

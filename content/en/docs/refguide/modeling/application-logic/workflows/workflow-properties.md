@@ -87,7 +87,7 @@ To view **Parameters**, click the ellipsis icon next to the **Workflow name** or
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an attribute from the context that will be displayed
 
 ##### 2.5.3.1 Adding New Parameters
 

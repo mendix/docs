@@ -54,7 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
-4. Open the the [Global Navigation Menu](/developerportal/#global-navigation) and select **Deployment**.
+4. Open the the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
 5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
@@ -186,7 +186,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
 
-    {{% alert color="info" %}}We recommend running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
+    {{% alert color="info" %}}Mendix recommends running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
 
 #### 4.3.1 Base Installation {#base-installation}
 
@@ -457,7 +457,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 {{% alert color="warning" %}}
-Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
+Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. Mendix recommends making a backup before applying any changes.
 {{% /alert %}}
 
 ### 6.1 Endpoint (network) Configuration {#advanced-network-settings}
@@ -1016,9 +1016,9 @@ Memory-based metrics should not be used for autoscaling.
 Mendix Operator version 2.4.0 or above has the APIs required by the vertical pod autoscaler.
 
 {{% alert color="warning" %}}
-Vertical pod autoscaling is still an experimental, optional Kubernetes addon.
+Vertical pod autoscaling is still an experimental, optional Kubernetes add-on.
 
-We recommend using *horizontal* pod autoscaling to adjust environments to meet demand.
+Mendix recommends using horizontal pod autoscaling to adjust environments to meet demand.
 
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}

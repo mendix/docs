@@ -382,7 +382,7 @@ Mendix for Private Cloud offers a reference dashboard that looks similar to Mend
 In addition, this dashboard will display Mendix app and Runtime logs.
 
 {{% alert color="warning" %}}Depending on how Prometheus is [configured](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
-and which addons are installed, some labels or metrics might be missing or have a different name.
+and which add-ons are installed, some labels or metrics might be missing or have a different name.
 The reference dashboards are compatible with Prometheus installed as described in [Installing Monitoring Tools](#install-grafana-loki), above.{{% /alert %}}
 
 ### 4.1 Import the Dashboard{#import-dashboard}
@@ -391,7 +391,7 @@ To install the reference dashboard, download the dashboard JSON to a local file 
 There are two dashboards available at the moment. If necessary you can install both at the same time:
 
 * [compatibility mode dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_compatibility-1.1.1.json) for metrics generated in compatibility mode
-* [native dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_native-1.1.0.json) for metrics generated in native mode
+* [native dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_native-1.1.1.json) for metrics generated in native mode
 
 [Import](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) the downloaded JSON into Grafana:
 

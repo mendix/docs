@@ -382,7 +382,7 @@ Mendix for Private Cloud offers a reference dashboard that looks similar to Mend
 In addition, this dashboard will display Mendix app and Runtime logs.
 
 {{% alert color="warning" %}}Depending on how Prometheus is [configured](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
-and which addons are installed, some labels or metrics might be missing or have a different name.
+and which add-ons are installed, some labels or metrics might be missing or have a different name.
 The reference dashboards are compatible with Prometheus installed as described in [Installing Monitoring Tools](#install-grafana-loki), above.{{% /alert %}}
 
 ### 4.1 Import the Dashboard{#import-dashboard}

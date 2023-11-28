@@ -32,7 +32,7 @@ weight: 95
 
 ### Pages
 
-#### ListView and Grid (Elements)
+#### ListView, Grid (Elements)
 
 * We changed the default value of the `dataSource` property.
 

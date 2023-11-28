@@ -119,7 +119,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 6.2 Git 
+### 6.2 Git{#git}
 
 #### 6.2.1 Name
 
@@ -152,6 +152,14 @@ Select **Enable automatic fetching from a remote repository** to enable the [Aut
 #### 6.2.7 Fetch Interval, Minutes
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
+#### 6.2.8 Combine Local and Remote Changes
+
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.5.
+{{% /alert %}}
+
+When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
 
 ## 7 Work Environment Tab
 

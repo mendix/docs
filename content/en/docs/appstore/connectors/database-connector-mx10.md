@@ -60,7 +60,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 1.  Right-click the module you would like to add the connection to and click **Add other > External database connection**. This opens the **Database Connection** wizard:
 
-    {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-connector-wizard.png" >}}
+    {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-connection-wizard.png" >}}
 
 2.  Select the database to which you would like to connect and enter the required information.
 
@@ -87,7 +87,7 @@ Click **Add Parameter** to add parameters to your SQL queries to pass dynamic va
 
 The example database in [Querying a Database](#query-database) is a table of customer details with information such as customer name, address, and phone number. Let's say you want to specify a specific customer while your app is running. You can add the following parameter:
 
-{{< figure src="/attachments/appstore/connectors/database-connector-mx10/sample-parameter.png" >}}
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/example-parameter.png" >}}
 
 Then, use the parameter in the query:
 
@@ -107,7 +107,7 @@ Click **Use Response** if you want to [create an entity from the response](#crea
 
 In the **Response Structure** tab, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
 
-{{< figure src="/attachments/appstore/connectors/database-connector-mx10/use-response.png" >}}
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/response-structure.png" >}}
 
 Click **Save Query & Create Entity** to create the entity and add it to your domain model:
 

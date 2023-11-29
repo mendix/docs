@@ -37,7 +37,7 @@ For more information, see [Translating Your App Content](/refguide/translate-you
 
 ### 2.2 App Name
 
-Every app is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more apps in the future, and will want to be able to recognize this app. We recommend leaving out dates or Mendix version numbers in the app name, since that information can be captured and extracted in a different way.
+Every app is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more apps in the future, and will want to be able to recognize this app. Mendix recommends leaving out dates or Mendix version numbers in the app name, since that information can be captured and extracted in a different way.
 
 ### 2.3 Configurations
 
@@ -105,7 +105,7 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
-The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your app.
+The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. Mendix recommends combining the guidelines below in a way that fits your app.
 
 #### 3.3.1 Process-Related Sources
 

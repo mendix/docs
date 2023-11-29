@@ -81,7 +81,7 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 4. Open the **Debugger** tab.
 
-5. If the debugger is disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. We recommend that you do not change this password.
+5. If the debugger is disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. Mendix recommends not changing this password.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debug-microflows-remotely/pc-debugger-password.png" alt="Enter password for the private cloud debugger" >}}
 

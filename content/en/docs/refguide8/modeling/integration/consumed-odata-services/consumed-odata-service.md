@@ -145,7 +145,7 @@ When you drag the **Customer** entity from **CustomerApi version 1.0.0** deploye
 
 It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users.
 
-We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
+Mendix recommends using a strict versioning system (for example, semantic numbering) when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
 #### 4.2.1 Minor Service Updates
 

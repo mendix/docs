@@ -132,11 +132,8 @@ This is the request entity of the `InvokeModelGeneric` action.
 | Attribute | Description |
 | --- | --- |
 | `ModelId` | The `ModelId` attribute describes identifier of the model and is a required parameter.|
-| `Accept` | The `Accept` attribute describes the desired MIME type of the inference body in the response. The default value is `application/json`.|
-| `ContentType` | The `ContentType` attribute describes the MIME type of the input data in the request. The default value is `application/json`.|
 | `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**.|
 | `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke.|
-| `InvokeRuntimeApi` | The `InvokeRuntimeApi` attribute describes whether the runtime API endpoint should be called, to which the Invoke action has been moved. The default value is **true**.|
 
 
 #### 4.1.4 InvokeModelGenericResponse {#invokemodelgenericresponse}
@@ -161,16 +158,16 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Credentials`, `ENUM_Region` | `ListFoundationModelsResponse`, `ListFoundationalModelsResponse` |
+| `Credentials (object)`, `ENUM_Region (enumeration)` | `ListFoundationModelsResponse (object)`|
 
 #### 4.2.2 Invoke Model Generic {#invoke-model-generic}
 
-The `InvokeModel Generic` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `RequestBody` and `InvokeModelGenericRequest` as input parameters.
+The `InvokeModel Generic` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `InvokeModelGenericResponse` |
+| `AWS_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
 
 

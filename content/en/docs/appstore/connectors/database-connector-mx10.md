@@ -1,6 +1,6 @@
 ---
-title: "Database (Mendix 10)"
-url: /appstore/connectors/database-connector-mx10/
+title: "External Database Connector"
+url: /appstore/connectors/external-database-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgres", "oracle", "new"]
@@ -46,10 +46,6 @@ This connector supports the following statements:
     * Hostname, port, and database name; or, instead, the JDBC connection string
 * Familiarity with the [SELECT SQL query](https://www.w3schools.com/sql/sql_select.asp)
 
-### 1.4  Dependencies
-
-This connector has no dependencies.
-
 ## 2 Installation {#installation}
 
 Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/general/app-store-content/#install).
@@ -66,7 +62,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-connector-wizard.png" >}}
 
-2.  Select the database to which you would like to connect and enter the required information. For detailed descriptions of the fields in the wizard, see the [Connect to Database Wizard](/refguide/external-database-connection/#wizard) section of *External Database Connection* in the Studio Pro guide.
+2.  Select the database to which you would like to connect and enter the required information.
 
 3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Successful** text pop-up, try checking your database details again.
 
@@ -79,7 +75,7 @@ Now you can start [querying the database](#query-database) to select data for us
 To query the database, do the following:
 
 1. Enter a query **Name** so you can access the same query later.
-2. Enter your `SELECT` **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * FROM Cars` selects all rows in the **Cars** table:
+2. Enter your `SELECT` **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * from customers` selects all rows in the **Customers** table:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
    
@@ -89,19 +85,19 @@ To query the database, do the following:
 
 Click **Add Parameter** to add parameters to your SQL queries to pass dynamic values to the query at runtime. 
 
-The example database in [Querying a Database](#query-database) is a table of cars with information such as ID number, plate number, and model. Let's say you want to specify a certain car model while your app is running. You can add the following parameter:
+The example database in [Querying a Database](#query-database) is a table of customer details with information such as customer name, address, and phone number. Let's say you want to specify a specific customer while your app is running. You can add the following parameter:
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/sample-parameter.png" >}}
 
 Then, use the parameter in the query:
 
-`select * from cars where model like {paramModelName}`
+`select * from customers where contactFirstName like {paramFirstName}`
 
 To learn more about SQL queries and parameters, consult the documentation of the database you are using, or read [How and Why to Use Parameterized Queries](https://techcommunity.microsoft.com/t5/sql-server-blog/how-and-why-to-use-parameterized-queries/ba-p/383483).
 
 ### 3.3 Using Query Response {#use-query-response}
 
-After [querying the database](#query-database), you can view the response in the **Reponse** screen. 
+After [querying the database](#query-database), you can view the response in the **Response** screen. 
 
 Click **Use Response** if you want to [create an entity from the response](#create-entity).
 
@@ -125,7 +121,7 @@ Use the [Query External Database](/refguide/query-external-database/) activity t
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. Specify if you want to **Use return value** (for example, a list of `cars`).
+5. Specify if you want to **Use return value** (for example, a list of `customers`).
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 

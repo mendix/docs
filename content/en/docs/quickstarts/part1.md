@@ -116,35 +116,37 @@ For additional information on available panes, see the [Integration](/refguide/v
 
 ## 5 Creating Your App's Domain Model
 
-In Mendix you define your app's data structure in the Domain Model.
+In Mendix, you define your app's data structure in the domain model.
 
 ### 5.1 Understanding the Domain Model
 
-The domain model is a visual representation of your app’s database. Each module in your app (modules created by you or your team, downloaded from the Marketplace, or System Modules) can all have their own individual models which are combined and translated into a database automatically at runtime. 
+The domain model is a visual representation of your app’s database. Each module in your app (meaning, modules created by you or your app team, modules downloaded from the Marketplace, or system nodules) can have their own individual models, which are combined and translated into a database automatically at runtime. 
 
-Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other either as a one-to-one association, one-to-many, or many-to-many.
+Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other as one-to-one, one-to-many, or many-to-many associations.
 
-When you run your app locally or deploy it for the first time, the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
+When you run your app locally or deploy it for the first time, the Mendix Runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
-Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as PostgreSQL, Microsoft SQL Server, and others. 
+Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
 ### 5.2 Creating an Entity to Store the Images
 
-1. To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side:
+To create an images to store the images used in your app, follow these steps:
 
-    * There is already an entity here: **Login** (it is part of the template and is used only for native mobile authentication, so you can ignore it for now)
+1. Open the domain model for the native mobile module by double-clicking it in the **App Explorer**:
 
     {{< figure src="/attachments/quickstarts/part1/create-entity.png" width="450px" alt="Create entity">}}
+    
+    Notice there is already an entity here called **Login**, which is part of the template and is used only for native mobile authentication. You can ignore this for now.
 
-1. Add an entity, *Picture*, to store all your uploaded images in the database. Drag a new **Entity** from the Toolbox and drop it into the domain model (or right-click anywhere in the domain model to add a new entity). 
-1. Double-click the new entity to open its properties window:
+2. Add an entity, *Picture*, to store all your uploaded images in the database. Drag a new **Entity** from the Toolbox and drop it into the domain model (or right-click anywhere in the domain model to add a new entity). 
+3. Double-click the new entity to open its properties window:
 
     {{< figure src="/attachments/quickstarts/part1/entity-config.png" width="450px" alt="Open properties">}}
 
     {{< figure src="/attachments/quickstarts/part1/entity-config-cont.png" width="450px" alt="Edit configuration">}}
 
-1. Name the entity *Picture*, then click **Select** next to **Generalization**. 
-1. Search for and select the **Image** entity (found in the system module).
+4. Name the entity *Picture*, then click **Select** next to **Generalization**. 
+5. Search for and select the **Image** entity (found in the system module).
 
 A generalization is a parent entity your child entity inherits properties from. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
 
@@ -156,8 +158,8 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
     {{< figure src="/attachments/quickstarts/part1/add-attributes.png" width="450px" alt="Name attribute">}}
 
-1. Repeat the process while adding an attribute called *Description*, except select **Unlimited** for the string's **Length**.
-1. Click **OK** to close the entity’s properties window:
+2. Repeat the process while adding an attribute called *Description*, except select **Unlimited** for the string's **Length**.
+3. Click **OK** to close the entity’s properties window:
 
     {{< figure src="/attachments/quickstarts/part1/description-attributes.png" width="450px" alt="Entity properties">}}
 

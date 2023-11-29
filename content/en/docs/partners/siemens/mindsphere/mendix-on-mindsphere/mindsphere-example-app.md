@@ -16,7 +16,7 @@ You can write Mendix apps which analyze data held in Insights Hub, the open, clo
 
 This documentation provides more explanation of the Insights Hub example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/Insights Hub app.
 
-You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop an Insights Hub app with Mendix we recommend a visit to our learning path [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix).
+You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop an Insights Hub app with Mendix, visit the [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) learning path.
 
 ## 2 Prerequisites
 

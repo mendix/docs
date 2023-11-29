@@ -146,15 +146,7 @@ The license overview contains the following information:
 
 * **Company** – who owns the license
 * **Is Production** – indicates if the environment is licensed as a production environment
-* **Expiration date**
 * **Runtime mode** – Production, Acceptance, or Test
-* **Limitations**
-    * **Limitation type**:
-        * **Concurrent** – the number of named users that are logged in simultaneously
-        * **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
-        * **Named** – the number of named users registered in the database that are allowed to use the application
-    * **Amount type**
-    * **Number of allowed users**
 
 ## 3 The Model Options Tab {#model-options}
 

@@ -138,7 +138,7 @@ To create an images to store the images used in your app, follow these steps:
     
     Notice there is already an entity here called **Login**, which is part of the template and is used only for native mobile authentication. You can ignore this for now.
 
-2. Add an entity, *Picture*, to store all your uploaded images in the database. Drag a new **Entity** from the Toolbox and drop it into the domain model (or right-click anywhere in the domain model to add a new entity). 
+2. Add an entity named *Picture* to store all your uploaded images in the database. Drag a new **Entity** from the **Toolbox** into the domain model (or right-click anywhere in the domain model to add the new entity). 
 3. Double-click the new entity to open its properties window:
 
     {{< figure src="/attachments/quickstarts/part1/entity-config.png" width="450px" alt="Open properties">}}

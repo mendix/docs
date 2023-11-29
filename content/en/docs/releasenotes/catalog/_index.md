@@ -17,10 +17,9 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We have fixed an issue where downloaded contracts had the wrong extension
-* We have made some visual fixes on the homepage
-    - Image quality has been improved
-    - Sample dataset badge no longer overlaps with the icon
+* We have fixed an issue where downloaded contracts had the wrong extension.
+* Image quality on the home page has been improved.
+* The sample dataset badge no longer overlaps with the icon.
 
 ### November 23, 2023
 

@@ -39,7 +39,7 @@ This connector supports the following statements:
 
 ### 1.3 Prerequisites
 
-* Studio Pro [10.3](/releasenotes/studio-pro/10.3/) or above
+* Studio Pro 10.6 or above
 * External database connection details, including the following:
     * Login credentials
     * Database type

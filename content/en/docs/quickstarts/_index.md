@@ -11,6 +11,7 @@ aliases:
 
 Welcome to the Mendix quickstarts for building an app! These tutorials cover the essentials of Mendix development:
 
+* [Build a Hello World App](/quickstarts/hello-world/)
 * [Part 1: Build a Responsive Web App](/quickstarts/part1/)
 * [Part 2: Add a Native Mobile App](/quickstarts/part2/)
 

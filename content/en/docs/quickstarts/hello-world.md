@@ -1,5 +1,5 @@
 ---
-title: "Build a Responsive Web App"
+title: "Build a Hello World App"
 url: /quickstarts/hello-world/
 weight: 5
 description: "Learn how to crete and deploy a Hello World app in two minutes."

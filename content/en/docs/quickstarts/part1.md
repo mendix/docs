@@ -1,5 +1,5 @@
 ---
-title: "Build a Responsive Web App"
+title: "Build a Responsive Web App (Part 1)"
 url: /quickstarts/part1/
 weight: 10
 description: "Learn the basics of making an app in a Responsive Web profile."

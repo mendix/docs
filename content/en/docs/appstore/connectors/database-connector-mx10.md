@@ -34,13 +34,7 @@ This connector supports the following statements:
 
 * `SELECT` — retrieves rows and columns from a database
 
-### 1.3 Limitations
-
-This connector currently has the following limitations:
-
-* Does not support parameters in activity "Query External Database"
-
-### 1.4 Prerequisites
+### 1.3 Prerequisites
 
 * Studio Pro [10.3](/releasenotes/studio-pro/10.3/) or above
 * External database connection details, including the following:
@@ -49,7 +43,7 @@ This connector currently has the following limitations:
     * Hostname, port, and database name; or, instead, the JDBC connection string
 * Familiarity with the [SELECT SQL query](https://www.w3schools.com/sql/sql_select.asp)
 
-### 1.5  Dependencies
+### 1.4  Dependencies
 
 This connector has no dependencies.
 
@@ -137,12 +131,4 @@ You can now use the microflow in your app. Here is an example of a configured mi
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/example-microflow.png" >}}
 
 See the [Query External Database](/refguide/query-external-database/) entry in the Studio Pro guide for further explanation of the properties in this activity.
-
-## 4 Running Your App
-
-[Do we need to add anything here?]
-
-## 5 Troubleshooting 
-
-[Do we need to add anything here?]
 

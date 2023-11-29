@@ -12,7 +12,7 @@ This document presents the system requirements for the various parts of the Priv
 
 ## 2 Hardware Requirements
 
-For performance reasons, we recommend at least the following minimum hardware requirements.
+For performance reasons, Mendix recommends at least the following minimum hardware requirements.
 
 ### 2.1 Kubernetes Hardware Requirements for Private Mendix Platform
 

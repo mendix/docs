@@ -8,7 +8,7 @@ tags: ["studio pro","OData","publish"]
 
 ## 1 Introduction
 
-In Studio Pro, entities can be exposed as [OData resources](/refguide/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well. 
+In Studio Pro, [entities can be published](/refguide/published-odata-entity/) by adding them to a published OData service. You can publish any number of related entities in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the published entity as well. 
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
@@ -55,7 +55,7 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 ### 2.5 Entities
 
-This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
+This list gives an overview of all [published entities](/refguide/published-odata-entity/).
 
 #### 2.5.1 Entity Details
 
@@ -117,9 +117,9 @@ You can configure security for the OData service when [App Security](/refguide/a
 
 #### 3.3.1 Requires Authentication {#authentication}
 
-Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
+Select whether clients need to authenticate or not. Select **No** to allow access to the service without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
-Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
+Even when you choose **Yes**, you can still expose the service to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 {{% alert color="info" %}}
 The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
@@ -131,7 +131,7 @@ If authentication is required, you can select which authentication methods you w
 
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
 * Select **Active session** to allow access from JavaScript inside your current application
-* Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a resource)
+* Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a published entity)
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
@@ -153,7 +153,7 @@ To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set
 
 ```js
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open("GET", "http://mysite/odata/myservice/myresource", false);
+xmlHttp.open("GET", "http://mysite/odata/myservice/myentity", false);
 xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
 xmlHttp.send(null);
 ```
@@ -225,14 +225,14 @@ Default value: *No*
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
 
 {{% alert color="warning" %}}
-While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
+While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 
 For details on how to filter the OData response, refer to [OData Query Options](/refguide/odata-query-options/).
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 
-When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
+When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
 
 ### 6.2 On-Premises Deployments
 
@@ -250,7 +250,7 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 ## 8 Publishing OData Services
 
-To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) these resources using [External Object activities](/refguide/external-object-activities/). 
+To publish an entity with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
 
 ## 9 Limitations
 

@@ -46,7 +46,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates. 
 
-The **Task description** can contain parameters that are written between braces, e.g. {1}.
+The **Task description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.2.3 Parameters {#parameters}
 

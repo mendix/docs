@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 For example, you have the Employee Onboarding process set up in your app. You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
 
-However, as the best practice we recommend using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
+However, as the best practice, Mendix recommends using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
 
 * To make it easier to update parameters in **ACT_SAP_INVENTORY_LAPTOP_CHECK**. If you make changes in the parameters of the microflow that would mean that every task using this microflow will result in consistency errors. The calling microflow makes it possible to make changes to the parameters of the called microflow (**ACT_SAP_INVENTORY_LAPTOP_CHECK**) in the future, as you will have to modify only the calling microflow. 
 * The calling microflow allows for data and parameter changes that the called microflow requires, but the workflow is not able to provide. For example, **ACT_SAP_INVENTORY_LAPTOP_CHECK** requires Employee ID, but the workflow has only Employee Name. You can get the Employee ID through the Employee's record and pass this to the **ACT_SAP_INVENTORY_LAPTOP_CHECK**.

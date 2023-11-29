@@ -472,7 +472,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Announcement
 
-* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). Mendix recommends using the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/), which handles long-running backup and restore jobs more robustly.
 
 ### June 14, 2021
 

@@ -110,7 +110,7 @@ If the file storage uses self-signed TLS certificates from a private CA, provide
 
 If you cannot run the data transfer tool from a local machine, because of network access issues, you need to run it in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a jump pod). To do this, follow the instructions below.
 
-Create a YAML file  (e.g. `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
+Create a YAML file  (for example, `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
 
 ```yaml
 apiVersion: v1

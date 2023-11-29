@@ -19,7 +19,7 @@ To add an external entity to your app model, follow these steps:
 
 1. In the domain model of your app, use the Integration pane to search for the entity or data source you want to use. 
 
-    {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all publishing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
 2. Drag the entity into the domain model. 
 
@@ -74,13 +74,13 @@ This group displays the general properties of the external entity. These values 
 
 ### 3.2 Attributes {#attributes}
 
-The [attributes](/refguide/attributes/) that have been exposed in the OData service for the external entity are listed here. You can choose to remove attributes that the app does not need. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, the changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
+The [attributes](/refguide/attributes/) that have been published in the OData service for the external entity are listed here. You can choose to remove attributes that the app does not need. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, the changes will not affect the metadata of the consumed service that the entity is published in or the attributes of the entity in the originating app.
 
 {{% alert color="info" %}}In the Integration pane, the associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included in the entity properties or when you drag them into the domain model. For more information, see [Integration Pane](/refguide/integration-pane/#association-attributes).{{% /alert %}}
 
 The following operations can be done on the attribute list:
 
-* **Add** – add attributes that were exposed in the OData service for the entity and were previously removed from this entity
+* **Add** – add attributes that were published in the OData service for the entity and were previously removed from this entity
 * **Edit** – edit the selected attribute from the [Edit Attribute](#edit-attribute) dialog
 * **Remove** – remove an attribute from the list
 
@@ -100,7 +100,7 @@ The **Edit Attribute** dialog can be used to specify a local name and add a loca
 
 ### 3.3 Associations {#associations}
 
-This tab displays the associations the external entity has with other entities that are exposed in the same service, and any associations that have been made with local entities. For more information on association properties in Studio Pro, see [Association Tab Properties](/refguide/association-member-properties/).
+This tab displays the associations the external entity has with other entities that are published in the same service, and any associations that have been made with local entities. For more information on association properties in Studio Pro, see [Association Tab Properties](/refguide/association-member-properties/).
 
 If the entity contains [one-way navigable associations](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
 
@@ -184,4 +184,4 @@ External entities cannot be committed. Use the [Send External Object activity](/
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
 
-For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more details on consuming services and published entities, including operations that can be performed on external entities, see [Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.

@@ -17,7 +17,7 @@ Welcome to the Mendix quickstarts for building an app! These tutorials cover the
 
 Each tutorial should take about 25 minutes to complete. 
 
-While you can start with Part 2, we recommend you read Part 1 to understand the basics of Mendix.
+While you can start with part 2, Mendix recommends reading part 1 to understand the basics of Mendix.
 
 When you are done, you will have mastered the basics of building and hosting apps with Mendix, and you will have your first app.
 

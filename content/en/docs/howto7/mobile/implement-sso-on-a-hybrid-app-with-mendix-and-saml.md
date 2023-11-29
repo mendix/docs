@@ -25,7 +25,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
+To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -172,7 +172,7 @@ To use the hybrid app package, follow these steps:
 ### 5.3 The SAML Module 
 
 {{% alert color="warning" %}}
-Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). Mendix recommends updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
 
 See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAML* documentation for more information.
 {{% /alert %}}

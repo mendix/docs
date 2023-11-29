@@ -73,7 +73,7 @@ BYOIDP SSO has the following limitations.
     * Create a service account on an email domain that is not federated with BYOIDP
 * When the Mendix Admin activates the BYOIDP configuration, Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature does not roll back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to login with their Mendix account.
 * Your conditional access policies in AzureAD may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
-* You cannot associate multiple Mendix accounts (e.g. an Admin account and a regular account) with a single identity in your IdP.
+* You cannot associate multiple Mendix accounts (for example, an Admin account and a regular account) with a single identity in your IdP.
 
 ## 2 Prerequisites
 

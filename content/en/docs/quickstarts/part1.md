@@ -9,53 +9,59 @@ aliases:
     - /refguide9/quickstart-part1/
 ---
 
-## 1 Introduction 
+## 1 Introduction
 
-Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstarts, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
+### 1.1 What Will You Learn?
 
-When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
+This quickstart tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
-### 1.1 Getting to Know Mendix
+After completing this tutorial, you will have a photo album app that allows end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
-This tutorial teaches you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
 
-A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
+### 1.2 Getting to Know Mendix
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the latest version of Studio Pro when completing the tutorial. Some of the screenshots in this guide might look a little different than your product, but Mendix recommends using the latest version of Studio Pro for ease and security.
+This tutorial teaches you several key Mendix concepts, such as adding an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), creating basic pages that use building blocks and design properties, and modeling your first microflow. 
 
-Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
+A [microflow](/refguide/microflows/) is a visual way of expressing logic or code that is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
-You will not need any additional software configured on your device in order to start.
+[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/) when completing the tutorial for ease of use and security. Please note some of the screenshots in this tutorial might look a little different than your your version
+
+Every app created with Studio Pro automatically provisions a [Free App environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed to Mendix Cloud, so you do not have to waste time provisioning a testing environment.
+
+You do not need any additional software configured on your machine in order to start.
 
 ## 2 Prerequisites 
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
-)—which takes only two minutes to finish
+* Create your [free Mendix account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs), which takes only two minutes to complete
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
-* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 3 Choosing an App Template with a Responsive Navigation Profile
+## 3 Choosing an App Template
 
-Here you will choose an app starting point. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers:
+Here you will choose a  starting point for your app. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers.
+
+To choose the best app template, follow these steps:
 
 1. Starting from Studio Pro, click **Create New App**:
 
     {{< figure src="/attachments/quickstarts/part1/starting-point.png" width="450px" alt="New app">}}
 
-1. Search for the **Blank Native Mobile App** and click **Use this starting point**:
-    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
-    * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
-1. Name your app *Quickstart App* and click the **Create app** button.
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
+2. Search for the **Blank Native Mobile App** and click **Use this starting point**.
+
+    {{% alert color="info" %}}**Why choose this template?**
+    Choosing the **Blank Native Mobile App** template lets you start with a native mobile navigation profile that is already configured and set up for your app. {{% /alert %}}
+
+    {{% alert color="info" %}}**Does that mean this app is native mobile only?**
+    No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.{{% /alert %}}
+
+4. Name your app *Quickstart App* and click **Create app**.
+5. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
 
     {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
 
-A page defines the end-user interface in a Mendix app. You can create and edit pages using the Page Editor. All pages are based on layouts and templates:
-
-* [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
-* [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
+A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
 
 ## 4 Exploring Studio Pro
 
@@ -272,8 +278,8 @@ You have finished your responsive app! You can run your photo album app and test
 Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1 of the quickstarts. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
 ## 8 Continuing with the Next Tutorial
 
-To continue learning, see Part 2: [Add a Native Mobile App](/quickstarts/part2/).
+To continue learning, see [Add a Native Mobile App](/quickstarts/part2/).

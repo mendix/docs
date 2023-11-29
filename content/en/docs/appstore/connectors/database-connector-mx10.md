@@ -1,6 +1,6 @@
 ---
-title: "Database (Mendix 10)"
-url: /appstore/connectors/database-connector-mx10/
+title: "External Database Connector"
+url: /appstore/connectors/external-database-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgres", "oracle", "new"]

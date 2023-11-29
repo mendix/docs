@@ -588,7 +588,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
-    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so Mendix recommends using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30, 2022
 

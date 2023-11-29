@@ -16,7 +16,7 @@ With Studio Pro version 9.12 and above, users can choose whether to start a new 
 For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*.
 
 {{% alert color="info" %}}
-For existing apps in Mendix 9, we recommend you to stick to SVN version control until planning an upgrade to Mendix 10, unless you require Git-specific capabilities.
+For existing apps in Mendix 9, Mendix recommends sticking to SVN version control until planning an upgrade to Mendix 10, unless you require Git-specific capabilities.
 
 Mendix 10 no longer supports SVN as version control system in Studio Pro. When planning to upgrade your app to Mendix 10, first migrate to Git within Mendix 9.
 {{% /alert %}}

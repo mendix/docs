@@ -127,7 +127,7 @@ Where possible, use the Close page action (or the above-mentioned variants of th
 
 Most applications consist of a set of primary user flows, and each primary flow may have secondary flows, for example to request some additional user input. In the case of a calendar app, browsing upcoming events would be the primary flow, and editing one event might be a secondary flow. In general, secondary flows should not disrupt the primary flow, meaning that after the user completes this secondary flow, they should end up where they were in the primary flow.
 
-Although such behavior can be modeled using the ability to close multiple pages, we recommend using pop-up pages for such scenarios. Pop-up pages exist entirely outside of the navigation stack, and can be opened and closed without disrupting your app's navigation history.
+Although such behavior can be modeled using the ability to close multiple pages, Mendix recommends using pop-up pages for such scenarios. Pop-up pages exist entirely outside of the navigation stack, and can be opened and closed without disrupting your app's navigation history.
 
 ### 5.4 Startup Flows
 

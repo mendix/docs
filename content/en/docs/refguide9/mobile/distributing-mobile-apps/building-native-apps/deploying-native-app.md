@@ -112,7 +112,7 @@ You have completed the mandatory basic app configuration required to build your 
 
 Next, do the following:
 
-1. Fill in an intentional version number. For defaults, we recommend you use these numbering guidelines:
+1. Fill in an intentional version number. For defaults, Mendix recommends using these numbering guidelines:
 
     * Versions lower than 0.5.0 for alpha releases
     * Versions ranging from 0.5 to 0.9.x for beta releases

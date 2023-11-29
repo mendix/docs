@@ -158,7 +158,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 | Configuration option                       | Example value | Explanation                                                                             |
 |--------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
-| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). |   
+| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (by default this is 365 days for projects migrated from Mendix 9 and 7 days for new projects or projects with an empty database.). |   
 
 {{% alert color="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
@@ -221,7 +221,7 @@ During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running
 Interrupting task threads may cause them to fail. These tasks will be marked as `Aborted` and retried at a later time.
 {{% /alert %}}
 
-### 2.13 Cleaning up old processed tasks {#cleanup}
+### 2.13 Cleaning Up Old Processed Tasks {#cleanup}
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 
@@ -262,7 +262,13 @@ Task queues have the following limitations:
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
 
-### 4.3 High-Level Implementation Overview
+### 4.3 Behavior If App Stops Unexpectedly
+
+If your app stops unexpectedly, a task can be left in a running state. This means that the [retry on failure](#retry) mechanism will not be triggered as the task does not appear to have failed.
+
+However, within 30 minutes of your app being restarted, the Mendix runtime will see that the task is no longer owned (see [High-Level Implementation Overview](#implementation), below) and will reschedule the tasks. This means that you will not see your tasks immediately restarted after an unexpected stop, but they will be restarted a few minutes later.
+
+### 4.4 High-Level Implementation Overview{#implementation}
 
 Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`, `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, `Arguments`, `ContextType`, `ContextData`, and `System.owner` of the task. This happens as part of the transaction which calls the microflow or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
 

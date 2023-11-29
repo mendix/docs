@@ -20,40 +20,36 @@ Custom certificates cannot be configured for Free Apps.
 
 ### 1.1 Incoming Connections
 
-To connect *to* your Mendix Cloud application *from* the internet, Mendix provides a *.mendixcloud.com* or *.mxapps.io* domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](/developerportal/deploy/custom-domains/).
+To connect to your Mendix Cloud application from the internet, Mendix provides a `.mendixcloud.com` or `.mxapps.io` domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](/developerportal/deploy/custom-domains/).
 
 In addition, you can restrict incoming traffic by requiring client certificates signed by a certificate authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
 ### 1.2 Outgoing Connections
 
-You may need to use certificates to set up connections from your Mendix Cloud application to third-parties that require SSL/TLS. There are two possible scenarios for this:
+You may need to use certificates to set up connections from your Mendix Cloud application to third parties that require SSL/TLS. There are two possible scenarios for this:
 
-* A third-party may require authentication via certificates (client certificates)
-* A third-party may use a certificate that is signed by their own authority (certificate authorities)
+* A third party may require authentication via certificates (client certificates)
+* A third party may use a certificate that is signed by their own authority (certificate authorities)
 
 ## 2 Incoming – Certificates
 
-Certificates for *.mendixcloud.com* and *.mxapps.io* are managed by Mendix and will automatically be updated on a regular basis, without notice. This is part of our regular operations and security posture. 
+Certificates for `.mendixcloud.com` and `.mxapps.io` are managed by Mendix and are automatically updated on a regular basis and without notice. This is part of Mendix's regular operations and security posture. 
 
 Using certificates with a short validity limits the impact of misconfigured or compromised certificates, which can occasionally happen. The wider internet community has standardized on this approach for many years.
 
 {{% alert color="warning" %}}
-**Do not pin these certificates in your solutions.**
-
-Doing so can interrupt your operations when Mendix updates these certificates.
-
-Pinning a certificate bypasses the built-in certificate chains of your operating system or JVM, and is widely considered a bad practice. 
+Do not pin these certificates in your solutions.<br><br>Doing so can interrupt your operations when Mendix updates these certificates.<br><br>Pinning a certificate bypasses the built-in certificate chains of your operating system or JVM, and is widely considered a bad practice. 
 {{% /alert %}}
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.
 
 ## 3 Outgoing – Client Certificates {#outgoing-client-certificates}
 
-For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) format is supported. Certificates are uploaded as a PKCS container which includes:
+For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) format is supported. Certificates are uploaded as a PKCS container that includes the following:
 
 * X.509 certificate
-* a private key
-* (optionally) a certificate chain
+* A private key
+* (Optionally) a certificate chain
 
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see the following:
 
@@ -61,20 +57,16 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 * [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 {{% alert color="warning" %}}
-**Do not use OpenSSL version 3.x on Windows**
-
-If you use OpenSSL version 3.x on Windows and you get the error `Could not open certificate container. Wrong password or corrupted file. Please try again.`, please use the latest patch release of **version 1.x**, which can be downloaded here: [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html).
-
-Another option is to use OpenSSL from within the **Windows Subsystem for Linux** to generate the certificate. Use the instructions [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to set this up.
+Do not use OpenSSL version 3.x on Windows.<br><br>If you use OpenSSL version 3.x on Windows and you get the error "Could not open certificate container. Wrong password or corrupted file. Please try again.", use the latest patch release of version 1.x. You can download the release on [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html).<br><br>Another option is to use OpenSSL from within the Windows Subsystem for Linux to generate the certificate. To set this up, use the instructions [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 {{% /alert %}}
 
 You can upload a PKCS12 file by following these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of your app's **Environments** page. Click the **Details** icon on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
-3. Below **Outgoing Connections Certificates** click **Add Client Certificate**.
+3. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" >}}
 
@@ -82,23 +74,23 @@ You can upload a PKCS12 file by following these steps:
 
 5. Enter the password to unlock the certificate container.
 
-6. If you are using a specific custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action/#client-certificate) or [Call Web Service](/refguide/call-web-service-action/#client-certificate) action, set a **WEB SERVICE CALL NAME** which you can use to pin the certificate by setting the call's **Client certificate identifier** to the **WEB SERVICE CALL NAME**.
+6. If you are using a custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action/#client-certificate) or [Call Web Service](/refguide/call-web-service-action/#client-certificate) action, set a **Web Service Call Name** and use it to pin the certificate by setting the call's **Client certificate identifier** to the **Web Service Call Name**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png" >}}
 
 {{% alert color="info" %}}
-Changes made to certificate settings will only become effective after restarting the app.
+Changes to certificate settings do not go into effect until you restart the app.
 {{% /alert %}}
 
-In the section **Pin Client Certificate to Web Services**, you can specify host names (for example, *hello-there.com*) or web service document names (for example, *MyFirstModule.ConsumedWebService*), indicating that this certificate should be used when contacting that host or calling that web service.
+In the section **Pin Client Certificate to Web Services**, you can specify host names (for example, `hello-there.com`) or web service document names (for example, *MyFirstModule.ConsumedWebService*), indicating that this certificate should be used when contacting that host or calling that web service.
 
 ## 4 Outgoing – Certificate Authorities
 
-Loading certificate authorities works much the same way, although they do not require authentication, as these are public certificates.
+Loading certificate authorities works much the same way, although they do not require authentication because they are public certificates.
 
 To upload a certificate authority, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** icon on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
@@ -106,9 +98,9 @@ To upload a certificate authority, follow these steps:
 
 4. Upload a certificate authority in the PEM format.
 
-If you run into any problems installing a client certificate or certificate authority, file a ticket at [https://support.mendix.com](https://support.mendix.com).
+If you run into any problems installing a client certificate or certificate authority, file a ticket with [Mendix Support](https://support.mendix.com).
 
 ## 5 Read More
 
-* [Transport_Layer_Security](http://en.wikipedia.org/wiki/Transport_Layer_Security)
+* [Transport Layer Security](http://en.wikipedia.org/wiki/Transport_Layer_Security)
 * [How Encryption Works](http://computer.howstuffworks.com/encryption.htm)

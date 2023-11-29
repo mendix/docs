@@ -1,7 +1,7 @@
 ---
 title: Apply Jump-To Option
 url: /refguide/apply-jump-to-option/
-weight: 05
+weight: 5
 tags: ["studio pro", "workflow", "jump-to option", "apply jump-to option"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

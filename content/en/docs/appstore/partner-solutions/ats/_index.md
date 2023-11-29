@@ -6,10 +6,15 @@ no_list: false
 description_list: true
 tags: ["ats", "application test suite", "clevr"]
 aliases:
+    - /addons/ats-addon/
     - /addons/ats-addon/index.html
 ---
 
 ## 1 Introduction
+
+{{% alert color="warning" %}}
+Mendix is no longer selling new licenses for ATS. It is still a supported product for existing customers with active contracts.
+{{% /alert %}}
 
 The Mendix Application Test Suite (ATS) is a suite of tools for embedding (automated) testing into your application life cycle. These tools are built by [CLEVR](https://www.clevr.com/) in Mendix on top of Selenium.
 

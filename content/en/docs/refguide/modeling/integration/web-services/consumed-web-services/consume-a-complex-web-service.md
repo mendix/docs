@@ -13,11 +13,13 @@ aliases:
 
 This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and re-use functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is done in a microflow using the call web service action.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Import a web service using the **Import Web Service** wizard
 * Directly import a web service document into your app
 * Configure a web service call
+
+{{% alert color="warning" %}}⚠ The **Import Web Service** wizard is deprecated and will be removed in Studio Pro 10.6.{{% /alert %}}
 
 ## 2 Importing a Web Service Using the Wizard
 
@@ -64,7 +66,7 @@ To import a web service using the wizard, follow these steps:
 
 10. Click **Finish** to create the web service.
 
-### 2.1 The Outcome
+### 2.2 The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
 
@@ -83,7 +85,7 @@ To import a web service directly, follow these steps:
 
 1. Right-click a module and select **Add Other** > **Consumed web service**.
 2. Specify a name for the new consumed web service and click **OK**.
-3. In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. Click **Edit**, and in the **WSDL Source** diaglog box, specify a **URL** or load a **File** from your computer.
+3. In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. Click **Edit**, and in the **WSDL Source** dialog box, specify a **URL** or load a **File** from your computer.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/enter-wsdl-url.png" >}}
 

@@ -49,7 +49,7 @@ every AR widget that is embedded in it. For example, if you use an **ImageTracke
 
 ### 3.3 Node (AR) {#node}
 
-**Node (AR)** can help group other widgets. Everything embedded in a **Node (AR)** can be oriented with fixed distances and rotations from each other. **Node (AR)** also has a feature that can make the objects in it 'billboard' to the camera, which is useful for UI like elements. To see an example of this, check **AR-Examples** > **Car Color Picker** and note the the spheres above the car.
+**Node (AR)** can help group other widgets. Everything embedded in a **Node (AR)** can be oriented with fixed distances and rotations from each other. **Node (AR)** also has a feature that can make the objects in it 'billboard' to the camera, which is useful for UI like elements. To see an example of this, check **AR-Examples** > **Car Color Picker** and note the spheres above the car.
 
 ## 4 Visual Widgets {#visual-widgets}
 

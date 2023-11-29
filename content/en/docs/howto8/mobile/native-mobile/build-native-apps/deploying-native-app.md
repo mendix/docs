@@ -9,7 +9,7 @@ tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", 
 
 ## 1 Introduction
 
-This how-to will teach you how to go from a blank slate to an app running on a device.
+This how-to teaches you how to go from a blank slate to an app running on a device.
 
 The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all projects with a native mobile navigation profile.
 
@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
-* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 

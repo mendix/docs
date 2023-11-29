@@ -1,6 +1,7 @@
 ---
 title: "XPath length"
 url: /refguide/xpath-length/
+weight: 4
 tags: ["studio pro"]
 ---
 
@@ -21,4 +22,3 @@ This query returns all customers with a `FirstName` of 5 or more characters:
      //Sales.Customer[length(FirstName) >= 5]
     {{% /tab %}}
 {{< /tabpane >}}
-

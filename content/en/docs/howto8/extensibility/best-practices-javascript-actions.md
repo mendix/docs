@@ -12,7 +12,7 @@ tags: ["JavaScript", "API", "nanoflow"]
 
 JavaScript actions can extend your app with several new functions. To implement JavaScript actions most effectively, be sure to follow these best practices.
 
-**This best practices will teach you how to do the following:**
+These best practices teach you how to do the following:
 
 * Create high-quality JavaScript actions
 * Learn common implementation patterns
@@ -255,7 +255,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 
 #### 2.2.7 Understanding Hybrid App External Dependencies
 
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
+The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
 
 It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/).
 
@@ -425,7 +425,7 @@ You can export a single action by right-clicking a JavaScript action in the Proj
 
 You can import a single action by right-clicking your module in the Project Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
-A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/sharing-content/).
 
 ### 3.4 Documenting JavaScript Actions{#document}
 

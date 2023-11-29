@@ -33,7 +33,7 @@ parseDateTime('2015-05-21', 'yyyy-MM-dd')
 returns
 
 ```java
-The date May 21st, 2015\. The time will be 12 o'clock at night because it is not specified.
+The date May 21, 2015\. The time will be 12 o'clock at night because it is not specified.
 ```
 
 ```java

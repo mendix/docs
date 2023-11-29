@@ -117,8 +117,6 @@ To cut/copy/paste you can use the following shortcuts:
 
 {{% alert color="info" %}}
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
-
-You cannot cut/copy/paste from Studio Pro to Studio.
 {{% /alert %}}
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 

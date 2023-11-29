@@ -8,7 +8,7 @@ tags: ["workflow", "workflows", "Studio Pro"]
 
 ## 1 Introduction
 
-Workflow is a visual language in Mendix Studio and Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
+Workflow is a visual language in Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
 ## 2 Workflow Elements
 

@@ -1,17 +1,21 @@
 ---
-title: "Projects API"
+title: "Projects API ⚠"
 url: /apidocs-mxsdk/apidocs/projects-api/
 category: "API Documentation"
 description: "This API allows you to programmatically create an app in your company space and move working copies between the Mendix Team Server and the Model Server."
 weight: 85
 ---
 
+{{% alert color="warning" %}}
+⚠ The Projects API is deprecated. It will be removed early in 2024. A firm date will be communicated once a decision has been made.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
 
 {{% alert color="warning" %}}
-As of June 20th, 2021, you can no longer create apps using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+As of June 20, 2021, you can no longer create apps using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
 {{% /alert %}}
 
 ## 2 Error Handling
@@ -42,7 +46,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
 | ApiKey | String | An [API Key](/apidocs-mxsdk/apidocs/authentication/) associated to the user account of *User*. |
-| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/general/app-store-overview/#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
+| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/overview/#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
 
 #### 3.1.2 Output
 

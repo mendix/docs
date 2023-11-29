@@ -76,7 +76,7 @@ Location URIs must be unique. Exposing two different resources at the same locat
 
 {{% /alert %}}
 
-Attributes and associations can be customized in the same way in the **Exposed attributes and associations** list window under the the **Exposed name** column. 
+Attributes and associations can be customized in the same way in the **Exposed attributes and associations** list window under the **Exposed name** column. 
 
 For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). The default is the same as the name of the association in the domain model.
 

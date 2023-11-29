@@ -39,7 +39,7 @@ Select from which revision of the main line or a branch line you want to create 
 
 This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
 
-Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+Select from which branch line you want to create another branch line. Mendix recommends making branch lines only from the main line, but in some cases, branching a branch line can be useful.
 
 ## 5 Tagged Version
 
@@ -62,4 +62,3 @@ Since branch line names must be unique, this option shows the existing branch li
 ## 8 Read More
 
 * [Version Control](/refguide9/version-control/)
-* [Collaborative Development](/refguide9/collaborative-development/)

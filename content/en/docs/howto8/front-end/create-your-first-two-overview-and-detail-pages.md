@@ -11,7 +11,7 @@ tags: ["front end"]
 
 This how-to explains how you can create overview and detail pages in Mendix. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create overview and detail pages
 * Configure navigation and security

@@ -72,7 +72,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
 |   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
 |   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
-|   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
+|   Enumeration   |  The enumeration parameter type allows you to pass an enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
 
@@ -130,7 +130,7 @@ Documentation is visible in the **Code** tab. Your documentation also is copied 
 
 ## 6 Code
 
-In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. From Mendix version 8.3 and above, the code can be written in modern JavaScript (ES8 / ES2017) and can use functions like `async` with `await` and `Promise`. The code will be transpiled and polyfilled for you to run (even on Internet Explorer 11). 
+In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. From Mendix 8.3 and above, the code can be written in modern JavaScript (ES8 / ES2017) and can use functions like `async` with `await` and `Promise`. The code will be transpiled and polyfilled for you to run (even on Internet Explorer 11). 
 
 The code has three sections: an import list, an extra code block, and a user code block. All code that is added should go in one of these blocks. Code outside the blocks will lost when re-generating the template code on deploy or update of the JavaScript action settings. 
 

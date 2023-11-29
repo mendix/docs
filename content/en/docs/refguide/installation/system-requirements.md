@@ -16,7 +16,7 @@ This document presents the system requirements for the various parts of the Mend
 
 Mendix Studio Pro has the requirements listed in the following sections.
 
-### 2.1 Software Specifications
+### 2.1 Software Specifications {#software}
 
 Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
@@ -27,8 +27,7 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
     * Eclipse Temurin JDK 11 (x64)
-    
-    Oracle JDK 11 can also be used if this is already installed.
+    * Oracle JDK 11 can also be used if this is already installed
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -46,7 +45,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-### 2.2 Hardware Specifications
+### 2.2 Hardware Specifications {#hardware}
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
 
@@ -77,6 +76,21 @@ For active development and running your application locally, your app folder sho
 
 ### 2.5 Supported Git Service Providers {#supported-providers}
 
+Git service providers have size limitations related to commits and repositories.
+
+Studio Pro does not support Large File Storage (LFS) for any provider.
+
+You can find a list of known limitations below, however, we advise you to check the most up-to-date limitations on respective web sites before considering using a certain service provider.
+
+| Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
+| ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB)  | 5 GB                |
+| GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
+| Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
+| Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
+
+¹ You will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
+
 #### 2.5.1 Azure Repos and Azure DevOps Server 
 
 We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
@@ -85,7 +99,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You need `Code (full)` permission for your token.
 
-##### 2.5.2 GitHub 
+#### 2.5.2 GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -93,7 +107,7 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 
 You need `repo` permissions for your token.
 
-##### 2.5.3 GitLab 
+#### 2.5.3 GitLab 
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
@@ -101,7 +115,7 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You need `write_repository` permission for the token.
 
-##### 2.5.4 BitBucket 
+#### 2.5.4 BitBucket 
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
@@ -119,7 +133,7 @@ If you are using the Intel® UHD Graphics 630 graphics processor, please ensure 
 
 ## 3 Team Server {#ts}
 
-The [Team Server](/developerportal/collaborate/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/general/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -144,21 +158,30 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.1 Operating System {#server-os}
 
-* Microsoft Windows Server 2008 SP2 and above
+* Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
-    * Debian 8 (Jessie) and above
-    * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
-    * CentOS 6, CentOS 7
+    * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
+    * Red Hat Enterprise Linux 8 and later
+    * CentOS 7
+    * CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
-* Microsoft Internet Information Services 7 and above
-* Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
+* Microsoft Internet Information Services 8 and above
+* Nginx
 * Apache
 
 ### 6.3 Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+{{% alert color="warning" %}}
+As Java 11 approaches the end of support in October, 2024, Mendix will stop supporting Java 11 with the release of Studio Pro 10.17 in November, 2024.<br/>
+<br/>
+Compatibility with Java 17 is planned for the Studio Pro 10.7 release in January, 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional.<br/>
+<br/>
+Compatibility with Java 21 is planned for the Studio Pro 10.10 release in April, 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+{{% /alert %}}
 
 ## 7 Databases {#databases}
 
@@ -166,12 +189,12 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.3, 10.4, 10.5, 10.6, 10.11
+* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19, 21c
-* PostgreSQL: 11, 12, 13, 14, 15
+* PostgreSQL: 12, 13, 14, 15, 16
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}
@@ -218,7 +241,7 @@ Internet Explorer is not supported in Studio Pro 10.
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and progressive web apps built with Mendix the following operating system versions are supported:
+For native and progressive web apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android
@@ -227,7 +250,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB
@@ -238,7 +261,7 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* Mono v5.20.x or .NET v4.7.2
+* .NET 6.0
 * JDK 11
 
 ## 12 mx Command-Line Tool {#mxtool}

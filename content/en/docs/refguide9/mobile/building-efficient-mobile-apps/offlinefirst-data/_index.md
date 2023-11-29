@@ -2,6 +2,8 @@
 title: "Offline-First Data"
 url: /refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/
 weight: 20
+no_list: false
+description_list: true 
 aliases:
     - /refguide9/offline-first/
     - /refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/
@@ -55,8 +57,4 @@ Typically, when a user visits or logs into a web app, the Mendix Runtime creates
 
 Session management in offline-first apps uses the same system mentioned above, but this introduces some challenges. Offline-first apps perform few requests to Mendix Runtime, because these apps work mostly with the local database. This causes the session on the runtime to expire while the user is still using the app. Mendix has employed solutions that differ per app type (native or PWA) to overcome this situation. 
 
-## 6 Main Documents in This Category
-
-* [Offline Synchronization](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) – describes how and when synchronization occurs, and how to resolve sync errors.
-* [Offline Best Practices](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/) – describes how to make secure, high-performing offline-first apps.
-* [Offline Data Security](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/) - describes best practices to increase security of the data stored on the device
+## 6 Documents in This Category

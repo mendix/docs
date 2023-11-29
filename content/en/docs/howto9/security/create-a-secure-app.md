@@ -9,11 +9,11 @@ tags: ["security", "secure app"]
 
 ## 1 Introduction
 
-Each application must have a proper security configuration in order to have its data secured. This how-to will teach you how to turn the security on and configure it.
+Each application must have a proper security configuration in order to have its data secured. This how-to teaches you how to turn the security on and configure it.
 
 You will start with the configuration of user and module roles for access to pages and microflows, so we’ll turn on the prototype/demo security. Next you will deal with production security.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure prototype/demo security
 * Configure production security

@@ -152,7 +152,7 @@ These are the nanoflow actions in the native mobile category:
     * FontScale: the device font scale (1 is normal)
     * FreeDiskStorage: the available storage size in bytes
     * Manufacturer: the device manufacturer (for example: Apple)
-    * Model: the device model (due to reliability, we recommend using DeviceId instead) 
+    * Model: the device model (due to reliability, Mendix recommends using DeviceId instead) 
     * ReadableVersion: the application version and build number
     * SystemName: the operating system name (iOS or Android)
     * SystemVersion: the operating system version
@@ -166,7 +166,7 @@ These are the nanoflow actions in the native mobile category:
     * IsEmulator: checks if the app is running on an emulator
     * IsTablet: checks if the app is running on a tablet
     * IsLandscape: checks if the device is currently in landscape mode
-    * HasNotch: checks if the the device has a notch
+    * HasNotch: checks if the device has a notch
 
 * **Hide keyboard** – hides the onscreen keyboard
 * **Open in app browser** – opens a specific URL in an in app web browser

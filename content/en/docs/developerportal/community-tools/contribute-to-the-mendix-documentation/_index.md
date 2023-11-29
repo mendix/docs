@@ -1,8 +1,8 @@
 ---
-title: "Contribute to the Documentation"
+title: "Contribute to Mendix Documentation"
 url: /developerportal/community-tools/contribute-to-the-mendix-documentation/
 weight: 1
-description: "Describes how to add and edit Mendix documentation as a Mendix community member."
+description: "Describes how to add and edit Mendix documentation as a community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
 ---
@@ -29,7 +29,7 @@ All documentation contributions may be edited to conform to our internal style g
 For a details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add to and edit existing documentation
 * Create new documentation
@@ -40,7 +40,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Have a GitHub account (sign up [here](https://github.com/join))
 
-You can create and edit files online within GitHub. If you want to work outside GitHub, we recommend using the following tools to contribute to the Mendix documentation:
+You can create and edit files online within GitHub. If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
 
 * For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>.</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
@@ -90,15 +90,14 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)
-* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
-* Document file names should always be lower-case with a hyphen (`-`) between each word
-* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-* Make sure the image files comply with these naming conventions:
-* Image file names should always be lower-case with a hyphen (`-`) between each word
-* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-* Make sure the image files have names that make sense so it is easy to find them
-* Save the image files in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
-* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
+* Make sure the Markdown file name reflects the the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
+* Name the Markdown and image files in lower-case with a hyphen (`-`) between each word, and do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* When creating screenshots:
+    * Make sure the resolution of your screen is 100% (or a multiple thereof) so that your images are sharp
+    * Focus on the part of screen that contains the information you need so that the browser does not have to shrink the image when it displays it, and crop the image closely
+    * Make sure the image file has a name that makes sense so it is easy to find it
+    * Save the image as a *.png* (preferred), *.jpg*, or *.gif* file
+    * Save the image file in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
 
 ### 5.3 Submitting Your Work
 
@@ -117,7 +116,7 @@ You may receive a response to your pull request asking for verification of speci
 
 The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://cla-assistant.io/mendix/docs).
 
-To access the license agreement, go to the the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
+To access the license agreement, go to the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
 
 This only needs to be done once.
 

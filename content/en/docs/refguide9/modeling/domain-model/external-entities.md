@@ -23,7 +23,7 @@ A license is required to use Mendix Data Hub and connect to external data source
 
 To add an external entity to your app model, follow these steps:
 
-1. In the the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
+1. In the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
 
     {{% alert color="info" %}}In the [Catalog](/catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 

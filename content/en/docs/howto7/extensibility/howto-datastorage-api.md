@@ -20,7 +20,7 @@ You can use these query languages in the Mendix Modeler, but both languages are 
 This how to describes how you can build the following microflow actions:
 
 * Retrieve advanced XPath - returns a list of entities as specified by an XPath expression
-* Retrieve advanced OQL - returns a list of entities as specified by a OQL query
+* Retrieve advanced OQL - returns a list of entities as specified by an OQL query
 * Retrieve Dataset OQL - returns a list of entities as specified by a Dataset OQL query
 * Retrieve advanced SQL - returns a list of entities as specified by a SQL query
 * Create first Monday of month list - returns a list of dates of the first Monday of every month in a specified range
@@ -146,7 +146,7 @@ Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the
 
 ## 5 Retrieving Objects Using SQL (Beta - Mendix 7 and Above)
 
-As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database. (This feature is currently in Beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
+As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database (this feature is in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
 
 The definition of the Java action resembles the OQL action, but instead of an OQL parameter you have an SQL parameter.
 

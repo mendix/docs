@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "java action", "debug"]
 
 To debug the Java actions used in a Mendix microflow, you need to make some configuration changes to the way you start the Mendix runtime. This how-to will explain how to manage this.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Edit the server configuration
 * Configure remote debugging
@@ -47,9 +47,6 @@ In your Java IDE, you need to configure remote debugging. This screenshot shows 
 * [Monitor Mendix using JMX](/howto7/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Log Levels](/howto7/monitoring-troubleshooting/log-levels/)
 * [Debug Microflows](/howto7/monitoring-troubleshooting/debug-microflows/)
-* [Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions/)
-* [Common Mendix SSO Errors](/howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/)
-* [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)
 * [Get Started with Nexus Maven Repository Manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
 * [Use Eclipse to Debug Your Tomcat Web Application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
 * [Profile Mendix Using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)

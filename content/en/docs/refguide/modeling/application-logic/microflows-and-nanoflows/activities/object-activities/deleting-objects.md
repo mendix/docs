@@ -80,7 +80,7 @@ When using the activity in a nanoflow accessible from an offline profile, please
 * When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
     * Deleting such an object removes it from the device and does not require synchronization, and therefore the before and after events of the corresponding entity will not be triggered
 
-For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties/#delete-behavior) section of Association Properties.
+For more information on associations' delete behavior, see the [On Delete Behavior](/refguide/association-properties/#delete-behavior) section of Association Properties.
 
 ### 4.1 Example {#delete-example}
 
@@ -107,7 +107,7 @@ In detail, the following graph shows what happens during deletions:
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" >}}
 
 {{% alert color="info" %}}
-The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+⚠ The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

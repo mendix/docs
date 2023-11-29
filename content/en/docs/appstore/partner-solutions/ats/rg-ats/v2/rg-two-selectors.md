@@ -16,10 +16,10 @@ The custom ATS selectors work the same as CSS3 selectors in your custom actions:
 | Pattern                    | Name                           | Meaning                                  |
 | -------------------------- | ------------------------------ | ---------------------------------------- |
 | :clickable                 | Clickable pseudo-class         | Selects a user interface element whose CSS visibility property is set to visible. |
-| :containsExact(*text*)     | ContainsExact pseudo-class     | Selects a element whose inner HTML is exactly equal to the given text (*not* case sensitive). |
-| :containsExactCase(*text*) | ContainsExactCase pseudo-class | Selects a element whose inner HTML is exactly equal to the given text (case sensitive). |
-| :containsRegex(*regex*)    | ContainsRegex pseudo-class     | Selects a element whose inner HTML matches the given regex. |
-| :containsText(*text*)      | ContainsText pseudo-class      | Selects a element whose inner text value is equal to the given text. Can only be used on text, CDATA, and element nodes. |
+| :containsExact(*text*)     | ContainsExact pseudo-class     | Selects an element whose inner HTML is exactly equal to the given text (*not* case sensitive). |
+| :containsExactCase(*text*) | ContainsExactCase pseudo-class | Selects an element whose inner HTML is exactly equal to the given text (case sensitive). |
+| :containsRegex(*regex*)    | ContainsRegex pseudo-class     | Selects an element whose inner HTML matches the given regex. |
+| :containsText(*text*)      | ContainsText pseudo-class      | Selects an element whose inner text value is equal to the given text. Can only be used on text, CDATA, and element nodes. |
 | :val(*text*)               | Value pseudo-class             | Selects an input, select, or text area whose value is equal to the given text. |
 
 ## 3 CSS Selectors
@@ -33,7 +33,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 | E[foo="bar"]  | Attribute Selector       | Selects every element `E`  whose `foo` attribute value is equal to `bar`. |
 | :nth-child(n) | Nth-child pseudo-class   | Selects the `n-th` child of its parent. |
 | :first-child  | First-Child pseudo-class | Selects the first child of its parent. |
-| :last-child   | Last-Child pseudo-class  | Selects the lastchild of its parent. |
+| :last-child   | Last-Child pseudo-class  | Selects the last child of its parent. |
 | :checked      | Checked pseudo-class     | Selects a user interface element which is checked. |
 | E > F         | Child Combinator         | Selects an `F` element child of an `E` element. |
 

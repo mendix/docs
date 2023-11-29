@@ -19,6 +19,7 @@ In a browser, it is rendered as a simple `div` element by default. It is also po
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Container properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Visibility](#visibility)
 * [Events](#events)
@@ -26,6 +27,7 @@ Properties:
 * [Accessibility](#accessibility)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

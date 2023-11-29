@@ -171,7 +171,7 @@ When the `Build` controller detects that the source URL (`spec.sourceURL`) in th
 The build pod will then do the following:
 
 * download the MDA from the specified `spec.sourceURL`
-* convert the MDA into a OCI image layer (app layer)
+* convert the MDA into an OCI image layer (app layer)
 * append the app layer to a `runtime-base` image
     {{% alert color="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
 * push the resulting image to the image registry

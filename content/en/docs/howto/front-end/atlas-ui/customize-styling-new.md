@@ -34,7 +34,7 @@ By default, Studio Pro shows styling files on the app level and from UI resource
 
 To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
 
-### 2.3 Adding Custom Styling
+### 2.3 Adding Custom Styling {#add-custom-styling}
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
@@ -160,7 +160,7 @@ To create a re-usable theme module, do the following:
     {{% alert color="info" %}}To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.{{% /alert %}}
 
 3. Copy the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*. Remove all the variables from the *theme/web/custom-variables.scss*. The *theme/web/custom-variables.scss* file should now be empty.
-4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name. The *theme/web/custom-variables.scss* file should only contain an import statement to your "mytheme" custom variables.
+4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss"` to the top of the file, replacing “mytheme” with your module name. The *theme/web/custom-variables.scss* file should only contain an import statement to your "mytheme" custom variables.
 
 The two files should end up looking like this:
 
@@ -184,7 +184,7 @@ $brand-warning: #eca51c;
 $brand-danger: #e33f4e;
 ```
 
-You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
+You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, Mendix recommends creating a company starter app containing this change.
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
@@ -249,7 +249,7 @@ export const brand = {
 If you get errors, double check if the imports point to valid files.
 
 {{% alert color="info" %}}
-When this approach is used we recommend you create a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
+When this approach is used, Mendix recommends creating a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
 {{% /alert %}}
 
 ## 5 Previewing a Styling Change {#previewing-styling}
@@ -560,7 +560,7 @@ excludeHelpers
 
 ## 9 Customizing index.html (Web) {#custom-web}
 
-By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
+By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, Mendix recommends copying *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
 ### 9.1 Cache Busting in Mendix
 

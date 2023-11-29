@@ -21,13 +21,14 @@ Tab containers are used to show information categorized into tabs. This can be v
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Tab container properties consist of the following sections:
 
 Properties:
+
 * [Visibility](#visibility)
 * [Common](#common)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
-
 
 ## 3 Properties 
 

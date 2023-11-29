@@ -1,6 +1,7 @@
 ---
 title: "XPath string-length"
 url: /refguide/xpath-string-length/
+weight: 5
 tags: ["studio pro"]
 ---
 

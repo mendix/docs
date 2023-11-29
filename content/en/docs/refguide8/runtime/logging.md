@@ -50,7 +50,7 @@ This list is currently incomplete and is being worked on.
 
 | Log Node | Description
 | --- | --- |
-| ActionManager | Log messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
+| ActionManager | Logs messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
@@ -67,25 +67,32 @@ This list is currently incomplete and is being worked on.
 | DocumentExporter | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
 | I18NProcessor | Logs messages related to translation of the app. |
+| Integration API | Logs messages related to the documentation of integration APIs. |
 | JSON | JSON messages from the Mendix Client to the Runtime Server. See [JSON](#json), below, for more information |
+| JSON Export | Logs messages related to export mappings to JSON. |
+| JSON Import | Logs messages related to import mappings from JSON. |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
-| M2EE | Log messages from the administration interface with the runtime |
-| MicroflowDebugger | Log messages related to the status of the microflow debugger, for example, connection status, incoming and outgoing requests, etc. |
-| MicroflowEngine | Log messages related to microflow execution, for example, which microflow / microflow action is being executed and errors that occur during the execution. |
+| M2EE | Logs messages from the administration interface with the Mendix Runtime. |
+| MicroflowDebugger | Logs messages related to the status of the microflow debugger (for example, connection status, incoming and outgoing requests). |
+| MicroflowEngine | Logs messages related to microflow execution (for example, which microflow or microflow action is being executed and errors that occur during the execution). |
 | ModelStore | |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
 | ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
-| OData Publish | Log messages related to published OData services. |
+| ODataConsume | Logs messages related to consumed OData services. |
+| OData Publish | Logs messages related to published OData services. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
-| REST Publish | Log messages related to published REST services. |
+| REST Consume | Logs messages related to the Call REST service activity. |
+| REST Publish | Logs messages related to published REST services. |
 | RequestStatistics | |
 | Services | |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
+| XML Export | Logs messages related to export mappings to XML. |
+| XML Import | Logs messages related to import mappings from XML. |
 
 ### 3.2 JSON{#json}
 

@@ -31,7 +31,7 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the project model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
+This is the project model as created by Studio Pro. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 
@@ -56,7 +56,7 @@ This is the Mendix app in mda format, which defines the app in a way which can b
 
 ### 2.8 CDN
 
-This data repository stores components of the deployment process such as versions of the Mendix Runtime and Mx Build.
+This data repository stores components of the deployment process such as versions of the Mendix Runtime and MxBuild.
 
 ### 2.9 Java RE
 

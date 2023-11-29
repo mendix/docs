@@ -3,7 +3,7 @@ title: "Build a Pluggable Web Widget: Part 2 (Advanced)"
 linktitle: "2. Build Pluggable Web Widget"
 url: /howto9/extensibility/create-a-pluggable-widget-two/
 weight: 20
-description: "This how-to will teach you how to add advanced features to your TextBox input widget."
+description: "This how-to teaches you how to add advanced features to your TextBox input widget."
 tags: ["mobile", "javascript", "widget"]
 ---
 
@@ -11,14 +11,14 @@ tags: ["mobile", "javascript", "widget"]
 
 The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Build a Pluggable Web Widget: Part 1](/howto9/extensibility/create-a-pluggable-widget-one/) and teach you how to add advanced features to your TextBox input widget.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure widget edit permissions
 * Add validation feedback
 * Add custom validations
 * Create an onChange action
 * Improve accessibility for screen readers 
-* Enable Mendix Studio Pro and Mendix Studio previews
+* Enable Mendix Studio Pro preview
 
 ## 2 Prerequisites
 
@@ -41,7 +41,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in Mendix Studio Pro): 
 
     ```xml
     <propertyGroup caption="Editability">
@@ -131,7 +131,7 @@ To add these restrictions, follow the instructions below:
 
 ### 3.2 Adding Validation Feedback
 
-This section will teach you to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
+This section teaches you how to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
 
 1. Drag a **call microflow button** widget below your TextBox widget and drop it there. On the subsequent dialog box, click **New** to assign a new microflow to your button, name it *Validation_Microflow*, and click **OK**:
 
@@ -513,7 +513,7 @@ You have now made your widget compatible with screen readers. If a screen reader
 
 ### 3.6 Enabling Preview Mode
 
-To easily view changes to your widget while in Mendix Studio or Mendix Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
+To easily view changes to your widget while in Mendix Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
 
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 

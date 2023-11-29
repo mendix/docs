@@ -52,7 +52,7 @@ To view your app on an Android device (or emulator), you must download and insta
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 8 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
+To view your app on an iOS device, you must download and install the Make It Native 8 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
 
 {{< figure src="/attachments/howto8/mobile/native-mobile/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
 
@@ -71,7 +71,7 @@ Viewing your app on a mobile device will allow you to test native features and o
 
 {{% alert color="warning" %}}
 
-Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point. Also, we recommend keeping the **Runtime port** in **Project Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point. Also, Mendix recommends keeping the **Runtime port** in **Project Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 {{% /alert %}}
 

@@ -18,13 +18,9 @@ For example, the image below shows two placeholders, **Main** and **Other** posi
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'"   width="400"  >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of placeholder properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder" >}}
-
-A placeholder has a single section, **Misc** and a single property, **Name**.
+A placeholder has a single property: **Name**.
 
 ### 2.1 Name
 

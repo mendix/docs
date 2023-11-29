@@ -12,6 +12,6 @@ tags: ["studio pro", "system requirements", "install"]
 
 Before installing Studio Pro 10, it is important to understand the [System Requirements](/refguide/system-requirements/). 
 
-If you have been using Studio Pro version 9, see [Upgrading from Mendix Studio Pro 9 to 10](/refguide/upgrading-from-9-to-10/).
+If you have been using Studio Pro 9, see [Upgrading from Mendix Studio Pro 9 to 10](/refguide/upgrading-from-9-to-10/).
 
 ## 2 Documents in This Category

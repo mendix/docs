@@ -1,6 +1,7 @@
 ---
 title: "XPath minutes-from-dateTime"
 url: /refguide/xpath-minutes-from-datetime/
+weight: 10
 tags: ["studio pro"]
 ---
 
@@ -49,4 +50,3 @@ This query returns all the logs where the minutes part of `DateAttribute` is 30 
      //Logging.Log[minutes-from-dateTime(DateAttribute, 'America/New_York') = 30]
     {{% /tab %}}
 {{< /tabpane >}}
-

@@ -6,7 +6,7 @@ weight: 85
 
 ## 8.16.0
 
-**Release date: November 23rd, 2020** 
+**Release date: November 23, 2020** 
 
 ### Microflows
 

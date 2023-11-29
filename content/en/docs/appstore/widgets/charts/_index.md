@@ -443,7 +443,7 @@ The sample domain model could be either of the two configurations below:
 
 #### 7.2.8 Bubble chart
 
-The **Bubble chart** has data properties identical to those of the the [Line chart](#line-chart). However, the **Bubble size data** attribute is required, as it contains and determines the size of the bubble.
+The **Bubble chart** has data properties identical to those of the [Line chart](#line-chart). However, the **Bubble size data** attribute is required, as it contains and determines the size of the bubble.
 
 ### 7.3 Advanced Configuration
 

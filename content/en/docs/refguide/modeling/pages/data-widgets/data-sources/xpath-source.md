@@ -7,6 +7,10 @@ weight: 20
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+In Mendix version 10.5 and above there is no separate XPath source. If you want to use an XPath in these versions, use the **Database** source.
+{{% /alert %}}
+
 If **XPath** is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. You can filter data with an [XPath constraint](#xpath-constraints).  
 
 The **XPath** data source is very similar to the [**Database** data source](/refguide/database-source/), except that XPath constraints are more flexible than the database ones. 
@@ -75,7 +79,7 @@ The feature to use objects and attributes can be used for [List view](/refguide/
 
 #### 2.4.1 Known Errors
 
-Currently, Studio Pro does not support database retreivals using XPath constraints that walk through both regular databases and [external entities](/refguide/external-entities/). This results in the `Mixed source retrieval is currently not supported` error. If you experience this error, use Data Grid 2 instead of Data Grid, then disable sorting and remove the option to search on external entity attributes.
+Currently, Studio Pro does not support database retrievals using XPath constraints that walk through both regular databases and [external entities](/refguide/external-entities/). This results in the `Mixed source retrieval is currently not supported` error. If you experience this error, use Data Grid 2 instead of Data Grid, then disable sorting and remove the option to search on external entity attributes.
 
 ## 3 Read More
 

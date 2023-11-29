@@ -116,7 +116,7 @@ Only one TabPage is visible at the same time, allowing to show a subset of widge
 ## 5 Buttons
 
 Buttons perform an action when clicked. They can be rendered as a button or as a hyperlink through the RenderType enumeration.
-The ButtonStyle enumeration determines the visual cues for the type of button (e.g. Warning, Success).
+The ButtonStyle enumeration determines the visual cues for the type of button (for example, Warning, Success).
 
 Buttons can have a caption, which is translatable and can be templated through the ClientTemplate.
 Through the icon property, the button can refer to an icon from either an image collection (using ImageIcon) or to a
@@ -221,10 +221,11 @@ The number of columns to show can be set with the `numberOfColumns` property, th
 
 Input widgets, such as a text box, will derive their content from their context.
 The data widgets themselves get this data from their configured data source.
-Depending on the data widget, different sources are applicable (e.g. a ListViewDatabaseSource is only applicable for
+Depending on the data widget, different sources are applicable (for example, a ListViewDatabaseSource is only applicable for
 a ListView widget).
 
 The data sources can be divided by how their retrieve their data:
+
 * Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-source/)
 * By [context](/refguide/context-source/) from a surrounding data widget or a page (or snippet) parameter
 * By [association](/refguide/association-source/) to an object from a surrounding data widget

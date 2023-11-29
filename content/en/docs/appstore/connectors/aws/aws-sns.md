@@ -19,17 +19,27 @@ Amazon Simple Notification Service (SNS) can send app-to-app (A2A) and app-to-pe
  
 ### 1.2 Prerequisites {#prerequisites}
  
-The Amazon SNS connector requires Mendix Studio Pro version 9.18.0 or above.
+The Amazon SNS connector requires Mendix Studio Pro 9.18.0 or above.
  
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
  
 {{% alert color="info" %}}
 Ensure that the AWS user account used for authentication has the appropriate permissions to access the SNS service in AWS.
 {{% /alert %}}
- 
+
+### 1.3 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+
 ## 2 Installation
  
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon SNS connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon SNS connector into your app.
  
 ## 3 Configuration
  
@@ -154,7 +164,7 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `AbstractMessageAttribute` | | This entity holds information required to publisj a message, specifically the message's attributes. The attributes it contains are `AttributeType`, which represents the native data type of the content, `Name`, which represents the attribute, and `Value`, which represents the attribute's value. This entity can be used to send messages to subsets of one's subscriber base. |
+| `AbstractMessageAttribute` | | This entity holds information required to publish a message, specifically the message's attributes. The attributes it contains are `AttributeType`, which represents the native data type of the content, `Name`, which represents the attribute, and `Value`, which represents the attribute's value. This entity can be used to send messages to subsets of one's subscriber base. |
 | `Topic` | | This generalization entity represents information on topics inside the Amazon SNS environment. The `ARN` (Amazon Resource Name) attribute represents an identification on Amazon's side, and the `Name` attribute represents the topic's name. |
 | `Message` | | This entity holds information for publishing a message, specifically the message to be broadcasted. The attributes it contains are `Subject`, which represents the message's subject, and `Body`, which represents the message's content. Required attributes: `_id`; `Message`. |
 | `ListTopicsResponse` | | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of `ListTopicsTopic` objects. Attributes: `NextToken` (string) - this token can be used to retrieve the next set of topics. |
@@ -230,7 +240,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
  
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |    **US Easth (Ohio)** |
+| `us_east_2` |    **US East (Ohio)** |
 | `us_east_1` |    **US East (N. Virginia)** |
 | `us_west_1` |    **US West (N. California)** |
 | `us_west_2` |    **US West (Oregon)** |
@@ -262,14 +272,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `Number` | **Number** |
 | `Binary` | **Binary** |
  
- #### 4.2.4 `ENUM_FilterPolicyScope`
+#### 4.2.4 `ENUM_FilterPolicyScope`
  
 | Name | Caption |
 | --- | --- |
 | `MESSAGE_ATTRIBUTES` | **MESSAGE-ATTRIBUTES SCOPE** |
 | `MESSAGE_BODY` | **MESSAGE-BODY SCOPE** |
  
- #### 4.2.4 `ENUM_AttributeFilterCompareOperator`
+#### 4.2.4 `ENUM_AttributeFilterCompareOperator`
  
 | Name | Caption |
 | --- | --- |

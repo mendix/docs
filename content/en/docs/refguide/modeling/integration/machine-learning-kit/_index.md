@@ -6,7 +6,6 @@ weight: 90
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
@@ -34,3 +33,7 @@ Learn more about the machine learning kit in the following documents:
     * [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)
 * [ML model mapping](/refguide/ml-model-mapping/), an entry in the Studio Pro guide about the service document for machine learning models
 * [Call ML Model](/refguide/call-ml-model/), about the microflow [activity](/refguide/activities/) to call an imported ML model in a microflow
+
+## 4 Read More
+
+* [Introducing the Mendix ML Kit for Low-Code ML Deployment](https://www.mendix.com/blog/introducing-the-mendix-ml-kit-for-low-code-deployment/)

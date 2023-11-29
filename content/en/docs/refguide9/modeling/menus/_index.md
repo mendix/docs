@@ -13,7 +13,7 @@ The top-bar of Studio Pro contains the following menus:
 
 {{< figure src="/attachments/refguide9/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
 
-* [Switch-to](#switch-to) – allows you to navigate to other parts of the platform
+* [Global Navigation Menu](#global-navigation-menu) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
 * [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed
@@ -23,9 +23,9 @@ The top-bar of Studio Pro contains the following menus:
 * [Language](#language) – contains language and translation settings
 * [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
-## 2 Switch-to Menu {#switch-to}
+## 2 Global Navigation Menu {#global-navigation-menu}
 
-The **Switch-to** menu is located at the upper left of Studio Pro and is represented as a nine dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Switch-to** menu, see the [Navigation](/developerportal/#navigation) section in the *Developer Portal Guide*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Global Navigation Menu** menu, see [Global Navigation](/developerportal/global-navigation/) in the *Developer Portal Guide*.
 
 ## 3 File Menu {#file}
 
@@ -60,7 +60,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
-| **Help Contents** | Opens the start page of the documentation in the default web browser. |   |
+| **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
 | **Ask a Question** | Opens the Mendix Forum in the default web browser. |   |
 | **Open Log File Directory** | Opens the log files for your app locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |

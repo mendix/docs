@@ -92,7 +92,7 @@ This property is exposed as an object containing the following properties:
 
 * `widgetCount`: The number of immediate child widgets configured
 * `renderer`: A React component allowing rendering of the child widgets in the preview
-    * The renderer component has a extra property called `caption` which will override the text that appears inside a dropzone when it is still empty
+    * The renderer component has an extra property called `caption` which will override the text that appears inside a dropzone when it is still empty
 
 ### 2.5 Expression
 

@@ -20,11 +20,11 @@ In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's
 
 ## Android 2.0.0 / iOS 2.0.0
 
-**Release date: 28th March 2023**
+**Release date: March 28, 2023**
 
 ### Improvements
 
-* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. We recommend upgrading your app to 9.24 or building a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
+* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. Mendix recommends upgrading your app to 9.24 or building a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
 
 ### Fixes 
 
@@ -32,7 +32,7 @@ In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's
 
 ## Android 1.1.2 / iOS 1.1.1
 
-**Release date: 16th August 2021**
+**Release date: August 16, 2021**
 
 ### Improvements
 
@@ -44,13 +44,13 @@ In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's
 
 ## Android 1.1.0 / iOS 1.1.0
 
-**Release date: 30th March 2021**
+**Release date: March 30, 2021**
 
 This is the official release of the Android and iOS versions of the Make It Native 9 app with support for Mendix Studio Pro 9.0. Both the Android and iOS versions allow you to preview and debug your locally-running native app on any [supported mobile platforms](/refguide9/system-requirements/#mobileos).
 
 ## Android 1.0.5
 
-**Release date: 11th May 2021**
+**Release date: May 11, 2021**
 
 ### Improvements
 
@@ -59,6 +59,6 @@ This is the official release of the Android and iOS versions of the Make It Nati
 
 ## Android 1.0.4 / iOS 1.0.2
 
-**Release date: 30th March 2021**
+**Release date: March 30, 2021**
 
 This is the official release of the Android and iOS versions of the Make It Native 9 app, with support for Mendix Studio Pro 9.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.

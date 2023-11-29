@@ -9,7 +9,7 @@ tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]
 
 ## 1 Introduction
 
-This how-to describes the process of developing an AWS connector. It will teach you the following:
+This how-to describes the process of developing an AWS connector. It teaches you the following:
 
 * Advantages of REST API-based development when creating your own AWS connector
 * Basic steps for building AWS connectors
@@ -131,7 +131,7 @@ After you create a microflow that connects to an AWS service, expose it as a mic
 4. In the **Category** field, enter the name of the AWS service.
 5. In the **Icon** section, select the official AWS icon.
 
-For more information, see [Microflow Properties: Expose as Microflow Action](https://docs.mendix.com/refguide/microflow/#expose-as-microflow).
+For more information, see [Microflow Properties: Expose as Microflow Action](/refguide/microflow/#expose-as-microflow).
 
 ## 4 Best Practices
 
@@ -150,7 +150,7 @@ When building the domain model for your connector, keep the following considerat
 
 ### 4.2 Naming Conventions for Elements within the Connector {#naming}
 
-To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the the table below for a list of best practices by element type:
+To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the table below for a list of best practices by element type:
 
 | Connector element | Naming convention |
 | --- | --- |
@@ -199,4 +199,4 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 
 ## 5 Publishing to the Mendix Marketplace
 
-If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/sharing-content/).

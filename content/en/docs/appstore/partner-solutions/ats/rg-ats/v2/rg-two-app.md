@@ -33,7 +33,7 @@ The **7-day history** infographic will only be included in the PDF report when y
 
 Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed/total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
 
-For data-driven tests, the dataset is diplayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related dataset records at the time of execution.
+For data-driven tests, the dataset is displayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related dataset records at the time of execution.
 
 The results of your test cases are displayed as the following labels:
 
@@ -59,7 +59,7 @@ There are two roles in ATS, which are at first assigned to the user by the syste
 
 ### 2.1 Tester
 
-The **Tester** role is assigned to a user when they have at least one Team Server project licensed in ATS. A tester has access to all the data and actions that are neccessary for writing and executing tests in ATS.
+The **Tester** role is assigned to a user when they have at least one Team Server project licensed in ATS. A tester has access to all the data and actions that are necessary for writing and executing tests in ATS.
 
 ### 2.2 App Admin
 
@@ -109,7 +109,7 @@ In the **Edit Selenium Hub** dialog box, set the following parameters:
 ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.
 
 {{% alert color="info" %}}
-Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
+Starting with ATS version 2.0, ATS capabilities override custom capabilities.
 {{% /alert %}}
 
 ### 3.3 Access Rights Control from ATS
@@ -124,9 +124,9 @@ App member that the have a No access role will not see the app in their **My app
 For on-premises instances of ATS, all accounts created manually by the tenant administrator will be members of each project.
 {{% /alert %}}
 
-In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the project role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the app role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 
-Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
+Finally, note that a user who has an administrative app role in the Developer Portal will always have administrative rights in ATS.
 
 {{% alert color="info" %}}
 If an app lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.

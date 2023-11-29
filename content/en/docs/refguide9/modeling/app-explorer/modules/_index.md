@@ -17,17 +17,13 @@ Within a module you can define [module security](/refguide9/module-security/) vi
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables and grids. Below you see tables grouped by category of all the different kinds of documents you can create within a module.
 
 {{% alert color="info" %}}
-Mendix Modules are distinct from React Native modules. 
-
-Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. 
-
-React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
+Mendix Modules are distinct from React Native modules. Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps, you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
 {{% /alert %}}
 
 ## 2 Module Types {#module-types}
 
 {{% alert color="info" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/modules/).
 {{% /alert %}}
 
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide9/module-settings/). 
@@ -43,7 +39,7 @@ There are the following type of modules:
 | Document type | Typical elements | Description |
 | --- | --- | --- |
 | [Pages](/refguide9/pages/) | [Data view](/refguide9/data-view/), [Data grid](/refguide9/data-grid/), [Table](/refguide9/table/), [Text box](/refguide9/text-box/) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
-| [Microflows](/refguide9/microflows/) | [Activities](/refguide9/activities/), [Sequence Flow](/refguide9/sequence-flow/) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
+| [Microflows](/refguide9/microflows/) | [Activities](/refguide9/activities/), [Sequence Flow](/refguide9/sequence-flow/) | Microflows describe the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide9/enumerations/) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
 ## 4 Page Resources
@@ -66,7 +62,7 @@ There are the following type of modules:
 | [Regular Expressions](/refguide9/regular-expressions/) | A regular expression is used by [validation rules](/refguide9/validation-rules/) on an entity to describe a set of criteria that a string can match. |
 | [Rules](/refguide9/rules/) | A rule defines a set of criteria, with a certain input the rule will result in a Boolean or enumeration depending on the criteria met. It can be called from a decision to determine the direction the microflow should go once the decision is reached. |
 | [Task Queue](/refguide9/task-queue/) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
-| [Scheduled Events](/refguide9/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
+| [Scheduled Events](/refguide9/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
 ## 6 Consumed Services
 

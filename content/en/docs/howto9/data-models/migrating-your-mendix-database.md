@@ -11,7 +11,7 @@ tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 
 This document explains how to migrate the data in an existing Mendix database to another Mendix database. This can be useful if you want to migrate from one type of database to another, for example MS SQL Server to PostgreSQL.
 
-**After completing this how-to you will know how to do the following:**
+After completing this how-to, you will know how to do the following:
 
 * Migrate a non-PostgreSQL database to a PostgreSQL database
 * Export a PostgreSQL database
@@ -23,7 +23,7 @@ This document explains how to migrate the data in an existing Mendix database to
 {{% alert color="warning" %}}
 You cannot use these methods to transfer data from one app to another. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide9/data-storage/) for more information.
 
-If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication/) module.
+If you want to copy data to another app, Mendix recommends using the [Database Replication](/appstore/modules/database-replication/) module.
 {{% /alert %}}
 
 ## 2 Overview
@@ -68,7 +68,7 @@ The source database structure and data do not change as part of the migration.
 
 ## 3 Using your PostgreSQL Database in Studio Pro
 
-You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt (HSQLDB) database.
+You can configure Studio Pro to use a PostgreSQL database instead of the built-in (HSQLDB) database.
 
 To do this, perform the following steps:
 
@@ -107,25 +107,30 @@ To export a PostgreSQL database, refer to either the [pg_dump](https://www.postg
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
+Use the Developer Portal to upload the migrated, exported database backup to Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal. Follow these steps:
 
 1. Select your app.
-2. Click **Backups** in the left-hand menu
-3. Click **Upload Backup** to upload your Database.
-4. Select the exported database file from your local file system using the file chooser
+2. Click **Backups** in the navigation pane.
+3. Click **Upload Backup** to upload your database.
+4. Select the exported database file from your local file system using the file chooser.
 5. After the upload is done, stop the application.
-6. Select the uploaded backup and click **Restore Backup** to restore the new Backup.
+6. On the backup you uploaded, click **More Options** > **Restore**.
 7. Finally, start the application.
 
 ## 5 Exporting a Mendix Cloud Database
 
-The same procedure can be used to export an existing Mendix cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
+The same procedure can be used to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab, select an existing Backup from the list, and click the **Download Backup** button to download the database to your local file system using the Database URL shown in the dialog. A fresh backup with recent data could also be created first using the **Create Backup** button.
+Export the Mendix Cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal:
 
-### 5.1 Importing into an On-premises PostgreSQL Database
+1. Select your app and environment.
+2. Click **Backups**.
+3. Optionally, create a fresh backup with recent data by clicking **Create Backup**.
+4. On the backup you want to download, click **More Options** > **Download**. This downloads the database to your local file system using the database URL shown in the dialog.
 
-To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
+### 5.1 Importing into an On-Premises PostgreSQL Database
+
+To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [pgAdmin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
 
 ### 5.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 

@@ -11,11 +11,11 @@ aliases:
 
 ## 1 Introduction 
 
-Workflow is a new visual language in Mendix Studio Pro and Mendix Studio that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
+Workflow is a new visual language in Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
 This how-to explains how to build an employee onboarding process using the workflow editor. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Creating a workflow
 * Creating user tasks for different user roles

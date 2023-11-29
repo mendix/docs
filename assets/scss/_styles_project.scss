@@ -20,7 +20,7 @@
             border-style: solid;
             border-color: $value;
             border-width: 0 0 0 4px;
-            background-color: fade-out($value, 0.75%); // NK - adds faded gradient to alert backgrounds
+            background-color: fade-out($value, 0.85%); // NK - adds faded gradient to alert backgrounds
         }
     }
 }

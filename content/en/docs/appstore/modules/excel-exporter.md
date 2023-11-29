@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "excel exporter", "excel", "filed
 
 ## 1 Introduction
 
-With the [Excel Exporter](https://marketplace.mendix.com/link/component/726/) module, you can create templates that export data from your Mendix application to the Excel or CSV formats. The module creates an OQL query and directly prints the result to a FileDocument system module entity in your desired format. You can add styling to your Excel to create proper headers and styling formats in order to create a complete report.
+With the [Excel Exporter](https://marketplace.mendix.com/link/component/726/) module, you can create templates that export data from your Mendix application to the Excel, macro-enabled Excel, or CSV formats. The module creates an OQL query and directly prints the result to a FileDocument system module entity in your desired format. You can add styling to your Excel to create proper headers and styling formats in order to create a complete report.
 
 The Excel Exporter is compatible with the [Excel Importer](/appstore/modules/excel-importer/) version 8.1.1 or higher and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 1.2.2 or higher.
 
@@ -28,9 +28,12 @@ On the **Excel Exporter** page, there are the following items:
 * **Search**: enables searching for a template using one or more of the following properties:
     * **Template ID**: the ID of a template, which is generated automatically by the system
     * **Name**: the name of the template
-    * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
+    * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, **Excel 2007 and higher (Macro-Enabled)**, or **CSV file**)
 * **New**: opens the **New template** dialog box that contains the following items:
-    * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
+    * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, **Excel 2007 and higher (Macro-Enabled)**, or **CSV file**)
+
+    {{% alert color="info" %}}The module uses `"` by default as the quotation character during CSV export. However, you can specify any single character of your choice as the quotation character or even decide NOT to have any during export.{{% /alert %}}
+
     * **Filename** : the name of the template
     * **Input object**(optional): an entity associated to your entity to be exported
     * **Description** (optional): the description of the template
@@ -57,7 +60,7 @@ On the template details page, you can define the template with the following ite
     * **Delete**: deletes the selected sheet
     * **Status**: if the sheet is correctly configured
     * **Sequence**: the sequence of the sheet shown in an exported document
-    * **Name**: the name of the sheet
+    * **Name**: the name of the sheet, which needs to be mandatorily provided
 * **Styles**: contains the following items that you can use to define the style in an exported document:
     * **New**: opens the **New Style** dialog box to create that contains the following items:
         * **Style name**: the name of the style
@@ -280,6 +283,8 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
     * **Default height**: if the row uses the default height, same as **Automatic height**
     * **Row height**: the fixed height of the row
 
+{{% alert color="info" %}}While exporting output data into an Excel file having macros in it, the existing macros will neither be parsed nor removed, but will be retained as-is in the output file.{{% /alert %}}
+
 ## 4 Read More
 
-* [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
+* [How to Export to Excel](/howto/integration/using-the-excel-exporter/)

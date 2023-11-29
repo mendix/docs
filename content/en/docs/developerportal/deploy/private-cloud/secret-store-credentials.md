@@ -33,7 +33,7 @@ To implement an external secret store, you must configure the required settings 
     In most cases, this should only be done once for the entire cluster. For more information and support, contact the secret storage provider.
 2. Install and configure a [Kubernetes Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/#supported-providers), for example, [AWS Secrets Manager CSI Secrets Store](https://github.com/aws/secrets-store-csi-driver-provider-aws).
     This driver is installed globally for the entire cluster. For more information, refer to documentation supplied by the secret storage provider.
-3. Prepare a Kubernetes `ServiceAccount` to be used for authentication. 
+3. Prepare a Kubernetes `ServiceAccount` to be used for authentication.
     The `ServiceAccount` name must match the [Mendix App CR](/developerportal/deploy/private-cloud-technical-appendix-01/) name (that, is, the internal name of the app environment). In addition, the `ServiceAccount` needs to have a `privatecloud.mendix.com/environment-account: "true"` annotation.
     Your secret storage provider may have other requirements - for more information, refer to documentation supplied by the secret storage provider. Typically, the Kubernetes `ServiceAccount` requires vendor-specific annotations to link it with an account or role in the secret storage provider.
 4. Configure the [SecretProviderClass](https://secrets-store-csi-driver.sigs.k8s.io/getting-started/usage.html#create-your-own-secretproviderclass-object)
@@ -75,12 +75,12 @@ The following table lists the properties used as keys for database and storage-r
 * `com.mendix.storage.azure` for Azure Blob Storage
 
 {{% alert color="info" %}}
-If your app is created in Mendix version 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify an `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket. Instead, you can use the same AWS IAM role for RDS authentication.
+If your app is created in Mendix 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify an `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket. Instead, you can use the same AWS IAM role for RDS authentication.
 For more information and a complete walkthrough example, see [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If your app is created in Mendix version 9.22 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify a `database-password` to access a Postgres RDS database. Instead, you can use the same AWS IAM role for RDS authentication.
+If your app is created in Mendix 9.22 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify a `database-password` to access a Postgres RDS database. Instead, you can use the same AWS IAM role for RDS authentication.
 For more information and a complete walkthrough example, see the [AWS RDS IAM authentication example](#configure-using-rds-iam).
 {{% /alert %}}
 
@@ -265,7 +265,7 @@ To enable your environment to use Vault as external secret storage, follow these
 
 14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
     The following yaml shows an example Mendix app CRD:
-    
+
     ```yaml
     cat > mendixApp.yaml <<EOF
     apiVersion: privatecloud.mendix.com/v1alpha1
@@ -301,12 +301,12 @@ To enable your environment to use Vault as external secret storage, follow these
 To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/blogs/security/how-to-use-aws-secrets-configuration-provider-with-kubernetes-secrets-store-csi-driver/) as external secret storage, follow these steps:
 
 1. In AWS Secrets Manager, create a new secret of the type **Other**.
-2. Define the keys as described in the [SecretProviderClass Keys](#keys) section above, and then click **Next**. 
+2. Define the keys as described in the [SecretProviderClass Keys](#keys) section above, and then click **Next**.
 3. Enter the secret name, for example, `<namespace>/<Kubernetes environment name>`.
 4. Follow the wizard to complete the secret creation process.
 5. Open the secret and copy the **Secret name** and **Secret ARN**.
 6. In the Cloud Portal, create an environment using secrets storage, with no database or storage plan.
-7. Create an **IAM Role** without any attached policies for that environment in the AWS console. 
+7. Create an **IAM Role** without any attached policies for that environment in the AWS console.
     {{% alert color="info" %}}Use the environment internal name as the service account name.{{% /alert %}}
 8. In the IAM role, add an inline policy with the following JSON:
 
@@ -341,7 +341,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
         The role ARN is required, you can use the **Copy** button next to the ARN name in the role details.
 
         After this, the specified serviceaccount in the specified namespace will be able to assume this role.
-       
+
 10. Create a Kubernetes `ServiceAccount` for your environment:
 
     ```shell
@@ -353,7 +353,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
 11. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true`in the Mendix app CRD.
 
     The following yaml shows an example Mendix app CRD:
-    
+
     ```yaml
     cat > mendixApp.yaml <<EOF
     apiVersion: privatecloud.mendix.com/v1alpha1
@@ -436,7 +436,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
 
 In the above example, `path` specifies the key name from the original AWS Secret (Secret Manager key), and `objectAlias` specifies how it will be named when mounted into the sidecar. Do not modify `objectAlias`, as it matches the AWS `objectName`.
 
-If your app is created in Mendix version 9.20 or above, you can remove `storage-access-key-id` and `storage-secret-access-key` parameters, and instead attach this IAM policy to the app's IAM role (replace `<bucket_name>` with the name of the S3 bucket):
+If your app is created in Mendix 9.20 or above, you can remove `storage-access-key-id` and `storage-secret-access-key` parameters, and instead attach this IAM policy to the app's IAM role (replace `<bucket_name>` with the name of the S3 bucket):
 
 ```json
 {
@@ -503,7 +503,7 @@ After completing the prerequisites, follow these steps to switch from password-b
    ```
 
    replacing `<db-region>` with the RDS database region, `<account-id>` with the AWS account ID, `<db-resource-id>` with the database Resource ID and `<database-username>` with the username specified in `database-username`.
-   
+
    For more information on how to get the Resource ID and create an RDS IAM policy, see the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html).
 4. Restart the Mendix app environment.
 
@@ -518,7 +518,7 @@ When implementing a secret store, keep in mind the following considerations:
 * If a secret is rotated or updated, Mendix Operator version 2.10.0 and above will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied. If the changes are not applied, you should restart the environment. Bear in mind the following features of detecting a changed secret:
     * There is a delay of a few minutes before the CSI Secrets Storage driver detects the changes.
     * Only file storage credentials and `MxAdmin` password changes are correctly processed at the moment.
-    * In Mendix version 9.22 or above, database password rotation is processed without restarting the app.
+    * In Mendix 9.22 or above, database password rotation is processed without restarting the app.
 * Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
 * The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass`.
 * CSI Secrets Storage can override app settings — if a parameter is configured in the Developer Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.

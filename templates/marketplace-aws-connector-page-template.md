@@ -32,6 +32,16 @@ To use the {CONNECTOR NAME} connector, you must also install and configure the f
 * [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the {CONNECTOR NAME} connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * {OTHER MODULES AS REQUIRED, WITH A SHORT DESCRIPTION OF THEIR PURPOSE AND A LINK TO THEIR PAGES ON MARKETPLACE.}
 
+### 1.3 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the {CONNECTOR NAME} connector into your app.
@@ -42,7 +52,6 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Configuring AWS Authentication
 
-#### THIS SECTION IS PRETTY MUCH ALWAYS REQUIRED, BUT THERE IS ONE PLATFORM-SUPPORTED CONNECTOR THAT USES A DIFFERENT AUTHENTICATION SETUP (AWS S3). IN THAT CASE, THIS SECTION IS SKIPPED.
 #### THIS SECTION HAS SCREENSHOTS FROM THE DYNAMODB CONNECTOR. REPLACE THEM WITH SIMILAR SCREENSHOTS FROM YOUR CONNECTOR.
 
 In order to use the {AWS SERVICE NAME} service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.

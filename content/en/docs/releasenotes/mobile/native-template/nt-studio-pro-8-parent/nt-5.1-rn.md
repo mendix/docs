@@ -13,7 +13,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.21
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -21,7 +21,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.20
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -30,7 +30,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.19
 
-**Release date: May 11th, 2022**
+**Release date: May 11, 2022**
 
 ### Fixes
 
@@ -38,7 +38,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ## 5.1.17
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -46,7 +46,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.16
 
-**Release date: September 9th, 2021**
+**Release date: September 9, 2021**
 
 ### Fixes
 
@@ -54,7 +54,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.15
 
-**Release date: August 9th, 2021**
+**Release date: August 9, 2021**
 
 ### Improvements
 
@@ -62,7 +62,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.14
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 ### Improvements
 
@@ -72,7 +72,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.13
 
-**Release date: June 30th, 2021**
+**Release date: June 30, 2021**
 
 ### Improvements
 
@@ -85,7 +85,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ## 5.1.12
 
-**Release date: June 11th, 2021**
+**Release date: June 11, 2021**
 
 ### Improvements
 
@@ -103,7 +103,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.11
 
-**Release date: May 14th, 2021**
+**Release date: May 14, 2021**
 
 ### Fixes 
 
@@ -111,7 +111,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.10
 
-**Release date: April 6th, 2021**
+**Release date: April 6, 2021**
 
 ### Improvements
 
@@ -123,7 +123,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 5.1.9
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Mobile Toolkit for 5.1.x
 
@@ -143,7 +143,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 ## 5.1.8 {#518}
 
-**Release date: March 17th, 2021**
+**Release date: March 17, 2021**
 
 ### Fixes
 
@@ -152,7 +152,7 @@ The Native Mobile Builder writes to the *config.json* and commits assets to rela
 
 ## 5.1.7
 
-**Release date: March 12th, 2021**
+**Release date: March 12, 2021**
 
 {{% alert color="warning" %}}
 We have decided to retract version 5.1.7 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8](#518). 
@@ -164,7 +164,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.6
 
-**Release date: February 15th, 2021**
+**Release date: February 15, 2021**
 
 ### Fixes
 
@@ -174,7 +174,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.5
 
-**Release date: February 4th, 2021**
+**Release date: February 4, 2021**
 
 ### Fixes
 
@@ -183,7 +183,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.4
 
-**Release date: December 22nd, 2020**
+**Release date: December 22, 2020**
 
 ### Fixes
 
@@ -191,7 +191,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.3
 
-**Release date: November 27th, 2020**
+**Release date: November 27, 2020**
 
 ### Improvements
 
@@ -203,7 +203,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.1
 
-**Release date: November 2nd, 2020**
+**Release date: November 2, 2020**
 
 ### Disclaimer
 
@@ -219,7 +219,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ## 5.1.0
 
-**Release date: October 27th, 2020**
+**Release date: October 27, 2020**
 
 ### Disclaimer
 

@@ -31,7 +31,7 @@ If you face connection problems when cloning the Git repository using the **Open
 
 ### 3.2 Customer-Facing Issues
 
-For Studio Pro developers to be able to troubleshoot issues that the customers face with Beta Git support, Studio Pro provides a logging mechanism.
+For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
 
 When filing a Git support issue with Mendix Support, attach the log files doing the following:
 

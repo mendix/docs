@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "Licens
 ---
 
 {{% alert color="warning" %}}
-Private Cloud License Manager is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
+Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -44,7 +44,7 @@ The PCLM server will not create the database for the licenses, you need to creat
 
 ## 3 Installing the PCLM server
 
-You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool.
+You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
 
 ### 3.1 Creating the Manifest
 
@@ -60,7 +60,6 @@ mx-pclm-cli installer-gen --db-type <db-type> \
     --db-port <port> \ 
     --db-strict-tls <tls-boolean> \
     --ssl-cert-file <ssl-root-certificate> \
-    --env <environment-type> \
     --image-repo <docker-repo> \
     --image-tag <docker-tag> \
     --out-file <out-file>
@@ -76,9 +75,8 @@ Where you need to supply the following parameters
 * `<port>` – the port used to access the database, default: *5432*
 * `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
 * `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
-* `<environment-type>` – the type of environment, `prod` *(default)* or `dev`
 * `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
-* `<docker-tag>` – the docker image tag, default: `master`
+* `<docker-tag>` – the docker image tag, default: `0.3.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest
@@ -118,7 +116,7 @@ metadata:
   namespace: my-pclm-1 
 spec:
   rules:
-    - host: pclm.<domain> # e.g. pclm.mydomain.io
+    - host: pclm.<domain> # for example, pclm.mydomain.io
       http:
         paths:
           - path: /
@@ -155,8 +153,8 @@ You can confirm that you can connect to the PCLM server using the following URLs
 * `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/health` should return `HTTP 200 OK`
 * `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics.
 
-
 When using the CLI, use `kubectl port-forward` instead of an ingress, as in the following example:
+
 ```bash {linenos=false}
 kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 ```
@@ -270,10 +268,49 @@ You will get a report of the results of your import operation:
 
 If a license has previously been imported, you will be told that it is `[Duplicated]`.
 
+### 6.1 Listing the Runtime License
+
+Once the license bundle is installed, you can see the list of Runtime license in the bundle using following command:
+
+```bash {linenos=false}
+mx-pclm-cli license runtime list \
+   -s <pclm-http-url> \
+   -u <admin-user> \
+   -p <admin-password>
+```   
+
+You will receive the result in the following format:
+
+| LICENSE-ID                           | TYPE       | EXPIRATION-DATE      | CREATED-AT           | PRODUCTS |
+|--------------------------------------|------------|----------------------|----------------------|----------|
+| 5025defa-a442-47c3-ae2e-2ac6628926e3 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
+| c823eeb1-7eb2-471c-a818-7be132c9cdb1 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
+
+{{% alert color="info" %}}
+The **PRODUCTS** field represents the product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the Mendix app CR. For more information, see how *runtimeLicenseProduct* is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
+In order to update the **product type** in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
+{{% /alert %}}
+
+### 6.2 Listing the Operator License
+
+Once the license bundle is installed, you can view the list of Runtime licenses in the bundle by using the following command:
+
+```bash {linenos=false}
+mx-pclm-cli license operator list \
+   -s <pclm-http-url> \
+   -u <admin-user> \
+   -p <admin-password>
+```   
+
+You will receive the result in the following format:
+
+| LICENSE-ID                           | TYPE       | EXPIRATION-DATE      | CREATED-AT           | PRODUCTS |
+|--------------------------------------|------------|----------------------|----------------------|----------|
+| c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
+
 ## 7 Applying Licenses to Your Operator and Apps
 
-To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation.
-Assume that the operator is running in the namespace `<operator-ns>`.
+To use the licenses, you must add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation. Assume that the operator is running in the namespace `<operator-ns>`.
 
 ### 7.1 Storing Operator User Credentials and Configuring the Mendix Operator
 
@@ -285,6 +322,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
    -u <admin-user> \
    -p <admin-password>
 ```   
+
 The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. 
 
 #### 7.1.1 Sample Yaml Files
@@ -422,30 +460,7 @@ spec:
       type: offline
 ```
 
-### 7.4 Auditing Licenses
-
-You can retrieve an audit report showing a history of which apps had which licenses, and which license(s) were applied to which operator(s) using the following command:
-
-```bash {linenos=false}
-mx-pclm-cli report generate \
-    --num-days <days> \
-    --zip-file <file-name> \
-    -s <pclm-http-url> \
-    -u <admin-user> \
-    -p <admin-password>
-```
-
-Where:
-
-* `<days>` – is the number of past days to report (default 365)
-* `<file-name>` – is the name of the file where a zipped version of the report is saved — if this is omitted, the report will be output to the console
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
-* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
-* `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
-
-The report is presented as a CSV file containing a summary of the licenses at various times over the specified period. The data in the report will only be available after 12 hours.
-
-## 8. Migration
+## 8 Migration
 
 If you have manually configured static runtime licenses (offline licenses), PCLM will not replace those licenses. Only the runtime licenses applied through a Subscription secret will be replaced. If your namespace was never licensed, please ignore this section.
 

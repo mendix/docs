@@ -2,6 +2,8 @@
 title: "Widget Development"
 url: /howto7/widget-development/
 weight: 90
+no_list: false
+description_list: true 
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -81,8 +83,4 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 
 Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
 
-## 5 Main Documents in This Category
-
-* [Build a Preview Image for a Custom Widget](/howto7/widget-development/add-a-preview-image-for-custom-widget/)
-* [Scaffold a Widget with the Yeoman Widget Generator](/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/)
-* [Use the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/)
+## 5 Documents in This Category

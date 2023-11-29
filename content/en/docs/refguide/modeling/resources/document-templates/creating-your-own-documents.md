@@ -11,7 +11,7 @@ Have you been wondering how to create your own documents with Mendix? This refer
 
 With Mendix, you can generate documents in different ways. Here, you will learn the fundamentals of generating a document from your own application.
 
-Before we start, we recommend you first read the following two pages:
+Before we start, Mendix recommends first reading these pages:
 
 * [Document Templates](/refguide/document-templates/)
 * [Generate Documents](/refguide/generate-document/)

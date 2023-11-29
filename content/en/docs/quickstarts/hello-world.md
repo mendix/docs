@@ -1,8 +1,8 @@
 ---
-title: "Build a Hello World App"
+title: "Creating and Deploying a Hello World App"
 url: /quickstarts/hello-world/
 weight: 5
-description: "Learn how to crete and deploy a Hello World app in two minutes."
+description: "Learn how to create and deploy a Hello World app with Mendix in two minutes."
 tags: ["hello world", "create", "app", "deploy"]
 ---
 
@@ -12,4 +12,4 @@ tags: ["hello world", "create", "app", "deploy"]
 
 ## 2 Continuing with the Next Tutorial
 
-To continue learning, see [Build a Responsive Web App](/quickstarts/part1/).
+To continue learning, see [Building a Responsive Web App](/quickstarts/part1/).

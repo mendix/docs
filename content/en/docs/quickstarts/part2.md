@@ -1,5 +1,5 @@
 ---
-title: "Add a Native Mobile App (Part 2)"
+title: "Adding a Native Mobile App"
 url: /quickstarts/part2/
 weight: 20
 description: "Learn the basics of making a native mobile app."

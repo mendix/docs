@@ -335,5 +335,5 @@ You can customize the registry **imageNameTemplate** in **OperatorConfiguration*
 * `{{.Name}}`: internal environment name.
 * `{{.Generation}}`: value of the Build CR’s [Generation](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace#generation) attribute.
 * `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Private Cloud Portal.
-* `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
+* `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision for example, 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.

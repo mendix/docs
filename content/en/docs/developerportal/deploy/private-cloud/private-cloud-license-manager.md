@@ -116,7 +116,7 @@ metadata:
   namespace: my-pclm-1 
 spec:
   rules:
-    - host: pclm.<domain> # e.g. pclm.mydomain.io
+    - host: pclm.<domain> # for example, pclm.mydomain.io
       http:
         paths:
           - path: /

@@ -24,7 +24,7 @@ To run your app on Insights Hub, you need to complete the prerequisites describe
 
 ### 2.1 Roles
 
-You need an Insights Hub user account on a tenant including a Developer Cockpit - e.g. a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
+You need an Insights Hub user account on a tenant including a Developer Cockpit - for example, a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
 
 * mdsp:core:Developer
 * mdsp:core:StandardUser

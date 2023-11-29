@@ -326,7 +326,7 @@ The following chart displays tensor element types that are currently unsupported
 | Complex Types          | complex64, complex128 |
 
 Similar to the data type restrictions, Studio Pro does not allow usage of the unsupported types in the input fields but having at least a single supported tensor type in the output fields is enough to load and integrate an ONNX model with MLKit. See the [ONNX IR documentation](https://github.com/onnx/onnx/blob/main/docs/IR.md) for all tensor types.
-To integrate a pre-trained model with an unsupported type from model repositories (e.g. ONNX Model Zoo), one can use graph editing tools (for example, [onnx.helper](https://onnx.ai/onnx/api/helper.html) and [graphsurgeon](https://github.com/NVIDIA/TensorRT/tree/master/tools/onnx-graphsurgeon)) to convert an unsupported type to a supported type like float16 → float32.
+To integrate a pre-trained model with an unsupported type from model repositories (for example, ONNX Model Zoo), one can use graph editing tools (for example, [onnx.helper](https://onnx.ai/onnx/api/helper.html) and [graphsurgeon](https://github.com/NVIDIA/TensorRT/tree/master/tools/onnx-graphsurgeon)) to convert an unsupported type to a supported type like float16 → float32.
 
 ### 6.3 GPU Inference
 

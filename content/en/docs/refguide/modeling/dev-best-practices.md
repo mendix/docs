@@ -391,7 +391,7 @@ By prioritizing the validation of inputs in microflows, you not only enhance the
 Guidelines below can help you choose a short yet meaningful name for your workflow:
 
 * The name matches the context entity name
-* The name consists of a noun + verb (e.g. *EmployeeOnboarding*)
+* The name consists of a noun + verb (for example, *EmployeeOnboarding*)
 * The name reflects what the process is about, what the goal of the process is
 
 ### 4.4 Warnings and Studio Pro Feedback

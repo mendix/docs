@@ -27,7 +27,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Read [Get Started with Native Mobile](/refguide9/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
-* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 

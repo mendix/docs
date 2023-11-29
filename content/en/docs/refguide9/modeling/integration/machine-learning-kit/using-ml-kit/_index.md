@@ -360,7 +360,7 @@ This is currently not supported.
   
     This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the ML model or a permission issues.
 
-    We recommend turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+    Mendix recommends turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
 
 ## 8 Read More {#readmore}
 

@@ -13,7 +13,7 @@ Mendix Studio Pro 9 gives you powerful new tools to enhance your apps. For the f
 
 ## 2 Updating from Studio Pro 8 to 9 {#studio-pro-upgrade}
 
-The following sub-sections explain the steps to take in converting your app from Studio Pro 8 to Studio Pro 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
+The following sub-sections explain the steps to take in converting your app from Studio Pro 8 to Studio Pro 9. Mendix recommends first reviewing the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
 
 ### 2.1 Backing Up Your App
 

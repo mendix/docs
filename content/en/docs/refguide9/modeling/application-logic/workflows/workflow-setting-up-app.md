@@ -43,7 +43,7 @@ While Workflow Commons does provide useful documents out-of-the-box, you might h
 
 ## 5 Workflow Best Practices
 
-We recommend the following best practices when working with workflows:
+Mendix recommends the following best practices when working with workflows:
 
 * When creating a user task, add a short description of the target users to the caption of the task. An example could be *HR: Schedule onboarding training* in an employee onboarding workflow.
 * When creating a microflow for a system task, prefix it with **WF\_**, so everyone knows it is being used in a workflow.

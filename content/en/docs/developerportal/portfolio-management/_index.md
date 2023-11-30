@@ -435,11 +435,29 @@ Alternatively, to delete an archived initiative, you can also click the ellipsis
 
 ## 5 Access Management {#access-management}
 
-The **Access Management** page shows all the users who have access to this portfolio. Portfolio Managers can see [access requests](#access-requests) by clicking the **Access Requests** tab. This tab is not visible for Contributors and Viewers.
+The **Access Management** page allows you to view and manage user access to the portfolio.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
-There are three access roles: **Portfolio Managers**, **Contributors**, and **Viewers**.
+### 5.1 Members
+
+The **Members** tab lists all the users who can access the portfolio. You can search a user by their use name, email, or company. You can also filters the users by role and status. The list contains the following items:
+
+* **User Name** – This is the name of the user.
+
+* **Email** – This is the email of the user.
+
+* **Company** – This shows the company to which the user belongs.
+
+* **Status** – This shows whether the user an active member or a deactivated member of the Mendix Platform.
+
+  {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
+
+* **Role** – This is the role of the user in the portfolio. There are three access roles: **Portfolio Managers**, **Contributors**, and **Viewers**. For more information, see the table below this list.
+
+* Ellipsis icon (**...**) – This gives you options to edit the role of the user or remove the user from the portfolio. For more information, see the [Editing and Removing a User](#edit-remove-user) section.
+
+  {{% alert color="info" %}}These options are  only available to Portfolio Managers.{{% /alert %}}
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
@@ -465,12 +483,20 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | View and download initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Export and import initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 
-### 5.1 Adding New Users {#add-users}
+#### 5.1.1 Leaving the Portfolio
+
+To leave the portfolio, click the Leave button above the list on the right side. 
+
+If you are the only Portfolio Manager of the portfolio, you will be asked to assign one user to be the Portfolio Manager before you can leave the portfolio.
+
+If you are the last user of the portfolio, you cannot leave the portfolio.
+
+#### 5.1.2 Adding New Users {#add-users}
 
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
-2. On the upper-right corner, click **Add Users**.
+2. On the upper-right corner of the **Members** tab, click **Add Users**.
 3. In the dialog box, enter the **Email Address** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
@@ -482,19 +508,23 @@ For users outside your company, they need to accept the invitation. They will ap
 
 For users within your company, they do not need to accept their invitation. If the users have a Mendix  account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
-### 5.2 Editing and Removing a User
+#### 5.1.3 Editing and Removing a User {#edit-remove-user}
 
 At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To remove a user from the portfolio, click **Remove**.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
 
-### 5.3 Access Requests {#access-requests}
+### 5.2 Access Requests {#access-requests}
+
+{{% alert color="info" %}}
+This tab is only visible to Project Managers.
+{{% /alert %}}
 
 Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
-The **Access Requests** page shows all open access requests for the portfolio with the following items:
+The **Access Requests** tab shows all open access requests for the portfolio with the following items:
 
 * **Requested By** – This is the name and avatar of the user who requested access.
 * **Role** – This is the access role that was requested by the user.
@@ -502,7 +532,7 @@ The **Access Requests** page shows all open access requests for the portfolio wi
 * **Reject** – Clicking this rejects the request.
 * **Approve** – Clicking this approves the request and gives the user access to the portfolio.
 
-### 5.4 Pending Invites
+### 5.3 Pending Invites
 
 The **Pending Invites** tab shows all pending invites for the portfolio with the following items:
 
@@ -519,9 +549,7 @@ The **Pending Invites** tab shows all pending invites for the portfolio with the
 ## 6 Portfolio Settings {#portfolio-settings}
 
 {{% alert color="info" %}}
-
 The **Portfolio Settings** page is only available for Portfolio Managers.
-
 {{% /alert %}}
 
 ### 6.1 Changing Portfolio Settings

@@ -128,7 +128,9 @@ When you run your app locally or deploy it for the first time, the Mendix Runtim
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
-### 5.2 Creating an Entity to Store the Images
+### 5.2 Configuring an Entity to Store the Images
+
+#### 5.2.1 Creating the Entity
 
 To create an images to store the images used in your app, follow these steps:
 
@@ -150,52 +152,59 @@ To create an images to store the images used in your app, follow these steps:
 5. Search for and select the **Image** entity (found in the **System** module).
 
     A generalization is a parent entity from which the child entity inherits properties. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
+    
+#### 5.2.2 Creating Attributes
 
-    You have created a new entity called **Picture** that inherits from the **System** entity called **Image**. However, the **Image** entity also inherits some of its properties from another **System** entity called **FileDocument**. This means you must add some attributes. Remember, your entity now inherits many properties from its parent entity **Image**. Therefore, you only have to add fields for the image's **Title** and **Description** information.
+You have created a new entity called **Picture** that inherits from the **System** entity called **Image**. However, the **Image** entity also inherits some of its properties from another **System** entity called **FileDocument**. This means you must add some attributes. Remember, your entity now inherits many properties from its parent entity **Image**. Therefore, you only have to add fields for the image's **Title** and **Description** information.
 
-6. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
+1. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
 
     {{< figure src="/attachments/quickstarts/part1/add-attributes.png" width="450px" alt="Name attribute">}}
 
-7. Repeat the step above to add an attribute called *Description*, but select **Unlimited** for the string's **Length**:
+2. Repeat the step above to add an attribute called *Description*, but select **Unlimited** for the string's **Length**:
 
     {{< figure src="/attachments/quickstarts/part1/description-attributes.png" width="450px" alt="Entity properties">}}
     
-8. Click **OK** to close the entity’s properties dialog box.
+3. Click **OK** to close the entity’s properties dialog box.
 
 ## 6 Creating Your App's User Interface
+
+### 6.1 Understanding the UI
 
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
 * Widgets – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use.
-* Context widgets – A context widget is a widget which displays data from the Domain Model. In Mendix there are four main context widgets: 
-    * [Data view](/refguide/data-view/): displays a single record
-    * [Data grid](/refguide/data-grid/): displays many records in a table format
-    * [List view](/refguide/list-view/): displays many records in a scrollable list
-    * [Template grid](/refguide/template-grid/): displays many records in configurable columns and rows
+* Context widgets – A context widget displays data from the domain model. In Mendix, there are four main context widgets: 
+    * [Data view](/refguide/data-view/) – displays a single record
+    * [Data grid](/refguide/data-grid/) – displays many records in a table format
+    * [List view](/refguide/list-view/) – displays many records in a scrollable list
+    * [Template grid](/refguide/template-grid/) – displays many records in configurable columns and rows
+
+### 6.2 Configuring a Template Grid
 
 Now it is time to build your photo album app:
 
-1. Open the **Home_Web** page from the App Explorer. 
-1. Drag a **Template Grid** from the **Toolbox** onto the page. 
-1. In Mendix, in order to display data from the domain model on a page element it needs to be within a context. Double-click the template grid to open its properties, then go to the **Data source** tab:
+1. Open the **Home_Web** page from the **App Explorer**. 
+2. Drag a **Template Grid** from the **Toolbox** onto the page. You can find this by opening the **Data containers** section, or by searching for this container.
+3. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties:
 
     {{< figure src="/attachments/quickstarts/part1/template-datasource.png" width="450px" alt="Open data properties">}}
 
-    {{< figure src="/attachments/quickstarts/part1/template-datasource-cont.png" width="450px" alt="Data source tab">}}
-
-1. Leave the **Datasource type** as **Database** and under **Entity** select the **Picture** entity we created earlier, then click **OK** to close the window:
+4. On the **Data source** tab, select the **Picture** entity you created earlier for the **Entity (path)**, then click **OK** to close the window:
 
     {{< figure src="/attachments/quickstarts/part1/template-edits.png" width="450px" alt="Configure data source">}}
 
-1. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**. 
-1. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons. To resolve this, right-click one of the buttons and select **Generate Page**:
+5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**. 
+6. Note the red error icons on the **New** and **Edit** buttons of the template grid, which are shown becuase there is no page connected to the buttons:
 
     {{< figure src="/attachments/quickstarts/part1/generate-page.png" width="450px" alt="Connect page">}}
 
-1. Leave the page name as is and choose the **Form Vertical** template for the page.
+7. To resolve this, right-click one of the buttons and select **Generate Page**.
+8. In the **Create Page** wizard that opens, leave the page name as is, and choose the **Form Vertical** template for the page.
 
-Next we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
+### 6.3 Using Building Blocks
+
+Next, we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
 
 1. Delete all the display widgets inside the grid (ensure you have switched from **Design** mode to **Structure** mode so you can delete the widgets easily).
 1. Right-click in the empty space and select **Add building block**.
@@ -225,11 +234,13 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 
 ## 7 Defining Logic Using Microflows
 
-There is only one step left before you can run and test your photo album app app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
+There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 
-A microflow is a piece of custom logic which is represented visually in Business Process Model and Notation (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server. This means an internet connection is required in order for it to execute. A microflow can only have one start point, but can often have multiple end points.
+But what if you want your app to perform some custom logic? For example, what if you wanted to validate that the end-user entered text for the **Title** and **Description** fields before they clicked **Save**? In Mendix, you can achieve this using a microflow.
 
-Implement custom logic with a microflow by doing the following:
+A microflow is a piece of custom logic that is represented visually in [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server, which means an internet connection is required for it to execute. A microflow can only have one start point, but it can often have multiple end points.
+
+To implement custom logic with a microflow, follow these steps:
 
 1. Open the page **Picture_NewEdit** using the App Explorer.
 1. Scroll down to the **Save** button at the bottom of the page. 

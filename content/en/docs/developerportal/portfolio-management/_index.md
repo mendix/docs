@@ -515,6 +515,14 @@ At the end of the row, click the ellipsis button (**...**), and then select the 
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
 
+#### 5.1.4 Removing Deactivated Users
+
+{{% alert color="info" %}}Only [Portfolio Managers](#access-management) can remove a deactivated user.{{% /alert %}}
+
+You can remove all the deactivated users from the portfolio in one go. 
+
+To do so, click **Remove Deactivated Users** above the list on the right side. If a deactivated user that you will remove still owns initiatives, these initiatives will not have any owner after you remove this user from the portfolio.
+
 ### 5.2 Access Requests {#access-requests}
 
 {{% alert color="info" %}}

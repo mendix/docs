@@ -1,0 +1,383 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Content API
+  description: The API to manage the Marketplace content for Mendix apps.
+  termsOfService: https://www.mendix.com/terms-of-use/
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+servers:
+  - url: "https://marketplace-api.mendix.com/v1"
+paths:
+  /content:
+    get:
+      tags:
+        - content
+      summary: Returns the list of content.
+      description: "Returns both public and private content belonging to your company. The content metadata is from the last published version of the content. This endpoint uses pagination."
+      operationId: getContent
+      parameters:
+        - $ref: '#/components/parameters/name'
+        - $ref: '#/components/parameters/isPrivate'
+        - $ref: '#/components/parameters/publishedSince'
+        - $ref: '#/components/parameters/limitContent'
+        - $ref: '#/components/parameters/offsetContent'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/content'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '500':
+          $ref: '#/components/responses/error500'
+
+  /content/{contentId}:
+    get:
+      tags:
+        - content
+      summary: Returns the specific content for the given content id.
+      description: "The content metadata is from the last published version of the content. You can query both public and private content belonging to your company."
+      operationId: getSpecificContent
+      parameters:
+        - $ref: '#/components/parameters/contentId'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/specificContent'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+        '500':
+          $ref: '#/components/responses/error500'
+
+  /content/{contentId}/versions:
+    get:
+      tags:
+        - content
+      summary: Returns all versions of the content.
+      description: "The content metadata is from the last published version of the content. You can query both public and private content belonging to your company."
+      operationId: getContentVersions
+      parameters:
+        - $ref: '#/components/parameters/contentId'
+        - $ref: '#/components/parameters/versionId'
+        - $ref: '#/components/parameters/supportedMendixVersion'
+        - $ref: '#/components/parameters/publishedSince'
+        - $ref: '#/components/parameters/limitContentVersions'
+        - $ref: '#/components/parameters/offsetContent'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/contentVersions'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '500':
+          $ref: '#/components/responses/error500'
+ 
+components:
+  parameters:
+    contentId:
+      name: contentId
+      in: path
+      description: "This is the identifier of the content."
+      required: true
+      schema:
+        type: integer
+    versionId:
+      name: versionId
+      in: query
+      description: "This is the UUID of the published version."
+      required: false
+      schema:
+        type: string
+        format: UUID
+    name:
+      name: name
+      in: query
+      description: "Allows you to do a query on the name of the last published version of the content. This can help to get the identifier of the content. It does a precise match for the value passed in the filter."
+      required: false
+      schema:
+        type: string
+    supportedMendixVersion:
+      name: supportedMendixVersion
+      in: query
+      description: "Allows you to find the version that is supported by the Mendix version passed in the filter. If multiple supported versions match the value, it returns the most recent published version."
+      required: false
+      schema:
+        type: string
+        pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})\\b$"
+        example: '10.1.1'
+    isPrivate:
+      name: isPrivate
+      in: query
+      description: "Allows you to filter on public or private content. Supported values are `true` or `false`. If the value is `true`, it returns only the last published versions of the private content belonging to your company. If the value is `false`, it returns only the last published versions of the public content belonging to your company. If no value is passed, then it returns the last published versions of both public and private content belonging to your company."
+      required: false
+      schema:
+        type: string
+    publishedSince:
+      name: publishedSince
+      in: query
+      description: "Allows you to find the content whose last published version was published since the date passed the filter. You must provide a value in the full-date format as specified in RFC 3339, for example: 2023-09-01."
+      required: false
+      schema:
+        type: string
+        format: yyyy-MM-dd
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        maximum: 100
+        default: 10
+    limitContent:
+      name: limit
+      in: query
+      required: false
+      description: "This defines the maximum number of content that can be returned per request. If no limit is specified, the default value is 10. However, the limit cannot exceed 100. If the value provided exceeds 100, the limit is automatically set to 20 without generating an error message."
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        maximum: 100
+        default: 10
+    limitContentVersions:
+      name: limit
+      in: query
+      required: false
+      description: "This defines the maximum number of content versions that can be returned per request. If no limit is specified, the default value is 10. However, the limit cannot exceed 20. If the value provided exceeds 20, the limit is automatically set to 20 without generating an error message."
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        maximum: 20
+        default: 10
+    offsetContent:
+      name: offset
+      in: query
+      required: false
+      description: "The offset is the zero-based index of the first content to be returned on the page."
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+        default: 0
+   
+  responses:
+    error400:
+      description: |-
+        The request may contain invalid or missing data.
+
+        The error message gives additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-400:
+              value:
+                error:
+                  code: 400
+                  message: Bad Request
+                  detail: "The request could not be processed by the server because the input parsing/processing failed."
+    error401:
+      description: |-
+        No usable authentication credentials were found.
+
+        The error message gives additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-401:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+                  detail: "The credentials could not be authenticated or no credentials were provided."
+    error404:
+      description: |-
+        The required item could not be found.
+
+        The error message gives additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-404:
+              value:
+                error:
+                  code: 404
+                  message: Not Found
+                  detail: "The content is not found."
+    error500:
+      description: |-
+        An error occurred during the processing of the request.
+
+        The error message gives additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-500:
+              value:
+                error:
+                  code: 500
+                  message: Internal Server Error
+                  detail: "Something went wrong."
+  schemas:
+    error:
+      type: object
+      properties:
+        code:
+          type: integer
+          minimum: 0
+          example: 400
+        message:
+          type: string
+          example: Bad Request
+        detail:
+          type: string
+          example: Malformed request body
+    appCategories:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+            example: "Authentication"
+    uuid:
+      type: string
+      format: uuid
+      example: 346a2cad-6b96-477a-9225-3957b73ctest
+
+    specificContent:
+      type: object
+      required:
+        - contentId
+        - publisher
+        - type
+        - isPrivate
+        - latestVersion
+      properties:
+        contentId:
+          type: integer
+          format: int64
+          example: 50
+          description: "This is the identifier of the content."
+        publisher:
+          type: string
+          example: "Automation Company Ltd."
+          description: "This is the company that owns the content."
+        type:
+          type: string
+          example: "Module"
+          description: "This returns the type of the content selected during onboarding. For the full list of the content types, see: https://docs.mendix.com/appstore/general/app-store-overview/."
+        categories:
+          $ref: '#/components/schemas/appCategories'
+          description: "This returns all the categories selected during onboarding of the content. If there is no category, no value is returned."
+        supportCategory:
+          type: string
+          example: "Community"
+          enum:
+          - Community
+          - Platform
+          - Partner
+          - Extended
+          - Deprecated
+          - Siemens
+          description: "The type of support for this content. For more information, see https://docs.mendix.com/appstore/general/app-store-content-support/"
+        licenseUrl:
+          type: string
+          format: url
+          example: "http://www.apache.org/licenses/LICENSE-2.0.html"
+          description: "The license selected during onboarding."
+        isPrivate:
+          type: boolean
+          description: "This indicates whether the content is public or private."
+        latestVersion:
+          $ref: '#/components/schemas/version'
+    content:
+      type: object
+      description: "The list of content that includes various elements such as modules, widgets, templates, or other components that developers create and share with the Mendix community."
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/specificContent'
+    contentVersions:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/contentVersion'
+    version:
+      type: object
+      properties:
+          name:
+            type: string
+            example: "3d Viewer"
+            description: "This is the name of the version of the content."
+          versionId:
+            type: string
+            format: uuid
+            description: "This is the UUID of the version."
+          versionNumber:
+            type: string
+            pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})(?:-[a-zA-Z]+)?\\b$"
+            example: '10.1.1'
+            description: "This is the version number. The format of the version number is major.minor.patch, for example: `1.0.0`."
+          minSupportedMendixVersion:
+            type: string
+            pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})\\b$"
+            example: '10.1.1'
+            description: "This is the Studio Pro version selected during the onboarding. This means any Studio Pro version equal to or greater than this version is compatible with the latest version of the content."
+          publicationDate:
+            type: string
+            format: yyyy-MM-ddTHH-mm-ssZ
+            example: '2023-09-01T09:04:00Z'
+    contentVersion:
+        allOf:
+        - $ref: '#/components/schemas/version'
+        properties:
+          releaseNotes:
+            type: string
+            example: "These are the release notes for this version."
+            description: "These are the release notes for the published versions."
+        
+                
+      
+  securitySchemes:
+    PersonalAccesToken:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
+tags:
+  - name: content
+
+security:
+  - PersonalAccessToken: []

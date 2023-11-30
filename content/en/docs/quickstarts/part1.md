@@ -38,11 +38,11 @@ Before starting this guide, make sure you have completed the following prerequis
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
 * If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 3 Choosing an App Template
+## 3 Selecting an App Template
 
-Here you will choose a  starting point for your app. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers.
+Here you will select a starting point for your app. It is key that you select a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers.
 
-To choose the best app template, follow these steps:
+To select the best app template, follow these steps:
 
 1. Starting from Studio Pro, click **Create New App**:
 
@@ -50,8 +50,8 @@ To choose the best app template, follow these steps:
 
 2. Search for the **Blank Native Mobile App** and click **Use this starting point**.
 
-    {{% alert color="info" %}}**Why choose this template?**
-    Choosing the **Blank Native Mobile App** template lets you start with a native mobile navigation profile that is already configured and set up for your app. {{% /alert %}}
+    {{% alert color="info" %}}**Why select this template?**
+    Selecting the **Blank Native Mobile App** template lets you start with a native mobile navigation profile that is already configured and set up for your app. {{% /alert %}}
 
     {{% alert color="info" %}}**Does that mean this app is native mobile only?**
     No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.{{% /alert %}}
@@ -195,42 +195,41 @@ Now it is time to build your photo album app:
     {{< figure src="/attachments/quickstarts/part1/template-edits.png" width="450px" alt="Configure data source">}}
 
 5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**. 
-6. Note the red error icons on the **New** and **Edit** buttons of the template grid, which are shown becuase there is no page connected to the buttons:
+6. Note the red error icons on the **New** and **Edit** buttons of the template grid, which are shown because there is no page connected to the buttons:
 
     {{< figure src="/attachments/quickstarts/part1/generate-page.png" width="450px" alt="Connect page">}}
 
-7. To resolve this, right-click one of the buttons and select **Generate Page**.
-8. In the **Create Page** wizard that opens, leave the page name as is, and choose the **Form Vertical** template for the page.
+7. To resolve this, right-click each button and select **Generate Page**.
+8. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
 
 ### 6.3 Using Building Blocks
 
-Next, we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
+Next, we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks. A building block is a collection of pre-styled display widgets, and it is similar to a component in React.js. Building blocks are data agnostic, which means they are created without data and you need to link the relevant data sources for the building block’s components when including them in a page.
+
+To add a building block to your app's UI, follow these steps:
 
 1. Delete all the display widgets inside the grid (ensure you have switched from **Design** mode to **Structure** mode so you can delete the widgets easily).
-1. Right-click in the empty space and select **Add building block**.
-1. Search for and select **Card action with image**.
+2. Right-click in the empty space and select **Add building block**.
+3. Search for and select **Card action with image**.
 
-A building block is a collection of pre-styled display widgets. A building block is similar to a component in React.js. Building blocks are data agnostic, meaning they are created without data and you need to link the relevant data sources for the building block’s components when including them in the page.
+### 6.4 Configuring the Display Widgets
 
-Next you will connect your data to the display widgets because your page is currently displaying only static resources:
+Next, you need to connect your data to the display widgets, because your page is currently displaying only static resources:
 
 {{< figure src="/attachments/quickstarts/part1/edit-caption.png" width="450px" alt="Dynamic data">}}
 
-To start, replace the static image with the image the user uploads to the database: 
+To start, replace the static image with the image the end-user uploads to the database by following these steps:
 
-1. Right-click on the static image viewer and click **Convert to dynamic image**. 
-1. Right-click on the image viewer again, click **Select data source**, and then search for your **Picture** entity (click **Yes** when prompted to automatically fill the contents of the widget).
-
-Your **Images** will now be displayed from the database, but the **Labels** on the page will still be displaying their default text. To fix this, do the following:
-
-1. Double-click to open the properties of the label captioned **Card title**.
-1. Click the **Edit** button next to **Caption**.
-1. In the new window, replace the caption field with the place holder *{1}*. 
-1. Click to add a new **Parameter** and select the **Title** attribute:
+1. Right-click the static image viewer and click **Convert to dynamic image**. 
+2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget.
+3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
+4. Click the **Edit** button next to **Caption**.
+5. In the new dialog box, replace the caption with the place holder *{1}*. 
+6. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/part1/parameter.png" width="450px" alt="Add attributes">}}
 
-1. Repeat this process for the label below with the caption **Supporting text**, making sure to select the **Description** attribute this time.
+7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
 ## 7 Defining Logic Using Microflows
 
@@ -242,20 +241,25 @@ A microflow is a piece of custom logic that is represented visually in [Business
 
 To implement custom logic with a microflow, follow these steps:
 
+
+
+
+
+
 1. Open the page **Picture_NewEdit** using the App Explorer.
-1. Scroll down to the **Save** button at the bottom of the page. 
-1. Right-click the button then click **Edit on click action**. 
-1. Set the on click action type to call a microflow.
-1. Choose to create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture* (click the **Show** button to quickly navigate to the new microflow):
+2. Scroll down to the **Save** button at the bottom of the page. 
+3. Right-click the button then click **Edit on click action**. 
+4. Set the on click action type to call a microflow.
+5. Choose to create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture* (click the **Show** button to quickly navigate to the new microflow):
 
     {{< figure src="/attachments/quickstarts/part1/edit-microflow.png" width="450px" alt="Edit microflow">}}
 
-1. You should now see the microflow open in your editor:
+6. You should now see the microflow open in your editor:
 
     {{< figure src="/attachments/quickstarts/part1/microflow.png" width="450px" alt="Microflow">}}
 
-1. Add a decision to the flow (The orange diamond shape) from the toolbox. 
-1. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/#trim)):
+7. Add a decision to the flow (The orange diamond shape) from the toolbox. 
+8. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/#trim)):
 
     ```text
     trim($Picture/Title) != ''
@@ -263,7 +267,10 @@ To implement custom logic with a microflow, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/decision.png" width="450px" alt="Decision expression">}}
 
-1. Click OK to close the window. 
+9. Click OK to close the window. 
+
+
+
 
 Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
 
@@ -273,6 +280,10 @@ Notice the line has changed to red. This is because a decision creates multiple 
 1. Repeat these steps for the **Description** attribute until your microflow looks like this:
 
     {{< figure src="/attachments/quickstarts/part1/expand-microflow.png" width="450px" alt="Your microflow">}}
+    
+    
+    
+
 
 Finally we need to commit the image to the database, and then close the page:
 

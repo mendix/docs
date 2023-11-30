@@ -41,7 +41,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## 3 Starting Your App
 
-### 3.1 Understanding Mendix App Starting Points
+### 3.1 Understanding App Starting Points
 
 You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quickstart tutorial, as the app you will develop needs to work for web browsers.
 
@@ -57,10 +57,10 @@ To select the best app template, follow these steps:
 
 2. Search for the **Blank Native Mobile App** and click **Use this starting point**.
 
-    {{% alert color="info" %}}**Why select this template?**
+    {{% alert color="info" %}}**Why select this template?**</br>
     Selecting the **Blank Native Mobile App** template lets you start with a native mobile navigation profile that is already configured and set up for your app. {{% /alert %}}
 
-    {{% alert color="info" %}}**Does that mean this app is native mobile only?**
+    {{% alert color="info" %}}**Does that mean this app is native mobile only?**</br>
     No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.{{% /alert %}}
 
 4. Name your app *Quickstart App* and click **Create app**.

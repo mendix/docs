@@ -38,7 +38,7 @@ The PDF document generation service does not store pages or documents at any tim
 ### 1.3 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/). Other deployment scenarios will be supported at a later stage.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/). Other deployment scenarios will be supported at a later stage. Note that we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Platform.
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. Mendix recommends compressing high-resolution images to reduce their file size.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access (for example, using IP safe-listing and/or client certificates), our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.

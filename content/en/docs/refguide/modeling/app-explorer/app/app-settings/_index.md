@@ -13,7 +13,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" >}}
 
 The categories described below are available.
 
@@ -43,17 +43,18 @@ If you experience an issue while running your app in which objects seem to be lo
 
 Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" >}}
 
 The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
-* "ws"
-* "ws-doc"
-* "rest-doc"
+* "api-doc"
 * "odata"
 * "odata-doc"
-* "api-doc"
-* "xas"
+* "pages"
 * "reload"
+* "rest-doc"
+* "ws"
+* "ws-doc"
+* "xas"
 
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 

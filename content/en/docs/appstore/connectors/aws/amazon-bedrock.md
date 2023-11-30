@@ -89,19 +89,21 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
-3. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **ListFoundationModels** activity.
-4. Drag the **ListFoundationModels** activity onto the work area of your microflow.
-5. Double-click the **ListFoundationModels** activity to configure the required parameters.
-6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type ENUM_Region of the AWS Authentication connector.
-7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
+3. From the **Toolbox**, drag a `Create Object` activity to your Microflow and create an object of type `ListFoundationModelsRequest`.
+4. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **ListFoundationModels** activity.
+5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
+6. Double-click the **ListFoundationModels** activity to configure the required parameters.
+7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type ENUM_Region of the AWS Authentication connector.
+8. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
     1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
     2. Drag the **Generate Credentials** to the beginning of your microflow.
     3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
-8. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
-9. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
-10. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-11. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
-12. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+4. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
+9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
+10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
+11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
+12. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
+13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
 
@@ -111,11 +113,15 @@ To help you work with the Amazon Bedrock connector, the following sections of th
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 ListFoundationModelsResponse {#listfoundationmodelsresponse}
+#### 4.1.1 ListFoundationModelsRequest {#listfoundationmodelsrequest}
+
+This is the request entity of the `ListFoundationModels` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
+
+#### 4.1.2 ListFoundationModelsResponse {#listfoundationmodelsresponse}
 
 The `ListFoundationModelsResponse` entity collects (through association) the details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the `ModelSummary` entity.
 
-#### 4.1.2 ModelSummary {#modelsummary}
+#### 4.1.3 ModelSummary {#modelsummary}
 
 The `ModelSummary` entity stores the details (per model) needed to invoke all the available foundational models. 
 
@@ -125,9 +131,9 @@ The `ModelSummary` entity stores the details (per model) needed to invoke all th
 | `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
 | `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the `ListFoundationalModelsResponse` (string)|
 
-#### 4.1.3 InvokeModelGenericRequest {#invokemodelgenericrequest}
+#### 4.1.4 InvokeModelGenericRequest {#invokemodelgenericrequest}
 
-This is the request entity of the `InvokeModelGeneric` action.
+This is the request entity of the `InvokeModelGeneric` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
 
 | Attribute | Description |
 | --- | --- |
@@ -136,7 +142,7 @@ This is the request entity of the `InvokeModelGeneric` action.
 | `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke.|
 
 
-#### 4.1.4 InvokeModelGenericResponse {#invokemodelgenericresponse}
+#### 4.1.5 InvokeModelGenericResponse {#invokemodelgenericresponse}
 
 This is the response entity of the `InvokeModelGeneric` action.
 
@@ -152,13 +158,13 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 4.2.1 List Foundation Models {#list-foundation-models}
 
-The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires a **Credentials** object and an `ENUM_Region` value (like **us_west_2**).
+The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires a **Credentials** object, an `ENUM_Region` value (like **us_west_2**) and `ListFoundationModelsRequest` as input parameters.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Credentials (object)`, `ENUM_Region (enumeration)` | `ListFoundationModelsResponse (object)`|
+| `Credentials (object)`, `ENUM_Region (enumeration)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
 
 #### 4.2.2 Invoke Model Generic {#invoke-model-generic}
 

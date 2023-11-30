@@ -510,6 +510,8 @@ For users within your company, they do not need to accept their invitation. If t
 
 #### 5.1.3 Editing and Removing a User {#edit-remove-user}
 
+{{% alert color="info" %}}Only [Portfolio Managers](#access-management) can edit or remove a user.{{% /alert %}}
+
 At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To remove a user from the portfolio, click **Remove**.
 
 {{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
@@ -533,6 +535,10 @@ The **Access Requests** tab shows all open access requests for the portfolio wit
 * **Approve** – Clicking this approves the request and gives the user access to the portfolio.
 
 ### 5.3 Pending Invites
+
+{{% alert color="info" %}}
+This tab is only visible to Project Managers.
+{{% /alert %}}
 
 The **Pending Invites** tab shows all pending invites for the portfolio with the following items:
 

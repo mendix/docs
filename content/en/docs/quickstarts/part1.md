@@ -23,11 +23,13 @@ This tutorial teaches you several key Mendix concepts, such as adding an entity 
 
 A [microflow](/refguide/microflows/) is a visual way of expressing logic or code that is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/) when completing the tutorial for ease of use and security. Please note some of the screenshots in this tutorial might look a little different than your your version
+[Mendix Studio Pro](/refguide/) is the Mendix integrated development environment (IDE) for professional developers. Use the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/) when completing the tutorial for ease of use and security. Please note some of the screenshots in this tutorial might look a little different than your your version
 
 Every app created with Studio Pro automatically provisions a [Free App environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed to Mendix Cloud, so you do not have to waste time provisioning a testing environment.
 
 You do not need any additional software configured on your machine in order to start.
+
+To learn more about Mendix concepts, check out the various sections of the [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/).
 
 ## 2 Prerequisites 
 
@@ -37,9 +39,15 @@ Before starting this guide, make sure you have completed the following prerequis
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
 * If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 3 Selecting an App Template
+## 3 Starting Your App
 
-Here you will select a starting point for your app. It is key that you select a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers.
+### 3.1 Understanding Mendix App Starting Points
+
+You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quickstart tutorial, as the app you will develop needs to work for web browsers.
+
+A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
+
+### 3.2 Selecting the App Template
 
 To select the best app template, follow these steps:
 
@@ -60,13 +68,11 @@ To select the best app template, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
 
-A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
-
 ## 4 Exploring Studio Pro
 
 ### 4.1 Studio Pro Overview
 
-Now that you have completed your first tasks in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
+Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
 
 Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
@@ -82,11 +88,11 @@ For more information on menus and functions, see the [Top Bar](/refguide/studio-
 
 ### 4.3 App Explorer
 
-You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and modules in your app:
+You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
 {{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="App Structure">}}
 
-Any [modules](/refguide/modules/) you download from the Marketplace appear under **Marketplace Modules** > **App**.
+Any [Marketplace modules](/appstore/modules/) you download appear under **Marketplace Modules** > **App**.
 
 ### 4.4 Bottom Dockable Panes
 
@@ -117,13 +123,13 @@ For additional information on available panes, see the [Integration](/refguide/v
 
 ## 5 Creating Your App's Domain Model
 
-In Mendix, you define your app's data structure in the domain model.
-
 ### 5.1 Understanding the Domain Model
+
+In Mendix, you define your app's data structure in the [domain model](/refguide/domain-model/).
 
 The domain model is a visual representation of your app’s database. Each module in your app (meaning, modules created by you or your app team, modules downloaded from the Marketplace, or system nodules) can have their own individual models, which are combined and translated into a database automatically at runtime. 
 
-Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other as one-to-one, one-to-many, or many-to-many associations.
+Domain models are comprised of [entities](/refguide/entities/) similar to a table in traditional SQL. Entities have [attributes](/refguide/attributes/) (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other as one-to-one, one-to-many, or many-to-many associations.
 
 When you run your app locally or deploy it for the first time, the Mendix Runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
@@ -133,7 +139,7 @@ Mendix by default uses its own built-in HSSQL database, but Mendix also supports
 
 #### 5.2.1 Creating the Entity
 
-To create an images to store the images used in your app, follow these steps:
+To create an entity to store the images used in your app, follow these steps:
 
 1. Open the domain model for the native mobile module by double-clicking it in the **App Explorer**:
 
@@ -174,7 +180,7 @@ You have created a new entity called **Picture** that inherits from the **System
 
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
-* Widgets – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use.
+* [Widgets](/refguide/page-resources/) – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use. There are also many [platform-supported widgets](/appstore/widgets/) available in the Mendix Marketplace.
 * Context widgets – A context widget displays data from the domain model. In Mendix, there are four main context widgets: 
     * [Data view](/refguide/data-view/) – displays a single record
     * [Data grid](/refguide/data-grid/) – displays many records in a table format
@@ -238,7 +244,7 @@ To start, replace the static image with the image the app end-user uploads to th
 
 There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 
-But what if you want your app to perform some custom logic? For example, what if you wanted to validate that the end-user entered text for the **Title** and **Description** fields before they clicked **Save**? In Mendix, you can achieve this using a microflow.
+But what if you want your app to perform some custom [logic](/refguide/application-logic/)? For example, what if you wanted to validate that the end-user entered text for the **Title** and **Description** fields before they clicked **Save**? In Mendix, you can achieve this using a microflow.
 
 A microflow is a piece of custom logic that is represented visually in [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server, which means an internet connection is required for it to execute. A microflow can only have one start point, but it can often have multiple end points.
 

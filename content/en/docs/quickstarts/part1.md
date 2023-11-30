@@ -15,8 +15,7 @@ aliases:
 
 This quickstart tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
-After completing this tutorial, you will have a photo album app that allows end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
-
+After completing this tutorial, you will have a photo album app that allows app end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
 ### 1.2 Getting to Know Mendix
 
@@ -65,6 +64,8 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 ## 4 Exploring Studio Pro
 
+### 4.1 Studio Pro Overview
+
 Now that you have completed your first tasks in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
 
 Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
@@ -73,13 +74,13 @@ Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro
 
 The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under the [View](/refguide/view-menu/) menu as well as reset your view back to the default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 4.1 Top Bar
+### 4.2 Top Bar
 
-The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the play icon). 
+The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the green play icon). 
 
 For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
-### 4.2 App Structure on the Left
+### 4.3 App Explorer
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and modules in your app:
 
@@ -87,7 +88,7 @@ You can navigate through your app using the [App Explorer](/refguide/app-explore
 
 Any [modules](/refguide/modules/) you download from the Marketplace appear under **Marketplace Modules** > **App**.
 
-### 4.3 Bottom Dockable Panes
+### 4.4 Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
@@ -101,7 +102,7 @@ Here you will find several default dockable panes:
 
 For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 4.4 Right Dockable Panes
+### 4.5 Right Dockable Panes
 
 Look at the right dockable pane of Studio Pro:
 
@@ -204,7 +205,7 @@ Now it is time to build your photo album app:
 
 ### 6.3 Using Building Blocks
 
-Next, we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks. A building block is a collection of pre-styled display widgets, and it is similar to a component in React.js. Building blocks are data agnostic, which means they are created without data and you need to link the relevant data sources for the building block’s components when including them in a page.
+Next, you need to replace some of the auto-generated content inside the template grid with some sleeker building blocks. A building block is a collection of pre-styled display widgets, and it is similar to a component in React.js. Building blocks are data agnostic, which means they are created without data and you need to link the relevant data sources for the building block’s components when including them in a page.
 
 To add a building block to your app's UI, follow these steps:
 
@@ -218,7 +219,7 @@ Next, you need to connect your data to the display widgets, because your page is
 
 {{< figure src="/attachments/quickstarts/part1/edit-caption.png" width="450px" alt="Dynamic data">}}
 
-To start, replace the static image with the image the end-user uploads to the database by following these steps:
+To start, replace the static image with the image the app end-user uploads to the database by following these steps:
 
 1. Right-click the static image viewer and click **Convert to dynamic image**. 
 2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget.
@@ -277,26 +278,23 @@ To implement custom logic with a microflow, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/expand-microflow.png" width="450px" alt="Your microflow">}}
     
-### 7.3 ___
+### 7.3 Finishing Up
 
-    
+Finally, the image needs to be committed to the database and the paged closed:
 
-
-Finally we need to commit the image to the database, and then close the page:
-
-1. Add a **Commit object(s)** action from the toolbox to the true path.
-1. Select the **Picture (NativeMobile.Picture)** entity to commit, select With **Events** > **No**, and select **Refresh in Client** > **Yes**:
+1. Add a **Commit object(s)** action from the **Toolbox** to the true path.
+2. Select the **Picture (NativeMobile.Picture)** entity to commit, and configure **Events** > **No** and **Refresh in Client** > **Yes**:
 
     {{< figure src="/attachments/quickstarts/part1/commit-objects.png" width="450px" alt="Configure commit object">}}
 
-1. Add a **Close page** action to the end of the microflow to ensure the user is directed back to the home page after clicking **Save**. 
+3. Add a **Close page** action to the end of the microflow to ensure the end-user is directed back to the home page after clicking **Save**. 
 
-You have finished your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
+You have now finished developing your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the **Run Locally** button (via the green play icon in the top bar). Your app should look like this:
 
 {{< figure src="/attachments/quickstarts/part1/complete.png" width="450px" alt="Run your app">}}
 
 {{% alert type="info" %}}
-Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud Free Tier EU.
+Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on the Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
 Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 

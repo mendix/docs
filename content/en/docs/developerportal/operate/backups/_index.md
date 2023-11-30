@@ -133,7 +133,7 @@ You can view details of a backup by clicking the **More Options** icon and then 
 Mendix Cloud backups that contain a very large number of files (that is, greater than about 50,000) experience slow performance for all backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file. As the number of files increases, the overhead becomes quite significant and can add several hours to the duration.
 
 ### 4.2 Customizations {#limitations-customizations}
-The customization of databases of apps in the Mendix Cloud is not supported. This includes, but is not limited to, installing extensions and enabling or disabling specific features. We do not support the upload and restore of backups of customized database to the Mendix Cloud. It is very likely that the restore of a backup of a customized database will fail. Making customizations to the database of an app in the Mendix Cloud will break the support and SLA for this app.
+Customization of the databases of apps in Mendix Cloud is not supported. This includes, but is not limited to, installing extensions and enabling or disabling specific features. Mendix does not support uploading and restoring backups of customized databases to Mendix Cloud. If you attempt to restore a backup of a customized database, the restore will likely fail. Note that customizing the database of an app in Mendix Cloud breaks the support and SLA for the app.
 
 ## 5 Read More
 

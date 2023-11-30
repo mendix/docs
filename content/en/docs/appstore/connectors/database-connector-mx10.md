@@ -17,7 +17,7 @@ This connector is supported for Studio Pro [10.3](/releasenotes/studio-pro/10.3/
 
 Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro (design time). 
 
-If you need to connect to other database types or use other statements besides `SELECT`, check out the [Database](/appstore/connectors/database-connector/) connector.
+If you need to connect to other database types, check out the [Database](/appstore/connectors/database-connector/) connector.
 
 ### 1.2 Features {#features}
 
@@ -39,7 +39,7 @@ This connector supports the following statements:
 
 ### 1.3 Prerequisites
 
-* Studio Pro 10.6 or above
+* Studio Pro 10.3 or above
 * External database connection details, including the following:
     * Login credentials
     * Database type
@@ -58,13 +58,13 @@ With this connector, you can test database connections and add queries and param
 
 After [installing](#installation) the connector, get started by doing the following:
 
-1.  Right-click the module you would like to add the connection to and click **Add other > External database connection**. This opens the **Database Connection** wizard:
+1.  Right-click the module you would like to add the connection to and click **Add other** > **External database connection**. This opens the **Database Connection** wizard:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/database-connection-wizard.png" >}}
 
 2.  Select the database to which you would like to connect and enter the required information.
 
-3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Successful** text pop-up, try checking your database details again.
+3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Successful** text confirmation, try checking your database details again.
 
 4.  Click **Save** to open the external database document for this database.
 
@@ -75,7 +75,7 @@ Now you can start [querying the database](#query-database) to select data for us
 To query the database, do the following:
 
 1. Enter a query **Name** so you can access the same query later.
-2. Enter your `SELECT` **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * from customers` selects all rows in the **Customers** table:
+2. Enter your **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * from customers` selects all rows in the **Customers** table:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
    

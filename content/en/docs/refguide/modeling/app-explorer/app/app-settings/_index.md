@@ -56,6 +56,8 @@ The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or 
 * "ws-doc"
 * "xas"
 
+Furthermore, static files are served on `/`. So any prefix that has the same name as a static folder located in `/deployment/web/` will cause an error.
+
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 
 ### 3.4 After Startup{#after-startup}

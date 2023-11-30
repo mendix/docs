@@ -11,13 +11,11 @@ aliases:
 
 ## 1 Introduction
 
-### 1.1 What Will You Learn?
-
 This quickstart tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
 After completing this tutorial, you will have a photo album app that allows app end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
-### 1.2 Getting to Know Mendix
+### 1.1 Getting to Know Mendix
 
 This tutorial teaches you several key Mendix concepts, such as adding an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), creating basic pages that use building blocks and design properties, and modeling your first microflow. 
 
@@ -41,13 +39,11 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## 3 Starting Your App
 
-### 3.1 Understanding App Starting Points
-
 You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quickstart tutorial, as the app you will develop needs to work for web browsers.
 
 A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
 
-### 3.2 Selecting the App Template
+### 3.1 Selecting the App Template
 
 To select the best app template, follow these steps:
 
@@ -70,8 +66,6 @@ To select the best app template, follow these steps:
 
 ## 4 Exploring Studio Pro
 
-### 4.1 Studio Pro Overview
-
 Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
 
 Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
@@ -80,13 +74,13 @@ Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro
 
 The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under the [View](/refguide/view-menu/) menu as well as reset your view back to the default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 4.2 Top Bar
+### 4.1 Top Bar
 
 The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the green play icon). 
 
 For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
-### 4.3 App Explorer
+### 4.2 App Explorer
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
@@ -94,7 +88,7 @@ You can navigate through your app using the [App Explorer](/refguide/app-explore
 
 Any [Marketplace modules](/appstore/modules/) you download appear under **Marketplace Modules** > **App**.
 
-### 4.4 Bottom Dockable Panes
+### 4.3 Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
@@ -108,7 +102,7 @@ Here you will find several default dockable panes:
 
 For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 4.5 Right Dockable Panes
+### 4.4 Right Dockable Panes
 
 Look at the right dockable pane of Studio Pro:
 
@@ -123,8 +117,6 @@ For additional information on available panes, see the [Integration](/refguide/v
 
 ## 5 Creating Your App's Domain Model
 
-### 5.1 Understanding the Domain Model
-
 In Mendix, you define your app's data structure in the [domain model](/refguide/domain-model/).
 
 The domain model is a visual representation of your app’s database. Each module in your app (meaning, modules created by you or your app team, modules downloaded from the Marketplace, or system nodules) can have their own individual models, which are combined and translated into a database automatically at runtime. 
@@ -135,9 +127,7 @@ When you run your app locally or deploy it for the first time, the Mendix Runtim
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
-### 5.2 Configuring an Entity to Store the Images
-
-#### 5.2.1 Creating the Entity
+### 5.1 Creating an Entity to Store the Images
 
 To create an entity to store the images used in your app, follow these steps:
 
@@ -160,7 +150,7 @@ To create an entity to store the images used in your app, follow these steps:
 
     A generalization is a parent entity from which the child entity inherits properties. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
     
-#### 5.2.2 Creating Attributes
+### 5.2 Creating Attributes
 
 You have created a new entity called **Picture** that inherits from the **System** entity called **Image**. However, the **Image** entity also inherits some of its properties from another **System** entity called **FileDocument**. This means you must add some attributes. Remember, your entity now inherits many properties from its parent entity **Image**. Therefore, you only have to add fields for the image's **Title** and **Description** information.
 
@@ -176,8 +166,6 @@ You have created a new entity called **Picture** that inherits from the **System
 
 ## 6 Creating Your App's User Interface
 
-### 6.1 Understanding the UI
-
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
 * [Widgets](/refguide/page-resources/) – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use. There are also many [platform-supported widgets](/appstore/widgets/) available in the Mendix Marketplace.
@@ -187,7 +175,7 @@ Now that you have created your domain model, it is time to create your photo alb
     * [List view](/refguide/list-view/) – displays many records in a scrollable list
     * [Template grid](/refguide/template-grid/) – displays many records in configurable columns and rows
 
-### 6.2 Configuring a Template Grid
+### 6.1 Configuring a Template Grid
 
 Now it is time to build your photo album app:
 
@@ -209,7 +197,7 @@ Now it is time to build your photo album app:
 7. To resolve this, right-click each button and select **Generate Page**.
 8. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
 
-### 6.3 Using Building Blocks
+### 6.2 Using Building Blocks
 
 Next, you need to replace some of the auto-generated content inside the template grid with some sleeker building blocks. A building block is a collection of pre-styled display widgets, and it is similar to a component in React.js. Building blocks are data agnostic, which means they are created without data and you need to link the relevant data sources for the building block’s components when including them in a page.
 
@@ -219,7 +207,7 @@ To add a building block to your app's UI, follow these steps:
 2. Right-click in the empty space and select **Add building block**.
 3. Search for and select **Card action with image**.
 
-### 6.4 Configuring the Display Widgets
+### 6.3 Configuring the Display Widgets
 
 Next, you need to connect your data to the display widgets, because your page is currently displaying only static resources:
 
@@ -240,15 +228,13 @@ To start, replace the static image with the image the app end-user uploads to th
 
 ## 7 Defining Logic Using Microflows
 
-### 7.1 Understanding Mendix Logic
-
 There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 
 But what if you want your app to perform some custom [logic](/refguide/application-logic/)? For example, what if you wanted to validate that the end-user entered text for the **Title** and **Description** fields before they clicked **Save**? In Mendix, you can achieve this using a microflow.
 
 A microflow is a piece of custom logic that is represented visually in [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server, which means an internet connection is required for it to execute. A microflow can only have one start point, but it can often have multiple end points.
 
-### 7.2 Implementing Custom Logic
+### 7.1 Implementing Custom Logic
 
 To implement custom logic with a microflow, follow these steps:
 
@@ -284,7 +270,7 @@ To implement custom logic with a microflow, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/expand-microflow.png" width="450px" alt="Your microflow">}}
     
-### 7.3 Finishing Up
+### 7.2 Finishing Up
 
 Finally, the image needs to be committed to the database and the paged closed:
 

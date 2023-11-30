@@ -264,26 +264,21 @@ To implement custom logic with a microflow, follow these steps:
     ```text
     trim($Picture/Title) != ''
     ```
-    
+
     The [trim](/refguide/string-function-calls/#trim) function always returns a string:
 
     {{< figure src="/attachments/quickstarts/part1/decision.png" width="450px" alt="Decision expression">}}
 
-9. Click **OK** to close the dialog box. 
-
-
-
-
-Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
-
-1. Add the additional path (by clicking the activity's red dot and dragging a connection out of it) and make sure to select the **False** path as the one which goes down. 
-1. You should also add the **Validation feedback** action to the false path to provide feedback to the user.
-1. Double-click your validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, **Member** > **Title**, and in **Template** add some error text such as *Please provide a title for your picture.*.
-1. Repeat these steps for the **Description** attribute until your microflow looks like this:
+9. Click **OK** to close the dialog box and notice the microflow line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false.
+10. Add the additional path by clicking the activity's red dot and dragging a connection out of it, making sure to select the **False** path as the one that goes down. 
+11. Add the **Validation feedback** action to the false path (so that feedback is provided to the end-user).
+12. Double-click the validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, then select **Member** > **Title**, and in **Template**, add some error text (for example, *Please provide a title for your picture.*).
+13. Repeat these steps for the **Description** attribute until your microflow looks like this:
 
     {{< figure src="/attachments/quickstarts/part1/expand-microflow.png" width="450px" alt="Your microflow">}}
     
-    
+### 7.3 ___
+
     
 
 

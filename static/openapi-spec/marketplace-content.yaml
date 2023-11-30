@@ -321,6 +321,7 @@ components:
           $ref: '#/components/schemas/version'
     content:
       type: object
+      description: "The list of content that includes various elements such as modules, widgets, templates, or other components that developers create and share with the Mendix community."
       properties:
         items:
           type: array

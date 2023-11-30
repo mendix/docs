@@ -138,30 +138,30 @@ To create an images to store the images used in your app, follow these steps:
     
     Notice there is already an entity here called **Login**, which is part of the template and is used only for native mobile authentication. You can ignore this for now.
 
-2. Add an entity named *Picture* to store all your uploaded images in the database. Drag a new **Entity** from the **Toolbox** into the domain model (or right-click anywhere in the domain model to add the new entity). 
-3. Double-click the new entity to open its properties window:
+2. Drag a new **Entity** from the **Toolbox** into the domain model (or right-click in the domain model and select **Add entity**). This entity will store all your uploaded images in the database. 
 
     {{< figure src="/attachments/quickstarts/part1/entity-config.png" width="450px" alt="Open properties">}}
 
+3. Double-click the new entity to open its properties dialog box:
+
     {{< figure src="/attachments/quickstarts/part1/entity-config-cont.png" width="450px" alt="Edit configuration">}}
 
-4. Name the entity *Picture*, then click **Select** next to **Generalization**. 
-5. Search for and select the **Image** entity (found in the system module).
+4. Name the entity *Picture*, then click **Generalization** > **Select**. 
+5. Search for and select the **Image** entity (found in the **System** module).
 
-A generalization is a parent entity your child entity inherits properties from. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
+    A generalization is a parent entity from which the child entity inherits properties. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
 
-For example you have created a new entity **Picture** which inherits from the system entity **Image**. However, the **Image** entity also inherits some of its properties from another system entity called **FileDocument**.
+    You have created a new entity called **Picture** that inherits from the **System** entity called **Image**. However, the **Image** entity also inherits some of its properties from another **System** entity called **FileDocument**. This means you must add some attributes. Remember, your entity now inherits many properties from its parent entity **Image**. Therefore, you only have to add fields for the image's **Title** and **Description** information.
 
-Next you must add some attributes. Remember, your entity now inherits many properties from its parent entity **-Image**. Therefore you only have to add fields for the image's **Title** and **Description** information:
-
-1. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
+6. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
 
     {{< figure src="/attachments/quickstarts/part1/add-attributes.png" width="450px" alt="Name attribute">}}
 
-2. Repeat the process while adding an attribute called *Description*, except select **Unlimited** for the string's **Length**.
-3. Click **OK** to close the entity’s properties window:
+7. Repeat the step above to add an attribute called *Description*, but select **Unlimited** for the string's **Length**:
 
     {{< figure src="/attachments/quickstarts/part1/description-attributes.png" width="450px" alt="Entity properties">}}
+    
+8. Click **OK** to close the entity’s properties dialog box.
 
 ## 6 Creating Your App's User Interface
 

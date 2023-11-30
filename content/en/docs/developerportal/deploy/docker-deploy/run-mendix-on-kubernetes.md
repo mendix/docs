@@ -10,7 +10,7 @@ tags: ["Minikube", "Docker", "deployment"]
 
 This how-to takes you through the process of deploying a Docker image of your Mendix app to [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), a local version of [Kubernetes](https://kubernetes.io/docs/home/) which runs in a Windows container or virtual machine. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
-Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away much of the heavy lifting. 
+Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, Mendix suggests you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away much of the heavy lifting. 
 
 This how-to teaches you how to do the following:
 
@@ -293,7 +293,7 @@ minikube image push <hub-user>/<repo-name>:<tag>
 Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in `mendix-app.yaml`. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
 {{% alert color="info" %}}
-In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
+In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, Mendix recommends using the storage provided on the selected cloud platform.
 {{% /alert %}}
 
 Deploy the application to Kubernetes:

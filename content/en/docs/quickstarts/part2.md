@@ -33,14 +33,14 @@ Native mobile apps are offline first and only fetch data from the server when pr
 Before starting this guide, make sure you have completed the following prerequisite:
 
 * Read through [Part 1: Build a Responsive Web App](/quickstarts/part1/)
-* Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
+* Download the [Make It Native 10](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-### 2.1 Downloading the Make It Native 9 App
+### 2.1 Downloading the Make It Native 10 App
 
-The [Make it Native 9](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
+The [Make it Native 10](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
 
-Specifically, the Make it Native 9 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
+Specifically, the Make it Native 10 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
 
 ## 3 Creating a Native Mobile Picture App
 
@@ -191,4 +191,5 @@ For more information on building and deploying apps with Mendix, see [Building N
 * [Studio Pro Overview](/refguide/studio-pro-overview/) – describes Studio Pro tabs, menus, and shortcut keys
 * [Mendix Best Practices for Development](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps
 * [Starting with App from a Spreadsheet](/refguide/app-from-spreadsheet/) – describes importing a Microsoft Excel spreadsheet and building an app using your data
-* [Mendix Academy Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new Mendix users who are also experienced developers
+* [Mendix Academy Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer) – the learning path recommended for new Mendix users who want to create their first app using low-code
+* [Mendix Academy Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the learning path recommended for new Mendix users who are also experienced developers

@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to **Feedback** in the Developer Portal. **Feedback** enables your team to view and manage all the feedback items that users have sent from your app.
+If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. You can access this page by selecting your app in the Developer Portal and then clicking **Feedback** in the navigation pane. **Feedback** enables your team to view and manage all the feedback items that users have sent from your app.
 
 ### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
@@ -40,13 +40,11 @@ If the user does not want to receive notifications anymore, they can clear the c
 
 After a user submits a feedback item from your app, it goes automatically to **Feedback** in the Developer Portal. **Feedback** enables your team to view all the feedback items. It also allows team members with the right permissions to organize the feedback items, and add feedback items manually.
 
-{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/#notifications) in the Developer Portal. If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
+{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
 
 **Feedback** contains two pages: **Inbox** and **Archive**.
 
 ### 2.1 Inbox {#inbox}
-
-#### 2.1.1 Viewing Feedback Items
 
 On the **Inbox** page, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
 
@@ -70,7 +68,7 @@ To search by **Subject**, **Description**, **User Email** and **Tags**, type the
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**,  **Status**, **Submission date**, and **Assignees**.
 
-#### 2.1.2 Organizing Feedback Items
+#### 2.1.1 Organizing Feedback Items in Inbox
 
 If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can also organize feedback items.
 
@@ -155,6 +153,8 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" >}}
 
+  {{% alert color="info" %}}For more information about how to manage tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
+
 * **Linked Feedback** – This shows which feedback items are linked to this feedback item.
 
   You can link a feedback item by selecting a feedback item from the drop-down list.
@@ -174,3 +174,27 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 * **Contact reporter** (not available on the side panel) – This section allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
+  
+#### 2.3.1 Managing Tags {#manage-tags}
+  
+  From the [feedback details](#feedback-details) page, you can manage tags by clicking the settings icon next to the **Tags** text box:
+  
+  {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" >}}
+  
+  To create a new tag, do as follows:
+  
+  1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
+  2. In the text box, enter the name for the new tag.
+  3. If you want to change the color of the new tag, click the colored circle and select a different color.
+  4. Click the check mark icon to save the new tag.
+  
+  To edit an existing tag, do as follows:
+  
+  1. To change the tag name, click the name of the tag. After the name becomes editable. Edit the name in the text box, and then click outside the text box to save the change.
+  2. To change the tag color, click the colored circle, and select a different color.
+  
+  To delete an existing tag, do as follows:
+  
+  1. Hover over the row where the tag is listed, a delete icon (red trash can) appears at the end of the row.
+  2. Click the delete icon. The **Confirmation** dialog box opens.
+  3. Click **Delete Tag**.

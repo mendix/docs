@@ -26,7 +26,7 @@ The **Show styling for** setting configures which styling files are shown in the
 You can select one of the following options:
 
 * **App Only** – This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the **theme** folder in App Explorer > **App** > **Styling**.
-* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
+* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, for example, to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
 * **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
 
 For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
@@ -119,7 +119,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 6.2 Git 
+### 6.2 Git{#git}
 
 #### 6.2.1 Name
 
@@ -153,6 +153,14 @@ Select **Enable automatic fetching from a remote repository** to enable the [Aut
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
 
+#### 6.2.8 Combine Local and Remote Changes
+
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.5.
+{{% /alert %}}
+
+When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}
@@ -177,6 +185,16 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-## 9 Read More
+## 9 New Features Tab {#new-features}
+
+### 9.1 Micro- And Nanoflow Editor
+
+Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
+
+### 9.2 Visual Builder
+
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the Builder as the default XPath constraint editor**.
+
+## 10 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

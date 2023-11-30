@@ -61,7 +61,7 @@ Advanced Audit Trail is a premium Mendix product that is subject to a purchase a
 
 ### 2.2 Installing the Components in Your app
 
-To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
+To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. Then follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Using Marketplace Content* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
 
 {{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
@@ -77,7 +77,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
     You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 
-    {{% alert color="info" %}}When your Mendix application includes entities with inheritance, we recommend you to only apply the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
+    {{% alert color="info" %}}When your Mendix application includes entities with inheritance, Mendix recommends only applying the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
 4. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
 5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
@@ -100,12 +100,12 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
         * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
 
 * Snapshots
-    * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g., password fields) in the snapshots.
+    * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (for example, password fields) in the snapshots.
 
         * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
         * **False**: Hashed Strings will be excluded and therefore not audited.
 
-        {{% alert color="info" %}}Manually-encrypted (e.g., using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
+        {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
 
 * Integration
     * **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
@@ -133,7 +133,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
 ### 3.5 Adding Additional Information to a Snapshot (Optional)
 
-It is possible to submit additional information for a snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature, the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
+It is possible to submit additional information for a snapshot (for example, in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature, the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 
@@ -141,7 +141,7 @@ Use **Override User for Snapshots in this Context** from the **Toolbox** (the **
 
 ### 3.7 Implementing User Name Scrambling (Optional)
 
-Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
+Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store a username differently in the long-term data storage. This can be used for anonymizing data (for example, due to GDPR).
 
 ### 3.8 Implementing Display Formatters (Optional)
 

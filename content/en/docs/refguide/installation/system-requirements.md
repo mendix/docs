@@ -27,8 +27,7 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
     * Eclipse Temurin JDK 11 (x64)
-    
-    Oracle JDK 11 can also be used if this is already installed.
+    * Oracle JDK 11 can also be used if this is already installed
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -76,6 +75,21 @@ For more information on ports and modifying Studio Pro's default ports, see [Con
 For active development and running your application locally, your app folder should be on local drive (such as C:) or on a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
 
 ### 2.5 Supported Git Service Providers {#supported-providers}
+
+Git service providers have size limitations related to commits and repositories.
+
+Studio Pro does not support Large File Storage (LFS) for any provider.
+
+You can find a list of known limitations below, however, we advise you to check the most up-to-date limitations on respective web sites before considering using a certain service provider.
+
+| Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
+| ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB)  | 5 GB                |
+| GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
+| Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
+| Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
+
+¹ You will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
 
 #### 2.5.1 Azure Repos and Azure DevOps Server 
 
@@ -180,7 +194,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19, 21c
-* PostgreSQL: 11, 12, 13, 14, 15
+* PostgreSQL: 12, 13, 14, 15, 16
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}
@@ -227,7 +241,7 @@ Internet Explorer is not supported in Studio Pro 10.
 
 ## 10 Mobile Operating Systems {#mobileos}
 
-For native and progressive web apps built with Mendix the following operating system versions are supported:
+For native and progressive web apps built with Mendix, the following operating system versions are supported:
 
 * Latest version of iOS
 * Latest three versions of Android
@@ -236,7 +250,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

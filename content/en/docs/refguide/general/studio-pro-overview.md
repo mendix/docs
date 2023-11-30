@@ -190,16 +190,7 @@ The following shortcut keys are available in the page editor:
 
 ### 7.4 Microflow and Nanoflow Editor Shortcut Keys
 
-The following shortcut keys are available in the microflow and nanoflow editors:
-
-| Key | Description |
-| --- | --- |
-| Arrow keys | Moves the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the end event to the right of it becomes selected. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. |
-| <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
-| <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
-| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
-| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow, nanoflow, and rule editors. 
 
 ### 7.5 Debugger Shortcut Keys {#debugger-shortcuts}
 

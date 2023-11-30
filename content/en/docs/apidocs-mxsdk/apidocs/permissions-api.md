@@ -14,7 +14,7 @@ weight: 75
 
 The Permissions API enables retrieving the [user roles](/refguide/user-roles/) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
-* A user may be granted roles through a group policy for a [group](/developerportal/control-center/#groups) in which they are a member. Group policies define a specific set of user roles to be granted to members of the group to which the policy applies for a specific environment. Group membership can also be changed by the [User Management API](/apidocs-mxsdk/apidocs/user-management-api/) .
+* A user may be granted roles through a group policy for a [group](/control-center/groups/) in which they are a member. Group policies define a specific set of user roles to be granted to members of the group to which the policy applies for a specific environment. Group membership can also be changed by the [User Management API](/apidocs-mxsdk/apidocs/user-management-api/) .
 
 {{% alert color="info" %}}
 

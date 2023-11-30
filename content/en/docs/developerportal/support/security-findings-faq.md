@@ -21,7 +21,7 @@ This FAQ document is not updated in real time. For updates on current security i
 
 ### 1.2 Security Advisories
 
-Security Advisories for Mendix are published under [Security Advisories](/releasenotes/security-advisories/).
+Security Advisories for Mendix are published in [Security Advisories](/releasenotes/security-advisories/).
 
 ### 1.3 General Security Advice
 
@@ -33,7 +33,7 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 
@@ -85,9 +85,9 @@ If you want to scan uploaded files for malicious content, you have to implement 
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
-* The jar is coming from a platform supported module. For more information about support categories see [Marketplace Content Support](/appstore/general/app-store-content-support/).
+* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/general/app-store-content/#update-module) in *Use Marketplace Content in Studio Pro* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Using Marketplace Content* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 
@@ -114,12 +114,12 @@ For more information, please see the [Cookies](/refguide/mendix-client/#cookies)
 
 ### 5.2 Cookie Missing ‘HTTPOnly’ Attribute
 
-In the Mendix cloud, [almost all] cookies will have the ‘HttpOnly’ attribute set to true by default. 
+In Mendix Cloud, (almost all) cookies have the ‘HttpOnly’ attribute set to true by default. 
 We have the cookies set by default in Mendix applications described in the [Cookies](/refguide/mendix-client/#cookies) section of *Mendix Client*. 
 
 For Mendix applications, the Cookies have the ‘HTTPOnly’ attribute set to true when they are set by the Mendix Runtime. Cookies which are set by the Mendix Client can't have the 'HttpOnly’ attribute set to true, as those cookies are not available to JavaScript, which is the language used by the Mendix Client.
 
-Cookies set by the Mendix Runtime, which may contain sensitive information such as the session id, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
+Cookies set by the Mendix Runtime, which may contain sensitive information such as the session ID, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
 
 ## 6 Why Are Some Security-Related HTTP Headers Not Set for My App?
 
@@ -139,11 +139,27 @@ By default, HTTP responses from the web server reveal information about the type
 
 Mendix considers this approach to be "security by obscurity". We do not feel that allowing responses to contain this information is a valid security risk in itself. Together with our Security team it was therefore decided not to hide this information. 
 
-A good example of this is leaking the web server information (e.g. "Server: nginx"). Firstly, the commonest web server types are nginx, IIS, and Apache. So publicly-known vulnerabilities of these three web servers will be tried regardless of whether or not this information is leaked. Secondly, [the Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) is in a public GitHub repository and you can easily see that Mendix is using nginx as its web server. Hiding this from the response headers doesn't make Mendix apps more secure. 
+A good example of this is leaking the web server information (for example, "Server: nginx"). Firstly, the commonest web server types are nginx, IIS, and Apache. So publicly-known vulnerabilities of these three web servers will be tried regardless of whether or not this information is leaked. Secondly, [the Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) is in a public GitHub repository and you can easily see that Mendix is using nginx as its web server. Hiding this from the response headers doesn't make Mendix apps more secure.
 
-## 7 Why Are Static Files Publicly Accessible in My App?
+### 6.4 Cache Control Header Is Set Incorrectly
 
-Mendix apps use two types of content: static content and dynamic content. Static content consists mainly of page templates (e.g., `*.xml` and `*.xml.gz`), images (e.g., `*.png`), icons (e.g., `*.svg`), JavaScript files (e.g., `*.js`), and styling (e.g., `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
+Mendix apps use two types of content: dynamic content and static content.
+
+The dynamic content consists of the data that is shown on the page. This data is retrieved from the database and served by the Mendix Runtime.
+
+All requests from the Mendix Runtime, set the Cache-Control header to `no-store`. These requests might contain sensitive data and setting the Cache-Control header `no-store` will prevent the response from being cached.
+
+For the static content, only the index.html and login.html files have the Cache-Control header set to `no-cache`.
+
+For the rest of the static content, the Cache-Control header is not set. See [Why Are Static Files Publicly Accessible in My App?](#static-content), below for a discussion around the availability of static content and why the cache control header is not relevant for this content.
+
+For the Mendix Cloud, you cannot change the setting of this header. If you are running outside the Mendix Cloud, you may be able to change this within your own infrastructure.
+
+See [Cache Control – Directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#directives) on the *mdn web docs* site for possible values for cache control directives. 
+
+## 7 Why Are Static Files Publicly Accessible in My App?{#static-content}
+
+Mendix apps use two types of content: static content and dynamic content. Static content consists mainly of page templates (for example, `*.xml` and `*.xml.gz`), images (for example, `*.png`), icons (for example, `*.svg`), JavaScript files (for example, `*.js`), and styling (for example, `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
 
 By default, the static content of your app is publicly available. This means you can make a directory listing and access files on the web server. The Mendix Client expects this and will not work properly if it is not. You can request the static content without signing in. This is not an issue, as the static content doesn't usually contain any sensitive data. It provides the framework within which data is displayed and logic applied. You should not add sensitive data to your static files (for example in a text widget on a page); Mendix apps provide more secure ways to store sensitive data.
 
@@ -155,11 +171,11 @@ Scanning your app, or the Mendix platform, with a security scanner will occasion
 
 ### 8.1 Weak Ciphers Supported in Mendix Cloud
 
-In the Mendix Cloud, security is of the highest priority, and we try to improve this constantly. The Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
+In Mendix Cloud, security is of the highest priority, and we try to improve this constantly. Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
 
 ### 8.2 No/Long Session Timeout
 
-The default timeout for sessions in Mendix is 10 minutes. This timeout can be changed by configuring the **SessionTimeout** [runtime setting](/refguide/custom-settings/#general). By default, the Mendix client sends keepalive messages to keep sessions alive when there is no activity. This can be changed by changing the value of the **EnableKeepAlive** runtime setting. In the Mendix Cloud, you can set custom runtime settings on the *Runtime* tab of the *Environment Details* page. 
+The default timeout for sessions in Mendix is 10 minutes. This timeout can be changed by configuring the **SessionTimeout** [runtime setting](/refguide/custom-settings/#general). By default, the Mendix client sends keepalive messages to keep sessions alive when there is no activity. This can be changed by changing the value of the **EnableKeepAlive** runtime setting. In Mendix Cloud, you can set custom runtime settings on the *Runtime* tab of the *Environment Details* page. 
 
 ### 8.3 Concurrent Login for Admin Accounts
 
@@ -216,3 +232,11 @@ The Mendix Runtime implements a number of mitigation methods which mean that the
 * Randomizing secrets per request
 * Masking secrets
 * Protecting vulnerable pages with CSRF
+
+## 9 Log Messages
+
+### 9.1 ERROR - Connector: 404 - file not found for file
+
+If you see entries saying `ERROR - Connector: 404 - file not found for file` in your Application Access Logs, these may originate from internal security scans or external attacks. We actively try to block attacks from crawlers.
+
+To investigate further, Mendix recommends [downloading the access logs](/developerportal/operate/logs/). This will enable you to review IP addresses, identify locations, and determine where requests are originating from. If you suspect a potential malicious attack, you can enhance security by adding an [Access Restriction Profile](/developerportal/deploy/access-restrictions/) which allows two IP ranges and excludes the IP address which you suspect.

@@ -44,7 +44,7 @@ Debugging in production is not recommended. However, if you are debugging in the
 
     {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580045.png" >}} 
 
-3. Click **Environments** in the left sidebar, and on the **Deploy** tab, click **Details** for the environment:
+3. Click **Environments** in the navigation pane. On the **Deploy** tab, click **Details** for the environment:
 
     {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580051.png" >}}
 
@@ -52,7 +52,7 @@ Debugging in production is not recommended. However, if you are debugging in the
 
     {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580050.png" >}}
 
-    This invokes the **Debugger settings** pop-up window. Usually this presents a URL (such as `http://yourapp.mendixcloud.com`) and a secure password that changes each time you enable and disable the debugger:
+    This invokes the **Debugger settings** pop-up window. Usually, this presents a URL (such as `http://yourapp.mendixcloud.com`) and a secure password that changes each time you enable and disable the debugger:
 
     {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows-remotely/18580049.png" >}}
 

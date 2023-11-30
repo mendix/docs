@@ -30,11 +30,11 @@ You can only export the active initiatives, not the archived ones.
 
 2. If you only want to export a selection of initiatives, before you start exporting initiatives, use **Filters** on the upper-right corner of the **Initiatives Overview** page to filter the initiatives that you want to export.
 
-5. Click the following icon on the upper-right corner to open a drop-down menu:
+3. Click the following icon on the upper-right corner to open a drop-down menu:
 
    {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  width="600"  >}}
 
-6. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
+4. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
 
    * Click **Export All** to export all initiatives of the portfolio.
    * Click **Export Selection** to only export the selection of your currently-filtered initiatives.

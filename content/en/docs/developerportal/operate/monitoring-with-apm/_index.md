@@ -3,15 +3,15 @@ title: "Monitoring Your Mendix Apps with an APM Tool"
 linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
-description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud app."
-tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "SaaS", "AppDynamics", "APM", "Splunk", "Dynatrace"]
+description: "How to use an APM (application performance monitoring) tool to monitor your Mendix Cloud app."
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "SaaS", "AppDynamics", "APM", "Splunk", "Dynatrace", "New Relic"]
 ---
 
 ## 1 Introduction
 
 There are several application performance monitoring (APM) tools for cloud applications available through a software as a service (SaaS) based data analytics platform. These APM tools provide comprehensive monitoring of servers, databases, tools, and services.
 
-Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
+Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, and New Relic to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
 
 {{% alert color="info" %}}
 [AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
@@ -21,6 +21,8 @@ Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatr
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix 7.15 and above.
 
 [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
+
+[New Relic](https://www.newrelic.com/) logging and application metrics are supported in Mendix 9.7 and above. Custom application runtime and database metrics are supported.
 {{% /alert %}}
 
 This document explains what information can be provided to a SaaS-based data analytics platform.
@@ -31,9 +33,10 @@ For details on how to add a specific APM tool to your app, see one of the follow
 * [Datadog for Mendix Cloud](/developerportal/operate/datadog-metrics/)
 * [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
 * [Splunk for Mendix Cloud](/developerportal/operate/splunk-metrics/)
+* [New Relic for Mendix Cloud](/developerportal/operate/newrelic-metrics/)
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to a SaaS-based Data Analytics Platform?
@@ -87,7 +90,7 @@ The following metrics are useful when monitoring the performance of your Mendix 
 * postgresql.max_connections
 * postgresql.percent_usage_connections
 
-Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action that might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud](/developerportal/operate/trends-v4/).
+Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action that might be required. Some of these trends are similar to those described in [Metrics](/developerportal/operate/metrics/).
 
 ## 4 App Metrics {#app-metrics}
 
@@ -200,7 +203,7 @@ The following Mendix request handler calls will be passed:
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 
-For details on how to analyze some of these values, see [Trends in Mendix Cloud](/developerportal/operate/trends-v4/).
+For details on how to analyze some of these values, see [Metrics](/developerportal/operate/metrics/).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**
@@ -259,13 +262,13 @@ The following example sends logs for the following:
 
 #### 4.2.2 Passing a Configuration to the Metrics Agent
 
-You pass the configuration to the metrics agent by adding a **Custom Runtime Setting** to your Mendix Cloud environment.
+You pass the configuration to the metrics agent by adding a custom runtime setting to your Mendix Cloud environment.
 
 1. Go to the **Environments** page of your app.
 2. Click **Details** next to the environment you have configured for Datadog.
-3. Add a **Custom Environment Variable** *METRICS_AGENT_CONFIG* with the value of the JSON required for your configuration.
+3. In the **Custom Environment Variable** section, add a `METRICS_AGENT_CONFIG` variable with the value of the JSON required for your configuration.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog_metricsagentconfig.png" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/metrics-agent-config.png" width=400 >}}
 
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must redeploy your application to apply the changes.
@@ -288,25 +291,25 @@ Database metrics (`postgresql.*` and `mx.database.diskstorage_size`) cannot be f
 
 ### 5.1 APM_METRICS_FILTER_ALLOW{#app-metrics-filter-allow}
 
-Comma-separated list of prefixes for the metrics to be allowed. By default, all metrics are allowed, even if they are not specified via this environment variable.
+Set the value to a comma-separated list of prefixes for the metrics to be allowed. By default, all metrics are allowed, even if they are not specified via this environment variable.
 
-For example, to allow only the session and the jvm metrics, set the environment variable to `mx.runtime.stats.sessions,jvm`.
+For example, to allow only the session and the JVM metrics, set the environment variable to `mx.runtime.stats.sessions,jvm`.
 
 ### 5.2 APM_METRICS_FILTER_DENY{#app-metrics-filter-deny}
 
-Comma-separated list of prefixes for the metrics to be denied. 
+Set the value to a comma-separated list of prefixes for the metrics to be denied. 
 
-For example, to filter out only metrics starting with jetty or mx.runtime, the environment variable should be set to `jetty,mx.runtime`.
+For example, to filter out only metrics starting with `jetty` or `mx.runtime`, set the environment variable to `jetty,mx.runtime`.
 
 ### 5.3 APM_METRICS_FILTER_DENY_ALL{#app-metrics-filter-deny-all}
 
-This environment variable can be used to stop ingestion of all metrics at once.
+You can use this environment variable can be used to stop ingestion of all metrics at once. 
 
-If it is set to `true`, all metrics will be denied regardless of the values of `APM_METRICS_FILTER_ALLOW`, `APM_METRICS_FILTER_DENY`, and `APPMETRICS_INCLUDE_DB`.
+If its value is set to `true`, all metrics will be denied regardless of the values of `APM_METRICS_FILTER_ALLOW`, `APM_METRICS_FILTER_DENY`, and `APPMETRICS_INCLUDE_DB`.
 
 ## 6 Tuning Log Levels
 
-If desired, you can adjust the log levels. If you configure your app's log levels via [The Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) on the **Environment Details** page, the log levels that you set there are also reflected in your APM integrations.
+If desired, you can adjust the log levels. If you configure your app's log levels via the [**Log Levels** tab](/developerportal/deploy/environments-details/#log-levels) on the **Environment Details** page, the log levels that you set there are also reflected in your APM integrations.
 
 ## 7 Read More
 

@@ -103,13 +103,18 @@ Use Developer Portal to upload the migrated, exported database backup to the Men
 
 ## 5 Exporting a Mendix Cloud Database
 
-The same procedure can be used to export an existing Mendix cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
+The same procedure can be used to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab, select an existing Backup from the list, and click the **Download Backup** button to download the database to your local file system using the Database URL shown in the dialog. A fresh backup with recent data could also be created first using the **Create Backup** button.
+Export the Mendix Cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal:
+
+1. Select your app and environment.
+2. Click **Backups**.
+3. Optionally, create a fresh backup with recent data by clicking **Create Backup**.
+4. On the backup you want to download, click **More Options** > **Download**. This downloads the database to your local file system using the database URL shown in the dialog box. 
 
 ### 5.1 Importing into an On-premises PostgreSQL Database
 
-To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
+To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [pgAdmin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
 
 ### 5.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 

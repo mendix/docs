@@ -69,7 +69,7 @@ To add an additional language, do the following:
 2. Click **Add** to open the **Add Language** dialog box.  
 3. Select a **Language**. In this example, we select **Russian, Russia**, but you can use any language you like.
 
-    {{% alert color="info" %}} We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
+    {{% alert color="info" %}}Mendix recommends that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
 
 4. Click **OK** to save the changes. The **Add Language** dialog box closes.
 

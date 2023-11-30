@@ -57,7 +57,7 @@ If you face connection problems when cloning the Git repository using the **Open
 
 ### 3.2 Customer-Facing Issues
 
-For Studio Pro developers to be able to troubleshoot issues that the customers face with Beta Git support, Studio Pro provides a logging mechanism.
+For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
 
 When filing a Git support issue with Mendix Support, attach the log files doing the following:
 
@@ -103,7 +103,7 @@ You can force Studio Pro to recreate the metadata by doing the following:
 1. Checkout the revision you want to create a deployment package from in a separate directory.
 2. Open it with the correct version of Studio Pro.
 3. Create a branch from it and switch to the new branch. 
-4. Do a cosmetic change (e.g. move an activity in a microflow a few pixels)
+4. Do a cosmetic change (for example, move an activity in a microflow a few pixels)
 5. Commit and Push the changes from Studio Pro.
 
 This will recreate the metadata and you should now be able to create a deployment package from this new revision.

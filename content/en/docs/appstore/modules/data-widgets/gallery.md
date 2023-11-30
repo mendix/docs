@@ -35,7 +35,7 @@ Data source specifies the source of the data being presented in the Gallery. You
 
 ### 2.2 Columns
 
-We provide a mechanism that automatically applies a different number of columns based on the device being used. In the gallery widget you can select columns for **Desktops**, **Tablets**, or **Phone/Mobile**.
+We provide a mechanism that automatically applies a different number of columns based on the device being used. In the Gallery widget, you can select columns for **Desktops**, **Tablets**, or **Phone/Mobile**.
 
 ### 2.3 Items
 

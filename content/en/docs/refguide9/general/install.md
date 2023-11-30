@@ -63,7 +63,7 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
+* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
 * Java JDK
 
     * For Mendix Studio Pro 9.18.0 and above – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)

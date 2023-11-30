@@ -10,9 +10,17 @@ tags: ["Buzz","Developer Portal"]
 
 ## 1 Buzz Locations
 
-Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
+Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your team. There are two types of **Buzz** pages: an app **Buzz** page and a **Company Buzz** page.
 
-## 2 Company Buzz {#company-buzz}
+## 2 App Buzz {#app-buzz}
+
+App **Buzz** is for a specific app:
+
+{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
+
+You can see the size of your **Team** and your team members on the right side of the page. Click the **+** icon to invite new members to your team directly (please note that we show no more than 25 team members at a time). Click **Show all** to go to the [Team](/developerportal/general/team/) page for the app.
+
+## 3 Company Buzz {#company-buzz}
 
 The **Company Buzz** is accessible via the top bar in the Developer Portal:
 
@@ -21,14 +29,6 @@ The **Company Buzz** is accessible via the top bar in the Developer Portal:
 The drop-down menu for the content you see in the Company Buzz is set to **All Channels** by default, which shows Buzz activity for all the apps for which you are a team member *plus* all Buzz activity for your company. In the menu, you can choose to see only Buzz for your company or for a specific app for which you are a team member. 
 
 Clicking an app name in **Recent Apps** will take you to the [App Buzz](#app-buzz) for that app, described below.
-
-## 3 App Buzz {#app-buzz}
-
-App **Buzz** is for a specific app:
-
-{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
-
-You can see the size of your **Team** and your team members on the right side of the page. Click the **+** icon to invite new members to your team directly (please note that we show no more than 25 team members at a time). Click **Show all** to go to the [Team](/developerportal/general/team/) page for the app.
 
 ## 4 Communicating on Buzz
 

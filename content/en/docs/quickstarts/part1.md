@@ -233,41 +233,43 @@ To start, replace the static image with the image the end-user uploads to the da
 
 ## 7 Defining Logic Using Microflows
 
+### 7.1 Understanding Mendix Logic
+
 There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 
 But what if you want your app to perform some custom logic? For example, what if you wanted to validate that the end-user entered text for the **Title** and **Description** fields before they clicked **Save**? In Mendix, you can achieve this using a microflow.
 
 A microflow is a piece of custom logic that is represented visually in [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server, which means an internet connection is required for it to execute. A microflow can only have one start point, but it can often have multiple end points.
 
+### 7.2 Implementing Custom Logic
+
 To implement custom logic with a microflow, follow these steps:
-
-
-
-
-
 
 1. Open the page **Picture_NewEdit** using the App Explorer.
 2. Scroll down to the **Save** button at the bottom of the page. 
-3. Right-click the button then click **Edit on click action**. 
-4. Set the on click action type to call a microflow.
-5. Choose to create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture* (click the **Show** button to quickly navigate to the new microflow):
+3. Right-click the button and select **Edit on click action**. 
+4. Set the **On click** action to **Call a microflow**.
+5. Click **New** in the **Select Microflow** dialog box in order to create a new microflow.
+6. Create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture*:
 
     {{< figure src="/attachments/quickstarts/part1/edit-microflow.png" width="450px" alt="Edit microflow">}}
 
-6. You should now see the microflow open in your editor:
+6. Click **Show** to quickly navigate to the new microflow and see it open in your editor:
 
     {{< figure src="/attachments/quickstarts/part1/microflow.png" width="450px" alt="Microflow">}}
 
-7. Add a decision to the flow (The orange diamond shape) from the toolbox. 
-8. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/#trim)):
+7. Add a **Decision** to the microflow (via the orange diamond icon in the editor's top bar).
+8. Give the decision the caption *Has title?* and input the following **Expression**:
 
     ```text
     trim($Picture/Title) != ''
     ```
+    
+    The [trim](/refguide/string-function-calls/#trim) function always returns a string:
 
     {{< figure src="/attachments/quickstarts/part1/decision.png" width="450px" alt="Decision expression">}}
 
-9. Click OK to close the window. 
+9. Click **OK** to close the dialog box. 
 
 
 

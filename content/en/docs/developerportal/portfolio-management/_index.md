@@ -441,7 +441,7 @@ The **Access Management** page allows you to view and manage user access to the 
 
 ### 5.1 Members
 
-The **Members** tab lists all the users who can access the portfolio. You can search a user by their use name, email, or company. You can also filters the users by role and status. The list contains the following items:
+The **Members** tab lists all the users who can access the portfolio. You can search a user by their user name, email, or company. You can also filters users by their role and status. The list contains the following items:
 
 * **User Name** – This is the name of the user.
 
@@ -453,11 +453,10 @@ The **Members** tab lists all the users who can access the portfolio. You can se
 
   {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
 
-* **Role** – This is the role of the user in the portfolio. There are three access roles: **Portfolio Managers**, **Contributors**, and **Viewers**. For more information, see the table below this list.
+* **Role** – This is the role of the user in the portfolio. The access portfolio can be **Portfolio Manager**, **Contributor**, or **Viewer**. For more information about each role, see the table below in this section.
 
-* Ellipsis icon (**...**) – This gives you options to edit the role of the user or remove the user from the portfolio. For more information, see the [Editing and Removing a User](#edit-remove-user) section.
+* Ellipsis button (only vailable to Portfolio Managers) – Clicking the **...** button gives you options to edit the role of the user or remove the user from the portfolio. For more information, see the [Editing and Removing a User](#edit-remove-user) section.
 
-  {{% alert color="info" %}}These options are  only available to Portfolio Managers.{{% /alert %}}
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
@@ -485,9 +484,9 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 #### 5.1.1 Leaving the Portfolio
 
-To leave the portfolio, click the Leave button above the list on the right side. 
+To leave the portfolio, click the **Leave** button on the right side above the member list. 
 
-If you are the only Portfolio Manager of the portfolio, you will be asked to assign one user to be the Portfolio Manager before you can leave the portfolio.
+If you are the only Portfolio Manager of the portfolio, you need to assign another user to be the Portfolio Manager before you can leave the portfolio.
 
 If you are the last user of the portfolio, you cannot leave the portfolio.
 
@@ -526,7 +525,7 @@ Users from the same company can request access to a restricted portfolio from th
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
-The **Access Requests** tab shows all open access requests for the portfolio with the following items:
+The **Access Requests** tab shows all open access requests for the portfolio. You can search a user by their user name. You can also filters users by their role. The list contains the following items:
 
 * **Requested By** – This is the name and avatar of the user who requested access.
 * **Role** – This is the access role that was requested by the user.
@@ -540,17 +539,12 @@ The **Access Requests** tab shows all open access requests for the portfolio wit
 This tab is only visible to Project Managers.
 {{% /alert %}}
 
-The **Pending Invites** tab shows all pending invites for the portfolio with the following items:
+The **Pending Invites** tab shows all pending invites for the portfolio. You can search a user by their email. You can also filters users by their role. The list contains the following items:
 
-* **Email** – This shows the email of the invited user
-
-* **Role** – This shows the access role of the invited user
-
-* **Invite date** – This shows the date the invite was sent
-
-* **Edit** – Clicking the button enables you to change the access role of the pending invite
-
-* **Delete** – Clicking the button enables you to delete pending invite
+* **Email** – This shows the email of the invited user.
+* **Role** – This shows the access role of the invited user.
+* **Invite date** – This shows the date the invite was sent.
+* Ellipsis icon  – Clicking the **...** button enables you to change the access role of the pending invite or cancel the pending invite.
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

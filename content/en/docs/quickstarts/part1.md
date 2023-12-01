@@ -157,10 +157,7 @@ To create an entity to store the images used in your app, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/5.3-entityprops3.png" width="450px" alt="Edit configuration">}}
     
-3. Double-click the new entity to open its properties dialog box:
-
-    {{< figure src="/attachments/quickstarts/part1/entity-config-cont.png" width="450px" alt="Edit configuration">}}
-
+3. Double-click the new entity to open its properties dialog box.
 4. Name the entity *Picture*, then click **Generalization** > **Select**. 
 5. Search for and select the **Image** entity (found in the **System** module).
 
@@ -230,9 +227,7 @@ To add a building block to your app's UI, follow these steps:
 
 ### 6.3 Configuring the Display Widgets
 
-Next, you need to connect your data to the display widgets, because your page is currently displaying only static resources:
-
-{{< figure src="/attachments/quickstarts/part1/edit-caption.png" width="450px" alt="Dynamic data">}}
+Next, you need to connect your data to the display widgets, because your page is currently displaying only static resources. 
 
 To start, replace the static image with the image the app end-user uploads to the database by following these steps:
 

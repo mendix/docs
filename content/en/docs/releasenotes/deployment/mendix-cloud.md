@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### December 7, 2023
+
+#### Improvements
+
+* If a user tries to upload or transport an MDA file that exceeds the maximum size of 1 GB, they will now see an error message warning them that their MDA file is too big.
+
 ### November 22, 2023
 
 #### Improvements

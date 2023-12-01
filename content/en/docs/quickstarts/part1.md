@@ -118,7 +118,7 @@ For more information on available panes, see the [MxAssist Best Practice Bot](/r
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/rightdock.png" width="350px" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-right.png" width="350px" alt="Right Dockable Pane">}}
 
 Here you will find more default dockable panes:
 

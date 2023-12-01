@@ -100,7 +100,7 @@ In the list, you can see the following items:
 
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 
-* **Members** – This shows the number of users who have access to the portfolio.
+* **Members** – This shows the number of active users who have access to the portfolio. The deactivated users are not counted.
 
 * **Privacy** – This shows the current privacy settings of the portfolio.
   * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.

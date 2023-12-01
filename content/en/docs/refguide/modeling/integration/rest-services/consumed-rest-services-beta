@@ -136,4 +136,12 @@ The entity name is prefilled, but you can change it to a custom name. To create 
 
 ### 3.7 Using a REST Request in a Microflow
 
+To select a request in the microflow, complete the following steps:
+1.	Create a new microflow and drag the **Send REST request** activity into it.
+2.	Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
+
+(add screenshot)
+
+If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow.
+
 

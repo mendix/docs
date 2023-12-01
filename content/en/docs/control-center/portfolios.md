@@ -33,9 +33,9 @@ The **All Portfolios** tab lists all portfolios in your company. Here you can [m
 
 In the list, you can see the following items:
 
-* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window  that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members, and a list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
-* **Members** – This shows the number of users who have access to this portfolio.
+* **Members** – This only shows the number of active users of this portfolio. The deactivated users are not included in this number.
 * **Privacy** – This shows the current privacy settings of the portfolio.
 
   * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
@@ -59,21 +59,30 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 
 ### 2.1 Access Management {#access-management}
 
-After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
+After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page. The Access Management page contains two tabs: the **Members** tab and the **Pending Invites** tab.
 
-In the search box, you can search for a user by the user name, email, company, status, or role.
+#### 2.1.1 Memebers  Tab
+
+On the **Member** tab, you can search for a user in the search box by the user name, email, company, status, or role.
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
+
+The **Remove Deactivated Users** button allows you to remove all deactivated users from this portfolio.
 
 The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
 
 * **User Name** – This shows the user name.
+
 * **Email** – This shows the email of the user.
+
 * **Company** – This shows the company where the user works.
-* **Status** – This shows the status of the portfolio access of the user.
-  * **Active** – The user has access to the portfolio.
-  * **Pending** – The user still needs to accept the invitation to the portfolio.
+
+* **Status** – This shows whether the user is active or deactivated.
+  
+  {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
+  
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
+
 * Ellipsis (**...**) – Clicking the button opens a menu with the following items:
   * **Edit** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio.
@@ -96,11 +105,11 @@ The **Alerts** tab lists all the portfolios that no longer have a Portfolio Mana
 
 In the list, you can see the following items:
 
-* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window  that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members, and a list of the Portfolio Managers.
 
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 
-* **Members** – This shows the number of active users who have access to the portfolio. The deactivated users are not counted.
+* **Members** – This only shows the number of active users of this portfolio. The deactivated users are not included in this number.
 
 * **Privacy** – This shows the current privacy settings of the portfolio.
   * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.

@@ -114,7 +114,7 @@ Here you will find several default dockable panes:
 
 For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 4.4 Right Dockable Panes
+### 4.4 Right Dockable Pane
 
 Look at the right dockable pane of Studio Pro:
 

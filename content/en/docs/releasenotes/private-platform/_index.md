@@ -10,6 +10,14 @@ These release notes cover changes made to the [Private Mendix Platform](/private
 
 ## 2023
 
+### November 30, 2023
+
+### Private Mendix Platform Enhancements
+
+* We have added the ability to select a locale in the general settings of Private Mendix Platform. Changing the locale sets locale-dependent formats, such as date and time, to the preferred format of the selected locale.
+* We have given administrators the option to provide their own, custom support instructions for users of the Platform.
+* We have added the option for a deployment package to be put in an S3 bucket at the end of a CI/CD pipeline, instead of being deployed to the production environment. Designated approvers can then retrieve the package from the S3 bucket and manually deploy it to the target environment.
+
 ### November 15, 2023
 
 ### Private Mendix Platform Release

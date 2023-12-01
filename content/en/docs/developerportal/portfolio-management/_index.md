@@ -449,13 +449,13 @@ The **Members** tab lists all the users who can access the portfolio. You can se
 
 * **Company** – This shows the company to which the user belongs.
 
-* **Status** – This shows whether the user an active member or a deactivated member of the Mendix Platform.
+* **Status** – This shows whether the user is active or deactivated.
 
   {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
 
-* **Role** – This is the role of the user in the portfolio. The access portfolio can be **Portfolio Manager**, **Contributor**, or **Viewer**. For more information about each role, see the table below in this section.
+* **Role** – This is the role of the user. A user can be a Portfolio Manager, Contributor, or Viewer. For more information about the permissions of each role, see the table below in this section.
 
-* Ellipsis button (only vailable to Portfolio Managers) – Clicking the **...** button gives you options to edit the role of the user or remove the user from the portfolio. For more information, see the [Editing and Removing a User](#edit-remove-user) section.
+* Ellipsis button (only available to Portfolio Managers) – Clicking the **...** button gives you options to edit the role of the user or remove the user from the portfolio. For more information, see the [Editing and Removing a User](#edit-remove-user) section.
 
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
@@ -486,9 +486,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 To leave the portfolio, click the **Leave** button on the right side above the member list. 
 
-If you are the only Portfolio Manager of the portfolio, you need to assign another user to be the Portfolio Manager before you can leave the portfolio.
-
-If you are the last user of the portfolio, you cannot leave the portfolio.
+If you are the only Portfolio Manager of the portfolio, when you click **Leave**, a dialog window opens and asks you to choose either assign another user to be the new Portfolio Manager before you leave the portfolio, or delete the portfolio permanently when you leave the portfolio. If you choose to assign a user as the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member or invite a new member to be the new Portfolio Manager.
 
 #### 5.1.2 Adding New Users {#add-users}
 
@@ -552,7 +550,7 @@ The **Pending Invites** tab shows all pending invites for the portfolio. You can
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
 * **Invite date** – This shows the date the invite was sent.
-* Ellipsis icon  – Clicking the **...** button enables you to change the access role of the pending invite or cancel the pending invite.
+* Ellipsis icon – Clicking the **...** button enables you to change the access role of the pending invite or cancel the pending invite.
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

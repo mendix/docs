@@ -175,7 +175,7 @@ Now that you have created your domain model, it is time to create your photo alb
     * [List view](/refguide/list-view/) – displays many records in a scrollable list
     * [Template grid](/refguide/template-grid/) – displays many records in configurable columns and rows
 
-### 6.1 Configuring a Template Grid
+### 6.1 Configuring a Template Grid {#template-grid}
 
 Now it is time to build your photo album app:
 

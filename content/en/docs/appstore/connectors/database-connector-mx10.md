@@ -44,7 +44,6 @@ This connector supports the following statements:
     * Login credentials
     * Database type
     * Hostname, port, and database name; or, instead, the JDBC connection string
-* Familiarity with the [SELECT SQL query](https://www.w3schools.com/sql/sql_select.asp)
 
 ## 2 Installation {#installation}
 

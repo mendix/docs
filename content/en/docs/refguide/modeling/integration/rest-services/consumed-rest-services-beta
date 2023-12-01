@@ -83,6 +83,19 @@ You can configure basic authentication to use for all requests in your document.
 
 ### 3.3 Adding Parameters 
 
+Parameters are fully supported in the path & query part of the URL. They are defined within curly brackets in the URL (for example, ‘http://numbersapi.com/{numbers}’). All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
+
+(add screenshot) 
+
+To add a parameter, follow these steps:
+
+1.	Open the **Parameters** tab and click **Add** 
+2.	Name your parameter, add a test value, and click **OK**
+
+(add screenshot)
+
+3. Click **Send** to test the parameters. 
+
 ### 3.4 Adding Headers
 
 ### 3.5 Adding a Request Body

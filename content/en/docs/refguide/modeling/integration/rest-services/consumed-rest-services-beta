@@ -111,6 +111,17 @@ You can add a header for any HTTP request you have specified in your document. T
 
 ### 3.5 Adding a Request Body
 
+POST requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
+
+1.	Click the **Body** tab and add your JSON string.
+
+(add screenshot)
+
+2.	Click **Use JSON Snippet**. 
+3.	To validate the input, click **Send**. The body string can be viewed in the **Body structure** tab.
+
+(add screenshot)
+
 ### 3.6 Creating an Entity from the Response
 
 ### 3.7 Using a REST Request in a Microflow 

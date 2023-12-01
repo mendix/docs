@@ -90,8 +90,6 @@ Then, use the parameter in the query:
 
 `select * from customers where contactFirstName like {paramFirstName}`
 
-To learn more about SQL queries and parameters, consult the documentation of the database you are using, or read [How and Why to Use Parameterized Queries](https://techcommunity.microsoft.com/t5/sql-server-blog/how-and-why-to-use-parameterized-queries/ba-p/383483).
-
 ### 3.3 Using Query Response {#use-query-response}
 
 After [querying the database](#query-database), you can view the response in the **Response** screen. 

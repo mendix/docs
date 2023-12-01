@@ -24,29 +24,13 @@ Some of the settings that you configure here are initially set by the [Private P
 
 General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status.. The settings in this section are largely configured  when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
 
-### 2.1 Capabilities
+### 2.1 General
 
-The settings in this section allow you to configure the basic aspects of your Private Mendix Platform.
+The **General** tab allows you to configure information about your organization, and optionally also the Certified Mendix Partner that is working with you on implementing Private Mendix Platform. You can also use it to configure your locale settings.
 
-#### 2.1.1 Use projects management?
-
-Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
-
-#### 2.1.2 Enable Marketplace?
-
-Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
-
-#### 2.1.3 Use own IDP?
-
-Optional. Enable users to login using SSO by configuring your IdP integration.
-
-#### 2.1.4 Use Webhooks?
-
-Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
-
-#### 2.1.5 Use License Manager for app licensing?
-
-Recommended. Upload your license bundle to automatically provision app licenses through Private Cloud License Manager. For more information, see Private Cloud License Manager.
+{{% alert color="info" %}}
+Changing your locale sets locale-dependent formats, such as date and time, to the preferred format of the selected locale. The settings are applied to the Private Mendix Platform (for example, in the Marketplace or Developer Portal), not in the apps created through the Platform.
+{{% /alert %}}
 
 ### 2.2 Branding
 
@@ -54,7 +38,39 @@ The settings in this section allow you to configure custom branding for your Pri
 
 {{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
 
-### 2.3 License
+### 2.3 Support
+
+In this section, you can provide your own help and support instructions for users of your Private Mendix Platform.
+
+{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
+
+Users can then see these instructions on the **Logs and Events** page for their app.
+
+### 2.4 Capabilities
+
+The settings in this section allow you to configure the basic aspects of your Private Mendix Platform.
+
+#### 2.4.1 Use projects management?
+
+Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+
+#### 2.4.2 Enable Marketplace?
+
+Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+
+#### 2.4.3 Use own IDP?
+
+Optional. Enable users to login using SSO by configuring your IdP integration.
+
+#### 2.4.4 Use Webhooks?
+
+Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+
+#### 2.4.5 Use License Manager for app licensing?
+
+Recommended. Upload your license bundle to automatically provision app licenses through Private Cloud License Manager. For more information, see Private Cloud License Manager.
+
+### 2.5 License
 
 On this page, you can view the status of your Private Mendix Platform license, and upload a new license bundle if necessary.
 
@@ -160,6 +176,14 @@ To create applications and collaborate, configure the connection to your version
 Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a custom template for your CI/CD capabilities.
 
 {{< figure src="/attachments/private-platform/pmp-wizard5.png" >}}
+
+#### 7.2.1 Configuring CI/CD Pipelines with Manual Approval
+
+If your production and development environments must be fully air-gapped and separated from each other, and you want to limit the ability to deploy packages to either selected users or an automated pipeline with manual approval, you can configure your cluster type to be **Upload MDA**.
+
+{{< figure src="/attachments/private-platform/pmp-wizard7.png" >}}
+
+Selecting this option allows you to specify an S3 bucket. This bucket is then used as the destination where the deployment package is uploaded at the end of the pipeline, instead of being deployed to the production environment. Designated approvers can then retrieve the package from the S3 bucket and manually deploy it to the target environment.
 
 ## 8 Platform Log
 

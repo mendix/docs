@@ -115,7 +115,7 @@ Here you will find more default dockable panes:
 
 For additional information on available panes, see the [Integration](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
-## 5 Creating Your App's Domain Model
+## 5 Creating Your App's Domain Model {#domain-model}
 
 In Mendix, you define your app's data structure in the [domain model](/refguide/domain-model/).
 

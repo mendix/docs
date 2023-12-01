@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* The disk usage and CPU usage graphs on the Metrics page now have y-axes that scale dynamically, with the minimum set to 0 and the maximum set to the maximum data point included in the request.
+* The application disk usage and CPU usage graphs on the Metrics page now have y-axes that scale dynamically, with the minimum set to 0 and the maximum set to the maximum data point included in the request.
 
 ### November 22, 2023
 

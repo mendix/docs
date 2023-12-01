@@ -188,7 +188,7 @@ In addition to the threadpool that is used for external HTTP requests (described
 
 ### 4.8 CPU Usage{#Trends-appcpu}
 
-The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data. If the app's CPU utilization is below 100%, then the y-axis ranges from 0 to the maximum data point included in the request.
+The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data, ranging from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
 

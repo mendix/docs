@@ -46,6 +46,8 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration 
 
+Use the Consumed REST service to configure a GET or POST request for your app. 
+
 ### 3.1 Basic Configuration 
 
 ### 3.2 Authentication Methods

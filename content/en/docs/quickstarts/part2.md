@@ -163,7 +163,10 @@ The final thing to do is ensure all the data captured by the user is synchronize
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
-1. Open the Make it Native app on your mobile device.
+1. Open the Make it Native app on your mobile device:
+
+    {{< figure src="/attachments/quickstarts/part2/min-start-screen.png" width="300px" alt="MIN start screen">}}
+
 1. Click the drop-down menu in Studio Pro and select **View app on your device**.
 1. Click the **View Native Mobile App** tab.
 1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):

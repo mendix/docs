@@ -125,54 +125,62 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
 
     {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
     
-    
-    
+### NEW PAGE
 
-
-Finally you need to create a page in which the user can view and edit their new picture:
+Finally you need to create a page where the end-user can view and edit their new picture:
 
 1. Add a **Show page** action to the nanoflow. 
 2. Open the action's properties:
-    1. Select the **Object to pass** as the **$NewPicture entity**. 
-    1. Click **Page** > **Select** and choose to create a new page. 
-    1. Give the page the **Page name** *Picture_NewEdit_Native* at the top of the screen.
-    1. Change the profile type to **Native mobile** at the top of the screen.
-    1. Select the **Edit with Dataview** template.
+    1. Set the **Object to pass** to be **$NewPicture entity**. 
+    1. Click **Page** > **Select** and create a new page. 
+    1. Set the **Page name** to be *Picture_NewEdit_Native* at the top of the screen.
+    1. Change the profile type to **Native mobile**.
+    1. Select the **Edit with Data View** template.
 
 You should see the new page:
 
 {{< figure src="/attachments/quickstarts/part2/native-pic-page.png" width="450px" alt="New page">}}
 
-Just like before, you need to validate that the user has entered the title and description. Instead of validating that data in a nanoflow, you can simply configure validation on the text boxes themselves:
+### VALIDATION
+
+Your app needs to validate that the end-user enters the title and description. Instead of validating that data in a nanoflow, you can configure validation on the text boxes:
 
 1. Double-click the **Title** field to open its properties. 
-2. Find **Validation Type** at the bottom. 
-3. Set **Validation Type** to **Required** and provide the message *Please provide a title for this picture*.
-4. Repeat this for the **Description** field, and provide the message *Please provide a description for this picture*.
+2. Set **Validation Type** to **Required** and set the message as, *Please provide a title for this picture*.
+3. Repeat the step above for the **Description** field, and set the message as, *Please provide a description for this picture*.
 
-The final thing to do is ensure all the data captured by the user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's save button: 
+### ENABLING AUTO_SYNCHRONIZATION
 
-1. Double-click the **Save** button. 
+Finally, you need to ensure all the data captured by the end-user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's Save button: 
+
+1. Double-click the **Save** button to open its properties.
 2. Set **Auto-synchronize** to **Yes**:
 
     {{< figure src="/attachments/quickstarts/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
+    
+### TESTING AND FINISHING UP
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
 1. Open the Make it Native app on your mobile device.
 2. Click the drop-down menu in Studio Pro and select **View app on your device**.
 3. Click the **View Native Mobile App** tab.
-4. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
+4. Scan the QR code with the Make it Native app on your mobile device to begin testing:
 
     {{< figure src="/attachments/quickstarts/part2/min-qr.png" width="300px" alt="Scan QR code">}}
+    
+    {{% alert color="info" %}}If you are using a Mac, be sure to use forward ports 8080/8083, as explained in [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide/using-mendix-studio-pro-on-a-mac/#configuring).{{% /alert %}}
 
-This will automatically begin testing. If you have issues, see [this troubleshooting guide](/refguide/mobile/getting-started-with-mobile/prerequisites/) for troubleshooting information.
+This will automatically begin the testing. If you need more information, see [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
+
+### SCENARIO
 
 When we tested our native mobile photo app, we were lucky to sight a stegosaurus nearby:
 
-{{< figure src="/attachments/quickstarts/part2/mobile-pic-1.png" width="200px" alt="stegosaurus 1">}}
-{{< figure src="/attachments/quickstarts/part2/mobile-pic-2.png" width="200px" alt="stegosaurus 2">}}
-{{< figure src="/attachments/quickstarts/part2/mobile-pic-3.png" width="200px" alt="stegosaurus 3">}}
+{{< figure src="/attachments/quickstarts/part2/mobile-pics-combined.png" width="500px" alt="stegosaurus 1">}}
+
+
+
 
 After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile after reloading the page in your browser:
 

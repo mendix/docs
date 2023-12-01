@@ -50,6 +50,23 @@ Use the Consumed REST service to configure a GET or POST request for your app.
 
 ### 3.1 Basic Configuration 
 
+Create a GET or POST request to send data to your server by doing the following:
+1.	In the **General** field, name your request. 
+2.	In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
+3.	Add an endpoint and click **Send**.
+
+(add screenshot)
+
+4.	Click **Configuration & authentication**.
+5.	Add a **Base URL** to use the same URL across all requests in this consumed REST service.
+
+(add screenshot)
+
+6.	Select an authentication method. For more information, see [Authentication methods](#authentication).
+7.	Click **Send**. 
+
+You can visualize your request in the **Response data** tab, then use the response to [create an entity in the domain model]{#create-an-entity}. 
+
 ### 3.2 Authentication Methods
 
 ### 3.3 Adding Parameters 

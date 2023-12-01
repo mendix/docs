@@ -124,5 +124,16 @@ POST requests support JSON strings as a request body. Add the JSON body snippet 
 
 ### 3.6 Creating an Entity from the Response
 
-### 3.7 Using a REST Request in a Microflow 
+You can check the response of your request in the **Response data** tab. 
+
+(add screenshot)
+
+If you want to use the response to create an entity in your domain model, navigate to the **Response structure** tab, which displays a preview of the response data. 
+
+(add screenshot)
+
+The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. This creates an entity in your domain model, which you can see by clicking **Show**
+
+### 3.7 Using a REST Request in a Microflow
+
 

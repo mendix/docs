@@ -112,13 +112,19 @@ Click **Save Query & Create Entity** to create the entity and add it to your dom
 
 Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
 
-1. Create a new microflow and drag the **Query external database** activity into it. 
+1. Create a new microflow and drag the **Query external database** activity into it.
+
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/query-external-database.png" >}}
+
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. Specify if you want to **Use return value** (for example, a list of `customers`).
-6. Click **OK**.
-7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
+5. In the Output field, use the drop-down to specify the **Return type**. You can also choose to **Use return value**.
+
+{{< figure src="/attachments/appstore/connectors/database-connector-mx10/return-type.png" >}}
+ 
+8. Click **OK**.
+9. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 
 You can now use the microflow in your app. Here is an example of a configured microflow:
 

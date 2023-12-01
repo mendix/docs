@@ -35,7 +35,7 @@ You can use this Consumed REST service to do the following:
 *[Studio Pro 10.6](add link) and above
 * Familiarity with [HTTP request methods]( https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-## 2 Installation 
+## 2 Installation {#installation}
 
 Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST service document to your app. To do this, 
 1.	Right-click the module you want to add the Consumed REST service document to.
@@ -44,11 +44,11 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 (add screenshot)
 
-## 3 Configuration 
+## 3 Configuration {#configuration}
 
 Use the Consumed REST service to configure a GET or POST request for your app. 
 
-### 3.1 Basic Configuration 
+### 3.1 Basic Configuration {#configure-a-request}
 
 Create a GET or POST request to send data to your server by doing the following:
 1.	In the **General** field, name your request. 
@@ -67,7 +67,7 @@ Create a GET or POST request to send data to your server by doing the following:
 
 You can visualize your request in the **Response data** tab, then use the response to [create an entity in the domain model]{#create-an-entity}. 
 
-### 3.2 Authentication Methods
+### 3.2 Authentication Methods {#authentication}
 
 You can configure basic authentication to use for all requests in your document. Authentication is not required but can be added if needed. To add basic authentication, do the following:
 
@@ -81,7 +81,7 @@ You can configure basic authentication to use for all requests in your document.
  2.	Name the constant and click **OK**
 4.	Add any additional information needed and click **OK** > **OK**.
 
-### 3.3 Adding Parameters 
+### 3.3 Adding Parameters {#add-parameters}
 
 Parameters are fully supported in the path & query part of the URL. They are defined within curly brackets in the URL (for example, ‘http://numbersapi.com/{numbers}’). All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
 
@@ -98,7 +98,7 @@ To add a parameter, follow these steps:
 
 Note: Parameters are not supported for the base URL. 
 
-### 3.4 Adding Headers
+### 3.4 Adding Headers {#add-headers}
 
 You can add a header for any HTTP request you have specified in your document. To add a header, do the following:
 
@@ -109,7 +109,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 3.	Click **OK**. To test the header, click **Send**   
 
-### 3.5 Adding a Request Body
+### 3.5 Adding a Request Body (for POST requests only) {#add-a-request-body}
 
 POST requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
@@ -122,7 +122,7 @@ POST requests support JSON strings as a request body. Add the JSON body snippet 
 
 (add screenshot)
 
-### 3.6 Creating an Entity from the Response
+### 3.6 Creating an Entity from the Response {#create-entity}
 
 You can check the response of your request in the **Response data** tab. 
 
@@ -134,7 +134,7 @@ If you want to use the response to create an entity in your domain model, naviga
 
 The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. This creates an entity in your domain model, which you can see by clicking **Show**
 
-### 3.7 Using a REST Request in a Microflow
+### 3.7 Using a REST Request in a Microflow {#add-entity-to-microflow}
 
 To select a request in the microflow, complete the following steps:
 1.	Create a new microflow and drag the **Send REST request** activity into it.

@@ -47,7 +47,7 @@ This connector supports the following statements:
 
 ## 2 Installation {#installation}
 
-Download the [Mendix 10 Database Connector](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/general/app-store-content/#install).
+Download the [External Database Connector](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/general/app-store-content/#install).
 
 ## 3 Configuration in Design Time {#configuration}
 

@@ -75,3 +75,10 @@ Distributing web apps is a single step; deploying to the production environment 
 As your native mobile app gets more complex, monitoring your app's behavior and users' interactions becomes an essential part of your app development cycle. Therefore Mendix supports sending default and custom logs of different levels from the Mendix native app to the [Mendix Runtime](/refguide/runtime/). This allows app administrators to monitor the app, gain insight on different app states, and possess an improved overview for troubleshooting. To learn more about logging in native mobile apps, see [Logging](/refguide/mobile/building-efficient-mobile-apps/logging/).
 
 We also have the information you need to [test](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/) and [debug](/refguide/mobile/distributing-mobile-apps/native-debug/) your Mendix apps. To debug a web app's JavaScript, you simply open the developer console. But to debug a Mendix native app, you can use the Make It Native testing app's **Enable Remote JS Debugging** function to open the app up to normal debugging with Chrome.
+
+## 8 Best Practices for Mobile Apps
+
+Todo: explain what best practices are and what to expect
+Todo: Add a link to new page /refguide/mobile/best-praxtices
+Todo: Add that page (it should contain a summary of all subpages and links to them)
+Todo: Add subpages with content

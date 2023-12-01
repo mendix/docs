@@ -3,13 +3,13 @@ title: "External Database Connector"
 url: /appstore/connectors/external-database-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
-tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgres", "oracle", "new"]
+tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgresql", "oracle", "new"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgresSQL, and Oracle databases with the [Mendix 10 Database](https://marketplace.mendix.com/link/component/216121) connector.
+Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [Mendix 10 Database](https://marketplace.mendix.com/link/component/216121) connector.
 
 This connector is supported for Studio Pro [10.6](/releasenotes/studio-pro/10.6/) and above. 
 

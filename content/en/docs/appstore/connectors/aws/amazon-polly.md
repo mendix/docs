@@ -172,7 +172,6 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 | --- | --- |
 | STANDARD | STANDARD |
 | NEURAL | NEURAL |
-| LONG_FORM | LONG_FORM |
 | UNKNOWN_TO_SDK_VERSION | UNKNOWN_TO_SDK_VERSION |
 
 #### 4.2.3 `TextType`

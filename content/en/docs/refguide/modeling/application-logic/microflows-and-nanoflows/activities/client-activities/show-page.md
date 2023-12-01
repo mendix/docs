@@ -58,10 +58,6 @@ This feature allows you to re-use the same page for the **New** and **Edit** but
 
 ### 3.3 Close Pages {#close-pages}
 
-{{% alert color="info" %}}
-This option is only available for native mobile.
-{{% /alert %}}
-
 Often you need to have control of page history, for example to show the correct page when a user presses the hardware back button on Android. These types of actions generally will only close a single page in the current stack. **Close Pages** provides more control over this behavior. We define relevant terms as follows:
 
 * **source page**: The page you are navigating *from*
@@ -72,8 +68,8 @@ Often you need to have control of page history, for example to show the correct 
 | None | Do not remove any pages from history. This is the default behavior.|
 | Single | After navigating to the **target page**, remove the **source page** from history. |
 | Multiple | After navigating to the **target page**, remove the **source page** and one or more pages before it from history. Configure the total number of pages removed using an expression. |
-| All | After navigating to the **target page**, remove the **source page** and all pages before it from history. This option is similar to the **Single** and **Multiple** options, except only pages in the current stack will be closed. |
-| Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow.<br />{{% alert color="warning" %}}In the page editor and in nanoflows as well as in native apps, this option can only be used in combination with target pages that are included in the bottom bar configuration (if the layout has a bottom bar) and that have a default layout type (meaning, not a pop-up).{{% /alert %}} |
+| All | After navigating to the **target page**, remove the **source page** and all pages before it from history. For web, the first page in the stack won't be closed. This option is similar to the **Single** and **Multiple** options, except only pages in the current stack will be closed. |
+| Clear history (native mobile only)| Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow.<br />{{% alert color="warning" %}}In the page editor and in nanoflows as well as in native apps, this option can only be used in combination with target pages that are included in the bottom bar configuration (if the layout has a bottom bar) and that have a default layout type (meaning, not a pop-up).{{% /alert %}} |
 
 ### 3.4 Parameters Section {#parameters}
 

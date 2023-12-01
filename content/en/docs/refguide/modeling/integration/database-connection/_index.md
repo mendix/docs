@@ -85,7 +85,7 @@ After [querying the database](/appstore/connectors/database-connector-mx10/#quer
 
 If you like what you see, click **Use Response**. This will take you to the [Data Structure](#data-structure) screen where you can preview and create an entity from the response.
 
-### 3.4 Data Structure {#data-structure}
+### 3.4 Response Structure {#data-structure}
 
 The **Data Structure** screen gives you a preview of an entity that can be created from the response of your query. You can adjust the name, or move back to a previous step. Click **Save Query & Create Entity** to create the entity in your domain model.
 

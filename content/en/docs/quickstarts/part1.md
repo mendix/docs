@@ -31,7 +31,7 @@ To learn more about Mendix concepts, check out the various sections of the [Plat
 
 ## 2 Prerequisites 
 
-Before starting this guide, make sure you have completed the following prerequisites:
+Before starting this tutorial, make sure you have completed the following prerequisites:
 
 * Create your [free Mendix account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs), which takes only two minutes to complete
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro

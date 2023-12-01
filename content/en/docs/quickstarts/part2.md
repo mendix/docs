@@ -13,34 +13,29 @@ aliases:
 
 In this quickstart tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/part1/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
 
-In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store).
+In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/part1/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
 
-### 1.2 Getting to Know Native Mobile
+### 1.2 Getting to Know Mendix Native Mobile
 
-The native app you create in this tutorial will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/part1/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
+Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance,  advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
 
-Mendix native mobile apps are native mobile apps based on React Native. These apps use native UI elements which means faster performance and advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
-
-Native mobile apps are offline first and only fetch data from the server when programmed to do so. By completing this guide, you will become acquainted with the following Mendix native mobile concepts:
+Native mobile apps are offline first and only fetch data from the server when programmed to do so. This tutorial will familiarize you with the following Mendix native mobile concepts:
 
 * [Offline-first design](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/)
 * [Data synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) between mobile devices and web apps
-* [Nanoflows](/refguide/nanoflows/): the native mobile JavaScript equivalent to microflows)
+* [Nanoflows](/refguide/nanoflows/), which are the native mobile JavaScript equivalent to microflows
 * Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
 
 ## 2 Prerequisites
 
-Before starting this guide, make sure you have completed the following prerequisite:
+Before starting this tutorial, make sure you have completed the following prerequisites:
 
-* Read through [Part 1: Build a Responsive Web App](/quickstarts/part1/)
+* Read through [Building a Responsive Web App](/quickstarts/part1/)
 * Download the [Make It Native 10](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
-
-### 2.1 Downloading the Make It Native 10 App
-
-The [Make it Native 10](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices. Once installed, the app lets you quickly test your native mobile app as you develop it. 
-
-Specifically, the Make it Native 10 app connects to your local development machine’s running copy of your app and then displays your app inside its mobile testing environment. This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app.
+    * The [Make it Native 10](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices
+    * Once installed, the app lets you quickly test your native mobile app as you develop it by connecting to your local development machine’s running copy of your app and displaying the app inside its mobile testing environment
+    * This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app
+* If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ## 3 Creating a Native Mobile Picture App
 

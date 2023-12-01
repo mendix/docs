@@ -171,24 +171,33 @@ All done! You can now run your app and test all the features you have built. To 
     
     {{% alert color="info" %}}If you are using a Mac, be sure to use forward ports 8080/8083, as explained in [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide/using-mendix-studio-pro-on-a-mac/#configuring).{{% /alert %}}
 
-This will automatically begin the testing. If you need more information, see [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
+This will automatically begin the testing:
+
+{{< figure src="/attachments/quickstarts/part2/mobile-pic-1.png" width="200px" >}}
+
+If you need more information, see [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
 
 ### SCENARIO
 
-When we tested our native mobile photo app, we were lucky to sight a stegosaurus nearby:
+While we were testing our native mobile photo app, we were lucky to see a dinosaur nearby:
 
-{{< figure src="/attachments/quickstarts/part2/mobile-pics-combined.png" width="500px" alt="stegosaurus 1">}}
+{{< figure src="/attachments/quickstarts/part2/mobile-pic-2.png" width="150px" alt="Stegosaurus plant holder in a mobile device camera">}}
 
+After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile:
 
+{{< figure src="/attachments/quickstarts/part2/mobile-pic-3.png" width="200px" alt="Updated app with new photo">}}
 
-
-After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile after reloading the page in your browser:
+After reloading the page in your browser, you should be able to also see the new pictures there:
 
 {{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="450px" alt="Browser view">}}
 
-Congratulations on successfully completing Part 2 of the quickstarts! You are definitely on your way to succeed with the Mendix Platform.
+Congratulations on completing this quickstart tutorial! You are on your way to successful app development with the Mendix Platform.
 
-For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). Put simply, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
+### READ MORE
+
+For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). 
+
+Put simply, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
 
 ## 5 Read More
 

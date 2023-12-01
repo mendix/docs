@@ -82,9 +82,9 @@ Now, the existing images are displayed from the database.
 
 Next, you will develop functionality that allows the end-user to take new pictures with the app and then upload them to the server.
 
-## 4 Using a Nanoflow to Call the Take Picture JSAction
+## 4 Using a Nanoflow to Call a JavaScript Action
 
-Your app needs a button which allows the user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users:
+Your app needs a button that allows the end-user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users that calls a nanoflow: 
 
 1. Drag the **Floating action button** from the **Toolbox** onto the page:
 
@@ -92,36 +92,42 @@ Your app needs a button which allows the user to take a picture. Instead of a re
 
     The location is managed in the widget's properties, so it does not matter where the widget is placed on the page. You can place it above the list view and still have it display in the bottom-right corner by configuring the widget correctly.
 
-1. Double-click the button to open its properties. 
-1. Select an **Icon** for the button, then search for the **camera** icon. 
-1. Set the position to the **right** and **bottom** side of the page. 
-1. Set the on click action is set to **Call a nanoflow**.
-1. Click **Nanoflow** > **Select** then create a new nanoflow called **ACT_TakeNewPicture**:
+2. Double-click the button to open its properties. 
+3. Select an **Icon** for the button, then search for the **Camera** icon. 
+4. Set the position to the **Right** and **Bottom** side of the page. 
+5. Set the **On click action** to **Call a nanoflow**.
+6. Click **Nanoflow** > **Select**, then create a new nanoflow called *ACT_TakeNewPicture*:
 
     {{< figure src="/attachments/quickstarts/part2/make-pic-nano.png" width="450px" alt="New nanoflow">}}
 
-[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are offline-first, meaning they can execute without an online data connection. Therefore certain functionality like calling a REST API, which is available in microflows, is not in nanoflows. This is because nanoflows are based on JavaScript and execute on mobile devices instead of the server. 
+### 4.1 Configuring the Nanoflow
+
+[Nanoflows](/refguide/nanoflows/) are the native mobile equivalent of microflows, but with several key differences. Nanoflows are based on JavaScript, and they are offline-first. This means they can execute without an online data connection, and they execute on mobile devices instead of the server. Therefore, certain functionality—like calling a REST API, which is available in microflows—is not available in nanoflows.
 
 Nanoflows also interact with the database on the user's mobile device, which is a copy of the server's database. All database transactions need to be synchronized from the device to the server in order for the data to reflect online.
 
-As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
+Do the following for your new **ACT_TakeNewPicture** nanoflow:
 
 1. Drag a **Create object** action from the **Toolbox** into the nanoflow. 
-1. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
-1. Drag a **Take Picture** action from the **Toolbox** into the nanoflow after the create object activity:
+2. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
+3. Drag a **Take Picture** action from the **Toolbox** into the nanoflow after the create object activity:
 
     {{< figure src="/attachments/quickstarts/part2/add-activities.png" width="450px" alt="Take picture action">}}
 
-1. Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
-    1. Picture: $NewPicture
-    1. Picture source: camera
-    1. Picture quality: original
-    1. Maximum width: empty
-    1. Maximum height: empty
-    1. Use return value: yes
-    1. Variable name: PictureTaken
+4. Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
+    * **Picture**: $NewPicture
+    * **Picture source**: camera
+    * **Picture quality**: original
+    * **Maximum width**: empty
+    * **Maximum height**: empty
+    * **Use return value**: yes
+    * **Variable name**: PictureTaken
 
     {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
+    
+    
+    
+
 
 Finally you need to create a page in which the user can view and edit their new picture:
 

@@ -58,7 +58,7 @@ This setting is available for only add-on and solution module types.
 
 A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-We recommend setting a new version every time changes are made to the module. 
+Mendix recommends setting a new version every time changes are made to the module. 
 
 ## 5 Read More
 

@@ -21,7 +21,7 @@ The Private Cloud data migration tool is compatible with [backup files](/develop
 When exporting files from an environment, the export only includes files which are in use (that is, which are referenced by a `System.FileDocument` entity). Any files that are not used by the app are ignored.
 
 {{% alert color="info" %}}
-Although this tool can also be used to backup and restore your Mendix for Private Cloud databases and files regularly, we recommend that you implement your own backup and restore processes which take advantage of the tools provided by your database vendor or cloud provider.
+Although this tool can also be used to backup and restore your Mendix for Private Cloud databases and files regularly, Mendix recommends implementing your own backup and restore processes which take advantage of the tools provided by your database vendor or cloud provider.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -110,7 +110,7 @@ If the file storage uses self-signed TLS certificates from a private CA, provide
 
 If you cannot run the data transfer tool from a local machine, because of network access issues, you need to run it in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a jump pod). To do this, follow the instructions below.
 
-Create a YAML file  (e.g. `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
+Create a YAML file  (for example, `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
 
 ```yaml
 apiVersion: v1

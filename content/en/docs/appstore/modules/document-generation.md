@@ -39,8 +39,8 @@ The PDF document generation service does not store pages or documents at any tim
 
 * Currently, PDF is the only supported document export format.
 * For deployment, currently only the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) is supported. Other deployment scenarios will be supported at a later stage.
-* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
-* When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access, for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
+* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. Mendix recommends compressing high-resolution images to reduce their file size.
+* When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access (for example, using IP safe-listing and/or client certificates), our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
 * Complex documents (for example, large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
@@ -63,7 +63,7 @@ The PDF document generation service does not store pages or documents at any tim
 
 ## 2 Installation {#installation}
 
-Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the Documentation Generation module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Documentation Generation module into your app.
 
 ## 3 Configuration {#configuration}
 
@@ -210,7 +210,7 @@ For scenarios where you want to generate documents as a system task (for example
 6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user object) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
-We recommend trying to log in as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
+Mendix recommends trying to log in as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
 ### 4.3 Language and Date/Time Handling
@@ -282,7 +282,7 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
 {{% alert color="info" %}}
-We recommend not using the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
+Mendix recommends not using the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
 {{% /alert %}}
 
 ## 5 Troubleshooting
@@ -302,7 +302,7 @@ In case you encounter any issues while [registering your app environment(s)](#re
 
 ### 5.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
-In general, we recommend you perform the following steps in case of any issues during runtime:
+In general, Mendix recommends performing the following steps in case of any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
@@ -324,7 +324,7 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 	at DocumentGenerationTest.ACT_TestDocument_WrongLayout (JavaAction : 'Generate PDF from page')
 ```
 
-We recommend you temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
+Mendix recommends temporarily setting the log level of the `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
 #### 5.2.3 Cloud Service Errors
 
@@ -340,7 +340,7 @@ In case you encounter the message "No configuration object available. For use in
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 
 * The required **Enable PDF export** design property is not set to **Yes** for the page you are trying to export to PDF.
-* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.
+* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, Mendix recommends temporarily adding the page to, for example, the app navigation.
 * A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.
 * Make sure that the module role `User` is assigned to the user who is passed in the `Generate as user` property of the `Generate PDF from page` action.

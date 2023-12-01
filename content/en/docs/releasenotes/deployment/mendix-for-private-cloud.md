@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### November 23, 2023
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor/#import-dashboard) for native metrics to deduplicate labels in case the app is restarted. When the app restarts, it will no longer create a new set of metrics.
+* We have rearranged JVM heap memory graphs for the G1 Garbage Collector so that *Eden Space* is always on top of other graphs, just like it was with the previous garbage collector.
+
 ### November 17, 2023
 
 #### Data Migration Tool (Preview) v0.0.4
@@ -770,7 +777,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have fixed an issue with misleading error messages in the container logs if Mendix Runtime is failing to start. If the MxAdmin user has an insecure password, a correct error message will be displayed.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
-After upgrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.
+After upgrading the Mendix Operator, Mendix recommends downloading the latest version of the Configuration Tool.
 
 ### January 6, 2021
 

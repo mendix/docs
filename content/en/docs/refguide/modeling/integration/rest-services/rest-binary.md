@@ -25,7 +25,7 @@ To publish or retrieve files with REST, do the following:
 
 * Install Studio Pro
 
-We recommend reading the following for some more background:
+Mendix recommends reading the following for some more background:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * Working with [Images, Videos, and Files](/refguide/image-and-file-widgets/) in Studio Pro

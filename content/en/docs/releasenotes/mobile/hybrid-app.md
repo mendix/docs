@@ -338,7 +338,7 @@ Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. There
 
 {{% alert color="info" %}}
 
-For this update, we recommend downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
+For this update, Mendix recommends downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
 
 {{% /alert %}}
 
@@ -391,7 +391,7 @@ This patch fixes an issue with an upstream dependency (`com.android.support:supp
 
 {{% alert color="info" %}}
 
-This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, Mendix recommends downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
 
 {{% /alert %}}
 
@@ -407,7 +407,7 @@ This is a major release, because it is not fully compatible with older versions 
 
 {{% alert color="info" %}}
 
-For this update, we recommend that you download a fresh hybrid app package from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
+For this update, Mendix recommends downloading a fresh hybrid app package from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
 
 {{% /alert %}}
 

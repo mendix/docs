@@ -13,6 +13,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### November 30, 2023
+
+#### New Features
+
+* We released the [Content API](/apidocs-mxsdk/apidocs/content-api/) for general use. This API allows you to retrieve information about both public and private company-specific Marketplace content.
+
 ### September 7, 2023
 
 #### Improvements
@@ -30,7 +36,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 
 #### New Features
 
-* You can now configure your own [proprietary license](/appstore/overview/share-content/#proprietary-license) when creating a new public component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization can use the license for other components. 
+* You can now configure your own [proprietary license](/appstore/sharing-content/#proprietary-license) when creating a new public component. The license will be reviewed by Mendix alongside the review of the component. After the license has been approved, you and anyone within your organization can use the license for other components. 
 
 ### May 25, 2023
 
@@ -82,7 +88,7 @@ The new view helps you to browse through Marketplace components and view compone
 
 Finally, we introduced UI changes for pagination and points of entry to the Marketplace for a better user experience.
 
-For more information, see [How to Use Marketplace Content](/appstore/overview/use-content/).
+For more information, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 {{% alert color="warning" %}}
 If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
@@ -113,12 +119,12 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * There are now user trials available for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
 * User trial subscriptions are now listed under [My Subscriptions](/appstore/overview/my-marketplace/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions).
-* For new uploads of public components, you can now optionally share a [virus scan report](/appstore/overview/share-content/#package) to speed up the governance process.
-* For solutions and solution templates, you can now add a [use case](/appstore/overview/share-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
+* For new uploads of public components, you can now optionally share a [virus scan report](/appstore/sharing-content/#package) to speed up the governance process.
+* For solutions and solution templates, you can now add a [use case](/appstore/sharing-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
 
 #### Improvements
 
-* We made performance improvements for when a large source file is [uploaded](/appstore/overview/share-content/#package), specifically on the navigation steps.
+* We made performance improvements for when a large source file is [uploaded](/appstore/sharing-content/#package), specifically on the navigation steps.
 * We improved the UI for self-service uploading your component to the Marketplace.
 
 ### February 10, 2022
@@ -138,19 +144,19 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We now support using rich text for your [component description](/appstore/overview/share-content/#general).
+* We now support using rich text for your [component description](/appstore/sharing-content/#general).
 
 ### November 18, 2021
 
 #### New Features
 
 * We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)).
-* You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/overview/share-content/#adding).
+* You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/sharing-content/#adding).
 
 #### Improvements
 
-* You can now add [release notes](/appstore/overview/share-content/#package) for your new component version without uploading a new source file.
-* You can now skip uploading a source file on the [Package](/appstore/overview/share-content/#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
+* You can now add [release notes](/appstore/sharing-content/#package) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Package](/appstore/sharing-content/#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7, 2021
 
@@ -182,9 +188,9 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* When [adding new Marketplace content](/appstore/overview/share-content/#adding), you can now only set the **Category** in the initial version of your content. You cannot change this setting by updating the content later.
+* When [adding new Marketplace content](/appstore/sharing-content/#adding), you can now only set the **Category** in the initial version of your content. You cannot change this setting by updating the content later.
 * When you create a new component in the **Solutions** category, you will not be able to upload a source file, as solutions will no longer have downloadable content.
-* We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/overview/share-content/#publish) page.
+* We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/sharing-content/#publish) page.
 
 #### Fixes
 
@@ -244,7 +250,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes
 
-* We fixed some bugs in the [add new Marketplace content](/appstore/overview/share-content/#adding) flow and we made error messages more descriptive.
+* We fixed some bugs in the [add new Marketplace content](/appstore/sharing-content/#adding) flow and we made error messages more descriptive.
 
 ## 2020
 
@@ -255,7 +261,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
 * We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/#home), [catalog](/appstore/overview/), [component details](/appstore/overview/#details), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
-* We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/overview/share-content/) to the Marketplace.
+* We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/sharing-content/) to the Marketplace.
 
 ### May 27, 2020
 
@@ -283,7 +289,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes {#private-fix}
 
-* Downloading [private content](/appstore/overview/share-content/#private) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
+* Downloading [private content](/appstore/sharing-content/#private) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
     * You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and [7.23.x](/releasenotes/studio-pro/7.23/) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
     * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/overview/my-marketplace/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 
@@ -329,7 +335,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvements
 
-We added the flexibility to label your App Store content with a [custom version number](/appstore/overview/share-content/#updating).
+We added the flexibility to label your App Store content with a [custom version number](/appstore/sharing-content/#updating).
 
 {{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com). Thanks, Andreas!{{% /alert %}}
 

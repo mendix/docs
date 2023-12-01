@@ -96,10 +96,12 @@ You can find a list of known limitations below, however, we advise you to check 
 
 | Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
 | ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
-| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB (warning 50 MB)  | 5 GB                |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB)  | 5 GB                |
 | GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
 | Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
 | Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
+
+¹ You will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
 
 #### 2.6.1 Azure Repos and Azure DevOps Server 
 
@@ -265,7 +267,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

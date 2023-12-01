@@ -17,6 +17,11 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
+### November 23, 2023
+
+#### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
 ### November 17, 2023
 
 #### Improvements
@@ -26,14 +31,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Fixes
 
-- We fixed a bunch of bugs in Epics, mostly related to the dark mode
-
+- We fixed a bunch of bugs in Epics, mostly related to the dark mode.
 ### November 16, 2023
 
 #### Improvements
 
 * We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configuration pop-up window that appears when setting up your Jira connection more clear.
-
 ### November 9, 2023
 
 #### New Features
@@ -43,14 +46,14 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Fixes
 
-* We fixed issue in Feedback where tags could be incorrectly duplicated.
-* We fixed issue in Feedback where deleting tags or statuses caused errors. 
+* We fixed an issue in Feedback where tags could be incorrectly duplicated.
+* We fixed an issue in Feedback where deleting tags or statuses caused errors.
 
 ### November 2, 2023
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -380,7 +383,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### Fixes
 
 * We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
-* We updated the text in the [notifications](/developerportal/#profile-notification-help) when a story is assigned to you in **Epics**.
+* We updated the text in the [notifications](/developerportal/global-navigation/#notifications) when a story is assigned to you in **Epics**.
 
 ### February 13, 2023 {#feb-13-23}
 
@@ -547,7 +550,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* We released [Notifications](/developerportal/#profile-notification-help) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21, 2022
 
@@ -585,7 +588,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
-    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so Mendix recommends using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30, 2022
 
@@ -687,7 +690,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* We improved the platform navigation. The [Switch to](/developerportal/#global-navigation) menu on the left side of the top bar now also provides access to your recently used apps.  
+* We improved the platform navigation. The [Switch to](/developerportal/global-navigation/) menu on the left side of the top bar now also provides access to your recently used apps.  
 
 ## 2021
 
@@ -810,7 +813,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Fixes
 
-* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/#company) could not add or remove team members.
+* We fixed an issue with the app's [Team](/developerportal/general/team/) page where [Mendix Admins](/control-center/company-settings/) could not add or remove team members.
 
 ### July 14, 2021
 

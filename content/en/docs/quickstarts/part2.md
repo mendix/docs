@@ -11,13 +11,13 @@ aliases:
 
 ## 1 Introduction 
 
-In this quicikstart tutorial, you will be adding on to the app you created in [Building a Responsive Web App](/quickstarts/part1/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package in order to start this tutorial right away.
+In this quickstart tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/part1/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
 
 In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store).
 
 ### 1.2 Getting to Know Native Mobile
 
-You will create a small native mobile app which adds on to the app made in Part 1. The native app will take pictures and upload them to the same database as before so they can be viewed in a browser or in a native app on your mobile device. You will also use the Make it Native app to test your app on a mobile device.
+The native app you create in this tutorial will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/part1/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
 
 Mendix native mobile apps are native mobile apps based on React Native. These apps use native UI elements which means faster performance and advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
 

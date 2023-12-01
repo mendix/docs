@@ -108,5 +108,3 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 ### 3.2 Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
-
-

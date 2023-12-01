@@ -22,4 +22,3 @@ While you can jump straight into [Adding a Native Mobile App](/quickstarts/part2
 When you are done, you will have mastered the basics of building and hosting apps with Mendix, and you will have your first app.
 
 Let's get started with [Creating and Deploying a Hello World App](/quickstarts/hello-world/) or [Building a Responsive Web App](/quickstarts/part1/)!
-

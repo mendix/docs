@@ -486,7 +486,11 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 To leave the portfolio, click the **Leave** button on the right side above the member list. 
 
-If you are the only Portfolio Manager of the portfolio, when you click **Leave**, a dialog window opens and asks you to choose either assign another user to be the new Portfolio Manager before you leave the portfolio, or delete the portfolio permanently when you leave the portfolio. If you choose to assign a user as the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member or invite a new member to be the new Portfolio Manager.
+If you are the only Portfolio Manager of the portfolio, when you click **Leave**, a dialog window opens and asks you to choose one of these two options:
+
+* Delete the portfolio permanently together with all the data in the portfolio when you leave the portfolio; or
+* Assign another user to be the new Portfolio Manager before you leave the portfolio
+  * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member, or invite a new member to be the new Portfolio Manager.
 
 #### 5.1.2 Adding New Users {#add-users}
 
@@ -494,7 +498,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 
 1. Go to **Access Management**.
 2. On the upper-right corner of the **Members** tab, click **Add Users**.
-3. In the dialog box, enter the **Email Address** of the user who you want to invite. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
+3. In the dialog box, enter the email address of the user who you want to invite. The **Email Address** field also gives a drop-down list with all the active users from your company. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
 6. Click **Send Invites**.
@@ -519,7 +523,7 @@ At the end of the row, click the ellipsis button (**...**), and then select the 
 
 You can remove all the deactivated users from the portfolio in one go. 
 
-To do so, click **Remove Deactivated Users** above the list on the right side. If a deactivated user that you will remove still owns initiatives, these initiatives will not have any owner after you remove this user from the portfolio.
+To do so, click **Remove Deactivated Users** above the list on the right side. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
 
 ### 5.2 Access Requests {#access-requests}
 

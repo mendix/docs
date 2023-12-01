@@ -37,7 +37,7 @@ Before starting this tutorial, make sure you have completed the following prereq
     * This lets you make changes to your app on your development machine, then instantly see those changes in the mobile app
 * If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 3 Creating a Native Mobile Picture App
+## 3 Building the Native Mobile Picture App
 
 Starting in Studio Pro, open the **Home_Native** page by double-clicking it in the **App Explorer**. You can also press <kbd>CTRL</kbd> + <kbd>G</kbd> to open the **Go to** menu and search for the page (the **Go to** menu is used for quick navigation in the app; for more Mendix shortcuts, see [Edit Menu](/refguide/edit-menu/#overview)).
 
@@ -60,33 +60,27 @@ The content on this page comes pre-made as a part of the template. To get starte
     
 5. When prompted to automatically fill the contents of the list view, click **No**.
 
-### 3.1 Creating the User Interface
+### 3.1 Creating the UI
 
-Next you are going to create the user interface for your native app:
+Next, you are going to create the UI for your native app:
 
 1. Right-click the empty space inside the list view and select **Add building block**.
-1. Search for and select the **Image** building block under **Cards**.
-
-Just as in [Part 1](/quickstarts/part1/), you must replace the auto-generated content with your content from the database.
-
-Start by replacing the static image with the image the user uploads to the database:
-
-1. Right-click the **Static Image** viewer and choose **Convert to dynamic image**. 
-1. Right-click the image viewer and choose **Select datasource**.
-1. Search for your **Picture** entity, select it, and when prompted to automatically fill the contents of the widget click **Yes**.
-
-Your images will now be displayed from the database, but the labels on the page will still be displaying their default text. To fix this, do the following:
-
-1. Double-click the label captioned **Card title** to open its properties.
-1. Click the **Edit** button next to **Caption**.
-1. In the new window, replace the caption field with the place holder *{1}*. 
-1. Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute:
+2. Search for and select the **Image** building block under **Cards**.
+3. Replace the static image with the image the end-user uploads to the database by right-clicking the **Static Image** viewer and selecting **Convert to dynamic image**. 
+4. Right-click the image viewer and select  **Select data source**.
+5. Search for and select your **Picture** entity, and when prompted to automatically fill the contents of the widget, click **Yes**.
+6. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
+7. Click the **Edit** button next to **Caption**.
+8. In the new dialog box, replace the caption with the place holder *{1}*. 
+9. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/part2/add-title-param.png" width="450px" alt="Configure edit button">}}
 
-1. Repeat the steps for the second label beneath the **Tile** field, this time linking it to the **Description** attribute instead.
+10. Repeat this process for the other label, making sure to select the **Description** attribute this time.
 
-Now your existing images are being displayed from the database. Next, you will develop functionality which allows the user to take new pictures with the app and then upload them to the server.
+Now, the existing images are displayed from the database. 
+
+Next, you will develop functionality that allows the end-user to take new pictures with the app and then upload them to the server.
 
 ## 4 Using a Nanoflow to Call the Take Picture JSAction
 

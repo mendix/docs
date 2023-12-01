@@ -24,6 +24,12 @@ You can use this Consumed REST service to do the following:
 
 ### 1.2 Limitations
 
+*This feature supports the following HTTP request methods:
+ *GET
+ *POST
+* To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
+* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
+
 ### 1.3 Prerequisites 
 
 ## 2 Installation 

@@ -29,7 +29,7 @@ General configuration settings allow you to manage the basic aspects of your Pri
 The **General** tab allows you to configure information about your organization, and optionally also the Certified Mendix Partner that is working with you on implementing Private Mendix Platform. You can also use it to configure your locale settings.
 
 {{% alert color="info" %}}
-Changing your locale sets locale-dependent formats, such as date and time, to the preferred format of the selected locale.
+Changing your locale sets locale-dependent formats, such as date and time, to the preferred format of the selected locale. The settings are applied to the Private Mendix Platform (for example, in the Marketplace or Developer Portal), not in the apps created through the Platform.
 {{% /alert %}}
 
 ### 2.2 Branding

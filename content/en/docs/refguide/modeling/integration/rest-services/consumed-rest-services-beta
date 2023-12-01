@@ -69,6 +69,18 @@ You can visualize your request in the **Response data** tab, then use the respon
 
 ### 3.2 Authentication Methods
 
+You can configure basic authentication to use for all requests in your document. Authentication is not required but can be added if needed. To add basic authentication, do the following:
+
+1.	 Click **Configuration & authentication**.
+2.	Under **Authentication method**, click the drop-down and select **Basic authentication**. 
+
+(add screenshot)
+
+3.	Select a constant or create a new one for your username and password. To create a new constant, follow these steps:
+ 1.	Next to **Username** or **Password**, click **Select** > **New**.
+ 2.	Name the constant and click **OK**
+4.	Add any additional information needed and click **OK** > **OK**.
+
 ### 3.3 Adding Parameters 
 
 ### 3.4 Adding Headers

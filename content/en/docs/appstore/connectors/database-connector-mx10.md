@@ -34,8 +34,6 @@ This connector supports the following statements:
 
 * `SELECT` — retrieves rows and columns from a database
 * `INSERT` — inserts data into a database  
-* `UPDATE` — updates existing data within a database 
-* `DELETE` — deletes records from a database
 
 ### 1.3 Prerequisites
 

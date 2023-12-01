@@ -25,7 +25,7 @@ This connector supports connections to the following database types:
 
 * Microsoft SQL
 * MySQL
-* PostgresSQL
+* PostgreSQL
 * Oracle
 
 If you are looking for another database type, follow the prompt to request support your database when you open the []

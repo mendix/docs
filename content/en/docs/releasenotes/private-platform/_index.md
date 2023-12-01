@@ -14,30 +14,30 @@ These release notes cover changes made to the [Private Mendix Platform](/private
 
 This release brings a number of additional functionalities for the Platform related to getting help, supporting manual deployment processes, as well as a number of fixes and minor improvements.
 
-### New Features
+#### New Features
 
-#### Help Button
+##### Help Button
 
 * For developers, we have added a **Help** button to the Developer Portal and a **Help** page that allows you to download a contextual information bundle. Share this bundle with your Certified Partner, or if your organization is certified, with your platform support team, using the instructions as displayed on the **Help** page. This will provide them with the technical information (logs, events, and so on) to streamline troubleshooting.
 * Company administrators can normalize support processes by inputting the proper Support process under the **Settings** > **General** > **Support** tab, using a Rich Text input field.
 
-#### Support for Manual Deployments
+##### Support for Manual Deployments
 
 * For developers, it is now possible to select a **Manual Deployment** target as one of your cluster options. When you deploy to these targets, your build artifact will be transported to the predefined storage bucket or artifact registry, so that the Ops teams can take over from there and deploy to any further isolated production infrastructure. Optionally, you can configure a Webhooks call to to start any automation pipelines on their side as well.
 * For cluster administrators, if your organization has isolated production clusters that require manual Ops intervention to deploy to, you can now predefine **Manual Deployment** targets in the Cluster Manager (**Settings** > **DevOps** > **CI/CD** > **Cluster Manager**). These are storage buckets or artifact registries where the built application package can be staged for any following manual steps. You can add these in the same way as you would add a new cluster, but select the Manual Deployment type and input the necessary authentication to write to the storage bucket. Optionally, you can also add Platform-level Webhook automation to automatically initiate any Ops processes on that side.
 
-### Improvements
+#### Improvements
 
-#### General Settings and Locale Preferences
+##### General Settings and Locale Preferences
 
 * We have added a **General** tab to the **General Settings** page (accessible to administrators), where Customer and Certified Partner information can be saved. 
 * The General section also includes locale preferences. Changing your country sets locale-dependent formats, such as numbers, date and time, or currency, to the preferred format of the selected country. The settings are applied to the Private Mendix Platform (for example, in the Marketplace or Developer Portal). They do not affect the date and time or locale settings of your apps.
 
-#### Helm Charts in the Installer
+##### Helm Charts in the Installer
 
 The Private Mendix Platfrom installer now uses explicitly defined Helm charts that are visible in the file and folder tree, instead of the hard-coded ones that were part of the installer's own code.
 
-### Fixes
+#### Fixes
 
 We have resolved the following issues:
 
@@ -53,7 +53,7 @@ We have resolved the following issues:
 * In some cases, errors would occur during Azure DevOps app creation with Studio Pro.
 * An administrator clicking on the **MxDock** link would result in an error.
 
-### Known Issues
+#### Known Issues
 
 * The new Installer Helm charts may affect scripted deployments. If you are a Certified Partner automating the Platform deployments, validate your automations to ensure that they continue to work correctly.
 * Due to introduction of a different cloning and copying mechanism for new branches in Studio Pro, we are temporarily unable to support newer Studio Pro 9.24 LTS patch versions until this matter is resolved. This issue will be resolved in a future release.

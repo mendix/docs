@@ -26,6 +26,10 @@ Native mobile apps are offline first and only fetch data from the server when pr
 * [Nanoflows](/refguide/nanoflows/), which are the native mobile JavaScript equivalent to microflows
 * Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
 
+For more information, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). 
+
+In summary, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. As you develop the app further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve the user experience. You can also add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you need help, Mendix provides [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case..
+
 ## 2 Prerequisites
 
 Before starting this tutorial, make sure you have completed the following prerequisites:
@@ -125,23 +129,19 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
 
     {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
     
-### NEW PAGE
-
-Finally you need to create a page where the end-user can view and edit their new picture:
-
-1. Add a **Show page** action to the nanoflow. 
-2. Open the action's properties:
+5. Finally you need to create a page where the end-user can view and edit their new picture.v Add a **Show page** action to the nanoflow. 
+6. Open the action's properties:
     1. Set the **Object to pass** to be **$NewPicture entity**. 
     1. Click **Page** > **Select** and create a new page. 
     1. Set the **Page name** to be *Picture_NewEdit_Native* at the top of the screen.
     1. Change the profile type to **Native mobile**.
     1. Select the **Edit with Data View** template.
 
-You should see the new page:
+You should now see the new page:
 
 {{< figure src="/attachments/quickstarts/part2/native-pic-page.png" width="450px" alt="New page">}}
 
-### VALIDATION
+### 4.2 Adding Validation
 
 Your app needs to validate that the end-user enters the title and description. Instead of validating that data in a nanoflow, you can configure validation on the text boxes:
 
@@ -149,7 +149,7 @@ Your app needs to validate that the end-user enters the title and description. I
 2. Set **Validation Type** to **Required** and set the message as, *Please provide a title for this picture*.
 3. Repeat the step above for the **Description** field, and set the message as, *Please provide a description for this picture*.
 
-### ENABLING AUTO_SYNCHRONIZATION
+### 4.3 Enabling Auto-Synchronization
 
 Finally, you need to ensure all the data captured by the end-user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's Save button: 
 
@@ -158,7 +158,7 @@ Finally, you need to ensure all the data captured by the end-user is synchronize
 
     {{< figure src="/attachments/quickstarts/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
     
-### TESTING AND FINISHING UP
+## 5 Testing and Finishing Up
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
@@ -171,35 +171,27 @@ All done! You can now run your app and test all the features you have built. To 
     
     {{% alert color="info" %}}If you are using a Mac, be sure to use forward ports 8080/8083, as explained in [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide/using-mendix-studio-pro-on-a-mac/#configuring).{{% /alert %}}
 
-This will automatically begin the testing:
+If you need more information, see [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
+
+This is what we saw when we started testing our native mobile photo app:
 
 {{< figure src="/attachments/quickstarts/part2/mobile-pic-1.png" width="200px" >}}
 
-If you need more information, see [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
-
-### SCENARIO
-
-While we were testing our native mobile photo app, we were lucky to see a dinosaur nearby:
+While we were testing, we were lucky to see a dinosaur nearby:
 
 {{< figure src="/attachments/quickstarts/part2/mobile-pic-2.png" width="150px" alt="Stegosaurus plant holder in a mobile device camera">}}
 
-After taking a photo with your native mobile app and tapping the **Save** button, you should be able to see your new pictures automatically appear in the responsive profile:
+After taking a photo with the native mobile app and tapping the **Save** button, we saw the new photo automatically appear in the responsive profile:
 
 {{< figure src="/attachments/quickstarts/part2/mobile-pic-3.png" width="200px" alt="Updated app with new photo">}}
 
-After reloading the page in your browser, you should be able to also see the new pictures there:
+After reloading the page in our browser, we could also see the new photo there:
 
 {{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="450px" alt="Browser view">}}
 
 Congratulations on completing this quickstart tutorial! You are on your way to successful app development with the Mendix Platform.
 
-### READ MORE
-
-For more information on building and deploying apps with Mendix, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/). 
-
-Put simply, Mendix lets you [build an app for distribution](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and get it running on a native device. After you develop further, you can [debug native app issues](/refguide/mobile/distributing-mobile-apps/native-debug/) to improve your users' experience. Then, you can add [custom fonts](/refguide/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/) to make your app feel more like your brand. And if you ever need help, we have [troubleshooting help](/refguide/mobile/getting-started-with-mobile/prerequisites/) for you just in case.
-
-## 5 Read More
+## 6 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/) – describes Studio Pro tabs, menus, and shortcut keys
 * [Mendix Best Practices for Development](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps

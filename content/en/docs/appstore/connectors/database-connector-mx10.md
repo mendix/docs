@@ -76,7 +76,7 @@ To query the database, do the following:
 
     {{< figure src="/attachments/appstore/connectors/database-connector-mx10/select-query-columns.png" >}}
    
-4. Click **Run Query** to move to the **Response** screen and view the queried data.
+4. Click **Run Query** to move to the **Response data** tab and view the queried data.
 
 #### 3.2.1 Adding Parameters {#parameters}
 

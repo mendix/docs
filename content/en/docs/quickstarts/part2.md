@@ -109,19 +109,19 @@ Nanoflows also interact with the database on the user's mobile device, which is 
 Do the following for your new **ACT_TakeNewPicture** nanoflow:
 
 1. Drag a **Create object** action from the **Toolbox** into the nanoflow. 
-2. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
-3. Drag a **Take Picture** action from the **Toolbox** into the nanoflow after the create object activity:
+2. Double-click the action and set the entity type as **Picture**, then click **OK**. 
+3. Drag a **Take Picture** action and position it after the Create object activity:
 
     {{< figure src="/attachments/quickstarts/part2/add-activities.png" width="450px" alt="Take picture action">}}
 
-4. Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
-    * **Picture**: $NewPicture
-    * **Picture source**: camera
-    * **Picture quality**: original
-    * **Maximum width**: empty
-    * **Maximum height**: empty
-    * **Use return value**: yes
-    * **Variable name**: PictureTaken
+4. Double-click the **Take Picture** action configure the properties like this:
+    * **Picture** – **$NewPicture**
+    * **Picture source** – **camera**
+    * **Picture quality** – **original**
+    * **Maximum width** – **empty**
+    * **Maximum height** – **empty**
+    * **Use return value** – **Yes**
+    * **Variable name** – **PictureTaken**
 
     {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
     
@@ -132,7 +132,7 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
 Finally you need to create a page in which the user can view and edit their new picture:
 
 1. Add a **Show page** action to the nanoflow. 
-1. Open the action's properties:
+2. Open the action's properties:
     1. Select the **Object to pass** as the **$NewPicture entity**. 
     1. Click **Page** > **Select** and choose to create a new page. 
     1. Give the page the **Page name** *Picture_NewEdit_Native* at the top of the screen.
@@ -146,23 +146,23 @@ You should see the new page:
 Just like before, you need to validate that the user has entered the title and description. Instead of validating that data in a nanoflow, you can simply configure validation on the text boxes themselves:
 
 1. Double-click the **Title** field to open its properties. 
-1. Find **Validation Type** at the bottom. 
-1. Set **Validation Type** to **Required** and provide the message *Please provide a title for this picture*.
-1. Repeat this for the **Description** field, and provide the message *Please provide a description for this picture*.
+2. Find **Validation Type** at the bottom. 
+3. Set **Validation Type** to **Required** and provide the message *Please provide a title for this picture*.
+4. Repeat this for the **Description** field, and provide the message *Please provide a description for this picture*.
 
 The final thing to do is ensure all the data captured by the user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's save button: 
 
 1. Double-click the **Save** button. 
-1. Set **Auto-synchronize** to **Yes**:
+2. Set **Auto-synchronize** to **Yes**:
 
     {{< figure src="/attachments/quickstarts/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
 1. Open the Make it Native app on your mobile device.
-1. Click the drop-down menu in Studio Pro and select **View app on your device**.
-1. Click the **View Native Mobile App** tab.
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
+2. Click the drop-down menu in Studio Pro and select **View app on your device**.
+3. Click the **View Native Mobile App** tab.
+4. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
 
     {{< figure src="/attachments/quickstarts/part2/min-qr.png" width="300px" alt="Scan QR code">}}
 

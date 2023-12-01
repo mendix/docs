@@ -28,6 +28,10 @@ General configuration settings allow you to manage the basic aspects of your Pri
 
 The **General** tab allows you to configure information about your organization, and optionally also the Certified Mendix Partner that is working with you on implementing Private Mendix Platform. You can also use it to configure your locale settings.
 
+{{% alert color="info" %}}
+Changing your locale sets locale-dependent formats, such as date and time, to the preferred format of the selected locale.
+{{% /alert %}}
+
 ### 2.2 Branding
 
 The settings in this section allow you to configure custom branding for your Private Mendix Platform. You can customize the title of the Platform as shown in the top bar, upload your logo, or change the image on the login page.
@@ -35,6 +39,8 @@ The settings in this section allow you to configure custom branding for your Pri
 {{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
 
 ### 2.3 Support
+
+
 
 ### 2.4 Capabilities
 

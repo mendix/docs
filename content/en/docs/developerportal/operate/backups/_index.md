@@ -20,9 +20,9 @@ The pruning schedule applies to nightly backups and backups initiated by users. 
 
 Backups are retained as follows:
 
-* Nightly Back-ups: maximum two (2) weeks history (counting from yesterday)
-* Sunday Back-ups: maximum three (3) months history (counting from yesterday)
-* Monthly Back-ups (1st Sunday of each month): maximum one (1) year history (counting from yesterday)
+* Nightly Backups: maximum two (2) weeks history (counting from yesterday)
+* Sunday Backups: maximum three (3) months history (counting from yesterday)
+* Monthly Backups (1st Sunday of each month): maximum one (1) year history (counting from yesterday)
 * Manual (user-initiated) backups: three (3) months
 
 ### 2.1 Nightly Backups

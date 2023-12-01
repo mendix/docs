@@ -105,7 +105,7 @@ The **Alerts** tab lists all the portfolios that no longer have a Portfolio Mana
 
 In the list, you can see the following items:
 
-* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window  that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members, and a list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members, and a list of the Portfolio Managers.
 
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 

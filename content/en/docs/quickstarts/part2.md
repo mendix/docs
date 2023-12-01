@@ -39,7 +39,7 @@ Before starting this tutorial, make sure you have completed the following prereq
 
 ## 3 Creating a Native Mobile Picture App
 
-Starting in Studio Pro, open the page **Home_Native** by double-clicking it in the App Explorer or by pressing <kbd>CTRL</kbd> + <kbd>G</kbd> to open your **Go to** menu and search for the page. The **Go to** menu is used for quick navigation in the app—for more Mendix shortcuts see [Edit Menu](/refguide/edit-menu/).
+Starting in Studio Pro, open the **Home_Native** page by double-clicking it in the **App Explorer**. You can also press <kbd>CTRL</kbd> + <kbd>G</kbd> to open the **Go to** menu and search for the page (the **Go to** menu is used for quick navigation in the app; for more Mendix shortcuts, see [Edit Menu](/refguide/edit-menu/#overview)).
 
 {{% alert type="info" %}}
 The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.
@@ -49,15 +49,16 @@ You should see this in Studio Pro:
 
 {{< figure src="/attachments/quickstarts/part2/studio-pro-check.png" width="450px" alt="What you should see">}}
 
-The content on the page comes pre-made as a part of the template. To get started, do the following:
+The content on this page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1](/quickstarts/part1/)) except it can scroll, which is better for mobile users.
-1. Right-click the list view, then click **Select data source**, 
-1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
-1. When prompted to automatically fill the contents of the list view, click **No**:
+2. Add a **List view** to the page via the **Toolbox**. A list view works like the template grid used in [Building a Responsive Web App](/quickstarts/part1/#template-grid), except that it can scroll, which is better for mobile users.
+3. Right-click the list view, then click **Select data source**.
+4. Click **Select** next to **Entity**, then search for and select the **Picture** entity: 
 
     {{< figure src="/attachments/quickstarts/part2/list-view-fill.png" width="450px" alt="List view">}}
+    
+5. When prompted to automatically fill the contents of the list view, click **No**.
 
 ### 3.1 Creating the User Interface
 

@@ -15,7 +15,7 @@ In this quickstart tutorial, you will add on to the app you created in [Building
 
 In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/part1/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
 
-### 1.2 Getting to Know Mendix Native Mobile
+### 1.1 Getting to Know Mendix Native Mobile
 
 Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance,  advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
 

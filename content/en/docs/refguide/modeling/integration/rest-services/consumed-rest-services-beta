@@ -37,6 +37,11 @@ You can use this Consumed REST service to do the following:
 
 ## 2 Installation 
 
+Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST service document to your app. To do this, 
+1.	Right-click the module you want to add the Consumed REST service document to.
+2.	Select **Add other** > **Consumed REST service**. 
+3.	Name the service and click **OK**.
+
 ## 3 Configuration 
 
 ### 3.1 Basic Configuration 

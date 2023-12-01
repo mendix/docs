@@ -5,8 +5,8 @@ weight: 20
 tags: ["studio pro", "change object", "activity"]
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction

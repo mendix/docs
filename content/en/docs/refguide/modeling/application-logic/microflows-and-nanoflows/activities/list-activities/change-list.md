@@ -6,10 +6,8 @@ tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
-
-Note that there are minor differences between the way this function works in microflows, and the way it works in nanoflows.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows. However, there are minor differences between the way it works in microflows and in nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -5,8 +5,8 @@ weight: 40
 tags: ["studio pro", "retrieve workflow", "workflow retrieve", "workflow", "system.workflow"]
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

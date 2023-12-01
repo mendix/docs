@@ -5,6 +5,10 @@ weight: 85
 tags: ["studio pro", "microflow", "workflow", "workflow activities"]
 ---
 
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The activities described in this document are in the **Workflow Activities** section of the **Toolbox**.

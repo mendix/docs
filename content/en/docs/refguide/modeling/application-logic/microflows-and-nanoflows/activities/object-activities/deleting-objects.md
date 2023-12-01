@@ -5,6 +5,10 @@ weight: 50
 tags: ["studio pro", "delete object", "activity"]
 ---
 
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Delete object(s)** activity can be used to delete one or more objects.

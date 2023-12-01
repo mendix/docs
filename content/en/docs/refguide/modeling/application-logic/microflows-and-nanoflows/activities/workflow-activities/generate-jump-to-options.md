@@ -5,8 +5,8 @@ weight: 35
 tags: ["studio pro", "workflow", "generate jump-to options"]
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

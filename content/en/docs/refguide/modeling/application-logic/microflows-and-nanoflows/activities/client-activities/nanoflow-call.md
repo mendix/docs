@@ -6,11 +6,11 @@ tags: ["studio pro", "nanoflow call", "call nanoflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
-
-{{% alert color="warning" %}}
-This activity can only be used in **Nanoflows**.
+{{% alert color="info" %}}
+This activity can only be used in nanoflows.
 {{% /alert %}}
+
+## 1 Introduction
 
 The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). Arguments can be passed to the nanoflow and the result can be stored in a variable.
 

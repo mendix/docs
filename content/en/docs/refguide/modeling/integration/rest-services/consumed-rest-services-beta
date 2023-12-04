@@ -96,7 +96,7 @@ To add a parameter, follow these steps:
 
 3. Click **Send** to test the parameters. 
 
-Note: Parameters are not supported for the base URL. 
+{{% alert color="info" %}}Parameters are not supported for the base URL.{{% /alert %}} 
 
 ### 3.4 Adding Headers {#add-headers}
 

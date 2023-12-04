@@ -17,7 +17,7 @@ This connector is supported for Studio Pro [10.6](/releasenotes/studio-pro/10.6/
 
 Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro (design time). 
 
-If you need to connect to other database types, check out the External [Database](/appstore/connectors/database-connector/) Connector.
+If you need to connect to other database types, check out the External [Database Connector](/appstore/connectors/database-connector/).
 
 ### 1.2 Features {#features}
 
@@ -49,7 +49,7 @@ Download the [External Database Connector](https://marketplace.mendix.com/link/c
 
 ## 3 Configuration in Design Time {#configuration}
 
-With this connector, you can test database connections and add queries and parameters during design time--before your app is running. This allows you to make sure everything works before deploying your app.
+With this connector, you can test database connections and add queries and parameters during design time before your app is running. This allows you to make sure everything works before deploying your app.
 
 ### 3.1 Getting Started: Connecting to a Database {#connect-database}
 
@@ -110,7 +110,7 @@ Click **Save Query & Create Entity** to create the entity and add it to your dom
 
 ### 3.5 Using the Entity in a Microflow {#entity-microflow}
 
-Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
+Use the Query External Database activity to call the database in a microflow. Do the following:
 
 1. Create a new microflow and drag the **Query external database** activity into it.
 

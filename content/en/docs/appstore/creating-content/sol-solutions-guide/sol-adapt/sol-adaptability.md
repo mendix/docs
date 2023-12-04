@@ -111,7 +111,7 @@ Variables cannot (easily) be translated, nor can text be changed in a protected 
 
 ## 6 Java source code protection
 
-Setting the export level to 'Hidden' on a Java action prevents unpacking the action in the project directory in the same path as regular modules do. Your Java code is still readable though, as the module package itself is a Zip file which can be viewed.
+Setting the export level to 'Hidden' on a Java action prevents unpacking the action in the project directory in the same path as regular modules do. Your Java code is put in a package, but no obfuscation or other security measures are taking place. That means that reverse engineering the package would reveal your source code.
 
 Mendix does not offer a facility to further protect intellectual property in your Java files. For further protection we recommend you to use other software, for example to obfuscate your source code.
 

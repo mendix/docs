@@ -78,7 +78,6 @@ We also have the information you need to [test](/refguide/mobile/distributing-mo
 
 ## 8 Best Practices for Mobile Apps
 
-Todo: explain what best practices are and what to expect
-Todo: Add a link to new page /refguide/mobile/best-praxtices
-Todo: Add that page (it should contain a summary of all subpages and links to them)
-Todo: Add subpages with content
+Building mobile and offline-first apps can be challenging. To help you make the most of our mobile capabilities, we have collected several best practice patterns. These patterns describe common challenges our developers face and established approaches how to resolve them.
+
+To learn about these best practices, see [Best Practices for Mobile Apps](/refguide/mobile/best-practices).

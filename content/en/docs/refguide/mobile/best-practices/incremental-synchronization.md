@@ -32,13 +32,13 @@ Incremental synchronization lets you speed up synchronization by transmitting on
 
 {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-1.png" alt="Microflow that synchronizes all product objects changed after the last synchronization date" >}}
 
-1. Create a Nanoflow to initialize the *SyncHelper*:
+7. Create a Nanoflow to initialize the *SyncHelper*:
     1. Retrieve the first *SyncHelper* object from the database and return it if it exists.
     2. Otherwise, create and commit a new *SyncHelper* object and return that.
 
 {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-2.png" alt="Nanoflow that initiatlizes the SyncHelper object" >}}
 
-1. Create a Nanoflow to trigger the incremental synchronization from the mobile device.
+8. Create a Nanoflow to trigger the incremental synchronization from the mobile device.
     1. Call the initialization Nanoflow above to retrieve the SyncHelper.
     2. Call the synchronization Microflow above with the parameter *SyncHelper/LastSyncDate* to trigger the synchronization.
     3. Retrieve the object with the latest *changedDate* from the database (Retrieve the first object and sort by changedDate descending).

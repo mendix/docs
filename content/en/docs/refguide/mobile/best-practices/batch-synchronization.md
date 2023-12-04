@@ -29,11 +29,11 @@ Batch synchronization lets you group large synchronization actions into smaller 
 
 {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-1.png" alt="Microflow that retrieves objects with offset" >}}
 
-1. Create a Microflow that returns the count of changed objects for a given synchronization date:
+4. Create a Microflow that returns the count of changed objects for a given synchronization date:
 
 {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-2.png" alt="Microflow that returns the count of changed objects for a given synchronization date" >}}
 
-1. Change the Nanoflow that triggers the synchronization to use a loop to trigger the synchronization repeatedly and track its progress:
+5. Change the Nanoflow that triggers the synchronization to use a loop to trigger the synchronization repeatedly and track its progress:
     1. Add a parameter of type *SyncProgress* to the Nanoflow.
     2. Call the Microflow to count the changed objects at the beginning.
     3. Create a variable *Offset* and initialize it with 0 after the Microflow call.
@@ -44,9 +44,9 @@ Batch synchronization lets you group large synchronization actions into smaller 
 
 {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-3.png" alt="Nanoflow with a loop to trigger the synchronization" >}}
 
-1. Create a Nanoflow *DS_SyncProgress* to create and return a new *SyncProgress* object.
-2. Add a DataView around the button that triggers the synchronization and set its data source to the Nanoflow *DS_SyncProgress*.
-3. Add a widget to show the value of *SyncProgress/Progress* into the DataView, such as a Progress Bar.
+6. Create a Nanoflow *DS_SyncProgress* to create and return a new *SyncProgress* object.
+7. Add a DataView around the button that triggers the synchronization and set its data source to the Nanoflow *DS_SyncProgress*.
+8. Add a widget to show the value of *SyncProgress/Progress* into the DataView, such as a Progress Bar.
 
 ## Considerations
 

@@ -24,19 +24,19 @@ Request objects help in this situation by capturing the requested changes in a s
 
 {{< figure src="/attachments/refguide/mobile/best-practices/request-object-1.png" alt="Example domain model with several entities and associations" >}}
 
-1. Change your offline client to create and edit only request objects.
-2. Create a Microflow that applies the changes. 
-3. In the Microflow, retrieve the request objects and apply the stored changes to your domain model. Below example creates *Order* and *OrderPosition* objects based on the request objects and reduces *Stock* count.
+2. Enable *Store owner* for these entities and limit access to objects owned by the user.
+3. Change your offline client to create and edit only request objects.
+4. Create a Microflow that applies the changes. 
+5. In the Microflow, retrieve the request objects and apply the stored changes to your domain model. Below example creates *Order* and *OrderPosition* objects based on the request objects and reduces *Stock* count.
 
 {{< figure src="/attachments/refguide/mobile/best-practices/request-object-2.png" alt="Microflow that applies changes to multiple objects based on the instructions stored in a request object" >}}
 
-1. Create a Nanoflow that triggers above Microflow. Ensure that all request objects are synchronized before and, if changed in the process, after calling the Microflow.
+5. Create a Nanoflow that triggers above Microflow. Ensure that all request objects are synchronized before and, if changed in the process, after calling the Microflow.
 
 {{< figure src="/attachments/refguide/mobile/best-practices/request-object-3.png" alt="Nanoflow that synchronized the request object and then triggers the Microflow to apply it" >}}
 
 ## Considerations
 
 - If the offline client employs multiple request objects in parallel, add a unique identifier (for example by using the Nanoflow action *Get guid)* to the main request object and use it as a reference that can be passed to the Microflow.
-- It can be beneficial for data integrity to keep the processed request objects in the server database. In that case, use a Deleted Flag to remove them from the offline client.
-- This best practice can be combined with 
-- Combine Request Object with Compound object to allow reading from and writing to complex data structures.
+- It can be beneficial for data integrity to keep the processed request objects in the server database. In that case, use a [Deleted Flag](/refguide/mobile/best-practices/deleted-flag) to remove them from the offline client.
+- Combine Request Object with [Compound Object](/refguide/mobile/best-practices/compound-object) to allow reading from and writing to complex data structures.

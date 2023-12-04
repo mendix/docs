@@ -184,7 +184,7 @@ With the filter as shown below, you can search for string matches on any of the 
 
 {{< figure src="/attachments/control-center/apps/filter-apps.png" >}}
 
-With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
+With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps** tabs.)
 
 {{< figure src="/attachments/control-center/apps/filter-last-commit.png" >}}
 

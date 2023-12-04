@@ -94,7 +94,9 @@ The **Pending Invites** tab shows all pending invites for the portfolio. You can
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
 * **Invite date** – This shows the date the invite was sent.
-* Ellipsis icon – Clicking the **...** button enables you to change the access role of the pending invite or cancel the pending invite.
+* Ellipsis icon (**...**) – Clicking the button opens a menu with the following items:
+  * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
+  * **Delete** – Selecting this allows you to cancel the pending invite.
 
 ### 2.2 Deleting a Portfolio {#delete-portfolio}
 

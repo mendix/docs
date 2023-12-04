@@ -226,7 +226,7 @@ The consequences of deactivating and deleting an app are as below:
 | Cloud environment stays persistent                          | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab or on the **Other Apps** tab if you select apps that are deployed on a different environment than Mendix Cloud.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a different environment than Mendix Cloud.
 {{% /alert %}}
 
 ## 10 Exporting Apps to an Excel File {#export-to-excel}

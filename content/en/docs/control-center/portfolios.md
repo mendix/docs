@@ -85,7 +85,7 @@ The list shows all users who have access to the portfolio as well as the pending
 
 * Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
   * **Edit** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allows you to remove the user from the portfolio.
+  * **Remove** – Selecting this allows you to remove the user from the portfolio. (For more information, see the [Editing and Removing a User](#edit-remove-user) section in *Portfolio Management*.)
 
 #### 2.1.2 Pending Invites Tab
 

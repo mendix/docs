@@ -15,7 +15,7 @@ The **Apps** page shows you all the apps belonging to your company. It also allo
 The **Apps** page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, **Deactivated Apps**, and **Default App Roles**.
 
 {{% alert color="info" %}}
-We are working on giving each deployment option a separate tab. Stay tuned.
+We are working on giving private clouds a separate tab. Stay tuned.
 {{% /alert %}}
 
 ## 2 Mendix Cloud
@@ -118,7 +118,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 The **Other Apps** tab shows the unlicensed apps that are not deployed as well as apps that are linked to other environment options than Mendix Cloud. 
 
 {{% alert color="info" %}}
-We are working on giving each deploymen option a separate tab. Stay tuned.
+We are working on giving private clouds a separate tab. Stay tuned.
 {{% /alert %}}
 
 You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.

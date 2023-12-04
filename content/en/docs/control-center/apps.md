@@ -99,9 +99,9 @@ The description of the items that you can select are as follows:
 
 - **Deployed Version**: the Mendix version of the deployed app
 
-- **Last Commit**: the last commit in any branch of the repository
+- **Last Commit**: the date of the last commit in any branch of the repository
 
-- **Members**: the number of the team members of the app
+- **Members**: the number of the team members in the app development team
 
 - **Created Date**: the date the app was created
 
@@ -133,7 +133,7 @@ The description of the items that you can select are as follows:
   {{% alert color="info" %}}
   You can view the [app details](#app-details) by clicking the app name in the table.
   {{% /alert %}}
-- **Members**: the number of the team members of the app
+- **Members**: the number of the team members in the app development team
 - **Created Date**: the date the app was created
 - **Actions**: adding the action menu (**...**) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
@@ -161,8 +161,8 @@ The description of the items that you can select are as follows:
   {{% /alert %}}
 - **Created Date**: the date the app was created
 - **Mainline Version**: the Mendix version of the app on the mainline in the repository
-- **Last Commit**: the last commit in any branch of the repository
-- **Members**: the number of the team members of the app
+- **Last Commit**: the date of the last commit in any branch of the repository
+- **Members**: the number of the team members in the app development team
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
 
@@ -203,7 +203,7 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 The app details page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
-* **Members** – This tab presents the team members of the app development team.
+* **Members** – This tab presents the team members in the app development team.
   * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
   * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.

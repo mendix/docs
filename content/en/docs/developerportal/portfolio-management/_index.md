@@ -455,7 +455,11 @@ The **Members** tab lists all the users who can access the portfolio. You can se
 
 * **Role** – This is the role of the user. A user can be a Portfolio Manager, Contributor, or Viewer. For more information about the permissions of each role, see the table below in this section.
 
-* Ellipsis button (only available to Portfolio Managers) – Clicking the **...** button gives you options to edit the role of the user or remove the user from the portfolio. For more information, see the [Editing and Removing a User](#edit-remove-user) section.
+* Ellipsis button (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
+
+  * **Edit** – Selecting this allows you to change the role of the user.
+  * **Remove** – Selecting this allows you to remove the user from the portfolio. (For more information, see the [Editing and Removing a User](#edit-remove-user) section.)
+
 
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
@@ -554,7 +558,7 @@ The **Pending Invites** tab shows all pending invites for the portfolio. You can
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
 * **Invite date** – This shows the date the invite was sent.
-* Ellipsis button – Clicking the button opens a menu with the following items:
+* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
 
   * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
 

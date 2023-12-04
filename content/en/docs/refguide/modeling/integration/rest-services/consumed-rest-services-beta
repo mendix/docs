@@ -38,9 +38,9 @@ You can use this Consumed REST service document to do the following:
 ## 2 Installation {#installation}
 
 Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST service document to your app. To do this, 
-1.	Right-click the module you want to add the Consumed REST service document to.
-2.	Select **Add other** > **Consumed REST service**. 
-3.	Name the service and click **OK**.
+1. Right-click the module you want to add the Consumed REST service document to.
+2. Select **Add other** > **Consumed REST service**. 
+3. Name the service and click **OK**.
 
 (add screenshot)
 
@@ -51,19 +51,19 @@ Use the Consumed REST service to configure a GET or POST request for your app.
 ### 3.1 Basic Configuration {#configure-a-request}
 
 Create a GET or POST request to send data to your server by doing the following:
-1.	In the **General** field, name your request. 
-2.	In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
-3.	Add an endpoint and click **Send**.
+1. In the **General** field, name your request. 
+2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
+3. Add an endpoint and click **Send**.
 
 (add screenshot)
 
-4.	Click **Configuration & authentication**.
-5.	Add a **Base URL** to use the same URL across all requests in this consumed REST service document.
+4. Click **Configuration & authentication**.
+5. Add a **Base URL** to use the same URL across all requests in this consumed REST service document.
 
 (add screenshot)
 
-6.	Select an authentication method. For more information, see [Authentication methods](#authentication).
-7.	Click **Send**. 
+6. Select an authentication method. For more information, see [Authentication methods](#authentication).
+7. Click **Send**. 
 
 You can visualize your request in the **Response data** tab, then use the response to [create an entity in the domain model](#create-an-entity). 
 
@@ -71,15 +71,15 @@ You can visualize your request in the **Response data** tab, then use the respon
 
 You can configure basic authentication to use for all requests in your document. Authentication is not required but can be added if needed. To add basic authentication, do the following:
 
-1.	 Click **Configuration & authentication**.
-2.	Under **Authentication method**, click the drop-down and select **Basic authentication**. 
+1. Click **Configuration & authentication**.
+2. Under **Authentication method**, click the drop-down and select **Basic authentication**. 
 
 (add screenshot)
 
-3.	Select a constant or create a new one for your username and password. To create a new constant, follow these steps:
- 1.	Next to **Username** or **Password**, click **Select** > **New**.
- 2.	Name the constant and click **OK**.
-4.	Add any additional information needed and click **OK** > **OK**.
+3. Select a constant or create a new one for your username and password. To create a new constant, follow these steps:
+   1. Next to **Username** or **Password**, click **Select** > **New**.
+   2. Name the constant and click **OK**.
+4. Add any additional information needed and click **OK** > **OK**.
 
 ### 3.3 Adding Parameters {#add-parameters}
 
@@ -89,8 +89,8 @@ Parameters are fully supported in the path & query part of the URL. They are def
 
 To add a parameter, follow these steps:
 
-1.	Open the **Parameters** tab and click **Add**.
-2.	Name your parameter, add a test value, and click **OK**.
+1. Open the **Parameters** tab and click **Add**.
+2. Name your parameter, add a test value, and click **OK**.
 
 (add screenshot)
 
@@ -102,23 +102,23 @@ Note: Parameters are not supported for the base URL.
 
 You can add a header for any HTTP request you have specified in your document. To add a header, do the following:
 
-1.	Open the **Headers** tab and click **New**.
-2.	In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by selecting **Custom** and adding in the value. 
+1. Open the **Headers** tab and click **New**.
+2. In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by selecting **Custom** and adding in the value. 
 
 (add screenshot)
 
-3.	Click **OK**. To test the header, click **Send**.  
+3. Click **OK**. To test the header, click **Send**.  
 
 ### 3.5 Adding a Request Body (for POST requests only) {#add-a-request-body}
 
 POST requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
-1.	Click the **Body** tab and add your JSON string.
+1. Click the **Body** tab and add your JSON string.
 
 (add screenshot)
 
-2.	Click **Use JSON Snippet**. 
-3.	To validate the input, click **Send**. The body string can be viewed in the **Body structure** tab.
+2. Click **Use JSON Snippet**. 
+3. To validate the input, click **Send**. The body string can be viewed in the **Body structure** tab.
 
 (add screenshot)
 
@@ -137,8 +137,8 @@ The entity name is prefilled, but you can change it to a custom name. To create 
 ### 3.7 Using a REST Request in a Microflow {#add-entity-to-microflow}
 
 To select a request in the microflow, complete the following steps:
-1.	Create a new microflow and drag the **Send REST request** activity into it.
-2.	Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
+1. Create a new microflow and drag the **Send REST request** activity into it.
+2. Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
 
 (add screenshot)
 

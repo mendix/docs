@@ -95,11 +95,11 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
   With this feature, you can do the following:
 
-  * Add a new Security Contact to your company
+    * Add a new Security Contact to your company
 
-  * Remove an existing Security Contact and replace it with a newer one
+    * Remove an existing Security Contact and replace it with a newer one
 
-  * Adjust the Security Contact’s name 
+    * Adjust the Security Contact’s name 
 
   For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
@@ -208,7 +208,6 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 #### Improvements
 
 * We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/control-center/) as a Mendix Admin, right?
-
 
 ### February 23, 2021
 

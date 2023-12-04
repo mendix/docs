@@ -75,7 +75,7 @@ The portfolio is created. You are the first Portfolio Manager of this portfolio.
 
 ## 3 Initiatives Overview {#initiatives-overview}
 
-In the Portfolio Management app, the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big app. For progress tracking, we recommend you to break down an app into smaller initiatives whenever possible.
+In the Portfolio Management app, the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big app. For progress tracking, Mendix recommends breaking down an app into smaller initiatives whenever possible.
 
 The **Initiatives Overview** page gives an overview of all the initiatives in this portfolio.
 

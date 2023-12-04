@@ -39,4 +39,3 @@ These links will open in a new browser tab.
 The **Free Environments** tab presents details on your company's free environments.
 
 When you select one or more environments via the checkboxes on the **Free Environments** tab, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
-

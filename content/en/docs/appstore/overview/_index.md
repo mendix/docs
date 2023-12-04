@@ -140,7 +140,7 @@ Support for content in this category is limited and is decided by Mendix on a ca
 
 #### 4.2.3 Community Category {#community-category}
 
-Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
+Support on content in this category is up to the user or organization providing the content. Mendix recommends contacting the owner of the content in case of questions or issues via the following methods:
 
 * Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages

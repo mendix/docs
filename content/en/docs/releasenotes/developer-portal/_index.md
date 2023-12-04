@@ -22,21 +22,24 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+
 ### November 17, 2023
 
 #### Improvements
 
-- In Epics, we added a filter on the [Epics](/developerportal/project-management/epics/epics/) page, allowing you to sort and view epics based on their status. We also add a mini survey on the filtering experience – tell us what you think!
-- In Epics, on the [Board](/developerportal/project-management/epics/board/) page you can now see the total number of stories in each swimlane – it is displayed right next to the name of the swimlane.
+* In Epics, we added a filter on the [Epics](/developerportal/project-management/epics/epics/) page, allowing you to sort and view epics based on their status. We also add a mini survey on the filtering experience – tell us what you think!
+* In Epics, on the [Board](/developerportal/project-management/epics/board/) page you can now see the total number of stories in each swimlane – it is displayed right next to the name of the swimlane.
 
 #### Fixes
 
-- We fixed a bunch of bugs in Epics, mostly related to the dark mode.
+* We fixed a bunch of bugs in Epics, mostly related to the dark mode.
+
 ### November 16, 2023
 
 #### Improvements
 
 * We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configuration pop-up window that appears when setting up your Jira connection more clear.
+
 ### November 9, 2023
 
 #### New Features
@@ -436,15 +439,15 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
   We made the following improvements:
 
-  * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
+    * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
 
-  * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
+    * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
 
-  * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
+    * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
 
-  * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
+    * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
 
-  * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
+    * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
 
   From this point on, Epics is the default project management tool for all new apps.
 
@@ -467,7 +470,6 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * Invite users to dedicated portfolio boards (both internal to your organization and external)
     * Easily manage portfolio users via **Access Management**
     * Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
-
 
 ### November 21, 2022
 
@@ -588,7 +590,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
-    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so Mendix recommends using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30, 2022
 

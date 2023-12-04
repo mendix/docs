@@ -47,7 +47,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: Run markdownlint-cli2 on docs
+          commit-message: Run markdownlint-cli2 on docs to find (and correct) linting errors. 
           title: '[Auto] Lint docs'
           body: |
             ${{ env.VER }}

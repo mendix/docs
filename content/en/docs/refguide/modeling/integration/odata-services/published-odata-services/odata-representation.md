@@ -29,7 +29,7 @@ This document describes how entities are represented in a published OData servic
 <sup>3</sup> When the string attribute has a limited length, the `MaxLength` attribute is specified. </small>
 <sup>4</sup> In Studio Pro 9.23 and below, all enumeration attributes were published as strings.
 
-Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not exposed, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
+Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not published, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 
 ### 2.1 Representation of ID {#id-representation}
 
@@ -47,10 +47,10 @@ In the settings of the OData service, you can choose how associations are repres
 
 When you choose to represent associations as links, each object contains a link for each of its associations. The associated object(s) can be retrieved via those links.
 
-This means that you can only expose an association when the entity on the other side is a resource of this service as well. This also means that you cannot publish the same entity more than once in the same service (because in that case, it would not be clear where the link should point to).
+This means that you can only publish an association when the entity on the other side is published in this service as well. This also means that you cannot publish the same entity more than once in the same service (because in that case, it would not be clear where the link should point to).
 
-Using this method, you can expose both sides of the association and you can expose many-to-many associations.
+Using this method, you can publish both sides of the association and you can publish many-to-many associations.
 
 ### 3.2 As an Associated Object ID
 
-When you choose to represent assocations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not expose it from that side.
+When you choose to represent assocations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not publish it from that side.

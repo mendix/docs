@@ -43,6 +43,8 @@ You can select one from many starting points for your Mendix app. It is key that
 
 A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
 
+{{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
+
 ### 3.1 Selecting the App Template
 
 To select the best app template, follow these steps:
@@ -67,20 +69,6 @@ To select the best app template, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
     
-#### MOVE
-
-A page defines the end-user interface in a Mendix app. You can create and edit pages using the Page Editor. All pages are based on layouts and templates:
-
-* [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
-* [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
-    {{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
-
-1. Name your app *Quickstart App* and click **Create app**.
-1. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
-
-    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
-
-
 ## 4 Exploring Studio Pro
 
 Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.

@@ -1,7 +1,7 @@
 ---
 title: "Beta Releases"
 url: /releasenotes/beta-features/
-tags: ["beta", "GA", "general availability", "feature", "feature flag", "product"]
+tags: ["Preview", "beta", "GA", "general availability", "feature", "feature flag", "product"]
 weight: 55
 #notoc: true
 #layout: wide
@@ -9,16 +9,18 @@ weight: 55
 
 ## 1 Introduction
 
-Some Mendix Platform releases contain beta features or products that can be used and evaluated by early-adopter developers. Mendix releases beta versions in two circumstances:
+Some Mendix Platform releases contain beta or preview features or products that can be used and evaluated by early-adopter developers. Mendix releases beta versions in two circumstances:
 
 * When a new product or product version is introduced and made available to early adopters so that they can try it
 * When individual features are introduced within a non-beta product which are, in principle, production-ready but are either subject to change or need to be reviewed by a broader audience; these features are disabled by default
 
-We collect feedback on the implementation and use of these beta features and products so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product. This also helps us prepare for the general availability (GA) release.
+Mendix releases preview versions of features when a new product or product version is introduced and already can give value to the user, but we cannot yet guarantee the stability or quality.
+
+We collect feedback on the implementation and use of these beta or preview features and products so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product. This also helps us prepare for the general availability (GA) release.
 
 An example is a new major version of Mendix Studio Pro. We release this product in beta, as the feature sets may not be complete and developers may find gaps in functionality that Mendix is still working on.
 
-The availability of beta features and products is documented in the release notes for the release. Other documentation may be provided by Mendix. Please consult the release notes and the documentation on how to enable and use these features and products.
+The availability of beta or preview features and products is documented in the release notes for the release. Other documentation may be provided by Mendix. Please consult the release notes and the documentation on how to enable and use these features and products.
 
 ## 2 Testing Beta Releases
 
@@ -46,3 +48,8 @@ Please take note of the following limitations regarding beta features and produc
 * Beta features and products may change in future releases, depending on the feedback
 * Beta features and products may be incomplete
     * Future releases may include more functionality to complete the feature or product
+ 
+
+## 4 Limitations of Preview Releases
+
+Preview releases have the same limitations as Beta releases.

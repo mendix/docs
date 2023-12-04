@@ -71,7 +71,6 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
     {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
 
-
 ## 4 Exploring Studio Pro
 
 Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.

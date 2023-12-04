@@ -40,7 +40,6 @@ The data migration tool is available as a technical preview. For documentation a
 
 * Resolved an issue where the user was unable to import a large bundle of licenses at the same time.
 
-
 ### November 2, 2023
 
 #### Portal Improvements

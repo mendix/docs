@@ -196,10 +196,6 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 If you click the name of an app in the overview table, a page opens and shows the details of this app.
 
-{{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Overview of Apps](#overview) section.
-{{% /alert %}} 
-
 The app details page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
@@ -210,6 +206,10 @@ The app details page has the following tabs:
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
 If the app is not a licensed app, you can see the **...** icon on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
+
+{{% alert color="info" %}}
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Overview of Apps](#overview) section.
+{{% /alert %}} 
 
 ## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 

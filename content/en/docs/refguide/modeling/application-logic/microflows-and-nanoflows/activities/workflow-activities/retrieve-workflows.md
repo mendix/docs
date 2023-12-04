@@ -44,7 +44,7 @@ You can also open the dialog box by double-clicking the activity, or right-click
 
 ### 3.1 Workflow Context
 
-An object of the Workflow Context entity available from the microflow parameters.
+An object of the workflow context entity available from the microflow parameters.
 
 ### 3.2 Variable Name
 

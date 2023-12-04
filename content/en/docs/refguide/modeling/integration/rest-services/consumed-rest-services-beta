@@ -18,15 +18,15 @@ This feature is supported for [Mendix Studio Pro 10.6](add link) and above.
 You can use this Consumed REST service document to do the following:
 
 * Consume a REST service
-* Configure GET and POST requests
+* Configure `GET` and `POST` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 
 ### 1.2 Limitations
 
 * This feature supports the following HTTP request methods:
-  * GET
-  * POST
+  * `GET`
+  * `POST`
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
 * If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
 
@@ -46,11 +46,11 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration {#configuration}
 
-Use the Consumed REST service to configure a GET or POST request for your app. 
+Use the Consumed REST service to configure a `GET` or `POST` request for your app. 
 
 ### 3.1 Basic Configuration {#configure-a-request}
 
-Create a GET or POST request to send data to your server by doing the following:
+Create a `GET` or `POST` request to send data to your server by doing the following:
 1. In the **General** field, name your request. 
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
 3. Add an endpoint and click **Send**.
@@ -83,7 +83,7 @@ You can configure basic authentication to use for all requests in your document.
 
 ### 3.3 Adding Parameters {#add-parameters}
 
-Parameters are fully supported in the path & query part of the URL. They are defined within curly brackets in the URL (for example, ‘http://numbersapi.com/{numbers}’). All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
+Parameters are fully supported in the path & query part of the URL. They are defined within curly brackets in the URL (for example, `http://numbersapi.com/{numbers}`). All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
 
 (add screenshot) 
 
@@ -111,7 +111,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 ### 3.5 Adding a Request Body (for POST requests only) {#add-a-request-body}
 
-POST requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
+`POST` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
 1. Click the **Body** tab and add your JSON string.
 

@@ -65,7 +65,7 @@ Create a GET or POST request to send data to your server by doing the following:
 6.	Select an authentication method. For more information, see [Authentication methods](#authentication).
 7.	Click **Send**. 
 
-You can visualize your request in the **Response data** tab, then use the response to [create an entity in the domain model]{#create-an-entity}. 
+You can visualize your request in the **Response data** tab, then use the response to [create an entity in the domain model](#create-an-entity). 
 
 ### 3.2 Authentication Methods {#authentication}
 

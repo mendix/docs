@@ -185,3 +185,8 @@ Features:
     * Schemes: `http`, `https`, `ftp`, `mailto`
 
     {{% alert color="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library/). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
+
+## 5 Known issue
+
+There is a problem with the toolbar buttons that causes incorrect rendering when hovering over them, depending on the screen size or scaling. The problem is caused by a miscalculation of the button's border by the browser, as well as styling issues with CKEditor.
+

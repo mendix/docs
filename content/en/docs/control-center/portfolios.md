@@ -83,7 +83,7 @@ The list shows all users who have access to the portfolio as well as the pending
   
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
 
-* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
+* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
   * **Edit** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
@@ -94,7 +94,7 @@ The **Pending Invites** tab shows all pending invites for the portfolio. You can
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
 * **Invite date** – This shows the date the invite was sent.
-* Ellipsis icon (**...**) – Clicking the button opens a menu with the following items:
+* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
   * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
   * **Delete** – Selecting this allows you to cancel the pending invite.
 
@@ -129,7 +129,7 @@ In the list, you can see the following items:
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
-* Ellipsis (**...**) – Clicking the icon opens a menu with the following items:
+* Ellipsis button (**...**) – Clicking the icon opens a menu with the following items:
 
   * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 

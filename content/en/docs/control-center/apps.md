@@ -54,7 +54,7 @@ The description of the items that you can select are as follows:
 
 - **Deployed Version**: the Mendix version of the app deployed on this environment
 
-- **Last Commit**: the date of the last commit in any branch of the repository
+- **Last Commit**: the date of the last commit in the main line
 
 - **Members**: the number of the team members in the app development team
 
@@ -99,7 +99,7 @@ The description of the items that you can select are as follows:
 
 - **Deployed Version**: the Mendix version of the deployed app
 
-- **Last Commit**: the date of the last commit in any branch of the repository
+- **Last Commit**: the date of the last commit in the main line
 
 - **Members**: the number of the team members in the app development team
 
@@ -161,7 +161,7 @@ The description of the items that you can select are as follows:
   {{% /alert %}}
 - **Created Date**: the date the app was created
 - **Mainline Version**: the Mendix version of the app on the mainline in the repository
-- **Last Commit**: the date of the last commit in any branch of the repository
+- **Last Commit**: the date of the last commit in the main line
 - **Members**: the number of the team members in the app development team
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.

@@ -87,6 +87,15 @@ The list shows all users who have access to the portfolio as well as the pending
   * **Edit** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
+#### 2.1.2 Pending Invites Tab
+
+The **Pending Invites** tab shows all pending invites for the portfolio. You can search a user by their email. You can also filters users by their role. The list contains the following items:
+
+* **Email** – This shows the email of the invited user.
+* **Role** – This shows the access role of the invited user.
+* **Invite date** – This shows the date the invite was sent.
+* Ellipsis icon – Clicking the **...** button enables you to change the access role of the pending invite or cancel the pending invite.
+
 ### 2.2 Deleting a Portfolio {#delete-portfolio}
 
 After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.

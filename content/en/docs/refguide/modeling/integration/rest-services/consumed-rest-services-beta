@@ -58,7 +58,7 @@ Create a GET or POST request to send data to your server by doing the following:
 (add screenshot)
 
 4.	Click **Configuration & authentication**.
-5.	Add a **Base URL** to use the same URL across all requests in this consumed REST service.
+5.	Add a **Base URL** to use the same URL across all requests in this consumed REST service document.
 
 (add screenshot)
 

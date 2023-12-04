@@ -265,7 +265,7 @@ Each initiative card shows the following information:
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
 * ① Initiative name
-* ② Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+* ② Ellipsis (**...**) button – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
     
@@ -297,7 +297,7 @@ The list contains the following information:
 * **Go-Live Date** – This shows the date when the app is expected to be up and running.
 * Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+* Ellipsis (**...**) button – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
@@ -325,7 +325,7 @@ The list contains the following information:
     * **Go-Live** – This is the date when the app is expected to be up and running.
 * Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+* Ellipsis (**...**) button – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
@@ -353,7 +353,7 @@ The list contains the following information:
     * **Go-Live** – This is the date when the app is expected to be up and running.
 * Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Ellipsis (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+* Ellipsis (**...**) button – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
@@ -419,7 +419,7 @@ The list contains the following information:
 * **Archiving Reason** – This shows reason why the initiative was archived.
 * **Archived Date** – This shows the date when the initiative was archived.
 * **Archived By** – This shows the avatar of the user who archived the initiative.
-* Ellipsis (**...**) icon – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
+* Ellipsis (**...**) button – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
@@ -554,7 +554,11 @@ The **Pending Invites** tab shows all pending invites for the portfolio. You can
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
 * **Invite date** – This shows the date the invite was sent.
-* Ellipsis icon – Clicking the **...** button enables you to change the access role of the pending invite or cancel the pending invite.
+* Ellipsis button – Clicking the button opens a menu with the following items:
+
+  * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
+
+  * **Delete** – Selecting this allows you to cancel the pending invite.
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

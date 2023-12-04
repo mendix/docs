@@ -142,6 +142,7 @@ Workflow activities are used in relation to workflows and their user tasks.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/open-workflow-page.png" link="/refguide/show-workflow-page/" width="160px" >}} | [Show workflow admin page](/refguide/show-workflow-page/) | Opens a workflow overview page. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/lock-workflow.png" link="/refguide/lock-workflow/" width="160px" >}} | [Lock Workflow](/refguide/lock-workflow/) | Allows you to lock a workflow. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/unlock-workflow.png" link="/refguide/unlock-workflow/" width="160px" >}} | [Unlock Workflow](/refguide/unlock-workflow/) | Allows you to unlock a workflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/notify-workflow.png" link="/refguide/notify-workflow/" width="160px" >}} | [Notify Workflow](/refguide/notify-workflow/) | Allows you to notify a workflow that is suspended on the [Wait for notification](/refguide/wait-for-notification/) activity. |
 
 ## 13 External Object Activities
 

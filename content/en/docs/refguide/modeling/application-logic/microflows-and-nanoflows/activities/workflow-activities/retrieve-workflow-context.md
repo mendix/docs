@@ -11,9 +11,9 @@ This activity can only be used in microflows.
 
 ## 1 Introduction
 
-A **Retrieve workflow context** activity can be used to retrieve the selected Workflow Context entity.
+A **Retrieve workflow context** activity can be used to retrieve the selected [workflow context entity](/refguide/workflow-parameters/#entity).
 
-It needs the **System.Workflow** entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). It will break at Runtime if the passed workflow object is not of the right type.
+It needs the **System.Workflow** entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). A Runtime error occurs if the passed workflow object is not of the right type.
 
 ## 2 Properties
 

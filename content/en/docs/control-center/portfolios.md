@@ -67,7 +67,7 @@ On the **Member** tab, you can search for a user in the search box by the user n
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The **Remove Deactivated Users** button allows you to remove all deactivated users from this portfolio.
+The **Remove Deactivated Users** button allows you to remove all deactivated users from this portfolio. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
 
 The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
 

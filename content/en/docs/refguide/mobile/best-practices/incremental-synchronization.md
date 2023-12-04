@@ -20,8 +20,8 @@ Incremental synchronization lets you speed up synchronization by transmitting on
 
 ## Implementation
 
-1. Implement the Deleted Flag (see above) for the target entity.
-2. Enable *Store ‘changedDate’* for the target entity.
+1. Implement the [Deleted Flag](/refguide/mobile/best-practices/deleted-flag) for the target entity.
+2. Enable *Store changedDate* for the target entity.
 3. Add a new entity with an attribute to store the last synchronization date (for example, *SyncHelper/LastSyncDate*).
 4. Set the default value for the synchronization date attribute to *1970-01-01*.
 5. Set the synchronization mode of the *SyncHelper* entity to *Never*.
@@ -32,7 +32,7 @@ Incremental synchronization lets you speed up synchronization by transmitting on
 
 {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-1.png" alt="Microflow that synchronizes all product objects changed after the last synchronization date" >}}
 
-1. Create a Nanoflow **to initialize the *SyncHelper*:
+1. Create a Nanoflow to initialize the *SyncHelper*:
     1. Retrieve the first *SyncHelper* object from the database and return it if it exists.
     2. Otherwise, create and commit a new *SyncHelper* object and return that.
 
@@ -52,4 +52,6 @@ Incremental synchronization lets you speed up synchronization by transmitting on
 - Incremental Sync does not speed up the initial synchronization.
 - If you are using this pattern for multiple entities, you can track the individual synchronization dates as different attributes of the SyncHelper object.
 - The *SyncHelper* object is best stored in the offline database using synchronization mode *Never* because this way it is cleared when the database is reset to trigger a full synchronization afterwards.
-- Instead of using a *SyncHelper* it is also possible to retrieve the most recent changeDate from the offline database. This can, however, lead to issues when committing and synchronizing a change from the offline client.
+- Instead of using a *SyncHelper* it is also possible to retrieve the most recent *changedDate* from the offline database. However, this can lead to issues when committing and synchronizing a change from the offline device.
+
+This pattern was developed by our MVP Marcel Groeneweg. You can watch him explain it in [this video](https://www.mendix.com/videos/lightning-fast-native-sync-for-large-data-sets/).

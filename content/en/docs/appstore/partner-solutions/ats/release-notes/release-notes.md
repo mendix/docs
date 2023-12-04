@@ -700,7 +700,7 @@ These are the new features on the ATS side:
 This table compares the nomenclature:
 
 | ATS              | Browserstack |
-| ---------------*| -----------* |
+| ---------------- | ------------ |
 | App              | Project      |
 | Job              | Build        |
 | Single test case | Session      |

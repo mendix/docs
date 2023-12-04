@@ -792,6 +792,7 @@ The `Label` value is set only if it lacks a non-default value when you set it. I
     <description/>
 </property>
 ```
+
 Then the `Label` property will be set by the first property configured. 
 
 ### 5.2 Name {#name}

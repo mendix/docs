@@ -46,6 +46,7 @@ Here you have the option to change the default URL prefix for all pages and micr
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" >}}
 
 The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
+
 * "api-doc"
 * "odata"
 * "odata-doc"

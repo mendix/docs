@@ -78,7 +78,7 @@ You can configure basic authentication to use for all requests in your document.
 
 3.	Select a constant or create a new one for your username and password. To create a new constant, follow these steps:
  1.	Next to **Username** or **Password**, click **Select** > **New**.
- 2.	Name the constant and click **OK**
+ 2.	Name the constant and click **OK**.
 4.	Add any additional information needed and click **OK** > **OK**.
 
 ### 3.3 Adding Parameters {#add-parameters}
@@ -89,8 +89,8 @@ Parameters are fully supported in the path & query part of the URL. They are def
 
 To add a parameter, follow these steps:
 
-1.	Open the **Parameters** tab and click **Add** 
-2.	Name your parameter, add a test value, and click **OK**
+1.	Open the **Parameters** tab and click **Add**.
+2.	Name your parameter, add a test value, and click **OK**.
 
 (add screenshot)
 
@@ -107,7 +107,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 (add screenshot)
 
-3.	Click **OK**. To test the header, click **Send**   
+3.	Click **OK**. To test the header, click **Send**.  
 
 ### 3.5 Adding a Request Body (for POST requests only) {#add-a-request-body}
 

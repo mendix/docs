@@ -31,7 +31,7 @@ To learn more about Mendix concepts, check out the various sections of the [Plat
 
 ## 2 Prerequisites 
 
-Before starting this guide, make sure you have completed the following prerequisites:
+Before starting this tutorial, make sure you have completed the following prerequisites:
 
 * Create your [free Mendix account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs), which takes only two minutes to complete
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
@@ -43,6 +43,8 @@ You can select one from many starting points for your Mendix app. It is key that
 
 A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
 
+{{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
+
 ### 3.1 Selecting the App Template
 
 To select the best app template, follow these steps:
@@ -51,26 +53,22 @@ To select the best app template, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/starting-point.png" width="450px" alt="New app">}}
 
-1. Search for the **Blank Native Mobile App** and click **Use this starting point**:
-    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
-    * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
-1. Name your app *Quickstart App* and click the **Create app** button.
-        {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="450px" alt="Create app">}}
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
+2. Search for the **Blank Native Mobile App** and click **Use this starting point**:
+
+    {{% alert color="info" %}}**Why select this template?**</br>
+    Selecting the **Blank Native Mobile App** template lets you start with a native mobile navigation profile that is already configured and set up for your app. {{% /alert %}}
+
+    {{% alert color="info" %}}**Does that mean this app is native mobile only?**</br>
+    No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.{{% /alert %}}
+
+4. Name your app *Quickstart App* and click **Create app**:
+
+    {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="450px" alt="Create app">}}
+
+5. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
 
     {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
-
-A page defines the end-user interface in a Mendix app. You can create and edit pages using the Page Editor. All pages are based on layouts and templates:
-
-* [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
-* [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
-    {{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
-
-1. Name your app *Quickstart App* and click **Create app**.
-1. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
-
-    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
-
+    
 ## 4 Exploring Studio Pro
 
 Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
@@ -85,27 +83,27 @@ The Studio Pro configuration you see is completely editable. You can add or hide
 
 The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the green play icon). 
 
-For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
-
 {{< figure src="/attachments/quickstarts/part1/4.1-topbar1.png" width="450px" alt="Studio Pro">}}
 
-### 4.2 App Structure on the Left
+For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
+
+### 4.2 App Explorer
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
-{{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="Left dockable pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="App Explorer as left dockable pane">}}
 
 Any [Marketplace modules](/appstore/modules/) you download appear under **Marketplace Modules** > **App**.
 
 {{< figure src="/attachments/quickstarts/part1/4.2-styles.png" alt="Modules">}}
 
-### 4.3 Bottom Dockable Pane 
+### 4.3 Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
 {{< figure src="/attachments/quickstarts/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
 
-Here you will find several default dockable panes:
+Here you will find some separate default dockable panes:
 
 * [Stories](/refguide/stories-pane/) – displays the active user stories added on your app’s **Stories** page in the Developer Portal 
 * [Changes](/refguide/changes-pane/) – displays a list of all changes in the app since the last commit to the Team Server
@@ -113,13 +111,13 @@ Here you will find several default dockable panes:
 
 For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 4.4 Right Dockable Pane
+### 4.4 Right Dockable Panes
 
 Look at the right dockable pane of Studio Pro:
 
 {{< figure src="/attachments/quickstarts/part1/tour-right.png" width="350px" alt="Right Dockable Pane">}}
 
-Here you will find more default dockable panes:
+Here you will find some more separate default dockable panes:
 
 * [Properties](/refguide/view-menu/#properties) – displays all the properties of the currently selected context element 
 * [Toolbox](/refguide/view-menu/#toolbox) – a list of things (which change depending on the context) you can add to the current document
@@ -138,7 +136,7 @@ When you run your app locally or deploy it for the first time, the Mendix Runtim
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
-{{< figure src="/attachments/quickstarts/part1/5.1-log.png" width="350px" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/part1/5.1-log.png" width="350px" alt="Log">}}
 
 ### 5.1 Creating an Entity to Store the Images
 
@@ -192,25 +190,25 @@ Now that you have created your domain model, it is time to create your photo alb
 Now it is time to build your photo album app:
 
 1. Open the **Home_Web** page from the **App Explorer**. 
-1. Drag a **Template Grid** from the **Toolbox** onto the page. You can find this by opening the **Data containers** section, or by searching for this container.
-1. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties:
+2. Drag a **Template Grid** from the **Toolbox** onto the page. You can find this by opening the **Data containers** section, or by searching for this container.
+3. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties:
 
     {{< figure src="/attachments/quickstarts/part1/6-database1.png" width="450px" alt="Open data properties">}}
 
-1. On the **Data source** tab, select the **Picture** entity you created earlier for the **Entity (path)**, then click **OK** to close the window:
+4. On the **Data source** tab, select the **Picture** entity you created earlier for the **Entity (path)**, then click **OK** to close the window:
 
     {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="450px" alt="Configure data source">}}
 
-1. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**.
+5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**:
 
     {{< figure src="/attachments/quickstarts/part1/6-databaseconfirm3.png" width="450px" alt="Configure data source">}}
- 
-1. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons.
+
+6. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons.
 
     {{< figure src="/attachments/quickstarts/part1/6-newbuttons4.png" width="450px" alt="Connect page">}}
 
-1. To resolve this, right-click each button and select **Generate Page**.
-1. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
+7. To resolve this, right-click each button and select **Generate Page**.
+8. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
 
 ### 6.2 Using Building Blocks
 
@@ -231,18 +229,18 @@ Next, you need to connect your data to the display widgets, because your page is
 To start, replace the static image with the image the app end-user uploads to the database by following these steps:
 
 1. Right-click the static image viewer and click **Convert to dynamic image**. 
-1. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget:
+2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget:
 
   {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="450px" alt="Autofill">}}
 
-1. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
-1. Click the **Edit** button next to **Caption**.
-1. In the new dialog box, replace the caption with the place holder *{1}*. 
-1. Click to add a new **Parameter** and select the **Title** attribute:
+3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
+4. Click the **Edit** button next to **Caption**.
+5. In the new dialog box, replace the caption with the place holder *{1}*. 
+6. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/part1/6-addattributes7.png" width="450px" alt="Add attributes">}}
 
-1. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
+7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
 ## 7 Defining Logic Using Microflows
 
@@ -257,20 +255,20 @@ A microflow is a piece of custom logic that is represented visually in [Business
 To implement custom logic with a microflow, follow these steps:
 
 1. Open the page **Picture_NewEdit** using the App Explorer.
-1. Scroll down to the **Save** button at the bottom of the page. 
-1. Right-click the button and select **Edit on click action**. 
-1. Set the **On click** action to **Call a microflow**.
-1. Click **New** in the **Select Microflow** dialog box in order to create a new microflow.
-1. Create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture*:
+2. Scroll down to the **Save** button at the bottom of the page. 
+3. Right-click the button and select **Edit on click action**. 
+4. Set the **On click** action to **Call a microflow**.
+5. Click **New** in the **Select Microflow** dialog box in order to create a new microflow.
+6. Create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture*:
 
     {{< figure src="/attachments/quickstarts/part1/7-editonclick1.png" width="450px" alt="Edit microflow">}}
 
-1. Click **Show** to quickly navigate to the new microflow and see it open in your editor:
+7. Click **Show** to quickly navigate to the new microflow and see it open in your editor:
 
     {{< figure src="/attachments/quickstarts/part1/7-microflow2.png" width="450px" alt="Microflow">}}
 
-1. Add a **Decision** to the microflow (via the orange diamond icon in the editor's top bar).
-1. Give the decision the caption *Has title?* and input the following **Expression**:
+8. Add a **Decision** to the microflow (via the orange diamond icon in the editor's top bar).
+9. Give the decision the caption *Has title?* and input the following **Expression**:
 
     ```text
     trim($Picture/Title) != ''
@@ -280,11 +278,11 @@ To implement custom logic with a microflow, follow these steps:
 
     {{< figure src="/attachments/quickstarts/part1/decision.png" width="450px" alt="Decision expression">}}
 
-1. Click **OK** to close the dialog box and notice the microflow line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false.
-1. Add the additional path by clicking the activity's red dot and dragging a connection out of it, making sure to select the **False** path as the one that goes down. 
-1. Add the **Validation feedback** action to the false path (so that feedback is provided to the end-user).
-1. Double-click the validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, then select **Member** > **Title**, and in **Template**, add some error text (for example, *Please provide a title for your picture.*).
-1. Repeat these steps for the **Description** attribute until your microflow looks like this:
+10. Click **OK** to close the dialog box and notice the microflow line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false.
+11. Add the additional path by clicking the activity's red dot and dragging a connection out of it, making sure to select the **False** path as the one that goes down. 
+12. Add the **Validation feedback** action to the false path (so that feedback is provided to the end-user).
+13. Double-click the validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, then select **Member** > **Title**, and in **Template**, add some error text (for example, *Please provide a title for your picture.*).
+14. Repeat these steps for the **Description** attribute until your microflow looks like this:
 
     {{< figure src="/attachments/quickstarts/part1/7-reddots4.png" width="450px" alt="Your microflow">}}
     
@@ -293,11 +291,11 @@ To implement custom logic with a microflow, follow these steps:
 Finally, the image needs to be committed to the database and the paged closed:
 
 1. Add a **Commit object(s)** action from the **Toolbox** to the true path.
-1. Select the **Picture (NativeMobile.Picture)** entity to commit, and configure **Events** > **No** and **Refresh in Client** > **Yes**:
+2. Select the **Picture (NativeMobile.Picture)** entity to commit, and configure **Events** > **No** and **Refresh in Client** > **Yes**:
 
     {{< figure src="/attachments/quickstarts/part1/7-configurecommit5.png" width="450px" alt="Configure commit object">}}
 
-1. Add a **Close page** action to the end of the microflow to ensure the end-user is directed back to the home page after clicking **Save**. 
+3. Add a **Close page** action to the end of the microflow to ensure the end-user is directed back to the home page after clicking **Save**. 
 
 You have now finished developing your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the **Run Locally** button (via the green play icon in the top bar). Your app should look like this:
 

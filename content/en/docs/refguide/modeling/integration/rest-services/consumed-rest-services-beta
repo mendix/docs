@@ -24,15 +24,15 @@ You can use this Consumed REST service document to do the following:
 
 ### 1.2 Limitations
 
-*This feature supports the following HTTP request methods:
- *GET
- *POST
+* This feature supports the following HTTP request methods:
+  * GET
+  * POST
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
 * If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
 
 ### 1.3 Prerequisites 
 
-*[Studio Pro 10.6](add link) and above
+* [Studio Pro 10.6](add link) and above
 * Familiarity with [HTTP request methods]( https://www.w3schools.com/tags/ref_httpmethods.asp)
 
 ## 2 Installation {#installation}

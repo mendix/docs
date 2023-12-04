@@ -166,9 +166,9 @@ All done! You can now run your app and test all the features you have built. To 
 
     {{< figure src="/attachments/quickstarts/part2/min-start-screen.png" width="300px" alt="MIN start screen">}}
 
-1. Click the drop-down menu in Studio Pro and select **View app on your device**.
-1. Click the **View Native Mobile App** tab.
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
+2. Click the drop-down menu in Studio Pro and select **View app on your device**.
+3. Click the **View Native Mobile App** tab.
+4. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
 
     {{< figure src="/attachments/quickstarts/part2/min-qr.png" width="300px" alt="Scan QR code">}}
     

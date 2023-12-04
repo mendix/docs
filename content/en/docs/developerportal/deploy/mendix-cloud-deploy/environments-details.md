@@ -44,7 +44,9 @@ At the bottom of the page, there are three overview grids showing the deployment
 
 ### 2.1 Actions {#actions}
 
-On the right side of the screen in the **General** tab, there are buttons that you can use to perform various actions. The action buttons you see depend on whether or not your app is running.
+On the right side of the screen in the **General** tab, there are buttons that you can use to perform various actions. Some action buttons are visible when your app is running, some are visible when your app is stopped, and some are always visible.
+
+{{% alert color="info" %}}Depending on your permissions, you may see only some of the action buttons described below. You can adjust your permissions settings on the [Permissions](/developerportal/deploy/node-permissions/) tab of your app's **Environments** page.{{% /alert %}}
 
 When your app is running, you can see the following action buttons:
 

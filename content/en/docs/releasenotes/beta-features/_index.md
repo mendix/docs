@@ -1,7 +1,7 @@
 ---
 title: "Beta and Preview Releases"
 url: /releasenotes/beta-features/
-tags: ["preview", "beta", "GA", "general availability", "feature", "feature flag", "product"]
+tags: ["beta", "preview", "GA", "general availability", "feature", "feature flag", "product"]
 weight: 55
 #notoc: true
 #layout: wide
@@ -18,7 +18,7 @@ Mendix releases beta versions in two circumstances:
 
 Mendix releases preview versions when a new product or product version is introduced and can already provide value to the user, but Mendix cannot yet guarantee the stability or quality.
 
-Generally, the release status can follow this order:
+Generally, the release status of a feature or product can follow this order:
 
 1. Private beta.
 2. Preview.

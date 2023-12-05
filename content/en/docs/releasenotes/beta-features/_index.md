@@ -47,7 +47,7 @@ If you would like to test a beta feature or product, consider the following:
 Please take note of the following limitations regarding beta/preview features and products:
 
 * Beta/preview features and products should not be used for production applications
-    * We do not offer production support on beta/previewfeatures and products
+    * We do not offer production support on beta/preview features and products
     * Beta/preview features and products may contain bugs, which could potentially lead to data corruption
 * Beta/preview features and products are not covered by any SLA
     * We value feedback, including tickets describing problems with beta/preview features and products, but these tickets will not be handled according to your SLA

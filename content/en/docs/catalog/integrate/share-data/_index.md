@@ -70,7 +70,7 @@ Do the following:
 
 1. In the App Explorer, right-click **MyFirstModule**. From the drop-down list, select **Add a folder**. Name it  *APIs*.
 
-    {{% alert color="info" %}}The published OData service functions as an API to your app. Some apps may have several published services, so it is good practice to keep them together in a folder for each module.{{% /alert %}}
+    {{% alert color="info" %}}The published service functions as an API to your app. Some apps may have several published services, so it is good practice to keep them together in a folder for each module.{{% /alert %}}
 
 2. In the **Domain Model**, right-click the **Customer** entity and select **Expose as OData resource…**.
 

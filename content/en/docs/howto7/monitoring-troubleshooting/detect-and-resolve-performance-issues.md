@@ -8,7 +8,7 @@ Any application can run into performance issues. Here are a number of possible p
 
 ## Overview
 
-The flow chart below, designed  like a microflow, provides a great infrastructure for deciding how to troubleshoot and resolve performance-related issues. The rest of this article will be based on this flow.
+The flow chart below, designed  like a microflow, provides a great infrastructure for deciding how to troubleshoot and resolve performance-related issues. The rest of this document will be based on this flow.
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580226.png" >}}
 
@@ -22,7 +22,7 @@ First, you'll need to identify if your issue is UI-centric or microflow-centric.
 
 {{% alert color="info" %}}
 
-All performance issues are extremely context-sensitive. That is, there is no single cure-all for a performance problem, but this article will attempt to address common issues and how may be able to resolve them.
+All performance issues are extremely context-sensitive. That is, there is no single cure-all for a performance problem, but this document will attempt to address common issues and how may be able to resolve them.
 
 {{% /alert %}}
 
@@ -52,7 +52,7 @@ If you have determined that slow loads are your issue, take a look at the slow l
 
 #### Slow Network
 
-If your data transfers are taking a long time, you may wish to contact a system administrator for further assistance. This article focuses on issues you can resolve within your application model.
+If your data transfers are taking a long time, you may wish to contact a system administrator for further assistance. This document focuses on issues you can resolve within your application model.
 
 #### Retrieve Action
 
@@ -122,7 +122,7 @@ Slow retrieves can occur for a number of different reasons. Here are a few:
 * Complex calculated attributes
 * Large # of objects retrieved (See batching below)
 
-Additionally, review this article on denormalization and how it can improve your app performance in some cases: [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/).
+Additionally, review this document on denormalization and how it can improve your app performance in some cases: [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/).
 
 ### Slow Database Commits
 
@@ -132,7 +132,7 @@ If you are commit large amounts of data (1000s of rows), you might consider usin
 
 #### Batches
 
-Below is an example of how to *retrieve* in batches. You can do something quite similar for commits as well. This article will be expanded in the future to include a complete example of a batch retrieve and a batch commit.
+Below is an example of how to *retrieve* in batches. You can do something quite similar for commits as well. This document will be expanded in the future to include a complete example of a batch retrieve and a batch commit.
 
 {{< figure src="/attachments/howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580216.png" >}}
 

@@ -11,7 +11,7 @@ Once your application starts performing poorly, becomes unstable or even worse: 
 
 ## 2 Common Errors
 
-Some of the more common errors you can find in the application log that can cause your application to go down are the topic of this article. Let’s dive right in.
+Some of the more common errors you can find in the application log that can cause your application to go down are the topic of this document. Let’s dive right in.
 
 ### 2.1 java.lang.StackOverflowError
 

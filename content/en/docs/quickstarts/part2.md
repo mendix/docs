@@ -51,7 +51,7 @@ The **Home_Native** page has a different icon than the **Home_Web** page. Mendix
 
 You should see this in Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part2/studio-pro-check.png" width="450px" alt="What you should see">}}
+{{< figure src="/attachments/quickstarts/part2/studio-pro-check.png" width="400px" alt="What you should see">}}
 
 The content on this page comes pre-made as a part of the template. To get started, do the following:
 
@@ -60,7 +60,7 @@ The content on this page comes pre-made as a part of the template. To get starte
 3. Right-click the list view, then click **Select data source**.
 4. Click **Select** next to **Entity**, then search for and select the **Picture** entity: 
 
-    {{< figure src="/attachments/quickstarts/part2/list-view-fill.png" width="450px" alt="List view">}}
+    {{< figure src="/attachments/quickstarts/part2/list-view-fill.png" width="400px" alt="List view">}}
     
 5. When prompted to automatically fill the contents of the list view, click **No**.
 
@@ -78,7 +78,7 @@ Next, you are going to create the UI for your native app:
 8. In the new dialog box, replace the caption with the place holder *{1}*. 
 9. Click to add a new **Parameter** and select the **Title** attribute:
 
-    {{< figure src="/attachments/quickstarts/part2/add-title-param.png" width="450px" alt="Configure edit button">}}
+    {{< figure src="/attachments/quickstarts/part2/add-title-param.png" width="400px" alt="Configure edit button">}}
 
 10. Repeat this process for the other label, making sure to select the **Description** attribute this time.
 
@@ -92,7 +92,7 @@ Your app needs a button that allows the end-user to take a picture. Instead of a
 
 1. Drag the **Floating action button** from the **Toolbox** onto the page:
 
-    {{< figure src="/attachments/quickstarts/part2/floating-action-button.png" width="450px" alt="Floating action button">}}
+    {{< figure src="/attachments/quickstarts/part2/floating-action-button.png" width="500px" alt="Floating action button">}}
 
     The location is managed in the widget's properties, so it does not matter where the widget is placed on the page. You can place it above the list view and still have it display in the bottom-right corner by configuring the widget correctly.
 
@@ -102,7 +102,7 @@ Your app needs a button that allows the end-user to take a picture. Instead of a
 5. Set the **On click action** to **Call a nanoflow**.
 6. Click **Nanoflow** > **Select**, then create a new nanoflow called *ACT_TakeNewPicture*:
 
-    {{< figure src="/attachments/quickstarts/part2/make-pic-nano.png" width="450px" alt="New nanoflow">}}
+    {{< figure src="/attachments/quickstarts/part2/make-pic-nano.png" width="300px" alt="New nanoflow">}}
 
 ### 4.1 Configuring the Nanoflow
 
@@ -127,7 +127,7 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
     * **Use return value** – **Yes**
     * **Variable name** – **PictureTaken**
 
-    {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="450px" alt="Configure take picture">}}
+    {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="350px" alt="Configure take picture">}}
     
 5. Finally you need to create a page where the end-user can view and edit their new picture.v Add a **Show page** action to the nanoflow. 
 6. Open the action's properties:
@@ -156,25 +156,27 @@ Finally, you need to ensure all the data captured by the end-user is synchronize
 1. Double-click the **Save** button to open its properties.
 2. Set **Auto-synchronize** to **Yes**:
 
-    {{< figure src="/attachments/quickstarts/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
+    {{< figure src="/attachments/quickstarts/part2/edit-button-props.png" width="300px" alt="Auto sync set to yes">}}
     
-## 5 Testing and Finishing Up
+## 5 Testing
 
 All done! You can now run your app and test all the features you have built. To test your native mobile app without creating a deployable package, do the following:
 
 1. Open the Make it Native app on your mobile device:
 
-    {{< figure src="/attachments/quickstarts/part2/min-start-screen.png" width="300px" alt="MIN start screen">}}
+    {{< figure src="/attachments/quickstarts/part2/min-start-screen.png" width="350px" alt="MIN start screen">}}
 
 2. Click the drop-down menu in Studio Pro and select **View app on your device**.
 3. Click the **View Native Mobile App** tab.
 4. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
 
-    {{< figure src="/attachments/quickstarts/part2/min-qr.png" width="300px" alt="Scan QR code">}}
+    {{< figure src="/attachments/quickstarts/part2/min-qr.png" width="400px" alt="Scan QR code">}}
     
     {{% alert color="info" %}}If you are using a Mac, be sure to use forward ports 8080/8083, as explained in [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide/using-mendix-studio-pro-on-a-mac/#configuring).{{% /alert %}}
 
 If you need more information, see [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
+
+## 6 Finishing Up
 
 This is what we saw when we started testing our native mobile photo app:
 
@@ -190,11 +192,11 @@ After taking a photo with the native mobile app and tapping the **Save** button,
 
 After reloading the page in our browser, we could also see the new photo there:
 
-{{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="450px" alt="Browser view">}}
+{{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="550px" alt="Browser view">}}
 
 Congratulations on completing this quickstart tutorial! You are on your way to successful app development with the Mendix Platform.
 
-## 6 Read More
+## 7 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/) – describes Studio Pro tabs, menus, and shortcut keys
 * [Mendix Best Practices for Development](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps

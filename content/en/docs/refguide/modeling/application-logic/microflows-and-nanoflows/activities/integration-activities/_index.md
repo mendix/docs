@@ -4,8 +4,9 @@ url: /refguide/integration-activities/
 weight: 60
 tags: ["studio pro"]
 ---
-{{% alert color="warning" %}}
-These activities can only be used in **Microflows**.
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

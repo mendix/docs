@@ -5,6 +5,10 @@ tags: ["studio pro", "microflow", "metrics", "micrometer"]
 weight: 81
 ---
 
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The activities described in this document are in the **Metrics Activities** section of the **Toolbox**.

@@ -12,7 +12,7 @@ aliases:
 ---
 ## 1 Introduction
 
-This guide explains how to use [published OData services](/refguide/published-odata-services/) and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
+This guide explains how to use published services and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
 
 ## 1.1 Use Cases
 
@@ -27,7 +27,7 @@ In these cases, you can still publish and consume external entities. This guide 
 
 During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Catalog if your application is hosted on the Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
 
-If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData entity](/refguide/published-odata-entity/) it provides using the metadata contract. For general resources on using data when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
+If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the published entity it provides using the metadata contract. For general resources on using data when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
 
 ### 2.1 Metadata Contracts {#metadata}
 
@@ -43,7 +43,7 @@ We support ZIP (for multiple file contracts) or XML (for single file contracts).
 
 If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or data sources to the Catalog. Registering the data source contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
 
-To manually register an OData contract metadata file to the Catalog, follow these basic steps:
+To manually register a contract metadata file to the Catalog, follow these basic steps:
 
 1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
 2. Use the [Transform](/catalog/register/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).

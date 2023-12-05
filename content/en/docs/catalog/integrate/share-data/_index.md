@@ -82,7 +82,7 @@ Do the following:
 
 4. Name the published service *{yourname}CustomerODataService* and click **OK**.
 
-    The new **{yourname}CustomerODataService** is added to the module. Select which attribute(s) to use as the key of this entity, then click **OK**. The **Edit published resource** dialog box is displayed for the entity **Customer**. 
+    The new **{yourname}CustomerODataService** is added to the module. Select which attribute(s) to use as the key of this entity, then click **OK** to view the **Edit published resource** dialog box for the entity **Customer**. 
 
     {{< figure src="/attachments/catalog/share-data/edit-published-resource-box.png" >}}
 

@@ -82,7 +82,7 @@ Do the following:
 
 4. Name the published service *{yourname}CustomerODataService* and click **OK**.
 
-    The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
+    The new **{yourname}CustomerODataService** is added to the module. Select which attribute(s) to use as the key of this entity, then click **OK**. The **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
     {{< figure src="/attachments/catalog/share-data/edit-published-resource-box.png" >}}
 
@@ -96,7 +96,7 @@ Do the following:
 
 6. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app.     
 
-7. The app is deployed, and the OData service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
+7. The app is deployed and the service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
 8. On the app's home page, click **Customers Overview**.
 9. Add data to the app. Click **New** to add data for a customer entry.
 

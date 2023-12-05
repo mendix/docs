@@ -17,7 +17,7 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. Mendix supports all OData versions.
+There are three ways to register published services in the Catalog. Mendix supports all OData versions.
 
 This how-to teaches you how to register a service in the following ways:
 
@@ -31,11 +31,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * You have Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed
 * You have a Mendix account
-* You have an exposed OData service that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/data-hub/share-data/))
+* You have an exposed service that you are ready to register (for instructions on how to create an exposed service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/data-hub/share-data/))
 
 ## 3 Registering a Service Through Mendix Cloud {#mendix-cloud}
 
-If you have a [published OData service](/refguide/published-odata-services/) that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), then congratulations! Your service is already registered in the [Catalog](/catalog/).
+If you have a published service that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), then congratulations! Your service is already registered in the [Catalog](/catalog/).
 
 ## 4 Registering a Service Without Mendix Cloud {#without-mendix-cloud}
 

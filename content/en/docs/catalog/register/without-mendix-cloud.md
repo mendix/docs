@@ -45,7 +45,7 @@ If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team 
 
 To manually register a contract metadata file to the Catalog, follow these basic steps:
 
-1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
+1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed services.
 2. Use the [Transform](/catalog/register/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).
 3. Use the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) to register the data source.
 
@@ -60,11 +60,11 @@ To manually register contracts to the Catalog without the Mendix Team Server, do
 
 ### 2.4 Importing Contracts Directly into Studio Pro (Bypassing the Catalog) {#import-contracts}
 
-If you are deploying locally, or do not want to register the data sources in the Catalog, you can import the metadata contracts or service URLs directly into Studio Pro to consume a published OData service.
+If you are deploying locally, or do not want to register the data sources in the Catalog, you can import the metadata contracts or service URLs directly into Studio Pro to consume a published service.
 
 #### 2.4.1 Importing from a File
 
-To import a metadata contract file of a published OData service, do the following:
+To import a metadata contract file of a published service, do the following:
 
 1. Export the contract from the publishing app and download it to your computer.
 
@@ -78,11 +78,11 @@ The service will now appear in the [Integration Pane](/refguide/integration-pane
 
 #### 2.4.2 Importing from a URL
 
-To import a published OData service URL, do the following:
+To import a published service URL, do the following:
 
-1. Copy the OData service URL.
+1. Copy the service URL.
 
-    To find the published OData service URL from Mendix apps, go to the **Settings** tab of the **Published OData Service** document, and copy the entire link in the **Metadata** field.
+    To find the published service URL from Mendix apps, go to the **Settings** tab of the **Published OData Service** document, and copy the entire link in the **Metadata** field.
 
 2. Add a **Consumed OData service** to your consuming app.
 
@@ -98,7 +98,7 @@ To update the metadata of a manually registered contract, follow the same steps 
 
 To update a data set in Studio Pro, do the following:
 
-1. Open your app and the published OData service you want to update.
+1. Open your app and the published service you want to update.
 2. Under **Entities**, select **Customer**, and click **Edit**.
 3. Select the checkbox for **Updateable** and click **OK**.
 4. Click **Publish**.
@@ -107,7 +107,7 @@ See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) sect
 
 ## 3 Using Data in Runtime {#dh-runtime}
 
-During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using data in design time](#dh-design-time). The Catalog is not involved during runtime.
+During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the resources that are set up when [using data in design time](#dh-design-time). The Catalog is not involved during runtime.
 
 {{% alert color="info" %}}
 Publishing and consuming services need to have network access to each other, but do not necessarily need to be on cloud or network. {{% /alert %}}

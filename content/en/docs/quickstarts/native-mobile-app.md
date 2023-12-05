@@ -5,15 +5,16 @@ weight: 20
 description: "Learn the basics of making a native mobile app."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
+    - /quickstarts/part2/
     - /refguide/quickstart-part2/
     - /refguide9/quickstart-part2/
 ---
 
 ## 1 Introduction 
 
-In this quickstart tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/part1/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
+In this quickstart tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/responsive-web-app/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
 
-In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/part1/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
+In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/responsive-web-app/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
 
 ### 1.1 Getting to Know Mendix Native Mobile
 
@@ -34,7 +35,7 @@ In summary, Mendix lets you [build an app for distribution](/refguide/mobile/dis
 
 Before starting this tutorial, make sure you have completed the following prerequisites:
 
-* Read through [Building a Responsive Web App](/quickstarts/part1/)
+* Read through [Building a Responsive Web App](/quickstarts/responsive-web-app/)
 * Download the [Make It Native 10](/refguide/getting-the-make-it-native-app/) app on your mobile device
     * The [Make it Native 10](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices
     * Once installed, the app lets you quickly test your native mobile app as you develop it by connecting to your local development machine’s running copy of your app and displaying the app inside its mobile testing environment
@@ -56,7 +57,7 @@ You should see this in Studio Pro:
 The content on this page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-2. Add a **List view** to the page via the **Toolbox**. A list view works like the template grid used in [Building a Responsive Web App](/quickstarts/part1/#template-grid), except that it can scroll, which is better for mobile users.
+2. Add a **List view** to the page via the **Toolbox**. A list view works like the template grid used in [Building a Responsive Web App](/quickstarts/responsive-web-app/#template-grid), except that it can scroll, which is better for mobile users.
 3. Right-click the list view, then click **Select data source**.
 4. Click **Select** next to **Entity**, then search for and select the **Picture** entity: 
 

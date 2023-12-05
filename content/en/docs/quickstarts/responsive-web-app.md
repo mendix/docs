@@ -5,6 +5,7 @@ weight: 10
 description: "Learn the basics of making an app in a responsive web profile."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
+    - /quickstarts/part1/
     - /refguide/quickstart-part1/
     - /refguide9/quickstart-part1/
 ---
@@ -309,4 +310,4 @@ Congratulations! You successfully completed this quickstart tutorial. You have y
 
 ## 8 Continuing with the Next Tutorial
 
-To continue learning, see [Add a Native Mobile App](/quickstarts/part2/).
+To continue learning, see [Add a Native Mobile App](/quickstarts/native-mobile-app/).

@@ -1,19 +1,19 @@
 ---
-title: "Combobox"
+title: "Combo Box"
 url: /appstore/widgets/combobox/
 category: "Widgets"
-description: "Describes the configuration and usage of the Combobox widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "combobox", "platform support"]
+description: "Describes the configuration and usage of the combo box widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "combo box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Combobox](https://marketplace.mendix.com/link/component/219304) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
+The [Combo Box](https://marketplace.mendix.com/link/component/219304) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
 
-A typical combobox can look like this:
+A typical combo box can look like this:
 
-{{< figure src="/attachments/appstore/widgets/combobox/combobox-demo.gif" width="300px" alt="Combobox Example" >}}
+{{< figure src="/attachments/appstore/widgets/combobox/combobox-demo.gif" width="300px" alt="Combo box example" >}}
 
 ### 1.1 Features
 
@@ -26,7 +26,7 @@ A typical combobox can look like this:
 
 ## 2 Properties Pane
 
-The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Combobox properties consist of the following sections:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Combo box properties consist of the following sections:
 
 Properties:
 
@@ -57,10 +57,10 @@ The **Data source** section (required) is used to configure the data for the wid
 The **General** section allows you to configure general behavior and captions for the combobox. The following configurations are available:
 
 * **Placeholder text** – captions that will be displayed when there is no data being selected
-* **Filter type** – allows the user to type into the input and filter displayable options on the combobox
-* **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combobox's options
+* **Filter type** – allows the user to type into the input and filter displayable options on the combo box
+* **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
 * **Clearable** – if enabled, this allows selected data to be cleared
-* **Custom content** – allows custom widgets to be displayed in the combobox instead of normal text values (only for association data source)
+* **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values (only for association data source)
 
 #### 2.1.3 Multi Selection (Reference Set)
 
@@ -75,7 +75,7 @@ The **Multi selection (reference set)** section allows you to configure combobox
 
 #### 2.1.4 Label
 
-The **Label** section allows you to display labels for the combobox.
+The **Label** section allows you to display labels for the combo box.
 
 #### 2.1.5 Conditional Visibility {#visibility}
 
@@ -93,7 +93,7 @@ The following configurations are available:
 
 ### 2.3 Accessibility Tab {#accessibility}
 
-The **Accessibility** tab allows you to configure settings for combobox accessibility features.
+The **Accessibility** tab allows you to configure settings for combo box accessibility features.
 
 ### 2.4 Common Tab {#common}
 

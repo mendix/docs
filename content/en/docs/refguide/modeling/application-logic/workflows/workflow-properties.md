@@ -87,7 +87,7 @@ To view **Parameters**, click the ellipsis icon next to the **Workflow name** or
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an attribute from the context that will be displayed
+* **Expression** – an expression that results in a string value; usually it is an attribute from the context that is of type String, or is converted to type String, for instance, with `toString`
 
 ##### 2.5.3.1 Adding New Parameters
 

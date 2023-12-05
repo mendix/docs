@@ -305,7 +305,7 @@ This service expects parameters in JSON/HTTP Header format. Examples of HTTP req
 
 By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. Mendix recommends enabling HTTPS/TLS protocols.
 
-In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
+In this example and in the rest of this document, Mendix uses `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
 ## 8 Authentication to External Services
 

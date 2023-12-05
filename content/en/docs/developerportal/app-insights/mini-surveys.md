@@ -25,7 +25,7 @@ This document first describes all the pages in Mini Surveys in the Developer Por
 
 ### 2.1 Survey Overview {#survey-overview}
 
-When you click **Mini Surveys** in the sidebar for an app that already has existing mini surveys, the **Survey Overview** page opens first.
+When you click **Mini Surveys** in the [navigation pane](/developerportal/#navigation-pane) for an app that already has existing mini surveys, the **Survey Overview** page opens first.
 
 On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
 
@@ -202,19 +202,25 @@ To obtain an API key for the implementation, follow these steps:
 To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
 1. Open your app in Studio Pro.
-2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the module into your app.
+2. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how many responses have been collected.
+When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/global-navigation/#notifications) on how many responses have been collected.
 
 To check the responses that have been collected, follow these steps::
 
 1. Open the app in the Developer Portal.
+
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
+
 3. On the **Active** tab, click the mini survey to open the [survey details](#survey-details) page.
+
 4. Go to the **Responses** tab to see all the responses that have been collected.
+
+   To have a quick view of individual survey responses, click a response in the list at the bottom. A side panel opens and shows the details of the response.
+
 5. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.
 
 ### 3.5 Survey Opt-out Rules
@@ -226,7 +232,7 @@ A mini survey has the following opt-out rules:
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 * If the user has answered all questions, then the survey will not show again to the user.
 
-Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you use the **TEST_MODE** constant to avoid clearing every time.
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, Mendix recommends using the **TEST_MODE** constant to avoid clearing every time.
 
 {{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 

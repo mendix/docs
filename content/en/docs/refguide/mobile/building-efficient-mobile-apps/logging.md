@@ -65,7 +65,7 @@ However, you may choose to add more entry and exit points at the **Debug** level
 
 ## 4 Native Client Default Log Nodes
 
-This section provides some details on specific log nodes used by the Mendix native client. We recommend that if you write your own [log messages](/refguide/log-message/) you should also use your own log node names to avoid confusion with the Mendix log messages.
+This section provides some details on specific log nodes used by the Mendix native client. Mendix recommends that if you write your own [log messages](/refguide/log-message/), you should also use your own log node names to avoid confusion with the Mendix log messages.
 
 ### 4.1 Default Mendix Native Client Log Nodes {#native-client-log-nodes}
 

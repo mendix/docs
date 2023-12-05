@@ -28,8 +28,8 @@ As a result of this, Mendix hybrid apps that employ push notifications can no lo
 
 To build the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
-2. Make sure the **Push Notifications** permission is checked under **Permissions**.
+1. Open your app in the Developer Portal. In the navigation pane on the left, click **Mobile App**.
+2. Make sure the **Push Notifications** permission is selected under **Permissions**.
 3. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}

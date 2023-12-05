@@ -165,7 +165,7 @@ The request body must adhere to URL encoding principles; that means that everyth
 
 ### 10.1 Updating Attributes
 
-When a published resource has the [Updatable](/refguide/published-odata-resource/#updatable) capability, you can update the resource's attributes and associations by sending a `PATCH` request to the URL of the object. Here is an example: `PATCH /odata/myservice/v1/Employees(8444249301330581)`.
+When a published entity has the [Updatable](/refguide/published-odata-entity/#updatable) capability, you can update attributes and associations by sending a `PATCH` request to the URL of the object. Here is an example: `PATCH /odata/myservice/v1/Employees(8444249301330581)`.
 
 Specify new values for attributes in the body of the request. Here is an example:
 
@@ -228,7 +228,7 @@ You can update an association only from the entity that is the [owner](/refguide
 
 ## 11 Inserting Objects {#inserting-objects}
 
-When a published resource has the [Insertable](/refguide/published-odata-resource/#capabilities) capability, you can create new objects by sending a `POST` request to the URL of the entity set. Here is an example: `POST /odata/myservice/v1/Employees`.
+When a published entity has the [Insertable](/refguide/published-odata-entity/#capabilities) capability, you can create new objects by sending a `POST` request to the URL of the entity set. Here is an example: `POST /odata/myservice/v1/Employees`.
 
 The body of the request may specify attribute and association values, just as with updates. However, unlike with updates, the `@delta` syntax is not used to specify objects, even when the association refers to multiple objects. Here is an example:
 
@@ -245,7 +245,7 @@ You can set values for an association only from the entity that is the [owner](/
 
 ## 12 Deleting Objects {#deleting-objects}
 
-When a published resource has the [Deletable](/refguide/published-odata-resource/#deletable) capability, you can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
+When a published entity has the [Deletable](/refguide/published-odata-entity/#deletable) capability, you can delete an object by sending a `DELETE` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Employees(8444249301330581)`).
 
 ## 13 Calling Microflows {#actions}
 

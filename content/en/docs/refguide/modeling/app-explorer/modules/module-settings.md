@@ -7,7 +7,7 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 ---
 
 {{% alert color="info" %}}
-In Mendix version 10.3.0 and above, there are two tabs, **Java Dependencies** and **Export**. In earlier versions, the content of the **Export** tab is the only content of the dialog box.
+In Studio Pro 10.3.0 and above, there are two tabs: **Java Dependencies** and **Export**. In versions below 10.3.0, the content of the **Export** tab is the only content of the dialog box.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -21,18 +21,14 @@ To open module settings, double-click **Settings** in the required module.
 ## 2 Java Dependencies
 
 {{% alert color="info" %}}
-Java managed dependencies are available in Mendix version 10.3.0 and above.
+Java managed dependencies are available in Studio Pro 10.3.0 and above.
 {{% /alert %}}
 
-You can add managed dependencies for each module on the **Java Dependencies** tab. See [Managed Dependencies](/refguide/managed-dependencies/) for more information.
+You can add managed dependencies for each module on the **Java Dependencies** tab. For more information, see [Managed Dependencies](/refguide/managed-dependencies/).
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-java-dependencies.png" >}}
 
 ## 3 Export
-
-{{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
-{{% /alert %}}
 
 Select the **Export** tab:
 
@@ -40,7 +36,7 @@ Select the **Export** tab:
 
 ### 3.1 Module Type {#module-type}
 
-There are three different types of modules and the choice of the type depends on the purpose of the module. You can choose one the following:
+There are three types of modules, and the choice of type depends on the purpose of the module. You can choose one the following:
 
 * [App module](#app-module)
 * [Add-on module](#add-on-module)
@@ -48,35 +44,35 @@ There are three different types of modules and the choice of the type depends on
 
 #### 3.1.1 App Module {#app-module}
 
-**App module** is a standard way of structuring your app. Use app modules to distinguish between functional domains: create an app module for each relevant domain and put all pages, microflows, entities, and other documents in one place.
+An app module is a standard way of structuring your app. Use app modules to distinguish between functional domains: create an app module for each relevant domain and put all pages, microflows, entities, and other documents in one place.
 
-An **App module** is exported as a package file (*.mpk* ) that includes the full source code of the module.
+An app module is exported as a package file (*.mpk* ) that includes the full source code of the module.
 
 #### 3.1.2 Add-on Module {#add-on-module}
 
-An **add-on module** is a stand-alone module that is not dependent on other modules and is used as a separate element, for example, as a connector. 
+An add-on module is a stand-alone module that is not dependent on other modules. It is used as a separate element (for example, as a connector). 
 
-An add-on module is exported as an module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on Export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
+An add-on module is exported as a module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
 
-If you are creating functionality that can be exported and used by other users separately and independently of the rest of the app, you can set your module to an add-on type.  
+If you are creating functionality that can be exported and used by other users separately and independently of the rest of the app, you can set your module to an add-on type.
 
-When the module is set as the add-on module, it gets the letter A as an icon.
+When the module is set as the add-on module, it gets the letter **A** as an icon.
 
 #### 3.1.3 Solution Module {#solution-module}
 
-**Solution modules** are only used for developing a solution and are an inseparable part of it. Set of solution modules used for the solution form the **solution core**. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information on solutions, see [Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+Solution modules are only used for developing a solution and are an inseparable part of it. The set of solution modules used for the solution form the solution core. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information, see [How to Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
-When the module is set as the solution module, it gets the letter S as an icon.
+When the module is set as the solution module, it gets the letter **S** as an icon.
 
 ### 3.2 Module Version
 
 {{% alert color="info" %}}
-This setting is available for only add-on and solution module types.
+This setting is available only for add-on and solution module types.
 {{% /alert %}}
 
-A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
+This is the version number of the module. The version should be a semantic version (meaning, it should consist of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-We recommend setting a new version every time changes are made to the module.
+Mendix recommends setting a new version every time changes are made to the module.
 
 ## 4 Read More
 

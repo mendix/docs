@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "workflow engine", "engine"]
 
 ## 1 Introduction
 
-The Workflow Engine is the Runtime engine to execute workflows. This document describes how the engine works, how you can interact with the engine, and what information it stores. This gives you a better understanding on how you can develop with Mendix workflows.
+The Mendix Workflow Engine is the Mendix Runtime engine to execute workflows. This document describes how the engine works, how you can interact with the engine, and what information it stores. This gives you a better understanding on how you can develop with Mendix workflows.
 
 ## 2 Workflow Data in the Mendix Database
 

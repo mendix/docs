@@ -109,6 +109,12 @@ Only adaptable content can be translated, since protected content is locked down
 
 Variables cannot (easily) be translated, nor can text be changed in a protected microflow (since this is locked down). As a workaround for this, consider using an editable Enumeration as an “internationalization map” combined with the [getCaption](/refguide/enumerations-in-expressions/#get-caption) function. 
 
-## 6 Read More
+## 6 Java Source Code Protection
+
+Setting the export level to **Hidden** on a Java action prevents the unpacking of the action in the app directory in the same path as regular modules. Your Java code is put in a package, but no obfuscation or other security measures take place. This means that reverse engineering the package would reveal your source code.
+
+Mendix does not offer a facility to further protect intellectual property in your Java files. For further protection, Mendix recommends using other software (for example, to obfuscate your source code).
+
+## 7 Read More
 
 * [Using the Right Components](https://academy.mendix.com/link/modules/510/lectures/4050/2.1-Using-the-Right-Components)

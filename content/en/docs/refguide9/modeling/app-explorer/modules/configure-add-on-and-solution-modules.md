@@ -7,20 +7,20 @@ tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/configure-add-on-and-solution-modules/).
 {{% /alert %}}
 
 ## 1 Introduction
 
-Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have Intellectual Property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
+Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have intellectual property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
 
-The main *difference* between an add-on and a solution module is their purpose. An add-on module is developed to be a *stand-alone functionality* that other users can consume in the their apps, for example, an add-on can be a connector. 
+The main difference between an add-on and a solution module is their purpose. An add-on module is developed to be a stand-alone functionality that other users can consume in the their apps, for example, an add-on can be a connector. 
 
-Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
+Solution modules are always part of a solution (any Mendix app that is suitable to be sold to multiple different customers). Solution modules are dependent on each other and are inseparable. Solutions modules form the solution core of the solution. 
 
 ## 2 Configuring Add-on and Solution Modules
 
-You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
+You can mark a standard module (app module) as an add-on or solution module at any time, but Mendix recommends doing so right as you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
 
 All content of add-on and solution modules is set to be hidden from consumers by default (modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
@@ -106,5 +106,5 @@ If, for some reason, you switch the add-on and solution module to an app module,
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
+* [Using Marketplace Content](/appstore/overview/use-content/)
 * [Import and Export Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/)

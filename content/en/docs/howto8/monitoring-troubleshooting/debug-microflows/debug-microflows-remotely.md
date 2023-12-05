@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 The Basics
 
-In the Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
+In Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
 {{% alert color="info" %}}
 The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud](/developerportal/deploy/scale-environment/) for more information.
@@ -35,23 +35,23 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 ### 3.1 Obtain Debugging Credentials
 
-#### 3.1.1 Obtain Debugging Credentials from Mendix cloud
+#### 3.1.1 Obtain Debugging Credentials from Mendix Cloud
 
-When your application is in the Mendix cloud:
+When your application is in Mendix Cloud, follow these steps:
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-2. Click **Environments** in the left sidebar.
+2. Click **Environments** in the navigation pane.
 
-3. In the **Deploy** tab, click **Details** for the environment which you want to debug:
+3. In the **Deploy** tab, click the **Details** icon for the environment that you want to debug:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/18580051.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/environment-details.png" >}}
 
 4. In the **General** tab, click **Show Debugger Information**:
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/show-debugger-information.png" >}}
 
-    This invokes the **Debugger settings** pop-up window which provides a URL (such as `http://yourapp.mendixcloud.com/debugger/`) and a password:
+    This invokes the **Debugger settings** pop-up window, which provides a URL (such as `http://yourapp.mendixcloud.com/debugger/`) and a password:
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/debugger-settings.png" >}}
 
@@ -67,13 +67,13 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
-2. Click **Environments** in the left sidebar.
+2. Click **Environments** in the navigation pane.
 
-3. Click **Details** for the environment which you want to debug.
+3. Click **Details** for the environment that you want to debug.
 
 4. Open the **Debugger** tab:
 
-5. If the debugger is currently disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. We recommend that you do not change this password.
+5. If the debugger is currently disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. Mendix recommends not changing this password.
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/pc-debugger-password.png" alt="Enter password for the private cloud debugger" >}}
 
@@ -104,7 +104,7 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 
 {{% alert color="warning" %}}
-If you do cannot connect the debugger, then you do not have sufficient permissions to your app. Ask the Technical Contac* or the project Scrum Master to provide the correct permissions.
+If you do cannot connect the debugger, then you do not have sufficient permissions to your app. Ask the Technical Contact or the project Scrum Master to provide the correct permissions.
 {{% /alert %}}
 
 1. Open the **Connect Debugger** dialog box – you can do this in two ways within Studio Pro:

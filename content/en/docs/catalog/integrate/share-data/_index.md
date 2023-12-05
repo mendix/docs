@@ -64,7 +64,7 @@ Go ahead and customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 
-You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
+You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a [Published OData service](/refguide/published-odata-services/) in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
 
 Do the following:
 

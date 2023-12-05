@@ -45,7 +45,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Rekognition connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon Rekognition connector into your app.
 
 ## 3 Configuration
 
@@ -399,7 +399,6 @@ JavaScript actions provide an additional way to extend the functionality of your
 
 The `JS_AddBoundingBox` JavaScript action can be used to generate a rectangle around the labels that have been identified on an image. The image upon which the rectangles are to be generated must be contained in a container. As a result, the JavaScript action can only be executed after the page has been rendered.
 
- 
 | Parameter | Description |
 | --- | --- |
 | `ClassName` (String) | A string representation of the container upon which a rectangle is to be generated. |

@@ -34,7 +34,6 @@ If you are using Google Maps, be sure to include an empty JSON array (specifical
 
 {{% /alert %}}
 
-
 ## 3 Settings {#settings}
 
 ### 3.1 Map Provider

@@ -11,11 +11,13 @@ aliases:
 
 ## 1 Introduction
 
-As of Studio Pro [9.21](/releasenotes/studio-pro/9.21/), Git is the default version control system in Studio Pro. Git offers [several advantages](/refguide9/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate. This document describes the most prominent changes between Git and SVN.
+With Studio Pro version 9.12 and above, users can choose whether to start a new app with SVN or Git version control. Git offers [several advantages](/refguide9/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate, as well as some downsides when working with large repositories. This document describes the most prominent changes between Git and SVN.
 
 For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*.
 
 {{% alert color="info" %}}
+For existing apps in Mendix 9, Mendix recommends sticking to SVN version control until planning an upgrade to Mendix 10, unless you require Git-specific capabilities.
+
 Mendix 10 no longer supports SVN as version control system in Studio Pro. When planning to upgrade your app to Mendix 10, first migrate to Git within Mendix 9.
 {{% /alert %}}
 
@@ -42,11 +44,19 @@ The table below outlines the main differences between SVN and Git:
 
 ## 3 Differences in Revision Numbers
 
-In SVN, commits are done to a central server which enforces the commit order. These commits are represented with a number that is generally sequentially increasing (e.g. 1, 2, 3, 4, 5).
+In SVN, commits are done to a central server which enforces the commit order. These commits are represented with a number that is generally sequentially increasing (for example, 1, 2, 3, 4, 5).
 
-In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
+In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (for example, f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
 
-## 4 Proxy Support {#proxy-support}
+## 4 Support for Fully Distributed Version Control
+
+To support Git's distributed version control system, every user who clones a Git repository essentially creates a full copy of the entire project. This includes its entire history. 
+
+This local history allows for complete independence, enabling users to work offline, commit changes, and explore the project's history seamlessly without the need for a constant connection to a central server.
+
+A downside of this is that a fresh checkout (called a 'clone' in Git), will taker longer compared to SVN. Where a checkout in SVN only downloads the last revision (which might be, for example, 100MB), doing a clone in Git means downloading the entire repository (which could be 1.2GB for the same repository). 
+
+## 5 Proxy Support {#proxy-support}
 
 Studio Pro communicates to Git repositories by two means: LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remote Git servers. This is when Git CLI is used and Studio Pro switches to the client while performing fetch, pull and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of Studio Pro installation). Therefore, any operation that requires transferring data to/from remote Git repositories, uses GitCLI client.
 
@@ -61,10 +71,10 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
 You can also use `--global` modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
 
-## 5 Interacting with Version Control Outside Studio Pro
+## 6 Interacting with Version Control Outside Studio Pro
 
 It is possible to [set up a third-party tool to connect to the Team Server](/refguide9/version-control-faq/#third-party-tools) for both SVN and Git. However, migrating to Git requires a different tool: instead of TortoiseSVN you can use tools like TortoiseGit or GitHub Desktop.
 
-## 6 Read More
+## 7 Read More
 
 * [Migrate to Git](/developerportal/general/migrate-to-git/)

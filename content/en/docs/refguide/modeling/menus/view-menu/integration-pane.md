@@ -12,14 +12,14 @@ aliases:
 
 Use the Integration Pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the [Integration Pane](/refguide/integration-pane/).
 
-You can search in the Catalog through the [Integration Pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
+You can search in the Catalog through the [Integration Pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are published in the registered OData services into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
 Besides external entities, OData services can expose actions that can be called from within microflows. From this pane you can drag these actions onto a microflow, where they will appear as a **Call external action** activity. In this activity you can configure the parameters and result variable.
 
 To display the [Integration Pane](/refguide/integration-pane/), click **View** > **Integration**.
 
 {{% alert color="info" %}}
-In the Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
+In the Catalog, registered published services are referred to as *data sources*. Published entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
 ## 2 Integration Pane Overview
@@ -90,7 +90,7 @@ The search results and **User in your App** section show the following informati
         {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
 
 * **Gray shield icon** shows if the service or entity is validated in the Catalog
-* **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
+* **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the the Catalog. Click to update the service that is consumed in the app to the contract that is now available:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Integration pane update" >}}
 

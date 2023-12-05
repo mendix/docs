@@ -116,7 +116,7 @@ metadata:
   namespace: my-pclm-1 
 spec:
   rules:
-    - host: pclm.<domain> # e.g. pclm.mydomain.io
+    - host: pclm.<domain> # for example, pclm.mydomain.io
       http:
         paths:
           - path: /
@@ -307,7 +307,6 @@ You will receive the result in the following format:
 | LICENSE-ID                           | TYPE       | EXPIRATION-DATE      | CREATED-AT           | PRODUCTS |
 |--------------------------------------|------------|----------------------|----------------------|----------|
 | c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
-
 
 ## 7 Applying Licenses to Your Operator and Apps
 

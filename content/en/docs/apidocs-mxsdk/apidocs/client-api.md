@@ -3,7 +3,7 @@ title: "Client API"
 url: /apidocs-mxsdk/apidocs/client-api/
 category: "API Documentation"
 description: "This API enriches the user interface of your applications by building on top of the Mendix web Client APIs."
-weight: 20
+weight: 25
 tags: ["Client API", "API"]
 ---
 

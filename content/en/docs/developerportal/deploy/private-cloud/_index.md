@@ -82,6 +82,7 @@ The table below shows the differences between the capabilities for apps deployed
 ## 4 Memory Allocation
 
 Each Mendix app or environment pod has the following containers:
+
 * Mx Runtime and the Mendix app itself
 * The m2ee sidecar container
 * The metrics sidecar container (only used when compatibility mode metrics are enabled)

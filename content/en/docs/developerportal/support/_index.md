@@ -82,9 +82,9 @@ During the start phase, and through part of the scale phase, of your digital tra
 
 ### 5.1 Mendix Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/#company).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/control-center/company-settings/).
 
-Please read more about this in [Control Center](/developerportal/control-center/).
+Please read more about this in [Control Center](/control-center/).
 
 ### 5.2 Technical Contacts
 
@@ -105,7 +105,7 @@ If, after your analysis, you suspect there is an issue with the Mendix Platform 
 
 ## 8 Product Support Period
 
-Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
+Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, Mendix recommends upgrading your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
 
 ## 9 Support for Different Deployment Strategies {#support-by-strategy}
 
@@ -113,23 +113,25 @@ With our Multi-Cloud strategy, Mendix allows the apps that you build to be deplo
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or a third party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
-| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional² |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **Appli&shy;cation** | | | | | | | |
-| **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
-| **Runtime** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | | | |
-| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner¹ | | |
-| **Appli&shy;cation Opera&shy;tion** | Mendix | Mendix | Mendix | Mendix | Mendix | | |
-| **Buildpack** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner¹ | | |
-| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner¹ | | |
-| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | Private Mendix Platform | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional³ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Appli&shy;cation** | | | | | | | | |
+| **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
+| **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | | |
+| **Runtime** | Mendix | Mendix | Mendix | Mendix | Certified Mendix Partner² | Mendix | Mendix | Mendix |
+| **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | Certified Mendix Partner²  | | |
+| **Logs/ Metrics** | Mendix | Mendix | | | Certified Mendix Partner² | Mendix Partner¹ | | |
+| **Appli&shy;cation Opera&shy;tion** | Mendix | Mendix | Mendix | Mendix | Certified Mendix Partner² | Mendix | Mendix | | |
+| **Buildpack** | Mendix | Mendix | Mendix | Mendix | Certified Mendix Partner² | Mendix | Mendix | Mendix |
+| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Certified Mendix Partner² | Mendix Partner¹ | | |
+| **Infra&shy;structure** | Mendix | Mendix | | | Certified Mendix Partner² | Mendix Partner¹ | | |
+| **Database/ File Storage/ Network** | Mendix | Mendix | | | Certified Mendix Partner² | Mendix Partner¹ | | |
 
 ¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD) or Tencent Support.
 
-²Traditional means deploying directly on Windows or Linux without using containerization.
+²Support will go through Private Mendix Platform Certified Partners.
+
+³Traditional means deploying directly on Windows or Linux without using containerization.
 
 In the diagrams below, the following colors are used:
 
@@ -149,14 +151,20 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 
 {{< figure src="/attachments/developerportal/support/private-cloud.png"   width="75%"  >}}
 
-### 9.3 SAP Business Technology Platform
+### 9.3 Private Mendix Platform
+
+Private Mendix Platform provides a platform experience in on-premises or (virtual) private cloud environments. It is dependent on Mendix for Private Cloud and Kubernetes, and integrates with tooling in the customer's landscape. Please refer to [Private Mendix Platform](/private-mendix-platform/) documentation for [prerequisites](/private-mendix-platform-prerequisites/) to install the platform and set up [configurations](/private-mendix-platform-configuration/), as well as [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation for [supported environments](/developerportal/deploy/private-cloud-supported-environments/). 
+
+This offering is delivered, managed and supported by Certified Partners (or Certified Customers). If you run into issues regarding your private platform, please contact your Certified Partner for support.
+
+### 9.4 SAP Business Technology Platform
 
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
 {{< figure src="/attachments/developerportal/support/sap-cloud-platform.png"   width="40%"  >}}
 
-### 9.4 Tencent
+### 9.5 Tencent
 
 Mendix provides an integration with Tencent for customers in China.
 
@@ -164,7 +172,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring �
 
 {{< figure src="/attachments/developerportal/support/tencent.png"   width="40%"  >}}
 
-### 9.5 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
+### 9.56 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
@@ -243,7 +251,7 @@ Mendix Support needs application logs to diagnose this component. Because Mendix
 
 Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace
 
-Read more about the levels of Support for Marketplace components in [Marketplace Content Support](/appstore/general/app-store-content-support/).
+For details about the levels of Support for Marketplace components, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 
 Mendix Support needs application logs to diagnose these components. Because Mendix has no control over the context in which the Marketplace content is run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 

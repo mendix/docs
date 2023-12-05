@@ -1527,7 +1527,7 @@ To configure the required settings for an RDS database, do the following steps:
     In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
     {{% /alert %}}
 
-3. Navigate to the RDS instance details, and write down the following information:
+2. Navigate to the RDS instance details, and write down the following information:
 
     1. The database **Endpoint** from the **Connectivity & security** tab:
 
@@ -1537,7 +1537,7 @@ To configure the required settings for an RDS database, do the following steps:
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" >}}
 
-4. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
 
 ```shell

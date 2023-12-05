@@ -80,6 +80,7 @@ flatDir {
 ```
 
 By default the repositories are configured as:
+
 ``` {linenos=false}
 gradlePluginPortal()
 mavenCentral()

@@ -64,7 +64,7 @@ For standard plans, your node has production and acceptance environments. It can
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section for standard environments" >}}
 
-For standard plans, the **Environments** section shows the following details:
+For standard plans, the **Environments** section shows the following information:
 
 * Environment name (Acceptance, Production, or Test)
 * Environment status, indicated by the icon next to the environment name:
@@ -94,7 +94,7 @@ If your Mendix license supports flexible environments, you can define the number
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
 
-For flexible environments, the **Environments** section shows the following details:
+For flexible environments, the **Environments** section shows the following information:
 
 * Environment status, indicated by the icon next to the environment name:
     * Green check mark – the application in this environment is running
@@ -113,7 +113,7 @@ You can perform the following actions in this section:
 * Search for an environment – Find a specific environment using the **Search** field.
 * View an environment's details – Go to the environment's [Details](/developerportal/deploy/environments-details/) page by clicking the **Details** icon.
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
-* Reorder environments - If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking the **More Options** icon and selecting **Move Up** or **Move Down**.
+* Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking the **More Options** icon and selecting **Move Up** or **Move Down**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="" >}}
 
@@ -149,7 +149,7 @@ For details on setting up access restriction profiles, see [Restrict Access for 
 
 ## 5 Permissions{#permissions}
 
-In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have the **Manage Permissions** permission can manage various permissions to the environments for each team member. Team members who have a role with **Cloud Access** can view the permissions.
+In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have **Manage Permissions** enabled can manage various permissions to the environments for each team member. Team members who have a role with **Cloud Access** can view the permissions.
 
 For details on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 

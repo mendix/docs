@@ -9,11 +9,13 @@ tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]
 
 ## 1 Introduction
 
-The **Running Now** dialog box can be accessed by clicking the **Show Running Now** button on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page. You can use it to monitor all actions that are currently running in your environment.
+You can use the **Running Now** dialog box to monitor all actions that are currently running in an environment. To access this information, click **Show Running Now** on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page for one of your app's environments. This button is only visible while the app is running.
+
+You must have **Access to Monitoring** enabled to launch the **Running Now** dialog box. For details on how to manage these permissions, see [Node Permissions](https://docs.mendix.com/developerportal/deploy/node-permissions/).
 
 ## 2 Running Now Navigation
 
-This dialog box shows all actions currently running in the environment. It also shows some general information about each action.
+The **Running Now** dialog box shows all actions currently running in the environment. It also shows some general information about each action.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/troubleshooting-mxcloud-runningnow/dialog-box.png" >}}
 
@@ -39,4 +41,3 @@ You can use the information displayed in the **Running Now** dialog box for vari
 ## 4 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Node Permissions](/developerportal/deploy/node-permissions/)

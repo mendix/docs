@@ -186,11 +186,11 @@ While we were testing, we were lucky to see a dinosaur nearby:
 
 {{< figure src="/attachments/quickstarts/part2/mobile-pic-2.png" width="150px" alt="Stegosaurus plant holder in a mobile device camera">}}
 
-After taking a photo with the native mobile app and tapping the **Save** button, we saw the new photo automatically appear in the responsive profile:
+After taking a photo with the native mobile app and tapping the **Save** button, we saw the new picture automatically appear in the responsive profile:
 
 {{< figure src="/attachments/quickstarts/part2/mobile-pic-3.png" width="200px" alt="Updated app with new photo">}}
 
-After reloading the page in our browser, we could also see the new photo there:
+After reloading the page in our browser, we could also see the new picture there:
 
 {{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="550px" alt="Browser view">}}
 

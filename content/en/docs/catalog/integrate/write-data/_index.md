@@ -10,13 +10,13 @@ aliases:
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/catalog/write-data/) and shows you how OData annotations give you the power to create, update, and delete data.
+This how-to builds on the information provided in [How to Share Data Between Apps](/catalog/write-data/) and shows you how annotations give you the power to create, update, and delete data.
 
 This how-to teaches you how to do the following:
 
-* Expose updatable OData entities, attributes, and associations in Mendix Studio Pro
+* Expose updatable entities, attributes, and associations in Mendix Studio Pro
 * See which capabilities a particular entity, attribute, or association has in the Catalog
-* Consume an updatable OData resource in your Mendix app
+* Consume an updatable resource in your Mendix app
 
 The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro uses the OData definitions.
 
@@ -38,9 +38,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
-When you publish an entity in a published OData service, the client can read the data by default. To allow clients to update, insert, or delete the data, do the following:
+When you publish an entity in a published service, the client can read the data by default. To allow clients to update, insert, or delete the data, do the following:
 
-1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**.
+1. Open the published service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**.
 2. Select the **Customer** entity and click **Edit**.
 3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
 
@@ -48,12 +48,12 @@ When you publish an entity in a published OData service, the client can read the
 
 The updatable OData capability relates to the data in your app. The Catalog provides an inventory of the metadata in your apps. In the Catalog, you can see entity, attribute, and association capabilities. Changes to the data itself occur in Mendix apps, not in the Catalog.
 
-To see the capabilities of a particular OData entity, do the following: 
+To see the capabilities of a particular entity, do the following: 
 
-1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/catalog/share-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Catalog and search for the name of an exposed service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/catalog/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you do not see many results, try removing the **Production** filter on your search.
 
-Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.
+Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any restrictions here.
 
 ## 5 Consuming OData Resources in Your Mendix App
 
@@ -61,7 +61,7 @@ Just like in the Catalog, you can see the **CRUD** capabilities of entities, att
 
 {{< figure src="/attachments/catalog/write-data/crud-capabilities.png" alt="crud capabilities" >}}
 
-To consume an OData entity, do the following:
+To consume an entity, do the following:
 
 1. In the **Integration** pane, enter a term in the search field. 
 2. Select your entity from the **Integration** pane. By default, the pane only shows results published to the production environment. If you also want to see results from other environments, click the filter icon and select the **Show development environment** checkbox.

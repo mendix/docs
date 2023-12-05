@@ -17,7 +17,7 @@ The new features were divided into these major themes, which are described in th
 {{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta release. For more information, see [Beta Releases](/releasenotes/beta-features/).
+"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 2 Continuous Collaboration {#continuous}
@@ -48,8 +48,8 @@ The new features were divided into these major themes, which are described in th
 | Rich design properties | GA: Q4 2023 |
 | Visual data filters | GA: Q4 2023 |
 | Mixed online and offline data | GA: Q4 2023 |
-| Mendix Chat | Public beta: Q4 2023<br>GA: TBD |
-| Mac support | Public beta: Q4 2023<br>GA: TBD |
+| Mendix Chat | Preview: Q4 2023<br>Public beta: TBD<br>GA: TBD |
+| Mac support | Preview: Q4 2023<br>Public beta: TBD<br>GA: TBD |
 
 ## 4 Composability {#composability}
 

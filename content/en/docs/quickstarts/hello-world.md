@@ -13,4 +13,4 @@ tags: ["hello world", "create", "app", "deploy"]
 
 ## 2 Continuing with the Next Tutorial
 
-To continue learning, see [Building a Responsive Web App](/quickstarts/part1/).
+To continue learning, see [Building a Responsive Web App](/quickstarts/responsive-web-app/).

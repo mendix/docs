@@ -1,19 +1,20 @@
 ---
 title: "Adding a Native Mobile App"
-url: /quickstarts/part2/
+url: /quickstarts/native-mobile-app/
 weight: 20
 description: "Learn the basics of making a native mobile app."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
+    - /quickstarts/part2/
     - /refguide/quickstart-part2/
     - /refguide9/quickstart-part2/
 ---
 
 ## 1 Introduction 
 
-In this quickstart tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/part1/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
+In this quick start tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/responsive-web-app/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
 
-In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/part1/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
+In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/responsive-web-app/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
 
 ### 1.1 Getting to Know Mendix Native Mobile
 
@@ -34,7 +35,7 @@ In summary, Mendix lets you [build an app for distribution](/refguide/mobile/dis
 
 Before starting this tutorial, make sure you have completed the following prerequisites:
 
-* Read through [Building a Responsive Web App](/quickstarts/part1/)
+* Read through [Building a Responsive Web App](/quickstarts/responsive-web-app/)
 * Download the [Make It Native 10](/refguide/getting-the-make-it-native-app/) app on your mobile device
     * The [Make it Native 10](/refguide/getting-the-make-it-native-app/) mobile app is available for Android and iOS devices
     * Once installed, the app lets you quickly test your native mobile app as you develop it by connecting to your local development machine’s running copy of your app and displaying the app inside its mobile testing environment
@@ -51,16 +52,16 @@ The **Home_Native** page has a different icon than the **Home_Web** page. Mendix
 
 You should see this in Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part2/studio-pro-check.png" width="400px" alt="What you should see">}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/studio-pro-check.png" width="400px" alt="What you should see">}}
 
 The content on this page comes pre-made as a part of the template. To get started, do the following:
 
 1. Delete everything from the page.
-2. Add a **List view** to the page via the **Toolbox**. A list view works like the template grid used in [Building a Responsive Web App](/quickstarts/part1/#template-grid), except that it can scroll, which is better for mobile users.
+2. Add a **List view** to the page via the **Toolbox**. A list view works like the template grid used in [Building a Responsive Web App](/quickstarts/responsive-web-app/#template-grid), except that it can scroll, which is better for mobile users.
 3. Right-click the list view, then click **Select data source**.
 4. Click **Select** next to **Entity**, then search for and select the **Picture** entity: 
 
-    {{< figure src="/attachments/quickstarts/part2/list-view-fill.png" width="400px" alt="List view">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/list-view-fill.png" width="400px" alt="List view">}}
     
 5. When prompted to automatically fill the contents of the list view, click **No**.
 
@@ -78,7 +79,7 @@ Next, you are going to create the UI for your native app:
 8. In the new dialog box, replace the caption with the place holder *{1}*. 
 9. Click to add a new **Parameter** and select the **Title** attribute:
 
-    {{< figure src="/attachments/quickstarts/part2/add-title-param.png" width="400px" alt="Configure edit button">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/add-title-param.png" width="400px" alt="Configure edit button">}}
 
 10. Repeat this process for the other label, making sure to select the **Description** attribute this time.
 
@@ -92,7 +93,7 @@ Your app needs a button that allows the end-user to take a picture. Instead of a
 
 1. Drag the **Floating action button** from the **Toolbox** onto the page:
 
-    {{< figure src="/attachments/quickstarts/part2/floating-action-button.png" width="500px" alt="Floating action button">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/floating-action-button.png" width="500px" alt="Floating action button">}}
 
     The location is managed in the widget's properties, so it does not matter where the widget is placed on the page. You can place it above the list view and still have it display in the bottom-right corner by configuring the widget correctly.
 
@@ -102,7 +103,7 @@ Your app needs a button that allows the end-user to take a picture. Instead of a
 5. Set the **On click action** to **Call a nanoflow**.
 6. Click **Nanoflow** > **Select**, then create a new nanoflow called *ACT_TakeNewPicture*:
 
-    {{< figure src="/attachments/quickstarts/part2/make-pic-nano.png" width="300px" alt="New nanoflow">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/make-pic-nano.png" width="300px" alt="New nanoflow">}}
 
 ### 4.1 Configuring the Nanoflow
 
@@ -116,7 +117,7 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
 2. Double-click the action and set the entity type as **Picture**, then click **OK**. 
 3. Drag a **Take Picture** action and position it after the Create object activity:
 
-    {{< figure src="/attachments/quickstarts/part2/add-activities.png" width="450px" alt="Take picture action">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/add-activities.png" width="450px" alt="Take picture action">}}
 
 4. Double-click the **Take Picture** action configure the properties like this:
     * **Picture** – **$NewPicture**
@@ -127,7 +128,7 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
     * **Use return value** – **Yes**
     * **Variable name** – **PictureTaken**
 
-    {{< figure src="/attachments/quickstarts/part2/config-take-pic.png" width="350px" alt="Configure take picture">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/config-take-pic.png" width="350px" alt="Configure take picture">}}
     
 5. Finally you need to create a page where the end-user can view and edit their new picture.v Add a **Show page** action to the nanoflow. 
 6. Open the action's properties:
@@ -139,7 +140,7 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
 
 You should now see the new page:
 
-{{< figure src="/attachments/quickstarts/part2/native-pic-page.png" width="450px" alt="New page">}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/native-pic-page.png" width="450px" alt="New page">}}
 
 ### 4.2 Adding Validation
 
@@ -156,7 +157,7 @@ Finally, you need to ensure all the data captured by the end-user is synchronize
 1. Double-click the **Save** button to open its properties.
 2. Set **Auto-synchronize** to **Yes**:
 
-    {{< figure src="/attachments/quickstarts/part2/edit-button-props.png" width="300px" alt="Auto sync set to yes">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/edit-button-props.png" width="300px" alt="Auto sync set to yes">}}
     
 ## 5 Testing
 
@@ -164,13 +165,13 @@ All done! You can now run your app and test all the features you have built. To 
 
 1. Open the Make it Native app on your mobile device:
 
-    {{< figure src="/attachments/quickstarts/part2/min-start-screen.png" width="350px" alt="MIN start screen">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/min-start-screen.png" width="350px" alt="MIN start screen">}}
 
 2. Click the drop-down menu in Studio Pro and select **View app on your device**.
 3. Click the **View Native Mobile App** tab.
 4. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
 
-    {{< figure src="/attachments/quickstarts/part2/min-qr.png" width="400px" alt="Scan QR code">}}
+    {{< figure src="/attachments/quickstarts/native-mobile-app/min-qr.png" width="400px" alt="Scan QR code">}}
     
     {{% alert color="info" %}}If you are using a Mac, be sure to use forward ports 8080/8083, as explained in [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide/using-mendix-studio-pro-on-a-mac/#configuring).{{% /alert %}}
 
@@ -180,21 +181,21 @@ If you need more information, see [Native App Prerequisites and Troubleshooting]
 
 This is what we saw when we started testing our native mobile photo app:
 
-{{< figure src="/attachments/quickstarts/part2/mobile-pic-1.png" width="200px" >}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/mobile-pic-1.png" width="200px" >}}
 
 While we were testing, we were lucky to see a dinosaur nearby:
 
-{{< figure src="/attachments/quickstarts/part2/mobile-pic-2.png" width="150px" alt="Stegosaurus plant holder in a mobile device camera">}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/mobile-pic-2.png" width="150px" alt="Stegosaurus plant holder in a mobile device camera">}}
 
 After taking a photo with the native mobile app and tapping the **Save** button, we saw the new picture automatically appear in the responsive profile:
 
-{{< figure src="/attachments/quickstarts/part2/mobile-pic-3.png" width="200px" alt="Updated app with new photo">}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/mobile-pic-3.png" width="200px" alt="Updated app with new photo">}}
 
 After reloading the page in our browser, we could also see the new picture there:
 
-{{< figure src="/attachments/quickstarts/part2/responsive-app.png" width="550px" alt="Browser view">}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/responsive-app.png" width="550px" alt="Browser view">}}
 
-Congratulations on completing this quickstart tutorial! You are on your way to successful app development with the Mendix Platform.
+Congratulations on completing this quick start tutorial! You are on your way to successful app development with the Mendix Platform.
 
 ## 7 Read More
 

@@ -1,17 +1,18 @@
 ---
 title: "Building a Responsive Web App"
-url: /quickstarts/part1/
+url: /quickstarts/responsive-web-app/
 weight: 10
 description: "Learn the basics of making an app in a responsive web profile."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
+    - /quickstarts/part1/
     - /refguide/quickstart-part1/
     - /refguide9/quickstart-part1/
 ---
 
 ## 1 Introduction
 
-This quickstart tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
+This quick start tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
 After completing this tutorial, you will have a photo album app that allows app end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
@@ -39,11 +40,11 @@ Before starting this tutorial, make sure you have completed the following prereq
 
 ## 3 Starting Your App
 
-You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quickstart tutorial, as the app you will develop needs to work for web browsers.
+You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quick start tutorial, as the app you will develop needs to work for web browsers.
 
 A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
 
-{{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/3-startingtemplate.png" width="450px" alt="Blank template">}}
 
 ### 3.1 Selecting the App Template
 
@@ -51,7 +52,7 @@ To select the best app template, follow these steps:
 
 1. Starting from Studio Pro, click **Create New App**:
 
-    {{< figure src="/attachments/quickstarts/part1/starting-point.png" width="450px" alt="New app">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/starting-point.png" width="450px" alt="New app">}}
 
 2. Search for the **Blank Native Mobile App** and click **Use this starting point**:
 
@@ -63,11 +64,11 @@ To select the best app template, follow these steps:
 
 3. Name your app *Quickstart App* and click **Create app**:
 
-    {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="400px" alt="Create app">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/3-createnameapp3.png" width="400px" alt="Create app">}}
 
 4. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
 
-    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="400px" alt="Home Web page">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/home-web.png" width="400px" alt="Home Web page">}}
     
 ## 4 Exploring Studio Pro
 
@@ -83,7 +84,7 @@ The Studio Pro configuration you see is completely editable. You can add or hide
 
 The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the green play icon). 
 
-{{< figure src="/attachments/quickstarts/part1/4.1-topbar1.png" width="450px" alt="Studio Pro">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/4.1-topbar1.png" width="450px" alt="Studio Pro">}}
 
 For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
@@ -91,17 +92,17 @@ For more information on menus and functions, see the [Top Bar](/refguide/studio-
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
-{{< figure src="/attachments/quickstarts/part1/tour-left.png" width="300px" alt="App Explorer as left dockable pane">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/tour-left.png" width="300px" alt="App Explorer as left dockable pane">}}
 
 Any [Marketplace modules](/appstore/modules/) you download appear under **Marketplace Modules** > **App**.
 
-{{< figure src="/attachments/quickstarts/part1/4.2-styles.png" width="300px" alt="Modules">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/4.2-styles.png" width="300px" alt="Modules">}}
 
 ### 4.3 Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/tour-bottom.png" width="400px" alt="Bottom Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/tour-bottom.png" width="400px" alt="Bottom Dockable Pane">}}
 
 Here you will find some separate default dockable panes:
 
@@ -115,7 +116,7 @@ For more information on available panes, see the [MxAssist Best Practice Bot](/r
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/tour-right.png" width="300px" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/tour-right.png" width="300px" alt="Right Dockable Pane">}}
 
 Here you will find some more separate default dockable panes:
 
@@ -136,7 +137,7 @@ When you run your app locally or deploy it for the first time, the Mendix Runtim
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
-{{< figure src="/attachments/quickstarts/part1/5.1-log.png" width="400px" alt="Log">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/5.1-log.png" width="400px" alt="Log">}}
 
 ### 5.1 Creating an Entity to Store the Images
 
@@ -144,17 +145,17 @@ To create an entity to store the images used in your app, follow these steps:
 
 1. Open the domain model for the native mobile module by double-clicking it in the **App Explorer**:
 
-    {{< figure src="/attachments/quickstarts/part1/5.2-loginentity.png" width="400px" alt="Login entity">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/5.2-loginentity.png" width="400px" alt="Login entity">}}
     
     Notice there is already an entity here called **Login**, which is part of the template and is used only for native mobile authentication. You can ignore this for now.
 
 2. Drag a new **Entity** from the **Toolbox** into the domain model (or right-click in the domain model and select **Add entity**). This entity will store all your uploaded images in the database. 
 
-    {{< figure src="/attachments/quickstarts/part1/5.2-newentity2.png" width="400px" alt="Open properties">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/5.2-newentity2.png" width="400px" alt="Open properties">}}
     
 3. Double-click the new entity to open its properties dialog box:
 
-    {{< figure src="/attachments/quickstarts/part1/5.3-entityprops3.png" width="400px" alt="Edit configuration">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/5.3-entityprops3.png" width="400px" alt="Edit configuration">}}
 
 4. Name the entity *Picture*, then click **Generalization** > **Select**. 
 5. Search for and select the **Image** entity (found in the **System** module).
@@ -167,11 +168,11 @@ You have created a new entity called **Picture** that inherits from the **System
 
 1. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
 
-    {{< figure src="/attachments/quickstarts/part1/5.3-addattribute4.png" width="400px" alt="Name attribute">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/5.3-addattribute4.png" width="400px" alt="Name attribute">}}
 
 2. Repeat the step above to add an attribute called *Description*, but select **Unlimited** for the string's **Length**:
 
-    {{< figure src="/attachments/quickstarts/part1/5.3-picentityprops5.png" width="400px" alt="Entity properties">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/5.3-picentityprops5.png" width="400px" alt="Entity properties">}}
     
 3. Click **OK** to close the entity’s properties dialog box.
 
@@ -194,16 +195,16 @@ Now it is time to build your photo album app:
 2. Drag a **Template Grid** from the **Toolbox** onto the page. You can find this by opening the **Data containers** section, or by searching for this container.
 3. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties:
 
-    {{< figure src="/attachments/quickstarts/part1/6-database1.png" width="450px" alt="Open data properties">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/6-database1.png" width="450px" alt="Open data properties">}}
 
 4. On the **Data source** tab, select the **Picture** entity you created earlier for the **Entity (path)**, then click **OK** to close the window:
 
-    {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="400px" alt="Configure data source">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/6-database2.png" width="400px" alt="Configure data source">}}
 
 5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**.
 6. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons.
 
-    {{< figure src="/attachments/quickstarts/part1/6-newbuttons4.png" width="450px" alt="Connect page">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/6-newbuttons4.png" width="450px" alt="Connect page">}}
 
 7. To resolve this, right-click each button and select **Generate Page**.
 8. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
@@ -218,7 +219,7 @@ To add a building block to your app's UI, follow these steps:
 2. Right-click in the empty space and select **Add building block**.
 3. Search for and select **Card action with image**:
 
-    {{< figure src="/attachments/quickstarts/part1/6-card5.png" width="400px" alt="Card action">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/6-card5.png" width="400px" alt="Card action">}}
 
 ### 6.3 Configuring the Display Widgets
 
@@ -229,14 +230,14 @@ To start, replace the static image with the image the app end-user uploads to th
 1. Right-click the static image viewer and click **Convert to dynamic image**. 
 2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget:
 
-  {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="400px" alt="Autofill">}}
+  {{< figure src="/attachments/quickstarts/responsive-web-app/6-fillcontents6.png" width="400px" alt="Autofill">}}
 
 3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 4. Click the **Edit** button next to **Caption**.
 5. In the new dialog box, replace the caption with the place holder *{1}*. 
 6. Click to add a new **Parameter** and select the **Title** attribute:
 
-    {{< figure src="/attachments/quickstarts/part1/6-addattributes7.png" width="400px" alt="Add attributes">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/6-addattributes7.png" width="400px" alt="Add attributes">}}
 
 7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
@@ -259,11 +260,11 @@ To implement custom logic with a microflow, follow these steps:
 5. Click **New** in the **Select Microflow** dialog box in order to create a new microflow.
 6. Create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture*:
 
-    {{< figure src="/attachments/quickstarts/part1/7-editonclick1.png" width="450px" alt="Edit microflow">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/7-editonclick1.png" width="450px" alt="Edit microflow">}}
 
 7. Click **Show** to quickly navigate to the new microflow and see it open in your editor:
 
-    {{< figure src="/attachments/quickstarts/part1/7-microflow2.png" width="450px" alt="Microflow">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/7-microflow2.png" width="450px" alt="Microflow">}}
 
 8. Add a **Decision** to the microflow (via the orange diamond icon in the editor's top bar).
 9. Give the decision the caption *Has title?* and input the following **Expression**:
@@ -274,7 +275,7 @@ To implement custom logic with a microflow, follow these steps:
     
     The [trim](/refguide/string-function-calls/#trim) function always returns a string:
 
-    {{< figure src="/attachments/quickstarts/part1/decision.png" width="450px" alt="Decision expression">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/decision.png" width="450px" alt="Decision expression">}}
 
 10. Click **OK** to close the dialog box and notice the microflow line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false.
 11. Add the additional path by clicking the activity's red dot and dragging a connection out of it, making sure to select the **False** path as the one that goes down. 
@@ -282,7 +283,7 @@ To implement custom logic with a microflow, follow these steps:
 13. Double-click the validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, then select **Member** > **Title**, and in **Template**, add some error text (for example, *Please provide a title for your picture.*).
 14. Repeat these steps for the **Description** attribute until your microflow looks like this:
 
-    {{< figure src="/attachments/quickstarts/part1/7-reddots4.png" width="450px" alt="Your microflow">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/7-reddots4.png" width="450px" alt="Your microflow">}}
     
 ### 7.2 Finishing Up
 
@@ -291,13 +292,13 @@ Finally, the image needs to be committed to the database and the paged closed:
 1. Add a **Commit object(s)** action from the **Toolbox** to the true path.
 2. Select the **Picture (NativeMobile.Picture)** entity to commit, and configure **Events** > **No** and **Refresh in Client** > **Yes**:
 
-    {{< figure src="/attachments/quickstarts/part1/7-configurecommit5.png" width="450px" alt="Configure commit object">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/7-configurecommit5.png" width="450px" alt="Configure commit object">}}
 
 3. Add a **Close page** action to the end of the microflow to ensure the end-user is directed back to the home page after clicking **Save**. 
 
 You have now finished developing your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the **Run Locally** button (via the green play icon in the top bar). Your app should look like this:
 
-{{< figure src="/attachments/quickstarts/part1/7-closepageaction6.png" width="450px" alt="Run your app">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/7-closepageaction6.png" width="450px" alt="Run your app">}}
 
 {{% alert type="info" %}}
 Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on the Mendix Cloud Free Tier EU.
@@ -305,8 +306,8 @@ Running your app compiles it locally on your development machine (your local hos
 
 Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
-{{< figure src="/attachments/quickstarts/part1/8-congrats1.png" width="550px" alt="Congratulations">}}
+{{< figure src="/attachments/quickstarts/responsive-web-app/8-congrats1.png" width="550px" alt="Congratulations">}}
 
 ## 8 Continuing with the Next Tutorial
 
-To continue learning, see [Add a Native Mobile App](/quickstarts/part2/).
+To continue learning, see [Add a Native Mobile App](/quickstarts/native-mobile-app/).

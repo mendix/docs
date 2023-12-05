@@ -12,7 +12,7 @@ aliases:
 {{% alert color="info" %}}
 This document is for the Mendix Feedback module, compatible with Studio Pro 9.18.6 and above.
 
-⚠ If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
+⚠ If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -25,7 +25,7 @@ The feedback provided via a widget version lower than 8.4.0 is no longer sent to
 
 If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher. 
 
-If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in the Developer Portal, we recommend that you remove the server location value within the widget and keep it empty.
+If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in the Developer Portal, Mendix recommends removing the server location value within the widget and keep it empty.
 
 In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 {{% /alert %}}
@@ -62,7 +62,7 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 
 ## 2 Installation
 
-You should install the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the latest version of the module into your app.
+You should install the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the latest version of the module into your app.
 
 ## 3 Usage
 
@@ -121,7 +121,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
     * **Use data source** – If the data source is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
 
-        * **User entity** – Choose the method that returns the entity that contains the user's information. It needs to be a list and the first item from the list will be used. We recommend only allowing the user to see the information of the current user. After this is configured, the options for **Display name attribute** and **Email address attribute** will show up. 
+        * **User entity** – Choose the method that returns the entity that contains the user's information. It needs to be a list and the first item from the list will be used. Mendix recommends only allowing the user to see the information of the current user. After this is configured, the options for **Display name attribute** and **Email address attribute** will show up. 
 
       {{% alert color="info" %}}If you are using MendixSSO 4, select the **MendixSSOUser** entity from the **MendixSSOModule** folder.{{% /alert %}}
 
@@ -279,7 +279,7 @@ When you have left your feedback, you need to exit the feedback mode by clicking
 
 #### 6.3.3 Upgrading the Widget 
 
-To upgrade your Mendix Feedback widget, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/#update-module). You can encounter the following error: 
+To upgrade your Mendix Feedback widget, follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/#update-module). You can encounter the following error: 
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/install-error.png" >}}
 

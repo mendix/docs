@@ -81,7 +81,7 @@ Would produce the following button and SVG:
 
 ## 5 Using SVGs in Pluggable Native Widgets
 
-To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
+To use an SVG in a pluggable native widget's image property, Mendix recommends using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
 Here is an example of using the `Image` component:
 

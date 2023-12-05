@@ -20,11 +20,11 @@ A user's home page can vary based on their [user roles](/refguide/user-roles/).
 The core of Mendix's navigation model is founded on the following profiles:
 
 * Responsive web
-    *  Responsive web offline
+    * Responsive web offline
 * Tablet web
-    *  Tablet web offline
+    * Tablet web offline
 * Phone web
-    *  Phone web offline
+    * Phone web offline
 * Native mobile (tablet & phone)
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).

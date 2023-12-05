@@ -99,7 +99,7 @@ Users that are able to sign in to the Mendix Platform with their credentials are
 
 #### 4.1.2 Company (Account) {#company-account}
 
-A group of users that work for the same legal entity. Companies can own email domains (for example "@acme.org"), which means that every new user that signs up with an email address within this domain will become part of the domain owning company. (Additional) email domains for a company can be requested through [Control Center](/developerportal/control-center/) or[Mendix Support](https://support.mendix.com/).
+A group of users that work for the same legal entity. Companies can own email domains (for example "@acme.org"), which means that every new user that signs up with an email address within this domain will become part of the domain owning company. (Additional) email domains for a company can be requested through [Control Center](/control-center/) or[Mendix Support](https://support.mendix.com/).
 
 #### 4.1.3 Groups
 

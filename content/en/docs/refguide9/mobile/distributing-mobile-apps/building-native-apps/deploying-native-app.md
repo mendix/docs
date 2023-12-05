@@ -27,7 +27,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Read [Get Started with Native Mobile](/refguide9/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
-* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 
@@ -112,7 +112,7 @@ You have completed the mandatory basic app configuration required to build your 
 
 Next, do the following:
 
-1. Fill in an intentional version number. For defaults, we recommend you use these numbering guidelines:
+1. Fill in an intentional version number. For defaults, Mendix recommends using these numbering guidelines:
 
     * Versions lower than 0.5.0 for alpha releases
     * Versions ranging from 0.5 to 0.9.x for beta releases

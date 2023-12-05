@@ -1,279 +1,312 @@
 ---
-title: "Build a Responsive Web App"
+title: "Building a Responsive Web App"
 url: /quickstarts/part1/
 weight: 10
-description: "Learn the basics of making an app in a Responsive Web profile."
+description: "Learn the basics of making an app in a responsive web profile."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
     - /refguide/quickstart-part1/
     - /refguide9/quickstart-part1/
 ---
 
-## 1 Introduction 
+## 1 Introduction
 
-Get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. This is Part 1 of the quickstarts, where you will learn the basics of Studio Pro, handle data using the Domain Model, populate your app's pages with dynamic data, and create custom app logic using a microflow.
+This quickstart tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
-When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
+After completing this tutorial, you will have a photo album app that allows app end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
 ### 1.1 Getting to Know Mendix
 
-This tutorial teaches you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
+This tutorial teaches you several key Mendix concepts, such as adding an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), creating basic pages that use building blocks and design properties, and modeling your first microflow. 
 
-A [microflow](/refguide/microflows/) is a visual way of expressing logic or code which is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
+A [microflow](/refguide/microflows/) is a visual way of expressing logic or code that is compiled into executable code at runtime. Microflows are commonly used to perform actions such as creating and changing objects, showing pages, and making choices.
 
-[Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) is the Mendix integrated development environment (IDE) for professional developers. Use the latest version of Studio Pro when completing the tutorial. Some of the screenshots in this guide might look a little different than your product, but we recommend you use the latest version of Studio Pro for ease and security.
+[Mendix Studio Pro](/refguide/) is the Mendix integrated development environment (IDE) for professional developers. Use the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/) when completing the tutorial for ease of use and security. Please note some of the screenshots in this tutorial might look a little different than your your version
 
-Every app created with us automatically provisions a [Free Cloud Environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed, so you do not have to waste time provisioning a testing environment.
+Every app created with Studio Pro automatically provisions a [Free App environment](/developerportal/deploy/mendix-cloud-deploy/#free-app) the first time it is deployed to Mendix Cloud, so you do not have to waste time provisioning a testing environment.
 
-You will not need any additional software configured on your device in order to start.
+You do not need any additional software configured on your machine in order to start.
+
+To learn more about Mendix concepts, check out the various sections of the [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/).
 
 ## 2 Prerequisites 
 
-Before starting this guide, make sure you have completed the following prerequisites:
+Before starting this tutorial, make sure you have completed the following prerequisites:
 
-* Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
-)—which takes only two minutes to finish
+* Create your [free Mendix account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs), which takes only two minutes to complete
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
-* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 3 Choosing an App Template with a Responsive Navigation Profile
+## 3 Starting Your App
 
-Here you will choose an app starting point. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers:
+You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quickstart tutorial, as the app you will develop needs to work for web browsers.
+
+A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
+
+{{< figure src="/attachments/quickstarts/part1/3-startingtemplate.png" width="450px" alt="Blank template">}}
+
+### 3.1 Selecting the App Template
+
+To select the best app template, follow these steps:
 
 1. Starting from Studio Pro, click **Create New App**:
 
     {{< figure src="/attachments/quickstarts/part1/starting-point.png" width="450px" alt="New app">}}
 
-1. Search for the **Blank Native Mobile App** and click **Use this starting point**:
-    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
-    * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
-1. Name your app *Quickstart App* and click the **Create app** button.
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
+2. Search for the **Blank Native Mobile App** and click **Use this starting point**:
 
-    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
+    {{% alert color="info" %}}**Why select this template?**</br>
+    Selecting the **Blank Native Mobile App** template lets you start with a native mobile navigation profile that is already configured and set up for your app. {{% /alert %}}
 
-A page defines the end-user interface in a Mendix app. You can create and edit pages using the Page Editor. All pages are based on layouts and templates:
+    {{% alert color="info" %}}**Does that mean this app is native mobile only?**</br>
+    No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.{{% /alert %}}
 
-* [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
-* [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
+3. Name your app *Quickstart App* and click **Create app**:
 
+    {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="400px" alt="Create app">}}
+
+4. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
+
+    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="400px" alt="Home Web page">}}
+    
 ## 4 Exploring Studio Pro
 
-Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
+Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
 
 Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro-overview/#working-area) where you can work on an open document. Surrounding this work area are various panes which you will learn more about in the sections below. Finally, if you wish to change the language you work in (and that your end-user will use) see the [Status Bar](/refguide/studio-pro-overview/#status-bar) at the bottom.
+Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro-overview/#working-area) where you can work on an open document. Surrounding this work area are various panes, which you will learn more about in the sections below. Finally, if you wish to change the language you work in (and that your end-user will use), see the [status bar](/refguide/studio-pro-overview/#status-bar) at the bottom.
 
-The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under the [View](/refguide/view-menu/) menu as well as reset your view back to the default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
 ### 4.1 Top Bar
 
-The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the play (**Run App**) button. 
+The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the green play icon). 
 
-For more information on the top bar's menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
+{{< figure src="/attachments/quickstarts/part1/4.1-topbar1.png" width="450px" alt="Studio Pro">}}
 
-### 4.2 App Structure on the Left
+For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
-You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
+### 4.2 App Explorer
 
-{{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="App Structure">}}
+You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
-Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
+{{< figure src="/attachments/quickstarts/part1/tour-left.png" width="300px" alt="App Explorer as left dockable pane">}}
 
-### 4.3 Bottom Dockable Pane 
+Any [Marketplace modules](/appstore/modules/) you download appear under **Marketplace Modules** > **App**.
+
+{{< figure src="/attachments/quickstarts/part1/4.2-styles.png" width="300px" alt="Modules">}}
+
+### 4.3 Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-bottom.png" width="400px" alt="Bottom Dockable Pane">}}
 
-Here you will find several default panes such as:
+Here you will find some separate default dockable panes:
 
-* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
-* **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
-* **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
+* [Stories](/refguide/stories-pane/) – displays the active user stories added on your app’s **Stories** page in the Developer Portal 
+* [Changes](/refguide/changes-pane/) – displays a list of all changes in the app since the last commit to the Team Server
+* [Errors](/refguide/errors-pane/) – displays any errors found within your app 
 
-For additional information on bottom default panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 4.4 Right Dockable Pane
+### 4.4 Right Dockable Panes
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/tour-right.png" width="350px" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-right.png" width="300px" alt="Right Dockable Pane">}}
 
-Here you will find more default panes:
+Here you will find some more separate default dockable panes:
 
-* **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
-* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
+* [Properties](/refguide/view-menu/#properties) – displays all the properties of the currently selected context element 
+* [Toolbox](/refguide/view-menu/#toolbox) – a list of things (which change depending on the context) you can add to the current document
 
-For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
+For additional information on available panes, see the [Integration](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
-## 5 Creating Your App's Domain Model
+## 5 Creating Your App's Domain Model {#domain-model}
 
-In Mendix you define your app's data structure in the Domain Model.
+In Mendix, you define your app's data structure in the [domain model](/refguide/domain-model/).
 
-### 5.1 Understanding the Domain Model
+The domain model is a visual representation of your app’s database. Each module in your app (meaning, modules created by you or your app team, modules downloaded from the Marketplace, or system nodules) can have their own individual models, which are combined and translated into a database automatically at runtime. 
 
-The domain model is a visual representation of your app’s database. Each module in your app (modules created by you or your team, downloaded from the Marketplace, or System Modules) can all have their own individual models which are combined and translated into a database automatically at runtime. 
+Domain models are comprised of [entities](/refguide/entities/) similar to a table in traditional SQL. Entities have [attributes](/refguide/attributes/) (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other as one-to-one, one-to-many, or many-to-many associations.
 
-Domain models are comprised of entities similar to a table in traditional SQL. Entities have attributes (similar to fields), and they can relate to other entities (including ones in other modules or even other apps). They can relate to each other either as a one-to-one association, one-to-many, or many-to-many.
+When you run your app locally or deploy it for the first time, the Mendix Runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
 
-When you run your app locally or deploy it for the first time, the runtime compiles your app’s domain models and creates the underlying database. Any subsequent changes will be seen as updates to the database.
+Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
-Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as PostgreSQL, Microsoft SQL Server, and others. 
+{{< figure src="/attachments/quickstarts/part1/5.1-log.png" width="400px" alt="Log">}}
 
-### 5.2 Creating an Entity to Store the Images
+### 5.1 Creating an Entity to Store the Images
 
-1. To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side:
+To create an entity to store the images used in your app, follow these steps:
 
-    * There is already an entity here: **Login** (it is part of the template and is used only for native mobile authentication, so you can ignore it for now)
+1. Open the domain model for the native mobile module by double-clicking it in the **App Explorer**:
 
-    {{< figure src="/attachments/quickstarts/part1/create-entity.png" width="450px" alt="Create entity">}}
+    {{< figure src="/attachments/quickstarts/part1/5.2-loginentity.png" width="400px" alt="Login entity">}}
+    
+    Notice there is already an entity here called **Login**, which is part of the template and is used only for native mobile authentication. You can ignore this for now.
 
-1. Add an entity, *Picture*, to store all your uploaded images in the database. Drag a new **Entity** from the Toolbox and drop it into the domain model (or right-click anywhere in the domain model to add a new entity). 
-1. Double-click the new entity to open its properties window:
+2. Drag a new **Entity** from the **Toolbox** into the domain model (or right-click in the domain model and select **Add entity**). This entity will store all your uploaded images in the database. 
 
-    {{< figure src="/attachments/quickstarts/part1/entity-config.png" width="450px" alt="Open properties">}}
+    {{< figure src="/attachments/quickstarts/part1/5.2-newentity2.png" width="400px" alt="Open properties">}}
+    
+3. Double-click the new entity to open its properties dialog box:
 
-    {{< figure src="/attachments/quickstarts/part1/entity-config-cont.png" width="450px" alt="Edit configuration">}}
+    {{< figure src="/attachments/quickstarts/part1/5.3-entityprops3.png" width="400px" alt="Edit configuration">}}
 
-1. Name the entity *Picture*, then click **Select** next to **Generalization**. 
-1. Search for and select the **Image** entity (found in the system module).
+4. Name the entity *Picture*, then click **Generalization** > **Select**. 
+5. Search for and select the **Image** entity (found in the **System** module).
 
-A generalization is a parent entity your child entity inherits properties from. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
+    A generalization is a parent entity from which the child entity inherits properties. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
+    
+### 5.2 Creating Attributes
 
-For example you have created a new entity **Picture** which inherits from the system entity **Image**. However, the **Image** entity also inherits some of its properties from another system entity called **FileDocument**.
-
-Next you must add some attributes. Remember, your entity now inherits many properties from its parent entity **-Image**. Therefore you only have to add fields for the image's **Title** and **Description** information:
+You have created a new entity called **Picture** that inherits from the **System** entity called **Image**. However, the **Image** entity also inherits some of its properties from another **System** entity called **FileDocument**. This means you must add some attributes. Remember, your entity now inherits many properties from its parent entity **Image**. Therefore, you only have to add fields for the image's **Title** and **Description** information.
 
 1. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
 
-    {{< figure src="/attachments/quickstarts/part1/add-attributes.png" width="450px" alt="Name attribute">}}
+    {{< figure src="/attachments/quickstarts/part1/5.3-addattribute4.png" width="400px" alt="Name attribute">}}
 
-1. Repeat the process while adding an attribute called *Description*, except select **Unlimited** for the string's **Length**.
-1. Click **OK** to close the entity’s properties window:
+2. Repeat the step above to add an attribute called *Description*, but select **Unlimited** for the string's **Length**:
 
-    {{< figure src="/attachments/quickstarts/part1/description-attributes.png" width="450px" alt="Entity properties">}}
+    {{< figure src="/attachments/quickstarts/part1/5.3-picentityprops5.png" width="400px" alt="Entity properties">}}
+    
+3. Click **OK** to close the entity’s properties dialog box.
 
 ## 6 Creating Your App's User Interface
 
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
-* Widgets – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use.
-* Context widgets – A context widget is a widget which displays data from the Domain Model. In Mendix there are four main context widgets: 
-    * [Data view](/refguide/data-view/): displays a single record
-    * [Data grid](/refguide/data-grid/): displays many records in a table format
-    * [List view](/refguide/list-view/): displays many records in a scrollable list
-    * [Template grid](/refguide/template-grid/): displays many records in configurable columns and rows
+* [Widgets](/refguide/page-resources/) – Widgets are pre-made user interface components. Widget development in Mendix is based on React for both web and native mobile. A widget can either be a single visual component (like a button), or a collection of components grouped together for ease of use. There are also many [platform-supported widgets](/appstore/widgets/) available in the Mendix Marketplace.
+* Context widgets – A context widget displays data from the domain model. In Mendix, there are four main context widgets: 
+    * [Data view](/refguide/data-view/) – displays a single record
+    * [Data grid](/refguide/data-grid/) – displays many records in a table format
+    * [List view](/refguide/list-view/) – displays many records in a scrollable list
+    * [Template grid](/refguide/template-grid/) – displays many records in configurable columns and rows
+
+### 6.1 Configuring a Template Grid {#template-grid}
 
 Now it is time to build your photo album app:
 
-1. Open the **Home_Web** page from the App Explorer. 
-1. Drag a **Template Grid** from the **Toolbox** onto the page. 
-1. In Mendix, in order to display data from the domain model on a page element it needs to be within a context. Double-click the template grid to open its properties, then go to the **Data source** tab:
+1. Open the **Home_Web** page from the **App Explorer**. 
+2. Drag a **Template Grid** from the **Toolbox** onto the page. You can find this by opening the **Data containers** section, or by searching for this container.
+3. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties:
 
-    {{< figure src="/attachments/quickstarts/part1/template-datasource.png" width="450px" alt="Open data properties">}}
+    {{< figure src="/attachments/quickstarts/part1/6-database1.png" width="450px" alt="Open data properties">}}
 
-    {{< figure src="/attachments/quickstarts/part1/template-datasource-cont.png" width="450px" alt="Data source tab">}}
+4. On the **Data source** tab, select the **Picture** entity you created earlier for the **Entity (path)**, then click **OK** to close the window:
 
-1. Leave the **Datasource type** as **Database** and under **Entity** select the **Picture** entity we created earlier, then click **OK** to close the window:
+    {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="400px" alt="Configure data source">}}
 
-    {{< figure src="/attachments/quickstarts/part1/template-edits.png" width="450px" alt="Configure data source">}}
+5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**.
+6. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons.
 
-1. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**. 
-1. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons. To resolve this, right-click one of the buttons and select **Generate Page**:
+    {{< figure src="/attachments/quickstarts/part1/6-newbuttons4.png" width="450px" alt="Connect page">}}
 
-    {{< figure src="/attachments/quickstarts/part1/generate-page.png" width="450px" alt="Connect page">}}
+7. To resolve this, right-click each button and select **Generate Page**.
+8. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
 
-1. Leave the page name as is and choose the **Form Vertical** template for the page.
+### 6.2 Using Building Blocks
 
-Next we want to replace some of the auto-generated content inside the template grid with some sleeker building blocks:
+Next, you need to replace some of the auto-generated content inside the template grid with some sleeker building blocks. A building block is a collection of pre-styled display widgets, and it is similar to a component in React.js. Building blocks are data agnostic, which means they are created without data and you need to link the relevant data sources for the building block’s components when including them in a page.
+
+To add a building block to your app's UI, follow these steps:
 
 1. Delete all the display widgets inside the grid (ensure you have switched from **Design** mode to **Structure** mode so you can delete the widgets easily).
-1. Right-click in the empty space and select **Add building block**.
-1. Search for and select **Card action with image**.
+2. Right-click in the empty space and select **Add building block**.
+3. Search for and select **Card action with image**:
 
-A building block is a collection of pre-styled display widgets. A building block is similar to a component in React.js. Building blocks are data agnostic, meaning they are created without data and you need to link the relevant data sources for the building block’s components when including them in the page.
+    {{< figure src="/attachments/quickstarts/part1/6-card5.png" width="400px" alt="Card action">}}
 
-Next you will connect your data to the display widgets because your page is currently displaying only static resources:
+### 6.3 Configuring the Display Widgets
 
-{{< figure src="/attachments/quickstarts/part1/edit-caption.png" width="450px" alt="Dynamic data">}}
+Next, you need to connect your data to the display widgets, because your page is currently displaying only static resources. 
 
-To start, replace the static image with the image the user uploads to the database: 
+To start, replace the static image with the image the app end-user uploads to the database by following these steps:
 
-1. Right-click on the static image viewer and click **Convert to dynamic image**. 
-1. Right-click on the image viewer again, click **Select data source**, and then search for your **Picture** entity (click **Yes** when prompted to automatically fill the contents of the widget).
+1. Right-click the static image viewer and click **Convert to dynamic image**. 
+2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget:
 
-Your **Images** will now be displayed from the database, but the **Labels** on the page will still be displaying their default text. To fix this, do the following:
+  {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="400px" alt="Autofill">}}
 
-1. Double-click to open the properties of the label captioned **Card title**.
-1. Click the **Edit** button next to **Caption**.
-1. In the new window, replace the caption field with the place holder *{1}*. 
-1. Click to add a new **Parameter** and select the **Title** attribute:
+3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
+4. Click the **Edit** button next to **Caption**.
+5. In the new dialog box, replace the caption with the place holder *{1}*. 
+6. Click to add a new **Parameter** and select the **Title** attribute:
 
-    {{< figure src="/attachments/quickstarts/part1/parameter.png" width="450px" alt="Add attributes">}}
+    {{< figure src="/attachments/quickstarts/part1/6-addattributes7.png" width="400px" alt="Add attributes">}}
 
-1. Repeat this process for the label below with the caption **Supporting text**, making sure to select the **Description** attribute this time.
+7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
 ## 7 Defining Logic Using Microflows
 
-There is only one step left before you can run and test your photo album app app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
+There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 
-A microflow is a piece of custom logic which is represented visually in Business Process Model and Notation (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server. This means an internet connection is required in order for it to execute. A microflow can only have one start point, but can often have multiple end points.
+But what if you want your app to perform some custom [logic](/refguide/application-logic/)? For example, what if you wanted to validate that the end-user entered text for the **Title** and **Description** fields before they clicked **Save**? In Mendix, you can achieve this using a microflow.
 
-Implement custom logic with a microflow by doing the following:
+A microflow is a piece of custom logic that is represented visually in [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server, which means an internet connection is required for it to execute. A microflow can only have one start point, but it can often have multiple end points.
+
+### 7.1 Implementing Custom Logic
+
+To implement custom logic with a microflow, follow these steps:
 
 1. Open the page **Picture_NewEdit** using the App Explorer.
-1. Scroll down to the **Save** button at the bottom of the page. 
-1. Right-click the button then click **Edit on click action**. 
-1. Set the on click action type to call a microflow.
-1. Choose to create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture* (click the **Show** button to quickly navigate to the new microflow):
+2. Scroll down to the **Save** button at the bottom of the page. 
+3. Right-click the button and select **Edit on click action**. 
+4. Set the **On click** action to **Call a microflow**.
+5. Click **New** in the **Select Microflow** dialog box in order to create a new microflow.
+6. Create a new microflow in the **Native Mobile** module called *ACT_ValidateAndSavePicture*:
 
-    {{< figure src="/attachments/quickstarts/part1/edit-microflow.png" width="450px" alt="Edit microflow">}}
+    {{< figure src="/attachments/quickstarts/part1/7-editonclick1.png" width="450px" alt="Edit microflow">}}
 
-1. You should now see the microflow open in your editor:
+7. Click **Show** to quickly navigate to the new microflow and see it open in your editor:
 
-    {{< figure src="/attachments/quickstarts/part1/microflow.png" width="450px" alt="Microflow">}}
+    {{< figure src="/attachments/quickstarts/part1/7-microflow2.png" width="450px" alt="Microflow">}}
 
-1. Add a decision to the flow (The orange diamond shape) from the toolbox. 
-1. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/#trim)):
+8. Add a **Decision** to the microflow (via the orange diamond icon in the editor's top bar).
+9. Give the decision the caption *Has title?* and input the following **Expression**:
 
     ```text
     trim($Picture/Title) != ''
     ```
+    
+    The [trim](/refguide/string-function-calls/#trim) function always returns a string:
 
     {{< figure src="/attachments/quickstarts/part1/decision.png" width="450px" alt="Decision expression">}}
 
-1. Click OK to close the window. 
+10. Click **OK** to close the dialog box and notice the microflow line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false.
+11. Add the additional path by clicking the activity's red dot and dragging a connection out of it, making sure to select the **False** path as the one that goes down. 
+12. Add the **Validation feedback** action to the false path (so that feedback is provided to the end-user).
+13. Double-click the validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, then select **Member** > **Title**, and in **Template**, add some error text (for example, *Please provide a title for your picture.*).
+14. Repeat these steps for the **Description** attribute until your microflow looks like this:
 
-Notice the line has changed to red. This is because a decision creates multiple paths within the microflow. You need to add another path for when this expression evaluates as false:
+    {{< figure src="/attachments/quickstarts/part1/7-reddots4.png" width="450px" alt="Your microflow">}}
+    
+### 7.2 Finishing Up
 
-1. Add the additional path (by clicking the activity's red dot and dragging a connection out of it) and make sure to select the **False** path as the one which goes down. 
-1. You should also add the **Validation feedback** action to the false path to provide feedback to the user.
-1. Double-click your validation feedback action, select **Variable** > **Picture (NativeMobile.Picture)**, **Member** > **Title**, and in **Template** add some error text such as *Please provide a title for your picture.*.
-1. Repeat these steps for the **Description** attribute until your microflow looks like this:
+Finally, the image needs to be committed to the database and the paged closed:
 
-    {{< figure src="/attachments/quickstarts/part1/expand-microflow.png" width="450px" alt="Your microflow">}}
+1. Add a **Commit object(s)** action from the **Toolbox** to the true path.
+2. Select the **Picture (NativeMobile.Picture)** entity to commit, and configure **Events** > **No** and **Refresh in Client** > **Yes**:
 
-Finally we need to commit the image to the database, and then close the page:
+    {{< figure src="/attachments/quickstarts/part1/7-configurecommit5.png" width="450px" alt="Configure commit object">}}
 
-1. Add a **Commit object(s)** action from the toolbox to the true path.
-1. Select the **Picture (NativeMobile.Picture)** entity to commit, select With **Events** > **No**, and select **Refresh in Client** > **Yes**:
+3. Add a **Close page** action to the end of the microflow to ensure the end-user is directed back to the home page after clicking **Save**. 
 
-    {{< figure src="/attachments/quickstarts/part1/commit-objects.png" width="450px" alt="Configure commit object">}}
+You have now finished developing your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the **Run Locally** button (via the green play icon in the top bar). Your app should look like this:
 
-1. Add a **Close page** action to the end of the microflow to ensure the user is directed back to the home page after clicking **Save**. 
-
-You have finished your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the green play icon in the top-right corner of Studio Pro (next to the **Publish** button):
-
-{{< figure src="/attachments/quickstarts/part1/complete.png" width="450px" alt="Run your app">}}
+{{< figure src="/attachments/quickstarts/part1/7-closepageaction6.png" width="450px" alt="Run your app">}}
 
 {{% alert type="info" %}}
-Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud Free Tier EU.
+Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on the Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
-Congratulations! You successfully completed Part 1 of the quickstarts. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
+Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
+
+{{< figure src="/attachments/quickstarts/part1/8-congrats1.png" width="550px" alt="Congratulations">}}
 
 ## 8 Continuing with the Next Tutorial
 
-To continue learning, see Part 2: [Add a Native Mobile App](/quickstarts/part2/).
+To continue learning, see [Add a Native Mobile App](/quickstarts/part2/).

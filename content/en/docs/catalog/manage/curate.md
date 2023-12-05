@@ -18,7 +18,7 @@ Users who can curate assets in the Catalog are as follows:
 * Owners of a registered service – can curate their own services which include those that have been set to non-**Discoverable**
 * [Curators](/catalog/manage/user-roles/#curator) and [Mendix Admins](/catalog/manage/user-roles/#admin) – can curate and find all registered assets in the Catalog
 
-Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in Data Hub.
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in the Catalog.
 
 {{% alert color="info" %}}
 Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
@@ -26,7 +26,7 @@ Information that is added or changed during curation is stored in the Catalog fo
 
 ## 2 Curate List {#curatelist}
 
-Owners and curators of registered assets can click **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
+Owners and curators of registered assets can click **Curate** from the Catalog home page to see the **Curation List** screen which provides an overview of all the registered assets that you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
 {{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" >}}
 
@@ -77,20 +77,20 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in the Catalog or curate it.{{% /alert %}}
 
 {{% alert color="info" %}}
-Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 
 #### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
-The **Technical Owner** can only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+The **Technical Owner** can only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 
-When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
+When curating the owners of an application, you can specify a **Business Owner** who is not a registered Mendix user but is a technical contact point for the application or the owner of the data that is made available in the app. The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 To add a custom **Business Owner**, follow these steps:
 
@@ -201,7 +201,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of the Catalog (also through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverability is turned off.
 

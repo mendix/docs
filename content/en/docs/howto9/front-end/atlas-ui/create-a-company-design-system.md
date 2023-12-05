@@ -39,4 +39,4 @@ You can easily test your theme with the already defined pages. For new layouts, 
 
 ## 6 Sharing the Theme Module
 
-You can publish the theme module as a separate module in the private market place or create a new company starter app that contains the theme module as discussed. When there are changes to the theme module, we recommend updating both so that new apps get the latest version and the existing app can update its theme.
+You can publish the theme module as a separate module in the private market place or create a new company starter app that contains the theme module as discussed. When there are changes to the theme module, Mendix recommends updating both so that new apps get the latest version and the existing app can update its theme.

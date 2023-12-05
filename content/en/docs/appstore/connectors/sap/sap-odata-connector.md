@@ -32,7 +32,7 @@ To authenticate with SAP, you must also obtain authorization credentials for the
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) into your app.
 
 ## 3 Configuration
 

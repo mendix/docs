@@ -59,12 +59,12 @@ Before you can use the AWS Authentication connector, you must first configure th
 {{% alert color="info" %}}
 To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.
 
-If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/general/app-store-content-support/#category), refer to the documentation provided with the connector for more information about the required permissions.
+If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/overview/#category), refer to the documentation provided with the connector for more information about the required permissions.
 {{% /alert %}}
 
 ## 3 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS Authentication connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the AWS Authentication connector into your app.
 
 ## 4 Usage
 
@@ -122,7 +122,7 @@ The steps described below are required for the following use cases:
 
 * If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
 * If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+* If you want to implement a [community-supported connector](/appstore/overview/#category) that does not come with its own exposed microflow action that includes handling authentication. 
 
 If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
@@ -158,7 +158,7 @@ The steps described below are required for the following use cases:
 
 * If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
 * If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+* If you want to implement a [community-supported connector](/appstore/overview/#category) that does not come with its own exposed microflow action that includes handling authentication. 
 
 If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
@@ -203,7 +203,7 @@ The steps described below are required for the following use cases:
 
 * If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
 * If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
+* If you want to implement a [community-supported connector](/appstore/overview/#category) that does not come with its own exposed microflow action that includes handling authentication. 
 
 If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}

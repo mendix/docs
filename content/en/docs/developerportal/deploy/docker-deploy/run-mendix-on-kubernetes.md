@@ -293,7 +293,7 @@ minikube image push <hub-user>/<repo-name>:<tag>
 Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in `mendix-app.yaml`. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
 {{% alert color="info" %}}
-In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
+In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, Mendix recommends using the storage provided on the selected cloud platform.
 {{% /alert %}}
 
 Deploy the application to Kubernetes:

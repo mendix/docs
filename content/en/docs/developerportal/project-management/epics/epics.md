@@ -8,7 +8,9 @@ tags: ["Project Management", "Epics", "Sprint", "Stories", "Developer Portal"]
 
 ## 1 Introduction
 
-The **Epics** page gives an overview of all the epics for your current app. Each row represents an epic.
+The **Epics** page gives an overview of all the epics for your current app. You can use the filter on the upper-right corner to filter epics by their status: **All**, **Completed**, **In Progress**, or **Not Started**. Clicking the **Create Epics** button enables you create a new epic.
+
+Each row represents an epic. 
 
 {{< figure src="/attachments/developerportal/project-management/epics/epics/epic.png" >}}
 
@@ -22,8 +24,6 @@ Each row shows the following details about an epic:
 * How many stories are completed for the epic
 
 Clicking a row opens the [epic details](#epic-details) dialog box.
-
-Clicking the **Create Epics** button on the upper-right corner enables you create a new epic.
 
 ## 2 Epic Details {#epic-details}
 

@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support", 
 
 The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
 
-The data source determines which objects will be shown in a Data Grid 2 module. Selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
+The data source determines which objects will be shown in a Data Grid 2 module. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
 The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 
@@ -432,7 +432,18 @@ If a filter is being used and its type does not match with any selected attribut
 There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
 
-## 8 Configuration
+## 8 Export to Excel
+
+The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the *Export_To_Excel* JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
+
+To export data from the data grid, create a new nanoflow that calls *Export_To_Excel*. The *Export_To_Excel* action has a set of inputs:
+
+* **Datagrid name** - the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
+* **File name** - the file name to use for the exported document
+* **Sheet name** - the name to use for the Excel sheet of the exported document
+* **Include column names** - a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
+
+## 9 Configuration
 
 You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro.
 
@@ -450,11 +461,11 @@ Here is an example of a configuration containing an On change action:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/configuration.png" alt="Example of a configuration containing on change action" >}}
 
-## 9 Performance
+## 10 Performance
 
 The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
 
-## 10 Troubleshooting
+## 11 Troubleshooting
 
 If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, please replace the line 3 `cssFiles` with the following code in the file `theme/settings.json`:
 

@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-This quickstart tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
+This quick start tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
 After completing this tutorial, you will have a photo album app that allows app end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
@@ -40,7 +40,7 @@ Before starting this tutorial, make sure you have completed the following prereq
 
 ## 3 Starting Your App
 
-You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quickstart tutorial, as the app you will develop needs to work for web browsers.
+You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quick start tutorial, as the app you will develop needs to work for web browsers.
 
 A page defines the end-user interface in a Mendix app. You can create and edit pages using the page editor. All the pages are based on layouts and templates. A page [layout](/refguide/layout/) defines a page's structure (such as, navigation element location and areas for content), and a page [template](/refguide/page-templates/) is a completely editable starting point for a new page (you can also start with a blank template to build from scratch).
 

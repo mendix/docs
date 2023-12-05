@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction 
 
-In this quickstart tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/responsive-web-app/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
+In this quick start tutorial, you will add on to the app you created in [Building a Responsive Web App](/quickstarts/responsive-web-app/). If you decided to skip that tutorial, you can [download](https://quickstartguidev1.s3.eu-west-2.amazonaws.com/Quickstart_App.mpk)  a copy of its completed app package so that you can start this tutorial right away.
 
 In this tutorial, you will learn to use a native mobile navigation profile. Apps built in the native mobile profile are typically installed natively on your iOS or Android device (usually via an app store). The native app you create will take pictures and upload them to the same database as configured in the [Creating Your App’s Domain Model](/quickstarts/responsive-web-app/#domain-model) section of *Building a Responsive Web App*. This will enable viewing the pictures in a browser or native app on a mobile device. You will also use the [Make it Native](/releasenotes/mobile/make-it-native-10/) app to test your app on a mobile device.
 
@@ -195,7 +195,7 @@ After reloading the page in our browser, we could also see the new picture there
 
 {{< figure src="/attachments/quickstarts/native-mobile-app/responsive-app.png" width="550px" alt="Browser view">}}
 
-Congratulations on completing this quickstart tutorial! You are on your way to successful app development with the Mendix Platform.
+Congratulations on completing this quick start tutorial! You are on your way to successful app development with the Mendix Platform.
 
 ## 7 Read More
 

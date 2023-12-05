@@ -21,7 +21,7 @@ Before installing Studio Pro 10, please read [System Requirements](/refguide/sys
 
 If you have been using Studio Pro version 9, Mendix recommends reading [Upgrading from Mendix Studio Pro 9 to 10](/refguide/upgrading-from-9-to-10/).
 
-If you are looking to build your first app, check out the [Quickstarts](/quickstarts/).
+If you are looking to build your first app, check out the [Quick Starts](/quickstarts/).
 
 If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 10 How-tos](/howto/).
 

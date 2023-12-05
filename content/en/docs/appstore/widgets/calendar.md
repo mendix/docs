@@ -140,25 +140,26 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 
     {{< figure src="/attachments/appstore/widgets/calendar/calendar2.gif" >}}
 
-## 3 Example configuration
+## 3 Example Configuration
 
-To configure the Calendar widget, follow these steps:
+To configure an example Calendar widget in a basic way, follow these steps:
 
-1. Place the widget in a data container like a Data view, List view, or Template grid widget.
-
-2. Navigate to the Data Source tab and configure the Data source type to retrieve a list of events. You can use a Microflow for this purpose.
-
-3. Configure the Event entity. For this example, create and select an Appointment entity in your Domain Model with the following attributes: title (string), start (data-time), end (data-time), allDay (boolean), and color (string).
-
-4. Select or create a Microflow that retrieves a list of the calendar events. Use the Retrieve Action to retrieve a list of Appointments from the database, and define this list as a return type.
-
-5. Configure the title, all day, start, end, and color attribute fields in the View tab. Select these attributes from the Appointment entity.
+1. Place the widget in a data container like a data view, list view, or template grid widget.
+1. Navigate to the **Data Source** tab and configure the data source type to retrieve a list of events. You can use a **Microflow** for this purpose.
+1. Configure the **Event** entity. For this example, create and select an entity named *Appointment* in your domain model with the following attributes: 
+    * title (string)
+    * start (data-time)
+    * end (data-time)
+    * allDay (Boolean)
+    * color (string)
+1. Select or create a microflow that retrieves a list of the calendar events. Use the **Retrieve** action to retrieve a list of **Appointments** from the database, and define this list as a return type.
+1. Configure the title, all day, start, end, and color attribute fields in the **View** tab. Select these attributes from the **Appointment** entity.
 
 Optionally, you can further configure the widget by following these steps:
 
-* Choose the initial selected view in the View tab. Select a Day, Week, or Month view as the default.
-
-* Choose the Events On Create event to call a Microflow. Create this Microflow to open a new page, like an overview edit page of this Appointment entity. This way, when a time slot in the calendar is selected, you can add or edit a new event.
-
-* Navigate to the Size tab and define the width and height of a suitable widget on the page.
+1. Choose the initial selected view in the **View** tab:
+    1. Select a **Day**, **Week**, or **Month** view as the default.
+1. In the **Events** tab, choose the **On Create** event and select **Call a Microflow**: 
+1. Create this microflow to open a new page, like an overview edit page of the **Appointment** entity mentioned above. This way, when a time slot in the calendar is selected, you can add or edit a new event.
+1. Navigate to the **Size** tab and define the width and height of the widget so it suits your page.
 

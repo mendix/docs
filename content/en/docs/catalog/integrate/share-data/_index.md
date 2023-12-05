@@ -76,11 +76,11 @@ Do the following:
 
     {{< figure src="/attachments/catalog/share-data/expose-as-odata-resource.png" >}}
 
-3. In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service to this folder.
+3. In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new service to this folder.
 
     {{< figure src="/attachments/catalog/share-data/select-published-odata-service.png" >}}
 
-4. Name the published OData service *{yourname}CustomerODataService* and click **OK**.
+4. Name the published service *{yourname}CustomerODataService* and click **OK**.
 
     The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
@@ -88,7 +88,7 @@ Do the following:
 
     {{% alert color="info" %}}  Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
-5. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
+5. Click **OK** to display the service document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 
     {{< figure src="/attachments/catalog/share-data/customer-odata-service-page.png" >}}
 

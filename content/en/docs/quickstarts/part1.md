@@ -61,13 +61,13 @@ To select the best app template, follow these steps:
     {{% alert color="info" %}}**Does that mean this app is native mobile only?**</br>
     No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.{{% /alert %}}
 
-4. Name your app *Quickstart App* and click **Create app**:
+3. Name your app *Quickstart App* and click **Create app**:
 
-    {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="450px" alt="Create app">}}
+    {{< figure src="/attachments/quickstarts/part1/3-createnameapp3.png" width="400px" alt="Create app">}}
 
-5. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
+4. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
 
-    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="450px" alt="Home Web page">}}
+    {{< figure src="/attachments/quickstarts/part1/home-web.png" width="400px" alt="Home Web page">}}
     
 ## 4 Exploring Studio Pro
 
@@ -91,17 +91,17 @@ For more information on menus and functions, see the [Top Bar](/refguide/studio-
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
-{{< figure src="/attachments/quickstarts/part1/tour-left.png" alt="App Explorer as left dockable pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-left.png" width="300px" alt="App Explorer as left dockable pane">}}
 
 Any [Marketplace modules](/appstore/modules/) you download appear under **Marketplace Modules** > **App**.
 
-{{< figure src="/attachments/quickstarts/part1/4.2-styles.png" alt="Modules">}}
+{{< figure src="/attachments/quickstarts/part1/4.2-styles.png" width="300px" alt="Modules">}}
 
 ### 4.3 Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-bottom.png" width="400px" alt="Bottom Dockable Pane">}}
 
 Here you will find some separate default dockable panes:
 
@@ -115,7 +115,7 @@ For more information on available panes, see the [MxAssist Best Practice Bot](/r
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/quickstarts/part1/tour-right.png" width="350px" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/quickstarts/part1/tour-right.png" width="300px" alt="Right Dockable Pane">}}
 
 Here you will find some more separate default dockable panes:
 
@@ -136,7 +136,7 @@ When you run your app locally or deploy it for the first time, the Mendix Runtim
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types, such as PostgreSQL and Microsoft SQL Server. 
 
-{{< figure src="/attachments/quickstarts/part1/5.1-log.png" width="350px" alt="Log">}}
+{{< figure src="/attachments/quickstarts/part1/5.1-log.png" width="400px" alt="Log">}}
 
 ### 5.1 Creating an Entity to Store the Images
 
@@ -144,17 +144,18 @@ To create an entity to store the images used in your app, follow these steps:
 
 1. Open the domain model for the native mobile module by double-clicking it in the **App Explorer**:
 
-    {{< figure src="/attachments/quickstarts/part1/5.2-loginentity.png" width="450px" alt="Login entity">}}
+    {{< figure src="/attachments/quickstarts/part1/5.2-loginentity.png" width="400px" alt="Login entity">}}
     
     Notice there is already an entity here called **Login**, which is part of the template and is used only for native mobile authentication. You can ignore this for now.
 
 2. Drag a new **Entity** from the **Toolbox** into the domain model (or right-click in the domain model and select **Add entity**). This entity will store all your uploaded images in the database. 
 
-    {{< figure src="/attachments/quickstarts/part1/5.2-newentity2.png" width="450px" alt="Open properties">}}
-
-    {{< figure src="/attachments/quickstarts/part1/5.3-entityprops3.png" width="450px" alt="Edit configuration">}}
+    {{< figure src="/attachments/quickstarts/part1/5.2-newentity2.png" width="400px" alt="Open properties">}}
     
-3. Double-click the new entity to open its properties dialog box.
+3. Double-click the new entity to open its properties dialog box:
+
+    {{< figure src="/attachments/quickstarts/part1/5.3-entityprops3.png" width="400px" alt="Edit configuration">}}
+
 4. Name the entity *Picture*, then click **Generalization** > **Select**. 
 5. Search for and select the **Image** entity (found in the **System** module).
 
@@ -166,11 +167,11 @@ You have created a new entity called **Picture** that inherits from the **System
 
 1. Under the **Attributes** tab in the entity’s properties, click **New**, name your attribute *Title*, and click **OK**:
 
-    {{< figure src="/attachments/quickstarts/part1/5.3-addattribute4.png" width="450px" alt="Name attribute">}}
+    {{< figure src="/attachments/quickstarts/part1/5.3-addattribute4.png" width="400px" alt="Name attribute">}}
 
 2. Repeat the step above to add an attribute called *Description*, but select **Unlimited** for the string's **Length**:
 
-    {{< figure src="/attachments/quickstarts/part1/5.3-picentityprops5.png" width="450px" alt="Entity properties">}}
+    {{< figure src="/attachments/quickstarts/part1/5.3-picentityprops5.png" width="400px" alt="Entity properties">}}
     
 3. Click **OK** to close the entity’s properties dialog box.
 
@@ -197,12 +198,9 @@ Now it is time to build your photo album app:
 
 4. On the **Data source** tab, select the **Picture** entity you created earlier for the **Entity (path)**, then click **OK** to close the window:
 
-    {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="450px" alt="Configure data source">}}
+    {{< figure src="/attachments/quickstarts/part1/6-database2.png" width="400px" alt="Configure data source">}}
 
-5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**:
-
-    {{< figure src="/attachments/quickstarts/part1/6-databaseconfirm3.png" width="450px" alt="Configure data source">}}
-
+5. When Studio Pro prompts you to automatically fill the contents of the template grid, click **Yes**.
 6. Note the red error pointers on the **New** and **Edit** buttons of the template grid. This is because there is no page connected to the buttons.
 
     {{< figure src="/attachments/quickstarts/part1/6-newbuttons4.png" width="450px" alt="Connect page">}}
@@ -220,7 +218,7 @@ To add a building block to your app's UI, follow these steps:
 2. Right-click in the empty space and select **Add building block**.
 3. Search for and select **Card action with image**:
 
-    {{< figure src="/attachments/quickstarts/part1/6-card5.png" width="450px" alt="Card action">}}
+    {{< figure src="/attachments/quickstarts/part1/6-card5.png" width="400px" alt="Card action">}}
 
 ### 6.3 Configuring the Display Widgets
 
@@ -231,14 +229,14 @@ To start, replace the static image with the image the app end-user uploads to th
 1. Right-click the static image viewer and click **Convert to dynamic image**. 
 2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget:
 
-  {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="450px" alt="Autofill">}}
+  {{< figure src="/attachments/quickstarts/part1/6-fillcontents6.png" width="400px" alt="Autofill">}}
 
 3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 4. Click the **Edit** button next to **Caption**.
 5. In the new dialog box, replace the caption with the place holder *{1}*. 
 6. Click to add a new **Parameter** and select the **Title** attribute:
 
-    {{< figure src="/attachments/quickstarts/part1/6-addattributes7.png" width="450px" alt="Add attributes">}}
+    {{< figure src="/attachments/quickstarts/part1/6-addattributes7.png" width="400px" alt="Add attributes">}}
 
 7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
@@ -307,7 +305,7 @@ Running your app compiles it locally on your development machine (your local hos
 
 Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
-{{< figure src="/attachments/quickstarts/part1/8-congrats1.png" width="450px" alt="Congratulations">}}
+{{< figure src="/attachments/quickstarts/part1/8-congrats1.png" width="550px" alt="Congratulations">}}
 
 ## 8 Continuing with the Next Tutorial
 

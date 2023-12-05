@@ -42,7 +42,7 @@ If you would like to test a beta feature or product, consider the following:
 * Feedback on the quality of the beta feature or product will be evaluated by the PM
 * When there is a strong desire to take a beta feature or product into production, please contact your CSM to see if special arrangements are possible
 
-## 3 Limitations of Preview and Beta Releases
+## 3 Limitations of Beta and Preview Releases
 
 Please take note of the following limitations regarding beta/preview features and products:
 

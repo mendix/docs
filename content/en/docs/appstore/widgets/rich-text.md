@@ -188,5 +188,8 @@ Features:
 
 ## 5 Limitations
 
-There is problem with the toolbar buttons which causes incorrect rendering when hovering over them, depending on the screen size or scaling. This problem is caused by a miscalculation of the button's border by the browser, as well as styling issues with CKEditor.
+THe following limitations apply to the rich text widget:
+
+* There is a hover style issue affecting the toolbar which occurs when display size is not set to 100%
+* This is an issue on the major browser which makes it unable to calculate correct pixel size on the widget border in CKEditor toolbar styling
 

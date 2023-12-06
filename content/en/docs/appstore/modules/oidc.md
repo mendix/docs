@@ -45,11 +45,12 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
     * For example, PKCE will be used automatically if it is detected.
 * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
-* Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
+* Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
 * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
 * Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IDP) (version 2.3.0 and above). 
 * Supports responsive web applications, a.k.a. browser based applications.
 * Works with the Mendix DeepLink module.
+* Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
 For readers with more knowledge of the OAuth and OIDC protocol.
@@ -84,6 +85,7 @@ The OIDC SSO module also has the following limitations:
 
 * If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IDP can be used to sign the end-user in.
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
+* You cannot control mapping of attributes to custom entities at deploy time, through constants. It can only be done at runtime using the configuration page in the app, or at design-time via a custom microflow.
 
 ## 2 Dependencies
 
@@ -95,6 +97,7 @@ It requires the following Marketplace modules to be included in your app:
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
+* [User Commons](/needalinkhere) (for version 2.4.0 and above)
 
 Versions below 2.3.0 also require [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) – see [Native Mobile Resources](/appstore/modules/native-mobile-resources/) documentation
 
@@ -305,7 +308,7 @@ In this case, the OIDC client is the app you are making.
 1. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline` scope.
     * Add other scopes as needed.
-1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". Also included is a salesforce-specific example. You may need to make changes in order to implement provisioning logic which fits your business needs. To do so, read the section on [Custom User Provisioning](#custom-provisioning).
+1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". Also included is a salesforce-specific example. You may need to make changes in order to implement provisioning logic which fits your business needs. To do so, read the section on [Custom User Provisioning](#custom-provisioning-mf).
 1. Optionally, check **Enable Access Token Parsing** if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 
 Once you have completed these steps, the SSO-configuration is ready for testing. See the section on [Testing and troubleshooting](#testing) for more information.
@@ -414,8 +417,9 @@ The following constants are optional:
 
 ## 6 User Provisioning
 
-Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app (as an `Account` object in the Administration module) when they log in for the first time.
-The user provisioning works by default but you can customize it if needed.
+Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app when they log in for the first time. 
+
+By default, end-users are provisioned using the `Account` object in the Administration module. If you need to use a custom user entity you can do this via [Custom User Provisioning Using a Microflow](#custom-provisioning-mf) or (in version 2.4.0 and above) [Custom User Provisioning at Runtime](#custom-provisioning-rt).
 
 ### 6.1 Default User Provisioning
 
@@ -433,11 +437,25 @@ Do not change the `UserProvisioning_StandardOIDC` microflow. This may give probl
 
 ### 6.2 Custom User Provisioning{#custom-provisioning}
 
+If you create custom user entities as specializations of the `System.User` entity, you can store user information that is more extensive than is possible with the `System.User` or `Administration.Account` entities. You can use these specializations as target entities for end-user provisioning using one of the methods described below.
+
+If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping.
+
+#### 6.2.1 Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
+
 Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `Administration.Account` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
 
 Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
 
 The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
+
+#### 6.2.2 Custom User Provisioning at Runtime{#custom-provisioning-rt}
+
+{{% alert color="info" %}}
+This feature is available in version 2.4.0 and above
+{{% /alert %}}
+
+{{% todo %}}Section needs to be copied from Paper document{{% /todo %}}
 
 ## 7 API Authentication {#api-authentication}
 
@@ -691,7 +709,7 @@ Your IDP may have different ways of handling requests to use a specific authenti
 * Your IDP may honor what is requested on a ‘best effort’ basis and indicate the actual authentication method used in the ID-token that is sent to your app.
 * Your IDP may send an error response to your app if the requested authentication method was not possible for the user that was asked to login, for whatever reason.
 
-When a user successfully signs in at your IDP, your IDP may or may not return an ACR claim in the ID-token. If your IDP returns the actual authentication method that was used in the ACR claim in the ID-token (and/or Access Token), you can create a [custom User Provisioning microflow](#custom-provisioning) (or [custom access token parsing microflow](#custom-parsing)) to grant or restrict access to specific resources or functionalities based on the level of authentication assurance.
+When a user successfully signs in at your IDP, your IDP may or may not return an ACR claim in the ID-token. If your IDP returns the actual authentication method that was used in the ACR claim in the ID-token (and/or Access Token), you can create a [custom User Provisioning microflow](#custom-provisioning-mf) (or [custom access token parsing microflow](#custom-parsing)) to grant or restrict access to specific resources or functionalities based on the level of authentication assurance.
 
 ## 9 Testing and Troubleshooting{#testing}
 

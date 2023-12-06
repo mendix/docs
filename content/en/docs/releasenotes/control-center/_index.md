@@ -19,8 +19,8 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 We made the following improvements to the [access management](/control-center/portfolios/#access-management) on the **Portfolios** page:
 
-* On the [Members](/control-center/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
-* All the pending invites now appear on the [Pending Invites](/control-center/#pending-invites) tab.
+* On the [Members](/control-center/portfolios/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* All the pending invites now appear on the [Pending Invites](/control-center/portfolios/#pending-invites) tab.
 
 ### October 26, 2023
 

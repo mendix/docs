@@ -106,7 +106,7 @@ The component details page also presents the following tabs:
 
 * **Overview** – contains a description and screenshots of the component
 * **Documentation** – includes details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots
-    * [Platform-supported components](/appstore/overview/#category) are documented according to content type and category in the [Marketplace Guide](/appstore/)
+    * [Platform-supported components](/appstore/overview/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/)
 * **Releases** – lists all the versions of the component along with details like the **Framework version** and the **UUID**
     * The component versions can be downloaded by clicking **Download**
     * The **UUID** can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*

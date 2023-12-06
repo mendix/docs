@@ -11,7 +11,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "mendix 10
 
 Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/216121).
 
-This connector is supported for Studio Pro [10.6](/releasenotes/studio-pro/10.6/) and above. 
+This connector is supported for Studio Pro 10.6 and above. 
 
 ### 1.1 Typical Use Cases
 

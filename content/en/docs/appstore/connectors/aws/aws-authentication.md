@@ -68,7 +68,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 4 Usage
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There is the microflow **Credentials_GenerateFromConstants** that implements the two basic authentication methods and one Java action **GetSigV4Headers** that can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
+After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There are three microflow operations: **GetStaticCredentials** and **GetTemporaryCredentials** for the two basic authentication methods and **GetSigV4Headers**. For more information about implementing each authentication mechanism, refer to the following sections:
 
 * [Temporary credentials](#session)
 * [Static credentials](#static)
@@ -84,12 +84,12 @@ Temporary credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM R
 
 You can implement temporary credentials in one of the following ways:
 
-* By using the **Credentials_GenerateFromConstants** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
+* By using the **GetSessionCredentials** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
 * By using credentials generated outside of Studio Pro, for example, through the AWS command-line interface. For more information, see [Using Credentials Generated Outside of Studio Pro](#credentials-cli).
 
 #### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
 
-To generate temporary credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **Credentials_GenerateFromConstants** microflow to a microflow in Studio Pro.
+To generate temporary credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **GetTemporaryCredentials** microflow to a microflow in Studio Pro.
 
 ##### 4.1.1.1  Adding a Client Certificate in the Developer Portal
 
@@ -135,19 +135,19 @@ The client certificate that you added now shows as **Currently enabled**.
 4. In the popup enter your values in the **New Value** field and click **Save**.
 5. When all constants have been set, restart the environment in order to make the new constant values effective.
 
-##### 4.1.1.3 Using the Credentials_GenerateFromConstants Microflow in Studio Pro
+##### 4.1.1.3 Using the GetTemporaryCredentials Microflow in Studio Pro
 
-After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **Credentials_GenerateFromConstants** microflow to a microflow.
+After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetTemporaryCredentials** microflow to a microflow.
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
 3. Drag a **Microflow call** activity from the **Toolbox** into the work area of the microflow.
-4. Double-click the new activity and select the **Credentials_GenerateFromConstants** microflow from the **Operations** folder.
+4. Double-click the new activity and select the **GetTemporary** microflow from the **Operations** folder.
 5. Select the **AWSRegion** parameter and click **Edit parameter value**.
 6. Select **Expression** and enter the corresponding AWS region from the enumeration **ENUM_Region**. Then click **OK**.
 7. Close the popup with another click on **OK**.
 
-The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
+The activity returns a **TemporaryCredentials** object that provides the required AWS authentication credentials for your microflow.
 8. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
 
 ##### 4.1.1.4 Configuring the Local Setup
@@ -172,28 +172,23 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 If you have credentials that have been generated without the help of the **Credentials_GenerateFromConstants** action, for example through the AWS command line interface, you can use them in your app in the following manner:
 
-1. Create a **Credentials** object with the following parameters:
+1. Create a **TemporaryCredentials** object with the following parameters:
     * **AccessKeyId** - your IAM access key 
     * **SecretAccesskey** - your secret access key
-    * **Provider** - set to *_Session*
-        
-2. Create a **SessionToken** object with the following parameters:
-    * **Token** - your token 
-    * **Credentials_SessionToken** - the association between **Credentials** and **SessionToken** 
-
-{{< figure src="/attachments/appstore/connectors/aws-authentication/association.png" >}}
-        
+    * **Token** - your token
+    * **Expiration** DateTime that the credentials expire
+    * 
 You can then use the above as a valid set of credentials.
 
 ### 4.2 Implementing Static Credentials {#static}
 
 Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure temporary credentials.
 
-To create static credentials with the **Credentials_GenerateFromConstants** activity in your app, perform the following steps:
+To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
-3. Drag the **Credentials_GenerateFromConstants** microflow from the **App Explorer** into the work area of the microflow.
+3. Drag the **GetStaticCredentials** microflow from the **App Explorer** into the work area of the microflow.
 4. Create a new **Configuration** in the **Settings** of your app.
 5. In the **Constants** tab, add the **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites) as **AWSAuthentication.AccessKey** and **AWSAuthentication.SecretAccessKey** respectively. You can decide how to provide them securely in your app.
 

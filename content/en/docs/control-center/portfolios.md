@@ -81,7 +81,7 @@ The **Pending Invites** tab shows all pending invites of external users. You can
 
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
-* **Invite date** – This shows the date the invite was sent.
+* **Invite Date** – This shows the date the invite was sent.
 * Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
   * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
   * **Delete** – Selecting this allows you to cancel the pending invite.

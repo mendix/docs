@@ -52,10 +52,8 @@ To configure this widget, follow these steps:
     * **Nanoflow** – this is the nanoflow to be executed
         * If the nanoflow returns false, it will not be executed any longer until the context changes
 
-  5. In addition to the standard configuration, you can also use the following Context configuration options:
-     
-     5.1 **First tick delay** - this is an optional attribute on the context entity that allows you to set a custom first interval (in milliseconds). This can be useful if you want to define a different first interval than what is defined in the Behavior tab.
-     
-     5.2 **Interval Attribute (in ms)** - this option allows you to define the interval based on an entity attribute. If set, it overrides the interval defined in the Behavior tab.
-     
-     5.3 **Timer Status Attribute** - this is an optional boolean attribute that acts as a flag to enable or disable the timer, or even to verify its status.
+5. In addition to the standard configuration, you can also use the following configuration options found in the **Context** tab:
+
+    * **First tick delay** – this is an optional attribute on the context entity that allows you to set a custom first interval (in milliseconds). This can be useful if you want to define a first interval different than what is defined in the **Behavior** tab.
+    * **Interval Attribute (in ms)** – this option allows you to define the interval based on an entity attribute. If set, it overrides the interval defined in the **Behavior** tab.
+    * **Timer Status Attribute** – this is an optional Boolean attribute that acts as a flag to enable or disable the timer, or even to verify its status.

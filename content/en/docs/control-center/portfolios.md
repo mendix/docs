@@ -51,7 +51,7 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 
 After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page. The Access Management page contains two tabs: the **Members** tab and the **Pending Invites** tab.
 
-#### 2.1.1 Members
+#### 2.1.1 Members {#members}
 
 The **Members** tab shows all users who have access to the portfolio. You can search for a user in the search box by the user name, email, company, or role.
 
@@ -73,7 +73,7 @@ In the list, you can see the following items:
   * **Edit Role** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
-#### 2.1.2 Pending Invites
+#### 2.1.2 Pending Invites {#pending-invites}
 
 When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must first accept the invite, then they can access this portfolio. Until the user accepts or rejects the invite, the invite appears on the **Pending Invites** tab. After they accept the invitation, they will appear on the **Members** tab.
 

@@ -135,7 +135,7 @@ To add general information to your initiative, follow these steps:
 
 6. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
-Now you can proceed to [Linking Epics to an Initiative](#link-epics).
+Now you can proceed to [link Epics to your initiative](#link-epics).
 
 ##### 3.1.2.1 Managing Tags {#manage-tags}
 
@@ -187,6 +187,8 @@ Once an epic is added, its ID, name, owner, and progress are displayed in this s
 To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
 {{% /alert %}}
 
+Now you can proceed to [add planning information](#add-planning-information).
+
 ##### 3.1.3.1 Differences Among Initiatives, Apps, and Epics {#differences-initiatives-apps-epics}
 
 An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the differences among initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
@@ -196,8 +198,6 @@ An initiative is usually worked upon in several epics. Initiatives are bigger pr
 The following figure shows examples of three portfolios. The first portfolio is to add a feature to an app, the second example is a minimal viable product (MVP) of an app, and the last example is to build an integration between two apps.
 
 {{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
-
-Now you can proceed to [add planning information](#add-planning-information).
 
 #### 3.1.4 Adding Planning Information {#add-planning-information}
 

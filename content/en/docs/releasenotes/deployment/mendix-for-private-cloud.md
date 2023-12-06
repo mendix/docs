@@ -13,6 +13,19 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### December 8th, 2023
+
+#### Mendix Operator v2.14.0 {#2.14.0}
+
+* We've added the following validation checks to the `mxpc-cli` installation and configuration tool
+  * When configuring a namespace, check to see that the database and blob file storage plans don't use the same name.
+  * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
+* We're improved authentication security of the Mendix Gateway Agent connection by switching to Digest validation of the cluster ID and secret.
+* We've updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
+* We've updated third-party component versions.
+* For standalone clusters, it's now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
+* Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
+
 ### November 23, 2023
 
 #### Prometheus Metrics

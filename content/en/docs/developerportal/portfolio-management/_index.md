@@ -443,7 +443,7 @@ The **Access Management** page allows you to view and manage user access to the 
 
 ### 5.1 Members {#members}
 
-The **Members** tab lists all the users who can access the portfolio. You can search a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
+The **Members** tab lists all the users that have portfolio access. You can search a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
 
 * **User Name** – This is the name of the user.
 
@@ -497,7 +497,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 
 * Delete the portfolio permanently together with all the data in the portfolio when you leave the portfolio; or
 * Assign another user to be the new Portfolio Manager before you leave the portfolio.
-  * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member, or invite a new member to be the new Portfolio Manager.
+  * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member and edit their role to Portfolio Manager, or invite a new member to be the new Portfolio Manager.
 
 #### 5.1.2 Adding New Users {#add-users}
 

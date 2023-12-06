@@ -149,7 +149,7 @@ To register services, you need the following:
 {{% alert color="warning" %}}
 Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.
 
-This is because changes to a particular version of a published service are reflected in the entities and attributes available through the Catalog, for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.
+This is because changes to a particular version of a published service are reflected in the metadata details available through the Catalog, for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.
 {{% /alert %}}
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints).

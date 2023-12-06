@@ -24,7 +24,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 We have made the following improvements to the **Access Management** page in Portfolio Management:
 
 * On the [Members](/developerportal/portfolio-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
-* Alll the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/#pending-invites) tab.
+* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/#pending-invites) tab.
 
 ### November 23, 2023
 

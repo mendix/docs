@@ -441,7 +441,7 @@ The **Access Management** page allows you to view and manage user access to the 
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
-### 5.1 Members
+### 5.1 Members {#members}
 
 The **Members** tab lists all the users who can access the portfolio. You can search a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
 
@@ -540,7 +540,7 @@ The **Access Requests** tab shows all open access requests for the portfolio. Yo
 * **Reject** – Clicking this rejects the request.
 * **Approve** – Clicking this approves the request and gives the user access to the portfolio.
 
-### 5.3 Pending Invites
+### 5.3 Pending Invites {#pending-invites}
 
 {{% alert color="info" %}}
 This tab is only visible to Portfolio Managers.

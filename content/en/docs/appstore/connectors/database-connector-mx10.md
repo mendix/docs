@@ -130,5 +130,5 @@ You can now use the microflow in your app. Here is an example of a configured mi
 
 {{< figure src="/attachments/appstore/connectors/external-database-connector/example-microflow.png" >}}
 
-See the [Query External Database](/refguide/query-external-database/) entry in the Studio Pro guide for further explanation of the properties in this activity.
+See the [Integration Activities](/refguide/integration-activities/) entry in the Studio Pro guide for further explanation of the properties in this activity.
 

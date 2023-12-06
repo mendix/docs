@@ -460,7 +460,7 @@ The **Members** tab lists all the users who can access the portfolio. You can se
 * Ellipsis button (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
 
   * **Edit Role** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allows you to remove the user from the portfolio. (For more information, see the [Editing and Removing a User](#edit-remove-user) section.)
+  * **Remove** – Selecting this allows you to remove the user from the portfolio. 
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
@@ -516,21 +516,11 @@ For users outside your company, they need to accept the invitation. They will ap
 
 For users within your company, they do not need to accept their invitation. If the users have a Mendix  account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
-#### 5.1.3 Editing the User Role and Removing a User {#edit-remove-user}
-
-{{% alert color="info" %}}Only [Portfolio Managers](#access-management) can edit or remove a user.{{% /alert %}}
-
-At the end of the row, click the ellipsis button (**...**), and then select the corresponding action. To update the permissions and the role of a user, click **Edit**. To remove a user from the portfolio, click **Remove**.
-
-{{< figure src="/attachments/developerportal/portfolio-management/edit-delete-user.png" >}}
-
-#### 5.1.4 Removing Deactivated Users
+#### 5.1.3 Removing Deactivated Users
 
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can remove a deactivated user.{{% /alert %}}
 
-When there are deactivated members in the portfolio, you can remove all the deactivated users from the portfolio in one go. 
-
-To do so, click **Remove Deactivated Users** above the list on the right side. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
+When there are deactivated members in the portfolio, the **Remove Deactivated Users** button becomes available above the list on the right side. Clicking the button allows you to remove all deactivated users from this portfolio in one go. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the user from the portfolio.
 
 ### 5.2 Access Requests {#access-requests}
 

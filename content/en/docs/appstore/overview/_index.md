@@ -68,6 +68,8 @@ Clicking the tile of a Marketplace component will bring you to its details page 
 
 {{< figure src="/attachments/appstore/overview/overview/component-details.png" >}}
 
+### 3.1 Header
+
 The header for a component presents the following details:
 
 * The name of the component
@@ -98,12 +100,20 @@ The **Support** section presents the category of support Mendix offers for the c
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
+### 3.2 Tabs
+
 The component details page also presents the following tabs:
 
-* **Overview** – contains a description and screenshot of the components
-* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/overview/#category) components are documented in the various categories of this *Marketplace Guide*
-* **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*)
-* **Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which opens a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
+* **Overview** – contains a description and screenshots of the component
+* **Documentation** – includes details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots
+    * [Platform-supported components](/appstore/overview/#category) are documented according to content type and category in the [Marketplace Guide](/appstore/)
+* **Releases** – lists all the versions of the component along with details like the **Framework version** and the **UUID**
+    * The component versions can be downloaded by clicking **Download**
+    * The **UUID** can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*
+* **Reviews** – user reviews of the component
+    * Click **Add Review** to open a section where you can add text, rate the component, and submit the review
+    * Your reviews are listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**
+    * If you are a developer of the component, you can **Reply** to a review
 * **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)
 
 ## 4 Marketplace Content Support {#support}

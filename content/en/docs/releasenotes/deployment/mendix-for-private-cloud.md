@@ -17,14 +17,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.14.0 {#2.14.0}
 
-* We've added the following validation checks to the `mxpc-cli` installation and configuration tool
-  * When configuring a namespace, check to see that the database and blob file storage plans don't use the same name.
+* We have added the following validation checks to the `mxpc-cli` installation and configuration tool:
+  * When configuring a namespace, check to see that the database and blob file storage plans do not use the same name.
   * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
-* We're improved authentication security of the Mendix Gateway Agent connection by switching to Digest validation of the cluster ID and secret.
-* We've updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
-* We've updated third-party component versions.
-* We’ve improved reliability of the code that processes statuses for resources such as Network, Build and Runtime. This will reduce the number of retries for _the object has been modified, please apply your changes to the latest version and try again errors_ and ensures that status icons are updated as soon as possible.
-* For standalone clusters, it's now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
+* We have improved the authentication security of the Mendix Gateway Agent connection by switching to digest validation of the cluster ID and secret.
+* We have updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
+* We have updated third-party component versions.
+* We have improved the reliability of the code that processes statuses for resources such as Network, Build and Runtime. This reduces the number of retries for *the object has been modified, please apply your changes to the latest version and try again* errors, and ensures that status icons are updated as soon as possible.
+* For standalone clusters, it is now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
 * Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
 
 ### November 23, 2023

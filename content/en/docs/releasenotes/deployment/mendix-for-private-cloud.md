@@ -23,6 +23,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We're improved authentication security of the Mendix Gateway Agent connection by switching to Digest validation of the cluster ID and secret.
 * We've updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
 * We've updated third-party component versions.
+* We’ve improved reliability of the code that processes statuses for resources such as Network, Build and Runtime. This will reduce the number of retries for _the object has been modified, please apply your changes to the latest version and try again errors_ and ensures that status icons are updated as soon as possible.
 * For standalone clusters, it's now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
 * Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
 

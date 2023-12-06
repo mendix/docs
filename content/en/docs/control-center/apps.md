@@ -133,6 +133,7 @@ The description of the items that you can select are as follows:
   {{% alert color="info" %}}
   You can view the [app details](#app-details) by clicking the app name in the table.
   {{% /alert %}}
+- **Last Commit**: the date of the last commit in the main line
 - **Members**: the number of the team members in the app development team
 - **Created Date**: the date the app was created
 - **Actions**: adding the action menu (**...**) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)

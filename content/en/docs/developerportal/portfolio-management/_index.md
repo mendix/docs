@@ -443,7 +443,7 @@ The **Access Management** page allows you to view and manage user access to the 
 
 ### 5.1 Members
 
-The **Members** tab lists all the users who can access the portfolio. You can search a user by their user name, email, or company. You can also filters users by their role and status. The list contains the following items:
+The **Members** tab lists all the users who can access the portfolio. You can search a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
 
 * **User Name** – This is the name of the user.
 
@@ -459,10 +459,8 @@ The **Members** tab lists all the users who can access the portfolio. You can se
 
 * Ellipsis button (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
 
-  * **Edit** – Selecting this allows you to change the role of the user.
+  * **Edit Role** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio. (For more information, see the [Editing and Removing a User](#edit-remove-user) section.)
-
-
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
@@ -514,11 +512,11 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 
 The users that you invited receive a notification per email and now appear on the **Access Management** page. 
 
-For users outside your company, they need to accept the invitation. They will appear on the **Pending Invites** tab until they accept the invitation. After they accept the invitation, they will appear in the **Members** tab.
+For users outside your company, they need to accept the invitation. They will appear on the **Pending Invites** tab until they accept or reject the invitation. After they accept the invitation, they will appear in the **Members** tab.
 
 For users within your company, they do not need to accept their invitation. If the users have a Mendix  account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
-#### 5.1.3 Editing and Removing a User {#edit-remove-user}
+#### 5.1.3 Editing the User Role and Removing a User {#edit-remove-user}
 
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can edit or remove a user.{{% /alert %}}
 
@@ -530,21 +528,21 @@ At the end of the row, click the ellipsis button (**...**), and then select the 
 
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can remove a deactivated user.{{% /alert %}}
 
-You can remove all the deactivated users from the portfolio in one go. 
+When there are deactivated members in the portfolio, you can remove all the deactivated users from the portfolio in one go. 
 
 To do so, click **Remove Deactivated Users** above the list on the right side. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
 
 ### 5.2 Access Requests {#access-requests}
 
 {{% alert color="info" %}}
-This tab is only visible to Project Managers.
+This tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
 Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request. 
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
-The **Access Requests** tab shows all open access requests for the portfolio. You can search a user by their user name. You can also filters users by their role. The list contains the following items:
+The **Access Requests** tab shows all open access requests for the portfolio. You can search a user by their user name. You can also filter users by their role. The list contains the following items:
 
 * **Requested By** – This is the name and avatar of the user who requested access.
 * **Role** – This is the access role that was requested by the user.
@@ -555,14 +553,16 @@ The **Access Requests** tab shows all open access requests for the portfolio. Yo
 ### 5.3 Pending Invites
 
 {{% alert color="info" %}}
-This tab is only visible to Project Managers.
+This tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
-The **Pending Invites** tab shows all pending invites for the portfolio. You can search a user by their email. You can also filters users by their role. The list contains the following items:
+When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must first accept the invite, then they can access this portfolio. Before the user accept or reject the invite, the invite appears on the **Pending Invites** tab. After they accept the invitation, they will appear on the **Members** tab.
+
+The **Pending Invites** tab shows all pending invites of external users. You can search a user by their email. You can also filter users by their role. The list contains the following items:
 
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
-* **Invite date** – This shows the date the invite was sent.
+* **Invite Date** – This shows the date the invite was sent.
 * Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
 
   * **Edit Role** – Selecting this allows you to change the access role of the pending invite.

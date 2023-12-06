@@ -38,7 +38,7 @@ The PDF document generation service does not store pages or documents at any tim
 ### 1.3 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/). Other deployment scenarios will be supported at a later stage. Note that we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Platform.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/). Other deployment scenarios will be supported at a later stage. Note that we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. Mendix recommends compressing high-resolution images to reduce their file size.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access (for example, using IP safe-listing and/or client certificates), our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
@@ -97,10 +97,11 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
 
-1. Enable the DocGen request handler (licensed apps on Mendix Public Cloud only).
-2. Register your app environments.
+1. Enable the DocGen request handler.
 
-{{% alert color="info" %}}If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip the first step and make sure that the */docgen/* path is accessible.{{% /alert %}}
+   {{% alert color="info" %}}This step is only for licensed apps on the Mendix Public Cloud. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
+
+2. Register your app environments.
 
 The steps for each procedure are described in the sections below. 
 

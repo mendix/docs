@@ -115,7 +115,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 4 Other Apps
 
-The **Other Apps** tab shows the unlicensed apps that are not deployed as well as apps that are linked to other environment options than Mendix Cloud. 
+The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are linked to  private clouds. 
 
 {{% alert color="info" %}}
 We are working on giving private clouds a separate tab. Stay tuned.
@@ -164,6 +164,7 @@ The description of the items that you can select are as follows:
 - **Mainline Version**: the Mendix version of the app on the mainline in the repository
 - **Last Commit**: the date of the last commit in the main line
 - **Members**: the number of the team members in the app development team
+- **Actions**: adding the action menu (**…**) to enable you to **Activate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](http://localhost:1313/control-center/apps/#deactivate-delete-apps) section.)
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
 
@@ -227,7 +228,7 @@ The consequences of deactivating and deleting an app are as below:
 | Cloud environment stays persistent                          | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a different environment than Mendix Cloud.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.
 {{% /alert %}}
 
 ## 10 Exporting Apps to an Excel File {#export-to-excel}

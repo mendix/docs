@@ -154,7 +154,7 @@ The *pre-processor* is the block of code that manipulates the data before being 
 
 The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX Runtime documentation). It is highly coupled with the ML model, its training process, and the domain of knowledge.
 
-This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as we use Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
+This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as Mendix uses Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
 
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
 

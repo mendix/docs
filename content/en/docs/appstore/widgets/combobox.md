@@ -54,7 +54,7 @@ The **Data source** section (required) is used to configure the data for the wid
 
 #### 2.1.2 General Tab
 
-The **General** section allows you to configure general behavior and captions for the combobox. The following configurations are available:
+The **General** section allows you to configure general behavior and captions for the combo box. The following configurations are available:
 
 * **Placeholder text** – captions that will be displayed when there is no data being selected
 * **Filter type** – allows the user to type into the input and filter displayable options on the combo box
@@ -64,7 +64,7 @@ The **General** section allows you to configure general behavior and captions fo
 
 #### 2.1.3 Multi Selection (Reference Set)
 
-The **Multi selection (reference set)** section allows you to configure combobox behavior for reference set type datasource. The following configurations are available:
+The **Multi selection (reference set)** section allows you to configure combo box behavior for reference set type datasource. The following configurations are available:
 
 * **Selection Method** – configures the behavior for selecting options
     * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.

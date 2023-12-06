@@ -30,4 +30,4 @@ If you have any additional useful resources, feel free to mention them in the co
 
 ## 4 Other
 
-* [Node.js refcard](https://dzone.com/refcardz/nodejs) – Node.js is the JavaScript engine we use to run our scripts
+* [Node.js refcard](https://dzone.com/refcardz/nodejs) – Node.js is the JavaScript engine Mendix uses to run our scripts

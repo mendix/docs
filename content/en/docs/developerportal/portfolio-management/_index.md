@@ -135,7 +135,7 @@ To add general information to your initiative, follow these steps:
 
 6. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
-Now you can proceed to [add planning information](#add-planning-information).
+Now you can proceed to [Linking Epics to an Initiative](#link-epics).
 
 ##### 3.1.2.1 Managing Tags {#manage-tags}
 
@@ -196,6 +196,8 @@ An initiative is usually worked upon in several epics. Initiatives are bigger pr
 The following figure shows examples of three portfolios. The first portfolio is to add a feature to an app, the second example is a minimal viable product (MVP) of an app, and the last example is to build an integration between two apps.
 
 {{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
+
+Now you can proceed to [add planning information](#add-planning-information).
 
 #### 3.1.4 Adding Planning Information {#add-planning-information}
 
@@ -485,6 +487,9 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | Delete initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View and download initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Export and import initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Link and unlink epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| View linked epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
+
 
 #### 5.1.1 Leaving the Portfolio
 

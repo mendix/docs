@@ -35,7 +35,7 @@ In the list, you can see the following items:
 
 * **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members (deactivated users are not counted), and a list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
-* **Members** – This only shows the number of active users of this portfolio. The deactivated users are not included in this number.
+* **Members** – This shows the number of active users of this portfolio. The deactivated users are not included in this number.
 * **Privacy** – This shows the current privacy settings of the portfolio.
 
     * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
@@ -61,15 +61,15 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 
 After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page. The Access Management page contains two tabs: the **Members** tab and the **Pending Invites** tab.
 
-#### 2.1.1 Memebers
+#### 2.1.1 Members
 
-On the **Member** tab, you can search for a user in the search box by the user name, email, company, status, or role.
+The **Members** tab shows all users who have access to the portfolio. You can search for a user in the search box by the user name, email, company, or role.
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The **Remove Deactivated Users** button allows you to remove all deactivated users from this portfolio. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
+The **Remove Deactivated Users** button is available when there are deactivated members in the portfolio. Clicking the button allows you to remove all deactivated users from this portfolio. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
 
-The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
+In the list, you can see the following items:
 
 * **User Name** – This shows the user name.
 * **Email** – This shows the email of the user.
@@ -80,12 +80,14 @@ The list shows all users who have access to the portfolio as well as the pending
   
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
 * Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
-  * **Edit** – Selecting this allows you to change the role of the user.
+  * **Edit Role** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio. (For more information, see the [Editing and Removing a User](/developerportal/portfolio-management/#edit-remove-user) section in *Portfolio Management*.)
 
 #### 2.1.2 Pending Invites
 
-The **Pending Invites** tab shows all pending invites for the portfolio. You can search a user by their email. You can also filters users by their role. The list contains the following items:
+When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must accept the invite before they can access this portfolio. 
+
+The **Pending Invites** tab shows all pending invites of external users. You can search a user by their email. You can also filter users by their role. The list contains the following items:
 
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
@@ -116,7 +118,7 @@ In the list, you can see the following items:
 
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 
-* **Members** – This only shows the number of active users of this portfolio. The deactivated users are not included in this number.
+* **Members** – This shows the number of active users of this portfolio. The deactivated users are not included in this number.
 
 * **Privacy** – This shows the current privacy settings of the portfolio.
     * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.

@@ -33,7 +33,7 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 Currently, the privacy settings of a portfolio can be private or restricted. Their differences are shown in the table below:
 
-| Portfolio type | Visible in the **Company Portfolios** section?               | How  to join the portfolio?                                  |
+| Portfolio type | Visible in the **Company Portfolios** section?               | How to join the portfolio?                                   |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). |
 | Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
@@ -496,7 +496,7 @@ To leave the portfolio, click the **Leave** button on the right side above the m
 If you are the only Portfolio Manager of the portfolio, when you click **Leave**, a dialog window opens and asks you to choose one of these two options:
 
 * Delete the portfolio permanently together with all the data in the portfolio when you leave the portfolio; or
-* Assign another user to be the new Portfolio Manager before you leave the portfolio
+* Assign another user to be the new Portfolio Manager before you leave the portfolio.
   * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member, or invite a new member to be the new Portfolio Manager.
 
 #### 5.1.2 Adding New Users {#add-users}
@@ -514,7 +514,7 @@ The users that you invited receive a notification per email and now appear on th
 
 For users outside your company, they need to accept the invitation. They will appear on the **Pending Invites** tab until they accept or reject the invitation. After they accept the invitation, they will appear in the **Members** tab.
 
-For users within your company, they do not need to accept their invitation. If the users have a Mendix  account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
+For users within your company, they do not need to accept their invitation. If the users have a Mendix account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
 #### 5.1.3 Removing Deactivated Users
 

@@ -23,9 +23,9 @@ AWS Authentication gives you the tools needed to authenticate your app with AWS 
 
 The AWS Authentication connector gives your app the ability to use the following types of AWS credentials:
 
-* [Session credentials](https://aws.amazon.com/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate.
-* [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, it is recommended to use Session credentials. However, you may want to use them to quickly test your connector, create a demo, or in cases where you are not able to set up and configure session based credentials.
-* [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them together with session or static credentials to sign your request, for example, while calling the API without using AWS SDK. Some compatible AWS connectors may explicitly require this type of authentication.
+* [Temporary credentials](https://aws.amazon.com/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use temporary credentials to authenticate.
+* [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, it is recommended to use temporary credentials. However, you may want to use them to quickly test your connector, create a demo, or in cases where you are not able to set up and configure temporary credentials.
+* [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them together with temporary or static credentials to sign your request, for example, while calling the API without using AWS SDK. Some compatible AWS connectors may explicitly require this type of authentication.
 
 You can implement the above authentication types by means of adding a corresponding activity to the microflow that requires AWS authentication (for example, in order to connect to Amazon Dynamo DB and retrieve specific information from a table). Each activity returns a Credentials object, which is then used for authentication.
 
@@ -54,7 +54,7 @@ Before you can use the AWS Authentication connector, you must first configure th
 | Item | Required for | Notes |
 | --- | --- | --- |
 | [IAM access key ID, secret access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) | Static credentials, signature version 4 headers | |
-| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Session credentials, signature version 4 headers | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Developer portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
+| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Temporary credentials, signature version 4 headers | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Developer portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
 
 {{% alert color="info" %}}
 To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.
@@ -70,26 +70,26 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There is the microflow **Credentials_GenerateFromConstants** that implements the two basic authentication methods and one Java action **GetSigV4Headers** that can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
 
-* [Session credentials](#session)
+* [Temporary credentials](#session)
 * [Static credentials](#static)
 * [Signature version 4 headers](#signature-v4-headers)
 
 {{% alert color="info" %}}
-In general, session credentials are the recommended authentication method for use with your production app. Static credentials are recommended for test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement session or static credentials with custom code.
+In general, temporary credentials are the recommended authentication method for use with your production app. Static credentials are recommended for test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement temporary or static credentials with custom code.
 {{% /alert %}}
 
-### 4.1 Implementing Session Credentials {#session}
+### 4.1 Implementing Temporary Credentials {#session}
 
-Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour. This is the recommended authentication method for most use cases.
+Temporary credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour. This is the recommended authentication method for most use cases.
 
-You can implement session credentials in one of the following ways:
+You can implement temporary credentials in one of the following ways:
 
 * By using the **Credentials_GenerateFromConstants** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
 * By using credentials generated outside of Studio Pro, for example, through the AWS command-line interface. For more information, see [Using Credentials Generated Outside of Studio Pro](#credentials-cli).
 
 #### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
 
-To generate session credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **Credentials_GenerateFromConstants** microflow to a microflow in Studio Pro.
+To generate temporary credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **Credentials_GenerateFromConstants** microflow to a microflow in Studio Pro.
 
 ##### 4.1.1.1  Adding a Client Certificate in the Developer Portal
 
@@ -106,14 +106,14 @@ To add the certificate, perform the following steps:
 
 5. Click **New**.
 6. In the **Details** dialog box, in the **Web Service Call name** field, enter an identifier for the certificate, for example, *MY_S3*.
-    The client certificate identifier is used as input when you create the session credentials.
+    The client certificate identifier is used as input when you create the temporary credentials.
    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
 
 The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
 
-#### 4.1.1.2 Configuring the Session Credentials Connection Details in the Developer Portal {#configure-credentials}
+#### 4.1.1.2 Configuring the Temporary Credentials Connection Details in the Developer Portal {#configure-credentials}
 
 1. Log in to the Developer Portal, and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
@@ -122,7 +122,7 @@ The client certificate that you added now shows as **Currently enabled**.
    | Parameter | Value |
    | --- | --- |
    | **AWSAuthentication.ClientCertificateID** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-   | **AWSAuthentication.Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+   | **AWSAuthentication.Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the temporary credentials expires |
    | **AWSAuthentication.ProfileARN** | ARN of the profile [created in IAM Roles Anywhere](#prerequisites) |
    | **AWSAuthentication.RoleARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
    | **AWSAuthentication.SessionName** | An identifier for the session |
@@ -162,7 +162,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
    {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
-4. Now go to the **Constants** tab and configure the constants of the session credentials' connection details.
+4. Now go to the **Constants** tab and configure the constants of the temporary credentials' connection details.
 5.  Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 6. click **OK**.
 
@@ -187,7 +187,7 @@ You can then use the above as a valid set of credentials.
 
 ### 4.2 Implementing Static Credentials {#static}
 
-Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure session credentials.
+Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure temporary credentials.
 
 To create static credentials with the **Credentials_GenerateFromConstants** activity in your app, perform the following steps:
 
@@ -204,9 +204,9 @@ To create static credentials with the **Credentials_GenerateFromConstants** acti
 
 ### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}
 
-Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate a session or static credentials request without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
+Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate a temporary or static credentials request without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
 
-This authentication method is suitable for advanced use cases. If your use case can be fulfilled with session credentials authentication alone, consider using that method instead.
+This authentication method is suitable for advanced use cases. If your use case can be fulfilled with temporary credentials authentication alone, consider using that method instead.
 
 To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [Java action](#java-action) that you can use, as well as an [example microflow](#microflow) configuration.
 

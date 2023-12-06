@@ -119,7 +119,7 @@ Use the Query External Database activity to call the database in a microflow. Do
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. In the Output field, use the drop-down to specify the **Return type**. You can also choose to **Use return value**.
+5. In the Output field, select if you want to **Use return value**.
 
 {{< figure src="/attachments/appstore/connectors/database-connector-mx10/return-type.png" >}}
  

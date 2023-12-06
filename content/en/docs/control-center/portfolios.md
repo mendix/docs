@@ -17,16 +17,6 @@ The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), 
 As a Mendix Admin, you cannot directly see the content of a portfolio. You need to have [portfolio access](#access-management) for this. You can give yourself portfolio access if needed.
 {{% /alert %}}
 
-The **Portfolios** page offers governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for changes of portfolio privacy settings. 
-
-The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
-
-{{% alert color="info" %}}
-
-As a Mendix Admin, you cannot directly see the content of a portfolio. You need to have [portfolio access](#access-management) for this. You can give yourself portfolio access if needed.
-
-{{% /alert %}}
-
 ## 2 All Portfolios {#all-portfolios}
 
 The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio). In the search box, you can search for a portfolio by its name.
@@ -67,7 +57,7 @@ The **Members** tab shows all users who have access to the portfolio. You can se
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The **Remove Deactivated Users** button is available when there are deactivated members in the portfolio. Clicking the button allows you to remove all deactivated users from this portfolio. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the deactivated user from the portfolio.
+The **Remove Deactivated Users** button is available when there are deactivated members in the portfolio. Clicking the button allows you to remove all deactivated users from this portfolio. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the user from the portfolio.
 
 In the list, you can see the following items:
 
@@ -81,7 +71,7 @@ In the list, you can see the following items:
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
 * Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
   * **Edit Role** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allows you to remove the user from the portfolio. (For more information, see the [Editing and Removing a User](/developerportal/portfolio-management/#edit-remove-user) section in *Portfolio Management*.)
+  * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
 #### 2.1.2 Pending Invites
 

@@ -81,7 +81,7 @@ The most commonly used attribute types can be used in your app. The types of the
 #### 3.2.2 Attributes of Complex Types
 
 {{% alert color="info" %}}
-Support for consuming attributes of complex types was introduced in Mendix version 10.5.
+Support for consuming attributes of complex types was introduced in Mendix version 10.6.
 {{% /alert %}}
 
 Complex types are not supported by the Mendix domain model. Mendix does, however, allow you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.

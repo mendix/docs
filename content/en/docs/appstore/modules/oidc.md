@@ -85,7 +85,7 @@ The OIDC SSO module also has the following limitations:
 
 * If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IDP can be used to sign the end-user in.
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
-* You cannot control mapping of attributes to custom entities at deploy time, through constants. It can only be done at runtime using the configuration page in the app, or at design-time via a custom microflow.
+* You cannot control mapping of attributes to custom entities at deploy time, through constants, as described in [Automated Deploy-time SSO Configuration](#deploy-time). It can only be done at runtime using the configuration page in the app, or at design-time via a custom microflow.
 
 ## 2 Dependencies
 
@@ -472,13 +472,15 @@ You can set up custom user provisioning once your app is running using the `OIDC
 
     * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**
     * You can only map one IdP claim to a **Custom user Entity Attribute**
+    * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association
 
 6. In **Select the CustomUserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
 
     The custom microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 
-    This selection can be blank if you do not want to add custom logic. 
+    This selection can be blank if you do not want to add custom logic.
+    
 7. Click **Save** to save the configuration.
 
 ## 7 API Authentication {#api-authentication}

@@ -8,12 +8,12 @@ tags: ["studio pro", "database connector", "mendix 10", "mendix connect", "conne
 
 ## 1 Introduction
 
-The [Mendix 10 Database Connector](/appstore/connectors/database-connector-mx10/) integrates with Studio Pro with an **External database connection** service document. Use this document alongside the connector to connect to external databases right in Studio Pro.
+The [Database Connector](/appstore/connectors/database-connector/) integrates with Studio Pro with an **External database connection** service document. Use this document alongside the connector to connect to external databases right in Studio Pro.
 
-This page references the **External database connection** document in Studio Pro. See [Mendix 10 Database Connector](/appstore/connectors/database-connector-mx10/) for the complete documentation. 
+This page references the **External database connection** document in Studio Pro. See [External Database Connector](/appstore/connectors/external-database-connector/) for the complete documentation. 
 
 {{% alert color="warning" %}}
-You must have the [Mendix 10 Database Connector](add marketplace link) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+You must have the [External Database Connector](https://marketplace.mendix.com/link/component/219862) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/overview/use-content/).
 {{% /alert %}}
 
 ## 2 Connect to Database Wizard {#wizard}

@@ -29,10 +29,10 @@ This extension supports following source files:
 
 This extension currently has the following limitations:
 
-* The cell-type of Excel column is taken from source file to ascertain the target Mendix type of the attribute; you cannot change it during *design-time*.
-* Source data can be mapped to only one entity - Associations are not supported for now.
-* You cannot map the data to an already existing NPE - You have to create a new Entity as part of mapping.
-* Enumerations are not supported as they are not part of Excel's data-type.
+* The Excel column cell-type of  is taken from the source file to ascertain the target Mendix type of the attribute; this cannot be changed during *design-time*.
+* Source data can be mapped to one entity only; associations are not supported for now.
+* You cannot map the data to an already existing NPE; you have to create a new Entity as part of mapping.
+* Enumerations are not supported 
 
 ### 1.4 Prerequisites
 

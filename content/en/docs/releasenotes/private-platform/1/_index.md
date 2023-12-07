@@ -1,5 +1,5 @@
 ---
-title: "Private Mendix Platform"
+title: "1.5"
 url: /releasenotes/private-platform/1/
 description: "Release notes for version 1 of Private Mendix Platform"
 weight: 10
@@ -8,9 +8,9 @@ tags: ["Private Mendix Platform", "Private Platform"]
 
 These release notes cover changes made to the [Private Mendix Platform](/private-mendix-platform/).
 
-## 2023
+## 1.5.2
 
-### November 30, 2023
+### Release date: November 30, 2023
 
 This release brings a number of additional functionalities for the Platform related to getting help, supporting manual deployment processes, as well as a number of fixes and minor improvements.
 
@@ -58,9 +58,9 @@ We have resolved the following issues:
 * The new Installer Helm charts may affect scripted deployments. If you are a Certified Partner automating the Platform deployments, validate your automations to ensure that they continue to work correctly.
 * Due to introduction of a different cloning and copying mechanism for new branches in Studio Pro, we are temporarily unable to support newer Studio Pro 9.24 LTS patch versions until this matter is resolved. This issue will be resolved in a future release.
 
-### November 15, 2023
+## Private Mendix Platform Release
 
-#### Private Mendix Platform Release
+### Release date: November 15, 2023
 
 Private Mendix Platform provides an end-to-end Mendix developer experience to customers who need to enjoy it on their private infrastructure. It provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. You can integrate Private Mendix Platform with your existing IT infrastructure and adapt it to your specific business requirements. For more information, see [Private Mendix Platform](/private-mendix-platform/).
 

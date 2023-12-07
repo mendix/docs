@@ -9,7 +9,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "mendix 10
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/216121).
+Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 This connector is supported for Studio Pro 10.6 and above. 
 
@@ -45,7 +45,7 @@ This connector supports the following statements:
 
 ## 2 Installation {#installation}
 
-Download the [External Database Connector](https://marketplace.mendix.com/link/component/216121) and [add it to your app](/appstore/overview/use-content/).
+Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) and [add it to your app](/appstore/overview/use-content/).
 
 ## 3 Configuration in Design Time {#configuration}
 

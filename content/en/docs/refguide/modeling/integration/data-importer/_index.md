@@ -8,15 +8,15 @@ tags: ["studio pro", "data importer", "excel importer"]
 
 ## 1 Introduction
 
-The **Data Importer** allows you to import an Excel file and choose which sheet and which columns from that sheet you want to import. During the *design-time* flow, you can preview the data that you would like to import and also create an NPE (non-persistable entity) in your domain model corresponding to your input. During *run-time* you can use the Data Importer Document created earlier in the *design-time* to import data from input Excel file(s).
+The Data Importer allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data that you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer Document created earlier to import data from input Excel file(s).
 
 {{% alert color="info" %}}
-The **Data Importer** is available in Studio Pro [10.4](/releasenotes/studio-pro/10.4/) and above.
+The Data Importer is available in Studio Pro [10.4](/releasenotes/studio-pro/10.4/) and above.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
-This Data Importer extesnion allows you to import data from Excel files directly into your app. You can create *Data Importer Document* to define which columns to import from a given Excel or worksheet, an NPE to hold the imported data along with source-to-target mapping. Later you can use the Data Import Document to import data from file(s) as the need may be.
+This Data Importer extension allows you to import data from Excel files directly into your app. You can create a Data Importer Document to define which columns to import from a given Excel or worksheet, an NPE to hold the imported data along with source-to-target mapping. Then, you can use the Data Import Document to import data from file(s) as the need may be.
 
 ### 1.2 Features {#features}
 

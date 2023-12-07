@@ -12,11 +12,11 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Query External Database** activity is used with the [Mendix 10 Database Connector](/appstore/connectors/database-connector-mx10/) to use preconfigured database queries and display retrieved data in your app.
+The **Query External Database** activity is used with the [External Database Connector](/appstore/connectors/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.
 
 This document covers the properties of the **Query External Database** activity. 
 
-To learn how to use this activity in a microflow and configure other aspects of the Database connector, see the [Configuration in Design Time](/appstore/connectors/database-connector-mx10/#configuration) section of *Mendix 10 Database Connector*.
+To learn how to use this activity in a microflow and configure other aspects of the Database connector, see the [Configuration](/appstore/connectors/external-database-connector/#configuration) section of *External Database Connector*.
 
 ## 2 Properties
 

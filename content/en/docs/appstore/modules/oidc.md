@@ -161,13 +161,13 @@ This section shows you how to configure your app to use OIDC for SSO.
 
 ### 4.1 Configuring Roles
 
-Ensure that you have allocated the following user roles to the OIDC module roles:
+Ensure that you have allocated the following user roles to the OIDC module and (in version 2.4.0 and above) UserCommons roles:
 
 | User Role | OIDC Module Role |
 | --- | --- |
-| Administrator | OIDC.Administrator |
+| Administrator | OIDC.Administrator, UserCommons.Administrator |
 | Anonymous | OIDC.Anonymous |
-| User | OIDC.User |
+| User | OIDC.User, UserCommons.Admin_ReadOnly |
 
 {{< figure src="/attachments/appstore/modules/oidc/user-roles.png" >}}
 
@@ -480,7 +480,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
     The custom microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 
     This selection can be blank if you do not want to add custom logic.
-    
+
 7. Click **Save** to save the configuration.
 
 ## 7 API Authentication {#api-authentication}

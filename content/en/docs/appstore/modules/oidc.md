@@ -186,7 +186,7 @@ In the **Anonymous** tab of the app security settings, do the following:
 
 {{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" >}}
 
-### 4.3 Configuring Navigation
+### 4.3 Configuring Navigation{#configure-nav}
 
 The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *(none)*.
 
@@ -308,7 +308,7 @@ In this case, the OIDC client is the app you are making.
 1. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline` scope.
     * Add other scopes as needed.
-1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". Also included is a salesforce-specific example. You may need to make changes in order to implement provisioning logic which fits your business needs. To do so, read the section on [Custom User Provisioning](#custom-provisioning-mf).
+1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
 1. Optionally, check **Enable Access Token Parsing** if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 
 Once you have completed these steps, the SSO-configuration is ready for testing. See the section on [Testing and troubleshooting](#testing) for more information.
@@ -455,7 +455,31 @@ The OIDC SSO module supports multiple IdPs. Since each provider can provide user
 This feature is available in version 2.4.0 and above
 {{% /alert %}}
 
-{{% todo %}}Section needs to be copied from Paper document{{% /todo %}}
+You can set up custom user provisioning once your app is running using the `OIDC.OIDC_Client_Overview` page that you set up for the administrator for the app in [Configuring Navigation](#configure-nav). You can set up custom user provisioning as follows:
+
+1. Sign in to the running app with an administrator account.
+2. Navigate to the `OIDC.OIDC_Client_Overview` page set up in the app navigation.
+3. Select the **Provisioning** tab.
+4. Set up the following information:
+    
+    * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
+    * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
+    * **User role** – the role which will be assigned to newly created users.
+
+5. Under **Just in time provisioning**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Custom user Entity Attribute** where you want to store the information.
+
+    Note the following:
+
+    * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**
+    * You can only map one IdP claim to a **Custom user Entity Attribute**
+    * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association
+
+6. In **Select the CustomUserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
+
+    The custom microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
+
+    This selection can be blank if you do not want to add custom logic. 
+7. Click **Save** to save the configuration.
 
 ## 7 API Authentication {#api-authentication}
 

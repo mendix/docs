@@ -49,7 +49,7 @@ The new features were divided into these major themes, which are described in th
 | Visual data filters | GA: Q4 2023 |
 | Mixed online and offline data | GA: Q4 2023 |
 | MendixChat | Preview: TBD<br>Public beta: TBD<br>GA: TBD |
-| Mac support | Preview: Q4 2023<br>Public beta: TBD<br>GA: TBD |
+| Mac support | Preview: Q1 2024<br>Public beta: TBD<br>GA: TBD |
 
 ## 4 Composability {#composability}
 

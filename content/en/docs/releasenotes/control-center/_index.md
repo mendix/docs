@@ -9,15 +9,24 @@ weight: 30
 
 These release notes cover changes to the app management functionality and other features of the [Mendix Control Center](/control-center/).
 
-To see the current status Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+To see the current status of the Mendix Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2023
+
+### December 7, 2023
+
+#### Improvements
+
+We made the following improvements to the [access management](/control-center/portfolios/#access-management) on the **Portfolios** page:
+
+* On the [Members](/control-center/portfolios/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* All the pending invites now appear on the [Pending Invites](/control-center/portfolios/#pending-invites) tab.
 
 ### October 26, 2023
 
 #### Improvements
 
-* We added the ability to directly [remove app members](/control-center/members/) from Control Center.
+* We added the ability to directly [remove app members](/control-center/members/) on the **Members** page.
 
 #### Fixes 
 
@@ -27,13 +36,13 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-* In Control Center, Mendix Admins can now [disable the digital signing](/control-center/security/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
+* On the **Security** page, Mendix Admins can now [disable the digital signing](/control-center/security/#disable-enable-digital-signing-emails) of the content of emails from Mendix, if it interferes with other email safety measures.
 
 ### September 7, 2023
 
 #### Deprecations
 
-* We have removed the **Onboarding** page from Control Center.
+* We have removed the **Onboarding** page.
 
 ### August 28, 2023
 
@@ -45,25 +54,25 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### Improvements
 
-* In Control Center, on the [Members](/control-center/members/) page you can now sort members based on the number of apps to which they belong.
-* In Control Center, we introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-general-settings) tab of the [Company Settings](/control-center/company-settings/) page.
+* On the [Members](/control-center/members/) page you can now sort members based on the number of apps to which they belong.
+* We introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-general-settings) tab of the [Company Settings](/control-center/company-settings/) page.
 
 ### July 13, 2023
 
 #### New Features 
 
-* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Member](/control-center/members/#active-deactive-members) page in Control Center. The column also appears in the Excel file, when you export the member information from these lists.
-* We introduced **Member ID** search functionality on the **Member** page in Control Center.
+* We added the **Member ID** column to the **Active Members** and **Deactivated Members** lists on the [Members](/control-center/members/#active-deactive-members) page. The column also appears in the Excel file, when you export the member information from these lists.
+* We introduced **Member ID** search functionality on the **Member** page.
 
 #### Improvements
 
-* We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics in Control Center.
+* We fixed column alignment issues and added responsive column resizing for member list columns to improve readability and visual aesthetics.
 
 ### July 3, 2023
 
 #### Deprecations
 
-* We removed the **Marketplace Content** section of [Control Center](/control-center/), which had been deprecated since March, 2023.
+* We removed the **Marketplace Content** section, which had been deprecated since March, 2023.
 
 ### May 17, 2023
 
@@ -84,14 +93,14 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### Improvements
 
-* In Control Center, we increased the limit of apps you can [activate or deactivate](/control-center/apps/#active-deactivated) to 100.
+* On the **Apps** page, we increased the limit of apps you can [activate or deactivate](/control-center/apps/#active-deactivated) to 100.
 * We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### February 23, 2023
 
 #### New Features
 
-* We have released a feature in Control Center where you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+* We have released a feature where you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
   With this feature, you can do the following:
 
@@ -116,7 +125,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-* We introduced the **Billing Accounts** page in Control Center where Mendix Admin can update the payment card information for their company at any time.
+* We introduced the **Billing Accounts** page where Mendix Admin can update the payment card information for their company at any time.
 
 ### August 25, 2022
 
@@ -128,23 +137,23 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-* We have introduced the **Marketplace Content** page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
+* We have introduced the **Marketplace Content** page, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 
 ### June 9, 2022
 
 #### New Features
 
-* The free Mendix Cloud environment of an app can now be deleted from the [app details](/control-center/apps/#app-details) page in Control Center.
+* The free Mendix Cloud environment of an app can now be deleted from the [app details](/control-center/apps/#app-details) page.
 
 #### Improvements
 
-* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/control-center/apps/#app-details) page in Control Center.
+* The free and licensed Mendix Cloud environments of an app are now visualized on the [app details](/control-center/apps/#app-details) page.
 
 ### April 21, 2022
 
 #### Improvements
 
-* We expanded the export-to-Excel functionality in [Control Center](/control-center/) for both the [Apps](/control-center/apps/) tab (which includes the **App ID**) and the [Cloud](/control-center/cloud/) tab (which includes the **App ID**, **Environment ID**, and **Environment URL**).
+* We expanded the export-to-Excel functionality for both the [Apps](/control-center/apps/) page (which includes the **App ID**) and the [Cloud](/control-center/cloud/) page (which includes the **App ID**, **Environment ID**, and **Environment URL**).
 
 ## 2021
 
@@ -152,19 +161,19 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### New Features
 
-* We have released the company **Onboarding** functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
+* We have released the company **Onboarding** functionality that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
 ### September 6, 2021
 
 #### New Feature
 
-* Mendix Admins can now configure their own [single sign-on](/control-center/security/set-up-sso-byoidp/) configuration from the [Security](/control-center/security/) tab of Control Center. 
+* Mendix Admins can now configure their own [single sign-on](/control-center/security/set-up-sso-byoidp/) configuration from the [Security](/control-center/security/) page. 
 
 ### August 26, 2021
 
 #### Improvements
 
-* We added a new menu item for Mendix Admins to access [Catalog Administration](/control-center/catalog-admin/) tasks in Control Center. For details, see [Catalog Administration](/control-center/catalog-admin/).
+* We added a new menu item for Mendix Admins to access [Catalog Administration](/control-center/catalog-admin/) tasks. For details, see [Catalog Administration](/control-center/catalog-admin/).
 
 ### August 19, 2021
 
@@ -182,7 +191,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### Improvements
 
-* We added a tab on the [Cloud](/control-center/cloud/) page in Control Center that displays details on **Free Environments**.
+* We added a tab on the [Cloud](/control-center/cloud/) page that displays details on **Free Environments**.
 
 ### May 7, 2021
 
@@ -200,8 +209,8 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### Improvements
 
-* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/control-center/groups/) once it has been created.
-* Mendix Admins can now [deactivate](/control-center/members/) Technical Contacts and the last Scrum Master in a team.
+* Mendix Admins can now edit the name and description of an [App Access Group](/control-center/groups/) once it has been created.
+* On the [Members](/control-center/members/) page, Mendix Admins can now deactivate Technical Contacts and the last Scrum Master in a team.
 
 ### March 4, 2021
 
@@ -213,7 +222,7 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 #### Improvements
 
-* We have updated the [App Projects](/control-center/apps/) tab of Control Center, where you can now do the following:
+* We have updated the [App Projects](/control-center/apps/) page, where you can now do the following:
     * Open the [Team](/developerportal/general/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
     * Deactivate or delete an app or a team member
 

@@ -41,30 +41,29 @@ This extension currently has the following limitations:
 
 ### 1.5  Dependencies
 
-This connector has no dependencies, but it needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from input Excel files. Download this component from Marketplace and [add it into your app](/appstore/general/app-store-content/#install).
+This connector has no dependencies, but it needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from input the Excel files. Download this component from Marketplace and [add it into your app](/appstore/general/app-store-content/#install).
 
 ## 2 Design-time flow
 
 ### 2.1 Creating a Data Importer Document {#create-document}
 
-To start importing data, right-click on the module, go to **Add other** > **Data Importer**.
+To import data, right-click on the module and click **Add other** > **Data Importer**.
 
-Refer the snapshot below for relevant menu option.
 {{< figure src="/attachments/appstore/connectors/data-importer/data-importer-menu.png" >}}
 
-Name the document, and the new **Data Importer Document** opens. 
+Name the document, click **OK**, and the new Data Importer document opens. 
 
 ### 2.2 Previewing Data {#preview-data}
 
-Once you have [created the **Data Importer** document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
+Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
 {{< figure src="/attachments/appstore/connectors/data-importer/select-file-for-preview.png" >}}
 
-After selecting or dropping the file in the *Select Source File* window, you can choose which sheet to import data from and you can also specify the header row and starting data row. :
+Select or drop the file in the **Select Source File** window. You can choose which sheet to import data from and specify the header row and starting data row.
 
-* **Sheet name** – name of the worksheet from where data needs to be imported (if the Excel has multiple worksheets, their names will appear in the dropdown)
-* **Header Row No** – row number of the file header; default is 1.
-* **Read Data From Row No** – starting line for reading data; default is 2.
+* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown
+* **Header Row No.** – row number of the file header; the default is 1
+* **Read Data From Row No** – starting line for reading data; the default is 2
 
 {{< figure src="/attachments/appstore/connectors/data-importer/select-sheet-and-header-data-row.png" >}}
 

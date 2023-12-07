@@ -85,7 +85,6 @@ The OIDC SSO module also has the following limitations:
 
 * If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IDP can be used to sign the end-user in.
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
-* You cannot control mapping of attributes to custom entities at deploy time, through constants, as described in [Automated Deploy-time SSO Configuration](#deploy-time). It can only be done at runtime using the configuration page in the app, or at design-time via a custom microflow.
 
 ## 2 Dependencies
 
@@ -419,7 +418,7 @@ The following constants are optional:
 
 Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app when they log in for the first time. 
 
-By default, end-users are provisioned using the `Account` object in the Administration module. If you need to use a custom user entity you can do this via [Custom User Provisioning Using a Microflow](#custom-provisioning-mf) or (in version 2.4.0 and above) [Custom User Provisioning at Runtime](#custom-provisioning-rt).
+By default, end-users are provisioned using the `Account` object in the Administration module. If you need to use a custom user entity you can do this via [Custom User Provisioning Using a Microflow](#custom-provisioning-mf) or (in version 2.4.0 and above) [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) or [Custom User Provisioning at Runtime](#custom-provisioning-rt).
 
 ### 6.1 Default User Provisioning
 
@@ -449,7 +448,28 @@ Make a single call from `CUSTOM_UserProvisioning` to your own module where you i
 
 The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
 
-#### 6.2.2 Custom User Provisioning at Runtime{#custom-provisioning-rt}
+#### 6.2.2 Custom User Provisioning at Deploy Time{#custom-provisioning-dep}
+
+{{% alert color="info" %}}
+This feature is available in version 2.4.0 and above
+{{% /alert %}}
+
+You can set up custom user provisioning by setting constants when you deploy your app. This has the following limitations compared to setting up provisioning using a microflow or changing the settings at runtime:
+
+* You will need to restart your app to apply changes to the constants
+* You cannot set custom mapping of IdP claims to attributes of your custom user entity
+
+You can set up custom user provisioning by setting the following constants. You can set default values when you build your app, but can override these in the app's environment.
+
+| Constant | Use | Notes | Example |
+| --- | --- | --- | --- |
+| CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
+| PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Email` |
+| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `Email` |
+| Userrole | the role which will be assigned to newly created users | *optional* | `User` |
+| CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
+
+#### 6.2.3 Custom User Provisioning at Runtime{#custom-provisioning-rt}
 
 {{% alert color="info" %}}
 This feature is available in version 2.4.0 and above

@@ -14,4 +14,6 @@ You can go to the [Mendix Community Hub](https://community.mendix.com/p/communit
 
 {{< figure src="/attachments/developerportal/community-tools/site.png" >}}
 
-## 2 Documents in This Category
+## 2 Guide Categories
+
+The *Community Tools Guide* is divided into the following categories:

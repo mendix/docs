@@ -17,7 +17,9 @@ Many apps can simply use the Atlas UI theme and its included set of design prope
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
-In Studio Pro, you can see which design properties are available for a widget in the **Properties** pane. A limited set of design properties can also be found in the widget's settings dialog box under the **Appearance** tab.
+In Studio Pro, you can see which design properties are available for a widget in the **Properties** pane.
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/overview.png" alt="The Properties pane in Studio Pro" >}}
 
 ## 2 Using Design Properties
 
@@ -141,7 +143,7 @@ Here is a full example of a **Toggle** design property:
 
 This is how the **Toggle** design property appears:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/design_property_toggle_studio_pro.png" alt="Toggle property in Studio Pro" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/toggle.png" alt="Toggle property in Studio Pro" >}}
 
 #### 4.1.3 Dropdown-Specific Fields
 
@@ -212,9 +214,7 @@ Here is an example of a **Dropdown** design property using CSS variables:
 
 This is how the **Dropdown** design property appears:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/design_property_dropdown_studio_pro.png" alt="Dropdown property in Studio Pro" >}}
-
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/design_property_dropdown_open_studio_pro.png" alt="Dropdown property options in Studio Pro" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/dropdown.png" alt="Dropdown property in Studio Pro" >}}
 
 #### 4.1.4 Colorpicker-Specific Fields
 
@@ -231,7 +231,7 @@ Colorpicker options have the following fields:
 | --------------------- | ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `name`                | Yes                      | String | Shown to the user when selecting a color.                                                                                                                                                                                            |
 | `class` or `variable` | One of these is required | String | A valid CSS class or CSS variable, respectively.                                                                                                                                                                                     |
-| `preview`             | Yes                      | String | A CSS variable (such as `--brand-primary`), a hexadecimal color definition (such as `#00FF00`) or the name of a HTML color (such as `green`). You can use a CSS variable for the preview even if the option is based on a CSS class. |
+| `preview`             | No                      | String | A CSS variable (such as `--brand-primary`), a hexadecimal color definition (such as `#00FF00`) or the name of a HTML color (such as `green`). You can use a CSS variable for the preview even if the option is based on a CSS class. |
 
 When the selected option defines a class, that class will be applied to the widget. When the selected option defines a variable, it will be applied to the specified `property`.
 
@@ -285,6 +285,10 @@ Here is an example of a **Colorpicker** design property using CSS variables:
 ```
 
 Note: if you can not provide a value for the preview, it is recommended to instead use a **Dropdown** design property. If at a later point in time you can provide the preview, you can always change the type from a **Dropdown** to a **Colorpicker**.
+
+This is how the **Colorpicker** design property appears:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/colorpicker.png" alt="Dropdown property in Studio Pro" >}}
 
 #### 4.1.5 ToggleButtonGroup-Specific Fields
 
@@ -357,6 +361,10 @@ Here is an example of a **ToggleButtonGroup** design property using CSS variable
     ]
 }
 ```
+
+This is how the **ToggleButtonGroup** design property appears when using icons for the options:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/toggle_button_group.png" alt="ToggleButtonGroup property in Studio Pro" >}}
 
 #### 4.1.5 Spacing-Specific Fields
 
@@ -492,11 +500,15 @@ Here is an example of a **Spacing** design property using CSS variables:
 }
 ```
 
+This is how the **Spacing** design property appears:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/spacing.png" alt="Spacing property in Studio Pro" >}}
+
 ### 4.2 Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
 
 Design properties can be extended or overridden in other modules. For example, you can add a custom drop-down option to an Atlas design property or override the applied CSS class of a toggle property. 
 
-Overriding a design property can be useful when creating a theme module that builds on top of Atlas styling. To do this, simply add a design property for the same widget type in *themesource/{YOURTHEMEMODULE}/{WEB|NATIVE}/design-properties.json* using the same name and property type. 
+Overriding a design property can be useful when creating a theme module that builds on top of Atlas styling. To do this, simply add a design property for the same widget type in *themesource/{YOURTHEMEMODULE}/{WEB|NATIVE}/design-properties.json* using the same name and a compatible type. 
 
 The precedence of design properties is determined by this compilation order of modules:
 
@@ -504,10 +516,16 @@ The precedence of design properties is determined by this compilation order of m
 1. UI resources modules, ordered as in **App Settings** > **Theme**.
 1. Non-UI user modules, ordered as in the Studio Pro App Explorer.
 
-If multiple modules have a definition of a **Dropdown** property with the same name, the options will be ordered from high to low precedence (highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
+If multiple modules have a definition of a **Dropdown**, **ColorPicker**, **ToggleButtonGroup** or **Spacing** property with the same name, the options will be ordered from high to low precedence (highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
+
+Definitions for **Toggle** and **Spacing** Design Properties can only be merged with definitions of the exact same type.
+Definitions of **ToggleButtonGroup** must either all set `multiSelect` to `true`, or alternatively set it to `false` or not define the `multiSelect` property at all.
+**Dropdown**, **ColorPicker** and single-select **ToggleButtonGroups** can all be merged.
+
+When merging definitions with different types, the last definition based on the precedence rules outlined above will be used to display the design property to the user.
 
 {{% alert color="warning" %}}
-Note that having multiple definitions with different types (for example **Toggle** and **Dropdown**) is an invalid configuration and will result in a failure to load any design properties.
+Note that having multiple definitions with incompatible types is an invalid configuration and will result in a failure to load any design properties.
 {{% /alert %}}
 
 ## 5 Widget Types{#widget-types}
@@ -528,7 +546,7 @@ When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/p
 
 As this document outlined, each of the design property types is designed to fulfill a certain use case. However, sometimes you might not know beforehand which type best fits your needs. In those cases, you might have to change the type of a design property. This is possible in the following cases:
 
-* You can change between a **Dropdown**, a **Colorpicker** or a single-select **ToggleButtonGroup** at any time. This does not affect any widget or any values you have set previously. Make sure that the new configuration follows the rules of that specific design property type. For example: when changing to a **ColorPicker**, make sure to add a `preview` field to all options.
+* You can change between a **Dropdown**, a **Colorpicker** or a single-select **ToggleButtonGroup** at any time. This does not affect any widget or any values you have set previously.
 
 However, not all design properties can freely change their types. In some cases, you do need more configuration, as explained in the [Renaming Design Properties](#old-names) section below.
 

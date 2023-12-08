@@ -124,6 +124,12 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 
     * Ensure that all the [required dependencies](#custom-repos-required-dependencies) exist in the configured repository. 
 
+5. CE9802 - Java dependency synchronization never done.
+
+   This is just an internal state we maintain for completeness. This should never occur unless something unexpectedly failed in the background in Studio Pro. If you encounter this by any chance, you can try to resolve this by
+    * Manually synchronizing dependencies once more
+    * Or restarting Studio Pro.
+
 5. CE9803 – Any failure which is not covered in the above scenarios.
 
     * Try manually synchronizing dependencies once more.

@@ -10,6 +10,6 @@ These release notes cover changes made to the [Private Mendix Platform](/private
 
 These are the [Private Mendix Platform](/private-mendix-platform/) major version release notes:
 
-* [1](/releasenotes/private-platform/1/)
+* [1.5](/releasenotes/private-platform/1/)
 
 For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS, and Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).

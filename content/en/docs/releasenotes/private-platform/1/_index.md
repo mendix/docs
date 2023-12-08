@@ -1,6 +1,6 @@
 ---
 title: "1.5"
-url: /releasenotes/private-platform/1/
+url: /releasenotes/private-platform/1-5/
 description: "Release notes for version 1 of Private Mendix Platform"
 weight: 10
 tags: ["Private Mendix Platform", "Private Platform"]

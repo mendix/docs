@@ -230,7 +230,7 @@ To start, replace the static image with the image the app end-user uploads to th
 1. Right-click the static image viewer and click **Convert to dynamic image**. 
 2. Right-click the image viewer again, click **Select data source**, and then search for and select your **Picture** entity. Click **Yes** when prompted to automatically fill the contents of the widget:
 
-  {{< figure src="/attachments/quickstarts/responsive-web-app/6-fillcontents6.png" width="400px" alt="Autofill">}}
+    {{< figure src="/attachments/quickstarts/responsive-web-app/6-fillcontents6.png" width="400px" alt="Autofill">}}
 
 3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 4. Click the **Edit** button next to **Caption**.

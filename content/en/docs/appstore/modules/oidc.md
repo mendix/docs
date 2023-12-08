@@ -166,7 +166,7 @@ Ensure that you have allocated the following user roles to the OIDC module and (
 | --- | --- |
 | Administrator | OIDC.Administrator, UserCommons.Administrator |
 | Anonymous | OIDC.Anonymous |
-| User | OIDC.User, UserCommons.Admin_ReadOnly |
+| User | OIDC.User |
 
 {{< figure src="/attachments/appstore/modules/oidc/user-roles.png" >}}
 

@@ -188,8 +188,7 @@ Features:
 
 ## 5 Limitations
 
-The following limitations apply to the rich text widget:
+The following limitation applies to the rich text widget:
 
-* There is a hover style issue affecting the toolbar which occurs when display size is not set to 100%
-* This is an issue on major browsers which makes them not calculate correct pixel size on the widget border in CKEditor toolbar styling. Specifically, the browsers scale pixels based on screen density to ensure information is displayed well across a variety of screen sizes. The side effect of this, however, is that CKEditor toolbar styling cannot give absolute calculations for pixel size.
+* A hover style issue affecting the toolbar occurs when display size is not set to 100%. This is because major browsers do not calculate correct pixel size on the widget border in CKEditor toolbar styling. The browsers scale pixels based on screen density to ensure information is displayed well across a variety of screen sizes. The side effect of this, however, is that CKEditor toolbar styling cannot give absolute calculations for pixel size.
 

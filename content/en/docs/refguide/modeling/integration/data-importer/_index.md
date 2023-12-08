@@ -106,12 +106,10 @@ The custom activity is configrued and you can import data from input files.
 
 ## 4 Running Your App
 
-This is not an exhaustive list of actions to perform for testing your App locally.
-1. Provide a placeholder for uploading a file (System.FileDocument) on a page and a button to call the configured microflow for importing data. 
-2. Deploy your App locally and browse & upload an input file which resembles the file used while creating *Data Importer Document*
-3. You should be able to see the message about x number of rows being imported into a List of *entity*
+To perform testing for your app, you can do the following actions:
+
+1. Provide a placeholder to upload a file (System.FileDocument) on a page and a button to call the configured microflow. 
+2. Deploy your app locally and browse and upload an input file which resembles the file used to create Data Importer document.
+3. View the message about x number of rows being imported into a list of entities. 
 
 {{< figure src="/attachments/appstore/connectors/data-importer/local-app-run.png" >}}
-
-## 5 Troubleshooting 
-

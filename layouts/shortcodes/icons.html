@@ -1,0 +1,6 @@
+<span class="inline-svg" >
+    {{- $fname:=print "static/mx-icons/" ( .Get 0 ) ".svg" -}}
+    {{- $path:="<path" -}}
+    {{- $fill:="<path fill=\"currentColor\"" -}}
+    {{ replace (readFile $fname) $path $fill | safeHTML }}
+</span>

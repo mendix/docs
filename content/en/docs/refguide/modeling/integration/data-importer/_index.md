@@ -87,20 +87,20 @@ The Data Importer document creation is complete and can be used to [import data 
 
 ## 3 Importing Data in a Microflow {#import-microflow}
 
-This is also called the *Run-time* flow, you can use the previously created *Data Importer Document* to import data from Excel file(s) using the custom activity. You can find *Import data from file* activity under the *Integration activities* in Toolbox tab. More information about custom activity can be found here! [Import data from file](/refguide/data-importer-activity/). Please follow these steps to import data into your App!
+Use the previously created Data Importer document to import data from your Excel file(s) in a microflow. To do this, do the following:
 
-1. Create a new microflow and drag the **Import data from file** activity into it. You will immediately notice 3 *consistency errors* generated because this activity needs 3 parameters to be specified. Input file, Data Importer Document and Return variable name.
+1. Create a new microflow and drag the **Import data from file** activity into it.
 
    {{< figure src="/attachments/appstore/connectors/data-importer/custom-activity.png" >}}
-   
-3. Double-click the activity and in the **File** field, specify an instance of File.SystemDocument as input file.
-4. Against the **Data importer document**, click *Select* and you will be presented with a Template selector and you can choose which *Data Importer Document* you want to utilize.
+
+2. Double-click the activity and in the **File** field, sselect an input file.
+3. In the **Data importer document** field, click *Select* and choose the Data Importer document you want to use.
   {{< figure src="/attachments/appstore/connectors/data-importer/choose-data-importer-template.png" >}}
 
-6. After the selection of *Data Importer Document*, the *Return type* and *Variable name* will be auto-populated. You can change the name  of the output variable if you wish.
-7. Click **OK**.
+1. After selecting the Data Importer document, the **Return type** and **Variable name** will be autopopulate. You can also change the name  of the output variable.
+2. Click **OK**.
 
-The custom activity is configrued and you are all set to import data from input files. Refer below an example of a configured microflow, where a simple message is displayed about how many records were imported from input file:
+The custom activity is configrued and you can import data from input files.
 
 {{< figure src="/attachments/appstore/connectors/data-importer/example-microflow.png" >}}
 

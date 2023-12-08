@@ -35,7 +35,16 @@ This connector supports the following statements:
 * `SELECT` — retrieves rows and columns from a database
 * `INSERT` — inserts data into a database  
 
-### 1.3 Prerequisites
+### 1.3 Limitations 
+
+* Only `SELECT` and `INSERT` queries are supported at this time
+* `SELECT` queries can be saved only if they are successfully executed and a response structure is created
+* The connector displays tables and views for the default schema of the logged in user
+* The connector supports columns with primitive data types only
+* If column names contain special characters, use an alias for the column name
+* Parameters are only supported for filter values (prepared statements)
+
+### 1.4 Prerequisites
 
 * Studio Pro 10.6 or above
 * External database connection details, including the following:

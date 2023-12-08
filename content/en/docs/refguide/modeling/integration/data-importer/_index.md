@@ -43,7 +43,7 @@ This extension currently has the following limitations:
 
 This connector has no dependencies, but it needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from input the Excel files. Download this component from Marketplace and [add it into your app](/appstore/general/app-store-content/#install).
 
-## 2 Design-time flow
+## 2 Design time flow
 
 ### 2.1 Creating a Data Importer Document {#create-document}
 
@@ -63,13 +63,15 @@ Select or drop the file in the **Select Source File** window. You can choose whi
 
 * **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown
 * **Header Row No.** – row number of the file header; the default is 1
-* **Read Data From Row No** – starting line for reading data; the default is 2
+* **Read Data From Row No.** – starting line for reading data; the default is 2
 
 {{< figure src="/attachments/appstore/connectors/data-importer/select-sheet-and-header-data-row.png" >}}
 
-Click **Preview Source Data & Entity**, first 10 rows from source file will be shown in the data preview section. You will also be able to see the Entity in the *Entity Preview* section. Note that the Sheet name is taken as Entity name. You can, of course, edit the name of the Entity. Also all the columns would be selected by default (cheked) and column name will correspond to the attribute name within Entity. You can un-check the columns that you do NOT want to import. At the bottom, you can see the target data type of the attribute; this is solely based on the cell-type defined in the Excel's first data row. In case you observe that some data types are incorrect, then you will have to check the cell-type of the first data row in Excel and adjust the cell-type definition accordingly.
+Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The column names correspond to the attribute name within the entity.
 
-{{% alert color="warning" %}} Column names which do not adhere to Mendix naming conventions will be auto-corrected. e.g. " " (*space*) character is not allowed in an attribute and it will be replaced by "_" (*underscore*) {{% /alert %}}
+All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell type defined in the file's first data row. If any data types are incorrect, check the cell type of the first data row in Excel and adjust the cell type definition accordingly.
+
+{{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
 {{< figure src="/attachments/appstore/connectors/data-importer/preview-data-and-entity.png" >}}
 

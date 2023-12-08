@@ -77,11 +77,13 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 ### 2.3 Creating an Entity {#create-entity}
 
-If everything looks good in the data preview [previewing the data](#preview-data), you can choose to edit the name of the entity and click **Create Entity**. 
+You can view the entity in the Entity Preview  section. You can change the name of the entity, though one is suggested for you. To create teh entity in your domain model, click **Create Entity** > **OK**.
 
-You will be notified once the entity is created in your domain module. You will also be shown the mapping of source Excel columns to target Entity attributes. Now the Data Importer Document creation is complete and this can be further used during Data Import. [importing data in a microflow](#import-microflow).
+When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
 
 {{< figure src="/attachments/appstore/connectors/data-importer/source-to-target-mapping.png" >}}
+
+The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
 
 ## 3 Importing Data in a Microflow {#import-microflow}
 

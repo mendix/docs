@@ -41,7 +41,7 @@ Your profile opens to the **Overview** tab, which shows you at a quick glance ho
 
 The first profile card below the header presents your **Stats**, which are your points divided between Mendix products and activities:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/stats.png"   width="350"  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/stats.png"   width="350"  >}}
 
 {{% alert color="warning" %}}
 Don't get disappointed about a low number of points, because everyone in the Mendix community started like that, even our Expert developers! There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
@@ -59,17 +59,17 @@ In the **Earned badges** section, you find the badges you have completed. If the
 
 The percentage on the card of the **Badges in progress** shows how far you have come to earn that particular badge. If the badge is a multi-level badge, only the highest completed badge is shown, so don't get distracted while earning it!
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/badges.png"   width="350"  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/badges.png"   width="350"  >}}
 
 ## 5 Challenges {#challenges}
 
 The **Challenge** card presents a featured challenge you can complete to gain credits. You can use the credits in the [Mendix Shop](https://shop.mendix.com) to order low-code t-shirts or other Mendix swag. Some challenges are going to be easy for you, whilst others might be harder to complete!
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/challenges.png"   width="350"  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/challenges.png"   width="350"  >}}
 
 Click **View All** to go to the **Challenges** tab of your profile. This tab presents more details on the challenge steps, the time left, and how many credits you can earn with them. You can complete these activities in any order you like.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/credits.png"   width="350"  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/credits.png"   width="350"  >}}
 
 When you complete a challenge, click **Claim Credits** to claim the Mendix credits. You can then spend your credits on cool items in the Mendix Shop.
 
@@ -79,20 +79,20 @@ One of the greatest strengths of Mendix is our awesome developers community, and
 
 You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon to send an invitation.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/connections.png"   width="350"  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/connections.png"   width="350"  >}}
 
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
 
 * **Share URL** – copy the personalized invite link and share it directly
 * **Send Invite** – send someone a Mendix invite by entering their email address
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/referral.png"   width="500"  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/referral.png"   width="500"  >}}
 
 ## 7 Leaderboard {#leaderboard}
 
 This card on your profile presents your points and ranking for the last 30 days:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/leaderboard.png" width="500px" alt="Leaderboard example" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/leaderboard.png" width="500px" alt="Leaderboard example" >}}
 
 Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
@@ -192,7 +192,7 @@ When you earn enough points, you gain a level:
 
 The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View All Projects** to go to the **Portfolio** tab, which presents all of your apps.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/portfolio.png" width="500px" alt="Portfolio example" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/portfolio.png" width="500px" alt="Portfolio example" >}}
 
 To add an app to your portfolio, click **Add Project**, which will open the editor. There are tips in the editor for what you should put in each field. All the fields in the editor are required before submission.
 
@@ -343,7 +343,7 @@ To get a Mendix API key, click **Configure API Keys** > **Create New API Key** a
 Make a note of the API key, as it will only be shown once. 
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/api-key.png" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/api-key.png" >}}
 
 {{% alert color="info" %}}
 We may cache your API key. This means that when you revoke an API key, it may take some time before the change takes effect.
@@ -383,13 +383,13 @@ When you click **New Token**, you need to set the following characteristics of t
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/create-pat.png" width="500px" alt="Dialog box for defining the PAT scopes" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/create-pat.png" width="500px" alt="Dialog box for defining the PAT scopes" >}}
 
 Details about the scopes can be found in the documentation for specific services.
 
 After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
 
 {{% alert color="warning" %}}
 Store the secret token in a safe location, because it will not be displayed again!
@@ -399,7 +399,7 @@ Store the secret token in a safe location, because it will not be displayed agai
 
 To see the scopes of a PAT you have created, click **View Details**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/manage-pat.png" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/manage-pat.png" >}}
 
 {{% alert color="info" %}}
 You cannot see the secret token of a PAT here. You can only see that the PAT exists along with its scopes. 

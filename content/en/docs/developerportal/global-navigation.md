@@ -52,6 +52,6 @@ To stop receiving notifications when new feedback is submitted for a specific ap
 
 ## 6 Profile Menu
 
-Click the **Open Profile Menu** button (via your avatar) to access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [User Settings](/developerportal/community-tools/mendix-profile/#settings). 
+Click the **Open Profile Menu** button (via your avatar) to access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/developerportal/community-tools/mendix-profile/#settings). 
 
 You can also sign out from the Mendix Platform via this menu.

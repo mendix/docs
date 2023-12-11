@@ -22,6 +22,10 @@ The **System.User** entity has inbuilt access rules where access is given to its
 
 ## 2 Defining Access Rules
 
+{{% alert color="info" %}}
+With Studio Pro 10.6.0 a new entity access rule editor has been released into Beta. You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/).
+{{% /alert %}}
+
 There are two ways to view access rules:
 
 * Via entity's **Properties** > **Access rules**: 

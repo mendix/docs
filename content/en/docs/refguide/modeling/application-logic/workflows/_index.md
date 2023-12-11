@@ -27,6 +27,7 @@ You can perform the following basic functions when working on workflows:
 * View element properties
 * Trigger a workflow from a page or via a microflow
 * Export a workflow to an image
+* Switching between portrait and landscape editor orientation
 
 ### 3.1 Opening a Workflow
 
@@ -188,6 +189,12 @@ Both options open a **Save file** dialog-box allowing you to choose a name and l
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/export-workflow-to-image.png" alt="Export workflow to image prompt" width="600">}}
 
 The current document is exported as an image in the .png format.
+
+### 3.10 Switching between Portrait and Landscape Editor Orientation
+
+Effortlessly switch between portrait and landscape editor orientations by selecting the orientation icon located in the upper-right corner of the workflow editor. Despite potential minor visual differences in certain canvas elements, the functionality remains entirely consistent across both rendering modes.
+
+It's important to bear in mind that the chosen orientation is not preserved or shared across projects. Consequently, each time you open or re-open a workflow, the orientation will reset to its default portrait setting.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 

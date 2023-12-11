@@ -382,7 +382,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT). Connecting to SVN can either be done using a PAT or your Mendix credentials.
+Connecting to Git is done using a personal access token (PAT).
 
 For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 

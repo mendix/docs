@@ -203,7 +203,7 @@ Users who do not currently have a Mendix account can sign in to the Mendix Platf
 
 Existing users of the Developer Portal can continue to use their accounts, but they will have to use the authentication provided by BYOIDP. They can no longer use the password they created on the Mendix Platform.
 
-### 8.2 BYOIDP and Team Server
+### 8.2 BYOIDP and Team Server {#team-server}
 
 Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/developerportal/community-tools/mendix-profile/#pat).
 
@@ -224,6 +224,7 @@ If the client secret is still active or you (as an administrator) still have an 
 * Clone the existing active IdP configuration, update the secret there and then activate the clone. This avoids updating all the users. This is the preferred option.
 * Disable the IdP configuration, update the secret, and then enable it again.
   
+
 If the client secret has expired, ask [Mendix Support](https://support.mendix.com/hc/en-us) to update the client secret of your active IdP configuration.
 
 If this is unsuccessful, you can ask Mendix Support to deactivate the active IdP configuration. This means that you (and your users) without active sessions will no longer have access and will need to reset and then use your platform password. Once you have access to the platform, you can set up your IdP configuration again.

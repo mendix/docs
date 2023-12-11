@@ -403,6 +403,8 @@ Connecting to SVN is done with your Mendix credentials:
 * Username: your Mendix account username
 * Password: your Mendix account password
 
+	{{% alert color="info" %}}If you are using BYOIDP, direct access to Team Server is no longer possible. For more information, see the in the [BYOIDP and Team Server](/control-center/security/set-up-sso-byoidp/#team-server) section *Set Up an SSO (BYOIDP)* .{{% /alert %}}
+
 ### 9.3 Adding Files and Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.

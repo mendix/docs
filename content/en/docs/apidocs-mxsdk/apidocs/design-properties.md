@@ -31,13 +31,13 @@ Design properties can make this work easier and safer. By configuring your own c
 
 You can define the styles that correspond to your design properties as CSS classes. Starting with Mendix 10, you can also use design properties to apply CSS variables (also known as CSS custom properties) to specified CSS properties. In this document, we will show examples of both ways.
 
-CSS classes are the easiest and most reusable way of applying styling. However, they can also lead to duplication of very similar CSS rules, resulting in large stylesheets. This can happen when you want to reuse the same color for a background color and a text color. CSS variables can make this more flexible by extracting common values, such as colors. A design property can target the `background-color` or the `color` CSS properties, for example.
+CSS classes are the easiest and most reusable way of applying styling. However, they can also lead to duplication of very similar CSS rules, resulting in large stylesheets. This can happen when you want to reuse the same color for a background color and a text color. CSS variables can make this more flexible by extracting common values, such as colors. For example, a design property can target the `background-color` or the `color` CSS properties.
 
-The Design Properties API is designed to allow you to choose between CSS classes or CSS variables depending on your use cases. You may also employ both and can easily mix approaches. You can even switch between using CSS classes and CSS variables without having to manually update the styles of your widgets. You can switch from one to the other at any time. For more information on the differences between these approaches, see [CSS Classes and CSS Variables](#class-variable).
+The Design Properties API is designed to allow you to choose between CSS classes or CSS variables depending on your use case. You may also employ both and can easily mix approaches. You can even switch between using CSS classes and CSS variables without having to manually update the styles of your widgets. You can switch from one to the other at any time. For more information on the differences between these approaches, see [CSS Classes and CSS Variables](#class-variable).
 
 ## 3 Design Property Types
 
-There are several types of design properties: **Toggle**, **Dropdown**, **Colorpicker**, **ToggleButtonGroup** and **Spacing**. They're intended to cover various use cases, allowing you to choose the design property type that best fits your need. Not all versions of Studio Pro support the same design property types.
+There are several types of design properties: **Toggle**, **Dropdown**, **Colorpicker**, **ToggleButtonGroup**, and **Spacing**. They are intended to cover various use cases, allowing you to choose the design property type that best fits your need. Not all versions of Studio Pro support the same design property types.
 
 * The **Toggle** type can be be turned on or off by the user. It can only be used with CSS classes, which will be applied if the toggle is turned on.
 * A **Dropdown** allows you to define a set of related options. Only a single option can be selected at a single time.
@@ -46,9 +46,9 @@ The following types have been introduced with Mendix 10:
 
 * A **Colorpicker** is like a **Dropdown**. As it is especially intended to work with colors, it allows you to add a preview of the color for each option.
 * The **ToggleButtonGroup** type also allows you to define a set of related options. Unlike a **Dropdown**, the **ToggleButtonGroup** can be configured to allow selecting multiple options.
-* The **Spacing** type can be used to set both margin and padding of a widget.
+* The **Spacing** type can be used to set both a widget's margin and padding.
 
-In some cases, it is possible to switch the type of design property you use, without any impact on how you used it previously. This can be helpful when you don't know exactly what type to use.
+In some cases, it is possible to switch the type of design property you use without any impact on how you used it previously. This can be helpful when you do not know exactly what type to use.
 
 ## 4 Design Properties Definitions {#design-properties-definitions}
 

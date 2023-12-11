@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue causing searching in Studio Pro to not work as expected
+* We fixed an issue where the search feature in Studio Pro did not work as expected.
 
 ### November 30, 2023
 

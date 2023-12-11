@@ -27,13 +27,13 @@ While styling Mendix apps, users must often apply the same set of CSS or native 
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
-### 2.1 Creating styles for your Design Properties
+### 2.1 Creating Styles for Your Design Properties
 
 You can define the styles that correspond to your design properties as CSS classes. Starting with Mendix 10, you can also use design properties to apply CSS variables (also known as CSS custom properties) to specified CSS properties. In this document, we will show examples of both ways.
 
-CSS classes are the easiest and most reusable way of applying styling. However, they can also lead to duplication of very similar CSS rules, resulting in large stylesheets. This can happen when you want to reuse the same color for a background-color and a text color. CSS variables can make this more flexible by extracting common values, such as colors. A design property can then target the `background-color` or the `color` CSS properties, for example.
+CSS classes are the easiest and most reusable way of applying styling. However, they can also lead to duplication of very similar CSS rules, resulting in large stylesheets. This can happen when you want to reuse the same color for a background color and a text color. CSS variables can make this more flexible by extracting common values, such as colors. A design property can target the `background-color` or the `color` CSS properties, for example.
 
-The Design Properties API is designed to allow you to choose between CSS classes or CSS variables depending on what works best for your specific use cases. You do not have to choose between either of them and can easily mix approaches, if you want to. You can even switch between using CSS classes and using CSS variables, or back, without having to manually update the styles of your widgets. You can do this at any time. See the section on [CSS classes and CSS variables](#class-variable) for more information on the differences between the two.
+The Design Properties API is designed to allow you to choose between CSS classes or CSS variables depending on your use cases. You may also employ both and can easily mix approaches. You can even switch between using CSS classes and CSS variables without having to manually update the styles of your widgets. You can switch from one to the other at any time. For more information on the differences between these approaches, see [CSS Classes and CSS Variables](#class-variable).
 
 ## 3 Design Property Types
 
@@ -672,9 +672,9 @@ Here is an example of a **Spacing** property that includes options that have bee
 
 The design property above is a replacement for the removed options **small** and **inner small** of the **Spacing-top**. The appropriate option will be selected, depending on the option that was previously selected. The value of **Spacing-top** will then be set to empty if that design property still exists.
 
-## 8 CSS classes and CSS Variables{#class-variable}
+## 8 CSS Classes and CSS Variables{#class-variable}
 
-### 8.1 CSS classes
+### 8.1 CSS Classes
 
 When using CSS classes, you should keep a few things in mind:
 
@@ -716,9 +716,9 @@ In your theme, you can create CSS variables as such:
 
 It is recommended to scope them to `:root`, like in the example, as this would make the CSS variables available for all widgets in your app.
 
-### 8.3 Using both CSS classes and CSS variables
+### 8.3 Using Both CSS Classes and CSS Variables
 
-You might want to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your existing styling right away. In that case, you can combine **Dropdown**, **Colorpicker**, **ToggleButtonGroup** and **Spacing** options using classes with ones that use CSS variables, as long as each individual option only defines a CSS class *or* a CSS variable, but not both. Also ensure that your design property defines a `property` field with the name of the CSS property you are targeting.
+You might want to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your existing styling right away. In that case, you can combine **Dropdown**, **Colorpicker**, **ToggleButtonGroup**, and **Spacing** options using classes with ones that use CSS variables, as long as each individual option only defines a CSS class *or* a CSS variable, but not both. Also ensure that your design property defines a `property` field with the name of the CSS property you are targeting.
 
 ```js
 {

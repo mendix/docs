@@ -13,7 +13,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" >}}
 
 The categories described below are available.
 
@@ -39,7 +39,27 @@ If this option is enabled (**true** by default), Mendix analyzes every microflow
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 After Startup{#after-startup}
+### 3.3 URL Prefix{#url-prefix}
+
+Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" >}}
+
+The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
+
+* "api-doc"
+* "odata"
+* "odata-doc"
+* "pages"
+* "reload"
+* "rest-doc"
+* "ws"
+* "ws-doc"
+* "xas"
+
+If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
+
+### 3.4 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
@@ -49,11 +69,11 @@ There is a timeout of *11 minutes* on the after startup microflow. If your after
 **After startup** is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
-### 3.4 Before Shutdown
+### 3.5 Before Shutdown
 
 Here you can select a microflow that is automatically executed when a shutdown command has been given, just before the application shuts down.
 
-### 3.5 Health Check
+### 3.6 Health Check
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
@@ -67,7 +87,7 @@ The health check microflow is specific to the [Mendix Cloud](/developerportal/de
 
 {{% /alert %}}
 
-### 3.6 First Day of the Week {#first-day-of-the-week}
+### 3.7 First Day of the Week {#first-day-of-the-week}
 
 The **First day of the week** setting determines the first day of the week in the date picker widget.
 
@@ -82,11 +102,11 @@ The **First day of the week** setting determines the first day of the week in th
 | **Friday** | Use Friday as first day of the week in date picker widgets. |
 | **Saturday** | Use Saturday as first day of the week in date picker widgets. |
 
-### 3.7 Default Time Zone
+### 3.8 Default Time Zone
 
 The **Default time zone** determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
-### 3.8 Scheduled Event Time Zone {#scheduled}
+### 3.9 Scheduled Event Time Zone {#scheduled}
 
 The **Scheduled event time zone** defines under which time zone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default time zone), you can select it here.
 
@@ -94,7 +114,7 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm{#hash-algorithm}
+### 3.10 Hash Algorithm{#hash-algorithm}
 
 The **Hash algorithm** is used to generate hash values for attributes of the hashed string type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
@@ -105,15 +125,15 @@ The **Hash algorithm** is used to generate hash values for attributes of the has
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.9.1 BCrypt Cost {#bcrypt-cost}
+#### 3.10.1 BCrypt Cost {#bcrypt-cost}
 
 **BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 12, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
-#### 3.9.2 Performance
+#### 3.10.2 Performance
 
 If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose **SSHA256** over **BCrypt**. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
 
-#### 3.9.3 Performance Tests
+#### 3.10.3 Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
@@ -140,7 +160,7 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms that any hashed attribute (like the `System$User` password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Numbers{#rounding}
+### 3.11 Rounding Numbers{#rounding}
 
 The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
@@ -161,7 +181,7 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-### 3.11 Multiple Sessions per User {#multiple-sessions}
+### 3.12 Multiple Sessions per User {#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 

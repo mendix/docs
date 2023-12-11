@@ -700,7 +700,7 @@ These are the new features on the ATS side:
 This table compares the nomenclature:
 
 | ATS              | Browserstack |
-| ---------------* | -----------* |
+| ---------------- | ------------ |
 | App              | Project      |
 | Job              | Build        |
 | Single test case | Session      |
@@ -1133,9 +1133,9 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 * The support for Mendix 7.6 is no longer experimental. Furthermore, we added compatibility for Mendix 7.8. You can now test a Mendix application that you've created on Mendix 5.14.1 up to Mendix 7.8.
 * ATS will now automatically detect and wait on many additional scenarios that are designated to block the execution of your tests:
-  * The execution of asynchronous microflows with a non-blocking progress bar
-  * The download of microflow result data (the objects returned from a microflow)
-  * UI rendering changes (for example, with conditional visibility)
+    * The execution of asynchronous microflows with a non-blocking progress bar
+    * The download of microflow result data (the objects returned from a microflow)
+    * UI rendering changes (for example, with conditional visibility)
 
 ## 2.3.0
 
@@ -1265,7 +1265,7 @@ You are able to browse all your folders, actions, test cases, and test suites vi
 
 #### Test Case Editing
 
-Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so we use the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
+Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so Mendix uses the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
 
 #### Results and Logs
 

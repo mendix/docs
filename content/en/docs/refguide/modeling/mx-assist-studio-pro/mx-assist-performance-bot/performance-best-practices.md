@@ -189,7 +189,7 @@ Using duplicated access rules on entities can affect performance, especially whe
 
 #### 2.8.1 Steps to Fix
 
-To fix the issue, we recommend revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
+To fix the issue, Mendix recommends revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
 
 * Consolidate the variation you have in your rules, add additional checks in your microflows to validate state changes rather than having all variations in the access rules.
 * Consider splitting your entity in multiple entities with one-to-one associations. On these individual entities you can simplify the access profiles and potentially limit access to the entire entity rather than dozens of individual fields.
@@ -243,16 +243,16 @@ By "specific" we mean how many association steps are involved. For example, an X
 
 Rearrange the parts of the XPath, so that the cheapest and most-specific parts are to the left of each `and`. Similarly, if using separate predicates like `[part 1][part 2]`, you can rearrange the predicates to have optimal ordering.
 
-### 2.14 Entity Exposed as OData with Key That Uses Non-indexed Attribute [MXP016] {#mxp016}
+### 2.14 Entity Published in OData with Key That Uses Non-indexed Attribute [MXP016] {#mxp016}
 
-Entities can be exposed as OData services. Depending on how many records the underlying entities contain, loading the data from the database can take time. For read-intensive entities that are exposed with a single key, it makes sense to add an index on the attribute used as a key. For larger volumes of data, this can significantly improve performance of object retrieval from the database.
+Entities can be published as OData services. Depending on how many records the underlying entities contain, loading the data from the database can take time. For read-intensive entities that are published with a single key, it makes sense to add an index on the attribute used as a key. For larger volumes of data, this can significantly improve performance of object retrieval from the database.
 
 #### 2.14.1 Steps to Fix
 
 To fix the issue, do the following:
 
 1. Check if the underlying entity contains a substantial amount of records before adding an index (at least 10000 records).
-2. Add an index on the attribute that is used as a key for the exposed entity.
+2. Add an index on the attribute that is used as a key for the published entity.
 
 {{% alert color="info" %}}
 This optimization may not be very beneficial for data types like Boolean and enumerations due to a limited number of possible values of these types. It is not recommended to add indexes for such types.

@@ -87,7 +87,7 @@ Security scanning tools can report vulnerabilities in Java libraries. These can 
 
 * The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Use Marketplace Content* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Using Marketplace Content* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 
@@ -139,7 +139,7 @@ By default, HTTP responses from the web server reveal information about the type
 
 Mendix considers this approach to be "security by obscurity". We do not feel that allowing responses to contain this information is a valid security risk in itself. Together with our Security team it was therefore decided not to hide this information. 
 
-A good example of this is leaking the web server information (e.g. "Server: nginx"). Firstly, the commonest web server types are nginx, IIS, and Apache. So publicly-known vulnerabilities of these three web servers will be tried regardless of whether or not this information is leaked. Secondly, [the Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) is in a public GitHub repository and you can easily see that Mendix is using nginx as its web server. Hiding this from the response headers doesn't make Mendix apps more secure.
+A good example of this is leaking the web server information (for example, "Server: nginx"). Firstly, the commonest web server types are nginx, IIS, and Apache. So publicly-known vulnerabilities of these three web servers will be tried regardless of whether or not this information is leaked. Secondly, [the Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) is in a public GitHub repository and you can easily see that Mendix is using nginx as its web server. Hiding this from the response headers doesn't make Mendix apps more secure.
 
 ### 6.4 Cache Control Header Is Set Incorrectly
 
@@ -159,7 +159,7 @@ See [Cache Control – Directives](https://developer.mozilla.org/en-US/docs/Web/
 
 ## 7 Why Are Static Files Publicly Accessible in My App?{#static-content}
 
-Mendix apps use two types of content: static content and dynamic content. Static content consists mainly of page templates (e.g., `*.xml` and `*.xml.gz`), images (e.g., `*.png`), icons (e.g., `*.svg`), JavaScript files (e.g., `*.js`), and styling (e.g., `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
+Mendix apps use two types of content: static content and dynamic content. Static content consists mainly of page templates (for example, `*.xml` and `*.xml.gz`), images (for example, `*.png`), icons (for example, `*.svg`), JavaScript files (for example, `*.js`), and styling (for example, `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
 
 By default, the static content of your app is publicly available. This means you can make a directory listing and access files on the web server. The Mendix Client expects this and will not work properly if it is not. You can request the static content without signing in. This is not an issue, as the static content doesn't usually contain any sensitive data. It provides the framework within which data is displayed and logic applied. You should not add sensitive data to your static files (for example in a text widget on a page); Mendix apps provide more secure ways to store sensitive data.
 
@@ -239,4 +239,4 @@ The Mendix Runtime implements a number of mitigation methods which mean that the
 
 If you see entries saying `ERROR - Connector: 404 - file not found for file` in your Application Access Logs, these may originate from internal security scans or external attacks. We actively try to block attacks from crawlers.
 
-To investigate further, we recommend [downloading the access logs](/developerportal/operate/logs/). This will enable you to review IP addresses, identify locations, and determine where requests are originating from. If you suspect a potential malicious attack, you can enhance security by adding an [Access Restriction Profile](/developerportal/deploy/access-restrictions/) which allows two IP ranges and excludes the IP address which you suspect.
+To investigate further, Mendix recommends [downloading the access logs](/developerportal/operate/logs/). This will enable you to review IP addresses, identify locations, and determine where requests are originating from. If you suspect a potential malicious attack, you can enhance security by adding an [Access Restriction Profile](/developerportal/deploy/access-restrictions/) which allows two IP ranges and excludes the IP address which you suspect.

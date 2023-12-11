@@ -145,7 +145,7 @@ When you drag the **Customer** entity from **CustomerApi version 1.0.0** deploye
 
 It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users.
 
-We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
+Mendix recommends using a strict versioning system (for example, semantic numbering) when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
 #### 4.2.1 Minor Service Updates
 
@@ -159,7 +159,7 @@ Minor service updates can be deployed to the same service endpoints, thereby ens
 
 *Major* service updates are for example, when entities or attributes are removed, or input parameters are required, which would be incompatible for the consuming apps and result in the consuming app "breaking".
 
-When a major change has been made to a published service we recommend that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number.
+When a major change has been made to a published service, Mendix recommends that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number.
 
 In this case the new service will be registered in the Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**:
 

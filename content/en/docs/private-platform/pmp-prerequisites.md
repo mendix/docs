@@ -12,7 +12,7 @@ This document presents the system requirements for the various parts of the Priv
 
 ## 2 Hardware Requirements
 
-For performance reasons, we recommend at least the following minimum hardware requirements.
+For performance reasons, Mendix recommends at least the following minimum hardware requirements.
 
 ### 2.1 Kubernetes Hardware Requirements for Private Mendix Platform
 
@@ -71,6 +71,9 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Type | Tools | Version | Remarks |
 | --- | --- | --- | --- |
 | Version control | GitLab | Latest | Required for projects and collaboration |
+| Version control | GitHub | Latest | Required for projects and collaboration |
+| Version control | Bitbucket | Latest | Required for projects and collaboration |
+| Version control | Azure DevOps | Latest | Required for projects and collaboration |
 | CI/CD | Jenkins | 2.346.1 or newer, with support for the Docker agent | Required for CI/CD |
 | CI/CD | Tekton | Mendix Operator version 1.20 or newer, Kubernetes version 1.19 or newer, latest version of Tekton from Mendix for Private Cloud | Required for CI/CD |
 

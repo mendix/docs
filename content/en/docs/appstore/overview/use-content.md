@@ -1,7 +1,7 @@
 ---
-title: "Use Marketplace Content"
+title: "Using Marketplace Content"
 url: /appstore/overview/use-content/
-linktitle: "Use Marketplace Content"
+linktitle: "Using Marketplace Content"
 weight: 2
 tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
@@ -181,7 +181,7 @@ In the scenario where you have an app with multiple languages in which you need 
 
 #### 3.1.3 Configuring the Widget
 
-After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
+After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, the Ratings widget is used as an example.
 
 To configure the widget, follow these steps:
 

@@ -49,11 +49,12 @@ The list view supports the following types of data sources:
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly form the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
+    {{% alert color="info" %}}From Mendix version 10.5, the list view does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Nanoflow source](/refguide/nanoflow-source/) – calculates the list of objects by executing a nanoflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 {{% alert color="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 

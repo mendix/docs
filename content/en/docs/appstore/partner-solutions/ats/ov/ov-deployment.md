@@ -40,7 +40,7 @@ The AUT is the deployed Mendix application that you want to test.
 
 ## 3 Deployment Options
 
-There are three deployment options. We recommend the first option, with the SaaS Selenium provider.
+There are three deployment options. The first option with the SaaS Selenium provider is recommended.
 
 ### 3.1 SaaS Selenium Provider
 

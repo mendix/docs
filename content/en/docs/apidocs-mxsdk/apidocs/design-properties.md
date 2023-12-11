@@ -13,7 +13,7 @@ The Mendix Design Properties API allows you to create or extend design propertie
 
 To use the API, you need to alter the *design-properties.json* file of a specific module in your application's **themesource** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
 
-Many apps can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. However, if you want to customize your styling more deeply, you will have to create your own custom design properties. This guide outlines how design properties work and can help you create custom design properties. The design properties provided by Atlas UI have been build in the same way as outlined here.
+Many apps can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. However, if you want to customize your styling more deeply, you will have to create your own custom design properties. This guide outlines how design properties work and can help you create custom design properties. The design properties provided by Atlas UI have been built in the same way as outlined here.
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
@@ -516,11 +516,11 @@ The precedence of design properties is determined by this compilation order of m
 1. UI resources modules, ordered as in **App Settings** > **Theme**.
 1. Non-UI user modules, ordered as in the Studio Pro App Explorer.
 
-If multiple modules have a definition of a **Dropdown**, **ColorPicker**, **ToggleButtonGroup** or **Spacing** property with the same name, the options will be ordered from high to low precedence (highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
+If multiple modules have a definition of a **Dropdown**, **ColorPicker**, **ToggleButtonGroup**, or **Spacing** property with the same name, the options will be ordered from high to low precedence (with the highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
 
-Definitions for **Toggle** and **Spacing** Design Properties can only be merged with definitions of the exact same type.
-Definitions of **ToggleButtonGroup** must either all set `multiSelect` to `true`, or alternatively set it to `false` or not define the `multiSelect` property at all.
-**Dropdown**, **ColorPicker** and single-select **ToggleButtonGroups** can all be merged.
+Definitions for **Toggle** and **Spacing** design properties can only be merged with definitions of the exact same type.
+
+Definitions of **ToggleButtonGroup** must either all set `multiSelect` to `true`, all be set it to `false`, or not define the `multiSelect` property at all. **Dropdown**, **ColorPicker**, and single-select **ToggleButtonGroups** can all be merged.
 
 When merging definitions with different types, the last definition based on the precedence rules outlined above will be used to display the design property to the user.
 

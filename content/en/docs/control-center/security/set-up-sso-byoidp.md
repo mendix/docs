@@ -203,7 +203,7 @@ Users who do not currently have a Mendix account can sign in to the Mendix Platf
 
 Existing users of the Developer Portal can continue to use their accounts, but they will have to use the authentication provided by BYOIDP. They can no longer use the password they created on the Mendix Platform.
 
-### 8.2 BYOIDP and Team Server
+### 8.2 BYOIDP and Team Server {#team-server}
 
 Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/developerportal/community-tools/mendix-profile/#pat).
 

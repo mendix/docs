@@ -124,7 +124,14 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 
     * Ensure that all the [required dependencies](#custom-repos-required-dependencies) exist in the configured repository. 
 
-5. CE9803 – Any failure which is not covered in the above scenarios.
+5. CE9802 - Java dependency synchronization never done.
+
+    This is just an internal state we maintain for completeness. This should never occur unless something unexpectedly fails in the background in Studio Pro. If you do encounter this, you can try to resolve this by doing either, or both, of the following:
+   
+    * Manually synchronizing dependencies once more
+    * Restarting Studio Pro
+
+6. CE9803 – Any failure which is not covered in the above scenarios.
 
     * Try manually synchronizing dependencies once more.
     * Reach out to [Mendix Support](https://support.mendix.com/) if the issue persists.

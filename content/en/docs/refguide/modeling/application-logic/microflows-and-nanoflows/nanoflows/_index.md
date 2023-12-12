@@ -136,7 +136,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ### 5.1 Studio Pro 10.3 and Below, and in the Classic Editor from 10.4 to 10.6
 
-The nanoflow editor offers keyboard support for navigating and manipulating the nanoflows. The following table shows the shortcut keys that can be used in the nanoflow editor in Studio Pro 10.3 and below, and in the **Classic** nanoflow editor from Studio Pro 10.4 to 10.6.
+The nanoflow editor offers keyboard support for navigating and manipulating nanoflows. The following table shows the shortcut keys that can be used in the nanoflow editor in Studio Pro 10.3 and below, and in the **Classic** nanoflow editor from Studio Pro 10.4 to 10.6.
 
 | Key | Effect |
 | --- | --- |

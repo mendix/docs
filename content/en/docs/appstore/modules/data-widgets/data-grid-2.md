@@ -88,11 +88,18 @@ This widget does not support [system texts](/refguide/system-texts/), meaning is
 
 In the new data grid we offer two types of pagination: **Paging Buttons** and **Virtual Scrolling**.
 
+{{< figure src="" alt="Paging button configurations">}}
+
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
+
+You can configure pagination based on:
+
+* **Position** — The "Position of paging button" options allows you to positioned paging buttons below or above the data grid.
+* **Visibility** — The "Show paging buttons" options allows you to always show paging or automatically show and hide based on the number of available data compared to display limit per page.
 
 ### 3.2 Virtual Scrolling 
 
@@ -183,6 +190,10 @@ This property is not available if you enable **Custom content** for the column
 {{% alert color="info" %}}
 This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types don't support association filtering.
 {{% /alert %}}
+
+### 4.10 Visible {#visible-filter}
+
+When using Datagrid, sometimes columns don't need to be shown. In this "Visible" expression configuration, you can specify when you want to display this columns
 
 ## 5 Rows
 

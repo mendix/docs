@@ -1,16 +1,22 @@
 ---
-title: "Icon Demo Temp"
+title: "Icon Demos"
 linktitle: "Icon Demo"
 url: /icons
-description: Temp demo file for SVG icon shortcodes.
-weight: 1
+description: "Demo file for SVG icon shortcodes."
+draft: true
+banner: "This is a draft and will not be rendered in the production website. Use this page to test how icons will render. Linting has been disabled for this file."
 ---
+<!-- markdownlint-disable-file -->
 
-Mendix provides a standard set of approved icons in [The Mendix Icon Set](https://mendix.atlassian.net/l/cp/U89wu3oL). This icon set is downloaded to the docs/static/mx-icons library in SVG format for use in the docs, like this:
+## 1 Introduction
 
-For more information, click **Details** ({{% icons notes-paper-text %}}).
+Mendix provides a standard set of approved icons in [The Mendix Icon Set](https://mendix.atlassian.net/l/cp/U89wu3oL). This icon set is downloaded to the *docs/static/mx-icons* library in SVG format for use in the docs via shortcodes, like this:
 
-Here are a few that might be useful:
+To see more information about the pipeline, click **Details** ({{% icons notes-paper-text %}}).
+
+## 2 Some Suggested Icons
+
+Here are some icons that might be particularly useful:
 
 * add ({{% icons add %}}) 
 * alarm-bell ({{% icons alarm-bell %}}) 

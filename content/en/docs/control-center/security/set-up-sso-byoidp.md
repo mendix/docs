@@ -34,7 +34,7 @@ Benefits of using BYOIDP SSO are:
 
 #### 1.2.1 User Experience
 
-When a user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platform, Studio Pro, or a Mendix SSO supported app, they enter their email address as a **Username**. The sign-in process will recognize that the email domain is configured for SSO and remove the password field, showing a button labeled **Sign in with SSO**. 
+When an end-user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platform, Studio Pro, or a Mendix SSO supported app, they enter their email address as a **Username**. The sign-in process will recognize that the email domain is configured for SSO and remove the password field, showing a button labeled **Sign in with SSO**. 
 
 #### 1.2.2 General Features
 
@@ -51,7 +51,7 @@ BYOIDP SSO has the following features:
 BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 
 * BYOIDP uses the IdP's OIDC (OpenID Connect) well-known/discovery endpoint to retrieve the URLs for the authorization endpoint, the token endpoint, and the JWKS endpoint.
-* The user's email address is used to associate a user's existing account within Mendix with the user's account at your IdP. This means that any existing Mendix account is linked to their IdP account for authentication, rather than a new Mendix account being created for them.
+* The user's email address is used to associate an end-user's existing account within Mendix with the user's account at your IdP. This means that any existing Mendix account is linked to their IdP account for authentication, rather than a new Mendix account being created for them.
     * This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign-up and login to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
 * BYOIDP SSO makes an authentication request to your IdP which means that only the 'openid' and 'profile' scope values are requested, as defined by OIDC. The request does not explicitly ask for authorization for specific platform roles such as developer, Mendix Admin, or Technical Contact. You can set up your IdP, however, to apply coarse-grained access rules based on the `client_id` for the Mendix Platform to deny access to the Mendix Platform for certain groups of employees.
 * Mendix provides support for two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication credentials in the HTTP header). If the IdP supports both methods, `client_secret_post` is used.
@@ -90,26 +90,36 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 
 As a Mendix Admin, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/control-center/security/) section.
 
+Clicking **Configure Single Sign-On** to see an overview of your Single Sign-on configurations.
+
 In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will inform you of known limitations.
 
-From here you can add a configuration, edit draft versions of a configuration, activate a draft version or de-activate the current IdP configuration.
+From here you can do the following:
+
+* **Add Configuration**
+* **Copy to Clipboard** the **Test Link** and **Test Email Domain** information
+* **Activate** or **De-activate** a configuration
+* Use the three-dot menu to **Edit**, **Duplicate**, or **Delete** a configuration
 
 ### 3.1 Adding a Configuration
 
 When adding a configuration, you will need to provide the information described below:
 
-* **Configuration name** – A name for the IdP setup in the SSO configuration for your own reference.
-
-    {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-1.png" >}}
-
-* **Redirect URL** – The callback URL to the Developer Portal to which your IdP needs to send the authenticated user.
-* **OpenID Connect well-known endpoint URL** – The endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
+* **Configuration Name** – A name for the IdP setup in the SSO configuration for your own reference.
+* **OpenID Connect Endpoint URL** – The well-known endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
     If your IdP supports multiple protocols, make sure you enter the OIDC endpoint.
 * **Client ID** – The ID of the Developer Portal registration in your IdP.
-* **Client secret** – The password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration, it will no longer be shown to you. For information about changing this value once your configuration is active, see the [Changing the Client Secret](#client-secret) section below.
-* **Scopes** – Selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. Typically the scopes `profile` and `email` are also needed to get the end-user's email address and name, which are required for SSO to fully map the end-user's identity. Your IdP may provide additional scopes you can use.
+* **Client Secret** – The password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration, it will no longer be shown to you. For information about changing this value once your configuration is active, see the [Changing the Client Secret](#client-secret) section below.
+* **Select Scopes** – Selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal.
 
-    {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-2.png" >}}
+    * The scope **OpenID** is required.
+    * Typically the scopes **Profile** and **Email** are also needed to get the end-user's email address and name, which are required for SSO to fully map the end-user's identity. Your IdP may provide additional scopes you can use.
+
+Use the **Copy** button to copy **the redirect URL used by the Mendix Platform Client** – the callback URL to the Developer Portal to which your IdP needs to send the authenticated user.
+
+{{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-2.png" >}}
+
+Click **Next** to test your configuration
 
 ### 3.2 Testing Your Configuration
 
@@ -117,17 +127,23 @@ Once you have configured the endpoint and the scopes, you are ready to perform t
 
 {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-3.png" >}}
 
+Log in within 30 seconds using valid credentials with your IdP. Once it is successful, click **Close Window** to close the new tab page. You will now see confirmation that the test was successful and you can click **Next** to continue to mapping claims.
+
+Click **Previous** if the test indicates that you have not entered the correct configuration details.
+
 ### 3.3 Mapping Between IdP and Mendix
 
 The data from your IdP may have different attribute names from the Mendix identity.
 
-Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least **ID**, **user name**, and a **first name** or **last name**.
+Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least **Foreign ID**, **Username**, and a **First Name** or **Last Name**.
 
 {{% alert color="info" %}}
-The user name must be in the correct form for an email address.
+The **Username** must be in the correct form for an email address.
 {{% /alert %}}
 
 {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-4.png" >}}
+
+**Preview** will show you how end-user names will be displayed.
 
 ## 4 Testing
 
@@ -135,8 +151,8 @@ When you have completed your IdP setup, you can perform a test sign-in before ac
 
 You can test in one of two ways:
 
-* Click the test endpoint of your configuration. It will redirect you to the login page of your IdP. Enter the credentials of a user known to your IdP. If the test succeeds, the Developer Portal landing page opens.
-* Go to https://login.mendix.com/ and, in the **Username** field, enter the test email domain of your configuration exactly as printed on the overview page. The password field should disappear. Click **Sign in with SSO**. This will redirect you to a login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
+* Use the **Test Link** for your configuration. It will redirect you to the login page of your IdP. Enter the credentials of an end-user known to your IdP. If the test succeeds, the Developer Portal landing page opens.
+* Copy the ***Test Email Domain** of your configuration from the the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to a login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
 
 For advice on where to look for issues if your test fails, see the [Troubleshooting](#troubleshooting) section.
 

@@ -112,6 +112,8 @@ Mendix also offers a Studio Pro installer called the **Portable** installer that
 
 As compared to the regular installer, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionality.
 
+Mendix Studio Pro that is installed using the portable installer will not show up in the 'Version Selector'. However, the user can manually add a Studio Pro version installed via the portable installer by clicking on the ‘Add custom version’ button in the 'Version Selector' and specifying the path to the executable file of that Studio Pro version.
+
 ## 7 Signing In
 
 When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.

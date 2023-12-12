@@ -34,7 +34,7 @@ Benefits of using BYOIDP SSO are:
 
 #### 1.2.1 User Experience
 
-When an end-user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platform, Studio Pro, or a Mendix SSO supported app, they enter their email address as a **Username**. The sign-in process will recognize that the email domain is configured for SSO and remove the password field, showing a button labeled **Sign in with SSO**. 
+When an end-user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platform or Studio Pro, they enter their email address as a **Username**. The sign-in process will recognize that the email domain is configured for SSO and remove the password field, showing a button labeled **Sign in with SSO**. 
 
 #### 1.2.2 General Features
 
@@ -90,7 +90,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 
 As a Mendix Admin, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/control-center/security/) section.
 
-Clicking **Configure Single Sign-On** to see an overview of your Single Sign-on configurations.
+Click **Configure Single Sign-On** to see an overview of your Single Sign-on configurations.
 
 In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will inform you of known limitations.
 

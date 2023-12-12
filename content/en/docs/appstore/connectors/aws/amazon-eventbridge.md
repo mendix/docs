@@ -105,11 +105,9 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
 
 6. In the **Edit parameters** section, edit the **ENUM_Region** parameter and change **Type** to **Expression**. 
 7. In the expression builder, type *ENUM_Region*, and then press **Ctrl+Space** to open the autocomplete dialog. 
-8. From the autocomplete dialog, select **AmazonEventBridgeConnector.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
+8. From the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_choose_aws_region.png" >}}
-
-    For a list of available AWS regions, see [ENUM_Region](#aws-region).
 
 9. Click **OK**.
 10. Configure the **Credentials_GenerateFromConstants** Microflow.
@@ -146,11 +144,9 @@ To configure your Mendix app to receive events, perform the following steps:
 
 7. In the **Edit parameters** section, edit the **ENUM_Region** parameter and change **Type** to **Expression**. 
 8. In the expression builder, type *ENUM_Region* and then press **Ctrl+Space** to open the autocomplete dialog. 
-9. From this autocomplete dialog, select **AmazonEventBridgeConnector.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
+9. From this autocomplete dialog, select **AWSAuthentication.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_choose_aws_region.png" >}}
-
-    For a list of available AWS regions, see [ENUM_Region](#aws-region).
 
 10. Click **OK**.
 11. Configure the **Credentials_GenerateFromConstants** Microflow. 

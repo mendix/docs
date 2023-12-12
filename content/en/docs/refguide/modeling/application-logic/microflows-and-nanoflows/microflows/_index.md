@@ -102,7 +102,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 3 Keyboard Support {#keyboard}
 
-### 3.1 Studio Pro 10.3 and below, and in the Classic Editor from 10.4 to 10.6
+### 3.1 Studio Pro 10.3 and Below, and in the Classic Editor from 10.4 to 10.6
 
 The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the shortcut keys that can be used in the microflow editor in Studio Pro 10.3 and below, and in the **Classic** microflow editor from Studio Pro 10.4 to 10.6.
 
@@ -121,10 +121,10 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
-### 3.2 In the Redesigned Editor in Studio Pro 10.4 and above
+### 3.2 In the Redesigned Editor in Studio Pro 10.4 and Above
 
 {{% alert color="info" %}}
-The redesigned microflow editor was released in beta in Studio Pro 10.4, and was set as the default microflow editor in Studio Pro 10.6. In the redesigned microflow editor, keyboard navigation has been improved. 
+The redesigned microflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. In the redesigned microflow editor, keyboard navigation has been improved.
 {{% /alert %}}
 
 The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows in the redesigned microflow editor.

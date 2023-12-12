@@ -124,7 +124,7 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 ### 3.2 In the Redesigned Editor in Studio Pro 10.4 and Above
 
 {{% alert color="info" %}}
-The redesigned microflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. In the redesigned microflow editor, keyboard navigation has been improved.
+The redesigned microflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. In the redesigned microflow editor, keyboard navigation has been improved. For more information, see [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/).
 {{% /alert %}}
 
 The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows in the redesigned microflow editor.

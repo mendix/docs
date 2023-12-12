@@ -110,9 +110,9 @@ For more information on how to configure a custom repository, see the *Custom Re
 
 Mendix also offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installer is available to download on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
 
-While the regular installer installs Mendix Studio Pro dependencies in system directories, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionality.
+While the regular installer installs Mendix Studio Pro dependencies in system directories, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionalities.
 
-The portable installer only includes the necessary tools to build with Studio Pro and run apps locally. It does not contain the MPR tool, mx, mxbuild, or mxuit. You can also not see the Console Log outside of Studio Pro. 
+The portable installer does not include all tools that come installed with Studio Pro or can be leveraged by Studio Pro, such as the MPR tool, mx, mxbuild, mxuit, or the Console Log. The portable installer only includes the tools that are necessary to be able to build with Studio Pro and to run apps locally. 
 
 ## 7 Signing In
 

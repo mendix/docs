@@ -4,12 +4,13 @@ url: /developerportal/deploy/pipelines/
 weight: 33
 description: "Describes how to set up pipelines in the Developer Portal"
 tags: ["Deploy","App","Developer Portal", "CI/CD"]
+status: "Public Beta"
 temp notes: "add tooltips and icons, more context around Variables, confirm name for the pipeline's Details page"
 ---
 
 ## 1 Introduction
 
-From the **Pipelines** page, you can set up deployment pipelines for your app.
+From the **Pipelines** page, you can set up automated deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click deployments that run according to the trigger that you have associated with it.
 
 To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane.
 
@@ -24,8 +25,6 @@ The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and 
 ### 2.1 The Runs Tab
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" >}}
-
-Click a run (or its **Details** (ICON) icon) to see the details of the run. Click **Run** (ICON) to run it again.
 
 By adjusting the **View** (ICON) settings, you can display or hide the following columns:
 
@@ -53,6 +52,10 @@ If you click **Run Manual Pipeline**, this launches a dialog box that lets you s
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-manual.png" alt="" width=60% >}}
 
 For information about the **Design a Pipeline** button, see [Designing or Editing a Pipeline](#design-edit-pipeline), below.
+
+Click a run (or its **Details** (ICON) icon) to see the details of the run. Click **Run** (ICON) to run it again.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
 
 ### 2.2 The Designs Tab
 
@@ -131,11 +134,21 @@ You then have a variety of customization options:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" >}}
 
+The steps are sorted into categories based on their function:
+
+* Build
+* Release
+* Code quality
+* Security
+* Communication
+* Developer tools
+* Marketplace
+
+You can also search for a step by name, and filter to see only platform-supported, community-supported, or partner-supported steps.
+
 When you are finished customizing your pipeline, click **Save**. Or, to immediately start using it, click **Save & Activate**.
 
-### 3.1 Pipeline Steps
-
-Do these need to be described in detail?
+The first time you activate a pipeline, you will be prompted to set up a personal access token (PAT) in the **Settings** tab if yo have not already set one up. This is required for a successful pipeline run.
 
 ## 4 Limitations
 

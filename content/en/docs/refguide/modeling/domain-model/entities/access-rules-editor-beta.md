@@ -25,7 +25,7 @@ Access rules are automaticly normalised when first using the new editor for an e
 
 Each module role from the module of the entity will have a default column for its access rigths without a XPath. Next to this default column a module role can have more columns if XPath's have been added. 
 
-A XPath contraint can be be added to a module role by clicking on the XPath field of its default column. This will open the XPath editor dialog. After a XPath contraint has been entered a new column is added. This new column will be created with the same access rights of the default column Alternatively, you can use the 'Add XPath' option in the context menu to add a new column based of any column. [Read more](#add-xpath)
+A XPath contraint can be be added to a module role by clicking on the XPath field of its default column. This will open the XPath editor dialog. After a XPath contraint has been entered a new column is added. This new column will be created with the same access rights of the default column Alternatively, you can use the 'Add XPath' option in the context menu to add a new column based of any column [Read more](#add-xpath).
 
 The non-default columns with a XPath contraint can be deleted via the context menu. The default column can not be deleted, but its content can be cleared in the same way. [Read more](#delete-clear)
 
@@ -33,7 +33,7 @@ The non-default columns with a XPath contraint can be deleted via the context me
 
 ## 3 Editing Create rigths
 
-Toggle the setting shown below *on* or *off* to enable or disable Create rigths. Note that XPath contrains are not applied to create operations, meaning that if you enable create access for one column any user with its module role can create objects of this entity.
+Toggle the setting shown below *on* or *off* to enable or disable Create rigths. Note that XPath contrains are not applied to create operations, meaning that if you enable create access for one column of a module role, any user with this module role can create objects of this entity.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/create.png" alt="This image indicates the position of the Create icons" width="550px" >}}
 
@@ -67,11 +67,11 @@ The context menu of a column can be openen by clicking on the three dots icon th
 
 ### 7.1 Copy to
 
-This option allows you to select another column and copy the Create, Delete, Read and Write access of this column to that column.
+This option allows you to select another column and to copy the Create, Delete, Read and Write access of this column to that column.
 
 ### 5.2 Copy from
 
-This option allows you select another column and copy the Create, Delete, Read and Write access of that column to this column.
+This option allows you select another column and to copy the Create, Delete, Read and Write access of that column to this column.
 
 ### 5.3 Add XPath
 

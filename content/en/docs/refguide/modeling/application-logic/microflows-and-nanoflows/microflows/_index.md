@@ -121,7 +121,7 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
-### 3.2 In the Redesigned Editor in Studio Pro 10.4 and Above
+### 3.2 In the Redesigned Editor in Studio Pro 10.4 and Above {#keyboard-improved}
 
 {{% alert color="info" %}}
 The redesigned microflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. In the redesigned microflow editor, keyboard navigation has been improved. For more information, see [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/).
@@ -178,6 +178,10 @@ To convert a microflow to a nanoflow, you have two options. The first option is 
 
 A new nanoflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflows.
 
-## 6 Canvas Interaction
+## 6 Canvas Interaction {#canvas-interaction}
 
-In the redesigned microflow editor since Studio Pro 10.4, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
+{{% alert color="info" %}}
+The redesigned microflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. For more information, see [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/).
+{{% /alert %}}
+
+In the redesigned microflow editor, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow. 

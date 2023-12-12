@@ -209,4 +209,8 @@ A new microflow is created and added to the same directory, and you can get cons
 
 ## 8 Canvas Interaction
 
-In the redesigned nanoflow editor since Studio Pro 10.4, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
+{{% alert color="info" %}}
+The redesigned nanoflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. For more information, see [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/).
+{{% /alert %}}
+
+In the redesigned nanoflow editor, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.

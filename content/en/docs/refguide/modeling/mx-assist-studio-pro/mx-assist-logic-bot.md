@@ -63,7 +63,7 @@ To open the properties dialog box after adding a suggested element, accept the s
 
 ### 2.2 Studio Pro 10.3 and Below
 
-In Studio Pro 10.3 and below, an older version of MxAssist Logic Bot is available. It is enabled by default. You can also access this MxAssist Logic Bot in the **Classic** version of the microflow editor from Studio Pro 10.4 to 10.6.
+In Studio Pro 10.3 and below, an older version of MxAssist Logic Bot is available. It is enabled by default. You can also access this MxAssist Logic Bot version in the **Classic** microflow editor from Studio Pro 10.4 to 10.6.
 
 You can switch it on and off using the **On-Off** toggle in the top right corner of the editor. You can also enable or disable it through the **Enable MxAssist Logic Bot** setting under the **Mendix Assist** tab in Studio Pro **Preferences**. For more information, see the [Logic Bot](/refguide/preferences-dialog/#logic-bot) section in *Preferences*.
 

@@ -13,7 +13,7 @@ Microflows and nanoflows allow you to express the logic of your application. The
 Microflows run in the runtime server and can therefore not be used in offline apps, while nanoflows run directly on the browser/device and can be used in an offline app. Furthermore, most of the actions in nanoflows run directly on the device, so there is also a speed benefit for logic which does not need access to the server. 
 
 {{% alert color="info" %}}
-Redesigned logic editors (microflows, nanoflows, and rules) were in beta from Studio Pro 10.4.0, and were released for GA in [Studio Pro 10.6.0](/releasenotes/studio-pro/10.6/#1060).
+Redesigned logic editors (microflows, nanoflows, and rules) were in beta from Studio Pro 10.4.0, and were released for GA in [Studio Pro 10.6.0](/releasenotes/studio-pro/10.6/#1060). In the redesigned logic editors, we have enhanced the usability of the [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/), added more support for keyboard navigation, and also invested in more developer experience details to make the interaction with the canvas even more fluent.
 {{% /alert %}} 
 
 In Studio Pro 10.4 and 10.5, you can activate the beta logic editors in the following ways:

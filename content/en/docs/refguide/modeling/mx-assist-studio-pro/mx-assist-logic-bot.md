@@ -9,14 +9,14 @@ tags: ["studio pro", "logic bot", "mendix assist", "AI", "assist", "mx assist"]
 ## 1 Introduction 
 
 {{% alert color="info" %}}
-MxAssist Logic Bot was enhanced in in Studio Pro 10.4 in the beta microflow, nanoflow, and rule editors. In Studio Pro 10.4 and 10.5, switch to the **Beta Version** of your editor if you want to access the enhanced MxAssist Logic Bot. In Studio Pro 10.6 and above, the enhanced MxAssist Logic Bot is enabled by default in the default logic editors.
+MxAssist Logic Bot has been enhanced since Studio Pro 10.4.0 in the redesigned logic editors. The redesigned logic editors were in beta in Studio Pro 10.4.0 and were released for GA in [Studio Pro 10.6.0](/releasenotes/studio-pro/10.6/#1060).
 {{% /alert %}}
 
 MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your logic based on the already designed activities, parameters, and other context-related information. It is built using the machine learning analysis of over twelve million anonymized application logics built with Mendix to detect and learn the best practice patterns in Mendix.
 
 The key features of MxAssist Logic Bot are the following:
 
-* **Smart search** (introduced as a beta feature in Studio Pro 10.4.0) - you can search for the element you want to add to your flow based on microflow or nanoflow parameters, domain model entities, or the documents in your app.
+* **Smart search** (available from Studio Pro 10.4.0) - you can search for the element you want to add to your flow based on microflow or nanoflow parameters, domain model entities, or the documents in your app.
 
 * **Next best action suggestion** – it recommends the next best activities out of more than 40 different options with accuracy of 95%. 
 * **Auto-configuration** – it does not only provide next best action, but automates the development further by pre-populating the parameters for such action.

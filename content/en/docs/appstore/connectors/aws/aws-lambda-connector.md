@@ -46,44 +46,45 @@ After you install the connector, you can find it in the **App Explorer**, in the
 In order to use the Amazon Lambda service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
 1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
-    The Amazon Lambda connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+2. Decide whether you want to use temporary or static credentials to authenticate.
+    The Amazon Lambda connector supports both temporary and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to temporary credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+    If you have multiple sets of AWS credentials, or if you want to use both static and temporary credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonLambdaConnector** > **ConnectionDetails** section.
+6. In the **Select Constants** dialog, find and expand the **AWSAuthentication** > **ConnectionDetails** section.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **TemporaryCredentials**.
 
     | Credentials type | Constant | Value |
     | --- | --- | --- |
-    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
     | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the temporary credentials expires |
     | **SessionCredentials** | **Session Name** | An identifier for the session |
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-To quickly configure the connection to AWS Lambda by using an example microflow, perform the following steps:
+To quickly configure the connection to AWS Lambda by configuring a microflow, perform the following steps:
 
-1. In the App Explorer, in **App** > **Marketplace modules** > **AWSLambdaConnector** > **ConnectionDetails**, configure the required authentication credentials.
-    For more information about the difference between static and session credentials, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-2. Optional: If you plan to use session credentials, edit the **UseSessionBasedCredentials** constant, and set the default value to **true**.
-3. In **AWSLambdaConnector** > **Operations**, find an example microflow that performs a function which you want to use in your app.
-    For example, if you want to get the list of available Lambda functions, find the **ListFunctions** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
-4. Configure the required parameters.
-    For example, for the **DeleteFunction** example microflow, you must specify the **Function name** that you want to delete.
+1. In the App Explorer, in **App** > **Marketplace modules** > **AWSAuthentication** > **ConnectionDetails**, configure the required authentication credentials.
+    For more information about the difference between static and temporary credentials, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+2. Create a new Microflow.   
+3. In **AWSLambdaConnector** > **Operations**, find the microflow activty for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
+4. Configure the required parameters:
+5. For the **ListFunctionsRequest** parameter, create a new `ListFunctionsRequest` object at the start of the microflow and pass it to the **ListFunctions** activity.
+6. In the Toolbox, depending on the type of credentials you want to use, search for the **GetStaticCredentials** activity *or* the **GetTemporaryCredentials** activity and drag it to the start of your microflow. Then select it as the value for the **Credentials** parameter of the **ListFunctions** activity.
+7. For the **ENUM_Region** parameter, choose a Region from the *AWSAuthentication.ENUM_Region* enumeration. For example, *AWSAuthentication.ENUM_Region.us_east_1* for the US_East_1 Region.
+8. The **ListFunctions** activity will return a `ListFunctionsResponse` with details about the retrieved lambda functions. 
 
 ## 4 Technical Reference
 

@@ -13,7 +13,133 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
-### July 13th, 2023
+### December 8th, 2023
+
+#### Mendix Operator v2.14.0 {#2.14.0}
+
+* We have added the following validation checks to the `mxpc-cli` installation and configuration tool:
+  * When configuring a namespace, check to see that the database and blob file storage plans do not use the same name.
+  * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
+* We have improved the authentication security of the Mendix Gateway Agent connection by switching to digest validation of the cluster ID and secret.
+* We have updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
+* We have updated third-party component versions.
+* We have improved the reliability of the code that processes statuses for resources such as Network, Build and Runtime. This reduces the number of retries for *the object has been modified, please apply your changes to the latest version and try again* errors, and ensures that status icons are updated as soon as possible.
+* For standalone clusters, it is now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
+* Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
+
+### November 23, 2023
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor/#import-dashboard) for native metrics to deduplicate labels in case the app is restarted. When the app restarts, it will no longer create a new set of metrics.
+* We have rearranged JVM heap memory graphs for the G1 Garbage Collector so that *Eden Space* is always on top of other graphs, just like it was with the previous garbage collector.
+
+### November 17, 2023
+
+#### Data Migration Tool (Preview) v0.0.4
+
+* We added support for backing up and restoring data in environments using [AWS IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/) authentication.
+
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
+
+### November 3, 2023
+
+#### Portal Fixes
+
+* Resolved an issue where ephemeral storage requests and limits were always set to 1 GB. (Ticket [200491](https://mendixsupport.zendesk.com/agent/tickets/200491).)
+
+#### Private Cloud License Manager (Beta- Release 2)
+
+* Resolved an issue where the user was unable to import a large bundle of licenses at the same time.
+
+### November 2, 2023
+
+#### Portal Improvements
+
+* We have introduced a feature within the **Plan** section that enables the deletion of plans from the portal.
+* We have separated the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. The **Modify MxAdmin Password** option must now be explicitly selected to enable the modification of the MxAdmin password. For existing users, if the **Manage Environment** option is already selected, the **Modify MxAdmin Password** option will be automatically enabled; otherwise, it will remain unselected.
+* We have added a new option to search environments based on the namespace on the **Environments Overview** page.
+
+#### Deploy API Improvements
+
+* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized.
+
+### October 30, 2023
+
+#### Data Migration Tool (Preview) v0.0.3
+
+* We have fixed an issue that prevented backups from completing. Previously, if the database contained a *System.FileDocument* entity with a NULL filename, it would cause an exception during the backup process.
+
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
+
+### October 19, 2023
+
+#### Portal Improvements
+
+* We have added an option to specify additional custom pod labels for an environment from the portal.
+* We have added an option to configure the ephemeral storage in the core resources selection flow.
+* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963)
+* We have fixed the issue where a user was able to select custom plans created for other namespaces.
+* We have added an extra warning message when a user tries to switch from default to custom core resource plans.
+
+### October 13, 2023
+
+#### Data Migration Tool (Preview) v0.0.2
+
+* We have updated the data transfer tool's error-handling code to provide more meaningful error messages.
+* If the data transfer tool fails to access or export a file, it will return an error and continue with the process, instead of failing the process immediately.
+* The data transfer tool will now only export files which are in use by the app (that is, which are referenced by a `System.FileDocument` entity).
+* We have updated the data transfer tool's dependencies to the latest versions.
+
+This tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+
+### September 21, 2023
+
+#### Portal Improvements
+
+* We have improved the user experience for the Cluster Manager, Environment Overview and Environment details pages by revamping the UI and adding sorting, searching, and filtering.
+* We have added a feature which will allow the creation of customized core resource plans in the Cluster Manager page.
+
+#### Deploy API Improvements
+
+* We have fixed a bug which occurred when providing an extra space in the URL for the API.
+* We have improved the **Update Environment** and **Delete Environment** requests by adding the namespace parameter.
+
+### September 19th, 2023
+
+#### Mendix Operator v2.13.0 {#2.13.0}
+
+* We have added support for Azure Workload Identity authentication when pushing images to Azure Container Registry. To use this option, the `mxpc-cli` installation and configuration tool now has a dedicated `microsoft-acr` registry type.
+* We have added an option to specify additional custom pod labels for an environment (or all environments in the namespace).
+* To improve security, ECR will use IRSA authentication by default instead of static credentials.
+* We have updated documentation on configuring and using container registries.
+* When pushing an image to a non-existing ECR repository, the Operator will attempt to create it by calling the ECR API.
+* We have added support for Postgres 15.
+* We refactored registry authentication code to use library authentication instead of binary plugins. This allows the dependencies to be kept up to date, improves reliability of builds and allows improved logging of the authentication process.
+* When deploying an image to an environment, the Mendix Operator will now use the built image's sha256 digest to ensure that what was built will be deployed.
+* We have updated the list of supported platforms to include Kubernetes 1.28 and OpenShift 4.13.
+* Upgrading to Mendix Operator v2.13.0 from a previous version will restart environments managed by that version of the Operator.
+
+### August 17, 2023
+
+#### Portal Improvements
+
+* We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with the navigation pane in a sidebar to the left.
+
+#### Deploy API Improvements
+
+* We have fixed the issue in the `Get Environments` API call, where the user was unable to retrieve all environments in an application when the same internal id was used for multiple environments. (Ticket: 190490)
+* We have added a fix for the `Update Environment` API call, where the user was unable to update environments which are using a dedicated storage plan. (Ticket 189615)
+* We have added the ability to automatically accept invitations for namespace and cluster membership.
+* We have updated the mandatory fields (email, role) in the Update Namespace/Cluster API calls.
+* We have made permissions mandatory if the role is set to CUSTOM.
+
+### July 13, 2023
 
 #### Portal Improvements
 
@@ -27,7 +153,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have fixed a core resource decimal conversion issue in the environment manifest file (Ticket 189615).
 * We have fixed an issue where upper-case letters in an email ID would prevent members invited to a cluster manager or namespace from accepting the invite. (Ticket 189975)
 
-### July 6th, 2023
+### July 6, 2023
 
 #### Mendix Operator v2.12.0 {#2.12.0}
 
@@ -35,12 +161,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have removed the need to specify a namespace name when applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
 * We fixed an issue where Google Cloud and Ceph bucket configuration would not be saved or loaded in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/).
 * We have updated components to use Go 1.20 and the latest dependency versions, in order to improve security score ratings for all container images.
-* For apps based on Mendix versions 9.12.0 and above, scheduled events are now configured on all instances. This improves reliability in some scenarios where a restart or an update is required.
+* For apps based on Mendix 9.12 and above, scheduled events are now configured on all instances. This improves reliability in some scenarios where a restart or an update is required.
 * We have updated the list of supported platforms to include Kubernetes 1.27.
 * We fixed an issue where connections to Azure SQL would fail with a *TLS Handshake failed* error.
 * The Mendix Operator will ensure that environments using licenses from the Private Cloud License Manager always have a non-expired license. When an environment's license reaches its expiration date, the Mendix Operator will replace it with a non-expired license from PCLM.
 
-### June 15th, 2023
+### June 15, 2023
 
 #### Portal Enhancements
 
@@ -53,7 +179,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have introduced [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) which provides a repository of offline Mendix licenses. You can use Private Cloud License Manager to manage these licenses centrally, and to automatically configure the licenses for the Mendix Operator and its Runtime.
 
 {{% alert color="info" %}}
-This feature is currently in a Beta release. For more information on what Beta release means, see [Beta Releases](/releasenotes/beta-features/).
+This feature is currently in a [beta release](/releasenotes/beta-features/).
 {{% /alert %}}
 
 #### Portal Improvements
@@ -125,7 +251,7 @@ This feature is currently in a Beta release. For more information on what Beta r
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 {{% alert color="info" %}}
-This feature is currently in a Beta release.
+This feature is currently in a beta release.
 {{% /alert %}}
 
 ### March 17, 2023
@@ -145,8 +271,8 @@ This feature is currently in a Beta release.
 #### Deploy API Improvements
 
 * We have added a new API endpoint for updating the namespaces. This will allow cluster managers to do the following tasks:
-    * Add, edit or remove member permissions and members in a namespace. 
-    * Enable or disable the external secret store and development mode configurations. 
+    * Add, edit or remove member permissions and members in a namespace.
+    * Enable or disable the external secret store and development mode configurations.
     * Add, update, or clear the operational URLs.
     * Activate or deactivate database and storage plans.
 * We have improved the Update Cluster API endpoint by allowing cluster managers to add new cluster managers.
@@ -209,7 +335,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 #### Portal Improvements
 
-* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
+* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets.
 * We have added a new status field indicating whether custom runtime setting and MxApp constants were loaded from CSI Secrets Storage.
 * We have added a notification on top of the Model Options and Runtime Settings page to indicate whether CSI Secrets Storage is enabled for a namespace.
 * We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
@@ -324,7 +450,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 * We fixed an issue where users were unable to see all the environments on the environment details page. (Ticket 151698)
 
-### June 2, 2022 
+### June 2, 2022
 
 #### Portal Improvements
 
@@ -402,19 +528,19 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 #### Mendix Operator v2.4.0 and Mendix Gateway Agent v2.4.0
 
-* We have added an option to use "native" or "compatibility" metrics. The native mode is only available for Mendix versions 9.7 and above, while compatibility mode is for the Mendix versions 9.6 and below. See [Customize Runtime Metrics](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) in *Creating a Private Cloud Cluster* for more information.
+* We have added an option to use "native" or "compatibility" metrics. The native mode is only available for Mendix 9.7 and above, while compatibility mode is for Mendix 9.6 and below. See [Customize Runtime Metrics](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) in *Creating a Private Cloud Cluster* for more information.
 
 #### Portal Improvement
 
 * We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
 * We have added the ability to add metrics configuration to an environment.
-  
+
 ### January 13, 2022
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
 * We have added a new field to set the Kubernetes ingress class as an annotation in the installer.
-* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster/#customize-registry-imagenametemplate).
+* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-registry/#customize-registry-imagenametemplate).
 
 #### Portal Improvements
 
@@ -454,7 +580,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have increased the deployment package size limit from 200 MB to 512 MB.
 * We have fixed an issue when the Runtime version was not visible on the transport package screen.
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
-* We have changed the left navigation panel to match the rest of the Developer Portal.
+* We have changed the navigation pane to match the rest of the Developer Portal.
 
 ### November 15, 2021
 
@@ -469,7 +595,7 @@ To see more details about supported databases and Kubernetes versions, see the [
 #### Prometheus Metrics
 
 * We have documented how to collect logs and metrics in Mendix for Private Cloud.
-* We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4/) users.
+* We have created a reference Grafana dashboard that offers a familiar experience for Mendix Cloud v4 [Metrics](/developerportal/operate/metrics/) users.
 
 To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor/).
 
@@ -493,7 +619,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 #### Data migration tool (preview)
 
 * We have added a data migration tool - that can be used to transfer data between Mendix for Private Cloud environments.
-* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup/#format-of-backup-file).
+* This tool is compatible with Mendix Cloud v4 [backup files](/developerportal/operate/restore-backup/#format-of-backup-file).
 
 This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer/).
 
@@ -664,7 +790,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have fixed an issue with misleading error messages in the container logs if Mendix Runtime is failing to start. If the MxAdmin user has an insecure password, a correct error message will be displayed.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
-After upgrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.
+After upgrading the Mendix Operator, Mendix recommends downloading the latest version of the Configuration Tool.
 
 ### January 6, 2021
 
@@ -687,7 +813,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 
 * We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page. 
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 #### Fixes
 
@@ -919,4 +1045,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.

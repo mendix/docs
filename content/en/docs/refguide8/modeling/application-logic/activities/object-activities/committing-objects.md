@@ -75,7 +75,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
+When committing a large number of objects, Mendix recommends not enabling **Refresh in client**, because it can slow things down.
 {{% /alert %}}
 
 #### 3.3.1 Microflow is Called from the Client in an Online App

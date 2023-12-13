@@ -19,7 +19,7 @@ The [AWS Lambda](https://marketplace.mendix.com/link/component/204511) connector
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The AWS Lambda connector requires Mendix Studio Pro version 9.18.0 or above.
+The AWS Lambda connector requires Mendix Studio Pro 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). If you are using the Amazon Lambda connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon S3 connector to function correctly For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
@@ -35,7 +35,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS Lambda connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the AWS Lambda connector into your app.
 
 ## 3 Configuration
 
@@ -155,4 +155,3 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `EVENT` | EVENT | Should use when one wants to invoke a lambda function asynchronously |
 | `REQUEST_RESPONSE` | REQUEST_RESPONSE | Should use when one wants to invoke a lambda function synchronously |
 | `DRY_RUN` | DRY_RUN | Should use when one wants to validate parameter values and verify that the user or role has permission to invoke the function |
-

@@ -13,7 +13,7 @@ aliases:
 
 To go directly to the desired element of your app in the Developer Portal, you can use deep links.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Find the App ID, Story ID, and Feedback Item Number for your app
 * Create deep links for your app, story, and feedback item
@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 
 To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Developer Portal:
 
-* For the app ID, select **Collaborate** > **General Settings** – you will find the ID at the bottom of the page:
+* For the app ID, select the **General** tab of the **Settings** – you will find the ID at the bottom of the page:
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/app-id.png" width="500px" alt="App ID on General Settings page" >}}
 

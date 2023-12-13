@@ -10,16 +10,21 @@ aliases:
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide8/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide9/deploying-a-mendix-app-to-cloud-foundry.html
+    - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
+    - /refguide8/deploying-a-mendix-app-to-cloud-foundry 
+    - /refguide9/deploying-a-mendix-app-to-cloud-foundry
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Mendix apps can be deployed to a variety of different environments, for example Mendix Cloud, On-premises, or Kubernetes.
+Mendix apps can be deployed to a variety of different environments, for example Mendix Cloud, on-premises, or Kubernetes.
 
 Mendix apps can also be deployed to any cloud platform which supports a version of Cloud Foundry, database, and cloud storage at or above the minimum required version which supports Mendix. For specific version numbers see [Mendix System Requirements](/refguide/system-requirements/). 
 
@@ -29,14 +34,18 @@ The advantages of Cloud Foundry are:
 * Horizontal scaling
 * Applications run inside stateless containers
 * Applications are only reachable over HTTP, HTTPS, or WebSockets
-* Binding services to applications for persistence, monitoring, e-mail, etc.
+* Binding services to applications for persistence, monitoring, email, etc.
 * Source code as input, running application as output
 * Extending to more software architectures via custom buildpacks
 * Automatic health monitoring and recovery
 
 For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cloud Foundry BuildPack](https://github.com/mendix/cf-mendix-buildpack). This Git also explains how Mendix apps can also be deployed to Cloud Foundry environments using command line instructions.
 
-**In this how-to you will learn how to do the following using Studio Pro and browser-based configuration options:**
+{{% alert color="info" %}}
+Specific Mendix versions require specific versions of the buildpack. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
+{{% /alert %}}
+
+In this how-to you will learn how to do the following using Studio Pro and browser-based configuration options:
 
 * Configure Cloud Foundry in Studio Pro and the service providing it
 * Add services to the app
@@ -155,7 +164,7 @@ Some trial accounts may not include object storage.
 You may need to configure your file store by using environment variables. See the [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack) for more information.
 {{% /alert %}}
 
-## 6 Deploy Your App to Cloud Foundry (Deprecated)
+## 6 ⚠ Deploy Your App to Cloud Foundry (Deprecated)
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
@@ -165,7 +174,7 @@ You may need to configure your file store by using environment variables. See th
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
 
-{{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix version 11.{{% /alert %}}
+{{% alert color="warning" %}}⚠ Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix 11.{{% /alert %}}
 
 ## 7 Cloud Foundry Environment Variables
 

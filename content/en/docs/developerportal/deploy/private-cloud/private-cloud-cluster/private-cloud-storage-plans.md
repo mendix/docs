@@ -163,7 +163,7 @@ You cannot create multiple database plans at the same time. Run the configuratio
 
 The following database types are supported:
 
-* [PostgreSQL](#database-postgres)
+* [PostgreSQL and Aurora PostgreSQL](#database-postgres)
 * [Ephemeral (non-persistent)](#database-ephemeral)
 * [SQL Server](#database-sqlserver)
 * [Dedicated JDBC](#database-jdbc)
@@ -250,7 +250,16 @@ The Postgres database is an automated, on-demand database. The Postgres plan off
 [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) removes static passwords and instead uses IAM roles for authentication.
 
 {{% alert color="info" %}}
-This section provides technical details on how IAM authentication works with Postgres. If you just need instructions to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide to set the Mendix Operator to manage an RDS database and S3 bucket.
+This section provides technical details on how IAM authentication works with Postgres. If you just need instructions to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quick start guide to set the Mendix Operator to manage an RDS database and S3 bucket.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+When dealing with an Aurora PostgreSQL database, an additional procedural step is required. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
+
+```shell {linenos=false}
+GRANT rds_iam TO db_userx;
+```
+
 {{% /alert %}}
 
 ##### 2.3.2.1 Prerequisites
@@ -283,7 +292,7 @@ This section provides technical details on how IAM authentication works with Pos
     ```
 
     {{% alert color="info" %}}The `<database_id>` parameter is not the database name (or ARN), but the uniquely generated AWS resource ID.
-    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document.{{% /alert %}}
+    For more information and instructions how to write this policy, see the [IAM policy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) document. In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.{{% /alert %}}
 
 * An IAM-based S3 blob storage plan.
    
@@ -335,7 +344,7 @@ In the Postgres plan configuration, enter the following details:
 * **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Authentication** - select `aws-iam` from the dropdown.
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
-    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
@@ -638,7 +647,7 @@ For apps using Mendix 9.22 (or a later version), the [IRSA Mode](#s3-irsa-mode) 
 If you would like to simply share a bucket between environments, or to manually create a bucket and account per environment, use the [existing bucket and account](#s3-existing-bucket-account) option.
 
 {{% alert color="info" %}}
-Although we offer additional flexibility and provide other options, we recommend using one of the options listed above.
+Although we offer additional flexibility and provide other options, Mendix recommends using one of the options listed above.
 {{% /alert %}}
 
 #### 3.3.1 Create Account with Existing Policy {#s3-create-account-existing-policy}
@@ -766,7 +775,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 * **IRSA Authentication** - Set to **no**.
 * **Create bucket per environment** - Set to **yes**.
-* **Create account (IAM user) per environment** - Set to **no**.
+* **Create account (IAM user) per environment** - Set to **yes**.
 * **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
 * **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - Set to **yes**.
@@ -780,7 +789,7 @@ It's similar to the [Create account with existing policy](#s3-create-account-exi
 
 {{% alert color="info" %}}
 This section provides technical details how IAM authentication works with Postgres.
-If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
+If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quick start guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
 {{% /alert %}}
 
 ##### 3.3.2.1 Prerequisites
@@ -950,7 +959,7 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Attach policy ARN** - The environment template policy ARN; this is the existing policy that will be attached to every environment's IAM role.
 * **EKS OIDC URL** - The OIDC URL of the EKS cluster; in most cases, the OIDC provider is [created automatically](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html), and its URL can be found in the AWS Management Console.
 * **IAM Role ARN** - the admin user role ARN.
-    * We recommend to use the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
+    * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
 
   {{% alert color="warning" %}}
@@ -1051,7 +1060,7 @@ This automated, on-demand option will create an S3 bucket and IAM account for ev
 {{% alert color="warning" %}}
 We do not recommend using this option, as it is not possible to customize the bucket settings (encryption or default file access). In addition, this option needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments. This option is primarily here for historical reasons.
 
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+Instead, Mendix recommends using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
 ##### 3.3.4.1 Prerequisites
@@ -1136,7 +1145,7 @@ This automated, on-demand option will create an S3 bucket and IAM account for ev
 {{% alert color="warning" %}}
 We do not recommend using this option, as it is not possible to customize the bucket settings (encryption or default file access). This option is primarily available for historical reasons.
 
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+Instead, Mendix recommends using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
 ##### 3.3.5.1 Prerequisites
@@ -1279,7 +1288,7 @@ This automated, on-demand option allows the sharing of an existing bucket betwee
 {{% alert color="warning" %}}
 We do not recommend using this option, as it needs admin-like IAM permissions to create inline policies, which might not be acceptable in regulated environments. This option is primarily available for historical reasons.
 
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
+Instead, Mendix recommends using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
 {{% /alert %}}
 
 ##### 3.3.6.1 Prerequisites
@@ -1350,85 +1359,6 @@ In the Amazon S3 plan configuration, enter the following details:
 * **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
 * **Create inline policy** - Set to **yes**.
 * **Access Key** and **Secret Key** - Credentials for the "admin" user account, used to create or delete environment IAM users.
-
-#### 3.3.7 Create Account with Inline Policy {#s3-create-account-inline-policy}
-
-This automated, on-demand option allows to share an existing bucket between environments, and isolates environments from accessing each other's data.
-
-{{% alert color="warning" %}}
-We do not recommend using this option, as it needs admin-like IAM permissions to create inline policies - which might not be acceptable in regulated environments. This option is primarily here for historical reasons.
-
-Instead, we recommend using the [Create account with existing policy](#s3-create-account-existing-policy) option if you need automation.
-{{% /alert %}}
-
-##### 3.3.7.1 Prerequisites
-
-* An existing S3 bucket
-* An admin user account - with the following policy (replace `<account_id>` with your AWS account number):
-
-    ```json
-    {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Sid": "iamPermissions",
-                "Effect": "Allow",
-                "Action": [
-                    "iam:DeleteAccessKey",
-                    "iam:PutUserPolicy",
-                    "iam:DeleteUserPolicy",
-                    "iam:DeleteUser",
-                    "iam:CreateUser",
-                    "iam:CreateAccessKey"
-                ],
-                "Resource": [
-                    "arn:aws:iam::<account_id>:user/mendix-*"
-                ]
-            }
-        ]
-    }
-    ```
-
-##### 3.3.7.2 Limitations
-
-* Access/Secret keys used by existing environments can only be rotated manually.
-* It is not possible to customize how the inline IAM policy is created.
-
-##### 3.3.7.3 Environment Isolation
-
-* Every environment has its own IAM user.
-* The S3 bucket is shared. 
-    * The Mendix Operator will generate an IAM policy for every user that only allows access to files in a specific prefix (directory) in the bucket.
-    * An environment cannot access files from other environments.
-* The Mendix Operator does not need permissions to create new buckets, only to create IAM users and inline policies.
-
-##### 3.3.7.4 Create Workflow
-
-When a new environment is created, the Mendix Operator performs the following actions:
-
-* Generate a new IAM username.
-* Create the new IAM user with an inline policy - allowing that user to access the environment's S3 bucket.
-* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
-
-##### 3.3.7.5 Delete Workflow
-
-When an existing environment is deleted, the Mendix Operator performs the following actions:
-
-* (Only if *Prevent Data Deletion* is not enabled) Delete files from that environment's prefix (directory). Files from other apps (in other prefixes/directories) will not be affected.
-* Delete that environment's IAM user.
-* Delete that environment's Kubernetes blob file storage credentials secret.
-
-##### 3.3.7.6 Configuring the Plan
-
-In the Amazon S3 plan configuration, enter the following details:
-
-* **IRSA Authentication** - Set to **no**.
-* **Create bucket per environment** - Set to **no**.
-* **Create account (IAM user) per environment** - Set to **yes**.
-* **Bucket region** - The existing shared bucket's region, for example `eu-west-1`.
-* **Bucket name** - The existing shared bucket's name, for example `mendix-apps-production-example`.
-* **Create inline policy** - Set to **yes**.
-* **Access Key** and **Secret Key** - Credentials for the admin user account, used to create or delete environment IAM users.
 
 ### 3.4 Azure Blob Storage {#blob-azure}
 
@@ -1593,6 +1523,10 @@ To configure the required settings for an RDS database, do the following steps:
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
 
+    {{% alert color="info" %}}
+    In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
+    {{% /alert %}}
+
 2. Navigate to the RDS instance details, and write down the following information:
 
     1. The database **Endpoint** from the **Connectivity & security** tab:
@@ -1678,7 +1612,7 @@ In this template, replace:
 * `<bucket_name>` with the S3 **Bucket name**
 * `<aws_region>` with the RDS Instance's AWS region
 * `<account_id>` with the AWS account ID
-* `<database_id>` with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is not the database name or ARN)
+* `<database_id>` with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is not the database name or ARN). In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.
 
 This environment template policy will be attached to every new environment's role. Write down its ARN.
 
@@ -1783,7 +1717,8 @@ In this template, replace:
 * `<bucket_name>` with the S3 **Bucket name**
 * `<aws_region>`, with the RDS Instance's AWS region
 * `<account_id>`, with the AWS account ID
-* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN)
+* `<database_id>`, with the **Resource ID** from the RDS database **Configuration** tab (it should look like `db-ABCDEFGHIJKL01234`, and is **not** the database name or ARN). In the case of Aurora DB, ensure that the `database_id` is from the cluster and not the instance.
+* `<database-user>` with the Postgres superuser account name
 
 This role allows the Mendix Operator to create and delete IAM roles for Mendix app environments.
 

@@ -3,6 +3,8 @@ title: "Build Custom Widgets"
 url: /howto8/extensibility/widget-development/
 category: "Extensibility"
 weight: 30
+no_list: false
+description_list: true 
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -80,7 +82,4 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 
 Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
 
-## 5 Main Documents in This Category
-
-* [Build a Preview Image for a Custom Widget](/howto8/extensibility/add-a-preview-image-for-custom-widget/)
-* [Build Widgets with XML](/howto8/extensibility/use-xml-widget/)
+## 5 Documents in This Category

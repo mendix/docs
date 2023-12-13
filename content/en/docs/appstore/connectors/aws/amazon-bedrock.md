@@ -9,11 +9,7 @@ tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
 
 ## 1 Introduction
 
-The [Amazon Bedrock]([#needs-link]) connector enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
-
-{{% alert color="info" %}}
-The Amazon Bedrock service is currently in preview, which means it is only available to selected users. For more information, refer to the Amazon service documentation.
-{{% /alert %}}
+The [Amazon Bedrock](https://marketplace.mendix.com/link/component/215042) connector enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
 
 ### 1.1 Typical Use Cases
 
@@ -42,11 +38,22 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Bedrock connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon Bedrock connector into your app.
 
 ## 3 Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+
+{{% alert color="info" %}}
+Amazon Bedrock has server-side validation for specific models. The Claude models require all prompts to be in the following format:
+    
+```text
+Human: <PROMPT>
+Assistant:
+```
+
+For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
+{{% /alert %}}
 
 ### 3.1 Configuring AWS Authentication
 
@@ -65,6 +72,7 @@ In order to use the Amazon Bedrock service, you must authenticate with AWS. To d
     | Credentials type | Parameter | Value |
     | --- | --- | --- |
     | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | Any | **Timeout** | Specifies how long the Call REST service activity should wait for the REST endpoint to respond |
     | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
     | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
     | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
@@ -88,11 +96,11 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
     1. In the **App Explorer**, in the **AmazonBedrockConnector** section, find the **Credentials_GenerateFromConstants** action under > **Resources** > **Authentication**.
     2. Drag the **Credentials_GenerateFromConstants** to the beginning of your microflow.
     3. Double-click the **Credentials_Generate** activity to configure the required parameters and provide a value for the AWS Region.
-7. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
-8. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
-9. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-10. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
-11. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+8. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
+9. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
+10. Double-click the **Retrieve** activity and make sure **By Association** is selected.
+11. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
+12. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
 
@@ -193,5 +201,3 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `AWS_Region (ENUM)`, `RequestBody (String)`, `InvokeModelGenericRequest` | `InvokeModelGenericResponse` |
-
-

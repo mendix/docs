@@ -235,7 +235,7 @@ Every published OData service (or data source) has a version number. Apps that c
 
 #### 3.1.2 Environments
 
-The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
+The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
@@ -386,7 +386,7 @@ This is a link to the business owner of the data exposed in the data source. For
 
 #### 3.6.3 Technical Owner
 
-The technical contact of the app; by default this is the owner who registered the OData service.
+This is a technical contact for the app. By default, this is the owner who registered the OData service.
 
 For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
 

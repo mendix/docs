@@ -14,11 +14,11 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 
 The standards used for OData in Mendix are:
 
-* [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
-* [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
+* [OData v3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
+* [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="info" %}}
-The OData version 4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/).
+The OData v4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/).
 {{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
@@ -60,7 +60,7 @@ This list gives an overview of all published attributes and associations.
 
 ### 2.6 Enumerations
 
-This list gives an overview of all [enumerations](/refguide9/enumerations/) that are published by the service (for OData version 4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
+This list gives an overview of all [enumerations](/refguide9/enumerations/) that are published by the service (for OData v4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
 
 Click **Edit** to change the exposed name of the enumeration (the name as it appears to clients of the service) and to provide documentation.
 

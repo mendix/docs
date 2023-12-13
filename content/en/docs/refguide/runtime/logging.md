@@ -51,16 +51,16 @@ The following log nodes are used by Mendix when writing log messages.
 This list is currently incomplete and is being updated.
 {{% /alert %}}
 
-| Log Node | Description
+| Log Node | Description|
 | --- | --- |
 | ActionManager | Logs messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
-| ConnectionBus_Queries | Deprecated: This is a legacy node. |
+| ConnectionBus_Queries | ⚠ Deprecated: This is a legacy node. |
 | ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data. |
 | ConnectionBus_Security | Information regarding access rights needed to access the database. |
-| ConnectionBus_Synchronize | Deprecated: This is a legacy node. |
+| ConnectionBus_Synchronize | ⚠ Deprecated: This is a legacy node. |
 | ConnectionBus_Update | All information related to the update of data in the database. Incoming storage requests, the executed statements and issues encountered during storage. |
 | ConnectionBus_Validation | Information related modification of the existing database, and database migration. |
 | Connector | |

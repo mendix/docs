@@ -8,11 +8,11 @@ tags: ["Studio Pro", "stories", "stories pane"]
 
 ## 1 Introduction 
 
-For version control enabled apps (apps with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via [Stories](/developerportal/project-management/stories/) or [Epics](/developerportal/project-management/epics/) in the Developer Portal.
+For version control enabled apps (apps with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via Stories or [Epics](/developerportal/project-management/epics/) in the Developer Portal.
 
 In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
 
-{{% alert color="info" %}}If you use Stories, both stories and tasks of the current Sprint are shown in the **Stories** pane. For more information on tasks, see the [Adding a Task to a Story](/developerportal/project-management/stories/#adding-task) section in *Stories*.
+{{% alert color="info" %}}If you use Stories, both stories and tasks of the current Sprint are shown in the **Stories** pane.
 
 If you use Epics, only the stories of the current Sprint will be shown in the **Stories** pane; the tasks of each story will not be shown. You also cannot change the status of the stories in the **Stories** pane.{{% /alert %}}
 
@@ -75,7 +75,7 @@ To open the document, either click the **Open document** button in the top bar o
 
 {{< figure src="/attachments/refguide9/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" >}}
 
-For more information on how to create a story on the basis of a feedback item and add it to your backlog, see the [Adding a Feedback Item to Your Backlog](/developerportal/general/feedback/#adding) section in *Feedback Management*.
+For more information on how to create a story on the basis of a feedback item and add it to your board in [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), see the [Feedback Details](/developerportal/app-insights/feedback/#feedback-details) section in *Feedback*.
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 
@@ -90,6 +90,5 @@ To change the status of a task, tick or clear the checkbox in the **Status** col
 
 ## 3 Read More
 
-* [Stories](/developerportal/project-management/stories/)
-* [Feedback Management](/developerportal/general/feedback/)
+* [Feedback Management](/developerportal/app-insights/feedback/)
 * [View Menu](/refguide9/view-menu/)

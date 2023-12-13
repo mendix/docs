@@ -7,6 +7,7 @@ description: "Describes how to solve problems that may occur when opening an app
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto/solving-load-and-import-errors.html
+    - /howto/solving-load-and-import-errors/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

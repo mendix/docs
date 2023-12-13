@@ -40,7 +40,7 @@ In microflows, both pattern letters `M` and `L` are supported and work completel
 
 However, in nanoflows, the pattern letter `M` usually should NOT be used, given that it is not properly supported in nanoflows currently. One exception is that you can use `MM` since it gives a numerical representation of a month name.
 
-In nanoflows, the pattern letter `L` works properly except when it is used for some languages where the month name changes depending on the context (languages with the genitive case). For those languages, we recommend that the character limit is `LL`, given that with more characters (for instance, `LLL` or `LLLL`), the pattern letter `L` might not work properly. For example, `LLL` does work for Russian but not for Catalan. `LLLL` is not recommended for any of those languages. 
+In nanoflows, the pattern letter `L` works properly except when it is used for some languages where the month name changes depending on the context (languages with the genitive case). For those languages, Mendix recommends that the character limit is `LL`, given that with more characters (for instance, `LLL` or `LLLL`), the pattern letter `L` might not work properly. For example, `LLL` does work for Russian but not for Catalan. `LLLL` is not recommended for any of those languages. 
 
 Here is a full collection of such languages that are available in Studio Pro: Armenian, Belarusian, Catalan, Croatian, Czech, Finnish, Greek, Lithuanian, Polish, Russian, Slovak, and Ukrainian.
 {{% /alert %}}
@@ -52,6 +52,10 @@ The following pattern letters are only available for microflows:
 | z      | Time zone                                 | Pacific Standard Time; PST; GMT-08:00 |
 | Z      | Time zone                                 | -0800                                 |
 | X      | Time zone                                 | -08; -0800; -08:00                    |
+
+{{% alert color="info" %}}
+For some parse and format functions, there are UTC variants. Do not use these UTC variants (for example, `parseDateTimeUTC`) in client-side expressions if you want to assign the output to (or compare the output with) an attribute of type **Date and time** where **Localize** is disabled. In the client, the localization functionality is built into the attribute type itself, and using UTC functions causes the time zone conversion to be handled twice.
+{{% /alert %}}
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 

@@ -5,6 +5,10 @@ weight: 50
 tags: ["studio pro", "delete object", "activity"]
 ---
 
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Delete object(s)** activity can be used to delete one or more objects.
@@ -30,7 +34,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Object or List
 
@@ -80,7 +84,7 @@ When using the activity in a nanoflow accessible from an offline profile, please
 * When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
     * Deleting such an object removes it from the device and does not require synchronization, and therefore the before and after events of the corresponding entity will not be triggered
 
-For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties/#delete-behavior) section of Association Properties.
+For more information on associations' delete behavior, see the [On Delete Behavior](/refguide/association-properties/#delete-behavior) section of Association Properties.
 
 ### 4.1 Example {#delete-example}
 
@@ -107,7 +111,7 @@ In detail, the following graph shows what happens during deletions:
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" >}}
 
 {{% alert color="info" %}}
-The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+⚠ The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

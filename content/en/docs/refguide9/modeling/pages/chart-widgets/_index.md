@@ -2,6 +2,8 @@
 title: "Charts"
 url: /refguide9/chart-widgets/
 weight: 70
+no_list: false
+description_list: true 
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
@@ -44,7 +46,7 @@ With *Any Chart* you can build all the chart types that are possible with Plotly
 
 The plotly charts require a configuration based on JSON, therefore *Any Chart* has JSON as input parameters. You can create this JSON dynamically in your microflow via a JSON Structure document and use this in the *Any Chart* configuration. It is also possible to define static JSON configuration which is combined with the dynamic JSON.
 
-This module also contains several [building blocks](/refguide9/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, we suggest you check out the plotly.js website.
+This module also contains several [building blocks](/refguide9/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, Mendix suggests checking out the plotly.js website.
 
 See [Any Chart Widgets](/refguide9/charts-any-configuration/) to learn how to configure *Any charts* widgets.
 
@@ -55,11 +57,3 @@ The [Any Chart Cheat Sheet](/refguide9/charts-any-cheat-sheet/) lists the most c
 {{% snippet file="/static/_includes/refguide9/performing-basic-functions-widgets.md" %}}
 
 ## 5 Documents in This Section
-
-The following documents explain how to use charts in more detail:
-
-* [Chart Configuration](/refguide9/charts-configuration/)
-* [Chart Advanced Cheat Sheet](/refguide9/charts-advanced-cheat-sheet/)
-* [Any Chart Widgets](/refguide9/charts-any-configuration/)
-* [Any Chart Building Blocks](/refguide9/charts-any-building-blocks/)
-* [Any Chart Cheat Sheet](/refguide9/charts-any-cheat-sheet/)

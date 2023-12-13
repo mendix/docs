@@ -3,6 +3,8 @@ title: "ATS Best Practices"
 url: /appstore/partner-solutions/ats/bp/
 category: "ATS"
 weight: 4
+no_list: false
+description_list: true
 description: "Presents ATS best practices for each ATS version."
 ---
 
@@ -10,7 +12,4 @@ description: "Presents ATS best practices for each ATS version."
 
 The *ATS Best Practices* are organized according to the ATS version.
 
-## 2 Main Documents in This section
-
-* [ATS 2 Best Practices](/appstore/partner-solutions/ats/bp-two/)
-* [ATS 1 Best Practices](/appstore/partner-solutions/ats/bp-one/)
+## 2 Documents in This section

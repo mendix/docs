@@ -9,7 +9,7 @@ tags: ["ATS", "testing"]
 
 This how-to describes the initial steps for automatically testing your applications using the Application Test Suite (ATS). Links to other how-to's and the ATS reference guide are included for more detailed information on steps and functions.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure your App
 * Create a test case

@@ -8,7 +8,9 @@ tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
-The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide/consumed-rest-services/) functionality.
+The OData implementation in Mendix does not support all features of the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data and logic between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed.
+
+When using 3rd-party APIs, we advise you to make a proof of concept to ensure that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, you can use the Mendix [REST](/refguide/consumed-rest-services/) functionality instead.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -61,7 +63,7 @@ The most commonly used attribute types can be used in your app. The types of the
 | OData Type                     | Mendix Type                           |
 | ---                            | ---                                   |
 | Binary                         | Binary (but see 3.4) |
-| Boolean                        | Boolean <sup><small>[1]</small></sup> |
+| Boolean                        | Boolean ¹ |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
 | Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
@@ -82,10 +84,10 @@ The consumed OData service does not support importing generalizations and specia
 
 This means that when you are consuming a Mendix OData endpoint, it is not necessary to consume both a generalization and its specialization. The specialization will now be an entity with all the attributes and associations of the generalization.
 
-Associations to the generalizations with other exposed entities in the published OData service will be included for the now discrete "specialized" entities.
+Associations to the generalizations with other published entities in the published OData service will be included for the now discrete "specialized" entities.
 
 {{% alert color="warning" %}}
-When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
+When a generalization and a specialized entity are published in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
 ### 3.4 Binary Attributes {#binary-attributes}
@@ -100,8 +102,35 @@ An OData v3 association can only be used if it has two ends.
 
 An OData v4 navigation property can only be used as an association if it has a partner.
 
-When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume the resource as an external entity.
+When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume it as an external entity.
 
 ### 3.6 Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
+
+## 4 Requirements on Actions {#actions}
+
+The [Call External Action](/refguide/call-external-action/) activity calls actions. It cannot call
+
+* Bound actions
+* Actions that take an unsupported type as parameter
+* Actions that return a value of an unsupported type
+
+Supported types, and their corresponding type in Mendix, are:
+
+| OData Type                        | Mendix Type                           |
+| ---                               | ---                                   |
+| Boolean                           | Boolean ¹ |
+| Byte, SByte, Int16, Int32, Int64  | Integer/Long |
+| Collection of Entities            | List of objects|
+| DateTime, DateTimeOffset, Time    | Date and time |
+| Decimal, Double, Single           | Decimal ² |
+| Entity                            | Object |
+| Enumeration                       | Enumeration |
+| String, Guid                      | String |
+
+Note that the only supported Collection type is a Collection of Entities, and that binary parameters or return values are not supported for consumed OData actions.
+
+¹ In Mendix, Booleans cannot be null. If the action returns null, the value will be false in Mendix.
+
+² Decimal values outside of the range of a Mendix [Decimal](/refguide/attributes/#type) are currently not supported. If the action returns a value outside of the range, the action will return an error.

@@ -2,6 +2,8 @@
 title: "Include Push Notifications"
 url: /howto8/mobile/push-notifications/
 weight: 10
+no_list: false
+description_list: true 
 tags: ["mobile", "push notification"]
 ---
 
@@ -22,7 +24,7 @@ To use push notifications, make sure you have the following:
 
 * Mendix Studio Pro from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * The Mendix [Push Notifications Connector](/appstore/modules/push-notifications/)
-* A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
+* A mobile device (to get started, Mendix recommends an Android device connected to your development machine via a data cable)
 
 ## 3 Supported Platforms
 
@@ -51,9 +53,3 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 For more information on contributing to this repository, see [How to Contribute to a Mendix GitHub Repository](/howto8/collaboration-requirements-management/contribute-to-a-github-repository/).
 
 ## 7 Documents in This Section
-
-* [Implement Push Notifications](/howto8/mobile/implementation-guide/)
-* [Send Push Notifications](/howto8/mobile/sending-push-notifications/)
-* [Set Up the Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/)
-* [Set Up the Apple Push Notification Server](/howto8/mobile/setting-up-apple-push-notification-server/)
-* [Test the Push Notifications Implementation](/howto8/mobile/testing-the-implementation/)

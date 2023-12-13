@@ -1,8 +1,10 @@
 ---
 title: "Version Control"
 url: /refguide7/version-control/
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed" 
 weight: 30
+no_list: false
+description_list: true 
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,8 +13,8 @@ tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collabo
 
 Version Control allows you to manage your app development in two ways:
 
-* Firstly, it allows you to store ([*commit*](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
-* Secondly, it allows work to take place on multiple [*development lines*](#development-line) so that several different features can be worked on at once. These development lines can then be [*merged*](#merge) back together so that your *main line* contains all the completed features that have been worked on separately.
+* Firstly, it allows you to ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
+* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your *main line* contains all the completed features that have been worked on separately.
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modeler and Developer Portal.
 
@@ -147,7 +149,4 @@ As with the examples in section 3, Version Control Processes for a Single Branch
 
 Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modeler and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
-## 5 Main Documents in This Category
-
-* [Using Version Control in the Desktop Modeler](/refguide7/using-version-control-in-the-dm/)
-* [Team Server](/refguide7/team-server/)
+## 5 Documents in This Category

@@ -9,7 +9,7 @@ tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]
 
 ## 1 Introduction
 
-This how-to describes the process of developing an AWS connector. It will teach you the following:
+This how-to describes the process of developing an AWS connector. It teaches you the following:
 
 * Advantages of REST API-based development when creating your own AWS connector
 * Basic steps for building AWS connectors
@@ -199,4 +199,4 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 
 ## 5 Publishing to the Mendix Marketplace
 
-If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/sharing-content/).

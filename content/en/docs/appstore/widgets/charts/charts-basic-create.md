@@ -12,7 +12,7 @@ aliases:
 
 The charts widget provides a basic implementation of different types of chart (for example: area, line, bar, column, and pie) in a Mendix application.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a chart with basic sample data
 

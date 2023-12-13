@@ -30,7 +30,7 @@ Enter a message describing the changes you have made. This message may contain m
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" >}}
 
-Tick the boxes next to the stories that are related to your commit. We recommend committing a small number of changes at a time, so there is usually just one related story.
+Tick the boxes next to the stories that are related to your commit. Mendix recommends committing a small number of changes at a time, so there is usually just one related story.
 
 ### 4.2 Changes in Model
 

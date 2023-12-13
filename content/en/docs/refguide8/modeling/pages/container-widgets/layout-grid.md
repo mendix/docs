@@ -19,7 +19,7 @@ A layout grid consists of [rows](#rows) and [columns](#columns): {{< figure src=
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
 {{% alert color="info" %}}
-Row and column properties described below are available if your project has [Mendix version 8.5.1](/releasenotes/studio-pro/8.5/) or above  and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
+Row and column properties described below are available if your project has [Mendix 8.5.1](/releasenotes/studio-pro/8.5/) or above  and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
 
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
 {{% /alert %}}

@@ -106,7 +106,7 @@ We made the following improvements to the [access management](/control-center/po
 
 #### Improvements
 
-* On the **Apps** page, we increased the limit of apps you can [activate or deactivate](/control-center/apps/#active-deactivated) to 100.
+* On the **Apps** page, we increased the limit of apps you can activate or deactivate to 100.
 * We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### February 23, 2023

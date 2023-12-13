@@ -210,7 +210,7 @@ The app details page has the following tabs:
 If the app is not a licensed app, you can see the **...** icon on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Overview of Apps](#overview) section.
+Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 {{% /alert %}} 
 
 ## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}

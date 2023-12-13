@@ -18,13 +18,13 @@ You must have the [External Database Connector](https://marketplace.mendix.com/l
 
 ## 2 Connect to Database Wizard {#wizard}
 
-Clicking **Add other > External database connection** on your module opens the **Connect to Database** wizard:
+Click **Add other > External database connection** on your module to open the **Connect to Database** wizard:
 
 {{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
 
 Once in the wizard, enter or select the following:
 
-* **Name** — (not necessarily the name of the database).
+* **Name** — name of your database connection
 * **Database Type** — Microsoft SQL, MySQL, Oracle, or PostgreSQL
 
 ### 2.1 Connecting Using Connection Details
@@ -34,15 +34,15 @@ If you select **Use connection details**, enter:
 * **Host** — the hostname (`localhost` when testing locally)
 * **Port** — the port number
 * **Database Name** — the name of the database
-* **User Name** — your username to access the database
-* **Password** — your password to access the database
+* **User Name** — the username to access the database
+* **Password** — the password to access the database
 
 ### 2.2 Connecting Using Connection String
 
 If you select **Use connection string**, enter the following:
 
-* **Username** — your username to access the database
-* **Password** — your password to access the database
+* **Username** — the username to access the database
+* **Password** — the password to access the database
 * **JDBC Connection String** — the connection string, in the following formats for each database type:
     * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
     * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
@@ -59,7 +59,7 @@ The name of the document is the **Name** (not **Database name**) you provided wh
 
 ### 3.1 Query Screen {#query-screen}
 
-On the left side of the document is the **Query** screen. Here, you can write an SQL query to retrieve data, and then run it to validate its response.
+On the left side of the document is the **Query** screen. Here, you can write an SQL query to retrieve data and run it to validate its response.
 
 View data from the database in the [Tables & Columns](#tables-columns) screen on the right.
 
@@ -77,18 +77,18 @@ Click **Execute Query** to view a preview of the reponse.
 
 ### 3.2 Tables & Columns {#tables-columns}
 
-The **Tables & Columns** field, on the right side of the screen, displays the information from your database. You can use queries to access certain information in your database.
+The **Tables & Columns** field on the right side of the screen displays the information from your database. You can use queries to access certain information in your database.
 
 ### 3.3 Response {#response}
 
 After [querying the database](/appstore/connectors/external-database-connector/#query-database), you can view the data included in the query in the **Response** screen.
 
-If you like what you see, click **Use Response**. This will take you to the [Data Structure](#data-structure) screen where you can preview and create an entity from the response.
+If you are satisfied with the response, click **Use Response**. This will take you to the [Data Structure](#data-structure) tab where you can preview and create an entity from the response.
 
 ### 3.4 Response Structure {#data-structure}
 
-The **Data Structure** screen gives you a preview of an entity that can be created from the response of your query. You can adjust the name, or move back to a previous step. Click **Save Query & Create Entity** to create the entity in your domain model.
+The **Data Structure** tab displays a preview of an entity that can be created from the response of your query. You can adjust the name, or move back to a previous step. Click **Save Query & Create Entity** to create the entity in your domain model.
 
 ## 4 Read More
 
-To use the data in a microflow, see the custom action page (when it's ready) 
+To learn about how to use the data in a microflow, see the [Query External Database](/refguide/query-external-database/) activity. 

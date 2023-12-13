@@ -76,7 +76,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
     1. Add the action `GetJCoDestination`. This will retrieve the JCoDestination to communicate 
     with SAP system.
 
-        {{% alert color="info" %}}We recommend that you always use the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.{{% /alert %}}
+        {{% alert color="info" %}}Mendix recommends always using the `GetJcoDestination` action before using the BAPI. If the destination has already been registered it will not be registered again.{{% /alert %}}
 
     2. Add the action `CallBAPI` with the following parameters:
         

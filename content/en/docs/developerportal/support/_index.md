@@ -105,7 +105,7 @@ If, after your analysis, you suspect there is an issue with the Mendix Platform 
 
 ## 8 Product Support Period
 
-Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
+Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, Mendix recommends upgrading your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
 
 ## 9 Support for Different Deployment Strategies {#support-by-strategy}
 
@@ -156,8 +156,6 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 Private Mendix Platform provides a platform experience in on-premises or (virtual) private cloud environments. It is dependent on Mendix for Private Cloud and Kubernetes, and integrates with tooling in the customer's landscape. Please refer to [Private Mendix Platform](/private-mendix-platform/) documentation for [prerequisites](/private-mendix-platform-prerequisites/) to install the platform and set up [configurations](/private-mendix-platform-configuration/), as well as [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation for [supported environments](/developerportal/deploy/private-cloud-supported-environments/). 
 
 This offering is delivered, managed and supported by Certified Partners (or Certified Customers). If you run into issues regarding your private platform, please contact your Certified Partner for support.
-
-{{< figure src="/attachments/developerportal/support/private-mendix-platform.png"   width="40%"  >}}
 
 ### 9.4 SAP Business Technology Platform
 

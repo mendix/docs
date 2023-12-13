@@ -15,6 +15,6 @@ These step-by-step guides teach you how to build native mobile applications and 
 * [Create a Custom Developer App](/howto8/mobile/how-to-devapps/) – Create a custom developer app: a substitute for the Make It Native app which accommodates custom dependencies such as native widgets or fonts.
 * [Add Fonts to Your Native App](/howto8/mobile/native-custom-fonts/) - Add custom fonts to your native mobile apps.
 
-We recommend you use the Native Builder UI client to build apps. If you need to use the Native Builder CLI tool, however, see this collection of documents:
+Mendix recommends using the Native Builder UI client to build apps. If you need to use the Native Builder CLI tool, however, see this collection of documents:
 
 * [How to Build Apps Using the Native Builder CLI](/howto8/mobile/use-cli-docs/)

@@ -20,11 +20,11 @@ Escalations occur in support centers for a variety of reasons. An escalation man
 
 ### 2.1 Functional Escalation
 
-We use this process when the Mendix Support team is unable to resolve the issue or stay within the agreed timeline (meaning, the targeted time for resolution is exceeded). We assign the issue to another team based on the skill set required to resolve the issue.
+Mendix uses this process when the Mendix Support team is unable to resolve the issue or stay within the agreed timeline (meaning, the targeted time for resolution is exceeded). We assign the issue to another team based on the skill set required to resolve the issue.
 
 ### 2.2 Hierarchical Escalation
 
-We use this process as a communicative means to inform all the parties involved in a proactive manner of a potential SLA breach.
+Mendix uses this process as a communicative means to inform all the parties involved in a proactive manner of a potential SLA breach.
 
 The essence of our escalation management is to bring order, structure, focused management attention, and additional resources to those customer situations which could otherwise result in a high level of customer dissatisfaction and/or damage to the service provider's reputation.
 

@@ -21,7 +21,7 @@ With the use of Insights Hub IIoT for Makers, you have an integrated developer e
 
 Insights Hub IIoT for Makers packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
-This documentation will help you find out how to develop for Siemens Insights Hub. Alternatively, have a look at the Mendix Academy Learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
+This documentation will help you find out how to develop for Siemens Insights Hub. Alternatively, have a look at the Mendix Academy learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
 
 ### 1.1 Limitations
 
@@ -218,7 +218,7 @@ Drag the [entities](/refguide/external-entities/) you need into your domain mode
 
 To extract data from Insights Hub, your calls to the Insights Hub API need to be authenticated. This is done through the [Insights Hub IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *How To Use Marketplace Content*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *Using Marketplace Content*.
 
 In the **_Use me** folder of the *InsightsHubIIotAuthenticator* module set the following constants:
 
@@ -240,7 +240,7 @@ Set the **Error handling microflow** to be *InsightsHubIIoTAuthenticator.DH_Erro
 
 To extract data from Insights Hub, your calls to the Insights Hub API need to be authenticated. This is done through the [Insights Hub IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *How To Use Marketplace Content*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *Using Marketplace Content*.
 
 ### 5.3 Authenticating Insights Hub REST Calls {#authenticating}
 

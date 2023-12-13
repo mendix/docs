@@ -123,7 +123,7 @@ You can import your stories using an Excel file to Epics as follows:
 
 2. Click **Download** to download the Excel file template.
 
-   {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
+   {{% alert color="warning" %}}To prevent errors, Mendix recommends using this Excel file template to import your stories.{{% /alert %}}
 
 3. Open the Excel file. Enter the data for your stories as follows:
 

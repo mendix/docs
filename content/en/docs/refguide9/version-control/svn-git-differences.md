@@ -16,7 +16,7 @@ With Studio Pro version 9.12 and above, users can choose whether to start a new 
 For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*.
 
 {{% alert color="info" %}}
-For existing apps in Mendix 9, we recommend you to stick to SVN version control until planning an upgrade to Mendix 10, unless you require Git-specific capabilities.
+For existing apps in Mendix 9, Mendix recommends sticking to SVN version control until planning an upgrade to Mendix 10, unless you require Git-specific capabilities.
 
 Mendix 10 no longer supports SVN as version control system in Studio Pro. When planning to upgrade your app to Mendix 10, first migrate to Git within Mendix 9.
 {{% /alert %}}
@@ -44,9 +44,9 @@ The table below outlines the main differences between SVN and Git:
 
 ## 3 Differences in Revision Numbers
 
-In SVN, commits are done to a central server which enforces the commit order. These commits are represented with a number that is generally sequentially increasing (e.g. 1, 2, 3, 4, 5).
+In SVN, commits are done to a central server which enforces the commit order. These commits are represented with a number that is generally sequentially increasing (for example, 1, 2, 3, 4, 5).
 
-In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
+In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (for example, f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
 
 ## 4 Support for Fully Distributed Version Control
 

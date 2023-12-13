@@ -24,7 +24,7 @@ When you click a member's name, a pop-up window opens with their member profile.
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating (on the **Active Members** tab) or activating (on the **Deactivated Members** tab) members.
 
-For security reasons, we recommend that you deactivate an employee that is leaving your company (if the employee returns to your company, they can be activated as a member again).
+For security reasons, Mendix recommends deactivating an employee that is leaving your company (if the employee returns to your company, they can be activated as a member again).
 
 {{% alert color="info" %}}
 You cannot deactivate yourself.

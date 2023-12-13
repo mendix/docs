@@ -194,7 +194,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19, 21c
-* PostgreSQL: 11, 12, 13, 14, 15, 16
+* PostgreSQL: 12, 13, 14, 15, 16
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}
@@ -250,7 +250,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

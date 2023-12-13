@@ -139,3 +139,27 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 * **Height** (default: **580**) – the height value of the calendar
 
     {{< figure src="/attachments/appstore/widgets/calendar/calendar2.gif" >}}
+
+## 3 Example Configuration
+
+To configure an example Calendar widget in a basic way, follow these steps:
+
+1. Place the widget in a data container like a data view, list view, or template grid widget.
+1. Navigate to the **Data Source** tab and configure the data source type to retrieve a list of events. You can use a **Microflow** for this purpose.
+1. Configure the **Event** entity. For this example, create and select an entity named *Appointment* in your domain model with the following attributes: 
+    * title (string)
+    * start (data-time)
+    * end (data-time)
+    * allDay (Boolean)
+    * color (string)
+1. Select or create a microflow that retrieves a list of the calendar events. Use the **Retrieve** action to retrieve a list of **Appointments** from the database, and define this list as a return type.
+1. Configure the title, all day, start, end, and color attribute fields in the **View** tab. Select these attributes from the **Appointment** entity.
+
+Optionally, you can further configure the widget by following these steps:
+
+1. Choose the initial selected view in the **View** tab:
+    1. Select a **Day**, **Week**, or **Month** view as the default.
+1. In the **Events** tab, choose the **On Create** event and select **Call a Microflow**: 
+1. Create this microflow so that it opens a new page, like an overview edit page of the **Appointment** entity mentioned above. This way, when a time slot in the calendar is selected, you can add or edit a new event.
+1. Navigate to the **Size** tab and define the width and height of the widget so it suits your page.
+

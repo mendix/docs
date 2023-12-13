@@ -202,7 +202,7 @@ To obtain an API key for the implementation, follow these steps:
 To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
 1. Open your app in Studio Pro.
-2. Follow the instructions in [How to Use Marketplace Content](/appstore/overview/use-content/) to import the module into your app.
+2. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
@@ -232,7 +232,7 @@ A mini survey has the following opt-out rules:
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 * If the user has answered all questions, then the survey will not show again to the user.
 
-Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you use the **TEST_MODE** constant to avoid clearing every time.
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, Mendix recommends using the **TEST_MODE** constant to avoid clearing every time.
 
 {{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 

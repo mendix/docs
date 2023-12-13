@@ -20,7 +20,7 @@ To learn how to use this activity in a microflow and configure other aspects of 
 
 ## 2 Properties
 
-Double-click on the **Query External Database** activity to view its properties.
+Double-click the **Query External Database** activity to view its properties.
 
 In the **Query** section are the following properties:
 
@@ -32,4 +32,4 @@ In the **Output** section are the following properties:
 
 * **Return type** – the return type once the microflow is completed
 * **Use return value** – select **Yes** or **No**
-    * **List name** – if **Use return value** is set to **Yes**, then this is the name of the returned list
+    * **List name** – if **Use return value** is set to **Yes**, this is the name of the returned list

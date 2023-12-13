@@ -26,7 +26,7 @@ The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and 
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" >}}
 
-By adjusting the **View** (ICON) settings, you can display or hide the following columns:
+By adjusting the **View** ({{% icon name="view" %}}) settings, you can display or hide the following columns:
 
 * Status
 * Run ID
@@ -53,7 +53,7 @@ If you click **Run Manual Pipeline**, this launches a dialog box that lets you s
 
 For information about the **Design a Pipeline** button, see [Designing or Editing a Pipeline](#design-edit-pipeline), below.
 
-Click a run (or its **Details** (ICON) icon) to see the details of the run. Click **Run** (ICON) to run it again.
+Click a run (or its **Details** icon ({{% icon name="paper-clipboard" %}})) to see the details of the run. Click **Run** ({{% icon name="pipeline-run" %}}) to run it again.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
 
@@ -63,7 +63,7 @@ Click a run (or its **Details** (ICON) icon) to see the details of the run. Clic
 
 On the **Designs** tab, you can see all existing pipeline designs.
 
-By adjusting the **View** (ICON) settings, you can display or hide the following columns:
+By adjusting the **View** ({{% icon name="view" %}}) settings, you can display or hide the following columns:
 
 * Pipeline Name
 * Trigger
@@ -74,9 +74,9 @@ By adjusting the **View** (ICON) settings, you can display or hide the following
 * Created Date/Time
 * Status
 
-Click a pipeline (or its **Details** (ICON) icon) to see the pipeline's **Details** page. You can also edit the pipeline details, as described in [Designing or Editing a Pipeline](#design-edit-pipeline), below.
+Click a pipeline (or its **Details** icon ({{% icon name="paper-clipboard" %}})) to see the pipeline's **Details** page. You can also edit the pipeline details, as described in [Designing or Editing a Pipeline](#design-edit-pipeline), below.
 
-Click **Delete** (ICON) to delete a pipeline design.
+Click **Delete** ({{% icon name="trash-can" %}}) to delete a pipeline design.
 
 Click **Activity Log** to open the activity log, which matches the activity log shown on the **Environments** page.
 
@@ -90,7 +90,7 @@ The **Variables** tab lets you create variables.
 
 You can use the drop-down menu to filter to specific variable types.
 
-Click **Create New Key** to create a new key, or double-click an existing key (or click **More Options** (ICON) > **Edit**) to launch the **Edit Key** dialog box.
+Click **Create New Key** to create a new key, or double-click an existing key (or click **More Options** ({{% icon name="three-dots-menu-horizontal-small" %}}) > **Edit**) to launch the **Edit Key** dialog box.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/edit-key.png" alt="" width=60% >}}
 
@@ -102,7 +102,7 @@ To use a variable in the pipeline design, type `$` and select your desired varia
 
 The **Settings** tab lets you configure pipeline run users.
 
-On a user, click the **Configure** (ICON) icon to launch the **Add New Run User** dialog box. You can choose **Another User** and specify that user's details, or you can choose **Me**. Click **Delete** (ICON) to remove a user.
+On a user, click **Configure** ({{% icon name="cog" %}}) to launch the **Add New Run User** dialog box. You can choose **Another User** and specify that user's details, or you can choose **Me**. Click **Delete** ({{% icon name="trash-can" %}}) to remove a user.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/add-new-run-user.png" alt="" width=60% >}}
 
@@ -127,10 +127,10 @@ From there, you can customize your pipeline. If you choose to work from an empty
 
 You then have a variety of customization options:
 
-* Click **More Options** (ICON) to edit the pipeline name, duplicate it, or delete it.
+* Click **More Options** ({{% icon name="paper-clipboard" %}}) to edit the pipeline name, duplicate it, or delete it.
 * Expand a step to customize or delete it
-* Use the six-dot drag handle (ICON) to rearrange steps
-* Add a step by clicking **Add** (ICON), which launches the **Pipeline Steps** dialog box:
+* Use the drag handle, which appears when you hover over a step, to rearrange steps
+* Add a step by clicking **Add** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" >}}
 

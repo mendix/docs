@@ -17,6 +17,18 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
+
+## December 14
+
+
+#### New Features
+
+* We added Priority status tags to FeedbackItems in [Feedback](/developerportal/app-insights/feedback/)
+* We added image upload to comments for communication between Reporter and Makers in [Feedback](/developerportal/app-insights/feedback/)
+
+#### Improvements
+* We updated PDS and and support for priority badges for FeedbackItems in [Feedback](/developerportal/app-insights/feedback/)
+
 ## December 7
 
 #### Improvements

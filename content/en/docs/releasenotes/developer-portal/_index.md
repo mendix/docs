@@ -17,7 +17,20 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
-## December 7
+### December 14, 2023
+
+#### Improvements
+
+* We display a warning sign in your [Project Settings](/developerportal/collaborate/general-settings/) if a project is without a Scrum Master or if a licensed app is without a Technical Contact. It is theoretically possible a project is left without a Scrum master or a Technical Contact if that person has submitted a Forget Me request with us
+* We merged the Team History and the [Project History](/developerportal/collaborate/general-settings/#history) page into one and we made sure you can download the History log. This is in preparation of the implementation of a audit trail retention policy sometime soon
+* If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first
+* We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix cloud](/developerportal/deploy/#3-mendix-cloud)
+
+#### Fixes
+
+* We fixed an issue where the [Invitation](/developerportal/general/team/#inviting) wizard would not give the user feedback if someone was invited to a project that already had a pending invitation
+
+### December 7, 2023
 
 #### Improvements
 

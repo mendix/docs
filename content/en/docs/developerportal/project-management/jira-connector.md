@@ -99,6 +99,6 @@ After you activated the Jira connector, you can review the configuration details
 
 If you need to connect to a different Jira environment, or need to rotate the API key used by the Jira connector, click **Edit Connection Details**. If you want to switch to a different Jira board within the same environment, click **Change Board**.
 
-In order for the Jira connector to work, we cache some information from your Jira board in our system. This include the name of the esitimation field that you use to set story points, as well as the status schema that you use in your board. If this information changes in Jira, you may need to refresh the cache by clicking **Reconnect**.
+In order for the Jira connector to work, Mendix caches some information from your Jira board in our system. This include the name of the esitimation field that you use to set story points, as well as the status schema that you use in your board. If this information changes in Jira, you may need to refresh the cache by clicking **Reconnect**.
 
-If you no longer wish to use the Jira connector, simply click **Deactivate Connection**. This will revert your project automatically to [Epics](/developerportal/project-management/epics/) as a project management tool.
+If you no longer wish to use the Jira connector, simply click **Deactivate Connection**. This will revert your project management tool automatically to [Epics](/developerportal/project-management/epics/).

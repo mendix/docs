@@ -58,7 +58,7 @@ To submit a request with Mendix Support, follow these steps:
 
         {{% alert color="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
 
-    * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/control-center/#company)
+    * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/control-center/company-settings/)
     * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/appstore/partner-solutions/ats/))
     * **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/appstore/partner-solutions/apd/))
     * **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication/) (for example, when you get a new phone)

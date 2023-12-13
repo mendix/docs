@@ -104,12 +104,12 @@ The following steps will change the permissions of a team member to an environme
       "member": {
         "userId": "john.doe@domain.tld"
       },
-      "canDeployApp": true,
-      "canManageBackups": false,
-      "canViewAlerts": false,
-      "canAccessAPI": false,
-      "canViewLogs": false,
-      "canManagePrivileges": false
+      "canDeployApp": "true",
+      "canManageBackups": "false",
+      "canViewAlerts": "false",
+      "canAccessAPI": "false",
+      "canViewLogs": "false",
+      "canManagePrivileges": "false"
     }
     …
     ```

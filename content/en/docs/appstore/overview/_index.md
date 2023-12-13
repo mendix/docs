@@ -25,7 +25,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Use Marketplace Content](/appstore/overview/use-content/).
+This document describes the different sections of the Mendix Marketplace. More information in this category can be found in [My Marketplace](/appstore/overview/my-marketplace/) and [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 2 Marketplace Home Page {#home}
 
@@ -35,7 +35,7 @@ The [Marketplace home page](https://marketplace.mendix.com/)  is your entry poin
 * Explore content via the **Content Types** and filters described below
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](/appstore/overview/my-marketplace/) as well as your company's [private content](/appstore/overview/my-marketplace/#company-content)
 * Click **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
-* Click **Add Content** to [share new Marketplace content](/appstore/overview/share-content/) you have developed
+* Click **Add Content** to [share new Marketplace content](/appstore/sharing-content/) you have developed
 
 {{< figure src="/attachments/appstore/overview/overview/home-page.png" >}}
 
@@ -57,16 +57,18 @@ The following filter options are also available:
 * **Support** – for details, see the [Marketplace Content Support](#support) section below
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
-* **Visibility** – for [Public](/appstore/overview/share-content/#public) or [Private](/appstore/overview/share-content/#private) content
+* **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
 
-For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *How to Use Marketplace Content*.
+For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/overview/use-content/#downloading) section of *Using Marketplace Content*.
 
 ## 3 Component Details Page {#details}
 
 Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.
 
 {{< figure src="/attachments/appstore/overview/overview/component-details.png" >}}
+
+### 3.1 Header
 
 The header for a component presents the following details:
 
@@ -79,7 +81,7 @@ The header for a component presents the following details:
     * **Start with Template** for starter templates – click this to use the template
     * **Download** for other content types – click this to download the component
     * **Contact Us** – click this to contact Mendix or the community supplier
-* The partner icon is applied to components that are supported by a partner:
+* <a id="partner-icon"></a>The partner icon is applied to components that are supported by a partner:
 
     {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  >}}
 
@@ -90,7 +92,7 @@ The header for a component presents the following details:
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
-* The type of [license](/appstore/overview/share-content/#license) for the component
+* The type of [license](/appstore/sharing-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
@@ -98,12 +100,20 @@ The **Support** section presents the category of support Mendix offers for the c
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
+### 3.2 Tabs
+
 The component details page also presents the following tabs:
 
-* **Overview** – contains a description and screenshot of the components
-* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots [platform-supported](/appstore/overview/#category) components are documented in the various categories of this *Marketplace Guide*
-* **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*)
-* **Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which opens a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
+* **Overview** – contains a description and screenshots of the component
+* **Documentation** – includes details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots
+    * [Platform-supported components](/appstore/overview/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/)
+* **Releases** – lists all the versions of the component along with details like the **Framework version** and the **UUID**
+    * The component versions can be downloaded by clicking **Download**
+    * The **UUID** can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*
+* **Reviews** – user reviews of the component
+    * Click **Add Review** to open a section where you can add text, rate the component, and submit the review
+    * Your reviews are listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**
+    * If you are a developer of the component, you can **Reply** to a review
 * **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)
 
 ## 4 Marketplace Content Support {#support}
@@ -129,18 +139,18 @@ We are always curious about and grateful for your feedback. The way you communic
 The applicable level of service for Mendix-supported Marketplace content is equal to the Mendix SLA you have acquired. In other words, the same SLA conditions apply to support on Marketplace content. This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
 
 {{% alert color="warning" %}}
-Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported.
+Content in this support category is supported as-is. When changing the content, the module will no longer be platform-supported.
 {{% /alert %}}
 
 #### 4.2.2 Deprecated Category {#deprecated}
 
-We will move Platform-supported content into this category when we consider the content end-of-life. We factor in popularity, the availability of improved alternative(s), and industry standards when deciding on this.
+Mendix moves platform-supported content into this category when the content is considered end-of-life. These decisions factor in popularity, the availability of improved alternative(s), and industry standards.
 
 Support for content in this category is limited and is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
 
 #### 4.2.3 Community Category {#community-category}
 
-Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
+Support on content in this category is up to the user or organization providing the content. Mendix recommends contacting the owner of the content in case of questions or issues via the following methods:
 
 * Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages

@@ -26,15 +26,15 @@ Before you delete or deactivate an app, make sure you have completed the followi
 
 * You need to have the **Scrum Master** role in your team (or a custom role with the **App Settings** permission).
 
-{{% alert color="info" %}}If you are a [Mendix Admin](/control-center/#apps), you can delete, deactivate, and activate all the company's apps, with or without team members for the app.{{% /alert %}}
+{{% alert color="info" %}}If you are a [Mendix Admin](/control-center/apps/), you can delete, deactivate, and activate all the company's apps, with or without team members for the app.{{% /alert %}}
 
 ## 3 Leaving, Deleting, or Deactivating an App
 
 If you want to leave and delete your app, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top menu bar, and select the app that you want to leave.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select the app that you want to leave.
 
-2. In the app's sidebar menu, select **Settings**.
+2. In the navigation pane, select **Settings**.
 
 3. At the bottom of the **General** tab, click one of the following buttons:
 

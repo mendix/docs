@@ -10,6 +10,16 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
+## iOS 1.2.1 / Android 1.2.1
+
+**Release date: November 24, 2023**
+
+### Features
+
+* We added new apps to Showcase:
+    * Citrus Grove Retail: a grocery store online shopping app
+    * New Garden County Inspection: an inspection and task assignment app
+
 ## iOS 1.2.0 / Android 1.2.0
 
 **Release date: October 16, 2023**

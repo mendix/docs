@@ -88,7 +88,7 @@ Would produce the following button and SVG:
 
 ### 2.4 Using SVGs in Pluggable Native Widgets {#svg-pluggable}
 
-To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
+To use an SVG in a pluggable native widget's image property, Mendix recommends using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
 Here is an example of using the `Image` component:
 
@@ -199,7 +199,7 @@ Before [adding fonts manually](#manual):
 
 * Understand the native mobile [local build process](/howto/mobile/native-build-locally/)
 * Locally check out your repository 
-* Understand git and have a git tool installed
+* Understand Git and have a Git tool installed
 * Have XCode installed for the iOS sections below
 
 ### 3.3 Adding Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}

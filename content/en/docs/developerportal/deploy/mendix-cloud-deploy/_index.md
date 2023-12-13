@@ -19,7 +19,7 @@ aliases:
 
 Mendix Cloud is a public cloud service for Mendix applications; it is the default deployment option for Mendix applications. You can either deploy a limited [Free App](https://www.mendix.com/evaluation-guide/evaluation-learning/getting-started/#evaluate-before) or an app running on a licensed cloud node.
 
-Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated works in exactly the same way as Mendix Cloud, but it runs on your own virtual private cloud and hosts only your company's apps.
+Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running apps of only one organization.
 
 ### 1.1 Free App {#free-app}
 
@@ -162,14 +162,12 @@ To deploy your app directly from Studio Pro, follow these steps:
 You can also deploy an app from the Team Server. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Apps** in the top navigation panel.
-3. Select your app.
-4. Go to **Environments**.
-5. Click **Create Package from Teamserver**.
-6. Select your desired branch and revision and click **Next**.
-7. Give the build a version number and click **Build this revision**.
+1. Open your app's **Environments** page.
+1. Click **Create Deployment Package**.
+1. Select your desired branch and revision and click **Next**.
+1. Give the build a version number and click **Build this revision**.
 
-The package is now deployed to the cloud.
+The package is now deployed to Mendix Cloud.
 
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
@@ -204,7 +202,7 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected"  width=60% >}}
 
-* Alternatively, in the top bar of Studio Pro, click **Run ▶** or **Publish**.
+* Alternatively, in the top bar of Studio Pro, click **Run** (▶) or **Publish**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" width=20% >}}
 

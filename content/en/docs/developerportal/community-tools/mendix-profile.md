@@ -204,7 +204,7 @@ On the **Activity** tab, you can see a list of the last 20 public events for you
 
 ## 10 User Settings {#settings}
 
-You can edit the information on your Mendix Profile by clicking the **User Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
+You can edit the information on your Mendix Profile by clicking **User Settings**. The **Settings** page has a navigation pane that allows you to edit the sections described below.
 
 ### 10.1 Profile {#profile}
 
@@ -270,7 +270,7 @@ Follow these steps to merge your profiles:
 6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
 
 {{% alert color="info" %}} 
-With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/control-center/#members).
+With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/control-center/members/).
 {{% /alert %}}
 
 #### 10.1.3 Merge Result {#merge-profile-result}
@@ -295,7 +295,7 @@ It is not possible to separate profiles after they have been merged. Double-chec
 
 This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
-By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/#security).
+By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/security/).
 
 You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking the menu button (**...**) of the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 

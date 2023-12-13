@@ -17,6 +17,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### November 22, 2023
+
+#### Improvements
+
+* We improved the layout and display of the Metrics page. Metrics can now be filtered via drop-down menus that set the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs. We also updated the visual style of the graphs. For more information, see [Metrics](/developerportal/operate/metrics/).
+* We improved the layout and functionality of the Logs page. The log archives now display file size for app and access logs, and they include an option to filter logs by date. For more information, see [Logs](/developerportal/operate/logs/).
+* The Logs page now has an activity log, which reports data on who has viewed or downloaded the logs. The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
+
 ### November 16, 2023
 
 #### Improvements
@@ -464,7 +472,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Announcement
 
-* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). Mendix recommends using the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/), which handles long-running backup and restore jobs more robustly.
 
 ### June 14, 2021
 

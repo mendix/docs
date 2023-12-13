@@ -342,7 +342,7 @@ Dependency management and auto-linking are not included as part of the Native Mo
 
 **Release date: February 12, 2021**
 
-#### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
+#### Native Dependency Management Beta (with Studio Pro 9.0.3 Beta)
 
 With the Mendix Studio Pro 9.0.3 beta release, we introduced native dependency management. Using native dependency management, widgets 
 and JavaScript actions can now define their native dependency requirements and let the Mendix Native Mobile Builder link them in apps.
@@ -429,7 +429,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 **Release date: October 27, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15/) and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro 8.15](/releasenotes/studio-pro/8.15/) and higher.
 
 #### Features
 

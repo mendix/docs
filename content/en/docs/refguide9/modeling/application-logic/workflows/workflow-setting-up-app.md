@@ -39,11 +39,11 @@ Finally, go to the Workflows tab in your [app settings](/refguide9/app-settings/
 
 ## 4 Customizing Workflow Commons
 
-While Workflow Commons does provide useful documents out-of-the-box, you might have the need to change the content and, for example, make pages company-specific. When doing so, we recommend that you make a copy of the document that you will be changing to a local module called **WorkflowCommonsCustomizations**, so that you do not accidentally overwrite your changes in the future when upgrading to a newer version. Feel free to also browse around in the **Private** folder of the module to discover the snippets and sub-microflows.
+While Workflow Commons does provide useful documents out-of-the-box, you might have the need to change the content and, for example, make pages company-specific. When doing so, Mendix recommends making a copy of the document that you will be changing to a local module called **WorkflowCommonsCustomizations**, so that you do not accidentally overwrite your changes in the future when upgrading to a newer version. Feel free to also browse around in the **Private** folder of the module to discover the snippets and sub-microflows.
 
 ## 5 Workflow Best Practices
 
-We recommend the following best practices when working with workflows:
+Mendix recommends the following best practices when working with workflows:
 
 * When creating a user task, add a short description of the target users to the caption of the task. An example could be *HR: Schedule onboarding training* in an employee onboarding workflow.
 * When creating a microflow for a system task, prefix it with **WF\_**, so everyone knows it is being used in a workflow.

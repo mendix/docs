@@ -1,9 +1,9 @@
 ---
-title: "Catalog Administration"
+title: "Catalog"
 url: /control-center/catalog-admin/
 category: "Control Center"
-weight: 15
-description: "Describes the Mendix Admin functions for Mendix Admin and curators."
+weight: 60
+description: "Describes the catalog administration in the Mendix Control Center."
 tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 aliases:
     - /control-center/data-hub-admin/
@@ -12,7 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-In the [Catalog](/control-center/#catalog) page of Control Center, you can perform the following operations:
+An organization's Catalog requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
+
+In the [Catalog](/control-center/catalog-admin/) page of Control Center, you can perform the following operations:
 
 * Assign and manage [Curators](#curator)
 * Invite and manage custom [Owners](#custom-owners) (who have already been added as business or technical owners in the Catalog)

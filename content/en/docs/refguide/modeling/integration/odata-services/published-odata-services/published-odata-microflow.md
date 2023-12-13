@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-As of Mendix 10.2.0, Studio Pro allows you to publish microflows as part of an OData service. A published microflow will be exposed as an [external action](/refguide/call-external-action/) which can be called by an application consuming this service. This allows you to model and expose operations that are more complex than straightforward create, read, update, and delete operations on a single entity.
+As of Mendix 10.2.0, Studio Pro allows you to publish microflows as part of an OData service. A published microflow becomes an [external action](/refguide/call-external-action/) which can be called by an application consuming this service. This allows you to model and publish operations that are more complex than straightforward create, read, update, and delete operations on a single entity.
 
 ## 2 Adding or Editing a Published Microflow
 

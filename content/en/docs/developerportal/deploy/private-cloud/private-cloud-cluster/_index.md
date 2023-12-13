@@ -54,7 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
-4. Open the the [Global Navigation Menu](/developerportal/#global-navigation) and select **Deployment**.
+4. Open the the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
 5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
@@ -186,7 +186,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
 
-    {{% alert color="info" %}}We recommend running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
+    {{% alert color="info" %}}Mendix recommends running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
 
 #### 4.3.1 Base Installation {#base-installation}
 
@@ -457,7 +457,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 {{% alert color="warning" %}}
-Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
+Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. Mendix recommends making a backup before applying any changes.
 {{% /alert %}}
 
 ### 6.1 Endpoint (network) Configuration {#advanced-network-settings}
@@ -923,7 +923,7 @@ spec:
 You can set the following metrics configuration values:
 
 * `mode`: metrics mode, `native` or `compatibility`. `native` mode is only available for Mendix 9.7 and above. See [Metrics Generation Modes](/developerportal/deploy/private-cloud-monitor/#metrics-generation-modes) in *Monitoring Environments in Mendix for Private Cloud* for more information.
-* `interval`: Interval between Prometheus scrapes specified in ISO 8601 duration format (e.g. 'PT1M' would be an interval of one minute). This should be aligned with your Prometheus configuration. If left empty it defaults to 1 minute (matching the default Prometheus scrape interval). This attribute is only applicable when `mode` is `native`.
+* `interval`: Interval between Prometheus scrapes specified in ISO 8601 duration format (for example, 'PT1M' would be an interval of one minute). This should be aligned with your Prometheus configuration. If left empty it defaults to 1 minute (matching the default Prometheus scrape interval). This attribute is only applicable when `mode` is `native`.
 * `mxAgentConfig`: configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to disable the instrumentation agent. This attribute is only applicable when `mode` is `native`.
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
@@ -1016,9 +1016,9 @@ Memory-based metrics should not be used for autoscaling.
 Mendix Operator version 2.4.0 or above has the APIs required by the vertical pod autoscaler.
 
 {{% alert color="warning" %}}
-Vertical pod autoscaling is still an experimental, optional Kubernetes addon.
+Vertical pod autoscaling is still an experimental, optional Kubernetes add-on.
 
-We recommend using *horizontal* pod autoscaling to adjust environments to meet demand.
+Mendix recommends using horizontal pod autoscaling to adjust environments to meet demand.
 
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
@@ -1357,6 +1357,7 @@ To remove the annotation:
 ```shell
 kubectl -n {namespace} annotate ingress {ingress-object} {annotationKey}-
 ```
+
 {{% /alert %}}
 
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
@@ -1488,8 +1489,8 @@ For Kubernetes:
 kubectl -n {namespace} get storageplan
 kubectl -n {namespace} delete storageplan {StoragePlanName}
 ```
-{{% /alert %}}
 
+{{% /alert %}}
 
 #### 7.2.5 Custom Core Resource Plan
 

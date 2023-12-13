@@ -3,6 +3,16 @@
 // _front-page.scss is only custom styling page not from Docsy/Bootstrap
 @import "front-page";
 
+@font-face { // MvM - Added for MxDock by request in #docs 2023-12-08
+    font-family: "Patron";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Patron"), url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2"),
+      url("/fonts/patron/PatronWEB-Medium.woff") format("woff");
+    unicode-range: U+000-5FF; /* Latin glyphs */
+}
+
 // _alert.scss - Style alert boxes
 
 .alert {

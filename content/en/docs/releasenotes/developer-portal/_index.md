@@ -20,14 +20,11 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## December 14
 
-
 #### New Features
 
-* We added Priority status tags to FeedbackItems in [Feedback](/developerportal/app-insights/feedback/)
-* We added image upload to comments for communication between Reporter and Makers in [Feedback](/developerportal/app-insights/feedback/)
+*  In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
 
-#### Improvements
-* We updated PDS and and support for priority badges for FeedbackItems in [Feedback](/developerportal/app-insights/feedback/)
+*  In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 ## December 7
 

@@ -183,6 +183,7 @@ The input and output for this service are shown in the table below:
 When invoking a model the error code 404 indicates that the targeted resource was not found.
 
 Possible root causes for this error include:
-- You don't have access to the model in the specified AWS region. Make sure to select the AWS Region where you have model access.
-- The model you are trying to invoke is deprecated. Please confirm that the model-id you specified is currently available in Amazon Bedrock. 
+1. You don't have access to the model in the specified AWS region. Make sure to select the AWS Region where you have model access.
+   You have an overview of models accessible to you in the AWS Management Console, in the [*Model Access* section of your Amazon Bedrock environment](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess).
+3. The model you are trying to invoke is deprecated. Please confirm that the model-id you specified is currently available in Amazon Bedrock. 
 

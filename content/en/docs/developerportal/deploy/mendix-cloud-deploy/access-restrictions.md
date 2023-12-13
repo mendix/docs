@@ -81,7 +81,7 @@ For each IP range, you can specify a **Name** for the range and a range of addre
 To apply a restriction to a specific application environment, follow these steps:
 
 1. In the Developer Portal, open the **Environment** page for your app.
-2. Click the **Details** icon on the desired environment.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 3. Go to the **Network** tab.
 4. The **Path Based Access Restrictions** section allows for applying access restrictions to a single environment.
 
@@ -122,7 +122,7 @@ To restrict access to the app to an IP range, follow these steps:
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/scenario1.png" alt="IP ranges added to the access restriction profile" >}}
 
 5. Save the access restriction profile.
-6. Go to the **Deploy** tab of the **Environments** page. Click the **Details** icon on the desired environment.
+6. Go to the **Deploy** tab of the **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 7. Switch to the **Network** tab.
 8. Select the top-level path (`/`) and click **Edit**.
 
@@ -152,7 +152,7 @@ To add this additional access restriction profile, follow these steps:
 2. Create a new access restriction profile.
 3. Upload the certificate of the internal CA that is used to sign the client certificates.
 4. Save the new access restriction profile.
-5. Go to the **Deploy** tab of the **Environments** page. Click the **Details** icon on the desired environment.
+5. Go to the **Deploy** tab of the **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 6. Switch to the **Network** tab.
 7. Edit the `/ws/` path of the environment to apply the new access restriction profile. This overrides the default profile (for the top level `/`) for the selected path (`/ws/`).
 

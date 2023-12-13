@@ -79,7 +79,7 @@ To create a new app, perform the following steps:
 
     For step-by-step examples and guides for new Mendix developers, refer to the following pages:
 
-    * [Quickstart guides](/quickstarts/)
+    * [Quick Starts](/quickstarts/)
     * [Learning path: Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer)
 
 ## 5 Managing Your App

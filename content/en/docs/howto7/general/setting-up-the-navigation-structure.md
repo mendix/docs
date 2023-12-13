@@ -26,7 +26,7 @@ This section will explain how to set the default home page. Please note that thi
 
 2. Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
 3. Next to **Home pages** > **Default home page**, click **Select**.
-4. Select the page you want to use as default home page. In this case, we use *Homepage.*
+4. Select the page you want to use as default home page. In this case, *Homepage* is used.
 
     {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581309.png" >}}
 

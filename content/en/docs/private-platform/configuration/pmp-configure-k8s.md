@@ -8,7 +8,7 @@ tags: ["private mendix platform",  "private platform", "private marketplace", "k
 
 ## 1 Introduction
 
-This article explains the configuration options available when configuring a Continuous Integration and Delivery (CI/CD) solution for Private Mendix Platform on a Kubernetes Cluster.
+This document explains the configuration options available when configuring a Continuous Integration and Delivery (CI/CD) solution for Private Mendix Platform on a Kubernetes Cluster.
 
 ### 1.1 Prerequisites
 

@@ -21,7 +21,7 @@ With Mendix, you can create different channels (for example, responsive, native 
 
 As you begin mobile development with Mendix, our [Getting Started with Mobile](/refguide9/mobile/getting-started-with-mobile/) guide can help you learn the basics. This how-to teaches you how to create a native mobile Mendix app. After you create it, you will view your app on a mobile device using our [Make It Native](/releasenotes/mobile/make-it-native-parent/) testing app. Getting Started with Mobile is a lean guide designed to show the basics of mobile development.
 
-For a broader introduction to Mendix development, you may also use the [Quickstarts](/quickstarts/) to learn some Studio Pro fundamentals:
+For a broader introduction to Mendix development, you may also use the [Quick Starts](/quickstarts/) to learn some Studio Pro fundamentals:
 
 * Learn Mendix Studio Pro's UI 
 * Make a web app that uses the Domain Model, dynamic data, and handles logic with a microflow
@@ -49,7 +49,7 @@ After you have built your application and tested it on end-user devices, you may
 The following documents will help you understand data syncing, accelerate your app's performance, and more:
 
 * [Optimizing Native Startup](/refguide9/mobile/building-efficient-mobile-apps/native-startup/) – This guide teaches you how to speed up your native app's startup time.
-* [Logging In Native Apps](/refguide9/mobile/building-efficient-mobile-apps/logging/) – In Mendix Studio Pro v9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
+* [Logging In Native Apps](/refguide9/mobile/building-efficient-mobile-apps/logging/) – In Mendix Studio Pro 9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
 * [Offline-First Data](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 
 ## 6 Using Mobile Capabilities

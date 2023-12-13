@@ -11,5 +11,3 @@ Here is an example:
 There is also an optional `color` attribute, used as follows:
 
 > Click **Delete** ({{% icon name="alert-circle" color="red" %}}).
-
-If one of these SVG files needs updating, or a new one needs to be added, contact #docs on Slack.

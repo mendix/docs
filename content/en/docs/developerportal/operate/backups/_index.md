@@ -114,7 +114,7 @@ For more information, see the [Restoring a Backup](/developerportal/operate/rest
  
 ### 3.5 Details {#backups-details}
 
-You can view details of a backup by clicking the **More Options** icon and then **Details**. You will see the following details:
+You can view details of a backup by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then **Details**. You will see the following details:
 
 | Backup Details                      | Description                                                                                   |
 | :---------------------------------- | :-------------------------------------------------------------------------------------------- |

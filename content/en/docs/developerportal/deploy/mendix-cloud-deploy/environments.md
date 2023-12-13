@@ -47,7 +47,7 @@ To deploy a package, transporting it from the Team Server to the selected enviro
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-icon.png" alt="" >}}
 
-If you click the **More Options** icon on a package, you can do the following:
+If you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a package, you can do the following:
 
 * View details, including the package size, description, build output, and an overview of the environments that are running the package
 * Delete the package
@@ -113,7 +113,7 @@ You can perform the following actions in this section:
 * Search for an environment – Find a specific environment using the **Search** field.
 * View an environment's details – Go to the environment's [Details](/developerportal/deploy/environments-details/) page by clicking the **Details** icon.
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
-* Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking the **More Options** icon and selecting **Move Up** or **Move Down**.
+* Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="" >}}
 

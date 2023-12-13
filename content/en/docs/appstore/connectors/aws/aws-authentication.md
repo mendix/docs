@@ -84,7 +84,7 @@ Temporary credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM R
 
 You can implement temporary credentials in one of the following ways:
 
-* By using the **GetSessionCredentials** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
+* By using the **GetTemporaryCredentials** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
 * By using credentials generated outside of Studio Pro, for example, through the AWS command-line interface. For more information, see [Using Credentials Generated Outside of Studio Pro](#credentials-cli).
 
 #### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}

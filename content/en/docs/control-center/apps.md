@@ -69,7 +69,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 3 Mendix Free Cloud
 
-The **Mendix Free** Cloud tab shows all the apps that are deployed on the Mendix Free Cloud.
+The **Mendix Free** Cloud tab shows all the free apps that are deployed on the Mendix Cloud.
 
 You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
 
@@ -231,9 +231,9 @@ The consequences of deactivating and deleting an app are as below:
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.
 {{% /alert %}}
 
-## 10 Exporting Apps to an Excel File {#export-to-excel}
+## 10 Exporting the Information About Apps to an Excel File {#export-to-excel}
 
-On each tab with an overview of apps, you can export information about apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
+On each tab with an overview of apps, you can export information of apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 
 To export information about ALL the apps in the table, click **Export All** on the upper-top corner. 
 

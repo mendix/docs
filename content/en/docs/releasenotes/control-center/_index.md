@@ -19,9 +19,9 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 We upgraded the [Apps](/control-center/apps/) page as follows:
 
-* You can now see the infomation of your apps combined with the information of their environments. (Currently only free and licensed apps deployed on the Mendix Cloud have distinct tabs, but eventually all deployment options will be supported.)
-* You can now use different kinds of filters and sorting options to analyze your application landscape more closely.
-* You can check the Mendix versions that are deployed in your repository to check if your Mendix versions are up to date.
+* You can now see the infomation of your apps combined with the information of their environments. (Currently only licensed and free apps deployed on the Mendix Public Cloud have distinct tabs, but eventually all deployment options will be supported.)
+* You can use different kinds of filters and sorting options to analyze your application landscape more closely.
+* You can check the Mendix version deployed in your repository to check whether your Mendix version is up to date.
 * You can now update Technical Contact on the **Apps** page.
 * You can deactivate multiple free apps in one go.
 * You can [export the information of apps to an Excel file](#control-center/apps/#export-to-excel).

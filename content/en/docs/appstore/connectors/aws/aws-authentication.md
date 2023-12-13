@@ -141,14 +141,21 @@ After enabling the certificate, you can now configure the microflow that authent
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
-3. Drag a **Microflow call** activity from the **Toolbox** into the work area of the microflow.
-4. Double-click the new activity and select the **GetTemporaryCredentials** microflow from the **Operations** folder.
-5. Select the **AWSRegion** parameter and click **Edit parameter value**.
-6. Select **Expression** and enter the corresponding AWS region from the enumeration **ENUM_Region**. Then click **OK**.
-7. Close the popup with another click on **OK**.
+3. Drag a **GetTemporaryCredentials** activity from the **Toolbox** into the work area of the microflow.
+
+ {{< figure src="toolbox-temporary" >}}
+
+ {{< figure src="microflow-temporary" >}}
+
+4. Select the **AWSRegion** parameter and click **Edit parameter value**.
+5. Select **Expression** and enter the corresponding AWS region from the enumeration **ENUM_Region**. Then click **OK**.
+
+ {{< figure src="set-awsregion-param" >}}
+
+6. Close the popup with another click on **OK**.
 
 The activity returns a **TemporaryCredentials** object that provides the required AWS authentication credentials for your microflow.
-8. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
+7. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
 
 ##### 4.1.1.4 Configuring the Local Setup
 
@@ -188,7 +195,12 @@ To create static credentials with the **GetStaticCredentials** activity in your 
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
-3. Drag the **GetStaticCredentials** microflow from the **App Explorer** into the work area of the microflow.
+3. Drag the **GetStaticCredentials** microflow from the **Toolboxr** into the work area of the microflow.
+
+ {{< figure src="toolbox-static" >}}
+
+ {{< figure src="microflow-static" >}}
+
 4. Create a new **Configuration** in the **Settings** of your app.
 5. In the **Constants** tab, add the **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites) as **AWSAuthentication.AccessKey** and **AWSAuthentication.SecretAccessKey** respectively. You can decide how to provide them securely in your app.
 

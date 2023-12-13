@@ -142,7 +142,7 @@ After enabling the certificate, you can now configure the microflow that authent
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
 3. Drag a **Microflow call** activity from the **Toolbox** into the work area of the microflow.
-4. Double-click the new activity and select the **GetTemporary** microflow from the **Operations** folder.
+4. Double-click the new activity and select the **GetTemporaryCredentials** microflow from the **Operations** folder.
 5. Select the **AWSRegion** parameter and click **Edit parameter value**.
 6. Select **Expression** and enter the corresponding AWS region from the enumeration **ENUM_Region**. Then click **OK**.
 7. Close the popup with another click on **OK**.
@@ -177,7 +177,7 @@ If you have credentials that have been generated without the help of the **Crede
     * **SecretAccesskey** - your secret access key
     * **Token** - your token
     * **Expiration** DateTime that the credentials expire
-    * 
+
 You can then use the above as a valid set of credentials.
 
 ### 4.2 Implementing Static Credentials {#static}

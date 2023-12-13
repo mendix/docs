@@ -42,7 +42,7 @@ Optionally, you can set various environments in the **config/environments.json**
 To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
 
 ```shell {linenos=false}
-npm run package -- --env.target=test  # target the test endpoint for ARM architecture
+npm run package -- --env target=test  # target the test endpoint for ARM architecture
 ```
 
 Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 

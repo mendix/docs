@@ -197,7 +197,7 @@ In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints
 
 ### 9.3 Entity access editor
 
-In Studio Pro version 10.6 a new access rule editor was releases in Beta. When enabling this option the new editor will be used in the *Access rules* tab of the entity properties dialog.
+In Studio Pro version 10.6 a new access rule editor was releases in Beta. When enabling this option the new editor will be used in the *Access rules* tab of the entity properties dialog. For more information, see [Access Rule Editor (Beta)](/refguide/access-rule-editor-beta/).
 
 ## 10 Read More
 

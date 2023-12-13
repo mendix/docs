@@ -13,7 +13,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click the **Details** icon by the environment you want to view.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
@@ -62,7 +62,7 @@ When your app is running, you can see the following action buttons:
 
 When your app is stopped, you see this set of action buttons instead:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-stopped.png" alt="Available actions when the app is stopped" width=40% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-stopped.png" alt="Available actions when the app is stopped" max-width=40% >}}
 
 * **Start Application** – This starts the application.
 * **Stop Application** – This stops the application.

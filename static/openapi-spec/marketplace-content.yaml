@@ -95,7 +95,7 @@ components:
     contentId:
       name: contentId
       in: path
-      description: "This is the identifier of the content."
+      description: "This is the identifier of the content. This represents the number that is available on the details page of the content. For example, it is '170' for 'https://marketplace.mendix.com/link/component/170'."
       required: true
       schema:
         type: integer

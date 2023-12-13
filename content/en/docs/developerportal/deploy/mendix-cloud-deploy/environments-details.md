@@ -11,7 +11,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click the **Details** icon by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 

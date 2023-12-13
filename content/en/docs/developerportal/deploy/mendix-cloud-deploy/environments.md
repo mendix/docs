@@ -81,7 +81,7 @@ For standard plans, the **Environments** section shows the following information
 
 You can perform the following actions in this section:
 
-* View an environment's details – Click the **Details** icon to go to the [Environment Details](/developerportal/deploy/environments-details/) page.
+* View an environment's details – Click **Details** ({{% icon name="notes-paper-edit" %}}) to go to the [Environment Details](/developerportal/deploy/environments-details/) page.
 * Transport an environment – If you have [Transport rights](/developerportal/deploy/node-permissions/#transport-rights) enabled, you will see a **More Options** icon that you can click to stage an environment to acceptance or production.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/transport-to.png" alt="" >}}
@@ -111,7 +111,7 @@ For flexible environments, the **Environments** section shows the following info
 You can perform the following actions in this section:
 
 * Search for an environment – Find a specific environment using the **Search** field.
-* View an environment's details – Go to the environment's [Details](/developerportal/deploy/environments-details/) page by clicking the **Details** icon.
+* View an environment's details – Go to the environment's [Details](/developerportal/deploy/environments-details/) page by clicking **Details** ({{% icon name="notes-paper-edit" %}}).
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
 

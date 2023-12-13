@@ -178,12 +178,20 @@ The input and output for this service are shown in the table below:
 
 ## 5 Troubleshooting
 
-### 5.1 Error code 404 - Resource not found
+## 5.1 Error code 400 - Bad request
+
+Your AWS organization may not have been granted access to the model you're trying to invoke. Navigate to your [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) in your Amazon Bedrock environment (note this is in the Oregon region [us-west-2]). In this overview you'll find the available models and your status towards each of them, ideally the status should be Access Granted. If the status is Available, this means that you can enable access to this model for your AWS organization. To do this follow these steps:
+In the top-right corner of the overview, click on Edit.
+A checkbox should appear next to each model. Select the models you wish to access with your credential set by checking the appropriate boxes.
+Once you've made your selections, navigate to the bottom-right corner and click Save Changes.
+It may take a few minutes before the status changes, after which it should say Access Granted.
+
+### 5.2 Error code 404 - Resource not found
 
 When invoking a model the error code 404 indicates that the targeted resource was not found.
 
 Possible root causes for this error include:
 1. You don't have access to the model in the specified AWS region. Make sure to select the AWS Region where you have model access.
-   You have an overview of models accessible to you in the AWS Management Console, in the [*Model Access* section of your Amazon Bedrock environment](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess).
+   You have an overview of models accessible to you in the AWS Management Console, in the [*Model Access* section of your Amazon Bedrock environment](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess).
 3. The model you are trying to invoke is deprecated. Please confirm that the model-id you specified is currently available in Amazon Bedrock. 
 

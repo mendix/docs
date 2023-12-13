@@ -11,7 +11,7 @@ weight: 20
 
 ## 1 Description
 
-This article describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.
+This document describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.
 To create a secure environment it is important to make a clear distinction between an user with an administrator role and a regular user of the application.
 
 ## 2 Instructions

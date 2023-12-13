@@ -20,7 +20,7 @@ The Group management functions of this API apply only to apps which are using th
 
 ## 2 Authentication
 
-The User Management API requires its users with the required permissions to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](/apidocs-mxsdk/apidocs/authentication/).
+The User Management API requires its users with the required permissions to authenticate themselves. This can be done by using API keys; for more information about this please refer to [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 Error Handling
 

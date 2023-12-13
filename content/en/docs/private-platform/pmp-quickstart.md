@@ -1,9 +1,9 @@
 ---
-title: "Private Mendix Platform Quickstart Guide"
+title: "Private Mendix Platform Quick Start Guide"
 url: /private-mendix-platform-quickstart/
 description: "Documents the installation and upgrade process for the Private Mendix Platform."
 weight: 20
-tags: ["private mendix platform",  "private platform", "private marketplace", "installation", "upgrade", "quickstart", "configuration wizard"]
+tags: ["private mendix platform",  "private platform", "private marketplace", "installation", "upgrade", "quick start", "configuration wizard"]
 ---
 
 ## 1 Introduction
@@ -184,7 +184,16 @@ Install the Private Mendix Platform by doing the following steps:
 
     {{< figure src="/attachments/private-platform/pmp-install8.png" >}}
 
-5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable.
+5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable:
+ 
+    * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
+    * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+    * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+    * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
+    * **Marketplace Import** - Optional. Enables content import with an external source.
+    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
+    * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+
 6. Click **Review and Apply** > **Evaluate Configuration**.
 7. Make any required changes or click **Run Test App**.
 
@@ -225,7 +234,17 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
 
     {{< figure src="/attachments/private-platform/pmp-upgrade1.png" >}}
 
-5. Click **Run Upgrade**.
+5. Verify the following settings:
+    
+    * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
+    * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+    * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+    * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
+    * **Marketplace Import** - Optional. Enables content import with an external source.
+    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
+    * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+
+6. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" >}}
 

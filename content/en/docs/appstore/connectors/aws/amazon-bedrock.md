@@ -176,4 +176,13 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `AWS_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
 
+## 5 Troubleshooting
+
+### 5.1 Error code 404 - Resource not found
+
+When invoking a model the error code 404 indicates that the targeted resource was not found.
+
+Possible root causes for this error include:
+- You don't have access to the model in the specified AWS region. Make sure to select the AWS Region where you have model access.
+- The model you are trying to invoke is deprecated. Please confirm that the model-id you specified is currently available in Amazon Bedrock. 
 

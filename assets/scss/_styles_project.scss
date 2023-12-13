@@ -266,13 +266,21 @@ div.date-format{
     }
 }
 
-// DB - custom edit, SVG icons for shortcode
+// DB - custom edit, inlline SVG icons for shortcode
 .inline-svg {
     display: inline-block;
     height:0.9rem;
     width:0.9rem;
     vertical-align:0.05rem;
   }
+
+// Images
+// DB – custom edit, class for adding borders around images
+.image-border {
+    border-color: #d7d7d7;
+    border-width: 1px;
+    border-style: solid;
+}
 
 // Foldable sidebar menu
 nav.foldable-nav {

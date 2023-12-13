@@ -141,7 +141,7 @@ If a network error happens during the file upload (via [step 2 in the upload pha
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#upload-step-two) will be uploaded again during the next synchronization.
 
-If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
+If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro 8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro 8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device. Therefore the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -170,7 +170,7 @@ The client downloads the contents of file objects during synchronization. Errors
 In these cases, synchronization fails. When it fails due to a connection error the client can retry. If it fails for other reasons, such as broken file content, the root cause must be fixed.
 
 {{% alert color="info" %}}
-In Mendix Studio Pro v9.17 and above, the client handles file download errors gracefully. Specifically, this means two things. 
+In Mendix Studio Pro 9.17 and above, the client handles file download errors gracefully. Specifically, this means two things. 
 
 Firstly, when a connection error occurs while downloading a file, the synchronization fails. The nanoflow or end-user can retry later when the connection is stable.
 

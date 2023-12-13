@@ -93,7 +93,7 @@ A web server can be used to serve static content and proxy the dynamic content. 
 
 CLEVR does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
 
-When using Nginx, we recommend to change the following settings in the server section:
+When using Nginx, changing the following settings in the server section is recommended:
 
 * keepalive_timeout 65000
 * client_max_body_size 64M

@@ -160,7 +160,7 @@ If you manage your projects in Jira, you can connect your apps in the Developer 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
+You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the Git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

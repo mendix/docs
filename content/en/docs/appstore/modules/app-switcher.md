@@ -14,7 +14,7 @@ The [App Switcher](https://marketplace.mendix.com/link/component/119451) is a mo
 ## 2 Prerequisites
 
 * Use Mendix Studio Pro [9.6.1](/releasenotes/studio-pro/9.1/) or higher
-* Install [Mendix SSO module](/appstore/modules/mendix-sso/) – we recommend having this module updated to the latest version
+* Install [Mendix SSO module](/appstore/modules/mendix-sso/) (Mendix recommends having this module updated to the latest version)
 
 ## 3 Configuration
 

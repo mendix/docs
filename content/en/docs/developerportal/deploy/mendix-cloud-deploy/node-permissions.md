@@ -9,11 +9,11 @@ tags: ["Node","Permission","Developer Portal"]
 
 ## 1 Introduction
 
-Fine-grained access management for your Mendix Cloud environments is handled in the **Permissions** tab of the [Environments](/developerportal/deploy/environments/) page for your app.
+Fine-grained access management for your Mendix Cloud environments is handled in the **Permissions** tab of your app's [Environments](/developerportal/deploy/environments/) page.
 
-Here, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can manage various permissions to the environments for each team member.
+On this tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and any team members with **Manage Permissions** enabled can manage various permissions to the environments for each team member.
 
-To learn more about the roles of team members, see [App Roles](/developerportal/general/app-roles/).
+Team members who have a role with **Cloud Access** can view the permissions. For more information, see [App Roles](/developerportal/general/app-roles/).
 
 ## 2 Viewing Your Nodes{#nodes}
 

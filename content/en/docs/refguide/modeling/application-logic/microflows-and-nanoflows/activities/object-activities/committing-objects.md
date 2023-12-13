@@ -5,8 +5,8 @@ weight: 30
 tags: ["studio pro", "commit object", "activity"]
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -36,7 +36,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Object or List
 
@@ -75,7 +75,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When committing a large number of objects, we recommend that you do not enable **Refresh in client** because it can slow things down.
+When committing a large number of objects, Mendix recommends not enabling **Refresh in client**, because it can slow things down.
 {{% /alert %}}
 
 #### 3.3.1 Microflow is Called from the Client in an Online App

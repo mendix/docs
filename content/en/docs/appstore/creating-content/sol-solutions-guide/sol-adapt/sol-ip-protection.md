@@ -72,7 +72,7 @@ Consumers of a solution with this kind of IP protection see only a well-designed
 
 Adaptable solutions that will be customized by your customer, by a third-party implementation partner, or even by your own professional services teams can benefit from IP protection. By protecting the common core that is shared across customers, maintenance efforts are brought under control and the core is protected from accidental (or intentional) changes.
 
-To protect your solutions, we recommend these steps:
+To protect your solutions, Mendix recommends these steps:
 
 1. Identify the shared [common core](/appstore/creating-content/sol-adapt/#three-parts) that will be unchanged across customers and protect it.
 2. Identify the parts that make up the flexible shell that customers might want to adapt.

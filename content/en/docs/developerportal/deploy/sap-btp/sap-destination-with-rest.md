@@ -98,12 +98,14 @@ The following entries are required in the **Operation** tab:
 The same HTTP Headers are required as for a REST call. They do the following:
 
 * Authenticate the app to perform the action via the Connectivity service
+* Authenticate the app to the correct SSC Location
 * Authenticate the user to access the endpoint defined by the destination
 * Request to return the data in JSON format
 
 |Key|Value|
 |---|---|
 |SAP-Connectivity-Authentication|$DestinationObject/SapConnectivityAuthentication|
+|SAP-Connectivity-SCC-Location_ID|$DestinationObject/SapConnectivitySccLocationId|
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 

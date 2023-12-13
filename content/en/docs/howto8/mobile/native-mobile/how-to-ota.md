@@ -27,7 +27,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro v8.15 or above using the online installer (the offline installer does not include the Mendix Native Mobile Builder dependency)
+* Install Mendix Studio Pro 8.15 or above using the online installer (the offline installer does not include the Mendix Native Mobile Builder dependency)
 * Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/).
 * Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](/howto8/mobile/deploying-native-app/#appcenter-token) section of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
 * Install your app on a test device or emulator.

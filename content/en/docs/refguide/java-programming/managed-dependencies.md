@@ -71,7 +71,7 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For example, to resolve dependencies from a directory `lib`, enter the following:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example, to resolve dependencies from a directory `lib`, enter the following:
 
 ```groovy {linenos=false}
 flatDir {
@@ -79,9 +79,22 @@ flatDir {
 }
 ```
 
+By default the repositories are configured as:
+
+``` {linenos=false}
+gradlePluginPortal()
+mavenCentral()
+```
+
 For more details, refer to the Gradle documentation on [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html).
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" >}}
+
+### 6.1 Required Dependencies{#custom-repos-required-dependencies}
+
+There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies:
+
+* The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBoM) required in certain contexts
 
 ## 7 Marketplace Modules
 
@@ -93,21 +106,32 @@ If you have an issue with the managed dependencies of a Marketplace module, you 
 
 There can be multiple reasons the dependencies cannot be resolved. See the following for some common failure causes with steps on how to fix the issue.
 
-1. CE9804 – Incorrect specification: the specified dependency could not be found in the configured Maven repository.
+1. CE9804 – Incorrect specification: the specified dependency could not be found in the configured repository.
 
     * Check whether you specified the correct **Group ID**, **Artifact ID**, and **Version**. These are case-sensitive.
     * If you are using a [custom repository](#custom-repos), check whether the dependency exists in the repository.
 
-2. CE9806 – Unable to reach repository / mis-configuration of custom repository.
+2. CE9805 – Network connection failure.
+
+    * Check that you have a working internet connection.
+    * If you are using a [custom repository](#custom-repos), confirm that the repository can be reached.
+
+3. CE9806 – Unable to reach repository / mis-configuration of custom repository.
 
     * Check that **Repositories** are configured if [**Use custom repositories**](#custom-repos) is set to *Yes*.
 
-3. CE9805 – Network connection failure.
+4. CE9807 - Required dependency could not be found in the configured repository.
 
-    * Check that you have a working internet connection.
-    * If you are using a [custom repository](#custom-repos), check that the repository can be reached.
+    * Ensure that all the [required dependencies](#custom-repos-required-dependencies) exist in the configured repository. 
 
-4. CE9803 – Any failure which is not covered in the above scenarios.
+5. CE9802 - Java dependency synchronization never done.
+
+    This is just an internal state we maintain for completeness. This should never occur unless something unexpectedly fails in the background in Studio Pro. If you do encounter this, you can try to resolve this by doing either, or both, of the following:
+   
+    * Manually synchronizing dependencies once more
+    * Restarting Studio Pro
+
+6. CE9803 – Any failure which is not covered in the above scenarios.
 
     * Try manually synchronizing dependencies once more.
     * Reach out to [Mendix Support](https://support.mendix.com/) if the issue persists.

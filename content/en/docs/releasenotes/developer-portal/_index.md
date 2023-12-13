@@ -21,14 +21,14 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* We display a warning sign in your [Project Settings](/developerportal/collaborate/general-settings/) if a project is without a Scrum Master or if a licensed app is without a Technical Contact. This can happen if a person with those roles submits a Forget Me request with us
-* We merged the Team History and the [Project History](/developerportal/collaborate/general-settings/#history) page into one and we made sure you can download the History log. This is in preparation of the implementation of an audit trail retention policy sometime soon
-* If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first
-* We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix cloud](/developerportal/deploy/#3-mendix-cloud)
+* We display a warning sign on the [Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal if an app has no Scrum Master or if a licensed app has no Technical Contact. This can happen if a person with those roles submits a "forget me" request with us.
+* We merged the **History** tab on the [Teams](/developerportal/general/team/) page and the [History](/developerportal/collaborate/general-settings/#history) tab on the **Settings** page into one and we made sure you can download the history log. This is to prepare for the implementation of an audit trail retention policy sometime soon.
+* If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first.
+* We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/developerportal/deploy/#mendix-cloud).
 
 #### Fixes
 
-* We fixed an issue where the [Invitation](/developerportal/general/team/#inviting) wizard would not give the inviter feedback that the invitee was invited already (and has not accepted yet)
+* We fixed an issue where the [invitation](/developerportal/general/team/#inviting) wizard would not give the inviter feedback that the invitee was invited already (and has not accepted yet).
 
 ### December 7, 2023
 

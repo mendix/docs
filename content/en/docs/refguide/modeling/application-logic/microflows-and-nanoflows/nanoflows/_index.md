@@ -134,9 +134,47 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 5 Keyboard Support
 
-### 5.1 Studio Pro 10.3 and Below, and in the Classic Editor from 10.4 to 10.6
+### 5.1 Studio Pro 10.6 and Above
 
-The nanoflow editor offers keyboard support for navigating and manipulating nanoflows. The following table shows the shortcut keys that can be used in the nanoflow editor in Studio Pro 10.3 and below, and in the **Classic** nanoflow editor from Studio Pro 10.4 to 10.6.
+The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating nanoflows in the nanoflow editor in Studio Pro 10.6 and above.
+
+#### 5.1.1 Selection
+
+| Key | Effect |
+| --- | --- |
+| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
+| <kbd>Home</kbd> | Select the start event. |
+| <kbd>End</kbd> | Select the first end event. |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd> | Select all elements. |
+| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
+
+#### 5.1.2 Navigation
+
+| Key | Effect |
+| --- | --- |
+| mouse scroll | Scroll up/down. |
+| <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
+| <kbd>Space</kbd> + mouse button | Drag screen.  |
+| <kbd>Ctrl</kbd> + <kbd>+</kbd>/<kbd>-</kbd> | Zoom in/out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
+| <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
+
+#### 5.1.3 Element Manipulation
+
+| Key | Effect |
+| --- | --- |
+| <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
+| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Bot dialog box. |
+| <kbd>Enter</kbd> - on a Logic Bot suggestion list item | The selected item is added on the flow arrow. The Logic Bot dialog box is shown again for the next action to be added. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Bot suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
+| <kbd>F2</kbd> | Rename the variable returned by the selected element. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
+| Context-menu key | Open the context-menu for the currently selected element. |
+
+### 5.2 Studio Pro 10.5 and Below
+
+The nanoflow editor offers keyboard support for navigating and manipulating nanoflows. The following table shows the shortcut keys that can be used in the nanoflow editor in Studio Pro 10.5 and below.
 
 | Key | Effect |
 | --- | --- |
@@ -153,48 +191,6 @@ The nanoflow editor offers keyboard support for navigating and manipulating nano
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
-### 5.2 In the Redesigned Editor in Studio Pro 10.4 and Above
-
-{{% alert color="info" %}}
-The redesigned nanoflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. In the redesigned nanoflow editor, keyboard navigation has been improved. For more information, see [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/).
-{{% /alert %}}
-
-The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating nanoflows in the redesigned nanoflow editor.
-
-#### 5.2.1 Selection
-
-| Key | Effect |
-| --- | --- |
-| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
-| <kbd>Home</kbd> | Select the start event. |
-| <kbd>End</kbd> | Select the first end event. |
-| <kbd>Ctrl</kbd> + <kbd>a</kbd> | Select all elements. |
-| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
-
-#### 5.2.2 Navigation
-
-| Key | Effect |
-| --- | --- |
-| mouse scroll | Scroll up/down. |
-| <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
-| <kbd>Space</kbd> + mouse button | Drag screen.  |
-| <kbd>Ctrl</kbd> + <kbd>+</kbd>/<kbd>-</kbd> | Zoom in/out.  |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
-| <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
-
-#### 5.2.3 Element Manipulation
-
-| Key | Effect |
-| --- | --- |
-| <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
-| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Bot dialog box. |
-| <kbd>Enter</kbd> - on a Logic Bot suggestion list item | The selected item is added on the flow arrow. The Logic Bot dialog box is shown again for the next action to be added. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Bot suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
-| <kbd>F2</kbd> | Rename the variable returned by the selected element. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
-| Context-menu key | Open the context-menu for the currently selected element. |
-
 ## 6 Security {#security}
 
 Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.
@@ -209,8 +205,4 @@ A new microflow is created and added to the same directory, and you can get cons
 
 ## 8 Canvas Interaction
 
-{{% alert color="info" %}}
-The redesigned nanoflow editor was in beta from Studio Pro 10.4.0 and was released for GA in Studio Pro 10.6.0. For more information, see [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/).
-{{% /alert %}}
-
-In the redesigned nanoflow editor, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
+In the nanoflow editor from Studio Pro 10.6, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.

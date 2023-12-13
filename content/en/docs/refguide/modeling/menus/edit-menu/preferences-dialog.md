@@ -84,10 +84,6 @@ The **Logic Bot** tab contains the following settings:
 * **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
 * **Show suggestions for system variables (Classic editor only)** – when enabled, MxAssist Logic Bot will include system objects in its suggestions.
 
-{{% alert color="info" %}}
-These settings only apply to the MxAssist Logic Bot version that is available from Studio Pro 10.0 to 10.3, and the MxAssist Logic Bot version that is available in the **Classic** editor from Studio Pro 10.4 to 10.6.
-{{% /alert %}}
-
 ### 4.2 Best Practice Bot
 
 The **Best Practice Bot** tab contains the following settings:
@@ -193,11 +189,7 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ### 9.1 Micro- And Nanoflow Editor
 
-{{% alert color="info" %}}
-Logic editors (microflows, nanoflows, and rules) were redesigned as beta from Studio Pro 10.4.0. The redesigned logic editors were released for GA in Studio Pro 10.6.0. 
-{{% /alert %}}
-
-In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the beta logic editors will become the default editors for all your microflows, nanoflows, and rules. 
+In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
 
 In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
 

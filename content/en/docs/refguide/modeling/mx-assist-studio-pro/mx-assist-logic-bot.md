@@ -9,14 +9,14 @@ tags: ["studio pro", "logic bot", "mendix assist", "AI", "assist", "mx assist"]
 ## 1 Introduction 
 
 {{% alert color="info" %}}
-MxAssist Logic Bot has been enhanced since Studio Pro 10.4.0 in the redesigned logic editors. The redesigned logic editors were in beta in Studio Pro 10.4.0 and were released for GA in [Studio Pro 10.6.0](/releasenotes/studio-pro/10.6/#1060).
+MxAssist Logic Bot has been enhanced from Studio Pro 10.6. In Studio Pro 10.6 and above, MxAssist Logic Bot is available not only for microflows but also for nanoflows and rules.
 {{% /alert %}}
 
 MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your logic based on the already designed activities, parameters, and other context-related information. It is built using the machine learning analysis of over twelve million anonymized application logics built with Mendix to detect and learn the best practice patterns in Mendix.
 
 The key features of MxAssist Logic Bot are the following:
 
-* **Smart search** (available from Studio Pro 10.4.0) - you can search for the element you want to add to your flow based on microflow or nanoflow parameters, domain model entities, or the documents in your app.
+* **Smart search** (from Studio Pro 10.6.0) - you can search for the element you want to add to your flow based on microflow or nanoflow parameters, domain model entities, or the documents in your app.
 
 * **Next best action suggestion** – it recommends the next best activities out of more than 40 different options with accuracy of 95%. 
 * **Auto-configuration** – it does not only provide next best action, but automates the development further by pre-populating the parameters for such action.
@@ -25,15 +25,11 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2  Modeling Using MxAssist Logic Bot {#logic-bot}
 
-### 2.1 Studio Pro 10.4 and Above
+### 2.1 Studio Pro 10.6 and Above
 
 {{% alert color="info" %}}
-In Studio Pro 10.6, the enhanced MxAssist Logic Bot is enabled by default. You cannot switch it off in the default logic editors. You can still switch to the **Classic** version of the editor if you go to **Edit** > **Preferences** > **New features**, and **Enable switching to the Classic version of the editor**.
-
-In studio Pro 10.4 and 10.5, you can access the the enhanced MxAssist Logic Bot if you switch to the **Beta Version** of the logic editors. You cannot switch it off in the beta logic editors.
+In Studio Pro 10.6 and above, MxAssist Logic Bot is enabled by default. You cannot switch it off.
 {{% /alert %}}
-
-MxAssist Logic Bot menu has been refreshed completely. The enhanced MxAssist Logic Bot provides better parametrized and AI-assisted suggestions, smart search, and keyboard-based navigation. Not only for microflows, it is also available for nanoflows and rules.
 
 MxAssist Logic Bot is displayed as a blue dot in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue circle, or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 
@@ -61,11 +57,9 @@ Choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to ac
 
 To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click). After closing the properties dialog box, the Logic Bot will open on the next flow.
 
-### 2.2 Studio Pro 10.3 and Below
+### 2.2 Studio Pro 10.5 and Below
 
-In Studio Pro 10.3 and below, an older version of MxAssist Logic Bot is available. It is enabled by default. You can also access this MxAssist Logic Bot version in the **Classic** microflow editor from Studio Pro 10.4 to 10.6.
-
-You can switch it on and off using the **On-Off** toggle in the top right corner of the editor. You can also enable or disable it through the **Enable MxAssist Logic Bot** setting under the **Mendix Assist** tab in Studio Pro **Preferences**. For more information, see the [Logic Bot](/refguide/preferences-dialog/#logic-bot) section in *Preferences*.
+In Studio Pro 10.5 and below, an older version of MxAssist Logic Bot is available. It is enabled by default. You can switch it on and off using the **On-Off** toggle in the top right corner of the editor. You can also enable or disable it through the **Enable MxAssist Logic Bot** setting under the **Mendix Assist** tab in Studio Pro [Preferences](/refguide/preferences-dialog/#logic-bot).
 
 To use this older version of MxAssist Logic Bot, do the following:
 

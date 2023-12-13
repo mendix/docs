@@ -13,6 +13,28 @@ To see the current status Control Center, see [Mendix Status](https://status.men
 
 ## 2023
 
+### December 13, 2023
+
+#### New Features
+
+We upgraded the [Apps](/control-center/apps/) page as follows:
+
+* You can now see the infomation of your apps combined with the information of their environments. (Currently only free and licensed apps deployed on the Mendix Cloud have distinct tabs, but eventually all deployment options will be supported.)
+* You can now use different kinds of filters and sorting options to analyze your application landscape more closely.
+* You can check the Mendix versions that are deployed in your repository to check if your Mendix versions are up to date.
+* You can now update Technical Contact on the **Apps** page.
+* You can deactivate multiple free apps in one go.
+* You can [export the information of apps to an Excel file](#control-center/apps/#export-to-excel).
+
+### December 7, 2023
+
+#### Improvements
+
+We made the following improvements to the [access management](/control-center/portfolios/#access-management) on the **Portfolios** page:
+
+* On the [Members](/control-center/portfolios/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* All the pending invites now appear on the [Pending Invites](/control-center/portfolios/#pending-invites) tab.
+
 ### October 26, 2023
 
 #### Improvements

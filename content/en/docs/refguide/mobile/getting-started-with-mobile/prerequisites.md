@@ -26,7 +26,9 @@ After the Make It Native 10 app is published in app stores, this document will b
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
 
-Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. The following list explains which version to use:
+Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. Please note that you can use the Make It Native 9 app until 10.5.x. We updated the app's React Native in 10.6, resulting in a changed MIN app version.
+
+The following list explains which version to use:
 
 * **10.6.0 and higher** – Make It Native 10 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464))
 * **9.24.0 to 10.5.x** – Make It Native 9 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=gsw&gl=US), [iOS](https://apps.apple.com/us/app/make-it-native-9/id1542182000))

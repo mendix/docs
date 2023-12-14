@@ -4,7 +4,6 @@ url: /howto/integration/use-the-external-database-connector
 weight: 21
 description: "Overview of the External Database Connector in Studio Pro"
 
-
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -32,7 +31,7 @@ Let's assume that you already have Mendix app.
 
 * Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) from the Mendix Marketplace into your app.
 
-* **username** and **password** for signing into the external database
+* **Username** and **Password** for signing into the external database
 * Connection details: **Host**, **Port**, **Database name**
 
 if additional connection properties are required to connect, you can alternatively use **“JDBC Connection String”**.
@@ -69,10 +68,14 @@ Once connection is successful and saved, you can explore and search **Tables & V
 
 ### 3. Create and Validate SQL Queries with Parameters:
 
-a. Create new query by entering **SQL Query** in SQL query editor box.
-b. Add **Parameters** if you want to use mendix constants or variables in your query during runtime(use curly braces to include parameters in query).
-c. Testvalue should be assigned to the parameter using **Add Parameter**.
-d. **Run Query** to validate query and see the response.
+1. Create new query by entering **SQL Query** in SQL query editor box.
+
+2. Add **Parameters** if you want to use mendix constants or variables in your 
+query during runtime(use curly braces to include parameters in query).
+
+3. Testvalue should be assigned to the parameter using **Add Parameter**.
+
+4. **Run Query** to validate query and see the response.
 
 for example:
 Below query retrieves list of RequestedProductRequirement where ProductLine is "Planes"
@@ -83,29 +86,37 @@ SQL Query :
 
 ### 4a. Save Query & Create Enity:
 
-a. For query which returns a resultset, click **Use Response** to create mapping.
-b. In **Response Structure** you can see Entity preview.
-c. Click on **Save Query & Create Enity** to save query and a new Entity is created in the domain model using response structure.
+1. For query which returns a resultset, click **Use Response** to create mapping.
+
+2. In **Response Structure** you can see Entity preview.
+
+3. Click on **Save Query & Create Enity** to save query and a new Entity is created in the domain model using response structure.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
 ### 4b. Save Query:
 
-a. For DML queries, *Number of affected rows* will be displayed as a Reponse.
+1. For DML queries, *Number of affected rows* will be displayed as a Reponse.
 For example: 
 `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
-b. Click **Save Query**
+
+2. Click **Save Query**
+
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 **For all DML Queries, changes made to database in Mendix Design phase are automatically rolled back**
 
 ### 5. Use “Query External Database” activity:
 
-a. Use `Query External Database` activity from toolbox in the microflow.
-b. Double click on activity and select created External Database Connection document.
-c. All the queries created for the selected document will appear in the dropdown, select the required one.
-d. Assign values to the parameters using `Expression editor`.
-e. Output details for the selected query will be auto-populated.
+1. Use `Query External Database` activity from toolbox in the microflow.
+
+2. Double click on activity and select created External Database Connection document.
+
+3. All the queries created for the selected document will appear in the dropdown, select the required one.
+
+4. Assign values to the parameters using `Expression editor`.
+
+5. Output details for the selected query will be auto-populated.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
 

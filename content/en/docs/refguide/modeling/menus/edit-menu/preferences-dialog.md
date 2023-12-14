@@ -79,6 +79,10 @@ Here you can specify which repositories to use for Gradle. The content of this f
 
 ### 4.1 Logic Bot {#logic-bot}
 
+{{% alert color="info" %}}
+These settings only apply to the **Classic** editor in Studio Pro 10.6 and below.
+{{% alert color="info" %}}
+
 The **Logic Bot** tab contains the following settings:
 
 * **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.

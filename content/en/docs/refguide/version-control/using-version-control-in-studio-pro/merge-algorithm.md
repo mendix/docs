@@ -280,7 +280,7 @@ Some of the controls are shared between both processes
 
 ### 5.1 Shared
 
-#### 5.1.1 'Abort merge'
+#### 5.1.1 'Abort'
 
 This button shall always be visible on almost all steps.
 
@@ -299,7 +299,7 @@ When clicked it will bring 'Changes Pane' into the view, as this is a place in w
 
 Compare to above button, this one shows up when there are conflicts in file not directly linked to your application.
 
-When clicked it will open up a pop up window with list of all the files that are affected by merge, with conflicted ones at the top of the list.
+When clicked it will open up a pop up window with list of all the files that are affected by the update process, with conflicted ones at the top of the list.
 
 You can also use ['Show Changes on Disk'](/refguide/version-control-menu/#4-show-changes-on-disk) menu item.
 

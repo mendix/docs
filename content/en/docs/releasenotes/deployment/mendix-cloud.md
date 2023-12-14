@@ -22,6 +22,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Improvements
 
 * If a user tries to upload or transport an MDA file that exceeds the maximum size of 1 GB, they will now see an error message warning them that their MDA file is too big.
+
+### December 14, 2023
+
+#### Improvements
+
+* The application disk usage and CPU usage graphs on the Metrics page now have y-axes that scale dynamically, with the minimum set to 0 and the maximum set to the maximum data point included in the request.
 * Under the Deploy API v4, we increased the maximum limit value for `/apps/{appId}/environments` from 20 to 100. 100 is also the new default limit value. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).
 
 ### November 22, 2023

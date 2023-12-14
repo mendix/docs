@@ -17,7 +17,7 @@ The new features were divided into these major themes, which are described in th
 {{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta release. For more information, see [Beta Releases](/releasenotes/beta-features/).
+"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 2 Continuous Collaboration {#continuous}
@@ -48,8 +48,8 @@ The new features were divided into these major themes, which are described in th
 | Rich design properties | GA: Q4 2023 |
 | Visual data filters | GA: Q4 2023 |
 | Mixed online and offline data | GA: Q4 2023 |
-| Mendix Chat | Public beta: Q4 2023<br>GA: TBD |
-| Mac support | Public beta: Q4 2023<br>GA: TBD |
+| MendixChat | Preview: TBD<br>Public beta: TBD<br>GA: TBD |
+| Mac support | Preview: Q1 2024<br>Public beta: TBD<br>GA: TBD |
 
 ## 4 Composability {#composability}
 
@@ -73,7 +73,7 @@ The new features were divided into these major themes, which are described in th
 | Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud, Private Mendix Platform) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
 | Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q4 2023 |
 | Private Mendix Platform | Released [Nov 15, 2023](/releasenotes/private-platform/)   |
-| Pipelines (Mendix Cloud, Cloud Dedicated) | Public beta: Q4 2023<br>GA: TBD |
+| Pipelines (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
 | Pipelines (Private Cloud) | GA: TBD |
 
 ## 6 Governance and Control {#governance}
@@ -83,5 +83,5 @@ The new features were divided into these major themes, which are described in th
 | BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for public beta [Aug 28, 2023](/releasenotes/control-center/#august-28-2023)<br>GA: TBD |
 | Cloud self-service (Mendix Cloud) | Currently in private beta<br>GA: TBD |
-| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q4 2023<br>GA: TBD |
+| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
 | Cloud self-service (Cloud Dedicated) | Private beta: Q4 2023<br>GA: TBD |

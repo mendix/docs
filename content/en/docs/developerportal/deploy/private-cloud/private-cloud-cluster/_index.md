@@ -1357,6 +1357,7 @@ To remove the annotation:
 ```shell
 kubectl -n {namespace} annotate ingress {ingress-object} {annotationKey}-
 ```
+
 {{% /alert %}}
 
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
@@ -1488,8 +1489,8 @@ For Kubernetes:
 kubectl -n {namespace} get storageplan
 kubectl -n {namespace} delete storageplan {StoragePlanName}
 ```
-{{% /alert %}}
 
+{{% /alert %}}
 
 #### 7.2.5 Custom Core Resource Plan
 

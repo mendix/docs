@@ -17,26 +17,56 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
+### December 14
+
+#### New Features
+
+*  In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
+*  In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+
+#### Improvements
+
+* We display a warning sign on the [Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal if an app has no Scrum Master or if a licensed app has no Technical Contact. This can happen if a person with those roles submits a "forget me" request with us.
+* We merged the **History** tab on the [Teams](/developerportal/general/team/) page and the [History](/developerportal/collaborate/general-settings/#history) tab on the **Settings** page into one and we made sure you can download the history log. This is to prepare for the implementation of an audit trail retention policy sometime soon.
+* If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first.
+* We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/developerportal/deploy/#mendix-cloud).
+
+#### Fixes
+
+* We fixed an issue where the [invitation](/developerportal/general/team/#inviting) wizard would not give the inviter feedback that the invitee was invited already (and has not accepted yet).
+
+### December 7
+
+#### Improvements
+
+We have made the following improvements to the **Access Management** page in Portfolio Management:
+
+* On the [Members](/developerportal/portfolio-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/#pending-invites) tab.
+
 ### November 23, 2023
 
 #### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+
 ### November 17, 2023
 
 #### Improvements
 
-- In Epics, we added a filter on the [Epics](/developerportal/project-management/epics/epics/) page, allowing you to sort and view epics based on their status. We also add a mini survey on the filtering experience – tell us what you think!
-- In Epics, on the [Board](/developerportal/project-management/epics/board/) page you can now see the total number of stories in each swimlane – it is displayed right next to the name of the swimlane.
+* In Epics, we added a filter on the [Epics](/developerportal/project-management/epics/epics/) page, allowing you to sort and view epics based on their status. We also add a mini survey on the filtering experience – tell us what you think!
+* In Epics, on the [Board](/developerportal/project-management/epics/board/) page you can now see the total number of stories in each swimlane – it is displayed right next to the name of the swimlane.
 
 #### Fixes
 
-- We fixed a bunch of bugs in Epics, mostly related to the dark mode.
+* We fixed a bunch of bugs in Epics, mostly related to the dark mode.
+
 ### November 16, 2023
 
 #### Improvements
 
 * We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configuration pop-up window that appears when setting up your Jira connection more clear.
+
 ### November 9, 2023
 
 #### New Features
@@ -436,15 +466,15 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
   We made the following improvements:
 
-  * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
+    * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
 
-  * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
+    * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
 
-  * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
+    * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
 
-  * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
+    * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
 
-  * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
+    * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
 
   From this point on, Epics is the default project management tool for all new apps.
 
@@ -467,7 +497,6 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * Invite users to dedicated portfolio boards (both internal to your organization and external)
     * Easily manage portfolio users via **Access Management**
     * Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
-
 
 ### November 21, 2022
 

@@ -15,7 +15,7 @@ The Maps module allows you to work with maps. Consult the instructions below to 
 * Complete the [Prerequisites](/howto8/mobile/deploying-native-app/#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Create an app on the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/overview) and have Google Maps enabled for Android (and iOS, if you wish to use Google Maps on iOS as well) and also posses an [API key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). 
 * Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a [billing account] (https://developers.google.com/maps/gmp-get-started#create-billing-account).
-* Install Mendix Studio Pro v8.15.0 and above to use the Native Mobile App Builder
+* Install Mendix Studio Pro 8.15.0 and above to use the Native Mobile App Builder
 
 ## 3 Setting Up App Deep Linking {#set-up}
 

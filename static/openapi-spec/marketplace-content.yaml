@@ -98,7 +98,7 @@ components:
       description: |-
         This is the identifier of the content, representing the number used in the URL of the content details page. For instance, it is '170' for 'https://marketplace.mendix.com/link/component/170'.
         
-        It can also be retrieved by querying the Content Api using the name of the last published version of the content. For instance, ```GET https://marketplace-api.mendix.com/v1/content?name=Community%20Commons```  will return the contentId for 'Community Commons'.
+        It can also be retrieved by querying the Content API using the name of the last published version of the content. For instance, ```GET https://marketplace-api.mendix.com/v1/content?name=Community%20Commons```  will return the contentId for 'Community Commons'.
       required: true
       schema:
         type: integer

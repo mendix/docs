@@ -41,6 +41,8 @@ In general, Mendix recommends using the Rebase strategy when combining changes, 
 In exceptional cases, for example when you have a lot of local commits where you expect conflicts, a merge commit might be the better choice. 
 {{% /alert %}}
 
+Both processes are guided by [notification controls](#notifications) showing actual state and possible next steps.
+
 ## 2 Scenario {#scenario}
 
 The clearest way to explain and illustrate the differences between Rebase and Merge commit when combining changes, is to examine an example scenario. The sections [Rebase](#rebase) and [Merge commit](#merge) show how the two approaches work.
@@ -269,3 +271,71 @@ Remember that Mine and Theirs are different, depending on whether you are using 
 {{% alert color="info" %}}
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
 {{% /alert %}}
+
+## 5 Notification Controls {#notifications}
+
+While combining changes either by rebase or merge you will be shown a notification bar which will inform about current status of the process and next available steps.
+
+Some of the controls are shared between both processes
+
+### 5.1 Shared
+
+#### 5.1.1 'Abort merge'
+
+This button shall always be visible on almost all steps.
+
+When clicked and confirmed combining process shall be stopped and all of the changes done prior to entering it shall be removed.
+In other words you shall be resetted to the point before starting this process.
+
+In has no effect on the server, only on your local work.
+
+#### 5.1.2 'Show conflicts'
+
+This button is only visible when there are conflicts related to your application, i.e. domain model, microflows.
+
+When clicked it will bring 'Changes Pane' into the view, as this is a place in which you should resolve this type of conflicts.
+
+#### 5.1.3 'Show file conflicts'
+
+Compare to above button, this one shows up when there are conflicts in file not directly linked to your application.
+
+When clicked it will open up a pop up window with list of all the files that are affected by merge, with conflicted ones at the top of the list.
+
+You can also use ['Show Changes on Disk'](/refguide/version-control-menu/#4-show-changes-on-disk) menu item.
+
+### 5.2 Rebase Specific Controls
+
+Rebase notification bar while in conflicts phase.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/NotificationBars/Rebase_Conflicts.png" alt="Rebase notification bar while in conflicts" width="525" >}}
+
+Rebase notification bar when conflicts for current step resolved.
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/NotificationBars/Rebase_Continue.png" alt="Rebase notification bar when ready for next step" width="525" >}}
+
+Rebase notification bar when whole rebase concluded.
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/NotificationBars/Rebase_Conclude.png" alt="Rebase notification bar while complete" width="525" >}}
+
+#### 5.2.1 'Continue'
+
+This button is visible when there are no more conflicts to resolve but there are still other changes to rebase.
+When click it resumes rebase process.
+
+#### 5.2.2 'Push'
+
+This button is visible after rebase has finished successfully and your changes are ready to be pushed to the server.
+When clicked it triggers a ['push'](/refguide/version-control-menu/#4-push) operation.
+
+### 5.3 Merge Specific Controls
+
+Merge notification bar while in conflicts phase.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/NotificationBars/Merge_Conflicts.png" alt="Merge notification bar while in conflicts" width="525" >}}
+
+Merge notification bar when merge concluded.
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/combining_changes/NotificationBars/Merge_Conclude.png" alt="Merge notification bar while complete" width="525" >}}
+
+#### 5.3.1 'Commit'
+
+This button is visible when there are no more conflicts to resolve, and merge process is finished.
+
+When clicked it opens up [commit dialog](/refguide/commit-dialog/) with predefined message indicating that this is a merge commit.

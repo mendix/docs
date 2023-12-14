@@ -372,14 +372,14 @@ components:
             description: "These are the release notes for the published versions."
 
   securitySchemes:
-    Personal Acces Token:
+    Personal Access Token:
       name: Authorization
       type: apiKey
       in: header
       description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
 
 security:
-  - Personal Acces Token: []
+  - Personal Access Token: []
 
 tags:
   - name: content

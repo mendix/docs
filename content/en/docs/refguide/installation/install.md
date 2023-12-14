@@ -92,7 +92,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
-    * The Gradle zip file should be named *gradle-7.6-bin.zip*
+    * The Gradle zip file should be named *gradle-7.6.3-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 

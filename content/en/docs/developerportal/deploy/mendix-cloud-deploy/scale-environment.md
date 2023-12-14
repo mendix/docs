@@ -43,7 +43,7 @@ If you want to scale your licensed app in Mendix Cloud, follow these steps:
 
 2. Click **Environments** to go to the Environments page.
 
-3. Click the **Details** icon on your desired environment.
+3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on your desired environment.
 
 4. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
 

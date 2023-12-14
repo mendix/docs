@@ -7,10 +7,10 @@ description: "Learn how to create and deploy a Hello World app with Mendix in tw
 tags: ["hello world", "create", "app", "deploy"]
 ---
 
-## 1 Hello Mendix – Create and Deploy a Hello World App 
+## 1 Hello Mendix: Create, Run, and Deploy a Hello World App with Mendix
 
-{{% youtube 0RaIorJjqVY %}}
+{{% youtube 5kRDyHfkwoI %}}
 
 ## 2 Continuing with the Next Tutorial
 
-To continue learning, see [Building a Responsive Web App](/quickstarts/part1/).
+To continue learning, see [Building a Responsive Web App](/quickstarts/responsive-web-app/).

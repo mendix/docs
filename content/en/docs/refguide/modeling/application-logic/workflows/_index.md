@@ -59,7 +59,7 @@ To delete a workflow, do the following:
 The selected workflow is deleted. 
 
 {{% alert color="info" %}}
-The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
+The **Workflow** entity that was generated when the workflow was created remains in the domain model. You have to delete it manually.
 {{% /alert %}}
 
 ### 3.4 Adding Elements to a Workflow {#add-elements-to-workflow}

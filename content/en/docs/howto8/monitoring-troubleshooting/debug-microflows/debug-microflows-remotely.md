@@ -43,7 +43,7 @@ When your application is in Mendix Cloud, follow these steps:
 
 2. Click **Environments** in the navigation pane.
 
-3. In the **Deploy** tab, click the **Details** icon for the environment that you want to debug:
+3. In the **Deploy** tab, click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment that you want to debug:
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/environment-details.png" >}}
 

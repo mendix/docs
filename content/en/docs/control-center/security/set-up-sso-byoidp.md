@@ -4,7 +4,7 @@ url: /control-center/security/set-up-sso-byoidp/
 category: "Security"
 weight: 5
 description: "Describes how you can use your company IdP to authenticate to Mendix."
-tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on"]
+tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on", "Azure AD", "Entra ID"]
 aliases:
     - /developerportal/control-center/set-up-sso-byoidp/
 ---
@@ -72,7 +72,7 @@ BYOIDP SSO has the following limitations.
     * Create a service account in the company IdP
     * Create a service account on an email domain that is not federated with BYOIDP
 * When the Mendix Admin activates the BYOIDP configuration, Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature does not roll back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to login with their Mendix account.
-* Your conditional access policies in AzureAD may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
+* Your conditional access policies in Entra ID (formerly Azure ID) may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
 * You cannot associate multiple Mendix accounts (for example, an Admin account and a regular account) with a single identity in your IdP.
 
 ## 2 Prerequisites
@@ -80,7 +80,7 @@ BYOIDP SSO has the following limitations.
 To set up an IdP configuration for the Mendix Platform and your Mendix app, you will need the following:
 
 * A subscription to an OIDC compliant IdP; you need to validate that your IdP supports OIDC
-    * If you are using Azure AD, Okta, Auth0, [Ping Identity](https://www.pingidentity.com), or ADFS you will be OK
+    * If you are using Entra ID, Okta, Auth0, [Ping Identity](https://www.pingidentity.com), or ADFS you will be OK
     * a full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/)
 * The URL for the so-called "well-known endpoint" of your IdP, where configuration details can be retrieved
     * The IdP's well-known endpoint must have a URL for the JWKS endpoint
@@ -131,7 +131,7 @@ Log in within 30 seconds using valid credentials with your IdP. Once it is succe
 
 Click **Previous** if the test indicates that you have not entered the correct configuration details.
 
-### 3.3 Mapping Between IdP and Mendix
+### 3.3 Mapping Between IdP and Mendix{#attribute-mapping}
 
 The data from your IdP may have different attribute names from the Mendix identity.
 
@@ -166,11 +166,11 @@ When you are ready, you can activate the IdP configuration from the overview pag
 
 You can deactivate the IdP configuration at any time. Although the changes start to come into effect immediately, updating your users will take some time depending on the number of users in your company. Users will have to reset their Mendix password to be able to sign-in since it was scrambled upon activation.
 
-## 7 Microsoft Azure AD
+## 7 Entra ID
 
-Microsoft Azure AD is one of the most used IdPs, and it supports OIDC. To set up with Azure, follow these steps:
+Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supports OIDC. To set up with Entra ID, follow these steps:
 
-1. Sign in to your Azure Active Directory portal and follow **Azure Active Directory** > **App registrations**.
+1. Sign in to your Microsoft Entra admin center portal and follow **Applications** > **App registrations**.
 2. Create a new app registration by clicking **New registration** in the top-left corner.
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-overview.png" >}}
@@ -209,7 +209,18 @@ Microsoft Azure AD is one of the most used IdPs, and it supports OIDC. To set up
 
 That's it! You are now ready to resume your IdP setup in the Developer Portal.
 
-For more information on setting up federation with a Microsoft Azure IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
+For more information on setting up federation with a Microsoft Entra ID IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
+
+### 7.1 Recommended Attribute Mapping for Entra ID
+
+For Entra ID, you can create a mapping between Entra ID and Mendix as described in [Mapping Between IdP and Mendix](#attribute-mapping), above. The most common mapping used for Entra ID is as follows:
+
+| Identity Attribute | Entra ID Claim |
+| --- | --- |
+| **Foreign ID** | `oid` |
+| **Username** | `preferred_username` or `email` |
+| **First Name** | `given_name` |
+| **Last Name** | `family_name` |
 
 ## 8 Considerations {#considerations}
 
@@ -268,7 +279,7 @@ Mendix supports two client authentication methods: `client_secret_post` (client 
 
 ### 9.3 Incorrect Conditional Access Policies
 
-In versions below Studio Pro 9.18, an embedded browser was used for signing in. Conditional access policies in AzureAD could block this Studio Pro browser. For example, you could hit this limitation when using Microsoft's Intune for MDM/MAM with versions below 9.18.
+In versions below Studio Pro 9.18, an embedded browser was used for signing in. Conditional access policies in Entra ID could block this Studio Pro browser. For example, you could hit this limitation when using Microsoft's Intune for MDM/MAM with versions below 9.18.
 
 For version 9.18 and above, Mendix Studio Pro uses the system browser for signing in to overcome this limitation.
 

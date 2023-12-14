@@ -26,7 +26,7 @@ If you are the Technical Contact for an app, you can grant team members the **Re
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment** (or **Deployment** > **Public Cloud**).
 3. Open the node by clicking **Environments** under the app name.
-4. Click the **Details** icon for the environment for which you want to set up alerts. You can set alerts permissions separately for each environment.
+4. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment for which you want to set up alerts. You can set alerts permissions separately for each environment.
 5. Switch to the **Permissions** tab.
 6. Select the checkbox below **Receive Alerts** for the user (or users) who should receive alerts. Your changes will save automatically.
 

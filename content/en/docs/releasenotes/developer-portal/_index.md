@@ -17,7 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
-### December 14, 2023
+### December 14
+
+#### New Features
+
+*  In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
+*  In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 
@@ -30,7 +35,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * We fixed an issue where the [invitation](/developerportal/general/team/#inviting) wizard would not give the inviter feedback that the invitee was invited already (and has not accepted yet).
 
-### December 7, 2023
+### December 7
 
 #### Improvements
 

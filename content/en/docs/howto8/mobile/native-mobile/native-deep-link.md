@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Complete the [Prerequisites](/howto8/mobile/deploying-native-app/#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date
-* Install git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
+* Install Git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
 * Install Mendix Studio Pro v 8.15.0 or above in order to use the Native Mobile App Builder
 
 ## 3. Setting up App Deep Linking {#set-up}
@@ -79,7 +79,7 @@ When running locally from source, on iOS you have to run `pod install` once more
     cd c:/github
     ```
 
-1. Use git to clone your Native Builder template from GitHub: 
+1. Use Git to clone your Native Builder template from GitHub: 
 
     ```shell {linenos=false}
     git clone https://github.com/your-account/native-deeplink-app

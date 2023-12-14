@@ -24,9 +24,14 @@ After the Make It Native 10 app is published in app stores, this document will b
 
 ## 2 Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. For Mendix 10, use the **Make It Native 10 app**. Use the **Make It Native 9 app** for Studio Pro 9.24.0 and above.
+The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
 
-This app is available for both Android and iOS devices.
+Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. The following list explains which version to use:
+
+* **10.6.0 or later**: Make It Native 10 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464))
+* **9.24.0 up to 10.5.x**: Make It Native 9 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=gsw&gl=US), [iOS](https://apps.apple.com/us/app/make-it-native-9/id1542182000))
+* **8.18.x**: Make It Native 8 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp&hl=en_US), [iOS](https://apps.apple.com/nl/app/make-it-native-8/id1334081181))
+* **Other**: [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)
 
 For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 

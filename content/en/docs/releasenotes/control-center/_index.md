@@ -13,6 +13,19 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2023
 
+### December 13, 2023
+
+#### New Features
+
+We upgraded the [Apps](/control-center/apps/) page as follows:
+
+* You can now see the information of your apps combined with the information of their environments. (Currently only licensed and free apps deployed on the Mendix Public Cloud have distinct tabs, but eventually all deployment options will be supported.)
+* You can use different kinds of filters and sorting options to analyze your application landscape more closely.
+* You can check the Mendix version deployed in your repository to check whether your Mendix version is up to date.
+* You can now update Technical Contact on the **Apps** page.
+* You can deactivate multiple free apps in one go.
+* You can [export the information of apps to an Excel file](/control-center/apps/#export-to-excel).
+
 ### December 7, 2023
 
 #### Improvements
@@ -93,7 +106,7 @@ We made the following improvements to the [access management](/control-center/po
 
 #### Improvements
 
-* On the **Apps** page, we increased the limit of apps you can [activate or deactivate](/control-center/apps/#active-deactivated) to 100.
+* On the **Apps** page, we increased the limit of apps you can activate or deactivate to 100.
 * We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### February 23, 2023

@@ -21,7 +21,8 @@ External Database Connector supports connecting to below databases:
 This how-to teaches you how to do the following:
 
 * Connect your Mendix App with an external Database.
-* Create and execute different SQL Queries.
+* Create and validate SQL Queries.
+* Use created queries in "Query External Database" activity.
 
 Let's use External Database Connector in  Mendix App, to connect, retreive and insert data.
 
@@ -50,8 +51,6 @@ if additional connection properties are required to connect, you can alternative
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/2.png" >}}
 
-Hurray Connection between your external database and Mendix app is established successfully.
-
 Click on **Save** to save connection details, these details are stored in 3 constants.
 
 - \<Document Name\>_DBSource
@@ -59,6 +58,8 @@ Click on **Save** to save connection details, these details are stored in 3 cons
 - \<Document Name\>_DBPassword
 
 For example: *Database*_DBsource. 
+
+Hurray Connection between your external database and Mendix app is established successfully.
 
 ### 2. Explore Tables and Views of a connected Database:
 
@@ -84,17 +85,19 @@ SQL Query :
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
 
-### 4a. Save Query & Create Enity:
+### 4. Save Query:
+
+#### 4a. Save Query to retrieve data:
 
 1. For query which returns a resultset, click **Use Response** to create mapping.
 
 2. In **Response Structure** you can see Entity preview.
 
-3. Click on **Save Query & Create Enity** to save query and a new Entity is created in the domain model using response structure.
+3. Click on **Save Query & Create Enity** to save query and a newly created Entity in the domain model using response structure.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
-### 4b. Save Query:
+### 4b. Save DML Query:
 
 1. For DML queries, *Number of affected rows* will be displayed as a Reponse.
 For example: 

@@ -72,7 +72,7 @@ The HTTP Headers do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-![rest-service-httpHeaders](https://github.com/mendix/docs/assets/17471702/58ebc5ae-0e19-4509-9ab5-045467f57a0c)
+For more information, see [rest-service-httpHeaders](https://github.com/mendix/docs/assets/17471702/58ebc5ae-0e19-4509-9ab5-045467f57a0c).
 
 ### 3.2 Configuring a SOAP Call
 
@@ -111,7 +111,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-![web-service-httpHeaders](https://github.com/mendix/docs/assets/17471702/32d677eb-a968-490f-8f90-b058d41ec868)
+For more information, see [web-service-httpHeaders](https://github.com/mendix/docs/assets/17471702/32d677eb-a968-490f-8f90-b058d41ec868).
 
 ## 4 Read More
 

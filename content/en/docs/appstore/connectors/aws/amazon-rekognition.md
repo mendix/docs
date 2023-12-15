@@ -226,7 +226,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); <br /> `Image` (Image) | An array or object of detected moderation label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label(s) |
 
 This activity returns a `DetectModerationLabelsResponse` objects and associated objects as shown in the table below:
 

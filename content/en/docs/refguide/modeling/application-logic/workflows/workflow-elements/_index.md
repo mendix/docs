@@ -12,6 +12,7 @@ A workflow is composed of elements that you can drag on a path from the **Toolbo
 * [Parameters](#parameters)
 * [General](#general)
 * [User tasks](#user-tasks)
+* [Events](#events)
 * [System actions](#system)
 
 ## 2 Workflow Parameters {#parameters}
@@ -33,7 +34,6 @@ The elements of this category are described in the table below:
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/jump.png" alt="Jump Activity" >}} | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification.png" alt="Wait for notification activity" >}} | [Wait for notification](/refguide/wait-for-notification/)             | Allows you to suspend a workflow’s execution until the workflow is notified.      | 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer.png" alt="Wait for timer activity" >}} | [Wait for timer](/refguide/wait-for-timer/)             | Allows you to suspend the execution of a workflow path until a timer has elapsed or deadline has been reached. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/end-event.png" alt="End event" >}} | End event                      | Ends the path of the workflow                                |
 
 {{% alert color="info" %}}
@@ -48,10 +48,18 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task.png" alt="User Task" >}} | [User task](/refguide/user-task/) | A central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task.png" alt="Multi-user task" >}} | [Multi-user task](/refguide/multi-user-task/) | A central element in a workflow that allows you assign a task to multiple users. Each user performs the same task. The outcomes from all individual tasks will be aggregated into a single multi-user task outcome based on the [completion condition](/refguide/multi-user-task/#completion-condition).  |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" >}} | [Call microflow](/refguide/call-microflow/) | Calls a selected microflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow.png" alt="Call Workflow" >}} | [Call workflow](/refguide/call-workflow/) | Calls a selected workflow. |
 
-## 5 System Actions {#system}
+## 5 Events {#events}
+
+The elements of this category are described in the table below:
+
+| Graphic                                                     | Element                           | Description                                                  |
+| ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer.png" width="50px" alt="Wait for timer activity" >}} | [Wait for timer](/refguide/wait-for-timer/)             | Allows you to suspend the execution of a workflow path until a timer has elapsed or deadline has been reached. |
+
+## 6 System Actions {#system}
 
 Elements in this category allow you to call a microflow or another workflow.
 

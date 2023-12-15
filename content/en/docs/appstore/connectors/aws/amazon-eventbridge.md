@@ -122,7 +122,7 @@ To configure your Mendix app to receive events, perform the following steps:
 
 10. Click **OK**.
 11. Configure the **Credentials_GenerateFromConstants** microflow. 
-12. Configure a method to trigger the *ASU_System* microflow. As a best practice, consider adding the microflow to the **Runtime settings** of your app and add this as the *After startup** Microflow. For an example of how a different trigger method can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+12. Configure a method to trigger the *ASU_System* microflow. As a best practice, consider adding the microflow to the **Runtime settings** of your app and add this as the *After startup** microflow. For an example of how a different trigger method can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_configure_asu.png" >}}
 

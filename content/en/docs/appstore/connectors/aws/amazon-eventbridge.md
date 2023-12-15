@@ -477,7 +477,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 ### 4.4 Activities {#activities} 
 
-Activities define the actions that are executed in a microflow or a Nanoflow.
+Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.4.1 UpdateConnection {#update-connection}
 

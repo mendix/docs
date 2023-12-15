@@ -258,9 +258,9 @@ The following microflow shows an example implementation of signature version 4 h
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4microflow.png" >}}
 
-In this example, a `SigV4Builder` activity is created and associated with a `Credentials` entity, a list of headers, and list of query parameters.
+In this example, a `SigV4Builder` object and a  `Credentials` object are passed as parameters. In the microflow, two lists of `SigV4Parameter` are created. One for the request headers and one for the query parameters.
 
-These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4Header` entity.
+These entities are used as input for the `GetSigV4Headers` microflow action, which returns a response in the form of a `SigV4Header` entity.
 
 The values set in the response entity are used as request headers in the REST call to AWS.
 

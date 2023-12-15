@@ -61,25 +61,25 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Rekognition, you can implement the functions of the connector by using the provided activities in Microflows. For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
+After you configure the authentication profile for Amazon Rekognition, you can implement the functions of the connector by using the provided activities in microflows. For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add Microflow**.
-2. Enter a name for your Microflow, for example, *ACT_DetectLabels*, and then click **OK**.
+2. Enter a name for your microflow, for example, *ACT_DetectLabels*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **DetectLabels** activity.
-4. Drag the **DetectLabels** activity onto the work area of your Microflow.
-5. Double-click the **DetectLabels** Microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
+4. Drag the **DetectLabels** activity onto the work area of your microflow.
+5. Double-click the **DetectLabels** microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
 6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type ENUM_Region of the AWS Authentication connector.
 7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
     1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
-    2. Drag the **Generate Credentials** to the beginning of your Microflow.
+    2. Drag the **Generate Credentials** to the beginning of your microflow.
     3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
 8. The `DetectLabelResponse` object is returned by the **DetectLabels** activity.   
-9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the Microflow area.
-10. Position the **Retrieve** activity between the **DetectLabels** activity and the Microflow end event.
+9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow work area.
+10. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.
 11. Double-click the **Retrieve** activity.
 12. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
 13. Click **OK**.
-14. Configure a method for triggering the **ACT_DetectLabels** Microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+14. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ## 4 Technical Reference
 

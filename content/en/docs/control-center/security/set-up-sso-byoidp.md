@@ -13,12 +13,12 @@ aliases:
 
 The Mendix Platform contains an identity provider (IdP) that allows users to sign in to:
 
-* Mendix Platform services
-* Applications in Mendix Cloud that have been built using [Mendix SSO](/appstore/modules/mendix-sso/)
+* Mendix Platform services such as the Developer Portal, the Marketplace, Control Center, and the Mendix Forum
+* Studio Pro
 
-You can use this to provide your platform users with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 
+Platform users can have separate Mendix credentials, or you can provide your platform users with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 
 
-Mendix calls this feature BYOIDP (bring your own identity provider), sometimes referred to as "customer IdP" or "customer IdP SSO." It is available for any app using the [standard or premium packages](https://www.mendix.com/pricing/).
+Mendix calls this identity federation BYOIDP (bring your own identity provider), sometimes referred to as "customer IdP" or "customer IdP SSO."
 
 This document describes the steps to set up a single sign-on configuration in Mendix.
 
@@ -40,11 +40,12 @@ When a user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platfor
 
 BYOIDP SSO has the following features:
 
-* Mendix Platform services, Studio Pro, and Mendix apps using Mendix SSO can delegate authentication to your IdP.
-* Authentication will be delegated for any user that has an email address where the email-domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
+* Mendix Platform services and Studio Pro delegate authentication of platform users to your IdP.
+* Authentication is delegated for any user that has an email address where the email domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
 * When BYOIDP is used, a session at Mendix is valid for one hour. After the session is expired, Mendix will request a new `ID_token` from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
+* You can also use the [Mendix SSO](/appstore/modules/mendix-sso/) module for any app using the [standard or premium packages](https://www.mendix.com/pricing/) to provide an SSO experience for your non-production apps. With BYOIDP, authentication of end-users of these apps will also use be delegated by BYOIDP SSO. The end-users of these apps need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 
 #### 1.2.3 Technical Integration
 

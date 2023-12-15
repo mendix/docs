@@ -49,7 +49,7 @@ Follow the instructions in [How to Use Marketplace Content](/appstore/overview/u
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonRekognitionConnector** section. The connector provides a [domain model](#domain-model) and [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a Microflow.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonRekognitionConnector** section. The connector provides a [domain model](#domain-model) and [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a microflow.
 
 ### 3.1 Configuring AWS Authentication
 

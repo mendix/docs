@@ -40,7 +40,7 @@ If you see **Get Started with Mendix**, a red dot next to this menu item will re
 
 ## 5 Notifications Menu {#notifications}
 
-Click the **Open Notifications Menu** button (via the bell icon) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
+Click **Open Notifications Menu** ({{% icon name="alarm-bell" color="color" %}}) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
 To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
 
@@ -52,6 +52,6 @@ To stop receiving notifications when new feedback is submitted for a specific ap
 
 ## 6 Profile Menu
 
-Click the **Open Profile Menu** button (via your avatar) to access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/developerportal/community-tools/mendix-profile/#settings). 
+Click **Open Profile Menu** ({{% icon name="user" color="color" %}} to access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/developerportal/community-tools/mendix-profile/#settings). 
 
 You can also sign out from the Mendix Platform via this menu.

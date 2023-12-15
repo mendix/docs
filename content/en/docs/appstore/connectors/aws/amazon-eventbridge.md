@@ -56,7 +56,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon EventBridge, you can implement the functions of the connector by using the provided activities in mcroflows.
+After you configure the authentication profile for Amazon EventBridge, you can implement the functions of the connector by using the provided activities in microflows.
  
 #### 3.2.1 Sending Events to an Event Bus
 

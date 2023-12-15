@@ -45,7 +45,7 @@ BYOIDP SSO has the following features:
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
 * When BYOIDP is used, a session at Mendix is valid for one hour. After the session is expired, Mendix will request a new `ID_token` from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
-* You can also use the [Mendix SSO](/appstore/modules/mendix-sso/) module for any app using the [standard or premium packages](https://www.mendix.com/pricing/) to provide an SSO experience for your non-production apps. With BYOIDP, authentication of end-users of these apps will also use be delegated by BYOIDP SSO. The end-users of these apps need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
+* You can also use the [Mendix SSO](/appstore/modules/mendix-sso/) module for any app using the [standard or premium packages](https://www.mendix.com/pricing/) to provide an SSO experience for your non-production apps. With BYOIDP, authentication of end-users of these apps will also be delegated by BYOIDP SSO. The end-users of these apps need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 
 #### 1.2.3 Technical Integration
 

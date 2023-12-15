@@ -63,7 +63,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 After you configure the authentication profile for Amazon Rekognition, you can implement the functions of the connector by using the provided activities in microflows. For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
 
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add Microflow**.
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_DetectLabels*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **DetectLabels** activity.
 4. Drag the **DetectLabels** activity onto the work area of your microflow.

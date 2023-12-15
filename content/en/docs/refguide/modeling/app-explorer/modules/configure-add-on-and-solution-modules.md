@@ -59,6 +59,8 @@ Below is the list of documents and elements that can be mark as **Usable**:
 * Image collections
 * Custom widgets
 
+Pages cannot be made **Usable**. Instead, a navigation microflow that opens the page can be made **Usable**.
+
 ## 3 Exporting Add-on Modules and Solutions {#export}
 
 {{% alert color="info" %}}

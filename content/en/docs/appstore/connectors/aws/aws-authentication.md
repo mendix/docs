@@ -177,13 +177,13 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 #### 4.1.2 Using Credentials Generated Outside of Studio Pro {#credentials-cli}
 
-If you have credentials that have been generated without the help of the **Credentials_GenerateFromConstants** action, for example through the AWS command line interface, you can use them in your app in the following manner:
+If you have credentials that have been generated without the help of the **GetTemporaryCredentials** action, for example through the AWS command line interface, you can use them in your app in the following manner:
 
 1. Create a **TemporaryCredentials** object with the following parameters:
     * **AccessKeyId** - your IAM access key 
     * **SecretAccesskey** - your secret access key
     * **Token** - your token
-    * **Expiration** DateTime that the credentials expire
+    * **Expiration** DateTime that the credentials expire. When using credentials generated outside of Studio-Pro
 
 You can then use the above as a valid set of credentials.
 
@@ -195,7 +195,7 @@ To create static credentials with the **GetStaticCredentials** activity in your 
 
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
-3. Drag the **GetStaticCredentials** microflow from the **Toolboxr** into the work area of the microflow.
+3. Drag the **GetStaticCredentials** microflow from the **Toolbox** into the work area of the microflow.
 
  {{< figure src="/attachments/appstore/connectors/aws-authentication/toolbox-static.png" >}}
 
@@ -215,7 +215,7 @@ Using signature version 4 headers grants you full control over the contents of t
 
 This authentication method is suitable for advanced use cases. If your use case can be fulfilled with temporary credentials authentication alone, consider using that method instead.
 
-To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [Java action](#java-action) that you can use, as well as an [example microflow](#microflow) configuration.
+To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [microflow action](#getsigv4headers) that you can use, as well as an [example microflow](#microflow) configuration.
 
 #### 4.3.1 Domain Model {#domain-model}
 
@@ -239,13 +239,14 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
 * `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
 * `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
 
-#### 4.3.2 `GetSigV4SignedHeaders` Java Action {#java-action}
+#### 4.3.2 `GetSigV4Headers` Microflow Action {#getsigv4headers}
 
-The `GetSigV4SignedHeaders` Java action computes and provides the signed headers. It takes the following parameters as input:
+The `GetSigV4Headers` microflow action computes and provides the signed headers. It takes the following parameters as input:
 
 * A `SigV4Builder` object
-* A `SigV4Parameter` object that provides a list of headers
-* Another, optional `SigV4Parameter` object that provides a list of `QueryParameters`
+* A `Credentials` object
+* Optional: `SigV4HeaderParameterList` - list of `SigV4Parameter` object that provides a list of request headers
+* Optional: `SigV4QueryParameterList` - list of `SigV4Parameter` object that provides a list of query parameters
 
 The output of the action is a `SigV4Headers` object.
 

@@ -89,7 +89,7 @@ To help you work with the Amazon Rekognition connector, the following sections o
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are (re-)used by the different models for the specific Microflow activities or for storing connection details.
+The entities in the table below describe all generalizations. These are (re-)used by the different models for the specific microflow activities or for storing connection details.
 
 | Name | Description |
 | --- | --- |

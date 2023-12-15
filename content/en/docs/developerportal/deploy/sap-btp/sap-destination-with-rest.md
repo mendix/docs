@@ -61,7 +61,7 @@ The following entries are required in the **General** tab:
 The HTTP Headers do the following:
 
 * Authenticate the app to perform the action via the connectivity service
-* Authenticate the app to the correct SSC Location
+* Authenticate the app to the correct Shared Service Center (SSC) location
 * Authenticate the user to access the endpoint defined by the destination
 * Request to return the data in JSON format
 

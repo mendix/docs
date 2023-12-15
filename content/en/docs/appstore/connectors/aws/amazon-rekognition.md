@@ -123,7 +123,7 @@ This enumeration specifies how much filtering is applied, for example, to identi
 
 ### 4.3 Activities {#activities}
 
-Activities define the actions that are executed in a Microflow or a Nanoflow. For more information, see [Activities](/refguide/activities/).
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.3.1 Compare Faces {#compare-faces}
 

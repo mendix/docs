@@ -245,8 +245,8 @@ The `GetSigV4Headers` microflow action computes and provides the signed headers.
 
 * A `SigV4Builder` object
 * A `Credentials` object
-* Optional: `SigV4HeaderParameterList` - list of `SigV4Parameter` object that provides a list of request headers
-* Optional: `SigV4QueryParameterList` - list of `SigV4Parameter` object that provides a list of query parameters
+* Optional: `SigV4HeaderParameterList` - list of type `SigV4Parameter` that provides a list of request headers
+* Optional: `SigV4QueryParameterList` - list of type `SigV4Parameter` that provides a list of query parameters
 
 The output of the action is a `SigV4Headers` object.
 

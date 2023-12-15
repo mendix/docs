@@ -16,7 +16,7 @@ aliases:
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
-These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
+These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
 
 ## 2 Accessing the Metrics Graphs
 

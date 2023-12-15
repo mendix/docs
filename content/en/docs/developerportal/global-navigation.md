@@ -14,7 +14,7 @@ The global navigation is always accessible throughout the online Mendix Platform
 
 ## 2 Global Navigation Menu {#global-navigation}
 
-On the left side of the top bar, click the **Open Global Navigation** button (via the nine-dots icon) to access the main menu:
+On the left side of the top bar, click **Open Global Navigation** ({{% icon name="layout-rounded-1" color="color" %}}) to access the main menu:
 
 {{< figure src="/attachments/developerportal/global-nav/navigation-menu.png" width="250" >}}
 

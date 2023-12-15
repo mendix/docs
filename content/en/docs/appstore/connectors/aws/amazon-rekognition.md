@@ -133,7 +133,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `SourceImage` (Image); <br /> `TargetImage` (Image); <br /> `SimilarityThreshold` (Decimal); <br /> `QualityFilter` (Enumeration) | Level of similarity among inputted images (Decimal) |
+| `SourceImage` (Image); `TargetImage` (Image); `SimilarityThreshold` (Decimal); `QualityFilter` (Enumeration) | Level of similarity among inputted images (Decimal) |
 
 This activity returns a `CompareFaces` entity with associated entities as shown in the table below:
 

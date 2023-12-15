@@ -187,17 +187,19 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ## 9 New Features Tab {#new-features}
 
-### 9.1 Micro- And Nanoflow Editor
+### 9.1 Access Rules Editor
+
+In Studio Pro version 10.6 a new access rule editor was introduced in Beta. Enable this option to use the new editor in the *Access rules* tab of the entity properties dialog.
+
+For more information, see [Defining Access Rules Using the New Editor](/refguide/access-rules/#new-editor) section of *Access Rules*.
+
+### 9.2 Micro- And Nanoflow Editor
 
 Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
 
-### 9.2 Visual Builder
+### 9.3 Visual Builder
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the Builder as the default XPath constraint editor**.
-
-### 9.3 Entity access editor
-
-In Studio Pro version 10.6 a new access rule editor was releases in Beta. When enabling this option the new editor will be used in the *Access rules* tab of the entity properties dialog. For more information, see [Access Rule Editor (Beta)](/refguide/access-rule-editor-beta/).
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
 
 ## 10 Read More
 

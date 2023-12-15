@@ -9,6 +9,8 @@ tags: ["rebase", "mine", "theirs", "merge", "conflict"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 aliases:
     - /refguide/new-merge-algorithm
+    - /refguide/rebase-conflict
+    - /refguide/rebase
 ---
 
 ## 1 Introduction
@@ -105,7 +107,7 @@ Your work will be now referenced as 'Theirs', while the server changes will be '
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/Steps/Rebase_Step_1.png" width="525" >}} 
 
-#### 3.1.2 Resolving the First Conflict  
+#### 3.1.2 Resolving the First Conflict{#resolving-first-conflict}
 
 Git tries to apply your first commit (`#3`) to the tip of the rebasing branch ('Mine'). The commit will come after commit `#4`. 
 

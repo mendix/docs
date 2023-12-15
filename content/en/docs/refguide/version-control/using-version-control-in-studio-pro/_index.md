@@ -315,7 +315,7 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
 
-You can also configure the git driver locally per repository using the following commands:
+You can also configure the Git driver locally per repository using the following commands:
 
 ```text {linenos=false}
 git config merge.custom.name "custom merge driver for specific files"
@@ -382,7 +382,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT). Connecting to SVN can either be done using a PAT or your Mendix credentials.
+Connecting to Git is done using a personal access token (PAT).
 
 For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 

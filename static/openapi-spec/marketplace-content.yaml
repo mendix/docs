@@ -95,7 +95,10 @@ components:
     contentId:
       name: contentId
       in: path
-      description: "This is the identifier of the content."
+      description: |-
+        This is the identifier of the content, representing the number used in the URL of the content details page. For instance, it is '170' for 'https://marketplace.mendix.com/link/component/170'.
+        
+        It can also be retrieved by querying the Content API using the name of the last published version of the content. For instance, ```GET https://marketplace-api.mendix.com/v1/content?name=Community%20Commons```  will return the contentId for 'Community Commons'.
       required: true
       schema:
         type: integer
@@ -367,17 +370,16 @@ components:
             type: string
             example: "These are the release notes for this version."
             description: "These are the release notes for the published versions."
-        
-                
-      
+
   securitySchemes:
-    PersonalAccesToken:
+    Personal Access Token:
       name: Authorization
       type: apiKey
       in: header
       description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
-tags:
-  - name: content
 
 security:
-  - PersonalAccessToken: []
+  - Personal Access Token: []
+
+tags:
+  - name: content

@@ -17,7 +17,7 @@ There are two ways to set up email alerts for an environment:
 * The Technical Contact can grant you the **Receive Alerts** permission in **Node Permissions**
 * You can select the **Email Alerts** checkbox yourself on the **Alerts** page
 
-Both options are described below.
+Both options for setting up email alerts are described below.
 
 ### 2.1 Node Permissions  
 
@@ -26,7 +26,7 @@ If you are the Technical Contact for an app, you can grant team members the **Re
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment** (or **Deployment** > **Public Cloud**).
 3. Open the node by clicking **Environments** under the app name.
-4. Click the **Details** icon for the environment for which you want to set up alerts. You can set alerts permissions separately for each environment.
+4. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment for which you want to set up alerts. You can set alerts permissions separately for each environment.
 5. Switch to the **Permissions** tab.
 6. Select the checkbox below **Receive Alerts** for the user (or users) who should receive alerts. Your changes will save automatically.
 
@@ -45,7 +45,7 @@ To enable email alerts, follow these steps:
 5. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
 6. Select the **Email Alerts** checkbox.  Your changes will save automatically.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" alt="The Email Alerts checkbox" width="70%" >}}
 
 ## 3 Alerts Using Webhooks 
 

@@ -340,7 +340,7 @@ JavaScript actions provide an additional way to extend the functionality of your
 
 #### 4.4.1 Image_AddBoundingBox {#js-bounding-box}
 
-The `Image_AddBoundingBox` Nanoflow action can be used to generate a rectangle around the labels that have been identified on an image. It makes use of a JavaScript action inside the Nanoflow. The image upon which the rectangles are to be generated must be contained in a container. As a result, the Nanoflow action can only be executed after the page has been rendered.
+The `Image_AddBoundingBox` nanoflow action can be used to generate a rectangle around the labels that have been identified on an image. It makes use of a JavaScript action inside the Nanoflow. The image upon which the rectangles are to be generated must be contained in a container. As a result, the nanoflow action can only be executed after the page has been rendered.
 
 | Parameter | Description |
 | --- | --- |

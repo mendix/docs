@@ -62,7 +62,7 @@ After you configure the authentication profile for Amazon EventBridge, you can i
 
 To send events to an event bus in your AWS environment, implement the [PutEvents](#put-events) activity by performing the following steps:
 
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add Microflow**.
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_create_microflow.png" >}}
 
@@ -93,7 +93,7 @@ To be able to receive events to your Mendix app, you first need to add your Mend
 
 To configure your Mendix app to receive events, perform the following steps:
 
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add Microflow**.
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_create_microflow.png" >}}
 

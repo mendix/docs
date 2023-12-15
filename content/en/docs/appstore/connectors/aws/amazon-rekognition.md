@@ -157,7 +157,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); <br /> `MaxResults` (Integer/Long, minimum value of 0); <br /> `ProjectARN` (String); <br /> `Image` (Image) | Custom label |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxResults` (Integer/Long, minimum value of 0); `ProjectARN` (String); `Image` (Image) | Custom label |
 
 This activity returns a `DetectCustomLabelsResponse` object and associated objects as shown in the table below:
 

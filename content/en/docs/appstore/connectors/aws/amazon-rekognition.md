@@ -245,7 +245,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); <br /> `MaxLabels` (Integer/Long, minimum value of 0); <br /> `Image` (Image) | An array or object of detected label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label(s) |
 
 This activity returns a `DetectLabelsResponse` objects with associated objects as shown in the table below:
 

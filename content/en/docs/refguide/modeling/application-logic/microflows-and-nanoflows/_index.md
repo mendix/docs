@@ -25,7 +25,7 @@ Explore the documentation for details on microflow and nanoflow definitions, pro
 * [Events](/refguide/events/)
 * [Common Properties](/refguide/microflow-element-common-properties/)
 
-## 2 Classic and Modern Logic Editors
+## 2 Classic and Modern Logic Editors {#new-editor}
 
 In Studio Pro 10.6 and above, use the new and modernized logic editors. The new editors focus on making your daily logic modeling experience faster, smoother and easier to learn. 
 

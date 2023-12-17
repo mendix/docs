@@ -15,7 +15,9 @@ A **Retrieve workflow activity records** activity can be used to retrieve a list
 
 It needs the **System.Workflow** instance object as its input. It will break at Runtime if the passed workflow object is empty.
 
-The **System.WorkflowActivityRecord** entity represents a snapshot of workflow activity attributes taken at a certain execution moment. If the activity is finished the snapshot will have workflow activity attributes at the moment when the activity has ended (completed, aborted or failed). If the activity is still in progress the snapshot will have the current activity attributes. The most common use case for the retrieved list of **System.WorkflowActivityRecord** objects is to build an activity timeline for a specific workflow. Each **System.WorkflowActivityRecord** object is linked to the previously executed activity through the **System.WorkflowActivityRecord_PreviousActivity** association (except for the Start event). It can be used to visualize the order in which each activity finishes.
+The **System.WorkflowActivityRecord** entity represents a snapshot of workflow activity attributes taken at a certain execution moment. If the activity is finished, the snapshot will have workflow activity attributes at the moment when the activity ends (completed, aborted, or failed). If the activity is still in progress, the snapshot will have the current activity attributes. 
+
+The most common use case for the retrieved list of **System.WorkflowActivityRecord** objects is to build an activity timeline for a specific workflow. Each **System.WorkflowActivityRecord** object is linked to the previously executed activity through the **System.WorkflowActivityRecord_PreviousActivity** association (except for the Start event). It can be used to visualize the order in which each activity finishes.
 
 ## 2 Properties
 

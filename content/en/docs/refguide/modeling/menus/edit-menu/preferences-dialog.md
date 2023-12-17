@@ -191,9 +191,9 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
 
-### 9.2 Use the modernized expression editor
+### 9.2 Use the Modernized Expression Editor
 
-The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+The expression editor is modernized since Studio Pro 10.6. This setting is enbaled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
 ### 9.3 Visual Builder
 

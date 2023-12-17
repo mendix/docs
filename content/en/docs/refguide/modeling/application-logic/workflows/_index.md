@@ -27,7 +27,7 @@ You can perform the following basic functions when working on workflows:
 * View element properties
 * Trigger a workflow from a page or via a microflow
 * Export a workflow to an image
-* Switching between portrait and landscape editor orientation
+* Switch between portrait and landscape editor orientation
 
 ### 3.1 Opening a Workflow
 

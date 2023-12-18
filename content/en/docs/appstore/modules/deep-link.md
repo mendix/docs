@@ -1,11 +1,15 @@
 ---
-title: "Deep Link"
+title: "Deep Link ⚠"
 url: /appstore/modules/deep-link/
 category: "Modules"
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}
+⚠ This module is deprecated from Studio Pro 9.6.0. It is replaced by microflow URLs and page URLs.
+{{% /alert %}}
 
 ## 1 Introduction
 

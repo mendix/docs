@@ -42,7 +42,7 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" width=25% >}}
 
-3. On the backup you want to restore, click the **More Options** icon and select **Restore** from the drop-down list.
+3. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/backupoptions.png" >}}
 
@@ -78,7 +78,7 @@ You can only restore data to an existing database. This means that there must ha
 
 1. In the Developer Portal, go to the **Backups** page for your app.
 2. Select the environment to which the backup should be restored (for example, **Acceptance**).
-3. On the backup you want to restore, click the **More Options** icon and select **Restore** from the drop-down list.
+3. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
 4. Confirm the backup restore by clicking **Restore Backup**.
 
 {{% alert color="info" %}}

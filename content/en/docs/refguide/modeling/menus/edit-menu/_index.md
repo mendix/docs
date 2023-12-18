@@ -12,7 +12,7 @@ Via the **Edit** menu you can perform various actions, such cut/copy/paste or se
 
 {{< figure src="/attachments/refguide/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu" >}}
 
-## 2 Menu Item Overview
+## 2 Menu Item Overview {#overview}
 
 The **Edit** menu items are described in the table below:
 

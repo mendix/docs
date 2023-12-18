@@ -13,7 +13,7 @@ Text widgets category are used to display textual information to the end-user. T
 
     {{< figure src="/attachments/refguide9/modeling/pages/text-widgets/text-widget-example.png" >}}
 
-* [Label](/refguide9/label/) – displays static text (the functionality of this widget is outdated, we recommend using the label property of [input elements](/refguide9/input-widgets/) or a text widget instead) 
+* [Label](/refguide9/label/) – displays static text (the functionality of this widget is outdated; Mendix recommends using the label property of [input elements](/refguide9/input-widgets/) or a text widget instead) 
 * [Page Title](/refguide9/page-title/) – displays page title set in [page properties](/refguide9/page-properties/#title)
 
     {{< figure src="/attachments/refguide9/modeling/pages/text-widgets/page-title-design-properties-example.png" >}}

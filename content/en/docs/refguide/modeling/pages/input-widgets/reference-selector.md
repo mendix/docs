@@ -31,6 +31,7 @@ If you only want to *display* information, you can also use a [text box](/refgui
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference selector properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -43,6 +44,7 @@ Properties:
 * [Selectable Objects](#selectable-objects)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
@@ -178,6 +180,7 @@ The **Source** property sets which of the three ways to define the selectable ob
 
 * Database *(default)*
 * XPath
+    {{% alert color="info" %}}From Mendix version 10.5, the reference selector does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * Microflow
 
 #### 3.10.1 Database
@@ -186,7 +189,9 @@ Database is the default source for the selectable objects. By default, all datab
 
 **Constraints**
 
-You can limit the objects presented to the end-user by adding constraints. You will be guided through making constraints in the **Edit Constraints** dialog box:
+From Mendix version 10.5, click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
+
+Below Mendix version 10.5, you can limit the objects presented to the end-user by adding constraints. You will be guided through making constraints in the **Edit Constraints** dialog box:
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png" alt="Edit constraints dialog box" >}}
 
@@ -197,6 +202,10 @@ See the [constraints](/refguide/database-source/#constraints) section of *Databa
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
 #### 3.10.2 XPath{#xpath-constraints}
+
+{{% alert color="info" %}}
+In Mendix version 10.5 and above, you can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. There is no separate **XPath** source. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
+{{% /alert %}}
 
 If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 
@@ -217,7 +226,7 @@ Imagine you have an ordering system where the products are sorted into categorie
 *Example Domain model*
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
 
-In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
+In the domain model, the order line has one-to-many associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
 {{% alert color="info" %}}
 Such a triangle-shaped part of the domain model is what makes using **constrained by** possible.

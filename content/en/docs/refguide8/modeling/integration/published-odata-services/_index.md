@@ -16,7 +16,7 @@ aliases:
 
 In Studio Pro, entities can be exposed as [OData resources](/refguide8/published-odata-resource/) by adding a new published OData service. You can expose any number of related resources in a published OData service. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
-The standard used for OData in Mendix is [OData version 3](http://www.odata.org/documentation/odata-version-3-0) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+The standard used for OData in Mendix is [OData v3](http://www.odata.org/documentation/odata-version-3-0) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
 This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
 

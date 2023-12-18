@@ -76,7 +76,7 @@ Set the name of your company and app in the constants.
 
 ## 9 Optionally Configure the APMAgent.NotifyMicroflowName Constant
 
-This constant defines the microflow that is called on the trigger notify action. You can call a microflow that sends an e-mail. The microflow gets three string parameters:
+This constant defines the microflow that is called on the trigger notify action. You can call a microflow that sends an email. The microflow gets three string parameters:
 
 * **To**
 * **Subject**

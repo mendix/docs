@@ -14,7 +14,7 @@ To avoid cluttering the tutorial, only the relevant code will be shown, not the 
 
 When you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments
@@ -104,7 +104,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 | 1 | Declaring an `Attachment` variable named `newAttachment`. |
 | 2 | Declaring an `InputStream` variable named `inputStream`. |
 | 3 | Starting to loop through a list of `IMendixObjects` returned by our helper method. |
-| 5 | Here we use the `Core` method `getFileDocumentContent()`, passing our retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
+| 5 | Here the `Core` method `getFileDocumentContent()` is used, passing the retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
 | 6 | A new `Attachment` is instanced. |
 | 7 | The relation to the destination object is set on our new `Attachment`. |
 | 8 | The content of the retrieved `InputStream` is stored in our new `Attachment` using the `Core` method `storeFileDocumentContent()`. This method takes a number of parameters: the context in which you are performing this store; the `IMendixObject` of the `Attachment` proxy, which is retrieved by calling `getMendixObject()` on the `Attachment` proxy; the file name of the `FileDocument` in string format, which is copied from the attachment you're copying from by using the `getValue()` method passing the member name you wish to know the value of; and the `InputStream` containing the actual file. |

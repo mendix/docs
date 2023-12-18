@@ -2,15 +2,15 @@
 title: "Security and Shared Datasets"
 url: /refguide/security-shared-datasets/
 weight: 75
-tags: ["Catalog", "security", "entity security", "dataset security","odata service security", "odata"]
+tags: ["Catalog", "security", "entity security", "dataset security","OData service security", "OData"]
 ---
 
 ## 1 Introduction
 
-For Mendix apps that publish or consume [external entities](/refguide/external-entities/) (abstracted OData services), the following details apply:
+For Mendix apps that publish or consume [external entities](/refguide/external-entities/) and/or actions (abstracted OData services), the following security is applied:
 
-* The security for the OData service is defined in the publishing app at the app, module, and entity level
-* The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
+* The security for the OData service is defined in the publishing app at the app, module, and entity or microflow level
+* The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities or microflows from the service are used in a consuming app when end-users try to access these
 
     {{% alert color="info" %}}The security for an OData service can only be set if the [app security](/refguide/app-security/) is enabled.{{% /alert %}}
 
@@ -19,11 +19,14 @@ For Mendix apps that publish or consume [external entities](/refguide/external-e
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
 
     * On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso/),  but it can also be the organization's identification protocol
-* In the publishing app in Studio Pro, access can be defined at the entity level as follows:
+
+* Access in the app publishing the external entities and actions can be [defined in Studio Pro](/refguide/published-odata-services/#security) as follows:
 
     * None
     * Basic authentication on the user name and password
     * Customized where the publisher builds their own microflow which gets the header from the request to determine the user and what the user wants to do
+
+* When app security has been enabled, entity access rules are enforced when executing published microflows, also for entities that are not published in the OData service.
 
 For further details, see the [Entity Access](/refguide/module-security/#entity-access) section of *Module Security*.
 

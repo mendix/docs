@@ -23,7 +23,7 @@ OTA updates are bound to a specific app version and build number. Therefore, you
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Push an OTA update for a released app
 * Rollback an update
@@ -99,7 +99,7 @@ To release a new version OTA, follow these steps:
     {{% alert color="info" %}}
 This command does the following:<br />
 
-* Runs Mx Build to build your project<br />
+* Runs MxBuild to build your project<br />
 * Packages your project to be pushed as a new update<br />
 * Pushes the new update package for the app's version 1.0.0<br />
 * Sets the rollout percentage to 100% (all app users)<br />

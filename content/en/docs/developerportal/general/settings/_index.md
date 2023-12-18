@@ -55,18 +55,40 @@ In this tab, you can find the following items:
 Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/general/leave-delete-app/).
 {{% /alert %}}
 
-## 3 Access Management {#managing-app-users}
+## 3 Cloud Settings {#cloud-settings}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can change cloud platforms.
+{{% /alert %}}
+
+On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
+
+If you select a non-Mendix Cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
+
+Specific steps for configuring different cloud platforms are provided here:
+
+* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
+* [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
+
+## 4 Access Management {#managing-app-users}
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Mange Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Manage Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
 
-On the tab, you can only see the environments that satisfy these requirements:
+On the tab, you can only see the environments that satisfy the following requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
-* Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
+* You are currently assigned a user role in the app which allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
-### 3.1 Managing Users {#manage-users}
+{{% alert color="info" %}}
+When deploying your application to a non-production environment, the deploying user and the Technical Contact are always assigned the Administrator user role.
+
+When deploying your application to a production environment, the Technical Contact is always assigned the Administrator user role. If you cannot see an environment, ask your Technical Contact to assign you a user role for that environment which allows you to manage other users. 
+{{% /alert %}}
+
+### 4.1 Managing Users {#manage-users}
 
 When you click **Manage Users** for your environment, a dialog box opens with a list of the current app users you can remove or edit:
 
@@ -75,10 +97,10 @@ To remove an app user from the environment, click **Remove** by their name.
 To edit an app user's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert color="info" %}}
-If an app user has been granted access to an app environment through a [group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
+If an app user has been granted access to an app environment through a [group](/control-center/groups/), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
-### 3.2 Inviting Users {#invite-users}
+### 4.2 Inviting Users {#invite-users}
 
 To invite new app users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
 
@@ -91,22 +113,6 @@ To invite new app users to your app, click **Invite Users** for that environment
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
 After they provide authorization, they will be brought to your deployed app.
-
-## 4 Cloud Settings {#cloud-settings}
-
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can change cloud platforms.
-{{% /alert %}}
-
-On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
-
-If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
-
-Specific steps for configuring different cloud platforms are provided here:
-
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
-* [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
 ## 5 API Keys {#general-settings-api-keys}
 
@@ -141,7 +147,7 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-It is possible to migrate all or part of your content from [Stories](/developerportal/project-management/stories/) to Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Planning*.
+It is possible to migrate all or part of your content from Stories to Epics. For details, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
@@ -150,11 +156,11 @@ If you manage your projects in Jira, you can connect your apps in the Developer 
 ## 7 Webhooks {#webhooks}
 
 {{% alert color="warning" %}}
-This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
+⚠ This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
+You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the Git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -172,8 +178,8 @@ After clicking **New Webhook** to create a new webhook for stories and sprints, 
 * **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
 * **Events** – what types of data will be sent via the webhook for stories and Sprints (you must select at least one; this appears when creating and editing a webhook for stories and Sprints, but it will not be displayed on the **Webhooks settings** page)
-    * [Sprints](/developerportal/project-management/stories/#story-actions)
-    * [Stories](/developerportal/project-management/stories/)
+    * **Sprints**
+    * **Stories**
 
 To edit the above details for an existing webhook for stories and Sprints, click **Edit**.
 
@@ -197,10 +203,10 @@ When you select a history item and click **Show item**, the details of the story
 
 ## 9 Story Archive {#story-archive}
 
-Once you have switched from Mendix Stories to Epics or Jira, we archive any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
+Once you have switched from Mendix Stories to Epics or Jira, Mendix archives any work you may have had in Mendix Stories. You can review your work on this tab, and download it if necessary.
 
 {{% alert color="warning" %}}
-We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to download your work before that date.
+Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  >}}

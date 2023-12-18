@@ -2,7 +2,7 @@
 title: "Add Fonts to Your Native Mobile App"
 url: /howto8/mobile/native-custom-fonts/
 weight: 42
-description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."
+description: "This how-to teaches you how to enrich the design of your native mobile app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 ---
 
@@ -84,7 +84,7 @@ Before [adding fonts manually](#manual):
 
 * Understand the native mobile [local build process](/howto8/mobile/native-build-locally/)
 * Locally check out your repository 
-* Understand git and have a git tool installed
+* Understand Git and have a Git tool installed
 * Have XCode installed for the iOS sections below
 
 ## 3 Add Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}

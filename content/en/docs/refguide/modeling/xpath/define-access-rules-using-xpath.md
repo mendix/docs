@@ -9,13 +9,17 @@ aliases:
     - /howto/logic-business-rules/define-access-rules-using-xpath/
 ---
 
+{{% alert color="info" %}}
+This example is using a version of Mendix below 10.5. In Mendix version 10.5 and above, the [XPath Constraints](/refguide/xpath-constraints/) dialog has a different UX which makes it easier to build XPath constraints. However, the concepts and XPath examples can still be used in Mendix version 10.5 and above.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints/) in the *Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules/) in the *Studio Pro Guide*.
 
 In this how-to, you will prepare a data structure (including security), a GUI, and some example data for customers, orders, and a financial administrator account. After this preparation, you will define the access rules for the **Order** entity using XPath on the payment status. The XPath will constrain the order so that it can only be seen by a financial administrator when the payment status of the order is set to **paid**.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Define access rules for an entity using XPath
 

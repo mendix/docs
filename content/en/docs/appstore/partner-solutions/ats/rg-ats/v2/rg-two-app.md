@@ -124,9 +124,9 @@ App member that the have a No access role will not see the app in their **My app
 For on-premises instances of ATS, all accounts created manually by the tenant administrator will be members of each project.
 {{% /alert %}}
 
-In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the project role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the app role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 
-Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
+Finally, note that a user who has an administrative app role in the Developer Portal will always have administrative rights in ATS.
 
 {{% alert color="info" %}}
 If an app lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.

@@ -44,7 +44,7 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 
 **Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used on preconfigured pages: the Admin Center and Workflow Admin page. 
 
-The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
+The **Workflow name** can contain parameters that are written between braces, for example, {1}.
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
@@ -52,7 +52,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Workflow description** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow description** is used in page templates. 
 
-The **Workflow description** can contain parameters that are written between braces, e.g. {1}.
+The **Workflow description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.3.3 Parameters {#parameters}
 

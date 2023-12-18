@@ -64,6 +64,8 @@ To export archived stories, perform these steps:
    * **UUID** – This is a universally unique identifier automatically generated for the story.
    * **Story id** – This is the unique ID of the story in Epics.
    * **Title** – This is the title of the story.
+   * **Assigned to** – This shows the person to whom the story was assigned.
+   * **Archived by** – This shows the person who archived the story.
    * **Description** – This is the description of the story.
    * **Story type** – This specifies whether the story is a **Feature** or **Bug**. 
    * **Story points** – This shows the story points.

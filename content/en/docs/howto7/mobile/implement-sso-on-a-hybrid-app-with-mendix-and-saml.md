@@ -25,7 +25,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
+To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -141,7 +141,7 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
+1. Open your app in the Developer Portal. In the navigation pane, click **Mobile App**.
 2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}
@@ -172,13 +172,13 @@ To use the hybrid app package, follow these steps:
 ### 5.3 The SAML Module 
 
 {{% alert color="warning" %}}
-Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). Mendix recommends updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
 
 See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAML* documentation for more information.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in version 1.16.6 and above for Mendix version 7.
+The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in version 1.16.6 and above for Mendix 7.
 {{% /alert %}}
 
 If you have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide7/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **SAML20.HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. 

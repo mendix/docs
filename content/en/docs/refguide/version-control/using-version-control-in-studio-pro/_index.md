@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide/version-control/).
+This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Control](/refguide/version-control/).
 
 ## 2 Starting an App with Version Control
 
@@ -20,9 +20,8 @@ To start a new app with version control do the following:
 1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
 2. Select the starting point – an app template.
 3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-4. Choose **Repository type**. 
-5. Change the **App directory**, or leave the default suggested by Studio Pro.
-6. Click **Create app**.
+4. Change the **App directory**, or leave the default suggested by Studio Pro.
+5. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
@@ -81,7 +80,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
+Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
@@ -119,13 +118,44 @@ If you also changed Java source code, added widgets or made other changes that a
 
 Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
 
-### 4.3 Pushing
+### 4.3 Pushing {#pushing}
 
 Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
+
+#### 4.3.1 Push Fast-Forward Only
+
+{{% alert color="info" %}}
+The features described in this section were introduced in Mendix version 10.3.
+{{% /alert %}}
+
+While you were working on your branch somebody may have pushed their changes to the same branch on the server already. In this case pushing isn’t possible and you will need to take further action first.
+
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this and **Also push changes to the remote server** will be set to **No** and disabled.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
+
+If the changes are discovered during the push, an information dialog with instructions will be shown.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
+
+Git prevents you from pushing your changes because it sees your changes and the remote changes as potentially conflicting. In this diagram you see that Git doesn’t know how to combine commits #3 and #5.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch.">}} 
+
+When you pull the changes, Studio Pro will merge the changes from the branch on the server into your local copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server.">}} 
+
+There are 2 possible scenarios when merging and needing to make a merge commit:
+
+1. No conflicts (for example, you added a microflow and somebody else added a module on the server)
+    In this case Studio pro can automatically resolve this and there is nothing for you to do.
+2. Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote)
+    In this case you will need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
 
 ### 4.4 Pulling
 
@@ -169,33 +199,7 @@ You can revert changes in the **Changes** pane, from **Version Control** > **Rev
 
 If you update/pull your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 
-There are two different sorts of conflict:
-
-* Document conflicts
-* App conflicts
-
-### 6.1 Resolving a Document Conflict
-
-Two changes in the same *document* that are really close to each other can cause a document conflict. For example, two people both change the properties of the same element on the page. The document will be marked as conflicted in the **Changes** pane. Conflicts have to be resolved before you can commit again.
-
-For more information on resolving document conflicts see [Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/merge-algorithm/) and [Changes Pane](/refguide/changes-pane/).
-
-### 6.2 Resolving an App Conflict
-
-App conflicts are conflicts are conflicts at the level of the app. There are two cause for app conflicts:
-
-1. One person deletes a document and the other makes a change inside that document.
-2. Both people move a document but to different places in the app tree.
-
-The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/app-conflicts.png" alt="Example of app conflicts" >}}
-
-{{% alert color="info" %}}
-If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
-{{% /alert %}}
-
-You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
+See [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/) for more information.
 
 ## 7 Using Branches
 
@@ -311,7 +315,7 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
 
-You can also configure the git driver locally per repository using the following commands:
+You can also configure the Git driver locally per repository using the following commands:
 
 ```text {linenos=false}
 git config merge.custom.name "custom merge driver for specific files"
@@ -378,7 +382,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT). Connecting to SVN can either be done using a PAT or your Mendix credentials.
+Connecting to Git is done using a personal access token (PAT).
 
 For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 

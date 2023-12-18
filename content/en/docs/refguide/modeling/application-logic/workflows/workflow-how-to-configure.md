@@ -15,7 +15,7 @@ Workflow is a new visual language that allows you to build extendable processes.
 
 This how-to explains how to build an employee onboarding process using the workflow editor. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a workflow
 * Create user tasks for different user roles

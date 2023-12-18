@@ -19,7 +19,7 @@ Amazon DynamoDB helps improve your app by giving you the tools to build scalable
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Amazon DynamoDB connector requires Mendix Studio Pro version 9.18.0 or above.
+The Amazon DynamoDB connector requires Mendix Studio Pro 9.18.0 or above.
 
 To use the Amazon DynamoDB connector, you must also install and configure the following modules:
 
@@ -38,7 +38,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon DynamoDB connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon DynamoDB connector into your app.
 
 ## 3 Configuration
 

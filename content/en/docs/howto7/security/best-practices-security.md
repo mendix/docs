@@ -87,7 +87,7 @@ Your application might require sensitive information that should be extra encryp
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
 
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption/) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, Mendix recommends storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption/) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
 
 ## 7 Using a Third-Party Identity Provider
 
@@ -107,7 +107,7 @@ Your application can gain the following benefits from using an identity provider
 
 By default, Mendix forces a strong password policy. The same password policy that is configured in the Mendix Modeler is also used for apps running in a hosted environment (for example, on test, acceptance, and production).
 
-It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, we recommend avoiding this approach so that deployments will continue to force a strong password policy.
+It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, Mendix recommends avoiding this approach so that deployments will continue to force a strong password policy.
 
 The password policy can be set by via the guidelines described in [Password Policy](/refguide7/password-policy/).
 

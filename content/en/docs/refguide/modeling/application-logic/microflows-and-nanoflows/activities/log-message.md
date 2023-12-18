@@ -6,8 +6,8 @@ tags: ["studio pro", "logging activity", "logging activities", "log message"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -31,7 +31,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Log Level
 
@@ -68,7 +68,7 @@ For each parameter in the template you define a microflow expression of which th
 
 {{% alert color="info" %}}
 
-With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to department {1}*. with parameter `$Department/Name` shows the name of the department to which an e-mail has been sent.
+With parameters you can customize your message with data specific to the situation. For example, the message *An email has been sent to department {1}*. with parameter `$Department/Name` shows the name of the department to which an email has been sent.
 
 {{% /alert %}}
 

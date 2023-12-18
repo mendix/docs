@@ -136,18 +136,24 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 The nanoflow editor offers keyboard support for navigating and manipulating the nanoflows. The following table shows the keys that can be used.
 
-| Key(s) | Effect |
+| Key | Effect |
 | --- | --- |
-| Arrow keys | Selects the nearby element (activity, event, loop, or parameter) in the direction of the arrow. |
-| <kbd>Enter</kbd> | Edits the properties of the selected element. |
-| <kbd>F2</kbd> | Renames the item returned by the selected element. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> or just starting to type | Edits the caption of the selected element. |
-| <kbd>Ctrl</kbd> + arrow keys | Moves the selected element in the direction of the arrow. |
-| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop is selected. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself is selected. |
-| <kbd>Home</kbd> | Selects the start event. |
-| <kbd>End</kbd> | Cycles through the end events. |
-| Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
+| Arrow keys | Move the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the activity to the right of it becomes selected. |
+| <kbd>Enter</kbd> | Edit the properties of the selected element. |
+| <kbd>F2</kbd> | Edit the name of the return value of the selected activity. This shortcut only functions on activities that return a result. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | Edit the caption of the selected element. |
+| <kbd>Ctrl</kbd> + arrow keys | Move the selected element in the direction of the arrow. |
+| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
+| <kbd>Home</kbd> | Select the start event. |
+| <kbd>End</kbd> | Cycle through the end events. |
+| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
+| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+| Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
+
+{{% alert color="info" %}}
+The beta version of the redesigned nanoflow editor is now available to try out in Studio Pro 10.4.0. In the beta nanoflow editor, keyboard navigation has been improved. For more information on what keyboard shortcuts are supported and their respective functions in the beta nanoflow editor, see the [Keyboard Navigation](/refguide/logic-editors-beta/#keyboard-navigation) section in *Logic Editors (Beta)*.
+{{% /alert %}}
 
 ## 6 Security {#security}
 

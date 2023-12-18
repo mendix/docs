@@ -1,5 +1,6 @@
 ---
 title: "Deploy API – Version 2"
+linktitle: "Deploy API v2"
 url: /apidocs-mxsdk/apidocs/deploy-api-2/
 category: "API Documentation"
 description: "Deploy API v2 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."

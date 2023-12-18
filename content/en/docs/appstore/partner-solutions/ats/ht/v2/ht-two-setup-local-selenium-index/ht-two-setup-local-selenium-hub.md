@@ -20,7 +20,7 @@ The following components are needed:
 * Install Java on your machine [https://java.com](https://java.com)
 * Install Chrome and Firefox on your machine
 * Your machine should allow connections from ATS on port 4444
-* From version 2.6, ATS uses the Selenium 3.8.1 API; therefore, we recommend using this version of Selenium as well
+* From version 2.6, ATS uses the Selenium 3.8.1 API; therefore, using this version of Selenium is recommended
 
 ## 3 Downloading Selenium Server
 

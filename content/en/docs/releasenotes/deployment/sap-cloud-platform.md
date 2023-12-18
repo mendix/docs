@@ -34,13 +34,13 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We released new versions of the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) and [UI Package for SAP Fiori themed apps](https://marketplace.mendix.com/link/component/107625) modules in the Mendix Marketplace. These modules allow you to use Mendix version 9.6.11 and above to make Fiori-styled apps which work alongside the Atlas Core theme.
+* We released new versions of the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) and [UI Package for SAP Fiori themed apps](https://marketplace.mendix.com/link/component/107625) modules in the Mendix Marketplace. These modules allow you to use Mendix 9.6.11 and above to make Fiori-styled apps which work alongside the Atlas Core theme.
 
 ### March 2, 2022
 
 #### BAPI Connector
 
-* We added the new BAPI Connector for SAP solutions, which allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/partners/sap/sap-bapi-connector/).
+* We added the new BAPI Connector for SAP solutions, which allows Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. For more information, see [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/).
 
 ## 2021
 
@@ -48,7 +48,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/).
+* We added a configurator to help you create a custom *xs-security-json* file to configure an XSUAA service. For more information, see [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/).
 
 ### October 14, 2021
 
@@ -65,14 +65,14 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements – OData Connector for SAP Solutions
 
-* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service/). Users will now be signed out so that they can retrieve a new access token.
+* We improved the error handling for expired access tokens when using [Get Destination](/developerportal/deploy/sap-cloud-platform/sap-destination-service/). Users will now be signed out so that they can retrieve a new access token.
 * We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
 
 ### July 26, 2021
 
 #### Improvements
 
-* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/).
+* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/).
 
     {{% alert color="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.{{% /alert %}}
 
@@ -86,7 +86,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-model-creator/) and [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
+* We released a new version of the [OData Model Creator for SAP Solutions](/appstore/connectors/sap/use-sap-model-creator/) and [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) which support read-only access to SAP OData Gateway Services which use OData v4. This is in addition to the existing support for OData v2 and v3.
 
 #### Fix
 
@@ -129,7 +129,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0/).
+* We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori UI Resources](/appstore/modules/sap-ui-resources/sap-fiori-3-0/).
 
 ### December 9, 2020
 
@@ -151,7 +151,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
 ### March 26, 2020
@@ -159,7 +159,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 #### Improvements
 
 * We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
-    * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
+    * Object storage is only supported in the Azure Netherlands region for  Mendix 8.7.0 and above.
 * We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
 * We have added the ability to specify a custom URL (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 

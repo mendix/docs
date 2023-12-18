@@ -11,11 +11,96 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
 
-There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+There are separate release notes for other deployment targets; see the [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
 
-For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2023
+
+### December 14, 2023
+
+#### Improvements
+
+* The application disk usage and CPU usage graphs on the Metrics page now have y-axes that scale dynamically, with the minimum set to 0 and the maximum set to the maximum data point included in the request.
+
+### November 22, 2023
+
+#### Improvements
+
+* We improved the layout and display of the Metrics page. Metrics can now be filtered via drop-down menus that set the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs. We also updated the visual style of the graphs. For more information, see [Metrics](/developerportal/operate/metrics/).
+* We improved the layout and functionality of the Logs page. The log archives now display file size for app and access logs, and they include an option to filter logs by date. For more information, see [Logs](/developerportal/operate/logs/).
+* The Logs page now has an activity log, which reports data on who has viewed or downloaded the logs. The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
+
+### November 16, 2023
+
+#### Improvements
+
+* We added support for sending application runtime logs and metrics to [New Relic](/developerportal/operate/newrelic-metrics/).
+* We deprecated the `SPLUNK_LOGS_REDACTION` and `DATADOG_LOGS_REDACTION` environment variables.
+* We introduced the `LOGS_REDACTION` variable, which is compatible with [Splunk](/developerportal/operate/splunk-metrics/), [Datadog](/developerportal/operate/datadog-metrics/), and [New Relic](/developerportal/operate/newrelic-metrics/).
+
+### October 26, 2023
+
+#### Improvements
+
+* We added support for an `Origin-Trials` HTTP header in the Developer Portal. To use this header, the customer must first deploy (or redeploy) their app sometime after 26 October, 12:00 PM. If the customer has deployed since this date, then they can simply set the header and restart their app to use the header. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
+
+### October 25, 2023
+
+#### Improvements
+
+* We added support for gp3 storage instances for databases; this provides higher baseline storage performance compared to gp2. IOPS and throughput performance will be upgraded according to the table below.
+
+    * From October 25 onwards, when a customer creates a new DB instance, it is provisioned with a gp3 storage instance if it has a storage size of at least 20 GiB (as specified in the table below). This also occurs when the customer's database is recreated.
+    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
+    * Existing databases eligible for this upgrade will be migrated later. More details will follow.
+
+    * For more information, see [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Metrics* documentation.
+
+### October 12, 2023
+
+#### Portal Enhancements
+
+* We moved the **Running Now** interface from the **Metrics** page to the [Environment Details](/developerportal/deploy/environments-details/) page. This interface now displays as a dialog box, accessed by clicking the **Show Running Now** action button when the environment is running.
+
+#### Fixes
+
+* We fixed some inconsistencies that appeared in the UI during MDA package uploads. 
+
+### September 19, 2023
+
+#### Improvements
+
+* We introduced a timeout limit for Free Apps where idle connections are actively running a transaction. This change enhances system efficiency by automatically releasing resources from idle, ongoing, transactions to optimize overall performance.
+
+### September 18, 2023
+
+#### Improvements
+
+* To improve the security of [Team Server](/developerportal/general/team-server/) for apps versioned with SVN, we have dropped support for TLS v1.0 and TLS v1.1 when connecting to the SVN Team Server.
+
+### September 14, 2023 
+
+#### Improvements
+
+* We added the AWS Middle East (UAE) region as a new deployment target.
+
+### September 8, 2023 
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with pg_dump version 14.8.
+
+### September 4, 2023 
+
+#### Improvements
+
+* We added webhooks for status [alerts](/developerportal/operate/monitoring-application-health/) generated for your environments.
 
 ### August 7, 2023
 
@@ -60,7 +145,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or a new deployment package is available for deployment to the Mendix Cloud. See [Webhooks](/developerportal/deploy/webhooks/) for more information.
 
-    {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
+    {{% alert color="info" %}}This feature is currently in a [beta release](/releasenotes/beta-features/).{{% /alert %}}
 
 ### February 23, 2023
 
@@ -94,7 +179,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fix
 
-* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/metrics/#Trends-appmxruntimerequests) and [Number of database queries being run](/developerportal/operate/metrics/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
 
 ### January 13, 2023
 
@@ -234,7 +319,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 #### Improvements
 
-* We have added two new graphs on the [Metrics page for Cloudv v4](/developerportal/operate/trends-v4/):
+* We have added two new graphs on the [Metrics page for Cloud v4](/developerportal/operate/metrics/):
     * Number of files in storage
     * Size of files in storage (in bytes)
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
@@ -393,7 +478,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Announcement
 
-* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). Mendix recommends using the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/), which handles long-running backup and restore jobs more robustly.
 
 ### June 14, 2021
 
@@ -405,7 +490,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Mendix Cloud v3 Archived Logs
 
-* We have deleted archived logs older than 6 months for all Mendix Cloud v3 apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+* We have deleted archived logs older than 6 months for all Mendix Cloud **v3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
 
 ### June 8, 2021
 
@@ -527,7 +612,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 17, 2020
 
-* We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
     For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 
@@ -663,7 +748,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 #### Improvements
 
-* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in the Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
+* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Metrics](/developerportal/operate/metrics/#Trends-dbdfabs) for more information.
 
 ### August 28, 2020
 
@@ -729,8 +814,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
-* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4/#Trends-appmxruntimejvmheap)
-* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4/#Trends-appmxruntimejvmprocessmemory)
+* as **unused** in [JVM Object Heap](/developerportal/operate/metrics/#Trends-appmxruntimejvmheap)
+* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/metrics/#Trends-appmxruntimejvmprocessmemory)
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -749,14 +834,14 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 #### Improvements
 
 * We introduced new alerts for Mendix Cloud v4.
-    * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance)
-    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4/#Trends-dbmemory)
+    * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance)
+    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/metrics/#Trends-dbmemory)
 
 ### June 4, 2020
 
 #### Improvements
 
-* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
 * In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path

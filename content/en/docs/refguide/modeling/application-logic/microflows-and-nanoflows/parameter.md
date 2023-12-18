@@ -8,7 +8,7 @@ tags: ["studio pro", "parameter", "parameters", "microflow"]
 
 ## 1 Introduction
 
-A parameter is a special kind of variable that is used as input for the microflow. When a microflow is triggered, the parameters are filled with the current values.
+Parameters are the means by which you pass data to your logic. When a microflow is triggered, the parameters are filled with the current values.
 
 If you want to use an object of the **Customer** entity in a microflow, use the parameter. In the image below, the object name is **EnclosingCustomer** and is shown in black. The data type is object. Therefore, the entity name is shown underneath the object name in color blue.
 

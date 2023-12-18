@@ -17,7 +17,7 @@ Client certificates for REST services were introduced in version 7.2.0.
 
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure to run locally
 * Configure in the Mendix Cloud
@@ -67,7 +67,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 
 {{% alert color="info" %}}
 
-The possibility to use an empty path was introduced in Mendix version 7.19.0.
+The possibility to use an empty path was introduced in Mendix 7.19.0.
 
 {{% /alert %}}
 
@@ -82,7 +82,7 @@ You will only be able to follow the steps below if you have the correct access r
 To configure client certificates in the Mendix Cloud, follow these steps:
 
 1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
-2. Each environment has its own configuration. Click **Details** next one of the environments.
+2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:

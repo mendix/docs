@@ -2,7 +2,7 @@
 title: "Strategic Partners Guide"
 url: /partners/
 description: "Documentation for AWS, SAP, and Siemens widgets written and maintained by Mendix"
-weight: 45
+weight: 50
 no_list: false
 description_list: true
 cascade:

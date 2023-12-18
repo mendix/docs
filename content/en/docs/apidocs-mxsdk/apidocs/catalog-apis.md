@@ -3,8 +3,8 @@ title: "Catalog APIs"
 url: /apidocs-mxsdk/apidocs/catalog-apis/
 category: "API Documentation"
 description: "Describes the Catalog APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
-weight: 25
-tags: ["data hub", "Catalog API", "authentication", "personal access token"]
+weight: 20
+tags: ["data hub", Catalog API", "authentication", "personal access token"]
 aliases:
     - /apidocs-mxsdk/apidocs/data-hub-apis/
 ---

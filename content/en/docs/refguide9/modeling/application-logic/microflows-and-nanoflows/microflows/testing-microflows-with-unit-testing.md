@@ -12,7 +12,7 @@ Verify that your [microflow](/refguide9/microflows/) works as expected by creati
 
 The Unit Testing module provides a user-friendly interface to manage and run unit tests that are created by using microflows, as well as unit tests that are by created using JUnit.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up the Unit Testing module
 * Unit-test a microflow
@@ -37,7 +37,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 1. Create a [new app](/refguide9/new-app/).
 2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
-    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+    For more information, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
 4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow.

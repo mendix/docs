@@ -2,7 +2,7 @@
 title: "Share Data Between Apps"
 url: /catalog/share-data/
 description: "Describes how to publish and register a simple data asset to the Catalog from Studio Pro and create a new app that consumes this asset."
-tags: ["Catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
+tags: ["data hub", "Catalog", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 weight: 10
 aliases:
     - /catalog/use-data-catalog.html
@@ -29,7 +29,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* Install Mendix Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating an App {#createapp} 
 
@@ -60,11 +60,11 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 
 You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. 
 
-Go ahead and customize the homepage further by changing the banner text.
+Go ahead and customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 
-You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
+You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a [Published OData service](/refguide/published-odata-services/) in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
 
 Do the following:
 
@@ -142,7 +142,7 @@ To do this, follow the steps below:
 
     The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment.
 
-5. From **{yourname}CustomerODataService**, drag the **Customer** entity into the domain model. The consumed service and entity have green checkmarks in the [Integration Pane](/refguide/integration-pane/) now.
+5. From **{yourname}CustomerODataService**, drag the **Customer** entity into the domain model. The consumed service and entity have green check marks in the [Integration Pane](/refguide/integration-pane/) now.
 6. This entity is different from the blue entity container from the first app. This purple colored entity is called an [external entity](/refguide/external-entities/). The name of the OData service it is exposed in is displayed above it. Click the information icon for the consumed service in the [Integration Pane](/refguide/integration-pane/) to see further information about the service, and follow the link to **View in Catalog**.
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.

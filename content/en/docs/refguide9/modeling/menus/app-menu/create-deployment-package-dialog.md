@@ -28,7 +28,7 @@ Unfortunately, from the error shown on the log during deployment is not always c
 
 Here you can decide whether you will create a versioned deployment package or not.
 
-A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. We recommend that you create versioned deployment packages unless you have very good reasons.
+A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. Mendix recommends creating versioned deployment packages unless you have very good reasons.
 
 A non-versioned deployment package is based on your local app on disk and cannot be traced back to a specific revision.
 

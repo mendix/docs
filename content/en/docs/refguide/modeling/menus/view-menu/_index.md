@@ -89,7 +89,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 ### 3.9 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ### 3.10 MxAssist Best Practice Bot {#mx-bot}
 

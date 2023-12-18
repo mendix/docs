@@ -37,7 +37,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 1. Create a [new app](/refguide/new-app/).
 2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
-    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+    For more information, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
 4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow.

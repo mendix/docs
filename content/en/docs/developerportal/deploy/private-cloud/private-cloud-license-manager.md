@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "Licens
 ---
 
 {{% alert color="warning" %}}
-Private Cloud License Manager is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
+Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -116,7 +116,7 @@ metadata:
   namespace: my-pclm-1 
 spec:
   rules:
-    - host: pclm.<domain> # e.g. pclm.mydomain.io
+    - host: pclm.<domain> # for example, pclm.mydomain.io
       http:
         paths:
           - path: /
@@ -286,10 +286,9 @@ You will receive the result in the following format:
 | 5025defa-a442-47c3-ae2e-2ac6628926e3 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 | c823eeb1-7eb2-471c-a818-7be132c9cdb1 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 
-The **PRODUCTS** field represents the product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the Mendix app CR for  which license is required. For more information, see how *runtimeLicenseProduct* is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
-
 {{% alert color="info" %}}
-In order to update the product type in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
+The **PRODUCTS** field represents the product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the Mendix app CR. For more information, see how *runtimeLicenseProduct* is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
+In order to update the **product type** in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
 {{% /alert %}}
 
 ### 6.2 Listing the Operator License
@@ -308,7 +307,6 @@ You will receive the result in the following format:
 | LICENSE-ID                           | TYPE       | EXPIRATION-DATE      | CREATED-AT           | PRODUCTS |
 |--------------------------------------|------------|----------------------|----------------------|----------|
 | c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
-
 
 ## 7 Applying Licenses to Your Operator and Apps
 

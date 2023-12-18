@@ -7,11 +7,11 @@ tags: ["workflow", "workflows", "workflow engine", "engine"]
 
 ## 1 Introduction
 
-The Workflow Engine is the Runtime engine to execute workflows. This document describes how the engine works, how you can interact with the engine, and what information it stores. This gives you a better understanding on how you can develop with Mendix workflows.
+The Mendix Workflow Engine is the Mendix Runtime engine to execute workflows. This document describes how the engine works, how you can interact with the engine, and what information it stores. This gives you a better understanding on how you can develop with Mendix workflows.
 
 ## 2 Workflow Data in the Mendix Database
 
-In the domain model of the System module, there are several workflow engine-related entities:
+In the domain model of the System module, there are several Workflow Engine-related entities:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" >}}
 
@@ -21,7 +21,7 @@ These entities are populated by the Workflow Engine, some on the start of the ap
 * [Instance-related entities](#instance) (populated while running workflows)
 * [Action-related entities](#action) (that fulfill a specific action)
 
-The workflow engine stores the state of the workflow instances in the database. It also uses a couple of internal, hidden entities to store the details about the workflow execution progress. These entities are not described in this document, but can be seen when exploring the tables in the database. These entities are hidden intentionally  as they should not be used outside the workflow engine, for example, to be displayed in pages or used in microflows. 
+The Workflow Engine stores the state of the workflow instances in the database. It also uses a couple of internal, hidden entities to store the details about the workflow execution progress. These entities are not described in this document, but can be seen when exploring the tables in the database. These entities are hidden intentionally  as they should not be used outside the Workflow Engine, for example, to be displayed in pages or used in microflows. 
 
 ### 2.1 Definition-Related Entities {#definition}
 
@@ -44,7 +44,7 @@ Security-wise, only users with the **Administrator** role can access definition-
 
 ### 2.2 Instance-Related Entities {#instance}
 
-The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. Only users who are involved in the workflow process have access to these entities. The main purpose of the workflow data is to handle the tasks and process execution and it is unaware of the business context it is running in. All workflow data is aimed at supporting the workflow engine. Business context can be added by a developer via the context entity.
+The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. Only users who are involved in the workflow process have access to these entities. The main purpose of the workflow data is to handle the tasks and process execution and it is unaware of the business context it is running in. All workflow data is aimed at supporting the Workflow Engine. Business context can be added by a developer via the context entity.
 
 #### 2.2.1 System.Workflow
 
@@ -109,7 +109,7 @@ The user running the workflow is the System user. That is the reason why you can
 
 During execution the System.Workflow object record gets locked beforehand. This way concurrent execution and changes to the workflow instance outside the Workflow Engine that executes the workflow are prohibited. 
 
-The execution of a workflow will load the workflow instance and will try to advance the workflow from the current activity. If this is not possible (the prerequisites for advancing an activity have not been met yet), or when the workflow reaches another activity that has to wait for completion, the workflow is suspended and it stores the new state in the database. The execution of that workflow instance will then stop and the engine may continue executing other workflow instances. For example, when a user task is in progress, the workflow is suspended until the user task is completed. As soon as something happens in the system that may allow a workflow instance to advance again, a workflow execution task will be queued to execute that workflow instance again, which may advance that workflow instance further. When the workflow engine reaches the **End** activity, the workflow execution will stop and the state of the workflow instance will become **Completed**. 
+The execution of a workflow will load the workflow instance and will try to advance the workflow from the current activity. If this is not possible (the prerequisites for advancing an activity have not been met yet), or when the workflow reaches another activity that has to wait for completion, the workflow is suspended and it stores the new state in the database. The execution of that workflow instance will then stop and the engine may continue executing other workflow instances. For example, when a user task is in progress, the workflow is suspended until the user task is completed. As soon as something happens in the system that may allow a workflow instance to advance again, a workflow execution task will be queued to execute that workflow instance again, which may advance that workflow instance further. When the Workflow Engine reaches the **End** activity, the workflow execution will stop and the state of the workflow instance will become **Completed**. 
 
 Before execution, the Workflow Engine verifies whether a workflow is compatible with the latest workflow definition of the app model. If version conflicts are found, the workflow instance becomes incompatible (the **State** attribute becomes **Incompatible** and the **Reason** attribute will contain the description of the conflicts). Next to an **In-Progress** or **Paused** workflow becoming incompatible, it is also possible that an incompatible workflow returns to its previous in-progress/paused state. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 

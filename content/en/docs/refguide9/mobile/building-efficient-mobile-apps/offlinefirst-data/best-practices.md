@@ -21,7 +21,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 
 ## 2 Preventing Synchronization Issues
 
-To avoid the problems mentioned above, we suggest following these best practices:
+To avoid the problems mentioned above, Mendix suggests following these best practices:
 
 * Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release—this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
 * Do not delete objects which can be synced to offline users (this will result in lost changes on those objects when attempted to synchronize them)
@@ -48,7 +48,7 @@ Microflows can be called from offline apps by using [microflow call](/refguide9/
 
 * Passing an object or a list of a persistable entity is not supported
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
-* Passing a non-persistable entity that was created in another microflow is not supported for Mendix Studio Pro v9.7 and below.
+* Passing a non-persistable entity that was created in another microflow is not supported for Mendix Studio Pro 9.7 and below.
 
 {{% alert color="info" %}}
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 
@@ -84,7 +84,7 @@ To be able to switch the language of a Mendix app, a device must be online and h
 
 To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over-the-air updates, see [Updating Native Apps](/refguide9/mobile/distributing-mobile-apps/overtheair-updates/).
 
-To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
+To avoid backwards-compatibility errors in offline microflow calls after the initial release, Mendix suggests these best practices:
 
 * Do not rename microflows or move them to different modules
 * Do not rename modules that contain microflows called from offline apps

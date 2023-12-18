@@ -35,7 +35,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS Lambda connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the AWS Lambda connector into your app.
 
 ## 3 Configuration
 
@@ -154,4 +154,3 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `EVENT` | EVENT | Should use when one wants to invoke a lambda function asynchronously |
 | `REQUEST_RESPONSE` | REQUEST_RESPONSE | Should use when one wants to invoke a lambda function synchronously |
 | `DRY_RUN` | DRY_RUN | Should use when one wants to validate parameter values and verify that the user or role has permission to invoke the function |
-

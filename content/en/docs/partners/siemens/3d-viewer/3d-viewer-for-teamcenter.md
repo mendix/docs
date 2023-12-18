@@ -47,7 +47,7 @@ Make sure you have the following prerequisites in place:
 
 ## 3 Installation
 
-To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) as necessary):
+To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) as necessary):
 
 * [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608)
 * [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service（v.2.0.0 or above). 

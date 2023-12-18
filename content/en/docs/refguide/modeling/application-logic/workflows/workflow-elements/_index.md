@@ -7,7 +7,7 @@ tags: ["workflow", "workflow elements", "Studio Pro"]
 
 ## 1 Introduction
 
-A workflow is composed of elements that you can drag on a path from the **Toolbox** or that you can see in the working area of the editor (. Below is a categorized overview of all elements. The following categories are used:
+A workflow is composed of elements that you can drag on a path from the **Toolbox** or that you can see in the working area of the editor. Below is a categorized overview of all elements. The following categories are used:
 
 * [Parameters](#parameters)
 * [General](#general)
@@ -32,6 +32,7 @@ The elements of this category are described in the table below:
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/decision.png" alt="Decision" >}} | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/jump.png" alt="Jump Activity" >}} | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification.png" alt="Wait for notification activity" >}} | [Wait for notification](/refguide/wait-for-notification/)             | Allows you to suspend a workflow’s execution until the workflow is notified.      |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/end-event.png" alt="End event" >}} | End event                      | Ends the path of the workflow                                |
 
 {{% alert color="info" %}}
@@ -40,9 +41,14 @@ You can add customized activities to this section if you use the **Expose as a w
 
 ## 4 User Tasks {#user-tasks}
 
-[User task](/refguide/user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
+Elements in this category allow you to assign certain tasks to users.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task.png" alt="User Task" >}}
+The elements of this category are described in the table below:
+
+| Graphic                                                     | Element                           | Description                                                  |
+| ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task.png" alt="User Task" >}} | [User task](/refguide/user-task/) | A central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task.png" alt="Multi-user task" >}} | [Multi-user task](/refguide/multi-user-task/) | A central element in a workflow that allows you assign a task to multiple users. Each user performs the same task. The outcomes from all individual tasks will be aggregated into a single multi-user task outcome based on the [completion condition](/refguide/multi-user-task/#completion-condition).  |
 
 ## 5 System Actions {#system}
 

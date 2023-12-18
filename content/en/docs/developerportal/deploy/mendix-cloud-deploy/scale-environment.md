@@ -1,16 +1,16 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud"
-linktitle: "Scaling in the Mendix Cloud"
+linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
 weight: 25
-description: "Describes how to scale your environments in the Mendix Cloud."
+description: "Describes how to scale your environments in Mendix Cloud."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-There are various ways to scale licensed apps in the Mendix Cloud.
+There are various ways to scale licensed apps in Mendix Cloud.
 
 Memory can be added to the application container. This is called vertical scaling.
 
@@ -22,40 +22,42 @@ Before Mendix 9.12.0, [scheduled events](/refguide/scheduled-events/) are always
 
 This how-to demonstrates how to do the following:
 
-* Scale your environment in the Mendix Cloud
+* Scale your environment in Mendix Cloud
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a licensed app hosted in the Mendix Cloud
+* Have a licensed app hosted in Mendix Cloud
 * Have a plan that provides more than 1 GiB of memory
 
 {{% alert color="info" %}}
-Details of your plan are displayed on the environment details page.
+Details of your plan are displayed on the Environment Details page.
 {{% /alert %}}
 
 ## 3 Scaling Your Environment
 
-If you want to scale your licensed app in the Mendix Cloud, follow these steps:
+If you want to scale your licensed app in Mendix Cloud, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
 2. Click **Environments** to go to the Environments page.
 
-3. Click **Details** for a selected environment.
+3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on your desired environment.
 
-4. Click **Change scaling** next to the current description of instances.
+4. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" >}}
 
 5. Set the number of **Instances** by dragging the indicator bar.
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert color="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values that exceed the memory provided by your plan, you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
+    {{% alert color="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br><br/>If you try to use scaling values that exceed the memory provided by your plan, you will get the following message "You do not have sufficient resources to configure this allocation."{{% /alert %}}    
 
 7. Click **Apply**. This restarts your environment to apply the changes.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" width=75% >}}
 
 ## 4 Examples
 
@@ -75,10 +77,10 @@ For example, you can use one instance with 4 GiB RAM. The remaining 12 GiB in yo
 
 ## 5 Read More
 
-* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
+* [Metrics](/developerportal/operate/metrics/)
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/general/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

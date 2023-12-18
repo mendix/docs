@@ -132,7 +132,6 @@ For performance reasons, this information is cached. If you need the current val
 
 * [`toUpperCase`](/refguide/string-function-calls/) – converts the string to upper-case
 * [`toLowerCase`](/refguide/string-function-calls/) – converts the string to lower-case
-* [`length`](/refguide/string-function-calls/) – the string length
 * [`substring`](/refguide/string-function-calls/) – gets a part of a string
 * [`find`](/refguide/string-function-calls/) – gets a sub-string position
 * [`findLast`](/refguide/string-function-calls/) – gets the last sub-string position
@@ -228,16 +227,20 @@ For performance reasons, this information is cached. If you need the current val
 
 See [To String](/refguide/to-string/) for details.
 
-## 18 Parse Integer
+## 18 Length
+
+See [Length](/refguide/length/) for details.
+
+## 19 Parse Integer
 
 See [Parse Integer](/refguide/parse-integer/) for details.
 
-## 19 Parse & Format Decimal Function Calls {#expressions-formatter-functions}
+## 20 Parse & Format Decimal Function Calls {#expressions-formatter-functions}
 
 * [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## 20 Parse & Format Date Function Calls
+## 21 Parse & Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string
@@ -246,7 +249,7 @@ See [Parse Integer](/refguide/parse-integer/) for details.
 * [`dateTimeToEpoch`](/refguide/parse-and-format-date-function-calls/) – converts a date to a long
 * [`epochToDateTime`](/refguide/parse-and-format-date-function-calls/) – converts a long to a date
 
-## 21 Enumerations in Expressions
+## 22 Enumerations in Expressions
 
 * [`getCaption`](/refguide/enumerations-in-expressions/) – gets the caption of an enumeration value in current language
 * [`getKey`](/refguide/enumerations-in-expressions/) – gets the technical name of an enumeration value

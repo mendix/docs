@@ -199,4 +199,4 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 
 ## 5 Publishing to the Mendix Marketplace
 
-If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/sharing-content/).

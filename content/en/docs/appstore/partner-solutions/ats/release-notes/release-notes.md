@@ -5,6 +5,20 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.1
+
+**Release date: Nov 7, 2023**
+
+### Improvements
+
+* We added support for [Mendix Epics](/appstore/partner-solutions/ats/ht-two-connect-stories-to-testcases/#set).
+
+### Fixes
+
+* We fixed an issue that resulted in the improper functioning of the **Find element by sizzle** action.
+* We fixed an issue where **Assert Validation Message** failed when **Negate** was set to true.
+* We fixed an issue that caused the **Open Mendix application** action to fail with a rendering timeout for Selenium 4.
+
 ## 2.29.0
 
 **Release date: July 25, 2023**
@@ -12,7 +26,7 @@ weight: 100
 ### Improvements
 
 * We have added support for Mendix 10.
-* We have added support for Selenium version 4 (beta)).
+* We have added support for Selenium version 4 (beta).
 * We have added support for the latest compatible browser versions for Chrome, Firefox, and Edge for Selenium 4.
 * We have removed support for the Internet Explorer browser.
 
@@ -818,7 +832,7 @@ Mendix applications based on Mendix 7.16 can now be tested and recorded with ATS
 ### Fixes
 
 * We fixed the issue where it was not possible to export documentation for test cases/suites with a description longer than 200 characters
-* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a *Timeout exception while waiting the application to be idle*
+* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a **Timeout exception while waiting the application to be idle**.
 
 ### Limitations
 
@@ -860,21 +874,21 @@ It is now possible to see a video recording for test cases executed on Browserst
 
 ### Fixes
 
-* The built-in function *Assert Condition Fails* was not working due to a bug . It is now fixed.
-* The built-in function *Assert at least one not null* was not working due to a bug. It is now fixed.
+* The built-in function **Assert Condition Fails** was not working due to a bug . It is now fixed.
+* The built-in function **Assert at least one not null** was not working due to a bug. It is now fixed.
 * The **Click Widget** action didn't propagate failures properly. As a consequence, a test step that used this action was not marked as failed, even though the actual click was not successful. This has been fixed.
 * Coping a data-driven test case did not copy the association to the dataset. This is now fixed.
 * When using a dataset field as in an test step where the parameter type is "Any" this was falsely classified as incompatible type issue and shows up under the "Test data" tab. This is now fixed.
 
 ### Important Change
 
-The built-in function *Assert not null* behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
+The built-in function **Assert not null** behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
 
-**IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function *Assert not null* with *Assert null*. This change is done automatically and will not affect the behavior of your existing test cases.
+**IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function**Assert not null** with **Assert null**. This change is done automatically and will not affect the behavior of your existing test cases.
 
 ### Limitations
 
-* Regarding *Nanoflows*, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.
+* Regarding nanoflows, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.
 
 ## 2.7.1
 
@@ -889,7 +903,7 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 * You can use the ATS recorder even if you have different pages for desktop and mobile.
 
 {{% alert color="warning" %}}
-This Beta feature has been discontinued.
+This beta feature has been discontinued.
 {{% /alert %}}
 
 ### Option
@@ -1038,7 +1052,7 @@ Mendix applications built on Mendix 7.11 or 7.12 can now be tested and recorded 
 
 Core actions lie at the heart of ATS. They enable testers to interact with Mendix widgets without having to worry about the internal structures and functions of the widgets. Naturally, we are constantly looking for ways to improve our core actions. In that regard, we are happy to announce that we designed and developed a completely new architecture for core actions. Because this new architecture is very different from the way actions were implemented in the past, we decided to rename core actions to **functions** to make the distinction clearer. The new function architecture will enable us to write functions that are smarter than their core action counterparts. This change is completely in the back end (meaning, "under the hood"), so you do not have to change anything in the way you are using ATS in order to benefit from the new architecture.
 
-This opens up a lot exciting possibilities for us as ATS developers. For example, we were able to write *context-aware* Get/Set Value functions. Previously, the corresponding core actions could only handle a few widgets. The new functions, on the contrary, support much more widgets, such as the Boolean slider widget, Bootstrap WYSIWYG editor, CKEditor, input reference selector, date picker, and radio button list. Furthermore, with the new architecture, functions should be more stable and more reliable. For a detailed list of the updated functions make sure to check the [ATS Reference Guide](/appstore/partner-solutions/ats/rg-two-ats/). In the future, we plan to utilize the new architecture to bring you even more improvements to the functions.
+This opens up a lot exciting possibilities for us as ATS developers. For example, we were able to write **context-aware** Get/Set Value functions. Previously, the corresponding core actions could only handle a few widgets. The new functions, on the contrary, support much more widgets, such as the Boolean slider widget, Bootstrap WYSIWYG editor, CKEditor, input reference selector, date picker, and radio button list. Furthermore, with the new architecture, functions should be more stable and more reliable. For a detailed list of the updated functions make sure to check the [ATS Reference Guide](/appstore/partner-solutions/ats/rg-two-ats/). In the future, we plan to utilize the new architecture to bring you even more improvements to the functions.
 
 ### Improvements
 
@@ -1251,7 +1265,7 @@ You are able to browse all your folders, actions, test cases, and test suites vi
 
 #### Test Case Editing
 
-Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so we use the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
+Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so Mendix uses the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
 
 #### Results and Logs
 
@@ -1508,7 +1522,7 @@ Unfortunately recording for the Input Reference Selector, CKEditor, and Bootstra
 
 ## 1.6.0
 
-***Date: August 29, 2016***
+**Date: August 29, 2016**
 
 ### Data-Driven Testing
 
@@ -1524,14 +1538,14 @@ Check the documentation on how to [create/maintain test data](/appstore/partner-
 
 * Click Widget action now doesn’t try to click invisible widgets
 * Recorder now also records when there is no mxname class on the lowest element
-* Recorder now never returns the *NO_UNIQUE_PATH* message if there is any possible unique combination of mxnames to identify the widget
-* The actions *Get Value*, *Assert Value* and *Find Widget* (with *Value* parameter set) now also recognize all text widgets
+* Recorder now never returns the **NO_UNIQUE_PATH** message if there is any possible unique combination of mxnames to identify the widget
+* The actions **Get Value**, **Assert Value**, and **Find Widget** (with **Value** parameter set) now also recognize all text widgets
 * Improved layout and usability on import dialog and overview page
 * Several theme fixes
 
 ### Deprecations
 
-* The *Click Item/Row* action has been deprecated in favor of the generic *Click Widget* action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
+* The **Click Item/Row** action has been deprecated in favor of the generic **Click Widget** action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
 
 ### Notes
 
@@ -1539,7 +1553,7 @@ Check the documentation on how to [create/maintain test data](/appstore/partner-
 
 ## 1.5.0
 
-***Date: July 18, 2016***
+**Date: July 18, 2016**
 
 ### User Experience
 

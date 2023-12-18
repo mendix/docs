@@ -68,7 +68,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-  text: {
+  caption: {
     // TextStyle properties
     color: "#00FF00",
   }
@@ -351,7 +351,7 @@ export const TextBox = {
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
-| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro v8.15). |
+| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro 8.15). |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
@@ -373,7 +373,7 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio Pro 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
 ```javascript
 export const DropDown = {
@@ -444,26 +444,26 @@ export const DropDown = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the drop-down is non-editable. |
-| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
-| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro 8.15).|
+| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro 8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro 8.11).|
 | `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the drop-down is non-editable. |
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro 8.11).|
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
-| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
-| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro 8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro 8.11).|
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro 8.11). |
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro 8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
-| `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro v8.11).|
-| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro 8.11).|
+| `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro 8.11).|
+| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro 8.15).|
 | `valueContainerError` | Same properties as `valueContainer`  | Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).|
-| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro 8.15).|
 
 The default class to style all text areas is named `DropDown`.
 
@@ -922,7 +922,7 @@ export const com_mendix_widget_native_badge_Badge = {
   container: {
     // This has all ViewStyle properties.
   },
-  text: {
+  caption: {
     // This has all TextStyle properties.
   }
 };
@@ -931,7 +931,7 @@ export const com_mendix_widget_native_badge_Badge = {
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `text` | This has all TextStyle properties. |      |
+| `caption` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -2446,7 +2446,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
-The default class to style all gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
+The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
 #### 11.33.1 Gallery Filtering
 

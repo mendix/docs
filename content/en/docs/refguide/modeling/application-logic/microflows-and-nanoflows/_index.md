@@ -14,6 +14,7 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 Explore the documentation for details on microflow and nanoflow definitions, properties, and usages.
 
+* [Logic Editors (Beta)](/refguide/logic-editors-beta/)
 * [Microflows](/refguide/microflows/)
 * [Nanoflows](/refguide/nanoflows/)
 * [Sequence Flow](/refguide/sequence-flow/)

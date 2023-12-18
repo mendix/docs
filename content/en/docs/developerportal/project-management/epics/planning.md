@@ -123,7 +123,7 @@ You can import your stories using an Excel file to Epics as follows:
 
 2. Click **Download** to download the Excel file template.
 
-   {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
+   {{% alert color="warning" %}}To prevent errors, Mendix recommends using this Excel file template to import your stories.{{% /alert %}}
 
 3. Open the Excel file. Enter the data for your stories as follows:
 
@@ -210,7 +210,7 @@ To migrate from Stories to Epics, follow these steps:
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
 
-2.  Read the information and then click **Start Migration**:
+2. Read the information and then click **Start Migration**:
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 
@@ -218,7 +218,7 @@ To migrate from Stories to Epics, follow these steps:
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
-A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
+A notification is sent in the [global navigation](/developerportal/global-navigation/#notifications) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
 {{% alert color="warning" %}}
 Once you have migrated your stories from Stories to Epics, Mendix archives any work you may have had in Stories. You can review your work in [Stories Archive](/developerportal/collaborate/general-settings/#story-archive) on the **Settings** page of the app, and download it if necessary. 

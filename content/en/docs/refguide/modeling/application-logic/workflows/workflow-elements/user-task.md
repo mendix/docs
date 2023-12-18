@@ -54,7 +54,7 @@ The **Due date** section properties are described in the table below:
 
 #### 2.4.1 Target Users Using {#target-users}
 
-**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow.
+**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath, or implement more flexible logic and add several checks using a microflow.
 
 Possible options of this property are described in the table below:
 
@@ -68,7 +68,7 @@ In case **Target users using** (an XPath or a microflow) results in an empty lis
 
 #### 2.4.2 XPath Constraint
 
-Specifies the expression used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**.
+Specifies the expression used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
 #### 2.4.3 Microflow
 
@@ -100,7 +100,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates.
 
-The **Task description** can contain parameters that are written between braces, e.g. {1}.
+The **Task description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.7.3 Parameters {#parameters}
 
@@ -111,7 +111,7 @@ To view **Parameters**, click the ellipsis icon next to the **Task name** or **T
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an attribute from the context that will be displayed
 
 ##### 2.7.3.1 Adding New Parameters
 

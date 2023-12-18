@@ -26,7 +26,7 @@ Ensure that the AWS user account used for authentication has the appropriate per
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon SQS connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon SQS connector into your app.
 
 ## 3 Configuration
 

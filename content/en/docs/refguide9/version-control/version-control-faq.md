@@ -74,7 +74,7 @@ However, in this case the following products and capabilities are not available:
 * [AQM](/addons/aqm-addon/) 
 
 {{% alert color="info" %}}
-For Git, connecting to a third-party Git version control repository is in Beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/#preparing-your-repo).
+For Git, connecting to a third-party Git version control repository is in beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/#preparing-your-repo).
 {{% /alert %}}
 
 ## 12 Will Mendix 9 Support Pull Requests and Peer Reviews? 

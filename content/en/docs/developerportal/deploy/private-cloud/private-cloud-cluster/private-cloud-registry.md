@@ -34,7 +34,7 @@ However, static credentials are often considered insecure, and cloud providers o
 Combining multiple authentication methods is not possible at the moment. For example, Nexus uses static username/password credentials, while ECR requires using an authentication plugin that integrates with AWS IAM; if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix for Private Cloud in a Nexus repository, you will need to use Nexus (or another registry supporting static credentials). Using ECR or ACR as the target registry will not be possible.
 
 The Docker image URL standard does not have an way to specify if a registry should be accessed over HTTP or HTTPS. Mendix for Private Cloud relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project.
-These heuristics are based on an assumption that it's not possible to get a valid TLS certificate for local addresses. If the registry domain name matches any of these rules, TLS will be disabled and all communication with the registry will happen over unencrypted HTTP:
+The heuristics is based on the assumption that it is not possible to get a valid TLS certificate for local addresses. If the registry domain name matches any of these rules, TLS will be disabled and all communication with the registry will happen over unencrypted HTTP:
 
 * A private network RFC1918 IP address (`10.0.0.0/8`, `172.16.0.0/12` or `192.168.0.0/16`).
 * A `localhost` domain name.
@@ -130,9 +130,9 @@ To use ECR with the Mendix Operator, you must do the following steps:
 
     1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
 
-      {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+       {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
-    2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`. You can specify any serviceaccount name here (for simplicity, we recommend using `mendix-builder`). For example, if the Mendix Operator is installed into the `mynamespace` namespace, set the value to `system:serviceaccount:mynamespace:mendix-builder`.
+    2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`. You can specify any serviceaccount name here (for simplicity, Mendix recommends using `mendix-builder`). For example, if the Mendix Operator is installed into the `mynamespace` namespace, set the value to `system:serviceaccount:mynamespace:mendix-builder`.
 
         See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
 
@@ -188,33 +188,30 @@ Use the following configuration options:
 Azure Workload Identity authentication is supported in Mendix Operator 2.13.0 and later versions. Older versions can only authenticate with ACR using static credentials; upgrading to Mendix Operator and switching to workload identity authentication is highly recommended.
 {{% /alert %}}
 
-### 2.5 Google Container Registry
+### 2.5 Google Artifact Registry (Previously Google Container Registry)
 
-To improve security, Google Container Registry recommends using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication instead of static credentials.
+To improve security, Google Artifact Registry recommends using [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) authentication instead of static credentials.
 
-To access the GCR registry, the Mendix Operator will use its Kubernetes Service Account for authentication, using the [docker-credential-gcr](https://github.com/GoogleCloudPlatform/docker-credential-gcr) plugin.
+To access the Google Artifact registry, the Mendix Operator will use its Kubernetes Service Account for authentication, using the [docker-credential-gcr](https://github.com/GoogleCloudPlatform/docker-credential-gcr) plugin.
 
-To use GCR with the Mendix Operator, you will need to:
+To use Google Artifact registry with the Mendix Operator, perform the following steps:
 
 1. Create a GCP Service Account (note that this is not the same as a Kubernetes Service Account).
 2. Assign the *Artifact Registry Writer* (`roles/artifactregistry.writer`) role to the GCR Service Account.
-3. Allow the Mendix Operator to use the GCR Service Account by running:
+3. Allow the Mendix Operator to use the GCR Service Account by running the following command, where `PROJECT_ID` is the Google Cloud project ID, `K8S_NAMESPACE` is the Kubernetes namespace name where the Operator is installed, `KSA_NAME` is the Kubernetes Service Account name, and `GSA_NAME` is the GCP Service Account name from step 1:
 
     ```shell
     gcloud iam service-accounts add-iam-policy-binding \
-            --role roles/iam.workloadIdentityUser \
-            --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
-            GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
+        --role roles/iam.workloadIdentityUser \
+        --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
+        GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
     ```
 
-    (replace `PROJECT_ID` with the Google Cloud project ID, `K8S_NAMESPACE` with the Kubernetes namespace name where the Operator is installed, `KSA_NAME` with the Kubernetes Service Account name, and `GSA_NAME` with the GCP Service Account name from step 1).
-
-    On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, we recommend using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides.
-    For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
+On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Account to authenticate. On the GCP side, there should be a matching GCP Service Account. For simplicity, Mendix recommends using the `mendix-builder` for the service account name, on both GCP and Kubernetes sides. For more details, see the Google documentation on [using workload identities](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to).
 
 Use the following configuration options:
 
-* **Registry Name** - Google Container Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
+* **Registry Name** - Google Artifact Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
 * **Registry URL** - container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
 * **GCP Service Account** - the GCP account name created on step 1, for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the GCP service account on step 3; the Kubernetes Service Account will be created automatically when you apply the changes.
@@ -338,5 +335,5 @@ You can customize the registry **imageNameTemplate** in **OperatorConfiguration*
 * `{{.Name}}`: internal environment name.
 * `{{.Generation}}`: value of the Build CR’s [Generation](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace#generation) attribute.
 * `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Private Cloud Portal.
-* `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
+* `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision for example, 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.

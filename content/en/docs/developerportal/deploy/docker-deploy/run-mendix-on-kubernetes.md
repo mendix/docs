@@ -10,7 +10,7 @@ tags: ["Minikube", "Docker", "deployment"]
 
 This how-to takes you through the process of deploying a Docker image of your Mendix app to [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), a local version of [Kubernetes](https://kubernetes.io/docs/home/) which runs in a Windows container or virtual machine. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
-Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away much of the heavy lifting. 
+Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, Mendix suggests you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away much of the heavy lifting. 
 
 This how-to teaches you how to do the following:
 
@@ -118,7 +118,7 @@ spec:
           name: mendix-pgdata
 ```
 
-To create the PostgreSQL database, we use the provided [postgres](https://hub.docker.com/_/postgres/) image. The environment variables provided in `env` are needed to configure the default database. Instead of setting the password in the *yaml* file directly, you can choose to use [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+To create the PostgreSQL database, Mendix uses the provided [postgres](https://hub.docker.com/_/postgres/) image. The environment variables provided in `env` are needed to configure the default database. Instead of setting the password in the *yaml* file directly, you can choose to use [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 And finally, it is necessary to expose the database as a service and make it available to the application. This is the definition of such a service:
 
@@ -293,7 +293,7 @@ minikube image push <hub-user>/<repo-name>:<tag>
 Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in `mendix-app.yaml`. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
 {{% alert color="info" %}}
-In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
+In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, Mendix recommends using the storage provided on the selected cloud platform.
 {{% /alert %}}
 
 Deploy the application to Kubernetes:
@@ -312,7 +312,7 @@ It should be noted that using a StatefulSet versus a deployment involves some di
 
 ### 4.4 Making the App Available
 
-To make the app available from the browser, it needs to be accessible outside of the cluster. For this, we use a service of the LoadBalancer or NodePort type. For Minikube we can use both, which exposes the app via an IP address.
+To make the app available from the browser, it needs to be accessible outside of the cluster. For this, Mendix uses a service of the LoadBalancer or NodePort type. For Minikube we can use both, which exposes the app via an IP address.
 
 If you deploy to a cloud provider, the method for publishing your app may be different (for example, some cloud providers can automatically update the load balancer to forward a URL request to the cluster). For more information, see [Create an External Load Balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/).
 

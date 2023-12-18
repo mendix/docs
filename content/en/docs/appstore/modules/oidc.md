@@ -102,7 +102,7 @@ Versions below 2.3.0 also require [Native Mobile Resources](https://marketplace.
 
 If you are migrating from the community edition of the module ([OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529)), please refer to the [migration documentation](#migration) below.
 
-1. [Add the “OIDC SSO” module into your app](/appstore/general/app-store-content/).
+1. [Add the “OIDC SSO” module into your app](/appstore/overview/use-content/).
 2. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
 3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OICD SSO module to a page that  is accessible to admin end-users of your app.
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
@@ -263,7 +263,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
         * **Client secret** - Select **Generate a client secret**
         * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
         * **Authentication flow session duration** - Enter a value from *3* to *15*
-        * **Allowed callback URLs** - Enter a URL in the following format: `https://{your Mendix app URL}]/oauth/v2/callback`
+        * **Allowed callback URLs** - Enter a URL in the following format: `https://<your-app-url>/oauth/v2/callback`
         * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
         * **Identity providers** - Select **Cognito user pool**
         * **OAuth 2.0 grant types** - Select **Authorization code grant**

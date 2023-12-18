@@ -21,9 +21,9 @@ This document describes the purpose and functionality of 2FA in the Developer Po
 
 Two-factor authentication requires you to identify yourself using your password as well as a second authentication mechanism. This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Developer Portal.
 
-Actions that require 2FA are indicated by a padlock symbol.
+Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}). For example, switching to the production environment requires 2FA.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" width=25% >}}
 
 ## 3 How It Works
 
@@ -36,75 +36,71 @@ Once 2FA is set up, you can use your chosen method to receive an authentication 
 
 Whenever you successfully complete 2FA, your browser session will be authorized for the next eight hours.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/information.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/information.png"   width=70%  >}}
 
 To set up 2FA, you first need to perform an action that requires 2FA. For example, you could click **Transport to Production** on the **Environments** page of your app.
 
-Choose one of the two authentication options and follow the relevant instructions, below.
+Then, choose one of the two authentication options.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/sms-or-google.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/sms-or-google.png" width=70% alt="" >}}
+
+Instructions for both authentication options are provided below.
 
 ### 3.1 SMS Authentication
 
 For SMS authentication, you need to have a phone number connected to a mobile phone or other device that can receive SMS messages. To set up 2FA with SMS, follow this process:
 
-1. Click **Use SMS** in the dialog box that opens when you use 2FA for the first time.
+1. Click **Use SMS** in the dialog box that opens the first time you perform an action that requires 2FA.
 2. Enter a phone number to which SMS messages can be sent. Click **Send text message**.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png"   width="400"  >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png"   width=70% >}}
 
 3. Enter the authentication code, which is sent as an SMS message to your device. Click **Activate**.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms.png"   width="400"  >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms.png"   width=70% >}}
 
-In the future, when you perform operations that require 2FA, you will need to ask Mendix to send a text message to your phone.
+In the future, when you perform operations that require 2FA, you will need to authenticate by sending a text message to your phone.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png"   width=70%  >}}
 
-You will need to enter the authentication code from the SMS message to unlock 2FA.
+Then, you can enter the authentication code from the text message to unlock 2FA.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png"   width=70% >}}
 
 ### 3.2 Google Authenticator
+
+{{% alert color="info" %}}You can follow this process with Google Authenticator, Windows Authenticator, or any other authenticator app that generates time-based one-time passwords.{{% /alert %}}
 
 {{% alert color="info" %}}
 For more information on how Google Authenticator works, see Google's documentation on [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
 {{% /alert %}}
 
-To set up 2FA with Google Authenticator, follow this process:
+To set up 2FA with an authenticator app, follow this process:
 
 1. Click **Use Google Authenticator** in the dialog box that opens when you use 2FA for the first time.
-2. Install and open the Google Authenticator app on your smartphone. Alternatively, you can use another authenticator app, such as Windows Authenticator.
+2. Install and open the Google Authenticator app (or a different authenticator app) on your smartphone.
 3. Select **Set up account** on the main page.
 4. Select **Scan a barcode** or **Enter provided key**.
 5. Scan the barcode or enter the six-digit time-based code.
 6. Once your authenticator app is set up, you will be asked to confirm by entering the code from your authenticator app.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator.png"   width="400"  >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator.png" width=70% alt="" >}}
 
 Your account is now secured with 2FA and ready to use.
 
 In the future, when you perform operations that require 2FA, you will get a six-digit number that expires every minute. You will need to enter that number to validate your account every time you perform an operation on the production environment.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/google.png"   width="400"  >}}
-
 ## 4 Changing your Device or Phone Number
 
 If you change your device or phone number, you must contact [Mendix Support](https://support.mendix.com/) to disable the authenticator on your Mendix account.
 
-You can reactivate 2FA by triggering any action that requires 2FA on your production environment.
+You can reactivate 2FA by triggering any action that requires 2FA.
 
 ## 5 Changing the Authentication Method
 
 After you have set up your authentication method, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) can disable the current authentication method. After the authentication method has been disabled, it can be set to a different method.
 
 For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com//requests/new) citing **Standard change: Reset Google Authenticator**.
-
-## 6 Technical Contact
-
-Team members with **App Team – Deploy Permissions** are authorized to have node permissions. The Technical Contact can grant those members different permissions that can differ per environment. For example, you might want to limit the access of external developers to only the acceptance environment.
-
-For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## 7 Read More
 

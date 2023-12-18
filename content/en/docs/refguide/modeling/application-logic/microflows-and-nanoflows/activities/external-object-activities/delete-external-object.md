@@ -3,8 +3,9 @@ title: "Delete External Object"
 url: /refguide/delete-external-object/
 tags: ["studio pro", "integration activity", "delete external object"]
 ---
-{{% alert color="warning" %}}
-These activities can only be used in **Microflows**.
+
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -17,7 +18,7 @@ When the microflow has **Apply entity access** set to **Yes**, only users with *
 
 ## 2 Activity Properties
 
-To manage the properties of the activity, double click the **Delete external object** activity, or right-click the activity and select **Properties**. 
+To manage the properties of the activity, double-click the **Delete external object** activity, or right-click the activity and select **Properties**. 
 
 Single-clicking on the activity displays the properties in the **Properties** pane.
 

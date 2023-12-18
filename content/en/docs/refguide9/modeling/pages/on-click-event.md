@@ -294,7 +294,7 @@ The following properties are specific for this event:
 
 ### 3.14 Show Workflow Admin Page {#show-workflow-page}
 
-**Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+**Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, for example, abort a workflow if required.
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 

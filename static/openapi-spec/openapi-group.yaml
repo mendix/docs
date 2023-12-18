@@ -1,0 +1,677 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: Group Service
+  description: The Group API is for managing the governance for certain resources. Group can be used to restrict access and modification of a set of apps or marketplace contents to a specific set of people.
+servers:
+  - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+paths:
+  '/groups/{groupId}':
+    get:
+      tags:
+        - groups
+      summary: Get a group
+      description: Get a single group by group Id
+      operationId: GetGroup
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/group'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+    put:
+      tags:
+        - groups
+      summary: Edit a group
+      description: "## Use this operation to edit a group\r\n\r\n- If a field is omitted in the request body, it is not updated. To set field to empty specify with empty string.\r\n"
+      operationId: ChangeGroup
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Group name or description change request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupInput'
+            examples:
+              Input group name or description:
+                value:
+                  name: GroupA
+                  description: GroupA description
+      responses:
+        '200':
+          $ref: '#/components/responses/group'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+      x-codegen-request-body-name: GroupInput
+    delete:
+      tags:
+        - groups
+      summary: Deletes a group
+      description: Delete a group
+      operationId: DeleteGroup
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Delete group successfully
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+  /groups:
+    get:
+      tags:
+        - groups
+      summary: Get all groups of the current user
+      description: Get all groups of the current user
+      operationId: GetGroups
+      responses:
+        '200':
+          $ref: '#/components/responses/groups'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+    post:
+      tags:
+        - groups
+      summary: Create a new group
+      description: |-
+        ## Create a new group
+
+        Name field is mandatory. Name can only be alphanumeric, spaces, underscores, or dashes. Max length for name field is 100 characters. Max length for Description is 250 characters.
+      operationId: CreateGroup
+      requestBody:
+        description: Group creation request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupInput'
+            examples:
+              Group creation requestE:
+                value:
+                  name: Group A
+                  description: The description of Group A
+      responses:
+        '201':
+          $ref: '#/components/responses/group'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+      x-codegen-request-body-name: GroupInput
+  '/groups/{groupId}/members':
+    get:
+      tags:
+        - groups
+      summary: Retrieve all members in group
+      description: Retrieve all members in group
+      operationId: GetMembers
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/members'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+  '/groups/members/{memberId}/{groupId}':
+    patch:
+      tags:
+        - groups
+      summary: Update group member role
+      description: Update member role in the group.
+      operationId: patch-groups-groupId-members-memberId
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+        - name: memberId
+          in: path
+          description: Group Member Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Group member role change request
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupMemberRoleInput'
+      responses:
+        '200':
+          $ref: '#/components/responses/member'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+  '/groups/{groupId}/requests':
+    post:
+      tags:
+        - groups
+      summary: Add or remove members from group
+      description: Add or remove members from group
+      operationId: UpdateGroupMembers
+      parameters:
+        - name: type
+          in: query
+          schema:
+            enum:
+              - Add
+              - Delete
+        - name: objectType
+          in: query
+          schema:
+            enum:
+              - Member
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Input group member list
+        required: false
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/ObjectInput'
+            examples:
+              Add group members:
+                value:
+                  - name: John
+                    role: Group_Admin
+                  - name: Jack
+                    role: Group_Member
+              Remove group members:
+                value:
+                  - name: John
+                  - name: Jack
+      responses:
+        '200':
+          $ref: '#/components/responses/members'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+      x-codegen-request-body-name: objectInputList
+tags:
+  - name: groups
+    description: ''
+components:
+  parameters:
+    groupId:
+      name: groupId
+      in: path
+      description: Group Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    memberId:
+      name: memberId
+      in: path
+      description: Group Member Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+  responses:
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid group name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid group name
+            400 - Invalid group member name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid group member name
+            400 - Invalid parameters:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: groupId
+                    reason: Invalid group id
+                  - name: memberId
+                    reason: Invalid member id
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Group not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Group not found
+            404 - Group member not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Group member not found
+    group:
+      description: Group
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              memberCount:
+                type: integer
+            x-examples:
+              Example 1:
+                id: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                name: GroupA
+                description: GroupA changed
+                memberCount: 7
+          examples:
+            Group:
+              value:
+                id: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                name: GroupA
+                description: GroupA changed
+                memberCount: 7
+    groups:
+      description: Group list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                description:
+                  type: string
+                memberCount:
+                  type: integer
+            x-examples:
+              Example 1:
+                - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
+                  name: testdaisy
+                  description: testdaisy
+                  memberCount: 3
+                - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
+                  name: GroupB
+                  description: GroupB
+                  memberCount: 4
+                - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                  name: GroupA
+                  description: GroupA changed
+                  memberCount: 7
+          examples:
+            Group list:
+              value:
+                - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
+                  name: testdaisy
+                  description: testdaisy
+                  memberCount: 3
+                - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
+                  name: GroupB
+                  description: GroupB
+                  memberCount: 4
+                - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                  name: GroupA
+                  description: GroupA changed
+                  memberCount: 7
+    members:
+      description: Group member list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                email:
+                  type: string
+                roles:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      role:
+                        type: string
+            x-examples:
+              Example 1:
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                  name: Daisy
+                  email: test
+                  roles:
+                    - role: Group_Member
+                - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                  name: kean
+                  email: kean.li@mendix.com
+                  roles:
+                    - role: Group_Member
+                - id: cdcbd426-dfb7-4689-9939-3312521f13ff
+                  name: muhong00
+                  email: muhong0@163.com
+                  roles:
+                    - role: Group_Admin
+                - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
+                  name: pmt_test
+                  email: pmt_test@mendix.local
+                  roles:
+                    - role: Group_Member
+          examples:
+            Group member list:
+              value:
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                  name: Daisy
+                  email: test
+                  roles:
+                    - role: Group_Member
+                - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                  name: kean
+                  email: kean.li@mendix.com
+                  roles:
+                    - role: Group_Member
+                - id: cdcbd426-dfb7-4689-9939-3312521f13ff
+                  name: muhong00
+                  email: muhong0@163.com
+                  roles:
+                    - role: Group_Admin
+                - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
+                  name: pmt_test
+                  email: pmt_test@mendix.local
+                  roles:
+                    - role: Group_Member
+    member:
+      description: Group member
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              email:
+                type: string
+              roles:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    role:
+                      type: string
+            x-examples:
+              Example 1:
+                id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                name: kean
+                email: kean.li@mendix.com
+                roles:
+                  - role: Group_Member
+          examples:
+            Group member:
+              value:
+                id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                name: kean
+                email: kean.li@mendix.com
+                roles:
+                  - role: Group_Member
+  schemas:
+    GroupInput:
+      type: object
+      title: GroupInput
+      description: Group creation request
+      properties:
+        name:
+          type: string
+          description: Group name
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 100
+          example: Group A
+        description:
+          type: string
+          description: Group description
+          maxLength: 250
+      required:
+        - name
+      x-examples:
+        Group creation request:
+          name: Group name
+          description: Group description
+      xml:
+        name: GroupInput
+    GroupMemberRoleInput:
+      type: object
+      title: GroupMemberRoleInput
+      description: Group member role change request
+      properties:
+        role:
+          enum:
+            - Group_Admin
+            - Group_Member
+          description: Group member role
+      required:
+        - role
+      x-examples:
+        Group member role change request:
+          role: Group_Member
+        Change group admin role request:
+          role: Group_Admin
+      xml:
+        name: MemberInput
+    ObjectInput:
+      type: object
+      title: ObjectInput
+      description: Group object(member user) change(add or delete) request
+      properties:
+        name:
+          type: string
+          description: Group object(member user) name
+          pattern: '^[a-zA-Z][a-zA-Z0-9_]{2,19}$'
+          minLength: 1
+          maxLength: 100
+          example: GroupA
+        role:
+          enum:
+            - Group_Admin
+            - Group_Member
+          description: Group object(member user) role
+      required:
+        - name
+      x-examples:
+        Group object(member user) change(add or delete) request:
+          name: User_Name
+          role: Group_Admin
+      xml:
+        name: ObjectInput
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+        invalid-params:
+          type: array
+          description: '(Optional) JSON list List of name, reason keys for invalid attribute values.'
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Parameter name.
+              reason:
+                type: string
+                description: Reason for error.
+      required:
+        - status
+        - title
+        - detail
+      x-examples:
+        Error response:
+          status: 400
+          title: Bad Request
+          detail: Please see invalid-params list
+          invalid-params:
+            - name: groupName
+              reason: Group name can not be empty
+security:
+  - mxtoken: []

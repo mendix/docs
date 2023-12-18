@@ -321,7 +321,7 @@ To configure the appearance of the custom widget in Studio Pro, export a `getPre
 
 Please note that the default colors will be automatically adjusted for dark mode (for example font color, border color, and more). However, the `isDarkMode` flag can be used when setting colors explicitly.
 
-To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], e.g. `[9, 18, 0]`.
+To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], for example, `[9, 18, 0]`.
 
 The following describes the API for the preview properties object that the `getPreview` should return.
 

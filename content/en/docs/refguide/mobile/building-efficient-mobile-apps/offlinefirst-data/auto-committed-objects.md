@@ -41,7 +41,7 @@ Auto-committed objects live until the user's session expires. When the user's se
 * **Auto-committed objects as regular objects** – auto-committed objects can be synchronized to other users' local databases and treated as regular objects, which may cause the following problems:
     * The Mendix Runtime does not run any validations or event handler microflows while auto-committing an object. Therefore, auto-committed objects synchronized to local databases may be invalid or incomplete. This may lead to bugs in the app model (nanoflows, UI, or other areas) if the app model is not resistant to invalid objects.
     * The synchronization may fail if a user changes and synchronizes an invalid auto-committed object.
-* **Delete behavior issues** – the Mendix Runtime may delete other associated objects while deleting the auto-committed objects at the end of a session. This can happen if the association's [delete behavior](/refguide/association-properties/#delete-behavior) is set to deleting associated objects.
+* **Delete behavior issues** – the Mendix Runtime may delete other associated objects while deleting the auto-committed objects at the end of a session. This can happen if the association's [on delete behavior](/refguide/association-properties/#delete-behavior) is set to deleting associated objects.
 
 ## 4 How Offline-First Apps Create Auto-Committed Objects
 
@@ -129,6 +129,6 @@ Auto-committed objects created inside microflows that are called from a nanoflow
 
 ## 6 Customizing the Auto-Commit Handling Behavior
 
-A custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting can be used in apps from Mendix Studio Pro v9.18 and above.
+A custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting can be used in apps from Mendix Studio Pro 9.18 and above.
 
 This setting is intended for offline-first apps created in Mendix 9.17 and below to keep the previous behavior. Disabling this setting for new applications is not recommended. For details on changing this setting, see [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings/#general-settings)

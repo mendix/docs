@@ -15,7 +15,7 @@ tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
 
 ## 1 Introduction
 
-While all inbound connections to apps in Mendix Cloud are secured with TLS, your apps can also connect to other services over the Internet. Some of these services will be third-party services and you will have to match the security settings set up by the service owner. Sometimes the service may be owned by you, or someone else in your company, and you can control how connection security is implemented.
+While all inbound connections to apps in Mendix Cloud are secured with TLS, your apps can also connect to other services over the internet. Some of these services will be third-party services and you will have to match the security settings set up by the service owner. Sometimes the service may be owned by you, or someone else in your company, and you can control how connection security is implemented.
 
 There are various methods which are used for securing connections from *back end services* to your *app* via the internet. This document sometimes refers to Mendix Cloud, but the methods are applicable to all other set-ups, such as public cloud or on-premises deployments.
 

@@ -4,13 +4,13 @@ url: /refguide9/workflow-beta-migration/
 linktitle: "Migrate Workflow Apps"
 category: "General Info"
 weight: 25
-description: "Describes how to migrate existing Workflow applications to the new feedback-improved Beta."
+description: "Describes how to migrate existing Workflow applications to the new feedback-improved beta."
 tags: ["studio pro", "workflow", "migration", "beta"]
 ---
 
 ## 1 Introduction
 
-[Workflows](/refguide9/workflows/) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
+[Workflows](/refguide9/workflows/) were introduced as a beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6 and above. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
 
 This document explains how to migrate your existing workflow apps depending on the version you are migrating to. It is meant for advanced Mendix developers, so proceed with caution.
 
@@ -73,9 +73,9 @@ Make sure the correct user entity is set in the App Settings: open **App Setting
 
 #### 3.1.5 Set Up Your Domain Model {#domain-model}
 
-After upgrading to the Mendix 9.6-9.9, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply remove the generalization and this will automatically make your entity persistable again. This entity represents your business data going through the workflow and is used for the **Workflow Context** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below.
+After upgrading to the Mendix 9.6-9.9, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply remove the generalization and this will automatically make your entity persistable again. This entity represents your business data going through the workflow and is used for the **WorkflowContext** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below.
 
-For every workflow in your application you now need an entity that represents the instances of the workflow and will be used by the **Workflow Instance** parameter in the workflow editor. This entity needs to be a specialization of the **Workflow** entity in the System module and has to be connected to your workflow context entity via either a one-to-one or one-to-many association, where the owner is the **Workflow Instance** entity. 
+For every workflow in your application you now need an entity that represents the instances of the workflow and will be used by the **Workflow Instance** parameter in the workflow editor. This entity needs to be a specialization of the **Workflow** entity in the System module and has to be connected to your workflow context entity via either a one-to-one or one-to-many association, where the owner is the **WorkflowInstance** entity. 
 
 #### 3.1.6 Reconfigure Your Workflow {#reconfigure-workflow}
 
@@ -121,13 +121,13 @@ Make sure the correct user entity is set in the App Settings: open **App Setting
 
 Follow recommendations below to set up your domain model:
 
-* Remove all specializations of Workflow and WorkflowUserTask from your domain model. If entities had any specific attributes and/or associations, move them to the Workflow Context entity.
-* In some cases it might be necessary to add an association from the Workflow Context entity to the Workflow entity (for example, if you used any Workflow data/columns in a data grid displaying the context entity); or duplicate all relevant data to the Workflow Context entity.
+* Remove all specializations of **Workflow** and **WorkflowUserTask** from your domain model. If entities had any specific attributes and/or associations, move them to the workflow context entity.
+* In some cases it might be necessary to add an association from the workflow context entity to the Workflow entity (for example, if you used any Workflow data/columns in a data grid displaying the context entity); or duplicate all relevant data to the workflow context entity.
 
 #### 3.2.6 Migrate Your Pages
 
 Follow recommendations below to migrate pages:
 
-* Update (task) pages to use the data source microflow to display details of the Workflow Context entity. This microflow retrieves the context entity for a workflow. The data source microflow for task pages is automatically generated when you generate your first task page from a workflow template. 
+* Update (task) pages to use the data source microflow to display details of the workflow context entity. This microflow retrieves the context entity for a workflow. The data source microflow for task pages is automatically generated when you generate your first task page from a workflow template. 
 * Remove all snippets, columns, etc., which rely on completed user tasks, such as timelines and *Completed Date* columns.
 * If you used the State attribute of WorkflowUserTask in any conditional visibility and/or dynamic class expressions, update those accordingly.

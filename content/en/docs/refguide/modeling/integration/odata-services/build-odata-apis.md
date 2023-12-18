@@ -37,7 +37,7 @@ REST APIs, and especially OData APIs, often provide access to data within the ap
 
 ## 2 Creating OData APIs {#creating-odata-apis}
 
-Create OData APIs by right clicking on an entity > **Expose as OData resource** or right clicking on a module > **Add other** > **Published OData service**. 
+Create OData APIs by right clicking on an entity > **Publish in OData service** or right clicking on a module > **Add other** > **Published OData service**. 
 
 ### 2.1 Published OData Service Document
 
@@ -45,7 +45,7 @@ In the [published OData service](/refguide/published-odata-services/) document, 
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/select-attributes-associations.png" >}} 
 
-For every published resource, you can define what functionality is available: 
+For every published entity, you can define what functionality is available: 
 
 * **Create** = `POST`
 * **Read** = `GET`
@@ -372,13 +372,13 @@ There are two ways to take an API-first approach, as explained in [API-First vs.
 
 ### 6.1 Defining a Resource Model
 
-Define a resource model using [non-persistable entities](/refguide/persistability/), expose these as OData resources, then model microflows to map these resources to the actual source data. This will require you to handle the OData query options in the microflow. Using custom Java actions can simplify this process, as explained in the [Combining Data from Two Entities](#two-entities) section below.
+Define a resource model using [non-persistable entities](/refguide/persistability/), publish them in an OData service, then model microflows to map these resources to the actual source data. This will require you to handle the OData query options in the microflow. Using custom Java actions can simplify this process, as explained in the [Combining Data from Two Entities](#two-entities) section below.
 
 ### 6.2 Combining Data from Two Entities {#two-entities}
 
 Refer to the [example domain model](#starting-domain-model) for this section.
 
-In this example, you can expose a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the **Firstname** and **Lastname** attributes into a single attribute, **Fullname**. Provide the home address information and exclude other address types:
+In this example, you can publish a single REST resource that combines data from the **Customer** entity and the **Address** entity. It will join data from both entities and combine the **Firstname** and **Lastname** attributes into a single attribute, **Fullname**. Provide the home address information and exclude other address types:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/expose-single-resource-domain-model.png" width="300" >}} 
 
@@ -406,7 +406,7 @@ In this example, you can expose a single REST resource that combines data from t
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-call.png" >}} 
 
-5. You have decoupled your REST resource from your domain model persistent entities. You can change your entities and use the OQL query to ensure the exposed data remains backwards compatible.
+5. You have decoupled your REST resource from your domain model persistent entities. You can change your entities and use the OQL query to ensure the published data remains backwards compatible.
 
      The Java action used above adds the OData query to the original OQL query as follows:
 

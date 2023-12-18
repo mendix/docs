@@ -36,7 +36,7 @@ SVGs can contain several kinds of elements. However, not all of them are support
 * CDATA elements
 * `<style />` tags and `style` attributes (please use regular properties instead)
 
-We suggest manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
+Mendix suggests manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
 
 ### 2.3 Styling SVGs {#styling}
 
@@ -88,7 +88,7 @@ Would produce the following button and SVG:
 
 ### 2.4 Using SVGs in Pluggable Native Widgets {#svg-pluggable}
 
-To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
+To use an SVG in a pluggable native widget's image property, Mendix recommends using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
 Here is an example of using the `Image` component:
 
@@ -199,7 +199,7 @@ Before [adding fonts manually](#manual):
 
 * Understand the native mobile [local build process](/howto/mobile/native-build-locally/)
 * Locally check out your repository 
-* Understand git and have a git tool installed
+* Understand Git and have a Git tool installed
 * Have XCode installed for the iOS sections below
 
 ### 3.3 Adding Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}

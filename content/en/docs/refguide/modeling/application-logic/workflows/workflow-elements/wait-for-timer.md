@@ -8,7 +8,7 @@ tags: ["workflow", "workflows", "wait for timer", "timer", "Studio Pro"]
 
 ## 1 Introduction
 
-The **Wait for timer** activity allows you to suspend a workflow path for a configurable duration or until a certain date and time. When an activity before the timer finishes and the workflow path reaches the timer, the configured duration or date and time will be scheduled to take effect.
+The **Wait for timer** activity allows you to suspend a workflow path for a configurable duration or until a certain date and time.
 
 For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 
@@ -28,20 +28,14 @@ The **Caption** describes what happens in this element. It is displayed in the w
 
 ### 2.2 Timer Section {#timer}
 
-The **Timer** property defines at which time the workflow path continues. 
+The **Timer** property defines at which time the workflow path continues. With this property, you can set the timer in two ways: you can set a certain duration, or a certain date and time with an expression. When an activity before the timer finishes and the workflow path reaches the timer, the configured duration or date and time will be scheduled to take effect.
 
-You can set the timer in two ways:
+The **Timer** properties are described in the table below:
 
 | Type | Description |
 | --- | --- |
 | Duration | You can set a certain duration for the timer. With the **Continue after** setting, you can indicate the number of seconds, minutes, hours, days, weeks or months the timer's duration is. Possible values for the setting are:<br /><ul><li>Second(s)</li><li>Minute(s)</li><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li><li>Month(s)</li> </ul> |
-| Expression | You can set a certain date and time for the timer by writing an expression via the **Continue at** setting.<br><br>For example, you can write `addDays([%CurrentDateTime%], 1)` to set tomorrow as the due date and time. To set a static date and time, you can use the expression `parseDateTimeUTC('2023-12-10T17:12:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')`. You can also set a more complex timer via [XPath configuration](#xpath-configuration).|
-
-#### 2.2.1 XPath Configuration {#xpath-configuration}
-
-With the **Expression** option, a timer can be set using XPath, making it possible to create a more complex timer. In the following example, a timer is set based on a Boolean value from the provided workflow context entity, which in this case is a Boolean value called `isVIPUser`.
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-xpath-example.jpg" alt="Wait For Timer Xpath" width="657" >}}
+| Expression | You can set a certain date and time for the timer by writing an expression via the **Continue at** setting.<br><br>For example, you can write `addDays([%CurrentDateTime%], 1)` to set tomorrow as the due date and time. To set a static date and time, you can use the expression `parseDateTimeUTC('2023-12-10T17:12:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')`.<br><br>You can also create a more complex timer. For example, you can set a timer based on a Boolean value (in this example, `isVIPUser`) from the provided workflow context entity: `if $WorkflowContext/isVIPUser then addDays([%CurrentDateTime%], 2) else addWeeks([%CurrentDateTime%], 2])`.<br><br>For more information on available expressions in Mendix, see [Expressions](/refguide/expressions/). |
 
 ### 2.3 Common Section {#common}
 
@@ -57,9 +51,9 @@ When a **Wait for timer** activity expires, it behaves differently depending on 
 
 ### 3.1 Workflow Incompatibility
 
-When a **Wait for timer** activity is added to a workflow instance before an activity that is currently in progress, the workflow instance will become incompatible. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning).
+When a **Wait for timer** activity is added to a workflow instance before an activity that is currently in progress, the workflow instance will become incompatible after redeployment of the application. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning).
 
-If a timer already started but gets removed before its set duration or date and time, the already scheduled task by the timer remains until the set duration or date and time is reached. When the set duration or date and time is reached, the already scheduled task will still trigger the execution of the timer but the workflow instance will not continue due to the incompatible state. A warning log is provided in this case.
+When a **Wait for timer** activity is removed from the workflow definition and the application is redeployed, on initiation of the application, it validates if there are any running timers (that is, active timers that are initiated but have not reached their defined date and time). In this case, the workflow becomes incompatible and a warning log is created. For information on how to resolve a conflict when an activity is removed, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning).
 
 ### 3.2 Specific Workflow State Cases
 
@@ -67,7 +61,7 @@ The following cases do not trigger a continuation of the workflow path when time
 
 * Expiration in a workflow that is aborted.
 * Expiration in a workflow that is incompatible. (After the workflow resumes, the workflow path continues normally.)
-* Expiration in a workflow that is jumped to a different activity. 
+* Expiration in a workflow that is jumped from the timer to a different activity. 
 * A workflow is restarted and a previous timer was still scheduled.
 
 ## 4 Read More

@@ -1,5 +1,5 @@
 ---
-title: "Import data from file Activity"
+title: "Import Data from File"
 url: /refguide/data-importer-activity/
 tags: ["studio pro", "import excel", "import data", "integration activity"]
 weight: 30

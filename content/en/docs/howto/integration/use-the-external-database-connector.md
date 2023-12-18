@@ -104,20 +104,20 @@ For example, `INSERT INTO classicmodels.productlines(productLine, requestedProdu
 
 ### 6 Use the Query External Database Activity
 
-1. Use `Query External Database` activity from toolbox in the microflow.
+1. Add the **Query external database** activity into your microflow.
 
-2. Double click on activity and select created External Database Connection document.
+2. Double-click on the activity and select the new external database document.
 
-3. All the queries created for the selected document will appear in the dropdown, select the required one.
+3. In the **Query** field, select the required query from the drop-down.
 
-4. Assign values to the parameters using `Expression editor`.
+4. Assign values to the parameters using the **Expression editor**.
 
-5. Output details for the selected query will be auto-populated.
+5. Output details for the selected query auto-populate.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
 
-With these steps you are ready to use data from external database in your Mendix App.
+You are now ready to use data from an external database in your Mendix App.
 
 {{% alert color="warning" %}}
-It is your responsibility to apply the proper security, as this action can allow for SQL injection into your Mendix application. Among others things, do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.
+Make sure to use secure measures, as this action can allow for SQL injection into your app. Do not use user-supplied or environment-supplied variables in your SQL statement; if possible, they should be static.
 {{% /alert %}}

@@ -23,7 +23,7 @@ Two-factor authentication requires you to identify yourself using your password 
 
 Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}). For example, switching to the production environment requires 2FA.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" width=25% >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" >}}
 
 ## 3 How It Works
 
@@ -36,13 +36,11 @@ Once 2FA is set up, you can use your chosen method to receive an authentication 
 
 Whenever you successfully complete 2FA, your browser session will be authorized for the next eight hours.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/information.png"   width=70%  >}}
-
 To set up 2FA, you first need to perform an action that requires 2FA. For example, you could click **Transport to Production** on the **Environments** page of your app.
 
 Then, choose one of the two authentication options.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/sms-or-google.png" width=70% alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator-choice.png"  class="image-border" max-width=70% alt="" >}}
 
 Instructions for both authentication options are provided below.
 
@@ -53,32 +51,32 @@ For SMS authentication, you need to have a phone number connected to a mobile ph
 1. Click **Use SMS** in the dialog box that opens the first time you perform an action that requires 2FA.
 2. Enter a phone number to which SMS messages can be sent. Click **Send text message**.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png"   width=70% >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png" class="image-border" max-width=70% alt="" >}}
 
 3. Enter the authentication code, which is sent as an SMS message to your device. Click **Activate**.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms.png"   width=70% >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms-code.png" class="image-border" max-width=70% alt="" >}}
 
 In the future, when you perform operations that require 2FA, you will need to authenticate by sending a text message to your phone.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png"   width=70%  >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png" max-width=70%  alt="" >}}
 
 Then, you can enter the authentication code from the text message to unlock 2FA.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png"   width=70% >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png" max-width=70% alt="" >}}
 
 ### 3.2 Authenticating with an Authenticator App
 
 To set up 2FA with an authenticator app, follow this process:
 
-1. Click **Use Authenticator App** in the dialog box that opens when you use 2FA for the first time.
+1. Click **Use Authenticator** in the dialog box that opens when you use 2FA for the first time.
 2. Install and open an authenticator app on your smartphone. You can use [Google Authenticator](https://support.google.com/accounts/answer/1066447), [Microsoft Authenticator](https://support.microsoft.com/en-us/account-billing/download-and-install-the-microsoft-authenticator-app-351498fc-850a-45da-b7b6-27e523b8702a), or any other authenticator app that generates time-based one-time passwords.
 3. Select **Set up account** on the main page.
 4. Select **Scan a barcode** or **Enter provided key**.
 5. Scan the barcode or enter the six-digit time-based code.
 6. Once your authenticator app is set up, you will be asked to confirm by entering the code from your authenticator app.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator.png" width=70% alt="" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" class="image-border" alt="" >}}
 
 Your account is now secured with 2FA and ready to use.
 

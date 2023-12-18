@@ -194,7 +194,7 @@ The current document is exported as an image in the .png format.
 
 You can switch between the portrait (vertical) and landscape (horizontal) editor orientation by clicking the orientation icon located in the upper-right corner of the workflow editor. Despite potential minor visual differences in certain canvas elements, the functionality remains entirely consistent across both rendering modes.
 
-It is important to bear in mind that the switch is not preserved or shared across projects. Consequently, each time you re-open a workflow, the orientation will reset to its default portrait mode.
+It is important to bear in mind that the chosen orientation is not preserved or shared across projects. Consequently, each time you re-open a workflow, the orientation will reset to its default portrait mode.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 

@@ -28,20 +28,18 @@ Let's use External Database Connector in  Mendix App, to connect, retreive and i
 
 ## 2 Prerequisites
 
-Let's assume that you already have Mendix app.
-
-* Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) from the Mendix Marketplace into your app.
+Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) into your app. Make sure you have the following details for your external connection:  
 
 * **Username** and **Password** for signing into the external database
 * Connection details: **Host**, **Port**, **Database name**
 
-if additional connection properties are required to connect, you can alternatively use **“JDBC Connection String”**.
+If additional connection properties are required to connect, you can alternatively use **JDBC Connection String**.
 
-## Steps to follow:
+## 3 Establish a connection 
 
-### 1. Establish connection between external database and Mendix app
+### 3.1 Establish connection between the external database and Mendix app
 
-1. Create new document of type **'External Database document'**(File -> New Document -> External Database Connection or Rightclick on Module -> Add other -> External Database Connection)
+1. Create a new document of type **'External Database document'**(File -> New Document -> External Database Connection or Rightclick on Module -> Add other -> External Database Connection)
 
 2. Select Database and add Connection details to connect to Database
 
@@ -61,13 +59,13 @@ For example: *Database*_DBsource.
 
 Hurray Connection between your external database and Mendix app is established successfully.
 
-### 2. Explore Tables and Views of a connected Database:
+### 3.2 Explore Tables and Views of a connected Database:
 
 Once connection is successful and saved, you can explore and search **Tables & Views** of external database in External Database Connection document.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
 
-### 3. Create and Validate SQL Queries with Parameters:
+### 3.3 Create and Validate SQL Queries with Parameters:
 
 1. Create new query by entering **SQL Query** in SQL query editor box.
 
@@ -85,9 +83,9 @@ SQL Query :
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
 
-### 4. Save Query:
+## 4. Save Quer
 
-#### 4a. Save Query to retrieve data:
+### 4.1 Save Query to retrieve data:
 
 1. For query which returns a resultset, click **Use Response** to create mapping.
 
@@ -97,7 +95,7 @@ SQL Query :
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
-### 4b. Save DML Query:
+### 5 Save DML Query
 
 1. For DML queries, *Number of affected rows* will be displayed as a Reponse.
 For example: 
@@ -109,7 +107,7 @@ For example:
 
 **For all DML Queries, changes made to database in Mendix Design phase are automatically rolled back**
 
-### 5. Use “Query External Database” activity:
+### 6 Use Query External Database activity:
 
 1. Use `Query External Database` activity from toolbox in the microflow.
 

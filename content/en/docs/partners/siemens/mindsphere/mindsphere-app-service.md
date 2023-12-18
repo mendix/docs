@@ -21,7 +21,7 @@ With the use of Insights Hub IIoT for Makers, you have an integrated developer e
 
 Insights Hub IIoT for Makers packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
-This documentation will help you find out how to develop for Siemens Insights Hub. Alternatively, have a look at the Mendix Academy Learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
+This documentation will help you find out how to develop for Siemens Insights Hub. Alternatively, have a look at the Mendix Academy learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
 
 ### 1.1 Limitations
 

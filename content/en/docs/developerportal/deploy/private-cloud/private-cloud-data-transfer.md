@@ -110,7 +110,7 @@ If the file storage uses self-signed TLS certificates from a private CA, provide
 
 If you cannot run the data transfer tool from a local machine, because of network access issues, you need to run it in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a jump pod). To do this, follow the instructions below.
 
-Create a YAML file  (e.g. `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
+Create a YAML file  (for example, `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
 
 ```yaml
 apiVersion: v1
@@ -294,6 +294,6 @@ In that case, changing the file extension can fix the issue, for example by chan
 * The export/import tool needs access to the Kubernetes API to get credentials for a specific environment.
 * If `pg_restore` fails for any reason, the data import process is terminated immediately with an error.
 * It is not possible to enforce TLS options.
-    * If _Strict TLS_ was disabled in the Postgres storage plan, the tool will try to use SSL, but will trust any server certificate. If the database does not support SSL, the tool will switch to an unencrypted connection.
-    * If the Postgres storage has the _Strict TLS_ option enabled, the tool will use SSL and validate the server certificate. If the certificate is not valid, or database does not support SSL, the connection will fail.
+    * If *Strict TLS* was disabled in the Postgres storage plan, the tool will try to use SSL, but will trust any server certificate. If the database does not support SSL, the tool will switch to an unencrypted connection.
+    * If the Postgres storage has the *Strict TLS* option enabled, the tool will use SSL and validate the server certificate. If the certificate is not valid, or database does not support SSL, the connection will fail.
     * For Minio and S3, TLS will be used if the environment's storage plan has an `https://` endpoint URL.

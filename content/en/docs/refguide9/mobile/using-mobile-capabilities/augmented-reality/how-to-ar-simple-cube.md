@@ -222,7 +222,7 @@ The **Common** tab appears this way:
 
 The **Common** tab has two important properties:
 
-* **Name** – is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its generated name.
+* **Name** – is used internally in all AR Widgets and must be unique. It can be changed, but Mendix recommends keeping its generated name.
 * **Visible** – is used to dictate the visibility of the AR component. This can be conditional just like most other widgets:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/visibility.png" alt="Visibility"   width="400"  >}}

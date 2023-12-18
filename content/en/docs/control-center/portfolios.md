@@ -17,29 +17,19 @@ The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), 
 As a Mendix Admin, you cannot directly see the content of a portfolio. You need to have [portfolio access](#access-management) for this. You can give yourself portfolio access if needed.
 {{% /alert %}}
 
-The **Portfolios** page offers governance features for [portfolio management](/developerportal/portfolio-management/) in your company. You can have an overview of all portfolios in your company, manage portfolio access, delete portfolios, reject or approve requests for changes of portfolio privacy settings. 
-
-The **Portfolios** page contains three tabs: [All Portfolios](#all-portfolios), [Alerts](#alerts), and [Privacy Requests](#privacy-requests).
-
-{{% alert color="info" %}}
-
-As a Mendix Admin, you cannot directly see the content of a portfolio. You need to have [portfolio access](#access-management) for this. You can give yourself portfolio access if needed.
-
-{{% /alert %}}
-
 ## 2 All Portfolios {#all-portfolios}
 
 The **All Portfolios** tab lists all portfolios in your company. Here you can [manage portfolio access](#access-management) and [delete portfolios](#delete-portfolio). In the search box, you can search for a portfolio by its name.
 
 In the list, you can see the following items:
 
-* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members (deactivated users are not counted), and a list of the Portfolio Managers.
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
-* **Members** – This shows the number of users who have access to this portfolio.
+* **Members** – This shows the number of active users of this portfolio. The deactivated users are not included in this number.
 * **Privacy** – This shows the current privacy settings of the portfolio.
 
-  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+    * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
 
 * **Created** – This shows the date on which the portfolio was created.
 
@@ -47,9 +37,9 @@ In the list, you can see the following items:
 
 * Ellipsis (**...**) – Clicking the button opens a menu with the following items:
 
-  * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
+    * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
-  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
+    * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
 {{% alert color="info" %}}
 
@@ -59,24 +49,42 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 
 ### 2.1 Access Management {#access-management}
 
-After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page.
+After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page. The Access Management page contains two tabs: the **Members** tab and the **Pending Invites** tab.
 
-In the search box, you can search for a user by the user name, email, company, status, or role.
+#### 2.1.1 Members {#members}
+
+The **Members** tab shows all users who have access to the portfolio. You can search for a user in the search box by the user name, email, company, or role.
 
 The **Add Users** button on the upper-right corner allows you to invite new users to the portfolio using their email addresses.
 
-The list shows all users who have access to the portfolio as well as the pending portfolio invitations. In the list, you can see the following items:
+The **Remove Deactivated Users** button is available when there are deactivated members in the portfolio. Clicking the button allows you to remove all deactivated users from this portfolio. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the user from the portfolio.
+
+In the list, you can see the following items:
 
 * **User Name** – This shows the user name.
 * **Email** – This shows the email of the user.
 * **Company** – This shows the company where the user works.
-* **Status** – This shows the status of the portfolio access of the user.
-  * **Active** – The user has access to the portfolio.
-  * **Pending** – The user still needs to accept the invitation to the portfolio.
+* **Status** – This shows whether the user is active or deactivated.
+  
+  {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
+  
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
-* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
-  * **Edit** – Selecting this allows you to change the role of the user.
+* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
+  * **Edit Role** – Selecting this allows you to change the role of the user.
   * **Remove** – Selecting this allows you to remove the user from the portfolio.
+
+#### 2.1.2 Pending Invites {#pending-invites}
+
+When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must first accept the invite, then they can access this portfolio. Until the user accepts or rejects the invite, the invite appears on the **Pending Invites** tab. After they accept the invitation, they will appear on the **Members** tab.
+
+The **Pending Invites** tab shows all pending invites of external users. You can search a user by their email. You can also filter users by their role. The list contains the following items:
+
+* **Email** – This shows the email of the invited user.
+* **Role** – This shows the access role of the invited user.
+* **Invite Date** – This shows the date the invite was sent.
+* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
+  * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
+  * **Delete** – Selecting this allows you to cancel the pending invite.
 
 ### 2.2 Deleting a Portfolio {#delete-portfolio}
 
@@ -96,24 +104,24 @@ The **Alerts** tab lists all the portfolios that no longer have a Portfolio Mana
 
 In the list, you can see the following items:
 
-* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio and the list of the Portfolio Managers.
+* **Portfolio Name** – This is the name of the portfolio. Clicking the name opens a pop-up window that shows the general information of the portfolio, such as the company name, privacy settings of the portfolio, number of active members (deactivated users are not counted), and a list of the Portfolio Managers.
 
 * **Managers** – This shows the number of Portfolio Managers in this portfolio.
 
-* **Members** – This shows the number of users who have access to the portfolio.
+* **Members** – This shows the number of active users of this portfolio. The deactivated users are not included in this number.
 
 * **Privacy** – This shows the current privacy settings of the portfolio.
-  * **Private** –  A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
-  * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+    * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
+    * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
 
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
-* Ellipsis (**...**) – Clicking the icon opens a menu with the following items:
+* Ellipsis button (**...**) – Clicking the icon opens a menu with the following items:
 
-  * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
+    * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
-  * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
+    * **Delete** – Selecting this allows you to [delete the portfolio](#delete-portfolio) permanently together with all the data in the portfolio.
 
 ## 4 Privacy Requests {#privacy-requests}
 

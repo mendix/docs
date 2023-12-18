@@ -36,7 +36,7 @@ The differences between the two approaches are as follows:
     * Resolves conflicts once, regardless of the number of local and remote commits being merged.
 
 {{% alert color="info" %}}
-In general we recommend users to use the Rebase strategy when combining changes, especially when actively collaborating on the same branch.
+In general, Mendix recommends using the Rebase strategy when combining changes, especially when actively collaborating on the same branch.
 
 In exceptional cases, for example when you have a lot of local commits where you expect conflicts, a merge commit might be the better choice. 
 {{% /alert %}}

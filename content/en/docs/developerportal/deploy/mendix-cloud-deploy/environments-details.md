@@ -11,9 +11,9 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click the **Details** icon by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
@@ -25,7 +25,7 @@ In the **General** tab, you can find the following information about your enviro
     * Green check mark – the application in this environment is running
     * Gray dash – no application has been started yet in this environment, or it has been turned off
     * Red cross – the application in this environment is unstable and probably not usable anymore
-* **Running since** – the date the app was started, if it is runnning
+* **Running since** – the date the app was started, if it is running
 * **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
 * **Project ID** – the unique identifier of the app
@@ -44,18 +44,30 @@ At the bottom of the page, there are three overview grids showing the deployment
 
 ### 2.1 Actions {#actions}
 
-On the right side of the screen, you can find the following action buttons:
+On the right side of the screen in the **General** tab, there are buttons that you can use to perform various actions. Some action buttons are visible when your app is running, some are visible when your app is stopped, and some are always visible.
 
-* **Restart Application** – This stops the running application and starts it again. It is necessary to apply new constant values or scheduled events to the environment.
-* **Start/Stop Application**
-* **Clear Environment** – This allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment as well. It is visible only when your application is stopped. For more information, see [Clearing an Environment](#clear-environment).
-* **Show Logged in Users** 
+{{% alert color="info" %}}Depending on your permissions, you may see only some of the action buttons described below. You can adjust your permissions settings on the [Permissions](/developerportal/deploy/node-permissions/) tab of your app's **Environments** page.{{% /alert %}}
+
+When your app is running, you can see the following action buttons:
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="Available actions when the app is running" max-width=40% >}}
+
+* **Restart Application** – This stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
+* **Stop Application** – This stops the application.
+* **Show Logged in Users** – This shows all users who are logged in to your app.
 * **Change Admin Password** – This changes the password for the built-in [administrator](/refguide/administrator/) account. The new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package.
-* **View Live Log**
+* **View Live Log** – This shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
 * **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
-* **Show Running Now** – This can be used to monitor all actions that are currently running in your environment. It is visible only when your application is running.
+* **Show Running Now** – You can use this to monitor all actions that are currently running in your environment.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="A screenshot of the available actions" width=250 >}}
+When your app is stopped, you see this set of action buttons instead:
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-stopped.png" alt="Available actions when the app is stopped" max-width=40% >}}
+
+* **Start Application** – This starts the application.
+* **Stop Application** – This stops the application.
+* **Clear Environment** – This allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment as well. For more information, see [Clearing an Environment](#clear-environment). 
+* **View Live Log** – This shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
@@ -72,9 +84,6 @@ You do not need to clear your environment if you are restoring an existing backu
 To clear your environment, follow these steps:
 
 1. Click **Clear Environment**.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details-buttons.png" alt=""   width="250"  >}}
-
 2. Select one of the following options:
     * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
@@ -146,15 +155,7 @@ The license overview contains the following information:
 
 * **Company** – who owns the license
 * **Is Production** – indicates if the environment is licensed as a production environment
-* **Expiration date**
 * **Runtime mode** – Production, Acceptance, or Test
-* **Limitations**
-    * **Limitation type**:
-        * **Concurrent** – the number of named users that are logged in simultaneously
-        * **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
-        * **Named** – the number of named users registered in the database that are allowed to use the application
-    * **Amount type**
-    * **Number of allowed users**
 
 ## 3 The Model Options Tab {#model-options}
 
@@ -259,18 +260,18 @@ For more information, see [HTTP Headers](https://developer.mozilla.org/en-US/doc
 
 #### 4.2.1 HTTP Response Headers Inserted Automatically
 
-A number of non-configurable response headers are added automatically by Mendix and the deployment environment. These are listed below.
+Mendix and the deployment environment automatically add some non-configurable response headers. These are listed below.
 
 | Response Header | Added In |
 | --------------- | -------- |
-| `cache-control`| The buildpack for **index.html** and **login.html** – the Mendix Runtime for other pages |
+| `cache-control`| The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
 | `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` |
 | `x-vcap-request-id` | Cloud Foundry to track requests through CF |
 
 #### 4.2.2 Running Your App in an Iframe {#iframe}
 
-Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through **SameSite** cookies. For more information, see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
+Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through `SameSite` cookies. For more information, see [SameSite Cookies Explained](https://web.dev/samesite-cookies-explained/).
 
 {{% alert color="info" %}}
 There can be additional issues when using cookies in iframes for end-users using the Safari browser. Resolving these issues is outside the control of Mendix. For more information, see [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/).
@@ -282,14 +283,14 @@ To avoid security issues when you want to embed the app in an iframe, use [custo
 
 ##### 4.2.2.2 Applying a Different SameSite Setting {#samesite}
 
-From Studio Pro 8.12, you can control the value of **SameSite** in your cookies. The default for all cookies depends on the version of Mendix you are using:
+From Studio Pro 8.12, you can control the value of `SameSite` in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
 * For Studio Pro 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
 * For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
-For Mendix 8.11 and below, there was no **SameSite** value set on cookies, and the behavior depended on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables); this sets `SameSite=None; Secure;` for all your cookies.
+For Mendix 8.11 and below, there was no `SameSite` value set on cookies, and the behavior depended on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in the **Custom Environment Variables** section; this sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is deployed after you apply the change.
@@ -297,7 +298,7 @@ The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is
 
 ##### 4.2.2.3 Using Custom Sign-In Pages
 
-If you use a custom sign-in page, the `originURI` cookie is normally set in the **index.html** file. If your Mendix app runs within an iframe, set this cookie with the `SameSite=None` and `Secure` attributes.
+If you use a custom sign-in page, the `originURI` cookie is normally set in the *index.html* file. If your Mendix app runs within an iframe, set this cookie with the `SameSite=None` and `Secure` attributes.
 
 To do this, find all the places in your [theme](/howto/front-end/customize-styling-new/) folder where this cookie is set. It looks like `document.cookie = "originURI=/login.html"`.
 Change this to add the required attributes. Here is an example:

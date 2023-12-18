@@ -100,12 +100,12 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
         * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
 
 * Snapshots
-    * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g., password fields) in the snapshots.
+    * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (for example, password fields) in the snapshots.
 
         * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
         * **False**: Hashed Strings will be excluded and therefore not audited.
 
-        {{% alert color="info" %}}Manually-encrypted (e.g., using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
+        {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
 
 * Integration
     * **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
@@ -133,7 +133,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
 ### 3.5 Adding Additional Information to a Snapshot (Optional)
 
-It is possible to submit additional information for a snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature, the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
+It is possible to submit additional information for a snapshot (for example, in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature, the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 
@@ -141,7 +141,7 @@ Use **Override User for Snapshots in this Context** from the **Toolbox** (the **
 
 ### 3.7 Implementing User Name Scrambling (Optional)
 
-Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store a username differently in the long-term data storage. This can be used for anonymizing data (e.g. due to GDPR).
+Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store a username differently in the long-term data storage. This can be used for anonymizing data (for example, due to GDPR).
 
 ### 3.8 Implementing Display Formatters (Optional)
 

@@ -22,7 +22,7 @@ A Mendix application can be deployed in different ways. You can deploy to your l
 * Each app can only be deployed to one type of target platform (for example Mendix Cloud nodes) in addition to local testing
 * Some features which rely on the target platform can work differently depending on what is supported (for example in Cloud Foundry, Kubernetes, or Windows server)
     * If you want to use a particular feature, check that it is supported by your chosen target platform
-{{% /alert %}}
+    {{% /alert %}}
 
 This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
@@ -36,7 +36,7 @@ In Studio Pro, you can click the play button (▶) in the toolbar to run your ap
 
 To speed up the development process, most changes you make within Studio Pro will use "Instant Update" to be reflected immediately in the locally-running app. However, some changes (such as changes to the domain model) will need the whole app to be restarted.
 
-## 3 Mendix Cloud
+## 3 Mendix Cloud {#mendix-cloud}
 
 Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on Mendix Cloud includes multiple environments, backups, monitoring, high availability, and more.
 

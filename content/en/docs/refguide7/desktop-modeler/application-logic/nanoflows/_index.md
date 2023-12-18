@@ -180,7 +180,7 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ## 8 Nanoflow Debugging
 
-Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and above).
+Step-by-step debugging is not supported yet. For now, Mendix recommends using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and above).
 
 ## 9 Security
 

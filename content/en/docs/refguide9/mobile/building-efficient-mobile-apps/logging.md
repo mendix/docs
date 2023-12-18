@@ -9,7 +9,7 @@ aliases:
 ---
 ## 1 Introduction
 
-In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
+In Mendix Studio Pro 9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
 
 {{% alert color="warning" %}}
 Please note the following current limitations regarding native client logs:
@@ -65,7 +65,7 @@ However, you may choose to add more entry and exit points at the **Debug** level
 
 ## 4 Native Client Default Log Nodes
 
-This section provides some details on specific log nodes used by the Mendix native client. We recommend that if you write your own [log messages](/refguide9/log-message/) you should also use your own log node names to avoid confusion with the Mendix log messages.
+This section provides some details on specific log nodes used by the Mendix native client. Mendix recommends that if you write your own [log messages](/refguide9/log-message/), you should also use your own log node names to avoid confusion with the Mendix log messages.
 
 ### 4.1 Default Mendix Native Client Log Nodes {#native-client-log-nodes}
 

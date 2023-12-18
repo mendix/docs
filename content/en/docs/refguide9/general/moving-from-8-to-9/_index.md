@@ -13,7 +13,7 @@ Mendix Studio Pro 9 gives you powerful new tools to enhance your apps. For the f
 
 ## 2 Updating from Studio Pro 8 to 9 {#studio-pro-upgrade}
 
-The following sub-sections explain the steps to take in converting your app from Studio Pro 8 to Studio Pro 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
+The following sub-sections explain the steps to take in converting your app from Studio Pro 8 to Studio Pro 9. Mendix recommends first reviewing the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
 
 ### 2.1 Backing Up Your App
 
@@ -22,13 +22,13 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### 2.2 Upgrading to the Latest Release of Version 8
 
 {{% alert color="warning" %}}
-It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
+It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, Mendix recommends updating to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
 {{% /alert %}}
 
 To upgrade to Mendix 8.18, follow these steps:
 
 1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18/).
-1. Open your app in Studio Pro v8.18.
+1. Open your app in Studio Pro 8.18.
 1. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Reviewing Your Mendix 8 App

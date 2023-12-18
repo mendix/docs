@@ -17,6 +17,7 @@ Your user account is created by the administrator of your Private Mendix Platfor
 {{< figure src="/attachments/private-platform/pmp-ug1.png" >}}
 
 ### 2.1 Profile {#profile}
+
 In the **Profile** tab, you can configure general information about yourself. This includes the following information:
 
 * Full name (for example, Jane Doe)
@@ -78,7 +79,7 @@ To create a new app, perform the following steps:
 
     For step-by-step examples and guides for new Mendix developers, refer to the following pages:
 
-    * [Quickstart guides](/quickstarts/)
+    * [Quick Starts](/quickstarts/)
     * [Learning path: Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer)
 
 ## 5 Managing Your App

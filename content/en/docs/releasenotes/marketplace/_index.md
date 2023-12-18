@@ -13,6 +13,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2023
 
+### November 30, 2023
+
+#### New Features
+
+* We released the [Content API](/apidocs-mxsdk/apidocs/content-api/) for general use. This API allows you to retrieve information about both public and private company-specific Marketplace content.
+
 ### September 7, 2023
 
 #### Improvements

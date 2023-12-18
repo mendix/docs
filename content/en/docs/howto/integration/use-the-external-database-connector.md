@@ -33,29 +33,27 @@ Download the [External Database Connector](https://marketplace.mendix.com/link/c
 
 If additional connection properties are required to connect, you can alternatively use **JDBC Connection String**.
 
-## 3 Establish a connection 
+## 3 Connect to the external database
 
 ### 3.1 Establish connection between the external database and Mendix app
 
-1. Create a new document of type **'External Database document'**(File -> New Document -> External Database Connection or Rightclick on Module -> Add other -> External Database Connection)
+1. Right-click the module you want to add the external database connection to and click **Add other** > **External database connection**.
 
-2. Select Database and add Connection details to connect to Database
+2. Select the database you want to connect to and add the connection details the Database Connection wizard.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" >}}
 
-3. Use **“Test Connection”** to validate connection of Mendix app with External Database 
+3. Click **“Test Connection”** to validate the connection to the external database.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/2.png" >}}
 
-Click on **Save** to save connection details, these details are stored in 3 constants.
+Click **Save** to save the connection details, which are stored in 3 constants:
 
-- \<Document Name\>_DBSource
-- \<Document Name\>_DBUsername
-- \<Document Name\>_DBPassword
+- `\<Document Name\>_DBSource`
+- `\<Document Name\>_DBUsername`
+- `\<Document Name\>_DBPassword`
 
-For example: *Database*_DBsource. 
-
-Hurray Connection between your external database and Mendix app is established successfully.
+For example: `*Database*_DBsource.`
 
 ### 3.2 Explore Tables and Views of a connected Database:
 
@@ -81,7 +79,7 @@ SQL Query :
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
 
-## 4. Save Quer
+## 4. Save Query
 
 ### 4.1 Save Query to retrieve data:
 

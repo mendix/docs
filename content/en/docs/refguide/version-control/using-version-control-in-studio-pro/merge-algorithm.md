@@ -291,17 +291,17 @@ In other words, the status is reset to the point before starting this process.
 
 This has no effect on changes committed to the server, only your local work.
 
-#### 5.1.2 Show conflicts
+#### 5.1.2 Show Conflicts
 
 The **Show conflicts** button is only visible when there are conflicts in your application, for example conflicting changes to domain models or  microflows.
 
 Click this button to bring the **Changes** pane into the view, as this is the place where you can resolve this type of conflict.
 
-#### 5.1.3 Show file conflicts
+#### 5.1.3 Show File Conflicts
 
 the **Show file conflicts** button, in comparison with the **Show conflicts** button, is shown when there are conflicts in files which are not directly linked to your application.
 
-When clicked it will open up a pop up window with a list of all the files that are affected by the update process, with conflicted ones at the top of the list.
+When clicked, it will open up a pop-up window with a list of all the files that are affected by the update process, with conflicted ones at the top of the list.
 
 You can also use the [Show Changes on Disk](/refguide/version-control-menu/#show-changes) menu item.
 

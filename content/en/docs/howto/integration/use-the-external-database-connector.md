@@ -9,22 +9,20 @@ description: "Overview of the External Database Connector in Studio Pro"
 
 ## 1 Introduction
 
-It is often required to use and access data from External Database directly in your Mendix App.This how-to describes how to easily and seamlessly connect and use data from an external database using [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Use the [External Database Connector](https://marketplace.mendix.com/link/component/219862) to connect, retrieve, and insert data into your Mendix app.
 
-External Database Connector supports connecting to below databases:
+The External Database Connector supports connections to the following databases:
 
-- MSSQL
-- MySQL
-- PostgreSQL
-- Oracle
+* MSSQL
+* MySQL
+* PostgreSQL
+* Oracle
 
 This how-to teaches you how to do the following:
 
-* Connect your Mendix App with an external Database.
-* Create and validate SQL Queries.
-* Use created queries in "Query External Database" activity.
-
-Let's use External Database Connector in  Mendix App, to connect, retreive and insert data.
+* Connect your Mendix App to an external database
+* Create and validate SQL Queries
+* Use created queries in the **Query External Database** activity
 
 ## 2 Prerequisites
 

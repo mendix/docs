@@ -51,9 +51,9 @@ When a **Wait for timer** activity expires, it behaves differently depending on 
 
 ### 3.1 Workflow Incompatibility
 
-When a **Wait for timer** activity is added to the workflow definition and the application is redeployed, a validation on already running workflow instances is performed. When the **Wait for timer** activity has been added before the currently in-progress activity, the workflow becomes incompatible. The conflict/incompatibility validation is analogous to other activities added before an in-progress activity. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning).
+When a **Wait for timer** activity is added to the workflow definition and the application is redeployed, a validation on already running workflow instances is performed. When the **Wait for timer** activity has been added before the currently in-progress activity, the workflow becomes incompatible. The conflict/incompatibility validation is analogous to other activities added before an in-progress activity. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 
-When a **Wait for timer** activity is removed from the workflow definition and the application is redeployed, on initiation of the application, it validates if there are any running timers (that is, active timers that are initiated but have not reached their defined date and time). In this case, the workflow becomes incompatible and a warning log is created. For information on how to resolve a conflict when an activity is removed, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning).
+When a **Wait for timer** activity is removed from the workflow definition and the application is redeployed, on initiation of the application, it validates if there are any running timers (that is, active timers that are initiated but have not reached their defined date and time). In this case, the workflow becomes incompatible and a warning log is created. For information on how to resolve a conflict when an activity is removed, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 
 ### 3.2 Specific Workflow State Cases
 
@@ -69,4 +69,4 @@ The following cases do not trigger a continuation of the workflow path when time
 * [Workflows](/refguide/workflows/)
 * [Add Date Function Calls](/refguide/add-date-function-calls/)
 * [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/)
-* [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning)
+* [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/)

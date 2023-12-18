@@ -37,7 +37,7 @@ If additional connection properties are required to connect, you can alternative
 
 ### 3.1 Establish connection between the external database and Mendix app
 
-1. Right-click the module you want to add the external database connection to and click **Add other** > **External database connection**.
+1. Right-click the module you want to add the external database document to and click **Add other** > **External database connection**.
 
 2. Select the database you want to connect to and add the connection details the Database Connection wizard.
 
@@ -80,29 +80,29 @@ SQL Query:
 
 ## 4. Save Query
 
-### 4.1 Save Query to retrieve data:
+### 4.1 Save Query to Retrieve Data:
 
-1. For query which returns a resultset, click **Use Response** to create mapping.
+1. Click **Use Response** to view the response data and mapping.
 
-2. In **Response Structure** you can see Entity preview.
+2. In the **Response Structure** tab, you can view the entity.
 
-3. Click on **Save Query & Create Enity** to save query and a newly created Entity in the domain model using response structure.
+3. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
 ### 5 Save DML Query
 
-1. For DML queries, *Number of affected rows* will be displayed as a Reponse.
-For example: 
-`INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
+1. For DML queries, *Number of affected rows* will be displayed as a reponse.
+   
+For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
 
-2. Click **Save Query**
+2. Click **Save Query**.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 {{% alert type="info" %}} For all DML Queries, changes made to database in Mendix Design phase are automatically rolled back. {% /alert %}}
 
-### 6 Use the Query External Database activity
+### 6 Use the Query External Database Activity
 
 1. Use `Query External Database` activity from toolbox in the microflow.
 

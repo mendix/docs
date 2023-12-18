@@ -349,10 +349,12 @@ When enabled, the names that Studio Pro suggests in microflows will start with a
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
 
-### 10.4 Use Data grid 2, Combo box and Image widgets for content generation 
+### 10.4 Use Data Grid 2, Combo Box, and Image Widgets for Content Generation 
 
-If this setting is enabled modern widgets like Data grid 2, Combo box and Image widgets are used when generating overview pages the content of data views. Existing generated content remains as it is. 
+If this setting is enabled, modern widgets like Data Grid 2, Combo Box, and Image will be used when generating overview pages or the content of data views. Existing generated content remains as is. 
 
-* Data Grid 2 is generated instead of Data grid 1
-* Combo box is generated instead of Dropdown, Reference selector, Input reference set selector widgets
+See the list below for detailed information on which widgets are generated in various circumstances:
+
+* Data Grid 2 is generated instead of Data Grid 1
+* Combo Box is generated instead of Dropdown, Reference selector, and Input reference set selector widgets
 * Image widget is generated instead of Static image widget and Dynamic image widget

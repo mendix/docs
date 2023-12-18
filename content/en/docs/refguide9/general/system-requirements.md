@@ -29,8 +29,6 @@ The following frameworks are required. They will be installed automatically by t
     * AdoptOpenJDK 11 (x64) – for Mendix 9.13 and below
     * Adoptium Temurin JDK 11 (x64) – for Mendix 9.14 to 9.17
     * Eclipse Temurin JDK 11 (x64)– for Mendix 9.18 and above
-    
-    Oracle JDK 11 can also be used if this is already installed.
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -267,7 +265,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

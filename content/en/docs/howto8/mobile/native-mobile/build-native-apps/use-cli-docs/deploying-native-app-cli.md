@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Use v2.0.0 with Mendix 8.1.0 and above
 * Use v3.0.0 with Mendix 8.3.0 and above
 * A [GitHub](https://github.com/) account.
-* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 

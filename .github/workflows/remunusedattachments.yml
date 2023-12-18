@@ -30,7 +30,8 @@ jobs:
           commit-message: Run removeUnusedAttachments.py on docs
           title: '[Auto] Remove unused attachments'
           body: |
-            "We're trying to delete some unnecessary attachments."
+            Pull Request to delete attachments shich are no longer used.
+            Check the htmltest output from the CI/CD pipeline to ensure that nothing has been removed accidentally.
           branch: rem-unused-attachments
           assignees: MarkvanMents
           reviewers: MarkvanMents

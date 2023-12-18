@@ -155,7 +155,7 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 
 ## 6 Nanoflow Debugging
 
-Step-by-step debugging is not supported yet. For now, we recommend using a log message activity, which is shown in the console log of Studio Pro.
+Step-by-step debugging is not supported yet. For now, Mendix recommends using a log message activity, which is shown in the console log of Studio Pro.
 
 ## 7 Security
 

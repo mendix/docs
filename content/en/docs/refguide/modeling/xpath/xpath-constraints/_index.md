@@ -19,7 +19,7 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 
 ### 2.1 Using Visual Builder
 
-In Mendix 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints.
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints.
 
 {{% alert color="warning" %}}
 Visual Builder for database constraints is beta in Mendix version 10.5 and has limitations which are listed in [Visual Builder Limitations](#limitations).
@@ -27,7 +27,7 @@ Visual Builder for database constraints is beta in Mendix version 10.5 and has l
 
 You can use the Visual Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder (beta)** option is selected to use the Builder. You can switch between the Builder and the XPath expression to view them in different ways. 
+Ensure the **Builder (beta)** option is selected to use the Builder. You can switch between the Builder and the XPath expression to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#new-features).
 
 #### 2.1.1 Constructing an XPath Constraint
 

@@ -43,7 +43,7 @@ When your application is in Mendix Cloud, follow these steps:
 
 2. Click **Environments** in the navigation pane.
 
-3. In the **Deploy** tab, click the **Details** icon for the environment that you want to debug:
+3. In the **Deploy** tab, click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment that you want to debug:
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/environment-details.png" >}}
 
@@ -73,7 +73,7 @@ You can only remotely debug apps deployed to Private Cloud for Mendix if you are
 
 4. Open the **Debugger** tab:
 
-5. If the debugger is currently disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. We recommend that you do not change this password.
+5. If the debugger is currently disabled, click **Enable Debugger**. You will be asked to confirm the generated strong password. Mendix recommends not changing this password.
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/debug-microflows-remotely/pc-debugger-password.png" alt="Enter password for the private cloud debugger" >}}
 

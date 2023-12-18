@@ -120,6 +120,6 @@ In some cases the generated CSS classes of an icon changes and you will have to 
 * Changing the configured collection class or prefix of the icon collection, including removing either option (this affects all icons in the collection)
 * If the collection class or prefix is not explicitly configured, renaming the icon collection or moving it to a different module (this affects all icons in the collection)
 
-To prevent issues from occurring, we recommend configuring the icon collection and naming all icons before you start using them directly in your styling. Afterwards, do not make any further changes.
+To prevent issues from occurring, Mendix recommends configuring the icon collection and naming all icons before you start using them directly in your styling. Afterwards, do not make any further changes.
 
 Icon tags do not affect the generated CSS styling. Thus, you are always able to edit, remove, or update icon tags even after you have started using your icons in your styling.

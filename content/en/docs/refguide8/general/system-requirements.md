@@ -25,7 +25,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.7.2 and all applicable Windows security patches
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2015 Redistributable Package
-* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0/#800) if you do not have any JDK 11 installed) 
+* AdoptOpenJDK 11 (installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0/#800) if you do not have any JDK 11 installed) 
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -173,7 +173,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

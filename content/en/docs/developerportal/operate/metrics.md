@@ -16,7 +16,7 @@ aliases:
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
-These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
+These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
 
 ## 2 Accessing the Metrics Graphs
 
@@ -188,7 +188,7 @@ In addition to the threadpool that is used for external HTTP requests (described
 
 ### 4.8 CPU Usage{#Trends-appcpu}
 
-The **CPU usage** graph shows the app CPU utilization, as a percentage.
+The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data, ranging from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
 
@@ -196,7 +196,7 @@ The **CPU usage** graph shows the app CPU utilization, as a percentage.
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
-This graph is normalized so that 100% is the full capacity of a single CPU. If you have two CPUs, you would expect your graph to peak at 200%. 
+This graph is normalized so that 100% is the full capacity of a single CPU, 200% is the full capacity of two CPUs, and so on.
 
 Your app can always access at least the amount of CPU specified for your container. However, because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with two CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
@@ -204,7 +204,7 @@ Your app can always access at least the amount of CPU specified for your contain
 
 ### 4.9 Disk Usage {#Trends-appdf}
 
-The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed in percentage.
+The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed as a percentage. The graph's y-axis scales dynamically based on the data. If the app's disk usage is below 100%, then the y-axis ranges from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage-pct.png" >}}
 

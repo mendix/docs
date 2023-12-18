@@ -12,6 +12,15 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.7
 
+### 4.7.3
+
+**Release date: December 18, 2023**
+
+* We now sign all Mendix Service Console executables and libraries, next to the main executable and the installer file (excluding third-party libraries).
+* We changed the default installation directory for the Service Console to the 64-bit program files directory (which is usually *C:\Program Files*), instead of the 32-bit directory (which is usually *C:\Program Files (x86)*), as the Service Console actually runs 64 bits when the OS supports this.
+* We added the `NoService` parameter to the `Start-MxApp` cmdlet, which will cause the cmdlet to start the app as a local process instead of as a service.
+* The `Stop-MxApp` cmdlet will now stop apps if they are started as a local process and as a service.
+
 ### 4.7.2
 
 **Release date: September 21, 2023**

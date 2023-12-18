@@ -72,7 +72,7 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-05-reference-selector/ref-selector-findwidgetchildnode-action.png" >}}
 
-5. ATS has core actions for selecting an option from a select element. We use the *Select Option by Text* action, because you want to select the option based on text. Enter the output of test step 1 as an input and give a proper description:
+5. ATS has core actions for selecting an option from a select element. The *Select Option by Text* action is used, because you want to select the option based on text. Enter the output of test step 1 as an input and give a proper description:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-05-reference-selector/ref-selector-selectoptionbytext-action.png" >}}
 

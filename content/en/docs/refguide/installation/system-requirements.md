@@ -25,9 +25,7 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
-    * Eclipse Temurin JDK 11 (x64)
-    * Oracle JDK 11 can also be used if this is already installed
+* A Java Developer Kit (JDK) version 11 - If not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'.
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -250,7 +248,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

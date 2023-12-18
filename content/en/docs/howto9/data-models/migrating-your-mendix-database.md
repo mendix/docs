@@ -23,7 +23,7 @@ After completing this how-to, you will know how to do the following:
 {{% alert color="warning" %}}
 You cannot use these methods to transfer data from one app to another. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide9/data-storage/) for more information.
 
-If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication/) module.
+If you want to copy data to another app, Mendix recommends using the [Database Replication](/appstore/modules/database-replication/) module.
 {{% /alert %}}
 
 ## 2 Overview

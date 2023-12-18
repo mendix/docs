@@ -96,6 +96,7 @@ This user needs to be invited into this organization as a organization member.
 {{% /alert %}}
 
 #### 3.2.1 User Name
+
 The user name (login name) of this GitHub user. 
 
 #### 3.2.2 Personal Access Token

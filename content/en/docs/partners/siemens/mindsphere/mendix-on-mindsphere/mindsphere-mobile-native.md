@@ -17,7 +17,7 @@ On a phone there is no Insights Hub launchpad - therefore the app has to impleme
 The end-user signs in to Insights Hub outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found in [Developing Mobile Apps for Insights Hub](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) in the Insights Hub documentation. But do not worry - the implementation is already part of the app template - just use it.
 To support deep links in your app, you have to create your own [Custom Development App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and register a deep link corresponding to your app registration.
 
-As a prerequisite, we recommend that you follow the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development.
+As a prerequisite, Mendix recommends following the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development.
 
 This documentation is structured into two main parts:
 

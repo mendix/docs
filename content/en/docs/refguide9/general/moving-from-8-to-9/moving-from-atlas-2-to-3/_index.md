@@ -27,7 +27,7 @@ The sections after the upgrade instructions reference known issues and some trou
 
 ## 2 Upgrading from Atlas 2 to Atlas 3 {#upgrade}
 
-Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your app requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
+Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your app requires hybrid content, Mendix recommends not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
 Before you start the upgrade process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto9/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*. 
 

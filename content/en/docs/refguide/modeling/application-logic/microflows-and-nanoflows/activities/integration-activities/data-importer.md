@@ -11,7 +11,7 @@ This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This activity is in Studio Pro [10.4](/releasenotes/studio-pro/10.4/) and above.
+This activity is in Studio Pro 10.6 and above.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -38,7 +38,7 @@ You can start using MendixChat by clicking one of the demo questions. You can al
 
 The following steps present an example of you how you can interact with MendixChat by asking your own question:
 
-1. Type the following question in the chatbox: `What is microflow?`.
+1. Type the following question in the chatbox: `When should I use a calculated attribute?`.
 
 2. Optionally, you can press <kbd>Enter</kbd> (or <kbd>Shift</kbd> + <kbd>Enter</kbd>) to add a new line to your question.  
 
@@ -48,7 +48,7 @@ The following steps present an example of you how you can interact with MendixCh
     * Top sources where the answer is generated from - reference links and page titles from Mendix knowledge base, for instance, Mendix Docs, Mendix Forum, and Mendix Academy.
     * Feedback icons
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-example.png" width="300px" >}}
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-example.png" width="300px" >}}
 
 4. To give your feedback on the given answer, click the thumbs up icon ({{% icon name="thumbs-up" %}}) or the thumbs down icon ({{% icon name="thumbs-down" %}}). 
 

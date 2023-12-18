@@ -1,5 +1,5 @@
 {{ $src := (.Page.Resources.GetMatch (printf "**%s*" (.Get "src"))) }}
-<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+<figure>
     <!-- NK - adds on-click link to images, default target is in new tab/window -->
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"
@@ -10,8 +10,10 @@
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
+         {{- with .Get "max-width" }} style="max-width:{{ . }}"{{ end -}}
          {{- with .Get "width" }} width="{{ . }}"{{ end -}}
          {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+         {{ with .Get "class" }} class="{{ . }}"{{ end -}}
     /> <!-- Closing img tag -->
     </a>
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}

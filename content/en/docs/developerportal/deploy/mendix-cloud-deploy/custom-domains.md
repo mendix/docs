@@ -211,7 +211,7 @@ To configure a custom domain for your application environment, follow these step
 
 1. Click **Environments**.
 
-2. Click the **Details** icon on the environment you want to configure.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to configure.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/environment-details.png" >}}
 

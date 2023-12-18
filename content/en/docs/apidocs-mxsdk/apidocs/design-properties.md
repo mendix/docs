@@ -522,7 +522,7 @@ Definitions for **Toggle** and **Spacing** design properties can only be merged 
 
 Definitions of **ToggleButtonGroup** must either all set `multiSelect` to `true`, all be set it to `false`, or not define the `multiSelect` property at all. **Dropdown**, **ColorPicker**, and single-select **ToggleButtonGroups** can all be merged.
 
-When merging definitions with different types, the last definition based on the precedence rules outlined above will be used to display the design property to the user.
+When merging definitions with different types, the last definition based on the precedence rules outlined above (i.e. the lowest in the list) will be used to display the design property to the user.
 
 {{% alert color="warning" %}}
 Note that having multiple definitions with incompatible types is an invalid configuration and will result in a failure to load any design properties.

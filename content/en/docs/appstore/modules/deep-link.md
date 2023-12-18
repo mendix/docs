@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 ---
 
 {{% alert color="warning" %}}
-⚠ This module is deprecated from Studio Pro 9.6.0. It is replaced by microflow URLs and page URLs.
+⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For more information about migrating your Deep Link module to built-in page and microflow URLs, see the [Deep Link Migration](#deep-link-mig) section below.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -44,6 +44,14 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 * Create persistent links to view only pages, which you can use in emails or on your website
 * Provide a colleague with a link to a certain object instead of describing the necessary navigation steps
 * Generate confirmation links that can be emailed to users
+
+## 2 Migration {#deep-link-mig}
+
+To migrate your Deep Link module's functionality to microflow URLs and page URLs, do the following:
+
+1.
+1.
+1.
 
 ## 2 Installation
 

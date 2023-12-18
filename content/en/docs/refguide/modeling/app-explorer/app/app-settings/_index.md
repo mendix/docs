@@ -351,10 +351,10 @@ This table allows you to select a default color for each microflow activity type
 
 ### 10.4 Use Data Grid 2, Combo Box, and Image Widgets for Content Generation 
 
-If this setting is enabled, modern widgets like Data Grid 2, Combo Box, and Image will be used when generating overview pages or the content of data views. Existing generated content remains as is. 
+If this setting is enabled, modern widgets like [Data Grid 2](/appstore/modules/data-grid-2/), [Combo Box](/appstore/widgets/combobox/), and [Image](/appstore/widgets/image/) will be used when generating overview pages or the content of data views. Existing generated content remains as is. 
 
 See the list below for detailed information on which widgets are generated in various circumstances:
 
-* Data Grid 2 is generated instead of Data Grid 1
-* Combo Box is generated instead of Dropdown, Reference selector, and Input reference set selector widgets
-* Image widget is generated instead of Static image widget and Dynamic image widget
+* A Data Grid 2 module is generated instead of a Data Grid 1 module
+* A combo box is generated instead of a combination of dropdown, reference selector, and input reference set selector widgets
+* An image widget is generated instead of a static image widget and a dynamic image widget

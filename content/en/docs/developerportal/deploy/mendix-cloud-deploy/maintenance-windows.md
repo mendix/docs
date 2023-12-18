@@ -46,7 +46,7 @@ Follow the instructions below to configure a maintenance window.
 
 2. Go to the **Environments** page for your app.
 
-3. Click the **Details** icon on the environment that you want to configure.
+3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/environment-details.png" alt="" >}}
 

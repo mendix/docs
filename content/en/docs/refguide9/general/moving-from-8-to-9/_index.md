@@ -28,7 +28,7 @@ It is technically required for you to upgrade your app to Mendix 8.12 first to b
 To upgrade to Mendix 8.18, follow these steps:
 
 1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18/).
-1. Open your app in Studio Pro v8.18.
+1. Open your app in Studio Pro 8.18.
 1. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Reviewing Your Mendix 8 App

@@ -21,7 +21,7 @@ This document describes the purpose and functionality of 2FA in the Developer Po
 
 Two-factor authentication requires you to identify yourself using your password as well as a second authentication mechanism. This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Developer Portal.
 
-Actions that require 2FA are indicated by a padlock symbol. For example, switching to the production environment requires 2FA.
+Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}). For example, switching to the production environment requires 2FA.
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" width=25% >}}
 

@@ -55,13 +55,13 @@ Click **Save** to save the connection details, which are stored in 3 constants:
 
 For example: `*Database*_DBsource.`
 
-### 3.2 Explore Tables and Views of a connected Database:
+### 3.2 Explore Tables and Views of a Connected Database
 
-Once connection is successful and saved, you can explore and search **Tables & Views** of external database in External Database Connection document.
+Once the connection is successful and saved, you can explore and search the **Tables & Views** of the external database.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
 
-### 3.3 Create and Validate SQL Queries with Parameters:
+### 3.3 Create and Validate SQL Queries with Parameters
 
 1. Create new query by entering **SQL Query** in SQL query editor box.
 
@@ -101,9 +101,9 @@ For example:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
-**For all DML Queries, changes made to database in Mendix Design phase are automatically rolled back**
+{{% alert type="info" %}} For all DML Queries, changes made to database in Mendix Design phase are automatically rolled back. {% /alert %}}
 
-### 6 Use Query External Database activity:
+### 6 Use the Query External Database activity
 
 1. Use `Query External Database` activity from toolbox in the microflow.
 

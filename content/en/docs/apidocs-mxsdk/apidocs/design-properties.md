@@ -29,9 +29,9 @@ Design properties can make this work easier and safer. By configuring your own c
 
 ### 2.1 Creating Styles for Your Design Properties
 
-You can define the styles that correspond to your design properties as CSS classes. Starting with Mendix 10, you can also use design properties to apply CSS variables (also known as CSS custom properties) to specified CSS properties. In this document, we will show examples of both ways.
+You can define the styles that correspond to your design properties as CSS classes. Starting with Studio Pro 10.0.0, you can also use design properties to apply CSS variables (also known as CSS custom properties) to specified CSS properties. This document will show examples of both ways.
 
-CSS classes are the easiest and most reusable way of applying styling. However, they can also lead to duplication of very similar CSS rules, resulting in large stylesheets. This can happen when you want to reuse the same color for a background color and a text color. CSS variables can make this more flexible by extracting common values, such as colors. For example, a design property can target the `background-color` or the `color` CSS properties.
+CSS classes are the easiest and most reusable way of applying styling. However, they can also lead to duplication of similar CSS rules, resulting in large style sheets. This can happen when you want to reuse the same color for a background color and a text color. CSS variables can make this more flexible by extracting common values, such as colors. For example, a design property can target the `background-color` or the `color` CSS properties.
 
 The Design Properties API is designed to allow you to choose between CSS classes or CSS variables depending on your use case. You may also employ both and can easily mix approaches. You can even switch between using CSS classes and CSS variables without having to manually update the styles of your widgets. You can switch from one to the other at any time. For more information on the differences between these approaches, see [CSS Classes and CSS Variables](#class-variable).
 
@@ -42,7 +42,7 @@ There are several types of design properties: **Toggle**, **Dropdown**, **Colorp
 * The **Toggle** type can be be turned on or off by the user. It can only be used with CSS classes, which will be applied if the toggle is turned on.
 * A **Dropdown** allows you to define a set of related options. Only a single option can be selected at a single time.
 
-The following types have been introduced with Mendix 10:
+The following types have been introduced with Studio Pro 10.0.0:
 
 * A **Colorpicker** is like a **Dropdown**. As it is especially intended to work with colors, it allows you to add a preview of the color for each option.
 * The **ToggleButtonGroup** type also allows you to define a set of related options. Unlike a **Dropdown**, the **ToggleButtonGroup** can be configured to allow selecting multiple options.
@@ -678,10 +678,10 @@ The design property above is a replacement for the removed options **small** and
 
 When using CSS classes, you should keep a few things in mind:
 
-* CSS classes are case insensitive, but it is highly recommended to use the exact casing when using them in your *design-properties.json* file.
-* When specifying a CSS class for a design property (such as for a **Toggle** or for a **Dropdown** option), it is also possible to use multiple CSS classes.
-* When referring to a CSS class in *design-properties.json*, do not use `.` at the start of your class names.
-* A design property or specific option of a design property can also apply multiple CSS classes.
+* CSS classes are case insensitive, but it is highly recommended to use precise casing when using them in your *design-properties.json* file
+* When specifying a CSS class for a design property (such as for a **Toggle** or for a **Dropdown** option), it is also possible to use multiple CSS classes
+* When referring to a CSS class in *design-properties.json*, do not use `.` at the start of your class names
+* A design property or specific option of a design property can also apply multiple CSS classes
 
 In your apps theme, you can create CSS classes as such:
 
@@ -699,11 +699,11 @@ In your apps theme, you can create CSS classes as such:
 
 When using CSS variables, you should keep a few things in mind:
 
-* CSS variables are case sensitive. Make sure to use the correct casing when referring to them in your *design-properties.json* file.
-* When referring to a CSS variable in *design-properties.json*, always include the `--` at the start of your CSS variable names.
-* CSS variables are not available for **native** documents.
-* Note you can not use SASS variables (starting with `$`.) You can define a CSS variable based on your SASS variable. For example: `--brand-primary: {$brandPrimary};`
-* Only a single CSS variable can be applied to a single CSS property.
+* CSS variables are case sensitive, so make sure to use the correct casing when referring to them in your *design-properties.json* file
+* When referring to a CSS variable in *design-properties.json*, always include the `--` at the start of your CSS variable names
+* CSS variables are not available for **native** documents
+* Note you cannot use SASS variables (starting with `$`), but you can define a CSS variable based on your SASS variable (for example: `--brand-primary: {$brandPrimary};`)
+* Only a single CSS variable can be applied to a single CSS property
 
 In your theme, you can create CSS variables as such:
 
@@ -718,7 +718,9 @@ It is recommended to scope them to `:root`, like in the example, as this would m
 
 ### 8.3 Using Both CSS Classes and CSS Variables
 
-You might want to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your existing styling right away. In that case, you can combine **Dropdown**, **Colorpicker**, **ToggleButtonGroup**, and **Spacing** options using classes with ones that use CSS variables, as long as each individual option only defines a CSS class *or* a CSS variable, but not both. Also ensure that your design property defines a `property` field with the name of the CSS property you are targeting.
+Your use case might require you to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your existing styling right away. 
+
+In that situation, you can combine **Dropdown**, **Colorpicker**, **ToggleButtonGroup**, and **Spacing** options using classes with ones that use CSS variables, as long as each individual option only defines a CSS class *or* a CSS variable (**but not both**). Also ensure that your design property defines a `property` field with the name of the CSS property you are targeting.
 
 ```js
 {

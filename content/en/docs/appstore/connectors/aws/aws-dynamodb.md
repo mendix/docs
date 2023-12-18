@@ -88,7 +88,6 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 12. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
 13. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
 15. Click **OK**, and then click **OK** again.
 
 
@@ -493,7 +492,7 @@ This generalization entity holds information of items inside Amazon DynamoDB. Ea
 
 ### 4.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon DynamoDB connector, enumerations list values such as the status of database tables, or the list of available AWS regions.
+An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon DynamoDB connector, enumerations list values such as the status of database tables.
 
 #### 4.2.1 `ENUM_BooleanValue`
 

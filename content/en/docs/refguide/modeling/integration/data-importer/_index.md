@@ -36,8 +36,7 @@ This extension currently has the following limitations:
 
 ### 1.4 Prerequisites
 
-* Studio Pro [10.4](/releasenotes/studio-pro/10.4/) or above
-
+* Studio Pro 10.6 or above
 
 ### 1.5  Dependencies
 

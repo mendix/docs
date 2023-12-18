@@ -63,18 +63,17 @@ Once the connection is successful and saved, you can explore and search the **Ta
 
 ### 3.3 Create and Validate SQL Queries with Parameters
 
-1. Create new query by entering **SQL Query** in SQL query editor box.
+1. Create a new query by entering an SQL query in the **SQL query** field.
 
-2. Add **Parameters** if you want to use mendix constants or variables in your 
-query during runtime(use curly braces to include parameters in query).
+2. Click **Add Parameter** if you want to use constants or variables in your query during runtime. Use curly braces to include a parameter in the query. 
 
-3. Testvalue should be assigned to the parameter using **Add Parameter**.
+3. Assign a Test Value to each parameter.
 
-4. **Run Query** to validate query and see the response.
+4. Click **Run Query** to validate the query and view the response.
 
-for example:
-Below query retrieves list of RequestedProductRequirement where ProductLine is "Planes"
-SQL Query :
+For example, the query below retrieves a list of RequestedProductRequirement where the ProductLine is "Planes"
+
+SQL Query:
 `Select requestedProductRequirement from productlines where productLine = {productLine}`
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}

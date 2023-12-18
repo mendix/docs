@@ -16,7 +16,7 @@ The Data Importer is available in Studio Pro 10.6 and above.
 
 ### 1.1 Typical Use Cases
 
-This Data Importer extension allows you to import data from Excel files directly into your app. You can create a Data Importer Document to define which columns to import from a given Excel or worksheet, an NPE to hold the imported data along with source-to-target mapping. Then, you can use the Data Import Document to import data from file(s) as the need may be.
+The Data Importer extension allows you to import data from Excel files directly into your app. You can create a Data Importer document to define which columns to import from an Excel file or worksheet and an NPE to hold the imported data, along with source-to-target mapping. Then, you can use the Data Import document to import data from these files.
 
 ### 1.2 Features {#features}
 

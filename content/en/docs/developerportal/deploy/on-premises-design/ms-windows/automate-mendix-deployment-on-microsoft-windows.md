@@ -73,7 +73,8 @@ Start-MxApp $APP_NAME -SynchronizeDatabase
 ```
 
 {{% alert color="info" %}}
-You can start your app as a local process instead of as a service when you add -NoService argument to `Start-MxApp` cmdlet.
+To start your app as a local process instead of a service, add a `-NoService` argument to the `Start-MxApp` cmdlet, as in the following example:
+
 ```
 Start-MxApp $APP_NAME -NoService -SynchronizeDatabase 
 ```

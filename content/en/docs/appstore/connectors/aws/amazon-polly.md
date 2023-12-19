@@ -61,7 +61,7 @@ After you configure the authentication profile for Amazon Polly, you can impleme
 2. Enter a name for your microflow, for example, *ACT_SynthesizeSpeech*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonPollyConnector** section, find the **SynthesizeSpeech** operation microflow.
 4. In the **App Explorer**, in the **AWSAuthentication** section, find the **GenerateCredentials** operation microflow.
-5. Drag the **GenerateCredentials** and  **SynthesizeSpeech** operation microflow's in to your microflow in that order.
+5. Drag the **GenerateCredentials** and **SynthesizeSpeech** operation microflows in to your microflow in that order.
 6. Double-click the **SynthesizeSpeech** activity to configure the required parameters. 
     
     For the `SynthesizeSpeech` activity, you must add your own entity that inherits from `System.FileDocument` to store the contents of the audio, provide a credentials object and specify the AWS Region. You must then add your `SynthesizeSpeechRequest` entity in your microflow as the last parameter. This entity requires the following parameters:

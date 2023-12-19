@@ -68,7 +68,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 4 Usage
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There are three microflow operations: **GetStaticCredentials** and **GetTemporaryCredentials** for the two basic authentication methods and **GetSigV4Headers**. For more information about implementing each authentication mechanism, refer to the following sections:
+After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There are three microflow operations: **GetStaticCredentials** and **GetTemporaryCredentials** for the two basic authentication methods, and **GetSigV4Headers** for signature version 4 headers. For more information about implementing each authentication mechanism, refer to the following sections:
 
 * [Temporary credentials](#session)
 * [Static credentials](#static)

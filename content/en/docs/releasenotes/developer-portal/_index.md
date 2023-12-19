@@ -2,7 +2,7 @@
 title: "Developer Portal"
 url: /releasenotes/developer-portal/
 description: "Release notes for all project management parts of the Mendix Developer Portal"
-tags: ["developer portal", "buzz", "mendix profile"]
+tags: ["developer portal", "buzz"]
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -255,11 +255,6 @@ We have made the following improvements to the **Access Management** page in Por
 * To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in Epics works a bit differently than before: the navigation items are on a pane on the left now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another. (If you need more space on the screen, you can always collapse the navigation pane.)
 * Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
-* We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
-
-#### Improvements
-
-* We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
 
 ### June 22, 2023
 
@@ -297,7 +292,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We changed the default app logo.
 
-### May 16, 2023{#byoidp}
+### May 16, 2023 {#byoidp}
 
 #### New Features
 
@@ -358,7 +353,6 @@ We have made the following improvements to the **Access Management** page in Por
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The navigation pane is now collapsible, which makes for a far better experience on small screen resolutions.
-* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
 
 ### March 16, 2023
@@ -372,7 +366,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * As of now, only Scrum Masters can [manage the app team](/developerportal/general/team/#managing).
-* We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
 
 #### Fixes
 
@@ -383,7 +376,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Fixes
 
 * We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/general/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
-* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
 
 ### February 16, 2023
 
@@ -403,10 +395,8 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
 * Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
-* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
 * We simplified the [team member invitation](/developerportal/general/team/#inviting) flow from a multi-step wizard to a single page.
 * We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
-* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
 
 #### Fixes
 
@@ -545,9 +535,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* We have changed the password reset flow:
-    * You can no longer update your password from your Mendix Profile.
-    * All password resets and changes are now done via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen. This will send a password reset link to your registered email address.
 * We introduced a separate session duration of one hour for users logging into the platform using SSO with their companies BYOIDP, so session management can be better controlled by their IDP.
 
 ### August 11, 2022
@@ -574,7 +561,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We removed the profile buzz page.
 * We made some small improvements to the **General Settings** page.
 
 ### July 7, 2022
@@ -610,7 +596,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed an issue where users with an invalid Twitter URL in the **Social** section of their Mendix Profile Settings could not change their password.
 * We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal.
 
 ### June 9, 2022
@@ -668,10 +653,6 @@ We have made the following improvements to the **Access Management** page in Por
 * The apps displayed on the **My Apps** tab that appears when starting Studio Pro are pulled from the [My Apps](/developerportal/#my-apps) page in Developer Portal. In Studio Pro versions below [9.6.0](/releasenotes/studio-pro/9.6/), the **My Apps** tab will no longer display [Git for version control](/refguide9/branch-line-manager-dialog/#byo-server-app) apps, as Git integration is not supported. In Studio Pro 9.6.0 and above, both Git-enabled and SVN-enabled apps are displayed.
 
 ### February 10, 2022
-
-#### New Features
-
-* We changed the button from favorite to bookmark in the [Mendix Forum](/developerportal/community-tools/mendix-forum/). You can now more easily bookmark posts for future reference.
 
 #### Improvements
 
@@ -777,13 +758,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Fixes
 
 * We fixed an issue where an error was shown when a Sprint was created from the **Stories** page.
-
-### September 13, 2021
-
-#### Improvements
-
-* Your [Mendix Profile](/developerportal/community-tools/mendix-profile/) got a visual update.
-* We removed the possibility to add a GitHub account to your profile.
 
 ### September 2, 2021
 
@@ -959,7 +933,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 * You can no longer create new polls on the company or app [Buzz](/developerportal/general/buzz/) page. Existing polls can still be answered.
 
 #### Fixes
@@ -1277,14 +1250,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue that sometimes caused the team member with the Technical Contact role to be hidden on the **Node Permissions** tab of the **Security** pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
 
-### November 14, 2018
-
-#### Mendix Shop
-
-* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/community-tools/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
-
-    {{< figure src="/attachments/releasenotes/developer-portal/shop.png"   width="300"  >}}
-
 ### November 1, 2018
 
 #### Improvements
@@ -1308,11 +1273,9 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 * Several UX updates were made to Developer Portal pages:
     * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
     * The **App** > **General** page has been redesigned.
-    * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
 
 ### October 1, 2018
 

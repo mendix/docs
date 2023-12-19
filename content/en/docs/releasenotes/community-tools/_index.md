@@ -9,9 +9,6 @@ weight: 20
 
 These release notes cover changes to the Mendix Profile, Mendix Forum, and other [Mendix community tools](ADDLINK).
 
--forum
--profile
--partner profile
 -github repo
 -oath and scopes
 -support
@@ -34,3 +31,100 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
     * There is a dedicated for page for your bookmarks
     * Breadcrumb navigation
     * Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
+
+### February 10, 2022
+
+#### New Features
+
+* We changed the button from favorite to bookmark in the [Mendix Forum](/developerportal/community-tools/mendix-forum/). You can now more easily bookmark posts for future reference.
+
+### June 29, 2023
+
+#### New Features
+
+* We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
+
+#### Improvements
+
+* We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
+
+### March 23, 2023
+
+#### Improvements
+
+* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+
+### March 9, 2023
+
+#### Improvements
+
+* We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
+
+### February 23, 2023
+
+#### Fixes
+
+* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
+
+### February 13, 2023 {#feb-13-23}
+
+#### Improvements
+
+* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
+* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
+
+### September 13, 2021
+
+#### Improvements
+
+* Your [Mendix Profile](/developerportal/community-tools/mendix-profile/) got a visual update.
+* We removed the possibility to add a GitHub account to your Mendix Profile.
+
+### January 24, 2021
+
+#### Improvements
+
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
+
+### November 14, 2018
+
+#### Mendix Shop
+
+* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/community-tools/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
+
+    {{< figure src="/attachments/releasenotes/developer-portal/shop.png"   width="300"  >}}
+    
+[**DELETE IMAGE**]
+
+### October 11, 2018
+
+#### Improvements
+
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/community-tools/mendix-profile/).
+* The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
+
+### August 22, 2022
+
+#### New Features
+
+* We have changed the password reset flow:
+    * You can no longer update your password from your Mendix Profile.
+    * All password resets and changes are now done via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen. This will send a password reset link to your registered email address
+
+### July 14, 2022
+
+#### Improvements
+
+* We removed the profile buzz page.
+
+### June 16, 2022
+
+#### Fixes
+
+* We fixed an issue where users with an invalid Twitter URL in the **Social** section of their Mendix Profile Settings could not change their password.
+
+### July 13, 2020
+
+#### Improvements
+
+* We changed the default avatar of a user profile from the Mendix logo to an industry standard user-icon.

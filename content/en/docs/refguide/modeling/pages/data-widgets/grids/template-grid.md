@@ -28,7 +28,7 @@ For more information, see [Control Bar](/refguide/control-bar/).
 
 ### 2.3 Sort Bar
 
-**Sort Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](/refguide/sort-bar/).
+**Sort Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](/refguide/sort-order/#sort-bar).
 
 ## 3 Properties
 

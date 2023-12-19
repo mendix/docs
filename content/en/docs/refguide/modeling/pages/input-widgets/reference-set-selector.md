@@ -178,7 +178,7 @@ The on-change property specifies an action that will be executed when leaving th
 
 ### 3.5 Common Section{#common}
 
-The rows of the reference set selector can be sorted using the `Sort by` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+The rows of the reference set selector can be sorted using the `Sort by` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-bar/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

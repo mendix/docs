@@ -2,3 +2,68 @@ title: "Data Importer Extension"
 url: /howto/integration/data-importer
 weight: 21
 description: "Overview of the Data Importer in Studio Pro"
+
+## 1 Introduction
+
+Mendix is the app platform for the enterprise organization and data is constantly exchanged amongst various system within an organization and sometimes even outside the organization boundaries. MS-Excel is one of the most recognized spreadsheet software where data is stored in a tabular grid of rows and columns. This how-to focuses on how you can import data from Excel files into your Mendix App.
+
+This how-to teaches you how to do the following:
+
+* Create *Data inporter document* using a sample representative file
+* Create Entity (Non-persistable entity) in your data model
+* Import data using the custom *Import data from file* activity.
+
+## 2 Prerequisites
+
+Following prerequisites should be met before you can start working with Data Importer.
+
+* Studio Pro [10.4](/releasenotes/studio-pro/10.4/) or above
+* This also needs [run-time module](https://marketplace.mendix.com/link/component/219833) to be able to import data from input Excel files. Download this component from Marketplace and [add it into your app](/appstore/general/app-store-content/#install).
+* A file document (see [File Manager](/refguide/file-manager/))
+
+## 3 Design time flow
+
+The Data Importer allows you to import an Excel file into your Mendix App. It allows you to choose which sheet to import data from and which columns you want to import. During the design-time flow, you can preview the data that you would like to import and create a non-persistable entity (NPE) in your domain model. At the end of this you would have a *Data Importer Document* which you can use along with a custom activity *Import data from file* in a microflow to import data from input Excel file(s).
+
+### 3.1 Creating a Data Importer Document
+
+To create a new Data Importer Document definition, right-click on the module and click **Add other** > **Data Importer**.
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/data-importer-menu.png" >}}
+
+Name the document, click **OK**, and the new Data Importer document opens. At this juncture you can upload a sample representative input file that you would like to define mapping for.  
+
+### 3.2 Previewing Data {#preview-data}
+
+Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/select-file-for-preview.png" >}}
+
+Select or drop the file in the **Select Source File** window. An excel workbook can have either single or multiple sheets. You can choose which sheet to import data from and specify the header row and starting data row.
+
+* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown.
+* **Header Row No.** – row number of the file header; the default is 1
+* **Read Data From Row No.** – starting line for reading data; the default is 2
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/select-sheet-and-header-data-row.png" >}}
+
+Click **Preview Source Data & Entity** to view the data from the file. The first 10 data rows from the source file are shown in the data preview section. If there are less than 10 data rows in the sample file, then only the available rows are shown. The column names correspond to the attribute name within the entity and the Sheet name will be used to define the Entity.
+
+All the columns are selected (checked) by default for import. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell type defined in the file's first data row. If any data types are incorrect, check the cell type of the first data row in Excel and adjust the cell type definition accordingly.
+
+{{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. In case of *Number* cell-type the target Mendix type will be mapped to *Decimal* to accommodate Integers & Decimals. {{% /alert %}}
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/preview-data-and-entity.png" >}}
+
+### 2.3 Creating an Entity {#create-entity}
+
+You can view the entity in the Entity Preview section. You can change the name of the entity, though one is suggested for you based on the Sheet Name. To create the entity in your domain model, click **Create Entity** > **OK**.
+
+When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/source-to-target-mapping.png" >}}
+
+The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
+
+## 4 Importing Data in a Microflow
+

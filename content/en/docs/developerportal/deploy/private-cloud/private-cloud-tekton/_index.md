@@ -313,7 +313,7 @@ This needs to be configured before you trigger any pipelines.
 
 ### 8.1 Git Access
 
-Your Tekton pipeline needs to have access to the git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
+Your Tekton pipeline needs to have access to the Git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
 
 ### 8.2 Registry Push Access
 
@@ -577,8 +577,8 @@ curl -X POST \
 
 | Parameter | Explanation                                                                                                                                                                                                                                                         |
 | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `repo.url` | URL of git repository that will be fetched                                                                                                                                                                                                                          |
-| `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched                                                                                                                                                                                              |
+| `repo.url` | The URL of Git repository that will be fetched                                                                                                                                                                                                                          |
+| `repo.revision` | A Git revision (for example, branch, tag, or SHA) that will be fetched                                                                                                                                                                                              |
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                                                                                                                                         |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name`                                                                                                                       |
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |

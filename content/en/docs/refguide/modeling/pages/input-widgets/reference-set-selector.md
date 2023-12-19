@@ -59,15 +59,11 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-There are three additional sets of properties which do not appear in the properties of the reference set selector widget.
+There are additional sets of properties which do not appear in the properties of the reference set selector widget.
 
 1. The control bar contains the buttons needed to search, add, and remove associations. For more information see [Control Bar](/refguide/control-bar/).
 
-2. The rows of the reference set selector can be sorted using the properties of the sort bar. For more information on using the sort bar, see [Sort Bar](/refguide/sort-bar/).
-
-    {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/sort-bar.png" >}}
-
-3. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Grid Columns](/refguide/columns/)
+2. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Grid Columns](/refguide/columns/)
 
 ## 3 Properties
 
@@ -181,6 +177,8 @@ The on-change property specifies an action that will be executed when leaving th
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 ### 3.5 Common Section{#common}
+
+The rows of the reference set selector can be sorted using the sort by property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

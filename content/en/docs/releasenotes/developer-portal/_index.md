@@ -557,12 +557,6 @@ We have made the following improvements to the **Access Management** page in Por
 * We simplified the process of [inviting other users](/developerportal/general/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
 * We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the **Stories** page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.
 
-### August 9, 2022
-
-#### New Features
-
-* We released [Notifications](/developerportal/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
-
 ### July 21, 2022
 
 #### Improvements
@@ -651,16 +645,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
     * Fixed on [May 5, 2022](#may-fifth).
-
-### April 7, 2022
-
-#### Improvements
-
-* We introduced a new layout of the [Mendix Forum](/developerportal/community-tools/mendix-forum/) that features the following changes:
-    * The main navigation has been moved to a navigation pane on the left of the screen
-    * There is a dedicated for page for your bookmarks
-    * Breadcrumb navigation
-    * Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
 
 ### March 24, 2022
 

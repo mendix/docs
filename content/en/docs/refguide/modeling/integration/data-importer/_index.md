@@ -40,7 +40,7 @@ This extension currently has the following limitations:
 
 ### 1.5  Dependencies
 
-This connector has no dependencies, but it needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from input the Excel files. Download this component from Marketplace and [add it into your app](/appstore/general/app-store-content/#install).
+This connector has no dependencies, but it needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from input the Excel files. Download this component from Marketplace and [add it into your app](/appstore/overview/use-content/).
 
 ## 2 Design time flow
 

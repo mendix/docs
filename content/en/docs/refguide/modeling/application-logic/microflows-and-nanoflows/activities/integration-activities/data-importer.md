@@ -24,7 +24,7 @@ The **Import data from file** activity can be used in a microflow to integrate d
 
 Drag the **Import data from file** activity into your microflow and double-click it to view its properties:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-actvities/data-importer-activity/custom-activity-params.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-actvities/import-data-from-file/custom-activity-params.png" >}}
 
 The following are the properties in the **Input** section:
 

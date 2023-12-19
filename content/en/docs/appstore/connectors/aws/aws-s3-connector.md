@@ -94,8 +94,6 @@ After you configure the authentication profile for Amazon S3, you can implement 
 
         {{< figure src="/attachments/appstore/connectors/aws-s3-connector/awsregions.png" alt="The list of AWS regions">}}
     
-        For a list of available AWS regions, see [AWS Region](#aws-region).
-
 6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GenerateCredentials** activity.
 7. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **CreateBucket** activity.
 8. Double-click the **GenerateCredentials** activity, and then configure the required **Region** parameter in the same way as described in step 5.

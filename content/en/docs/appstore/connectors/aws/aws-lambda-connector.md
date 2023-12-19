@@ -55,7 +55,7 @@ To quickly configure the connection to AWS Lambda by configuring a microflow, pe
 
 1. In the App Explorer, in **App** > **Marketplace modules** > **AWSAuthentication** > **ConnectionDetails**, configure the required authentication credentials.
     For more information about the difference between static and temporary credentials, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-2. Create a new Microflow.   
+2. Create a new microflow.   
 3. In **AWSLambdaConnector** > **Operations**, find the microflow activty for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
 4. Configure the required parameters:
 5. For the **ListFunctionsRequest** parameter, create a new `ListFunctionsRequest` object at the start of the microflow and pass it to the **ListFunctions** activity.

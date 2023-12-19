@@ -183,7 +183,7 @@ If you have credentials that have been generated without the help of the **GetTe
     * **AccessKeyId** - your IAM access key 
     * **SecretAccesskey** - your secret access key
     * **Token** - your token
-    * **Expiration** DateTime that the credentials expire. When using credentials generated outside of Studio-Pro, the AWS Authentication Connector can't assume the IAM Role again after expiration.
+    * **Expiration** - the date and time when the credentials expire. When using credentials generated outside of Studio-Pro, the AWS Authentication Connector cannot assume the IAM Role again after expiration.
 
 You can then use the above as a valid set of credentials.
 

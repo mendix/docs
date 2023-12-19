@@ -58,15 +58,15 @@ If calculated attributes are not used, they can safely be removed to avoid redun
 
 To fix the issue, delete the unused calculated attribute.
 
-### 2.2 Add an Index to Attributes in Sort Bars [MXP003] {#mxp003}
+### 2.2 Add an Index to Attributes in Sort Order [MXP003] {#mxp003}
 
-[Sort bars](/refguide/sort-order/#sort-bar) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
+[Sort order](/refguide/sort-order) is used to sort items in data containers. Sort order can be used in three different types of data containers:
 
 * Data grid
 * Template grid
 * Reference set selector
 
-Each sort item in the sort bar is sequentially utilized to order the data in the widget. Adding an [index](/refguide/indexes/) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. 
+Each sort item in the sort order is sequentially utilized to order the data in the widget. Adding an [index](/refguide/indexes/) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. 
 
 There can be four operations performed on an entity: create, update, delete, and select. Entities, for which the number of create, update, and delete operations is much greater than the number of select operations can be called *write-intensive* because most operations mutate data in a database rather than select from it.
 
@@ -76,7 +76,7 @@ As totally different best practices apply for read-intensive and write-intensive
 
 #### 2.2.1 Steps to Fix
 
-To fix the issue, add an index on attributes which are used as sort items in sort bars on pages.
+To fix the issue, add an index on attributes which are used as sort items in sort orders on pages.
 
 ### 2.3 Avoid Committing Objects Inside a Loop with Create Object, Change Object, or Commit Activities [MXP004][MXP005] {#mxp004}
 

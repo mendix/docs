@@ -132,8 +132,8 @@ The client certificate that you added now shows as **Currently enabled**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/devportal-edit-constant.png"" >}}
 
-4. In the popup enter your values in the **New Value** field and click **Save**.
-5. When all constants have been set, restart the environment in order to make the new constant values effective.
+4. Fill out the **New Value** field and click **Save**.
+5. After setting all constants, restart the environment in order to apply the new constant values.
 
 ##### 4.1.1.3 Using the GetTemporaryCredentials Microflow in Studio Pro
 

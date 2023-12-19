@@ -29,7 +29,7 @@ MendixChat appears at the right side of Studio Pro under the **MendixChat** tab.
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-interface.png" width="300px" >}}
 
 {{% alert color="warning"%}}
-In some cases, you might need to click **Sign in** before MendixChat is available for use.
+In some cases, even when you are already logged in to Studio Pro, you might need to click **Sign in** under the **MendixChat** tab so that MendixChat is available for use.
 {{% /alert %}}
 
 ### 2.1 An Example of Interacting with MendixChat

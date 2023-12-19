@@ -60,7 +60,7 @@ To fix the issue, delete the unused calculated attribute.
 
 ### 2.2 Add an Index to Attributes in Sort Order [MXP003] {#mxp003}
 
-[Sort order](/refguide/sort-order) is used to sort items in data containers. Sort order can be used in three different types of data containers:
+[Sort order](/refguide/sort-order/) is used to sort items in data containers. Sort order can be used in three different types of data containers:
 
 * Data grid
 * Template grid

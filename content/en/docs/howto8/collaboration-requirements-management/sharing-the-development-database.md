@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to will teach you how to open and manage the data stored inside the built-in database.
+All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to teaches you how to open and manage the data stored inside the built-in database.
 
 ## 2 Prerequisites
 
@@ -104,7 +104,6 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 ## 9 Read More
 
-* [Stories](/developerportal/project-management/stories/)
 * [Contributing to a GitHub repository](/howto8/collaboration-requirements-management/contribute-to-a-github-repository/)
 * [Starting your own repository](/howto8/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide8/version-control/)

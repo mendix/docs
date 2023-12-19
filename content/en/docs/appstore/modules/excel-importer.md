@@ -284,7 +284,7 @@ Generally, the **OutOfMemory Error** indicates that the system was unable to cre
 
 Our internal tests indicate that JVM's memory footprint peaks at 3 GB while importing an Excel file of ~9MB; our test file had ~25,000 rows, and each row combined 40 columns in a single entity.
 
-The example above reflects JVM's memory (RAM), not your Mendix container's memory. Furthermore, the memory requirements will increase if associations are also getting processed as part of an Excel import, so the numbers above should be viewed as a basic guideline of the upper limit. We recommend you leave a suitable buffer of extra memory while sizing your container.
+The example above reflects JVM's memory (RAM), not your Mendix container's memory. Furthermore, the memory requirements will increase if associations are also getting processed as part of an Excel import, so the numbers above should be viewed as a basic guideline of the upper limit. Mendix recommends leaving a suitable buffer of extra memory while sizing your container.
 
 ### 5.10 After Upgrading to the Latest Version of Excel Importer, userlib Contains Two Files of the same JAR. How Should I Resolve This?
 

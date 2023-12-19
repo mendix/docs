@@ -11,7 +11,7 @@ aliases:
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add a new language to your app
 * Change the working language
@@ -69,7 +69,7 @@ To add an additional language, do the following:
 2. Click **Add** to open the **Add Language** dialog box.  
 3. Select a **Language**. In this example, we select **Russian, Russia**, but you can use any language you like.
 
-    {{% alert color="info" %}} We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
+    {{% alert color="info" %}}Mendix recommends that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
 
 4. Click **OK** to save the changes. The **Add Language** dialog box closes.
 

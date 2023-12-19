@@ -52,7 +52,7 @@ If you have determined that slow loads are your issue, take a look at the slow l
 
 #### 3.2.1 Slow Network
 
-If your data transfers are taking a long time for a small amount of data, you may wish to contact a system administrator for further assistance. This article focuses on issues you can resolve within your application model.
+If your data transfers are taking a long time for a small amount of data, you may wish to contact a system administrator for further assistance. This document focuses on issues you can resolve within your application model.
 
 #### 3.2.2 Retrieve Action
 

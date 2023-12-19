@@ -2,7 +2,7 @@
 title: "Marketplace Guide"
 url: /appstore/
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
-weight: 35
+weight: 40
 no_list: false 
 description_list: true 
 cascade:
@@ -17,7 +17,7 @@ Mendix Studio Pro contains a lot of core out-of-the-box widgets such as data gri
 
 {{% alert color="info" %}}The [Marketplace China Edition](https://marketplace.mendix.tencent-cloud.com/) is exclusively available for the China market. The components offered on the Marketplace China Edition can be different from the Marketplace.{{% /alert %}}
 
-This guide presents documentation on configuring and using the latest versions of [platform-supported](/appstore/general/app-store-content-support/#category) Marketplace components.
+This guide presents documentation on configuring and using the latest versions of [platform-supported](/appstore/overview/#category) Marketplace components.
 
 It also contains guidelines on [creating Marketplace content](/appstore/creating-content/) to share and sell.
 

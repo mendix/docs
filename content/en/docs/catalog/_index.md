@@ -2,7 +2,7 @@
 title: "Catalog Guide"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
-weight: 40
+weight: 45
 no_list: false
 description_list: true
 cascade:
@@ -58,7 +58,7 @@ From the **Home** screen, you can do the following:
 The Catalog is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
 
 {{% alert color="info" %}}
-The Catalog integration is available in Studio Pro version 8.14 and above. {{% /alert %}}
+The Catalog integration is available in Studio Pro 8.14 and above. {{% /alert %}}
 
 ## 4 Information Available in the Catalog {#available-info}
 
@@ -76,6 +76,6 @@ The information that is registered for data sources and exposed datasets are as 
 
     {{% alert color="info" %}}If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
-Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
+Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/control-center/catalog-admin/).
 
-## 6 Documents in This Category
+## 5 Documents in This Category

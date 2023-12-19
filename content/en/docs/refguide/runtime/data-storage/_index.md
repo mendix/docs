@@ -16,7 +16,7 @@ Data storage is the data foundation of the Mendix Runtime. Data storage does the
 * Handles security transparently and effectively
 
 {{% alert color="warning" %}}
-Each app has its own database which cannot be shared directly with other apps. If you want to share data with another app, you must publish an API using [Data Hub](/data-hub/share-data/) or the [REST and OData](/refguide/integration/) capabilities of Mendix.
+Each app has its own database which cannot be shared directly with other apps. If you want to share data with another app, you must publish an API using the [Catalog](/data-hub/share-data/) or the [REST and OData](/refguide/integration/) capabilities of Mendix.
 
 See [Databases and Apps](#databases), below, for an overview of this.
 {{% /alert %}}
@@ -52,7 +52,7 @@ You now try to deploy `Order Viewer` to use the same database as `Order Processi
 
 ### 3.3 How to Share Data
 
-If you want to share data between apps, you should set up a *microservices* architecture. In short, identify one app which you want to use to store the data. This app will now do all the creating, reading, updating, and deleting of the data. It will publish an API to allow other apps to access the data using, for example, [OData](/refguide/published-odata-services/) or [Data Hub](/data-hub/share-data/). Other apps can then consume this API to use the data. This ensures that there is only one source for the data and that it is kept consistent.
+If you want to share data between apps, you should set up a *microservices* architecture. In short, identify one app which you want to use to store the data. This app will now do all the creating, reading, updating, and deleting of the data. It will publish an API to allow other apps to access the data using, for example, [OData](/refguide/published-odata-services/) or the [Catalog](/data-hub/share-data/). Other apps can then consume this API to use the data. This ensures that there is only one source for the data and that it is kept consistent.
 
 An alternative is to copy the data to another app, for example using the [Database Replication](/appstore/modules/database-replication/) module. This however, will be a snapshot of your data at the time you replicate it and changes to the data made in the original app will not be reflected in your new app.
 

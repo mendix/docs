@@ -14,7 +14,7 @@ To avoid cluttering the tutorial, only the relevant code will be shown, not the 
 
 When you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments
@@ -78,7 +78,7 @@ public static List<IMendixObject> getAttachments(GenericObject object, IContext 
 | 3 | The name of the `Attachment` entity is defined in a `String` by copying the `entityName` from the `Attachment` proxy class. |
 | 4 | The name of the relation between the `Attachment` entity and `GenericObject` entity is defined in a `String` by getting it from the `MemberNames` enumeration of the `Attachment` proxy class and calling `toString()` on it. |
 | 5 | The ID of the `currentObject` is retrieved from the `GenericObject` proxy object method `getGUID();`. |
-| 6 | We construct a query on the `Attachment` entity that is related to the object with `currentid`. The prefix `$` denotes that this is a variable, which can later be safely inserted using the `Core.createXPathQuery` API (Note: this API is only present in Mendix version 7.17 and above).
+| 6 | We construct a query on the `Attachment` entity that is related to the object with `currentid`. The prefix `$` denotes that this is a variable, which can later be safely inserted using the `Core.createXPathQuery` API (Note: this API is only present in Mendix 7.17 and above).
 | 7 | The `Core` method `createXPathQuery` is used to create a query. This query fill the variable `currentid` with the ID of the current object. We pass the context in which we want the query to be executed. After this its result (a list of `IMendixObjects`) is immediately returned.
 
 Using the createXPathQuery API, you can also enter conditions, such as a sorting mechanism and a maximum number of objects returned. After executing, these are taken into account. View the JavaDoc for more information.
@@ -104,7 +104,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 | 1 | Declaring an `Attachment` variable named `newAttachment`. |
 | 2 | Declaring an `InputStream` variable named `inputStream`. |
 | 3 | Starting to loop through a list of `IMendixObjects` returned by our helper method. |
-| 5 | Here we use the `Core` method `getFileDocumentContent()`, passing our retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
+| 5 | Here the `Core` method `getFileDocumentContent()` is used, passing our retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
 | 6 | A new `Attachment` is instanced. |
 | 7 | The relation to the destination object is set on our new `Attachment`. |
 | 8 | The content of the retrieved `InputStream` is stored in our new `Attachment` using the `Core` method `storeFileDocumentContent()`. This method takes a number of parameters: the context in which you are performing this store; the `IMendixObject` of the `Attachment` proxy, which is retrieved by calling `getMendixObject()` on the `Attachment` proxy; the file name of the `FileDocument` in string format, which is copied from the attachment you're copying from by using the `getValue()` method passing the member name you wish to know the value of; and the `InputStream` containing the actual file. |

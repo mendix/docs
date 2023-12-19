@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider
 
 The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
 
-The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.22.0 and above.
+The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix 9.22.0 and above.
 
 The idea is that you set up a single Mendix app which uses the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module to authenticate end-users with your central IdP. The same app also acts as an OIDC provider for your other apps to use as the IdP for OIDC SSO. This means it is working as an IAM (Identity and Access Management) broker for authentication and, optionally, authorization. You can easily add or remove apps from the IAM Broker app within the Mendix ecosystem using an API without each app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
 
@@ -44,7 +44,7 @@ The OIDC Provider has the following features and limitations:
 * Your apps can be registered as an OIDC client with the OIDC Provider using the client registration API or client configuration screen. The client registration API allows you to register your client automatically when using a CI/CD deployment pipeline.
 * It publishes a well-known endpoint to communicate endpoints and other IdP characteristics to client applications. Mendix apps using the OIDC SSO module will consume this endpoint to perform actions like retrieving the keys needed to validate ID-tokens that they receive.
 * It supports the OIDC ‘nonce’ parameter, PKCE, and multiple client authentication methods ( client_secret_post, client_secret_basic) as security features.
-    
+
 **Limitations**
 
 * The hybrid resource owner password credentials, and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
@@ -180,7 +180,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     ```
 
 #### 3.3.2 Manual Client Registration
-    
+
 If you cannot use automatic registration, you can register the client manually.
 
 1. Select **Manual Registration**.
@@ -207,7 +207,7 @@ Whichever option you choose, you will need to use [Custom User Provisioning](/ap
  When you follow the recommended approach for [centralized authorization](#centralized-auth) using OAuth scopes, the OIDC Provider needs to know which user roles have been implemented in your Mendix apps, so the client can assign those user roles.
 
 The scope values (user roles) that you assign to the authenticated user in the OIDC Provider are sent to your app in both the ID-token and Access Token. Communicating authorization via Access Token is the standard approach when using OAuth. If your client app consumes APIs, it can forward the Access Token as a bearer token in the http authorization header in such API calls.
- 
+
 To return requested scopes to your client app, you need to perform the following steps to configure the OIDC Provider:
 
 1. Open the **Scopes** tab for the client you want to configure
@@ -215,7 +215,7 @@ To return requested scopes to your client app, you need to perform the following
 
     1. use the **Name** as the user role in your client app.
     1. From version 1.1.0 you can also use the UUID of the user role in your client app.
-    
+
         The benefit of this second approach is that it avoids ‘scope collision’. In other words, you avoid having confusion between user roles with the same name but in different apps.
 
     If your client app consumes APIs and wants to get access using the Access Token from the OIDC Provider, you may want to configure additional scope values, as required by those APIs.
@@ -230,21 +230,21 @@ Do not to create scopes with the same name as standard scopes (as defined in the
 * phone
 {{% /alert %}}
 
-    {{% alert color="info" %}}    
+    {{% alert color="info" %}}
 The scopes you configure are not added automatically to the "scopes_supported" attribute on the OIDC Provider’s well-known endpoint. You must manually configure the scope value in your client app to be able to request it.
 {{% /alert %}}
 
-1. Add logic to the OIDC Provider to assign user roles (custom scope values) based on your preferred business logic. 
+1. Add logic to the OIDC Provider to assign user roles (custom scope values) based on your preferred business logic.
 
     Modify the `OpenIDConnectProvider.SUB_CustomScope` microflow to assign the scope value (user role) based on your authorization business logic. You would typically use the following inputs to decide whether to return a requested scope:
 
-    * `RegisteredClient` – this identifies the client app that sends the login request and associated user role/scope request 
+    * `RegisteredClient` – this identifies the client app that sends the login request and associated user role/scope request
     * `Account` – defines the user who tries login
     * `AllowedScopeList` – the scopes associated with the client in the OIDC Provider
     * `scopesListFromRequest` – the scopes/user roles which the client requests
-     
+
     The Microflow returns the scope(s) as a String containing space-separated values. If any of the requested scopes are not associated with the client then the microflow returns an empty value as output.
-    
+
     {{% alert color="info" %}}The default implementation of `OpenIDConnectProvider.SUB_CustomScope` grants any requested scope provided it is associated with client (your Mendix app). It does not do any validation of the end user.{{% /alert %}}
 
 1. In the connected apps, select the following microflows in the [OIDC SSO](/appstore/modules/oidc/) module to let you app apply the assigned user roles to the end-users:
@@ -264,7 +264,7 @@ To pass this additional information, you need to create custom claims. You can d
 1. Create a microflow which returns a value to the claim.
 
     From version 1.1.0, you can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object.
-    
+
     The ID-token will be a nested JSON structure with the name of the object as the key and a list of attribute names of your object as the keys and the attribute values as the values.
 
     ```json {linenos=false}
@@ -313,15 +313,29 @@ Some examples of existing claims are:
 *¹ The claims starting com.mendix.user are an alpha feature and may be deprecated in a future release in favor of standard claims specified by OIDC protocol. The OIDC SSO (client) module does not process these claims.*
 {{% /alert %}}
 
+### 3.4 Configure Authentication with Login Location Constant
+
+Consider a scenario, where you build an app using [OIDC Provider](https://marketplace.mendix.com/link/component/214681) Module. You can call this app as OIDC Provider app or Provider app. Other apps using [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirects end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
+The **LoginLocation** is a constant in the OIDC Provider module that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:
+
+{{< figure src="/attachments/appstore/modules/oidc-provider/Basic_Username_Password.png">}}
+
+However, if you want the Provider app to act as an IAM broker, you need to redirect the authorization request within your Provider app to the endpoint of the local SSO module you choose to use. To do so, perform the steps below:
+
+1. Set the **LoginLocation** to the login URL of the SSO module.
+1. Include the return parameter name.
+For example, `SSO/Login?cont=` is the login URL and `cont` is the return parameter name.
+
 ## 4 Configuring an OIDC Client
 
 You need to configure the OIDC SSO module in your app which is using the IAM broker. Perform the following steps to configure the OIDC SSO module in your client app, and test that it is correctly communicating with the IAM broker.
 
 1. Create an app containing the OIDC SSO module as described in [OIDC SSO](/appstore/modules/oidc/).
 
-    {{% alert color="info" %}}If you are testing locally, you will need to run your OIDC client in a separate copy of Studio Pro and on a different port from the IAM broker.<p />In the [Server](/refguide/configuration/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
+    {{% alert color="info" %}}If you are testing locally, you will need to run your OIDC client in a separate copy of Studio Pro and on a different port from the IAM broker.
+    In the [Server](/refguide/configuration/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
     {{% /alert %}}
-    
+
     1. When you get to [Configuration of OIDC Provider](/appstore/modules/oidc/#oidc-configuration), you already have the values from the previous section.
 
     1. In the [OIDC Client Configuration](/appstore/modules/oidc/#oidc-configuration) section, add a client configuration and use the following values:
@@ -329,7 +343,7 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
         * **Client ID** – the **Client ID** of the IAM Broker
         * **Client Authentication Method** – *Client ID and Secret*
         * **Client Secret** – the **Client Secret** of the IAM Broker
-    
+
     1. Enter the **Automatic Configuration URL** using the URL of your IAM Broker app with the well-known (`/oidc/.well-known/openid-configuration`) endpoint and click **Import Configuration**. For example, when running locally, `http://localhost:8080/oidc/.well-known/openid-configuration`
 
     1. Continue editing the configuration and add the following scopes:
@@ -405,7 +419,7 @@ In versions of OIDC Provider below 1.1.0, the following values are not included 
 ### 6.1 Infinite Loop of Redirects
 
 The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
-To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix version 8.11](/releasenotes/studio-pro/8.11/).
+To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix 8.11](/releasenotes/studio-pro/8.11/).
 
 ## 7 About Authorization{#about-authorization}
 

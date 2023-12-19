@@ -24,7 +24,7 @@ In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's
 
 ### Improvements
 
-* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. We recommend upgrading your app to 9.24 or building a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
+* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. Mendix recommends upgrading your app to 9.24 or building a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
 
 ### Fixes 
 

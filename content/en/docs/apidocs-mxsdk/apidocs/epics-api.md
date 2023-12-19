@@ -9,18 +9,18 @@ tags: ["API", "epics", "project management"]
 ---
 
 {{% alert color="warning" %}}
-As of the GA release on December 1, 2022, [Epics](/developerportal/project-management/epics/) is the default tool for you to manage the development process of new apps. Epics is a replacement of [Stories](/developerportal/project-management/stories/). You can still use Stories in addition to Epics. However, Mendix recommends not using both of them at the same time as it will make data migration more difficult later.
+Epics is the default tool for you to manage the development process of new apps. It is a replacement of Stories, which has been deprecated on October 1, 2023.
 {{% /alert %}}
 
 ## 1 Introduction
 
 The Mendix Epics API allows you to retrieve, create, and update stories as well as get all the statuses that can be possibly assigned to stories.
 
-## 2 Authentication{#authentication}
+## 2 Authentication {#authentication}
 
 Authentication for the Epics API uses a personal access token (PAT).
 
-### 2.1 Generating a PAT
+### 2.1 Generating a PAT {#generate}
 
 To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 

@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section will teach you how to register for FCM and configure the service in your app.
+You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section teaches you how to register for FCM and configure the service in your app.
 
 ## 2 Prerequisites
 
@@ -65,6 +65,10 @@ For a native mobile app, your bundle ID will be what you specify for the **App i
 
 * For Android, open *android/app/build.gradle* and consult **applicationId** to find your ID 
 * For iOS, open *ios/Config/config.xcconfig* and consult **BUNDLE_IDENTIFIER** to find your ID
+
+{{% alert color="info" %}}
+If you also want to support a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/), repeat above the steps and append `.developerapp` to the IDs.
+{{% /alert %}}
 
 Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
 

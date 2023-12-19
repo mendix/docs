@@ -32,7 +32,7 @@ For module versions below 9.1.0, the [Object Handling](/appstore/modules/object-
 
 1. Import the Unit Testing module into your app.
 
-    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+    For more information, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 1. Map the module role **TestRunner** to the applicable user roles in your app.
 1. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.

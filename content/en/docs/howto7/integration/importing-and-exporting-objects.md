@@ -14,7 +14,7 @@ In Mendix, you don't need to reinvent the wheel. You can save time by importing 
 Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Import and export the following Desktop Modeler objects:
     * projects
@@ -151,7 +151,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the Marketplace
 
-To learn more about importing content from the Marketplace, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Exporting Objects
 

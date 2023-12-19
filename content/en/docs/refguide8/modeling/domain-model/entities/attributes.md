@@ -14,7 +14,7 @@ tags: ["domain model", "entity", "attribute", "studio pro"]
 
 **Attributes** are characteristics that describe and/or identify an entity. Each of these attributes is given a name.
 
-A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an e-mail address (for example, **EmailAddress**) and other personal information.
+A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an email address (for example, **EmailAddress**) and other personal information.
 
 {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" >}}
 

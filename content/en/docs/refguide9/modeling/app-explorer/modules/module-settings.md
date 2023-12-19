@@ -7,7 +7,7 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 ---
 
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/module-settings/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -58,7 +58,7 @@ This setting is available for only add-on and solution module types.
 
 A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-We recommend setting a new version every time changes are made to the module. 
+Mendix recommends setting a new version every time changes are made to the module. 
 
 ## 5 Read More
 

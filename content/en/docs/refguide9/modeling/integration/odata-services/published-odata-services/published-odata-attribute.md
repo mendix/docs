@@ -38,7 +38,7 @@ The type of the attribute.
 
 ### 2.6 Exposed As
 
-This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData version 4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
+This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData v4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
 
 {{% alert color="info" %}}
 The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.

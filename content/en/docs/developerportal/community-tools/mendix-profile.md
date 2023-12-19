@@ -170,7 +170,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Complete a lecture in the Mendix Academy | 1 | N/A |
 | Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 
-### 7.6 Point Levels
+### 7.6 Point Levels {#level}
 
 When you earn enough points, you gain a level:
 
@@ -204,7 +204,7 @@ On the **Activity** tab, you can see a list of the last 20 public events for you
 
 ## 10 User Settings {#settings}
 
-You can edit the information on your Mendix Profile by clicking the **User Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
+You can edit the information on your Mendix Profile by clicking **User Settings**. The **Settings** page has a navigation pane that allows you to edit the sections described below.
 
 ### 10.1 Profile {#profile}
 
@@ -228,7 +228,7 @@ To make your public profile private again, click **Make Profile Private**.
 
 You can also add a **Recover Email** address, which is useful if you lose access to your account or Mendix Profile. You can provide a non-business email address for this.
 
-#### 10.1.1 Merging Profiles
+#### 10.1.1 Merging Profiles {#merging-profiles}
 
 If you own two (or more) user accounts, Mendix recommendeds merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
 
@@ -239,6 +239,10 @@ These are the prerequisites for the profile merge actions:
 * Own two (or more) user accounts
 * Have platform access with at least one of these user accounts
 * Be able to receive emails for the user profiles that will be merged (this can be your email address used to log in or a profile email address)
+
+{{% alert color="warning" %}}
+You should also prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this so that you do not lose access to the apps of your old account, and also so you do not need a new invitation to those apps to gain access.
+{{% /alert %}}
 
 Before you start with a new profile merge action, it is important to understand what scenarios are possible and what it means for the profile merge process. The following starting scenarios are possible:
 
@@ -266,7 +270,7 @@ Follow these steps to merge your profiles:
 6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
 
 {{% alert color="info" %}} 
-With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
+With the merge, the accounts of both profiles are kept. None of the accounts will be deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/control-center/members/).
 {{% /alert %}}
 
 #### 10.1.3 Merge Result {#merge-profile-result}
@@ -287,17 +291,36 @@ The following details may have conflicts, but these can easily be updated after 
 It is not possible to separate profiles after they have been merged. Double-check that the information from all of your profiles is valid.
 {{% /alert %}}
 
-### 10.2 Account
+### 10.2 Accounts
 
 This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
-By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
+By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/security/).
 
-You can update the password of each of your accounts via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
+You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking the menu button (**...**) of the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
-If you do not want to use an account anymore, you can remove it from this page. Click the menu button next to the account you want to delete and select **Forget this Account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile will be deleted when you delete all your accounts.
+If you do not want to use an account anymore, you can remove it from this page. Click the menu button (**...**) for the logged-in account and select **Delete this account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile is deleted when you delete all of your accounts. 
 
-### 10.3 Notifications {#notifications}
+You can only remove the account with which you are logged in. If you do not have access to your account anymore, please reach out to [Mendix Support](https://support.mendix.com/hc/en-us) to delete your account.
+
+#### 10.2.1 Creating an Account
+
+If you already have a profile and want to add a new account to this profile, you can create the new account on your profile's **Accounts** overview. This action combines signing up for a new Mendix Platform account and [merging your profiles](#merging-profiles). After succesfully completing the flow, the new account appears in the **Accounts** overview.
+
+Follow these steps to add a new account to your Mendix Pofile:
+
+1. Click **Create Account**.
+2. In the dialog box that appears, enter the email address of the account you want to create, then click **Next**.
+3. In the next dialog box, enter a secure **Password** and indicate whether you want to receive Marketing communications from Mendix on this account. Then click **Next**.
+4. Enter the verification code you receive via the selected email address.
+5. Click **Verify**. You will see a loader while your account is created in the background.
+6. If all went well, the new account is visible in the list of accounts that are part of your Mendix Profile!
+
+{{% alert color="warning" %}}
+This feature is not available if your company has enabled single sign-on. If this is the case, you have to follow the regular sign up process and then [merge the new account to your profile](#merging-profiles) when the sign-up is completed.
+{{% /alert %}}
+
+### 10.3 Notification Settings {#notifications}
 
 On this page, you can configure how you want to be notified of Mendix Platform activity.
 
@@ -353,7 +376,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.2.1 Creating a PAT
+##### 10.4.2.1 Creating a PAT {#create-pat}
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 

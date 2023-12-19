@@ -27,7 +27,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Administration module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Administration module into your app.
 
 ## 3 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 

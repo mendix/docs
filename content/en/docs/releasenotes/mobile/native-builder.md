@@ -113,7 +113,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ### Breaking Changes
 
-* This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
+* This version only supports Mendix 8.1.0 and above. If you have to stick with Mendix 8.0.0, please consider using Native Builder v1.0.0.
 
 ### Known Issues
 

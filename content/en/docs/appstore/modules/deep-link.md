@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows you to configure a mapping between a request handler and microflows. In this way, you can create additional entry points to access specific parts of your application. The Deep Link module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 {{% alert color="info" %}}
-If you are using Mendix version 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
+If you are using Mendix 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
 {{% /alert %}}
 
 If you need to access pages or set up a published REST service, the Deep Link module may not be the best solution – there are also other approaches available. For the differences between these approaches, see the table below:
@@ -43,7 +43,7 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Deep Link module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Deep Link module into your app.
 
 {{% alert color="info" %}}After you install the Deep Link module and set up deep links, these links will not break if you upgrade from Mendix Studio Pro 9 to 10.{{% /alert %}}
 
@@ -96,8 +96,8 @@ On the **Advanced** tab, there are these settings:
 * **Do not force a login action** – If selected, anonymous users will be able to access the deep link. If unselected, anonymous user sessions will be redirected to the location specified in the **LoginLocation** constant.
 * **Language** – The selected language will be associated to the anonymous user session.
 * **Keep the deep link the entire session** – If selected, the deep link will be the home page for the session. For example, when the user goes to `/link/article/1`, the deep link handler microflow is executed and the user is navigated to the page specified in handler microflow. This handler microflow now will be executed every time user reloads the Mendix app or calls the **DeepLink.DeepLinkHome** microflow. Ending current session will stop this behavior until this deep link is called again.
-* **Process an argument as an Object** – This is deprecated.
-* **Process an argument as a String** – This is deprecated.
+* **Process an argument as an Object** – ⚠ This is deprecated.
+* **Process an argument as a String** – ⚠ This is deprecated.
 * **Alternative Index Page** – If selected, the default index location (`index.html`) and the **DeepLink.IndexPage** constant will be overridden by this value. This is useful for theme-related use cases, for example, `index-dark.html`.
 * **Track hit count** - If selected, Deeplink will track the number of hits on this link in the `HitCount` attribute. This tracking can be disabled if performance issues occur. This option is only available in Deep Link module version 9 or higher.
 
@@ -129,7 +129,7 @@ To view all the available deep link configurations and example URLs, add the **D
 
     * When the value is left empty, the default location is `login.html` (this file should be available in the theme folder).
     * When the login location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the login location.
-    * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO v2.0 and above is required).
+    * When using the deep link module with a Siemens Insights Hub app, use `/sso-login.html?redirect_uri=` as the login location if you are using version 4.0 and above of Insights Hub SSO. For versions of Insights Hub SSO between version 2.0 and version 4.0 use `mindsphere-login.html` as the `redirect_uri`. Insights Hub SSO below version 2.0 does not support login location on deep links.
     * When using XSUAA, set the value to `/xsauaalogin/login?ret=`.
     * When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
         * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.
@@ -149,7 +149,7 @@ This is because for Mendix 9, the [default value for SameSite cookies](/develope
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
 
-Additionally, there is an incompatibility between Mendix version 9.20 and above and earlier versions of the Deep Link module which could cause this. If you are using Mendix version 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
+Additionally, there is an incompatibility between Mendix 9.20 and above and earlier versions of the Deep Link module which could cause this. If you are using Mendix 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
 
 ### 4.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
 

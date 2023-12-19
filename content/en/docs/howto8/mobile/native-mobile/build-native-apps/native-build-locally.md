@@ -10,7 +10,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ## 1 Introduction
 
 {{% alert color="info" %}}
-For this how-to, Mendix Studio Pro v8.15.1 is required. If you are using an older Studio Pro version, please use [How to Build a Mendix Native Mobile App Locally Manually](/howto8/mobile/native-build-locally-manually/).
+For this how-to, Mendix Studio Pro 8.15.1 is required. If you are using an older Studio Pro version, please use [How to Build a Mendix Native Mobile App Locally Manually](/howto8/mobile/native-build-locally-manually/).
 {{% /alert %}}
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 12.4](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install [XCode 12.4](https://apps.apple.com/us/app/xcode/id497799835?mt=12) or higher and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 

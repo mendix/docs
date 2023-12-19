@@ -33,15 +33,15 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the **Cloud Settings** tab of the **Settings** in the left-hand menu of the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, go to **Settings** in the Developer Portal's navigation pane and switch to the **Cloud Settings** tab.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" >}}
 
-Click **Set up SAP Cloud** and you will be taken to the SAP BTP welcome page.
+Click **Set up SAP Cloud** to go to the SAP BTP welcome page.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings-landing-page.png" >}}
 
-Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
+Click **Getting Started**, then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New SAP App{#NewSAPApp}
 
@@ -89,10 +89,10 @@ If you have already logged on to SAP and your SAP session has not expired, you w
 You may be asked to provide your credentials in one of two ways:
 
 * You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
-* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (please note this method is being deprecated)
+* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (⚠ please note this method is being deprecated)
 
 {{% alert color="info" %}}
-If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
 {{% /alert %}}
 
 You will now be asked to provide the final details for the SAP BTP development environment.
@@ -590,7 +590,7 @@ The variables beginning **DT_** set up Dynatrace. Setting these variables means 
 
 ##### 7.4.2.2 Unsupported Environment Variables
 
-You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
+You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" >}}
 
@@ -636,7 +636,7 @@ Alternatively, click **Download Configuration File** to create the file which yo
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert color="info" %}}
-You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
+You can only use SAP HANA as the Mendix database for Mendix 7.23.3 and above.
 
 There are also some differences in the way that Mendix can be used with SAP HANA compared to a PostgreSQL, Hyperscaler Option database – see [SAP HANA – Known Issues](/refguide/saphana/).
 {{% /alert %}}
@@ -772,4 +772,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 11 Read More
 
-* [SAP Single Sign On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)
+* [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/)

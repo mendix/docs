@@ -32,7 +32,7 @@ You can also create environments and deploy and manage apps using the [Mendix fo
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro version 7.23.3 (build 48173) or above.
+* Mendix Studio Pro 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. If you want to change it to Developer mode, the Cluster Manager can do this from the cluster manager page.
 
@@ -56,7 +56,7 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
-1. On the **Environments** page for your app in the Developer Portal, click **Create Package From Teamserver**.
+1. On the **Environments** page for your app in the Developer Portal, click **Create Deployment Package**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image9.png" >}}
 
@@ -69,7 +69,7 @@ Before you can create an environment, you will need to create a deployment packa
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image11.png" >}}
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
-5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
+5. Select an environment in **Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
 6. Click **Build this revision.**
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image12.png" >}}
@@ -130,26 +130,29 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
-    | --- | --- | --- | --- | --- |
-    | Small | 1 | 0.5 | 0.1 | 0.5 |
-    | Medium | 2 | 2 | 1 | 1 |
-    | Large | 4 | 4 | 2 | 2 |
-    | Custom | own choice | own choice | own choice | own choice |
+    | **Name** | **CPU cores**: Limit | **Memory (GB)**: Limit |  **Ephemeral Storage (GB)**: Limit | **CPU cores**: Request | **Memory (GB)**: Request | **Ephemeral Storage (GB)**: Request |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | Small | 1 | 0.5 | 1 | 0.1 |0.5 | 1 |
+    | Medium | 2 | 2 | 1 | 1 | 1 | 1 |
+    | Large | 4 | 4 | 1 | 2 | 2 | 1 |
+    | Custom | own choice | own choice | own choice | own choice | own choice | own choice |
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
+
+    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments cannot be created using the default plans until all the associated environments using the custom core resource plan are deleted and the custom resource plan is disabled on the **Cluster manager** page.
+    {{% /alert %}}
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
     {{% alert color="info" %}}
-If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-{{% /alert %}}
+    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+    {{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
     {{% alert color="info" %}}
-If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-{{% /alert %}}
+    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+    {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
 
@@ -159,6 +162,8 @@ If the Cluster Manager has configured a secret store for this namespace, this op
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image8.png" >}}
 
     See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
+
+    You can also filter the environment by the namespace name, environment ID, and environment name.
 
 {{% alert color="info" %}}
 The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
@@ -176,20 +181,28 @@ If creation of the environment fails, then contact your cluster manager. If they
 
 You can deploy the deployment package of your app by doing the following:
 
-1. Click **Deploy** next to the deployment package you wish to deploy.
-2. Confirm the **Target** environment (you can select a different one here if one is available).
+1. Click **Deploy** button provided in **...** section next to the deployment package you wish to deploy.
+2. Select the **Destination** environment by clicking on Change environment (you can select a different one here if one is available).
 3. Confirm that the **Status** is *Ready*.
 4. Click **Transport**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image15.png" >}}
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/constantTab.png" >}}
+
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/scheduledevent.png" >}}
+
 7. Click **Continue** to continue to the Start Application confirmation page.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image16.png" >}}
 
 8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/ApplyChangesPage.png" >}}
 
 You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
 
@@ -510,7 +523,7 @@ On the **Log Levels** tab, you can change the log levels which are used for the 
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/log-levels-tab-1.png" >}}
 
-The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModile.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
+The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModule.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/log-levels-tab-2.png" >}}
 
@@ -562,6 +575,8 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/#private-cloud).
 
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/debuggerTab.png" >}}
+
 ## 6 Current Limitations{#limitations}
 
 ### 6.1 Reserved Names for Mendix Apps{#reserved-names}
@@ -576,7 +591,7 @@ Delete all environments before you delete an app. If you delete an app which has
 
 ### 6.3 Deployment Package Size
 
-Mendix for Private Cloud has a limit of 512 MB on the size of a deployment package.
+Mendix for Private Cloud has a limit of 1024 MB on the size of a deployment package.
 
 ## 7 Troubleshooting
 
@@ -688,6 +703,88 @@ When an Istio service mesh is enabled in a namespace, every pod's traffic is rou
 To fix this issue, enable the `holdApplicationUntilProxyStarts: true` setting in the Istio [proxy config](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig). With this option, containers are only started once the Istio sidecar is ready to accept network traffic.
 
 For more information, see https://github.com/istio/istio/pull/24737.
+
+### 7.7 Out of Memory Killed Error
+
+This error refers to a situation where a running pod is terminated because it has exhausted the available memory resources on the node where it is running. This can occur when a pod consumes more memory than it has been allocated, or when a node runs out of resources (memory). In this case, the node will kill random pods that are using more memory than their requests value. In Kubernetes, this is called overcommitment. For more information, refer to [Red Hat documentation](https://docs.okd.io/4.13/post_installation_configuration/node-tasks.html#nodes-cluster-overcommit-resource-requests_post-install-node-tasks).
+
+To fix this issue, you can raise memory requests to match the memory limit by performing the following steps:
+
+1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
+
+    1. To update the Mendix Operator configuration, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit operatorconfiguration
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit operatorconfiguration
+        ```
+
+    2. To update the Mendix Agent, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit deployment mendix-agent
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit deployment mendix-agent
+        ```
+
+    3. To update the Mendix Operator, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit deployment mendix-operator
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit deployment mendix-operator
+        ```
+
+    4. Restart the Mendix operator by using the following command:
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} scale deployment mendix-operator --replicas=0
+        oc -n {namespace} scale deployment mendix-operator --replicas=1
+        ```
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+        kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+        ```
+
+2. When running the upgrade procedure in mxpc-cli, check that the memory request values for *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments are equal to the memory limit value.
+3. In the portal, update the default core environment sizes so that memory requests are at least equal to memory limits.
+4. For Mendix apps, edit the environment memory request by running the following command:
+
+    For Openshift:
+
+    ```shell
+    oc -n {namespace} edit mendixapp {environmentInternalId}
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} edit mendixapp {environmentInternalId}
+    ```
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 

@@ -2,7 +2,6 @@
 title: "SAP Horizon Native UI Resources"
 url: /appstore/modules/sap-ui-resources/sap-native-resources/
 category: "SAP"
-weight: 18
 description: "The SAP Horizon Native UI Resources module allows you to create Native apps with Fiori Horizon-theme UI styling."
 tags: ["SAP", "Fiori", "UI", "resources", "Native"]
 aliases:
@@ -35,7 +34,7 @@ The SAP Horizon Native UI Resources module requires the following modules:
 
 ## 3 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the SAP Horizon Native UI Resources module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the SAP Horizon Native UI Resources module into your app.
 
 ## 4 Configuration
 

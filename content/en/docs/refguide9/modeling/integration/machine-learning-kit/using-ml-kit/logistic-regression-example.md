@@ -5,7 +5,7 @@ category: Using ML Kit
 weight: 20
 tags: ["studio pro", "machine learning", "ml kit", "models", "integration", "example", "logistic regression"]
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [Beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
+{{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
 ## 1 Introduction
 

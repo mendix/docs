@@ -59,12 +59,12 @@ Before you can use the AWS Authentication connector, you must first configure th
 {{% alert color="info" %}}
 To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.
 
-If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/general/app-store-content-support/#category), refer to the documentation provided with the connector for more information about the required permissions.
+If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/overview/#category), refer to the documentation provided with the connector for more information about the required permissions.
 {{% /alert %}}
 
 ## 3 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS Authentication connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the AWS Authentication connector into your app.
 
 ## 4 Usage
 

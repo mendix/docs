@@ -9,7 +9,7 @@ tags: ["ATS", "testing"]
 
 This how-to explains data-driven testing, a functionality of ATS. With data-driven testing, you can run the same test case with different data sheets without manually entering the new information in the case. ATS executes a test case for each record in the primary dataset.
 
-**This how-to will teach you  how to do the following**
+This how-to teaches you how to do the following:
 
 * Create a primary dataset with different datasheets in ATS
 * Create an Excel file to upload in ATS

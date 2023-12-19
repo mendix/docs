@@ -32,7 +32,7 @@ At the heart of the navigation model in Mendix, these are the available profiles
 * Phone browser
 * Native phone
 
-Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
+Users that access the app via a particular device type are automatically redirected to the home page of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
 
 The device type of the currently logged-in user is available in [microflows](/refguide8/microflows/) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](/refguide8/enumerations/) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 

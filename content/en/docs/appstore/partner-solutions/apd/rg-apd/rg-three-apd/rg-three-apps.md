@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/apd/rg-three-apps/
 
 ## 1 Apps Overview
 
-The homepage of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal/) in alphabetical order.
+The home page of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal/) in alphabetical order.
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/ProjectsDashboard.png" >}}
 

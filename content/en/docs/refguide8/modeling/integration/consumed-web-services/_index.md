@@ -15,7 +15,7 @@ This document describes imported web services. For further information on the co
 
 ## 2 Web Services
 
-Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or Internet).
+Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or internet).
 
 Mendix supports the interaction between servers using SOAP. This can either be Mendix-to-Mendix, Mendix-to-ThirdParty or ThirdParty-to-Mendix.
 
@@ -82,6 +82,6 @@ Mendix supports consuming web service data according to the following protocols:
 * WS-Policy v1.5
 * WS-PolicyAttachment 1.5
 * WS-ReliableMessaging 1.1
-* WS-Addressing 1.0 (from Mendix version 8.16)
+* WS-Addressing 1.0 (from Mendix 8.16)
 
 To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to `Transport` with clientCredentialType `Basic` in the **web.config** file. The user credentials can be configured in Studio Pro as a **Call Web Service** activity as described in [Use HTTP authentication](/refguide8/call-web-service-action/#http-headers).

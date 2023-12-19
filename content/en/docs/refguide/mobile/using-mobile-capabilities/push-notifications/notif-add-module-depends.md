@@ -50,6 +50,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 1. Search for *Native mobile resources*.
 1. Open the [Native mobile resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module.
 1. Click **Download**.
+1. Add the `NativeMobileResources.User` module role to any user role that needs to interact with notifications.
 1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](/appstore/modules/native-mobile-resources/).
 
 ## 6 Implementing the Atlas Core Module

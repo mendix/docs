@@ -15,16 +15,16 @@ The [OpenID Connect (OIDC) SSO](https://marketplace.mendix.com/link/component/12
 OIDC is an extension of OAuth2 that propagates the end-user's identity to your application.
 
 {{% alert color="warning" %}}
-This OIDC SSO module works with Mendix version 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
+This OIDC SSO module works with Mendix 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 
-If you are using Mendix version 9.20 and above, please use version 2.0.0 or above of the OIDC SSO module.
+If you are using Mendix 9.20 and above, please use version 2.0.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 The OIDC SSO module works with web/responsive applications only.
 {{% /alert %}}
 
-Alternatives to using OIDC SSO for managing single sign on are:
+Alternatives to using OIDC SSO for managing single sign-on are:
 
 * [SAML](https://marketplace.mendix.com/link/component/1174) – if your IdP supports the SAML protocol but not the OIDC protocol
 * [MendixSSO](https://marketplace.mendix.com/link/component/111349) – if your app is targeted at end-users that have signed up to the Mendix platform
@@ -102,7 +102,7 @@ Versions below 2.3.0 also require [Native Mobile Resources](https://marketplace.
 
 If you are migrating from the community edition of the module ([OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529)), please refer to the [migration documentation](#migration) below.
 
-1. [Add the “OIDC SSO” module into your app](/appstore/general/app-store-content/).
+1. [Add the “OIDC SSO” module into your app](/appstore/overview/use-content/).
 2. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
 3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OICD SSO module to a page that  is accessible to admin end-users of your app.
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
@@ -128,7 +128,7 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 If you already have the [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529) (community edition) in your module, you can migrate to this, platform supported, version by following the instruction below.
 
-#### 3.2.1 Upgrading from Mendix Version 8 to Mendix Version 9
+#### 3.2.1 Upgrading from Mendix 8 to Mendix 9
 
 To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 
@@ -145,9 +145,9 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 11. Delete the “Atlas_UI_Resources” module from your app. Your app is now using themes from the Atlas Core Module.
 12. Update the “Administration” and “MendixSSO” modules to the latest version by importing them from the Marketplace.
 
-#### 3.2.2 Replacing Community Edition with Platform Edition on Mendix Version 9
+#### 3.2.2 Replacing Community Edition with Platform Edition on Mendix 9
 
-If your app is already developed using Mendix version 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
+If your app is already developed using Mendix 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
 
 1. Import the "OIDC" platform edition module from the Marketplace.
 2. Import the "Mx Model Reflection" Module from the Marketplace.
@@ -263,7 +263,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
         * **Client secret** - Select **Generate a client secret**
         * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
         * **Authentication flow session duration** - Enter a value from *3* to *15*
-        * **Allowed callback URLs** - Enter a URL in the following format: `https://{your Mendix app URL}]/oauth/v2/callback`
+        * **Allowed callback URLs** - Enter a URL in the following format: `https://<your-app-url>/oauth/v2/callback`
         * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
         * **Identity providers** - Select **Cognito user pool**
         * **OAuth 2.0 grant types** - Select **Authorization code grant**
@@ -645,7 +645,6 @@ To use OIDC SSO module in conjunction with the DeepLink module, you can choose b
 A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
-
 
 ### 8.5 Use ACR to Request Authentication Method
 

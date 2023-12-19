@@ -21,7 +21,7 @@ The mx tool enables the options described below.
 
 ### 3.1 mx convert Command
 
-The `mx convert` command converts the apps to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix version 8.1.0.58215, then `mx convert` will convert apps to that version. 
+The `mx convert` command converts the apps to a specific Studio Pro version. For example, if you are using the mx command-line tool for Mendix 8.1.0.58215, then `mx convert` will convert apps to that version. 
 
 The input can be a single file, directory, or multiple files.
 
@@ -73,7 +73,7 @@ Return codes are described in the table below:
 
 ### 3.2 mx create-project Command
 
-The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro version 8.1.0.58215,  `mx create project` will create a new app in that version. 
+The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 8.1.0.58215,  `mx create project` will create a new app in that version. 
 
 #### 3.2.1 Usage
 

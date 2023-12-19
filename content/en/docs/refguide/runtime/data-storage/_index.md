@@ -71,3 +71,29 @@ When the record gets locked, as long as the transaction is executing, no other u
 To ensure data validity and improve database performance in a multiuser environment, Mendix isolates concurrent database transactions. Isolation is done by using the `Read Committed` isolation level. This is the default isolation setting for PostgreSQL databases. Mendix relies on the implementation of `Read Committed` in the database. If you use a different database, the results of `Read Committed` might vary due to a different implementation of the isolation level.
 
 For more information on how `Read Committed` works in PostgreSQL, see [PostgreSQL Read Committed documentation](https://www.postgresql.org/docs/12/transaction-iso.html#XACT-READ-COMMITTED).
+
+# Foreign Key Constraints
+
+## Foreign Key Constraints in Mendix
+
+A Foreign Key Constraint is a database-level concept. A Foreign Key Constraint enforces consistency of links between tables and makes sure that a reference to a table row exists only if a referred row exists as well.
+
+When it comes to the Mendix data model, it means that all associations and System members such as `owner` and `changedBy` are guaranteed to be consistent, i.e. if there is an association, then the associated object exists as well.
+
+From the user perspective, that is already the case: In a Mendix app, is impossible to encounter a reference that does not refer to an object. Nevertheless, there are certain scenarios that may lead to records in underlying association tables not having referred records in entity tables. Such association records are not accessible from the app itself, so such orphaned records do not affect app functionality in any way. But their existence in the database usually indicates that the app itself may contain an error that leads to inconsistent data.
+
+The Foreign Key Constraints feature is designed to safeguard against such negative scenarios that would lead to dangling references. Using foreign key constraints is also a good practice of database development.
+
+With this feature, if a dangling reference is to be introduced, a `MendixRuntimeException` is thrown instead. This allows the developer to investigate the root cause of such scenario. Without that feature, the erroneous scenario would go unnoticed.
+
+
+## Adding Foreign Key Constraints in new projects
+
+Foreign Key Constraints are enabled for new projects starting with version 10.6. This applies to:
+
+- Projects created from scratch using a starter app
+- Projects created using “Import app package” functionality
+
+Projects created before 10.6 are not affected. This means that if your project is created in a version of Studio Pro earlier than 10.6 and then upgraded to 10.6 or a later version, Foreign Key Constraints do not get enabled for it.
+
+When a new project is created using a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted in such database. That cleanup is performed only once and is not repeated on consequent runs for the same database.

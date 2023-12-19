@@ -77,7 +77,7 @@ After you configure the authentication profile for Amazon Polly, you can impleme
     * `LanguageCode` - Language code of the voice. This parameter is only necessary if you are using a voice that can use multiple languages. If left empty, the default value for that voice is used. 
     
     For more information on Amazon Polly voices and their engines, see [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html).
-7. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
+7. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression.
 8. Click **OK**.
 9. Open a page that contains a widget for playing audio, for example, the [Play Audio](https://marketplace.mendix.com/link/component/120804) widget.
 10. Configure the widget to use the `FileDocument` configured in the **SynthesizeSpeech** activity.

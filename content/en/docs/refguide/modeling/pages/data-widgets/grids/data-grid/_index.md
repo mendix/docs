@@ -43,7 +43,7 @@ Data grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
-The rows of the data grid can be sorted using the sort by property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+The rows of the data grid can be sorted using the `Sort by` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

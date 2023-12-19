@@ -92,7 +92,7 @@ SQL Query:
 
 ### 5 Save DML Query
 
-1. For DML queries, *Number of affected rows* will be displayed as a reponse.
+1. For DML queries, *Number of affected rows* will be displayed as a response.
    
 For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
 

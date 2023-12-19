@@ -58,6 +58,7 @@ To quickly configure the connection to AWS Lambda by configuring a microflow, pe
 2. Create a new microflow.   
 3. In **AWSLambdaConnector** > **Operations**, find the microflow activty for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
 4. Configure the required parameters:
+   
     1. For the **ListFunctionsRequest** parameter, create a new `ListFunctionsRequest` object at the start of the microflow and pass it to the **ListFunctions** activity.
     2. In the Toolbox, depending on the type of credentials you want to use, search for the **GetStaticCredentials** activity *or* the **GetTemporaryCredentials** activity and drag it to the start of your microflow. Then select it as the value for the **Credentials** parameter of the **ListFunctions** activity.
     3. For the **ENUM_Region** parameter, choose a Region from the *AWSAuthentication.ENUM_Region* enumeration. For example, *AWSAuthentication.ENUM_Region.us_east_1* for the US_East_1 Region.

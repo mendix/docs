@@ -30,7 +30,7 @@ See [Columns (document template)](/refguide/columns-document-template/).
 
 ### 2.2 Sort Bar
 
-See [Sort Bar](/refguide/sort-bar/).
+See [Sort Bar](/refguide/sort-order/#sort-bar).
 
 ## 3 Appearance Properties
 

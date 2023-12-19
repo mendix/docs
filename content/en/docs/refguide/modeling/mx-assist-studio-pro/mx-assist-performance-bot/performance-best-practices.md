@@ -60,7 +60,7 @@ To fix the issue, delete the unused calculated attribute.
 
 ### 2.2 Add an Index to Attributes in Sort Bars [MXP003] {#mxp003}
 
-[Sort bars](/refguide/sort-bar/) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
+[Sort bars](/refguide/sort-order/#sort-bar) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
 
 * Data grid
 * Template grid

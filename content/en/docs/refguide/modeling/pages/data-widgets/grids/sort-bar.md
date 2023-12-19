@@ -23,7 +23,7 @@ If you do not specify any sort items, the objects will appear in the order in wh
 There are special cases for ordering behavior. For more details, refer to [Order By Behavior](/refguide/ordering-behavior/).
 {{% /alert %}}
 
-## 2 Sort Bar
+## 2 Sort Bar{#sort-bar}
 
 The sort order can be configured from the properties dialog box or properties panel. In structure mode, it can also be configured with the sort bar.
 

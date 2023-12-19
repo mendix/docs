@@ -130,7 +130,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
    The image below shows an example:
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/devportal-edit-constant.png"" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/devportal-edit-constant.png" >}}
 
 4. Fill out the **New Value** field and click **Save**.
 5. After setting all constants, restart the environment in order to apply the new constant values.

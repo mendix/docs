@@ -110,7 +110,7 @@ The `DescribeVoicesRequest` is the request object used for the  [DescribeVoices]
 
 #### 4.1.3 DescribeVoicesResponse
 
-The `DescribeVoicesResponse` entity is the response for the [DescribeVoices](#describe-voices) action. The action also returns a list of `DescribeVoice` objects associated with the `DescribeVoicesResponse` object. The `DescribeVoice` entity inherits from the voice entity and contains all its attributes. For more information on the attributes, see [Voice](#voice).
+The `DescribeVoicesResponse` entity is the response for the [DescribeVoices](#describe-voices) action. The action also returns a list of `DescribeVoice` objects associated with the `DescribeVoicesResponse` object. The `DescribeVoice` entity inherits from the voice entity and contains all its attributes.
 
 #### 4.1.4 SynthesizeSpeechRequest
 

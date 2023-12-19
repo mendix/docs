@@ -28,7 +28,7 @@ Planned maintenance is a maintenance operation that will be (or has been) carrie
 
 Whenever possible, planned maintenance is carried out within your preferred maintenance window.
 
-{{% alert color="info" %}}Infrastructure maintenance uses rolling updates, so this type of maintenance may occur outside of your preferred maintenance window. During infrastructure maintenance, multi-instance apps continue to be available. However, apps with a single instance see brief downtime (~1-2 minutes) because the instance needs to be restarted.{{% /alert %}}
+{{% alert color="info" %}}The platform on which apps run in Mendix Cloud must also be updated regularly. This infrastructure maintenance requires an update to a whole Mendix Cloud region at once, so this type of maintenance may occur outside of your preferred maintenance window. The infrastructure maintenance uses rolling updates; multi-instance apps continue to be available, but apps with a single instance see brief downtime (~1-2 minutes) because the instance needs to be restarted.{{% /alert %}}
 
 ## 2 Prerequisites
 

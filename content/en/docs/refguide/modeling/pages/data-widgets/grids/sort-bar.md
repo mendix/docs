@@ -25,7 +25,7 @@ There are special cases for ordering behavior. For more details, refer to [Order
 
 ## 2 Sort Bar
 
-The sort order can be configured from the properties dialog or properties panel. In structure mode, it can also be configured with the sort bar.
+The sort order can be configured from the properties dialog box or properties panel. In structure mode, it can also be configured with the sort bar.
 
 ## 3 Read More
 

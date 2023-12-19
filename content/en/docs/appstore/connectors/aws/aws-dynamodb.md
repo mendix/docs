@@ -202,295 +202,270 @@ This generalization entity holds information of items inside Amazon DynamoDB. Ea
 
 | Name | Documentation |
 | --- |  --- |
-| N/A | Entity 'AbstractItem' has no attributes. |
-
+| N/A | The `AbstractItem` entity has no attributes. |
 
 #### 4.1.2 AbstractKey
-
   
 | Name | Documentation |
 | --- |  --- |
-| Key |      |
-
+| `Key` | |
 
 #### 4.1.3 KeyValueString
   
 | Name | Documentation |
 | --- | --- |
-| StringValue | The StringValue attribute describes an attribute of type string. |
-
+| `StringValue` | The `StringValue` attribute describes an attribute of type String. |
 
 #### 4.1.4 KeyValueLong
   
 | Name | Documentation |
 | --- | --- |
-| LongValue | The LongValue attribute describes an attribute of type long. |
-
+| `LongValue` | The `LongValue` attribute describes an attribute of type Long. |
 
 #### 4.1.5 KeyValueDecimal
 
 | Name | Documentation |
 | --- | --- |
-| DecimalValue | The DecimalValue attribute describes an attribute of type decimal. |
-
+| `DecimalValue` | The DecimalValue attribute describes an attribute of type Decimal. |
 
 #### 4.1.6 KeyValueBoolean
   
 | Name | Documentation |
 | --- | --- |
-| BooleanValue | The BooleanValue attribute describes an attribute of type boolean. |
+| `BooleanValue` | The `BooleanValue` attribute describes an attribute of type boolean. |
 
 #### 4.1.7 DescribeTableRequest
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
 #### 4.1.8 DescribeTableResponse
   
 | Name | Documentation |
 | --- | --- |
-| ItemCount | The ItemCount attribute describes the number of items in the specified table. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. |
-| CreationDateTime | The CreationDateTime attribute describes the date and time when the table was created, in UNIX epoch time format. |
-| TableARN | The TableARN attribute describes the Amazon Resource Name (ARN) that uniquely identifies the table. |
-| TableId | The TableId attribute describes the unique identifier for the table for which the backup was created. |
-| TableStatus | The TableStatus attribute describes the current state of the table. |
-| TableName | The TableName attribute describes the table name. |
+| `ItemCount` | The `ItemCount` attribute describes the number of items in the specified table. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. |
+| `CreationDateTime` | The `CreationDateTime` attribute describes the date and time when the table was created, in UNIX epoch time format. |
+| `TableARN` | The `TableARN` attribute describes the Amazon Resource Name (ARN) that uniquely identifies the table. |
+| `TableId` | The `TableId` attribute describes the unique identifier for the table for which the backup was created. |
+| `TableStatus` | The `TableStatus` attribute describes the current state of the table. |
+| `TableName` | The `TableName` attribute describes the table name. |
 
 #### 4.1.9 AttributeDefinition
 
-
 | Name | Documentation |
 | --- | --- |
-| AttributeType | The AttributeType attribute describes the data type for the attribute. |
+| `AttributeType` | The `AttributeType` attribute describes the data type for the attribute. |
 
 #### 4.1.10 KeySchemaElement
   
 | Name | Documentation |
 | --- | --- |
-| KeyType | The KeyType attribute describes the role of the attribute. |
+| `KeyType` | The `KeyType` attribute describes the role of the attribute. |
 
 #### 4.1.11 DeleteItemRequest
   
 | Name | Description |
 | ---  | --- |
-| ConditionExpression |  The ConditionExpression attribute describes a condition that must be satisfied in order for a conditional DeleteItem to succeed. |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
+| `ConditionExpression` |  The `ConditionExpression` attribute describes a condition that must be satisfied in order for a conditional `DeleteItem` to succeed. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
 #### 4.1.12 DeleteItem
 
- Name | Description |
+| Name | Description |
 | ---  | --- |
-| N/A |  Entity 'DeleteItem' has no attributes, it inherits from 'AbstractItem'. |
+| N/A |  Entity `DeleteItem` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.13 ExpressionAttributeName
-
   
 | Name | Documentation |
 | --- | --- |
-| Placeholder |     |
+| Placeholder | N/A |
 
 #### 4.1.14 DeleteItemResponse
 
- Name | Description |
+| Name | Description |
 | ---  | --- |
-| N/A |  Entity 'DeleteItemResponse' has no attributes. |
+| N/A |  Entity `DeleteItemResponse` has no attributes. |
 
 #### 4.1.15 ListTablesRequest
   
 | Name | Documentation |
 | --- | --- |
-| ExclusiveStartTableName | The ExclusiveStartTableName attribute describes the first table name that this operation will evaluate. Use the value that was returned for LastEvaluatedTableName in a previous operation, so that you can obtain the next page of results. |
-| Limit | The Limit attribute describes a maximum number of table names to return. If this parameter is not specified, the limit is 100. |
+| `ExclusiveStartTableName` | The `ExclusiveStartTableName` attribute describes the first table name that this operation will evaluate. Use the value that was returned for `LastEvaluatedTableName` in a previous operation, so that you can obtain the next page of results. |
+| `Limit` | The `Limit` attribute describes a maximum number of table names to return. If this parameter is not specified, the limit is 100. |
 
 #### 4.1.16 ListTablesResponse
   
 | Name | Documentation |
 | --- | --- |
-| LastEvaluatedTableName | The LastEvaluatedTableName attribute describes the name of the last table in the current page of results. Use this value as the ExclusiveStartTableName in a new request to obtain the next page of results, until all the table names are returned. |
+| `LastEvaluatedTableName` | The `LastEvaluatedTableName` attribute describes the name of the last table in the current page of results. Use this value as the `ExclusiveStartTableName` in a new request to obtain the next page of results, until all the table names are returned. |
 
 #### 4.1.17 Table
-
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name. |
-
+| `TableName` | The `TableName` attribute describes the table name. |
 
 #### 4.1.18 BatchGetItemRequest
-
   
 | Name | Documentation |
 | --- | --- |
-| isConsistentRead | The isConsistentRead attribute describes the consistency of a read operation. If set to true, then a strongly consistent read is used; otherwise, an eventually consistent read is used. |
+| `isConsistentRead` | The `isConsistentRead` attribute describes the consistency of a read operation. If set to true, then a strongly consistent read is used; otherwise, an eventually consistent read is used. |
 
 #### 4.1.19 RequestTable
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
-| ProjectionExpression | The ProjectionExpression attribute describes a string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the ProjectionExpression must be separated by commas. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+| `ProjectionExpression` | The `ProjectionExpression` attribute describes a string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the `ProjectionExpression` must be separated by commas. |
 
 #### 4.1.20 BatchGetRequestedItem
 
 | Name | Documentation |
 | --- | --- |
-| N/A | Entity 'BatchGetRequestedItem' has no attributes, it inherits from 'AbstractItem'. |
+| N/A | Entity `BatchGetRequestedItem` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.21 BatchGetItemResponse
 
 | Name | Documentation |
 | --- | --- |
-| N/A | Entity 'BatchGetItemResponse' has no attributes. |
+| N/A | Entity `BatchGetItemResponse` has no attributes. |
 
 #### 4.1.22 ResponseTable
-
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name. |
+| `TableName` | The `TableName` attribute describes the table name. |
 
 #### 4.1.23 BatchGetResponseItem
 
 | Name | Documentation |
 | --- | --- |
-| N/A | Entity 'BatchGetResponseItem' has no attributes, it inherits from 'AbstractItem'. |
-
+| N/A | Entity `BatchGetResponseItem` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.24 ScanRequest
   
 | Name | Documentation |
 | --- | --- |
-| Limit | The Limit attribute describes the maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the number of items up to the limit while processing the results, it stops the operation and returns the matching values up to that point, and a key in LastEvaluatedKey to apply in a subsequent operation, so that you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this limit, it stops the operation and returns the matching values up to the limit, and a key in LastEvaluatedKey to apply in a subsequent operation to continue the operation. |
-| IndexName | The IndexName attribute describes the name of a secondary index to scan. This index can be any local secondary index or global secondary index. Note that if you use the IndexName parameter, you must also provide TableName. |
-| TableName | The TableName attribute describes the name of the table containing the requested items; or, if you provide IndexName, the name of the table to which that index belongs and is a required parameter. |
+| `Limit` | The `Limit` attribute describes the maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the number of items up to the limit while processing the results, it stops the operation and returns the matching values up to that point, and a key in LastEvaluatedKey to apply in a subsequent operation, so that you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this limit, it stops the operation and returns the matching values up to the limit, and a key in LastEvaluatedKey to apply in a subsequent operation to continue the operation. |
+| `IndexName` | The `IndexName` attribute describes the name of a secondary index to scan. This index can be any local secondary index or global secondary index. Note that if you use the IndexName parameter, you must also provide TableName. |
+| `TableName` | The `TableName` attribute describes the name of the table containing the requested items; or, if you provide the `IndexName`, the name of the table to which that index belongs and is a required parameter. |
 
 #### 4.1.25 Condition
   
 | Name  | Documentation |
 | --- | --- |
-| ComparisonOperator | The ComparisonOperator attribute describes a comparator for evaluating attributes. For example, equals, greater than, less than, etc. and is a required parameter. |
+| `ComparisonOperator` | The `ComparisonOperator` attribute describes a comparator for evaluating attributes. For example, equals, greater than, less than, etc. and is a required parameter. |
 
 #### 4.1.26 ScanTableValueString
   
 | Name | Documentation |
 | --- | --- |
-| StringValue | The StringValue attribute describes an attribute of type String. |
+| `StringValue` | The StringValue attribute describes an attribute of type String. |
 
 #### 4.1.27 ScanTableValueDecimal
 
-
 | Name |  Documentation |
 | --- | --- |
-| DecimalValue | The DecimalValue attribute describes an attribute of type Decimal. |
+| `DecimalValue` | The `DecimalValue` attribute describes an attribute of type Decimal. |
 
 #### 4.1.28 ScanTableValueLong
 
 | Name | Documentation |
 | --- | --- |
-| LongValue | The LongValue attribute describes an attribute of type Long. |
+| `LongValue` | The LongValue attribute describes an attribute of type Long. |
 
 #### 4.1.29 ScanTableValueBoolean
   
 | Name | Documentation |
 | --- | --- |
-| BooleanValue | The BooleanValue attribute describes an attribute of type Boolean. |
+| `BooleanValue` | The `BooleanValue` attribute describes an attribute of type Boolean. |
 
 #### 4.1.30 ScanResponse
-
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name. |
+| `TableName` | The `TableName` attribute describes the table name. |
 
 #### 4.1.31 ScanItem
 
 | Name | Documentation |
 | --- | --- |
-| N/A | Entity 'ScanItem' has no attributes, it inherits from 'AbstractItem'. |
-
+| N/A | Entity `ScanItem` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.32 BatchWriteItemRequest
 
 | Name | Documentation |
 | --- | --- |
-| N/A | Entity 'BatchWriteItemRequest' has no attributes. |
-
+| N/A | Entity `BatchWriteItemRequest` has no attributes. |
 
 #### 4.1.33 TableWithItemsToAdd
-
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
 #### 4.1.34 ItemToAdd
 
 | Name | Documentation |
 | --- | --- |
-| N/A | Entity 'ItemToAdd' has no attributes, it inherits from 'AbstractItem'. |
+| N/A | Entity `ItemToAdd` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.35 TableWithItemsToDelete
   
 | Name |  Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
 #### 4.1.36 ItemToDelete
 
- Name | Documentation |
+| Name | Documentation |
 | --- | --- |
-| N/A | Entity 'ItemToDelete' has no attributes, it inherits from 'AbstractItem'. |
+| N/A | Entity `ItemToDelete` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.37 BatchWriteItemResponse
 
- Name | Documentation |
+| Name | Documentation |
 | --- | --- |
-| N/A | Entity 'BatchWriteItemResponse' has no attributes. |
-
+| N/A | Entity `BatchWriteItemResponse` has no attributes. |
 
 #### 4.1.38 GetItemRequest
-
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
-| isConsistentRead | The isConsistentRead attribute describes the read consistency model: If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads. |
-
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+| `isConsistentRead` | The `isConsistentRead` attribute describes the read consistency model. If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads. |
 
 #### 4.1.39 GetItem
 
- Name | Documentation |
+| Name | Documentation |
 | --- | --- |
-| N/A | Entity 'GetItem' has no attributes, it inherits from 'AbstractItem'. |
-
+| N/A | Entity `GetItem` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.40 GetItemResponse
 
- Name | Documentation |
+| Name | Documentation |
 | --- | --- |
-| N/A | Entity 'GetItemResponse' has no attributes, it inherits from 'AbstractItem'. |
-
+| N/A | Entity `GetItemResponse` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.41 PutItemRequest
-
   
 | Name | Documentation |
 | --- | --- |
-| TableName | The TableName attribute describes the table name and is a required parameter. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
 #### 4.1.42 PutItem
 
  Name | Documentation |
 | --- | --- |
-| N/A | Entity 'PutItem' has no attributes, it inherits from 'AbstractItem'. |
+| N/A | Entity `PutItem` has no attributes, it inherits from `AbstractItem`. |
 
 #### 4.1.43 PutItemResponse
 
  Name | Documentation |
 | --- | --- |
-| N/A | Entity 'PutItemResponse' has no attributes. |
-
+| N/A | Entity `PutItemResponse` has no attributes. |
 
 ### 4.2 Enumerations
 

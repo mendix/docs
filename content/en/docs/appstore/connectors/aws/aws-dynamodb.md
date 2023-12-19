@@ -91,19 +91,19 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 15. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 16. Click **OK**, and then click **OK** again.
 17. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GenerateCredentials** activity.
-18. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the ListTables activity.
-19. Double-click the GenerateCredentials activity, and then configure the required ENUM_Region parameter in the same way as described in step 5.
-20. Double-click the ListTables activity and configure the Credentials parameter by doing the following steps:
+18. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
+19. Double-click the **GenerateCredential**s activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
+20. Double-click the **ListTables** activity and configure the **Credentials** parameter by doing the following steps:
 
-    * Click Edit parameter value.
-    * Edit the Credentials parameter and let it auto-fill.
+    * Click **Edit parameter value**.
+    * Edit the **Credentials** parameter and let it auto-fill.
 
-22. In the Toolbox pane, search for the Create Object activity, drag it onto the microflow area, and position it between the GenerateCredentials and the ListTables activity.
-23. Double-click the Create Object activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
-24. Double-click the CreateBucket activity and configure the CreateBucketRequest parameter by doing the following steps:
+22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GenerateCredentials** and the **ListTables** activity.
+23. Double-click the **Create Object** activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
+24. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
 
-    * Click Edit parameter value.
-    * Edit the CreateBucketRequest parameter and let it auto-fill.
+    * Click **Edit parameter value**.
+    * Edit the **CreateBucketRequest** parameter and let it auto-fill.
 
 26. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 27. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
@@ -155,23 +155,25 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     * **Value** - The created object, for example, `$NewDBTable`
     
 50. Double-click the end event of your microflow, and then set the following values:
+
     * **Type** - **List**
     * **Entity** - The entity that you previously added to your domain model, for example, `DBTable`
-51. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
-52. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
-53. In the **Lists** category, select the **List** template for the page.
-54. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
-55. On the page, double-click the **List view** widget.
+      
+52. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
+53. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+54. In the **Lists** category, select the **List** template for the page.
+55. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
+56. On the page, double-click the **List view** widget.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listview.png" alt="The List view widget">}}
 
-56. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-57. In the **Microflow** field, select the **DS_ListTables** microflow.
-58. Click **OK**, and then click **Yes**.
-59. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
-60. In the **App Explorer**, double-click the **Navigation** for your app.
-61. In the Menu section, click **New Item**.
-62. In the **New Menu Item** dialog, configure the following settings:
+57. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+58. In the **Microflow** field, select the **DS_ListTables** microflow.
+59. Click **OK**, and then click **Yes**.
+60. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
+61. In the **App Explorer**, double-click the **Navigation** for your app.
+62. In the Menu section, click **New Item**.
+63. In the **New Menu Item** dialog, configure the following settings:
 
     * **Caption** - A caption for the navigation item, for example, *Table*
     * **Icon** - An icon that will be displayed for this page in the navigation for your app

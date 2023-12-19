@@ -14,7 +14,7 @@ This activity can only be used in **Microflows**.
 This activity is in Studio Pro 10.6 and above.
 {{% /alert %}}
 
-## 1 Introduction
+## 1 Introduction 
 
 The **Import data from file** activity can be used in a microflow to integrate data from an Excel file into your Mendix app. The activity can be found under **Integration activities** in the **Toolbox**.
 
@@ -33,5 +33,5 @@ The following are the properties in the **Input** section:
 
 The following are the properties in the **Output** section:
 
-* **Return type** – the return type of the microflow
-* **Variable name** – the name of output/return variable
+* **Use return variable** – if set to yes, you will be asked to give it a name
+* **Variable name** – the result of the activity will be given this name

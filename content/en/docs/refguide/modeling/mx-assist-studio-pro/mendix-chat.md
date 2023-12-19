@@ -29,14 +29,14 @@ MendixChat appears at the right side of Studio Pro under the **MendixChat** tab.
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-interface.png" width="300px" >}}
 
 {{% alert color="warning"%}}
-In some cases, even when you are already logged in to Studio Pro, you might need to click **Sign in** under the **MendixChat** tab so that MendixChat is available for use.
+In some cases, even when you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab so that MendixChat is available for use.
 {{% /alert %}}
 
 ### 2.1 An Example of Interacting with MendixChat
 
 You can start using MendixChat by clicking one of the demo questions. You can also start by asking your own question in the chatbox. 
 
-The following steps present an example of you how you can interact with MendixChat by asking your own question:
+The following steps present an example of how you can interact with MendixChat by asking your own question:
 
 1. Type the following question in the chatbox: `When should I use a calculated attribute?`.
 

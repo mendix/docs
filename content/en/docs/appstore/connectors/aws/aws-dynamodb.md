@@ -512,17 +512,16 @@ For more information on using comparison operators, please visit [Amazon DynamoD
 |`BEGINS_WITH` | **BEGINS_WITH** | The enumeration element that evaluates items for a prefix |
 | `BETWEEN` | **BETWEEN** | The enumeration element that evaluates items between two given items, where the first item must be smaller than the second |
 | `CONTAINS` | **CONTAINS** | The enumeration element that evaluates items for a subsequence or value in a set |
-| `EQ` |    **EQUAL** | The enumeration element that evaluates items against an item. This comparison operator supports all data types, including lists and maps |
-| `GE` |    **GREATER_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are greater than or equal to the key-value pair |
-| `GT` |    **GREATER_THAN** | The enumeration element that evaluates whether items are greater than the key-value pair |
-| `IN` |    **IN** | The enumeration element that evaluates whether items match elements in a list |
-| `LE` |    **LESS_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are less than or equal to the key-value pair |
-| `LT` |    **LESS_THAN** | The enumeration element that evaluates whether items are less than the key-value pair |
-| `NE` |    **NOT_EQUAL** | The enumeration element that evaluates whether items are unequal to the key-value pair |
-| `NOT_CONTAINS` |    **NOT_CONTAINS** | The enumeration element that evaluates items for absence of a subsequence, or absence of a value in a set |
-| `NOT_NULL` |    **NOT_NULL** | The enumeration element that evaluates whether items are not null. This comparison operator supports all data types, including lists and maps |
-| `_NULL` |    **NULL** | The enumeration element that evaluates whether items have the attribute. This comparison operator supports all data types, including lists and maps |
-
+| `EQ` | **EQUAL** | The enumeration element that evaluates items against an item. This comparison operator supports all data types, including lists and maps |
+| `GE` | **GREATER_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are greater than or equal to the key-value pair |
+| `GT` | **GREATER_THAN** | The enumeration element that evaluates whether items are greater than the key-value pair |
+| `IN` | **IN** | The enumeration element that evaluates whether items match elements in a list |
+| `LE` | **LESS_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are less than or equal to the key-value pair |
+| `LT` | **LESS_THAN** | The enumeration element that evaluates whether items are less than the key-value pair |
+| `NE` | **NOT_EQUAL** | The enumeration element that evaluates whether items are unequal to the key-value pair |
+| `NOT_CONTAINS` | **NOT_CONTAINS** | The enumeration element that evaluates items for absence of a subsequence, or absence of a value in a set |
+| `NOT_NULL` | **NOT_NULL** | The enumeration element that evaluates whether items are not null. This comparison operator supports all data types, including lists and maps |
+| `_NULL` | **NULL** | The enumeration element that evaluates whether items have the attribute. This comparison operator supports all data types, including lists and maps |
 
 ### 4.3 Activities {#activities}
 
@@ -564,7 +563,6 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-
 #### 4.3.4 BatchWriteItem
 
 The `BatchWriteItem` Amazon DynamoDB activity allows you to put or delete multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `Credentials` object and a `BatchWriteItemRequest` object containing the tables from which the item needs to be put or deleted.
@@ -603,7 +601,6 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-
 #### 4.3.7 PutItem
 
 The `PutItem` Amazon DynamoDB activity allows you to put and update an item in DynamoDB. It requires a valid AWS Region, `Credentials` object, and an `PutItemRequest` object with a `PutItem` object associated to it. If the table has only a partition key, then only one `KeyValue` object is required inside the `PutItem` object. If the table has both a partition and sort key, then two `KeyValue` objects are required.
@@ -627,4 +624,3 @@ The input and output for this service are shown in the table below:
 | `GetItemRequest` (Object) | `GetItemResponse` (Object) |
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
-

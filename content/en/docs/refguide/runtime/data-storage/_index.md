@@ -72,28 +72,33 @@ To ensure data validity and improve database performance in a multiuser environm
 
 For more information on how `Read Committed` works in PostgreSQL, see [PostgreSQL Read Committed documentation](https://www.postgresql.org/docs/12/transaction-iso.html#XACT-READ-COMMITTED).
 
-# Foreign Key Constraints
+## 5 Foreign Key Constraints{#fkc}
 
-## Foreign Key Constraints in Mendix
+A Foreign Key Constraint (FKC) is a database-level concept. An FKC enforces consistency of links between tables and makes sure that a reference to a table row exists only if a referred row exists as well.
 
-A Foreign Key Constraint is a database-level concept. A Foreign Key Constraint enforces consistency of links between tables and makes sure that a reference to a table row exists only if a referred row exists as well.
+### 5.1 Foreign Key Constraints in Mendix
 
-When it comes to the Mendix data model, it means that all associations and System members such as `owner` and `changedBy` are guaranteed to be consistent, i.e. if there is an association, then the associated object exists as well.
+{{% alert color="info" %}}
+Foreign Key Constraints are applied to new apps created in Mendix version 10.6.0.
+{{% /alert %}}
 
-From the user perspective, that is already the case: In a Mendix app, is impossible to encounter a reference that does not refer to an object. Nevertheless, there are certain scenarios that may lead to records in underlying association tables not having referred records in entity tables. Such association records are not accessible from the app itself, so such orphaned records do not affect app functionality in any way. But their existence in the database usually indicates that the app itself may contain an error that leads to inconsistent data.
+When it comes to the Mendix data model, having a FKC means that all associations and System members such as `owner` and `changedBy` are guaranteed to be consistent; if there is an association, then the associated object exists as well.
 
-The Foreign Key Constraints feature is designed to safeguard against such negative scenarios that would lead to dangling references. Using foreign key constraints is also a good practice of database development.
+From the user perspective, that is already the case. In a Mendix app, is impossible to encounter a reference that does not refer to an object.
 
-With this feature, if a dangling reference is to be introduced, a `MendixRuntimeException` is thrown instead. This allows the developer to investigate the root cause of such scenario. Without that feature, the erroneous scenario would go unnoticed.
+Nevertheless, because of the way Mendix uses association tables in the database to record associations from the Domain Model, there are certain scenarios that may lead to records in these association tables referring to non-existent records in entity tables, leaving the association tables having dangling references. Such association records are not accessible from the app itself, so such orphaned records do not affect app functionality in any way. But their existence in the database usually indicates that the app itself may contain an error that leads to inconsistent data.
 
+The FKC feature is designed to safeguard against scenarios that would lead to dangling references. Using FKCs is also a good practice of database development.
 
-## Adding Foreign Key Constraints in new projects
+With this feature, if the app is going to create a dangling reference, a runtime exception is thrown. This allows the developer to identify and investigate the root cause of the dangling reference. Without that feature, the erroneous scenario would go unnoticed.
+
+### 5.2 Adding Foreign Key Constraints to New Projects
 
 Foreign Key Constraints are enabled for new projects starting with version 10.6. This applies to:
 
-- Projects created from scratch using a starter app
-- Projects created using “Import app package” functionality
+* Projects created from scratch using a starter app
+* Projects created using [Import app package](/refguide/import-app-package-dialog/)
 
-Projects created before 10.6 are not affected. This means that if your project is created in a version of Studio Pro earlier than 10.6 and then upgraded to 10.6 or a later version, Foreign Key Constraints do not get enabled for it.
+Apps created before 10.6 are not affected. This means that if your app is created in a version of Studio Pro below 10.6.0 and then upgraded to version 10.6.0 or above, FKCs do not get enabled for it.
 
-When a new project is created using a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted in such database. That cleanup is performed only once and is not repeated on consequent runs for the same database.
+When a new app is created from a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted from the database. This cleanup is performed only once and is not repeated on consequent runs for the same database.

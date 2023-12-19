@@ -14,7 +14,7 @@ This activity can only be used in **Microflows**.
 This activity is in Studio Pro [10.2](/releasenotes/studio-pro/10.2/) and above.
 {{% /alert %}}
 
-## 1 Introduction
+## 1 Introduction 
 
 [verify that this activity is indeed under Integration Activities or its own thing]
 

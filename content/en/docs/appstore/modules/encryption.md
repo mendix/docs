@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the following encryption needs:
 
 * Plain text encryption (for example, passwords)
-* FileDocument encryption (for example, files of photos)
+* FileDocument encryption (for example, files or photos)
 
 ## 2 Plain Text Encryption
 

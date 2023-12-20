@@ -156,7 +156,7 @@ Follow these steps to describe your content:
 
 #### 4.1.2 Providing License Details {#license}
 
-Select the type of **License** you want applied to your app (if applicable).
+Select the type of **License** you want applied to your app.
 
 ##### 4.1.2.1 Open-Source Software Licenses
 

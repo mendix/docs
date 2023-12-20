@@ -61,16 +61,18 @@ The following entries are required in the **General** tab:
 The HTTP Headers do the following:
 
 * Authenticate the app to perform the action via the connectivity service
+* Authenticate the app to the correct Shared Service Center (SSC) location
 * Authenticate the user to access the endpoint defined by the destination
 * Request to return the data in JSON format
 
 |Key|Value|
 |---|---|
 |SAP-Connectivity-Authentication|$DestinationObject/SapConnectivityAuthentication|
+|SAP-Connectivity-SCC-Location_ID|$DestinationObject/SapConnectivitySccLocationId|
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-http-headers.png" alt="REST HTTP headers tab" >}}
+For more information, see [rest-service-httpHeaders](https://github.com/mendix/docs/assets/17471702/58ebc5ae-0e19-4509-9ab5-045467f57a0c).
 
 ### 3.2 Configuring a SOAP Call
 
@@ -109,7 +111,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 |Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
 |Accept|'application/json'|
 
-{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/web-service-http-headers.png" alt="SOAP web services HTTP headers tab" >}}
+For more information, see [web-service-httpHeaders](https://github.com/mendix/docs/assets/17471702/32d677eb-a968-490f-8f90-b058d41ec868).
 
 ## 4 Read More
 

@@ -116,7 +116,7 @@ The portable installer does not include all tools that come installed with Studi
 
 Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking on the **Add custom version** button in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
 
-{{< figure src="/attachments/refguide/installation/install/version-selector.png"   >}}
+{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="300">}}
 
 ## 7 Signing In
 

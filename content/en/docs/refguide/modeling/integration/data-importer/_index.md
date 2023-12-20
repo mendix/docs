@@ -1,6 +1,6 @@
 ---
 title: "Data Importer Extension"
-url: /appstore/connectors/data-importer/
+url: /appstore/modules/data-importer/
 weight: 21
 description: "Overview of the Data Importer in Studio Pro"
 tags: ["studio pro", "data importer", "excel importer"]

@@ -114,6 +114,10 @@ While the regular installer installs Mendix Studio Pro dependencies in system di
 
 The portable installer does not include all tools that come installed with Studio Pro or can be leveraged by Studio Pro, such as the MPR tool, mx, mxbuild, mxuit, or the Console Log. The portable installer only includes the tools that are necessary to be able to build with Studio Pro and to run apps locally. 
 
+Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking on the **Add custom version** button in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
+
+{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="300">}}
+
 ## 7 Signing In
 
 When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.

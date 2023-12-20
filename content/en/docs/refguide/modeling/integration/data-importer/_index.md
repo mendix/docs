@@ -48,7 +48,7 @@ This connector has no dependencies, but it needs [Mendix Runtime](https://market
 
 To import data, right-click on the module and click **Add other** > **Data Importer**.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/data-importer-menu.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/data-importer-menu.png" >}}
 
 Name the document, click **OK**, and the new Data Importer document opens. 
 
@@ -56,7 +56,7 @@ Name the document, click **OK**, and the new Data Importer document opens.
 
 Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/select-file-for-preview.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/select-file-for-preview.png" >}}
 
 Select or drop the file in the **Select Source File** window. You can choose which sheet to import data from and specify the header row and starting data row.
 
@@ -64,7 +64,7 @@ Select or drop the file in the **Select Source File** window. You can choose whi
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/select-sheet-and-header-data-row.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/select-sheet-and-header-data-row.png" >}}
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The column names correspond to the attribute name within the entity.
 
@@ -72,7 +72,7 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/preview-data-and-entity.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/preview-data-and-entity.png" >}}
 
 ### 2.3 Creating an Entity {#create-entity}
 
@@ -80,7 +80,7 @@ You can view the entity in the Entity Preview  section. You can change the name 
 
 When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/source-to-target-mapping.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/source-to-target-mapping.png" >}}
 
 The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
 
@@ -90,18 +90,18 @@ Use the previously created Data Importer document to import data from your Excel
 
 1. Create a new microflow and drag the **Import data from file** activity into it.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/custom-activity.png" >}}
+   {{< figure src="/attachments/appstore/modules/data-importer-extension/custom-activity.png" >}}
 
 2. Double-click the activity and in the **File** field, sselect an input file.
 3. In the **Data importer document** field, click *Select* and choose the Data Importer document you want to use.
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/choose-data-importer-template.png" >}}
+  {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
 
 1. After selecting the Data Importer document, the **Return type** and **Variable name** will be autopopulate. You can also change the name  of the output variable.
 2. Click **OK**.
 
 The custom activity is configrued and you can import data from input files.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/example-microflow.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/example-microflow.png" >}}
 
 ## 4 Running Your App
 
@@ -111,4 +111,4 @@ To perform testing for your app, you can do the following actions:
 2. Deploy your app locally and browse and upload an input file which resembles the file used to create Data Importer document.
 3. View the message about x number of rows being imported into a list of entities. 
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/local-app-run.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/local-app-run.png" >}}

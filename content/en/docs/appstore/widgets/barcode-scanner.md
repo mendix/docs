@@ -26,7 +26,7 @@ For security reasons, certain browsers will only allow access to an end-user dev
 The only requirement for the Barcode Scanner widget is that it needs to be placed inside a data view that provides an object with a string attribute. The barcode detection result (being a string) will be stored in this attribute.
 
 {{% alert color="info" %}}
-Make sure the length of this string attribute is long enough to store the barcode detection results for your use case, or the application will throw an error. If you are not sure about what length is required, then we recommend setting the string attribute length to **Unlimited**.
+Make sure the length of this string attribute is long enough to store the barcode detection results for your use case, or the application will throw an error. If you are not sure about what length is required, then Mendix recommends setting the string attribute length to **Unlimited**.
 {{% /alert %}}
 
 When the widget is placed on a page, it will automatically put a black canvas overlay on top of the entire page. This canvas will provide end-users with the ability to see their device's camera feed and scan barcodes if they allow the permission request from the application.

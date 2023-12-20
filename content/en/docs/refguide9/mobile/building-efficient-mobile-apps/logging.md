@@ -9,7 +9,7 @@ aliases:
 ---
 ## 1 Introduction
 
-In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
+In Mendix Studio Pro 9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
 
 {{% alert color="warning" %}}
 Please note the following current limitations regarding native client logs:
@@ -65,7 +65,7 @@ However, you may choose to add more entry and exit points at the **Debug** level
 
 ## 4 Native Client Default Log Nodes
 
-This section provides some details on specific log nodes used by the Mendix native client. We recommend that if you write your own [log messages](/refguide9/log-message/) you should also use your own log node names to avoid confusion with the Mendix log messages.
+This section provides some details on specific log nodes used by the Mendix native client. Mendix recommends that if you write your own [log messages](/refguide9/log-message/), you should also use your own log node names to avoid confusion with the Mendix log messages.
 
 ### 4.1 Default Mendix Native Client Log Nodes {#native-client-log-nodes}
 
@@ -101,7 +101,7 @@ When the app goes to the background or closes, the native client will save buffe
 
 In this scenario, it will discard older messages so that it will not overflow with too many logs. An additional `info` log message will be added with the number of discarded logs and the timestamps of when these log messages were ignored.
 
-The body of the log message consists of the timestamp in which the message was logged (which differs from the timestamp that is normally shown in the Cloud Portal as that one refers to the timestamps the log messages were collected), a unique session id so that the log messages can be grouped by device or origin, and the main content of the log message itself. 
+The body of the log message consists of the timestamp in which the message was logged (which differs from the timestamp that is normally shown in the Cloud Portal as that one refers to the timestamps the log messages were collected), a unique session ID so that the log messages can be grouped by device or origin, and the main content of the log message itself. 
 
 ## 6 Extending Logging
 

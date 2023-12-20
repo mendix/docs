@@ -6,8 +6,8 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -33,7 +33,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 The properties dialog box consists of four tabs:
 
@@ -269,5 +269,5 @@ To prevent this type of attack from happening, you can take the following precau
 If that is not possible:
 
 * Always validate and sanitize the user inputs
-* Maintain a whitelist of the domains that should be accessible and use it to validate URLs
+* Maintain a safe list of the domains that should be accessible and use it to validate URLs
 * Do not allow the user to access an unprocessed response from the call (note that it might not be sufficient to make secret information invisible on a page. See also the section on [Communication Patterns](/refguide/communication-patterns/#security))

@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide9/version-control/).
+This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Control](/refguide9/version-control/).
 
 ## 2 Starting an App with Version Control
 
@@ -81,7 +81,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
+Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
@@ -316,7 +316,7 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
 
-You can also configure the git driver locally per repository using the following commands:
+You can also configure the Git driver locally per repository using the following commands:
 
 ```text {linenos=false}
 git config merge.custom.name "custom merge driver for specific files"
@@ -402,6 +402,8 @@ Connecting to SVN is done with your Mendix credentials:
 * URL: `https://teamserver.sprintr.com/<your AppID>/`
 * Username: your Mendix account username
 * Password: your Mendix account password
+
+    {{% alert color="info" %}}If you are using BYOIDP, direct access to Team Server is no longer possible. For more information, see the in the [BYOIDP and Team Server](/control-center/security/set-up-sso-byoidp/#team-server) section *Set Up an SSO (BYOIDP)* .{{% /alert %}}
 
 ### 9.3 Adding Files and Directories
 

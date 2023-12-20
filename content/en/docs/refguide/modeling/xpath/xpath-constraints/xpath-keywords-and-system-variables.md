@@ -142,15 +142,19 @@ This query returns only customers who have registered this week:
 
 This query returns only customers who have registered in the past three years:
 
+[//]: # (<!-- markdownlint-disable no-space-in-emphasis -->)
+
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [DateRegistered > '[%BeginOfCurrentDay%] - 3 *[%YearLength%]']
+    [DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3* [%YearLength%]']
+    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
 {{< /tabpane >}}
+
+[//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
 
 This query returns users with the role "Administrator":
 

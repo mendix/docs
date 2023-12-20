@@ -7,8 +7,8 @@ tags: ["studio pro", "retrieve", "activity", "microflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -34,7 +34,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Source {#source}
 
@@ -67,7 +67,15 @@ This property specifies which association is followed. The association must be a
 
 This property specifies the entity from which to retrieve instances (objects).
 
-#### 3.3.2 Range
+#### 3.3.2 XPath Constraint
+
+The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
+
+{{% alert color="info" %}}
+Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.
+{{% /alert %}}
+
+#### 3.3.3 Range
 
 This property specifies the range that determines how many objects are retrieved:
 
@@ -76,14 +84,6 @@ This property specifies the range that determines how many objects are retrieved
 | All | Retrieve all objects at once. |
 | First | Retrieve only the first object. The result of the retrieve action will be a single object instead of a list. Note that when you know you have only one object or you only want to use the first object in a list, use **First** to get a result of the object type (as opposed to a list). |
 | Custom | Retrieve a given number of objects (**Amount**) starting at a given index (**Offset**). The amount and offset are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. |
-
-#### 3.3.3 XPath Constraint
-
-The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
-
-{{% alert color="info" %}}
-Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.
-{{% /alert %}}
 
 #### 3.3.4 Sorting
 

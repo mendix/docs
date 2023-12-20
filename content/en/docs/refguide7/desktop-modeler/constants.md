@@ -9,7 +9,7 @@ Constants are used to define configuration values. These can differ per environm
 
 When running the application on SAP BTP, or a licensed Mendix Cloud environment, you can configure each environment separately using the *Model Options* tab of the *Environment Details* page to set your constants. See [Environment Details](/developerportal/deploy/environments-details/) for more information.
 
-For other cloud environments, for example, MindSphere, the constants can be accessed as *Environment Variables* in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant**. For example `mymodule.myconstant`.
+For other cloud environments, for example, Insights Hub, the constants can be accessed as *Environment Variables* in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant**. For example `mymodule.myconstant`.
 
 When running the application locally or in a sandbox, the values defined in the Modeler are used.
 

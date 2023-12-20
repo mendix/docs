@@ -58,7 +58,7 @@ To submit a request with Mendix Support, follow these steps:
 
         {{% alert color="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
 
-    * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
+    * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/control-center/company-settings/)
     * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/appstore/partner-solutions/ats/))
     * **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/appstore/partner-solutions/apd/))
     * **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication/) (for example, when you get a new phone)
@@ -83,7 +83,7 @@ To submit a request with Mendix Support, follow these steps:
         * **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
         * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
         * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
-        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
+        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
         * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
     * **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
@@ -179,7 +179,7 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 * Reproducible steps
 
 {{% alert color="info" %}}
-Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/general/app-store-content-support/).
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
 {{% /alert %}}
 
 ### 5.7 Mobile Problems

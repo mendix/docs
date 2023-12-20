@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources and actions in apps through the [Integration Pane](/refguide/integration-pane/).
 
-OData services that are registered in the [Catalog](/catalog/) expose entities that can be dragged and dropped into your domain model through the [Integration Pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
+OData services that are registered in the [Catalog](/catalog/) publish entities that can be dragged and dropped into your domain model through the [Integration Pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and published entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](/refguide/consumed-odata-service/).
 
@@ -33,13 +33,13 @@ External entities have some limitations compared to persistable entities:
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints/) in the access rules of external entities cannot be set
 
-Associations between external entities (as defined in the originating app) are shown in the domain model. You can only use the associations where both sides are exposed.
+Associations between external entities (as defined in the originating app) are shown in the domain model. You can only use the associations where both sides are published.
 
 You can create associations between local [persistable entities](/refguide/persistability/#persistable) and external entities. For those associations, the persistable entities need to be the owner.
 
 ### 2.2 External Actions {#external-actions}
 
-External actions allow you to execute actions exposed by the OData service. An action can take parameters and may return a value. This is defined in the OData service contract.
+External actions allow you to execute actions published by the OData service. An action can take parameters and may return a value. This is defined in the OData service contract.
 
 There are some limitations on which actions can be consumed. These are described in the [Requirements on Actions](/refguide/consumed-odata-service-requirements/#actions) section of *Consumed OData Service Requirements*.
 
@@ -55,7 +55,7 @@ This means that the consumed service has to be **Updated** to the new contract. 
 
 #### 2.3.1 Limitations {#consumed-odata-service-limitations}
 
-When you update a [consumed OData service](/refguide/consumed-odata-service/) with a new version from Mendix Data Hub, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
+When you update a [consumed OData service](/refguide/consumed-odata-service/) with a new version from the Catalog, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
 
 ## 3 Runtime Considerations
 

@@ -6,9 +6,19 @@ description: "These release notes showcase each release of the iOS and Android M
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 ---
 
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
+For more information on the Make It Native app, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
+
+## iOS 1.2.1 / Android 1.2.1
+
+**Release date: November 24, 2023**
+
+### Features
+
+* We added new apps to Showcase:
+    * Citrus Grove Retail: a grocery store online shopping app
+    * New Garden County Inspection: an inspection and task assignment app
 
 ## iOS 1.2.0 / Android 1.2.0
 

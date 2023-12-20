@@ -158,7 +158,7 @@ To add developers to the Partner Profile, follow these steps:
     Only the certifications and points of the added developers will be counted in the Partner Profile. The highest rank of certification will be added to the overview.
 
 {{% alert color="info" %}}
-Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/developerportal/control-center/).
+Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/control-center/).
 {{% /alert %}}
 
 ## 8 Editing Testimonials

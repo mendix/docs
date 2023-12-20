@@ -103,6 +103,13 @@ spec:
   ingressClassName: alb # Optional, can be omitted : specify the Ingress class
   ingressPath: "/" # Optional, can be omitted : specify the Ingress path. Anything other than "/" or "/*" will be ignored as Mendix applications don't support path based routing
   ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
+  topologySpreadConstraints: # Optional, can be omitted : specify Kubernetes topology spread constraints
+    - maxSkew: 1
+      topologyKey: topology.kubernetes.io/zone
+      whenUnsatisfiable: DoNotSchedule
+      labelSelector:
+        matchLabels:
+          privatecloud.mendix.com/app: example-mendixapp
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
@@ -160,7 +167,7 @@ spec:
   customPodLabels: # Optional: custom pod labels
     general: # Optional: general pod labels (applied to all app-related pods)
       azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
-   runtimeLicenseProduct: # Optional: Specify the type of product required for the Runtime License. This is applicable when PCLM is used for licensing. By default, the value is set to Standard, if left empty   
+  runtimeLicenseProduct: # Optional: Specify the type of product required for the Runtime License. This is applicable when PCLM is used for licensing. By default, the value is set to Standard, if left empty
 ```
 
 You need to make the following changes:
@@ -180,6 +187,7 @@ You need to make the following changes:
 * **endpointAnnotations** – set custom annotations for Ingress (or OpenShift Route) objects; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
 * **ingressPath** – specify a custom Ingress path; this overrides the [default ingress path](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
 * **ingressPathType** – specify a custom Ingress class name; this overrides the [default ingress pathType](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
+* **topologySpreadConstraints** – specify Kubernetes [topology spread constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) for the app's runtime pods; please specify only constraints that are supported by your cluster
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)

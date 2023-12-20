@@ -19,7 +19,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 * Create microflows (see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)
-* Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+* Add Marketplace content to your app (see [Using Marketplace Content](/appstore/overview/use-content/))
 * Secure your applications (see [How to Create a Secure App](/howto/security/create-a-secure-app/))
 
 ## 3 Preparing the Data Structure, GUI and Modules

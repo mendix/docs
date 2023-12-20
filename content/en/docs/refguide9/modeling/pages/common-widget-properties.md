@@ -77,7 +77,7 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 {{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
 
 {{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+The dynamic classes property was introduced in Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
@@ -349,7 +349,7 @@ You can choose both **Context** conditions and **Module roles** conditions to ap
 {{% alert color="warning" %}}
 With the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages.
 
-Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. We recommend that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
+Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. Mendix recommends that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
 {{% /alert %}}
 
 #### 9.1.1 Context

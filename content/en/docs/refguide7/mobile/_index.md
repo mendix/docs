@@ -33,7 +33,7 @@ Some widgets are more suitable to mobile use than others. For example, the [data
 
 Mendix apps can simply be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript.
 
-If you want to publish your app in the Apple App Store or Google Play, you have to wrap the app in a native shell. We use [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a Javascript API. These apps are also called "hybrid" apps, because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
+If you want to publish your app in the Apple App Store or Google Play, you have to wrap the app in a native shell. Mendix uses [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a Javascript API. These apps are also called "hybrid" apps, because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
 
 ### 5.1 Hybrid Mobile Widgets
 

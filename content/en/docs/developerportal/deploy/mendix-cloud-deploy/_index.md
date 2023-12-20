@@ -19,7 +19,7 @@ aliases:
 
 Mendix Cloud is a public cloud service for Mendix applications; it is the default deployment option for Mendix applications. You can either deploy a limited [Free App](https://www.mendix.com/evaluation-guide/evaluation-learning/getting-started/#evaluate-before) or an app running on a licensed cloud node.
 
-Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated works in exactly the same way as Mendix Cloud, but it runs on your own virtual private cloud and hosts only your company's apps.
+Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running apps of only one organization.
 
 ### 1.1 Free App {#free-app}
 
@@ -62,7 +62,7 @@ If you are an existing customer, you should deploy into your licensed cloud node
 
 As noted in the table above, a Free App goes into sleep mode after about an hour of inactivity. If you access the app while it is inactive, it displays the following message: 
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% >}}
 
 If, after a couple of minutes, your app does not wake up, contact [Mendix Support](http://support.mendix.com).
 
@@ -152,7 +152,7 @@ To deploy your app directly from Studio Pro, follow these steps:
 2. Open the licensed app.
 3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% >}}
 
 4. In the **Deploy to Mendix Cloud** dialog box, click **Deploy**.
 5. You will see a dialog box with the following message: "Successfully started Mendix Cloud deployment. To see the uploaded package, click **Show online** in the dialog box."
@@ -162,14 +162,12 @@ To deploy your app directly from Studio Pro, follow these steps:
 You can also deploy an app from the Team Server. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Apps** in the top navigation panel.
-3. Select your app.
-4. Go to **Environments**.
-5. Click **Create package from team server**.
-6. Select your desired branch and revision and click **Next**.
-7. Give the build a version number and click **Build this revision**.
+1. Open your app's **Environments** page.
+1. Click **Create Deployment Package**.
+1. Select your desired branch and revision and click **Next**.
+1. Give the build a version number and click **Build this revision**.
 
-The package is now deployed to the cloud.
+The package is now deployed to Mendix Cloud.
 
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
@@ -179,6 +177,9 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
 2. Open your app.
 3. Go to **Environments**.
 4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy**.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" alt="" >}}
+
 5. Click the environment to which you want to deploy the package.
 6. Click **Transport**.
 
@@ -199,15 +200,15 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected"  width=60% >}}
 
-* Alternatively, in the top bar of Studio Pro, click **Run** or **Publish**.
+* Alternatively, in the top bar of Studio Pro, click **Run** (▶) or **Publish**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" width=20% >}}
 
 ## 3 Status of Deployment
 
-The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment.
+The [Mendix status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment.
 
 ## 4 Mendix Pricing Plans {#plans}
 

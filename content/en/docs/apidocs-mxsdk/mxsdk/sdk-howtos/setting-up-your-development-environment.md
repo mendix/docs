@@ -37,7 +37,7 @@ To set up your development tools, follow these steps:
     v14.15.0
     ```
 
-    For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
+    For Debian-based Linux distributions such as Ubuntu, please refer to [NodeSource Node.js Binary Distributions](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
     In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 

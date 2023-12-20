@@ -9,23 +9,21 @@ tags: ["Node","Permission","Developer Portal"]
 
 ## 1 Introduction
 
-Fine-grained access management for your Mendix Cloud environments is handled in the **Permissions** tab of the [Environments](/developerportal/deploy/environments/) page for your app.
+Fine-grained access management for your Mendix Cloud environments is handled in the **Permissions** tab of your app's [Environments](/developerportal/deploy/environments/) page.
 
-Here, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can manage various permissions to the environments for each team member.
+On this tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and any team members with **Manage Permissions** enabled can manage various permissions to the environments for each team member.
 
-Each team member can subscribe to (and unsubscribe from) the alerts.
-
-To learn more about the roles of team members, see [App Roles](/developerportal/general/app-roles/).
+Team members who have a role with **Cloud Access** can view the permissions. For more information, see [App Roles](/developerportal/general/app-roles/).
 
 ## 2 Viewing Your Nodes{#nodes}
 
-To find a list of all the Mendix Cloud licensed nodes that you have access to, open the [Switch to](/developerportal/#navigation) menu and select **Cloud**.
+To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment**.
 
 You will see a list of all your licensed nodes:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png" alt="Licensed Mendix Cloud nodes" >}}
 
-Click **Environments** to go to the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to that node.
+To go to the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node, click **Environments** on that node.
 
 ## 3 Permissions
 
@@ -33,20 +31,18 @@ In the **Permissions** tab of the **Environments** page, you can manage access t
 
 ### 3.1 User Roles for Managing Permissions
 
-Users with the Technical Contact role and any team members with **Manage Permissions** enabled can manage the permission settings for the cloud node.
+The Technical Contact and any team members with **Manage Permissions** enabled can manage the permission settings for the cloud node.
 
 {{% alert color="info" %}}
 Mendix Admins can manage permissions using the Deploy API v4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).
 {{% /alert %}}
 
-The permissions are set independently for each environment. You can choose the environment at the top of the **Permissions** tab. Changing the permissions for a production environment requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
+Permissions are set independently for each environment. To choose the environment, use the drop-down list in the upper-right corner of the **Permissions** tab. Changing the permissions for a production environment requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
-Team members with a user role that includes **Cloud Access**** can view the permissions.
+Team members with a user role that includes **Cloud Access** can view the permissions.
 
 {{% alert color="info" %}}
-Team members with a user role that includes **Cloud Access** are listed in the **Permissions** tab. This tab also shows deactivated users who have been given these permissions, even though these users no longer have access to your project. 
-
-You can change user roles for team members in [Team](/developerportal/general/team/).
+Team members with a user role that includes **Cloud Access** are listed in the **Permissions** tab. This tab also shows deactivated users who have been given these permissions, even though these users no longer have access to your project.<br><br>You can change user roles for team members in [Team](/developerportal/general/team/).
 {{% /alert %}}
 
 ### 3.2 Accessing Node Permissions
@@ -56,19 +52,19 @@ To access the node permissions, do the following:
 1. Click **Environments** for your app.
 2. Switch to the **Permissions** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permissions.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/permissions-tab.png" >}}
 
-3. From the drop-down menu, select the environment for which you want to change permissions.
+3. From the drop-down list in the upper-right corner, select the environment for which you want to change permissions.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-flexible-environments.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/change-environments.png" alt="" width=25% >}}
 
-4. Complete two-factor authentication, if required for the selected environment.
+4. If prompted, complete two-factor authentication.
 
 ### 3.3 Permissions
 
-The Technical Contact and team members specifically allowed to manage permissions can set the following node permissions: **Manage Permissions**, **Transport Rights**, **Access to Backups**, **Receive Alerts**, **API Rights**, and **Access to Monitoring**.
+The Technical Contact can enable and disable **Manage Permissions** for the other team members. Any team members with **Manage Permissions** enabled can set the following node permissions: **Transport Rights**, **Access to Backups**, **Receive Alerts**, **API Rights**, and **Access to Monitoring**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodepermission.png" alt="Node permissions dashboard" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permission.png" alt="Node permissions dashboard" >}}
 
 #### 3.3.1 Manage Permissions
 
@@ -92,7 +88,7 @@ For more information, see [Backups](/developerportal/operate/backups/).
 
 #### 3.3.4 Receive Alerts
 
-Team members with **Receives Alerts** permissions will receive an email whenever an alert is triggered.
+Team members with **Receive Alerts** permissions will receive an email whenever an alert is triggered.
 
 Alerts are triggered by any of the following circumstances:
 
@@ -125,13 +121,13 @@ The CSV file contains a list of environments, users, and their respective permis
 
 In addition, all changes to node permissions are logged on the activity log.
 
-## 5 Technical Contact
+## 5 The Technical Contact
 
-A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
+A cloud node has a single Technical Contact. The Technical Contact manages the cloud node and can control whether the other team members have access to **Manage Permissions**.
 
 The Technical Contact can give the Technical Contact role to another team member. To transfer the role from yourself to another user, click **Change to Technical Contact** under the other user's name. Note that only one user at a time can be the Technical Contact.
 
-For full details on this role, see the [Technical Contact](/developerportal/general/app-roles/#technical-contact) section of **App Roles**.
+For full details on this role, see the [Technical Contact](/developerportal/general/app-roles/#technical-contact) section of *App Roles*.
 
 {{% alert color="info" %}}
 Mendix Admins can also give the Technical Contact role to another team member using the Deploy API v4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).

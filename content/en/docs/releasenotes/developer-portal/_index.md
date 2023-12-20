@@ -143,7 +143,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Deprecations
 
-* We have done all the preparation work for retiring Stories (remember it will happen on October 1). After that date, you will still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
+* We have done all the preparation work for retiring Stories (remember it will happen on October 1, 2023). After that date, you will still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
 
 ### September 7, 2023
 
@@ -164,7 +164,7 @@ We have made the following improvements to the **Access Management** page in Por
 
     * In Feedback, we added a new filter called "status" on the **Inbox** page and the **Archive** page.
     * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
-    * We added documentation links on the home page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+    * We added documentation links on the home page of **Feedback** and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 
 #### Improvements
 
@@ -206,7 +206,7 @@ We have made the following improvements to the **Access Management** page in Por
 
     * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
     * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
-    * Support defining the duration of the survey
+    * Supports defining the duration of the survey
     * Offers the toaster feature for you to designate the survey's on-screen placement
     * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
     * Supports recording all survey responses, even if a customer does not complete the entire survey
@@ -434,18 +434,12 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability!
-
-  We made the following improvements:
+* We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability! We made the following improvements:
 
     * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
-
     * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
-
     * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
-
     * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
-
     * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
 
   From this point on, Epics is the default project management tool for all new apps.
@@ -618,7 +612,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a known issue where not all app images were displayed correctly on the [My Apps](/developerportal/#my-apps) page. (Ticket 148379)
+* We fixed a [known issue](#april-ki) where not all app images were displayed correctly on the [My Apps](/developerportal/#my-apps) page. (Ticket 148379)
 
 ### April 21, 2022
 
@@ -626,7 +620,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We removed the old Stories UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
 
-#### Known Issues
+#### Known Issues {#april-ki}
 
 * Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
     * Fixed on [May 5, 2022](#may-fifth).
@@ -674,14 +668,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We recently changed the password length requirement from 8 to 12 characters. We noticed this caused some confusion, because not all pages where the password can be reset or changed listed the password requirements. We made sure that all pages now list those requirements.
 * During the last release, we introduced an issue where the Developer Portal exposed apps without a repository to Studio Pro. We patched this issue on December 17, 2021 with a band-aid. This release sees a more permanent solution.
-
-### December 15, 2021
-
-#### Improvements
-
-* We changed the minimum length of passwords from 8 to 12 characters.
 
 ### December 2, 2021
 
@@ -829,7 +816,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue where you could not always see the avatars of other users in the same app.
 * We fixed an issue where there were styling glitches visible when adding a description to a newly created story.
-* We fixed an issue where Mendix Support was not always able to adjust app permissions on behalf of customers.
 
 ### May 7, 2021
 
@@ -1172,12 +1158,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
-### May 10, 2019
-
-#### Support Improvements
-
-* We have changed the way you request a license for a new app. You can now request a license using the [Request New App Node](https://newnode.mendix.com/) app. Other requests should continue to be made through the [Support Portal](https://support.mendix.com).
-
 ### May 2, 2019
 
 #### UI Improvements
@@ -1267,7 +1247,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and **People** pages. (Ticket 69702)
 
 ### October 11, 2018
 

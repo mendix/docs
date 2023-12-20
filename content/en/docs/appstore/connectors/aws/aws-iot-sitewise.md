@@ -749,9 +749,9 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | --- | --- | --- |
 | `ACCESS_DENIED_EXCEPTION` | ACCESS_DENIED_EXCEPTION | The property value returned and error because access was denied. |
 | `CONFLICTING_OPERATION_EXCEPTION` | CONFLICTING_OPERATION_EXCEPTION | Your request has conflicting operations. This can occur if you're trying to perform more than one operation on the same resource at the same time. |
-| `INTERNAL_FAILURE_EXCEPTION` | INTERNAL_FAILURE_EXCEPTION | AWS IoT SiteWise can't process your request right now. Try again later. |
+| `INTERNAL_FAILURE_EXCEPTION` | INTERNAL_FAILURE_EXCEPTION | AWS IoT SiteWise cannot process your request right now. Try again later. |
 | `INVALID_REQUEST_EXCEPTION` | INVALID_REQUEST_EXCEPTION | The property value returned an error because the request was invalid. |
-| `LIMIT_EXCEEDED_EXCEPTION` | LIMIT_EXCEEDED_EXCEPTION | You've reached the limit for a resource. For example, this can occur if you're trying to associate more than the allowed number of child properties for an asset.|
+| `LIMIT_EXCEEDED_EXCEPTION` | LIMIT_EXCEEDED_EXCEPTION | You have reached the limit for a resource. For example, this can occur if you are trying to associate more than the allowed number of child properties for an asset.|
 | `RESOURCE_NOT_FOUND_EXCEPTION` | RESOURCE_NOT_FOUND_EXCEPTION | The property value you are trying to change was not found. |
 | `SERVICE_UNAVAILABLE_EXCEPTION` | SERVICE_UNAVAILABLE_EXCEPTION | The requested service is unavailable. |
 | `THROTTLING_EXCEPTION` | THROTTLING_EXCEPTION | Your request exceeded a rate limit. For example, you might have exceeded the number of AWS IoT SiteWise assets that can be created per second. |

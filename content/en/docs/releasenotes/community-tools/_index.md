@@ -1,13 +1,13 @@
 ---
 title: "Community Tools"
-url: /releasenotes/developer-portal/
+url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
 tags: ["forum", "mendix profile", "profile"]
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the Mendix Profile, Mendix Forum, and other [Mendix community tools](ADDLINK).
+These release notes cover changes to the Mendix Profile, Mendix Forum, and other [Mendix community tools](add-link).
 
 ## 2023
 

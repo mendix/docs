@@ -74,7 +74,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
-8. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
+8. For the **Credentials** parameter, provide a **Credentials Object** from the AWS Authentication connector:
     1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
     2. Drag the **Generate Credentials** to the beginning of your microflow.
     3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.

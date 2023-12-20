@@ -13,6 +13,37 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### December 8, 2023
+
+#### Fixes
+
+* We fixed an issue where the search feature in Studio Pro did not work as expected.
+
+### November 30, 2023
+
+#### Fixes
+
+* We have fixed an issue where downloaded contracts had the wrong extension.
+* Image quality on the home page has been improved.
+* The sample dataset badge no longer overlaps with the icon.
+
+### November 23, 2023
+
+#### Improvement
+
+* We have redirected the **Catalog** link in the Control Center to the **Curate** page instead of the Catalog home page.
+* We have displayed enumeration data types for the attributes of a data set in the Catalog UI.
+
+#### Fixes
+
+* We fixed an issue where the data source description did not display on the tile in the Popular Data Sources section.
+
+### November 16, 2023
+
+#### Fixes
+
+* We fixed an issue where some applications did not show up in the drop-down menu of the registration form.
+
 ### November 2, 2023
 
 #### Improvement
@@ -253,7 +284,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * You can now view authentication details in the [data source details](/catalog/manage/search/#service-details) page. 
-* The **Technical Owner** can now only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+* The **Technical Owner** can now only be changed in **Control Center**, not within the **Catalog**. See the [Custom Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 
 #### Fixes
 
@@ -363,7 +394,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvements
 
-* Mendix Admins can now assign a new [external user](/developerportal/control-center/catalog-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Mendix Admins can now assign a new [external user](/control-center/catalog-admin/#external-users) when removing the existing one from company's Catalog. To remove a user, go to **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 #### Fixes
 
@@ -649,7 +680,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/catalog-admin/#settings) page in Control Center with a default discoverability setting.
+* We added a new **Settings** tab to the [Data Hub](/control-center/catalog-admin/#settings) page in Control Center with a default discoverability setting.
 * We added a discoverability radio button to the data source [registration](/catalog/register/register-data/) form.
 
 #### Fixes
@@ -674,7 +705,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 
 * We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
-* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Admins.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Admins.
 
 ### October 14, 2021
 
@@ -734,7 +765,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed an issue where updating a service version created a new endpoint instead of updating the existing one.
 * We fixed an issue that caused pagination URLs to be returned as *http* links rather than *https*.
-* We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/developerportal/control-center/#catalog) page navigated to the Data Hub home page. Now, it navigates to Control Center.
+* We fixed an issue where clicking **Control Center** in the top bar of the [Catalog Administration](/control-center/catalog-admin/) page navigated to the Data Hub home page. Now, it navigates to Control Center.
 
 ### September 2, 2021
 
@@ -752,7 +783,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `Mindsphere` application types.
-* We added Catalog integration with [Control Center](/developerportal/control-center/#catalog). For details, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
+* We added Catalog integration with [Control Center](/control-center/catalog-admin/). For details, see [Catalog Administration](/control-center/catalog-admin/).
 
 ### August 19, 2021
 

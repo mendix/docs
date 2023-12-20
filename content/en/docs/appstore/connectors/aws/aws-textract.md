@@ -33,7 +33,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Textract connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon Textract connector into your app.
 
 ## 3 Configuration
 
@@ -381,4 +381,4 @@ This activity returns a `GetExpenseAnalysisResponse` object with objects from th
 | --- | --- | --- |
 | `GetExpenseAnalysisResponse` | | This entity is the response for the Amazon Textract `GetExpenseAnalyis` action. It holds information about the JobStatus. If too many Blocks were found, it contains a NextToken that can be used to retrieve the next batch of results. |
 | `AsyncExpenseDocument` | `ExpenseDocument` | This entity (and its associated entities) hold information about the extracted Expense data per page.|
-|`ExpenseAnalysisWarning`|`Warning`| This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|
+| `ExpenseAnalysisWarning` | `Warning` | This entity holds information about the warnings that were sent as part of the response, and the pages to which they apply.|

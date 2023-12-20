@@ -31,7 +31,11 @@ The **Team Server URL** can be used to directly access your app content. On SVN 
 
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
-* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/developerportal/control-center/set-up-sso-byoidp/)
+* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/control-center/security/set-up-sso-byoidp/)
+
+{{% alert color="info" %}}
+You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
+{{% /alert %}}
 
 If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 
@@ -40,9 +44,13 @@ If you are connecting to Git, or connecting to SVN using a PAT, you need to crea
 
 When connecting, your username is your Mendix account username, and your password is the PAT you created. When connecting to Git, you can also use the word *pat* as your username.
 
-{{% alert color="info" %}}
-You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
-{{% /alert %}}
+### 3.1 Using the Command Line
+
+If you want to clone/checkout your repository using the command line, you must include your PAT as part of the command.
+
+For Git, the command has the form `git clone https://pat:{USERPAT}@git.api.mendix.com/{APPID}.git`, where `{USERPAT}` is your PAT.
+
+For SVN, the command has the form `svn checkout --revision "{REVISION}" --username "{USERNAME}" --password "{USERPAT}" https://svn.home.mendix.com/{APPID}/branches/{BRANCH}`
 
 ## 4 Revision History {#revision-history}
 

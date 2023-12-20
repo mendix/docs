@@ -20,7 +20,7 @@ Solution modules are always part of a solution (any Mendix app that is suitable 
 
 ## 2 Configuring Add-on and Solution Modules
 
-You can mark a standard module (app module) as an add-on or solution module at any time, but we recommend to do so right-away when you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
+You can mark a standard module (app module) as an add-on or solution module at any time, but Mendix recommends doing so right as you start developing. We also recommend changing the module version for add-on and solution modules every time you make changes to them. 
 
 All content of add-on and solution modules is set to be hidden from consumers by default (modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
@@ -106,5 +106,5 @@ If, for some reason, you switch the add-on and solution module to an app module,
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
+* [Using Marketplace Content](/appstore/overview/use-content/)
 * [Import and Export Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/)

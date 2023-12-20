@@ -41,7 +41,7 @@ The basic package has the following features:
 
 ## 3 Purchasing a Basic Package
 
-Select your Free App in the Developer Portal, and click **Environments** in the left menu.
+Select your Free App in the Developer Portal. Click **Environments** in the navigation pane.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 

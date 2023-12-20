@@ -18,7 +18,7 @@ While developing Mendix apps, you will need to test and iterate to make the best
 
 ## 2 Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro v9.24.0 and above.
+The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro 9.24.0 and above.
 
 This app is available for both Android and iOS devices.
 
@@ -43,7 +43,7 @@ To troubleshoot issues related to the Make it Native app, see the sections below
 
 #### 3.1.1 Port Issues
 
-We recommend keeping the **Runtime port** in your [configuration](/refguide9/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Mendix recommends keeping the **Runtime port** in your [configuration](/refguide9/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 #### 3.1.2 Wifi Network Settings
 
@@ -61,7 +61,7 @@ Depending on your device settings and network characteristics, the Make it Nativ
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
 
-These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. We recommend you consult your firewall administrator.
+These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. Mendix recommends consulting your firewall administrator.
 
 For the Windows Defender firewall, the most common firewall, do the following:
 

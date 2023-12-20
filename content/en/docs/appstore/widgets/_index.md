@@ -2,7 +2,7 @@
 title: "Widgets"
 url: /appstore/widgets/
 description: "Presents details on the widgets available in the Mendix Marketplace."
-weight: 60
+weight: 7
 no_list: false
 simple_list: true
 tags: ["marketplace", "marketplace component", "module", "platform support"]

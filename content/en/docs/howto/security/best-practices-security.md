@@ -84,11 +84,11 @@ Firstly, you need to answer the question **Requires authentication** with *Yes* 
 The platform guides you towards choosing *Yes* for the API endpoints you create. 
 Intuitively this seems correct, as when the *Yes* option is toggled on. Mendix Studio Pro will reveal a variety of authentication options.
 These options will restrict which users or external systems have access to your API endpoint.
-From a security perspective this is exactly what we want.
+From a security perspective this is exactly what is wanted.
 
 However, choosing between *Yes* and *No* is not this straightforward.
 Choosing *Yes* will force your API requests to be executed in the context of a user account and require an active session to be established. 
-Skipping the step where we retrieve the user account and establish a session can have a significant performance improvement for your API.
+Skipping the step where you retrieve the user account and establish a session can have a significant performance improvement for your API.
 This is why choosing *No* can still be a viable option for your API, and it might even be the recommended option in many situations.
 
 The best practices when selecting *No* as **Requires authentication** option are as follows.
@@ -164,9 +164,22 @@ Your application might require sensitive information that should be extra encryp
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
 
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption/) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, Mendix recommends storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption/) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
 
-## 7 Using a Third-Party Identity Provider
+## 7 Using Credentials in Your App
+
+You may need to store sensitive information, such as credentials, in your app. To limit access to this sensitive information, Mendix recommends the following:
+
+* Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [developer portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
+* The constants should be blank by default (not populated with the credentials) in the app.
+
+    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configuration/#constants).
+
+* Only authorized people should be given access to set the constants when the app is deployed. This is done through the [app roles](/developerportal/general/app-roles/) and (for the Mendix Cloud) the [node permissions](/developerportal/deploy/node-permissions/).
+
+Credentials should not be stored in your database as this means that they are also included in backups. Even if they are encrypted, your app will know the encryption key so that they can be decrypted.
+
+## 8 Using a Third-Party Identity Provider
 
 When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise grade identity provider like ADFS.
 
@@ -180,15 +193,15 @@ Your application can gain the following benefits from using an identity provider
 * Stronger password policies are applied
 * The user experience is improved by facilitating single sign-on (SSO)
 
-## 8 Applying a Strong Password Policy
+## 9 Applying a Strong Password Policy
 
 By default, Mendix forces a strong password policy. The same password policy that is configured in Mendix Studio Pro is also used for apps running in a hosted environment (for example, on test, acceptance, and production).
 
-It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, we recommend avoiding this approach so that deployments will continue to force a strong password policy.
+It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, Mendix recommends avoiding this approach so that deployments will continue to force a strong password policy.
 
 The password policy can be set by via the guidelines described in [Password Policy](/refguide/password-policy/).
 
-## 9 Renaming the Administrator User
+## 10 Renaming the Administrator User
 
 Each application requires power users who should be able to administer technical functions (like configuring SSO). By default, the user who has these capabilities is called **MxAdmin** and has the **Administrator** role.
 
@@ -202,7 +215,7 @@ When deployed to the Mendix Cloud, the information about the administrator user 
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
 {{% /alert %}}
 
-## 10 Using SSL on Consumed Web Services Whenever Possible
+## 11 Using SSL on Consumed Web Services Whenever Possible
 
 Most apps consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.
 
@@ -216,7 +229,7 @@ There are several scenarios possible for protecting your outgoing connections us
 
 You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
 
-## 11 Adding HTTP Headers {#adding-http-header}
+## 12 Adding HTTP Headers {#adding-http-header}
 
 HTTP headers can add an additional layer of security and help you detect certain attacks. For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section in *Environment Details*.  
 
@@ -230,7 +243,7 @@ The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an 
 
 If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Informations Services (IIS).
 
-## 12 Maintaining a High Level of App Hygiene
+## 13 Maintaining a High Level of App Hygiene
 
 As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.
 
@@ -242,7 +255,7 @@ To keep your app hygiene at a good level, perform the following steps:
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
 
-## 13 Configuring User Roles and Access
+## 14 Configuring User Roles and Access
 
 Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 
@@ -251,11 +264,11 @@ Which users and roles are defined within an application is different per app and
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
 * The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 
-## 14 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
+## 15 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
 
 Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. 
 
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [Using Marketplace Content](/appstore/overview/use-content/).

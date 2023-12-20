@@ -190,7 +190,7 @@ Progressive web apps (PWAs) cache resources such as pages, images, and their off
 If you are experiencing unexpected issues, it is a good idea to clear the cache and make your progressive web app download all resources again. To do so, follow these steps on the affected client:
 
 1. Open the Mendix PWA in Google Chrome or Microsoft Edge.
-1.  Open the developer tools by pressing <kbd>{F12}</kbd>: 
+1. Open the developer tools by pressing <kbd>{F12}</kbd>: 
 
     {{< figure src="/attachments/refguide/mobile/progressive-web-app/pwa-cache.png" alt="Full PWA Cache" width="350">}}
 
@@ -206,3 +206,14 @@ You can choose to clear the following resources:
 * **Web SQL**: clears the offline database
 * **Cookies**: clears the session and sign out the user (local and session storage must be selected as well)
 * **Cache storage**: clears all cached pages, images, and client JavaScript code (this will also refresh HTTP headers sent from the Mendix deployment environment)
+
+### 7.2 Enabling WebSQL Support in Development
+
+Offline-first PWAs make use of WebSQL to store offline data. This was deprecated by Chromium and has since been disabled in several web browsers. To enable it for production environments, please read [this guide](https://www.mendix.com/blog/websql-removal-and-how-it-affects-your-mendix-pwas/) on our blog.
+
+This solution should not be used for local development. Instead, you should test with Google Chrome and enable support for WebSQL locally. To do this, follow these instructions:
+
+1. Open the URL `chrome://flags` in Google Chrome.
+1. Search for *WebSQL* in the search box at the top.
+1. Change the dropdown next to **Allow access to WebSQL APIs** from **Default** to **Enabled**.
+1. Close the tab and start testing your offline-first PWA locally.

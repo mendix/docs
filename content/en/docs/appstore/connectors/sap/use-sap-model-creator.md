@@ -20,7 +20,7 @@ The [OData Connector for SAP solutions](/appstore/connectors/sap/sap-odata-conne
 
 SAP data models reflect an [OData](/appstore/connectors/sap/sap-odata-connector/) service or [BAPI](/appstore/connectors/sap/sap-bapi-connector/) from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
 
-Handcrafting a Mendix domain model for these services would be a lot of work. The Model Creator for SAP Integrations automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your app. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
+Handcrafting a Mendix domain model for these services would be a lot of work. The [Model Creator for SAP Integrations](https://marketplace.mendix.com/link/component/119968) automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your app. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
 For a BAPI service you will need to download a BAPI Schema. See [Create a Mendix BAPI Module Using the Model Creator](#create-bapi-module) for information on how to use the BAPI Schema.
 
@@ -331,6 +331,6 @@ For more information on how to use the imported data model together with the ODa
 
 ## 6 Read More
 
-* [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
+* [Using Marketplace Content](/appstore/overview/use-content/)
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
 * [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/odata)

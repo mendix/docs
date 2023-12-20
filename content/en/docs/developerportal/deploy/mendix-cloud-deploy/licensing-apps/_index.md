@@ -109,9 +109,9 @@ To unlink a Free App, do the following:
 
 2. Select the app that you want to unlink.
 
-3. Go to **Environments** in the left navigation panel.
+3. Go to [Environments](/developerportal/deploy/environments/) in the navigation pane.
 
-4. If the **Environments** tab shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
+4. If the page shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/link-node.png" >}}
    
@@ -155,7 +155,7 @@ To connect your app to a licensed node, do the following:
 
 2. Select the app you want to link to the node.
 
-3. Go to **Environments** in the left navigation panel.
+3. Click **Environments** in the navigation pane.
 
 4. Click **Select a node**.
 

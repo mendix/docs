@@ -13,6 +13,37 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### December 8th, 2023
+
+#### Mendix Operator v2.14.0 {#2.14.0}
+
+* We have added the following validation checks to the `mxpc-cli` installation and configuration tool:
+  * When configuring a namespace, check to see that the database and blob file storage plans do not use the same name.
+  * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
+* We have improved the authentication security of the Mendix Gateway Agent connection by switching to digest validation of the cluster ID and secret.
+* We have updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
+* We have updated third-party component versions.
+* We have improved the reliability of the code that processes statuses for resources such as Network, Build and Runtime. This reduces the number of retries for *the object has been modified, please apply your changes to the latest version and try again* errors, and ensures that status icons are updated as soon as possible.
+* For standalone clusters, it is now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
+* Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
+
+### November 23, 2023
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor/#import-dashboard) for native metrics to deduplicate labels in case the app is restarted. When the app restarts, it will no longer create a new set of metrics.
+* We have rearranged JVM heap memory graphs for the G1 Garbage Collector so that *Eden Space* is always on top of other graphs, just like it was with the previous garbage collector.
+
+### November 17, 2023
+
+#### Data Migration Tool (Preview) v0.0.4
+
+* We added support for backing up and restoring data in environments using [AWS IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/) authentication.
+
+{{% alert color="info" %}}
+The data migration tool is available as a technical preview. For documentation and download links, see [Private Cloud Data Transfer](/developerportal/deploy/private-cloud-data-transfer/).
+{{% /alert %}}
+
 ### November 3, 2023
 
 #### Portal Fixes
@@ -22,7 +53,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Private Cloud License Manager (Beta- Release 2)
 
 * Resolved an issue where the user was unable to import a large bundle of licenses at the same time.
-
 
 ### November 2, 2023
 
@@ -34,7 +64,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Deploy API Improvements
 
-* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized. 
+* We have recently decoupled the **Modify MxAdmin Password** and **Manage Environment** permissions for cases where member permissions are customized.
 
 ### October 30, 2023
 
@@ -52,7 +82,7 @@ The data migration tool is available as a technical preview. For documentation a
 
 * We have added an option to specify additional custom pod labels for an environment from the portal.
 * We have added an option to configure the ephemeral storage in the core resources selection flow.
-* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963) 
+* In order to be consistent with the Mendix Public Cloud portal, the number of constants visible per page has been increased from 5 to 10. A similar change has also been made for scheduled events, custom runtime settings, custom environment variables, and client certificates. For log levels, the number of items visible per page has been increased to 20. (Ticket 196963)
 * We have fixed the issue where a user was able to select custom plans created for other namespaces.
 * We have added an extra warning message when a user tries to switch from default to custom core resource plans.
 
@@ -99,7 +129,7 @@ This tool is available as a technical preview. For documentation and download li
 #### Portal Improvements
 
 * We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
-* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with navigation panel in a sidebar to the left.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with the navigation pane in a sidebar to the left.
 
 #### Deploy API Improvements
 
@@ -550,7 +580,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have increased the deployment package size limit from 200 MB to 512 MB.
 * We have fixed an issue when the Runtime version was not visible on the transport package screen.
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
-* We have changed the left navigation panel to match the rest of the Developer Portal.
+* We have changed the navigation pane to match the rest of the Developer Portal.
 
 ### November 15, 2021
 
@@ -760,7 +790,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have fixed an issue with misleading error messages in the container logs if Mendix Runtime is failing to start. If the MxAdmin user has an insecure password, a correct error message will be displayed.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
-After upgrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.
+After upgrading the Mendix Operator, Mendix recommends downloading the latest version of the Configuration Tool.
 
 ### January 6, 2021
 

@@ -25,7 +25,7 @@ The Amazon EventBridge connector requires Mendix Studio Pro 9.18.0 or above.
 
 To use the Amazon EventBridge connector, you must also install and configure the following modules:
 
-* [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon EventBridge connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+* [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon EventBridge connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Amazon EventBridge connector.
 
 ### 1.3 Licensing and Cost
@@ -40,7 +40,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon EventBridge connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon EventBridge connector into your app.
 
 ## 3 Configuration
 
@@ -50,37 +50,9 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 In order to use the Amazon EventBridge service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
-1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
-    
-    The Amazon EventBridge connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-3. In the **App Explorer**, double-click the **Settings** for your app.
-
-    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_open_settings.png" alt="The Settings option in the App Explorer">}}
-
-4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
-    
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
-
-5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonEventBridgeConnector** > **ConnectionDetails** section.
-
-    {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_edit_configuration.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
-
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
-   
-    | Credentials type | Parameter | Value |
-    | --- | --- | --- |
-    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
-    | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
-    | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
-    | **SessionCredentials** | **Session Name** | An identifier for the session |
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
@@ -103,13 +75,11 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_actions.png" >}}
 
-6. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. 
-7. In the expression builder, type *AWS_Region*, and then press **Ctrl+Space** to open the autocomplete dialog. 
-8. From the autocomplete dialog, select **AmazonEventBridgeConnector.AWS_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
+6. In the **Edit parameters** section, edit the **ENUM_Region** parameter and change **Type** to **Expression**. 
+7. In the expression builder, type *ENUM_Region*, and then press **Ctrl+Space** to open the autocomplete dialog. 
+8. From the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_choose_aws_region.png" >}}
-
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
 
 9. Click **OK**.
 10. Configure the **Credentials_GenerateFromConstants** microflow.
@@ -144,13 +114,11 @@ To configure your Mendix app to receive events, perform the following steps:
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_credentials.png" >}}
 
-7. In the **Edit parameters** section, edit the **AWS_Region** parameter and change **Type** to **Expression**. 
-8. In the expression builder, type *AWS_Region* and then press **Ctrl+Space** to open the autocomplete dialog. 
-9. From this autocomplete dialog, select **AmazonEventBridgeConnector.AWS_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
+7. In the **Edit parameters** section, edit the **ENUM_Region** parameter and change **Type** to **Expression**. 
+8. In the expression builder, type *ENUM_Region* and then press **Ctrl+Space** to open the autocomplete dialog. 
+9. From this autocomplete dialog, select **AWSAuthentication.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_choose_aws_region.png" >}}
-
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
 
 10. Click **OK**.
 11. Configure the **Credentials_GenerateFromConstants** microflow. 
@@ -184,14 +152,7 @@ Constants are used to define configuration values. All activities are exported a
 
 | Name | Description | 
 | --- | --- |
-| `AmazonEventBridgeConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. | 
-| `AmazonEventBridgeConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service | 
-| `AmazonEventBridgeConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located | 
-| `AmazonEventBridgeConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. | 
-| `AmazonEventBridgeConnector.AWS_TrustAnchorARN` | The `TrustAnchorARN` of the TrustAnchor configured in IAM Roles Anywhere that is used for the configured role | 
-| `AmazonEventBridgeConnector.UseStaticCredentials` | The `UseStaticCredentials` Boolean value defines if the connector uses the provided static credentials (`AccessKey` and `SecretKey`) over the session-based credentials | 
-| `AmazonEventBridgeConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service | 
-| `AmazonEventBridgeConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
+| `AmazonEventBridgeConnector.APIKey` | API key that will be used for the authentication of your connection. |
 
 ### 4.2 Domain Model {#domain-model}
 
@@ -472,34 +433,7 @@ This entity contains additional parameters of the connection. It is associated w
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon EventBridge connector, enumerations list values such as the list of available AWS regions, the API destination state, the connection state, and others.
 
-#### 4.3.1 AWS_Region {#aws-region}
-
-| Name | Caption | 
-| --- | --- | 
-| `us_east_2` | US East (Ohio) | 
-| `us_east_1` | US East (N. Virginia) | 
-| `us_west_1` | US West (N. California) | 
-| `us_west_2` | US West (Oregon) | 
-| `af_south_1` | Africa (Cape Town) | 
-| `ap_east_1` | Asia Pacific (Hong Kong) | 
-| `ap_southeast_3` | Asia Pacific (Jakarta) | 
-| `ap_south_1` | Asia Pacific (Mumbai) | 
-| `ap_northeast_3` | Asia Pacific (Osaka) | 
-| `ap_northeast_2` | Asia Pacific (Seoul) | 
-| `ap_southeast_1` | Asia Pacific (Singapore) | 
-| `ap_southeast_2` | Asia Pacific (Sydney) | 
-| `ap_northeast_1` | Asia Pacific (Tokyo) | 
-| `ca_central_1` | Canada (Central) | 
-| `eu_central_1` | Europe (Frankfurt) | 
-| `eu_west_1` | Europe (Ireland) | 
-| `eu_west_2` | Europe (London) | 
-| `eu_south_1` | Europe (Milan) | 
-| `eu_west_3` | Europe (Paris) | 
-| `eu_north_1` | Europe (Stockholm) | 
-| `me_south_1` | Middle East (Bahrain) | 
-| `sa_east_1` | South America (São Paulo) |
-
-#### 4.3.2 ApiDestinationState
+#### 4.3.1 ApiDestinationState
 
 | Name | Caption | 
 | --- | --- | 
@@ -507,7 +441,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | INACTIVE | INACTIVE | 
 | UNKNOWN | UNKNOWN | 
 
-#### 4.3.3 ConnectionOAuthHttpMethod
+#### 4.3.2 ConnectionOAuthHttpMethod
 
 | Name | Caption | 
 | --- | --- | 
@@ -516,7 +450,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | PUT | PUT | 
 | UNKNOWN_TO_SDK_VERSION | UNKNOWN_TO_SDK_VERSION | 
 
-#### 4.3.4 ConnectionState
+#### 4.3.3 ConnectionState
 
 | Name | Caption | 
 | --- | --- | 
@@ -529,7 +463,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | UNKNOWN_TO_SDK_VERSION | UNKNOWN_TO_SDK_VERSION | 
 | UPDATING | UPDATING |
 
-#### 4.3.5 HttpMethod
+#### 4.3.4 HttpMethod
 
 | Name | Caption | 
 | --- | --- | 
@@ -547,7 +481,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.4.1 UpdateConnection {#update-connection}
 
-The `UpdateConnection` Amazon EventBridge action allows you to update connections in your AWS console from your Mendix app. It requires a valid `AWS_Region` parameter and an `UpdateConnectionRequest` object and returns an `UpdateConnectionResponse` object. The input and output for this service are shown in the table below: 
+The `UpdateConnection` Amazon EventBridge action allows you to update connections in your AWS console from your Mendix app. It requires a valid `ENUM_Region` parameter and an `UpdateConnectionRequest` object and returns an `UpdateConnectionResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -557,7 +491,7 @@ The authorization types BASIC and API_KEY are available, but the OATH authentica
 
 #### 4.4.2 PutEvents {#put-events}
 
-The `PutEvents` Amazon EventBridge actions allows you to send custom events to Amazon EventBridge so that they can be matched to rules. It requires a valid `AWS_Region` and `PutEventsRequest` object. It returns an PutEventsResponse object, which contains a list of ResponseEntry objects. The input and output for this service are shown in the table below: 
+The `PutEvents` Amazon EventBridge actions allows you to send custom events to Amazon EventBridge so that they can be matched to rules. It requires a valid `ENUM_Region` and `PutEventsRequest` object. It returns an PutEventsResponse object, which contains a list of ResponseEntry objects. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -565,7 +499,7 @@ The `PutEvents` Amazon EventBridge actions allows you to send custom events to A
 
 #### 4.4.3 CreateConnection {#create-connection}
 
-The `CreateConnection` Amazon EventBridge action allows you to create new connections in your AWS console from your Mendix app. It requires a valid `AWS_Region` parameter and a `CreateConnectionRequest` object and returns a `CreateConnectionResponse` object. The input and output for this service are shown in the table below: 
+The `CreateConnection` Amazon EventBridge action allows you to create new connections in your AWS console from your Mendix app. It requires a valid `ENUM_Region` parameter and a `CreateConnectionRequest` object and returns a `CreateConnectionResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -589,7 +523,7 @@ To replace the wildcard token in the `ApiDestination` resource in Amazon EventBr
 
 #### 4.4.5 DescribeConnection {#describe-connection}
 
-The `DescribeConnection` Amazon EventBridge action allows you to get details on a specific connection that exists within EventBridge. It requires a valid `AWS_Region` parameter and a `describeConnectionRequest` object and returns a `DescribeConnectionResponse` object. If the user enters a connection that does not exist, the `DescribeConnectionResponse` object will be empty. The input and output for this service are shown in the table below: 
+The `DescribeConnection` Amazon EventBridge action allows you to get details on a specific connection that exists within EventBridge. It requires a valid `ENUM_Region` parameter and a `describeConnectionRequest` object and returns a `DescribeConnectionResponse` object. If the user enters a connection that does not exist, the `DescribeConnectionResponse` object will be empty. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -597,7 +531,7 @@ The `DescribeConnection` Amazon EventBridge action allows you to get details on 
 
 #### 4.4.6 DescribeApiDestination {#describe-api-destination}
 
-The `DescribeApiDestination` Amazon EventBridge action allows you to get details on a specific API destination that exists within EventBridge. It requires a valid `AWS_Region` parameter and a `DescribeApiDestinationRequest` object and returns a `DescribeApiDestinationResponse` object. If the user enters an API destination that does not exist, the returned `DescribeApiDestinationResponse` object will be empty. The input and output for this service are shown in the table below:
+The `DescribeApiDestination` Amazon EventBridge action allows you to get details on a specific API destination that exists within EventBridge. It requires a valid `ENUM_Region` parameter and a `DescribeApiDestinationRequest` object and returns a `DescribeApiDestinationResponse` object. If the user enters an API destination that does not exist, the returned `DescribeApiDestinationResponse` object will be empty. The input and output for this service are shown in the table below:
 
 | Input | Output | 
 | --- | --- | 
@@ -605,7 +539,7 @@ The `DescribeApiDestination` Amazon EventBridge action allows you to get details
 
 #### 4.4.7 UpdateApiDestination {#update-api-destination}
 
-The `UpdateApiDestination` Amazon EventBridge action allows you to update a specific API destination that exists within EventBridge. It requires a valid `AWS_Region` parameter and an `UpdateApiDestinationRequest` object and returns an `UpdateApiDestinationResponse` object. The input and output for this service are shown in the table below: 
+The `UpdateApiDestination` Amazon EventBridge action allows you to update a specific API destination that exists within EventBridge. It requires a valid `ENUM_Region` parameter and an `UpdateApiDestinationRequest` object and returns an `UpdateApiDestinationResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -636,4 +570,4 @@ If an `EventRoutingConfiguration` object with the same `EventType` already exist
 | Input | Output | 
 | --- | --- | 
 | `EventType` | |
-| `CallbackMicroflow` | |
+| `Callback` | |

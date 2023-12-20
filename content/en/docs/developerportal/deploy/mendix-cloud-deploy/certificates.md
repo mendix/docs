@@ -62,7 +62,7 @@ Do not use OpenSSL version 3.x on Windows.<br><br>If you use OpenSSL version 3.x
 
 You can upload a PKCS12 file by following these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of your app's **Environments** page. Click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of your app's **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
@@ -90,7 +90,7 @@ Loading certificate authorities works much the same way, although they do not re
 
 To upload a certificate authority, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 

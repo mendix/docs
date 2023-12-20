@@ -20,9 +20,8 @@ To start a new app with version control do the following:
 1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
 2. Select the starting point – an app template.
 3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-4. Choose **Repository type**. 
-5. Change the **App directory**, or leave the default suggested by Studio Pro.
-6. Click **Create app**.
+4. Change the **App directory**, or leave the default suggested by Studio Pro.
+5. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
@@ -81,7 +80,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
+Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
@@ -200,33 +199,7 @@ You can revert changes in the **Changes** pane, from **Version Control** > **Rev
 
 If you update/pull your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 
-There are two different sorts of conflict:
-
-* Document conflicts
-* App conflicts
-
-### 6.1 Resolving a Document Conflict
-
-Two changes in the same *document* that are really close to each other can cause a document conflict. For example, two people both change the properties of the same element on the page. The document will be marked as conflicted in the **Changes** pane. Conflicts have to be resolved before you can commit again.
-
-For more information on resolving document conflicts see [Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/merge-algorithm/) and [Changes Pane](/refguide/changes-pane/).
-
-### 6.2 Resolving an App Conflict
-
-App conflicts are conflicts are conflicts at the level of the app. There are two cause for app conflicts:
-
-1. One person deletes a document and the other makes a change inside that document.
-2. Both people move a document but to different places in the app tree.
-
-The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/app-conflicts.png" alt="Example of app conflicts" >}}
-
-{{% alert color="info" %}}
-If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
-{{% /alert %}}
-
-You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
+See [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/) for more information.
 
 ## 7 Using Branches
 
@@ -342,7 +315,7 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
 
-You can also configure the git driver locally per repository using the following commands:
+You can also configure the Git driver locally per repository using the following commands:
 
 ```text {linenos=false}
 git config merge.custom.name "custom merge driver for specific files"
@@ -409,7 +382,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT). Connecting to SVN can either be done using a PAT or your Mendix credentials.
+Connecting to Git is done using a personal access token (PAT).
 
 For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 

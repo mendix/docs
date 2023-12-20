@@ -105,7 +105,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

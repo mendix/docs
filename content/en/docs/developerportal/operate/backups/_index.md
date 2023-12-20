@@ -10,22 +10,26 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 ## 1 Introduction
 
-Backup snapshots for apps running in Mendix Cloud are created every night or on demand, as described in the [Backups](#backups) section, below.
+Backup snapshots for apps running in Mendix Cloud are automatically created every night, week, and month. They can also be created on demand, as described in the [Backups](#backups) section, below.
 
 Backup snapshots contain both the database and file documents referred to in the database.
 
 ## 2 Creation and Retention Schedules
 
-The pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than scheduled, you have to download the backup.
+Backups are created and retained as follows:
 
-Backups are retained as follows:
+| Frequency | Timing                                                     | Type                    | Retention Period |
+| --------- | ---------------------------------------------------------- | ----------------------- | ---------------- |
+| Nightly   | As specified in [Nightly Backups](#nightly-backups), below | Automatic               | Two weeks        |
+| Weekly    | Each Sunday                                                | Automatic               | Three months     |
+| Monthly   | First Sunday of each month                                 | Automatic               | One year         |
+| On demand | On demand                                                  | Manual (user initiated) | Three months     |
 
-* Nightly backups: 30 days
-* Weekly backups (Sunday night): three months
-* Monthly backups (First Sunday night of the month): one year
-* Manual (user-initiated) backups: three months
+Each backup is automatically deleted when its retention period is over, but you can always manually delete it before then. By default, backups are retained for exactly the specified period; for example, a weekly backup created at 3:18 on December 3 expires at 3:18 on March 3. If you want to keep a backup for longer than scheduled, you can download the backup to your computer.
 
-### 2.1 Nightly Backups
+{{% alert color="info" %}}Backups are only created when the app is deployed and running.{{% /alert %}}
+
+### 2.1 Nightly Backups{#nightly-backups}
 
 The **Start Time** of nightly backups in UTC is shown below. The **Local Time** indicates the time at the regional data center; this may vary if **Summer Time** or other adjustments are in place.
 
@@ -60,6 +64,8 @@ The monthly backup occurs on the first Sunday of the month. If the first nightly
 
 The **Backups** page presents options for managing your backups. These are described below.
 
+{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" >}}
+
 ### 3.1 Create Backup
 
 This automatically generates a backup snapshot from your application data. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
@@ -90,10 +96,10 @@ You can download a backup archive containing one of the following:
 * **Database Only**
 * **Files Only**
 
-For more information, see [Downloading a Backup](/developerportal/operate/download-backup/).
+For more information, see the [Downloading a Backup](/developerportal/operate/download-backup/) page.
 
 {{% alert color="info" %}}
-As the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
+Because the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
 ### 3.4 Restore Backup
@@ -110,30 +116,34 @@ For more information, see [Restoring a Backup](/developerportal/operate/restore-
  
 ### 3.5 Details {#backups-details}
 
-When you click **Details**, you can view the following details:
+You can view details of a backup by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then **Details**. You will see the following details:
 
 | Backup Details                      | Description                                                                                   |
 | :---------------------------------- | :-------------------------------------------------------------------------------------------- |
 | **Status**                          | The status of the backup (**Queued**, **Running**, **Failed**, or **Completed**)              |
-| **Created by**/ <br /> **Type**     | The name of the person who created the backup; automated system backups are named **Nightly** |
-| **ID**/ <br /> **Snapshot id**      | A unique identifier for the backup snapshot                                                   |
-| **Date**/ <br /> **Created on**     | The creation date of the backup                                                               |
+| **Type**     | The name of the person who created the backup; automated system backups are named **Nightly** |
+| **Snapshot id**      | A unique identifier for the backup snapshot                                                   |
+| **Created on**     | The creation date of the backup                                                               |
 | **Expires on**                      | The date when the backup will be removed from the system                                      |
 | **Model version**                   | The version of the deployment package used during backup creation                             |
 | **Snapshot Size Uncompressed (MB)** | The size of database dump and files of the snapshot in MB                                     |
 | **Comment**                         | A comment added to the backup                                                                 |
 
-At the bottom of the screen, you can click **Delete** to delete the selected backup.
-
-{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% >}}
 
 ## 4 Limitations
 
-Mendix Cloud backups that contain a very large number of files (that is, greater than about 50,000) experience slow performance for all backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file.  As the number of files increases, the overhead becomes quite significant and can add several hours to the duration.
+### 4.1 Performance {#limitations-performance}
+
+Mendix Cloud backups that contain a very large number of files (that is, greater than about 50,000) experience slow performance for all backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file. As the number of files increases, the overhead becomes quite significant and can add several hours to the duration.
+
+### 4.2 Customizations {#limitations-customizations}
+
+Customization of the databases of apps in Mendix Cloud is not supported. This includes, but is not limited to, installing extensions and enabling or disabling specific features. Mendix does not support uploading and restoring backups of customized databases to Mendix Cloud. If you attempt to restore a backup of a customized database, the restore will likely fail. Note that customizing the database of an app in Mendix Cloud breaks the support and SLA for the app.
 
 ## 5 Read More
 
-* [How to Create a Backup](/developerportal/operate/create-backup/)
-* [How to Download a Backup](/developerportal/operate/download-backup/)
-* [How to Restore a Backup](/developerportal/operate/restore-backup/)
-* [How to Restore a Backup Locally](/developerportal/operate/restore-backup-locally/)
+* [Creating a Backup](/developerportal/operate/create-backup/)
+* [Downloading a Backup](/developerportal/operate/download-backup/)
+* [Restoring a Backup](/developerportal/operate/restore-backup/)
+* [Restoring a Backup Locally](/developerportal/operate/restore-backup-locally/)

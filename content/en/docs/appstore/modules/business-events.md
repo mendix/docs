@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps.
 
-To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for a [Mendix Event Broker](#mendix-event-broker).
+To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](#mendix-event-broker).
 
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above, and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}} 
@@ -39,7 +39,7 @@ The Mendix Business Events module itself does not require a license, but it depe
 
 ## 3 Configuration
 
-To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module into your app. See the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*.
+To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module into your app. See the [Installing Marketplace Content](/appstore/overview/use-content/#install) section in *Using Marketplace Content*.
 
 ### 3.1 Configuring Local Deployments {#config-local-deployment}
 

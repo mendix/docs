@@ -40,7 +40,7 @@ When analyzing app models you get a lot of power: you can access every tiny deta
 
 {{% alert color="info" %}}
 
-Because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and it is safe to use on most of the metamodel. However, we recommend only doing read access actions on the following metamodel components, because it is easy to create an invalid model:
+Because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and it is safe to use on most of the metamodel. However, Mendix recommends only doing read access actions on the following metamodel components, because it is easy to create an invalid model:
 
 * Consumed and published web services
 * XML schemas

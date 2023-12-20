@@ -5,9 +5,9 @@ description: "Overview of the Data Importer in Studio Pro"
 
 ## 1 Introduction
 
-Mendix is the app platform for the enterprise organization and data is constantly exchanged amongst various system within an organization and sometimes even outside the organization boundaries. MS-Excel is one of the most recognized spreadsheet software where data is stored in a tabular grid of rows and columns. This how-to focuses on how you can import data from Excel files into your Mendix App.
+Mendix is the app platform for the enterprise organization and data is constantly exchanged amongst various systems within an organization and sometimes even outside the organization boundaries. MS-Excel is one of the most recognized spreadsheet software where data is stored in a tabular grid of rows and columns. This how-to focuses on how you can import data from Excel files into your Mendix App.
 
-This how-to teaches you how to do the following:
+This how-to teaches you to do the following:
 
 * Create *Data inporter document* using a sample representative file
 * Create Entity (Non-persistable entity) in your data model
@@ -39,7 +39,7 @@ Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/select-file-for-preview.png" >}}
 
-Select or drop the file in the **Select Source File** window. An excel workbook can have either single or multiple sheets. You can choose which sheet to import data from and specify the header row and starting data row.
+Select or drop the file in the **Select Source File** window. An excel workbook can have either single or multiple sheets; you can choose which sheet to import data from and specify the header row and starting data row.
 
 * **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown.
 * **Header Row No.** – row number of the file header; the default is 1
@@ -49,21 +49,95 @@ Select or drop the file in the **Select Source File** window. An excel workbook 
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 data rows from the source file are shown in the data preview section. If there are less than 10 data rows in the sample file, then only the available rows are shown. The column names correspond to the attribute name within the entity and the Sheet name will be used to define the Entity.
 
-All the columns are selected (checked) by default for import. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell type defined in the file's first data row. If any data types are incorrect, check the cell type of the first data row in Excel and adjust the cell type definition accordingly.
+All the columns are selected (checked) by default for import. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell-type defined in the input excel's first data row. If any data types are incorrect, check the cell type of the *first* data row in Excel and adjust the cell-type definition accordingly.
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. In case of *Number* cell-type the target Mendix type will be mapped to *Decimal* to accommodate Integers & Decimals. {{% /alert %}}
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/preview-data-and-entity.png" >}}
 
-### 2.3 Creating an Entity {#create-entity}
+### 3.3 Creating an Entity {#create-entity}
 
-You can view the entity in the Entity Preview section. You can change the name of the entity, though one is suggested for you based on the Sheet Name. To create the entity in your domain model, click **Create Entity** > **OK**.
+You can view the entity in the Entity Preview section. You can change the name of the entity, though one is suggested for you based on the Sheet Name. To create the entity in your domain model, click **Create Entity** > **OK**. You will be shown a confirmation message that an Entity has been created in the Domain model and it can be readily used.
 
-When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
+When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes as shown in the image below. 
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/source-to-target-mapping.png" >}}
 
-The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
+The Data Importer document creation is complete and can be used to import data in a microflow.
 
-## 4 Importing Data in a Microflow
+## 4 Building your App {#build-data-importer-app}
 
+Say you want to periodically import data from an Excel file which is generated by some other App or enterprise system. You would like to validate if the data is correct and can be imported with the given mapping without any errors. Let's try to build an App which will achieve this using Data Importer.
+
+But before that a little background about the Data Importer extension : It requires [run-time module](https://marketplace.mendix.com/link/component/219833) from Marketplace to help you achieve your goals. So search the Data Importer module in the *Marketplace* and import it. The DataImporter module should be visible under the Marketplace modules in your App as shown below.
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/data-importer-in-marketplace-module.png" >}}
+
+### 4.1 Custom activity {#Import-data-from-file}
+
+The **Import data from file** activity can be found under **Integration activities** in the **Toolbox**. On double-click you can view its properties:
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/custom-activity-params.png" >}}
+
+The following are the properties in the **Input** section:
+
+* **File** – name of file from which you want to import data
+* **Data importer document** – the Data importer document created at the end of design-time flow.
+
+The following are the properties in the **Output** section:
+
+* **Return Type** – will be set to List of the NPE defined for the Data importer document.
+* **Variable name** – will be auto-populated as well to *EntityName*List
+
+### 4.2 Build the pages
+
+As the *Import data from file* custom activity needs an input file from where data needs to be imported, let's build a page where a *System.FileDocument* can be uploaded and then be fed to our custom activity.
+
+1. Add a Button on the home page with a caption 'Upload Customer Data'
+2. On click of this button you can create an Object of System.FileDocument and pass the control to another page (UploadCustomerData) where file can be uploaded.
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/home-page-button.png" >}}
+
+3. On the 'UploadCustomerData' page - include a Data view for FileDocument and include a 'File Manager' to assist a file upload.
+4. Add an Action button to call Microflow which will help us import the input file. The uploaded file will be passed as a parameter to this Microflow.
+
+{{< figure src="/attachments/refguide/integration/data-importer-extension/data-view-file-manager.png" >}}
+
+### 4.3 import-microflow
+
+5. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity under "Integration activities".
+
+   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/integration-activity.png" >}}
+
+6. As soon as the **Import data from file** activity is added into Microflow, you will start seeing 3 errors in the console; mainly complaining aobut missing input file, data importer document and Output variable being empty.
+
+   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/custom-activity.png" >}}
+
+7. Let's try to address these errors. Double-click the activity and in the **File** field, choose the input file that is passed on from the file upload page to this Microflow as a parameter.
+8. In the **Data importer document** field, click *Select* and choose the Data Importer document you want to use.
+
+  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/choose-data-importer-template.png" >}}
+
+9. After selecting the Data Importer document, the **Return type** and **Variable name** will be autopopulated. You can also change the name  of the output variable if you wish.
+10. Click **OK**. The custom activity is configrued and all the errors should be gone now.
+
+  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/configured-custom-activity.png" >}}
+
+11. Next you can add an *Aggregate list* activity and configure it to count the size of the CustomerList which is returned from our previous activity.
+
+  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/aggregate-list.png" >}}
+
+12. Configure a *Show Message* activity next. You can use a template message and a parameter which can be as shown below.
+
+  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/show-message-with-list-size.png" >}}
+
+13. You can set $CustomerList as return value from the *Import data from file* activity to be further used. Your completed microflow should look like below.
+
+  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/example-microflow.png" >}}
+
+14. Deploy your app locally and browse and upload an input file which is similar to the file that was used as a template while creating Data Importer document.
+15. Validate that you see a message stating *Imported xx rows from input file into a list of NPEs*
+
+  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/local-app-run.png" >}}
+
+Bravo! you have successfully configured & used the Data importer. You can extend this as per your requirements; you can convert the list of NPEs into persistable entities by providing Message definition or using for-each loop construct and individually creating & committing entities into your database.

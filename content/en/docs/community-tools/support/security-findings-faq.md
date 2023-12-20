@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
-url: /developerportal/support/security-findings-faq
+url: /community-tools/support/security-findings-faq
 category: "Mendix Support"
 weight: 60
 description: "FAQ about existing security findings and other security questions."

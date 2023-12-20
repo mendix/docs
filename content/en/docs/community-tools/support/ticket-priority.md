@@ -1,6 +1,6 @@
 ---
 title: "Support Ticket Priority"
-url: /developerportal/support/ticket-priority/
+url: /community-tools/support/ticket-priority/
 category: "Mendix Support"
 weight: 40
 description: "Describes how priority levels are determined for Mendix Support."

@@ -1,6 +1,6 @@
 ---
 title: "Prepare Your App for Support"
-url: /developerportal/support/prepare-your-app/
+url: /community-tools/support/prepare-your-app/
 category: "Mendix Support"
 weight: 10
 description: "Describes how to configure app authorization to select the affected app(s) in the Mendix Support Portal."

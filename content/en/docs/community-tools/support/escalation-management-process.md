@@ -1,6 +1,6 @@
 ---
 title: "Support Escalation Process"
-url: /developerportal/support/escalation-management-process/
+url: /community-tools/support/escalation-management-process/
 category: "Mendix Support"
 weight: 50
 description: "Describes how a support request can be escalated to bring your issue to closure."

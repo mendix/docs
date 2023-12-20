@@ -1,6 +1,6 @@
 ---
 title: "Mendix Support"
-url: /developerportal/support/
+url: /community-tools/support/
 description: "Provides information on how to obtain support for your Mendix apps."
 weight: 35
 no_list: false 

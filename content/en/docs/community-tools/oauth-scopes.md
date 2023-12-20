@@ -1,6 +1,6 @@
 ---
 title: "OAuth and Scopes"
-url: /developerportal/community-tools/oauth-scopes/
+url: /community-tools/oauth-scopes/
 category: "Community Tools"
 weight: 7
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  

@@ -1,6 +1,6 @@
 ---
 title: "Mendix Forum"
-url: /developerportal/community-tools/mendix-forum/
+url: /community-tools/mendix-forum/
 category: "Community Tools"
 weight: 3
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."

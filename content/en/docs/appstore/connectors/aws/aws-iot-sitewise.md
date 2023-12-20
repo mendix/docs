@@ -57,7 +57,7 @@ After you configure the authentication profile for AWS IoT SiteWise, you can imp
 4. In your **Toolbox**, find the **Create Object** activity and drag it onto the work area of your microflow.
 5. In the **Entity** field, select **ListAssetModelsRequest**.
 6. Double-click the **ListAssetModels** microflow activity to configure the required parameters.
-7. In the **Edit parameters** section, edit the **ENUM_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [ENUM_Region](#enum-region).
+7. In the **Edit parameters** section, edit the **ENUM_Region** parameter, and provide a value by using a variable or an expression.
 8. Click **OK**.
 9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 10. Position the **Retrieve** activity between the **ListAssetModels** activity and the microflow end event.
@@ -922,7 +922,7 @@ The `BatchPutAssetPropertyValue` Amazon Iot SiteWise activity allows you to put 
 
 #### 4.3.18 JA_FindNearestSecond {#find-nearest-second}
 
-The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAssetPropertyAggregates](#get-asset-property-aggregates) and [BatchGetAssetPropertyValueHistory](#get-asset-property-value-history) Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attbibutes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created this JA_FindNearestSecond java action with three different enum variables for the `FindType` parameter. It requires a date and time `DateTime` parameter and a [`FindType`](#find-nearest-second) enum parameter and returns a date and time value.
+The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAssetPropertyAggregates](#get-asset-property-aggregates) and [BatchGetAssetPropertyValueHistory](#get-asset-property-value-history) Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attbibutes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created the `JA_FindNearestSecond` java action with three different enum variables for the `FindType` parameter. It requires a date and time `DateTime` parameter and a [`FindType`](#find-nearest-second) enum parameter and returns a date and time value.
 
 | Input | Output | 
 | --- | --- | 

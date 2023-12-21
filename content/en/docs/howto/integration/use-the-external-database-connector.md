@@ -100,7 +100,7 @@ For example, `INSERT INTO classicmodels.productlines(productLine, requestedProdu
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
-{{% alert type="info" %}} For all DML Queries, changes made to database in Mendix Design phase are automatically rolled back. {% /alert %}}
+{{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
 ### 6 Use the Query External Database Activity
 

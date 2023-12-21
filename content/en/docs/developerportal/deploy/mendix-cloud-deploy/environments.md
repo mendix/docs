@@ -42,7 +42,8 @@ You can also see information and perform actions on the existing deployment pack
 * Date that the deployment package was created
 * Creator account
 * Expiry date of the deployment package, if one is set
-    * Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire. Expiry dates only apply to excess non-deployed packages; these are set to be deleted within 15 days, unless they are deployed before that date.
+    * Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
+    * Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
 
 To deploy a package, transporting it from the Team Server to the selected environment, click the **Deploy** icon.
 

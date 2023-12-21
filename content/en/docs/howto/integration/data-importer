@@ -23,7 +23,7 @@ Download the [Data Importer extension](https://marketplace.mendix.com/link/compo
 * Studio Pro [10.4](/releasenotes/studio-pro/10.4/) or above
 * A file document (see [File Manager](/refguide/file-manager/))
 
-## 3 Design time flow
+## 3 Design Time Flow
 
 The Data Importer allows you to import an Excel file into your Mendix App. It allows you to choose which sheet to import data from and which columns you want to import. During the design-time flow, you can preview the data that you would like to import and create a non-persistable entity (NPE) in your domain model. At the end of this you would have a *Data Importer Document* which you can use along with a custom activity *Import data from file* in a microflow to import data from input Excel file(s).
 
@@ -75,7 +75,7 @@ But before that a little background about the Data Importer extension : It requi
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/data-importer-in-marketplace-module.png" >}}
 
-### 4.1 Custom activity {#Import-data-from-file}
+### 4.1 Custom Activity {#Import-data-from-file}
 
 The **Import data from file** activity can be found under **Integration activities** in the **Toolbox**. On double-click you can view its properties:
 
@@ -91,7 +91,7 @@ The following are the properties in the **Output** section:
 * **Return Type** – will be set to List of the NPE defined for the Data importer document.
 * **Variable name** – will be auto-populated as well to *EntityName*List
 
-### 4.2 Build the pages
+### 4.2 Build the Pages
 
 As the *Import data from file* custom activity needs an input file from where data needs to be imported, let's build a page where a *System.FileDocument* can be uploaded and then be fed to our custom activity.
 
@@ -105,7 +105,7 @@ As the *Import data from file* custom activity needs an input file from where da
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/data-view-file-manager.png" >}}
 
-### 4.3 import-microflow
+### 4.3 Import a Microflow
 
 5. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity under "Integration activities".
 

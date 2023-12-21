@@ -9,6 +9,6 @@ description: "Native Template 8 release notes."
 
 **Release date: December 21, 2023**
 
-### Fixes
+### Improvements
 
-* We have upgraded React Native version to 0.72.7
+* We have upgraded our React Native version to 0.72.7

@@ -61,9 +61,9 @@ All the columns are automatically selected (checked) for import. You can uncheck
 
 ### 3.3 Creating an Entity {#create-entity}
 
-You can view the entity in the Entity Preview section. You can change the name of the entity, though one is suggested for you based on the Sheet Name. To create the entity in your domain model, click **Create Entity** > **OK**. You will be shown a confirmation message that an Entity has been created in the Domain model and it can be readily used.
+View the entity in the **Entity Preview** section. You can change the name of the entity, though one is suggested for you based on the sheet name. To create the entity in your domain model, click **Create Entity** > **OK**. You see a confirmation message that an entity has been created in the Domain model and is ready to use.
 
-When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes as shown in the image below. 
+When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/source-to-target-mapping.png" >}}
 

@@ -10,7 +10,7 @@ For more information on the Make It Native app, see the [Getting the Make It Nat
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
-## iOS 2.0.0 / Android 2.0.0
+## iOS 2.0.0 / Android 2.0.0{#upgraded-react-min}
 
 **Release date: December 21, 2023**
 

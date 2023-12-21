@@ -77,12 +77,16 @@ Here you can specify which repositories to use for Gradle. The content of this f
 
 ## 4 Mendix Assist Tab
 
-### 4.1 Logic Bot
+### 4.1 Logic Bot {#logic-bot}
+
+{{% alert color="info" %}}
+These settings only apply to the **Classic** editor in Studio Pro 10.5 and below.
+{{% alert color="info" %}}
 
 The **Logic Bot** tab contains the following settings:
 
-* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
-* **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like `currentUser` or `currentSession`).
+* **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
+* **Show suggestions for system variables (Classic editor only)** – when enabled, MxAssist Logic Bot will include system objects in its suggestions.
 
 ### 4.2 Best Practice Bot
 
@@ -189,7 +193,9 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ### 9.1 Micro- And Nanoflow Editor
 
-Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
+In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
+
+In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
 
 ### 9.2 Visual Builder
 

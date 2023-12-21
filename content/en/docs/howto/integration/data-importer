@@ -25,15 +25,17 @@ Download the [Data Importer extension](https://marketplace.mendix.com/link/compo
 
 ## 3 Design Time Flow
 
-The Data Importer allows you to import an Excel file into your Mendix App. It allows you to choose which sheet to import data from and which columns you want to import. During the design-time flow, you can preview the data that you would like to import and create a non-persistable entity (NPE) in your domain model. At the end of this you would have a *Data Importer Document* which you can use along with a custom activity *Import data from file* in a microflow to import data from input Excel file(s).
+The Data Importer allows you to import an Excel file into your app. Choose which sheet to import data from and which columns you want to include. During the design time flow, you can preview the data and create a non-persistable entity (NPE) in your domain model. 
+
+This module creates a Data Importer document, which you can use along with the *Import data from file* activity. Use this custom activity in a microflow to import data from an Excel file.
 
 ### 3.1 Creating a Data Importer Document
 
-To create a new Data Importer Document definition, right-click on the module and click **Add other** > **Data Importer**.
+Right-click the module you want to add the Data Importer document to and click **Add other** > **Data Importer**.
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/data-importer-menu.png" >}}
 
-Name the document, click **OK**, and the new Data Importer document opens. At this juncture you can upload a sample representative input file that you would like to define mapping for.  
+Name the document, then click **OK**, and the new Data Importer document opens.
 
 ### 3.2 Previewing Data {#preview-data}
 

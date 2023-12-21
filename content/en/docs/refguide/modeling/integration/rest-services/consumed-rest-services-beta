@@ -32,7 +32,7 @@ You can use this Consumed REST service document to do the following:
 
 ### 1.3 Prerequisites 
 
-* [Studio Pro 10.6](add link) and above
+* [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above
 * Familiarity with [HTTP request methods]( https://www.w3schools.com/tags/ref_httpmethods.asp)
 
 ## 2 Installation {#installation}

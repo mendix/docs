@@ -8,20 +8,19 @@ description: "Overview of the Data Importer in Studio Pro"
 
 ## 1 Introduction
 
-Mendix is the app platform for the enterprise organization and data is constantly exchanged amongst various systems within an organization and sometimes even outside the organization boundaries. MS-Excel is one of the most recognized spreadsheet software where data is stored in a tabular grid of rows and columns. This how-to focuses on how you can import data from Excel files into your Mendix App.
+Data is constantly exchanged between various systems inside and outside an organization. Microsoft Excel is a common spreadsheet software where data is stored in a tabular grid of rows and columns and has a structure that can be beneficial in your app.
 
 This how-to teaches you to do the following:
 
-* Create *Data inporter document* using a sample representative file
-* Create Entity (Non-persistable entity) in your data model
-* Import data using the custom *Import data from file* activity.
+* Create a *Data Importer document* using a sample representative file
+* Create a (non-persistable) entity in your domain model
+* Import data using the custom *Import data from file* activity
 
 ## 2 Prerequisites
 
-Following prerequisites should be met before you can start working with Data Importer.
+Download the [Data Importer extension](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/overview/use-content/#install). This module also requires:
 
 * Studio Pro [10.4](/releasenotes/studio-pro/10.4/) or above
-* This also needs [run-time module](https://marketplace.mendix.com/link/component/219833) to be able to import data from input Excel files. Download this component from Marketplace and [add it into your app](/appstore/general/app-store-content/#install).
 * A file document (see [File Manager](/refguide/file-manager/))
 
 ## 3 Design time flow

@@ -45,10 +45,10 @@ The new features were divided into these major themes, which are described in th
 | PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
 | Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
 | Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
-| Rich design properties | GA: Q4 2023 |
+| Rich design properties | Released for GA [Dec 21, 2023](/releasenotes/studio-pro/10.6/) |
+| MendixChat | Released for public beta [Dec 21, 2023](/releasenotes/studio-pro/10.6/)<br>GA: TBD |
 | Visual data filters | GA: Q4 2023 |
 | Mixed online and offline data | GA: Q4 2023 |
-| MendixChat | Public beta: Q4 2023<br>GA: TBD |
 | Mac support | Preview: Q1 2024<br>Public beta: TBD<br>GA: TBD |
 
 ## 4 Composability {#composability}

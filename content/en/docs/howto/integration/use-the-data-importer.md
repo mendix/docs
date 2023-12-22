@@ -91,15 +91,15 @@ The following are the properties in the **Output** section:
 
 ### 4.2 Build the Pages
 
-As the *Import data from file* custom activity needs an input file from where data needs to be imported, let's build a page where a *System.FileDocument* can be uploaded and then be fed to our custom activity.
+The *Import data from file* custom activity needs an input file to import data from. The example below builds a page where a `System.FileDocument`is uploaded and fed to the custom activity.
 
-1. Add a Button on the home page with a caption 'Upload Customer Data'
-2. On click of this button you can create an Object of System.FileDocument and pass the control to another page (UploadCustomerData) where file can be uploaded.
+1. Open the home page and add a button with the caption *Upload Customer Data*.
+2. Click the button and create a `System.FileDocument` object and pass the control to another page (**UploadCustomerData**) where the file can be uploaded.
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/home-page-button.png" >}}
 
-3. On the 'UploadCustomerData' page - include a Data view for FileDocument and include a 'File Manager' to assist a file upload.
-4. Add an Action button to call Microflow which will help us import the input file. The uploaded file will be passed as a parameter to this Microflow.
+3. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
+4. Add an **Action** button to call a microflow, which will import the input file. The uploaded file will be passed as a parameter to this microflow.
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/data-view-file-manager.png" >}}
 

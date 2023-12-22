@@ -105,25 +105,25 @@ The *Import data from file* custom activity needs an input file to import data f
 
 ### 4.3 Import a Microflow
 
-1. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity under "Integration activities".
+1. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under "Integration activities".
 
    {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/integration-activity.png" >}}
 
-2. As soon as the **Import data from file** activity is added into Microflow, you will start seeing 3 errors in the console; mainly complaining aobut missing input file, data importer document and Output variable being empty.
+2. When the **Import data from file** activity is added into microflow, you see three errors in the console.
 
    {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/custom-activity.png" >}}
 
-3. Let's try to address these errors. Double-click the activity and in the **File** field, choose the input file that is passed on from the file upload page to this Microflow as a parameter.
-4. In the **Data importer document** field, click *Select* and choose the Data Importer document you want to use.
+3. To address these errors, double-click the activity and in the **File** field, choose the input file that is passed from the file upload page to this microflow as a parameter.
+4. In the **Data Importer document** field, click *Select* and choose the Data Importer document you want to use.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/choose-data-importer-template.png" >}}
 
-5. After selecting the Data Importer document, the **Return type** and **Variable name** will be autopopulated. You can also change the name  of the output variable if you wish.
-6. Click **OK**. The custom activity is configrued and all the errors should be gone now.
+5. After selecting the Data Importer document, the **Return type** and **Variable name** will auto-populate. You can change the name of the output variable if you wish.
+6. Click **OK**. The custom activity is configured and all the errors should be fixed.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/configured-custom-activity.png" >}}
 
-7. Next you can add an *Aggregate list* activity and configure it to count the size of the CustomerList which is returned from our previous activity.
+7. Add an **Aggregate list** activity and configure it to count the size of the 'CustomerList', which is returned from our previous activity.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/aggregate-list.png" >}}
 

@@ -1,5 +1,5 @@
 ---
-title: "Pipelines"
+title: "Pipelines (Beta)"
 url: /developerportal/deploy/pipelines/
 weight: 33
 description: "Describes how to set up pipelines in the Developer Portal"
@@ -7,6 +7,8 @@ tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 temp notes: "add tooltips and icons, more context around Variables, confirm name for the pipeline's Details page"
 ---
+
+{{% alert color="warning" %}}The Pipelines Portal is currently in beta. This means it should not be used for production applications, it is not covered by any SLA, it may introduce breaking changes, and it is subject to change in future releases. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 

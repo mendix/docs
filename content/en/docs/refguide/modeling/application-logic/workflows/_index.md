@@ -190,7 +190,7 @@ Both options open a **Save file** dialog-box allowing you to choose a name and l
 
 The current document is exported as an image in the .png format.
 
-### 3.10 Switching between Portrait and Landscape Editor Orientation
+### 3.10 Switching between Portrait and Landscape Editor Orientation {#orientation-modes}
 
 You can switch between the portrait (vertical) and landscape (horizontal) editor orientation by clicking the orientation icon located in the upper-right corner of the workflow editor. Despite potential minor visual differences in certain canvas elements, the functionality remains entirely consistent across both rendering modes.
 

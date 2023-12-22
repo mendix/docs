@@ -88,7 +88,7 @@ Every time changes can be combined, for example when pulling changes from the se
 Rebasing is the default way to integrate your work with the server changes. It moves your changes to the tip of the changes pulled from the server.
 
 {{% alert color="warning" %}}
-Rebase feature is available only with installed Git with a version starting from 2.41.0.
+Rebase is available only for installed Git version 2.41.0 and above.
 {{% /alert %}}
 
 {{% alert color="info" %}}

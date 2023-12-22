@@ -81,7 +81,7 @@ Here you can specify which repositories to use for Gradle. The content of this f
 
 {{% alert color="info" %}}
 These settings only apply to the **Classic** editor in Studio Pro 10.5 and below.
-{{% alert color="info" %}}
+{{% /alert %}}
 
 The **Logic Bot** tab contains the following settings:
 

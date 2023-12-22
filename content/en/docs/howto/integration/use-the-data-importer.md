@@ -75,7 +75,7 @@ Use the Data Importer to periodically import and validate data from an Excel fil
 
 ### 4.1 Custom Activity {#Import-data-from-file}
 
-The **Import data from file** activity can be found under **Integration activities** in the **Toolbox**. On double-click you can view its properties:
+The **Import data from file** activity can be found under **Integration activities** in the **Toolbox**. Double-click to view its properties:
 
 {{< figure src="/attachments/refguide/integration/data-importer-extension/custom-activity-params.png" >}}
 

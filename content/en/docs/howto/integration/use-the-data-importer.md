@@ -123,21 +123,21 @@ The *Import data from file* custom activity needs an input file to import data f
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/configured-custom-activity.png" >}}
 
-7. Add an **Aggregate list** activity and configure it to count the size of the 'CustomerList', which is returned from our previous activity.
+7. Add an **Aggregate list** activity and configure it to count the size of the 'CustomerList', which is returned from the previous activity.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/aggregate-list.png" >}}
 
-8. Configure a *Show Message* activity next. You can use a template message and a parameter which can be as shown below.
+8. Configure a **Show message** activity. You can use a template message and a parameter, such as in the sample below.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/show-message-with-list-size.png" >}}
 
-9. You can set $CustomerList as return value from the *Import data from file* activity to be further used. Your completed microflow should look like below.
+9. Set $CustomerList as the return value from the **Import data from file** activity to be used later. Your completed microflow should look like the image below.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/example-microflow.png" >}}
 
-10. Deploy your app locally and browse and upload an input file which is similar to the file that was used as a template while creating Data Importer document.
-11. Validate that you see a message stating *Imported xx rows from input file into a list of NPEs*
+10. Deploy your app locally. Browse and upload an input file, which is similar to the file that was used as a template while creating Data Importer document.
+11. Check that you see a message that states **Imported xx rows from input file into a list of NPEs*.
 
   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/local-app-run.png" >}}
 
-Bravo! you have successfully configured & used the Data importer. You can extend this as per your requirements; you can convert the list of NPEs into persistable entities by providing Message definition or using for-each loop construct and individually creating & committing entities into your database.
+You have successfully configured and used the Data Importer extension. You can extend this as per your requirements. For example, you can convert the list of NPEs into persistable entities by providing message definition, or using for each loop construct and individually creating & committing entities into your database.

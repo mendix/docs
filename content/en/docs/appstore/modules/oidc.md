@@ -751,10 +751,8 @@ To resolve this, open the Mendix Service Console and ensure that the **Port numb
 
 ### 9.5 `CommunityCommons.RandomStrongPassword` microflow does not match the expected parameters
 
-When you are using OIDC SSO module with Community Commons (version 10.0.3 and above), you may get below error message in the Mendix Studio Pro console logs:
-“The arguments that are passed to Java action CommunityCommons.RandomStrongPassword do not match the expected parameters and need to be refreshed”
-This error indicates that new parameters must be synced with the microflow.
+When you are using OIDC SSO module with Community Commons (version 10.0.3 and above) you can get an error message “The arguments that are passed to Java action CommunityCommons.RandomStrongPassword do not match the expected parameters and need to be refreshed” in the Mendix Studio Pro console logs. This error indicates the new parameters that need to be synced with the microflow.
 
-To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
+To resolve this, open the microflow that you use for OIDC SSO module or refresh it before you deploy your Mendix app again.
 
 {{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" >}}

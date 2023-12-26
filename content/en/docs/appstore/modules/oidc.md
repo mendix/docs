@@ -748,3 +748,11 @@ If you have deployed your app on premises but did not configure a return URL for
 To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
 
 {{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}
+
+### 9.5 `CommunityCommons.RandomStrongPassword` microflow does not match the expected parameters
+
+When you are using OIDC SSO module with Community Commons (version 10.0.3 and above) you can get an error message “The arguments that are passed to Java action CommunityCommons.RandomStrongPassword do not match the expected parameters and need to be refreshed” in the Mendix Studio Pro console logs. This error indicates the new parameters that need to be synced (mapped…???) with the microflow.
+
+To resolve this, open the microflow that you use for OIDC SSO module or refresh it before you deploy your Mendix app again.
+
+{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" >}}

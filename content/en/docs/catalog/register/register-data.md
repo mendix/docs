@@ -17,7 +17,7 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. Mendix supports all OData versions.
+There are three ways to register published services in the Catalog. Mendix supports all OData versions.
 
 This how-to teaches you how to register a service in the following ways:
 

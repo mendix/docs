@@ -17,7 +17,7 @@ From the **Pipelines** page, you can set up automated deployment pipelines for y
 To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane.
 
 {{% alert color="info" %}}
-You must have **(---)** permissions to view and edit pipelines. For details on configuring these permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
+To view the Pipelines Portal, you must have a role with cloud access. For details on configuring roles, see [Team](/developerportal/general/team/).
 {{% /alert %}}
 
 ## 2 Navigation

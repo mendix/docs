@@ -33,7 +33,7 @@ This module creates a Data Importer document, which you can use along with the *
 
 Right-click the module you want to add the Data Importer document to and click **Add other** > **Data Importer**.
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/data-importer-menu.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/data-importer-menu.png" >}}
 
 Name the document, then click **OK**, and the new Data Importer document opens.
 
@@ -41,7 +41,7 @@ Name the document, then click **OK**, and the new Data Importer document opens.
 
 Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/select-file-for-preview.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/select-file-for-preview.png" >}}
 
 Select or drop the file in the **Select Source File** field. An Excel workbook can have single or multiple sheets; you can choose which sheet to import data from and specify the header row and starting data row.
 
@@ -49,7 +49,7 @@ Select or drop the file in the **Select Source File** field. An Excel workbook c
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/select-sheet-and-header-data-row.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/select-sheet-and-header-data-row.png" >}}
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 data rows from the source file are shown in the data preview section. If there are less than 10 data rows in the sample file, only the available rows are shown. The column names correspond to the attribute name within the entity, and the sheet name is used to define the entity.
 
@@ -57,7 +57,7 @@ All the columns are automatically selected (checked) for import. You can uncheck
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. For *Number* cell-types, the target Mendix type is mapped to *Decimal* to accommodate to integers and decimals. {{% /alert %}}
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/preview-data-and-entity.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/preview-data-and-entity.png" >}}
 
 ### 3.3 Creating an Entity {#create-entity}
 
@@ -65,7 +65,7 @@ View the entity in the **Entity Preview** section. You can change the name of th
 
 When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/source-to-target-mapping.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/source-to-target-mapping.png" >}}
 
 The Data Importer document creation is complete and can be used to import data in a microflow.
 
@@ -77,7 +77,7 @@ At the end of the design time flow, you create a Data Importer document, which a
 
 The **Import data from file** activity can be found under **Integration activities** in the **Toolbox**. Double-click to view its properties:
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/custom-activity-params.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/custom-activity-params.png" >}}
 
 The following are the properties in the **Input** section:
 
@@ -96,48 +96,48 @@ The *Import data from file* custom activity needs an input file to import data f
 1. Open the home page and add a button with the caption *Upload Customer Data*.
 2. Click the button and create a `System.FileDocument` object and pass the control to another page (**UploadCustomerData**) where the file can be uploaded.
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/home-page-button.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/home-page-button.png" >}}
 
 3. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
 4. Add an **Action** button to call a microflow, which will import the input file. The uploaded file will be passed as a parameter to this microflow.
 
-{{< figure src="/attachments/refguide/integration/data-importer-extension/data-view-file-manager.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-data-importer/data-view-file-manager.png" >}}
 
 ### 4.3 Import a Microflow
 
 1. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under "Integration activities".
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/integration-activity.png" >}}
+   {{< figure src="/attachments/howto/integration/use-the-data-importer/integration-activity.png" >}}
 
 2. When the **Import data from file** activity is added into microflow, you see three errors in the console.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/custom-activity.png" >}}
+   {{< figure src="/attachments/howto/integration/use-the-data-importer/custom-activity.png" >}}
 
 3. To address these errors, double-click the activity and in the **File** field, choose the input file that is passed from the file upload page to this microflow as a parameter.
 4. In the **Data Importer document** field, click *Select* and choose the Data Importer document you want to use.
 
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/choose-data-importer-template.png" >}}
+  {{< figure src="/attachments/howto/integration/use-the-data-importer/choose-data-importer-template.png" >}}
 
 5. After selecting the Data Importer document, the **Return type** and **Variable name** will auto-populate. You can change the name of the output variable if you wish.
 6. Click **OK**. The custom activity is configured and all the errors should be fixed.
 
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/configured-custom-activity.png" >}}
+  {{< figure src="/attachments/howto/integration/use-the-data-importer/configured-custom-activity.png" >}}
 
 7. Add an **Aggregate list** activity and configure it to count the size of the 'CustomerList', which is returned from the previous activity.
 
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/aggregate-list.png" >}}
+  {{< figure src="/attachments/howto/integration/use-the-data-importer/aggregate-list.png" >}}
 
 8. Configure a **Show message** activity. You can use a template message and a parameter, such as in the sample below.
 
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/show-message-with-list-size.png" >}}
+  {{< figure src="/attachments/howto/integration/use-the-data-importer/show-message-with-list-size.png" >}}
 
 9. Set $CustomerList as the return value from the **Import data from file** activity to be used later. Your completed microflow should look like the image below.
 
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/example-microflow.png" >}}
+  {{< figure src="/attachments/howto/integration/use-the-data-importer/example-microflow.png" >}}
 
 10. Deploy your app locally. Browse and upload an input file, which is similar to the file that was used as a template while creating Data Importer document.
 11. Check that you see a message that states **Imported xx rows from input file into a list of NPEs*.
 
-  {{< figure src="/attachments/refguide/modeling/integration/data-importer-extension/local-app-run.png" >}}
+  {{< figure src="/attachments/howto/integration/use-the-data-importer/local-app-run.png" >}}
 
 You have successfully configured and used the Data Importer extension. You can extend this as per your requirements. For example, you can convert the list of NPEs into persistable entities by providing message definition, or using for each loop construct and individually creating & committing entities into your database.

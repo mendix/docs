@@ -1,11 +1,10 @@
 ---
-title: "Pipelines (Beta)"
+title: "Pipelines Portal (Beta)"
 url: /developerportal/deploy/pipelines/
 weight: 33
 description: "Describes how to set up pipelines in the Developer Portal"
 tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
-temp notes: "add tooltips and icons, more context around Variables, confirm name for the pipeline's Details page"
 ---
 
 {{% alert color="warning" %}}The Pipelines Portal is currently in beta. This means it should not be used for production applications, it is not covered by any SLA, it may introduce breaking changes, and it is subject to change in future releases. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).{{% /alert %}}
@@ -22,13 +21,13 @@ To view the Pipelines Portal, you must have a role with cloud access. For detail
 
 ## 2 Navigation
 
-The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and **Settings**.
+The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**.
 
 ### 2.1 The Runs Tab
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" class="image-border" >}}
 
-By adjusting the **View** ({{% icon name="view" %}}) settings, you can display or hide the following columns:
+For each run, you can view the following information:
 
 * Status
 * Run ID
@@ -38,79 +37,51 @@ By adjusting the **View** ({{% icon name="view" %}}) settings, you can display o
 * Last Run
 * Duration
 * Trigger
-* Revision
 
 The search and filter options allow you to review specific run types. You can do the following:
 
 * Search by run ID, branch, or pipeline name
 * Filter by trigger: All triggers, on commit, scheduled, manual
-* Filter by who the run was triggered by
 * Filter by status: All statuses, succeeded, in progress, or failed
 
-There is also a **Run Manual Pipeline** button and a **Design a Pipeline** button.
-
-If you click **Run Manual Pipeline**, this launches a dialog box that lets you select a pipeline, a branch, variables, and value before running the specified pipeline. 
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-manual.png" alt="" width=60% >}}
-
-For information about the **Design a Pipeline** button, see [Designing or Editing a Pipeline](#design-edit-pipeline), below.
-
-Click a run (or its **Details** icon ({{% icon name="paper-clipboard" %}})) to see the details of the run. Click **Run** ({{% icon name="pipeline-run" %}}) to run it again.
+To see the details of particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
 
+From this page, you can view an overview of the run and expand each executed step to see its log. You can also download the logs.
+
 ### 2.2 The Designs Tab
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" class="image-border" >}}
 
 On the **Designs** tab, you can see all existing pipeline designs.
 
-By adjusting the **View** ({{% icon name="view" %}}) settings, you can display or hide the following columns:
+For each design, you can view the following information:
 
 * Pipeline Name
 * Trigger
 * Branch
 * Last Modified by
 * Last Modified Date/Time
-* Created by
-* Created Date/Time
 * Status
 
-Click a pipeline (or its **Details** icon ({{% icon name="paper-clipboard" %}})) to see the pipeline's **Details** page. You can also edit the pipeline details, as described in [Designing or Editing a Pipeline](#design-edit-pipeline), below.
+On a pipeline, click **Details** ({{% icon name="paper-clipboard" %}}) to see the pipeline's **Details** page. You can also edit the pipeline details, as described in [Designing or Editing a Pipeline](#design-edit-pipeline), below.
 
 Click **Delete** ({{% icon name="trash-can" %}}) to delete a pipeline design.
 
-Click **Activity Log** to open the activity log, which matches the activity log shown on the **Environments** page.
+### 2.3 The Settings Tab
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/activity-log.png" alt="" width=60% >}}
-
-### 2.3 The Variables Tab
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/variables-tab.png" alt="" width=75% >}}
-
-The **Variables** tab lets you create variables.
-
-You can use the drop-down menu to filter to specific variable types.
-
-Click **Create New Key** to create a new key, or double-click an existing key (or click **More Options** ({{% icon name="three-dots-menu-horizontal-small" %}}) > **Edit**) to launch the **Edit Key** dialog box.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/edit-key.png" alt="" width=60% >}}
-
-To use a variable in the pipeline design, type `$` and select your desired variable. Note that these are in addition to the built-in, Mendix-defined variables.
-
-### 2.4 The Settings Tab
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" class="image-border" >}}
 
 The **Settings** tab lets you configure pipeline run users.
 
-On a user, click **Configure** ({{% icon name="cog" %}}) to launch the **Add New Run User** dialog box. You can choose **Another User** and specify that user's details, or you can choose **Me**. Click **Delete** ({{% icon name="trash-can" %}}) to remove a user.
+Click **Setup** to launch the **Setup** dialog box. Then, enter your email, personal access token, and API key.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/add-new-run-user.png" alt="" width=60% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/user-setup.png" alt="" width=60% class="image-border" >}}
 
 ## 3 Designing or Editing a Pipeline{#design-edit-pipeline}
 
-To design a new pipeline, click **Design a Pipeline** from either the **Runs** or **Designs** tab. That launches the **Design a Pipeline** dialog box. You can choose if you want to start from a pipeline template or an empty pipeline.
+To design a new pipeline, click **Design a Pipeline** from any tab. That launches the **Design a Pipeline** dialog box. You can choose if you want to start from a pipeline template or an empty pipeline.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/design-pipeline.png" width=60% alt="" >}}
 
@@ -129,28 +100,20 @@ From there, you can customize your pipeline. If you choose to work from an empty
 
 You then have a variety of customization options:
 
-* Click **More Options** ({{% icon name="paper-clipboard" %}}) to edit the pipeline name, duplicate it, or delete it.
-* Expand a step to customize or delete it
-* Use the drag handle, which appears when you hover over a step, to rearrange steps
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal-small" %}}) to edit the pipeline name, duplicate it, or delete it.
+* Expand a step to customize or delete it.
 * Add a step by clicking **Add** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box:
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" class="image-border" >}}
 
 The steps are sorted into categories based on their function:
 
 * Build
 * Release
-* Code quality
-* Security
-* Communication
-* Developer tools
-* Marketplace
-
-You can also search for a step by name, and filter to see only platform-supported, community-supported, or partner-supported steps.
 
 When you are finished customizing your pipeline, click **Save**. Or, to immediately start using it, click **Save & Activate**.
 
-The first time you activate a pipeline, you will be prompted to set up a personal access token (PAT) in the **Settings** tab if yo have not already set one up. This is required for a successful pipeline run.
+The first time you activate a pipeline, you will be prompted to set up a personal access token (PAT) in the **Settings** tab if you have not already set one up. This is required for a successful pipeline run.
 
 ## 4 Limitations
 

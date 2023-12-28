@@ -85,7 +85,7 @@ After you install the OpenAI Connector, you can find it in the **App Explorer**,
 
 #### 3.1.1 OpenAI Configuration {#openai-configuration} 
 
-The following inputs are required to create a configuration for the OpenAI: 
+The following inputs are required for the OpenAI configuration: 
 
 | Parameter | Value |
 | ---| --- |
@@ -101,7 +101,7 @@ For more details, see the [OpenAI API reference](https://platform.openai.com/doc
 
 #### 3.1.2 Azure OpenAI Configuration {#azure-open-ai-configuration} 
 
-The following inputs are required to create a configuration for the **Azure OpenAI**: 
+The following inputs are required for the Azure OpenAI configuration: 
 
 | Parameter | Value |
 | ---| --- |
@@ -109,7 +109,7 @@ The following inputs are required to create a configuration for the **Azure Open
 | API type | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/` |
 | API key | This is the access token to authorize your API call. <br />Follow these [instructions](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity) to generate a Microsoft Entra access token. |
-| DeploymentName | This is the deployment name you chose when you deployed the model. Go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models. |
+| DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. |
 
 {{% alert color="info" %}}
@@ -124,12 +124,12 @@ These microflows expect a [Configuration](#configuration-entity) entity a, as we
 - For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
 - For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
 
-In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections in this document. See [ENUM_Role](#enum-role) for the technical reference. 
+In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
 #### 3.2.1 `Chat completions without history` 
 
-The microflow activity `Chat completions without history` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The **system** prompt and **user** prompt are available as String input parameters. Depending on the use case, both or only one can be used. Technical details are explained in the [Technical reference](#chat-completions-without-history-technical) section of this document. 
-Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. More information on [prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering). 
+The microflow activity `Chat completions without history` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as String input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
+Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information, see [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering). 
 
 #### 3.2.2 `Chat completions with history`
 
@@ -137,13 +137,13 @@ The microflow activity `Chat completions with history` supports more complex use
 - `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
 - `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`.  
 
-The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant. Technical details about this are explained in the [Technical reference](#chat-completions-with-history-technical) section of this document. 
+The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant. For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
-For more inspiration or guidance on how to use those microflows in your logic, Menix highly recommends to download our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
 
 ## 4 Technical Reference 
 
-To help you work with the **OpenAI Connector**, the following sections of this document list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
+To help you work with the **OpenAI Connector**, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
 
 ### 4.1 Domain Model {#domain-model} 
 
@@ -158,7 +158,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `DisplayName` | This is the name identifier of a configuration. |
 | `ApiType` | The value can be `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | `Endpoint` | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
-| `DeploymentName` | This is the deployment name you chose when you deployed the model. Log in at [Azure OpenAI](https://oai.azure.com/) and navigate to deployments in the sidebar. Only relevant for configurations of `ApiType` **AzureOpenAI**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models . |
+| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion` | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
 | `ApiKey `| This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
 | `ModelDefault` | If no model is specified for the call to be executed, the contents of this field will be used. Only relevant for configurations of `ApiType` **OpenAI**.<br />For more information, see the [ENUM_Model](#enum-model) section. |

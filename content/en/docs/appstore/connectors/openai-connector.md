@@ -10,9 +10,7 @@ draft: false
 
 ## 1 Introduction 
 
-The **OpenAI Connector** allows you to integrate generative AI into your Mendix app. This connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
-
-The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat).
+The **OpenAI Connector** allows you to integrate generative AI into your Mendix app. This connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat).
 
 OpenAI provides market-leading large language model capabilities with GPT-4: 
 
@@ -62,26 +60,26 @@ The current scope is limited to text generation use cases based on the Chat Comp
 
 ### 1.4 Prerequisites 
 
-* You should have [signed up](https://platform.openai.com/) for an OpenAI trial account or have access to [Azure OpenAI](https://oai.azure.com/). 
+* You should have [signed up](https://platform.openai.com/) for an OpenAI trial account, or have access to [Azure OpenAI](https://oai.azure.com/). 
 
 ### 1.5 Dependencies 
 
-- Mendix Studio Pro version 9.24.0 and higher 
+- Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
 - [Encryption](https://marketplace.mendix.com/link/component/1011) module 
 
 ## 2 Installation 
 
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the **OpenAI Connector** into your app. 
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OpenAI Connector into your app. 
 
-## 3 Configuration 
+## 3 Configuration
 
-After you install the **OpenAI Connector**, you can find it in the *App Explorer*, in the Marketplace modules section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration
 
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
-2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_Configurations** to a page that is already part of your navigation. Now you can set up your OpenAI configuration(s) at runtime.
-3. Depending the type of your configuration, continue with one of the following sections:
+2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_Configurations** to a page that is already part of your navigation. 
+3. Continue to set up your OpenAI configuration at runtime. Depending the type of your configuration, continue with one of the following sections:
    * [OpenAI Configuration](#openai-configuration); or
    * [Azure OpenAI Configuration](#azure-open-ai-configuration)
 
@@ -91,10 +89,10 @@ The following inputs are required to create a configuration for the OpenAI:
 
 | Parameter | Value |
 | ---| --- |
-| DisplayName | Name identifier of a configuration, e.g. *MyConfiguration*. |
-| API type | `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
-| Endpoint | API Endpoint, e.g. `https://api.openai.com/v1` |
-| API key | Access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
+| API type | Select `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| Endpoint | This is the API Endpoint, e.g. `https://api.openai.com/v1` |
+| API key | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 | Default model | If no model is specified for the call to be executed, the contents of this field will be used. For more information, see the [ENUM_Model](#enum-model) section. |
 
 {{% alert color="info" %}}
@@ -107,11 +105,11 @@ The following inputs are required to create a configuration for the **Azure Open
 
 | Parameter | Value |
 | ---| --- |
-| DisplayName | Name identifier of a configuration, e.g. *MyConfiguration*. |
-| API type | `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
-| Endpoint | API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/` |
-| API key | Access token to authorize your API call. <br />Follow these [instructions](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity) to generate a Microsoft Entra access token. |
-| DeploymentName | This is the deployment name you chose when you deployed the model. Go to [Azure OpenAI](https://oai.azure.com/) and check the name under **Deployments**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models. |
+| DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
+| API type | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| Endpoint | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/` |
+| API key | This is the access token to authorize your API call. <br />Follow these [instructions](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity) to generate a Microsoft Entra access token. |
+| DeploymentName | This is the deployment name you chose when you deployed the model. Go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. |
 
 {{% alert color="info" %}}
@@ -122,9 +120,9 @@ For more details, see the [Azure OpenAI Service REST API reference](https://lear
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** tab in Mendix Studio Pro. 
 
-These microflows expect a `Configuration` entity as described in the previous section, as well as the desired AI model (optional) that should be used for generating responses.  
-- For the configuration for OpenAI API, if no model is explicitly passed into the microflow, there is a default model that will be used.
-- For the configuration for Azure OpenAI, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
+These microflows expect a [Configuration](#configuration-entity) entity a, as well as the desired AI model (optional) that should be used for generating responses.  
+- For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
+- For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections in this document. See [ENUM_Role](#enum-role) for the technical reference. 
 

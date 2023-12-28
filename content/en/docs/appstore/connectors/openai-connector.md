@@ -151,21 +151,21 @@ To help you work with the **OpenAI Connector**, the following sections of this d
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain model](/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
 
-#### 4.1.1 Configuration {#configuration-entity} 
+#### 4.1.1 `Configuration` {#configuration-entity} 
 
 This entity is used to store the API credentials and endpoints in the configuration for OpenAI or Azure OpenAI .
 
 | Attribute | Description |
 | ---| --- |
-| `DisplayName` | Name identifier of a configuration. |
-| `ApiType` | `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
-| `Endpoint` | API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
+| `DisplayName` | This is the name identifier of a configuration. |
+| `ApiType` | The value can be `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| `Endpoint` | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
 | `DeploymentName` | This is the deployment name you chose when you deployed the model. Log in at [Azure OpenAI](https://oai.azure.com/) and navigate to deployments in the sidebar. Only relevant for configurations of `ApiType` **AzureOpenAI**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models . |
-| `ApiVersion` | The API version to use for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
-| `ApiKey `| Access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
+| `ApiVersion` | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
+| `ApiKey `| This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
 | `ModelDefault` | If no model is specified for the call to be executed, the contents of this field will be used. Only relevant for configurations of `ApiType` **OpenAI**.<br />For more information, see the [ENUM_Model](#enum-model) section. |
 
-#### 4.1.2 ApiKey 
+#### 4.1.2 `ApiKey` 
 
 This is a helper entity to edit the `ApiKey` to be stored in the [Configuration](#configuration-entity) entity. 
 
@@ -173,82 +173,82 @@ This is a helper entity to edit the `ApiKey` to be stored in the [Configuration]
 | ---| --- | 
 | `ApiKey` | Access token to authorize your API call. | 
 
-#### 4.1.3 AbstractChatCompletionsMessage {#abstractchatcompletionsmessage} 
+#### 4.1.3 `AbstractChatCompletionsMessage` {#abstractchatcompletionsmessage} 
 
 This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity directly. Instead, use one of its specializations. 
 
 | Attribute | Description |
 | ---| --- |
-| `Content` | The content of a message. |
-| `Role` | The role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
+| `Content` | This is the content of a message. |
+| `Role` | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
 
-#### 4.1.4 ChatCompletionsRequest {#chatcompletionsrequest} 
+#### 4.1.4 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
 A chat completions request that creates a model response for the given chat conversation. 
 
 | Attribute | Description |
 | ---| --- |
-| `Model` | Model is required for requests to OpenAI. Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment.<br />For more information, see the [ENUM_Model](#enum-model) section. |
-| `Frequency_penalty` | The value should be a Decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0. |
+| `Model` | This is required for requests to OpenAI. Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment.<br />For more information, see the [ENUM_Model](#enum-model) section. |
+| `Frequency_penalty` | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0. |
 | `Max_tokens` | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length. This attribute is optional. |
-| `Temperature` | Sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. Decimal between 0.0 and 2.0. The default value is 1.0. |
-| `Top_p` | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. Mendix generally recommends altering `Top_p` or `Temperature` but not both. This attribute is optional. Decimal between 0.0 and 1.0. The default value is 1.0. |
-| `N` | Number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep n as 1 to minimize costs. This attribute is optional. The default value is 1. |
+| `Temperature` | This is the sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. |
+| `Top_p` | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. Mendix generally recommends altering `Top_p` or `Temperature` but not both. This attribute is optional. The value should be a decimal between 0.0 and 1.0. The default value is 1.0. |
+| `N` | This is the number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep `N` as 1 to minimize costs. This attribute is optional. The default value is 1. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.5 ChatCompletionsMessages 
+#### 4.1.5 `ChatCompletionsMessages` 
 
-A wrapper for a list of messages comprising the conversation so far. 
+This is a wrapper for a list of messages comprising the conversation so far. 
 
-#### 4.1.6 ChatCompletionsMessageRequest 
+#### 4.1.6 `ChatCompletionsMessageRequest` 
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. Each instance contains a text that needs to be taken into account by the model when processing the completion request. 
 
-#### 4.1.7 ChatCompletionsResponse {#chatcompletionsresponse} 
+#### 4.1.7 `ChatCompletionsResponse` {#chatcompletionsresponse} 
 
-Represents a chat completion response returned by model, based on the provided input. 
+This represents a chat completion response returned by model, based on the provided input. 
 
-| Attribute | Description | 
-| --- | --- | 
-| `_id` | A unique identifier for the chat completion. | 
-| `_object` | The object type, which is always *chat.completion*. | 
-| `Created` | The Unix timestamp (in seconds) of when the chat completion was created. | 
-| `Model` | The model used for the chat completion. | 
-| `System_fingerprint` | This fingerprint represents the backend configuration that the model runs with. The value can be used in conjunction with the seed request parameter to understand when backend changes have been made that might impact determinism. | 
+| Attribute | Description |
+| --- | --- |
+| `_id` | This is a unique identifier for the chat completion. |
+| `_object` | This is the object type, which is always *chat.completion*. |
+| `Created` | This is the Unix timestamp (in seconds) of when the chat completion was created. |
+| `Model` | This is the model used for the chat completion. |
+| `System_fingerprint` | This fingerprint represents the backend configuration that the model runs with. The value can be used in conjunction with the seed request parameter to understand when backend changes have been made that might impact determinism. |
 
-*Note: The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.* 
+{{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.8 Choice 
+#### 4.1.8 `Choice `
 
-A list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
+This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
-| Attribute | Description | 
-| ---| --- | 
-| `Index` | The index of the choice in the list of choices. | 
-| `Finish_reason` | The reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. | 
+| Attribute | Description |
+| ---| --- |
+| `Index` | This is the index of the choice in the list of choices. |
+| `Finish_reason` | This is the reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. |
 
-#### 4.1.9 ChatCompletionsMessageResponse 
+#### 4.1.9 `ChatCompletionsMessageResponse` 
 
-This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (**assistant** prompt). 
+This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (assistant prompt). 
 
-#### 4.1.10 Usage 
+#### 4.1.10 `Usage` 
 
-Usage statistics for the completion request. 
+This is the statistics for the completion request. 
 
-| Attribute | Description | 
-| ---| --- | 
-| `Prompt_tokens` | Number of tokens in the prompt. | 
-| `Completion_tokens` | Number of tokens in the generated completion. | 
-| `Total_tokens` | Total number of tokens used in the request (`Prompt_tokens` + `Completion_tokens`). | 
+| Attribute | Description |
+| ---| --- |
+| `Prompt_tokens` | This is the number of tokens in the prompt. |
+| `Completion_tokens` | This is the number of tokens in the generated completion. |
+| `Total_tokens` | This is the total number of tokens used in the request (`Prompt_tokens` + `Completion_tokens`). |
 
-OpenAI provides more information on how to [manage tokens](https://platform.openai.com/docs/guides/text-generation/managing-tokens) for text generation. 
+For more information on how to manage tokens for text generation, see [Managing tokens](https://platform.openai.com/docs/guides/text-generation/managing-tokens).
 
-#### 4.1.11 ChatCompletionsSession {#chatcompletionssession} 
+#### 4.1.11 `ChatCompletionsSession` {#chatcompletionssession} 
 
 This entity functions as a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
 
-#### 4.1.12 ChatCompletionsSessionMessage 
+#### 4.1.12 `ChatCompletionsSessionMessage` 
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. 
 
@@ -256,7 +256,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](https://docs.mendix.com/refguide/enumerations/). 
 
-#### 4.2.1 ENUM_ApiType {#enum-apitype} 
+#### 4.2.1 `ENUM_ApiType` {#enum-apitype} 
 
 This enumeration provides a list of supported API types. 
 
@@ -265,9 +265,9 @@ This enumeration provides a list of supported API types.
 | `AzureOpenAI` | **Azure OpenAI** | 
 | `OpenAI` | **OpenAI** | 
 
-#### 4.2.2 ENUM_Model {#enum-model} 
+#### 4.2.2 `ENUM_Model` {#enum-model} 
 
-This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/text-generation) for the Chat Completions API. The **OpenAI Connector** only supports newer models (2023+), legacy models and updated legacy models are not supported. This enumeration is only applicable for configurations or API calls to **OpenAI** (not Azure OpenAI). 
+This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/text-generation) for the Chat Completions API. The OpenAI Connector only supports newer models (2023+), legacy models and updated legacy models are not supported. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI). 
 
 | Name | Caption | 
 | --- | --- | 
@@ -276,19 +276,19 @@ This enumeration provides a list of [supported models](https://platform.openai.c
 | `gpt_4` | **gpt-4** | 
 | `gpt_4_32k` | **gpt-4-32k** | 
 
-#### 4.2.3 ENUM_Role {#enum-role} 
+#### 4.2.3 `ENUM_Role` {#enum-role} 
 
 This enumeration provides a list of message author roles. 
 
-| Name | Caption | Description | 
-| --- | --- | --- | 
-| `assistant` | **Assistant** | An **assistant** message was generated by the model as a response to a user message. | 
-| `system` | **System** | A **system** message can be used to specify the persona used by the model in its replies. This is typically specified by the developer to steer the model response. | 
-| `user` | **User** | A **user** message is the input from a user. | 
+| Name | Caption | Description |
+| --- | --- | --- |
+| `assistant` | **Assistant** | This is an assistant message was generated by the model as a response to a user message. |
+| `system` | **System** | This is a system message can be used to specify the persona used by the model in its replies. This is typically specified by the developer to steer the model response. |
+| `user` | **User** | This is a user message is the input from a user. |
 
 ### 4.3 Activities {#activities} 
 
-Activities define the actions that are executed in a microflow or a nanoflow. A functional description of the actions can be found in the [chat completions configuration](#chat-completions-configuration) section. 
+Activities define the actions that are executed in a microflow or a nanoflow. For more information about the functional description of the actions, see the [Chat Completions Configuration](#chat-completions-configuration) section. 
 
 #### 4.3.1 Chat Completions 
 
@@ -314,7 +314,7 @@ The `ChatCompletionsSession` is a wrapper object for the ordered list of message
 
 ##### 4.3.1.3 Chat Completions Advanced
 
-For advanced developers that like to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` 	microflow. The inputs and output are shown in the table below: 
+For advanced developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` 	microflow. The inputs and output are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 

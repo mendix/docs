@@ -10,9 +10,9 @@ draft: false
 
 ## 1 Introduction 
 
-The **OpenAI Connector** allows you to integrate generative AI into your Mendix app. The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat). 
+The **OpenAI Connector** allows you to integrate generative AI into your Mendix app. This connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-This connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
+The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat).
 
 ### 1.1 Typical Use Cases 
 
@@ -89,7 +89,7 @@ After you install the **OpenAI Connector**, you can find it in the *App Explorer
    * [OpenAI Configuration](#openai-configuration); or
    * [Azure OpenAI Configuration](#azure-open-ai-configuration)
 
-#### 3.1.1 OpenAI Configuration {#openaiconfiguration} 
+#### 3.1.1 OpenAI Configuration {#openai-configuration} 
 
 The following inputs are required to create a configuration of OpenAI: 
 
@@ -300,13 +300,13 @@ The chat completions API from OpenAI accepts a complex JSON structure that consi
 
 ##### 4.3.1.1 Chat Completions Without History {#chat-completions-without-history-technical} 
 
-Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with String input and output not considering a previous conversation. See [ENUM_Roles](#enum-roles) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and and a `ENUM_Model` value. If no model is provided, the `ModelDefault` value from the [Configuration](#configuration-entity) will be used in the call. 
+Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with String input and output not considering a previous conversation. See [ENUM_Role](#enum-role) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and and a `ENUM_Model` value. If no model is provided, the `ModelDefault` value from the [Configuration](#configuration-entity) will be used in the call. 
 
 | Input | Output | 
 | --- | --- | 
 | `UserPrompt`, `SystemPrompt`, `Configuration`, `ENUM_Model` | `AssistantResponseText` | 
 
-##### 4.3.1.2 Chat Completions with History
+##### 4.3.1.2 Chat Completions with History {#chat-completions-with-history-technical}
 
 Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [ChatCompletionsSession](#chatcompletionssession) input and a String output of the assistant response. It is not required to provide a `SystemPrompt` string and and a `ENUM_Model` value. If no model is provided, the `ModelDefault` value from the [Configuration](#configuration-entity) will be used in the call. 
 

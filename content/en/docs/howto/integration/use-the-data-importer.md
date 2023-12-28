@@ -93,17 +93,22 @@ The following are the properties in the **Output** section:
 
 The *Import data from file* custom activity needs an input file to import data from. The example below builds a page where a `System.FileDocument`is uploaded and fed to the custom activity.
 
-1. Open the home page and add a button with the caption *Upload Customer Data*.
-2. Click the button and create a `System.FileDocument` object and pass the control to another page (**UploadCustomerData**) where the file can be uploaded.
+1. Open the home page and add a button and name it *Upload Customer Data*.
+2. Double-click the button and in the **Events** field under the **On click** drop-down, select **Create object** to create a `System.FileDocument` entity.
+   
+3. Pass the control to a new page (**UploadCustomerData**) where the file is uploaded.
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/home-page-button.png" >}}
 
-3. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
-4. Add an **Action** button to call a microflow, which will import the input file. The uploaded file will be passed as a parameter to this microflow.
+4. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
 
-{{< figure src="/attachments/howto/integration/use-the-data-importer/data-view-file-manager.png" >}}
+5. Return to the **UploadCustomerData** page and from the **Toolbox**, add a **Call microflow button**. 
 
-### 4.3 Import a Microflow
+6. Click **New** and name the microflow *Import Customer Data*. You also see **FileDocument** in the parameters section; make sure this box is checked to include it as a parameter and click **OK**.
+
+{{< figure src="/attachments/howto/integration/use-the-data-importer/add-parameter.png" >}}
+
+### 4.3 Configuring the Import data from file Activity in a Microflow 
 
 1. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under "Integration activities".
 

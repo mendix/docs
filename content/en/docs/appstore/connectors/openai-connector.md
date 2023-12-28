@@ -14,6 +14,12 @@ The **OpenAI Connector** allows you to integrate generative AI into your Mendix 
 
 The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat).
 
+OpenAI provides market-leading large language model capabilities with GPT-4: 
+
+* Advanced reasoning: Follow complex instructions in natural language and solve difficult problems with accuracy. 
+* Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
+* Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
+
 ### 1.1 Typical Use Cases 
 
 * Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
@@ -45,16 +51,6 @@ The current scope is limited to text generation use cases based on the [OpenAI C
 You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for use cases.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-
-OpenAI provides market-leading large language model capabilities with GPT-4: 
-
-* Advanced reasoning: Follow complex instructions in natural language and solve difficult problems with accuracy. 
-* Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
-* Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
-
-{{% /alert %}}
-
 ### 1.2 Features 
 
 Mendix provides dual API support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
@@ -62,7 +58,7 @@ With the current version 1.2.0, Mendix supports chat completions for [text gener
 
 ### 1.3 Limitations 
 
-The current scope is limited to text generation use cases based on the Chat Completions API. Instead of waiting for more scope to be ready, we are now releasing this version for you to experiment! 
+The current scope is limited to text generation use cases based on the Chat Completions API. Instead of waiting for more scope to be ready, Mendix is releasing this version for you to experiment.
 
 ### 1.4 Prerequisites 
 
@@ -91,15 +87,15 @@ After you install the **OpenAI Connector**, you can find it in the *App Explorer
 
 #### 3.1.1 OpenAI Configuration {#openai-configuration} 
 
-The following inputs are required to create a configuration of OpenAI: 
+The following inputs are required to create a configuration for the OpenAI: 
 
 | Parameter | Value |
 | ---| --- |
 | DisplayName | Name identifier of a configuration, e.g. *MyConfiguration*. |
-| API type | `OpenAI`, see [ENUM_ApiType](#enum-apitype). |
+| API type | `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint | API Endpoint, e.g. `https://api.openai.com/v1` |
 | API key | Access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
-| Default model | If no model is specified for the call to be executed, the contents of this field will be used. See [ENUM_Model](#enum-model). |
+| Default model | If no model is specified for the call to be executed, the contents of this field will be used. For more information, see the [ENUM_Model](#enum-model) section. |
 
 {{% alert color="info" %}}
 For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference).
@@ -107,45 +103,45 @@ For more details, see the [OpenAI API reference](https://platform.openai.com/doc
 
 #### 3.1.2 Azure OpenAI Configuration {#azure-open-ai-configuration} 
 
-The following inputs are required to create a configuration of type **Azure OpenAI**: 
+The following inputs are required to create a configuration for the **Azure OpenAI**: 
 
 | Parameter | Value |
 | ---| --- |
 | DisplayName | Name identifier of a configuration, e.g. *MyConfiguration*. |
-| API type | `AzureOpenAI`, see [ENUM_ApiType](#enum-apitype). |
+| API type | `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint | API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/` |
-| API key | Access token to authorize your API call. Follow these [instructions](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity) to generate a Microsoft Entra access token. |
-| DeploymentName | Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models This is the deployment name you chose when you deployed the model. See [Azure OpenAI](https://oai.azure.com/) under **Deployments**. |
+| API key | Access token to authorize your API call. <br />Follow these [instructions](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity) to generate a Microsoft Entra access token. |
+| DeploymentName | This is the deployment name you chose when you deployed the model. Go to [Azure OpenAI](https://oai.azure.com/) and check the name under **Deployments**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. |
 
 {{% alert color="info" %}}
 For more details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference) .
 {{% /alert %}}
 
-### 3.2 Chat completions configuration {#chat-completions-configuration} 
+### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** tab in Mendix Studio Pro. 
 
 These microflows expect a `Configuration` entity as described in the previous section, as well as the desired AI model (optional) that should be used for generating responses.  
-- In the case of an **OpenAI** API type configuration, there is a default model that will be used if no model is explicitly passed into the microflow.  
-- In the case of an **Azure OpenAI** type configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
+- For the configuration for OpenAI API, if no model is explicitly passed into the microflow, there is a default model that will be used.
+- For the configuration for Azure OpenAI, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
 
-In the context of chat completions, **system** prompts and **user** prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections in this document. See [ENUM_Role](#enum-role) for the technical reference. 
+In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections in this document. See [ENUM_Role](#enum-role) for the technical reference. 
 
-#### 3.2.1 Chat Completions Without History 
+#### 3.2.1 `Chat completions without history` 
 
 The microflow activity `Chat completions without history` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The **system** prompt and **user** prompt are available as String input parameters. Depending on the use case, both or only one can be used. Technical details are explained in the [Technical reference](#chat-completions-without-history-technical) section of this document. 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. More information on [prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering). 
 
-#### 3.2.2 Chat Completions with History 
+#### 3.2.2 `Chat completions with history`
 
 The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow.  
 - `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-- `ChatCompletionsSession_AddMessage` is used to attach the historical message(s) to the `ChatCompletionsSession`.  
+- `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`.  
 
-The content of such a message corresponds to a **system**, **assistant** or **user** prompt. In the case of multiple historical messages the order is relevant. Technical details about this are explained in the [Technical reference](#chat-completions-with-history-technical) section of this document. 
+The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant. Technical details about this are explained in the [Technical reference](#chat-completions-with-history-technical) section of this document. 
 
-For more inspiration or guidance on how to use those microflows in your logic, we highly recommend to download our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+For more inspiration or guidance on how to use those microflows in your logic, Menix highly recommends to download our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
 
 ## 4 Technical Reference 
 
@@ -153,25 +149,25 @@ To help you work with the **OpenAI Connector**, the following sections of this d
 
 ### 4.1 Domain Model {#domain-model} 
 
-The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain model](https://docs.mendix.com/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see below under [Activities](#activities). 
+The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain model](/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
 
 #### 4.1.1 Configuration {#configuration-entity} 
 
-This entity is used to store **OpenAI** or **Azure OpenAI** type API credentials and endpoints. 
+This entity is used to store the API credentials and endpoints in the configuration for OpenAI or Azure OpenAI .
 
 | Attribute | Description |
 | ---| --- |
 | `DisplayName` | Name identifier of a configuration. |
-| `ApiType` | `OpenAI` or `AzureOpenAI` see [ENUM_ApiType](#enum-apitype) |
-| `Endpoint` | API Endpoint, e.g. `https://api.openai.com/v1` for **OpenAI** or `https://your-resource-name.openai.azure.com/openai/deployments/`for **Azure OpenAI**|
-| `DeploymentName` | Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models This is the deployment name you chose when you deployed the model. Login at [Azure OpenAI](https://oai.azure.com/) and navigate to deployments in the sidebar. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
+| `ApiType` | `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| `Endpoint` | API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
+| `DeploymentName` | This is the deployment name you chose when you deployed the model. Log in at [Azure OpenAI](https://oai.azure.com/) and navigate to deployments in the sidebar. Only relevant for configurations of `ApiType` **AzureOpenAI**.<br />Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models . |
 | `ApiVersion` | The API version to use for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
-| `ApiKey `| Access token to authorize your API call. See [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) for details. |
-| `ModelDefault` | If no model is specified for the call to be executed, the contents of this field will be used. See [ENUM_Model](#enum-model). Only relevant for configurations of `ApiType` **OpenAI**. |
+| `ApiKey `| Access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
+| `ModelDefault` | If no model is specified for the call to be executed, the contents of this field will be used. Only relevant for configurations of `ApiType` **OpenAI**.<br />For more information, see the [ENUM_Model](#enum-model) section. |
 
 #### 4.1.2 ApiKey 
 
-Helper entity to edit the `ApiKey` to be stored in the [Configuration](#configuration-entity) entity. 
+This is a helper entity to edit the `ApiKey` to be stored in the [Configuration](#configuration-entity) entity. 
 
 | Attribute | Description | 
 | ---| --- | 
@@ -181,25 +177,25 @@ Helper entity to edit the `ApiKey` to be stored in the [Configuration](#configur
 
 This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity directly. Instead, use one of its specializations. 
 
-| Attribute | Description | 
-| ---| --- | 
-| `Content` | The content of a message. | 
-| `Role` | Role of the message author. See [ENUM_Role](#enum-role). | 
+| Attribute | Description |
+| ---| --- |
+| `Content` | The content of a message. |
+| `Role` | The role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
 
 #### 4.1.4 ChatCompletionsRequest {#chatcompletionsrequest} 
 
 A chat completions request that creates a model response for the given chat conversation. 
 
-| Attribute | Description | 
-| ---| --- | 
-| `Model` | See [ENUM_Model](#enum-model). Model is required for requests to OpenAI. Model is **not** considered for request to Azure OpenAI, because the model is determined by the deployment. | 
-| `Frequency_penalty` | Decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. Optional attribute. Defaults to 0. | 
-| `Max_tokens` | The maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length. Optional attribute. | 
-| `Temperature` | Sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Optional attribute. Decimal between 0.0 and 2.0. Defaults to 1.0. | 
-| `Top_p` | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering `Top_p` or `Temperature` but not both. Optional attribute. Decimal between 0.0 and 1.0. Defaults to 1.0. | 
-| `N` | Number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep n as 1 to minimize costs. Optional attribute. Defaults to 1. | 
+| Attribute | Description |
+| ---| --- |
+| `Model` | Model is required for requests to OpenAI. Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment.<br />For more information, see the [ENUM_Model](#enum-model) section. |
+| `Frequency_penalty` | The value should be a Decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0. |
+| `Max_tokens` | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length. This attribute is optional. |
+| `Temperature` | Sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. Decimal between 0.0 and 2.0. The default value is 1.0. |
+| `Top_p` | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. Mendix generally recommends altering `Top_p` or `Temperature` but not both. This attribute is optional. Decimal between 0.0 and 1.0. The default value is 1.0. |
+| `N` | Number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep n as 1 to minimize costs. This attribute is optional. The default value is 1. |
 
-*Note: The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.* 
+{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.* {{% /alert %}}
 
 #### 4.1.5 ChatCompletionsMessages 
 

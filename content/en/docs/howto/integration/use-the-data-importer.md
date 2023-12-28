@@ -110,7 +110,7 @@ The *Import data from file* custom activity needs an input file to import data f
 
 ### 4.3 Configuring the Import data from file Activity in a Microflow 
 
-1. Create a new microflow and drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under "Integration activities".
+1. In the created microflow, drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under "Integration activities".
 
    {{< figure src="/attachments/howto/integration/use-the-data-importer/integration-activity.png" >}}
 

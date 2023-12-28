@@ -195,7 +195,7 @@ A chat completions request that creates a model response for the given chat conv
 | `Top_p` | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. Mendix generally recommends altering `Top_p` or `Temperature` but not both. This attribute is optional. Decimal between 0.0 and 1.0. The default value is 1.0. |
 | `N` | Number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep n as 1 to minimize costs. This attribute is optional. The default value is 1. |
 
-{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.* {{% /alert %}}
+{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
 #### 4.1.5 ChatCompletionsMessages 
 
@@ -314,7 +314,7 @@ The `ChatCompletionsSession` is a wrapper object for the ordered list of message
 
 ##### 4.3.1.3 Chat Completions Advanced
 
-For advanced developers that like to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, we recommend using the `ChatCompletionsRequest_CallAPI` 	microflow. The inputs and output are shown in the table below: 
+For advanced developers that like to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` 	microflow. The inputs and output are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -326,4 +326,4 @@ This option can be used if the default values of the `ChatCompletionsRequest` ar
 
 ### 5.1 Showcase application 
 
-For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends to download our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
+For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.

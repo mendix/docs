@@ -27,7 +27,7 @@ This release is focused on improving the stability of the Platform further, in a
 
 ###### Automatically Fetching New Releases
 
-The [Download Portal](privateplatform.mendix.com) can now automatically fetch new Private Mendix Platform releases. This simplifies release operations for the product engineering team and unlocks faster access to new releases by Certified Partners and customers.
+The [Download Portal](https://privateplatform.mendix.com) can now automatically fetch new Private Mendix Platform releases. This simplifies release operations for the product engineering team and unlocks faster access to new releases by Certified Partners and customers.
 
 ###### Checksums Added
 

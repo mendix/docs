@@ -25,14 +25,9 @@ This release is focused on improving the stability of the Platform further, in a
 
 ##### Download Portal Improvements
 
-###### Automatically Fetching New Releases
-
-The [Download Portal](https://privateplatform.mendix.com) can now automatically fetch new Private Mendix Platform releases. This simplifies release operations for the product engineering team and unlocks faster access to new releases by Certified Partners and customers.
-
 ###### Checksums Added
 
 To ensure the integrity and security of your Private Mendix Platform installer, we have added checksums to the download portal. New releases are signed with an SHA-256 checksum, which can be copied or downloaded to verify the integrity of the downloaded artifact.
-
 
 #### Fixes
 

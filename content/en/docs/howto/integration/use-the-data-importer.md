@@ -101,6 +101,8 @@ The **Import data from file** custom activity needs an input file to import data
 
 4. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
 
+{{< figure src="/attachments/howto/integration/use-the-data-importer/data-view-file-manager.png" >}}
+
 5. Open the **Toolbox** and add a **Call microflow button**. 
 
 6. Click **New** and name the microflow *Import Customer Data*. You also see **FileDocument** in the parameters section; make sure this box is checked to include it as a parameter and click **OK**.

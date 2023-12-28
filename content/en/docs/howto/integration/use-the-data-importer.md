@@ -12,9 +12,9 @@ Data is constantly exchanged between various systems inside and outside an organ
 
 This how-to teaches you to do the following:
 
-* Create a *Data Importer document* using a sample representative file
+* Create a Data Importer document using a sample representative file
 * Create a (non-persistable) entity in your domain model
-* Import data using the custom *Import data from file* activity
+* Import data using the custom **Import data from file** activity
 
 ## 2 Prerequisites
 
@@ -27,7 +27,7 @@ Download the [Data Importer extension](https://marketplace.mendix.com/link/compo
 
 The Data Importer allows you to import an Excel file into your app. Choose which sheet to import data from and which columns you want to include. During the design time flow, you can preview the data and create a non-persistable entity (NPE) in your domain model. 
 
-This module creates a Data Importer document, which you can use along with the *Import data from file* activity. Use this custom activity in a microflow to import data from an Excel file.
+This module creates a Data Importer document, which you can use along with the **Import data from file** activity. Use this custom activity in a microflow to import data from an Excel file.
 
 ### 3.1 Creating a Data Importer Document
 
@@ -45,7 +45,7 @@ Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
 Select or drop the file in the **Select Source File** field. An Excel workbook can have single or multiple sheets; you can choose which sheet to import data from and specify the header row and starting data row.
 
-* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown.
+* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
@@ -53,15 +53,15 @@ Select or drop the file in the **Select Source File** field. An Excel workbook c
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 data rows from the source file are shown in the data preview section. If there are less than 10 data rows in the sample file, only the available rows are shown. The column names correspond to the attribute name within the entity, and the sheet name is used to define the entity.
 
-All the columns are automatically selected (checked) for import. You can uncheck the columns you do not want to use. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell-type defined in the Excel file's first data row. If any data types are incorrect, check the cell-type of the first data row and adjust the definition accordingly.
+All the columns are automatically selected (checked) for import. You can uncheck the columns you do not want to use. At the bottom of the table, you see the target data type of the attribute, which is based on the cell-type defined in the Excel file's first data row. If any data types are incorrect, check the cell-type of the first data row and adjust the definition accordingly.
 
-{{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. For *Number* cell-types, the target Mendix type is mapped to *Decimal* to accommodate to integers and decimals. {{% /alert %}}
+{{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. For **Number** cell-types, the target Mendix type is mapped to **Decimal** to accommodate to integers and decimals. {{% /alert %}}
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/preview-data-and-entity.png" >}}
 
 ### 3.3 Creating an Entity {#create-entity}
 
-View the entity in the **Entity Preview** section. You can change the name of the entity, though one is suggested for you based on the sheet name. To create the entity in your domain model, click **Create Entity** > **OK**. You see a confirmation message that an entity has been created in the Domain model and is ready to use.
+View the entity in the **Entity Preview** section. You can change the name of the entity, though one is suggested for you based on the sheet name. To create the entity in your domain model, click **Create Entity** > **OK**. You see a confirmation message that an entity has been created in the domain model and is ready to use.
 
 When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
 
@@ -75,23 +75,23 @@ At the end of the design time flow, you create a Data Importer document, which a
 
 ### 4.1 Custom Activity {#Import-data-from-file}
 
-The **Import data from file** activity can be found under **Integration activities** in the **Toolbox**. Double-click to view its properties:
+The **Import data from file** activity is found under **Integration activities** in the **Toolbox**. Double-click to view its properties:
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/custom-activity-params.png" >}}
 
-The following are the properties in the **Input** section:
+The **Input** section includes:
 
-* **File** – name of file from which you want to import data
-* **Data importer document** – the Data importer document created at the end of design-time flow.
+* **File** – name of the file from which you want to import data
+* **Data Importer document** – the Data Importer document created at the end of the design time flow
 
-The following are the properties in the **Output** section:
+The **Output** section includes:
 
-* **Return Type** – will be set to List of the NPE defined for the Data importer document.
-* **Variable name** – will be auto-populated as well to *EntityName*List
+* **Return Type** – set to the list of NPEs defined in the Data Importer document
+* **Variable name** – auto-populated to the **EntityName** list
 
 ### 4.2 Build the Pages
 
-The *Import data from file* custom activity needs an input file to import data from. The example below builds a page where a `System.FileDocument`is uploaded and fed to the custom activity.
+The **Import data from file** custom activity needs an input file to import data from. The example below builds a page where a `System.FileDocument`is uploaded and fed to the custom activity.
 
 1. Open the home page and add a button and name it *Upload Customer Data*.
 2. Double-click the button and in the **Events** field under the **On click** drop-down, select **Create object** to create a `System.FileDocument` entity.

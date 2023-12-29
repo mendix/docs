@@ -8,6 +8,48 @@ tags: ["Private Mendix Platform", "Private Platform"]
 
 These release notes cover changes made to the [Private Mendix Platform](/private-mendix-platform/).
 
+## 1.5.3
+
+### Release date: December 28, 2023
+
+This release is focused on improving the stability of the Platform further, in anticipation of the upcoming MTS release.
+
+#### New Features
+
+#### Azure DevOps CI/CD
+
+* For developers, we have added the option to build and deploy your application over a preconfigured Azure DevOps CI/CD pipeline.
+* Company administrators can now configure and set up an integration with Azure DevOps Pipelines. Private Mendix Platform can now integrate with an Azure DevOps Pipelines host and set up a preconfigured pipeline to build and deploy. Once selected and configured, any developers building and deploying apps will automatically make use of this service integration in the background.
+
+#### Improvements
+
+##### Download Portal Improvements
+
+###### Automatically Fetching New Releases
+
+The [Download Portal](https://privateplatform.mendix.com) can now automatically fetch new Private Mendix Platform releases. This simplifies release operations for the product engineering team and unlocks faster access to new releases by Certified Partners and customers.
+
+###### Checksums Added
+
+To ensure the integrity and security of your Private Mendix Platform installer, we have added checksums to the download portal. New releases are signed with an SHA-256 checksum, which can be copied or downloaded to verify the integrity of the downloaded artifact.
+
+#### Fixes
+
+We have provided the following fixes:
+
+* Fixed alignment issues in PDFs generated from archived Platform logs.
+* Resolved an issue with  creating a new app in an air-gapped scenario with no Marketplace templates loaded.
+* Resolved an issue with changing the app name that occurred under certain combinations of settings.
+* Fixed the date format in the Marketplace **Item** view in both Web UI and In-IDE.
+* Fixed unchanged locale date and time preferences in some places.
+* Minor layout corrections for the **General Settings** page.
+* Fixed an issue with button styling on the **Help** page.
+* Various fixes for the Download Portal.
+
+#### Known Issues
+
+* We are temporarily unable to support newer Studio Pro 9.24 LTS patch versions with Private Mendix Platform. Until this matter is resolved in a published release of Studio Pro, Private Mendix Platform remains compatible only with Studio Pro 9.24.3.
+
 ## 1.5.2
 
 ### Release date: November 30, 2023

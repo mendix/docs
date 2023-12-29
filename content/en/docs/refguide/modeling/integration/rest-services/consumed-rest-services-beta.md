@@ -11,7 +11,7 @@ tags: ["Consumed REST service", "mendix 10", "studio pro 10", "GET", "POST", "ne
 
 Use the new Consumed REST service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
 
-This feature is supported for [Mendix Studio Pro 10.6](add link) and above.
+This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 
 ### 1.1 Use Cases
 

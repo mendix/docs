@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### December 28, 2023
+
+#### Fixes
+
+* We removed delete access for automatically registered data sources, a feature that was mistakenly introduced in a previous release.
+
 ### December 8, 2023
 
 #### Fixes

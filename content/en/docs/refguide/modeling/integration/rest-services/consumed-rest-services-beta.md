@@ -25,8 +25,8 @@ You can use this Consumed REST service document to do the following:
 ### 1.2 Limitations
 
 * This feature supports the following HTTP request methods:
-  * `GET`
-  * `POST`
+    * `GET`
+    * `POST`
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
 * If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
 
@@ -38,6 +38,7 @@ You can use this Consumed REST service document to do the following:
 ## 2 Installation {#installation}
 
 Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST service document to your app. To do this, 
+
 1. Right-click the module you want to add the Consumed REST service document to.
 2. Select **Add other** > **Consumed REST service**. 
 3. Name the service and click **OK**.
@@ -51,6 +52,7 @@ Use the Consumed REST service to configure a `GET` or `POST` request for your ap
 ### 3.1 Basic Configuration {#configure-a-request}
 
 Create a `GET` or `POST` request to send data to your server by doing the following:
+
 1. In the **General** field, name your request. 
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
 3. Add an endpoint and click **Send**.
@@ -137,11 +139,10 @@ The entity name is prefilled, but you can change it to a custom name. To create 
 ### 3.7 Using a REST Request in a Microflow {#add-entity-to-microflow}
 
 To select a request in the microflow, complete the following steps:
+
 1. Create a new microflow and drag the **Send REST request** activity into it.
 2. Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/select-rest-request.png" >}}
 
 If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow.
-
-

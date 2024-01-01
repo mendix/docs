@@ -170,7 +170,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
    {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
 4. In the **Constants** tab, configure the constants of the temporary credentials' connection details.
-5.  Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
+5. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 6. click **OK**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-session-credentials-constants.png" >}}

@@ -121,7 +121,6 @@ This is the request entity of the `InvokeModelGeneric` action. It is a specializ
 | `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**.|
 | `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke.|
 
-
 #### 4.1.5 InvokeModelGenericResponse {#invokemodelgenericresponse}
 
 This is the response entity of the `InvokeModelGeneric` action.

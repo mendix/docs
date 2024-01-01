@@ -236,7 +236,6 @@ This enumeration holds the available types of analysis to perform. For more info
 
 {{% alert color="info" %}} The current version of the Amazon Textract Connector support the following Feature Types: TABLES, FORMS, QUERIES and SIGNATURES. Adding the Feature Type LAYOUT to the request is currently not supported and can cause errors. {{% /alert %}}
 
-
 #### 4.2.7 JobStatus
 
 This enumeration indicates the status of the document analysis job as part of the `GetDocumentAnalysisResponse`. For more information, see [Job Status](https://docs.aws.amazon.com/textract/latest/dg/API_GetExpenseAnalysis.html#Textract-GetExpenseAnalysis-response-JobStatus) in the AWS API documentation.

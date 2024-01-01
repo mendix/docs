@@ -64,15 +64,15 @@ With this connector, you can test database connections and add queries and param
 
 After [installing](#installation) the connector, get started by doing the following:
 
-1.  Right-click the module you would like to add the connection to and click **Add other** > **External database connection**. This opens the **Database Connection** wizard:
+1. Right-click the module you would like to add the connection to and click **Add other** > **External database connection**. This opens the **Database Connection** wizard:
 
     {{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
 
-2.  Select the database to which you would like to connect and enter the required information.
+2. Select the database to which you would like to connect and enter the required information.
 
-3.  Click **Test Connection** to see if the connection works. If you do not see a green **Connection Successful** text confirmation, try checking your database details again.
+3. Click **Test Connection** to see if the connection works. If you do not see a green **Connection Successful** text confirmation, try checking your database details again.
 
-4.  Click **Save** to open the external database document for this database.
+4. Click **Save** to open the external database document for this database.
 
 Now you can start [querying the database](#query-database) to select data for use in your app.
 
@@ -140,4 +140,3 @@ You can now use the microflow in your app. Here is an example of a configured mi
 {{< figure src="/attachments/appstore/connectors/external-database-connector/example-microflow.png" >}}
 
 See the [Integration Activities](/refguide/integration-activities/) entry in the Studio Pro guide for further explanation of the properties in this activity.
-

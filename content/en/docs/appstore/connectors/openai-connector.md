@@ -28,23 +28,22 @@ OpenAI provides market-leading large language model capabilities with GPT-4:
 
 * Integrate more easily with OpenAI’s platform which, by providing text generation models, allows you to build applications with the following features:
 
-  - Draft documents 
+    * Draft documents 
   
-  - Write computer code 
+    * Write computer code 
   
-  - Answer questions about a knowledge base 
+    * Answer questions about a knowledge base 
   
-  - Analyze texts 
+    * Analyze texts 
   
-  - Give software a natural language interface 
+    * Give software a natural language interface 
   
-  - Tutor in a range of subjects 
+    * Tutor in a range of subjects 
   
-  - Translate languages 
+    * Translate languages 
   
-  - Simulate characters for games 
+    * Simulate characters for games 
   
-
 {{% alert color="info" %}}
 You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for use cases.
 {{% /alert %}}
@@ -64,8 +63,8 @@ The current scope is limited to text generation use cases based on the Chat Comp
 
 ### 1.5 Dependencies 
 
-- Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
-- [Encryption](https://marketplace.mendix.com/link/component/1011) module 
+* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
+* [Encryption](https://marketplace.mendix.com/link/component/1011) module 
 
 ## 2 Installation 
 
@@ -121,8 +120,8 @@ For more details, see the [Azure OpenAI Service REST API reference](https://lear
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** tab in Mendix Studio Pro. 
 
 These microflows expect a [Configuration](#configuration-entity) entity a, as well as the desired AI model (optional) that should be used for generating responses.  
-- For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
-- For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
+* For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
@@ -134,8 +133,8 @@ Functionally, the prompt strings can be written in a specific way and can be tai
 #### 3.2.2 `Chat completions with history`
 
 The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow.  
-- `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-- `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`.  
+* `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`.  
 
 The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant. For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
@@ -160,7 +159,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `Endpoint` | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
 | `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion` | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
-| `ApiKey `| This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
+| `ApiKey`| This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
 | `ModelDefault` | If no model is specified for the call to be executed, the contents of this field will be used. Only relevant for configurations of `ApiType` **OpenAI**.<br />For more information, see the [ENUM_Model](#enum-model) section. |
 
 #### 4.1.2 `ApiKey` 
@@ -217,7 +216,7 @@ This represents a chat completion response returned by model, based on the provi
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.8 `Choice `
+#### 4.1.8 `Choice`
 
 This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
@@ -308,11 +307,11 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | --- | --- | 
 | `ChatCompletionsSession`, `Configuration`, `ENUM_Model` | `AssistantResponseText` | 
 
-The `ChatCompletionsSession` is a wrapper object for the ordered list of messages that represent the conversation so far. You can use `ChatCompletionsSession_Create` to create a new `ChatCompletionsSession` to create a new session and with `ChatCompletionsSession_AddMessage` new ` ChatCompletionsSessionMessage` objects will be added to the session. The messages must be added in chronological order. In the microflow `ChatCompletions_Execute_WithHistory` this message list will be mapped to the actual request structure. 
+The `ChatCompletionsSession` is a wrapper object for the ordered list of messages that represent the conversation so far. You can use `ChatCompletionsSession_Create` to create a new `ChatCompletionsSession` to create a new session and with `ChatCompletionsSession_AddMessage` new `ChatCompletionsSessionMessage` objects will be added to the session. The messages must be added in chronological order. In the microflow `ChatCompletions_Execute_WithHistory` this message list will be mapped to the actual request structure. 
 
 ##### 4.3.1.3 Chat Completions Advanced
 
-For advanced developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` 	microflow. The inputs and output are shown in the table below: 
+For advanced developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI`     microflow. The inputs and output are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 

@@ -148,9 +148,9 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
             "client_id" : "ClientID",
             "client_name" : "ClientName",
             "client_secret" : "ClientSecret",
-            "redirect_uris" : [ http://localhost:8081/oauth/v2/callback ],
-            "backchannel_logout_uri" : http://localhost:8081/logout,
-            "post_logout_redirect_uris" : [http://localhost:8081/logout],
+            "redirect_uris" : [ "http://localhost:8081/oauth/v2/callback" ],
+            "backchannel_logout_uri" : "http://localhost:8081/logout",
+            "post_logout_redirect_uris" : ["http://localhost:8081/logout"],
             "grant_types": [ "authorization_code" ],
             "scope": "User"
         }
@@ -198,7 +198,7 @@ If you cannot use automatic registration, you can register the client manually.
 
 There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
 
-Choose one of the two options, below. 
+Choose one of the two options, below.
 
 Whichever option you choose, you will need to use [Custom User Provisioning](/appstore/modules/oidc/#custom-provisioning) in the OIDC SSO module of your client app to assign the correct user roles to the end-user.
 
@@ -464,9 +464,9 @@ There are two ways in OIDC Provider to get create accounts:
 #### 7.3.1 When Using IAM Brokering
 
 In this case, accounts which can be used by OIDC provider are synced from your IdP directly into the IAM broker application. In this case, an `AccountDetail` object is created for every account object when the end-user tries to login. This is automatically handled by code without any configuration.
-    
+
 This means that the access token will contain a "sub" claim which gets value from the `MendixUserID` attribute of the `AccountDetail` entity.
-    
+
 #### 7.3.2 Using the AccountDetail Page of the  OIDC Provider Module
 
 This is the case where the OIDC Provider module can be used separately as an IDP without building an IAM structure.

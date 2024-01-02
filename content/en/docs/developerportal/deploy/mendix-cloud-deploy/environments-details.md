@@ -87,10 +87,13 @@ To clear your environment, follow these steps:
 2. Select one of the following options:
     * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
-3. Confirm that you want to clear your environment by typing *clear*.
+3. Confirm that you want to clear your environment by typing the indicated text (*clear database* or *clear model and database*, depending on which option you selected).
 4. Click **Clear Environment**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
+    alt="Clear Environment options and confirmation"
+    max-width=70%
+    class="image-border" >}}
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 

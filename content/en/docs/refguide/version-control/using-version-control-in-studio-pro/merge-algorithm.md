@@ -87,6 +87,10 @@ Every time changes can be combined, for example when pulling changes from the se
 
 Rebasing is the default way to integrate your work with the server changes. It moves your changes to the tip of the changes pulled from the server.
 
+{{% alert color="warning" %}}
+Rebase is available only for installed Git version 2.41.0 and above.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 During the rebase process, there is a slight terminology change in Studio Pro compared to merge.
 {{% /alert %}}

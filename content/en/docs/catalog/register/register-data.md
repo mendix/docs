@@ -39,7 +39,7 @@ If you have a [published OData service](/refguide/published-odata-services/) tha
 
 ## 4 Registering a Service Without Mendix Cloud {#without-mendix-cloud}
 
-If you are not using Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed OData service in the Catalog:
+If you are not using Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed service in the Catalog:
 
 * [Through the Catalog Registration API](#registration-api)
 * [Through the Catalog UI form](#registration-form)
@@ -50,13 +50,13 @@ For details on working with external entities and the Catalog without Mendix Clo
 
 ### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 
-Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed OData services. 
+Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed services. 
 
 First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers: `Authorization: MxToken <your_Personal_Access_Token>`.
 
 For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
-Once you have a personal access token, follow this series of REST calls (described in detail in the following sections) to register the details of your exposed OData services:
+Once you have a personal access token, follow this series of REST calls (described in detail in the following sections) to register the details of your exposed services:
 
 1. [Register the application](#register-application) and retrieve an application UUID.
 2. Use the application UUID to [register the environment](#register-environment) and retrieve the environment UUID.

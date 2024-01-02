@@ -2,7 +2,7 @@
 title: "Portfolio Management"
 url: /developerportal/portfolio-management/
 weight: 25
-description: "Describes the Mendix Portfolio Management app."
+description: "Describes the Mendix Portfolio Management ."
 tags: ["Portfolio Management"]
 #The anchor #portfolios-settings below is mapped, so it should not be removed or changed. If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,7 +13,7 @@ The [Portfolio Management](https://portfolio.mendix.com) tool is available to al
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
-When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Visit Portfolio Management** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
+When you start the Portfolio Management  for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Get Started** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management , the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
 
 ### 2.1 My Portfolios vs Company Portfolios
 
@@ -75,7 +75,7 @@ The portfolio is created. You are the first Portfolio Manager of this portfolio.
 
 ## 3 Initiatives Overview {#initiatives-overview}
 
-In the Portfolio Management app, the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big app. For progress tracking, Mendix recommends breaking down an app into smaller initiatives whenever possible.
+In the Portfolio Management , the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big . For progress tracking, Mendix recommends breaking down an  into smaller initiatives whenever possible.
 
 The **Initiatives Overview** page gives an overview of all the initiatives in this portfolio.
 
@@ -120,13 +120,13 @@ To add general information to your initiative, follow these steps:
     {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
 2. Enter the **Description** of the initiative.
-3. If there is an existing app that you want to change or if development is already in progress, you can link the app to this initiative:
+3. If there are any existing Mendix apps related to this initiative or any in development, you can link these apps:
 
     1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
         {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
 
-    2. Select the app that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
+    2. Select the app(s) that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
 
 4. Set the **Owner** for the initiative.
 5. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
@@ -178,8 +178,13 @@ You can link any epic from [Epics](/developerportal/project-management/epics/) t
 To link epics to an initiative, do as follows:
 
 1. At the bottom of the **Epics** section, click **+ Link Epics**. The **Link Epics** dialog window opens.
-2. Select the epics. You can search by the epic ID or name. 
-3. Click **Add** to link the selected epics to the initiative. 
+2. Select the app, which you want to link epics of.
+3. Select the epics. You can search by the epic ID or name. 
+4. Click **Add** to link the selected epics to the initiative. 
+
+{{% alert color="info" %}}
+To link epics from multiple apps to a single initiative, all apps should be linked to this initaitve and you need to repeat the steps for each app separately.
+{{% /alert %}} 
 
 Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
 
@@ -205,7 +210,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 * **Intake Date** – the date when the initiative is accepted based on business requirements
 * **Start Date** – the date when the first actions are taken to start implementation
-* **Go-Live date** – the date when the app is expected to be up and running
+* **Go-Live date** – the date when the app(s) is expected to be up and running
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
@@ -254,6 +259,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 * [Kanban view](#kanban-view)
 * [List view](#list-view)
 * [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice) (the section you see here depends on the prioritization model selected in [Portfolio Settings](#portfolio-settings))
+* [Planning view](#planning-view)
 
 #### 3.2.1 Kanban View {#kanban-view}
 
@@ -276,8 +282,8 @@ Each initiative card shows the following information:
 * ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.
-    * **Go-Live** – This shows the date when the app is expected to be up and running.
-* ⑥ Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+    * **Go-Live** – This shows the date when the app(s) is expected to be up and running.
+* ⑥ Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
 * ⑦ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
@@ -296,8 +302,8 @@ The list contains the following information:
     
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
-* **Go-Live Date** – This shows the date when the app is expected to be up and running.
-* Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+* **Go-Live Date** – This shows the date when the app(s) is expected to be up and running.
+* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -324,8 +330,8 @@ The list contains the following information:
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the app is expected to be up and running.
-* Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+    * **Go-Live** – This is the date when the app(s) is expected to be up and running.
+* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -352,11 +358,26 @@ The list contains the following information:
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the app is expected to be up and running.
-* Icon of the linked app – Clicking this shows the information about the Mendix app that is linked with the initiative.
+    * **Go-Live** – This is the date when the app(s) is expected to be up and running.
+* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+
+#### 3.2.5 Planning View {#planning-view}
+
+In the planning view, you can view all initiatives from a timeline perspective. Planning view support planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. You can change the timeframe via settings on the bottom right.
+
+* **Initiative Name** – Clicking this opens a side pane that shows initiative details.
+* Progress Bar - when you hover on them you see the dates.
+    * **Start** – This is the date when the first actions are taken to start implementation.
+    * **Go-Live**  – This is the date when the app is expected to be up and running.
+* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
+* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Vertical blue line indicates date of today.
+* Dates on the header and their frequency changes depending on your timeframe settings, you can find this setting at the bottom right of the planning board.
+
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
@@ -485,6 +506,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | Delete initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View and download initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Export and import initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Link and unlink apps | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Link and unlink epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View linked epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 
@@ -613,4 +635,4 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
 * [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)
 * [Make Strategic Decisions with Portfolio Management](https://academy.mendix.com/link/paths/145/Make-Strategic-Decisions-With-Portfolio-Management)
-* [Why Portfolio Management is Crucial to App Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to-app-development-at-scale/)
+* [Why Portfolio Management is Crucial to  Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to--development-at-scale/)

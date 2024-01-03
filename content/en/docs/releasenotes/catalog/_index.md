@@ -11,19 +11,20 @@ aliases:
 
 These release notes cover changes made to the [Catalog](/catalog/).
 
-## 2023
+## 2024
 
 ### January 4, 2024
 
-
 #### Fixes
 
-* We fixed a visual bug on the curation page, where two pagination bars were shown
-* We have addressed potential security vulnerabilities.
+* We fixed a visual bug on the Curation page where two pagination bars were shown.
+* We addressed potential security vulnerabilities.
 
-### Improvement
+#### Improvement
 
-* Users that are not a curator or administrator can now view deeplinks to undiscoverable services 
+* Users that are not an administrator or curator can now view deeplinks to undiscoverable services.
+
+## 2023
 
 ### December 28, 2023
 

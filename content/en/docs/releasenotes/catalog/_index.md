@@ -13,6 +13,18 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2023
 
+### January 4, 2024
+
+
+#### Fixes
+
+* We fixed a visual bug on the curation page, where two pagination bars were shown
+* We have addressed potential security vulnerabilities.
+
+### Improvement
+
+* Users that are not a curator or administrator can now view deeplinks to undiscoverable services 
+
 ### December 28, 2023
 
 #### Fixes

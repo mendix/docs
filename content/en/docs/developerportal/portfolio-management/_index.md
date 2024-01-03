@@ -2,7 +2,7 @@
 title: "Portfolio Management"
 url: /developerportal/portfolio-management/
 weight: 25
-description: "Describes the Mendix Portfolio Management ."
+description: "Describes the Mendix Portfolio Management app."
 tags: ["Portfolio Management"]
 #The anchor #portfolios-settings below is mapped, so it should not be removed or changed. If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,7 +13,7 @@ The [Portfolio Management](https://portfolio.mendix.com) tool is available to al
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
-When you start the Portfolio Management  for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Get Started** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management , the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
+When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Get Started** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
 
 ### 2.1 My Portfolios vs Company Portfolios
 
@@ -75,7 +75,7 @@ The portfolio is created. You are the first Portfolio Manager of this portfolio.
 
 ## 3 Initiatives Overview {#initiatives-overview}
 
-In the Portfolio Management , the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big . For progress tracking, Mendix recommends breaking down an  into smaller initiatives whenever possible.
+In the Portfolio Management app, the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big app. For progress tracking, Mendix recommends breaking down an app into smaller initiatives whenever possible.
 
 The **Initiatives Overview** page gives an overview of all the initiatives in this portfolio.
 
@@ -369,6 +369,10 @@ The list contains the following information:
 
 In the planning view, you can view all initiatives from a timeline perspective. Planning view support planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. You can change the timeframe via settings on the bottom right.
 
+{{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
+
+The view contains the following information:
+
 * **Initiative Name** – Clicking this opens a side pane that shows initiative details.
 * Progress Bar - when you hover on them you see the dates.
     * **Start** – This is the date when the first actions are taken to start implementation.
@@ -635,4 +639,4 @@ To add an option for a setting, click **Add Department**, **Add Country**, **Add
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
 * [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)
 * [Make Strategic Decisions with Portfolio Management](https://academy.mendix.com/link/paths/145/Make-Strategic-Decisions-With-Portfolio-Management)
-* [Why Portfolio Management is Crucial to  Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to--development-at-scale/)
+* [Why Portfolio Management is Crucial to App Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to--development-at-scale/)

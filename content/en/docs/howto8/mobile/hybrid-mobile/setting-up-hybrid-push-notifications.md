@@ -20,35 +20,35 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Complete [How to Set Up the Google Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/)
 
-## 3 Setting upLegacy Cloud Messaging APIs
+## 3 Setting up Legacy Cloud Messaging APIs
 
-Mendix hybrid apps use the Legacy Cloud Messaging APIs from Firebase to send push notifications to Android devices. These must be enabled in the Firebase project you created earlier.
+Mendix hybrid apps use the legacy cloud Messaging APIs from Google Firebase to send push notifications to Android devices. These must be enabled in the Firebase project you created earlier.
 
-1. Open the Firebase Console and access your project.
+1. Open the Firebase console and access your project.
 2. Open the project settings (click on the cogwheel) and open the cloud messaging tab.
 3. If Cloud Messaging API (Legacy) is disabled, click the three dots on the right and select "Manage API in Google Cloud Console".
 
-![image](https://github.com/mendix/docs/assets/1334574/3ef07497-9c92-4d2c-b695-22cb8b9f9096)
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-hybrid-push-notifications/cloud-messaging-api.png" >}}
 
 4. Click Enable
 
-![image](https://github.com/mendix/docs/assets/1334574/4cdcbf2a-1ce3-4373-a89b-665149fb88c9)
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-hybrid-push-notifications/google-cloud-messaging.png" >}}
 
 5. Go back to the cloud messaging tab in the project settings of the firebase console. Verify that the API is now enabled. Refresh the page if needed.
 6. Copy the Server key.
 
-![image](https://github.com/mendix/docs/assets/1334574/69896319-a7c7-4bd3-bf24-1444a1766d3a)
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-hybrid-push-notifications/cloud-messaging-api-enabled.png" >}}
 
 7. In your Mendix Project open the Microflow SendFCMMessage_Hybrid of the PushNotifications module.
 8. Edit third "Call REST (POST)" action from the top.
 
-![image](https://github.com/mendix/docs/assets/1334574/3bda7baf-627e-40c0-91ce-4ebe3e860160)
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-hybrid-push-notifications/SendFCMMessage_Hybrid.png" >}}
 
 9. Change the value after "key=" to the Server key copied in step 6.
 
-![image](https://github.com/mendix/docs/assets/1334574/c6ef41e4-66b4-4f98-92fd-792885537367)
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-hybrid-push-notifications/Call-REST.png" >}}
 
-10. Save the Microflow and redeploy your application.
+10.  Save the Microflow and redeploy your application.
 
 ## 4 Building Your Mobile Application
 

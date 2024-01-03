@@ -84,4 +84,4 @@ The new features were divided into these major themes, which are described in th
 | Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for public beta [Aug 28, 2023](/releasenotes/control-center/#august-28-2023)<br>GA: TBD |
 | Cloud self-service (Mendix Cloud) | Currently in private beta<br>GA: TBD |
 | Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
-| Cloud self-service (Cloud Dedicated) | Private beta: Q4 2023<br>GA: TBD |
+| Cloud self-service (Cloud Dedicated) | Private beta: Q2 2024<br>GA: TBD |

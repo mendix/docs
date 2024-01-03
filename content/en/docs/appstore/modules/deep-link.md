@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 ⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
 {{% /alert %}}
 
-## 1 Migrating to Page and Microflow URLs
+## 1 Migrating to Page and Microflow URLs{#migrate-page-micro}
 
 The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 

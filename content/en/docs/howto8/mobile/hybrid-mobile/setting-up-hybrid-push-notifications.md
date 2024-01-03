@@ -1,4 +1,3 @@
-![image](https://github.com/mendix/docs/assets/1334574/694820c9-9b75-47bd-b67f-1db4ce0321d4)---
 title: "Set Up Hybrid Push Notifications"
 url: /howto8/mobile/setting-up-hybrid-push-notifications/
 weight: 9

@@ -24,9 +24,9 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 * **Required For 10.6 and Higher** – This version of the MIN app is designed to work exclusively with **Mendix Studio Pro 10.6** and higher. Users on Mendix Studio Pro versions below 10.6 should continue to use Make It Native 9 for app development and testing purposes. See [Make It Native Apps](/releasenotes/mobile/make-it-native-parent/) for a precise list of which MIN versions work with with Studio Pro versions.
 * **Critical Update** – With the upgrade to React Native 0.72.7, it is essential for all users to update their app to this latest version. Please note that older versions of the MIN app will no longer function after this update. We strongly advise all users to install this update immediately to continue using the app without interruption.
 
-#### Known Issues
+#### Known Issues {#known-issues-200}
 
-* **Augmented Reality (AR) Feature** - We are currently aware of an issue where the AR functionality is not operating as expected in the MiN app. Our team is actively working on a solution and we aim to fix this in an upcoming update.
+* **Augmented Reality (AR) Feature** - We are currently aware of an issue where the AR functionality is not operating as expected in the MIN app. We are actively working on a solution and we aim to fix this issue in a subsequent update.
 
 ## iOS 1.2.1 / Android 1.2.1
 

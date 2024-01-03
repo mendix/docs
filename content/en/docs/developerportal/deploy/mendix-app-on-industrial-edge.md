@@ -24,7 +24,7 @@ For information about the dependencies and prerequisites to use Mendix on Edge, 
 
 For more information about pushing your applications to the Industrial Edge Hub, see [Get started](https://docs.eu1.edge.siemens.cloud/get_started_and_operate/industrial_edge_hub/setup/ieh_index.html).
 
-For more information about pushing your applications to the Industrial Edge Management system, see [Industrial Edge Management - Overview](https://docs.eu1.edge.siemens.cloud/get_started_and_operate/industrial_edge_management/overview.html).
+For more information about pushing your applications to the Industrial Edge Management system, see [Industrial Edge Management - Overview](https://docs.eu1.edge.siemens.cloud/develop_an_application/mendix/user_journey.html).
 
 After your app is uploaded to your Industrial Edge environment, it is treated like any other native IE application, for example those purchased over the Industrial Edge Marketplace.
 

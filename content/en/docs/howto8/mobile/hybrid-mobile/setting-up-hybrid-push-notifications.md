@@ -1,4 +1,4 @@
----
+![image](https://github.com/mendix/docs/assets/1334574/694820c9-9b75-47bd-b67f-1db4ce0321d4)---
 title: "Set Up Hybrid Push Notifications"
 url: /howto8/mobile/setting-up-hybrid-push-notifications/
 weight: 9
@@ -20,7 +20,37 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Complete [How to Set Up the Google Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/)
 
-## 3 Building Your Mobile Application
+## 3 Setting upLegacy Cloud Messaging APIs
+
+Mendix hybrid apps use the Legacy Cloud Messaging APIs from Firebase to send push notifications to Android devices. These must be enabled in the Firebase project you created earlier.
+
+1. Open the Firebase Console and access your project.
+2. Open the project settings (click on the cogwheel) and open the cloud messaging tab.
+3. If Cloud Messaging API (Legacy) is disabled, click the three dots on the right and select "Manage API in Google Cloud Console".
+
+![image](https://github.com/mendix/docs/assets/1334574/3ef07497-9c92-4d2c-b695-22cb8b9f9096)
+
+4. Click Enable
+
+![image](https://github.com/mendix/docs/assets/1334574/4cdcbf2a-1ce3-4373-a89b-665149fb88c9)
+
+5. Go back to the cloud messaging tab in the project settings of the firebase console. Verify that the API is now enabled. Refresh the page if needed.
+6. Copy the Server key.
+
+![image](https://github.com/mendix/docs/assets/1334574/69896319-a7c7-4bd3-bf24-1444a1766d3a)
+
+7. In your Mendix Project open the Microflow SendFCMMessage_Hybrid of the PushNotifications module.
+8. Edit third "Call REST (POST)" action from the top.
+
+![image](https://github.com/mendix/docs/assets/1334574/3bda7baf-627e-40c0-91ce-4ebe3e860160)
+
+9. Change the value after "key=" to the Server key copied in step 6.
+
+![image](https://github.com/mendix/docs/assets/1334574/c6ef41e4-66b4-4f98-92fd-792885537367)
+
+10. Save the Microflow and redeploy your application.
+
+## 4 Building Your Mobile Application
 
 If your app supports push notifications, you are required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
@@ -51,7 +81,7 @@ To build the hybrid app package, follow these steps:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" >}}
 
-## 4 Read More
+## 5 Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)

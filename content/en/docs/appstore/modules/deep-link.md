@@ -21,7 +21,7 @@ The functionality of the Deep Link module has been replaced by various built-in 
 * **Miscellaneous** – Other features of the deep link module can be replaced by their dedicated built-in features:
   * `Do not force a login action` is replaced by the [built-in security features](/howto/security/set-up-anonymous-user-security/) for [anonymous users](/refguide/anonymous-users/). 
   * `Alternative Index Page` is replaced by theming options provided by Mendix. 
-  * `Track hit count` is replaced by application access logs and metrics which allow you to track your app's traffic. 
+  * `Track hit count` is replaced by [application access logs and metrics](/developerportal/operate/logs/) which allow you to track your app's traffic. 
   * `Keep the deep link the entire session` is no longer relevant, as page URLs give you finer-grained control over the URL the user sees in the browser.
 
 ## 2 Introduction

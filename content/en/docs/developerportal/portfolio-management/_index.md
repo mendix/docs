@@ -374,15 +374,13 @@ In the planning view, you can view all initiatives from a timeline perspective. 
 The view contains the following information:
 
 * **Initiative Name** – Clicking this opens a side pane that shows initiative details.
-* Progress Bar - when you hover on them you see the dates.
+* Progress Bar - Hovering above the bars you can see the dates.
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live**  – This is the date when the app is expected to be up and running.
 * Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Vertical blue line indicates date of today.
 * Dates on the header and their frequency changes depending on your timeframe settings, you can find this setting at the bottom right of the planning board.
-
-    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
 
@@ -398,7 +396,7 @@ Both Portfolio Managers and Contributors can edit, archive, or delete an initiat
 
 {{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" >}}
 
-When you view initiative details, you can only **Post Comment**. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
+When you view initiative details, you can only **Post Comment** or link epics. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
 
 ### 3.4 Editing or Deleting an initiative {#edit-delete-initiative}
 

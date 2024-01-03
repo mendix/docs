@@ -13,13 +13,16 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 
 ## 1 Migrating to Page and Microflow URLs
 
-The functionality of the Deep Link module has been replaced by various built-in features of the Mendix platform. For links to pages that have either no parameters or only parameters that are persitable entities you can use page URLs. Using page URLs over microflow URLs has a performance advantage (no microflow has to be executed) and the URL will always be used for the page, even when opening it from a different source then just the deep link. To keep the same URL as before, put the `name` of the deep link in the URL field, followed by the name of the attribute that was configured in the deeplink. E.g. `product/{PageParameterName/AttributeName}` for a deep link with `name` `product` and `attribute` `AttributeName`.
+The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 
-For cases not entirely coverd by the page URL functionality you add a URL to the microflows you where using with the Deep Link module. Because microflow URLs do not use query parameters (e.g. `?param1=foo&param2=bar`), you can end up with a different URL as before.
-
-Within the runtime setting of your application you can configure the page URL prefix. Change this from the default `p` to `link` to keep you our existing URLs working. Note that after this you have to completly remove the deeplink module from your project, or your app wil fail to start.
-
-Other features of the deep link module can be replaced by their dedicated built-in features. `Do not force a login action` can be replaced by the built-in security features for anonymous users. For `Alternative Index Page` you use the theming options provided by Mendix. Instead of the `Track hit count` use you applications access logs and metrics to track traffic yo your application. `Keep the deep link the entire session` is no longer relevant as page URLs give you a finer grained control over the URL the users sees in the browser.
+* **Page URLs** – For links to pages that have either no parameters or only parameters that are persitable entities you can use page URLs. Using page URLs over microflow URLs has a performance advantage (no microflow has to be executed) and the URL will always be used for the page, even when opening it from a different source then just the deep link. To keep the same URL as before, put the `name` of the deep link in the URL field, followed by the name of the attribute that was configured in the deeplink. E.g. `product/{PageParameterName/AttributeName}` for a deep link with `name` `product` and `attribute` `AttributeName`.
+  * Within the runtime setting of your application you can configure the page URL prefix. Change this from the default `p` to `link` to keep you our existing URLs working. Note that after this you have to completely remove the Deep Link module from your app, or else your app will fail to start. 
+* **Microflow URLs** – For cases not entirely covered by the page URL functionality, you add a URL to the microflows you were using with the Deep Link module. Because microflow URLs do not use query parameters (for example `?param1=foo&param2=bar`), you can end up with a different URL than before.
+* **Miscellaneous** – Other features of the deep link module can be replaced by their dedicated built-in features:
+  * `Do not force a login action` can be replaced by the built-in security features for anonymous users. 
+  * For `Alternative Index Page` you use the theming options provided by Mendix. 
+  * Instead of the `Track hit count` use you applications access logs and metrics to track traffic yo your application. 
+  * `Keep the deep link the entire session` is no longer relevant, as page URLs give you finer-grained control over the URL the user sees in the browser.
 
 ## 2 Introduction
 

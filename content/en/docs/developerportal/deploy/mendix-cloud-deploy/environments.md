@@ -70,10 +70,9 @@ For standard plans, the **Environments** section shows the following information
 
 * Environment name (Acceptance, Production, or Test)
 * Environment status, indicated by the icon next to the environment name:
-    * Green check mark – the application in this environment is running
-    * Gray dash – no application has been started yet in this environment, or it has been turned off
-    * Red cross – the application in this environment is unstable and probably not usable anymore
-
+    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * Name of the deployment package
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
@@ -99,9 +98,9 @@ If your Mendix license supports flexible environments, you can define the number
 For flexible environments, the **Environments** section shows the following information:
 
 * Environment status, indicated by the icon next to the environment name:
-    * Green check mark – the application in this environment is running
-    * Gray dash – no application has been started yet in this environment, or it has been turned off
-    * Red cross – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * Name of the environment
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built

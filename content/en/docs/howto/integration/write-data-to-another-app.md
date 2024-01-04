@@ -1,11 +1,12 @@
 ---
 title: "Write Data to Another App"
-url: /catalog/write-data/
+url: /howto/integration/write-data/
 description: "Describes how to add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Catalog, and use them to build your app."
 tags: ["data hub", "external entities", "published OData service" ,"how to","OData", "Catalog"]
 weight: 20
 aliases:
     - /data-hub/write-data/
+    - /catalog/write-data/
 ---
 
 ## 1 Introduction

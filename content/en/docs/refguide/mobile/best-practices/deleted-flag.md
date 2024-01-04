@@ -6,6 +6,7 @@ weight: 10
 description: "This pattern lets you remove deleted objects from the offline database via Sync-to-device."
 tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
+
 ## Summary
 
 This pattern lets you remove deleted objects from the offline database via Sync-to-device.

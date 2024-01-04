@@ -6,6 +6,7 @@ weight: 20
 description: "This patterns makes it possible to incrementally sync objects from the server to the device based on changed dates."
 tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
+
 ## Summary
 
 This patterns makes it possible to incrementally sync objects from the server to the device based on changed dates.

@@ -6,19 +6,22 @@ weight: 30
 description: "This pattern lets you spread long synchronizations to multiple actions and present a progress to your users."
 tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
-## Summary
+
+## 1 Introduction
 
 This pattern lets you spread long synchronizations to multiple actions and present a progress to your users.
 
-## Challenge
+### 1.1 Challenge
 
-When synchronizing objects in an offline-first application, no feedback is given to the user about the duration of the synchronization. This can be frustrating for users especially if the synchronization takes a long time.
+When synchronizing objects in an offline-first application, no feedback is given to the user about the duration of the synchronization. This can be frustrating for users if the synchronization takes a long time.
 
-## Solution
+### 1.2 Solution
 
-Batch synchronization lets you group large synchronization actions into smaller actions. These smaller actions can be tracked in the client to show progress when synchronizing all data.
+Batch synchronization lets you group large synchronization actions into smaller actions. These smaller actions can be tracked in the client to show progress when synchronizing all data. This increases the users' feelings of understanding and control while using your app.
 
-## Implementation
+## 2 Implementation
+
+To implement this best practice, do the following:
 
 1. Implement [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization) for the target entity.
 2. Add a non-persistent entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute *Progress* of type Integer).
@@ -50,8 +53,8 @@ Batch synchronization lets you group large synchronization actions into smaller 
 
 ## Considerations
 
-- For more complex synchronization scenarios that use multiple entities, it can be beneficial to create a separate synchronization page to show the progress of all synchronized entities and let users start and pause the synchronization as needed.
-- The batch size should be between 100 and 10.000 objects. Larger batches tend to synchronize faster but smaller batches give more responsive feedback to users.
-- If the data changes during the batch synchronization, the offset might run out of sync and result in incomplete synchronizations. Use this pattern only for data that changes infrequently and at times when users are not using the app. If overlap cannot be avoided, add a locking mechanism that prevents synchronization while the data is changing.
+* For more complex synchronization scenarios that use multiple entities, it can be beneficial to create a separate synchronization page to show the progress of all synchronized entities and let users start and pause the synchronization as needed.
+* The batch size should be between 100 and 10.000 objects. Larger batches tend to synchronize faster but smaller batches give more responsive feedback to users.
+* If the data changes during the batch synchronization, the offset might run out of sync and result in incomplete synchronizations. Use this pattern only for data that changes infrequently and at times when users are not using the app. If overlap cannot be avoided, add a locking mechanism that prevents synchronization while the data is changing.
 
 This pattern was developed by our MVP Marcel Groeneweg. You can watch him explain it in [this video](https://www.mendix.com/videos/lightning-fast-native-sync-for-large-data-sets/).

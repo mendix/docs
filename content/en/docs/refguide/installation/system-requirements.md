@@ -26,7 +26,7 @@ The following frameworks are required. They will be installed automatically by t
 * Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - If not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'.
-* Git for Windows (x64)
+* Git for Windows (x64) version 2.41.0 or above
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 

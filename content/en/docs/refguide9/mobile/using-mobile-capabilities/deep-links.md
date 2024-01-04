@@ -21,7 +21,7 @@ You can also register the handling of a normal weblink beginning with `http://` 
 
 When an app is installed it registers the `schema` and optionally the `host` so its operating system knows which application should be opened when the URL is clicked. If you tap the link, the application will be opened whether it is running, running in the background, or closed.
 
-Deeplinks registrations persist after the app is closed. Specifically, deeplinks are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
+Deep link registrations persist after the app is closed. Specifically, deep links are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
 
 ### 1.1 Testing With the Make It Native App
 

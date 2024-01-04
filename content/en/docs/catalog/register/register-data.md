@@ -309,7 +309,7 @@ The Catalog has a UI form where you can register a single exposed service. Make 
 
 Follow the steps below:
 
-1. Start at the [Catalog home page](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
+1. Open the [Catalog home page](https://catalog.mendix.com).
 
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
 3. On the **Data Source** screen, select the type of service you want to reigster and specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.

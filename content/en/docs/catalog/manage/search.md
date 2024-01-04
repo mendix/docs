@@ -294,7 +294,7 @@ To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
-You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Catalog](/howto/integration/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. For more information, see [Write Data to Another App](/howto/integration/write-data).
 
 You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 

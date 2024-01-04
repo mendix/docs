@@ -93,7 +93,7 @@ You can perform the following actions in this section:
 
 If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment (or environments) may be designated according to your requirements. For example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" class="image-border" >}}
 
 For flexible environments, the **Environments** section shows the following information:
 
@@ -116,7 +116,7 @@ You can perform the following actions in this section:
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="Move Up and Move Down options" class="image-border" >}}
 
     {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
 
@@ -124,7 +124,7 @@ You can perform the following actions in this section:
 
 In the **Activity** section, you can view a log of deployment activities performed on your environments.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" class="image-border" >}}
 
 {{% alert color="info" %}}
 Operations performed on a customer's behalf through an authorized Mendix support ticket are not logged in the activity log.
@@ -172,7 +172,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## 7 Read More
 
-* [Deploy and Manage](/developerportal/deploy/)
+* [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
 * [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/)

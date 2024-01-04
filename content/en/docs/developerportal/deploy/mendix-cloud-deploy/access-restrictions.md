@@ -107,12 +107,12 @@ Two scenarios in which you can use access restrictions are described below.
 
 ### 4.1 Example Scenario 1 – Restricting Access Based on an IP Range
 
-An example scenario in which a basic IP range restriction could be used is when an app running in Mendix Cloud is only to be accessed from a single office. The interactive web browser interface of the app should only be accessible to employees in the office of the company running the app. From the rest of the internet, the login screen of the application should not even be visible.
+Consider this is example scenario in which a basic IP range restriction could be used: You have an app running in Mendix Cloud that is only to be accessed from a single office. The interactive web browser interface of the app should only be accessible to employees in the office of the company running the app. From the rest of the internet, the login screen of the application should not even be visible.
 
 To restrict access to the app to an IP range, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your app.
-2. Go to the **Access Restriction Profiles** tab of the **Environments** page.
+1. From the [Developer Portal](http://sprintr.home.mendix.com), go to your app's **Environments** page.
+2. Switch to the **Access Restriction Profiles** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png" alt="The Access Restriction Profiles tab" >}}
 
@@ -165,6 +165,6 @@ If the `/ws/` path should still be reachable from the office location without us
 ## 5 Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
-* [Deploy and Manage](/developerportal/deploy/)
+* [Deployment](/developerportal/deploy/)
 * [Environments](/developerportal/deploy/environments/)
 * [Environment Details](/developerportal/deploy/environments-details/)

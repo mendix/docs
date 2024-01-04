@@ -12,7 +12,7 @@ draft: false
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) is the Mendix connector for the APIs & large language models (LLMs) powering OpenAI's ChatGPT: GPT-3.5, GPT-4 and DALL-E. It allows you to integrate generative AI into your Mendix app. This connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat) for both platforms, with an additional image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images) (currently only supported from OpenAI).
+The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat) for both platforms, with an additional image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images); DALL-E is currently only supported from OpenAI; Azure OpenAI only shows it in preview mode.
 
 ### 1.1 Typical Use Cases 
 

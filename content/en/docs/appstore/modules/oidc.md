@@ -61,7 +61,7 @@ For readers with more knowledge of the OAuth and OIDC protocol.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
     * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
-        * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
 
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
 
@@ -530,7 +530,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-        * Microsoft Azure AD – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+    * Microsoft Azure AD – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
 
         ```json {linenos=false}
         "roles": [

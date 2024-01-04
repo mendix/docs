@@ -311,7 +311,7 @@ The `ChatCompletionsSession` is a wrapper object for the ordered list of message
 
 ##### 4.3.1.3 Chat Completions Advanced
 
-For advanced developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI`     microflow. The inputs and output are shown in the table below: 
+For advanced developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` microflow. The inputs and output are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 

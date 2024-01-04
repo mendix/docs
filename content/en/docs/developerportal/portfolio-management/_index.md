@@ -115,20 +115,24 @@ Now you can proceed to [add general information](#add-general-information).
 
 To add general information to your initiative, follow these steps:
 
+{{% alert color="info" %}}Some fields in this procedure have an **ⓘ** icon next to them, for example, the **Link Existing App** field. You can check out the descriptions of these fields by hovering over the **ⓘ** icons.{{% /alert %}}
+
 1. In the **Edit Initiative** side pane, select **Tags** for the initiative. You can use tags to classify your initiatives, for example by types. You can select existing tags or create new tags. 
 
     {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
 2. Enter the **Description** of the initiative.
+
 3. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
 
     1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
-        {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
+    2. Select the app that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
 
-    2. Select the apps that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
+    3. Repeat the two steps above to link more apps if you want to link more than one app.
 
 4. Set the **Owner** for the initiative.
+
 5. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
 
     {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
@@ -284,7 +288,7 @@ Each initiative card shows the following information:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.
     * **Go-Live** – This shows the date when the apps are expected to be up and running.
-* ⑥ Icons of the linked apps – Clicking an icon shows the information about the app.
+* ⑥ Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * ⑦ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
@@ -304,7 +308,7 @@ The list contains the following information:
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
 * **Go-Live Date** – This shows the date when the apps are expected to be up and running.
-* Icons of the linked apps – Clicking an icon shows the information about the app.
+* Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -332,7 +336,7 @@ The list contains the following information:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live** – This is the date when the apps are expected to be up and running.
-* Icons of the linked apps – Clicking an icon shows the information about the app.
+* Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -360,7 +364,7 @@ The list contains the following information:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live** – This is the date when the apps are expected to be up and running.
-*  Icons of the linked apps – Clicking an icon shows the information about the app.
+*  Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -381,7 +385,7 @@ The view contains the following information:
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live** – This is the date when the apps are expected to be up and running.
     
-*  Icons of the linked apps – Clicking an icon shows the information about the app.
+*  Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Vertical blue line – This indicates the date of today.
 

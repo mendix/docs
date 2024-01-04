@@ -11,47 +11,47 @@ tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization
 
 This pattern lets you spread long synchronizations to multiple actions and present a progress to your users.
 
-### 1.1 Challenge
+## 2 Challenge
 
 When synchronizing objects in an offline-first application, no feedback is given to the user about the duration of the synchronization. This can be frustrating for users if the synchronization takes a long time.
 
-### 1.2 Solution
+## 3 Solution
 
-Batch synchronization lets you group large synchronization actions into smaller actions. These smaller actions can be tracked in the client to show progress when synchronizing all data. This increases the users' feelings of understanding and control while using your app.
+Batch synchronization lets you group large synchronization actions into smaller actions. These smaller actions can be tracked in the client to show progress when synchronizing all data. This increases the user's sense of understanding and control while using your app.
 
-## 2 Implementation
+## 4 Implementation
 
 To implement this best practice, do the following:
 
-1. Implement [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization) for the target entity.
-2. Add a non-persistent entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute *Progress* of type Integer).
-3. Change the Microflow that retrieves and synchronizes the changed objects to accept an offset:
-    1. Add a parameter *Offset* of type Integer.
-    2. Set the offset of the retrieve to the parameter and the amount to a fixed value (for example, 100).
-    3. Sort the results by *changedDate*.
+1. Implement [incremental synchronization](/refguide/mobile/best-practices/incremental-synchronization) for the target entity.
+2. Add a non-persistent entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute **Progress** of type `Integer`).
+3. Change the microflow that retrieves and synchronizes the changed objects to accept an offset:
+    1. Add a parameter **Offset** of type `Integer`.
+    2. Set the offset of the retrieve to the parameter and the amount to a fixed value (for example, `100`).
+    3. Sort the results by **changedDate**.
 
-{{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-1.png" alt="Microflow that retrieves objects with offset" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-1.png" alt="Microflow that retrieves objects with offset" >}}
 
-4. Create a Microflow that returns the count of changed objects for a given synchronization date:
+4. Create a microflow that returns the count of changed objects for a given synchronization date:
 
-{{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-2.png" alt="Microflow that returns the count of changed objects for a given synchronization date" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-2.png" alt="Microflow that returns the count of changed objects for a given synchronization date" >}}
 
-5. Change the Nanoflow that triggers the synchronization to use a loop to trigger the synchronization repeatedly and track its progress:
-    1. Add a parameter of type *SyncProgress* to the Nanoflow.
-    2. Call the Microflow to count the changed objects at the beginning.
-    3. Create a variable *Offset* and initialize it with 0 after the Microflow call.
-    4. Add a While Loop afterwards with condition *Offset <= Count* and place the call to the synchronization Microflow into the loop.
-    5. Set the *Offset* variable as a parameter to the synchronization Microflow call.
-    6. Add a *Change Variable* action after the synchronization Microflow call and set the *Offset* variable to `$Offset + 100` (adjust to your chosen batch size).
-    7. Set *SyncProgress/Progress* to reflect the current progress: `round($Offset div $Count * 100)`
+5. Change the nanoflow that triggers the synchronization to use a loop to trigger the synchronization repeatedly and track its progress:
+    1. Add a parameter of type `SyncProgress` to the nanoflow.
+    2. Call the microflow to count the changed objects at the beginning.
+    3. Create a variable *Offset* and initialize it with 0 after the microflow call.
+    4. Add a **While Loop** afterwards with condition **Offset <= Count** and place the call to the synchronization microflow into the loop.
+    5. Set the `Offset` variable as a parameter to the synchronization microflow call.
+    6. Add a **Change Variable** action after the synchronization Microflow call and set the `Offset` variable to `$Offset + 100` (adjust to your chosen batch size).
+    7. Set **SyncProgress/Progress** to reflect the current progress: `round($Offset div $Count * 100)`
 
-{{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-3.png" alt="Nanoflow with a loop to trigger the synchronization" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-3.png" alt="Nanoflow with a loop to trigger the synchronization" >}}
 
-6. Create a Nanoflow *DS_SyncProgress* to create and return a new *SyncProgress* object.
-7. Add a DataView around the button that triggers the synchronization and set its data source to the Nanoflow *DS_SyncProgress*.
-8. Add a widget to show the value of *SyncProgress/Progress* into the DataView, such as a Progress Bar.
+6. Create a nanoflow called *DS_SyncProgress* to create and return a new `SyncProgress` object.
+7. Add a data view around the button that triggers the synchronization and set its data source to the nanoflow **DS_SyncProgress**.
+8. Add a widget to show the value of **SyncProgress/Progress** into the data view, such as a [progress bar](/appstore/widgets/progress-bar/).
 
-## Considerations
+## 5 Advanced Advice
 
 * For more complex synchronization scenarios that use multiple entities, it can be beneficial to create a separate synchronization page to show the progress of all synchronized entities and let users start and pause the synchronization as needed.
 * The batch size should be between 100 and 10.000 objects. Larger batches tend to synchronize faster but smaller batches give more responsive feedback to users.

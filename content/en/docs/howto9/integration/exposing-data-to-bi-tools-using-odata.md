@@ -34,7 +34,7 @@ Before checking out this guide, make sure you do the following:
 
 ## 3 Creating a Published OData Service {#create-service}
 
-A published OData service can be used by third-party applications to read data from a Mendix application. For detailed steps on publishing an OData service, see the [Creating an App](/catalog/share-data/#createapp) and [Publishing to the Catalog](/catalog/share-data/#publishing) sections of *Share Data Between Apps*. The basic steps are as follows:
+A published OData service can be used by third-party applications to read data from a Mendix application. For detailed steps on publishing an OData service, see the [Creating an App](/howto/integration/share-data/#createapp) and [Publishing to the Catalog](/howto/integration/share-data/#publishing) sections of *Share Data Between Apps*. The basic steps are as follows:
 
 1. Open Studio Pro and add a folder named *OData Services* to **MyFirstModule**.
 2. Right-click the new folder and select **Add other** > **Published OData service**.

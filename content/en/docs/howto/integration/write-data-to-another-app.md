@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/catalog/write-data/) and shows you how OData annotations give you the power to create, update, and delete data.
+This how-to builds on the information provided in [How to Share Data Between Apps](/howto/integration/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
 
 This how-to teaches you how to do the following:
 
@@ -35,7 +35,7 @@ Note the following terminology differences described in the table below:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the most recent version of [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
-* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/catalog/write-data/)
+* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/howto/integration/share-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
@@ -51,7 +51,7 @@ The updatable OData capability relates to the data in your app. The Catalog prov
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/catalog/share-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/howto/integration/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you do not see many results, try removing the **Production** filter on your search.
 
 Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.

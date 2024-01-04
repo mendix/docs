@@ -28,7 +28,7 @@ A reporting tool like Excel or Tableau can discover what data and functionality 
 
 Before checking out this guide, make sure you do the following:
 
-* Create an app that includes data you want to expose. You can either have published OData services already, or follow the steps in the [Creating a Published OData Service](#create-service) section below. For detailed steps to publishing an OData service,see the [Creating an App](/catalog/share-data/#createapp) and [Publishing to the Catalog](/catalog/share-data/#publishing) sections of *Share Data Between Apps*. 
+* Create an app that includes data you want to expose. You can either have published OData services already, or follow the steps in the [Creating a Published OData Service](#create-service) section below. For detailed steps to publishing an OData service,see the [Creating an App](/howto/integration/share-data/#createapp) and [Publishing to the Catalog](/howto/integration/#publishing) sections of *Share Data Between Apps*. 
 * Install Excel (we will use Excel for Office 365).
 * Download and install the public version of [Tableau](https://public.tableau.com).
 

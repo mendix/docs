@@ -302,7 +302,7 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
 
 The Catalog has a UI form where you can register a single exposed service. Make sure you have collected the following details before you begin:
 
-* OData metadata contract file as an XML, or ZIP if it is multiple files
+* Metadata contract file as an XML, or ZIP if it is multiple files
 * Data Source details: `Name`, `Version`, `Path`
 * Application `Name`
 * Environment details: `Name`, `Location` (URL), `Type`

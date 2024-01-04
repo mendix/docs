@@ -120,13 +120,13 @@ To add general information to your initiative, follow these steps:
     {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
 2. Enter the **Description** of the initiative.
-3. If there are any existing Mendix apps related to this initiative or any in development, you can link these apps:
+3. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
 
     1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
         {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
 
-    2. Select the app(s) that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
+    2. Select the apps that you want to link to the initiative. If you like to see more information about a linked app, click the app name after it is linked.
 
 4. Set the **Owner** for the initiative.
 5. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
@@ -178,12 +178,12 @@ You can link any epic from [Epics](/developerportal/project-management/epics/) t
 To link epics to an initiative, do as follows:
 
 1. At the bottom of the **Epics** section, click **+ Link Epics**. The **Link Epics** dialog window opens.
-2. Select the app, which you want to link epics of.
+2. Select the app to which you want to link epics.
 3. Select the epics. You can search by the epic ID or name. 
 4. Click **Add** to link the selected epics to the initiative. 
 
 {{% alert color="info" %}}
-To link epics from multiple apps to a single initiative, all apps should be linked to this initaitve and you need to repeat the steps for each app separately.
+To link epics from multiple apps to a single initiative, all apps should be linked to this initiative and you need to repeat the steps for each app separately.
 {{% /alert %}} 
 
 Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
@@ -210,7 +210,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 * **Intake Date** – the date when the initiative is accepted based on business requirements
 * **Start Date** – the date when the first actions are taken to start implementation
-* **Go-Live date** – the date when the app(s) is expected to be up and running
+* **Go-Live date** – the date when the apps are expected to be up and running
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
@@ -264,6 +264,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 #### 3.2.1 Kanban View {#kanban-view}
 
 In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click the **<** or **>** icon on the left or right side of the card.
+
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 To filter initiatives, you can select a filter from the **Filters** drop-down list on the top of the page.
@@ -282,8 +283,8 @@ Each initiative card shows the following information:
 * ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.
-    * **Go-Live** – This shows the date when the app(s) is expected to be up and running.
-* ⑥ Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
+    * **Go-Live** – This shows the date when the apps are expected to be up and running.
+* ⑥ Icons of the linked apps – Clicking an icon shows the information about the app.
 * ⑦ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
@@ -302,8 +303,8 @@ The list contains the following information:
     
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
-* **Go-Live Date** – This shows the date when the app(s) is expected to be up and running.
-* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
+* **Go-Live Date** – This shows the date when the apps are expected to be up and running.
+* Icons of the linked apps – Clicking an icon shows the information about the app.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -330,8 +331,8 @@ The list contains the following information:
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the app(s) is expected to be up and running.
-* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
+    * **Go-Live** – This is the date when the apps are expected to be up and running.
+* Icons of the linked apps – Clicking an icon shows the information about the app.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -358,8 +359,8 @@ The list contains the following information:
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the app(s) is expected to be up and running.
-* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
+    * **Go-Live** – This is the date when the apps are expected to be up and running.
+*  Icons of the linked apps – Clicking an icon shows the information about the app.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -367,20 +368,22 @@ The list contains the following information:
 
 #### 3.2.5 Planning View {#planning-view}
 
-In the planning view, you can view all initiatives from a timeline perspective. Planning view support planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. You can change the timeframe via settings on the bottom right.
+In the planning view, you can view all initiatives on a timeline. The planning view supports planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. 
+
+The dates on the timeline as well as their frequency depend on your selection on the lower-right corner of the page. You can change the dates and the frequency by clicking the **Weeks**, **Months**, or **Quarters** button. Clicking **Today** brings the view back to today.
 
 {{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
 
 The view contains the following information:
 
 * **Initiative Name** – Clicking this opens a side pane that shows initiative details.
-* Progress Bar - Hovering above the bars you can see the dates.
+* Progress bar - Hovering above the bar shows the following defined dates of initiative lifecycle:
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live**  – This is the date when the app is expected to be up and running.
-* Icon of the linked app(s) – Clicking this shows the information about the linked Mendix app when there is only 1 linked app, otherwise multiple linked apps icon is shown.
+    * **Go-Live** – This is the date when the apps are expected to be up and running.
+    
+*  Icons of the linked apps – Clicking an icon shows the information about the app.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Vertical blue line indicates date of today.
-* Dates on the header and their frequency changes depending on your timeframe settings, you can find this setting at the bottom right of the planning board.
+* Vertical blue line – This indicates the date of today.
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
 
@@ -389,14 +392,12 @@ On the **Initiatives Overview** page, if you click an initiative, a side pane op
 On the upper-right corner of the pane, there is a link button and an ellipsis button (**…**). Clicking the link button copies the link to the initiative. Clicking **...** opens a menu that allows you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
 {{% alert type="info" %}}
-
 Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
-
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" >}}
 
-When you view initiative details, you can only **Post Comment** or link epics. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
+When you view initiative details, you can only post comments or link epics. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
 
 ### 3.4 Editing or Deleting an initiative {#edit-delete-initiative}
 
@@ -530,7 +531,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 1. Go to **Access Management**.
 2. On the upper-right corner of the **Members** tab, click **Add Users**.
 3. In the dialog box, enter the email address of the user who you want to invite. The **Email Address** field also gives a drop-down list with all the active users from your company. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
-4. Select an **Access Role** for the user(s) – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
+4. Select an **Access Role** for the users – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
 6. Click **Send Invites**.
 

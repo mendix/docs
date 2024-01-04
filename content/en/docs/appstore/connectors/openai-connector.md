@@ -289,7 +289,7 @@ An image generations request that creates a model response including generated i
 | `Prompt` | This is the prompt that is used by the model to generate the image(s). | 
 | `Model` | The model to use for image generation. Defaults to `dall-e-2`. For more information, see the [ENUM_Model_ImageGenerations](#enum-model-images) section. |
 | `N` | The number of images to generate. Must be between 1 and 10. For `dall-e-3`, only n=1 is supported. This attribute is optional. |
-| `Quality` | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `stamdard`. For more information, see the [ENUM_Quality](#enum-quality) section. |
+| `Quality` | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `standard`. For more information, see the [ENUM_Quality](#enum-quality) section. |
 | `ResponseFormat` | This is a parameter used to specify the technical format of the returned generated images by the API. This attribute is optional and defaults to `url`. For more information see the [ENUM_ResponseFormat](#enum-response-format) section. |
 | `Size` | This is the requested size of the generated images. This attribute is optional and defaults to `1024x1024`. For more information see the [ENUM_Size](#enum-size) section. |
 | `Style` | The style of the generated images. This attribute is optional and defaults to `vivid`. For more information, see the [ENUM_Style](#enum-style) section. |

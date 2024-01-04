@@ -99,7 +99,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
 2. Click **Create a Certificate Request**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" alt="" width=75% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" class="image-border" alt="" width=75% >}}
 
 3. Fill in the required fields.
 
@@ -149,7 +149,7 @@ To upload the custom domain certificate, follow these steps:
 
 2. Click **Upload Certificate, Chain and Key**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" width=75% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" width=75% class="image-border" alt="" >}}
 
 3. Type a **Description** for the certificate.
 
@@ -211,7 +211,7 @@ To configure a custom domain for your application environment, follow these step
 
 1. Click **Environments**.
 
-2. Click the **Details** icon on the environment you want to configure.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to configure.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/environment-details.png" >}}
 

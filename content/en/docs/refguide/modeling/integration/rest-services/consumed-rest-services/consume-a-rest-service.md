@@ -1,5 +1,5 @@
 ---
-title: "Consume a REST Service"
+title: "Advanced Consumed REST Services"
 url: /refguide/integration/consume-a-rest-service/
 category: "Integration"
 weight: 9

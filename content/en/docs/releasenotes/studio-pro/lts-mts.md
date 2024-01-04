@@ -86,10 +86,12 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 An MTS is a minor version released approximately every 6 months after a new major version release for general availability.
 
-The next MTS version for Studio Pro will be 10.6, due to be released in December, 2023.
+This is the current MTS version of Studio Pro:
+
+* [10.6](/releasenotes/studio-pro/10.6/) (started in December, 2023)
 
 {{% alert color="info" %}}
-Older MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10).
+MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10.0).
 {{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.

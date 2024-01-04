@@ -11,7 +11,7 @@ aliases:
 
 While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`. 
 
-Deeplinks are always called or triggered within the schema that they define. For example, using `makeitnative://` instead of `http://` in the mobile browser would force the Make It Native app to open. 
+Deep links are always called or triggered within the schema that they define. For example, using `makeitnative://` instead of `http://` in the mobile browser would force the Make It Native app to open. 
 
 A URL is constructed of these parts (everything after **path** is defined as a detail):
 
@@ -21,7 +21,7 @@ You can also register the handling of a normal weblink beginning with `http://` 
 
 When an app is installed it registers the `schema` and optionally the `host` so its operating system knows which application should be opened when the URL is clicked. If you tap the link, the application will be opened whether it is running, running in the background, or closed.
 
-Deeplinks registrations persist after the app is closed. Specifically, deeplinks are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
+Deep link registrations persist after the app is closed. Specifically, deep links are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
 
 ### 1.1 Testing With the Make It Native App
 
@@ -35,7 +35,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date
-* Install git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
+* Install Git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
 * Install Mendix Studio Pro v 8.15.0 or above in order to use the Native Mobile App Builder
 
 ## 3 Setting up App Deep Linking {#set-up}

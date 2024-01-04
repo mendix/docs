@@ -11,7 +11,7 @@ tags: ["workflow", "workflows", "wait for notification", "notification", "Studio
 The **Wait for notification** activity allows you to suspend a workflow's execution until the workflow is notified.
 
 {{% alert color="info" %}}
-If you have this activity in one of the parallel split branches, then only the branch which has this activity will suspend and all the other branches will continue with their own activities.
+If you have this activity in one of the parallel split paths, then only the path which has this activity will suspend and all the other paths will continue with their own activities.
 
 However, the whole parallel split will still suspend on the merge of the split until the waiting activity is notified.
 {{% /alert %}}

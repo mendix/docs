@@ -10,7 +10,7 @@ tags: ["API", "API Key", "Authentication"]
 
 ## 1 Introduction
 
-Most Mendix Platform APIs require their users to authenticate themselves. This is done by using API keys.
+Most Mendix Platform APIs require you to authenticate yourself. This is done by using API keys.
 
 ## 2 Obtaining API Keys
 
@@ -22,3 +22,5 @@ Any call to the Mendix Platform APIs should be authenticated using the following
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
+
+For an example, see one of the [Request](/apidocs-mxsdk/apidocs/deploy-api/#list-environments-request) sections in *Deploy API – Version 1*.

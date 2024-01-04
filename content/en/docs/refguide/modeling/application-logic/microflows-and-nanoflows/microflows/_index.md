@@ -102,7 +102,47 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 3 Keyboard Support {#keyboard}
 
-The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the keys that can be used.
+### 3.1 Studio Pro 10.6 and Above {#keyboard-improved}
+
+The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows in the microflow editor in Studio Pro 10.6 and above.
+
+#### 3.1.1 Selection
+
+| Key | Effect |
+| --- | --- |
+| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
+| <kbd>Home</kbd> | Select the start event. |
+| <kbd>End</kbd> | Select the first end event. |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd> | Select all elements. |
+| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
+
+#### 3.1.2 Navigation
+
+| Key | Effect |
+| --- | --- |
+| mouse scroll | Scroll up/down. |
+| <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
+| <kbd>Space</kbd> + mouse button | Drag screen.  |
+| <kbd>Ctrl</kbd> + <kbd>+</kbd>/<kbd>-</kbd> | Zoom in/out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
+| <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
+
+#### 3.1.3 Element Manipulation
+
+| Key | Effect |
+| --- | --- |
+| <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
+| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Bot dialog box. |
+| <kbd>Enter</kbd> - on a Logic Bot suggestion list item | The selected item is added on the flow arrow. The Logic Bot dialog box is shown again for the next action to be added. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Bot suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
+| <kbd>F2</kbd> | Rename the variable returned by the selected element. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
+| Context-menu key | Open the context-menu for the currently selected element. |
+
+### 3.2 Studio Pro 10.5 and Below
+
+The following table shows the shortcut keys that can be used in the microflow editor in Studio Pro 10.5 and below.
 
 | Key | Effect |
 | --- | --- |
@@ -119,10 +159,6 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
-{{% alert color="info" %}}
-The beta version of the redesigned microflow editor is now available to try out in Studio Pro 10.4.0. In the beta microflow editor, keyboard navigation has been improved. For more information on what keyboard shortcuts are supported and their respective functions in the beta microflow editor, see the [Keyboard Navigation](/refguide/logic-editors-beta/#keyboard-navigation) section in *Logic Editors (Beta)*.
-{{% /alert %}}
-
 ## 4 Microflow Debugging
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
@@ -137,3 +173,7 @@ To convert a microflow to a nanoflow, you have two options. The first option is 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/convert-to-nanoflow.PNG" alt="Convert to nanoflow" width="550px" >}}
 
 A new nanoflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflows.
+
+## 6 Canvas Interaction {#canvas-interaction}
+
+In the microflow editor from Studio Pro 10.6, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow. 

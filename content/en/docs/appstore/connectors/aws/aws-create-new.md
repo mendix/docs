@@ -114,7 +114,7 @@ After modeling the API response, you can create the corresponding action to use 
 3. Configure both [static and session-based credentials](/appstore/connectors/aws/aws-authentication/).
 4. Create a **Call REST** activity and configure the headers from the SigV4Header object.
 
-    For more information, see [AWS Authentication: GetSigV4SignedHeaders Java Action](/appstore/connectors/aws/aws-authentication/#java-action).
+    For more information, see [AWS Authentication: Implementing Signature Version 4 Headers](/appstore/connectors/aws/aws-authentication/#signature-v4-headers).
 
 The signing of headers may differ across AWS services, for example:
 

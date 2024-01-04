@@ -53,8 +53,10 @@ To implement this best practice, do the following:
 
 ## 5 Advanced Advice
 
-* For more complex synchronization scenarios that use multiple entities, it can be beneficial to create a separate synchronization page to show the progress of all synchronized entities and let users start and pause the synchronization as needed.
-* The batch size should be between 100 and 10.000 objects. Larger batches tend to synchronize faster but smaller batches give more responsive feedback to users.
-* If the data changes during the batch synchronization, the offset might run out of sync and result in incomplete synchronizations. Use this pattern only for data that changes infrequently and at times when users are not using the app. If overlap cannot be avoided, add a locking mechanism that prevents synchronization while the data is changing.
+For advanced development advice, consult the following MVP recommendations:
+
+* For more complex synchronization scenarios that use multiple entities, create a separate synchronization page to show the progress of all synchronized entities. This lets users start and pause the synchronization as needed.
+* Batch size should be between 100 and 10,000 objects. Larger batches tend to synchronize faster, but smaller batches give more responsive feedback to users.
+* If the data changes during the batch synchronization, then the offset might run out of sync resulting in incomplete synchronizations. Use this pattern only for data that changes infrequently when users are not using the app. If overlap cannot be avoided, add a locking mechanism that prevents synchronization while the data is changing.
 
 This pattern was developed by our MVP Marcel Groeneweg. You can watch him explain it in [this video](https://www.mendix.com/videos/lightning-fast-native-sync-for-large-data-sets/).

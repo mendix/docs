@@ -18,7 +18,7 @@ This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/
 You can use this Consumed REST service document to do the following:
 
 * Consume a REST service
-* Configure `GET`, `POST` and `PATCH` requests
+* Configure `GET`, `POST`, and `PATCH` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 
@@ -47,11 +47,11 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration {#configuration}
 
-Use the Consumed REST service to configure a `GET`, `POST` or `PATCH` request for your app. 
+Use the Consumed REST service to configure a `GET`, `POST`, or `PATCH` request for your app. 
 
 ### 3.1 Basic Configuration {#configure-a-request}
 
-Create a `GET`, `POST` or `PATCH` request to send data to your server by doing the following:
+Create a `GET`, `POST`, or `PATCH` request to send data to your server by doing the following:
 1. In the **General** field, name your request. 
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
 3. Add an endpoint and click **Send**.

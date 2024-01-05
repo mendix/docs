@@ -148,5 +148,4 @@ Because connectors are exported as modules and then published on the Marketplace
 
 * Read [How to Share Marketplace Content](/appstore/sharing-content/)
 * Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
-* See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
 * Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#third-party)

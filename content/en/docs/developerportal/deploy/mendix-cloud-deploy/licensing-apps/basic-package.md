@@ -9,33 +9,39 @@ tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Ba
 
 ## 1 Introduction
 
-To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, cannot be scaled and has limited operational information available.
+You can only run Mendix apps in production on Mendix Cloud if they are linked to a licensed node.
 
-If you have an app which you want to license, you can do this simply and cost-effectively by ordering the **Mendix Basic** package. This can be done online.
+Without a licensed node, you can still deploy your app and test it, but it will have several limitations:
+
+* It runs for only a couple of hours before shutting down
+* It cannot be scaled
+* It has limited operational information available
+
+If you have an app that you want to license, you can do this simply and cost-effectively by ordering the [Mendix Basic](https://www.mendix.com/pricing/basic-package/) package.
 
 {{% alert color="info" %}}
-Your order is made immediately but the provisioning of your licensed node will take 48 hours.
+After you order the Mendix Basic package, it may take up to 48 hours before your licensed node is ready for use.
 {{% /alert %}}
 
 ## 2 Features of the Basic Package
 
-The basic package has the following features.
+The basic package has the following features:
 
-* Runs in the Mendix Cloud
-* Supports between five and a hundred (5-100) users
+* Runs in Mendix Cloud
+* Supports between five and one hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and a single cloud environment on the Mendix Cloud, together with the ability to preview and test in Studio Pro. The cloud environment has the following features:
+* Has a limited amount of resources and a single cloud environment on Mendix Cloud, together with the ability to preview and test in Studio Pro. The cloud environment has the following features:
     * 1 GiB App RAM
     * 0.25 vCPU
-    * 1 GiB database schema as a part of a shared database — your schema is private to your app and some database monitoring graphs are not available (see [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/) for more information)
+    * 1 GiB database schema as a part of a shared database — your schema is private to your app, and some database monitoring graphs are not available (see [Metrics](/developerportal/operate/metrics/) for more information)
     * 1 GiB file storage for `FileDocument` and `Image` entities
-* The regular Mendix [Service Level Agreement](https://www.mendix.com/wp-content/uploads/Mx_ServiceLevelAgreement_v2018-01.pdf) applies, but please note the following:
-    * You cannot get telephone support: access to support is via the [Mendix support website](https://support.mendix.com) only.
-    * Support is only available for general platform issues – Mendix support cannot give help on problems with individual apps.
+* The regular Mendix [Service Level Agreement](https://www.mendix.com/wp-content/uploads/Mx_ServiceLevelAgreement_v2018-01.pdf) applies, but note the following:
+    * You cannot get telephone support; you can only access support via the [Mendix Support](https://support.mendix.com) website.
+    * Support is only available for general platform issues; Mendix Support cannot help solve problems with individual apps.
 
 ## 3 Purchasing a Basic Package
 
-Select your Free App in the Developer Portal, and click **Environments** in the left-hand menu.
+Select your Free App in the Developer Portal. Click **Environments** in the navigation pane.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
@@ -43,68 +49,66 @@ When you view your Free App environment, you will see a banner showing that you 
 
 To order your Mendix Basic package, do the following:
 
-1. Click the **Learn More** button.
+1. Click **Learn More**.
 
 2. Review the features of Mendix Basic and click **Upgrade Now**.
 
 3. Configure the Basic Package by choosing the following:
 
-    * **Select the application you would like to upgrade** – this will default to the current Free App, but you can choose another of your Free Apps using the dropdown
-    * **URL you want to use to access your app** – choose your preferred subdomain of `.mendixcloud.com`, this is where users can find your app
-    * **Select the region to deploy your app** – choose your preferred region, we recommend the region where you expect to receive most visitors — these regions correspond to AWS regions
-    * **Fill in the number of Users** – the cost of your basic package relates to the number of users
+    * **App Name** – This defaults to the current Free App, but you can choose another of your Free Apps using the drop-down list.
+    * **App URL** – Choose your preferred subdomain of `.mendixcloud.com`. This is where users can find your app.
+    * **Deployment Region** – Choose your preferred region. Mendix recommends selecting the region where you expect to receive the most visitors. The available regions correspond to AWS regions.
+    * **Number of Users** – The cost of your Basic package depends on the number of users.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/configure-basic-package.png" alt="Configuration screen" >}}
 
-    You can see a summary of your basic package on the right-hand side of the screen.
+    You can see a summary of your Basic package on the right side of the screen.
 
-4. Click **Continue**
+4. Click **Continue**.
 
-5. Enter the invoice details.
+5. Enter your account and billing details.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/invoice-details.png" alt="Invoice details entry screen" >}}
-
-    {{% alert color="info" %}}Ensure that the **Email Address** is monitored. Mendix will use this to send further information about your Mendix Basic package.{{% /alert %}}
+    {{% alert color="info" %}}Enter an email address that you monitor. Mendix uses this email address to send important information about your Mendix Basic package.{{% /alert %}}
 
 6. Click **Continue**.
 
-7. Review your order and make any changes needed.
+7. Review your order and make any changes needed. Review and accept the **Terms & Conditions**.
 
-8. Click to agree to the **Terms & Conditions**.
+    {{% alert color="info" %}}The license may take 48 hours to provision. You will receive your invoice about 14 days after you submit your order.{{% /alert %}}
 
-    {{% alert color="info" %}}The license will take 48 hours to provision.<br />You will receive your invoice 7-14 days after you submit your order.{{% /alert %}}
+8. Depending on your payment method, you will be asked to enter your credit card details or to continue with the payment on your account. 
 
-9. Click **Order Now** to complete your order.
+9. Click **Purchase** to complete your order.
 
-10. Read the confirmation details and click **Done** to return to the Developer Portal.
-
-    You will also receive confirmation email at the address entered in your order.
+10. Read the confirmation details and click **Done** to return to the Developer Portal. You will also receive a confirmation email at the email address entered in your order.
 
 ## 4 Linking Your App to your Mendix Basic Node
 
-After 48 hours, your Mendix Basic package will be provisioned as a new licensed node. You will receive an email at the address entered in your order informing you that this has happened and linking you to the documentation on how to use the node.
+After 48 hours, your Mendix Basic package will be provisioned as a new licensed node. You will receive an email at the address entered in your order; this email notifies you that your node is ready and directs you to documentation on how to use the node.
 
-Linking your app to your licensed node is done in the same way as for any other sort of license. See the following documents for more information on how to do this:
+To link your app to your licensed node, follow the same process as for any other sort of license. For details on how to link your app, see the following documents:
 
-* [How To Migrate a Free App to Mendix Basic](/developerportal/deploy/migrate-free-app-to-basic/) for brief instructions
-* [Linking Your App to a Licensed Node](/developerportal/deploy/licensing-apps/#licensed-node) in *Licensing Mendix Cloud Apps* for full details
+* For brief instructions, see [How To Migrate a Free App to Mendix Basic](/developerportal/deploy/migrate-free-app-to-basic/)
+* For full details, see [Linking Your App to a Licensed Node](/developerportal/deploy/licensing-apps/#licensed-node) in *Licensing Mendix Cloud Apps*
 
 ## 5 Invoicing for your Basic Package
 
-It will take 7-14 days to prepare your invoice. This will be sent to the address that you entered as the **invoice Email Address**.
+It takes about 14 days to prepare your invoice. The invoice is sent to the **Invoice Email** that you provide. 
 
-Our payment terms are 30 days.
+For automatic orders, payment occurs when the package is ordered. For manual orders, payment is due within 30 days.
 
-## 6 Renewing Payment Method
+## 6 Renewing Your Payment Method
 
-Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+Your plan automatically renews 12 months from the date of provision. You can opt out of auto-renewal 60 days before the period ends.
+
+Before renewing the licenses for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" >}}
 
 The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
 
-You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
+You can find the **Payment Method** at the bottom of the page. Depending on the payment method, you will see either an invoice or the credit card data.
 
-{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
+{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the Marketplace in the past. These cards are not shown here. The **Payment Method** section shows only the most recent credit card registered for your company's billing account. This card is also used to renew the existing subscriptions.{{% /alert %}}
 
-If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
+If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and click **Update Details**.

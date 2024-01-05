@@ -7,7 +7,7 @@ weight: 40
 
 ## 1 Introduction
 
-We define an offline application as the portion of a Mendix app that is accessible through the [Hybrid Tablet profile](/refguide7/hybrid-tablet-profile/) and/or the [Hybrid Phone profile](/refguide7/hybrid-phone-profile/). Offline support must be enabled. Pages available in these profiles can be viewed without an Internet connection. Consequently, they are subject to a number of restrictions which are explained below.
+We define an offline application as the portion of a Mendix app that is accessible through the [Hybrid Tablet profile](/refguide7/hybrid-tablet-profile/) and/or the [Hybrid Phone profile](/refguide7/hybrid-phone-profile/). Offline support must be enabled. Pages available in these profiles can be viewed without an internet connection. Consequently, they are subject to a number of restrictions which are explained below.
 
 ## 2 Availability
 

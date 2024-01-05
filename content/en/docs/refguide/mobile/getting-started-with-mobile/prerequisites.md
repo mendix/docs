@@ -17,16 +17,23 @@ While developing Mendix apps, you will need to test and iterate to make the best
 * The [Troubleshooting Common Mobile Issues](#troubleshooting) section explains port forwarding, WiFi settings, and other common troubleshooting issues
 
 {{% alert color="warning" %}}
-Please note that instructions in this document reference Mendix 9 technologies. When using Mx10 Beta 1 or Beta 2, please use the Make it Native 9 app while testing.
+Please note that instructions in this document reference Mendix 9 technologies.
 
 After the Make It Native 10 app is published in app stores, this document will be rewritten to describe testing Mx10 apps.
 {{% /alert %}}
 
 ## 2 Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. For Mendix 10, use the **Make It Native 10 app**. Use the **Make It Native 9 app** for Studio Pro v9.24.0 and above.
+The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
 
-This app is available for both Android and iOS devices.
+Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. Please note that you can use the Make It Native 9 app until 10.5.x. We updated the app's React Native in 10.6, resulting in a changed MIN app version.
+
+The following list explains which version to use:
+
+* **10.6.0 and higher** – Make It Native 10 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464))
+* **9.24.0 to 10.5.x** – Make It Native 9 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=gsw&gl=US), [iOS](https://apps.apple.com/us/app/make-it-native-9/id1542182000))
+* **8.18.x** – Make It Native 8 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp&hl=en_US), [iOS](https://apps.apple.com/nl/app/make-it-native-8/id1334081181))
+* **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)
 
 For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 
@@ -49,7 +56,7 @@ To troubleshoot issues related to the Make it Native app, see the sections below
 
 #### 3.1.1 Port Issues
 
-We recommend keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Mendix recommends keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 #### 3.1.2 Wifi Network Settings
 
@@ -67,7 +74,7 @@ Depending on your device settings and network characteristics, the Make it Nativ
 
     {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
 
-These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. We recommend you consult your firewall administrator.
+These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. Mendix recommends you consult your firewall administrator.
 
 For the Windows Defender firewall, the most common firewall, do the following:
 

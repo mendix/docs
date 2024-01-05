@@ -138,7 +138,7 @@ It is possible to fix most of the deprecation errors in one single action. To ac
 {{% alert color="warning" %}}
 If any attributes have been converted during this process, the next time your app is run locally or deployed the database will be converted to support the new attribute types.
 
-**This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
+**This database conversion could take a long time!** Mendix suggests that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
 {{% /alert %}}
 
 ## 5 Using REST and Web Service Calls

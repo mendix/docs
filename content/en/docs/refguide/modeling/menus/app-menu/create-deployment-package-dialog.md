@@ -17,7 +17,7 @@ Most deployment targets have a limit on the uncompressed size of deployment pack
 | --- | --- |
 | Mendix Cloud | 1 GB |
 | SAP BTP | 1.5 GB |
-| Mendix for Private Cloud | 512 MB |
+| Mendix for Private Cloud | 1024 MB |
 
 This is the uncompressed size of the deployment package (.mda file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
 
@@ -28,7 +28,7 @@ Unfortunately, from the error shown on the log during deployment is not always c
 
 Here you can decide whether you will create a versioned deployment package or not.
 
-A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. We recommend that you create versioned deployment packages unless you have very good reasons.
+A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. Mendix recommends creating versioned deployment packages unless you have very good reasons.
 
 A non-versioned deployment package is based on your local app on disk and cannot be traced back to a specific revision.
 

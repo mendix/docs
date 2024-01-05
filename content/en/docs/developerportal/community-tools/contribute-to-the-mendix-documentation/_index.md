@@ -1,8 +1,8 @@
 ---
-title: "Contribute to the Documentation"
+title: "Contribute to Mendix Documentation"
 url: /developerportal/community-tools/contribute-to-the-mendix-documentation/
 weight: 1
-description: "Describes how to add and edit Mendix documentation as a Mendix community member."
+description: "Describes how to add and edit Mendix documentation as a community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
 ---
@@ -29,7 +29,7 @@ All documentation contributions may be edited to conform to our internal style g
 For a details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add to and edit existing documentation
 * Create new documentation
@@ -40,7 +40,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Have a GitHub account (sign up [here](https://github.com/join))
 
-You can create and edit files online within GitHub. If you want to work outside GitHub, we recommend using the following tools to contribute to the Mendix documentation:
+You can create and edit files online within GitHub. If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
 
 * For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>.</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)

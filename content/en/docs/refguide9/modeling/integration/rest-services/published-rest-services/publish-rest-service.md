@@ -13,7 +13,7 @@ aliases:
 
 Mendix allows you to publish REST web services natively from Studio Pro. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 
@@ -115,7 +115,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/refguide9/modeling/integration/publish-rest-service/MFExportWithMapping.png" >}}
 
-17. Add a an activity to the microflow to create an object of the type **HttpResponse**:
+17. Add an activity to the microflow to create an object of the type **HttpResponse**:
 
     {{< figure src="/attachments/refguide9/modeling/integration/publish-rest-service/httpResponse.png" >}}
 

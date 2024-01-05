@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 This how-to explains how you can improve performance by denormalizing data in Mendix.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Denormalize data
 * Keep denormalized data in sync

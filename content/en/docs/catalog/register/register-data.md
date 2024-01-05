@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * You have Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed
 * You have a Mendix account
-* You have an exposed OData service that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/data-hub/share-data/))
+* You have an exposed OData service that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/howto/integration/share-data/)
 
 ## 3 Registering a Service Through Mendix Cloud {#mendix-cloud}
 
@@ -330,7 +330,7 @@ Follow the steps below:
 
 Congratulations! Your OData service is registered in the Catalog. 
 
-The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/catalog-admin/#settings) section of *Catalog Administration*.
+The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/control-center/catalog-admin/#settings) section of *Catalog Administration*.
 
 #### 4.2.1 Selecting an Authentication Method {#authentication}
 

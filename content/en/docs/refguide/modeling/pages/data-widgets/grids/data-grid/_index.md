@@ -23,8 +23,7 @@ A data grid contains the following components:
 
 1. [Search bar](/refguide/search-bar/) – allows end-users to search for objects in the data grid
 2. [Control bar](/refguide/control-bar/) – allows you to control the objects displayed in the data grid by means of buttons
-3. [Sort bar](/refguide/sort-bar/) – allows end-users to sort items in the data grid 
-4. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
+3. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
 
 ## 3 Properties
@@ -43,22 +42,25 @@ Data grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
+The rows of the data grid can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 3.2 Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide/data-sources/).
+The data source determines which objects will be shown in a data grid. For general information on data sources, see [Data Sources](/refguide/data-sources/).
 
 #### 3.2.1 Type
 
-The list view supports the following types of data sources: 
+The data grid supports the following types of data sources: 
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly from the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly from the database
+    {{% alert color="info" %}}From Mendix version 10.5, the data grid widget does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 ### 3.3 Design Properties Section {#design-properties}
 

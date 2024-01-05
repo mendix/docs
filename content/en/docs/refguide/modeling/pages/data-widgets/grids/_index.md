@@ -14,7 +14,7 @@ Grids show a list of objects and include a [data grid](/refguide/data-grid/) and
 Grids have the following components in common:
 
 * [Search bar](/refguide/search-bar/) –  allows end-users to search for objects in the grid 
-* [Sort bar](/refguide/sort-bar/) –  allows end-users to sort items in the grid 
+* [Sort bar](/refguide/sort-order/#sort-bar) –  allows end-users to sort items in the grid 
 * [Control bar](/refguide/control-bar/) –  allows end-users to control the objects displayed in the grid by means of buttons 
 
 ## 2 Choosing a Grid

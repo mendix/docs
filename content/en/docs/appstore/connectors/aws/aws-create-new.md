@@ -9,7 +9,7 @@ tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]
 
 ## 1 Introduction
 
-This how-to describes the process of developing an AWS connector. It will teach you the following:
+This how-to describes the process of developing an AWS connector. It teaches you the following:
 
 * Advantages of REST API-based development when creating your own AWS connector
 * Basic steps for building AWS connectors
@@ -114,7 +114,7 @@ After modeling the API response, you can create the corresponding action to use 
 3. Configure both [static and session-based credentials](/appstore/connectors/aws/aws-authentication/).
 4. Create a **Call REST** activity and configure the headers from the SigV4Header object.
 
-    For more information, see [AWS Authentication: GetSigV4SignedHeaders Java Action](/appstore/connectors/aws/aws-authentication/#java-action).
+    For more information, see [AWS Authentication: Implementing Signature Version 4 Headers](/appstore/connectors/aws/aws-authentication/#signature-v4-headers).
 
 The signing of headers may differ across AWS services, for example:
 
@@ -199,4 +199,4 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 
 ## 5 Publishing to the Mendix Marketplace
 
-If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/sharing-content/).

@@ -2,7 +2,7 @@
 title: "Get Started with the Catalog"
 url: /catalog/get-started/
 category: "Catalog"
-linktitle: "Get Started"
+linktitle: "Get Started with the Catalog"
 weight: 1
 description: "Describes initial steps beginning users can take with their Catalog."
 tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", "integration pane", "studio pro"]
@@ -41,9 +41,9 @@ Once data sources are registered, the metadata is stored in the Catalog so that 
 
 ## 4 Try It Out
 
-Follow [Share Data Between Apps](/data-hub/share-data/) to use the Catalog to share data between two Mendix apps.
+Follow [Share Data Between Apps](/howto/integration/share-data/) to use the Catalog to share data between two Mendix apps.
 
-Build on this experience by learning how to [write data to another app](/catalog/write-data/).
+Build on this experience by learning how to [write data to another app](/howto/integration/write-data/).
 
 ## 5 Processes and Properties
 

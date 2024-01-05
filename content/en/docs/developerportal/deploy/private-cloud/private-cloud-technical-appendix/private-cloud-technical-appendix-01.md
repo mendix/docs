@@ -154,7 +154,7 @@ For example, building a container image can take several minutes. To push the re
 Databases and file storage buckets require client libraries – and in some cases additional packages.
 
 For some tasks, the Operator uses “task” pods: pods that execute a certain task and then terminate. These pods are an equivalent to CI/CD jobs — the Operator will provide all parameters to the task, then wait for the pod to complete and check its final status.
-This allows the Operator to support extensions and provider-specific addons that are delivered as separate containers, keeping the Operator image compact and free of code and dependencies that are optional.
+This allows the Operator to support extensions and provider-specific add-ons that are delivered as separate containers, keeping the Operator image compact and free of code and dependencies that are optional.
 Running separate pods also allows the Operator to be restarted without interrupting any tasks that are in progress. This approach also allows lengthy or  resource-consuming tasks to run separately from the Operator, in separate pods or even on different nodes, without consuming resources from the Operator.
 
 ### 3.7 Other Notes

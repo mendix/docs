@@ -521,6 +521,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property                                   |
+| `setLabel`   | No       | Boolean        | `true` to enable setting [`Label`](#setLabel) value automatically with configured attribute, false `otherwise`                   |
 
 #### 4.4.2 XML Elements
 
@@ -591,6 +592,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
 | `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |
+| `setLabel`          | No       | Boolean        | `true` to enable setting [`Label`](#setLabel) value automatically with configured entity, false `otherwise`                      |
 
 #### 4.5.2 XML Elements
 
@@ -753,6 +755,45 @@ Label property allows a pluggable widget to have labeling functionality similar 
 ```xml
 <systemProperty key="Label"/>
 ```
+
+#### 5.2 setLabel {#setLabel}
+
+{{% alert color="info" %}}
+The `setLabel` attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
+{{% /alert %}}
+
+You can use `setLabel` to specify which properties can be used to set the `Label` property value. 
+
+Configuring the value of a property with the `setLabel` attribute will automatically update the value of `Label`.
+
+Only attribute and association properties can use the `setLabel` attribute. 
+
+The `Label` value is set only if it lacks a non-default value when you set it. If a property become hidden, the `Label` value is reverted back to default. More than one property can set the label. However if multiple properties with the `setLabel` attribute are visible simultaneously, the first one updated sets the label. For example, when properties are defined as follows:
+
+```xml
+<property key="myAttribute" setLabel="true" type="attribute">
+	<caption>My string</caption>
+	<description>My string setting</description>
+    <attributeTypes>
+        <attributeType name="String" />
+        <attributeType name="Boolean" />
+    </attributeTypes>
+</property>
+<property key="myAssociation" setLabel="true" type="association" selectableObjects="objectsDatasource">
+    <caption>Reference</caption>
+    <description>Reference</description>
+    <associationTypes>
+        <associationType name="Reference"/>
+        <associationType name="ReferenceSet"/>
+    </associationTypes>
+</property>
+<property key="objectsDatasource" type="datasource" isList="true">
+    <caption>Selectable objects</caption>
+    <description/>
+</property>
+```
+
+Then the `Label` property will be set by the first property configured. 
 
 ### 5.2 Name {#name}
 

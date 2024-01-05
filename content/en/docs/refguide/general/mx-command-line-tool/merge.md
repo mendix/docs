@@ -167,18 +167,17 @@ Create `.gitattributes` file in .git folder of your App on disk. Add the followi
 
 ### 4.3. Verification
 
-To confirm this works, you can create a blank version-controlled app and do the following:
+To confirm this works, use Studio Pro to create a blank version-controlled app and do the following:
 
 1. Create a branch called *branch* and download it.
 2. Change the caption of a home page to *Branch*.
 3. Add a microflow named *branch*.
 4. Commit and push your changes.
 5. Switch back to the **Main** branch.
-6. Pull the changes from the remote.
-7. Change the caption of the home page to *Main*.
-8. Add a microflow named *main*.
-9. Commit and push your changes.
-10. Open the Git command line in your app's **Main** branch directory and run `git merge origin/branch`.
+6. Change the caption of the home page to *Main*.
+7. Add a microflow named *main*.
+8. Commit and push your changes.
+9. Open the Git command line in your app's **Main** branch directory and run `git merge origin/branch`.
 
 If you configured everything correctly, the command line output should look like this:
 

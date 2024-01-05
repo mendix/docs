@@ -20,7 +20,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
-The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
+The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Redistributable Package (x64)
@@ -28,7 +28,7 @@ The following frameworks are required. They will be installed automatically by t
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, you are installing:
     * Eclipse Temurin JDK 11 (x64)
     
-    Oracle JDK 11 can also be used if this is already installed.
+    Oracle JDK 11 can also be used if this is already installed
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -48,9 +48,9 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### 2.2 Hardware Specifications {#hardware}
 
-Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
 
-* **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
+* **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
 * **RAM** – 4GB
 * **Display Resolution** –  1080p (1920x1080)
 
@@ -64,16 +64,16 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 
 To run a Mendix app, Mendix Studio Pro uses the following ports by default. If your firewall is blocking these, you will need to open them:
 
-* 8080: runtime port
-* 8083: mobile packager
-* 8090: admin port
-* 8100: sign-in port
+* 8080 – runtime port
+* 8083 – mobile packager
+* 8090 – admin port
+* 8100 – sign-in port
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
 ### 2.4 File Locations
 
-For active development and running your application locally, your app folder should be on local drive (such as C:) or on a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
+For active development and running your application locally, your app folder should be on a local drive (such as C:) or a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
 
 ### 2.5 Supported Git Service Providers {#supported-providers}
 
@@ -164,9 +164,9 @@ When running Mendix on a server, you will need Java Runtime Environment (JRE) 11
 {{% alert color="warning" %}}
 As Java 11 approaches the end of support in October, 2024, Mendix will stop supporting Java 11 with the release of Studio Pro 10.17 in November, 2024.<br/>
 <br/>
-Compatibility with Java 17 is planned for the Studio Pro 10.8 release in February, 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional.<br/>
+Compatibility with Java 17 is planned for Studio Pro version 10.8, to be released in February 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional.<br/>
 <br/>
-Compatibility with Java 21 is planned for the Studio Pro 10.10 release in April, 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
 {{% /alert %}}
 
 ## 7 Databases {#databases}

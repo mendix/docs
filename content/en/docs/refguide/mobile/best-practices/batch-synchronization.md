@@ -53,7 +53,7 @@ To implement this best practice, do the following:
 
 ## 5 Advanced Advice
 
-For advanced development advice, consult the following MVP recommendations:
+For advanced development advice, consult the following recommendations:
 
 * For more complex synchronization scenarios that use multiple entities, create a separate synchronization page to show the progress of all synchronized entities. This lets users start and pause the synchronization as needed.
 * Batch size should be between 100 and 10,000 objects. Larger batches tend to synchronize faster, but smaller batches give more responsive feedback to users.

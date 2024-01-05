@@ -49,7 +49,7 @@ This is because changes to a particular version of a published OData service wil
 
 The location denotes where the service will be available. It is recommended to include the service name and the major version in the location, e.g. `svc/products/v1/`.
 
-The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved cannot be used at the start of the location. Other than that, you can change the location to any valid URL.
+The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
 ### 2.4 Namespace
 

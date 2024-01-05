@@ -24,7 +24,6 @@ This extension supports following source files:
 
 * Microsoft Excel (.xls, .xlsx)
 
-
 ### 1.3 Limitations
 
 This extension currently has the following limitations:

@@ -214,7 +214,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 * **Intake Date** – the date when the initiative is accepted based on business requirements
 * **Start Date** – the date when the first actions are taken to start implementation
-* **Go-Live date** – the date when the apps are expected to be up and running
+* **Go-Live date** – the date when the app (or apps) is expected to be up and running
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
@@ -287,8 +287,8 @@ Each initiative card shows the following information:
 * ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.
-    * **Go-Live** – This shows the date when the apps are expected to be up and running.
-* ⑥ Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+    * **Go-Live** – This shows the date when the app (or apps) is expected to be up and running.
+* ⑥ Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * ⑦ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
@@ -307,8 +307,8 @@ The list contains the following information:
     
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
-* **Go-Live Date** – This shows the date when the apps are expected to be up and running.
-* Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+* **Go-Live Date** – This shows the date when the app (or apps) is expected to be up and running.
+* Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -335,8 +335,8 @@ The list contains the following information:
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the apps are expected to be up and running.
-* Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+    * **Go-Live** – This is the date when the app (or apps) is expected to be up and running.
+* Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -363,8 +363,8 @@ The list contains the following information:
 * Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the apps are expected to be up and running.
-*  Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+    * **Go-Live** – This is the date when the app (apps) is expected to be up and running.
+*  Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Ellipsis button (**...**) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
   
@@ -383,9 +383,9 @@ The view contains the following information:
 * **Initiative Name** – Clicking this opens a side pane that shows initiative details.
 * Progress bar - Hovering above the bar shows the following defined dates of initiative lifecycle:
     * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the apps are expected to be up and running.
+    * **Go-Live** – This is the date when the app (apps) is expected to be up and running.
     
-*  Icon of the linked apps – If there is only one linked app, clicking an icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+*  Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Vertical blue line – This indicates the date of today.
 

@@ -54,7 +54,7 @@ Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#regi
 
 First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers: `Authorization: MxToken <your_Personal_Access_Token>`.
 
-For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+For details on creating a personal access token (PAT), see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 Once you have a personal access token, follow this series of REST calls (described in detail in the following sections) to register the details of your exposed OData services:
 

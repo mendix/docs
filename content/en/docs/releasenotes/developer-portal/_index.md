@@ -83,7 +83,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -314,7 +314,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
+* You can now use a [Personal Access Token](/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
 
@@ -1265,7 +1265,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and **People** pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and **People** pages. (Ticket 69702)
 
 ### October 11, 2018
 

@@ -9,7 +9,7 @@ tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 aliases:
     - /howtogeneral/support/index.html
     - /howtogeneral/support/
-    - /developerportal/support/
+    - /community-tools/support/
 ---
 
 ## 1 What You Can Expect from Mendix Support
@@ -62,7 +62,7 @@ We expect that many questions and issues can be solved by reading the [Mendix Do
 
 We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
 
-For more details, see [Forum](/developerportal/community-tools/mendix-forum/).
+For more details, see [Forum](/community-tools/mendix-forum/).
 
 ## 4 Accessing Mendix Support
 

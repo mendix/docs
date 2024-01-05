@@ -7,7 +7,7 @@ description: "Describes how a support request can be escalated to bring your iss
 tags: ["support", "escalation management"]
 aliases:
     - /howtogeneral/support/index.html
-    - /developerportal/support/escalation-management-process/
+    - /community-tools/support/escalation-management-process/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

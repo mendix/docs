@@ -5,7 +5,7 @@ category: "Community Tools"
 weight: 3
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 aliases:
-    - /developerportal/community-tools/mendix-forum/
+    - /community-tools/mendix-forum/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +13,7 @@ aliases:
 
 The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/developerportal/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
+The Mendix Forum is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
 
 Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
 
@@ -52,7 +52,7 @@ Each question has the following details:
 * ⑥ The number of votes for the question
 * ⑦ The number of answers to the question
 * ⑧ The number of views the question has received
-* ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
+* ⑨ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
 * ⑩ The avatars of the Mendix comminity members who have answered and commented
 
 {{% alert color="info" %}}
@@ -147,7 +147,7 @@ Each exchange has the following details:
     * Clicking a tag opens an overview page that lists all the posts with the same tag
 * ⑥ The number of comments on the exchange
 * ⑦ The number of views the exchange has received
-* ⑧ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
+* ⑧ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
 * ⑨ The avatars of the Mendix comminity members who have commented
 
 ### 5.1 Searching and Filtering Exchanges
@@ -221,7 +221,7 @@ Each idea has the following details:
 * ⑦ The number of votes on the idea
 * ⑧ The number of comments on the idea
 * ⑨ The number of views the idea has received
-* ⑩ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
+* ⑩ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
 * ⑪ The avatars of the Mendix comminity members who have commented
 
 ### 6.1 Searching and Filtering Ideas

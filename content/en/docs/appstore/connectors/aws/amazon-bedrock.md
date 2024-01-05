@@ -77,8 +77,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 8. For the **Credentials** parameter, provide a **Credentials Object** from the AWS Authentication connector:
     1. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **Generate Credentials** action.
     2. Drag the **Generate Credentials** to the beginning of your microflow.
-    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
-4. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
+    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
 10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.

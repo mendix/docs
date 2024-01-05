@@ -119,9 +119,10 @@ For more details, see the [Azure OpenAI Service REST API reference](https://lear
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** tab in Mendix Studio Pro. 
 
-These microflows expect a [Configuration](#configuration-entity) entity a, as well as the desired AI model (optional) that should be used for generating responses.  
+These microflows expect a [Configuration](#configuration-entity) entity a, as well as the desired AI model (optional) that should be used for generating responses. 
+
 * For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
-* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty.  
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
@@ -132,9 +133,10 @@ Functionally, the prompt strings can be written in a specific way and can be tai
 
 #### 3.2.2 `Chat completions with history`
 
-The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow.  
+The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow. 
+
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`.  
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
 
 The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant. For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 

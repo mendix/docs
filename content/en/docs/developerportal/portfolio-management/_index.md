@@ -540,7 +540,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 1. Go to **Access Management**.
 2. On the upper-right corner of the **Members** tab, click **Add Users**.
 3. In the dialog box, enter the email address of the user who you want to invite. The **Email Address** field also gives a drop-down list with all the active users from your company. You can add multiple email addresses if you need to invite more than one user. The users can be people within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
-4. Select an **Access Role** for the users – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines the user's access level to all the initiatives in this portfolio.
+4. Select an **Access Role** for the users that you add – **Portfolio Manager**, **Contributor**, or **Viewer**. This determines their access level to all the initiatives in this portfolio.
 5. Click **Add to List**.
 6. Click **Send Invites**.
 

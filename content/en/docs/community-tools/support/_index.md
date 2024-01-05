@@ -9,6 +9,7 @@ tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 aliases:
     - /howtogeneral/support/index.html
     - /howtogeneral/support/
+    - /developerportal/support/
 ---
 
 ## 1 What You Can Expect from Mendix Support

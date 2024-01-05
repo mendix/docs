@@ -8,6 +8,7 @@ tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:
     - /developerportal/mendix-profile/
+    - /developerportal/community-tools/mendix-profile/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

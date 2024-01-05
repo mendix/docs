@@ -5,6 +5,8 @@ category: "Mendix Support"
 weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
+aliases:
+    - /developerportal/support/submit-support-request/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor request-priority below is mapped, so it should not be removed or changed.
 ---

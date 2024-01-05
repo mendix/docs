@@ -6,6 +6,8 @@ category: "Mendix Support"
 weight: 60
 description: "FAQ about existing security findings and other security questions."
 tags: ["support", "FAQ", "security", "vulnerability", "malicious files", "file scanning", "insecure cookie", "cookies without security", "insecure access", "web server", "unauthorized access" ]
+aliases:
+    - /developerportal/support/security-findings-faq/
 ---
 
 ## 1 Introduction

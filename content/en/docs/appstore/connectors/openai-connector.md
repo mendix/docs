@@ -16,7 +16,7 @@ The current scope is limited to text generation use cases based on the [OpenAI C
 
 ### 1.1 Typical Use Cases 
 
-#### 1.1.1 Text generation
+#### 1.1.1 Text Generation
 
 * Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
 
@@ -48,7 +48,7 @@ OpenAI provides market-leading large language model capabilities with GPT-4:
 * Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
 * Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
   
-#### 1.1.2 Image generation
+#### 1.1.2 Image Generation
 
 Generate one or more completely new, original images and art from a text description. Powered by the OpenAI DALL-E API, the connector enables developers to generate these images by combining concepts, attributes, and styles.
 
@@ -127,7 +127,7 @@ For more details, see the [Azure OpenAI Service REST API reference](https://lear
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 
-After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, three microflows for chat completions are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** tab in Mendix Studio Pro. 
+After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, three microflows for chat completions are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
 
 These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model (optional) that should be used for generating responses.  
 - For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
@@ -137,7 +137,7 @@ In the context of chat completions, system prompts and user prompts are two key 
 
 #### 3.2.1 `Call Chat Completions API (without history)` 
 
-The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as String input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
+The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information, see [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering). 
 
 #### 3.2.2 `Call Chat Completions API (with history)`
@@ -150,13 +150,13 @@ The content of such a message corresponds to a system, assistant, or user prompt
 
 #### 3.2.3 `Call Chat Completions API (advanced)`
 
-The microflow activity `Call Chat Completions API (advanced)` can be used in cases where the above microflows do not provide enought support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
+The microflow activity `Call Chat Completions API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
 
-For more inspiration or guidance on how to use the above microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
-In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, two microflows for image generations are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** tab in Mendix Studio Pro. 
+In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, two microflows for image generations are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
 
 These microflows, similar to the [Chat Completions](#chat-completions-configuration) case, expect a [Configuration](#configuration-entity) entity, as well as the desired AI model (optional) that should be used for generating an image responses.
 
@@ -166,9 +166,9 @@ The microflow activity `Call Image Generations API (single image)` supports scen
 
 #### 3.3.2 `Call Image Generations API (advanced)`
 
-The microflow activity `Call Image Generations API (advanced)` can be used in cases where the above microflows do not provide enought support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#image-generations-advanced-technical) section.
+The microflow activity `Call Image Generations API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#image-generations-advanced-technical) section.
 
-For more inspiration or guidance on how to use the above microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
 
 ## 4 Technical Reference 
 
@@ -282,17 +282,17 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.13 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
-An image generations request that creates a model response including generated image(s) for the given prompt. 
+This is an image generations request that creates a model response including generated image(s) for the given prompt. 
 
 | Attribute | Description |
 | ---| --- |
-| `Prompt` | This is the prompt that is used by the model to generate the image(s). | 
-| `Model` | The model to use for image generation. Defaults to `dall-e-2`. For more information, see the [ENUM_Model_ImageGenerations](#enum-model-images) section. |
-| `N` | The number of images to generate. Must be between 1 and 10. For `dall-e-3`, only n=1 is supported. This attribute is optional. |
-| `Quality` | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `standard`. For more information, see the [ENUM_Quality](#enum-quality) section. |
-| `ResponseFormat` | This is a parameter used to specify the technical format of the returned generated images by the API. This attribute is optional and defaults to `url`. For more information see the [ENUM_ResponseFormat](#enum-response-format) section. |
-| `Size` | This is the requested size of the generated images. This attribute is optional and defaults to `1024x1024`. For more information see the [ENUM_Size](#enum-size) section. |
-| `Style` | The style of the generated images. This attribute is optional and defaults to `vivid`. For more information, see the [ENUM_Style](#enum-style) section. |
+| `Prompt` | This is the prompt that is used by the model to generate the image(s). |
+| `Model` | The model to use for image generation. Its default value is`dall-e-2`. For more information, see the [ENUM_Model_ImageGenerations](#enum-model-images) section. |
+| `N` | The number of images to generate. The value must be between 1 and 10. For `dall-e-3`, only n=1 is supported. This attribute is optional. |
+| `Quality` | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `standard`.<br />For more information, see the [ENUM_Quality](#enum-quality) section. |
+| `ResponseFormat` | This is a parameter used to specify the technical format of the returned generated images by the API. This attribute is optional. The default value is  `url`. For more information see the [ENUM_ResponseFormat](#enum-response-format) section. |
+| `Size` | This is the requested size of the generated images. This attribute is optional. Its default value is `1024x1024`.<br />For more information see the [ENUM_Size](#enum-size) section. |
+| `Style` | The style of the generated images. This attribute is optional. Its default value is `vivid`.<br />For more information, see the [ENUM_Style](#enum-style) section. |
 | `User` | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
@@ -311,12 +311,12 @@ This is a wrapper for a list of [images](#image) that are part of the [response]
 
 #### 4.1.16 `Image` {#image}
 
-This represents the url or the content of an image generated by the API.
+This represents the URL or the content of an image generated by the API.
 
 | Attribute | Description |
 | --- | --- |
-| `Url` | This is the URL of the generated image that can be used to fetch the image data if the `responseFormat` is `url`. Note: URLs typically expire after a certain time. |
-| `B64Json` | This is the base64-encoded String representation of the generated image that can be used to process the image data if the `responseFormat` is `b64_json` |
+| `Url` | This is the URL of the generated image that can be used to fetch the image data if the `responseFormat` is `url`. <br />{{% alert color="info" %}}URLs typically expire after a certain time.{{% /alert %}} |
+| `B64Json` | This is the base64-encoded string representation of the generated image that can be used to process the image data if the `responseFormat` is `b64_json` |
 | `RevisedPrompt` | This is the prompt that was used to generate the image. It is only populated if there was any revision to the prompt. |
 
 
@@ -324,13 +324,13 @@ This represents the url or the content of an image generated by the API.
 
 #### 4.1.17 `GeneratedImage` {#generatedimage}
 
-This is is an entity that is used to map the [image](#image) data from the API response onto a Mendix image entity so that it can be used as such in the application. 
+This is an entity that is used to map the [image](#image) data from the API response onto a Mendix image entity so that it can be used as such in the application. 
 
 | Attribute | Description |
 | --- | --- |
 | `RevisedPrompt` | This is the prompt that was used to generate the image. It is only populated if there was any revision to the prompt. |
 
-{{% alert color="info" %}} This entity is meant to be used as a generalization when implementing one of the [exposed microflows for image generations](#image-generations-technical). Refer to the [configuration](#image-generations-configuration) section for information on how to use it. {{% /alert %}}
+{{% alert color="info" %}} This entity is meant to be used as a generalization when one of the [exposed microflows for image generations](#image-generations-technical) is implemented. For information about how to use this entity, see the [Image Generations Configuration](#image-generations-configuration) section. {{% /alert %}}
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -347,7 +347,9 @@ This enumeration provides a list of supported API types.
 
 #### 4.2.2 `ENUM_Model_ChatCompletions` {#enum-model-chat} 
 
-This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/text-generation) for the Chat Completions API. The OpenAI Connector only supports newer models (2023+), legacy models and updated legacy models are not supported. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI). Note: the captions are in this case the values that are relevant for the raw API calls (since enumeration key values don't allow certain characters).
+This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/text-generation) for the Chat Completions API. The OpenAI Connector only supports newer models (2023+), legacy models, and updated legacy models are not supported. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI).
+
+{{% alert color="info" %}}The captions are in this case the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
 
 | Name | Caption | 
 | --- | --- | 
@@ -368,7 +370,9 @@ This enumeration provides a list of message author roles.
 
 #### 4.2.4 `ENUM_Model_ImageGenerations` {#enum-model-images} 
 
-This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/images) for the Image Generations API. The OpenAI Connector currently supports two models. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI). The specific operations that are supported per model are described by OpenAI and the list may change in the future. Note: the captions are in this case the values that are relevant for the raw API calls (since enumeration key values don't allow certain characters).
+This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/images) for the Image Generations API. The OpenAI Connector currently supports two models. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI). The specific operations that are supported per model are described by OpenAI and the list may change in the future.
+
+{{% alert color="info" %}}The captions are in this case the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
 
 | Name | Caption | 
 | --- | --- | 
@@ -386,7 +390,7 @@ This enumeration provides a list of quality levels for the images that are gener
 
 #### 4.2.6 `ENUM_ResponseFormat` {#enum-response-format} 
 
-This enumeration provides a list of supported response types for generated images. Currently images can be returned either as a URL to a .png file, or a base64 encoded string representation of the image directly.
+This enumeration provides a list of supported response types for generated images. Currently, images can be returned either as a URL to a PNG file, or a base64 encoded string representation of the image directly.
 
 | Name | Caption | 
 | --- | --- | 
@@ -395,7 +399,9 @@ This enumeration provides a list of supported response types for generated image
 
 #### 4.2.7 `ENUM_Size` {#enum-size} 
 
-This enumeration provides a list of supported pixel dimensions for the generated images. It depends on the model which options are supported. Note: the captions are in this case the values that are relevant for the raw API calls (since enumeration key values don't allow certain characters).
+This enumeration provides a list of supported pixel dimensions for the generated images. It depends on the model which options are supported.
+
+{{% alert color="info" %}}The captions are in this case the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
 
 | Name | Caption | 
 | --- | --- | 
@@ -420,19 +426,19 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 4.3.1 Chat Completions 
 
-The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message strucure and are meant to facilitate easier implementation in certain use cases. 
+The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. 
 
-##### 4.3.1.1 Call Chat Completions API (without history) {#chat-completions-without-history-technical} 
+##### 4.3.1.1 Call Chat Completions API (Without History) {#chat-completions-without-history-technical} 
 
-Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with String input and output not considering a previous conversation. See [ENUM_Role](#enum-role) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. 
+Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with string input and output not considering a previous conversation. See [ENUM_Role](#enum-role) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. 
 
 | Input | Output | 
 | --- | --- | 
 | `UserPrompt`, `SystemPrompt`, `Configuration`, `ENUM_Model_ChatCompletions` | `AssistantResponseText` | 
 
-##### 4.3.1.2 Call Chat Completions API (with history) {#chat-completions-with-history-technical}
+##### 4.3.1.2 Call Chat Completions API (with History) {#chat-completions-with-history-technical}
 
-Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [ChatCompletionsSession](#chatcompletionssession) input and a String output of the assistant response. It is not required to provide a `SystemPrompt` string and and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. 
+Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [ChatCompletionsSession](#chatcompletionssession) input and a string output of the assistant response. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. 
 
 | Input | Output | 
 | --- | --- | 
@@ -440,7 +446,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 
 The `ChatCompletionsSession` is a wrapper object for the ordered list of messages that represent the conversation so far. You can use `ChatCompletionsSession_Create` to create a new `ChatCompletionsSession` to create a new session and with `ChatCompletionsSession_AddMessage` new ` ChatCompletionsSessionMessage` objects will be added to the session. The messages must be added in chronological order. In the microflow `ChatCompletions_Execute_WithHistory` this message list will be mapped to the actual request structure. 
 
-##### 4.3.1.3 Call Chat Completions API (advanced) {#chat-completions-advanced-technical}
+##### 4.3.1.3 Call Chat Completions API (Advanced) {#chat-completions-advanced-technical}
 
 For developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` microflow. The inputs and output are shown in the table below: 
 
@@ -452,11 +458,11 @@ This option can be used if the default values of the `ChatCompletionsRequest` ar
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
-The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input and generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64 string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output strucures and are meant to facilitate easier implementation in certain use cases. Currently, only the OpenAI API provides support for images (not Azure OpenAI).
+The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input and generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64 string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and are meant to facilitate easier implementation in certain use cases. Currently, only the OpenAI API provides support for images (not Azure OpenAI).
 
-##### 4.3.2.1 Call Image Generations API (single image) {#image-generations-single-technical} 
+##### 4.3.2.1 Call Image Generations API (Single Image) {#image-generations-single-technical} 
 
-Use the microflow `ImageGenerations_Execute` to execute a single image generations API call based on a Prompt string input, where the response is mapped as an image onto the `OutputImage` object. The `OutputImage` instance must be a specialization of `GeneratedImage`. It is not required to provide the `ENUM_Model_ImageGenerations`, `ENUM_Size`, `UserString`, `ENUM_Quality` and `ENUM_Style`  values. If no model is provided, the `ModelDefaultImages` value from the [Configuration](#configuration-entity) will be used in the call. For the other optional parameters, if left empty, the default value as specified by the OpenAI documentation will be assumed in the API.
+Use the microflow `ImageGenerations_Execute` to execute a single image generations API call based on a Prompt string input, where the response is mapped as an image onto the `OutputImage` object. The `OutputImage` instance must be a specialization of `GeneratedImage`. It is not required to provide the `ENUM_Model_ImageGenerations`, `ENUM_Size`, `UserString`, `ENUM_Quality`, and `ENUM_Style`  values. If no model is provided, the `ModelDefaultImages` value from the [Configuration](#configuration-entity) will be used in the call. For the other optional parameters, if left empty, the default value as specified by the OpenAI documentation will be assumed in the API.
 
 | Input | Output | 
 | --- | --- | 
@@ -472,6 +478,6 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 
 ## 5 Examples 
 
-### 5.1 Showcase application 
+### 5.1 Showcase Application 
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.

@@ -39,11 +39,11 @@ Depending upon the frameworks and tools used to create the ML model, there are m
 * [XGBoost](https://github.com/onnx/onnxmltools)
 * [SparkML](https://github.com/onnx/onnxmltools)
 
+### 2.2 Importing an ML Model and Creating the ML Mapping Document {#import-model}
+
 {{% alert color="info" %}}
 It is advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
 {{% /alert %}}
-
-### 2.2 Importing an ML Model and Creating the ML Mapping Document {#import-model}
 
 To use the ML model in your app, import it to create an ML mapping document.
 

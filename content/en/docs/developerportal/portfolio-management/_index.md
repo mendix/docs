@@ -386,7 +386,7 @@ The dates on the timeline as well as their frequency depend on your selection on
 The view contains the following information:
 
 * **Initiative Name** – Clicking this opens a side pane that shows initiative details.
-* Progress bar - Hovering above the bar shows the following defined dates of initiative lifecycle:
+* Progress bar - Hovering over the bar shows the following defined dates of initiative lifecycle:
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live** – This is the date when the app (apps) is expected to be up and running.
     

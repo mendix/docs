@@ -18,7 +18,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications {#software}
 
-Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on the M series Apple Silicon Macs, and require [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on the M series Apple Silicon Macs, which require [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 

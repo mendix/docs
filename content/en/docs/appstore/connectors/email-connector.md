@@ -103,7 +103,7 @@ In Studio Pro, it is also possible to use the **GetAutoConfig** Java action to g
 To manually configure the account for sending and receiving emails, enter the protocol, server host, and server port. Refer to the email server documentation to get this information.
 
 {{% alert color="info" %}}
-If you have neither selected *Use SSL* nor *Use TLS* in the 'Send Emails' section, but if your mail server allows secure connections, then irrespective of your configuration a secure connection is initialized. This means a higher priority is given to a secure connection than an unsecured one, if the underlying Email server infra supports secure connection.
+Even if you do not select *Use SSL* or *Use TLS** when you configure the **Email Protocol**, as long as your mail server allows secure connections, then a secure connection is initialized regardless your configuration. This means a higher priority is given to a secure connection than an unsecured one, if the underlying Email server infra supports secure connection.
 {{% /alert %}}
 
 ### 3.2 Additional Account Settings {#other-account-settings}
@@ -259,7 +259,7 @@ To configure an OAuth provider for the client credentials grant flow, provide th
 * **Tenant ID**
 
 With Email Connector version 5.2.0 and newer, it is now possible to send emails using a client credentials flow.
- 
+
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
 To register your app on the Azure portal, follow Microsoft's tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). As mentioned above in [OAuth Provider Configuration Details](#oauth-config-details), make sure to set the **Redirect URI** as the **Callback URL**.

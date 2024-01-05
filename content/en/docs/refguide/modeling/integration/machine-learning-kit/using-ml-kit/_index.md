@@ -11,7 +11,13 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}
+For further information on working with ML models in Mendix, check out a demo app and Jupyter notebook examples in the [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository.
+{{% /alert %}}
+
+For information on troubleshooting several general issues with importing and running your ML model, see the [FAQs](#FAQs) section below. 
+
+For information on ML Kit known issues, see the [Known Issues](#known-issues) section below. 
 
 ## 2 Usage {#usage}
 
@@ -32,6 +38,10 @@ Depending upon the frameworks and tools used to create the ML model, there are m
 * [LibSVM](https://github.com/onnx/onnxmltools)
 * [XGBoost](https://github.com/onnx/onnxmltools)
 * [SparkML](https://github.com/onnx/onnxmltools)
+
+{{% alert color="info" %}}
+It is advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
+{{% /alert %}}
 
 ### 2.2 Importing an ML Model and Creating the ML Mapping Document {#import-model}
 
@@ -298,7 +308,7 @@ In general, the transformation of the multidimensional arrays is subject to Java
 
 For more information, see [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/).
  
-## 6 Known Issues
+## 6 Known Issues {#known-issues}
 
 ### 6.1 I/O Data Types
 
@@ -334,9 +344,9 @@ This is currently not supported.
 
 ### 6.4 ML Kit in Mendix Apps
 
-You can only call the ML model via the MLKit from Microflows.
+You can only call the ML model via the ML Kit from microflows.
 
-## 7 FAQs
+## 7 FAQs {#FAQs}
 
 1. My model does not import properly. 
    

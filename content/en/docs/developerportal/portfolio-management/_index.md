@@ -177,18 +177,23 @@ To delete an existing tag, do as follows:
 Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.
 {{% /alert %}} 
 
-You can link any epic from [Epics](/developerportal/project-management/epics/) to an initiative. However, before you link epics, make sure the app to which the epics belong is already linked in the **Link Existing App** field. (Read more about the [differences among initiatives, apps, and epics](#differences-initiatives-apps-epics) in the section below.)
+You can link any epic from [Epics](/developerportal/project-management/epics/) to an initiative. Follow the procedure below:
 
-To link epics to an initiative, do as follows:
+1. Make sure the app to which the epics belong is already linked in the **Link Existing App** field. 
 
-1. At the bottom of the **Epics** section, click **+ Link Epics**. The **Link Epics** dialog window opens.
-2. Select the app to which you want to link epics.
-3. Select the epics. You can search by the epic ID or name. 
-4. Click **Add** to link the selected epics to the initiative. 
+   If the epics that you want to link belong to multiple apps, make sure these apps are all linked in the **Link Existing App** field.
 
-{{% alert color="info" %}}
-To link epics from multiple apps to a single initiative, all apps should be linked to this initiative and you need to repeat the steps for each app separately.
-{{% /alert %}} 
+   {{% alert color="info" %}}For more information about the differences among initiatives, apps, and epics, read the [section](#differences-initiatives-apps-epics) below. {{% /alert %}} 
+
+2. At the bottom of the **Epics** section, click **+ Link Epics**. The **Link Epics** dialog window opens.
+
+3. Select the app to which the epics belong.
+
+4. Select the epics. You can search by the epic ID or name. 
+
+5. Click **Add** to link the selected epics to the initiative. 
+
+6. If you need to link epics belonging to other apps to this initiative, repeat the steps from 2 to 5, until you link all the epics.
 
 Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
 

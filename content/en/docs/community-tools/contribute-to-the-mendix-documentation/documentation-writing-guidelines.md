@@ -1,6 +1,6 @@
 ---
 title: "Documentation Writing Guidelines"
-url: /developerportal/community-tools/documentation-writing-guidelines/
+url: /community-tools/documentation-writing-guidelines/
 description: "Describes some guidelines to follow when contributing to the Mendix documentation."
 tags: ["documentation", "community"]
 aliases:
@@ -96,4 +96,4 @@ When writing for the *Studio Pro Guide*, consider these guidelines:
 
 ## 5 Read More
 
-* [How to Contribute to the Mendix Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation/)
+* [How to Contribute to the Mendix Documentation](/community-tools/contribute-to-the-mendix-documentation/)

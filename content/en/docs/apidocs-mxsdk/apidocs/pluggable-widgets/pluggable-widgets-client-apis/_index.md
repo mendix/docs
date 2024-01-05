@@ -244,6 +244,36 @@ export interface FileValue {
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
 
+### 4.9 SelectionValue {#selection-value}
+
+`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#selection), and is defined as follows:
+
+```ts
+declare interface SelectionValue<T> {
+    readonly selection: T;
+    readonly setSelection: (value: T) => void;
+}
+```
+
+The type received by the component for the selection property depends on the allowed selection types:
+
+* If only single are allowed, the component receives a `SelectionSingleValue` defined as `SelectionValue<Option_2<ObjectItem>> & { type: "Single" };`
+* If only multi are allowed, the client gets a `SelectionMultiValue` defined as `SelectionValue<ObjectItem[]> & { type: "Multi" };`
+
+Finally, when both selection types are allowed the type is a union of `SelectionSingleValue` and `SelectionMultiValue` and the widget should check the `type` to determine if a single or multi selection is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript.
+
+```ts
+if (selection?.selection === undefined) {
+	return "None";
+}
+
+if (selection.type === "Single") {
+	selection.setSelection(objectItem);
+} else {
+	selection.setSelection([objectItem]);
+}
+```
+
 ## 5 Exposed Modules
 
 ### 5.1 Icon {#icon}

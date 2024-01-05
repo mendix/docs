@@ -48,9 +48,9 @@ This connector supports the following statements:
 
 * Studio Pro 10.6 or above
 * External database connection details, including the following:
-    * Login credentials
-    * Database type
-    * Hostname, port, and database name; or, instead, the JDBC connection string
+  * Login credentials
+  * Database type
+  * Hostname, port, and database name; or, instead, the JDBC connection string
 
 ## 2 Installation {#installation}
 
@@ -66,7 +66,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 1. Right-click the module you would like to add the connection to and click **Add other** > **External database connection**. This opens the **Database Connection** wizard:
 
-    {{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
+{{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
 
 2. Select the database to which you would like to connect and enter the required information.
 
@@ -83,7 +83,7 @@ To query the database, do the following:
 1. Enter a query **Name** so you can access the same query later.
 2. Enter your **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * from customers` selects all rows in the **Customers** table:
 
-    {{< figure src="/attachments/appstore/connectors/external-database-connector/select-query-columns.png" >}}
+{{< figure src="/attachments/appstore/connectors/external-database-connector/select-query-columns.png" >}}
    
 4. Click **Run Query** to move to the **Response data** tab and view the queried data.
 
@@ -132,8 +132,8 @@ Use the Query External Database activity to call the database in a microflow. Do
 
 {{< figure src="/attachments/appstore/connectors/external-database-connector/return-type.png" >}}
  
-8. Click **OK**.
-9. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
+6. Click **OK**.
+7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 
 You can now use the microflow in your app. Here is an example of a configured microflow:
 

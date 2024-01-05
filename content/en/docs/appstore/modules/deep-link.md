@@ -170,7 +170,6 @@ This is because for Mendix 9, the [default value for SameSite cookies](/develope
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
 
-
 Additionally, there is an incompatibility between Mendix version 9.20 and higher and earlier versions of the Deep Link module which could cause this. If you are using Mendix version 9.20 or higher, you need to use version 9.0.8 or higher of the Deep Link module.
 
 ### 5.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}

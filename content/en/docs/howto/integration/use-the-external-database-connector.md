@@ -49,9 +49,9 @@ If additional connection properties are required to connect, you can alternative
 
 Click **Save** to save the connection details, which are stored in 3 constants:
 
-- `\<Document Name\>_DBSource`
-- `\<Document Name\>_DBUsername`
-- `\<Document Name\>_DBPassword`
+* `\<Document Name\>_DBSource`
+* `\<Document Name\>_DBUsername`
+* `\<Document Name\>_DBPassword`
 
 For example: `*Database*_DBsource.`
 

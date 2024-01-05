@@ -30,42 +30,41 @@ You can customize the columns of the table by clicking the column selector (the 
 
 The description of the items that you can select are as follows:
 
-- **AppID**: the unique identifier of the app
+* **AppID**: the unique identifier of the app
 
-- **App Name**: the name of the app
+* **App Name**: the name of the app
 
   {{% alert color="info" %}}
   You can view the [app details](#app-details) by clicking the app name in the table.
   {{% /alert %}}
 
-- **Technical Contact**: the technical contact of the app. 
+* **Technical Contact**: the technical contact of the app. 
 
   {{% alert color="info" %}}
   You can edit the Technical Contact of an app by clicking the pencil icon next to the currect Technical Contact in the table.
   {{% /alert %}}
 
-- **EnvID**: the unique identifier of the environment.
+* **EnvID**: the unique identifier of the environment.
 
-- **Environment**: the name of the environment.
+* **Environment**: the name of the environment.
 
-- **Deployed Status**: whether the app has been deployed on this environment
+* **Deployed Status**: whether the app has been deployed on this environment
 
-- **Mainline Version**: the Mendix version of the app on the mainline in the repository
+* **Mainline Version**: the Mendix version of the app on the mainline in the repository
 
-- **Deployed Version**: the Mendix version of the app deployed on this environment
+* **Deployed Version**: the Mendix version of the app deployed on this environment
 
-- **Last Commit**: the date of the last commit in the main line
+* **Last Commit**: the date of the last commit in the main line
 
-- **Members**: the number of the team members in the app development team
+* **Members**: the number of the team members in the app development team
 
-- **Production**: Whether the environment is a production environment
+* **Production**: Whether the environment is a production environment
 
-- **Created Date**: the date the app was created
+* **Created Date**: the date the app was created
 
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
-
 
 ## 3 Mendix Free Cloud
 
@@ -77,37 +76,37 @@ You can customize the columns of the table by clicking the column selector (the 
 
 The description of the items that you can select are as follows:
 
-- **AppID**: the unique identifier of the app
+* **AppID**: the unique identifier of the app
 
-- **App Name**: the name of the app
+* **App Name**: the name of the app
 
   {{% alert color="info" %}}
   You can view the [app details](#app-details) by clicking the app name in the table.
   {{% /alert %}}
 
-- **Technical Contact**: the technical contact of the app. 
+* **Technical Contact**: the technical contact of the app. 
 
   {{% alert color="info" %}}
   You can edit the Technical Contact of an app by clicking the pencil icon next to the currect Technical Contact in the table.
   {{% /alert %}}
 
-- **EnvID**: the unique identifier of the environment.
+* **EnvID**: the unique identifier of the environment.
 
-- **Deployed Status**: whether the app has been deployed on this environment
+* **Deployed Status**: whether the app has been deployed on this environment
 
-- **Mainline Version**: the Mendix version of the app on the mainline in the repository
+* **Mainline Version**: the Mendix version of the app on the mainline in the repository
 
-- **Deployed Version**: the Mendix version of the deployed app
+* **Deployed Version**: the Mendix version of the deployed app
 
-- **Last Commit**: the date of the last commit in the main line
+* **Last Commit**: the date of the last commit in the main line
 
-- **Members**: the number of the team members in the app development team
+* **Members**: the number of the team members in the app development team
 
-- **Created Date**: the date the app was created
+* **Created Date**: the date the app was created
 
-- **Actions**: adding the action menu (**...**) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
+* **Actions**: adding the action menu (**...**) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
 
 When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the options for deactivating and deleting apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
@@ -127,18 +126,18 @@ You can customize the columns of the table by clicking the column selector (the 
 
 The description of the items that you can select are as follows:
 
-- **AppID**: the unique identifier of the app
-- **App Name**: the name of the app
+* **AppID**: the unique identifier of the app
+* **App Name**: the name of the app
 
   {{% alert color="info" %}}
   You can view the [app details](#app-details) by clicking the app name in the table.
   {{% /alert %}}
-- **Last Commit**: the date of the last commit in the main line
-- **Members**: the number of the team members in the app development team
-- **Created Date**: the date the app was created
-- **Actions**: adding the action menu (**...**) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
+* **Last Commit**: the date of the last commit in the main line
+* **Members**: the number of the team members in the app development team
+* **Created Date**: the date the app was created
+* **Actions**: adding the action menu (**...**) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
 
 When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the options for deactivating and deleting apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
@@ -154,19 +153,19 @@ You can customize the columns of the table by clicking the column selector (the 
 
 The description of the items that you can select are as follows:
 
-- **AppID**: the unique identifier of the app
-- **App Name**: the name of the app
+* **AppID**: the unique identifier of the app
+* **App Name**: the name of the app
 
   {{% alert color="info" %}}
   You can view the [app details](#app-details) by clicking the app name in the table.
   {{% /alert %}}
-- **Created Date**: the date the app was created
-- **Mainline Version**: the Mendix version of the app on the mainline in the repository
-- **Last Commit**: the date of the last commit in the main line
-- **Members**: the number of the team members in the app development team
-- **Actions**: adding the action menu (**…**) to enable you to **Activate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](http://localhost:1313/control-center/apps/#deactivate-delete-apps) section.)
+* **Created Date**: the date the app was created
+* **Mainline Version**: the Mendix version of the app on the mainline in the repository
+* **Last Commit**: the date of the last commit in the main line
+* **Members**: the number of the team members in the app development team
+* **Actions**: adding the action menu (**…**) to enable you to **Activate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](http://localhost:1313/control-center/apps/#deactivate-delete-apps) section.)
 
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table ](#filter-apps)section.
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
 
 When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, the app will appear on the corresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 
@@ -202,8 +201,8 @@ The app details page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
 * **Members** – This tab presents the team members in the app development team.
-  * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
-  * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
+    * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
+    * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** tab and/or customized for a particular app
 

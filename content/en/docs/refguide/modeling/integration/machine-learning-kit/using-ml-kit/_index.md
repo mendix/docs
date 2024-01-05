@@ -340,9 +340,9 @@ You can only call the ML model via the MLKit from Microflows.
 
 1. My model does not import properly. 
    
-    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models, so as far as the ML model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
+    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models. As long as the ML model is properly converted into the ONNX format and complies with the standard, Studio Pro is able to run it.
 
-    Try re-downloading the ML model or verifying the conversion process.
+    Try re-downloading the ML model or verifying the conversion process. It is also advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
 
 2. The output from my model outputs in the training environment is different from the outputs in Studio Pro.
    

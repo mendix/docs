@@ -38,7 +38,7 @@ Example:
 http://localhost:8080/rest/my_service_name/v1
 ```
 
-The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved cannot be used at the start of the location. Other than that, you can change the location to any valid URL.
+The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
 When your application is running, you can click the location to open the [interactive documentation page](/refguide/published-rest-services/#interactive-documentation).
 

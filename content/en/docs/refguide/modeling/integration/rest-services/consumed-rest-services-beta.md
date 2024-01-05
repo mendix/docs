@@ -18,7 +18,7 @@ This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/
 You can use this Consumed REST service document to do the following:
 
 * Consume a REST service
-* Configure `GET` and `POST` requests
+* Configure `GET`, `POST` and `PATCH` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 
@@ -27,6 +27,7 @@ You can use this Consumed REST service document to do the following:
 * This feature supports the following HTTP request methods:
   * `GET`
   * `POST`
+  * `PATCH`
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
 * If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
 
@@ -46,11 +47,11 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration {#configuration}
 
-Use the Consumed REST service to configure a `GET` or `POST` request for your app. 
+Use the Consumed REST service to configure a `GET`, `POST` or `PATCH` request for your app. 
 
 ### 3.1 Basic Configuration {#configure-a-request}
 
-Create a `GET` or `POST` request to send data to your server by doing the following:
+Create a `GET`, `POST` or `PATCH` request to send data to your server by doing the following:
 1. In the **General** field, name your request. 
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
 3. Add an endpoint and click **Send**.
@@ -109,9 +110,9 @@ You can add a header for any HTTP request you have specified in your document. T
 
 3. Click **OK**. To test the header, click **Send**.  
 
-### 3.5 Adding a Request Body (for POST requests only) {#add-a-request-body}
+### 3.5 Adding a Request Body (for POST and PATCH requests only) {#add-a-request-body}
 
-`POST` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
+`POST` and `PATCH` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
 1. Click the **Body** tab and add your JSON string.
 

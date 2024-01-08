@@ -30,7 +30,7 @@ When your app is deployed to Mendix Cloud, it automatically creates daily app an
 
 For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
-Logs on Mendix Cloud are rotated and archived every day. For each day, you can download the app log or the access log by clicking the corresponding **Download** icon. File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
+Logs on Mendix Cloud are rotated and archived every day. For each day, you can download the app log or the access log by clicking the corresponding **Download** button ({{% icon name="download-bottom" %}}). File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
 
 By default, archived logs are sorted by date; the current log is the first one listed. They are stored for six months. You can manually click through the archived logs or use the search field to find logs for a specific date.
 
@@ -50,7 +50,7 @@ At the bottom of the **Logs** page, there is an activity log. This section repor
 The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" >}}
+{{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" class="image-border" >}}
 
 ## 3 Apps on SAP Business Technology Platform
 

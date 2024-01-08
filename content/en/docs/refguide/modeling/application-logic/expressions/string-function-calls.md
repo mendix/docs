@@ -131,13 +131,13 @@ The output is the following:
 If you use a third parameter that specifies the desired length of the output:
 
 ```java {linenos=false}
-substring('funwithmendixapps', 7,6)
+substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
 ```java {linenos=false}
-'mendix'
+'my'
 ```
 
 You can also limit the value of the third parameter to prevent it from specifying a desired length that is out of range:

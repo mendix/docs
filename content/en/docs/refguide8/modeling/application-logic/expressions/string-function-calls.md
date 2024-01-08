@@ -159,16 +159,22 @@ The output is the following:
 'mystring'
 ```
 
-Another example of an input is:
+If you use a third parameter that specifies the desired length of the output:
 
-```java
-substring('mendixapp', 6,3)
+```java {linenos=false}
+substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
-```java
-'app'
+```java {linenos=false}
+'my'
+```
+
+You can also limit the value of the third parameter to prevent it from specifying a desired length that is out of range:
+
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

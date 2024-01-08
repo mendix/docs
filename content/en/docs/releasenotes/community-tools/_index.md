@@ -11,6 +11,12 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 
 ## 2023
 
+### October 26, 2023
+
+#### Improvements
+
+* In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
+
 ### June 29, 2023
 
 #### New Features

@@ -98,7 +98,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
-* In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
 
 #### Fixes 
 

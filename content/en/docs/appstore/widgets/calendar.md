@@ -162,4 +162,3 @@ Optionally, you can further configure the widget by following these steps:
 1. In the **Events** tab, choose the **On Create** event and select **Call a Microflow**: 
 1. Create this microflow so that it opens a new page, like an overview edit page of the **Appointment** entity mentioned above. This way, when a time slot in the calendar is selected, you can add or edit a new event.
 1. Navigate to the **Size** tab and define the width and height of the widget so it suits your page.
-

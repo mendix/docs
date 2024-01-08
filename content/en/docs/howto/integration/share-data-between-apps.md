@@ -1,6 +1,6 @@
 ---
 title: "Share Data Between Apps"
-url: /catalog/share-data/
+url: /howto/integration/share-data/
 description: "Describes how to publish and register a simple data asset to the Catalog from Studio Pro and create a new app that consumes this asset."
 tags: ["data hub", "Catalog", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 weight: 10
@@ -11,6 +11,7 @@ aliases:
     - /data-hub/share-data/
     - /catalog/#share-data
     - /data-hub/data-hub-catalog/share-data/
+    - /catalog/share-data/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

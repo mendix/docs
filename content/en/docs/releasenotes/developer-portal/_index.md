@@ -21,8 +21,8 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-*  In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
-*  In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+* In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
+* In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 

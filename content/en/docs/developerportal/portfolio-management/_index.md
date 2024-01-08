@@ -377,22 +377,22 @@ The list contains the following information:
 
 #### 3.2.5 Planning View {#planning-view}
 
-In the planning view, you can view all initiatives on a timeline. The planning view supports planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. 
+In the planning view, you can view all initiatives on a timeline. The planning view supports planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. Initiatives in this view are sorted by their start date and the timeline view scrolling is limited by 1 years back and 2 years ahead from the current date.
 
-The dates on the timeline as well as their frequency depend on your selection on the lower-right corner of the page. You can change the dates and the frequency by clicking the **Weeks**, **Months**, or **Quarters** button. Clicking **Today** brings the view back to today.
+
 
 {{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
 
 The view contains the following information:
 
-* **Initiative Name** – Clicking this opens a side pane that shows initiative details.
-* Progress bar - Hovering over the bar shows the following defined dates of initiative lifecycle:
-    * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This is the date when the app (apps) is expected to be up and running.
-    
-*  Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+* Initiative Name – Clicking this opens a side pane that shows initiative details.
+* Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Vertical blue line – This indicates the date of today.
+* Time bar - This bar starts with the start date of an initiative and ends with the go-live date. Hovering over them you can see these days in a tooltip:
+    * **Start** – This is the date when the first actions are taken to start implementation.
+    * **Go-Live** – This is the date when the app (or apps) is expected to be up and running.
+* Today Indicator(Vertical blue line) – The date of today is indicated by the vertical blue line.
+* Time Frames - You can adjust the zoom level of the timeline by clicking the **Weeks**, **Months**, or **Quarters** button on the bottom-right corner. Clicking the **Today** button brings the view back to today.
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
 
@@ -518,7 +518,6 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | Delete initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View and download initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 | Export and import initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Link and unlink apps | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Link and unlink epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View linked epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 

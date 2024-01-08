@@ -9,6 +9,10 @@ tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 
 ## 1 Introduction 
 
+{{% alert color="warning"%}}
+Currently, the availability of MendixChat is limited to Europe. It will be available worldwide by January 12, 2024.
+{{% /alert %}}
+
 MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 
 
 MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Forum](https://forum.mendix.com/index3.html#/community), and [Mendix Academy](https://academy.mendix.com/link/home). 

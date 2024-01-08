@@ -22,7 +22,7 @@ On the **General Settings** tab of this page, you can manage your company detail
 
 Under **Company Details**, you can edit your **Company Name** and **Description**.
 
-### 2.2 Company Email Domains
+### 2.2 Company Email Domains {#company-email-domains}
 
 Under **Company Email Domains**, you can request new company email domains by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
@@ -32,7 +32,7 @@ To export all the email domains, use the **Export to Excel** button.
 
 {{< figure src="/attachments/control-center/company-settings/company-email-domains.png" width="650px" >}}
 
-### 2.3 Security Contact
+### 2.3 Security Contact {#security-contact}
 
 Under **Security Contact**, you can provide a specific security contact who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 

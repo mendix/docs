@@ -1,10 +1,10 @@
 ---
-title: "Register OData Resources in the Catalog"
-linktitle: "Register OData Resources"
+title: "Register Resources in the Catalog"
+linktitle: "Register Resources"
 url: /catalog/register/register-data/
-description: "Describes how to register OData resources in the Catalog: through Mendix Cloud, using the Registration API, or in the UI form."
+description: "Describes how to register resources in the Catalog: through Mendix Cloud, using the Registration API, or in the UI form."
 weight: 10
-tags: ["data hub", "Catalog", "external entities", "register", "published OData service" ,"how to", "registration"]
+tags: ["data hub", "Catalog", "external entities", "register", "published OData service", "published service", "how to", "registration", "register resources"]
 aliases:
     - /catalog/register/
     - /catalog/register-data/
@@ -17,7 +17,7 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register [published OData services](/refguide/published-odata-services/) in the Catalog. Mendix supports all OData versions.
+There are three ways to register published services in the Catalog. Mendix supports all OData versions.
 
 This how-to teaches you how to register a service in the following ways:
 
@@ -35,11 +35,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Registering a Service Through Mendix Cloud {#mendix-cloud}
 
-If you have a [published OData service](/refguide/published-odata-services/) that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), then congratulations! Your service is already registered in the [Catalog](/catalog/).
+If you have a published service that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), then your service is already registered in the [Catalog](/catalog/).
 
 ## 4 Registering a Service Without Mendix Cloud {#without-mendix-cloud}
 
-If you are not using Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed OData service in the Catalog:
+If you are not using Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed service in the Catalog:
 
 * [Through the Catalog Registration API](#registration-api)
 * [Through the Catalog UI form](#registration-form)
@@ -50,13 +50,13 @@ For details on working with external entities and the Catalog without Mendix Clo
 
 ### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
 
-Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed OData services. 
+Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed services. 
 
 First, you need to create an authentication token to get access to the Catalog APIs. The Catalog Registration API requires authentication through a personal access token. For every API request you make to a Catalog API, include the following key-value pair with your headers: `Authorization: MxToken <your_Personal_Access_Token>`.
 
 For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
-Once you have a personal access token, follow this series of REST calls (described in detail in the following sections) to register the details of your exposed OData services:
+Once you have a personal access token, follow this series of REST calls (described in detail in the following sections) to register the details of your exposed services:
 
 1. [Register the application](#register-application) and retrieve an application UUID.
 2. Use the application UUID to [register the environment](#register-environment) and retrieve the environment UUID.
@@ -232,7 +232,7 @@ To call the Transform endpoint of the Registration API, you need the following:
 * Endpoint location `Name`
 * Endpoint location `Value`
 
-    {{% alert color="info" %}}You can find these two values in the *metadata.json* file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
+    {{% alert color="info" %}}You can find these two values in the *metadata.json* file for your exposed service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
     {{% alert color="info" %}}For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson).{{% /alert %}}
 
@@ -300,21 +300,21 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
 
 ### 4.2 Registering a Service Through the Catalog UI Form {#registration-form}
 
-The Catalog has a UI form where you can register a single exposed OData service. Make sure you have collected the following details before you begin:
+The Catalog has a UI form where you can register a single exposed service. Make sure you have collected the following details before you begin:
 
-* OData metadata contract file as an XML, or ZIP if it is multiple files
+* Metadata contract file as an XML, or ZIP if it is multiple files
 * Data Source details: `Name`, `Version`, `Path`
 * Application `Name`
 * Environment details: `Name`, `Location` (URL), `Type`
 
 Follow the steps below:
 
-1. Start at the [Catalog home page](https://catalog.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
+1. Open the [Catalog home page](https://catalog.mendix.com).
 
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
-3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the OData service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
+3. On the **Data Source** screen, select the type of service you want to reigster and specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
-    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published OData service are reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.{{% /alert %}}
+    {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published service are reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.{{% /alert %}}
 
 4. Once you have filled out all the required fields, select **Next**.
 5. On the **Application** screen, select an existing application by name or register a new one. You will also be able to edit **Technical Owner** and **Business Owner** through the **Curation** feature after registration is completed.
@@ -328,9 +328,9 @@ Follow the steps below:
 8. Select your **Authentication** method. For details on supported authentication types, see the [Authentication](#authentication) section below. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
 9. Select **Done!** to complete the registration.
 
-Congratulations! Your OData service is registered in the Catalog. 
+Congratulations! Your service is registered in the Catalog. 
 
-The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/control-center/catalog-admin/#settings) section of *Catalog Administration*.
+The discoverable status of the service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/control-center/catalog-admin/#settings) section of *Catalog Administration*.
 
 #### 4.2.1 Selecting an Authentication Method {#authentication}
 

@@ -4,7 +4,7 @@ url: /appstore/connectors/openai-connector
 linktitle: "OpenAI"
 weight: 
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace. OpenAI provides market-leading large language model capabilities with GPT-4."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt"] 
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI"] 
 draft: false 
 ---
 
@@ -120,7 +120,7 @@ For more details, see the [Azure OpenAI Service REST API reference](https://lear
 **How to obtain Azure OpenAI resource name** {#azure-resource-name}
 1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
 2. Click the cogwheel at the top right, then go to tab `Resource`.
-3. Find `Current resource` and click `JSON View`.
+3. Find `Current resource` and click `JSON view`.
 4. Copy & store the value of the field `name` as your ressource name in the Endpoint URL.
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
@@ -132,12 +132,12 @@ These microflows expect a [Configuration](#configuration-entity) entity a, as we
 * For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
-In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
+In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering see the [resources](#resources) section. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
 #### 3.2.1 `Call Chat Completions API (without history)` 
 
 The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
-Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information, see [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering). 
+Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering see the [resources](#resources) section.
 
 #### 3.2.2 `Call Chat Completions API (with history)`
 
@@ -464,7 +464,7 @@ The image generations API from OpenAI accepts a JSON structure that consists of 
 
 ##### 4.3.2.1 Call Image Generations API (Single Image) {#image-generations-single-technical} 
 
-Use the microflow `ImageGenerations_Execute` to execute a single image generations API call based on a Prompt string input, where the response is mapped as an image onto the `OutputImage` object. The `OutputImage` instance must be a specialization of `GeneratedImage`. It is not required to provide the `ENUM_Model_ImageGenerations`, `ENUM_Size`, `UserString`, `ENUM_Quality`, and `ENUM_Style`  values. If no model is provided, the `ModelDefaultImages` value from the [Configuration](#configuration-entity) will be used in the call. For the other optional parameters, if left empty, the default value as specified by the OpenAI documentation will be assumed in the API.
+Use the microflow `ImageGenerations_Execute` to execute a single image generations API call based on a prompt string input, where the response is mapped as an image onto the `OutputImage` object. The `OutputImage` instance must be a specialization of `GeneratedImage`. It is not required to provide the `ENUM_Model_ImageGenerations`, `ENUM_Size`, `UserString`, `ENUM_Quality`, and `ENUM_Style`  values. If no model is provided, the `ModelDefaultImages` value from the [Configuration](#configuration-entity) will be used in the call. For the other optional parameters, if left empty, the default value as specified by the OpenAI documentation will be assumed in the API.
 
 | Input | Output | 
 | --- | --- | 
@@ -478,8 +478,15 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 | --- | --- | 
 | `Configuration`, `ImageGenerationsRequest` | `ImageGenerationsResponse` | 
 
-## 5 Examples 
+## 5 Examples & Resources
 
 ### 5.1 Showcase Application 
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
+
+### 5.2 Other Resources {#resources}
+
+**Prompt engineering**
+* https://platform.openai.com/docs/guides/prompt-engineering
+* https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering
+* https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions

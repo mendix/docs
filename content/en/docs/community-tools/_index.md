@@ -1,6 +1,6 @@
 ---
 title: "Community Tools Guide"
-url: /community-tools/community-tools/
+url: /community-tools/
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
 weight: 42
 no_list: false 

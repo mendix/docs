@@ -3,7 +3,7 @@ title: "Community Tools"
 url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
 tags: ["forum", "mendix profile", "profile"]
-weight: 20
+weight: 37
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

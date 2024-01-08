@@ -8,7 +8,7 @@ tags: ["studio pro", "data importer", "excel importer"]
 
 ## 1 Introduction
 
-The Data Importer allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data that you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer Document created earlier to import data from input Excel file(s).
+The Data Importer allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer document created earlier to import data from input Excel file(s).
 
 {{% alert color="info" %}}
 The Data Importer is available in Studio Pro 10.6 and above.
@@ -28,9 +28,9 @@ This extension supports following source files:
 
 This extension currently has the following limitations:
 
-* The Excel column cell-type is taken from the source file to determine the target attribute type; this cannot be changed during design-time.
-* Source data can be mapped to one entity only; associations are not supported for now.
-* You cannot map the data to an already existing NPE; you have to create a new Entity as part of mapping.
+* The Excel column cell type is taken from the source file to determine the target attribute type; this cannot be changed during design-time
+* Source data can be mapped to one entity only; associations are not currently supported 
+* You cannot map the data to an already existing NPE; you have to create a new entity as part of mapping
 * Enumerations are not supported 
 
 ### 1.4 Prerequisites
@@ -39,7 +39,7 @@ This extension currently has the following limitations:
 
 ### 1.5  Dependencies
 
-This connector has no dependencies, but it needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from input the Excel files. Download this component from Marketplace and [add it into your app](/appstore/overview/use-content/).
+This connector needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from an Excel file. Download this component from the Marketplace and [add it into your app](/appstore/overview/use-content/).
 
 ## 2 Design time flow
 
@@ -59,7 +59,7 @@ Once you have [created the Data Importer document](#create-document), click **Se
 
 Select or drop the file in the **Select Source File** window. You can choose which sheet to import data from and specify the header row and starting data row.
 
-* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, their names will appear in the dropdown
+* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, the sheet name appears in the dropdown
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
@@ -75,7 +75,7 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 ### 2.3 Creating an Entity {#create-entity}
 
-You can view the entity in the Entity Preview  section. You can change the name of the entity, though one is suggested for you. To create teh entity in your domain model, click **Create Entity** > **OK**.
+You can view the entity in the entity preview section. You can change the name of the entity, though one is suggested for you. To create the entity in your domain model, click **Create Entity** > **OK**.
 
 When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
 
@@ -91,12 +91,13 @@ Use the previously created Data Importer document to import data from your Excel
 
    {{< figure src="/attachments/appstore/modules/data-importer-extension/custom-activity.png" >}}
 
-2. Double-click the activity and in the **File** field, sselect an input file.
-3. In the **Data importer document** field, click *Select* and choose the Data Importer document you want to use.
+2. Double-click the activity and in the **File** field, select an input file.
+3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use.
+
   {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
 
-1. After selecting the Data Importer document, the **Return type** and **Variable name** will be autopopulate. You can also change the name  of the output variable.
-2. Click **OK**.
+4. After selecting the Data Importer document, the **Return type** and **Variable name** will autopopulate. You can also change the name of the output variable.
+5. Click **OK**.
 
 The custom activity is configrued and you can import data from input files.
 
@@ -104,10 +105,10 @@ The custom activity is configrued and you can import data from input files.
 
 ## 4 Running Your App
 
-To perform testing for your app, you can do the following actions:
+To perform testing, you can do the following actions:
 
 1. Provide a placeholder to upload a file (System.FileDocument) on a page and a button to call the configured microflow. 
-2. Deploy your app locally and browse and upload an input file which resembles the file used to create Data Importer document.
+2. Deploy your app locally and browse and upload an input file that resembles the file used to create Data Importer document.
 3. View the message about x number of rows being imported into a list of entities. 
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/local-app-run.png" >}}

@@ -583,6 +583,7 @@ You can choose to add supported variables by selecting them from a drop-down lis
 * **DT_PAAS_TOKEN** – the token for integrating your Dynatrace environment with Cloud Foundry
 * **DT_SAAS_URL** – the monitoring endpoint URL of the Dynatrace service
 * **DT_TENANT** – the unique identifier of your Dynatrace environment
+* **NON_MENDIX_PUBLIC_CLOUD** - must be set to **true** when using Datadog, Dynatrace, or other similar tools
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables.png" alt="List of custom environment variables" >}}
 
@@ -795,11 +796,13 @@ Starting from Mendix version 9.7, the support for the `statsd` is removed.
 
 #### 10.4.2 Solution
 
-In the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab), in the **Custom Environment Variables** section, add a new variable with the following settings:
+1. In the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab), in the **Custom Environment Variables** section, add a new variable with the following settings:
 
-* **Supported** - select **No**
-* **Name** - enter *NON_MENDIX_PUBLIC_CLOUD*
-* **Value** - enter *true*
+* **Supported** - select **Yes**
+* **Name** - select **NON_MENDIX_PUBLIC_CLOUD**
+* **Value** - select **true**
+
+2. Restart your application.
 
 ## 11 Status of SAP BTP Deployment
 

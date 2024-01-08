@@ -14,7 +14,7 @@ aliases:
 
 The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreoever, you can view and add Mendix Admins of your company.
 
-## 2 General Settings {#company-general-settings}
+## 2 General Settings
 
 On the **General Settings** tab of this page, you can manage your company details, company email domains, and security contact.
 

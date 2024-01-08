@@ -37,7 +37,7 @@ The **Team Server URL** can be used to directly access your app content. On SVN 
 You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
 {{% /alert %}}
 
-If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
+If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 
 * `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository* – for accessing the Git Team Server
 * `mx:modelrepository:write` under *Model Repository* – for accessing the SVN Team Server

@@ -107,7 +107,7 @@ At this point, all the implementation steps are done and you can deploy your app
 
 {{% alert color="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a `NullPointerException` when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 
@@ -125,7 +125,7 @@ Configure FCM as follows:
 4. Upload your private key (which you downloaded when you created a service account).
 
 {{% alert color="warning" %}}
-Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly and you will get a **NullPointerException** error when you try to send a notification to FCM. If you get the **NullPointerException** error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
+Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly and you will get a `NullPointerException` error when you try to send a notification to FCM. If you get the `NullPointerException` error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
 {{% /alert %}}
 
 For more details, see [How to Set Up the Apple Push Notification Server](/howto8/mobile/setting-up-apple-push-notification-server/) and [How to Set Up the Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/).

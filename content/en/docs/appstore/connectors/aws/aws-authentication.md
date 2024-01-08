@@ -152,9 +152,7 @@ After enabling the certificate, you can now configure the microflow that authent
 
  {{< figure src="/attachments/appstore/connectors/aws-authentication/set-awsregion-param.png" >}}
 
-6. Close the popup with another click on **OK**.
-
-The activity returns a **TemporaryCredentials** object that provides the required AWS authentication credentials for your microflow.
+6. Click **OK**. The activity returns a **TemporaryCredentials** object that provides the required AWS authentication credentials for your microflow.
 7. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
 
 ##### 4.1.1.4 Configuring the Local Setup
@@ -170,7 +168,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
    {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
 4. In the **Constants** tab, configure the constants of the temporary credentials' connection details.
-5.  Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
+5. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 6. click **OK**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-session-credentials-constants.png" >}}
@@ -207,6 +205,7 @@ To create static credentials with the **GetStaticCredentials** activity in your 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-static-credentials-constants.png" >}}
 
     The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
+
 6. Continue the configuration by adding more activities to your microflow.
 
 ### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}

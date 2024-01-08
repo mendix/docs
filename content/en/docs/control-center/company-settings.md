@@ -16,7 +16,7 @@ The **Company Settings** page allows you to change company details, company emai
 
 ## 2 General Settings {#company-general-settings}
 
-On the **General Settings** tab of this page, you can edit your company details and 
+On the **General Settings** tab of this page, you can manage your company details, company email domains, and security contact.
 
 ### 2.1 Company Details
 

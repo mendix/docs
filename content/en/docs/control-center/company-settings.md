@@ -22,7 +22,9 @@ On the **General Settings** tab of this page, you can manage your company detail
 
 Under **Company Details**, you can edit your **Company Name** and **Description**.
 
-You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/community-tools/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
+### 2.2 Company Email Domains {#company-email-domains}
+
+Under **Company Email Domains**, you can request new company email domains by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign-on using BYOIDP](/control-center/security/set-up-sso-byoidp/), BYOIDP will automatically adopt it, without further actions from the Mendix Admins.
 

@@ -125,7 +125,7 @@ returns:
 If this third parameter is too big, the function will throw an error saying it is out of range, so make sure to limit it. This is an example with use of the length function:
 
 ```java
-'substring('thisismystring', 0, min(length('thisismystring'), 20))'
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

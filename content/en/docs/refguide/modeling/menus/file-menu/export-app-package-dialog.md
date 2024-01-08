@@ -22,11 +22,11 @@ For more information on what options you can select, see the sections below.
 
 ## 2 Package Type
 
-When you have access to publishing add-on modules and solutions, you can select to export you app as the **Solution** or **Source Package**. 
+Alternatively, you can export your app as an [Adaptable Solution](/appstore/creating-content/sol-adapt/). To enable this option when exporting, open the **App settings** > **Solution** tab and set **Enable solution adapation** to Yes.
+
+You can now choose to export your app as the **Solution** or **Source Package**. 
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
-
-The access can be gained through the [Mendix Partner Program](/appstore/partner-program/).
 
 ### 2.1 Solution Package
 

@@ -28,4 +28,5 @@ To learn about using OData to implement REST best practices, see
 
 To wrap services, APIs, or databases in OData, see:
 
-* [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/)
+* [Register Non-OData Resources in the Catalog
+](/catalog/register/register-non-odata-resources/)

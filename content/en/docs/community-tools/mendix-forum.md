@@ -289,4 +289,4 @@ Mendix looks forward to hearing your ideas!
 
 ## 7 Read More
 
-* [How to Contribute to Mendix Documentation](/community-tools/contribute-to-the-mendix-documentation/)
+* [How to Contribute to Mendix Documentation](/community-tools/contribute-to-mendix-docs/)

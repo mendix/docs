@@ -1,10 +1,10 @@
 ---
 title: "Documentation Writing Guidelines"
-url: /community-tools/documentation-writing-guidelines/
+url: /community-tools/documentation-guidelines/
 description: "Describes some guidelines to follow when contributing to the Mendix documentation."
 tags: ["documentation", "community"]
 aliases:
-    - /developerportal/community-tools/documentation-writing-guidelines/
+    - /developerportal/community-tools/documentation-guidelines/
 ---
 
 ## 1 Introduction
@@ -64,11 +64,11 @@ You can tell end-users that they need to have installed certain software require
 
 Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example, the arrows and flow on this screenshot are too busy and not clear enough for the user:
 
-{{< figure src="/attachments/community-tools/contribute-to-the-mendix-documentation/documentation-writing-guidelines/image_examples.png"   width="500"  >}}
+{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/documentation-guidelines/image_examples.png"   width="500"  >}}
 
 Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable:
 
-{{< figure src="/attachments/community-tools/contribute-to-the-mendix-documentation/documentation-writing-guidelines/image_examples2.png"   width="400"  >}}
+{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/documentation-guidelines/image_examples2.png"   width="400"  >}}
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
@@ -96,4 +96,4 @@ When writing for the *Studio Pro Guide*, consider these guidelines:
 
 ## 5 Read More
 
-* [How to Contribute to the Mendix Documentation](/community-tools/contribute-to-the-mendix-documentation/)
+* [How to Contribute to the Mendix Documentation](/community-tools/contribute-to-mendix-docs/)

@@ -17,7 +17,7 @@ This how-to teaches you the following:
 * Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-odata/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites

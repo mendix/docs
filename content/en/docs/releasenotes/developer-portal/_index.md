@@ -24,7 +24,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
 
 * You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
-* It is now possible to link epics from different apps to an initiative.
+* You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
 
 ## 2023
 

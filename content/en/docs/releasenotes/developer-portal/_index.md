@@ -21,7 +21,10 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* In Portfolio Management, you can now check initiatives on the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown in one timeline, with each timeline bar presenting an initiative.
+We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
+
+* You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+* It is now possible to link epics from different apps to an initiative.
 
 ## 2023
 
@@ -29,8 +32,11 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-*  In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
-*  In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
+
+* App team members now can assign priority to feedback items and filter feedback items by their priority.
+
+*  It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 

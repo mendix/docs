@@ -9,7 +9,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more.
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in the Developer Portal and click **Environments** in the navigation pane.
 
 The **Environments** page has the following tabs:
 

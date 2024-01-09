@@ -233,7 +233,7 @@ Existing users of the Developer Portal can continue to use their accounts, but t
 
 ### 8.2 BYOIDP and Team Server {#team-server}
 
-Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/developerportal/community-tools/mendix-profile/#pat).
+Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/#pat).
 
 Before activating BYOIDP, your developers should set up PATs for direct access to repos (for example, from CI/CD pipelines and/or Tortoise SVN) instead of using usernames and passwords.
 

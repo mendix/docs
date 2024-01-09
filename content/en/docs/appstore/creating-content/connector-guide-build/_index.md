@@ -17,7 +17,7 @@ This how-to teaches you the following:
 * Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-odata/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites
@@ -148,5 +148,4 @@ Because connectors are exported as modules and then published on the Marketplace
 
 * Read [How to Share Marketplace Content](/appstore/sharing-content/)
 * Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
-* See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
-* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#third-party)
+* See more about building a third-party service connector using [OData Services](/refguide/integration/odata-services/)

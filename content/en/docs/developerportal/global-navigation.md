@@ -30,7 +30,7 @@ Use the various filters to refine your search results:
 
 ## 4 Support Menu
 
-Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/developerportal/community-tools/mendix-forum/#questions-tab) to the Mendix community, [share an idea](/developerportal/community-tools/mendix-forum/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/developerportal/support/).
+Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/community-tools/mendix-forum/#questions-tab) to the Mendix community, [share an idea](/community-tools/mendix-forum/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/community-tools/support/).
 
 {{< figure src="/attachments/developerportal/global-nav/help-menu.png" width="300" >}}
 
@@ -42,7 +42,7 @@ If you see **Get Started with Mendix**, a red dot next to this menu item will re
 
 Click **Open Notifications Menu** ({{% icon name="alarm-bell" color="color" %}}) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
-To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the [Notification Settings](/developerportal/community-tools/mendix-profile/#notifications) page that opens. 
+To configure what types of notifications you receive, click the settings button (via the gear icon) and update the options in the [Notification Settings](/community-tools/mendix-profile/#notifications) page that opens. 
 
 {{< figure src="/attachments/developerportal/global-nav/notifications.png" width="300" >}}
 
@@ -52,6 +52,6 @@ To stop receiving notifications when new feedback is submitted for a specific ap
 
 ## 6 Profile Menu
 
-Click **Open Profile Menu** ({{% icon name="user" color="color" %}}) to access your [Mendix Profile](/developerportal/community-tools/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/developerportal/community-tools/mendix-profile/#settings). 
+Click **Open Profile Menu** ({{% icon name="user" color="color" %}}) to access your [Mendix Profile](/community-tools/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/community-tools/mendix-profile/#settings). 
 
 You can also sign out from the Mendix Platform via this menu.

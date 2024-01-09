@@ -9,7 +9,6 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Mendix is all about enabling developers. Within apps developers can be enabled by using a design system that allows them to quickly build consistent and coherent interfaces in line with the company brand. Atlas 3 comes with a default design system which can be used to build your own design system. For more information, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-
 {{% alert color="info" %}}
 In this document, the term "design system" is used, but this could also be considered a UI Kit, depending on how it is used and implemented.
 {{% /alert %}}

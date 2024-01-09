@@ -106,8 +106,8 @@ The following inputs are required for the Azure OpenAI configuration:
 | ---| --- |
 | DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
 | API type | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
-| Endpoint | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/`. Follow there [steps](#azure-resource-name} to obtain `your-resource-name`. |
-| API key | This is the access token to authorize your API call. <br />Follow these [instructions](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity) to generate a Microsoft Entra access token. |
+| Endpoint | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/`.<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
+| API key | This is the access token to authorize your API call. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
 
@@ -117,7 +117,8 @@ In the case of Azure OpenAI there needs to be a deployment per model so that it 
 For more details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
 {{% /alert %}}
 
-**How to obtain Azure OpenAI resource name** {#azure-resource-name}
+##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
+
 1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
 2. Click the cogwheel at the top right, then go to tab `Resource`.
 3. Find `Current resource` and click `JSON view`.
@@ -132,7 +133,7 @@ These microflows expect a [Configuration](#configuration-entity) entity a, as we
 * For the OpenAI API configuration, if no model is explicitly passed into the microflow, there is a default model that will be used.
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
-In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering see the [resources](#resources) section. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
+In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
 #### 3.2.1 `Call Chat Completions API (without history)` 
 
@@ -332,7 +333,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 | --- | --- |
 | `RevisedPrompt` | This is the prompt that was used to generate the image. It is only populated if there was any revision to the prompt. |
 
-{{% alert color="info" %}} This entity is meant to be used as a generalization when one of the [exposed microflows for image generations](#image-generations-technical) is implemented. For information about how to use this entity, see the [Image Generations Configuration](#image-generations-configuration) section. {{% /alert %}}
+{{% alert color="info" %}} This entity is meant to be used as a generalization when one of the [exposed microflows for image generations](#image-generations-technical) is implemented. For more information about how to use this entity, see the [Image Generations Configuration](#image-generations-configuration) section. {{% /alert %}}
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -478,15 +479,13 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 | --- | --- | 
 | `Configuration`, `ImageGenerationsRequest` | `ImageGenerationsResponse` | 
 
-## 5 Examples & Resources
-
-### 5.1 Showcase Application 
+## 5 Showcase Application 
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
 
-### 5.2 Other Resources {#resources}
+## 6 Read More {#read-more}
 
-**Prompt engineering**
-* https://platform.openai.com/docs/guides/prompt-engineering
-* https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering
-* https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions
+* [Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
+
+* [Introduction to Prompt Engineering](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
+* [Prompt Engineering Techniques](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)

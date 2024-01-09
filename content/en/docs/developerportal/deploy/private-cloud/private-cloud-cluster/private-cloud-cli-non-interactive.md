@@ -43,7 +43,7 @@ The namespace-id and namespace-secret are only required when using Mendix for Pr
 
 ### Global Operator Namespace - Base installation
 
-In case of Global Operator, the base installation should only be applied on Global Operator namespace and not on managed namespace. For more information, check Global Operator documentation.
+In case of Global Operator, the base installation should only be applied on Global Operator namespace and not on the managed namespace. For more information, check Global Operator documentation.
 
 ## 3 Apply Configuration
 
@@ -128,6 +128,6 @@ To [upgrade the versions of Mendix components in your namespace](/developerporta
 ```
 
 {{% alert color="info" %}}
-In case Global Namespace installation, upgrade procedure is not applicable for managed namespace.
+In case of Global Namespace installation, the upgrade procedure is not applicable for the managed namespace.
 {{% /alert %}}
 

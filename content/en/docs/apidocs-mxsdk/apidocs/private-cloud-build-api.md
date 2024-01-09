@@ -73,7 +73,7 @@ Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"statu
 The following sections of this document contain sample usage scenarios for the API.
 
 {{% alert color="info" %}}
-Please note that the inputs in API requests are case-sensitive. Therefore, make sure that the input requests are in lowercase.
+Please note that the attribute values in API requests are case-sensitive, therefore make sure that the input requests are entered correctly according to the specification file.
 {{% /alert %}}
 
 ### 3.1 Using the API to Build, Download and Delete a Deployment Package

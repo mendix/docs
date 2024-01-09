@@ -24,6 +24,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * Addressed an issue on the PCLM statistics page where users encountered difficulty navigating to the license list when it exceeded 100 licenses in the portal.
 * Added a warning on the Namespace Customization page to let you know that the Ingress annotation will still be kept in the Ingress object even if it's removed from the portal.
 * Implementation of a feature to automatically remove deployment packages that have been inactive for more than 2 weeks.
+* Applying the changes or refreshing the Environment Details page will now remember the tab on which the user was present and it will NOT redirect the user the **General** tab anymore.
 
 ## 2023
 

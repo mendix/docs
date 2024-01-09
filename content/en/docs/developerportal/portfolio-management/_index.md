@@ -81,9 +81,9 @@ The **Initiatives Overview** page gives an overview of all the initiatives in th
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiatives-overview.png" >}}
 
-In the search box, you can search for an initiative by the initiative name.
+In the search box on the top, you can search for an initiative by the initiative name.
 
-On the upper-right corner, you can use the **Filters** to filter initiatives. Using the drop-down list next to the **Filters**, you can [change your view](#change-view). Clicking the **Create Initiative** button allows you to [create a new initiative](#create-new-initiative).
+On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives and the results persist even after you change to a new view. You can [export and import Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
 
 ### 3.1 Creating a New Initiative {#create-new-initiative}
 
@@ -276,8 +276,6 @@ In Kanban view, all the initiatives are represented by initiative cards, and are
 
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-To filter initiatives, you can select a filter from the **Filters** drop-down list on the top of the page.
-
 Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
@@ -390,7 +388,7 @@ The view contains the following information:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
 * Today Indicator (the vertical blue line) – This indicates the date of today.
-* **Weeks**, **Months**, and **Quarters**  – Clicking one of these buttons change the zoom level of the timeline.
+* **Weeks**, **Months**, and **Quarters**  – Clicking one of these buttons changes the zoom level of the timeline.
 * **Today** – Clicking this button brings the view back to today.
 
 ### 3.3 Viewing Initiative Details {#view-initiative}

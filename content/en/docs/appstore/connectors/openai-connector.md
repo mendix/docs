@@ -120,9 +120,10 @@ For more details, see the [Azure OpenAI Service REST API reference](https://lear
 ##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
 
 1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
-2. Click the cogwheel at the top right, then go to tab `Resource`.
-3. Find `Current resource` and click `JSON view`.
-4. Copy & store the value of the field `name` as your ressource name in the Endpoint URL.
+2. On the upper-right corner, click the setting icon (the cogwheel). 
+3. Go to the **Resource** tab.
+4. Go to **Current resource** and click **JSON view**.
+5. Use the value of the **name** field as your resource name in the endpoint URL.
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 

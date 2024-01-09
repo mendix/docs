@@ -219,7 +219,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 * **Intake Date** – the date when the initiative is accepted based on business requirements
 * **Start Date** – the date when the first actions are taken to start implementation
-* **Go-Live date** – the date when the initiative is expected to be delivered or implemented
+* **Go-Live date** – the date when the initiative is expected to be delivered or implemented.
 
 Now you can proceed to [add prioritization information](#add-prioritization-information).
 
@@ -377,9 +377,7 @@ The list contains the following information:
 
 #### 3.2.5 Planning View {#planning-view}
 
-In the planning view, you can view all initiatives on a timeline. The planning view supports planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. Initiatives in this view are sorted by their start date and the timeline view scrolling is limited by 1 years back and 2 years ahead from the current date.
-
-
+In the planning view, you can view all initiatives on a timeline. The planning view supports planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. Initiatives in this view are sorted by their start date. You can see maximum one years back and two years ahead from the current date.
 
 {{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
 
@@ -388,11 +386,12 @@ The view contains the following information:
 * Initiative Name – Clicking this opens a side pane that shows initiative details.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Time bar - This bar starts with the start date of an initiative and ends with the go-live date. Hovering over them you can see these days in a tooltip:
-    * **Start** – This is the date when the first actions are taken to start implementation.
-    * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
-* Today Indicator(Vertical blue line) – The date of today is indicated by the vertical blue line.
-* Time Frames - You can adjust the zoom level of the timeline by clicking the **Weeks**, **Months**, or **Quarters** button on the bottom-right corner. Clicking the **Today** button brings the view back to today.
+* Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows the dates of these days in a tooltip:
+    * **Start date** – The start date is the date when the first actions are taken to start implementation.
+    * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
+* Today Indicator (the vertical blue line) – This indicates the date of today.
+* **Weeks**, **Months**, and **Quarters**  – Clicking one of these buttons change the zoom level of the timeline.
+* **Today** – Clicking this button brings the view back to today.
 
 ### 3.3 Viewing Initiative Details {#view-initiative}
 

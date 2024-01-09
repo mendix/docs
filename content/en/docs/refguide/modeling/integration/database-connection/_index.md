@@ -44,10 +44,10 @@ If you select **Use connection string**, enter the following:
 * **Username** — the username to access the database
 * **Password** — the password to access the database
 * **JDBC Connection String** — the connection string, in the following formats for each database type:
-    * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
-    * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
-    * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
-    * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+  * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
+  * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
+  * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
+  * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
 
 ## 3 External Database Connection Document {#external-database-document}
 
@@ -69,9 +69,10 @@ This screen includes the following fields:
 * **SQL Query** — text box where you can enter your query
 
 In the **Parameters** section, click **Add Parameter** to enter the following information:
-    * **Name** — name of the parameter that can be used in the **SQL Query** field (in the form of {parameter_name})
-    * **Data Type** — select the type of data for your parameter
-    * **Test Value** — enter or select the value of the parameter
+
+* **Name** — name of the parameter that can be used in the **SQL Query** field (in the form of {parameter_name})
+* **Data Type** — select the type of data for your parameter
+* **Test Value** — enter or select the value of the parameter
 
 Click **Execute Query** to view a preview of the reponse.
 

@@ -38,7 +38,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 ### 3.2 Download a Backup{#download-backup}
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
-1. On the backup that you want to download, click **More Options** > **Download**.
+1. On the backup that you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download**.
 1. Make sure **Full Snapshot** is selected, then click **Start** to prepare the download.
 1. Once the backup is ready, click **Download**.
 
@@ -93,7 +93,7 @@ The final step is restoring your data. This must be done after you've deployed y
 
 3. Select the backup file you downloaded earlier in [Download a Backup](#download-backup), then click **Upload Archive**. The file will be uploaded. Once the upload completes, a backup file is uploaded to your app using the data from your old Free App environment.
 
-4. On the backup you just uploaded, click **More Options** > **Restore**.
+4. On the backup you just uploaded, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Restore**.
 
 5. Confirm the restore by clicking **Restore Backup**.
 

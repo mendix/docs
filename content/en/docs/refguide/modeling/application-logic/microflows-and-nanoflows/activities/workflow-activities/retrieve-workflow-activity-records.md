@@ -5,7 +5,7 @@ weight: 40
 tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
 ---
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 

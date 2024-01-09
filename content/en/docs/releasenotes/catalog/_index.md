@@ -3,13 +3,26 @@ title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 tags: ["data hub", "Catalog", "data hub Landscape"]
-weight: 37
+weight: 36
 aliases:
     - /releasenotes/data-hub/
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes made to the [Catalog](/catalog/).
+
+## 2024
+
+### January 4, 2024
+
+#### Fixes
+
+* We fixed a visual bug on the Curation page where two pagination bars were shown.
+* We addressed potential security vulnerabilities.
+
+#### Improvement
+
+* Users that are not an administrator or curator can now view deeplinks to undiscoverable services.
 
 ## 2023
 

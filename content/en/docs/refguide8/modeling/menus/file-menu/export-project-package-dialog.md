@@ -4,8 +4,8 @@ url: /refguide8/export-project-package-dialog/
 weight: 30
 tags: ["studio pro", "export app", "export project package"]
 aliases:
-    - /developerportal/support/export-a-project-package.html
-    - /developerportal/support/export-a-project-package
+    - /community-tools/support/export-a-project-package.html
+    - /community-tools/support/export-a-project-package
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

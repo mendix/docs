@@ -489,8 +489,8 @@ The **Members** tab lists all the users that have portfolio access. You can sear
 
 * Ellipsis button (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
 
-  * **Edit Role** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allows you to remove the user from the portfolio. 
+    * **Edit Role** – Selecting this allows you to change the role of the user.
+    * **Remove** – Selecting this allows you to remove the user from the portfolio. 
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
@@ -518,7 +518,6 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | Link and unlink epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View linked epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 
-
 #### 5.1.1 Leaving the Portfolio
 
 To leave the portfolio, click the **Leave** button on the right side above the member list. 
@@ -527,7 +526,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 
 * Delete the portfolio permanently together with all the data in the portfolio when you leave the portfolio; or
 * Assign another user to be the new Portfolio Manager before you leave the portfolio.
-  * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member and edit their role to Portfolio Manager, or invite a new member to be the new Portfolio Manager.
+    * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member and edit their role to Portfolio Manager, or invite a new member to be the new Portfolio Manager.
 
 #### 5.1.2 Adding New Users {#add-users}
 
@@ -585,9 +584,9 @@ The **Pending Invites** tab shows all pending invites of external users. You can
 * **Invite Date** – This shows the date the invite was sent.
 * Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
 
-  * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
+    * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
 
-  * **Delete** – Selecting this allows you to cancel the pending invite.
+    * **Delete** – Selecting this allows you to cancel the pending invite.
 
 ## 6 Portfolio Settings {#portfolio-settings}
 

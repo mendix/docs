@@ -112,9 +112,7 @@ The following inputs are required for the Azure OpenAI configuration:
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
 
 {{% alert color="info" %}}
-In the case of Azure OpenAI there needs to be a deployment per model so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you will need to create multiple configuration objects, one for every deployed model.
-
-For more details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
+For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects, one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
 {{% /alert %}}
 
 ##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}

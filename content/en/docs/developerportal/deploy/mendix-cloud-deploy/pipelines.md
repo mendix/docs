@@ -29,19 +29,20 @@ Give your pipeline a name, and click **Next** to go to your new pipeline's **Det
 
 From there, you can customize your pipeline. If you choose to work from an empty pipeline, you will start by adding steps. Or, if you work from the template, you will start with a pipeline that is pre-populated with the following basic steps:
 
-1. Start Pipeline
-1. Build
-1. Publish
-1. Stop Environment
-1. Create Backup
-1. Deploy
+1. Start Pipeline —  This is a mandatory step for each pipeline. In this step, you define the conditions on which the pipeline should start; you can set the pipeline to run on commit or according to a weekly schedule.
+1. Checkout — This is a mandatory step for each pipeline. In this step, you select a branch to check out.
+1. Build — Build a deployment package
+1. Publish — Publish generated deployment package to a repository
+1. Stop Environment — Stop a selected environment
+1. Create Backup — Create and store a backup of an existing environment before deploying a new deployment package
+1. Deploy — Deploy to selected target environment
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
 
 You then have a variety of customization options:
 
 * Click **More Options** ({{% icon name="three-dots-menu-horizontal-small" %}}) to edit the pipeline name, duplicate it, or delete it.
-* Expand a step to customize or delete it.
+* Expand a step to configure or delete it.
 * Add a step by clicking **Add** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" class="image-border" >}}

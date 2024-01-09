@@ -10,7 +10,7 @@ tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 ## 1 Introduction 
 
 {{% alert color="warning"%}}
-Currently, the availability of MendixChat is limited to Europe. It will be available worldwide by January 12, 2024.
+Currently, the availability of MendixChat is limited to Europe and APAC. It will be available worldwide by January 12, 2024.
 {{% /alert %}}
 
 {{% alert color="info"%}}

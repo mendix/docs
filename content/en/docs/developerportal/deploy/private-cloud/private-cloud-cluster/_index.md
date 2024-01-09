@@ -65,13 +65,13 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    1. **Installation Type** – Select Global Installation if you would like to have a single operator namespace managing multiple namespaces or just a single operator namespace. See [Global Operator](/developerportal/deploy/private-cloud-cluster/global-operator-installation) to understand further how global operator installation works.
+    1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or just a single operator namespace. Refer [Global Operator](/developerportal/deploy/private-cloud-cluster/global-operator-installation) for a detailed explanation of how global operator installation functions.
 
     2. **Cluster Name** – The name you want to give the cluster you are creating.    
 
-    2. **Cluster Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
+    3. **Cluster Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
 
-    3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
+    4. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
 8. Click **Create**.
 
@@ -338,7 +338,7 @@ If Mendix for Private Cloud needs to communicate with external services, some of
 In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
 
 {{% alert color="info" %}}
-In case of Global Operator, if the operator configurations for managed namespace is different than Global operator namespace operator configuration, then configurations from managed namespace will always take precedence.
+For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
 {{% /alert %}}
 
 
@@ -440,7 +440,7 @@ In order to configure PCLM, make sure that the Operator version is 2.11.0 and ab
 
 
 {{% alert color="info" %}}
-In case of Global Operator, both the managed namespace and the global operator namespace needs to be configured with the Licenses manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+In the context of the Global Operator, it is necessary to configure both the managed namespace and the global operator namespace with the License Manager details. For additional information, please refer to the [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) documentation.
 {{% /alert %}}
 
 ## 6 Advanced Operator Configuration
@@ -450,9 +450,8 @@ Before updating the Operator with the advanced configurations, make sure to go t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In case of Global Operator, if the operator configurations for managed namespace is different than Global operator namespace operator configuration, then configurations from managed namespace will always take precedence.
+For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
 {{% /alert %}}
-
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
@@ -635,16 +634,10 @@ Below is an example of the Deployment definition of an app. In this example, the
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
-# ...
-# omitted lines for brevity
-# ...
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 0
-  # ...
-  # omitted lines for brevity
-  # ...
   template:
     metadata:
       # ...
@@ -712,9 +705,6 @@ spec:
           requests:
             cpu: 100m
             memory: 512Mi
-# ...
-# omitted lines for brevity
-# ...
 ```
 #### 6.3.1 Resource Definition via Operator Configuration Manifest
 
@@ -723,9 +713,6 @@ For a given namespace all the resource information is aggregated in the `mendix-
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: OperatorConfiguration
-# ...
-# omitted lines for brevity
-# ...
 spec:
   sidecarResources:
     limits:
@@ -1548,7 +1535,7 @@ This tab shows information on the versions of the various components installed i
 
 #### 7.2.8 Customization
 
-This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers and product type for the PCLM License.
+This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers and product type for the PCLM Runtime License.
 
 Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
@@ -1564,13 +1551,13 @@ If you want to use the secret store for custom runtime settings or MxApp constan
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 
-In case PCLM is configured, the default value for the product type of a Runtime licenses is set to **standard**. However, if the PCLM Runtime license imported in the license server are set as something other than **standard**, the value can be configured here. The value of Product type of the Runtime license can be checked under **PCLM Statistics** page by selecting **Runtime** under **Select type**.
+If PCLM is configured, the default product type for Runtime licenses is set to **standard**. However, if the product type for PCLM Runtime licenses in the license server differs from **standard**, you can customize it here. To check the Product type of the Runtime license, navigate to the PCLM Statistics page, select Runtime under Select type.
 
 {{% alert color="info" %}}
-Make sure to enter the exact value of the product type as specified in the product type of the runtime license in PCLM Statistics page.
+The product type value to be entered is case sensitive. Hence, ensure that the value should exactly match with the product type of the runtime license on the PCLM Statistics page.
 {{% /alert %}}
 
-The value of product type configured in this page will be propogated to all the environments under this namespace and the associated environments will pick up the license of this product type.
+The configured product type value on this page will be applied to all environments within this namespace, and associated environments will adopt the license of this specific product type.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 

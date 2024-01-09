@@ -326,7 +326,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
 The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. 
 
 {{% alert color="info" %}}
-In case of Global Operator Installation, the above command needs to be run for both Global Operator namespace and the managed namespaces under it for which the license needs to be applied. Kindly ensure that the same PCLM license details are configured for both managed and global operator namespace, otherwise it may lead to unexpected results.
+For Global Operator Installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes.
 {{% /alert %}}
 
 #### 7.1.1 Sample Yaml Files

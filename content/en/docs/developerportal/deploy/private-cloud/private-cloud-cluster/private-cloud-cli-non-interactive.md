@@ -41,6 +41,10 @@ To perform the [base installation](/developerportal/deploy/private-cloud-cluster
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
+### Global Operator Namespace - Base installation
+
+In case of Global Operator, the base installation should only be applied on Global Operator namespace and not on managed namespace. For more information, check Global Operator documentation.
+
 ## 3 Apply Configuration
 
 ### 3.1 Standard Namespace
@@ -83,7 +87,7 @@ registry:
 
 ### Global Operator - Managed Namespace 
 
-To configure a managed namespace inside a Global Operator, the namespace configuration should only be applied on managed namespace. For more information, check Global Operator documentation.
+To configure a managed namespace inside a Global Operator, the namespace configuration should only be applied on managed namespace and not Global Operator namespace. For more information, check Global Operator documentation.
 
 Apply below config file, for the managed namespace configuration.
 

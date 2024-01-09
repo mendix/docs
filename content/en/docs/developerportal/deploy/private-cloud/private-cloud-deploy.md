@@ -255,7 +255,7 @@ This displays details of the deployment package.
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image18.png" >}}
 
 {{% alert color="info" %}}
-If the deployment package is being unused for more than 2 weeks or it is being locked by the Developer, the deployment package would be automatically deleted based on the expiry date. Ensure to lock the deployment package if it needs to be used for future.
+Should a deployment package remain unused, inactive, or unlocked for a period exceeding 2 weeks, it will be automatically deleted according to the expiry date. To retain the deployment package for future use, be sure to lock it.
 {{% /alert %}}
 
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
@@ -479,7 +479,7 @@ Subscription secrets are obtained from [Mendix support](https://support.mendix.c
 
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
-If you are using Private Cloud License Manager, and would like to configure the product type for the Runtime license for a specific environment, it can be configured by editing the Product type. With this, the associated environment would pull the license from the license bundle with Product type as set in the environment. By default, the value is set to the value set in Namespace configuration page.
+For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
 
 #### 5.1.4 Security
 
@@ -719,7 +719,7 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
 1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
 
 {{% alert color="info" %}}
-In case of Global Operator, if the operator configurations for managed namespace is different than Global operator namespace operator configuration, then configurations from managed namespace will always take precedence.
+For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
 {{% /alert %}}
 
     1. To update the Mendix Operator configuration, use the following command:

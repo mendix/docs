@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* In Portfolio Management, we added a [planning view](/developerportal/portfolio-management/#planning-view), where initiatives are shown in a timeline, with each initiative presented by a timeline bar.
+* In Portfolio Management, you can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown in one timeline, with each timeline bar presenting an initiative.
 
 ## 2023
 

@@ -375,7 +375,7 @@ The list contains the following information:
 
 #### 3.2.5 Planning View {#planning-view}
 
-In the planning view, you can view all initiatives on a timeline. The planning view supports planning, coordination, and decision-making by providing a clear visual representation of the scheduled activities and milestones across various initiatives. Initiatives in this view are sorted by their start date. You can see maximum one years back and two years ahead from the current date.
+The planning view provides a clear visual representation of initiatives on a timeline to assist you with planning, coordination, and decision-making. Initiatives in this view are sorted by their start date. You can see maximum one years back and two years ahead from the current date.
 
 {{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
 

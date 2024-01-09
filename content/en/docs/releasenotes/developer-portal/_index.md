@@ -15,6 +15,14 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### January 11
+
+#### New Features
+
+* In Portfolio Management, we added a [planning view](/developerportal/portfolio-management/#planning-view), where initiatives are shown in a timeline, with each initiative presented by a timeline bar.
+
 ## 2023
 
 ### December 14

@@ -138,7 +138,7 @@ In the context of chat completions, system prompts and user prompts are two key 
 #### 3.2.1 `Call Chat Completions API (without history)` 
 
 The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
-Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering see the [resources](#resources) section.
+Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
 #### 3.2.2 `Call Chat Completions API (with history)`
 

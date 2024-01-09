@@ -65,9 +65,11 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    1. **Name** – The name you want to give the cluster you are creating.
+    1. **Installation Type** – Select Global Installation if you would like to have a single operator namespace managing multiple namespaces or just a single operator namespace. See [Global Operator](/developerportal/deploy/private-cloud-cluster/global-operator-installation) to understand further how global operator installation works.
 
-    2. **Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
+    2. **Cluster Name** – The name you want to give the cluster you are creating.    
+
+    2. **Cluster Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
 
     3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
@@ -335,6 +337,11 @@ By default, Mendix Operator trusts Certificate Authorities from the [Mozilla CA 
 If Mendix for Private Cloud needs to communicate with external services, some of those services might have TLS certificates signed by a custom (private) CA.
 In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
 
+{{% alert color="info" %}}
+In case of Global Operator, if the operator configurations for managed namespace is different than Global operator namespace operator configuration, then configurations from managed namespace will always take precedence.
+{{% /alert %}}
+
+
 1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
     1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
 
@@ -431,11 +438,21 @@ You can license the Operator and Runtime of your application by configuring the 
 In order to configure PCLM, make sure that the Operator version is 2.11.0 and above.
 {{% /alert %}}
 
+
+{{% alert color="info" %}}
+In case of Global Operator, both the managed namespace and the global operator namespace needs to be configured with the Licenses manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+{{% /alert %}}
+
 ## 6 Advanced Operator Configuration
 
 {{% alert color="warning" %}}
 Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix for Private Cloud.
 {{% /alert %}}
+
+{{% alert color="info" %}}
+In case of Global Operator, if the operator configurations for managed namespace is different than Global operator namespace operator configuration, then configurations from managed namespace will always take precedence.
+{{% /alert %}}
+
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
@@ -699,127 +716,7 @@ spec:
 # omitted lines for brevity
 # ...
 ```
-
-#### 6.3.1 Customize Liveness Probe to Resolve Crash Loopback Scenarios
-
-The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
-
-The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
-
-{{% alert color="warning" %}}
-The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
-{{% /alert %}}
-
-Let us now analyze the `liveness probe` section from the application deployment example, above:
-
-```yaml
-livenessProbe:
-  failureThreshold: 3
-  httpGet:
-    path: /
-    port: mendix-app
-    scheme: HTTP
-  initialDelaySeconds: 60
-  periodSeconds: 15
-  successThreshold: 1
-  timeoutSeconds: 1
-```
-
-The following fields can be configured:
-
-* `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
-* `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
-* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
-* `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
-* `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
-
-{{% alert color="info" %}}
-If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
-{{% /alert %}}
-
-#### 6.3.2 Customize Startup Probes for Slow Starting Applications
-
-If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
-
-A startup probe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startup probe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. Startup probes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startup probe that hasn't yet succeeded.
-
-You can see an example of a startup probe configuration below:
-
-```yaml
-startupProbe:
-  httpGet:
-    path: /
-    port: mendix-app
-    scheme: HTTP
-  failureThreshold: 30
-  periodSeconds: 10
-```
-
-In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's [restartPolicy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy).
-
-{{% alert color="info" %}}
-If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
-
-Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
-{{% /alert %}}
-
-#### 6.3.3 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
-
-Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
-
-```yaml {linenos=false}
-terminationGracePeriodSeconds: 300
-```
-
-{{% alert color="info" %}}
-The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
-{{% /alert %}}
-
-#### 6.3.4 Customize Container Resources: Memory and CPU
-
-Let us now analyze the `resources` section from the example application deployment, above:
-
-```yaml
-resources:
-  limits:
-    cpu: 1
-    memory: 512Mi
-  requests:
-    cpu: 100m
-    memory: 512Mi
-```
-
-This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
-
-The settings in the example above mean that
-
-* the container will always receive at least the resources set in `requests`
-* if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
-* a container will never be granted more than its resource `limits`
-
-##### 6.3.4.1 Meaning of CPU
-
-Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
-
-Fractional requests are allowed. For instance, in this example, we are requesting `100m`, which can be read as *one hundred millicpu*, and limiting to a maximum of `1` CPU (1000m).
-
-A precision finer than 1m is not allowed.
-
-##### 6.3.4.2 Meaning of Memory
-
-Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
-
-For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
-
-{{% alert color="warning" %}}
-Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
-{{% /alert %}}
-
-#### 6.3.5 Resource Definition via Operator Configuration Manifest
+#### 6.3.1 Resource Definition via Operator Configuration Manifest
 
 For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
 
@@ -877,6 +774,126 @@ The following fields can be configured:
 * `metricsSidecarResources` – this is used for all m2ee-metrics containers in the namespace
 * `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
+
+#### 6.3.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+
+The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
+
+The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
+
+{{% alert color="warning" %}}
+The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
+{{% /alert %}}
+
+Let us now analyze the `liveness probe` section from the application deployment example, above:
+
+```yaml
+livenessProbe:
+  failureThreshold: 3
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  initialDelaySeconds: 60
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 1
+```
+
+The following fields can be configured:
+
+* `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
+* `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
+* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
+* `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
+* `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
+
+{{% alert color="info" %}}
+If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
+{{% /alert %}}
+
+#### 6.3.3 Customize Startup Probes for Slow Starting Applications
+
+If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
+
+A startup probe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startup probe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. Startup probes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startup probe that hasn't yet succeeded.
+
+You can see an example of a startup probe configuration below:
+
+```yaml
+startupProbe:
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  failureThreshold: 30
+  periodSeconds: 10
+```
+
+In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's [restartPolicy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy).
+
+{{% alert color="info" %}}
+If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
+
+Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
+{{% /alert %}}
+
+#### 6.3.4 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
+
+Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
+
+```yaml {linenos=false}
+terminationGracePeriodSeconds: 300
+```
+
+{{% alert color="info" %}}
+The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+{{% /alert %}}
+
+#### 6.3.5 Customize Container Resources: Memory and CPU
+
+Let us now analyze the `resources` section from the example application deployment, above:
+
+```yaml
+resources:
+  limits:
+    cpu: 1
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 512Mi
+```
+
+This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
+
+The settings in the example above mean that
+
+* the container will always receive at least the resources set in `requests`
+* if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
+* a container will never be granted more than its resource `limits`
+
+##### 6.3.5.1 Meaning of CPU
+
+Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
+
+Fractional requests are allowed. For instance, in this example, we are requesting `100m`, which can be read as *one hundred millicpu*, and limiting to a maximum of `1` CPU (1000m).
+
+A precision finer than 1m is not allowed.
+
+##### 6.3.5.2 Meaning of Memory
+
+Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
+
+For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
+
+{{% alert color="warning" %}}
+Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
+{{% /alert %}}
+
 
 ### 6.4 Customize Runtime Metrics {#customize-runtime-metrics}
 
@@ -1531,7 +1548,7 @@ This tab shows information on the versions of the various components installed i
 
 #### 7.2.8 Customization
 
-This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers.
+This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers and product type for the PCLM License.
 
 Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
@@ -1546,6 +1563,14 @@ If you want to use the secret store for custom runtime settings or MxApp constan
 {{% /alert %}}
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
+
+In case PCLM is configured, the default value for the product type of a Runtime licenses is set to **standard**. However, if the PCLM Runtime license imported in the license server are set as something other than **standard**, the value can be configured here. The value of Product type of the Runtime license can be checked under **PCLM Statistics** page by selecting **Runtime** under **Select type**.
+
+{{% alert color="info" %}}
+Make sure to enter the exact value of the product type as specified in the product type of the runtime license in PCLM Statistics page.
+{{% /alert %}}
+
+The value of product type configured in this page will be propogated to all the environments under this namespace and the associated environments will pick up the license of this product type.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 

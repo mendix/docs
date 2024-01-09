@@ -11,6 +11,20 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### January 11, 2024
+
+#### New Global Operator Installation Method
+* Introducing a streamlined approach to installing the Operator within a namespace. With the Global Operator Installation, users only need to install a single global Operator and Agent to efficiently manage applications across various namespaces. Please consult the Global Operator Installation documentation for further details.
+
+#### Portal Improvements
+
+* In Namespace details and Environment details pages, a new option has been added to configure the Product type for Runtime License.
+* Addressed an issue on the PCLM statistics page where users encountered difficulty navigating to the license list when it exceeded 100 licenses in the portal.
+* Added a warning on the Namespace Customization page to let you know that the Ingress annotation will still be kept in the Ingress object even if it's removed from the portal.
+* Implementation of a feature to automatically remove deployment packages that have been inactive for more than 2 weeks.
+
 ## 2023
 
 ### December 8th, 2023

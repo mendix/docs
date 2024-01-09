@@ -72,6 +72,10 @@ Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"statu
 
 The following sections of this document contain sample usage scenarios for the API.
 
+{{% alert color="info" %}}
+The inputs in the api requests are case sensitive, hence, ensure that the input requests is in lowercase.
+{{% /alert %}}
+
 ### 3.1 Using the API to Build, Download and Delete a Deployment Package
 
 The following steps will create a deployment package, retrieve it, refresh its `URL`, download it, delete it and, in the end, list all available deployment packages of an application.

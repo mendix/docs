@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
+Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
 ## 2 Search Using the API {#search-api}
 

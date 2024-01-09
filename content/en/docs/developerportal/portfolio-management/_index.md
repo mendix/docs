@@ -375,7 +375,7 @@ The list contains the following information:
 
 #### 3.2.5 Planning View {#planning-view}
 
-The planning view gives you a clear visual representation of initiatives on a timeline to assist you with planning, coordination, and decision-making. Initiatives in this view are sorted by their go-live date. You can see maximum one years back and two years ahead from the current date.
+The planning view gives you a clear visual representation of initiatives on a timeline to assist you with planning, coordination, and decision-making. Initiatives in this view are sorted by their go-live date. You can see maximum one year back and two years ahead from the current date.
 
 {{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
 
@@ -384,7 +384,7 @@ The view contains the following information:
 * Initiative Name – Clicking this opens a side pane that shows initiative details.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows the dates of these days in a tooltip:
+* Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
 * Today Indicator (the vertical blue line) – This indicates the date of today.

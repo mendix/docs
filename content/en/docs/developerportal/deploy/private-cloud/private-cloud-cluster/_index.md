@@ -1210,7 +1210,7 @@ Once you enable the **Use custom core resources plans** button, you cannot switc
 
 #### 7.2.6 Installation
 
-The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
+The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
 #### 7.2.7 Additional Information
 

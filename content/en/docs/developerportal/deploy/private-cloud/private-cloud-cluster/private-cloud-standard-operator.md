@@ -93,7 +93,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
-    {{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
+    {{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](developerportal/deploy/private-cloud-cluster/#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
 
     You will see the configuration options on the screen and will be guided through filling in the information needed.
 

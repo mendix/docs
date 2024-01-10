@@ -57,7 +57,7 @@ The current scope of the connector is limited to text and image generation use c
 
 ### 1.4 Prerequisites 
 
-* You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to [Azure OpenAI](https://oai.azure.com/). 
+You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to [Azure OpenAI](https://oai.azure.com/). 
 
 ### 1.5 Dependencies 
 
@@ -380,11 +380,12 @@ This enumeration provides a list of message author roles.
 
 #### 4.2.4 `ENUM_ResponseFormat_Chat` {#enum-responseformat-chat} 
 
-This enumeration provides a list of supported response types for chat completions images. Currently completions can be returned in normal text format (supported for all chat completions models available in the connector), as well as in JSON mode for [specific models](https://platform.openai.com/docs/guides/text-generation/json-mode).
+This enumeration provides a list of supported response types for chat completions. Currently chat completions can be returned in normal text format (supported for all chat completions models available in the connector), as well as in JSON mode for [specific models](https://platform.openai.com/docs/guides/text-generation/json-mode).
 
 | Name | Caption | 
 | --- | --- | 
 | `json_object` | **JSONObject** |
+| `text` | **Text** |
 
 #### 4.2.5 `ENUM_Model_ImageGenerations` {#enum-model-images} 
 
@@ -448,7 +449,7 @@ The chat completions API from OpenAI accepts a complex JSON structure that consi
 
 ##### 4.3.1.1 Call Chat Completions API (Without History) {#chat-completions-without-history-technical} 
 
-Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with string input and output not considering a previous conversation. See [ENUM_Role](#enum-role) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. For certain models it is possible to force the assistant response to be a valid JSON structure using the optional `ENUM_ResponseFormat_Chat` [parameter](#enum-responseformat-chat); if no value is specified, the default value as specified by the OpenAI documentation will be assumed in the API. 
+Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with string input and output not considering a previous conversation. See [ENUM_Role](#enum-role) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. For certain models it is possible to force the assistant response to be a valid JSON structure using the optional `ENUM_ResponseFormat_Chat` [parameter](#enum-responseformat-chat); if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. 
 
 | Input | Output | 
 | --- | --- | 
@@ -456,7 +457,7 @@ Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple c
 
 ##### 4.3.1.2 Call Chat Completions API (with History) {#chat-completions-with-history-technical}
 
-Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [ChatCompletionsSession](#chatcompletionssession) input and a string output of the assistant response. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. For certain models it is possible to force the assistant response to be a valid JSON structure using the optional `ENUM_ResponseFormat_Chat` [parameter](#enum-responseformat-chat); if no value is specified, the default value as specified by the OpenAI documentation will be assumed in the API.
+Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [ChatCompletionsSession](#chatcompletionssession) input and a string output of the assistant response. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. For certain models it is possible to force the assistant response to be a valid JSON structure using the optional `ENUM_ResponseFormat_Chat` [parameter](#enum-responseformat-chat); if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API.
 
 | Input | Output | 
 | --- | --- | 

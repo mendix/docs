@@ -3,14 +3,14 @@ title: "OpenAI"
 url: /appstore/connectors/openai-connector 
 linktitle: "OpenAI"
 weight: 
-description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace. OpenAI provides market-leading large language model capabilities with GPT-4."
+description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
 tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI"] 
 draft: false 
 ---
 
 ## 1 Introduction 
 
-The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) is the Mendix connector for OpenAI's ChatGPT (GPT-3.5 and GPT-4) and DALL-E, which are powered by APIs and large language models (LLMs). This connector allows you to integrate generative AI into your Mendix app. The connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
+The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) is the Mendix connector for OpenAI's ChatGPT (GPT-3.5 and GPT-4) and DALL-E, which are powered by large language models (LLMs). This connector allows you to integrate generative AI into your Mendix app. The connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
 The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat) for both platforms, with an additional image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images); DALL-E is currently only supported from OpenAI; Azure OpenAI only shows it in preview mode.
 
@@ -40,7 +40,7 @@ OpenAI provides market-leading large language model capabilities with GPT-4:
   
 #### 1.1.2 Image Generation
 
-Generate one or more completely new, original images and art from a text description. Powered by the OpenAI DALL-E API, the connector enables developers to generate these images by combining concepts, attributes, and styles.
+Generate one or more completely new, original images and art from a text description. Powered by the OpenAI DALL-E models, the connector enables developers to generate these images by combining concepts, attributes, and styles.
 
 {{% alert color="info" %}}
 You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for use cases.

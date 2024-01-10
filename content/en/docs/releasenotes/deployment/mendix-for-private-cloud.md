@@ -13,10 +13,10 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
-### January 11, 2024
+### January 14, 2024
 
 #### New Global Operator Installation Method
-* Introducing a streamlined approach to installing the Operator within a namespace. With the Global Operator Installation, users only need to install a single global Operator and Agent to efficiently manage applications across various namespaces. Please consult the Global Operator Installation documentation for further details.
+* Introducing a streamlined approach to installing the Operator within a namespace. With the Global Operator Installation, users only need to install a single global Operator and Agent to efficiently manage applications across various namespaces. Please consult the Global Operator Installation documentation for further details. The Global Operator is still under beta phase, hence functionalities such as PCLM are not fully supported on portal side.
 
 #### Portal Improvements
 

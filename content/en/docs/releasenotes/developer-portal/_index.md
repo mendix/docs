@@ -15,6 +15,14 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### January 11, 2024
+
+#### Improvements
+
+* As you already know, we have replaced Mendix Stories with our new agile planning tool, [Epics](/developerportal/project-management/epics/). Some of you had a lot of stories to export, so we added the option to export data from the [Story Archive](/developerportal/collaborate/general-settings/#story-archive) in batches. Please make sure to export everything you would like to keep until 1 October 2024. After that, we'll start deleting old data in accordance with our data retention policy.
+
 ## 2023
 
 ### December 14

@@ -9,10 +9,6 @@ tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 
 ## 1 Introduction 
 
-{{% alert color="warning"%}}
-Currently, the availability of MendixChat is limited to Europe and APAC. It will be available worldwide by January 12, 2024.
-{{% /alert %}}
-
 {{% alert color="info"%}}
 MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Preview Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
 

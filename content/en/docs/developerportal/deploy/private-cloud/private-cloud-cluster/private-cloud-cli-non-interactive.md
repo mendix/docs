@@ -14,7 +14,7 @@ To support automation namespace installation and configuration we provide a non-
 
 {{% alert color="info" %}} To use non-interactive mode, you need Mendix Operator version 2.1.0 or above.{{% /alert %}}
 
-Please see [Download the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool) for information on how to download the configuration tool.
+Please see [Download the Configuration Tool](/developerportal/deploy/standard-operator/#download-configuration-tool) for information on how to download the configuration tool.
 
 {{% alert color="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
@@ -33,7 +33,7 @@ When using connected mode, you need to put namespace id and namespace secret as 
 
 ## 2 Base Installation
 
-To perform the [base installation](/developerportal/deploy/private-cloud-cluster/#base-installation), use the following command:
+To perform the [base installation](/developerportal/deploy/standard-operator/#base-installation), use the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>

@@ -92,7 +92,7 @@ In the section [Running the Configuration Tool](/developerportal/deploy/standard
 
 ### 6.1 Base Installation
 
-With the `--registry` flag set, follow the instructions in the [Base Installation](/developerportal/deploy/private-cloud-cluster/#base-installation) section of *Creating a Private Cloud Cluster*.
+With the `--registry` flag set, follow the instructions in the [Base Installation](/developerportal/deploy/standard-operator/#base-installation) section of *Creating a Private Cloud Cluster*.
 
 ### 6.2 Configure Namespace
 

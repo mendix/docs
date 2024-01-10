@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-You can use the Catalog to search for and consume registered OData services. You can also register new services and curate your own services.
+You can use the Catalog to search for and consume registered OData and OpenAPI services. You can also register new services and curate your own services.
 
 Specifically, you can use the Catalog to do the following: 
 

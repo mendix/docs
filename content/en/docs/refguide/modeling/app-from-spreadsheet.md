@@ -119,7 +119,7 @@ Open the domain model to see the created entities and attributes:
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/domain-model-example.jpg"   width="650"  >}}
 
-You can now preview your app by running it locally (the play icon at the top) and test the app.
+You can now preview your app and test it out by clicking **Run Locally** ({{% icon name="controls-play" %}}).
 
 ### 4.3 Generating Pages {#generating-pages}
 

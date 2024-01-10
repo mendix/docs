@@ -55,7 +55,7 @@ Follow these steps to install and run the Company Expenses app:
 
     {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/download.png" >}}
 
-5. Click the play button (**Run Locally**), then **View App**.
+5. Click **Run Locally** ({{% icon name="controls-play" %}}), then **View App**.
 
 ## 4 Create Your First Automated Test
 

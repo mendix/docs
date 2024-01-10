@@ -129,8 +129,9 @@ In principle, you have to follow the description of how to create a [Custom Deve
 
 ### 2.4 Try out your application
 
-You should now be ready to start your application for the very first time on your mobile phone. For this, click the **Run Locally** button so that your own native application can connect to your Mendix Studio Pro.
-When your application is running you should see the login page of the Anonymous user role.
+You should now be ready to start your application for the very first time on your mobile phone. For this, click **Run Locally** ({{% icon name="controls-play" %}}) so that your own native application can connect to your Mendix Studio Pro.
+
+When your application is running, you will see the login page of the Anonymous user role.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/MobileLoginPage.png" alt="Mobile" >}}
 

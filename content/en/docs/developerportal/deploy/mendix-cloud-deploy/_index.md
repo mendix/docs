@@ -202,9 +202,9 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected"  width=60% >}}
 
-* Alternatively, in the top bar of Studio Pro, click **Run** (▶) or **Publish**.
+* Alternatively, in the top bar of Studio Pro, click **Publish**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" width=20% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" width=20% >}}
 
 ## 3 Status of Deployment
 

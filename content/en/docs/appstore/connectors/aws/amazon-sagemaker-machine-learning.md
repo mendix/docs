@@ -38,7 +38,7 @@ To start using SageMaker Studio, perform the following steps:
 6. Select **ipykernel** as the kernel.
 7. Run the notebook to execute the code.
     1. Put the cursor at the first line.
-    2. Click the **Play** icon on top, and then click it again to run the model training and create the ONNX file. You only need to execute the first two sections, as shown in the following figure:
+    2. Click **Run** ({{% icon name="controls-play" %}}) on top, and then click it again to run the model training and create the ONNX file. You only need to execute the first two sections, as shown in the following figure:
 
         {{< figure src="/attachments/appstore/connectors/aws-sagemaker/file-contents.png" alt="The file contents">}}
 
@@ -142,7 +142,7 @@ After creating the ONNX model file, import it into Mendix Studio Pro by doing th
 
     {{< figure src="/attachments/appstore/connectors/aws-sagemaker/pages.png" alt="The default page and home page highlighted">}}
 
-16. Click the **Run** icon in the upper right corner to run the project. Once it is ready, click the **View App** button to go to the local application.
+16. Click **Run Locally** ({{% icon name="controls-play" %}}) in the upper right corner to run the project. Once it is ready, click **View App** to go to the local application.
 
     {{< figure src="/attachments/appstore/connectors/aws-sagemaker/run-app.png" alt="The Run and View App options">}}
 

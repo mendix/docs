@@ -200,7 +200,7 @@ When switching between Ingress, OpenShift Routes, and Service Only, you need to 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](#advanced-network-settings).
+Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings).
 {{% /alert %}}
 
 #### 4.2.4 Registry {#registry}

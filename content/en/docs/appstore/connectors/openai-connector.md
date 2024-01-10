@@ -10,7 +10,7 @@ draft: false
 
 ## 1 Introduction 
 
-The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) is the Mendix connector for the APIs & large language models (LLMs) powering OpenAI's ChatGPT: GPT-3.5, GPT-4 and DALL-E. It allows you to integrate generative AI into your Mendix app. This connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
+The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) is the Mendix connector for OpenAI's ChatGPT (GPT-3.5 and GPT-4) and DALL-E, which are powered by APIs and large language models (LLMs). This connector allows you to integrate generative AI into your Mendix app. The connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
 The current scope is limited to text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat) for both platforms, with an additional image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images); DALL-E is currently only supported from OpenAI; Azure OpenAI only shows it in preview mode.
 
@@ -359,7 +359,7 @@ This enumeration provides a list of supported API types.
 
 This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/text-generation) for the Chat Completions API. The OpenAI Connector only supports newer models (2023+), legacy models, and updated legacy models are not supported. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI).
 
-{{% alert color="info" %}}The captions are in this case the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
+{{% alert color="info" %}}In this case, the captions are the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
 
 | Name | Caption | 
 | --- | --- | 
@@ -390,7 +390,7 @@ This enumeration provides a list of supported response types for chat completion
 
 This enumeration provides a list of [supported models](https://platform.openai.com/docs/guides/images) for the Image Generations API. The OpenAI Connector currently supports two models. This enumeration is only applicable for configurations or API calls to OpenAI (not Azure OpenAI). The specific operations that are supported per model are described by OpenAI and the list may change in the future.
 
-{{% alert color="info" %}}The captions are in this case the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
+{{% alert color="info" %}}In this case, the captions are the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
 
 | Name | Caption | 
 | --- | --- | 
@@ -419,7 +419,7 @@ This enumeration provides a list of supported response types for generated image
 
 This enumeration provides a list of supported pixel dimensions for the generated images. It depends on the model which options are supported.
 
-{{% alert color="info" %}}The captions are in this case the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
+{{% alert color="info" %}}In this case, the captions are the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters.{{% /alert %}}
 
 | Name | Caption | 
 | --- | --- | 
@@ -446,7 +446,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. 
 
-##### 4.3.1.1 Call Chat Completions API (without History) {#chat-completions-without-history-technical} 
+##### 4.3.1.1 Call Chat Completions API (Without History) {#chat-completions-without-history-technical} 
 
 Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with string input and output not considering a previous conversation. See [ENUM_Role](#enum-role) for the difference between `UserPrompt` and `SystemPrompt`. It is not required to provide a `SystemPrompt` string and a `ENUM_Model_ChatCompletions` value. If no model is provided, the `ModelDefaultChat` value from the [Configuration](#configuration-entity) will be used in the call. For certain models it is possible to force the assistant response to be a valid JSON structure using the optional `ENUM_ResponseFormat_Chat` [parameter](#enum-responseformat-chat); if no value is specified, the default value as specified by the OpenAI documentation will be assumed in the API. 
 

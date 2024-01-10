@@ -57,7 +57,7 @@ The current scope of the connector is limited to text and image generation use c
 
 ### 1.4 Prerequisites 
 
-You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to [Azure OpenAI](https://oai.azure.com/). 
+You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
 
 ### 1.5 Dependencies 
 

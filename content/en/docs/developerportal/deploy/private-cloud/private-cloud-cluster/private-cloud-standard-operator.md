@@ -93,7 +93,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
-    {{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](developerportal/deploy/private-cloud-cluster/#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
+    {{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](/developerportal/deploy/private-cloud-cluster/#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
 
     You will see the configuration options on the screen and will be guided through filling in the information needed.
 
@@ -196,7 +196,7 @@ See the [Blob storage plans](/developerportal/deploy/private-cloud-storage-plans
 This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
 
 {{% alert color="info" %}}
-When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
 {{% alert color="info" %}}

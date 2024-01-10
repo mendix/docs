@@ -9,11 +9,13 @@ tags: ["studio pro", "integration activity", "Send REST request"]
 
 The **Send REST request (beta)** activity allows you to send a REST request, which is configured in a [Consumed REST Service (beta) document]( /refguide/consumed-rest-services-beta/).
 
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/rest-microflow.png" >}}
+
 ## 2 Properties 
 
 Double-click the **Send REST request (beta)** activity to view its properties:
 
-
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/send-request.png" >}}
 
 The following are the properties in the **Input** section:
 

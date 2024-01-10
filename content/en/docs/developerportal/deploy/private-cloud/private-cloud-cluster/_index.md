@@ -1142,7 +1142,7 @@ From this page you can see a summary of your clusters with all their namespaces 
 
 Here you can perform the following actions on the entire cluster:
 
-* Delete the cluster by clicking the delete icon
+* Delete the cluster by clicking **Delete** ({{% icon name="trash-can" %}})
 * Rename the cluster or edit its description by clicking the edit icon
 * Invite another cluster manager
 
@@ -1187,7 +1187,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 
 See the sections below for more information.
 
-You can also delete your namespace from the cluster manager by clicking the delete icon in the top right.
+You can also delete your namespace from the cluster manager by clicking **Delete Namespace** ({{% icon name="trash-can" %}}) in the top right.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png" >}}
 

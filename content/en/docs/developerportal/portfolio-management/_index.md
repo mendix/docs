@@ -163,8 +163,8 @@ To edit an existing tag, do as follows:
 
 To delete an existing tag, do as follows:
 
-1. Hover over the row where the tag is listed, a delete icon (red trash can) appears at the end of the row.
-2. Click the delete icon. The **Confirmation** dialog box opens.
+1. Hover over the row where the tag is listed. A **Delete** button ({{% icon name="trash-can" %}}) appears at the end of the row.
+2. Click **Delete**. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
 #### 3.1.3 Linking Epics to an Initiative {#link-epics}
@@ -184,7 +184,7 @@ To link epics to an initiative, do as follows:
 Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
 
 {{% alert color="info" %}}
-To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the delete icon that appears at the end of the row.
+To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the **Delete** button ({{% icon name="trash-can" %}}) that appears at the end of the row.
 {{% /alert %}}
 
 Now you can proceed to [add planning information](#add-planning-information).

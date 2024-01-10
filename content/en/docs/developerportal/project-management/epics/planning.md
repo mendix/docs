@@ -178,11 +178,11 @@ When you click **...** on the upper-right corner of the **Planning** page, and s
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
-To add a tag, click **+Add Tag**, enter the name,  select a color, and then click the save icon to save it.
+To add a tag, click **+Add Tag**, enter the name,  select a color, and then click **Save** {{% icon name="checkmark-circle" %}} to save it.
 
-To rename a tag, double click the tag name, change the name in the text box, and then click outside the text box to save it.
+To rename a tag, double-click the tag name, change the name in the text box, and then click outside the text box to save it.
 
-To delete a tag, hover over the row of the tag, and then click the delete icon that appears at the end of the row.
+To delete a tag, hover over the row of the tag, and then click the **Cancel** button ({{% icon name="remove" %}}) that appears at the end of the row.
 
 To change the tag color, click the current color, and then select the new color from the dialog box.
 

@@ -198,6 +198,6 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   To delete an existing tag, do as follows:
 
-  1. Hover over the row where the tag is listed, a delete icon (red trash can) appears at the end of the row.
-  2. Click the delete icon. The **Confirmation** dialog box opens.
+  1. Hover over the row where the tag is listed. A **Delete** button ({{% icon name="trash-can" %}})appears at the end of the row.
+  2. Click **Delete**. The **Confirmation** dialog box opens.
   3. Click **Delete Tag**.

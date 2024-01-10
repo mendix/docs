@@ -135,7 +135,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
 * **Assigned To** – This shows to whom the feedback item is assigned. When you assign the feedback item to someone,  they will get an email notification.
 
-* **Status** – This is the status of the feedback item. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. When you close a feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking the settings icon and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback items based on the status.
+* **Status** – This is the status of the feedback item. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. When you close a feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback items based on the status.
 
 * **Summary** – This is the summary of the feedback item. Only your team members can see this summary.
 
@@ -180,7 +180,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
   
 #### 2.3.1 Managing Tags {#manage-tags}
 
-  From the [feedback details](#feedback-details) page, you can manage tags by clicking the settings icon next to the **Tags** text box:
+  From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" >}}
 

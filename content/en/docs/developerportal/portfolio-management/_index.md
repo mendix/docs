@@ -141,7 +141,7 @@ Now you can proceed to [link Epics to your initiative](#link-epics).
 
 While you are in the process of [adding general information](#add-general-information), you can manage tags as follows:
 
-In the **Edit Initiative** side pane, click the settings icon next to the **Tags** text box.
+In the **Edit Initiative** side pane, click **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box.
 
 {{< figure src="/attachments/developerportal/portfolio-management/manage-tags.png" >}}
 

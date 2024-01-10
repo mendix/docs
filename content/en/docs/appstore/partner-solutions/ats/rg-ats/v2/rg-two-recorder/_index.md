@@ -17,7 +17,7 @@ Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where 
 
 ## 3 Using the ATS Desktop Recorder
 
-Before you can use the ATS Desktop Recorder, you must set your project preferences to the Desktop Recorder. You can open the project preferences from any page by clicking the cog icon:
+Before you can use the ATS Desktop Recorder, you must set your project preferences to the Desktop Recorder. You can open the project preferences from any page by clicking **Preferences** ({{% icon name="cog" %}}):
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-recorder/configure-project-preferences.png" >}}
 

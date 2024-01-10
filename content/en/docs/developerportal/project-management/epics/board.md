@@ -93,7 +93,7 @@ The story details dialog box shows the following items:
 
 * **Tags** – You can add or remove tags.
     * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
+    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
     
 * **Story Points** – You can set the story points to an integer.
 

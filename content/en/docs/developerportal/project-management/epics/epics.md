@@ -43,7 +43,7 @@ The epic details dialog box shows the following items:
 * **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
 * **Tags** – You can add or remove tags.
     * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**
-    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
+    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
 
 * **Attachments** – You can add attachments by clicking **+**.
 * **Stories** – This shows the open stories that are linked to this epic.

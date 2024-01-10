@@ -292,11 +292,11 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.14 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
-This is an image generations request that creates a model response including generated image(s) for the given prompt. 
+This is an image generations request that creates a model response including generated image (or images) for the given prompt. 
 
 | Attribute | Description |
 | ---| --- |
-| `Prompt` | This is the prompt that is used by the model to generate the image(s). |
+| `Prompt` | This is the prompt that is used by the model to generate the image (or images) . |
 | `Model` | The model to use for image generation. Its default value is`dall-e-2`. <br />For more information, see the [ENUM_Model_ImageGenerations](#enum-model-images) section. |
 | `N` | The number of images to generate. The value must be between 1 and 10. For `dall-e-3`, only n=1 is supported. This attribute is optional. |
 | `Quality` | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `standard`.<br />For more information, see the [ENUM_Quality](#enum-quality) section. |

@@ -338,7 +338,7 @@ If Mendix for Private Cloud needs to communicate with external services, some of
 In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
 
 {{% alert color="info" %}}
-For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
+When Global Operator is in use, every managed namespace will have its own, local configuration, and can be configured individually. Most of configuration from the Global Operator namespace will not be used for managed namespaces.
 {{% /alert %}}
 
 
@@ -485,6 +485,9 @@ When using **Ingress** for network endpoints:
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
 spec:
   # Endpoint (Network) configuration
   endpoint:
@@ -523,6 +526,9 @@ spec:
       path: "/"
       # Optional, can be omitted : specify the Ingress pathType
       pathType: ImplementationSpecific
+# ...
+# omitted lines for brevity
+# ...      
 ```
 
 When using **OpenShift Routes** for network endpoints:
@@ -634,10 +640,16 @@ Below is an example of the Deployment definition of an app. In this example, the
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
+# ...
+# omitted lines for brevity
+# ...
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 0
+  # ...
+  # omitted lines for brevity
+  # ...
   template:
     metadata:
       # ...
@@ -705,14 +717,20 @@ spec:
           requests:
             cpu: 100m
             memory: 512Mi
+# ...
+# omitted lines for brevity
+# ...    
 ```
 #### 6.3.1 Resource Definition via Operator Configuration Manifest
 
-For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
+For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below. Kindly note that the below configuration is just for reference puropose. 
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
 spec:
   sidecarResources:
     limits:
@@ -843,7 +861,8 @@ The `terminationGracePeriodSeconds` setting is available in the Mendix for Priva
 
 #### 6.3.5 Customize Container Resources: Memory and CPU
 
-Let us now analyze the `resources` section from the example application deployment, above:
+Let us now analyze the `resources` section from the example application deployment, above. Kindly note that below configuration is just for reference purpose.
+
 
 ```yaml
 resources:

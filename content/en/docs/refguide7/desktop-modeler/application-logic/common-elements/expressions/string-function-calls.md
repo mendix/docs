@@ -122,7 +122,7 @@ returns:
 'my'
 ```
 
-If this third parameter is too big, the function will throw an error saying it is out of range. You can specify the value of the third parameter using the `length` function:
+If this third parameter is too big, the function will throw an error saying it is out of range. To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
 
 ```java {linenos=false}
 substring('thisismystring', 0, min(length('thisismystring'), 20))

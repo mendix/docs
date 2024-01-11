@@ -124,8 +124,8 @@ returns:
 
 If this third parameter is too big, the function will throw an error saying it is out of range. You can specify the value of the third parameter using the `length` function:
 
-```java
-substring('thisismystring', 0, length('thisismystring'))
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

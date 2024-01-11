@@ -78,7 +78,7 @@ The prerequisites are the following:
     | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
-* For Mendix Studio Pro 9.24.0 and above – [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
+* For Mendix Studio Pro 9.24.0 and above – [Gradle 7.6 or above](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
@@ -103,7 +103,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
-    * The Gradle zip file should be named *gradle-7.6-bin.zip*
+    * The Gradle zip file should be named *gradle-7.6.3-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 

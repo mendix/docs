@@ -91,7 +91,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 15. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 16. Click **OK**, and then click **OK** again.
 17. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
-18. Drag the the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
+18. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
 19. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 20. Double-click the **ListTables** activity and configure the **Credentials** parameter by doing the following steps:
 

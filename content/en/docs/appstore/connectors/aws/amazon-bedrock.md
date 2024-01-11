@@ -74,10 +74,10 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
-8. For the **Credentials** parameter, provide a **Credentials Object** from the AWS Authentication connector:
-    1. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **Generate Credentials** action.
-    2. Drag the **Generate Credentials** to the beginning of your microflow.
-    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
+8. For the **Credentials** parameter, provide a **Credentials** object from the AWS Authentication connector:
+    1. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** or **GetTemporaryCredentials** action.
+    2. Drag the the one you would like to use to the beginning of your microflow.
+    3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
 10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
@@ -130,7 +130,72 @@ This is the response entity of the `InvokeModelGeneric` action.
 | `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved.|
 | `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model.|
 
-#### 4.1.6 RetrieveAndGenerateRequest {#retrieveandgeneraterequest}
+#### 4.1.6 RetrieveRequest {#retrieverequest}
+
+This is the request entity of the `Retrieve` action.
+
+| Attribute | Description |
+| --- | --- |
+| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter.|
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
+
+#### 4.1.7 RetrievalConfiguration {#retrievalconfiguration}
+
+The `RetrievalConfiguration` entity holds information about how the results should be returned.
+
+| Attribute | Description |
+| --- | --- |
+| `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return.|
+
+#### 4.1.8 RetrievalQuery {#retrievalquery}
+
+The `RetrievalQuery` entity holds information about the query made to the knowledge base.
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | The `Text` attribute describes the text of the query made to the knowledge base.|
+
+#### 4.1.9 RetrieveResponse {#retrieveresponse}
+
+This is the response entity of the `Retrieve` action.
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
+
+#### 4.1.10 RetrievalResult {#retrievalresult}
+
+The `RetrievalResult` entity holds information about the query made to the knowledge base.
+
+| Attribute | Description |
+| --- | --- |
+| `Score` | The `Score` attribute describes the level of relevance of the result to the query.|
+
+#### 4.1.11 Content {#content}
+
+The `Content` entity holds information about the cited text from the data source.
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | The `Text` attribute describes the cited text from the data source.|
+
+#### 4.1.12 Location {#location}
+
+The `Location` entity holds information about the location of the data source.
+
+| Attribute | Description |
+| --- | --- |
+| `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source.|
+
+#### 4.1.13 S3Location {#s3location}
+
+The `S3Location` entity holds information about the S3 location of the data source.
+
+| Attribute | Description |
+| --- | --- |
+| `URI` | The `URI` attribute describes the S3 URI of the data source.|
+
+#### 4.1.14 RetrieveAndGenerateRequest {#retrieveandgeneraterequest}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -139,7 +204,7 @@ This is the request entity of the `RetrieveAndGenerate` action.
 | `InputText` | The `InputText` attribute describes the query made to the knowledge base and is a required parameter.|
 | `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.|
 
-#### 4.1.7 RetrieveAndGenerateConfiguration {#retrieveandgenerateconfiguration}
+#### 4.1.15 RetrieveAndGenerateConfiguration {#retrieveandgenerateconfiguration}
 
 The `RetrieveAndGenerateConfiguration` entity holds information about the resource being queried. 
 
@@ -149,7 +214,7 @@ The `RetrieveAndGenerateConfiguration` entity holds information about the resour
 | `ModelARN` | The `ModelARN` attribute describes the ARN of the foundation model used to generate a response and is a required parameter.|
 | `RetrieveAndGenerateType` | The `RetrieveAndGenerateType` attribute describes the type of resource that is queried by the request. Currently, the only supported value is 'KNOWLEDGE_BASE'.|
 
-#### 4.1.8 SessionConfiguration {#sessionconfiguration}
+#### 4.1.16 SessionConfiguration {#sessionconfiguration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.
 
@@ -157,7 +222,7 @@ The `SessionConfiguration` entity holds information about details of the session
 | --- | --- |
 | `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session.|
 
-#### 4.1.9 RetrieveAndGenerateResponse {#retrieveandgenerateresponse}
+#### 4.1.17 RetrieveAndGenerateResponse {#retrieveandgenerateresponse}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -166,11 +231,11 @@ This is the request entity of the `RetrieveAndGenerate` action.
 | `OutputText` | The `OutputText` attribute describes the response generated from querying the knowledge base.|
 | `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.|
 
-#### 4.1.10 Citation {#citation}
+#### 4.1.18 Citation {#citation}
 
 The `Citation` entitiy contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
-#### 4.1.11 GeneratedResponsePart {#generatedresponsepart}
+#### 4.1.19 GeneratedResponsePart {#generatedresponsepart}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.
 
@@ -180,7 +245,7 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 | `Start` | The `Start` attribute describes where the text with a citation starts in the generated output.|
 | `End` | The `End` attribute describes where the text with a citation ends in the generated output.|
 
-#### 4.1.12 RetrievedReference {#retrievedreference}
+#### 4.1.20 RetrievedReference {#retrievedreference}
 
 The `RetrievedReference` entitiy holds information about a sources cited for the generated response.
 
@@ -196,13 +261,13 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 4.2.1 List Foundation Models {#list-foundation-models}
 
-The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires a **Credentials** object, an `ENUM_Region` value (like **us_west_2**) and `ListFoundationModelsRequest` as input parameters.
+The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires `ENUM_Region`, `Credentials` and `ListFoundationModelsRequest` as input parameters.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Credentials (object)`, `ENUM_Region (enumeration)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
 
 #### 4.2.2 Invoke Model Generic {#invoke-model-generic}
 
@@ -214,19 +279,21 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
 
-#### 4.2.1 List Foundation Models {#list-foundation-models}
+#### 4.2.3 Retrieve {#retrieve}
 
-The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires a **Credentials** object, an `ENUM_Region` value (like **us_west_2**) and `ListFoundationModelsRequest` as input parameters.
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
+
+To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Credentials (object)`, `ENUM_Region (enumeration)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
-#### 4.2.3 Retrieve And Generate {#retrieve-and-generate}
+#### 4.2.4 Retrieve And Generate {#retrieve-and-generate}
 
 The `Retrieve And Generate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
 
@@ -236,7 +303,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `AWS_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
 
 ## 5 Troubleshooting
 

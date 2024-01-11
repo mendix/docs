@@ -41,10 +41,10 @@ Navigate to the **Pending Invites** tab for an overview of all sent and unaccept
 
 To invite new team members, follow these steps:
 
-1. Click **Invite Member** on the **Team** page or the **+** icon next to the team in the [app Buzz](/developerportal/general/buzz/#app-buzz).
-2. Enter the email address for the Mendix user(s) you want to invite to the team.
+1. Click **Invite Member** on the **Team** page or **Invite someone to your team** ({{% icon name="add-circle" %}}) next to the team in the [app Buzz](/developerportal/general/buzz/#app-buzz).
+2. Enter the email address for the Mendix user (or users) you want to invite to the team.
 3. Select an **Access Role** for the new member and click **Add**.
-4. Send the invitation(s).
+4. Send the invitation.
 
 {{% alert color="info" %}}If you invite a Mendix user from your company to an app owned by your company, the invited user is added directly to the app's team.{{% /alert %}}
 

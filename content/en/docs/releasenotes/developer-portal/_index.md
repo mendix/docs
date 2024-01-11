@@ -2,7 +2,7 @@
 title: "Developer Portal"
 url: /releasenotes/developer-portal/
 description: "Release notes for all project management parts of the Mendix Developer Portal"
-tags: ["developer portal", "buzz", "mendix profile"]
+tags: ["developer portal", "buzz"]
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -15,14 +15,27 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### January 11
+
+#### New Features
+
+We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
+
+* You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+* You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
+
 ## 2023
 
 ### December 14
 
 #### New Features
 
-*  In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
-*  In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
+
+* App team members now can assign priority to feedback items and filter feedback items by their priority.
+*  It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 
@@ -83,7 +96,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/developerportal/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -98,7 +111,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We have improved the formatting on all [Feedback](/developerportal/app-insights/feedback/) notifications.
-* In Academy, we now have a new user-friendly experience for taking the [Mendix Rapid Developer Exam](https://academy.mendix.com/link/rapiddeveloper).
 
 #### Fixes 
 
@@ -161,7 +173,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Deprecations
 
-* We have done all the preparation work for retiring Stories (remember it will happen on October 1). After that date, you will still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
+* We have done all the preparation work for retiring Stories (remember it will happen on October 1, 2023). After that date, you will still be able to go into Epics and migrate all your stories, comments, attachments, and more, but Stories will not be available for any app anymore.
 
 ### September 7, 2023
 
@@ -182,7 +194,7 @@ We have made the following improvements to the **Access Management** page in Por
 
     * In Feedback, we added a new filter called "status" on the **Inbox** page and the **Archive** page.
     * In Feedback, we introduced a tag called “Handled” for migrated feedback items that were already handled. You can search for feedback items using this tag on the Inbox page.
-    * We added documentation links on the home page of Feedback and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
+    * We added documentation links on the home page of **Feedback** and [Mini Surveys](/developerportal/app-insights/mini-surveys/).
 
 #### Improvements
 
@@ -224,7 +236,7 @@ We have made the following improvements to the **Access Management** page in Por
 
     * Enables easy configuration of a survey questionnaire with up to three questions in any desired format
     * Allows you to tailor the survey setup to specify its display location, trigger timing, and target user group
-    * Support defining the duration of the survey
+    * Supports defining the duration of the survey
     * Offers the toaster feature for you to designate the survey's on-screen placement
     * Allows you to select your preferred survey format from options including rating scales, multiple choices, open questions, and net promoter score (NPS)
     * Supports recording all survey responses, even if a customer does not complete the entire survey
@@ -273,11 +285,6 @@ We have made the following improvements to the **Access Management** page in Por
 * To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in Epics works a bit differently than before: the navigation items are on a pane on the left now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another. (If you need more space on the screen, you can always collapse the navigation pane.)
 * Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
-* We introduced a Mendix Profile recovery email address option that allows you to prove ownership of a profile during the profile merge process. You can provide a non-business email address for this.
-
-#### Improvements
-
-* We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
 
 ### June 22, 2023
 
@@ -315,11 +322,11 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We changed the default app logo.
 
-### May 16, 2023{#byoidp}
+### May 16, 2023 {#byoidp}
 
 #### New Features
 
-* You can now use a [Personal Access Token](/developerportal/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
+* You can now use a [Personal Access Token](/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
 
@@ -376,7 +383,6 @@ We have made the following improvements to the **Access Management** page in Por
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.
 * The navigation pane is now collapsible, which makes for a far better experience on small screen resolutions.
-* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
 
 ### March 16, 2023
@@ -390,7 +396,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * As of now, only Scrum Masters can [manage the app team](/developerportal/general/team/#managing).
-* We simplified the way your [Notification](/developerportal/community-tools/mendix-profile/#notifications) settings are stored.
 
 #### Fixes
 
@@ -401,7 +406,6 @@ We have made the following improvements to the **Access Management** page in Por
 #### Fixes
 
 * We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/general/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
-* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile).
 
 ### February 16, 2023
 
@@ -421,10 +425,8 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
 * Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
-* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
 * We simplified the [team member invitation](/developerportal/general/team/#inviting) flow from a multi-step wizard to a single page.
 * We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
-* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
 
 #### Fixes
 
@@ -462,18 +464,12 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability!
-
-  We made the following improvements:
+* We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability! We made the following improvements:
 
     * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
-
     * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
-
     * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
-
     * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
-
     * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
 
   From this point on, Epics is the default project management tool for all new apps.
@@ -563,9 +559,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* We have changed the password reset flow:
-    * You can no longer update your password from your Mendix Profile.
-    * All password resets and changes are now done via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen. This will send a password reset link to your registered email address.
 * We introduced a separate session duration of one hour for users logging into the platform using SSO with their companies BYOIDP, so session management can be better controlled by their IDP.
 
 ### August 11, 2022
@@ -574,12 +567,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We simplified the process of [inviting other users](/developerportal/general/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
 * We added a banner about [Epics](/developerportal/project-management/epics/), our new tool for Agile planning, on the **Stories** page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.
-
-### August 9, 2022
-
-#### New Features
-
-* We released [Notifications](/developerportal/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21, 2022
 
@@ -598,7 +585,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We removed the profile buzz page.
 * We made some small improvements to the **General Settings** page.
 
 ### July 7, 2022
@@ -634,7 +620,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed an issue where users with an invalid Twitter URL in the **Social** section of their Mendix Profile Settings could not change their password.
 * We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal.
 
 ### June 9, 2022
@@ -657,7 +642,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a known issue where not all app images were displayed correctly on the [My Apps](/developerportal/#my-apps) page. (Ticket 148379)
+* We fixed a [known issue](#april-ki) where not all app images were displayed correctly on the [My Apps](/developerportal/#my-apps) page. (Ticket 148379)
 
 ### April 21, 2022
 
@@ -665,20 +650,10 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We removed the old Stories UI in preparation for a brand new Mendix tool for Agile project management that will eventually replace **Stories** completely – stay tuned!
 
-#### Known Issues
+#### Known Issues {#april-ki}
 
 * Under certain circumstances, the app image is not displayed properly on the [My Apps](/developerportal/#my-apps) page.
     * Fixed on [May 5, 2022](#may-fifth).
-
-### April 7, 2022
-
-#### Improvements
-
-* We introduced a new layout of the [Mendix Forum](/developerportal/community-tools/mendix-forum/) that features the following changes:
-    * The main navigation has been moved to a navigation pane on the left of the screen
-    * There is a dedicated for page for your bookmarks
-    * Breadcrumb navigation
-    * Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
 
 ### March 24, 2022
 
@@ -703,10 +678,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 ### February 10, 2022
 
-#### New Features
-
-* We changed the button from favorite to bookmark in the [Mendix Forum](/developerportal/community-tools/mendix-forum/). You can now more easily bookmark posts for future reference.
-
 #### Improvements
 
 * In our continuous effort to change the Developer Portal from a monolith into microservices, we have taken a big step in giving company data its own service. This paves the way for an updated password maintenance experience, which we will release soon.
@@ -727,14 +698,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We recently changed the password length requirement from 8 to 12 characters. We noticed this caused some confusion, because not all pages where the password can be reset or changed listed the password requirements. We made sure that all pages now list those requirements.
 * During the last release, we introduced an issue where the Developer Portal exposed apps without a repository to Studio Pro. We patched this issue on December 17, 2021 with a band-aid. This release sees a more permanent solution.
-
-### December 15, 2021
-
-#### Improvements
-
-* We changed the minimum length of passwords from 8 to 12 characters.
 
 ### December 2, 2021
 
@@ -812,13 +776,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue where an error was shown when a Sprint was created from the **Stories** page.
 
-### September 13, 2021
-
-#### Improvements
-
-* Your [Mendix Profile](/developerportal/community-tools/mendix-profile/) got a visual update.
-* We removed the possibility to add a GitHub account to your profile.
-
 ### September 2, 2021
 
 #### Improvements
@@ -889,7 +846,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue where you could not always see the avatars of other users in the same app.
 * We fixed an issue where there were styling glitches visible when adding a description to a newly created story.
-* We fixed an issue where Mendix Support was not always able to adjust app permissions on behalf of customers.
 
 ### May 7, 2021
 
@@ -993,7 +949,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 * You can no longer create new polls on the company or app [Buzz](/developerportal/general/buzz/) page. Existing polls can still be answered.
 
 #### Fixes
@@ -1233,12 +1188,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue where updates to decimal constants in the Developer Portal were limited to 2 decimal places. This has been increased to 8 decimal places. (Ticket 85507)
 
-### May 10, 2019
-
-#### Support Improvements
-
-* We have changed the way you request a license for a new app. You can now request a license using the [Request New App Node](https://newnode.mendix.com/) app. Other requests should continue to be made through the [Support Portal](https://support.mendix.com).
-
 ### May 2, 2019
 
 #### UI Improvements
@@ -1311,14 +1260,6 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We fixed an issue that sometimes caused the team member with the Technical Contact role to be hidden on the **Node Permissions** tab of the **Security** pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
 
-### November 14, 2018
-
-#### Mendix Shop
-
-* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/community-tools/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
-
-    {{< figure src="/attachments/releasenotes/developer-portal/shop.png"   width="300"  >}}
-
 ### November 1, 2018
 
 #### Improvements
@@ -1336,17 +1277,15 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and [People](https://developer.mendixcloud.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/general/buzz/) and **People** pages. (Ticket 69702)
 
 ### October 11, 2018
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 * Several UX updates were made to Developer Portal pages:
     * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
     * The **App** > **General** page has been redesigned.
-    * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
 
 ### October 1, 2018
 

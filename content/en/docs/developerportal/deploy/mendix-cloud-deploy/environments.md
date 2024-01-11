@@ -9,7 +9,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more.
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in the Developer Portal and click **Environments** in the navigation pane.
 
 The **Environments** page has the following tabs:
 
@@ -70,10 +70,9 @@ For standard plans, the **Environments** section shows the following information
 
 * Environment name (Acceptance, Production, or Test)
 * Environment status, indicated by the icon next to the environment name:
-    * Green check mark – the application in this environment is running
-    * Gray dash – no application has been started yet in this environment, or it has been turned off
-    * Red cross – the application in this environment is unstable and probably not usable anymore
-
+    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * Name of the deployment package
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
@@ -84,7 +83,7 @@ For standard plans, the **Environments** section shows the following information
 You can perform the following actions in this section:
 
 * View an environment's details – Click **Details** ({{% icon name="notes-paper-edit" %}}) to go to the [Environment Details](/developerportal/deploy/environments-details/) page.
-* Transport an environment – If you have [Transport rights](/developerportal/deploy/node-permissions/#transport-rights) enabled, you will see a **More Options** icon that you can click to stage an environment to acceptance or production.
+* Transport an environment – If you have [Transport rights](/developerportal/deploy/node-permissions/#transport-rights) enabled, you will see a **More Options** button ({{% icon name="three-dots-menu-horizontal" %}}) that you can click to stage an environment to acceptance or production.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/transport-to.png" alt="" >}}
 
@@ -94,14 +93,14 @@ You can perform the following actions in this section:
 
 If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment (or environments) may be designated according to your requirements. For example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" class="image-border" >}}
 
 For flexible environments, the **Environments** section shows the following information:
 
 * Environment status, indicated by the icon next to the environment name:
-    * Green check mark – the application in this environment is running
-    * Gray dash – no application has been started yet in this environment, or it has been turned off
-    * Red cross – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * Name of the environment
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
@@ -117,7 +116,7 @@ You can perform the following actions in this section:
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="Move Up and Move Down options" class="image-border" >}}
 
     {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
 
@@ -125,7 +124,7 @@ You can perform the following actions in this section:
 
 In the **Activity** section, you can view a log of deployment activities performed on your environments.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" class="image-border" >}}
 
 {{% alert color="info" %}}
 Operations performed on a customer's behalf through an authorized Mendix support ticket are not logged in the activity log.
@@ -173,7 +172,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## 7 Read More
 
-* [Deploy and Manage](/developerportal/deploy/)
+* [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
 * [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/)

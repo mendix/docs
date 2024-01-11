@@ -15,6 +15,8 @@ To open the **Environment Details** page, go to the [Developer Portal](http://sp
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
+{{% alert color="info" %}}You must have permissions for **Transport Rights** or **Access to Monitoring** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
+
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
 ## 2 The General Tab

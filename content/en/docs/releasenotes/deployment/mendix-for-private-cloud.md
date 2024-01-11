@@ -18,8 +18,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Mendix Operator v2.14.0 {#2.14.0}
 
 * We have added the following validation checks to the `mxpc-cli` installation and configuration tool:
-  * When configuring a namespace, check to see that the database and blob file storage plans do not use the same name.
-  * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
+    * When configuring a namespace, check to see that the database and blob file storage plans do not use the same name.
+    * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
 * We have improved the authentication security of the Mendix Gateway Agent connection by switching to digest validation of the cluster ID and secret.
 * We have updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
 * We have updated third-party component versions.

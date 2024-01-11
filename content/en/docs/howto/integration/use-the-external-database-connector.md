@@ -33,9 +33,9 @@ Download the [External Database Connector](https://marketplace.mendix.com/link/c
 
 If additional connection properties are required to connect, you can alternatively use **JDBC Connection String**.
 
-## 3 Connect to the external database
+## 3 Connect to the External Database
 
-### 3.1 Establish connection between the external database and Mendix app
+### 3.1 Establish Connection Between the External Database and Mendix App
 
 1. Right-click the module you want to add the external database document to and click **Add other** > **External database connection**.
 
@@ -49,9 +49,9 @@ If additional connection properties are required to connect, you can alternative
 
 Click **Save** to save the connection details, which are stored in 3 constants:
 
-- `\<Document Name\>_DBSource`
-- `\<Document Name\>_DBUsername`
-- `\<Document Name\>_DBPassword`
+* `\<Document Name\>_DBSource`
+* `\<Document Name\>_DBUsername`
+* `\<Document Name\>_DBPassword`
 
 For example: `*Database*_DBsource.`
 
@@ -80,7 +80,7 @@ SQL Query:
 
 ## 4. Save Query
 
-### 4.1 Save Query to Retrieve Data:
+### 4.1 Save Query to Retrieve Data
 
 1. Click **Use Response** to view the response data and mapping.
 

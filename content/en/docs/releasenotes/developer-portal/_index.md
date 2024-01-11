@@ -28,7 +28,9 @@ We added the following new features in [Portfolio Management](/developerportal/p
 
 #### Improvements
 
-* As you already know, we have replaced Mendix Stories with our new agile planning tool, [Epics](/developerportal/project-management/epics/). Some of you had a lot of stories to export, so we added the option to export data from the [Story Archive](/developerportal/collaborate/general-settings/#story-archive) in batches. Please make sure to export everything you would like to keep until 1 October 2024. After that, we'll start deleting old data in accordance with our data retention policy.
+* [Epics](/developerportal/project-management/epics/), our new agile planning tool has [replaced Mendix Stories](#stories-deprecation). We have added the option to export data from the [Story Archive](/developerportal/collaborate/general-settings/#story-archive) in batches, for those of you who had a lot of stories to export.
+
+    You will need to export everything you want to keep before 1 October 2024. After that, old data will be deleted in accordance with our data retention policy.
 
 ## 2023
 
@@ -153,7 +155,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We improved the migration flow to make it as easy as possible for you to [move your data from Stories to Epics](/developerportal/project-management/epics/planning/#data-migration).
 
-#### Deprecations
+#### Deprecations{#stories-deprecation}
 
 * Stories is officially retired and Epics is the only official Mendix agile planning tool now. You can still migrate all your data from Stories to Epics.
 

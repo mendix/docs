@@ -70,9 +70,9 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 5. Double-click the **DetectLabels** microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
 6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type ENUM_Region of the AWS Authentication connector.
 7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
-    1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
-    2. Drag the **Generate Credentials** to the beginning of your microflow.
-    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
+    1. In the **App Explorer**, in the **AWSAuthentication** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions under > **Operations**.
+    2. Drag the the one you would like to use to the beginning of your microflow.
+    3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region.
 8. The `DetectLabelResponse` object is returned by the **DetectLabels** activity.   
 9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow work area.
 10. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.

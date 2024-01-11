@@ -393,7 +393,7 @@ true
 
 ## 10 trim {#trim}
 
-Removes all the whitespace at the beginning and end of a string.
+Removes all the whitespace at the beginning and end of a string; if the input string was empty, returns an empty string ''.
 
 ### 10.1 Input Parameters
 
@@ -411,7 +411,7 @@ The output is described in the table below:
 | -------------------------------------------------------- | ------ |
 | Same string, but without spaces at the beginning and end. | String |
 
-### 10.3 Example
+### 10.3.1 Example 1 - trimming behaviour
 
 If you use the following input:
 
@@ -423,6 +423,20 @@ The output is:
 
 ```java {linenos=false}
 'this is my string'
+```
+
+### 10.3.2 Example 2  - empty
+
+If you use the following input:
+
+```java {linenos=false}
+trim(empty)
+```
+
+The output is:
+
+```java {linenos=false}
+''
 ```
 
 ## 11 isMatch

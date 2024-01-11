@@ -168,10 +168,10 @@ The output is the following:
 'my'
 ```
 
-You can also limit the value of the third parameter to prevent it from specifying a desired length that is out of range:
+You can also specify the value of the third parameter using the `length` function:
 
 ```java {linenos=false}
-substring('thisismystring', 0, min(length('thisismystring'), 20))
+substring('thisismystring', 0, length('thisismystring'))
 ```
 
 ## 6 find

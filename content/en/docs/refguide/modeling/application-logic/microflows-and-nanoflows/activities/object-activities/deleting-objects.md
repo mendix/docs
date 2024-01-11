@@ -1,5 +1,5 @@
 ---
-title: "Delete Object(s)"
+title: "Delete Object (or Objects)"
 url: /refguide/deleting-objects/
 weight: 50
 tags: ["studio pro", "delete object", "activity"]
@@ -11,7 +11,7 @@ This activity can be used in both microflows and nanoflows.
 
 ## 1 Introduction
 
-The **Delete object(s)** activity can be used to delete one or more objects.
+The **Delete object (or objects)** activity can be used to delete one or more objects.
 
 ## 2 Properties
 
@@ -56,7 +56,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 
 #### 3.2.1 Activity Used in a Microflow Called from the Client in a Responsive Web App or PWA
 
-If **Refresh in client** is set to **No**, the data sources are not rerun, and widgets which need to reload data will still display the object(s).
+If **Refresh in client** is set to **No**, the data sources are not rerun, and widgets which need to reload data will still display the object (or objects).
 
 If set to **Yes**, the deletion is reflected across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 
@@ -77,7 +77,7 @@ All changes immediately take effect in the client while executing such a nanoflo
 When using the activity in a nanoflow accessible from an offline profile, please note the following limitations:
 
 * Deleting non-persistable objects is not supported
-* If the entity of an object passed to the activity has any associations with other entities in the domain model, the delete behavior for each of those associations must be set to **Keep {associated entity name} object(s)** (for more details, see the [example below](#delete-example))
+* If the entity of an object passed to the activity has any associations with other entities in the domain model, the delete behavior for each of those associations must be set to **Keep {associated entity name} object (or objects)** (for more details, see the [example below](#delete-example))
 * Setting a different delete behavior option triggers a consistency error
 * Before and after delete events are only triggered upon synchronization of the deleted object
 * Before and after delete events are not triggered for an object that does not exist in the runtime database
@@ -115,7 +115,7 @@ In detail, the following graph shows what happens during deletions:
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **Delete object(s)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object(s)** activity.
+The **Delete object (or objects)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object (or objects)** activity.
 {{% /alert %}}
 
 * Events:

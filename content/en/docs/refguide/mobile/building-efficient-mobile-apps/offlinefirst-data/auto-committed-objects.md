@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see the [Autocommit and Associated Objects](/refguide/committing-objects/#autocommit-and-associated-objects) section of *Commit Object(s)*.
+Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see the [Autocommit and Associated Objects](/refguide/committing-objects/#autocommit-and-associated-objects) section of *Commit Object (or Objects)*.
 
 ## 2 Offline-First Apps and Auto-Commit Logic
 
@@ -97,10 +97,10 @@ This is how the message will appear:
 
 ```text {linenos=false}
 The offline synchronization detected {count} auto-committed objects during synchronization executed by {user}. Auto committed objects are not supported during offline synchronization. The Mendix runtime has deleted the following objects:
-- {Entity1}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
-- {Entity2}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
+- {Entity1}: {count} object (or objects) - ({guid1}, {guid2}, ... {guidN})
+- {Entity2}: {count} object (or objects) - ({guid1}, {guid2}, ... {guidN})
 ...
-- {EntityN}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
+- {EntityN}: {count} object (or objects) - ({guid1}, {guid2}, ... {guidN})
 
 Please refer to the documentation to learn more about this issue and how to solve it:
 https://docs.mendix.com/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/
@@ -116,10 +116,10 @@ Auto-committed objects created during synchronization are deleted immediately af
 
 ```text {linenos=false}
 The offline synchronization detected {count} auto-committed objects during synchronization executed by {user}. Auto committed objects are not supported during offline synchronization. The Mendix runtime has deleted the following objects:
-- {Entity1}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
-- {Entity2}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
+- {Entity1}: {count} object (or objects) - ({guid1}, {guid2}, ... {guidN})
+- {Entity2}: {count} object (or objects) - ({guid1}, {guid2}, ... {guidN})
 ...
-- {EntityN}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
+- {EntityN}: {count} object (or objects) - ({guid1}, {guid2}, ... {guidN})
 
 Please refer to the documentation to learn more about this issue and how to solve it:
 https://docs.mendix.com/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/

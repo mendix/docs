@@ -69,7 +69,7 @@ These binary operations have as an input a list and either another list or an ob
 | --- | --- | --- |
 | Union | The result is a combination of the elements of both parameters avoiding duplicates. | List |
 | Intersect | The result is a list containing elements that appear in both parameters. | List |
-| Subtract | The result is the first parameter with the element(s) of the second parameter removed. | List |
+| Subtract | The result is the first parameter with the element (or elements) of the second parameter removed. | List |
 | Contains | Checks whether all elements of the second parameter are present in the first parameter. | Boolean |
 | Equals | Checks whether the lists contain the same elements. | Boolean |
 

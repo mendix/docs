@@ -88,19 +88,19 @@ One-way navigable associations are represented by a dashed arrow in Domain model
 
 When you delete an object, there are three ways to treat associated objects:
 
-* Keep associated object(s) *(default)*
-* Delete associated object(s) as well
-* Delete the object only if there are no associated object(s)
+* Keep associated object (or objects) *(default)*
+* Delete associated object (or objects) as well
+* Delete the object only if there are no associated object (or objects)
 
 These options are described in more detail below.
 
-#### 2.6.1 On Delete of ‘{Name of Entity}’ Object Keep ‘{Name of Associated Entity}’ Object(s) *(default)*
+#### 2.6.1 On Delete of ‘{Name of Entity}’ Object Keep ‘{Name of Associated Entity}’ Object (or Objects) *(default)*
 
-When an object is deleted, the associated object(s) are not deleted. This is the default.
+When an object is deleted, the associated object (or objects) are not deleted. This is the default.
 
-#### 2.6.2 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Associated Entity}’ Object(s) as Well
+#### 2.6.2 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Associated Entity}’ Object (or Objects) as Well
 
-When an object is deleted, the associated object(s) are also deleted.
+When an object is deleted, the associated object (or objects) are also deleted.
 
 This delete behavior is used, for example, if you want to delete any associated **Profile** when a **Customer** is deleted:
 
@@ -110,9 +110,9 @@ This delete behavior is used, for example, if you want to delete any associated 
 This option is not available for associations that involve an external entity.
 {{% /alert %}}
 
-#### 2.6.3 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Entity}’ Object Only If It Is Not Associated with ‘{Name of Associated Entity}’ Object(s)
+#### 2.6.3 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Entity}’ Object Only If It Is Not Associated with ‘{Name of Associated Entity}’ Object (or Objects)
 
-An object can only be deleted if it is not associated with any other object(s).
+An object can only be deleted if it is not associated with any other object (or objects).
 
 This delete behavior is used, for example, if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
 

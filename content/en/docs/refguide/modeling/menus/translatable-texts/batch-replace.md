@@ -37,10 +37,10 @@ To search for phrases that are similar, type what you want to search for.
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png" alt="Batch translate search" >}}
 
-By default, all the translatable text from the selected module(s) will be shown.
+By default, all the translatable text from the selected module (or modules) will be shown.
 
 Each found text will be displayed in the **Text** column.
-The **#** column shows the number of times it occurs in the selected module(s).
+The **#** column shows the number of times it occurs in the selected module (or modules).
 
 If you select a line, you can look in the **Show occurrence** section to see the **Object** containing the text and the **Document** it appears in. Double-clicking or clicking **Show occurrence** will open the document and select the object so you can easily see the context.
 
@@ -86,9 +86,9 @@ Click **Import from Excel…** to import a correctly-constructed Microsoft Excel
 
 This does the following:
 
-* The selected module(s) are set to the ones in the *Filter:* line of the file
+* The selected module (or modules) are set to the ones in the *Filter:* line of the file
 * Any texts which are empty in column B will be ignored
-* Any texts in column A which do not match translatable texts in the selected module(s) will be ignored
+* Any texts in column A which do not match translatable texts in the selected module (or modules) will be ignored
 * Any text in column B which is not ignored is entered into the **Replace with** column
 
 Changes will only be made if you click **Replace**.

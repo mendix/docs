@@ -656,7 +656,7 @@ ACR is available in version 2.3.0 and above of the OIDC SSO module.
 
 #### 8.5.1 Configuring Authentication Methods That Can Be Requested at Your IdP
 
-To configure the ACR value(s) in the OIDC SSO module, follow these steps:
+To configure the ACR value (or values) in the OIDC SSO module, follow these steps:
 
 1. Navigate to the screen where the OIDC configuration is managed.
 2. Select your client configuration and click **Edit**.

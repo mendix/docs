@@ -697,7 +697,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
     * customize the Ingress path and path type (required to support Ingress controllers such as AWS Application Load Balancer).
     * customize the Ingress class.
     * customize the Service type.
-    * customize the Service port(s).
+    * customize the Service port (or ports).
 * We have added options to override the following Ingress and Service options per-environment (only supported in Standalone mode at the moment):
     * Ingress annotations
     * Service annotations

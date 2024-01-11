@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object(s).
+A **reference set selector** is used to allow the end-user to display or select the value (or values) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object (or objects).
 
 A reference set selector must be placed in a [data container](/refguide/data-widgets/).
 
@@ -20,7 +20,7 @@ What you can do with a reference set selector depends on the **Owner** of the as
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/domain-model-owner-default.png" alt="The domain model for a reference set selector between Customer (parent) and Group where the owner is 'default' (as in, the Customer refers to the Group)" >}}
 
-You can put a reference set selector in a Customer data view to allow the user to select the Group(s) to which the customer belongs. However, because the Customer is the owner of the association, you cannot put a reference set selector in a Group data view to select the Customer(s) in the Group.
+You can put a reference set selector in a Customer data view to allow the user to select the Group (or Groups) to which the customer belongs. However, because the Customer is the owner of the association, you cannot put a reference set selector in a Group data view to select the Customer (or Customers) in the Group.
 
 To allow you to both add a Group to a Customer, and add a Customer to a Group, you need to set ownership of the association to **Both**.
 
@@ -160,7 +160,7 @@ The default button can be triggered by a single or a double click a row.
 
 {{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
-The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
+The attribute path specifies which attribute (or attributes) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
 
 {{% alert color="warning" %}}
 You cannot currently use non-persistable entities in a reference set selector.

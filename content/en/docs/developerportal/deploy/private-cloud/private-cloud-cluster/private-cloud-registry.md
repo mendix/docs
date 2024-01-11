@@ -128,7 +128,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
 
 4. Allow the Mendix Operator to assume this role by configuring the role's trust policy.
 
-    1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+    1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 

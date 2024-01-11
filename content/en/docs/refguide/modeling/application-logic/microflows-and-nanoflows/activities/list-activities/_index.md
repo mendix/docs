@@ -9,7 +9,7 @@ tags: ["studio pro", "microflow", "list"]
 
 When working with the Mendix Platform, you can use microflows to manipulate not only single objects but whole lists of entities with a single activity.
 
-Additional activities which work on lists, [commit object(s)](/refguide/committing-objects/), [delete object(s)](/refguide/deleting-objects/), and [retrieve](/refguide/retrieve/), are in the [Object Activities](/refguide/object-activities/) section of the toolbox. You can also [loop](/refguide/loop/) through a list to perform activities on the individual objects.
+Additional activities which work on lists, [commit object (or objects)](/refguide/committing-objects/), [delete object (or objects)](/refguide/deleting-objects/), and [retrieve](/refguide/retrieve/), are in the [Object Activities](/refguide/object-activities/) section of the toolbox. You can also [loop](/refguide/loop/) through a list to perform activities on the individual objects.
 
 The activities described in this document are in the **List Activities** section of the **Toolbox**.
 

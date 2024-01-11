@@ -206,7 +206,7 @@ Follow the instructions below and replace *[Name]* with the name of the rule in 
 
 1. Open the IIS Manager and navigate to the website you want to manage.
 2. In the **Features View**, double-click **URL Rewrite**.
-3. In the **Actions** pane on the right side of the screen, click **Add rule(s)…** to add a new rewrite rule.
+3. In the **Actions** pane on the right side of the screen, click **Add rule (or rules)…** to add a new rewrite rule.
 4. In the **Inbound Rules** section, double-click *Blank rule*.
 5. In the **Name** field, enter *[Name]* from the table above.
 6. In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.
@@ -235,7 +235,7 @@ This has to be the first rule; it is described after the rewrite rules to ensure
 4. Enter the **Server variable name** *HTTP_X_FORWARDED_PROTO*.
 5. Click **OK**.
 6. Click **Back to Rules**.
-7. Click **Add rule(s)…**.
+7. Click **Add rule (or rules)…**.
 8. Click **Blank Rule**.
 9. Set the **Name** to *add x-forwarded-proto header*.
 10. In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.
@@ -256,7 +256,7 @@ This has to be the first rule; it is described after the rewrite rules to ensure
 
 If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypted HTTP traffic to HTTPS. To configure this, follow these steps:
 
-1. Click **Add rule(s)…**.
+1. Click **Add rule (or rules)…**.
 2. Click **Blank Rule**.
 3. Set the **Name** to *Redirect to HTTPS*.
 4. In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.

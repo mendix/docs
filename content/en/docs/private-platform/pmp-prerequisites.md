@@ -46,7 +46,7 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 * Mendix Studio Pro must be able to access Private Mendix Platform
 * IdP for SSO must be available and configurable during installation process
 G* it, Jenkins and other services must be accessible on the same virtual network, or allow external bi-directional communication with Private Mendix Platform
-* For Mendix Marketplace, an object storage must be accessible over HTTP(S) on either internal network or through a connection to a Mendix repository
+* For Mendix Marketplace, an object storage must be accessible over HTTP (or HTTPs) on either internal network or through a connection to a Mendix repository
 * Private Mendix Platform should be able to access the Kubernetes API directly
 
 ## 4 Software Resource Requirements

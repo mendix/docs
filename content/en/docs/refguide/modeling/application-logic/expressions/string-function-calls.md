@@ -393,7 +393,7 @@ true
 
 ## 10 trim {#trim}
 
-Removes all the whitespace at the beginning and end of a string; if the input string was empty, returns an empty string ''.
+Removes all the whitespace at the beginning and end of a string.
 
 ### 10.1 Input Parameters
 
@@ -411,7 +411,11 @@ The output is described in the table below:
 | -------------------------------------------------------- | ------ |
 | Same string, but without spaces at the beginning and end. | String |
 
-### 10.3.1 Example 1 - trimming behaviour
+{{% alert color="info" %}}
+If you pass an empty string to this function, it returns an empty string.
+{{% /alert %}}
+
+### 10.3 Example
 
 If you use the following input:
 
@@ -425,12 +429,10 @@ The output is:
 'this is my string'
 ```
 
-### 10.3.2 Example 2  - empty
-
 If you use the following input:
 
 ```java {linenos=false}
-trim(empty)
+trim('')
 ```
 
 The output is:

@@ -30,7 +30,7 @@ We added the following new features in [Portfolio Management](/developerportal/p
 
 * [Epics](/developerportal/project-management/epics/), our new agile planning tool has [replaced Mendix Stories](#stories-deprecation). We have added the option to export data from the [Story Archive](/developerportal/collaborate/general-settings/#story-archive) in batches, for those of you who had a lot of stories to export.
 
-    You will need to export everything you want to keep before 1 October 2024. After that, old data will be deleted.(See the warning in the [Story Archive](/developerportal/collaborate/general-settings/#story-archive)section of *Settings*.)
+    You will need to export everything you want to keep before 1 October, 2024. After that, old data will be deleted.
 
 ## 2023
 

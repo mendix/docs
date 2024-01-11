@@ -493,7 +493,7 @@ If you use the **Application Autoscaler** service on SAP BTP, Mendix can create 
 To upload the JSON **File** for service binding, follow these steps:
 
 1. Select the service in the **Service To Be Bound** section.
-2. Click the ellipsis (**...**) next to the service for which you want to upload the file.
+2. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the service for which you want to upload the file.
 3. Select **Add Binding Configuration**.
 4. Select the JSON **File** to upload.
 5. Click **Save**.
@@ -508,11 +508,11 @@ If you receive an error trying to restart the app, please refer to the [App Will
 
 #### 7.3.2 Unbinding and Removing Services
 
-If you no longer require a service you can unbind it or remove it from your app.
+If you no longer require a service, you can unbind it or remove it from your app.
 
-**Unbinding a Service**
+##### 7.3.2.1 Unbinding a Service
 
-1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
+1. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the service you want to unbind in the **Bound Services** section.
 2. Select one of the following:
     * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound again next time your app is restarted
     * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
@@ -530,13 +530,13 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound but not deleted, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
-**Removing an Unbound Service**
+##### 7.3.2.2 Removing an Unbound Service
 
-1. Click the ellipsis next to the service you want to remove in the **Services To Be Bound** section.
+1. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the service you want to remove in the **Services To Be Bound** section.
 
 2. Select **Remove Service**.
 
-3. Confirm by clicking **Remove**
+3. Confirm by clicking **Remove**.
 
     The service is deleted from the app environment and returned to the list of **Available Services**.
 
@@ -546,7 +546,7 @@ When a service is in the **Services To Be Bound** section, you can add a new bin
 
 If you want to change the configuration of a service which is already bound, you will need to unbind the service first, as described above.
 
-1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
+1. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the service you want to (re)configure in the **Services To Be Bound** section.
 
 2. Select **Add Binding Configuration**.
 

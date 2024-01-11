@@ -46,7 +46,7 @@ The information on the dashboard is retrieved when you open the page. If you lea
 
 You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. After the refreshing is completed, you need to wait one minute before you can refresh it again.
 
-You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
+You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
 
 ## 3 Environment Details
 

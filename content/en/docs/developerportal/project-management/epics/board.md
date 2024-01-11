@@ -24,7 +24,7 @@ You can add more custom swimlanes, such as **In Progress**, **In Review**, and *
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/add-swimlane.png" width="500px" >}}
 
-You can rename, archive, or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
+You can rename, archive, or delete a swimlane as follows: click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the swimlane, and then select the corresponding option.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/rename-archive-delete-swimlane.png" >}}
 
@@ -54,7 +54,7 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the card, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/archive-delete-story.png" >}}
 
@@ -66,7 +66,7 @@ You can click a story card to view the [story details](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, archive, or delete the story.
+On the upper-right corner, you can click the link icon to copy the link to the story. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to open a menu that allows you to clone, archive, or delete the story.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/story-details-page-icons.png" >}}
 
@@ -161,7 +161,7 @@ The upper-left corner of the page shows the name of the current Sprint, when the
 
 The main area of the page gives an overview of all the stories in your current Sprint. When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in the [Commit](/refguide/commit-dialog/) dialog box.
 
-{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/epics/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
+{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/epics/planning/#scrum-planning) page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner, and select the corresponding item.{{% /alert %}}
 
 ### 3.2 Kanban Board
 

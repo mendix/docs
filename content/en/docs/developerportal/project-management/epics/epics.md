@@ -29,7 +29,7 @@ Clicking a row opens the [epic details](#epic-details) dialog box.
 
 When you click an epic, the epic details dialog box opens. 
 
-On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
+On the upper-right corner, there is a link icon and a **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button. Clicking the link icon copies the link to the epic. Clicking **More Options** opens a pop-up menu that allows you to delete the epic.
 
 {{< figure src="/attachments/developerportal/project-management/epics/epics/epic-details-page-ellipsis.png" >}}
 

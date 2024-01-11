@@ -49,7 +49,7 @@ You can check out our [showcase app](https://marketplace.mendix.com/link/compone
 ### 1.2 Features 
 
 Mendix provides dual API support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
-With the current version 1.2.0, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation) and the Image Generations API for [images](https://platform.openai.com/docs/guides/images). 
+With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation) and the Image Generations API for [images](https://platform.openai.com/docs/guides/images). 
 
 ### 1.3 Limitations 
 

@@ -239,11 +239,11 @@ Here, we add a new Role Collection for the Inspector 2 role in the SAP BTP space
 
     {{< figure src="/attachments/appstore/connectors/sap-xsuaa-connector/select-role-collection.png" >}}
 
-3. Add the Role(s) which you want to include in this Role Collection.
+3. Add the Role (or Roles) which you want to include in this Role Collection.
 
     {{< figure src="/attachments/appstore/connectors/sap-xsuaa-connector/add-role.png" >}}
 
-The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role(s) which it includes.
+The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role (or Roles) which it includes.
 
 {{< figure src="/attachments/appstore/connectors/sap-xsuaa-connector/show-role-collection.png" >}}
 

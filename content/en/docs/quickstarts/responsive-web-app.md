@@ -289,7 +289,7 @@ To implement custom logic with a microflow, follow these steps:
 
 Finally, the image needs to be committed to the database and the paged closed:
 
-1. Add a **Commit object(s)** action from the **Toolbox** to the true path.
+1. Add a **Commit object (or objects)** action from the **Toolbox** to the true path.
 2. Select the **Picture (NativeMobile.Picture)** entity to commit, and configure **Events** > **No** and **Refresh in Client** > **Yes**:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/7-configurecommit5.png" width="450px" alt="Configure commit object">}}

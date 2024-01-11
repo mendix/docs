@@ -52,16 +52,16 @@ The button you just created calls a microflow that does not do anything yet. To 
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/created-microflow.png" >}}
 
-2. Open the **Toolbox** and search for the **Commit object(s)** activity there.
-3. Drag the **Commit object(s)** activity into the flow between the start and end events.
-4. Double-click the **Commit object(s)** activity to open its properties.
+2. Open the **Toolbox** and search for the **Commit object (or objects)** activity there.
+3. Drag the **Commit object (or objects)** activity into the flow between the start and end events.
+4. Double-click the **Commit object (or objects)** activity to open its properties.
 5. In the **Input** section, select **Customer** for **Object or List**.
 6. Set **Refresh in client** to **Yes** and click **OK**:
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/commit-object-properties.png" width="400px" >}}
 
 7. Open the **Toolbox**, and find the **Close page** activity there.
-8. Drag the **Close page** activity into the flow after the **Commit object(s)** activity:
+8. Drag the **Close page** activity into the flow after the **Commit object (or objects)** activity:
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px" >}}
 

@@ -64,7 +64,7 @@ Add series and configure their properties, each series represents a dataset. For
 
 2. Data points<a id="data-points"></a>
 
-    The attribute(s) within the data source used for the values to be plotted.
+    The attribute (or attributes) within the data source used for the values to be plotted.
 
     {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/series-item-data-points.png" alt="Edit series Data points tab" >}}
 

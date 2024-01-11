@@ -63,7 +63,7 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Save changes](#save-changes) 
 * [Cancel changes](#cancel-changes) 
 * [Close page](#close-page) 
-* [Delete object(s)](#delete-objects) 
+* [Delete object (or objects)](#delete-objects) 
 * [Synchronize](#synchronize) 
 * [Sign out](#sign-out) 
 * [Call workflow](#call-workflow)
@@ -83,7 +83,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
   
 * **Page settings** – opens a dialog box enabling you to configure the page in more detail (including the page title).
 
-* **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
+* **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page (or pages) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
 
 #### 3.2.1 Page Settings {#page-settings}
 
@@ -282,9 +282,9 @@ Set the **Close page** property to indicate whether the current page should be c
 
 The **Close page** event closes a pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages).
 
-### 3.10 Delete object(s) {#delete-objects}
+### 3.10 Delete object (or objects) {#delete-objects}
 
-When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object(s) event** will delete the selected objects.
+When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object (or objects) event** will delete the selected objects.
 
 In other situations, the user can select which objects to delete. The object can be from any surrounding data container, [snippet parameter](/refguide/snippet/), [page parameter](/refguide/page-properties/#parameters) or selections of [pluggable widgets](/refguide/mendix-client/#pluggable-widgets) (for example a [Data Grid 2](/appstore/modules/data-grid-2/) or [Gallery](/appstore/modules/gallery/) widget).
 

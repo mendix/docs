@@ -32,17 +32,17 @@ Here you can do the following:
 * **Edit** an existing message definition
 * **Delete** an unwanted message definition
 * **Find usages** of a message definition
-* **Generate mapping(s)…** from a message definition (see below)
+* **Generate mapping (or mappings)…** from a message definition (see below)
 
-### 3.1 Generate Mapping(s)…
+### 3.1 Generate Mapping (or Mappings)…
 
-The **Generate mapping(s)…** button allows you to generate import and/or export mapping documents from the selected message definition. The mappings are added to your module.
+The **Generate mapping (or mappings)…** button allows you to generate import and/or export mapping documents from the selected message definition. The mappings are added to your module.
 
 To generate mappings, do the following:
 
 1. Select the message definition you want to use.
-2. Click **Generate mapping(s)…**.
-3. Ensure that the required mapping(s) is selected.
+2. Click **Generate mapping (or mappings)…**.
+3. Ensure that the required mapping (or mappings) is selected.
 4. Click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
@@ -63,7 +63,7 @@ The name of the message definition.
 
 #### 4.1.2 Entity
 
-An entity in your app domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
+An entity in your app domain model (or models) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
 
 #### 4.1.3 Structure
 

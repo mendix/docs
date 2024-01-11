@@ -1,5 +1,5 @@
 ---
-title: "Commit Object(s)"
+title: "Commit Object (or Objects)"
 url: /refguide/committing-objects/
 weight: 30
 tags: ["studio pro", "commit object", "activity"]
@@ -11,7 +11,7 @@ This activity can be used in both microflows and nanoflows.
 
 ## 1 Introduction
 
-The **Commit object(s)** activity works on one or more objects. For persistable entities, committing an object stores it in the database. Committing non-persistable entities stores the current attribute values and association values in memory. This allows a rollback to revert to those values. See also [Persistability](/refguide/persistability/). External objects cannot be committed. To store changed values of external objects, use the [Send External Object](/refguide/send-external-object/) activity.
+The **Commit object (or objects)** activity works on one or more objects. For persistable entities, committing an object stores it in the database. Committing non-persistable entities stores the current attribute values and association values in memory. This allows a rollback to revert to those values. See also [Persistability](/refguide/persistability/). External objects cannot be committed. To store changed values of external objects, use the [Send External Object](/refguide/send-external-object/) activity.
 
 {{% alert color="info" %}}
 A Mendix commit does not always behave like a database commit. See [How Commits Work](#how-commits-work), below, for more information.
@@ -19,13 +19,13 @@ A Mendix commit does not always behave like a database commit. See [How Commits 
 
 ## 2 Properties
 
-An example of commit object(s) properties is represented in the image below:
+An example of commit object (or objects) properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object (or objects) properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The commit object(s) properties pane consists of the following sections:
+The commit object (or objects) properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -56,9 +56,9 @@ Default: **Yes**
 
 Nanoflows do not have this property.
 
-If the commit object(s) activity is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
+If the commit object (or objects) activity is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
 
-If the commit object(s) activity is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
+If the commit object (or objects) activity is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
 
 ### 3.3 Refresh in Client{#refresh-in-client}
 

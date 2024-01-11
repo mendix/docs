@@ -23,7 +23,7 @@ See [Databases and Apps](#databases), below, for an overview of this.
 
 ## 2 Supported Databases
 
-For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model(s).
+For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model (or models).
 
 If you are deploying to a different infrastructure, you will need to provide your own database.
 See [System Requirements](/refguide/system-requirements/#databases) for the list of supported databases.
@@ -62,7 +62,7 @@ An alternative is to copy the data to another app, for example using the [Databa
 
 Mendix does not use read locks on the database. Therefore, object reads can always be performed. A database write lock is put in place for the first object commit. If there are overlapping update transactions on the same object, the first update transaction puts a write lock on the database object. The next update transaction waits until the first one finishes before executing. However, if the first update process takes an inordinate amount of time, it may cause a timeout.
 
-When users or microflows make changes to database records, all changes will execute in a transaction. Write locks are placed on individual records the moment they are committed. Until this point no locks will be placed on the data. For more information on the differences between transaction commits and object commits, see the [How Commits Work](/refguide/committing-objects/#how-commits-work) section in *Commit Object(s)*.
+When users or microflows make changes to database records, all changes will execute in a transaction. Write locks are placed on individual records the moment they are committed. Until this point no locks will be placed on the data. For more information on the differences between transaction commits and object commits, see the [How Commits Work](/refguide/committing-objects/#how-commits-work) section in *Commit Object (or Objects)*.
 
 When the record gets locked, as long as the transaction is executing, no other users or processes are able to change the data. The uncommitted information is not visible for others. The changed data becomes available for other users to read only after the transaction completes. While the transaction is running, other users are able to read and change the previously persisted version of the data. Any changes from other processes will be applied when the transaction completes and the initial write lock is lifted, overwriting the previous changes.
 

@@ -699,7 +699,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Improvements
 
-* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
+* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name (\1 \1s) or the Common Name attribute of the database server certificate is matched against the database host name.
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -855,7 +855,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
         {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
         For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
-    You will need to redeploy your app in order to apply the new ARP(s).
+    You will need to redeploy your app in order to apply the new (\1 \1s).
 
 ### May 1, 2020
 

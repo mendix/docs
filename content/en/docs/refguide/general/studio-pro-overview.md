@@ -161,9 +161,9 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
-| <kbd>Delete</kbd> | Deletes the currently selected item(s). |
+| <kbd>Delete</kbd> | Deletes the currently selected item (or items). |
 | <kbd>↑</kbd> / <kbd>↓</kbd> | Selects previous/next item. |
-| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item(s) up/down. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item (or items) up/down. |
 
 ### 7.2 Domain Model Editor Shortcut Keys
 

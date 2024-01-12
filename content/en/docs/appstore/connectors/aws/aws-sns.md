@@ -125,7 +125,7 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 9. Double-click the **PublishBatch** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
-10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials**/**GetTemporaryCredentials** and the **PublishBatch** activity.
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **PublishBatch** activity.
 11. Double-click the **CreateObject** activity and select **PublishBatchRequest** as the entity to create.
 12. Add another **CreateObject** activity before the **PublishBatchRequest** object and select **PublishBatchTopic** as the entity to create.
 13. Provide values for the **ARN** and **Name** attributes of the **PublishBatchTopic** object.

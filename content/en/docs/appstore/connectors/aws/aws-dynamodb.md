@@ -98,7 +98,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     * Click **Edit parameter value**.
     * Edit the **Credentials** parameter and let it auto-fill.
 
-22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials**/**GetTemporaryCredentials** and the **ListTables** activity.
+22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **ListTables** activity.
 23. Double-click the **Create Object** activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
 24. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
 

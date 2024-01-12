@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see the [Autocommit and Associated Objects](/refguide/committing-objects/#autocommit-and-associated-objects) section of *Commit Object (or Objects)*.
+Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see the [Autocommit and Associated Objects](/refguide/committing-objects/#autocommit-and-associated-objects) section of *Commit Object(s)*.
 
 ## 2 Offline-First Apps and Auto-Commit Logic
 

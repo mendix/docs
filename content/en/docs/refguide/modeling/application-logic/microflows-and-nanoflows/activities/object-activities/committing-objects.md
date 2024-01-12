@@ -1,5 +1,5 @@
 ---
-title: "Commit Object (or Objects)"
+title: "Commit Object(s)"
 url: /refguide/committing-objects/
 weight: 30
 tags: ["studio pro", "commit object", "activity"]

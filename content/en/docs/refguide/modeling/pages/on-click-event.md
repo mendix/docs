@@ -63,7 +63,7 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Save changes](#save-changes) 
 * [Cancel changes](#cancel-changes) 
 * [Close page](#close-page) 
-* [Delete object (or objects)](#delete-objects) 
+* [Delete object(s)](#delete-objects) 
 * [Synchronize](#synchronize) 
 * [Sign out](#sign-out) 
 * [Call workflow](#call-workflow)
@@ -282,9 +282,9 @@ Set the **Close page** property to indicate whether the current page should be c
 
 The **Close page** event closes a pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages).
 
-### 3.10 Delete object (or objects) {#delete-objects}
+### 3.10 Delete object(s) {#delete-objects}
 
-When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object (or objects) event** will delete the selected objects.
+When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object(s)** event will delete the selected objects.
 
 In other situations, the user can select which objects to delete. The object can be from any surrounding data container, [snippet parameter](/refguide/snippet/), [page parameter](/refguide/page-properties/#parameters) or selections of [pluggable widgets](/refguide/mendix-client/#pluggable-widgets) (for example a [Data Grid 2](/appstore/modules/data-grid-2/) or [Gallery](/appstore/modules/gallery/) widget).
 

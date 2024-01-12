@@ -20,7 +20,7 @@ The following are the object activities you can use in your microflow or nanoflo
 * [Change object](/refguide/change-object/) – changes the members of an object
 * [Commit objects (or objectss)](/refguide/committing-objects/) – either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back
 * [Create object](/refguide/create-object/) – creates an object
-* [Delete object (or objects)](/refguide/deleting-objects/) – activity deletes one or more objects
+* [Delete object(s)](/refguide/deleting-objects/) – activity deletes one or more objects
 * [Retrieve](/refguide/retrieve/) – gets one or more objects of an entity
 * [Rollback object](/refguide/rollback-object/) – undoes uncommitted changes made to an object
 

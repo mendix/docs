@@ -44,7 +44,7 @@ Using this mode, only the selected objects or lists are synchronized. Deleted ob
 
 ## 3 Synchronization Behavior {#synchronization-behavior}
 
-This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object (or objects)](#selected-objects) modes.
+This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
 {{% alert color="warning" %}}
 The settings in [synchronization configuration](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.

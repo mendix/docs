@@ -1,9 +1,9 @@
 ---
-title: "Migrate to a Different Public Cloud Region"
-linktitle: "Migrate to Other Region"
+title: "Migrate to a Different Cloud Node"
+linktitle: "Migrate to Other Node"
 url: /developerportal/deploy/migrating-on-public-cloud/
 weight: 10
-description: "How to migrate your app from one Mendix Public Cloud region to another."
+description: "How to migrate your app from one cloud node to another."
 tags: ["App","Migrate","Developer Portal","public cloud","Node", "region", "data center"]
 aliases:
     - /developerportal/howto/migrating-to-v4.html
@@ -14,7 +14,10 @@ aliases:
 
 ## 1 Introduction
 
-This document explains how to migrate your licensed app from one Mendix Public Cloud region to another.
+This document explains how to migrate your licensed app from one cloud node to another. There are a couple reasons you may wish to move your app to a different node:
+
+* You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a new node in the new region, and then migrate your app to your new node.
+* You want to to switch from Mendix Public Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to your new node.
 
 ## 2 Migration Considerations
 

@@ -14,7 +14,7 @@ The APD Performance Recorder enables recording each individual action within a M
 
 ## 2 Recording a New Session
 
-Start a new recording session by clicking **Record runtime (or runtimes)**. You can provide a session name (optional) and check the box for all user browsers to be recorded. You can also choose to record the browser console.
+Start a new recording session by clicking **Record runtime(s)**. You can provide a session name (optional) and check the box for all user browsers to be recorded. You can also choose to record the browser console.
 
 It is possible to record an individual user's browser without recording the runtime by clearing the **Record all browsers** box and then clicking **Select browsers to record**. A pop-up window will show a list of the users logged in on the current day. You can select here the users whose browsers you want to record.
 

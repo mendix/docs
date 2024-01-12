@@ -115,7 +115,7 @@ After retrieving a list of orders with the status **Processing**, use a [loop](/
 9. Click **OK**, and then click **OK** again.
 10. Drag a **Commit** activity from the **Toolbox** and place it after the **Loop** activity.
 11. Double-click the **Commit** activity.
-12. In the **Commit Object (or Objects)** dialog box, configure the following settings:
+12. In the **Commit Object(s)** dialog box, configure the following settings:
     * **Object or List** – select **OrderList**
     * **Refresh in Client** – set to **Yes**; this settings refreshes your list in the client so that your changes are visible
 13. Click **OK**, and then save the microflow.

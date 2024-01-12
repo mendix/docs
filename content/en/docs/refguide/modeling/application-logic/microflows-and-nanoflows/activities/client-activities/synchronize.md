@@ -36,7 +36,7 @@ Using the **Unsynchronized objects** mode, all objects with changes committed to
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  >}}
 
-The **Selected object (or objects)** mode synchronizes objects partially, based on a selection:
+The **Selected object(s)** mode synchronizes objects partially, based on a selection:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  >}}
 
@@ -47,10 +47,10 @@ Using this mode, only the selected objects or lists are synchronized. Deleted ob
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object (or objects)](#selected-objects) modes.
 
 {{% alert color="warning" %}}
-The settings in [synchronization configuration](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object (or objects)** modes.
+The settings in [synchronization configuration](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
 {{% /alert %}}
 
-In the **Selected object (or objects)** mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
+In the **Selected object(s)** mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
 
 If the selected object has local changes, the following steps are performed:
 

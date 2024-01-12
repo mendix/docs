@@ -10,7 +10,7 @@ tags: ["studio pro", "microflow", "object"]
 
 When working with the Mendix Platform, objects of entities are always being manipulated. This happens implicitly within [data containers](/refguide/data-widgets/) on a page, or explicitly using activities in microflows and nanoflows.
 
-The activities in this section of the microflow and nanoflow toolbox generally work on single objects, however **commit object (or objects)**, **delete object (or objects)**, and **retrieve** also work on lists of objects. For other activities which work with lists, see [List Activities](/refguide/list-activities/).
+The activities in this section of the microflow and nanoflow toolbox generally work on single objects, however **commit object(s)**, **delete object(s)**, and **retrieve** also work on lists of objects. For other activities which work with lists, see [List Activities](/refguide/list-activities/).
 
 The activities described in this document are in the **Object Activities** section of the **Toolbox**.
 

@@ -183,8 +183,8 @@ Providing accurate testimonials is an important part of participating in the Men
 
 To make a colleague a profile editor, follow these steps:
 
-1. On the Partner Profile, click the **Profile editor (or editors)** tab.
-2. The **Select profile editor (or editors)** dialog box displays all the employees of your company. Select the colleague who you want to make a profile editor.
+1. On the Partner Profile, click the **Profile editor(s)** tab.
+2. The **Select profile editor(s)** dialog box displays all the employees of your company. Select the colleague who you want to make a profile editor.
 3. Click **Make Profile Editor**.
 
 ## 10 Sorting on the Partners Overview Page

@@ -859,7 +859,7 @@ The `terminationGracePeriodSeconds` setting is available in the Mendix for Priva
 
 #### 6.3.5 Customize Container Resources: Memory and CPU
 
-Let us now analyze the `resources` section from the example application deployment, above. Kindly note that below configuration is just for reference purpose.
+The `resources` following section shows an example configuration of the `resources` section from the example application deployment, above. Note that the configuration is just for reference purpose.
 
 
 ```yaml

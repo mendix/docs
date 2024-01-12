@@ -1,5 +1,5 @@
 ---
-title: "Combo Box"
+title: "Combo box"
 url: /appstore/widgets/combobox/
 category: "Widgets"
 description: "Describes the configuration and usage of the combo box widget, which is available in the Mendix Marketplace."
@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "widget", "combo box", "platform 
 
 ## 1 Introduction
 
-The [Combo Box](https://marketplace.mendix.com/link/component/219304) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
+The [Combo box](https://marketplace.mendix.com/link/component/219304) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
 
 A typical combo box can look like this:
 
@@ -22,6 +22,7 @@ A typical combo box can look like this:
     * Enumeration
     * Boolean
 * Supports custom content rendering
+* Supports custom footer
 * Supports options filtering for quick selection
 
 ## 2 Properties Pane
@@ -59,8 +60,9 @@ The **General** section allows you to configure general behavior and captions fo
 * **Placeholder text** – captions that will be displayed when there is no data being selected
 * **Filter type** – allows the user to type into the input and filter displayable options on the combo box
 * **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
-* **Clearable** – if enabled, this allows selected data to be cleared
+* **Clearable** – if enabled, this allows selected data to be cleared at once
 * **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values (only for association data source)
+* **Show footer** – if enabled, this allows custom widgets to be placed as combo box footer
 
 #### 2.1.3 Multi Selection (Reference Set)
 
@@ -69,9 +71,14 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 * **Selection Method** – configures the behavior for selecting options
     * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
     * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the **X** button on each of the displayed selected items.
-* **Show selected item as** – you can choose to display selected item as labels with **X** buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
+* **Show selected item as** – you can choose to display selected item as labels with **X** buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). 
+ {{% alert color="info" %}}The **Show selected item as** property is only available for **Checkbox** selection method, without custom content.{{% /alert %}}
 
     {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
+* **Select/Unselect button** – you can choose to enable select all / unselect all button that will be display on the top of the options list.
+ {{% alert color="info" %}}The **Select/Unselect button** can have a label placed that can be configure through accessibility tab.{{% /alert %}}
+
+{{< figure src="/attachments/appstore/widgets/combobox/combobox-selectall.png" alt="Show select or unselect button header" >}}
 
 #### 2.1.4 Label
 

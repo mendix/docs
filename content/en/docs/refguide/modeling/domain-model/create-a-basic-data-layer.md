@@ -118,11 +118,11 @@ You can configure the [on delete behavior](/refguide/association-properties/#del
 
 To configure the delete behavior, double-click the **Order_Customer** association to open its **Properties** dialog box:
 
-* To configure cascading delete, select the **Delete 'Order' object (or objects) as well** option in the **On delete of 'Customer' object** section; this means that all the orders of a customer are removed if the customer is deleted:
+* To configure cascading delete, select the **Delete 'Order' object(s) as well** option in the **On delete of 'Customer' object** section; this means that all the orders of a customer are removed if the customer is deleted:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/cascading-delete.png" width="500px" >}}
 
-* To configure prevention of delete, select the **Delete 'Customer' object only if it is not associated with 'Order' object (or objects)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** is shown to the end-user who tries to delete a customer that has orders:
+* To configure prevention of delete, select the **Delete 'Customer' object only if it is not associated with 'Order' object(s)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** is shown to the end-user who tries to delete a customer that has orders:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/delete-prevention.png" width="500px" >}}
 

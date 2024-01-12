@@ -37,7 +37,7 @@ The **激活** tab displays all the apps for which you are a [Team](/developerpo
 
 Click an app tile to see more details about the app.
 
-By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
+By clicking **More Options** ({{% icon name="three-dots-menu-horizontal %}}) in the app tile, you can quickly perform a number of actions:
 
 * Open the app in Studio Pro
 * Archive the app – This allows you to archive the app, provided you are the only team member. You will be warned of the consequences and asked for confirmation before the app is archived. Any apps you archived will appear in the **归档** tab. 

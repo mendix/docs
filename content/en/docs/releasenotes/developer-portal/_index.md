@@ -365,7 +365,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
+* In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
 * After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of Stories. We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.

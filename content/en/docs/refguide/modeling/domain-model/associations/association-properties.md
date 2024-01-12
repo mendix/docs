@@ -88,17 +88,17 @@ One-way navigable associations are represented by a dashed arrow in Domain model
 
 When you delete an object, there are three ways to treat associated objects:
 
-* Keep associated object (or objects) *(default)*
-* Delete associated object (or objects) as well
-* Delete the object only if there are no associated object (or objects)
+* Keep associated object(s) *(default)*
+* Delete associated object(s) as well
+* Delete the object only if there are no associated object(s)
 
 These options are described in more detail below.
 
-#### 2.6.1 On Delete of ‘{Name of Entity}’ Object Keep ‘{Name of Associated Entity}’ Object (or Objects) *(default)*
+#### 2.6.1 On Delete of ‘{Name of Entity}’ Object Keep ‘{Name of Associated Entity}’ Object(s) *(default)*
 
-When an object is deleted, the associated object (or objects) are not deleted. This is the default.
+When an object is deleted, the associated object( or objects) are not deleted. This is the default.
 
-#### 2.6.2 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Associated Entity}’ Object (or Objects) as Well
+#### 2.6.2 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Associated Entity}’ Object(s) as Well
 
 When an object is deleted, the associated object (or objects) are also deleted.
 
@@ -110,7 +110,7 @@ This delete behavior is used, for example, if you want to delete any associated 
 This option is not available for associations that involve an external entity.
 {{% /alert %}}
 
-#### 2.6.3 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Entity}’ Object Only If It Is Not Associated with ‘{Name of Associated Entity}’ Object (or Objects)
+#### 2.6.3 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Entity}’ Object Only If It Is Not Associated with ‘{Name of Associated Entity}’ Object(s)
 
 An object can only be deleted if it is not associated with any other object (or objects).
 

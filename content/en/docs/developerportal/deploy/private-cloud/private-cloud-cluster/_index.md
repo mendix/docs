@@ -449,7 +449,7 @@ Before updating the Operator with the advanced configurations, make sure to go t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
+For Global Operator scenarios, if the Operator configuration in the managed namespace differa from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
 {{% /alert %}}
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.

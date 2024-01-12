@@ -17,7 +17,7 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, number of environments, or status. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
 {{< figure src="/attachments/control-center/deployed-app/apps-overview.png" alt="Deployed Apps - apps overview" >}}
 

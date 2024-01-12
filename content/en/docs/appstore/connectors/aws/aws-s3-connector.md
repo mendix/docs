@@ -72,7 +72,7 @@ After you configure the authentication profile for Amazon S3, you can implement 
 9. Double-click the **CreateBucket** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
-10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials**/**GetTemporaryCredentials** and the **CreateBucket** activity.
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **CreateBucket** activity.
 11. Double-click the **Create Object** activity, and then select **AmazonS3Connector.CreateBucketRequest** as the entity.
 12. In the **Member** section, click **New**, and then select **BucketName** as the member.
 13. Configure an expression to generate the names of the buckets created in Amazon S3 by the microflow.

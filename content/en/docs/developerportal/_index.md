@@ -43,7 +43,7 @@ The **Pending Invites** tab presents the pending invitations to apps that you ha
 
 Click an app tile to see the app [Buzz](/developerportal/general/buzz/#app-buzz).
 
-By clicking **More Options** ({{% icon name="three-dots-menu-horizontal %}}) in the app tile, you can quickly perform a number of actions:
+By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
 
 {{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
 

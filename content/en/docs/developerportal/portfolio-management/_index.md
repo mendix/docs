@@ -457,7 +457,7 @@ The **Members** tab lists all the users that have portfolio access. You can sear
 
 * **Role** – This is the role of the user. A user can be a Portfolio Manager, Contributor, or Viewer. For more information about the permissions of each role, see the table below in this section.
 
-* **More Options** ({{% icon name="three-dots-menu-horizontal %}}) (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
 
     * **Edit Role** – Selecting this allows you to change the role of the user.
     * **Remove** – Selecting this allows you to remove the user from the portfolio. 

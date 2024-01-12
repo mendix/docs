@@ -16,15 +16,22 @@ For information on the current status of deployment to Mendix for Private Cloud 
 ### January 14, 2024
 
 #### New Global Operator Installation Method
-* Introducing a streamlined approach to installing the Operator within a namespace. With the Global Operator Installation, users only need to install a single global Operator and Agent to efficiently manage applications across various namespaces. Please consult the Global Operator Installation documentation for further details. The Global Operator is still under beta phase, hence features such as License Manager is not fully supported on portal side. Along with this, the Global Operator is also not supported in Deploy API.
+
+* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](https://docs.mendix.com/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
+
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+
+Some features, such as Private Cloud License Manager, are not fully supported yet. In addition, the Deploy API does not support the Global Operator yet.
+{{% /alert %}}
 
 #### Portal Improvements
 
-* In Namespace details and Environment details pages, a new option has been added to configure the Product type for Runtime License.
-* Addressed an issue on the PCLM statistics page where users encountered difficulty navigating to the license list when it exceeded 100 licenses in the portal.
-* Added a warning on the Namespace Customization page to let you know that the Ingress annotation will still be kept in the Ingress object even if it's removed from the portal.
-* Implementation of a feature to automatically remove deployment packages that have been inactive for more than 2 weeks.
-* Applying the changes or refreshing the Environment Details page will now remember the tab on which the user was present and it will NOT redirect the user the **General** tab anymore.
+* We have added a new option to configure the product type for the Runtime license on the **Namespace details** and **Environment details** page.
+* We have addressed an issue on the PCLM statistics page where users encountered difficulty navigating to the license list if it contained more than 100 licenses.
+* We have dded a warning on the **Namespace Customization** page to let you know that the Ingress annotation will still be kept in the Ingress object even if it is removed from the Portal.
+* We have implemented a feature to automatically remove deployment packages that have been inactive for more than two weeks.
+* Applying the changes or refreshing the **Environment Details** page will now remember the tab on which the user was present and it will not redirect the user the **General** tab anymore.
 
 ## 2023
 

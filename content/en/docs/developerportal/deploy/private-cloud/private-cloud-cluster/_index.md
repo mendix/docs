@@ -721,7 +721,7 @@ spec:
 ```
 #### 6.3.1 Resource Definition via Operator Configuration Manifest
 
-For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below. Kindly note that the below configuration is just for reference puropose. 
+For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose. 
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

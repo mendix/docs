@@ -77,7 +77,7 @@ All changes immediately take effect in the client while executing such a nanoflo
 When using the activity in a nanoflow accessible from an offline profile, please note the following limitations:
 
 * Deleting non-persistable objects is not supported
-* If the entity of an object passed to the activity has any associations with other entities in the domain model, the delete behavior for each of those associations must be set to **Keep {associated entity name} object (or objects)** (for more details, see the [example below](#delete-example))
+* If the entity of an object passed to the activity has any associations with other entities in the domain model, the delete behavior for each of those associations must be set to **Keep {associated entity name} object(s)** (for more details, see the [example below](#delete-example))
 * Setting a different delete behavior option triggers a consistency error
 * Before and after delete events are only triggered upon synchronization of the deleted object
 * Before and after delete events are not triggered for an object that does not exist in the runtime database

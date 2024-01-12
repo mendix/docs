@@ -16,8 +16,8 @@ aliases:
 
 This document explains how to migrate your licensed app from one cloud node to another. There are a couple reasons you may wish to move your app to a different node:
 
-* You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a new node in the new region, and then migrate your app to your new node.
-* You want to to switch from Mendix Public Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to your new node.
+* You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a node in the region of your choosing, and then migrate your app to this target node.
+* You want to to switch from Mendix Public Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
 
 ## 2 Migration Considerations
 
@@ -36,13 +36,13 @@ When migrating your app, keep the following considerations in mind:
 Before following the steps described on this page, make sure that you have met the following prerequisites:
 
 * Ensure that your app is on a [supported version](/releasenotes/studio-pro/lts-mts/) of Mendix. For the best level of support, use a long-term support version.
-* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available. To request a licensed Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app.
+* Have a licensed cloud node available to use as your target node. For details on how to request a new node, see [Requesting a New Licensed App Node](/community-tools/support/new-app-node-request-template/#new-node). You can specify the hosting type and region during this app request process.
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both of your cloud nodes.
 * Create two new temporary Free Apps without Free App environments. For instructions on unlinking a Free App from its environment, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink).
 
 ## 4 Migrating the App
 
-To manually migrate your app to a different node in Mendix Cloud, follow the steps in the sections below. Those steps are summarized in this graphic:
+To manually migrate your app to a new node, follow the steps in the sections below. Those steps are summarized in this graphic:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" alt="" >}}
 

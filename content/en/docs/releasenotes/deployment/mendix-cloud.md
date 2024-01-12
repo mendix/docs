@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### December 28, 2023
+
+#### New Features
+
+* We now support [regional fallback](/developerportal/deploy/mendix-cloud-deploy/#regional-fallback) in Mendix Cloud. With regional fallback, the database and file storage of your application are replicated to another Mendix Cloud region. If the primary region of your application goes down due to an outage, we will switch over to the fallback region. Your app will then be available to process requests from the fallback region. Without regional fallback, you will have to wait for the primary region to become available again. Regional fallback is part of our Premium Plus cloud resource packs.
+    * Regional fallback is available in all Mendix Cloud regions except Tokyo. We will offer regional fallback in Tokyo in Q1 of 2024.
+
 ### December 21, 2023
 
 #### Improvements

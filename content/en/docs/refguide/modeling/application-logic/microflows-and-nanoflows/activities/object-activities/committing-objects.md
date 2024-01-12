@@ -11,7 +11,7 @@ This activity can be used in both microflows and nanoflows.
 
 ## 1 Introduction
 
-The **Commit object (or objects)** activity works on one or more objects. For persistable entities, committing an object stores it in the database. Committing non-persistable entities stores the current attribute values and association values in memory. This allows a rollback to revert to those values. See also [Persistability](/refguide/persistability/). External objects cannot be committed. To store changed values of external objects, use the [Send External Object](/refguide/send-external-object/) activity.
+The **Commit object(s)** activity works on one or more objects. For persistable entities, committing an object stores it in the database. Committing non-persistable entities stores the current attribute values and association values in memory. This allows a rollback to revert to those values. See also [Persistability](/refguide/persistability/). External objects cannot be committed. To store changed values of external objects, use the [Send External Object](/refguide/send-external-object/) activity.
 
 {{% alert color="info" %}}
 A Mendix commit does not always behave like a database commit. See [How Commits Work](#how-commits-work), below, for more information.

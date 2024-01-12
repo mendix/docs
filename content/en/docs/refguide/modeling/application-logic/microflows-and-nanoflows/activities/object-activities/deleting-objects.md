@@ -1,5 +1,5 @@
 ---
-title: "Delete Object (or Objects)"
+title: "Delete Object(s)"
 url: /refguide/deleting-objects/
 weight: 50
 tags: ["studio pro", "delete object", "activity"]
@@ -11,7 +11,7 @@ This activity can be used in both microflows and nanoflows.
 
 ## 1 Introduction
 
-The **Delete object (or objects)** activity can be used to delete one or more objects.
+The **Delete object(s)** activity can be used to delete one or more objects.
 
 ## 2 Properties
 
@@ -115,7 +115,7 @@ In detail, the following graph shows what happens during deletions:
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **Delete object (or objects)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object (or objects)** activity.
+The **Delete object(s)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object(s)** activity.
 {{% /alert %}}
 
 * Events:

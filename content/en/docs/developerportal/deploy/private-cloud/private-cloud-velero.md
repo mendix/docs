@@ -38,7 +38,7 @@ To create a backup with Velero, follow these steps:
     kubectl scale deployment mendix-operator --replicas=0
     ```
 
-     {{% alert color="info" %}} In case of Global Operator, this needs to be done for Global Operator namespace{{% /alert %}}   
+     {{% alert color="info" %}} For Global Operator, this needs to be done for the Global Operator namespace.{{% /alert %}}   
 
 2. Create the backup by entering the following command:
 

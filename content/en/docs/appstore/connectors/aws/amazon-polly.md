@@ -60,8 +60,8 @@ After you configure the authentication profile for Amazon Polly, you can impleme
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_SynthesizeSpeech*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonPollyConnector** section, find the **SynthesizeSpeech** operation microflow.
-4. In the **App Explorer**, in the **AWSAuthentication** section, find the **GenerateCredentials** operation microflow.
-5. Drag the **GenerateCredentials** and **SynthesizeSpeech** operation microflows in to your microflow in that order.
+4. In the **App Explorer**, in the **AWSAuthentication** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** microflows.
+5. Drag the one you would like to use and the **SynthesizeSpeech** microflow in to your microflow in that order.
 6. Double-click the **SynthesizeSpeech** activity to configure the required parameters. 
     
     For the `SynthesizeSpeech` activity, you must add your own entity that inherits from `System.FileDocument` to store the contents of the audio, provide a credentials object and specify the AWS Region. You must then add your `SynthesizeSpeechRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
@@ -77,7 +77,7 @@ After you configure the authentication profile for Amazon Polly, you can impleme
     * `LanguageCode` - Language code of the voice. This parameter is only necessary if you are using a voice that can use multiple languages. If left empty, the default value for that voice is used. 
     
     For more information on Amazon Polly voices and their engines, see [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html).
-7. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression.
+7. In the **Edit parameters** section, edit the **ENUM_Region** parameter, and provide a value by using a variable or an expression.
 8. Click **OK**.
 9. Open a page that contains a widget for playing audio, for example, the [Play Audio](https://marketplace.mendix.com/link/component/120804) widget.
 10. Configure the widget to use the `FileDocument` configured in the **SynthesizeSpeech** activity.

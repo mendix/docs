@@ -19,11 +19,17 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 {{< figure src="/attachments/control-center/entitlements/entitlements.png" alt="entitlements page" >}}
 
-### 1.1 What Is Cloud Credits?
+### 1.1 What Are Cloud Credits? {#cloud-credits}
 
 Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Cloud credits provide a flexible and scalable way for your companies to mange costs and allocate resources.
 
+If you want to top up the cloud credits or purchase (or change) cloud resource packs, contact your Customer Success Manager (CSM).
+
 ### 1.2 Cloud Resource Packs
+
+{{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
+
+The table below shows how many cloud credits each cloud resource pack costs:
 
 | Pack                           | Cloud Credits |
 | ------------------------------ | ------------- |

@@ -90,7 +90,7 @@ Most of the Mendix Runtime Java API calls that were deprecated in Mendix 9 have 
 
 Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Mendix Runtime API change details.
 
-### 7.3 XPath Query Engine Updates
+### 7.3 XPath Query Engine Updates{#query-engine}
 
 With Studio Pro 9, we introduced a new query engine. During that introduction, some behavior changed (as described in the [XPath Query Engine 9](/refguide9/moving-from-8-to-9/#query-engine-9) section of *Moving from Mendix Studio Pro 8 to 9*). 
 

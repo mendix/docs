@@ -28,7 +28,7 @@ It is technically required for you to upgrade your app to Mendix 8.12 first to b
 To upgrade to Mendix 8.18, follow these steps:
 
 1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18/).
-1. Open your app in Studio Pro v8.18.
+1. Open your app in Studio Pro 8.18.
 1. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Reviewing Your Mendix 8 App
@@ -89,7 +89,7 @@ Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix run
 
 If your app is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
 
-If any are found, an error like **An error occurred while initializing the Runtime: Detected unique constrain violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request/).
+If any are found, an error like **An error occurred while initializing the Runtime: Detected unique constrain violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/community-tools/support/submit-support-request/).
 
 ### 3.2 Mendix Object Changed Flag
 

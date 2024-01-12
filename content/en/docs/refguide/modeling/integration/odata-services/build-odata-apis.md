@@ -481,5 +481,4 @@ This approach ensures customer applications can migrate at their own pace becaus
 ## 8 Read More
 
 * [OData Services](/refguide/integration/odata-services/)
-* [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/)
 * [Integration](/refguide/integration/)

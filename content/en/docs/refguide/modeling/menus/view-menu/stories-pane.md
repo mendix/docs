@@ -77,17 +77,11 @@ For more information on how to create a story on the basis of a feedback item an
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 
-If you use Stories in the Developer Portal for this app, you can change the status of a story or a task on the **Stories** pane. If you use Epics or Jira connector, you cannot change the status of the stories in the pane. 
-
-To change the status of a *story*, click its status in the **Status** column. The status will change in the following succession: *To do* > *Running* > *Done* > *To do*. 
-
-To change the status of a task, tick or clear the checkbox in the **Status** column:
-
-* Clear the checkbox to set the done task in *To do*
-* Tick the checkbox to set the task to *Done*
+{{% alert color="warning" %}}This functionality is currently unavailable while we are implementing a new version that supports Epics and Jira.{{% /alert %}}
 
 ## 3 Read More
 
 * [Epics](/developerportal/project-management/epics/)
+* [Jira Connector](/developerportal/project-management/jira-connector/)
 * [Feedback Management](/developerportal/app-insights/feedback/)
 * [View Menu](/refguide/view-menu/)

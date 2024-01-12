@@ -17,7 +17,7 @@ Finding the right data to use in your app development is made easier using the s
 
 To use the Catalog Search API, you need the following:
 
-* A [personal access token](/developerportal/community-tools/mendix-profile/#pat)
+* A [personal access token](/community-tools/mendix-profile/#pat)
 * A search term
 
 For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html#/Search/get_data).
@@ -294,7 +294,7 @@ To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
-You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Catalog](/catalog/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. For more information, see [Write Data to Another App](/howto/integration/write-data/).
 
 You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 

@@ -250,7 +250,7 @@ The Postgres database is an automated, on-demand database. The Postgres plan off
 [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) removes static passwords and instead uses IAM roles for authentication.
 
 {{% alert color="info" %}}
-This section provides technical details on how IAM authentication works with Postgres. If you just need instructions to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide to set the Mendix Operator to manage an RDS database and S3 bucket.
+This section provides technical details on how IAM authentication works with Postgres. If you just need instructions to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quick start guide to set the Mendix Operator to manage an RDS database and S3 bucket.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -789,7 +789,7 @@ It's similar to the [Create account with existing policy](#s3-create-account-exi
 
 {{% alert color="info" %}}
 This section provides technical details how IAM authentication works with Postgres.
-If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quickstart guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
+If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quick start guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
 {{% /alert %}}
 
 ##### 3.3.2.1 Prerequisites

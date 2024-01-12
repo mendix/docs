@@ -2,7 +2,7 @@
 title: "Catalog Guide"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
-weight: 45
+weight: 41
 no_list: false
 description_list: true
 cascade:

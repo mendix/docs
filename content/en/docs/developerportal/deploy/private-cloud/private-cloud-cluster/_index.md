@@ -437,7 +437,6 @@ You can license the Operator and Runtime of your application by configuring the 
 In order to configure PCLM, make sure that the Operator version is 2.11.0 and above.
 {{% /alert %}}
 
-
 {{% alert color="info" %}}
 In the context of the Global Operator, it is necessary to configure both the managed namespace and the Global Operator namespace with the License Manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 {{% /alert %}}

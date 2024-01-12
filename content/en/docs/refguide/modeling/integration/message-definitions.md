@@ -32,16 +32,16 @@ Here you can do the following:
 * **Edit** an existing message definition
 * **Delete** an unwanted message definition
 * **Find usages** of a message definition
-* **Generate mapping (or mappings)…** from a message definition (see below)
+* **Generate mapping(s)…** from a message definition (see below)
 
-### 3.1 Generate Mapping (or Mappings)…
+### 3.1 Generate Mapping(s)…
 
-The **Generate mapping (or mappings)…** button allows you to generate import and/or export mapping documents from the selected message definition. The mappings are added to your module.
+The **Generate mapping(s)…** button allows you to generate import and/or export mapping documents from the selected message definition. The mappings are added to your module.
 
 To generate mappings, do the following:
 
 1. Select the message definition you want to use.
-2. Click **Generate mapping (or mappings)…**.
+2. Click **Generate mapping(s)…**.
 3. Ensure that the required mapping (or mappings) is selected.
 4. Click **OK**.
 

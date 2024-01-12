@@ -77,7 +77,7 @@ For more information on how to create a story on the basis of a feedback item an
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 
-{{% alert color="info" %}}This functionality is currently unavailable while we are implementing a new version that supports Epics and Jira.{{% /alert %}}
+{{% alert color="warning" %}}This functionality is currently unavailable while we are implementing a new version that supports Epics and Jira.{{% /alert %}}
 
 ## 3 Read More
 

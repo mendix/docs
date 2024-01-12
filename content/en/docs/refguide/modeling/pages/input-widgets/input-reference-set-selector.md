@@ -28,7 +28,7 @@ To allow you to both add a Group to a Customer, and add a Customer to a Group, y
 
 In the input reference set selector, the path to the attribute to be displayed (association, related entity, and attribute) is shown inside the input reference set selector, displayed between square brackets, and colored blue.
 
-For example, using the domain model above, the following input reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
+For example, using the domain model above, the following input reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name** of the **Group** associated with the current **Customer**.
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png" >}}
 

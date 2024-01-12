@@ -439,7 +439,7 @@ In order to configure PCLM, make sure that the Operator version is 2.11.0 and ab
 
 
 {{% alert color="info" %}}
-In the context of the Global Operator, it is necessary to configure both the managed namespace and the global operator namespace with the License Manager details. For additional information, please refer to the [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) documentation.
+In the context of the Global Operator, it is necessary to configure both the managed namespace and the Global Operator namespace with the License Manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 {{% /alert %}}
 
 ## 6 Advanced Operator Configuration

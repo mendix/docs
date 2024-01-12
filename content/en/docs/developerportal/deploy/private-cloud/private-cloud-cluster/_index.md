@@ -1552,7 +1552,7 @@ This tab shows information on the versions of the various components installed i
 
 #### 7.2.8 Customization
 
-This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers and product type for the PCLM Runtime License.
+This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers, and product type for the PCLM Runtime License.
 
 Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
@@ -1568,13 +1568,13 @@ If you want to use the secret store for custom runtime settings or MxApp constan
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 
-If PCLM is configured, the default product type for Runtime licenses is set to **standard**. However, if the product type for PCLM Runtime licenses in the license server differs from **standard**, you can customize it here. To check the Product type of the Runtime license, navigate to the PCLM Statistics page, select Runtime under Select type.
+If PCLM is configured, the default product type for Runtime licenses is set to **standard**. However, if the product type for PCLM Runtime licenses in the license server differs from **Standard**, you can customize it here. To check the product type of the Runtime license, navigate to the **PCLM Statistics** page, and then select **Runtime** in the **Select type** field.
 
 {{% alert color="info" %}}
-The product type value to be entered is case sensitive. Hence, ensure that the value should exactly match with the product type of the runtime license on the PCLM Statistics page.
+The product type value to be entered is case-sensitive. Ensure that the value matches exactly with the product type of the Runtime license on the **PCLM Statistics** page.
 {{% /alert %}}
 
-The configured product type value on this page will be applied to all environments within this namespace, and associated environments will adopt the license of this specific product type.
+The selected product type will be applied to all environments within this namespace, and associated environments will adopt the license of this specific product type.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 

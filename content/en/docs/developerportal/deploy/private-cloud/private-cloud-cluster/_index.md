@@ -338,9 +338,8 @@ If Mendix for Private Cloud needs to communicate with external services, some of
 In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
 
 {{% alert color="info" %}}
-When Global Operator is in use, every managed namespace will have its own, local configuration, and can be configured individually. Most of configuration from the Global Operator namespace will not be used for managed namespaces.
+When Global Operator is in use, every managed namespace has its own, local configuration, and can be configured individually. Most of the configuration from the Global Operator namespace is not used for managed namespaces.
 {{% /alert %}}
-
 
 1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
     1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:

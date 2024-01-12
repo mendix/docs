@@ -13,7 +13,7 @@ Mendix Cloud is where licensed Mendix apps are deployed to a scalable, enterpris
 
 Apps deployed to Mendix Cloud run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via [Mendix APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in many regions of the world.
 
-## 2 Where Is Data Hosted?
+## 2 Where Is Data Hosted?{#cloud-data-regions}
 
 The primary hosting locations are as follows:
 

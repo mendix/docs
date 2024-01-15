@@ -81,7 +81,6 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 * **Select/Unselect button** – you can choose to enable a "select all / unselect all" button that will be displayed on the top of the options list:
 
     {{< figure src="/attachments/appstore/widgets/combobox/select-all.png" alt="Show select or unselect button header" >}}
-    {{% alert color="info" %}}The **Select/Unselect button** can have a label placed that can be configured through the **Accessibility** tab.{{% /alert %}}
 
 #### 2.1.4 Label
 

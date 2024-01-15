@@ -9,15 +9,21 @@ tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 
 ## 1 Introduction 
 
+{{% alert color="info"%}}
+MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Preview Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
+
+MendixChat does not use any project, customer, or company information. It only uses the data that you have entered in MendixChat. Please do not enter any personal or sensitive data in the chat!
+{{% /alert %}}
+
 MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 
 
 MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Forum](https://forum.mendix.com/index3.html#/community), and [Mendix Academy](https://academy.mendix.com/link/home). 
 
-{{% alert color="info"%}}
-MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Preview Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve!
-{{% /alert %}}
-
 ## 2 Using MendixChat
+
+{{% alert color="warning"%}}
+Sometimes even if you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use.
+{{% /alert %}}
 
 To access MendixChat, follow these steps:
 
@@ -27,10 +33,6 @@ To access MendixChat, follow these steps:
 MendixChat appears at the right side of Studio Pro under the **MendixChat** tab.
 
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-interface.png" width="300px" >}}
-
-{{% alert color="warning"%}}
-In some cases, even when you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab so that MendixChat is available for use.
-{{% /alert %}}
 
 ### 2.1 An Example of Interacting with MendixChat
 

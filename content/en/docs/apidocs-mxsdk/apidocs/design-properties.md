@@ -125,7 +125,6 @@ Name your design property and its options carefully. Those names cannot be chang
 
 Design properties of type **Toggle** have the following additional field:
 
-
 | Field   | Required   | Type   | Description                                                          |
 | ------- | ---------- | ------ | -------------------------------------------------------------------- |
 | `class` | Yes        | String | A class name to be applied if the option is toggled on for a widget. |

@@ -14,7 +14,7 @@ To support automation namespace installation and configuration we provide a non-
 
 {{% alert color="info" %}} To use non-interactive mode, you need Mendix Operator version 2.1.0 or above.{{% /alert %}}
 
-Please see [Download the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool) for information on how to download the configuration tool.
+Please see [Download the Configuration Tool](/developerportal/deploy/standard-operator/#download-configuration-tool) for information on how to download the configuration tool.
 
 {{% alert color="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
@@ -33,7 +33,7 @@ When using connected mode, you need to put namespace id and namespace secret as 
 
 ## 2 Base Installation
 
-To perform the [base installation](/developerportal/deploy/private-cloud-cluster/#base-installation), use the following command:
+To perform the [base installation](/developerportal/deploy/standard-operator/#base-installation), use the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
@@ -47,8 +47,7 @@ For Global Operator, the base installation should only be applied to the Global 
 
 ## 3 Apply Configuration
 
-### 3.1 Standard Namespace
-To [configure the namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace) with a configuration file, use the following command:
+To [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
@@ -56,7 +55,7 @@ To [configure the namespace](/developerportal/deploy/private-cloud-cluster/#conf
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
-To generate the config file, follow the instructions described in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/). The **mx_config_cli.yaml** file is generated when you click **Write YAML** during the [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply) phase of configuring your namespace interactively.
+To generate the config file, follow the instructions described in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/). The **mx_config_cli.yaml** file is generated when you click **Write YAML** during the [Review and Apply](/developerportal/deploy/standard-operator/#review-apply) phase of configuring your namespace interactively.
 
 Below is an example of a config file. The example is provided for reference only. To make sure that the config file captures all the values of the input fields used in your own app, you must generate your own **mx_config_cli.yaml** file.
 

@@ -114,7 +114,7 @@ The component details page also presents the following tabs:
     * Click **Add Review** to open a section where you can add text, rate the component, and submit the review
     * Your reviews are listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**
     * If you are a developer of the component, you can **Reply** to a review
-* **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)
+* **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/)
 
 ## 4 Marketplace Content Support {#support}
 

@@ -1,17 +1,19 @@
 ---
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
-url: /developerportal/support/security-findings-faq
+url: /community-tools/support/security-findings-faq
 category: "Mendix Support"
 weight: 60
 description: "FAQ about existing security findings and other security questions."
 tags: ["support", "FAQ", "security", "vulnerability", "malicious files", "file scanning", "insecure cookie", "cookies without security", "insecure access", "web server", "unauthorized access" ]
+aliases:
+    - /community-tools/support/security-findings-faq/
 ---
 
 ## 1 Introduction
 
 This document lists a number of frequently asked questions (FAQs) we often receive about security findings and other issues around the security of the Mendix product and platform.
-See the [Requirements for Security Support Tickets](/developerportal/support/submit-support-request/#security-tickets) section of *Submit a Support Request* if you want to create a security tickets.
+See the [Requirements for Security Support Tickets](/community-tools/support/submit-support-request/#security-tickets) section of *Submit a Support Request* if you want to create a security tickets.
 
 There is additional information about security and reported vulnerabilities available elsewhere on the Mendix Platform. See the links in the sections below.
 
@@ -29,11 +31,11 @@ You can find our best practices on how to make your app secure in [How To Implem
 
 ### 1.4 Platform Support
 
-Mendix Support will only assist when using platform-supported components. See the table  in the [Support for Different Deployment Strategies](/developerportal/support/#support-by-strategy) section of the *Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
+Mendix Support will only assist when using platform-supported components. See the table  in the [Support for Different Deployment Strategies](/community-tools/support/#support-by-strategy) section of the *Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
 
 ### 1.5 Security Contact
 
-In Control Center, you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+In Control Center, you can add and manage a [Security Contact](/control-center/company-settings/#security-contact) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
 ## 2 Can Data Be Manipulated in the Client?
 

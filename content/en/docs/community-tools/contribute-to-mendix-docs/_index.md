@@ -1,9 +1,11 @@
 ---
-title: "Contribute to Mendix Documentation"
-url: /developerportal/community-tools/contribute-to-the-mendix-documentation/
-weight: 1
+title: "Contribute to Mendix Docs"
+url: /community-tools/contribute-to-mendix-docs/
+weight: 10
 description: "Describes how to add and edit Mendix documentation as a community member."
 tags: ["documentation", "community"]
+aliases:
+    - /developerportal/community-tools/contribute-to-mendix-docs/
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
 ---
 
@@ -50,7 +52,7 @@ You can create and edit files online within GitHub. If you want to work outside 
 To edit existing documentation, follow these steps:
 
 1. Click **Edit** in the upper-right corner of the specific Mendix documentation page that you want to work on.
-2. Make your changes in GitHub (make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)).
+2. Make your changes in GitHub (make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork and Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
 {{% alert color="warning" %}}
@@ -89,7 +91,7 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 
 Follow these guidelines and conventions when writing:
 
-* Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)
+* Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)
 * Make sure the Markdown file name reflects the the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
 * Name the Markdown and image files in lower-case with a hyphen (`-`) between each word, and do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * When creating screenshots:
@@ -122,4 +124,4 @@ This only needs to be done once.
 
 ## 7 Read More
 
-* [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)
+* [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)

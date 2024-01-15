@@ -3,7 +3,7 @@ title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 tags: ["data hub", "Catalog", "data hub Landscape"]
-weight: 37
+weight: 36
 aliases:
     - /releasenotes/data-hub/
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -12,6 +12,12 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
+
+### January 11, 2024
+
+#### Improvement
+
+* We addressed potential security vulnerabilities.
 
 ### January 4, 2024
 

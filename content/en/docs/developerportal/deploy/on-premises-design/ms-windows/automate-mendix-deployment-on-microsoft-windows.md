@@ -78,6 +78,7 @@ To start your app as a local process instead of a service, add a `-NoService` ar
 ```
 Start-MxApp $APP_NAME -NoService -SynchronizeDatabase 
 ```
+
 {{% /alert %}}
 
 {{% alert color="warning" %}}

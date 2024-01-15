@@ -1,9 +1,11 @@
 ---
 title: "Mendix Forum"
-url: /developerportal/community-tools/mendix-forum/
+url: /community-tools/mendix-forum/
 category: "Community Tools"
 weight: 3
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
+aliases:
+    - /community-tools/mendix-forum/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +13,7 @@ description: "Describes the Mendix Forum, where the Mendix community can ask and
 
 The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/developerportal/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
+The Mendix Forum is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
 
 Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
 
@@ -36,7 +38,7 @@ In **Personal** > **Posts**, the following tabs are available:
 
 In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/question-example.png" >}}
 
 Each question has the following details:
 
@@ -50,7 +52,7 @@ Each question has the following details:
 * ⑥ The number of votes for the question
 * ⑦ The number of answers to the question
 * ⑧ The number of views the question has received
-* ⑨ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
+* ⑨ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
 * ⑩ The avatars of the Mendix comminity members who have answered and commented
 
 {{% alert color="info" %}}
@@ -73,7 +75,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of a question brings you to its details page:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/question-details.png" >}}
 
 On this page, you do the following:
 
@@ -93,11 +95,11 @@ On this page, you do the following:
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/question-answer.png"   width="65%" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/question-answer.png"   width="65%" >}}
 
 In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/your-answer.png"  width="50%" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/your-answer.png"  width="50%" >}}
 
 {{% alert color="info" %}}
 The URL for each question is unique.
@@ -132,7 +134,7 @@ Once a question you have asked receives several answers, you can accept an answe
 
 In **General** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchange-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/exchange-example.png" >}}
 
 Each exchange has the following details:
 
@@ -145,7 +147,7 @@ Each exchange has the following details:
     * Clicking a tag opens an overview page that lists all the posts with the same tag
 * ⑥ The number of comments on the exchange
 * ⑦ The number of views the exchange has received
-* ⑧ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
+* ⑧ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
 * ⑨ The avatars of the Mendix comminity members who have commented
 
 ### 5.1 Searching and Filtering Exchanges
@@ -162,7 +164,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of an exchange brings you to its details page:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/exchange-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/exchange-details.png" >}}
 
 On this page, you do the following:
 
@@ -201,7 +203,7 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/idea-example.png" >}}
 
 Each idea has the following details:
 
@@ -219,7 +221,7 @@ Each idea has the following details:
 * ⑦ The number of votes on the idea
 * ⑧ The number of comments on the idea
 * ⑨ The number of views the idea has received
-* ⑩ The name, avatar, and [level](/developerportal/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
+* ⑩ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
 * ⑪ The avatars of the Mendix comminity members who have commented
 
 ### 6.1 Searching and Filtering Ideas
@@ -237,7 +239,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of an idea brings you to its details page:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-forum/idea-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-forum/idea-details.png" >}}
 
 On this page, you do the following:
 
@@ -287,4 +289,4 @@ Mendix looks forward to hearing your ideas!
 
 ## 7 Read More
 
-* [How to Contribute to Mendix Documentation](/developerportal/community-tools/contribute-to-the-mendix-documentation/)
+* [How to Contribute to Mendix Documentation](/community-tools/contribute-to-mendix-docs/)

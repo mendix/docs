@@ -5,10 +5,6 @@ weight: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-a-sql-server-user.pdf).
-{{% /alert %}}
-
 ## 1 Description
 
 This document describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.

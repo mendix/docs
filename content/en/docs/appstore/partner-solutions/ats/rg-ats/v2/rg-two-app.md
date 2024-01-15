@@ -116,7 +116,7 @@ Starting with ATS version 2.0, ATS capabilities override custom capabilities.
 
 Under **App Team**, you can specify which app members have what type of access rights for an app.
 
-By default, app members with the Scrum Master role in the Developer Portal will have administrative rights. All other members of the app will get the default role configured for that app. Please keep in mind that users still need to be a member of an app in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
+By default, app members with the Scrum Master role in the Developer Portal will have administrative rights. All other members of the app will get No access for that app. Please keep in mind that users still need to be a member of an app in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
 
 App member that the have a No access role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
 

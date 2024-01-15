@@ -123,8 +123,8 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/third-party-integration.png" >}}
 
-    * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
-    * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
+    * **Convert to a story** ({{% icon name="share" %}}) – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
+    * **Share** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
     * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}):
         * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
         * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
@@ -168,9 +168,9 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 
-  You can unlink a feedback item by hovering over the feedback item and clicking the **X** button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** page.
+  You can unlink a feedback item by hovering over the feedback item and clicking the **Remove** ({{% icon name="remove" %}}) button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** page.
 
-* **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **+** and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
+* **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
 
 * **Team Comments** – This section shows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
@@ -198,6 +198,6 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   To delete an existing tag, do as follows:
 
-  1. Hover over the row where the tag is listed. A **Delete** button ({{% icon name="trash-can" %}})appears at the end of the row.
+  1. Hover over the row where the tag is listed. A **Delete** button ({{% icon name="trash-can" %}}) appears at the end of the row.
   2. Click **Delete**. The **Confirmation** dialog box opens.
   3. Click **Delete Tag**.

@@ -33,14 +33,26 @@ The table below shows how many cloud credits each cloud resource pack costs:
 
 | Pack                           | Cloud Credits |
 | ------------------------------ | ------------- |
-| XS21                           |               |
-| S21                            |               |
-| M21                            |               |
-| L21                            |               |
-| XL21                           |               |
-| XXL21                          |               |
-| XXXL21                         |               |
-| XXXXL21                        |               |
+| XS21                           | 1             |
+| S21                            | 2             |
+| M21                            | 4             |
+| L21                            | 8             |
+| XL21                           | 16            |
+| XXL21                          | 32            |
+| XXXL21                         | 64            |
+| XXXXL21                        | 128           |
+| S21 Premium                    | 3             |
+| M21 Premium                    | 6             |
+| L21 Premium                    | 12            |
+| XL21 Premium                   | 24            |
+| XXL21 Premium                  | 48            |
+| XXXL21 Premium                 | 96            |
+| XXXXL21 Premium                | 192           |
+| XL21 Premium Plus              | 40            |
+| XXL21 Premium Plus             | 80            |
+| XXXL21 Premium Plus            | 160           |
+| XXXXL21 Premium Plus           | 320           |
+| XS20 (legacy resource pack)    | 1             |
 | S20 (legacy resource pack)     | 2             |
 | M20 (legacy resource pack)     | 4             |
 | L20 (legacy resource pack)     | 8             |
@@ -55,4 +67,4 @@ The table below shows how many cloud credits each cloud resource pack costs:
 | L (legacy resource pack)       | 3.73          |
 | XL (legacy resource pack)      | 7.33          |
 | XXL (legacy resource pack)     | 16.67         |
-
+| XXXL (legacy resource pack)    | 64            |

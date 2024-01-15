@@ -425,7 +425,7 @@ The output is:
 'this is my string'
 ```
 
-If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` is empty:
+If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` in the input is empty:
 
 ```java {linenos=false}
 trim($MyString)

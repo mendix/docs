@@ -411,10 +411,6 @@ The output is described in the table below:
 | -------------------------------------------------------- | ------ |
 | Same string, but without spaces at the beginning and end. | String |
 
-{{% alert color="info" %}}
-If you pass an empty string to this function, it returns an empty string.
-{{% /alert %}}
-
 ### 10.3 Example
 
 If you use the following input:
@@ -429,10 +425,10 @@ The output is:
 'this is my string'
 ```
 
-If you use the following input:
+If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` is empty:
 
 ```java {linenos=false}
-trim('')
+trim($MyString)
 ```
 
 The output is:

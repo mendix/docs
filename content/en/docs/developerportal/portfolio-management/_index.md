@@ -287,7 +287,7 @@ Each initiative card shows the following information:
     
 * ③ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
 * ④ Department – This shows the department to which the initiative belongs.
-* ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
+* ⑤ **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.
     * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
@@ -335,7 +335,7 @@ The list contains the following information:
 * **Risk Reduction** – This indicates how much this initiative will help mitigate or reduce future risks. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 * **Size** – This is the job size of the initiative. You can select **XL**, **L**, **M**, **S**, or **XS**.
 * **Score** – This is the WSJF score of the initiative.
-* Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
+* **Dates** ({{% icon name="calendar" %}}) – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
@@ -363,7 +363,7 @@ The list contains the following information:
 * **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **High**, **Medium**, or **Low**.
 * **Effort** – This is the estimated total amount of time that the initiative will require from all members of your team: product, design, and development. You must enter an integer in this field.
 * **Score** – This is the RICE score of the initiative.
-* Calendar icon – Hovering over the icon shows the following defined dates of the initiative lifecycle:
+* **Dates** ({{% icon name="calendar" %}}) – Hovering over the icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This is the date when the initiative is accepted based on business requirements.
     * **Start** – This is the date when the first actions are taken to start implementation.
     * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.

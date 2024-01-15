@@ -9,7 +9,7 @@ tags: ["mobile", "best practices", "patterns"]
 
 ## 1 Introduction
 
-Guides in this section will help you understand and apply best practices for building mobile apps with Mendix. 
+Guides in this section will help you understand and apply best practices for building mobile apps with Mendix.
 
 ### Best Practices for Offline-First Apps
 

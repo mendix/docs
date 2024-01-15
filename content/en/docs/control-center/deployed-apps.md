@@ -54,7 +54,7 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact, and then select the new contact from the list.
 
-{{< figure src="/attachments/control-center/deployed-apps/edit-technical-contact.png" max-width=800px class="image-border"  alt="changing the technical contact" >}}
+{{< figure src="/attachments/control-center/deployed-apps/edit-technical-contact.png" max-width=100% class="image-border"  alt="changing the technical contact" >}}
 
 {{% alert color="info" %}}
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.

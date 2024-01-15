@@ -19,6 +19,11 @@ While using Team Server is the recommended for most Mendix developers, you may p
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
+{{% alert color="info" %}}When you use a third-party Git version control repository, the following products and capabilities are not available:
+* Deployment using the Developer Portal directly from the Team Server
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* [AQM](/addons/aqm-addon/){{% /alert %}}
+
 ## 2 Prerequisites
 
 Make sure you have completed the following prerequisites:

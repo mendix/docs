@@ -232,9 +232,11 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 ### 4.2 Cloud Resource Packs {#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
+Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-The current resource packs are listed below.
+If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual credits known as cloud credits to purchase cloud resource packs on the Mendix Platform. For more information about how this works, see [Entitlements](/control-center/entitlements/).
+
+The technical details for the cloud resource packs are listed below.
 
 | Pack        | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
 | ----------- | ------- | -------- | ------- | ------- | ---------- | ------------ |

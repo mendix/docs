@@ -29,3 +29,33 @@ Click the icon in the top right corner to access the following pages that allow 
 
 * [Resize Environment](/community-tools/support/new-app-node-request-template/#resize) – requests a container size change
 * [Offboard Environment](/community-tools/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
+
+## 2 Adding a New Environment
+
+To add a new environment for your app, click the name of an app, and then click the **Add Environment** button. You must specify the following information:
+
+* **Environment Name** – Enter a name for your new environment. The name must be unique (that is, your app cannot have more than one environment with the same name).
+* **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
+* **Production Environment** – Indicate whether the environment will be used for production.
+
+{{< figure src="/attachments/control-center/new-environment.png" alt="adding a new environment" >}}
+
+## 3 Offboarding an Environment
+
+To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
+
+{{< figure src="/attachments/control-center/offboarding.png" alt="confirming the offboarding" >}}
+
+{{% alert color="warning" %}}
+Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
+{{% /alert %}}
+
+## 4 Changing the Technical Contact of an App
+
+To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact, and then select the new contact from the list.
+
+{{< figure src="/attachments/control-center/edit-technical-contact.png" alt="changing the technical contact" >}}
+
+{{% alert color="info" %}}
+You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+{{% /alert %}}

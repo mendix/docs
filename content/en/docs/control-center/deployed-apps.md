@@ -23,7 +23,7 @@ The **Deployed Apps Overview** page shows a list of all the apps within your com
 
 You can click the name of an app to see a list of environments available for the app.
 
-{{< figure src="/attachments/control-center/deployed-app/cloud-provisioning.png"  class="image-border" alt="cloud provisioning page for an app" >}}
+{{< figure src="/attachments/control-center/deployed-apps/cloud-provisioning.png"  class="image-border" alt="cloud provisioning page for an app" >}}
 
 Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/community-tools/support/submit-support-request/#submitting):
 

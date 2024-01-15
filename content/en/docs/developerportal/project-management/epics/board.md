@@ -66,7 +66,7 @@ You can click a story card to view the [story details](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to open a menu that allows you to clone, archive, or delete the story.
+On the upper-right corner, you can click **Copy Link** ({{% icon name="hyperlink" %}}) to copy the link to the story. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to open a menu that allows you to clone, archive, or delete the story.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/story-details-page-icons.png" >}}
 

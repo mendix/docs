@@ -31,22 +31,22 @@ Incremental synchronization lets you speed up synchronization by transmitting on
     1. Retrieve all objects from the database that have a *changedDate* greater than the parameter.
     1. Synchronize these objects to the device.
 
-{{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-1.png" alt="Microflow that synchronizes all product objects changed after the last synchronization date" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-1.png" alt="Microflow that synchronizes all product objects changed after the last synchronization date" >}}
 
 1. Create a nanoflow to initialize the *SyncHelper*:
     1. Retrieve the first *SyncHelper* object from the database and return it if it exists.
     1. Otherwise, create and commit a new *SyncHelper* object and return that.
 
-{{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-2.png" alt="Nanoflow that initializes the SyncHelper object" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-2.png" alt="Nanoflow that initializes the SyncHelper object" >}}
 
 1. Create a nanoflow to trigger the incremental synchronization from the mobile device.
     1. Call the initialization nanoflow above to retrieve the SyncHelper.
     1. Call the synchronization microflow above with the parameter *SyncHelper/LastSyncDate* to trigger the synchronization.
     1. Retrieve the object with the latest *changedDate* from the database (Retrieve the first object and sort by changedDate descending).
     1. Change and commit the SyncHelper to update *SyncHelper/LastSyncDate* to the *changedDate* of the retrieved object.
-    1. Optionally: show a progress bar.
+    1. Optionally, show a progress bar.
 
-{{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-3.png" alt="Nanoflow that triggers the synchronization microflow" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-3.png" alt="Nanoflow that triggers the synchronization microflow" >}}
 
 ## 5 Advanced Advice
 

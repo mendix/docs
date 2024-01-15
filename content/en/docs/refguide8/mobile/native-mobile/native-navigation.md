@@ -15,7 +15,7 @@ Generally in web apps, there is only one page open at any given time. This is be
 
 ### 1.2 Native Mobile Apps
 
-In native mobile apps, pages are kept open by default. This makes it possible to instantly navigate back (for example by tapping the back button or by swiping) while retaining the state of previous pages such as scroll location and active tab information. This greatly benefits your app's user experience. We recommend, however, taking open pages into account when developing mobile apps. Specifically, make sure that there will not be too many pages open at once (which will result in bad performance), and that data is refreshed or updated when needed. To achieve these ends, Mendix gives you granular control over your exact navigation flow.
+In native mobile apps, pages are kept open by default. This makes it possible to instantly navigate back (for example by tapping the back button or by swiping) while retaining the state of previous pages such as scroll location and active tab information. This greatly benefits your app's user experience. However, Mendix recommends taking open pages into account when developing mobile apps. Specifically, make sure that there will not be too many pages open at once (which will result in bad performance), and that data is refreshed or updated when needed. To achieve these ends, Mendix gives you granular control over your exact navigation flow.
 
 ## 2 Layout Types
 
@@ -127,7 +127,7 @@ Where possible, use the Close page action (or the above-mentioned variants of th
 
 Most applications consist of a set of primary user flows, and each primary flow may have secondary flows, for example to request some additional user input. In the case of a calendar app, browsing upcoming events would be the primary flow, and editing one event might be a secondary flow. In general, secondary flows should not disrupt the primary flow, meaning that after the user completes this secondary flow, they should end up where they were in the primary flow.
 
-Although such behavior can be modeled using the ability to close multiple pages, we recommend using pop-up pages for such scenarios. Pop-up pages exist entirely outside of the navigation stack, and can be opened and closed without disrupting your app's navigation history.
+Although such behavior can be modeled using the ability to close multiple pages, Mendix recommends using pop-up pages for such scenarios. Pop-up pages exist entirely outside of the navigation stack, and can be opened and closed without disrupting your app's navigation history.
 
 ### 5.4 Startup Flows
 

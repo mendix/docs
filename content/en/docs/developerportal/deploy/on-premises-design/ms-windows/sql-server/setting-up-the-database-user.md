@@ -5,10 +5,6 @@ weight: 30
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-the-database-user.pdf).
-{{% /alert %}}
-
 ## 1 General
 
 Determine your login name. If the user you want to use is a local SQL server user select the option SQL Server Authentication. When you want to use an AD account for the database access you can select Windows Authentication. If you choose to use an AD account, the application should also run with this account and you’ll need to configure your database connection to use integrated authentication.
@@ -29,7 +25,7 @@ You can find more information about the authorization level of the server roles 
 
 ## 3 User Mapping
 
-With the User Mapping properties you can grant the user access to the different database. We suggest you use one account per Mendix application. So this means that the user you are creating should only have access to one single application database. 
+With the User Mapping properties you can grant the user access to the different database. Mendix suggests you use one account per Mendix application. So this means that the user you are creating should only have access to one single application database. 
 
 {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/setting-up-the-database-user/18580672.png" >}}
 

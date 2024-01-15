@@ -11,7 +11,13 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}
+For further information on working with ML models in Mendix, check out a demo app and Jupyter notebook examples in the [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository.
+{{% /alert %}}
+
+For information on troubleshooting several general issues with importing and running your ML model, see the [FAQs](#FAQs) section below. 
+
+For information on ML Kit known issues, see the [Known Issues](#known-issues) section below. 
 
 ## 2 Usage {#usage}
 
@@ -34,6 +40,10 @@ Depending upon the frameworks and tools used to create the ML model, there are m
 * [SparkML](https://github.com/onnx/onnxmltools)
 
 ### 2.2 Importing an ML Model and Creating the ML Mapping Document {#import-model}
+
+{{% alert color="info" %}}
+It is advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
+{{% /alert %}}
 
 To use the ML model in your app, import it to create an ML mapping document.
 
@@ -154,7 +164,7 @@ The *pre-processor* is the block of code that manipulates the data before being 
 
 The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX Runtime documentation). It is highly coupled with the ML model, its training process, and the domain of knowledge.
 
-This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as we use Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
+This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as Mendix uses Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
 
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
 
@@ -243,7 +253,7 @@ The released versions of the *ML Kit* and supported ONNX Runtime versions can be
 
 | Mendix Studio Pro | ML Kit   | ONNX Runtime |
 | ----------------- | -------- | ------------ |
-| 9.23              | Public Beta | 1.11.0       |
+| 9.23              | Public beta | 1.11.0       |
 
 ## 5 Monitoring and Troubleshooting
 
@@ -298,7 +308,7 @@ In general, the transformation of the multidimensional arrays is subject to Java
 
 For more information, see [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/).
  
-## 6 Known Issues
+## 6 Known Issues {#known-issues}
 
 ### 6.1 I/O Data Types
 
@@ -326,7 +336,7 @@ The following chart displays tensor element types that are currently unsupported
 | Complex Types          | complex64, complex128 |
 
 Similar to the data type restrictions, Studio Pro does not allow usage of the unsupported types in the input fields but having at least a single supported tensor type in the output fields is enough to load and integrate an ONNX model with MLKit. See the [ONNX IR documentation](https://github.com/onnx/onnx/blob/main/docs/IR.md) for all tensor types.
-To integrate a pre-trained model with an unsupported type from model repositories (e.g. ONNX Model Zoo), one can use graph editing tools (for example, [onnx.helper](https://onnx.ai/onnx/api/helper.html) and [graphsurgeon](https://github.com/NVIDIA/TensorRT/tree/master/tools/onnx-graphsurgeon)) to convert an unsupported type to a supported type like float16 → float32.
+To integrate a pre-trained model with an unsupported type from model repositories (for example, ONNX Model Zoo), one can use graph editing tools (for example, [onnx.helper](https://onnx.ai/onnx/api/helper.html) and [graphsurgeon](https://github.com/NVIDIA/TensorRT/tree/master/tools/onnx-graphsurgeon)) to convert an unsupported type to a supported type like float16 → float32.
 
 ### 6.3 GPU Inference
 
@@ -334,15 +344,15 @@ This is currently not supported.
 
 ### 6.4 ML Kit in Mendix Apps
 
-You can only call the ML model via the MLKit from Microflows.
+You can only call the ML model via the ML Kit from microflows.
 
-## 7 FAQs
+## 7 FAQs {#FAQs}
 
 1. My model does not import properly. 
    
-    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models, so as far as the ML model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
+    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models. As long as the ML model is properly converted into the ONNX format and complies with the standard, Studio Pro is able to run it.
 
-    Try re-downloading the ML model or verifying the conversion process.
+    Try re-downloading the ML model or verifying the conversion process. It is also advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
 
 2. The output from my model outputs in the training environment is different from the outputs in Studio Pro.
    
@@ -363,7 +373,7 @@ You can only call the ML model via the MLKit from Microflows.
   
     This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the ML model or a permission issues.
 
-    We recommend turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+    Mendix recommends turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
 
 ## 8 Read More {#readmore}
 

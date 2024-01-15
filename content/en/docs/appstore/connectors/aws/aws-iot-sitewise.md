@@ -19,7 +19,7 @@ AWS IoT SiteWise is a managed service that simplifies collecting, organizing, an
 
 The AWS IoT SiteWise connector requires Mendix Studio Pro 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the AWS IoT SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). If you are using the Amazon Iot SiteWise connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon Iot SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ### 1.3 Licensing and Cost
 
@@ -33,7 +33,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS IoT SiteWise connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the AWS IoT SiteWise connector into your app.
 
 ## 3 Configuration
 
@@ -41,36 +41,12 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Configuring AWS Authentication
 
-In order to use the AWS IoT SiteWise service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+In order to use the Amazon IoT SiteWise service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
-1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
-    The AWS IoT SiteWise connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-3. In the **App Explorer**, double-click the **Settings** for your app.
+As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
-
-4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
-5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AWSIoTSiteWiseConnector** > **ConnectionDetails** section.
-
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
-
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
-
-    | Credentials type | Parameter | Value |
-    | --- | --- | --- |
-    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
-    | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
-    | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
-    | **SessionCredentials** | **Session Name** | An identifier for the session |
-
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
+   
 ### 3.2 Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve a list of asset models, implement the [ListAssetModels](#list-assets) activity by doing the following steps:
@@ -81,7 +57,7 @@ After you configure the authentication profile for AWS IoT SiteWise, you can imp
 4. In your **Toolbox**, find the **Create Object** activity and drag it onto the work area of your microflow.
 5. In the **Entity** field, select **ListAssetModelsRequest**.
 6. Double-click the **ListAssetModels** microflow activity to configure the required parameters.
-7. In the **Edit parameters** section, edit the **ENUM_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [ENUM_Region](#enum-region).
+7. In the **Edit parameters** section, edit the **ENUM_Region** parameter, and provide a value by using a variable or an expression.
 8. Click **OK**.
 9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 10. Position the **Retrieve** activity between the **ListAssetModels** activity and the microflow end event.
@@ -441,7 +417,7 @@ The domain model is a data model that describes the information in your applicat
 | --- | --- |
 | `Quality` | Describes the quality of the asset property value |
 
-### 4.1.47 TimeInNanos {#time-in-nanos}
+### 4.1.47 AbstractTimeInNanos {#abstract-time-in-nanos}
 
 | Attribute | Description |
 | --- | --- |
@@ -569,38 +545,60 @@ The domain model is a data model that describes the information in your applicat
 | --- | --- |
 | `NextToken` | Describes the token for the next set of results, or null if there are no additional results. |
 
+### 4.1.63 BatchPutAssetPropertyValueRequest {#batch-put-asset-property-value-request}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes. |
+
+### 4.1.64 PutAssetPropertyValueEntry {#put-asset-property-value-entry}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractEntry` entity. |
+
+### 4.1.65 PutAssetPropertyValue {#put-asset-property-value}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractAssetPropertyValue` entity.|
+
+### 4.1.66 TimeInNanos_Response {#time-in-nanos-response}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractTimeInNanos` entity. |
+
+### 4.1.67 TimeInNanos {#time-in-nanos}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes since it inherits from the `AbstractTimeInNanos` entity. |
+
+### 4.1.68 BatchPutAssetPropertyValueResponse {#batch-put-asset-property-value-response}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes. |
+
+### 4.1.69 BatchPutAssetPropertyErrorEntry {#batch-put-asset-property-error-entry}
+
+| Attribute | Description |
+| --- | --- |
+| `EntrID` | The user specified ID for the entry. You can use this ID to identify which entries failed. |
+
+### 4.1.70 BatchPutAssetPropertyError {#batch-put-asset-property-error}
+
+| Attribute | Description |
+| --- | --- |
+| `ErrorCode` | Holds the returned error code. |
+| `ErrorMessage` | The associated error message. |
+
 ### 4.2 Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the AWS IoT SiteWise connector, enumerations list values such as the list of available AWS regions, the asset model state, error details code and the detailed error codes.
 
-#### 4.2.1 ENUM_Region {#enum-region}
-
-| Name | Caption | 
-| --- | --- | 
-| `us_east_2` | US East (Ohio) | 
-| `us_east_1` | US East (N. Virginia) | 
-| `us_west_1` | US West (N. California) | 
-| `us_west_2` | US West (Oregon) | 
-| `af_south_1` | Africa (Cape Town) | 
-| `ap_east_1` | Asia Pacific (Hong Kong) | 
-| `ap_southeast_3` | Asia Pacific (Jakarta) | 
-| `ap_south_1` | Asia Pacific (Mumbai) | 
-| `ap_northeast_3` | Asia Pacific (Osaka) | 
-| `ap_northeast_2` | Asia Pacific (Seoul) | 
-| `ap_southeast_1` | Asia Pacific (Singapore) | 
-| `ap_southeast_2` | Asia Pacific (Sydney) | 
-| `ap_northeast_1` | Asia Pacific (Tokyo) | 
-| `ca_central_1` | Canada (Central) | 
-| `eu_central_1` | Europe (Frankfurt) | 
-| `eu_west_1` | Europe (Ireland) | 
-| `eu_west_2` | Europe (London) | 
-| `eu_south_1` | Europe (Milan) | 
-| `eu_west_3` | Europe (Paris) | 
-| `eu_north_1` | Europe (Stockholm) | 
-| `me_south_1` | Middle East (Bahrain) | 
-| `sa_east_1` | South America (São Paulo) |
-
-#### 4.2.2 ENUM_AssetModelStatus_State
+#### 4.2.1 ENUM_AssetModelStatus_State
 
  Name | Caption | Description |
 | --- | --- | --- |
@@ -611,21 +609,21 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `DELETING` | DELETING | The asset model is being deleted. |
 | `FAILED` | FAILED | The asset model failed to validate during a create or update operation. |
 
-#### 4.2.3 ENUM_ErrorDetails_Code
+#### 4.2.2 ENUM_ErrorDetails_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `VALIDATION_ERROR` | VALIDATION_ERROR |  |
 | `INTERNAL_FAILURE` | INTERNAL_FAILURE |  |
 
-#### 4.2.4 ENUM_DetailedError_Code
+#### 4.2.3 ENUM_DetailedError_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `INCOMPATIBLE_COMPUTE_LOCATION` | The provided compute location is incompatible. |  |
 | `INCOMPATIBLE_FORWARDING_CONFIGURATION` | The provided forwarding configuration is incompatible. |  |
 
-#### 4.2.5 ENUM_PortalStatus_State
+#### 4.2.4 ENUM_PortalStatus_State
 
  Name | Caption | Description |
 | --- | --- | --- |
@@ -635,7 +633,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `ACTIVE` | ACTIVE | The portal is active. |
 | `FAILED` | FAILED | The portal failed to validate during a create or update operation. |
 
-#### 4.2.6 ENUM_MonitorErrorDetails_Code
+#### 4.2.5 ENUM_MonitorErrorDetails_Code
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -643,21 +641,21 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `VALIDATION_ERROR` | A validation error was returned. |  |
 | `LIMIT_EXCEEDED` | The monitoring limit has been exceeded. |  |
 
-#### 4.2.7 ENUM_AssetModelCompositeModelType
+#### 4.2.6 ENUM_AssetModelCompositeModelType
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `AWS` | INTERNAL_FAILURE | The type of the composite model. |
 | `ALARM` | VALIDATION_ERROR | The type of the composite model. |
 
-#### 4.2.8 ENUM_ComputeLocation
+#### 4.2.7 ENUM_ComputeLocation
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `EDGE` | EDGE | The variable is being computed on the Edge device. |
 | `CLOUD` | CLOUD | The variable is being computed in the cloud. |
 
-#### 4.2.9 ENUM_DataType
+#### 4.2.8 ENUM_DataType
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -667,35 +665,35 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `_BOOLEAN` | BOOLEAN | The variable is of type Boolean. |
 | `STRUCT` | STRUCT | The variable is of type struct. |
 
-#### 4.2.10 ENUM_ForwardingConfigState
+#### 4.2.9 ENUM_ForwardingConfigState
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `DISABLED` | DISABLED | The forwarding config state is disabled. |
 | `ENABLED` | ENABLED | The forwarding config state is enabled. |
 
-#### 4.2.11 ENUM_ListAssetsFilter
+#### 4.2.10 ENUM_ListAssetsFilter
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `ALL` | ALL | The filter to retrieve all assets associated with a specified asset model. |
 | `TOP_LEVEL` | TOP_LEVEL | The filter to retrieve only top-level assets. |
 
-#### 4.2.12 ENUM_PropertyNotificationState
+#### 4.2.11 ENUM_PropertyNotificationState
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `ENABLED` | ENABLED | Describes a property's notification state. |
 | `DISABLED` | DISABLED | Describes a property's notification state. |
 
-#### 4.2.13 ENUM_AssociatedAsset_TraversalDirection
+#### 4.2.12 ENUM_AssociatedAsset_TraversalDirection
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `CHILD` | CHILD | Lists all child assets associated to the asset. |
 | `PARENT` | PARENT | The list includes the asset's parent asset. |
 
-#### 4.2.14 ENUM_AssetPropertyValue_Quality
+#### 4.2.13 ENUM_AssetPropertyValue_Quality
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -703,14 +701,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `BAD` | BAD | The data is affected by an issue such as sensor failure. |
 | `UNCERTAIN` | UNCERTAIN | The data is affected by an issue such as sensor inaccuracy. |
 
-#### 4.2.15 ENUM_TimeOrdering
+#### 4.2.14 ENUM_TimeOrdering
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `ASCENDING` | ASCENDING | Chronological sorting order of the requested information is ascending. |
 | `DESCENDING` | DESCENDING | Chronological sorting order of the requested information is descending. |
 
-#### 4.2.16 ENUM_Resolution
+#### 4.2.15 ENUM_Resolution
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -719,7 +717,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `_1h` | 1h | Time interval of one hour over which data is aggregated. |
 | `_1d` | 1d | Time interval of one day over which data is aggregated. |
 
-#### 4.2.17 ENUM_AggregateType
+#### 4.2.16 ENUM_AggregateType
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -730,7 +728,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `SUM` | SUM | Data aggregating function being the summed up value in the specified period. |
 | `STANDARD_DEVIATION` | STANDARD_DEVIATION | Data aggregating function being the standard deviation in the specified period. |
 
-#### 4.2.18 ENUM_ErrorCode
+#### 4.2.17 ENUM_ErrorCode
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -738,12 +736,35 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `InvalidRequestException` | InvalidRequestException | Retrieving the property value returned an error because the request was invalid. |
 | `AccessDeniedException` | AccessDeniedException | Retrieving the property value returned and error because access was denied. |
 
-#### 4.2.19 ENUM_CompletionStatus
+#### 4.2.18 ENUM_CompletionStatus
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `SUCCESS` | SUCCESS | The entry was skipped because it was included in a prior batch retrieval call. |
 | `ERROR` | ERROR | The entry was skipped because it returned an error. |
+
+#### 4.2.19 ENUM_BatchPutAssetPropertyError_ErrorCode
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ACCESS_DENIED_EXCEPTION` | ACCESS_DENIED_EXCEPTION | The property value returned and error because access was denied. |
+| `CONFLICTING_OPERATION_EXCEPTION` | CONFLICTING_OPERATION_EXCEPTION | Your request has conflicting operations. This can occur if you're trying to perform more than one operation on the same resource at the same time. |
+| `INTERNAL_FAILURE_EXCEPTION` | INTERNAL_FAILURE_EXCEPTION | AWS IoT SiteWise cannot process your request right now. Try again later. |
+| `INVALID_REQUEST_EXCEPTION` | INVALID_REQUEST_EXCEPTION | The property value returned an error because the request was invalid. |
+| `LIMIT_EXCEEDED_EXCEPTION` | LIMIT_EXCEEDED_EXCEPTION | You have reached the limit for a resource. For example, this can occur if you are trying to associate more than the allowed number of child properties for an asset.|
+| `RESOURCE_NOT_FOUND_EXCEPTION` | RESOURCE_NOT_FOUND_EXCEPTION | The property value you are trying to change was not found. |
+| `SERVICE_UNAVAILABLE_EXCEPTION` | SERVICE_UNAVAILABLE_EXCEPTION | The requested service is unavailable. |
+| `THROTTLING_EXCEPTION` | THROTTLING_EXCEPTION | Your request exceeded a rate limit. For example, you might have exceeded the number of AWS IoT SiteWise assets that can be created per second. |
+| `TIMESTAMP_OUT_OF_RANGE_EXCEPTION` | TIMESTAMP_OUT_OF_RANGE_EXCEPTION | You entered a faulty timestamp. |
+| `UNKNOWN_TO_SDK_VERSION` | UNKNOWN_TO_SDK_VERSION | Returned when the enumeration value is unknown in the SDK. |
+
+#### 4.2.20 ENUM_FindNearestSecond_Type {#find-nearest-second}
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `ROUND` | ROUND | To round to the nearest unit. |
+| `CEILING` | CEILING | To round up to the nearest second. |
+| `TRUNCATE` | TRUNCATE | To round down to the nearest second. |
 
 ### 4.3 Activities {#activities}
 
@@ -867,7 +888,7 @@ The `GetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you to re
 | --- | --- | 
 | `GetAssetPropertyValueHistoryRequest` | `GetAssetPropertyValueHistoryResponse` |
 
-#### 4.3.14 GetAssetPropertyValueHistory {#get-asset-property-value-history}
+#### 4.3.14 GetAssetPropertyAggregates {#get-asset-property-aggregates}
 
 The `GetAssetPropertyAggregates` Amazon Iot SiteWise activity allows you to retrieve aggregated values for an asset property. It requires a valid `ENUM_Region` parameter and a `GetAssetPropertyAggregatesRequest` object and returns a `GetAssetPropertyAggregatesResponse` object.
 
@@ -890,3 +911,19 @@ The `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activity allows you 
 | Input | Output | 
 | --- | --- | 
 | `BatchGetAssetPropertyValueHistoryRequest` | `BatchGetAssetPropertyValueHistoryResponse` |
+
+#### 4.3.17 BatchPutAssetPropertyValue {#batch-put-asset-property-value}
+
+The `BatchPutAssetPropertyValue` Amazon Iot SiteWise activity allows you to put values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchPutAssetPropertyValueRequest` object and returns a `BatchPutAssetPropertyValueResponse` object.
+
+| Input | Output | 
+| --- | --- | 
+| `BatchPutAssetPropertyValueRequest` | `BatchPutAssetPropertyValueResponse` |
+
+#### 4.3.18 JA_FindNearestSecond {#find-nearest-second}
+
+The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAssetPropertyAggregates](#get-asset-property-aggregates) and [BatchGetAssetPropertyValueHistory](#get-asset-property-value-history) Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attbibutes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created the `JA_FindNearestSecond` java action with three different enum variables for the `FindType` parameter. It requires a date and time `DateTime` parameter and a [`FindType`](#find-nearest-second) enum parameter and returns a date and time value.
+
+| Input | Output | 
+| --- | --- | 
+| `DateTime` , `FindType` | Date and time value |

@@ -15,7 +15,7 @@ All applications running in Mendix Cloud are accessed using the HTTPS protocol. 
 
 Besides these instructions, every request also contains additional information: the request headers. Examples of information available in these headers are the IP address from which the request originates and the type of web browser or other HTTP client used.
 
-Most of the request headers are added by the HTTP client (the web browser, for example) and let through by the Mendix Cloud. However, some of the request headers are inserted by Mendix Cloud itself between receiving the request and handing it over to the actual application process.
+Most of the request headers are added by the HTTP client (the web browser, for example) and let through by Mendix Cloud. However, some of the request headers are inserted by Mendix Cloud itself between receiving the request and handing it over to the actual application process.
 
 Using custom Java code in the application, the full content of an incoming request can be inspected.
 
@@ -28,9 +28,9 @@ The following headers are usually set by the HTTP client. Mendix Cloud does not 
 | **Host**                                    | `custom-domain.example.com`                                  | The domain name that was used by the client to access the application |
 | **User-Agent**                              | `Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0` | The user agent, describing itself |
 
-### 2.2 Available Request Headers Inserted by the Mendix Cloud
+### 2.2 Available Request Headers Inserted by Mendix Cloud
 
-The following headers are set by the Mendix Cloud. If any of these are present in the request sent from the user agent, they will be forcibly overwritten.
+The following headers are set by Mendix Cloud. If any of these are present in the request sent from the user agent, they will be forcibly overwritten.
 
 | Header name                                 | Example values                                             | Description
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |

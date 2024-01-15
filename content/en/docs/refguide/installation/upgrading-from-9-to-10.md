@@ -24,7 +24,7 @@ Before upgrading your app to Mendix 10, ensure that the app is successfully [mig
 
 If your app is on a Studio Pro version below 9, you must upgrade sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/)), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), and finally from 9 to 10. 
 
-If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/developerportal/control-center/#dashboard). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
+If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/control-center/dashboard/). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
 ## 2 Backing Up Your App
 
@@ -90,7 +90,7 @@ Most of the Mendix Runtime Java API calls that were deprecated in Mendix 9 have 
 
 Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Mendix Runtime API change details.
 
-### 7.3 XPath Query Engine Updates
+### 7.3 XPath Query Engine Updates{#query-engine}
 
 With Studio Pro 9, we introduced a new query engine. During that introduction, some behavior changed (as described in the [XPath Query Engine 9](/refguide9/moving-from-8-to-9/#query-engine-9) section of *Moving from Mendix Studio Pro 8 to 9*). 
 

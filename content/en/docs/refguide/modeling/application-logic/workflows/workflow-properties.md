@@ -68,7 +68,7 @@ If you generate the page using the templates in **Workflows Commons** module, th
 
 **Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used on preconfigured pages: the Admin Center and Workflow Admin page. 
 
-The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
+The **Workflow name** can contain parameters that are written between braces, for example, {1}.
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
@@ -76,7 +76,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Workflow description** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow description** is used in page templates. 
 
-The **Workflow description** can contain parameters that are written between braces, e.g. {1}.
+The **Workflow description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.5.3 Parameters {#parameters}
 
@@ -87,7 +87,7 @@ To view **Parameters**, click the ellipsis icon next to the **Workflow name** or
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an expression that results in a string value; usually it is an attribute from the context that is of type String, or is converted to a string, for instance, with `toString`
 
 ##### 2.5.3.1 Adding New Parameters
 

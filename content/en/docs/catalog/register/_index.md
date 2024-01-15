@@ -16,6 +16,5 @@ Common tasks for registering data sources include the following:
 * [Automating registration in a pipeline on a Private Cloud](/catalog/automate-registration/)
 * Manually uploading a metadata contract with the [Catalog UI form](/catalog/register/register-data/#registration-form)
 * [Using the Registration API](/catalog/register/register-data/#register-services) (for any deployment method)
-* [Wrap services, APIs, and databases with OData](/refguide/wrap-services-odata/)
 
 For an overview of registering OData sources, see [Register OData Resources in the Catalog](/catalog/register/register-data/). You can also [Register Non-OData Resources in the Catalog](/catalog/register-non-odata-resources/). 

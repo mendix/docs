@@ -23,7 +23,7 @@ When consuming add-on modules and solutions, you may come across the following l
 
 ## 3 Importing an Add-on Module 
 
-There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*.
+There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/overview/use-content/#install) section in *Using Marketplace Content*.
 
 You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/refguide9/import-and-export/#import-module) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
@@ -51,5 +51,5 @@ The module is deleted from your app.
 ## 7 Read More
 
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
+* [Using Marketplace Content](/appstore/overview/use-content/)
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/)

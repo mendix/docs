@@ -33,15 +33,15 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the **Cloud Settings** tab of the **Settings** in the left-hand menu of the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, go to **Settings** in the Developer Portal's navigation pane and switch to the **Cloud Settings** tab.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" >}}
 
-Click **Set up SAP Cloud** and you will be taken to the SAP BTP welcome page.
+Click **Set up SAP Cloud** to go to the SAP BTP welcome page.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings-landing-page.png" >}}
 
-Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
+Click **Getting Started**, then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New SAP App{#NewSAPApp}
 
@@ -590,7 +590,7 @@ The variables beginning **DT_** set up Dynatrace. Setting these variables means 
 
 ##### 7.4.2.2 Unsupported Environment Variables
 
-You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
+You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" >}}
 

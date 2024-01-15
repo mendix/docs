@@ -11,7 +11,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-A **Retrieve workflow context** activity can be used to retrieve the selected Workflow Context entity.
+A **Retrieve workflow context** activity can be used to retrieve the selected workflow context entity.
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/retrieve.png" alt="Retrieve Workflow Context Activity" >}}
 

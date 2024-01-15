@@ -12,7 +12,7 @@ After you have created a [mini survey](/developerportal/app-insights/mini-survey
 
 ## 2 Installation
 
-To import this module into your app, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+To import this module into your app, follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Configuration {#configuration}
 
@@ -24,7 +24,7 @@ To import this module into your app, follow the instructions in [How to Use Mark
     1. Set the constant **APIKEY_APPINSIGHTS** to the [API key](/developerportal/app-insights/mini-surveys/#obtain-api-key) that you obtained.
     2. (Optional) Configure the constant **TEST_MODE**. If this is turned on, the survey will always show.
     3. Save the changes.
-4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini survey to appear. We recommend placing only one widget inside the primary layout page.
+4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini survey to appear. Mendix recommends placing only one widget inside the primary layout page.
 5. Configure how the mini survey will appear, either on-action or on-page load:
 
     * For the on-action option:
@@ -66,7 +66,7 @@ No. The behaviors are exactly the same as described in the [What Happens if a Us
 
 ### 4.4 Can I Use Multiple Widgets on a Single Page?
 
-We recommend you use only one Mini Survey widget per page. If you are experimenting, enable the **TEST_MODE** constant.
+Mendix recommends using only one Mini Survey widget per page. If you are experimenting, enable the **TEST_MODE** constant.
 
 If your app uses a master layout page and many child pages. You can place one Mini Survey widget on the master layout page and then use multiple **ShowSurvey_OnAction** or **ShowSurvey_UsingDataView** nanoflow actions to trigger the survey to show.
 
@@ -80,7 +80,7 @@ A mini survey has the following opt-out rules:
 
 * If the user has answered all questions, then the survey will not show again to the user. 
 
-Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, we recommend you use the **TEST_MODE** constant to avoid clearing every time.
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, Mendix recommends using the **TEST_MODE** constant to avoid clearing every time.
 
 {{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 

@@ -4,17 +4,45 @@ url: /releasenotes/mobile/make-it-native-10/
 weight: 8
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
+#ki: "Augmented Reality (AR) Feature" - MOO-1312
 ---
 
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
+For more information on the Make It Native app, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
+
+## iOS 2.0.0 / Android 2.0.0{#upgraded-react-min}
+
+**Release date: December 21, 2023**
+
+### Improvements
+
+* We have upgraded our React Native to 0.72.7. This significant update improves performance and increases compatibility with React Native's latest features.
+
+### Compatibility Notice
+
+* **Required For 10.6 and Higher** – This version of the MIN app is designed to work exclusively with **Mendix Studio Pro 10.6** and higher. Users on Mendix Studio Pro versions below 10.6 should continue to use Make It Native 9 for app development and testing purposes. See [Make It Native Apps](/releasenotes/mobile/make-it-native-parent/) for a precise list of which MIN versions work with with Studio Pro versions.
+* **Critical Update** – With the upgrade to React Native 0.72.7, it is essential for all users to update their app to this latest version. Please note that older versions of the MIN app will no longer function after this update. We strongly advise all users to install this update immediately to continue using the app without interruption.
+
+### Known Issues {#known-issues-200}
+
+* **Augmented Reality (AR) Feature** - We are currently aware of an issue where the AR functionality is not operating as expected in the MIN app. We are actively working on a solution and we aim to fix this issue in a subsequent update.
+
+## iOS 1.2.1 / Android 1.2.1
+
+**Release date: November 24, 2023**
+
+### Features
+
+* We added new apps to Showcase:
+    * Citrus Grove Retail: a grocery store online shopping app
+    * New Garden County Inspection: an inspection and task assignment app
 
 ## iOS 1.2.0 / Android 1.2.0
 
 **Release date: October 16, 2023**
 
-### Fixed
+### Fixes
 
 * We fixed an issue related to Firebase integration. This fix ensures improved stability and a smoother experience while using the Make It Native app.
 
@@ -30,7 +58,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/us/app/
 
 * We introduced fresh visual designs for Make It Native 10.
 
-### Fixed
+### Fixes
 
 * We upgraded `react-native-device-info` to version 8.7.1 to enhance device compatibility and performance.
 * We updated the Showcase Banking App.

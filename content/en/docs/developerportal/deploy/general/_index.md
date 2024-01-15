@@ -8,17 +8,13 @@ tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Az
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/general.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix apps can be deployed to many different platforms. Much of the deployment and management of a Mendix app depends on which platform it is deployed to. You can find information about each platform in the sections of documentation which relate specifically to deployment to that platform.
 
 There are, however, a number of issues which are related to all, or multiple platforms. Rather than duplicate this information, these are covered in this section of the documentation.
 
-The subjects covered in the *General* section of deployment are:
+The subjects covered in the *General* section of deployment are as follows:
 
 * [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/)
 * [Secure Outgoing Connections from your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/)
@@ -30,7 +26,7 @@ The subjects covered in the *General* section of deployment are:
 
 To deploy an app to the cloud, you first have to build a project model (MDA). The runtime deployment is described in more detail in [Runtime Deployment](/refguide/runtime-deployment/). This can be done independently or as part of the deploy pipeline.
 
-The time it takes to build your model (.mda) depends on the complexity of the model and the number and size of the files held in the TeamServer repository which is used to build the model.
+The time it takes to build your model (.mda) depends on the complexity of the model and the number and size of the files held in the Team Server repository which is used to build the model.
 
 ## 3 Managing Your Deployed Apps
 
@@ -38,6 +34,8 @@ For many of the platforms to which Mendix can be deployed, the following pages i
 
 * Environments
 * Mobile App
+
+You can access both of these pages via the Developer Portal’s [navigation pane](/developerportal/#navigation-pane).
 
 ### 3.1 Environments
 

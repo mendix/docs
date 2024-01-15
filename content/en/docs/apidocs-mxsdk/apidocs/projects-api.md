@@ -7,7 +7,7 @@ weight: 85
 ---
 
 {{% alert color="warning" %}}
-⚠ The Projects API is deprecated. It will be removed early in 2024. A firm date will be communicated once a decision has been made.
+⚠ The Projects API is deprecated. Mendix aims to remove the Project API on March 1, 2024.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -46,7 +46,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
 | ApiKey | String | An [API Key](/apidocs-mxsdk/apidocs/authentication/) associated to the user account of *User*. |
-| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/general/app-store-overview/#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
+| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/overview/#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
 
 #### 3.1.2 Output
 

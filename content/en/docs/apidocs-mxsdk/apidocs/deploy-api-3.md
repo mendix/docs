@@ -29,7 +29,7 @@ Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
 
 Select the following as **Deployment Mendix Cloud** scopes:
 
@@ -104,12 +104,12 @@ The following steps will change the permissions of a team member to an environme
       "member": {
         "userId": "john.doe@domain.tld"
       },
-      "canDeployApp": true,
-      "canManageBackups": false,
-      "canViewAlerts": false,
-      "canAccessAPI": false,
-      "canViewLogs": false,
-      "canManagePrivileges": false
+      "canDeployApp": "true",
+      "canManageBackups": "false",
+      "canViewAlerts": "false",
+      "canAccessAPI": "false",
+      "canViewLogs": "false",
+      "canManagePrivileges": "false"
     }
     …
     ```

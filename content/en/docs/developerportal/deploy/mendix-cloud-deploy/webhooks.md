@@ -3,13 +3,13 @@ title: "Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
-description: "Creating a webhook to trigger actions from the Mendix cloud"
-tags: ["Mendix cloud", "Webhooks", "CI/CD", "Pipeline"]
+description: "Creating a webhook to trigger actions from Mendix Cloud"
+tags: ["Mendix Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction
 
-Webhooks allow you to send information about your licensed Mendix app deployed to the Mendix Cloud or Mendix for Private Cloud to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
+Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix for Private Cloud to an external app or workflow. This can be used, for example, to trigger an automated CI/CD workflow when a new change is committed to the Team Server.
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
@@ -20,7 +20,7 @@ Mendix provides webhooks to send project information when the following events h
 The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 
 {{% alert color="info" %}}
-Webhooks are only available for licensed Mendix apps that are deployed to the Mendix Cloud or Mendix for Private Cloud.
+Webhooks are only available for licensed Mendix apps that are deployed to Mendix Cloud or Mendix for Private Cloud.
 
 They are set up and work independently of the deprecated [webhooks for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
 {{% /alert %}}
@@ -32,7 +32,7 @@ They are set up and work independently of the deprecated [webhooks for Sprints a
 To set up a webhook, do the following:
 
 1. Open your app in the Developer Portal.
-1. Open the **Webhooks** page from the menu on the left. You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
+1. From the navigation pane, open the **Webhooks** page. You will see any current webhooks with an indication of whether they are active or inactive. An inactive webhook will not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:
     * **Webhook Name** – This is a name, which you can use to identify the webhook.

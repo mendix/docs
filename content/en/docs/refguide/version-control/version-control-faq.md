@@ -43,13 +43,7 @@ Yes, as the Team Server is based on a full implementation of Git. You can direct
 
 Yes, it is possible to connect to a third-party Git version control repository, which is often called BYO-GIT (Bring Your Own Git).
 
-However, in this case the following products and capabilities are not available:
-
-* Deployment using the Developer Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
-* [AQM](/addons/aqm-addon/) 
-
-For more information about the supported Git repositories, see the [Preparing Your Repository](/refguide/on-premises-git/#preparing-your-repo) section in *Working with Git On-Premises Version Control Server*.
+For more information about limitations and the supported Git repositories, see the [Introduction](/refguide/on-premises-git/#intro) and [Preparing Your Repository](/refguide/on-premises-git/#preparing-your-repo) sections in *Working with Git On-Premises Version Control Server*.
 
 ## 9 Does Mendix 10 Support Pull Requests and Peer Reviews? 
 

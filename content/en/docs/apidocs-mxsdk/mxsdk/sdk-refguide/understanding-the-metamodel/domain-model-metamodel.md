@@ -63,7 +63,7 @@ Studio Pro Guide | Model SDK API docs
 
 ## 4 Access Rules
 
-To secure access to the data in a Mendix app, you can define access rules for entities. An access rule is always defined for a certain module role, defines to which attribute or association members that role has access, and the retrieved data is constrained by an xpath constraint.
+To secure access to the data in a Mendix app, you can define access rules for entities. An access rule is always defined for a certain module role, defines to which attribute or association members that role has access, and the retrieved data is constrained by an XPath constraint.
 
 ### 4.1 Graphical Overview
 

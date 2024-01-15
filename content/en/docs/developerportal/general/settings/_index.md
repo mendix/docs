@@ -63,7 +63,7 @@ Only users with the **App Settings** permission can change cloud platforms.
 
 On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
-If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
+If you select a non-Mendix Cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
 Specific steps for configuring different cloud platforms are provided here:
 
@@ -97,7 +97,7 @@ To remove an app user from the environment, click **Remove** by their name.
 To edit an app user's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert color="info" %}}
-If an app user has been granted access to an app environment through a [group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
+If an app user has been granted access to an app environment through a [group](/control-center/groups/), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
 ### 4.2 Inviting Users {#invite-users}
@@ -160,7 +160,7 @@ If you manage your projects in Jira, you can connect your apps in the Developer 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
+You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the Git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

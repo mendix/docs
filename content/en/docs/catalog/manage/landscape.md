@@ -12,9 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-The Landscape View presents a graphical view of the registered OData services in your [Catalog](/catalog/). It provides a landscape visualization of items registered in the Catalog, and their relationships with apps that consume the datasets that they connect to. In the Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued are also shown in the Landscape.
+The Landscape View presents a graphical view of the registered services in your [Catalog](/catalog/). It provides a landscape visualization of items registered in the Catalog, and their relationships with apps that consume the datasets that they connect to. In the Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published services from the apps. All public services that are issued are also shown in the Landscape.
 
-In the Landscape, you will see, at a glance, the network of deployments of the apps publishing OData services and those consuming them. It enhances searching for suitable data sources in the Catalog by showing the following:
+In the Landscape, you will see, at a glance, the network of deployments of the apps publishing services and those consuming them. It enhances searching for suitable data sources in the Catalog by showing the following:
 
 * Popular apps in the Catalog Landscape and the apps that consume data from them
 * The dependencies between consuming and publishing apps
@@ -33,7 +33,7 @@ You can access the Landscape from [Catalog](https://catalog.mendix.com/) by clic
 
 ### 2.1 Structure and Flow of Data
 
-A registered OData service includes the precise definition of the app and the datasets or entity sets—that provide the link to the shared data. The service endpoint and the deployment to a specific environment is shown as a node on the Landscape.
+A registered service includes the precise definition of the app and the datasets or entity sets—that provide the link to the shared data. The service endpoint and the deployment to a specific environment is shown as a node on the Landscape.
 
 The Landscape depiction of a service and its network will be such that it will show the "flow" of data from the bottom of the display towards the top according to the following principles:
 
@@ -55,7 +55,7 @@ Registered apps and services are depicted in the Landscape as nodes from the def
 
 #### 2.3.1 Data Sources
 
-Data sources or the published OData services are depicted as a round node with the icon that indicates the **Technology** (OData) and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
+Data sources or the published services are depicted as a round node with the icon that indicates the **Technology** and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
 
 {{% alert color="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
 
@@ -70,7 +70,7 @@ Apps are displayed as square icons with the application icon and the environment
 The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are published by a service and consumed by consuming apps. These are illustrated and described in the following examples:
 
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**.
-* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
+* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
 
     The app **StudioExperienceMob6Aug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
 

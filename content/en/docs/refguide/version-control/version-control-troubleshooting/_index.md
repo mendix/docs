@@ -38,9 +38,9 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
 You can also use `--global` modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
 
-### 2.2 Getting an Oops Pop-Up Menu
+### 2.2 Getting an "Oops" Pop-Up Menu
 
-You may get an Oops pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. The problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
+You may get an "Oops" pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. The problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
 
 * Specify the user name:
   `git config --global user.name "<Name>"`
@@ -57,7 +57,7 @@ If you face connection problems when cloning the Git repository using the **Open
 
 ### 3.2 Customer-Facing Issues
 
-For Studio Pro developers to be able to troubleshoot issues that the customers face with Beta Git support, Studio Pro provides a logging mechanism.
+For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
 
 When filing a Git support issue with Mendix Support, attach the log files doing the following:
 
@@ -103,7 +103,7 @@ You can force Studio Pro to recreate the metadata by doing the following:
 1. Checkout the revision you want to create a deployment package from in a separate directory.
 2. Open it with the correct version of Studio Pro.
 3. Create a branch from it and switch to the new branch. 
-4. Do a cosmetic change (e.g. move an activity in a microflow a few pixels)
+4. Do a cosmetic change (for example, move an activity in a microflow a few pixels)
 5. Commit and Push the changes from Studio Pro.
 
 This will recreate the metadata and you should now be able to create a deployment package from this new revision.

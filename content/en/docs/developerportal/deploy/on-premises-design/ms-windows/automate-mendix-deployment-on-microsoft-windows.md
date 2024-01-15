@@ -29,7 +29,7 @@ To install Mendix-specific cmdlets that you can use to script your app deploymen
     * Fetch the source from Team server and build the package locally with [MxBuild.exe](/refguide/mxbuild/).
     * Create the package manually. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 2. In Windows PowerShell, run the following command: `Import-Module '{<Mendix Service Console installation directory>}\Mendix.Service.Commands.dll'`.
-    For example, if Mendix Service Console is installed at *C:\Program Files (x86)\Mendix\Service Console*, enter `Import-Module 'C:\Program Files (x86)\Mendix\Service Console\Mendix.Service.Commands.dll'`
+    For example, if Mendix Service Console is installed at *C:\Program Files\Mendix\Service Console*, enter `Import-Module 'C:\Program Files\Mendix\Service Console\Mendix.Service.Commands.dll'`
 3. Verify that the following commands are now available in PowerShell:
     * `Start-MxApp`
     * `Stop-MxApp`
@@ -71,6 +71,15 @@ Update-MxApp $APP_NAME -LiteralPath $LITERAL_PATH
 # start app, update database                                     
 Start-MxApp $APP_NAME -SynchronizeDatabase
 ```
+
+{{% alert color="info" %}}
+To start your app as a local process instead of a service, add a `-NoService` argument to the `Start-MxApp` cmdlet, as in the following example:
+
+```
+Start-MxApp $APP_NAME -NoService -SynchronizeDatabase 
+```
+
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 Stopping your app before you update it is a necessary part of the process. Do not attempt to extract the deployment package into your app while the app is running.

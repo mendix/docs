@@ -38,10 +38,10 @@ upgrading to Kubernetes 1.21 and Mendix Operator v2.\*.\* will prepare resources
 
 ### 2.1 Download the Configuration Tool{#download-configuration-tool}
 
-Follow the instructions to [Download the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool).
+Follow the instructions to [Download the Configuration Tool](/developerportal/deploy/standard-operator/#download-configuration-tool).
 When downloading the Configuration Tool, choose the version you would like to upgrade to (1.9.0 or a later version) - not the version that is currently installed.
 
-If you're using an OpenShift cluster, follow the [Signing in to OpenShift](/developerportal/deploy/private-cloud-cluster/#openshift-signin) instructions.
+If you're using an OpenShift cluster, follow the [Signing in to OpenShift](/developerportal/deploy/standard-operator/#openshift-signin) instructions.
 
 ### 2.2 CLI Availability
 
@@ -49,7 +49,7 @@ You must have the *OpenShift CLI* installed for upgrading Mendix for Private Clo
 
 ## 3 Upgrade Namespace{#upgrade-cluster}
 
-1. Follow the instructions to [Run the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#running-the-tool). You will see the initial screen:
+1. Follow the instructions to [Run the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool). You will see the initial screen:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-upgrade-guide/mxpc-cli-welcome.png" >}}
 2. Click **Upgrade Namespace**. You will see the screen below:

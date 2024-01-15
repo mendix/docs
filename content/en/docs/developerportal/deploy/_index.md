@@ -9,20 +9,16 @@ tags: ["Deploy","Manage", "Mendix Cloud", "SAP", "Cloud Foundry", "Kubernetes", 
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
-A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
+A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to Mendix Cloud, which is the default location for both free and licensed apps. You can also deploy to SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
 
 {{% alert color="warning" %}}
 
 * Each app can only be deployed to one type of target platform (for example Mendix Cloud nodes) in addition to local testing
 * Some features which rely on the target platform can work differently depending on what is supported (for example in Cloud Foundry, Kubernetes, or Windows server)
     * If you want to use a particular feature, check that it is supported by your chosen target platform
-{{% /alert %}}
+    {{% /alert %}}
 
 This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
@@ -32,21 +28,21 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 ## 2 Run Locally or Preview
 
-In Studio Pro, you can click the play button (▶) in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
+In Studio Pro, you can click **Play** ({{% icon name="controls-play" %}}) in the toolbar to run your app locally. Use the **View App** button to directly jump to see your app running in your browser at *localhost*.
 
 To speed up the development process, most changes you make within Studio Pro will use "Instant Update" to be reflected immediately in the locally-running app. However, some changes (such as changes to the domain model) will need the whole app to be restarted.
 
-## 3 Mendix Cloud
+## 3 Mendix Cloud {#mendix-cloud}
 
-The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on the Mendix Cloud includes multiple environments, backups, monitoring, high availability, and more.
+Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on Mendix Cloud includes multiple environments, backups, monitoring, high availability, and more.
 
-From within Mendix Studio Pro, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal and, from there, you can transport it and start running your application. 
+From within Mendix Studio Pro, you can view the cloud nodes you have available in Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal and, from there, you can transport it and start running your application. 
 
 For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
 ### 3.1 Mendix Cloud Dedicated {#mendix-cloud-dedicated}
 
-Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). This works in exactly the same way as the Mendix Cloud except that the cluster on which the apps run is not shared with any other customers. Only your own organization's apps run on this cluster. Furthermore, you can also have direct access to your other system over your network.
+Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). This works in exactly the same way as Mendix Cloud except that the cluster on which the apps run is not shared with any other customers. Only your own organization's apps run on this cluster. Furthermore, you can also have direct access to your other system over your network.
 
 ## 4 SAP Business Technology Platform (SAP BTP)
 
@@ -54,11 +50,11 @@ If you create your app from an SAP app template, the Developer Portal will lead 
 
 For more information, see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
-## 5 Siemens MindSphere
+## 5 Siemens Insights Hub
 
-You can deploy your app to MindSphere, the cloud-based, open IoT operating system from Siemens. Here you can leverage the information held within MindSphere and share your app with selected MindSphere tenants.
+You can deploy your app to Insights Hub, the cloud-based, open IoT operating system from Siemens. Here you can leverage the information held within Insights Hub and share your app with selected Insights Hub tenants.
 
-To find out how to do this, read [Siemens MindSphere](/developerportal/deploy/deploying-to-mindsphere/).
+To find out how to do this, read [Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
 
 ## 6 Private Cloud
 

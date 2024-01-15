@@ -16,7 +16,7 @@ This document describes known issues with Git version control and the ways to fi
 You may encounter the following issues:
 
 * **Proxy servers are not supported** — we do not support connecting to Git repositories from behind a proxy server yet (for a workaround, see the [Proxy Support](/refguide9/svn-git-differences/#proxy-support) section in *Differences between Git and SVN*)
-* **Getting an Oops pop-up menu when setting a name and an email for Git in the Preferences dialog box or while committing** — the problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
+* **Getting an "Oops" pop-up menu when setting a name and an email for Git in the Preferences dialog box or while committing** — the problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
     * Specify the user name:
     `git config --global user.name "<Name>"`
     * Specify the email:
@@ -31,7 +31,7 @@ If you face connection problems when cloning the Git repository using the **Open
 
 ### 3.2 Customer-Facing Issues
 
-For Studio Pro developers to be able to troubleshoot issues that the customers face with Beta Git support, Studio Pro provides a logging mechanism.
+For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
 
 When filing a Git support issue with Mendix Support, attach the log files doing the following:
 

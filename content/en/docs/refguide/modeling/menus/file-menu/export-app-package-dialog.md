@@ -22,7 +22,7 @@ For more information on what options you can select, see the sections below.
 
 ## 2 Package Type
 
-Alternatively, you can export your app as an [Adaptable Solution](/appstore/creating-content/sol-adapt/). To enable this option when exporting, open the **App settings** > **Solution** tab and set **Enable solution adapation** to Yes.
+Alternatively, you can export your app as an [Adaptable Solution](/appstore/creating-content/sol-adapt/). To be able to do it when exporting, open the **App settings** > **Solution** tab and set **Enable solution adaptation** to **Yes**. For more information on this setting, see the [Solution Tab](/refguide/app-settings/#solution) section in *App Settings*. 
 
 You can now choose to export your app as the **Solution** or **Source Package**. 
 

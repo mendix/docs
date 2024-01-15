@@ -41,7 +41,7 @@ The description of the items that you can select are as follows:
 * **Technical Contact**: the technical contact of the app. 
 
   {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking the pencil icon next to the currect Technical Contact in the table.
+  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
   {{% /alert %}}
 
 * **EnvID**: the unique identifier of the environment.
@@ -87,7 +87,7 @@ The description of the items that you can select are as follows:
 * **Technical Contact**: the technical contact of the app. 
 
   {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking the pencil icon next to the currect Technical Contact in the table.
+  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
   {{% /alert %}}
 
 * **EnvID**: the unique identifier of the environment.

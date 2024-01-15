@@ -1143,7 +1143,7 @@ From this page you can see a summary of your clusters with all their namespaces 
 Here you can perform the following actions on the entire cluster:
 
 * Delete the cluster by clicking **Delete** ({{% icon name="trash-can" %}})
-* Rename the cluster or edit its description by clicking the edit icon
+* Rename the cluster or edit its description by clicking **Edit** ({{% icon name="pencil" %}})
 * Invite another cluster manager
 
 <a id="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:

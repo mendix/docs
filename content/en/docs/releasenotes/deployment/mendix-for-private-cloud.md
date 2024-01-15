@@ -32,6 +32,8 @@ Some features, such as Private Cloud License Manager, are not fully supported ye
 * We have dded a warning on the **Namespace Customization** page to let you know that the Ingress annotation will still be kept in the Ingress object even if it is removed from the Portal.
 * We have implemented a feature to automatically remove deployment packages that have been inactive for more than two weeks.
 * Applying the changes or refreshing the **Environment Details** page will now remember the tab on which the user was present and it will not redirect the user the **General** tab anymore.
+* You can now invite multiple individuals as Cluster managers and namespace members by using a semicolon (;) as a separator.
+* We addressed an issue in the Deploy API where the character limit for the **Operate** link was restricted to 200. This limitation has been removed, and the **Operate** link now supports unlimited characters, aligning with the Portal behavior (Ticket-202867).
 
 ## 2023
 

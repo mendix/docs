@@ -33,7 +33,7 @@ When you open the Developer Portal, you are brought to the **My Apps** page, whi
 
 The **All** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. 
 
-Any app tile you pin with the pin icon will appear in the **Pinned** tab. 
+Any app tile you pin by clicking **Pin** ({{% icon name="pin" %}}) will appear in the **Pinned** tab. 
 
 Use the drop-down menu on the right side of the page to sort the apps by **Most Recent** or in alphabetical order of **App Name**.
 

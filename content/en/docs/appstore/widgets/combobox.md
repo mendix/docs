@@ -78,7 +78,7 @@ The **Multi selection (reference set)** section allows you to configure combo bo
     {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
     {{% alert color="info" %}}The **Show selected item as** property is only available for the **Checkbox** selection method without custom content.{{% /alert %}}
 
-* **Select/Unselect button** – you can choose to enable a "select all / unselect all" button that will be displayed on the top of the options list:
+* **Show Select All** – you can choose to enable a "Show select all" button that will be displayed on the top of the options list. It allows the end-user to click it and select or deselect all options at once:
 
     {{< figure src="/attachments/appstore/widgets/combobox/select-all.png" alt="Show select or unselect button header" >}}
 

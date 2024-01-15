@@ -9,7 +9,7 @@ aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 

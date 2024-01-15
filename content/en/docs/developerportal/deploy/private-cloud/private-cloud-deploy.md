@@ -254,6 +254,10 @@ This displays details of the deployment package.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image18.png" >}}
 
+{{% alert color="info" %}}
+Should a deployment package remain unused, inactive, or unlocked for a period exceeding 2 weeks, it will be automatically deleted according to the expiry date. To retain the deployment package for future use, be sure to lock it.
+{{% /alert %}}
+
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
 
 There are three additional actions you can take while looking at the deployment package details:
@@ -474,6 +478,8 @@ If you need to enter or change the subscription secret, then you can do that her
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
 
 #### 5.1.4 Security
 
@@ -711,6 +717,10 @@ This error refers to a situation where a running pod is terminated because it ha
 To fix this issue, you can raise memory requests to match the memory limit by performing the following steps:
 
 1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
+
+{{% alert color="info" %}}
+For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
+{{% /alert %}}
 
     1. To update the Mendix Operator configuration, use the following command:
 

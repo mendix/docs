@@ -41,6 +41,10 @@ To perform the [base installation](/developerportal/deploy/standard-operator/#ba
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
+### Global Operator Namespace - Base installation
+
+For Global Operator, the base installation should only be applied to the Global Operator namespace and not to the managed namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
+
 ## 3 Apply Configuration
 
 To [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
@@ -80,6 +84,39 @@ registry:
   type: openshift4
 ```
 
+### Global Operator - Managed Namespace 
+
+To configure a managed namespace inside a Global Operator, the namespace configuration should only be applied on managed namespace and not Global Operator namespace. For more information, check Global Operator documentation.
+
+Apply below config file, for the managed namespace configuration.
+
+```yaml
+namespace: managedNamespace
+cluster_mode: connected
+mask:
+  database_plan: true
+  storage_plan: true
+  ingress: true
+  registry: true
+  proxy: false
+  custom_tls: false
+database_plan:
+  name: ephemeral-database
+  type: ephemeral
+storage_plan:
+  name: ephemeral-storage
+  type: ephemeral
+ingress:
+  type: openshift-route
+  enable_tls: false
+  k8s_ingress: null
+  service: null
+registry:
+  type: openshift4
+global_operator:
+  operator_namespace: globalOperatorNamespace
+```
+
 ## 4 Upgrade Mendix Operator and Mendix Gateway Agent
 
 To [upgrade the versions of Mendix components in your namespace](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster), use the following command:
@@ -88,3 +125,8 @@ To [upgrade the versions of Mendix components in your namespace](/developerporta
 ./mxpc-cli upgrade-namespace --clusterType <cluster-type> --namespace <namespace>
 
 ```
+
+{{% alert color="info" %}}
+In case of Global Namespace installation, the upgrade procedure is not applicable for the managed namespace.
+{{% /alert %}}
+

@@ -29,7 +29,7 @@ Some features, such as Private Cloud License Manager, are not fully supported ye
 
 * We have added a new option to configure the product type for the Runtime license on the **Namespace details** and **Environment details** page.
 * We have addressed an issue on the PCLM statistics page where users encountered difficulty navigating to the license list if it contained more than 100 licenses.
-* We have dded a warning on the **Namespace Customization** page to let you know that the Ingress annotation will still be kept in the Ingress object even if it is removed from the Portal.
+* We have added a warning on the **Namespace Customization** page to let you know that the Ingress annotation will still be kept in the Ingress object even if it is removed from the Portal.
 * We have implemented a feature to automatically remove deployment packages that have been inactive for more than two weeks.
 * Applying the changes or refreshing the **Environment Details** page will now remember the tab on which the user was present and it will not redirect the user the **General** tab anymore.
 * You can now invite multiple individuals as Cluster managers and namespace members by using a semicolon (;) as a separator.

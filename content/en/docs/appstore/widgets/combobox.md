@@ -68,8 +68,8 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 
 * **Selection Method** – configures the behavior for selecting options
     * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
-    * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the **X** button on each of the displayed selected items.
-* **Show selected item as** – you can choose to display selected item as labels with **X** buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
+    * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
+* **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
 
     {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
 

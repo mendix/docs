@@ -14,7 +14,7 @@ To support automation namespace installation and configuration we provide a non-
 
 {{% alert color="info" %}} To use non-interactive mode, you need Mendix Operator version 2.1.0 or above.{{% /alert %}}
 
-Please see [Download the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool) for information on how to download the configuration tool.
+Please see [Download the Configuration Tool](/developerportal/deploy/standard-operator/#download-configuration-tool) for information on how to download the configuration tool.
 
 {{% alert color="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
@@ -33,7 +33,7 @@ When using connected mode, you need to put namespace id and namespace secret as 
 
 ## 2 Base Installation
 
-To perform the [base installation](/developerportal/deploy/private-cloud-cluster/#base-installation), use the following command:
+To perform the [base installation](/developerportal/deploy/standard-operator/#base-installation), use the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
@@ -41,9 +41,13 @@ To perform the [base installation](/developerportal/deploy/private-cloud-cluster
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
+### Global Operator Namespace - Base installation
+
+For Global Operator, the base installation should only be applied to the Global Operator namespace and not to the managed namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
+
 ## 3 Apply Configuration
 
-To [configure the namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace) with a configuration file, use the following command:
+To [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
@@ -51,7 +55,7 @@ To [configure the namespace](/developerportal/deploy/private-cloud-cluster/#conf
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
-To generate the config file, follow the instructions described in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/). The **mx_config_cli.yaml** file is generated when you click **Write YAML** during the [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply) phase of configuring your namespace interactively.
+To generate the config file, follow the instructions described in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/). The **mx_config_cli.yaml** file is generated when you click **Write YAML** during the [Review and Apply](/developerportal/deploy/standard-operator/#review-apply) phase of configuring your namespace interactively.
 
 Below is an example of a config file. The example is provided for reference only. To make sure that the config file captures all the values of the input fields used in your own app, you must generate your own **mx_config_cli.yaml** file.
 
@@ -80,6 +84,39 @@ registry:
   type: openshift4
 ```
 
+### Global Operator - Managed Namespace 
+
+To configure a managed namespace inside a Global Operator, the namespace configuration should only be applied on managed namespace and not Global Operator namespace. For more information, check Global Operator documentation.
+
+Apply below config file, for the managed namespace configuration.
+
+```yaml
+namespace: managedNamespace
+cluster_mode: connected
+mask:
+  database_plan: true
+  storage_plan: true
+  ingress: true
+  registry: true
+  proxy: false
+  custom_tls: false
+database_plan:
+  name: ephemeral-database
+  type: ephemeral
+storage_plan:
+  name: ephemeral-storage
+  type: ephemeral
+ingress:
+  type: openshift-route
+  enable_tls: false
+  k8s_ingress: null
+  service: null
+registry:
+  type: openshift4
+global_operator:
+  operator_namespace: globalOperatorNamespace
+```
+
 ## 4 Upgrade Mendix Operator and Mendix Gateway Agent
 
 To [upgrade the versions of Mendix components in your namespace](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster), use the following command:
@@ -88,3 +125,8 @@ To [upgrade the versions of Mendix components in your namespace](/developerporta
 ./mxpc-cli upgrade-namespace --clusterType <cluster-type> --namespace <namespace>
 
 ```
+
+{{% alert color="info" %}}
+In case of Global Namespace installation, the upgrade procedure is not applicable for the managed namespace.
+{{% /alert %}}
+

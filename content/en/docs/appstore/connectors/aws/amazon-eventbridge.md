@@ -71,7 +71,7 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
 4. Drag the **PutEvents** activity onto the microflow you are working on.
 5. Double-click the **PutEvents** activity to configure the required parameters.
 
-    For the **PutEvents** activity, you must specify the AWS Region, and add the `Credentials` and `PutEventsRequest` objects. The `PutEventsRequest` object requires at least one `RequestEntry` object associated with it, which defines the event that you want to send. To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of your **PutEvents** activity, so that you can pass the `Credentials` object as input parameter of the activity.
+    For the **PutEvents** activity, you must specify the AWS Region, and add the `Credentials` and `PutEventsRequest` objects. The `PutEventsRequest` object requires at least one `RequestEntry` object associated with it, which defines the event that you want to send. To get your `Credentials` object, add either the **GetStaticCredentials** or the **GetTemporaryCredentials** microflow in front of your **PutEvents** activity, so that you can pass the `Credentials` object as input parameter of the activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_actions.png" >}}
 
@@ -82,7 +82,7 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_put_events_choose_aws_region.png" >}}
 
 9. Click **OK**.
-10. Configure the **Credentials_GenerateFromConstants** microflow.
+10. Configure the **GetStaticCredentials** or **GetTemporaryCredentials** microflow.
 11. Open a page that contains a data view to show all the parameters of the `PutEventsResponse` object and its associated `ResponseEntry` objects, which is the response of the **PutEvents** activity.
 12. Configure a method to trigger the *ACT_ PutEvents* microflow. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
@@ -110,7 +110,7 @@ To configure your Mendix app to receive events, perform the following steps:
 6. In the microflow that you created, double-click the **RegisterMyMendixApp** microflow to configure the required parameters.
     
     For the **RegisterMyMendixApp** microflow, you must specify the AWS Region, add your `Credentials`, and add a `Name` and `Description` parameter. The `Name` parameter is used to check if a connection with the given name exists. If the name does not exist, a new connection with the given `Name` and `Description` parameters and API authentication method with the **APIKey** constant is created. If the connection already exists, it is updated with the given parameters. The `Name` parameter is then used to check if an API destination with the given name exists. If the destination does not exist, a new API destination is created with the given `Name` and `Description` parameters, the previously created connection, and the `{ApplicationURL}/rest/EventBridge/v1/event` invocation endpoint. If an API destination with the given name exists, it is updated with the parameters. 
-    To get your `Credentials` object, add the **Credentials_GenerateFromConstants** microflow in front of the **RegisterMyMendixApp** microflow, so that you can pass the `Credentials` object as input parameter.
+    To get your `Credentials` object, add either the **GetStaticCredentials** or the **GetTemporaryCredentials** microflow in front of the **RegisterMyMendixApp** microflow, so that you can pass the `Credentials` object as input parameter.
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_credentials.png" >}}
 
@@ -121,7 +121,7 @@ To configure your Mendix app to receive events, perform the following steps:
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_choose_aws_region.png" >}}
 
 10. Click **OK**.
-11. Configure the **Credentials_GenerateFromConstants** microflow. 
+11. Configure the **GetStaticCredentials** or **GetTemporaryCredentials** microflow.
 12. Configure a method to trigger the *ASU_System* microflow. As a best practice, consider adding the microflow to the **Runtime settings** of your app and add this as the *After startup** microflow. For an example of how a different trigger method can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
     {{< figure src="/attachments/appstore/connectors/aws-eventbridge/eventbridge_register_configure_asu.png" >}}

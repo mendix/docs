@@ -38,6 +38,8 @@ To create a backup with Velero, follow these steps:
     kubectl scale deployment mendix-operator --replicas=0
     ```
 
+     {{% alert color="info" %}} For Global Operator, this needs to be done for the Global Operator namespace.{{% /alert %}}   
+
 2. Create the backup by entering the following command:
 
     ```text {linenos=false}
@@ -45,6 +47,9 @@ To create a backup with Velero, follow these steps:
     ``` 
 
     {{% alert color="info" %}}The above command creates a backup of all your namespaces with the name *mendix-velero-bkp*. If you only want to back up a specific namespace, use the `include-namespace` flag.{{% /alert %}}
+    
+    {{% alert color="info" %}}In case of Global Operator, the `include-namespace` flag should be used for both the Global Operator namespace and the managed namespace.{{% /alert %}}
+
 
 3. Verify that the backup is complete by entering the following command:
 

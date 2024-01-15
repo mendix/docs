@@ -62,7 +62,7 @@ The **General** section allows you to configure general behavior and captions fo
 * **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
 * **Clearable** – if enabled, this allows selected data to be cleared all at once
 * **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values (only for association data source)
-* **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer:
+* **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
     {{< figure src="/attachments/appstore/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." >}}
 
 

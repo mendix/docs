@@ -25,7 +25,7 @@ Incremental synchronization lets you speed up synchronization by transmitting on
 
 To implement this pattern, do the following:
 
-1. Implement the [Deleted Flag](/refguide/mobile/best-practices/deleted-flag) best practice for the target entity.
+1. Implement the [Deleted Flag](/refguide/mobile/best-practices/deleted-flag/) best practice for the target entity.
 1. Enable **Store changedDate** for the target entity.
 1. Add a new entity with an attribute to store the last synchronization date (for example, **SyncHelper/LastSyncDate**).
 1. Set the default value for the synchronization date attribute to **1970-01-01**.

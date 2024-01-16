@@ -57,5 +57,5 @@ To improve your apps further, consult the following recommendations:
 * The after commit event handlers used in the best practice can lead to performance issues if the target object or a related object changes frequently. In this case, use a designated update microflow instead of after commit event handlers.
 * If associations to related objects can be empty, be sure to handle this in the update microflow — for example by using the expression `if ($Store=empty) then '-' else $Store/Name`.
 * It is often useful for compound objects to store aggregate values, such as the number of related objects. These can be computed using the appropriate **List Aggregation** action in the update microflow.
-* It is assumed that compound objects are not changed by the offline client. If this is needed, combine the compound object with a [Request Object](/refguide/mobile/best-practices/request-object).
-* Combine the compound object with [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization) to further increase synchronization performance.
+* It is assumed that compound objects are not changed by the offline client. If this is needed, combine the compound object with a [Request Object](/refguide/mobile/best-practices/request-object/).
+* Combine the compound object with [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization/) to further increase synchronization performance.

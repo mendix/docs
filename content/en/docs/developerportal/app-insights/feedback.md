@@ -42,15 +42,15 @@ After a user submits a feedback item from your app, it goes automatically to **F
 
 {{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
 
-**Feedback** contains two pages: **Inbox** and **Archive**.
+**Feedback** contains two tabs: **Inbox** and **Archive**.
 
 ### 2.1 Inbox {#inbox}
 
-On the **Inbox** page, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
+On the **Inbox** tab, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" >}}
 
-In the list on the **Inbox** page, you can find the following information for each feedback item:
+In the list on the **Inbox** tab, you can find the following information for each feedback item:
 
 * **ID** – the unique number that is assigned to the feedback item
 * **Subject** – the title of the feedback item given by the reporter
@@ -87,15 +87,19 @@ If you select feedback items, you can see the following buttons:
 
 * **Move** – Clicking this moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
 
+* **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the selected feedback items to stories on the designated board in Epics or Jira.
+
+* **Status** – You can select a status from the list and clicking apply button will change the status of the feedback items.
+
 * **Archive** – Clicking this sets all the feedback items as archived.
 
 * **Delete** – Clicking this removes the feedback item permanently from **Feedback**. The result is irreversible.
 
 ### 2.2 Archive {#archive}
 
-On the **Archive** page, everyone in your team can view all the archived feedback items.
+On the **Archive** tab, everyone in your team can view all the archived feedback items.
 
-In the list on the **Archive** page, you can find the following information for each feedback item:
+In the list on the **Archive** tab, you can find the following information for each feedback item:
 
 * **ID** – the unique number that is assigned to the feedback item
 * **Subject** – the title of the feedback item given by the reporter
@@ -113,7 +117,7 @@ Clicking the filter bar will open the **Filter by** side panel. In this side pan
 
 ### 2.3 Feedback Details {#feedback-details}
 
-On the [Inbox](#inbox) or [Archive](#archive) page, when you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
+On the [Inbox](#inbox) or [Archive](#archive) tabs, when you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details.{{% /alert %}}
 
@@ -123,10 +127,10 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/third-party-integration.png" >}}
 
-    * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
     * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
     * Ellipsis (**...**)
         * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
+        * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
         * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
 
 * **Last activity** – This shows when the last edit to the feedback item was made.

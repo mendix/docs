@@ -18,7 +18,9 @@ App **Buzz** is for a specific app:
 
 {{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
 
-You can see the size of your **Team** and your team members on the right side of the page. Click the **+** icon to invite new members to your team directly (please note that we show no more than 25 team members at a time). Click **Show all** to go to the [Team](/developerportal/general/team/) page for the app.
+You can see the size of your **Team** and your team members on the right side of the page. Up to 25 team members can be displayed here at a time.
+
+Click **Invite someone to your team** ({{% icon name="add-circle" %}}) to invite new members to your team directly. Click **Show All** to go to the [Team](/developerportal/general/team/) page for the app.
 
 ## 3 Company Buzz {#company-buzz}
 
@@ -26,7 +28,7 @@ The **Company Buzz** is accessible via the top bar in the Developer Portal:
 
 {{< figure src="/attachments/developerportal/general/buzz/company-buzz.png" >}}
 
-The drop-down menu for the content you see in the Company Buzz is set to **All Channels** by default, which shows Buzz activity for all the apps for which you are a team member *plus* all Buzz activity for your company. In the menu, you can choose to see only Buzz for your company or for a specific app for which you are a team member. 
+The drop-down menu for the content you see in the Company Buzz is set to **All Channels** by default. This shows Buzz activity for all the apps for which you are a team member, as well as all Buzz activity for your company. In the menu, you can choose to see only Buzz for your company or for a specific app for which you are a team member. 
 
 Clicking an app name in **Recent Apps** will take you to the [App Buzz](#app-buzz) for that app, described below.
 

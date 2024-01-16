@@ -21,7 +21,7 @@ You can also register the handling of a normal weblink beginning with `http://` 
 
 When an app is installed it registers the `schema` and optionally the `host` so its operating system knows which application should be opened when the URL is clicked. If you tap the link, the application will be opened whether it is running, running in the background, or closed.
 
-Deeplinks registrations persist after the app is closed. Specifically, deeplinks are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
+Deep links registration persist after the app is closed. Specifically, deep links are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
 
 ### 1.1 Testing With the Make It Native App
 
@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Complete the [Prerequisites](/howto8/mobile/deploying-native-app/#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date
-* Install git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
+* Install Git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
 * Install Mendix Studio Pro v 8.15.0 or above in order to use the Native Mobile App Builder
 
 ## 3. Setting up App Deep Linking {#set-up}
@@ -79,7 +79,7 @@ When running locally from source, on iOS you have to run `pod install` once more
     cd c:/github
     ```
 
-1. Use git to clone your Native Builder template from GitHub: 
+1. Use Git to clone your Native Builder template from GitHub: 
 
     ```shell {linenos=false}
     git clone https://github.com/your-account/native-deeplink-app

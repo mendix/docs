@@ -31,7 +31,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -71,6 +71,10 @@ Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"statu
 ## 3 Examples
 
 The following sections of this document contain sample usage scenarios for the API.
+
+{{% alert color="info" %}}
+Please note that the attribute values in API requests are case-sensitive. Make sure that the input requests are entered correctly according to the specification file.
+{{% /alert %}}
 
 ### 3.1 Using the API to Build, Download and Delete a Deployment Package
 

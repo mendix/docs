@@ -38,7 +38,7 @@ These instructions do not explain how to move databases, file storage, or any ot
 
 ## 2 Basic Concepts and Overview
 
-When you deploy an app to the cloud, whether it is a Free App or a licensed app, it will consist of several parts:
+When you deploy an app to the cloud, whether it is a Free App or a licensed app, it consists of several parts:
 
 * Mendix Runtime – essentially, one or more instances of your app running in a container
 * Routing layer
@@ -105,25 +105,21 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
 To unlink a Free App, do the following:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. From the [Developer Portal](http://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
-2. Select the app that you want to unlink.
+1. If the page shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
 
-3. Go to [Environments](/developerportal/deploy/environments/) in the navigation pane.
-
-4. If the page shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/link-node.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/link-node.png" class="image-border" >}}
    
-5. Click **Unlink your app**.
+1. Click **Unlink your app**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/unlink-free-app.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/unlink-free-app.png" class="image-border" >}}
 
-6. Click **Yes, delete all data and unlink this app** to confirm.
+1. Click **Yes, delete all data and unlink this app** to confirm.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" width=400 >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" max-width=70% >}}
 
-7. If prompted, validate with your [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
+1. If prompted, authenticate yourself with [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
 Your app has now been unlinked from the Free App environment.
 
@@ -151,25 +147,21 @@ Apart from the app, the rest of the environment (or environments) in the target 
 
 To connect your app to a licensed node, do the following:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. From the [Developer Portal](http://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
-2. Select the app you want to link to the node.
+1. Click **Select a node**.
 
-3. Click **Environments** in the navigation pane.
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/link-node.png" class="image-border" >}}
 
-4. Click **Select a node**.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/link-node.png" >}}
-
-5. Click **Use this Node**.
+1. Click **Use this Node**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/choose-node.png" >}}
 
-6. If there is already an app linked to the node, you will be prompted to confirm that you want to replace it. Click **Continue** to confirm.
+1. If there is already an app linked to the node, you will be prompted to confirm that you want to replace it. Click **Continue** to confirm.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-replace.png" width=400 >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/confirm-replace.png" max-width=70% >}}
 
-7. If prompted, validate with your [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
+1. If prompted, authenticate yourself with [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
 Your app is now connected to this node.
 

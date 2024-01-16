@@ -39,4 +39,3 @@ weight: 95
 #### DatabaseSourceBase, GridDatabaseSource, ListViewDatabaseSource, DatabaseConstraint, SelectorDatabaseSource (Elements)
 
 * We deleted these elements.
-

@@ -9,26 +9,22 @@ tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Ba
 
 ## 1 Introduction
 
-You can only run Mendix apps in production on Mendix Cloud if they are linked to a licensed node.
-
-Without a licensed node, you can still deploy your app and test it, but it will have several limitations:
-
-* It runs for only a couple of hours before shutting down
-* It cannot be scaled
-* It has limited operational information available
-
-If you have an app that you want to license, you can do this simply and cost-effectively by ordering the [Mendix Basic](https://www.mendix.com/pricing/basic-package/) package.
+You can only run a Mendix app in production on Mendix Cloud if the app is linked to a licensed node. If you have an app that you want to license, you can do this simply and cost-effectively by ordering the [Mendix Basic](https://www.mendix.com/pricing/basic-package/) package.
 
 {{% alert color="info" %}}
 After you order the Mendix Basic package, it may take up to 48 hours before your licensed node is ready for use.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Without a license, you can still deploy and test your app, but the functionality is limited compared to the Basic Package. For more information, see [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy).
+{{% /alert %}}
+
 ## 2 Features of the Basic Package
 
-The basic package has the following features:
+The Basic Package has the following features:
 
 * Runs in Mendix Cloud
-* Supports between five and one hundred (5-100) users
+* Supports 5-100 users
 * Can be paid for via invoice only
 * Has a limited amount of resources and a single cloud environment on Mendix Cloud, together with the ability to preview and test in Studio Pro. The cloud environment has the following features:
     * 1 GiB App RAM
@@ -41,7 +37,7 @@ The basic package has the following features:
 
 ## 3 Purchasing a Basic Package
 
-Select your Free App in the Developer Portal. Click **Environments** in the navigation pane.
+From the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the **Environments** page of the Free App you want to license.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
@@ -55,7 +51,7 @@ To order your Mendix Basic package, do the following:
 
 3. Configure the Basic Package by choosing the following:
 
-    * **App Name** – This defaults to the current Free App, but you can choose another of your Free Apps using the drop-down list.
+    * **App Name** – This defaults to the current Free App, but you can choose another one of your Free Apps using the drop-down list.
     * **App URL** – Choose your preferred subdomain of `.mendixcloud.com`. This is where users can find your app.
     * **Deployment Region** – Choose your preferred region. Mendix recommends selecting the region where you expect to receive the most visitors. The available regions correspond to AWS regions.
     * **Number of Users** – The cost of your Basic package depends on the number of users.

@@ -23,7 +23,7 @@ The Amazon DynamoDB connector requires Mendix Studio Pro 9.18.0 or above.
 
 To use the Amazon DynamoDB connector, you must also install and configure the following modules:
 
-* [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+* [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. If you are using the Amazon DynamoDB connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon S3 connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.
 
 ### 1.3 Licensing and Cost
@@ -48,33 +48,9 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 In order to use the Amazon DynamoDB service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
-1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
-2. Decide whether you want to use session or static credentials to authenticate.
-    The Amazon DynamoDB connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-3. In the **App Explorer**, double-click the **Settings** for your app.
+As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
-
-4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
-    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
-5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
-6. In the **Select Constants** dialog, find and expand the **AmazonDynamoDBConnector** > **ConnectionDetails** section.
-
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
-
-7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
-
-    | Credentials type | Constant | Value |
-    | --- | --- | --- |
-    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
-    | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
-    | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
-    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
-    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
-    | **SessionCredentials** | **Session Name** | An identifier for the session |
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
@@ -97,7 +73,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/addmicroflow.png" alt="Adding a microflow">}}
 
 7. Enter a name for your microflow, for example, *DS_ListTables*, and then click **OK**.
-8. In the **App Explorer**, in the **Amazon DynamoDBConnector** > **Operations** section, find the **ListTables** activity.
+8. In the **App Explorer**, in the **AmazonDynamoDBConnector** > **Operations** section, find the **ListTables** activity.
 9. Drag the **ListTables** activity onto the work area of your microflow.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listtables.png" alt="The DS_ListTables microflow with the ListTables activity">}}
@@ -108,80 +84,97 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 
 11. Double-click the **ListTables** activity to configure the required parameters.
   
-    For the `ListTables` activity, you must specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
-12. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-13. In the expression builder, type `AWS_Region`, and then press **Ctrl+Space**.
-14. In the autocomplete dialog, select **AmazonDynamoDBConnector.AWS_Region**, then type *.* and select your AWS region from the list.
-
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/awsregions.png" alt="The list of AWS regions">}}
+    For the `ListTables` activity, you must specify the region for which you want to retrieve the tables from, a `Credentials` object and a `ListTablesRequest` object. Other activities may have different required parameters.
     
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
-15. Click **OK**, and then click **OK** again.
-16. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-17. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
+13. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
+14. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+15. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
+16. Click **OK**, and then click **OK** again.
+17. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
+18. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
+19. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
+20. Double-click the **ListTables** activity and configure the **Credentials** parameter by doing the following steps:
+
+    * Click **Edit parameter value**.
+    * Edit the **Credentials** parameter and let it auto-fill.
+
+22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **ListTables** activity.
+23. Double-click the **Create Object** activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
+24. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
+
+    * Click **Edit parameter value**.
+    * Edit the **CreateBucketRequest** parameter and let it auto-fill.
+
+26. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+27. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow.png" alt="The microflow with the Retrieve activity added">}}
 
-18. Double-click the **Retrieve** activity.
-19. In the **Association** section, click **Select**.
-20. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListTablesResponse** as the association.
+28. Double-click the **Retrieve** activity.
+29. In the **Association** section, click **Select**.
+30. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListTablesResponse** as the association.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/selectassociation.png" alt="Selecting the association">}}
 
-21. Click **OK**.
-22. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
-23. Position the **Create list** activity between the microflow start event and the **ListTables** activity.
+31. Click **OK**.
+32. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
+33. Position the **Create list** activity between the microflow start event and the **ListTables** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/createlist.png" alt="The microflow with the Create list activity added">}}
 
-24. Double-click the **Create list** activity.
-25. In the **Entity** section, click **Select**.
-26. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`.
+34. Double-click the **Create list** activity.
+35. In the **Entity** section, click **Select**.
+36. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/selectentity.png" alt="Selecting the entity">}}
 
-27. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
-28. Position the **Loop** activity before the microflow end event.
+37. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
+38. Position the **Loop** activity before the microflow end event.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/addloop.png" alt="The microflow with the loop added">}}
 
-29. Double-click the **Loop** activity.
-30. In the **Iterate over** list, select **ListTableList**.
+39. Double-click the **Loop** activity.
+40. In the **Iterate over** list, select **ListTableList**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/editloop.png" alt="Selecting the entity to iterate over">}}
 
-31. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
+41. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/createobject.png" alt="The microflow with the Create activity added">}}
 
-32. Double-click the **Create object** activity.
-33. In the **Entity** section, click **Select**.
-34. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`, and then click **Select**.
-35. In the **Create Object** dialog box, click **New**.
-36. In the **Edit Change Item** dialog box, in the **Member** drop-down, select the attribute that you previously created, for example, `TableName`.
-37. In the expression editor, type `$IteratorListTable/Name`, and then click **OK**.
-38. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
-39. Double-click the **Change List** activity, and then set the following values:
+42. Double-click the **Create object** activity.
+43. In the **Entity** section, click **Select**.
+44. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`, and then click **Select**.
+45. In the **Create Object** dialog box, click **New**.
+46. In the **Edit Change Item** dialog box, in the **Member** drop-down, select the attribute that you previously created, for example, `TableName`.
+47. In the expression editor, type `$IteratorListTable/TableName`, and then click **OK**.
+48. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
+49. Double-click the **Change List** activity, and then set the following values:
+
     * **Type** - **Add**
     * **Value** - The created object, for example, `$NewDBTable`
-40. Double-click the end event of your microflow, and then set the following values:
+    
+50. Double-click the end event of your microflow, and then set the following values:
+
     * **Type** - **List**
     * **Entity** - The entity that you previously added to your domain model, for example, `DBTable`
-41. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
-42. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
-43. In the **Lists** category, select the **List** template for the page.
-44. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
-45. On the page, double-click the **List view** widget.
+      
+52. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
+53. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+54. In the **Lists** category, select the **List** template for the page.
+55. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
+56. On the page, double-click the **List view** widget.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listview.png" alt="The List view widget">}}
 
-46. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-47. In the **Microflow** field, select the **DS_ListTables** microflow.
-48. Click **OK**, and then click **Yes**.
-49. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
-50. In the **App Explorer**, double-click the **Navigation** for your app.
-51. In the Menu section, click **New Item**.
-52. In the **New Menu Item** dialog, configure the following settings:
+57. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+58. In the **Microflow** field, select the **DS_ListTables** microflow.
+59. Click **OK**, and then click **Yes**.
+60. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
+61. In the **App Explorer**, double-click the **Navigation** for your app.
+62. In the Menu section, click **New Item**.
+63. In the **New Menu Item** dialog, configure the following settings:
+
     * **Caption** - A caption for the navigation item, for example, *Table*
     * **Icon** - An icon that will be displayed for this page in the navigation for your app
     * **On click** - **Show a page**
@@ -189,10 +182,11 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
 
-53. Click **OK**.
+64. Click **OK**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
-54. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+    
+65. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 
@@ -202,21 +196,280 @@ To help you work with the Amazon DynamoDB connector, the following sections of t
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
+#### 4.1.1 AbstractItem
+
+This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one KeyValue object.
+
+| Name | Documentation |
+| --- |  --- |
+| N/A | The `AbstractItem` entity has no attributes. |
+
+#### 4.1.2 AbstractKey
+  
+| Name | Documentation |
+| --- |  --- |
+| `Key` | |
+
+#### 4.1.3 KeyValueString
+  
+| Name | Documentation |
+| --- | --- |
+| `StringValue` | The `StringValue` attribute describes an attribute of type String. |
+
+#### 4.1.4 KeyValueLong
+  
+| Name | Documentation |
+| --- | --- |
+| `LongValue` | The `LongValue` attribute describes an attribute of type Long. |
+
+#### 4.1.5 KeyValueDecimal
+
+| Name | Documentation |
+| --- | --- |
+| `DecimalValue` | The DecimalValue attribute describes an attribute of type Decimal. |
+
+#### 4.1.6 KeyValueBoolean
+  
+| Name | Documentation |
+| --- | --- |
+| `BooleanValue` | The `BooleanValue` attribute describes an attribute of type boolean. |
+
+#### 4.1.7 DescribeTableRequest
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+
+#### 4.1.8 DescribeTableResponse
+  
+| Name | Documentation |
+| --- | --- |
+| `ItemCount` | The `ItemCount` attribute describes the number of items in the specified table. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value. |
+| `CreationDateTime` | The `CreationDateTime` attribute describes the date and time when the table was created, in UNIX epoch time format. |
+| `TableARN` | The `TableARN` attribute describes the Amazon Resource Name (ARN) that uniquely identifies the table. |
+| `TableId` | The `TableId` attribute describes the unique identifier for the table for which the backup was created. |
+| `TableStatus` | The `TableStatus` attribute describes the current state of the table. |
+| `TableName` | The `TableName` attribute describes the table name. |
+
+#### 4.1.9 AttributeDefinition
+
+| Name | Documentation |
+| --- | --- |
+| `AttributeType` | The `AttributeType` attribute describes the data type for the attribute. |
+
+#### 4.1.10 KeySchemaElement
+  
+| Name | Documentation |
+| --- | --- |
+| `KeyType` | The `KeyType` attribute describes the role of the attribute. |
+
+#### 4.1.11 DeleteItemRequest
+  
+| Name | Description |
+| ---  | --- |
+| `ConditionExpression` |  The `ConditionExpression` attribute describes a condition that must be satisfied in order for a conditional `DeleteItem` to succeed. |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+
+#### 4.1.12 DeleteItem
 
 | Name | Description |
+| ---  | --- |
+| N/A |  Entity `DeleteItem` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.13 ExpressionAttributeName
+  
+| Name | Documentation |
 | --- | --- |
-| `Table` | This generalization entity holds information for a given table. The attribute it contains is `Name`, which is the name of the table inside of Amazon DynamoDB. |
-| `Key` | This generalization entity holds information for the key in a key-value pair. The sole purpose of this entity is to be specialized from. Values in DynamoDB are stored in key-value pairs and the connector returns the data in its native type. |
-| `Item` | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `BooleanValue`, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
+| Placeholder | N/A |
+
+#### 4.1.14 DeleteItemResponse
+
+| Name | Description |
+| ---  | --- |
+| N/A |  Entity `DeleteItemResponse` has no attributes. |
+
+#### 4.1.15 ListTablesRequest
+  
+| Name | Documentation |
+| --- | --- |
+| `ExclusiveStartTableName` | The `ExclusiveStartTableName` attribute describes the first table name that this operation will evaluate. Use the value that was returned for `LastEvaluatedTableName` in a previous operation, so that you can obtain the next page of results. |
+| `Limit` | The `Limit` attribute describes a maximum number of table names to return. If this parameter is not specified, the limit is 100. |
+
+#### 4.1.16 ListTablesResponse
+  
+| Name | Documentation |
+| --- | --- |
+| `LastEvaluatedTableName` | The `LastEvaluatedTableName` attribute describes the name of the last table in the current page of results. Use this value as the `ExclusiveStartTableName` in a new request to obtain the next page of results, until all the table names are returned. |
+
+#### 4.1.17 Table
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name. |
+
+#### 4.1.18 BatchGetItemRequest
+  
+| Name | Documentation |
+| --- | --- |
+| `isConsistentRead` | The `isConsistentRead` attribute describes the consistency of a read operation. If set to true, then a strongly consistent read is used; otherwise, an eventually consistent read is used. |
+
+#### 4.1.19 RequestTable
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+| `ProjectionExpression` | The `ProjectionExpression` attribute describes a string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the `ProjectionExpression` must be separated by commas. |
+
+#### 4.1.20 BatchGetRequestedItem
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `BatchGetRequestedItem` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.21 BatchGetItemResponse
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `BatchGetItemResponse` has no attributes. |
+
+#### 4.1.22 ResponseTable
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name. |
+
+#### 4.1.23 BatchGetResponseItem
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `BatchGetResponseItem` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.24 ScanRequest
+  
+| Name | Documentation |
+| --- | --- |
+| `Limit` | The `Limit` attribute describes the maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the number of items up to the limit while processing the results, it stops the operation and returns the matching values up to that point, and a key in LastEvaluatedKey to apply in a subsequent operation, so that you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this limit, it stops the operation and returns the matching values up to the limit, and a key in LastEvaluatedKey to apply in a subsequent operation to continue the operation. |
+| `IndexName` | The `IndexName` attribute describes the name of a secondary index to scan. This index can be any local secondary index or global secondary index. Note that if you use the IndexName parameter, you must also provide TableName. |
+| `TableName` | The `TableName` attribute describes the name of the table containing the requested items; or, if you provide the `IndexName`, the name of the table to which that index belongs and is a required parameter. |
+
+#### 4.1.25 Condition
+  
+| Name  | Documentation |
+| --- | --- |
+| `ComparisonOperator` | The `ComparisonOperator` attribute describes a comparator for evaluating attributes. For example, equals, greater than, less than, etc. and is a required parameter. |
+
+#### 4.1.26 ScanTableValueString
+  
+| Name | Documentation |
+| --- | --- |
+| `StringValue` | The StringValue attribute describes an attribute of type String. |
+
+#### 4.1.27 ScanTableValueDecimal
+
+| Name |  Documentation |
+| --- | --- |
+| `DecimalValue` | The `DecimalValue` attribute describes an attribute of type Decimal. |
+
+#### 4.1.28 ScanTableValueLong
+
+| Name | Documentation |
+| --- | --- |
+| `LongValue` | The LongValue attribute describes an attribute of type Long. |
+
+#### 4.1.29 ScanTableValueBoolean
+  
+| Name | Documentation |
+| --- | --- |
+| `BooleanValue` | The `BooleanValue` attribute describes an attribute of type Boolean. |
+
+#### 4.1.30 ScanResponse
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name. |
+
+#### 4.1.31 ScanItem
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `ScanItem` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.32 BatchWriteItemRequest
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `BatchWriteItemRequest` has no attributes. |
+
+#### 4.1.33 TableWithItemsToAdd
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+
+#### 4.1.34 ItemToAdd
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `ItemToAdd` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.35 TableWithItemsToDelete
+  
+| Name |  Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+
+#### 4.1.36 ItemToDelete
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `ItemToDelete` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.37 BatchWriteItemResponse
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `BatchWriteItemResponse` has no attributes. |
+
+#### 4.1.38 GetItemRequest
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+| `isConsistentRead` | The `isConsistentRead` attribute describes the read consistency model. If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads. |
+
+#### 4.1.39 GetItem
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `GetItem` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.40 GetItemResponse
+
+| Name | Documentation |
+| --- | --- |
+| N/A | Entity `GetItemResponse` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.41 PutItemRequest
+  
+| Name | Documentation |
+| --- | --- |
+| `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
+
+#### 4.1.42 PutItem
+
+ Name | Documentation |
+| --- | --- |
+| N/A | Entity `PutItem` has no attributes, it inherits from `AbstractItem`. |
+
+#### 4.1.43 PutItemResponse
+
+ Name | Documentation |
+| --- | --- |
+| N/A | Entity `PutItemResponse` has no attributes. |
 
 ### 4.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon DynamoDB connector, enumerations list values such as the status of database tables, or the list of available AWS regions.
+An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon DynamoDB connector, enumerations list values such as the status of database tables.
 
 #### 4.2.1 `ENUM_BooleanValue`
 
@@ -259,119 +512,72 @@ For more information on using comparison operators, please visit [Amazon DynamoD
 |`BEGINS_WITH` | **BEGINS_WITH** | The enumeration element that evaluates items for a prefix |
 | `BETWEEN` | **BETWEEN** | The enumeration element that evaluates items between two given items, where the first item must be smaller than the second |
 | `CONTAINS` | **CONTAINS** | The enumeration element that evaluates items for a subsequence or value in a set |
-| `EQ` |    **EQUAL** | The enumeration element that evaluates items against an item. This comparison operator supports all data types, including lists and maps |
-| `GE` |    **GREATER_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are greater than or equal to the key-value pair |
-| `GT` |    **GREATER_THAN** | The enumeration element that evaluates whether items are greater than the key-value pair |
-| `IN` |    **IN** | The enumeration element that evaluates whether items match elements in a list |
-| `LE` |    **LESS_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are less than or equal to the key-value pair |
-| `LT` |    **LESS_THAN** | The enumeration element that evaluates whether items are less than the key-value pair |
-| `NE` |    **NOT_EQUAL** | The enumeration element that evaluates whether items are unequal to the key-value pair |
-| `NOT_CONTAINS` |    **NOT_CONTAINS** | The enumeration element that evaluates items for absence of a subsequence, or absence of a value in a set |
-| `NOT_NULL` |    **NOT_NULL** | The enumeration element that evaluates whether items are not null. This comparison operator supports all data types, including lists and maps |
-| `_NULL` |    **NULL** | The enumeration element that evaluates whether items have the attribute. This comparison operator supports all data types, including lists and maps |
-
-#### 4.2.6 `AWS_Region` {#aws-region}
-
-| Name | Caption |
-| --- | --- |
-| `us_east_2` |    **US East (Ohio)** |
-| `us_east_1` |    **US East (N. Virginia)** |
-| `us_west_1` |    **US West (N. California)** |
-| `us_west_2` |    **US West (Oregon)** |
-| `af_south_1` |    **Africa (Cape Town)** |
-| `ap_east_1` |    **Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` |    **Asia Pacific (Jakarta)** |
-| `ap_south_1` |    **Asia Pacific (Mumbai)** |
-| `ap_northeast_3` |    **Asia Pacific (Osaka)** |
-| `ap_northeast_2` |    **Asia Pacific (Seoul)** |
-| `ap_southeast_1` |    **Asia Pacific (Singapore)** |
-| `ap_southeast_2` |    **Asia Pacific (Sydney)** |
-| `ap_northeast_1` |    **Asia Pacific (Tokyo)** |
-| `ca_central_1` |    **Canada (Central)** |
-| `eu_central_1` |    **Europe (Frankfurt)** |
-| `eu_west_1` |    **Europe (Ireland)** |
-| `eu_west_2` |    **Europe (London)** |
-| `eu_south_1` |    **Europe (Milan)** |
-| `eu_west_3` |    **Europe (Paris)** |
-| `eu_north_1` |    **Europe (Stockholm)** |
-| `me_south_1` |    **Middle East (Bahrain)** |
-| `sa_east_1` |    **South America (São Paulo)** |
+| `EQ` | **EQUAL** | The enumeration element that evaluates items against an item. This comparison operator supports all data types, including lists and maps |
+| `GE` | **GREATER_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are greater than or equal to the key-value pair |
+| `GT` | **GREATER_THAN** | The enumeration element that evaluates whether items are greater than the key-value pair |
+| `IN` | **IN** | The enumeration element that evaluates whether items match elements in a list |
+| `LE` | **LESS_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are less than or equal to the key-value pair |
+| `LT` | **LESS_THAN** | The enumeration element that evaluates whether items are less than the key-value pair |
+| `NE` | **NOT_EQUAL** | The enumeration element that evaluates whether items are unequal to the key-value pair |
+| `NOT_CONTAINS` | **NOT_CONTAINS** | The enumeration element that evaluates items for absence of a subsequence, or absence of a value in a set |
+| `NOT_NULL` | **NOT_NULL** | The enumeration element that evaluates whether items are not null. This comparison operator supports all data types, including lists and maps |
+| `_NULL` | **NULL** | The enumeration element that evaluates whether items have the attribute. This comparison operator supports all data types, including lists and maps |
 
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon DynamoDB connector, they represent the actions that can be performed on DynamoDB database tables.
 
-#### 4.3.1 Batch Get Item
+#### 4.3.1 BatchGetItem
 
-The `BatchGetItem` Amazon DynamoDB activity allows you to get multiple items from DynamoDB in a single call. It requires a valid AWS Region and a response entity that contains the tables from which the item must be fetched. You must also specify whether the activity should perform a consistent read, and provide a list of keys to query from.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `BatchGetItemRequest (Object)` | `BatchGetItemResponse (Object)` |
-| `IsConsistentRead (Boolean)` | |
-
-This activity returns a `BatchGetItemResponse` object with objects from the following entities, as shown in the table below:
-
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `RequestTable` | `AmazonDynamoDBConnector.Table` | This entity holds the references of which items are to be retrieved. The attribute it contains is `ProjectionExpression`, which is a string that identifies the attributes that one wants to retrieve. |
-| `ResponseTable` | `AmazonDynamoDBConnector.Table` | This entity holds information for the item retrieval. It contains a list of items, each of which contain a list of key-value pairs. |
-| `Item` | | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `BooleanValue`, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
-
-#### 4.3.2 List Tables {#list-tables}
-
-The `ListTables` Amazon DynamoDB activity allows you to retrieve a list of `Table` objects for a given region, which contains the table's name. It requires a valid AWS region and AWS credentials.
+The `BatchGetItem` Amazon DynamoDB activity allows you to get multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `Credentials` object and a `BatchGetItemRequest` object that contains the tables from which the item must be fetched. You must also specify whether the activity should perform a consistent read, and provide a list of keys to query from.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| N/A | `ListTableResponse (Object)` |
+| `BatchGetItemRequest` (Object) | `BatchGetItemResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
 
-This activity returns a ListTablesResponse object with objects from the following entities, as shown in the table below:
+#### 4.3.2 ListTables {#list-tables}
 
-| Name | Generalization | Documentation |
-| --- | --- | --- |
-| `ListTablesResponse` | | This entity is the root object that holds a list of `ListTable` objects. It is the response for the Amazon DynamoDB `ListTables` activity. It holds a list of `ListTable` objects. |
-| `ListTable` | `AmazonDynamoDBConnector.Table` | This entity holds information of the retrieved table. The attribute it contains is `Name`, which reflects the name of the table inside Amazon DynamoDB. |
-
-#### 4.3.3 Describe Table
-
-The `DescribeTable` Amazon DynamoDB activity allows you to get a description from a given table inside DynamoDB. It requires a valid AWS region and a table name. It returns a `TableDescription` object which includes the `Name`, `ItemCount`, `CreationDateTime`, `TableARN`, `TableId` and `TableStatus`, as well as a list of `AttributeDefinitions` and `KeySchemaElements`.
+The `ListTables` Amazon DynamoDB activity allows you to retrieve a list of `Table` objects for a given region, which contains the table's name. It requires a valid AWS Region, a `Credentials` object and a `ListTablesRequest` object.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `TableName (String)` | `TableDescription (Object)` |
+| `ListTablesRequest` (Object) | `ListTablesResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
 
-This activity returns a `TableDescription` object with objects from the following entities, as shown in the table below:
+#### 4.3.3 DescribeTable
 
-| Name | Generalization | Documentation | Attributes |
-| --- | --- | --- | --- |
-| `TableDescription` | `AmazonDynamoDBConnector.Table` | This entity is the response for the Amazon DynamoDB `DescribeTable` activity. The attributes it contains are `Name`, `ItemCount`, `CreationDateTime`, `TableARN`, `TableId` and `TableStatus`. The response additionally contains a list of at least one `KeySchemaElement` and `AttributeDefinition` (for a table with only a partition key). | `Name` - the name of the table inside Amazon DynamoDB; `ItemCount` - the number of items the table contains; `CreationDateTime` - the moment at which the table had been created; `TableARN` - the resource name of the table inside Amazon; `TableId` - the table's identification; `TableStatus` - the status of the table. | 
-| `AttributeDefinition` | `AmazonDynamoDBConnector.Key` | This entity holds information regarding the columns inside an Amazon DynamoDB table. The attributes it contains are `AttributeName` and `AttributeType`. | `AttributeName` - the column's name as it appears inside Amazon DynamoDB; `AttributeType` - the data type for the column. |
-| `KeySchemaElement` | `AmazonDynamoDBConnector.Key` | This entity holds information regarding the key schema for a given table. The attributes it contains are `Key` and `KeyType`. | `Key` - the name of the column as it appears in Amazon DynamoDB; | `KeyType` - either `HASH (partition)` or `RANGE (sort)`. |
-
-#### 4.3.4 Batch Write Item
-
-The `BatchWriteItem` Amazon DynamoDB activity allows you to put or delete multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `BatchWriteItemRequest` object containing the tables from which the item needs to be put or deleted. This activity has no return value.
+The `DescribeTable` Amazon DynamoDB activity allows you to get a description from a given table inside DynamoDB. It requires a valid AWS Region, a `Credentials` object and a `DescribeTableRequest` object. It returns a `DescribeTableResponse` object which includes the `Name`, `ItemCount`, `CreationDateTime`, `TableARN`, `TableId` and `TableStatus`, as well as a list of `AttributeDefinitions` and `KeySchemaElements`.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `BatchWriteRequest (Object)` | N/A |
+| `DescribeTableRequest` (Object) | `DescribeTableResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
 
-#### 4.3.5 Delete Item
+#### 4.3.4 BatchWriteItem
 
-The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, and a `DeleteItemRequest` object with an `Item` object associated to it. If the given table has only a partition key, the `Item` object should have a `KeyValue` object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the `Item` object must have two `KeyValue` objects.
+The `BatchWriteItem` Amazon DynamoDB activity allows you to put or delete multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `Credentials` object and a `BatchWriteItemRequest` object containing the tables from which the item needs to be put or deleted.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `BatchWriteItemRequest` (Object) | `BatchWriteItemResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
+
+#### 4.3.5 DeleteItem
+
+The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
 
 Optionally, you can include a condition expression. The delete activity is then only performed when the condition returns true. Additionally, you can include an expression attribute list to escape reserved words.
 
@@ -379,58 +585,42 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `DeleteItemRequest (Object)` | N/A |
+| `DeleteItemRequest` (Object) | `DeleteItemResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
 
-#### 4.3.6 Scan Table
+#### 4.3.6 ScanTable
 
-The `ScanTable` Amazon DynamoDB activity allows you to retrieve items from an Amazon DynamoDB table. It requires a valid AWS Region and a `ScanTableRequest` object. Optional parameters (attributes within `ScanTableRequest`) are the limit (how much data is retrieved in each batch), as well as the index name (the name of the secondary global index of the given table). This activity returns a `ScanTableResponse` object with a list of items associated with it.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ScanTableRequest (Object)`    | `ScanTableResponse (Object)` |
-
-This activity returns a `ScanTableResponse` object with objects from the following entities, as shown in the table below:
-
-| Name | Generalization | Documentation |
-| --- | --- | --- |
-| `ScanTableResponse` | `AmazonDynamoDBConnector.Table` | This entity holds the information that is returned from the scan table activity. This entity has the table's name as an attribute. Moreover, it contains a list of items. Each item represents a row inside an Amazon DynamoDB table. Each item contains a list of key-value pairs, which represent the attributes inside a row of a table. |
-| `Item` | | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is BooleanValue, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
-
-#### 4.3.7 Put Item
-
-The `PutItem` Amazon DynamoDB activity allows you to put and update an item in DynamoDB. It requires a valid AWS Region, `TableName`, and an `Item` object. If the table has only a partition key, then only one `KeyValue` object is required inside the `Item` object. If the table has both a partition and sort key, then two `KeyValue` objects are required.
+The `ScanTable` Amazon DynamoDB activity allows you to retrieve items from an Amazon DynamoDB table. It requires a valid AWS Region, a `Credentials` object and a `ScanTableRequest` object. Optional parameters (attributes within `ScanTableRequest`) are the limit (how much data is retrieved in each batch), as well as the index name (the name of the secondary global index of the given table). This activity returns a `ScanTableResponse` object with a list of items associated with it.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `TableName (String)` | `RequestID (String)` |
-| `Item (Object)` | |
+| `ScanTableRequest` (Object) | `ScanTableResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
 
-#### 4.3.8 Get Item
+#### 4.3.7 PutItem
 
-The `GetItem` Amazon DynamoDB activity allows you to get an item from DynamoDB. It requires a valid AWS Region, a `TableName`, `IsConsistentRead`, and an `Item` object.
+The `PutItem` Amazon DynamoDB activity allows you to put and update an item in DynamoDB. It requires a valid AWS Region, `Credentials` object, and an `PutItemRequest` object with a `PutItem` object associated to it. If the table has only a partition key, then only one `KeyValue` object is required inside the `PutItem` object. If the table has both a partition and sort key, then two `KeyValue` objects are required.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `TableName (String)`    | `Item (Object)` |
-| `IsConsistentRead (Boolean)` | |
-| `Item (Object)` |    |
+| `PutItemRequest` (Object) | `PutItemResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |
 
-This activity returns an `Item` object with objects from the following entities as shown in the table below:
+#### 4.3.8 GetItem
 
-| Name | Generalization | Documentation |
-| --- | --- | --- |
-| Item | | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `BooleanValue`, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
+The `GetItem` Amazon DynamoDB activity allows you to get an item from DynamoDB. It requires a valid AWS Region, a `Credentials` object, and a `GetItemRequest` with a `GetItem` object associated to it.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GetItemRequest` (Object) | `GetItemResponse` (Object) |
+| `Region` (Enumeration) | |
+| `Credentials` (Object) | |

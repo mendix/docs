@@ -185,3 +185,10 @@ Features:
     * Schemes: `http`, `https`, `ftp`, `mailto`
 
     {{% alert color="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library/). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
+
+## 5 Limitations
+
+The following limitation applies to the rich text widget:
+
+* A hover style issue affecting the toolbar occurs when display size is not set to 100%. This is because major browsers do not calculate correct pixel size on the widget border in CKEditor toolbar styling. The browsers scale pixels based on screen density to ensure information is displayed well across a variety of screen sizes. The side effect of this, however, is that CKEditor toolbar styling cannot give absolute calculations for pixel size.
+* When the keyboard input is set to a language which uses input method editors (IME) to offer suggestions via a drop-down (for example Japanese or Chinese), pressing <kbd>Space</kbd> to select a suggestion can cause the drop-down to close without selecting any suggestion. This sends a result of no entered value for CKEditor to read. If the user wants to submit or save this value, CKEditor misses handling this IME behavior. This chain of events may print errors in the browser console, and cause rendering issues in older Rich Text Format (RTF) versions.

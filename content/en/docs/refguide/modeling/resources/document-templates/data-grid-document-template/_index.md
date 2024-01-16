@@ -28,10 +28,6 @@ A data grid showing a list of orders with a description and the referenced custo
 
 See [Columns (document template)](/refguide/columns-document-template/).
 
-### 2.2 Sort Bar
-
-See [Sort Bar](/refguide/sort-bar/).
-
 ## 3 Appearance Properties
 
 ### 3.1 Column Weights

@@ -11,7 +11,7 @@ tags: ["AWS", "Amazon SageMaker", "machine learning", "ML", "Mendix Studio Pro"]
 
 Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses on developing algorithms and models that enable computers to learn from data and make predictions or decisions without being explicitly programmed. In this way, models can be trained based on custom data of a specific sector or company, and can perform tasks more efficiently than an out-of-the-box foundational model. 
 
-In this article, you will learn how you can incorporate ML into your Mendix app by using [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/).
+In this document, you will learn how you can incorporate ML into your Mendix app by using [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/).
 
 ### 1.1 Prerequisites
 
@@ -30,23 +30,19 @@ By following the tutorial, you will create a demo spam filter with the help of A
 
 To start using SageMaker Studio, perform the following steps:
 
-1. Log in to your AWS account and navigate to the SageMaker service. 
-2. In the SageMaker dashboard, from the left side menu, select the **Studio** to go to the SageMaker Studio interface.
-3. Choose a user profile and open Studio. 
-    If there is not a profile or a domain, create one by choosing **Domains** from the left-side menu, and then following the instructions.   
-4. On the SageMaker Studio Home screen, click **Open Launcher**.
-5. Click the **Change environment** button to select the image type (CPU or GPU) and the kernel.
-6. In the left-hand navigation menu, click the **Files** icon.
-7. Upload the *spam_nb.ipynb* and *spam.csv* example files.
-8. Once the files are visible in the folder, open the *spam_nb.ipynb* file. For a detailed explanation of the contents of the file, see [Spam_nb.ipynb File Contents](#file-contents).
-
-    {{< figure src="/attachments/appstore/connectors/aws-sagemaker/sagemaker.png" alt="The uploaded files in SageMaker Studio">}}
-
-9. Run the notebook to execute the code.
+1. [Launch Amazon SageMaker Studio.](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-launch.html)
+2. [Launch JupyterLab.](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-jl-user-guide.html)
+3. In JupyterLab, click **Upload**.
+4. Upload the *spam_nb.ipynb* and *spam.csv* example files.
+5. Once the files are visible in the folder, open the *spam_nb.ipynb* file. For a detailed explanation of the contents of the file, see [Spam_nb.ipynb File Contents](#file-contents).
+6. Select **ipykernel** as the kernel.
+7. Run the notebook to execute the code.
     1. Put the cursor at the first line.
-    2. Click the **Play** icon on top, and then click it again to run the model training and create the ONNX file.
-    3. Check the **Files** folder, right-click **spam_nb.onnx**, and download the file.
-    4. After training and testing the model, terminate all running instances to avoid extra charges.
+    2. Click the **Play** icon on top, and then click it again to run the model training and create the ONNX file. You only need to execute the first two sections, as shown in the following figure:
+
+        {{< figure src="/attachments/appstore/connectors/aws-sagemaker/file-contents.png" alt="The file contents">}}
+
+    3. After training and testing the model, terminate all running instances to avoid extra charges.
 
 ### 2.1 Spam_nb.ipynb File Contents {#file-contents}
 

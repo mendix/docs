@@ -10,216 +10,34 @@ tags: ["Mendix app", "Industrial Edge", "edge", "docker image", "Mendix Buildpac
 
 ## 1 Introduction
 
-[Industrial Edge](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/production-machines.html) is the Siemens platform for hosting applications from different vendors on a computing platform close to the shop floor. Industrial Edge enables extensions to automation, deployments of demanding stream processing, and learning algorithms, as well as hosting your apps from integration code to site automation.
+[Industrial Edge](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/production-machines.html) is the Siemens IOT platform for hosting applications from different vendors on a computing platform close to the shopfloor. Industrial Edge (IE) enables extensive connectivity to automation and other operational technology (OT) equipment, while allowing the deployments of demanding edge applications to locally process shopfloor data.
 
-Industrial Edge empowers factory operators to create custom applications with the Mendix low-code platform that run locally as Edge Apps. Among its other tools, Industrial Edge provides the [Industrial Edge App Publisher (IEAP)](https://support.industry.siemens.com/cs/us/en/view/109799477), a tool installed on a development PC to convert Mendix apps to Industrial Edge Apps. The Industrial Edge App Publisher is available for both Windows and Linux operating systems.
+Mendix on Edge empowers factory operators to create custom applications with the Mendix low-code platform that run locally as Edge Apps. Among its other tools, Industrial Edge provides the [Industrial Edge Plugin for Mendix Studio Pro](https://marketplace.mendix.com/link/component/218436), a tool extending Mendix Studio Pro seamlessly on a development PC which supports the developer with publishing Mendix apps into the Industrial Edge Environment.
 
-This documentation is meant for Mendix developers who want to use their apps in the Industrial Edge environment.
+This documentation is meant for Mendix developers who want to develop and use their apps in the Industrial Edge environment.
 
 ## 2 Prerequisites
 
-To convert your Mendix app to an Industrial Edge App, the following is required:
+For information about the dependencies and prerequisites to use Mendix on Edge, see [Mendix on Edge](https://docs.eu1.edge.siemens.cloud/develop_an_application/mendix/user_journey.html).
 
-* A deployment package (MDA) of your Mendix app
-* The Industrial Edge App Publisher UI/CLI installed on your development PC
+## 3 Pushing your App to Industrial Edge by Using the IE Plugin for Mendix Studio Pro
 
-    You need the following versions of the Industrial Edge App Publisher:
-    * IEAP UI: minimum v1.2.8
-    * IEAP CLI: minimum v1.3.3
-* [Docker](https://docs.docker.com/get-docker/) with [tcp Socket enabled](https://docs.docker.com/engine/reference/commandline/dockerd/) for Docker daemon
-* An Industrial Edge Management (IEM) to deploy your app 
+For more information about pushing your applications to the Industrial Edge Hub, see [Get started](https://docs.eu1.edge.siemens.cloud/get_started_and_operate/industrial_edge_hub/setup/ieh_index.html).
 
-If you want to test and deploy your converted Mendix app, you also need an Industrial Edge Device (IED) on which to install the Mendix app.
+For more information about pushing your applications to the Industrial Edge Management system, see [Industrial Edge Management - Overview](https://docs.eu1.edge.siemens.cloud/develop_an_application/mendix/user_journey.html).
 
-## 3 Convert Your Mendix App to an Edge App
+After your app is uploaded to your Industrial Edge environment, it is treated like any other native IE application, for example those purchased over the Industrial Edge Marketplace.
 
-To convert your Mendix app into an Industrial Edge App, follow the instructions below.
+## 4 Deploying and Installing Apps on Industrial Edge
 
-### 3.1 Create a Deployment Package of Your Mendix App
+For a step-by-step guide for setting up and operating your Industrial Edge environment and installing applications on your Industrial Edge Devices, see [Get Started & Operate - Overview](https://docs.eu1.edge.siemens.cloud/get_started_and_operate/index.html).
 
-Create a deployment package (MDA) for your Mendix app, following the instructions on [Create Deployment Package](/refguide/create-deployment-package-dialog/).
-
-### 3.2 Create a Docker Image of Your Mendix App  
-
-You can create your Docker image in one of two ways:
-
-* Through the [Industrial Edge App Publisher UI](#ieapui)
-* Using the [Industrial Edge App Publisher CLI](#ieapcli)
-
-For more information on the steps described below, refer to the [Industrial Edge App Publisher - Operation](https://support.industry.siemens.com/cs/us/en/view/109799477) manual.
-
-#### 3.2.1 Industrial Edge App Publisher UI{#ieapui}
-
-To create your docker image using the IEAP UI, do the following:
-
-1. Select an empty folder as the workspace to be used by the Industrial Edge App Publisher to store the app-related data.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/App_Publisher_Workspace.png" alt="Select Workspace" >}}
-
-2. Connect to the Docker daemon.
-
-3. Connect to an Industrial Edge Management.
-
-4. Create a Docker image of your Mendix app by doing the following: 
-    1. Click **Create Image**.
-    1. Select **Mendix**.
-    1. Enter the name of the Docker image you want to create.
-    1. Click **Browse** and select the deployment package (MDA) of your Mendix app.
-    1. Click **Create**.
-
-        {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/select_mda_file.png" alt="Create docker image of Mendix app" >}}
-
-Once the Docker image is built, the next step is creating the Mendix Edge App.
-
-#### 3.2.2 Industrial Edge App Publisher CLI{#ieapcli}
-
-Alternatively, to create the Docker image of your Mendix app using the IEAP CLI, enter the following commands into the CLI:
-  
-1. Use the following command to connect to the Docker daemon:
-
-    ```shell {linenos=false}
-    ie-app-publisher-linux de c -u http://127.0.0.1:2375
-    ```
-
-2. Use the following command to create a Docker image of your Mendix app, `mymendixapp`:
-
-    ```shell {linenos=false}
-    ie-app-publisher-linux im c -n mendixedge:latest -f /root/mymendixapp.mda
-    ```
-
-Once the Docker image is built, the next step is to create the Mendix Edge App.
-
-## 4 Create Mendix Edge App 
-
-After you have created the Docker image of your Mendix app, you must create the corresponding Industrial Edge App and its version. To do so, follow the steps below.
-
-### 4.1 Create Mendix App on the IEM Side
-
-{{% alert color="info" %}}
-You can skip this step if you just want to create a standalone app that does not require an IEM connection in the Industrial Edge App Publisher.
-{{% /alert %}}
-
-1. Log into your IEM.
-2. Create a project and the related Mendix app inside the project.
-
-    You can find the procedure and additional information on how to create a project and an app inside of it in the **Applications > My Projects** section of the [Industrial Edge Management - Operation](https://support.industry.siemens.com/cs/us/en/view/109799510) manual.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/IEM_Created_app.png" alt="Create docker image of Mendix app" >}}
-
-Once you have created the Mendix app on IEM side, you must create a version of your Mendix app in the Industrial Edge App Publisher.
-
-### 4.2 Create App Version
-
-Mendix Applications on Industrial Edge support configuration files. You can add a configuration file for each Edge device, with specific environment variables in addition to the default variables that are configured within the docker compose file.
-
-The container will search the location, specified in the environment variable `IEM_CONFIG_PATH`, for files with the extension `.env`. The `.env` files can contain one or more environment variables, which will be added to the environment variables of the container. This can be used to set constants, scheduled events, or custom runtime settings specific to the Edge device. For the syntax to use, consult the [Constants](https://github.com/mendix/cf-mendix-buildpack#constants) section of the Mendix buildpack. 
-
-See the next section for an example compose file including the `IEM_CONFIG_PATH`, which is set in the example to `/cfg-data`.
-
-As above, you can publish your app using the IEAP UI or the IEAP CLI.
-
-#### 4.2.1 Industrial Edge App Publisher UI
-
-To create a version of your app on Industrial Edge using IEAP UI, follow these steps.
-
-1. Open the IEAP UI.
-2. Log in to the IEM. You will see the applications that are created on the IEM.
-3. Click the Mendix Edge App that you created in step 4.1.
-4. Click **Add New Version**.
-5. Enter all the required Docker Compose configurations and information for your Mendix app in the wizard. 
-6. In the wizard, select the Docker image that you created above.
-    {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/Select_Mendix_Image.png" alt="Create docker image of Mendix app" >}}
-    
-7. Click **Save** and then **Review**.
-
-    The *docker-compose.yml* file for your Mendix app will resemble this example:
-
-    ```yaml
-    version: '2.3'
-        services:
-            mendixapp:
-                image: mendixedge:latest
-                healthcheck:
-                    test: ['CMD', 'curl', '-f', 'http://localhost']
-                    interval: 15s
-                    retries: 2
-                    start_period: 10s
-                    timeout: 3s
-                environment:
-                    ADMIN_PASSWORD: *******
-                    DATABASE_ENDPOINT: 'jdbc:hsqldb:file:~/data/database/db:mem:mendix'
-                    MXRUNTIME_DatabaseType: HSQLDB
-                    MXRUNTIME_DatabaseJdbcUrl: 'jdbc:hsqldb:file:~/data/database/db:mem:mendix'
-                    IEM_CONFIG_PATH: /cfg-data
-                volumes:
-                   - './publish/:/publish/'
-                   - './cfg-data/:/cfg-data/'
-                mem_limit: 1gb
-                restart: unless-stopped
-                ports:
-                   - '60000:8080'
-                
-    ```
-
-8. Click **Validate & Create**. This creates the version metadata in the workspace you selected earlier.
-
-9. Click **Start Upload** to upload the created app version. 
-
-#### 4.2.2 Industrial Edge App Publisher CLI
-
-To create the app version by using the IEAP CLI, use the following commands.
-
-1. Create an empty folder, and run the following command inside that folder to initialize a workspace:
-
-    ```shell {linenos=false}
-    ie-app-publisher-linux ws i
-    ```
-
-2. Connect the Industrial Edge App Publisher to an Industrial Edge Management using the appropriate credentials:
-
-    ```shell {linenos=false}
-    ie-app-publisher-linux em li -u "https://int.portal.t.edge.siemens.cloud" -e user@siemens.com -p P@ssword123
-    ```
-
-3. List the project, including its apps, and fetch the `applicationId` that will be needed for creating an app version:
-
-    ```shell {linenos=false}
-    ie-app-publisher-linux em pr l -k "projectId, name"
-    ie-app-publisher-linux em pr la -p "758aa412254545465" -k "applicationId, title"
-    ```
-
-4. Create a version of your Mendix app using the `applicationId` that you just retrieved:
-
-    ```shell
-    ie-app-publisher-linux em app cuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' -y './docker-compose.yml' -c 'change logs' -n -n {"mendixapp":[{"name":"mendix","protocol":"HTTPS","port":"8080","headers":"","rewriteTarget":"/"}]}  -s 'mendix' -t 'FromBoxReverseProxy' -u '8080' -r '' 
-    ie-app-publisher-linux em app uuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' 
-    ```
-
-## 5 Install Your Mendix App on an Edge Device 
-
-### 5.1 Prerequisites
-
-To install your Mendix app on an Edge Device, you need an Edge Device added to your IEM.
-
-For the procedure and additional information on how to add an Edge Device to the IEM, see the **Connecting an Edge Device** section of the [Industrial Edge Device - Operation](https://support.industry.siemens.com/cs/us/en/view/109799507) manual.
-
-### 5.2 Procedure
-
-To install your Mendix app on your Edge Device, follow these steps:
-
-1. Log into your IEM.
-2. Navigate to **Applications** > **My Projects**.
-3. Click the tile of the Mendix app.
-4. To install an app version, click the install action icon of the corresponding version.
-5. Select the Edge Devices on which you want to install the Mendix app version.
-6. Click **Install**.
-
-For more information on how to install an app (version), refer to the [Industrial Edge Management - Operation](https://support.industry.siemens.com/cs/us/en/view/109799510) manual.
-
-## 6 Read More
+## 5 Read More
 
 The following documents give more information on Industrial Edge operations:
 
-* [Industrial Edge Device - Operation](https://support.industry.siemens.com/cs/us/en/view/109799507) 
-* [Industrial Edge Management - Operation](https://support.industry.siemens.com/cs/us/en/view/109799510)
-* [Industrial Edge App Publisher - Operation](https://support.industry.siemens.com/cs/us/en/view/109799477)
+* [Industrial Edge Homepage](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html)
+* [Industrial Edge Documentation](https://docs.eu1.edge.siemens.cloud/index.html)
+* [Industrial Edge Marketplace](https://www.dex.siemens.com/?selected=edge)
+* [Mendix on Edge Device License](https://www.dex.siemens.com/edge/get-started/mendix-device-license)
+* [Industrial Edge space on the Mendix Forum](https://forum.mendix.com/link/space/industrial-edge)

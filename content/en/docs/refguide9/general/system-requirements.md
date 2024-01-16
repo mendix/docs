@@ -29,8 +29,6 @@ The following frameworks are required. They will be installed automatically by t
     * AdoptOpenJDK 11 (x64) – for Mendix 9.13 and below
     * Adoptium Temurin JDK 11 (x64) – for Mendix 9.14 to 9.17
     * Eclipse Temurin JDK 11 (x64)– for Mendix 9.18 and above
-    
-    Oracle JDK 11 can also be used if this is already installed.
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)

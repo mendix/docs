@@ -258,6 +258,55 @@ The `RetrievedReference` entitiy holds information about a sources cited for the
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
 
+#### 4.1.22 StartIngestionJobRequest {#startingestionjobrequest}
+
+This is the request entity of the `StartIngestionJob` action.
+
+| Attribute | Description |
+| --- | --- |
+| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
+| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
+
+#### 4.1.23 GetIngestionJobRequest {#getingestionjobrequest}
+
+This is the request entity of the `GetIngestionJob` action.
+
+| Attribute | Description |
+| --- | --- |
+| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
+| `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve.|
+| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
+
+#### 4.1.24 GetIngestionJobResponse {#getingestionjobresponse}
+
+This is the response entity of the `GetIngestionJob` action.
+
+#### 4.1.25 StartIngestionJobResponse {#startingestionjobresponse}
+
+This is the response entity of the `StartIngestionJob` action.
+
+#### 4.1.26 IngestionJob {#ingestionjob}
+
+This is the response entity of the `IngestionJob` action.
+
+| Attribute | Description |
+| --- | --- |
+| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
+| `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve.|
+| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
+| `Status` | The `Text` attribute contains the status of the ingestion job.|
+| `Statistics` | The `Text` attribute contains statistics about the ingestion job.|
+| `StartedAt` | The `Timestamp` at which the ingestion job started.|
+| `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated.|
+
+#### 4.1.27 FailureReason {#failurereason}
+
+The `FailureReason` entity holds the reason an interaction failed.
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | The `Text` attribute describes reason the interaction failed.|
+
 ### 4.2 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
@@ -307,6 +356,30 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
+
+#### 4.2.5 Start Ingestion Job {#start-ingestion-job}
+
+The `Start Ingestion Job` activity allows you to begin an ingestion job, in which a data source is added to a knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
+
+To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `StartIngestionJobRequest (object)` | `StartIngestionJobResponse (object)` |
+
+#### 4.2.6 Get Ingestion Job {#get-ingestion-job}
+
+The `Get Ingestion Job` activity allows you to retrieve information about a ingestion job, in which a data source is added to a knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
+
+To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `GetIngestionJobRequest (object)` | `GetIngestionJobResponse (object)` |
 
 ## 5 Troubleshooting
 

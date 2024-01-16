@@ -5,7 +5,10 @@ category: "Control Center"
 description: "Describes the Apps page in the Mendix Control Center."
 tags: ["control center", "mendix admin", "apps"]
 weight: 15
-no_list: true 
+no_list: true
+aliases:
+    - /developerportal/company-app-roles/users.html
+    - /developerportal/company-app-roles/users
 ---
 
 ## 1 Introduction

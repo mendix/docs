@@ -94,10 +94,10 @@ The **Paging Buttons** option will render the default buttons as the previous da
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" class="image-border">}}
 
-You can configure pagination based on:
+You can configure pagination based on the following properties:
 
-* **Position** — The "Position of paging button" options allows you to positioned paging buttons below or above the data grid.
-* **Visibility** — The "Show paging buttons" options allows you to always show paging or automatically show and hide based on the number of available data compared to display limit per page.
+* **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
+* **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
 ### 3.2 Virtual Scrolling 
 
@@ -191,7 +191,7 @@ This column configuration is intended to be used in conjunction with [Drop-down 
 
 ### 4.10 Visible {#visible-filter}
 
-When using Datagrid, sometimes columns don't need to be shown. In this "Visible" expression configuration, you can specify when you want to display this columns
+When using a data grid, sometimes columns do not need to be shown. Using this **Visible** expression configuration, you can specify when you want to display columns
 
 ## 5 Rows
 

@@ -9,11 +9,11 @@ tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization
 
 ## 1 Introduction
 
-This pattern lets you remove deleted objects from the offline database via the **Sync-to-device** action.
+This pattern lets you remove deleted objects from the offline database via the [Synchronize to Device](/refguide/synchronize-to-device/) action.
 
 ## 2 Challenge
 
-Using **Synchronize to device from a Microflow** allows for fine-grained control over which objects to synchronize. However, it cannot be used to synchronize deleted objects to the offline database. This means that if an object is deleted on the server, it will remain on the client unless a full synchronization is run.
+Using **Synchronize to device from a Microflow** allows for fine-grained control over which objects are synchronized. However, it cannot be used to synchronize deleted objects to the offline database. This means that if an object is deleted on the server, it will remain on the client unless a full synchronization is run.
 
 ## 3 Solution
 
@@ -21,10 +21,12 @@ The deleted flag overcomes this limitation by introducing a new Boolean attribut
 
 ## 4 Implementation
 
-1. Set the synchronization mode of the target entity to *Nothing (preserve data)*.
-1. Add a Boolean attribute to the target entity (for example, *IsDeleted*) to flag objects that have been deleted and set the default value to *false*.
+To implement this pattern, do the following:
+
+1. Set the synchronization mode of the target entity to **Nothing (preserve data)**.
+1. Add a Boolean attribute to the target entity (for example, **IsDeleted**) to flag objects that have been deleted and set the default value to *false*.
 1. Replace any logic that deletes objects of the target entity with a microflow that sets this attribute to *true.*
-1. Add the following XPath constraint to all access rules of the target entity to limit access to objects that are not flagged as deleted: `[not(IsDeleted)]`
+1. Add the following XPath constraint to all access rules of the target entity to limit access to objects that are not flagged as deleted: `[not(IsDeleted)]`.
 
 ## 5 Recommendations
 

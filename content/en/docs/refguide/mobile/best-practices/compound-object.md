@@ -21,20 +21,22 @@ These performance problems can be countered by combining multiple objects into c
 
 ## 4 Implementation
 
+To implement this pattern, do the following:
+
 1. Create a new entity (for example *OfflineProduct*) to store the compound object.
 1. Add all attributes needed in the offline client, including those from related entities, to the compound object.
 1. Create a 1-1 association between the compound object and the target object. Configure the association to delete the compound object on deleting the target object:
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-1.png" alt="Dialog with the on delete action set to delete" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-1.png" alt="Dialog with the on delete action set to delete" class="image-border">}}
 
 1. Create a microflow (call it *SUB_CreateOrRetrieveOfflineProduct*) that retrieves and returns the compound object associated with the target object. If it does not exist, a new compound object is returned instead. For the new object, the association to the target object must be set:
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-2.png" alt="Microflow that creates or retrieves an OfflineProduct object" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-2.png" alt="Microflow that creates or retrieves an OfflineProduct object" class="image-border">}}
 
 1. Create a microflow (called *ACO_Product*, which will serve as the update microflow) and configure it as an *After Commit* event handler of the target entity. This microflow ensures that the compound object is created and updated when the target object is created or changed.
 1. To do so, retrieve the compound object with the above microflow and set its attributes, retrieving all related objects as needed:
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-3.png" alt="Microflow that creates or updates an OfflineProduct object when a Product object changes" >}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-3.png" alt="Microflow that creates or updates an OfflineProduct object when a Product object changes" class="image-border">}}
 
 1. Create additional microflows as *After Commit* event handlers for all other entities that have attributes included in the compound object. These microflows ensure that the compound object is updated when the related object is changed:
     1. Create a list of compound objects to commit all changes in a single action.
@@ -44,7 +46,7 @@ These performance problems can be countered by combining multiple objects into c
     1. Commit the list of compound objects.
     1. Here is an example illustration for an entity that is nested 2 levels deep (**Store** → **StoreSection** → **Product**):
 
-        {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-4.png" alt="Microflow that creates or updates all OfflineProduct objects when an assoicated object of the Product object changes" >}}
+        {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-4.png" alt="Microflow that creates or updates all OfflineProduct objects when an assoicated object of the Product object changes" class="image-border">}}
 
 1. Replace all usages of the target object and related objects with the compound object in your offline client.
 

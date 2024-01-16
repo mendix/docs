@@ -36,7 +36,9 @@ Request objects help alleviate this situation. Specifically, request objects cap
 
     {{< figure src="/attachments/refguide/mobile/best-practices/request-object-3.png" alt="Nanoflow that synchronized the request object and then triggers the Microflow to apply it" >}}
 
-## 5 Considerations
+## 5 Recommendations
+
+To improve your apps further, consult the following recommendations:
 
 * If the offline client employs multiple request objects in parallel, add a unique identifier (for example by using the nanoflow action **Get guid**) to the main request object and use it as a reference that can be passed to the microflow.
 * It can be beneficial for data integrity to keep the processed request objects in the server database. In that case, use a [Deleted Flag](/refguide/mobile/best-practices/deleted-flag) to remove them from the offline client.

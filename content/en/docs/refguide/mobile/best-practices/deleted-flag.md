@@ -26,7 +26,9 @@ The Deleted Flag overcomes this limitation by introducing a new Boolean attribut
 1. Replace any logic that deletes objects of the target entity with a Microflow that sets this attribute to *true.*
 1. Add the following XPath constraint to all access rules of the target entity to limit access to objects that are not flagged as deleted: `[not(IsDeleted)]`
 
-## 5 Advanced Advice
+## 5 Recommendations
+
+To improve your apps further, consult the following recommendations:
 
 * Add an index for the created attribute to optimize database performance.
 * Deny read or write access to the created attribute for all roles.

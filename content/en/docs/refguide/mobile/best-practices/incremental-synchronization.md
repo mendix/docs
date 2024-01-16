@@ -48,7 +48,9 @@ Incremental synchronization lets you speed up synchronization by transmitting on
 
     {{< figure src="/attachments/refguide/mobile/best-practices/incremental-synchronization-3.png" alt="Nanoflow that triggers the synchronization microflow" >}}
 
-## 5 Advanced Advice
+## 5 Recommendations
+
+To improve your apps further, consult the following recommendations:
 
 * Incremental synchronization does not speed up an app's initial synchronization.
 * If you are using this best practice for multiple entities, you can track the individual synchronization dates as different attributes of the **SyncHelper** object.

@@ -11,7 +11,7 @@ tags: ["mobile", "best practices", "patterns"]
 
 Guides in this section will help you understand and apply best practices for building mobile apps with Mendix.
 
-### Best Practices for Offline-First Apps
+## 2 Best Practices for Offline-First Apps
 
 * [Deleted Flag](/refguide/mobile/best-practices/deleted-flag) – Remove deleted objects from the offline database via the synchronize to device activity.
 * [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization) – Incrementally sync objects from the server to the device based on changed dates.

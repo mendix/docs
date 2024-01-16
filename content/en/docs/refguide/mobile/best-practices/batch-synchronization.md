@@ -51,9 +51,9 @@ To implement this best practice, do the following:
 1. Add a data view around the button that triggers the synchronization and set its data source to the nanoflow **DS_SyncProgress**.
 1. Add a widget to show the value of **SyncProgress/Progress** into the data view, such as a [progress bar](/appstore/widgets/progress-bar/).
 
-## 5 Advanced Advice
+## 5 Recommendations
 
-For advanced development advice, consult the following recommendations:
+To improve your apps further, consult the following recommendations:
 
 * For more complex synchronization scenarios that use multiple entities, create a separate synchronization page to show the progress of all synchronized entities. This lets users start and pause the synchronization as needed.
 * Batch size should be between 100 and 10,000 objects. Larger batches tend to synchronize faster, but smaller batches give more responsive feedback to users.

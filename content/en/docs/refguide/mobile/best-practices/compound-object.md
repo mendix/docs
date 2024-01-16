@@ -48,9 +48,9 @@ These performance problems can be countered by combining multiple objects into c
 
 1. Replace all usages of the target object and related objects with the compound object in your offline client.
 
-## 5 Advanced Advice
+## 5 Recommendations
 
-For advanced development advice, consult the following recommendations:
+To improve your apps further, consult the following recommendations:
 
 * The after commit event handlers used in the best practice can lead to performance issues if the target object or a related object changes frequently. In this case, use a designated update microflow instead of after commit event handlers.
 * If associations to related objects can be empty, be sure to handle this in the update microflow — for example by using the expression `if ($Store=empty) then '-' else $Store/Name`.

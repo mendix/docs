@@ -130,7 +130,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
     * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
     * Ellipsis (**...**)
         * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
-        * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
+        * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
         * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
 
 * **Last activity** – This shows when the last edit to the feedback item was made.

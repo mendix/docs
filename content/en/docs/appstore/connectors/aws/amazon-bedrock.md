@@ -138,6 +138,7 @@ This is the request entity of the `Retrieve` action.
 | --- | --- |
 | `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter.|
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
+| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base.|
 
 #### 4.1.7 RetrievalConfiguration {#retrievalconfiguration}
 
@@ -147,15 +148,7 @@ The `RetrievalConfiguration` entity holds information about how the results shou
 | --- | --- |
 | `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return.|
 
-#### 4.1.8 RetrievalQuery {#retrievalquery}
-
-The `RetrievalQuery` entity holds information about the query made to the knowledge base.
-
-| Attribute | Description |
-| --- | --- |
-| `Text` | The `Text` attribute describes the text of the query made to the knowledge base.|
-
-#### 4.1.9 RetrieveResponse {#retrieveresponse}
+#### 4.1.8 RetrieveResponse {#retrieveresponse}
 
 This is the response entity of the `Retrieve` action.
 
@@ -163,7 +156,7 @@ This is the response entity of the `Retrieve` action.
 | --- | --- |
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
 
-#### 4.1.10 RetrievalResult {#retrievalresult}
+#### 4.1.9 RetrievalResult {#retrievalresult}
 
 The `RetrievalResult` entity holds information about the query made to the knowledge base.
 
@@ -171,7 +164,7 @@ The `RetrievalResult` entity holds information about the query made to the knowl
 | --- | --- |
 | `Score` | The `Score` attribute describes the level of relevance of the result to the query.|
 
-#### 4.1.11 Content {#content}
+#### 4.1.10 Content {#content}
 
 The `Content` entity holds information about the cited text from the data source.
 
@@ -179,7 +172,7 @@ The `Content` entity holds information about the cited text from the data source
 | --- | --- |
 | `Text` | The `Text` attribute describes the cited text from the data source.|
 
-#### 4.1.12 Location {#location}
+#### 4.1.11 Location {#location}
 
 The `Location` entity holds information about the location of the data source.
 
@@ -187,13 +180,19 @@ The `Location` entity holds information about the location of the data source.
 | --- | --- |
 | `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source.|
 
-#### 4.1.13 S3Location {#s3location}
+#### 4.1.12 S3Location {#s3location}
 
 The `S3Location` entity holds information about the S3 location of the data source.
 
 | Attribute | Description |
 | --- | --- |
 | `URI` | The `URI` attribute describes the S3 URI of the data source.|
+
+#### 4.1.13 RetrieveLocation {#retrievelocation}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
 
 #### 4.1.14 RetrieveAndGenerateRequest {#retrieveandgeneraterequest}
 
@@ -252,8 +251,12 @@ The `RetrievedReference` entitiy holds information about a sources cited for the
 | Attribute | Description |
 | --- | --- |
 | `Text` | The `Text` attribute contains the cited text from the data source.|
-| `LocationType` | The `LocationType` attribute describes the type of the location of the data source. Currently, the only valid value is 'S3'.|
-| `S3LocationUri` | The `S3LocationUri` attribute describes the S3 URI of the data source.|
+
+#### 4.1.21 RetrieveAndGenerateLocation {#retrieveandgeneratelocation}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
 
 ### 4.2 Activities {#activities}
 

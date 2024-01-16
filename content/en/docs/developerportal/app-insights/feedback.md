@@ -67,7 +67,7 @@ To export all feedback items into one Excel file, click **Export**.
 
 To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**.
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
 #### 2.1.1 Organizing Feedback Items in Inbox
 
@@ -113,7 +113,7 @@ To export all the archived feedback items into one Excel file, click **Export**.
 
 To search by **Subject** and **ID**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**.
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
 ### 2.3 Feedback Details {#feedback-details}
 

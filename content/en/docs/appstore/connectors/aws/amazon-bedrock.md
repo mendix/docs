@@ -28,7 +28,7 @@ To authenticate with Amazon Web Service (AWS), you must also install and configu
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
 
-The pricing of the Amazon Bedrock Connectors is dependent on the Foundational Model that you use. You can find information about the pricing in the Foundational Model overview in the AWS console. 
+The pricing of the Amazon Bedrock Connectors is dependent on the Foundational Model that you use. You can find information about the pricing in the Foundational Model overview in the AWS console.
 
 {{% alert color="info" %}}
 Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
@@ -46,7 +46,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 {{% alert color="info" %}}
 Amazon Bedrock has server-side validation for specific models. The Claude models require all prompts to be in the following format:
-    
+
 ```text
 Human: <PROMPT>
 Assistant:
@@ -59,7 +59,7 @@ For more information, see [Inference parameters for foundation models](https://d
 
 In order to use the Amazon Bedrock service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
-As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
+As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module.
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
 
@@ -78,11 +78,11 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
     1. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** or **GetTemporaryCredentials** action.
     2. Drag the one you would like to use to the beginning of your microflow.
     3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
-9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.    
+9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.
 10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-12. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#modelsummary).
-13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entites. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+12. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#model-summary).
+13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
 
@@ -92,17 +92,17 @@ To help you work with the Amazon Bedrock connector, the following sections of th
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 ListFoundationModelsRequest {#listfoundationmodelsrequest}
+#### 4.1.1 ListFoundationModelsRequest {#list-foundation-models-request}
 
 This is the request entity of the `ListFoundationModels` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
 
-#### 4.1.2 ListFoundationModelsResponse {#listfoundationmodelsresponse}
+#### 4.1.2 ListFoundationModelsResponse {#list-foundation-models-response}
 
 The `ListFoundationModelsResponse` entity collects (through association) the details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the `ModelSummary` entity.
 
-#### 4.1.3 ModelSummary {#modelsummary}
+#### 4.1.3 ModelSummary {#model-summary}
 
-The `ModelSummary` entity stores the details (per model) needed to invoke all the available foundational models. 
+The `ModelSummary` entity stores the details (per model) needed to invoke all the available foundational models.
 
 | Attribute/Association | Description |
 | --- | --- |
@@ -110,7 +110,7 @@ The `ModelSummary` entity stores the details (per model) needed to invoke all th
 | `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
 | `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the `ListFoundationalModelsResponse` (string)|
 
-#### 4.1.4 InvokeModelGenericRequest {#invokemodelgenericrequest}
+#### 4.1.4 InvokeModelGenericRequest {#invoke-model-generic-request}
 
 This is the request entity of the `InvokeModelGeneric` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
 
@@ -120,7 +120,7 @@ This is the request entity of the `InvokeModelGeneric` action. It is a specializ
 | `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**.|
 | `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke.|
 
-#### 4.1.5 InvokeModelGenericResponse {#invokemodelgenericresponse}
+#### 4.1.5 InvokeModelGenericResponse {#invoke-model-generic-response}
 
 This is the response entity of the `InvokeModelGeneric` action.
 
@@ -130,7 +130,7 @@ This is the response entity of the `InvokeModelGeneric` action.
 | `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved.|
 | `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model.|
 
-#### 4.1.6 RetrieveRequest {#retrieverequest}
+#### 4.1.6 RetrieveRequest {#retrieve-request}
 
 This is the request entity of the `Retrieve` action.
 
@@ -140,7 +140,7 @@ This is the request entity of the `Retrieve` action.
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
 | `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base.|
 
-#### 4.1.7 RetrievalConfiguration {#retrievalconfiguration}
+#### 4.1.7 RetrievalConfiguration {#retrieval-configuration}
 
 The `RetrievalConfiguration` entity holds information about how the results should be returned.
 
@@ -148,7 +148,7 @@ The `RetrievalConfiguration` entity holds information about how the results shou
 | --- | --- |
 | `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return.|
 
-#### 4.1.8 RetrieveResponse {#retrieveresponse}
+#### 4.1.8 RetrieveResponse {#retrieve-response}
 
 This is the response entity of the `Retrieve` action.
 
@@ -156,7 +156,7 @@ This is the response entity of the `Retrieve` action.
 | --- | --- |
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
 
-#### 4.1.9 RetrievalResult {#retrievalresult}
+#### 4.1.9 RetrievalResult {#retrieval-result}
 
 The `RetrievalResult` entity holds information about the query made to the knowledge base.
 
@@ -188,13 +188,13 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | --- | --- |
 | `URI` | The `URI` attribute describes the S3 URI of the data source.|
 
-#### 4.1.13 RetrieveLocation {#retrievelocation}
+#### 4.1.13 RetrieveLocation {#retrieve-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
 
-#### 4.1.14 RetrieveAndGenerateRequest {#retrieveandgeneraterequest}
+#### 4.1.14 RetrieveAndGenerateRequest {#retrieve-and-generate-request}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -203,9 +203,9 @@ This is the request entity of the `RetrieveAndGenerate` action.
 | `InputText` | The `InputText` attribute describes the query made to the knowledge base and is a required parameter.|
 | `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.|
 
-#### 4.1.15 RetrieveAndGenerateConfiguration {#retrieveandgenerateconfiguration}
+#### 4.1.15 RetrieveAndGenerateConfiguration {#retrieve-and-generate-configuration}
 
-The `RetrieveAndGenerateConfiguration` entity holds information about the resource being queried. 
+The `RetrieveAndGenerateConfiguration` entity holds information about the resource being queried.
 
 | Attribute | Description |
 | --- | --- |
@@ -213,7 +213,7 @@ The `RetrieveAndGenerateConfiguration` entity holds information about the resour
 | `ModelARN` | The `ModelARN` attribute describes the ARN of the foundation model used to generate a response and is a required parameter.|
 | `RetrieveAndGenerateType` | The `RetrieveAndGenerateType` attribute describes the type of resource that is queried by the request. Currently, the only supported value is 'KNOWLEDGE_BASE'.|
 
-#### 4.1.16 SessionConfiguration {#sessionconfiguration}
+#### 4.1.16 SessionConfiguration {#session-configuration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.
 
@@ -221,7 +221,7 @@ The `SessionConfiguration` entity holds information about details of the session
 | --- | --- |
 | `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session.|
 
-#### 4.1.17 RetrieveAndGenerateResponse {#retrieveandgenerateresponse}
+#### 4.1.17 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -232,9 +232,9 @@ This is the request entity of the `RetrieveAndGenerate` action.
 
 #### 4.1.18 Citation {#citation}
 
-The `Citation` entitiy contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
+The `Citation` entity contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
-#### 4.1.19 GeneratedResponsePart {#generatedresponsepart}
+#### 4.1.19 GeneratedResponsePart {#generated-response-part}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.
 
@@ -244,21 +244,21 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 | `Start` | The `Start` attribute describes where the text with a citation starts in the generated output.|
 | `End` | The `End` attribute describes where the text with a citation ends in the generated output.|
 
-#### 4.1.20 RetrievedReference {#retrievedreference}
+#### 4.1.20 RetrievedReference {#retrieved-reference}
 
-The `RetrievedReference` entitiy holds information about a sources cited for the generated response.
+The `RetrievedReference` entity holds information about a sources cited for the generated response.
 
 | Attribute | Description |
 | --- | --- |
 | `Text` | The `Text` attribute contains the cited text from the data source.|
 
-#### 4.1.21 RetrieveAndGenerateLocation {#retrieveandgeneratelocation}
+#### 4.1.21 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
 
-#### 4.1.22 StartIngestionJobRequest {#startingestionjobrequest}
+#### 4.1.22 StartIngestionJobRequest {#start-ingestion-job-request}
 
 This is the request entity of the `StartIngestionJob` action.
 
@@ -267,7 +267,7 @@ This is the request entity of the `StartIngestionJob` action.
 | `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
 
-#### 4.1.23 GetIngestionJobRequest {#getingestionjobrequest}
+#### 4.1.23 GetIngestionJobRequest {#get-ingestion-job-request}
 
 This is the request entity of the `GetIngestionJob` action.
 
@@ -277,15 +277,15 @@ This is the request entity of the `GetIngestionJob` action.
 | `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve.|
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
 
-#### 4.1.24 GetIngestionJobResponse {#getingestionjobresponse}
+#### 4.1.24 GetIngestionJobResponse {#get-ingestion-job-response}
 
 This is the response entity of the `GetIngestionJob` action.
 
-#### 4.1.25 StartIngestionJobResponse {#startingestionjobresponse}
+#### 4.1.25 StartIngestionJobResponse {#start-ingestion-job-response}
 
 This is the response entity of the `StartIngestionJob` action.
 
-#### 4.1.26 IngestionJob {#ingestionjob}
+#### 4.1.26 IngestionJob {#ingestion-job}
 
 This is the response entity of the `IngestionJob` action.
 
@@ -299,7 +299,7 @@ This is the response entity of the `IngestionJob` action.
 | `StartedAt` | The `Timestamp` at which the ingestion job started.|
 | `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated.|
 
-#### 4.1.27 FailureReason {#failurereason}
+#### 4.1.27 FailureReason {#failure-reason}
 
 The `FailureReason` entity holds the reason an interaction failed.
 
@@ -391,7 +391,7 @@ The service returns the error code *400 - Bad Request*.
 
 #### 5.1.1 Cause
 
-Your AWS organization may not have been granted access to the model which you are trying to invoke. 
+Your AWS organization may not have been granted access to the model which you are trying to invoke.
 
 #### 5.1.2 Solution
 

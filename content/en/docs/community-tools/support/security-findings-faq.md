@@ -103,6 +103,11 @@ We will only update a third-party library if:
 
 If an older library provides all the functionality that is required and doesn't contain any bugs or security vulnerabilities, there is no need to update the library. Updating a library in this case increases the risk of issues: newer versions of a library might contain changes that break existing functionality within the module.
 
+#### 4.1.1 Library versions in marketplace modules. 
+
+To align libraries in marketplace modules, we will update to align major versions of libraries in marketplace modules. 
+
+
 ## 5 Why Are Some Security Attributes Not Set for the Cookies in My App?
 
 Security scanning tools can report vulnerabilities in the way Mendix handles cookies. For example that cookies are insecure or vulnerable, or have improper or missing attributes. The sections below explain why these might be being reported.

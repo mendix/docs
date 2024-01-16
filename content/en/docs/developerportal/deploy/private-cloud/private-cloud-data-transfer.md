@@ -271,7 +271,7 @@ kubectl -n $NAMESPACE cp files_and_database.tar.gz mendix-backup-restore:/tmp/re
 kubectl -n $NAMESPACE exec -it mendix-backup-restore -- /tmp/mxpc-data-migration restore -e $ENVIRONMENT -f /tmp/restore.tar.gz -n $NAMESPACE
 ```
 
-After running the import/export operation (or operations), delete the backup pod and its dependencies (replace `{namespace}` with the previously used namespace name):
+After running the import or export operation, delete the backup pod and its dependencies (replace `{namespace}` with the previously used namespace name):
 
 ```shell
 NAMESPACE={namespace}

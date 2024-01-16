@@ -60,3 +60,8 @@ To improve your apps further, consult the following recommendations:
 * If you are using this best practice for multiple entities, you can track the individual synchronization dates as different attributes of the **SyncHelper** object.
 * The **SyncHelper** object is best stored in the offline database using synchronization mode **Never**.This way, it is cleared when the database is reset to trigger a full synchronization afterwards.
 * Instead of using a **SyncHelper**, it is also possible to retrieve the most recent **changedDate** from the offline database. However, this can lead to issues when committing and synchronizing a change from the offline device.
+
+## 6 Read More
+
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
+](/refguide/dev-best-practices/)

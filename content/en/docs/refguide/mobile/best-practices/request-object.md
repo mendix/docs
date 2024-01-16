@@ -45,3 +45,8 @@ To improve your apps further, consult the following recommendations:
 * If the offline client employs multiple request objects in parallel, add a unique identifier (for example by using the nanoflow action **Get guid**) to the main request object and use it as a reference that can be passed to the microflow.
 * It can be beneficial for data integrity to keep the processed request objects in the server database. In that case, use a [Deleted Flag](/refguide/mobile/best-practices/deleted-flag/) to remove them from the offline client.
 * Combine **Request Object** with [Compound Object](/refguide/mobile/best-practices/compound-object/) to allow reading from and writing to complex data structures.
+
+## 6 Read More
+
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
+](/refguide/dev-best-practices/)

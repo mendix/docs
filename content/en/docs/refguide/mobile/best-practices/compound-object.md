@@ -59,3 +59,8 @@ To improve your apps further, consult the following recommendations:
 * It is often useful for compound objects to store aggregate values, such as the number of related objects. These can be computed using the appropriate **List Aggregation** action in the update microflow.
 * It is assumed that compound objects are not changed by the offline client. If this is needed, combine the compound object with a [Request Object](/refguide/mobile/best-practices/request-object/).
 * Combine the compound object with [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization/) to further increase synchronization performance.
+
+## 6 Read More
+
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
+](/refguide/dev-best-practices/)

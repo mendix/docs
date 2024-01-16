@@ -35,3 +35,8 @@ To improve your apps further, consult the following recommendations:
 * Add an index for the created attribute to optimize database performance.
 * Deny read or write access to the created attribute for all roles.
 * Objects using this pattern are no longer deleted from the server database, which can lead to performance and storage problems. Cleaning up flagged objects after a set time can overcome this, but you must ensure that all clients are synchronized before cleaning up. Not doing so can lead to synchronization errors.
+
+## 6 Read More
+
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
+](/refguide/dev-best-practices/)

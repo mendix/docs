@@ -18,3 +18,8 @@ Guides in this section will help you apply best practices and patterns when buil
 * [Batch Synchronization](/refguide/mobile/best-practices/batch-synchronization/) – Spread long synchronizations to multiple actions and present a progress to your users.
 * [Compound Object](/refguide/mobile/best-practices/compound-object/) – Combine multiple objects to improve synchronization performance.
 * [Request Object](/refguide/mobile/best-practices/request-object/) – Capture changes as objects and apply them after synchronization making these changes more secure.
+
+## 3 Read More
+
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
+](/refguide/dev-best-practices/)

@@ -118,7 +118,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 ##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
 
 1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
-2. On the upper-right corner, click the setting icon (the cogwheel). 
+2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
 5. Use the value of the **name** field as your resource name in the endpoint URL.

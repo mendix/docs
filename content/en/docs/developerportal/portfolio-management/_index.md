@@ -395,7 +395,7 @@ The view contains the following information:
 
 On the **Initiatives Overview** page, if you click an initiative, a side pane opens on the right side to show initiative details.
 
-On the upper-right corner of the pane, there is a link button and **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button. Clicking the link button copies the link to the initiative. Clicking **More Options** opens a menu that allows you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+On the upper-right corner of the pane, there is a **Copy link** ({{% icon name="hyperlink" %}}) button and **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button. Clicking **Copy link** copies the link to the initiative. Clicking **More Options** opens a menu that allows you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
 {{% alert type="info" %}}
 Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.

@@ -83,7 +83,7 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click the details icon on the top right of the page:
+1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
 

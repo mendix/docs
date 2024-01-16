@@ -64,6 +64,6 @@ The APM manager runs automatic cleanups. These remove monitoring data automatica
 * Medium – 1 week (for working data like performance recordings and logs)
 * Long – 1 year (for historic data like statistics)
 
-Data can be preserved using the push-pin button. This prevents automatic cleanup.
+Data can be preserved using the **Pin** ({{% icon name="pin" %}}) button. This prevents automatic cleanup.
 
 Environments are automatically deleted if they are not used for a year.

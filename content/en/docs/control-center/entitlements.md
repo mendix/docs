@@ -21,17 +21,17 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 ### 1.1 What Are Cloud Credits? {#cloud-credits}
 
-Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Cloud credits provide a flexible and scalable way for your companies to manage costs and allocate resources.
+Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Cloud credits provide a flexible and scalable way for your companies to manage costs and allocate resources.
 
-If you want to top up the cloud credits or purchase (or change) cloud resource packs, contact your Customer Success Manager (CSM).
+If you want to top up the cloud credits, you can just purchase cloud resource packs. Your purchase will be converted into cloud credits and you can then spend the cloud credits on any cloud resource pack available to you. If you have any questions about cloud credits, contact your Customer Success Manager (CSM).
 
 ### 1.2 Cloud Resource Packs
 
 {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
 
-The table below shows how many cloud credits each cloud resource pack costs:
+The tables below show how many cloud credits each cloud resource pack costs:
 
-| Pack                           | Cloud Credits |
+| Standard Resource Packs    | Cloud Credits |
 | ------------------------------ | ------------- |
 | XS21                           | 1             |
 | S21                            | 2             |
@@ -41,6 +41,9 @@ The table below shows how many cloud credits each cloud resource pack costs:
 | XXL21                          | 32            |
 | XXXL21                         | 64            |
 | XXXXL21                        | 128           |
+
+|Premium Resource Packs                  | Cloud Credits |
+| ------------------------------ | ------------- |
 | S21 Premium                    | 3             |
 | M21 Premium                    | 6             |
 | L21 Premium                    | 12            |
@@ -52,19 +55,22 @@ The table below shows how many cloud credits each cloud resource pack costs:
 | XXL21 Premium Plus             | 80            |
 | XXXL21 Premium Plus            | 160           |
 | XXXXL21 Premium Plus           | 320           |
-| XS20 (legacy resource pack)    | 1             |
-| S20 (legacy resource pack)     | 2             |
-| M20 (legacy resource pack)     | 4             |
-| L20 (legacy resource pack)     | 8             |
-| XL20 (legacy resource pack)    | 16            |
-| XXL20 (legacy resource pack)   | 32            |
-| Strato (legacy resource pack)  | 1.2           |
-| Meso (legacy resource pack)    | 4.67          |
-| Iono (legacy resource pack)    | 6.67          |
-| Magneto (legacy resource pack) | 14.67         |
-| S (legacy resource pack)       | 0.8           |
-| M (legacy resource pack)       | 1.6           |
-| L (legacy resource pack)       | 3.73          |
-| XL (legacy resource pack)      | 7.33          |
-| XXL (legacy resource pack)     | 16.67         |
-| XXXL (legacy resource pack)    | 64            |
+
+| Legacy Resource Packs | Cloud Credits |
+| ------------------------------ | ------------- |
+| XS20    | 1             |
+| S20     | 2             |
+| M20     | 4             |
+| L20     | 8             |
+| XL20    | 16            |
+| XXL20   | 32            |
+| Strato  | 1.2           |
+| Meso    | 4.67          |
+| Iono    | 6.67          |
+| Magneto | 14.67         |
+| S       | 0.8           |
+| M       | 1.6           |
+| L       | 3.73          |
+| XL      | 7.33          |
+| XXL     | 16.67         |
+| XXXL    | 64            |

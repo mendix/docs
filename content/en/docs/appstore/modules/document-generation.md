@@ -339,6 +339,8 @@ In case you encounter the message "Unable to generate document, service response
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
 
+In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and [register](#register-app) the affected app environment(s) again.
+
 In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
 
 #### 6.2.4 Timeout Errors

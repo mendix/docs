@@ -11,8 +11,6 @@ cascade:
     - mendix_version: 10
 aliases:
     - /developerportal/control-center
-    - /developerportal/company-app-roles/users.html
-    - /developerportal/company-app-roles/users
 ---
 
 ## 1 Introduction

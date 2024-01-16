@@ -9,7 +9,7 @@ tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization
 
 ## 1 Introduction
 
-This pattern lets you remove deleted objects from the offline database via Sync-to-device.
+This pattern lets you remove deleted objects from the offline database via the **Sync-to-device** action.
 
 ## 2 Challenge
 
@@ -17,13 +17,13 @@ Using **Synchronize to device from a Microflow** allows for fine-grained control
 
 ## 3 Solution
 
-The Deleted Flag overcomes this limitation by introducing a new Boolean attribute (the deleted flag). This attribute is used to flag deleted objects instead of actually deleting them. This is achieved by configuring access rules for all user roles to prevent access to all flagged objects. This lets you flag objects for deletion on the server and synchronize these objects to the offline database, removing them in the process.
+The deleted flag overcomes this limitation by introducing a new Boolean attribute (the deleted flag). This attribute is used to flag deleted objects instead of actually deleting them. This is achieved by configuring access rules for all user roles to prevent access to all flagged objects. This lets you flag objects for deletion on the server and synchronize these objects to the offline database, removing them in the process.
 
 ## 4 Implementation
 
 1. Set the synchronization mode of the target entity to *Nothing (preserve data)*.
 1. Add a Boolean attribute to the target entity (for example, *IsDeleted*) to flag objects that have been deleted and set the default value to *false*.
-1. Replace any logic that deletes objects of the target entity with a Microflow that sets this attribute to *true.*
+1. Replace any logic that deletes objects of the target entity with a microflow that sets this attribute to *true.*
 1. Add the following XPath constraint to all access rules of the target entity to limit access to objects that are not flagged as deleted: `[not(IsDeleted)]`
 
 ## 5 Recommendations

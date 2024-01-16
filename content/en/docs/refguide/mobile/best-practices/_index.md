@@ -3,13 +3,13 @@ title: "Best Practices for Mobile Apps"
 url: /refguide/mobile/best-practices
 category: Mobile
 weight: 60
-description: "Best practices for building mobile apps with Mendix."
+description: "Best practices and patterns for building mobile apps with Mendix."
 tags: ["mobile", "best practices", "patterns"]
 ---
 
 ## 1 Introduction
 
-Guides in this section will help you understand and apply best practices for building mobile apps with Mendix.
+Guides in this section will help you apply best practices and patterns when building mobile apps with Mendix.
 
 ## 2 Best Practices for Offline-First Apps
 

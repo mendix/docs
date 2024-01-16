@@ -1,6 +1,6 @@
 ---
 title: "Request Object"
-url: /refguide/mobile/best-practices/request-object
+url: /refguide/mobile/best-practices/request-object/
 category: Mobile
 weight: 50
 description: "This pattern lets you capture changes as objects and apply them after synchronization making these changes more secure."
@@ -44,4 +44,4 @@ To improve your apps further, consult the following recommendations:
 
 * If the offline client employs multiple request objects in parallel, add a unique identifier (for example by using the nanoflow action **Get guid**) to the main request object and use it as a reference that can be passed to the microflow.
 * It can be beneficial for data integrity to keep the processed request objects in the server database. In that case, use a [Deleted Flag](/refguide/mobile/best-practices/deleted-flag/) to remove them from the offline client.
-* Combine **Request Object** with [Compound Object](/refguide/mobile/best-practices/compound-object) to allow reading from and writing to complex data structures.
+* Combine **Request Object** with [Compound Object](/refguide/mobile/best-practices/compound-object/) to allow reading from and writing to complex data structures.

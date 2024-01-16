@@ -22,10 +22,10 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 #### Improvements
 
 * We released a few improvements for [Feedback](/developerportal/app-insights/feedback/):
-    * We combined Inbox and Archive pages into one page called **Feedback Home**. You can now use the tabs on the home page.
-    * We introduced a new bulk actions bar where you can link, move, archive, delete items, assign status and create stories.
-    * We save your filters in Inbox and Archive tabs until the the page is refreshed.
-  
+    * We combined **Inbox** and **Archive** pages into one page called **Feedback Home**. You can now use the tabs on the home page.
+    * We introduced a new bulk actions bar where you can link, move, archive, and delete items, assign status, and create stories.
+    * We save your filters on **Inbox** and **Archive** tabs until the page is refreshed.
+
 ### January 11
 
 #### New Features

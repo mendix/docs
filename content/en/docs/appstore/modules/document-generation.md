@@ -22,9 +22,9 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 ### 1.2 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/). Other deployment scenarios will be supported at a later stage. Note that we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/),  [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/) and [On-Premises](developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage. Note that for all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
-* When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to "Allow all access" for the top-level path and the DocGen request handler. If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
+* When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to "Allow all access" for the top-level path (`/`) and the DocGen request handler (`/docgen/`). If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
 * Complex documents (for example, large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
@@ -57,7 +57,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
     2. Add the module role **Administrator** from the **DocumentGeneration** module to all app user roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
 4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This will automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
-5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section.
+5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section or in the [Running On-Premises](#run-on-premises) section.
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
 
@@ -132,6 +132,47 @@ The steps for each procedure are described in the sections below.
 6. Follow the steps on the page to register your app environment.
 
 {{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
+
+### 3.3 Running On-Premises {#run-on-premises}
+
+To configure the module to generate documents on your on-premises environments, you need to perform the following procedures:
+
+1. Install the prerequisite software.
+
+1. Configure the module to use the local service.
+
+1. Enable the DocGen request handler.
+
+#### 3.3.1 Installing the Prerequisite Software {#install-prerequisites}
+
+##### 3.3.1.1 Chromium
+
+Download a stable release of the Chromium browser for the applicable operating system and extract the archive to a location of your choosing. The currently supported stable release is 112.0.5615.0 ([Windows](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). [Linux](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/1109252/)).
+
+Configure the path to the *chrome* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
+
+{{% alert color="info" %}}Even though we advise to use Chromium, you can also use Google Chrome instead. The configuration remains the same.{{% /alert %}}
+
+##### 3.3.1.1 Node.js
+
+Download and install [Node.js](https://nodejs.org/). We recommend to install the same version that is shipped with the Studio Pro version that is used to build the project. You can find this version by locating and executing the `node` executable within the `modeler/tools/node` folder of your Studio Pro installation.
+
+Configure the path to the *node* executable in the **CustomNodePath** constant in the **_UseMe** > **Configuration** folder. 
+
+{{% alert color="info" %}}Make sure that the Mendix Runtime has the applicable rights to execute the *node* executable.{{% /alert %}}
+
+#### 3.3.1 Configuring the Module to use the Local Service {#configure-local-service}
+
+Set the **OverrideServiceType** constant to `Local` in the **_UseMe** > **Configuration** folder. This enforces the use of the local service instead of the cloud service.
+
+#### 3.3.2 Enabling the DocGen Request Handler {#setup-inbound-rules}
+
+In case you deploy on [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you need to add the following rules when configuring the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules):
+
+Rule | Name | Pattern | Rewrite URL
+---- | ---- | ------- | -----------
+1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 ## 4 Usage
 
@@ -339,7 +380,7 @@ In case you encounter the message "Unable to generate document, service response
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
 
-In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and [register](#register-app) the affected app environment(s) again.
+In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 
 In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
 

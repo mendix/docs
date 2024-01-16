@@ -48,7 +48,7 @@ After a user submits a feedback item from your app, it goes automatically to **F
 
 On the **Inbox** tab, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
 
-{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" class="image-border" alt="inbox tab" >}}
 
 In the list on the **Inbox** tab, you can find the following information for each feedback item:
 
@@ -89,7 +89,7 @@ If you select feedback items, you can see the following buttons:
 
 * **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the selected feedback items to stories on the designated board in Epics or Jira.
 
-* **Status** – You can select a status from the list and clicking apply button will change the status of the feedback items.
+* **Status** – You can select a status from the list and then click **Apply** to change the status of the feedback items.
 
 * **Archive** – Clicking this sets all the feedback items as archived.
 
@@ -117,22 +117,20 @@ Clicking the filter bar will open the **Filter by** side panel. In this side pan
 
 ### 2.3 Feedback Details {#feedback-details}
 
-On the [Inbox](#inbox) or [Archive](#archive) tabs, when you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
+On the [Inbox](#inbox) and [Archive](#archive) tabs, if you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details.{{% /alert %}}
 
 The feedback details on the **Feedback Details** page or on the side panel contain the following items: 
 
-* Buttons on the upper-right corner
+* Buttons ({{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner 
 
-  {{< figure src="/attachments/developerportal/app-insights/feedback/third-party-integration.png" >}}
-
-    * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
-    * Ellipsis (**...**)
+    * {{% icon name="hyperlink" %}} – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
+    * {{% icon name="three-dots-menu-horizontal" %}} – Clicking the button opens a menu with the following items:
         * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
         * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
         * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
-
+  
 * **Last activity** – This shows when the last edit to the feedback item was made.
 
 * **Priority** – This shows the priority that the feedback item has.

@@ -21,11 +21,9 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 ### 1.1 What Are Cloud Credits? {#cloud-credits}
 
-Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Cloud credits provide a flexible and scalable way for your companies to manage costs and allocate resources.
+Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). If you want to top up the cloud credits, you can just purchase cloud resource packs. Your purchase will be converted into cloud credits and you can then spend the cloud credits on any cloud resource pack available to you.
 
 To use cloud credits, you need to enable self-service. If you want to enable self-service or have questions about cloud credits, contact your Customer Success Manager (CSM).
-
-If you want to top up the cloud credits, you can just purchase cloud resource packs. Your purchase will be converted into cloud credits and you can then spend the cloud credits on any cloud resource pack available to you. 
 
 ### 1.2 Cloud Resource Packs
 

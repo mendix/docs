@@ -6,10 +6,10 @@ weight: 10
 description: "Describes how to configure app authorization to select the affected app(s) in the Mendix Support Portal."
 tags: ["on-premises", "support"]
 aliases:
-    - /community-tools/support/change-affected-apps.html
-    - /community-tools/support/change-affected-apps
-    - /community-tools/support/prepare-your-project/
-    - /community-tools/support/prepare-your-app/
+    - /developerportal/support/change-affected-apps.html
+    - /developerportal/support/change-affected-apps
+    - /developerportal/support/prepare-your-project/
+    - /developerportal/support/prepare-your-app/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

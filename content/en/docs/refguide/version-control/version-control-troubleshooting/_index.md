@@ -24,6 +24,12 @@ For more information and general help on version control, see the following docu
 
 ### 2.1 Getting an `The project contains changes that have not been committed yet. Please commit first before attempting to merge again. While you have not changes any files.` Error {#css-error}
 
+{{% alert color="info" %}}
+
+This issue is a known issue for Mendix 10.0 and above. For more information, see [10.0](/releasenotes/studio-pro/10.0/#css-ki) release notes.
+
+{{% /alert %}}
+
 You may get `The project contains changes that have not been committed yet. Please commit first before attempting to merge again. While you have not changes any files.` error when you feel there are no uncommitted changes. 
 
 This happens due to line endings in CSS files not being handled properly. Thus, sometimes after reverting all changes or applying other version control operations the css.map files show up in the **Changes on Disk** dialog box.

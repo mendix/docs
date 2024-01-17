@@ -77,7 +77,7 @@ You can add new feedback items manually yourself.
 
 To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** page) or click **Add item** (if there are already feedback items on the **Inbox** page), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback item** dialog box.
 
-If you select feedback items, you can see the following buttons: 
+If you select feedback items, you can see the following items: 
 
 * **Link Items** – Clicking this links the feedback items together into one feedback group.
 
@@ -85,15 +85,15 @@ If you select feedback items, you can see the following buttons:
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 
-* **Move** – Clicking this moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
+* **Move** – Clicking this moves the selected feedback items to any other app of which you are a member. Whenever you move feedback items, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback item from the group first.
 
 * **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the selected feedback items to stories on the designated board in Epics or Jira.
 
-* **Status** – You can select a status from the list and then click **Apply** to change the status of the feedback items.
+* Status drop-down list – You can select a status from the drop-down list and then click **Apply** to change the status of the selected feedback items.
 
-* **Archive** – Clicking this sets all the feedback items as archived.
+* **Archive** – Clicking this sets the selected feedback items as archived.
 
-* **Delete** – Clicking this removes the feedback item permanently from **Feedback**. The result is irreversible.
+* **Delete** – Clicking this deletes the selected feedback items permanently. The result is irreversible.
 
 ### 2.2 Archive {#archive}
 

@@ -11,7 +11,9 @@ tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization
 
 This pattern makes it possible to incrementally sync objects from the server to the device based on changed dates.
 
-This pattern was developed by our MVP Marcel Groeneweg. You can watch him explain it in [this video](https://www.mendix.com/videos/lightning-fast-native-sync-for-large-data-sets/).
+This pattern was developed by our MVP Marcel Groeneweg. You can watch him explain it in [this video](https://www.mendix.com/videos/lightning-fast-native-sync-for-large-data-sets/):
+
+{{% vidyard dUhLAZukL7AU3JY43eUQ4Q %}}
 
 ## 2 Challenge
 

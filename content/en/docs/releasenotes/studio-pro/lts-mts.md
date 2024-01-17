@@ -66,7 +66,7 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 {{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" >}}
 
-{{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/community-tools/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
+{{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
 
 ### 2.2 Release Cycle
 
@@ -144,4 +144,4 @@ The "end of support" for a version means that fixes, updates, investigating, tro
 
 If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer LTS version that is supported. 
 
-Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended unless you have purchased the [Extended Support](/community-tools/support/#extended-support) product.
+Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended unless you have purchased the [Extended Support](/support/#extended-support) product.

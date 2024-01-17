@@ -16,8 +16,6 @@ Visit the [Mendix Community Hub](https://community.mendix.com/p/community) for a
 
 {{< figure src="/attachments/community-tools/site.png" >}}
 
-This guide also presents important details on how to utilize and communicate with [Mendix Support](/community-tools/support/).
-
 ## 2 Guide Categories
 
 The *Community Tools Guide* is divided into the following categories:

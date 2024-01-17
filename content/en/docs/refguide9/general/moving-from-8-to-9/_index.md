@@ -89,7 +89,7 @@ Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix run
 
 If your app is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
 
-If any are found, an error like **An error occurred while initializing the Runtime: Detected unique constrain violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/community-tools/support/submit-support-request/).
+If any are found, an error like **An error occurred while initializing the Runtime: Detected unique constrain violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/support/submit-support-request/).
 
 ### 3.2 Mendix Object Changed Flag
 

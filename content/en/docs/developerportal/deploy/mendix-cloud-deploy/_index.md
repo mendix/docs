@@ -113,13 +113,10 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ## 2 Deploying an App to Mendix Cloud {#deploy-app-mendix-cloud}
 
-There are several options available to deploy your application to a connected Mendix Cloud node.
-
 This how-to explains how to do the following:
 
-* Deploy a licensed app to Mendix Cloud
-* Deploy via Mendix Studio Pro
-* Deploy the app to an environment
+* Create a deployment package for a licensed app on Mendix Cloud
+* Deploy a licensed app to an environment
 * Deploy a Free App to Mendix Cloud
 
 ### 2.1 Prerequisites
@@ -130,36 +127,36 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 For a licensed app, make sure to complete these prerequisites:
 
-* Your app must be linked to a licensed cloud node
-* You must have deployment permissions
-* Your Google Authenticator must be enabled
-* The deployment package for your app must be no bigger than 1 GB
+* Your app is linked to a licensed cloud node
+* You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
+* Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
+* The deployment package for your app is not bigger than 1 GB
 
 #### 2.1.2 Prerequisites for a Free App
 
-* You must have created an app
+* You have created an app
 * As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
 
-### 2.2 Deploying a Licensed App to Mendix Cloud
+### 2.2 Creating a Deployment Package for a Licensed App on Mendix Cloud
 
-There are two methods for deploying your app to Mendix Cloud. The first option is directly via Studio Pro, and the second is from the Team Server through the Developer Portal.
+There are two methods for creating a deployment package on Mendix Cloud. The first option is directly via Studio Pro, and the second is from the Team Server through the Developer Portal.
 
-#### 2.2.1 Deploying via Studio Pro
+#### 2.2.1 Creating a Deployment Package via Studio Pro
 
-To deploy your app directly from Studio Pro, follow these steps:
+To create a deployment package directly from Studio Pro, follow these steps:
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
 3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% class="image-border" >}}
 
-4. In the **Deploy to Mendix Cloud** dialog box, click **Deploy**.
-5. You will see a dialog box with the following message: "Successfully started Mendix Cloud deployment. To see the uploaded package, click **Show online** in the dialog box."
+4. In the **Deploy to the cloud** dialog box, click **Deploy**.
+5. You will see a dialog box with the following message: "Successfully started cloud deployment." To see the uploaded package, click **Show online** in the dialog box.
 
-#### 2.2.2 Creating a Package from the Team Server {#package-from-team-server}
+#### 2.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
 
-You can also deploy an app from the Team Server. To do this, follow these steps:
+You can also create a deployment package from the Team Server in the Developer Portal. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 1. Open your app's **Environments** page.
@@ -167,23 +164,21 @@ You can also deploy an app from the Team Server. To do this, follow these steps:
 1. Select your desired branch and revision and click **Next**.
 1. Give the build a version number and click **Build this revision**.
 
-The package is now deployed to Mendix Cloud.
-
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
-The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
+The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps:
 
-1. Open the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open your app.
 3. Go to **Environments**.
-4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy**.
+4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" class="image-border" alt="" >}}
 
-5. Click the environment to which you want to deploy the package.
+5. Select the environment to which you want to deploy the package.
 6. Click **Transport**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" class="image-border" >}}
 
 7. If prompted, clean the environment.
 8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
@@ -288,7 +283,7 @@ Fallback ensures that the data in your database is automatically copied to a dat
 
 The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
 
-#### 4.3.2 Regional Fallback
+#### 4.3.2 Regional Fallback{#regional-fallback}
 
 You can also purchase a Premium Plus plan, which provides all the features of the Premium plan, with the addition of Regional Fallback.
 

@@ -129,7 +129,7 @@ In this tab, you can specify the location of your import bundle from Marketplace
 
 1. Download the Marketplace contents available as a zip file.
 2. Unzip the files to an internal location which Private Mendix Platform can access via HTTP or HTTPS without authentication. Do not change the directory structure.
-3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#custom-tls).
+3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Private Cloud Cluster](/developerportal/deploy/standard-operator/#custom-tls).
 4. In the **Content Import** tab, in the **Connection Configuration** field, enter the root URL of the package.json file included in the Marketplace download. 
 
     For example, if the package.json can be accessed at the URL `https://<your domain>/release/marketplace/Marketplace-1.0/package.json`, enter the following URL: `https://<your domain>/release/marketplace/Marketplace-1.0/`

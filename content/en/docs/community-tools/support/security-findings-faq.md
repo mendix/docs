@@ -83,7 +83,7 @@ Uploaded files can’t be executed on the server. You can configure the file man
 
 If you want to scan uploaded files for malicious content, you have to implement virus and malware scanning yourself. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
 
-## 4 Why Are Vulnerabilities Reported in Some Java Libraries?{#java-libraries}
+## 4 Why Are Vulnerabilities Reported in Some Java Libraries? {#java-libraries}
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
@@ -102,6 +102,10 @@ We will only update a third-party library if:
 3. The old version of the library contains a security vulnerability - we have regular security scans on all of our platform-supported content and if the security scan reports a security vulnerability in a third-party library, we will update the library to mitigate the security finding.
 
 If an older library provides all the functionality that is required and doesn't contain any bugs or security vulnerabilities, there is no need to update the library. Updating a library in this case increases the risk of issues: newer versions of a library might contain changes that break existing functionality within the module.
+
+#### 4.1.1 Library Versions in Marketplace Modules
+
+Mendix will update to align major versions of libraries in Marketplace modules. 
 
 ## 5 Why Are Some Security Attributes Not Set for the Cookies in My App?
 

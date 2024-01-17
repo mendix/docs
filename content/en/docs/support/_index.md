@@ -1,8 +1,8 @@
 ---
-title: "Mendix Support"
-url: /community-tools/support/
+title: "Mendix Support Guide"
+url: /support/
 description: "Provides information on how to obtain support for your Mendix apps."
-weight: 35
+weight: 47
 no_list: false 
 description_list: true
 tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
@@ -10,6 +10,7 @@ aliases:
     - /howtogeneral/support/index.html
     - /howtogeneral/support/
     - /developerportal/support/
+	- /community-tools/support/
 ---
 
 ## 1 What You Can Expect from Mendix Support

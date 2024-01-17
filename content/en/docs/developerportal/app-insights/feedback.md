@@ -75,9 +75,11 @@ If your [role](/developerportal/general/app-roles/) has the permission that **Ca
 
 You can add new feedback items manually yourself. 
 
-To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** page) or click **Add item** (if there are already feedback items on the **Inbox** page), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback item** dialog box.
+To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** tab) or click **Add item** (if there are already feedback items on the **Inbox** tab), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback item** dialog box.
 
 If you select feedback items, you can see the following items: 
+
+{{< figure src="/attachments/developerportal/app-insights/feedback/bulk-actions-bar.png" class="image-border" alt="bulk-actions-bar" >}}
 
 * **Link Items** – Clicking this links the feedback items together into one feedback group.
 
@@ -166,11 +168,11 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" >}}
 
-  Once a feedback item is linked, it disappears from the list on the **Inbox** or **Archive** page. You can only access the linked feedback item from its primary feedback item to which it is linked. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
+  Once a feedback item is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback item from its primary feedback item to which it is linked. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 
-  You can unlink a feedback item by hovering over the feedback item and clicking the **X** button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** page.
+  You can unlink a feedback item by hovering over the feedback item and clicking the **X** button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** tab.
 
 * **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **+** and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
 

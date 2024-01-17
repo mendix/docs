@@ -6,8 +6,6 @@ description: "Describes the Company Settings page in the Mendix Control Center."
 tags: ["control center", "mendix admin", "company settings"]
 weight: 30
 no_list: list
-aliases:
-
 ---
 
 ## 1 Introduction

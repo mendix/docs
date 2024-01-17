@@ -52,6 +52,9 @@ The activity log records access by team members as well as members of Mendix Sup
 
 {{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" class="image-border" >}}
 
+### 2.1 Retention
+For apps Deployed to Mendix Cloud, logs are rotated and archived every day. The logs are kept for 6 months.
+
 ## 3 Apps on SAP Business Technology Platform
 
 For apps deployed to SAP Business Technology Platform (SAP BTP), you can see the logs using Kibana.

@@ -670,7 +670,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/object.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/object.png" class="image-border">}}
 
 ### 4.7 File {#file}
 
@@ -697,7 +697,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/file.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/file.png" class="image-border">}}
 
 ### 4.8 Datasource {#datasource}
 
@@ -743,7 +743,7 @@ Then the Studio Pro UI for the property appears like this:
 The property type was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
 {{% /alert %}}
 
-The selection property allows a widget to read and set a [selection](/refguide/selection/) that can be used in actions, expressions or a `Listen to` data source of a data view.
+The selection property allows a widget to read and set a [selection](/refguide/selection/) that can be used in actions, expressions, or a `Listen to` data source of a data view.
 
 #### 4.9.1 XML Attributes
 
@@ -751,14 +751,14 @@ The selection property allows a widget to read and set a [selection](/refguide/s
 |----------------|----------|---------------------|-------------------------------------------------------------------------------------------------|
 | `type`         | Yes      | String              | Must be `selection`                                                                             |
 | `key`          | Yes      | String              | See [key](#key)                                                                                 |
-| `dataSource`   | yes      | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this selection property  |
+| `dataSource`   | Yes      | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this selection property  |
 | `defaultValue` | No       | String (Expression) | Default value for the property                                                                  |
 
 #### 4.9.2 XML Elements
 
 `<selectionTypes>` (required) — This element encapsulates `<selectionType>` elements which declare supported selection types available while configuring the selection property in Studio Pro.
 
-`<selectionType>` (required one or more) — this element defines the selection type in the `name` attribute.
+`<selectionType>` (required one or more) — This element defines the selection type in the `name` attribute.
 
 | Supported Selection Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -766,7 +766,7 @@ The selection property allows a widget to read and set a [selection](/refguide/s
 | `Single`                  | `SelectionSingleValue`                        |
 | `Multi`                   | `SelectionMultiValue`                         |
 
-for more information, see the [SelectionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#selection-value) section of *Client APIs Available to Pluggable Widgets*.
+For more information, see the [SelectionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#selection-value) section of *Client APIs Available to Pluggable Widgets*.
 
 #### 4.1.3 Studio Pro UI
 
@@ -786,7 +786,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/selection.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/selection.png" class="image-border">}}
 
 ## 5 System Properties {#system-properties}
 

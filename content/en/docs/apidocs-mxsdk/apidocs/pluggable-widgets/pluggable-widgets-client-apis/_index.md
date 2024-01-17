@@ -257,10 +257,10 @@ declare interface SelectionValue<T> {
 
 The type received by the component for the selection property depends on the allowed selection types:
 
-* If only single selection are allowed, the component receives a `SelectionSingleValue` defined as `SelectionValue<Option<ObjectItem>> & { type: "Single" };`
-* If only multi selection are allowed, the client gets a `SelectionMultiValue` defined as `SelectionValue<ObjectItem[]> & { type: "Multi" };`
+* If only single selection is allowed, the component receives a `SelectionSingleValue` defined as `SelectionValue<Option<ObjectItem>> & { type: "Single" };`.
+* If only multi selection is allowed, the client gets a `SelectionMultiValue` defined as `SelectionValue<ObjectItem[]> & { type: "Multi" };`.
 
-Finally, when both selection types are allowed the type is a union of `SelectionSingleValue` and `SelectionMultiValue` and the widget should check the `type` to determine if a single or multi selection is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript.
+Finally, when both selection types are allowed, then the type is a union of `SelectionSingleValue` and `SelectionMultiValue` and the widget should check the `type` to determine if a single or multi selection is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript:
 
 ```ts
 if (selection?.selection === undefined) {

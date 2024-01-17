@@ -54,7 +54,16 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
     2. Add the module role **Administrator** from the **DocumentGeneration** module to all app user roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
 4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This will automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
-5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section or in the [Running On-Premises](#run-on-premises) section.
+5. To test the module locally, perform the procedure as described in the [Running locally from Studio Pro](#run-locally) section. 
+6. When deploying your app, consider that we currently support two types of deployments:
+
+    1. [Running on Mendix Cloud](#run-on-mendix-cloud) using the PDF service in the Mendix Public Platform. This option is available for apps that are deployed to:
+        * [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+        * [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/)
+
+    2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to:
+        * [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
+        * [Unix-Like Deployments](/developerportal/deploy/unix-like/)
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
 
@@ -313,11 +322,11 @@ We recommend not to use the viewport width (`vw`) and viewport height (`vh`) uni
 ## 5 Architecture
 
 ### 5.1 Overview
-The Document Generation module uses the PDF document generation service running in the Mendix Public Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
+The Document Generation module uses the PDF document generation service running in the Mendix Public Platform to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
 When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
-When running on Mendix Cloud, the PDF document generation service on Mendix Public Cloud (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
+When running on Mendix Cloud, the PDF document generation service on Mendix Public Platform (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
 {{< figure src="/attachments/appstore/modules/document-generation/request-flow.png" >}}
 

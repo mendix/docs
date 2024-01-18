@@ -15,6 +15,15 @@ There are separate release notes for other deployment targets; see the [Deployme
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### January 18, 2024
+
+#### Bug Fixes
+
+* We have fixed an issue with two-factor authentication (2FA) on the **Metrics** and **Logs** pages. The 2FA is now session based and not at the account level.
+* Memory-related metrics graphs now display in gibibytes (GiB) and not gigabytes (GB).
+
 ## 2023
 
 ### December 28, 2023

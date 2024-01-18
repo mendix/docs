@@ -54,11 +54,37 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
 You can also use `--global` modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
 
-### 2.3 Connection Problems When Cloning the Git Repository
+### 2.3 Getting an "Oops" Pop-Up Menu
+
+You may get an "Oops" pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. The problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
+
+* Specify the user name:
+  `git config --global user.name "<Name>"`
+* Specify the email:
+  `git config --global user.email "<Email>"`
+
+Any of these commands will create a global Git config. Subsequent interactions via the Studio Pro interface will succeed from now on.
+
+### 2.4 Merging Branches Results in No Changes Being Applied
+
+When two branches are merged, changes sometimes do not come through.
+To fix this issue, take the following steps:
+
+1. Ensure `user.name` and `user.email` exist in your git config:
+   * Specify the user name:
+     `git config --global user.name "<Name>"`
+   * Specify the email:
+     `git config --global user.email "<Email>"` 
+2. Ensure the git version on you machine is 2.43.x or above:
+   * Check your installed git version by running the following command:
+     `git version`.
+   * If needed install the correct version from the [git website](https://git-scm.com/download/win).
+
+### 2.5 Connection Problems When Cloning the Git Repository
 
 If you face connection problems when cloning the Git repository using the **Open App** or **Download App** dialog box, the first thing to check is whether the URL of the remote Git repository is correct. It should not be copied from the browser address bar. Most Git services have a noticeable colored **Clone** button which provides the correct URL in a pop-up window. You should use this URL with Studio Pro.
 
-### 2.4 Customer-Facing Issues
+### 2.6 Customer-Facing Issues
 
 For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
 
@@ -70,7 +96,7 @@ When filing a Git support issue with Mendix Support, attach the log files doing 
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 
-### 2.5 Git Properties Useful for Troubleshooting
+### 2.7 Git Properties Useful for Troubleshooting
 
 {{% alert color="warning" %}}
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing it. 
@@ -84,16 +110,6 @@ There are properties of the Git repository that provide you with the information
 
 `git config --list --show-origin --show-scope` — provides information on user's Git config
 
-### 2.6 Other Issues
 
-You may encounter the following issues:
-
-* **Proxy servers are not supported** — we do not support connecting to Git repositories from behind a proxy server yet (for a workaround, see the [Proxy Support](/refguide9/svn-git-differences/#proxy-support) section in *Differences between Git and SVN*)
-* **Getting an "Oops" pop-up menu when setting a name and an email for Git in the Preferences dialog box or while committing** — the problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
-  * Specify the user name:
-    `git config --global user.name "<Name>"`
-  * Specify the email:
-    `git config --global user.email "<Email>"`
-  * Any of these commands will create a global Git config. Subsequent interactions via the Studio Pro interface will succeed from now on.
 
  

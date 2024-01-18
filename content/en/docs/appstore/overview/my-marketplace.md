@@ -23,7 +23,6 @@ This page presents details on how many total drafts you have, which drafts are r
 These are the possible **Status** entries for each item:
 
 * **Incomplete draft** – the draft is incomplete and requires additional information before you can submit it
-* **Submit for approval** – the draft for the first version of the component is ready to be submitted for review by Mendix 
 * **Ready to publish**  – the draft of the new version of the component is ready to be published to the Mendix Marketplace
 * **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/sharing-content/governance-process/) 
 * **Declined** – the draft was declined after review by Mendix; you can find specific feedback in the email notification and on the draft edit page

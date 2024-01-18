@@ -355,7 +355,6 @@ If you see large values here that do not immediately drop back again, it may ind
 ### 5.8 Database Disk Usage{#Trends-dbdfabs}
 
 The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). It is measured in GiB.
-When hovering over the graph, you will also see the total size of your database.
 
 The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 GiB.
 

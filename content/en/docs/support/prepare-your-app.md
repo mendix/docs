@@ -9,7 +9,7 @@ aliases:
     - /developerportal/support/change-affected-apps
     - /developerportal/support/prepare-your-project/
     - /developerportal/support/prepare-your-app/
-	- /community-tools/support/prepare-your-app/
+    - /community-tools/support/prepare-your-app/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

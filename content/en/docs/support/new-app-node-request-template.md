@@ -8,7 +8,7 @@ aliases:
     - /developerportal/support/new-app-request-template.html
     - /developerportal/support/new-app-request-template/
     - /developerportal/support/new-app-node-request-template/
-	- /community-tools/support/new-app-node-request-template/
+    - /community-tools/support/new-app-node-request-template/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

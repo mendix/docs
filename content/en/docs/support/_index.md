@@ -10,7 +10,7 @@ aliases:
     - /howtogeneral/support/index.html
     - /howtogeneral/support/
     - /developerportal/support/
-	- /community-tools/support/
+    - /community-tools/support/
 ---
 
 ## 1 What You Can Expect from Mendix Support

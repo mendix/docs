@@ -1080,7 +1080,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/community-tools/support/). Features of Flexible Environments include the following:
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/support/). Features of Flexible Environments include the following:
     * You can search for the environment for which you want to see details
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments

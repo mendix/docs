@@ -1,12 +1,12 @@
 ---
 title: "Submit a Support Request"
-url: /community-tools/support/submit-support-request/
-category: "Mendix Support"
+url: /support/submit-support-request/
 weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 aliases:
     - /developerportal/support/submit-support-request/
+    - /community-tools/support/submit-support-request/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor request-priority below is mapped, so it should not be removed or changed.
 ---
@@ -38,14 +38,14 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Prepare Your App for Support](/community-tools/support/prepare-your-app/))
+* The affected app (for more information, see [How to Prepare Your App for Support](/support/prepare-your-app/))
 
 To submit a request with Mendix Support, follow these steps:
 
 1. Click **Submit a request** in the upper-right corner of the portal.
 2. Select an issue from the drop-down menu:
 
-    {{< figure src="/attachments/community-tools/support/submit-support-request/issue.png" >}}
+    {{< figure src="/attachments/support/submit-support-request/issue.png" >}}
 
     You can select from the following issues:
 
@@ -96,7 +96,7 @@ If investigating the documentation and searching the [Mendix Forum](https://foru
 
 ## 4 Request Priority {#request-priority}
 
-You can select the priority that you feel the request should have. Please note the [SLA regulations](/community-tools/support/#sla) for this priority.
+You can select the priority that you feel the request should have. Please note the [SLA regulations](/support/#sla) for this priority.
 
 The priority is based on the combination of impact and urgency: 
 
@@ -119,9 +119,9 @@ You can set the priority to the following levels:
 * **Medium**
 * **Low**
 
-The [ticket priority](/community-tools/support/ticket-priority/) that Mendix Support validates is based on this matrix:
+The [ticket priority](/support/ticket-priority/) that Mendix Support validates is based on this matrix:
 
-{{< figure src="/attachments/community-tools/support/submit-support-request/204371729-pic5.png" >}}
+{{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" >}}
 
 ## 5 Providing Attachments and Additional Information
 
@@ -145,7 +145,7 @@ If you are reporting a security finding or other security-related issue, for exa
 1. If the security finding is in a marketplace component
     1. check that it is platform supported — community-supported components are not supported by Mendix support.
     1. ensure the component is up to date.
-1. Review the [Frequently Asked Questions - Security](/community-tools/support/security-findings-faq/) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
+1. Review the [Frequently Asked Questions - Security](/support/security-findings-faq/) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
     * A description of the issue found — please submit only one finding per support ticket.
@@ -197,11 +197,11 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 
 By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
 
-{{< figure src="/attachments/community-tools/support/submit-support-request/activities.png" >}}
+{{< figure src="/attachments/support/submit-support-request/activities.png" >}}
 
 On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app:
 
-{{< figure src="/attachments/community-tools/support/submit-support-request/follow.png" >}}
+{{< figure src="/attachments/support/submit-support-request/follow.png" >}}
 
 ## 7 Viewing and Updating Tickets
 
@@ -220,7 +220,7 @@ The ticket can have the following statuses:
     * You can close the ticket yourself by checking the box **Please consider this request solved**
     * The ticket will be closed for comments automatically after a set number of days, after which you can create a follow-up ticket
 
-{{< figure src="/attachments/community-tools/support/submit-support-request/request.png" >}}
+{{< figure src="/attachments/support/submit-support-request/request.png" >}}
 
 ## 8 Submitting a Feature Request
 
@@ -228,5 +228,5 @@ On the [Mendix Idea Forum](https://forum.mendixcloud.com/p/ideas), Mendix captur
 
 ## 9 Read More
 
-* [Ticket Priority](/community-tools/support/ticket-priority/)
-* [Escalation Management Process](/community-tools/support/escalation-management-process/)
+* [Ticket Priority](/support/ticket-priority/)
+* [Escalation Management Process](/support/escalation-management-process/)

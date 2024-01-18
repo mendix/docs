@@ -320,7 +320,7 @@ For example, if your application is running on `https://myapp.mendixcloud.com`, 
 
 ## 6 Tokens
 
-Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users have issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to [Mendix Support](/community-tools/support/).
+Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users have issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to [Mendix Support](/support/).
 
 {{% alert color="info" %}}
 Tokens contain personal information as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).

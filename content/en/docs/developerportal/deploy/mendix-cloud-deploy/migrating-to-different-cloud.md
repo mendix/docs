@@ -36,7 +36,7 @@ When migrating your app, keep the following considerations in mind:
 Before following the steps described on this page, make sure that you have met the following prerequisites:
 
 * Ensure that your app is on a [supported version](/releasenotes/studio-pro/lts-mts/) of Mendix. For the best level of support, use a long-term support version.
-* Have a licensed cloud node available to use as your target node. For details on how to request a new node, see [Requesting a New Licensed App Node](/community-tools/support/new-app-node-request-template/#new-node). You can specify the hosting type and region during this app request process.
+* Have a licensed cloud node available to use as your target node. For details on how to request a new node, see [Requesting a New Licensed App Node](/support/new-app-node-request-template/#new-node). You can specify the hosting type and region during this app request process.
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both of your cloud nodes.
 * Create two new temporary Free Apps without Free App environments. For instructions on unlinking a Free App from its environment, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink).
 

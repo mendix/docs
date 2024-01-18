@@ -1,13 +1,13 @@
 ---
 title: "Support Escalation Process"
-url: /community-tools/support/escalation-management-process/
-category: "Mendix Support"
+url: /support/escalation-management-process/
 weight: 50
 description: "Describes how a support request can be escalated to bring your issue to closure."
 tags: ["support", "escalation management"]
 aliases:
     - /howtogeneral/support/index.html
     - /developerportal/support/escalation-management-process/
+    - /community-tools/support/escalation-management-process/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,7 +33,7 @@ The essence of our escalation management is to bring order, structure, focused m
 
 ## 3 Escalation Process Overview
 
-{{< figure src="/attachments/community-tools/support/escalation-management-process/escalation_process_overview.png" >}}
+{{< figure src="/attachments/support/escalation-management-process/escalation_process_overview.png" >}}
 
 ## 4 When Should an Escalation Be Initiated?
 
@@ -58,7 +58,7 @@ This is the normal process for a support case:
 1. Navigate to the [Mendix Support](https://support.mendix.com/).
 2. Click **Submit a request**, which will open this form:
 
-    {{< figure src="/attachments/community-tools/support/escalation-management-process/zendesk.png" >}}
+    {{< figure src="/attachments/support/escalation-management-process/zendesk.png" >}}
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
 
@@ -86,7 +86,7 @@ In the case notes, CC **escalation[at]mendix.com** and in the case note, do the 
 * Provide the business use case for the escalation
 * The next steps provided by the assigned Technical Support Engineer
 
-{{< figure src="/attachments/community-tools/support/escalation-management-process/escalation.png" >}}
+{{< figure src="/attachments/support/escalation-management-process/escalation.png" >}}
 
 ## 7 What Can I Expect During an Escalated Status?
 

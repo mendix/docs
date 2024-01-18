@@ -58,7 +58,7 @@ The **Environment Details** page also lists the alert information of this specif
 
 * **Alert Type** – This shows the name of the alert type.
 * **Status** – This shows the status of the specific alert, indicated by an icon:
-    * A critical alert is indicated by a circle icon with a cross in the middle.
-    * A warning alert is indicated by a triangle icon with an exclamation mark in the middle.
+    * A critical alert is indicated by a {{% icon name="remove-circle" %}} icon.
+    * A warning alert is indicated by a {{% icon name="alert-triangle" %}} icon.
     * An OK alert is indicated by the word **OK**.
 * **Timestamp** – This is the date and time this alert occurred.

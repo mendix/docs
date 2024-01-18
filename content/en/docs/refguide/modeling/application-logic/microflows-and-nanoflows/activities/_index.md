@@ -111,9 +111,9 @@ These activities can only be used in microflows.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/counter.png" alt="counter" link="/refguide/metrics-counter/" max-width=60% >}} | [Counter](/refguide/metrics-counter/) | Allows you to increment a counter by the specified value. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/increment-counter.png" alt="increment-counter" link="/refguide/metrics-increment-counter/" max-width=60% >}} | [Increment Counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=60% >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/counter.png" alt="counter" link="/refguide/metrics-counter/" max-width=55% >}} | [Counter](/refguide/metrics-counter/) | Allows you to increment a counter by the specified value. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/increment-counter.png" alt="increment-counter" link="/refguide/metrics-increment-counter/" max-width=55% >}} | [Increment Counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=55% >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
 
 ## 11 ML Kit Activities
 

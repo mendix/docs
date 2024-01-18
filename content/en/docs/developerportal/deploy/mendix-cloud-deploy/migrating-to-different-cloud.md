@@ -183,7 +183,7 @@ Or, if you made a certificate request to Mendix, the private key is stored in th
 
 The two custom domain certificate options are shown below:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" alt="" width=75% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" alt="" width=75% class="image-border" >}}
 
 ### 4.7 Offboarding the Source Node
 

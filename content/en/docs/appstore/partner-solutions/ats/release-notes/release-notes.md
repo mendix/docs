@@ -5,9 +5,24 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.2
+
+**Release date: January 16, 2024**
+
+### Improvements
+
+* Apps built with Studio Pro [10.6](/releasenotes/studio-pro/10.6/) can now be tested using ATS.
+* We upgraded to Studio Pro [8.18.27](/releasenotes/studio-pro/8.18/#81827) for security fixes.
+* We addressed support for the MacOs versions (11, 12, 13) and resolutions (2K, 4K) for Selenium 4.
+* We added support for the [Accordion](/appstore/widgets/accordion/) widget.
+
+### Deprecations
+
+* Selenium version 3 is now deprecated and will be disabled after April 30, 2024.
+
 ## 2.29.1
 
-**Release date: Nov 7, 2023**
+**Release date: November 7, 2023**
 
 ### Improvements
 

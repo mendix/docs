@@ -19,11 +19,11 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### January 18, 2024
 
-#### Improvements
+#### Bug Fixes
 
-* We have fixed the issue of MFA on the Metrics & Logs page. The MFA is now session based & not at the account level
-* Bug fix to show the memory related metrics graphs in GiB & not GB
-* Built the foundation to support showing metrics & logs for the mendix apps deployed in the K8s platform
+* We have fixed an issue with two-factor authentication (2FA) on the **Metrics** and **Logs** pages. The 2FA is now session based and not at the account level.
+* Memory-related metrics graphs now display in gibibytes (GiB) and not gigabytes (GB).
+* We built the foundation to support showing metrics and logs for the Mendix apps deployed in the K8s platform.
 
 ## 2023
 

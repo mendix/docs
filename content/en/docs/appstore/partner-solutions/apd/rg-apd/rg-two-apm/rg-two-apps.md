@@ -19,7 +19,7 @@ In case an application is not visible in this overview, click **Can’t find you
 
 ## 2 Tour Guides and Videos
 
-APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting the **Tour** option.
+APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the {{% icon name="question-circle" %}} icon next to your profile image and selecting the **Tour** option.
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/Documentation.png" >}}
 

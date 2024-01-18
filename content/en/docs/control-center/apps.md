@@ -27,7 +27,7 @@ The **Mendix Cloud** tab gives an overview of all the licensed apps that can be 
 
 By default you only see apps and their production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
+You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" >}}
 
@@ -73,7 +73,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 The **Mendix Free** Cloud tab shows all the free apps that are deployed on the Mendix Cloud.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
+You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" >}}
 
@@ -123,7 +123,7 @@ The **Other Apps** tab shows the unlicensed apps that are not deployed and the a
 We are working on giving private clouds a separate tab. Stay tuned.
 {{% /alert %}}
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
+You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" >}}
 
@@ -150,7 +150,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 The **Deactivated Apps** tab shows all the deactivated apps that belong to your company.
 
-You can customize the columns of the table by clicking the column selector (the eye icon) on the upper-righter corner of the table. The items selected are shown as columns in the table.
+You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
 {{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" >}}
 

@@ -49,7 +49,7 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
 
 The actions available depend on the app selected. The default actions available are **Edit in Mendix Studio Pro** and **Leave App**.
 
-To stop watching an app and disable notifications for that app, click the eye icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the eye icon so that you see the **You are watching this app** tooltip.
+To stop watching an app and disable notifications for that app, click the {{% icon name="view" %}} icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the {{% icon name="view-off" %}} icon so that you see the **You are watching this app** tooltip.
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 

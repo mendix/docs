@@ -90,7 +90,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 * **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey. You need only one API key per app.
 
     * To generate an API key, click **Generate API Key** here.
-    * To view an existing API key, click the eye icon in the **View** column in the table.
+    * To view an existing API key, click the eye icon ({{% icon name="view-off" %}}) in the **View** column in the table.
 
 ### 2.2 Survey Details {#survey-details}
 

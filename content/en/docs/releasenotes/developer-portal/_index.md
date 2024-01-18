@@ -1095,7 +1095,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Fixes
 
 * We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
-* We fixed a bug where the star icon on your [favorite apps](/developerportal/#my-apps) was not displayed properly.
+* We fixed a bug where the star icon ({{% icon name="star" %}}) on your [favorite apps](/developerportal/#my-apps) was not displayed properly.
 
 ### May 22, 2020
 

@@ -15,6 +15,16 @@ There are separate release notes for other deployment targets; see the [Deployme
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### January 18, 2024
+
+#### Improvements
+
+* We have fixed the issue of MFA on the Metrics & Logs page. The MFA is now session based & not at the account level
+* Bug fix to show the memory related metrics graphs in GiB & not GB
+* Built the foundation to support showing metrics & logs for the mendix apps deployed in the K8s platform
+
 ## 2023
 
 ### December 28, 2023

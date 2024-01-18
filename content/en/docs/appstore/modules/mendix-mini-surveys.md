@@ -86,7 +86,7 @@ Survey opt-out rule is a variable cached to your internet browser. You can reset
 
 ### 4.6 Can I Delay the Appearance of the Mini Survey After the Page Loads?
 
-Yes. To set the delay time, open the settings of the Mini Survey widget, and set the delay time in seconds in the **Pop-up Delay** field on the **Show Survey** tab. If the value is set to be 0, it is still assigned to the variable that is used.
+Yes. To set the delay time, open the settings of the Mini Survey widget, and set the delay time in seconds in the **Pop-up Delay** field on the **Show Survey** tab. If the value is set to 0, it is still assigned to the variable that is used.
 
 ## 5 Troubleshooting {#troubleshooting} 
 

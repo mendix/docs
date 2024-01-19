@@ -17,7 +17,7 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 #### New Features
 
-* We introduced the [Private Marketplace](/control-center/private-marketplace) page in Control Center, which allows you to approve or decline requests for publishing content to your organization's private Marketplace.
+* We introduced the [Private Marketplace](/control-center/private-marketplace) page in Control Center, which allows Mendix Admins to approve or decline requests for publishing content to your organization's private Marketplace.
 
 ## 2023
 

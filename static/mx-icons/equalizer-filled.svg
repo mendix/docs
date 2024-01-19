@@ -1,0 +1,14 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2H20V6H12V2Z" fill="black"/>
+<path d="M20 8H12V12H20V8Z" fill="black"/>
+<path d="M10 14H2V18H10V14Z" fill="black"/>
+<path d="M2 20H10V24H2V20Z" fill="black"/>
+<path d="M2 26H10V30H2V26Z" fill="black"/>
+<path d="M12 26H20V30H12V26Z" fill="black"/>
+<path d="M30 26H22V30H30V26Z" fill="black"/>
+<path d="M20 20H12V24H20V20Z" fill="black"/>
+<path d="M22 20H30V24H22V20Z" fill="black"/>
+<path d="M12 14H20V18H12V14Z" fill="black"/>
+<path d="M30 14H22V18H30V14Z" fill="black"/>
+<path d="M22 8H30V12H22V8Z" fill="black"/>
+</svg>

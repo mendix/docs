@@ -23,7 +23,7 @@ On the **Approval Requests** tab, you can configure the governance capabilities 
 
 {{< figure src="/attachments/control-center/private-marketplace/approval-requests.png" max-width=100% class="image-border" alt=''private-marketplace''  >}}
 
-#### 2.1 Approval Requests Settings
+### 2.1 Approval Requests Settings
 
 Under the **Approvals Requests** section, you can configure settings for the following governance capabilities:
 
@@ -41,7 +41,7 @@ Under the **Approvals Requests** section, you can configure settings for the fol
 
   {{% alert color="info" %}}This setting only affects your notifications, not the notifications of other Mendix Admins in your organization{{% /alert %}}
 
-#### 2.2 Pending Approvals List {#pending-approvals}
+### 2.2 Pending Approvals List {#pending-approvals}
 
 The **Pending Approvals** list shows all the approval requests that need to be approved or rejected, with the following details:
 
@@ -52,16 +52,16 @@ The **Pending Approvals** list shows all the approval requests that need to be a
 * **Submitter** – This shows the name of the submitter.
 * **Submission Date** – This shows the date when the request is submitted.
 
-##### 2.2.1 Request Details
+#### 2.2.1 Request Details
 
-If you click the component name in a request on the **Pending Approvals** list, the details of the request open in a new page.
+If you click the component name in a request on the **Pending Approvals** list, the details of the request open in a new page. Here you can check all the provided information about the component, download the *•mpk* file, and approve or decline the request.
 
 {{< figure src="/attachments/control-center/private-marketplace/request-details.png" max-width=100% class="image-border" alt=''request-details''  >}}
 
 On the top, you can find following buttons:
 
-*  **Approval** – Click this button to approve the request. You can also add a reason to your decision. After the approval, the submitter will receive a notification, and the component will be published to the private Marketplace of your company.
-*  **Decline** – Click this button to reject the request. You can also add a reason to your decision. After the rejection, the submitter will receive a notification.
+*  **Approval** – Click this button to approve the request. After you approve the request, the submitter will receive a notification, and the component will be published to the private Marketplace of your company.
+*  **Decline** – Click this button to reject the request. You can also add a reason in the dialog box that opens. After you decline the request, the submitter will receive a notification.
 * **Download** – Click this button to download the *.mpk* file of the component.
 
 The request details page also has the following tabs:

@@ -22,7 +22,7 @@ Below is a domain model that defines customers and orders. The names of the enti
 | --- | --- |
 | Annotation | A comment explaining an aspect of the domain model |
 | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database |
-| Event Handler (or Handlers) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
+| Event Handler | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
 | Image | An image which helps to identify the entity |
 | Validation Rule | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute |
 | Calculated Value | An indication that the value of this [attribute](/refguide/attributes/) is calculated |

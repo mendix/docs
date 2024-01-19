@@ -15,9 +15,9 @@ The **Private Marketplace** page in Control Center gives you the capabilities to
 - Company Guidelines Assurance: It enables you to meet regulatory requirements and internal policies by thoroughly reviewing components.
 - Efficient Management: It offers a centralized approval process to save time and resources, preventing additional communication outside of the platform. 
 
-The Private Marketplace page contains two tabs: the [Approval Requests](#approval-requests) tab and the [Approval History](#approval-history) tab.
-
 {{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to the [Company Content](/appstore/overview/my-marketplace/#company-content) in [My Marketplace](https://marketplace.mendix.com/link/mymarketplace), click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
+
+The Private Marketplace page contains two tabs: the [Approval Requests](#approval-requests) tab and the [Approval History](#approval-history) tab.
 
 ## 2 Approval Requests {#approval-requests}
 

@@ -76,12 +76,12 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region">}}
 
-6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GenerateCredentials** activity.
-7. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
+6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
+7. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity">}}
 
-8. Double-click the **GenerateCredentials** activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
+8. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 9. Double-click the **Subscribe** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
@@ -116,16 +116,16 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 
         {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region">}}
 
-6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GenerateCredentials** activity.
-7. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.
+6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
+7. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-sns/sns_publishbatch_actions.png" alt="Adding the PublishBatch activity">}}
 
-8. Double-click the **GenerateCredentials** activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
+8. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 9. Double-click the **PublishBatch** activity and configure the **Credentials** parameter by doing the following steps:
     1. Click **Edit parameter value**.
     2. Edit the **Credentials** parameter and let it auto-fill.
-10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GenerateCredentials** and the **PublishBatch** activity.
+10. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **PublishBatch** activity.
 11. Double-click the **CreateObject** activity and select **PublishBatchRequest** as the entity to create.
 12. Add another **CreateObject** activity before the **PublishBatchRequest** object and select **PublishBatchTopic** as the entity to create.
 13. Provide values for the **ARN** and **Name** attributes of the **PublishBatchTopic** object.

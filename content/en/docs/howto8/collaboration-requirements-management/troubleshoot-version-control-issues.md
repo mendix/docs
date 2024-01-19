@@ -183,4 +183,4 @@ If the solutions here do not work for your version control problems, please subm
 
 ## 4 Read More
 
-* [Submit Support Requests](/community-tools/support/submit-support-request/)
+* [Submit Support Requests](/support/submit-support-request/)

@@ -84,7 +84,7 @@ You need to add the `/link/` path as a request handler in your app. To achieve t
     3. For **After startup**, **Select** the **DeepLink.StartDeeplink** microflow.
 * If your app has an after-startup microflow, extend it with a [sub-microflow activity](/refguide/extracting-and-using-sub-microflows/) that calls the **DeepLink.StartDeeplink** microflow
 
-### 3.2 Configuring the Microflow for the Default Home Page
+### 4.2 Configuring the Microflow for the Default Home Page
 
 When a user accesses the Mendix app, the app needs to check if a deep link request is associated to the user session. To achieve this, add the **DeepLink.DeeplinkHome** microflow to a microflow that is configured for the [default home page](/refguide/navigation/#default-home-page) (via **App** > **Navigation** > **Home pages** > **Default home page**). For an example of this configuration, see the **DeepLink.Home_ResponsiveProfile** microflow.
 

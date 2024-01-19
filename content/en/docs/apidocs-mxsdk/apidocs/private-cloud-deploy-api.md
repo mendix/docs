@@ -21,6 +21,11 @@ The Mendix for Private Cloud Deploy API allows you to manage application environ
 The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The Global Operator installation is not yet available in Deploy API.
+{{% /alert %}}
+
+
 ## 2 Using the API
 
 To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
@@ -107,6 +112,10 @@ The following steps will create a cluster, register and install a namespace, add
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Configuration of License Product type via the deploy API is not yet supported.
 {{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}

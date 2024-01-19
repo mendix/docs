@@ -128,16 +128,22 @@ The output is the following:
 'mystring'
 ```
 
-Another example of an input is:
+If you use a third parameter to specify the desired length of the output:
 
 ```java {linenos=false}
-substring('funwithmendixapps', 7,6)
+substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
 ```java {linenos=false}
-'mendix'
+'my'
+```
+
+To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
+
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 5 find
@@ -423,6 +429,18 @@ The output is:
 
 ```java {linenos=false}
 'this is my string'
+```
+
+If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` in the input is empty:
+
+```java {linenos=false}
+trim($MyString)
+```
+
+The output is:
+
+```java {linenos=false}
+''
 ```
 
 ## 11 isMatch

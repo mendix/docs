@@ -13,7 +13,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
 This module uses the PDF document generation service running in the Mendix Public Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
-When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
+When using **Run Locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
 When running on Mendix Cloud, the PDF document generation service on Mendix Public Cloud (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
@@ -77,7 +77,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
 
-To be able to test PDF document generation when using **Run locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
+To be able to test PDF document generation when using **Run Locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
 
 #### 3.1.1 Chrome
 

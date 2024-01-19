@@ -34,7 +34,7 @@ Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https:
 
 To install the ATS Helper, follow these steps:
 
-1. Open ATS and click the information icon in the upper-right corner of the screen:
+1. Open ATS and click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/information-icon.png" >}}
 
@@ -60,7 +60,7 @@ See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-
 
 To install the ATS Recorder, follow these steps:
 
-1. Open ATS and click the information icon in the upper-right corner of the screen:
+1. Open ATS and click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/information-icon.png" >}}
     

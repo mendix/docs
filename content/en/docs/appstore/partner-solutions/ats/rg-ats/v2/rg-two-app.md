@@ -23,7 +23,7 @@ To generate a PDF report of the status of your tests, click **Download Report**.
 Adding a test suite or a folder will recursively add all nested test suites and test cases.
 {{% /alert %}}
 
-When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the **X** button.
+When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the {{% icon name="remove" %}} button.
 
 {{% alert color="info" %}}
 The **7-day history** infographic will only be included in the PDF report when you choose **All**.

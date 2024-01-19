@@ -62,7 +62,7 @@ Here is an example of reordering in progress:
 
 ### 2.4 Hiding
 
-**Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
+**Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon ({{% icon name="view" %}}) will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
 
 Here is an example of hiding button containing columns to be hidden:
 

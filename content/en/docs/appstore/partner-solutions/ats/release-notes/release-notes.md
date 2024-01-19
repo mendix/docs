@@ -975,7 +975,7 @@ The same holds for the function parameters.
 ### Fixes
 
 * Due to an artificial limitation only the first 20 fields were shown when editing a dataset. This limitation has been removed.
-* When a test step in the logs refers to a function it is not possible to open/edit this function. However, due to a bug the edit icon was still shown for such test steps. This has been fixed.
+* When a test step in the logs refers to a function it is not possible to open/edit this function. However, due to a bug the **Edit** icon ({{% icon name="pencil" %}}) was still shown for such test steps. This has been fixed.
 * When a test case with an empty test step in the middle was executed, the test case failed with a null pointer exception. This is now fixed and the empty test step is not interfering with the execution.
 * In some cases the tooltip for action/parameter documentation was not showing the full description. This is now fixed.
 * When pasting items in the repository it was possible to click the paste button multiple times. This is fixed by adding a progress bar to prevent pasting an item multiple times by accident.
@@ -1037,7 +1037,7 @@ Mendix applications built on Mendix 7.11 or 7.12 can now be tested and recorded 
 * We added support for the Radiobutton List widget and for the Input Reference Set Selector widget. They can be recorded as well as tested with the standard ATS function.
 * We now support the newest macOS version: macOS High Sierra.
 * You can now select multiple items in the search dialog box by holding down <kbd>Ctrl</kbd> while clicking the items. This is possible when you are adding a test case/suite to a test suite, adding test cases/suites to a story, and adding stories to a test case/suite.
-* A parameter of the text type now also shows the edit icon when it is empty.
+* A parameter of the text type now also shows the **Edit** icon ({{% icon name="pencil" %}}) when it is empty.
 
 ### Fixes
 

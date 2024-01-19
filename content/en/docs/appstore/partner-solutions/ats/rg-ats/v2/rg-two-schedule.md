@@ -9,7 +9,7 @@ Scheduling allows you to plan the execution of test cases and test suites at def
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-schedule/schedules_tab_with_alerting.png" >}}
 
-If you want to edit the schedule, click the pencil icon to the right of the schedule. Clicking the "X" icon will delete the schedule. To activate/deactivate a schedule, click the box in front of the schedule.
+If you want to edit the schedule, click **Edit** ({{% icon name="pencil" %}}) to the right of the schedule. Clicking **Delete** ({{% icon name="remove" %}}) will delete the schedule. To activate/deactivate a schedule, click the box in front of the schedule.
 
 ## 2 New/Edit Schedule
 

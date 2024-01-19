@@ -76,7 +76,7 @@ With parameters you can customize your message with data specific to the situati
 
 ### 3.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon.
+Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}).
 
 Double-clicking these log messages shows the stack trace.
 

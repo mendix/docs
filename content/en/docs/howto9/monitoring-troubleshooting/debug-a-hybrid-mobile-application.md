@@ -31,7 +31,7 @@ From your console, start weinre with the following parameters: `weinre --boundHo
 
 ## 4 Connect Your Mendix Developer App
 
-Click the settings icon in the upper-right corner of the screen to configure your debugger:
+Click **Settings** ({{% icon name="cog" %}}) on the upper-right corner of the screen to configure your debugger:
 
 {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-a-hybrid-mobile-application/18580021.png" >}}
 

@@ -27,7 +27,7 @@ These are the possible **Status** entries for each item:
 * **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/sharing-content/governance-process/) 
 * **Declined** – the draft was declined after review by Mendix; you can find specific feedback in the email notification and on the draft edit page
 
-On this page, click the ellipsis (**...**) button  for a component to access the following options:
+On this page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a component to access the following options:
 
 * **Edit Draft** – click this to go to the component's draft page, where you can continue editing the component details
 * **Submit Draft** – if your component is ready to be submitted and has no errors, you can proceed with the submission for review

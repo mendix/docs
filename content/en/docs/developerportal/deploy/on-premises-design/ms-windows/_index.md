@@ -235,7 +235,7 @@ This has to be the first rule; it is described after the rewrite rules to ensure
 4. Enter the **Server variable name** *HTTP_X_FORWARDED_PROTO*.
 5. Click **OK**.
 6. Click **Back to Rules**.
-7. Click **Add rule (or rules)…**.
+7. Click **Add rule(s)…**.
 8. Click **Blank Rule**.
 9. Set the **Name** to *add x-forwarded-proto header*.
 10. In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.

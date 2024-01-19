@@ -120,9 +120,9 @@ The story details dialog box shows the following items:
     
     * Epic {epic name} unlinked
     
-    * Tag (or Tags) {tag names} added
+    * Tag (or tags) {tag names} added
     
-    * Tag (or Tags) {tag names} removed
+    * Tag (or tags) {tag names} removed
     
     * Story points changed to {story points}
     

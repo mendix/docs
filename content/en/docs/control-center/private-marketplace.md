@@ -29,6 +29,8 @@ On the **Approval Requests** tab, you can configure the governance capabilities 
 
 Under the **Approvals Requests** section, you can configure settings for the following governance capabilities:
 
+{{% alert color="info" %}}All the settings are turned off  by default.{{% /alert %}}
+
 * **Mendix Admins must approve submissions for new components** – If you turn on this toggle, when a new component is submitted to the private Marketplace, a Mendix Admin needs to approve the submission before the component is added to the private Marketplace. The submission appears on the [Pending Approvals](#pending-approvals) list before it gets approved or declined.
 
   {{% alert color="info" %}}This setting only affects only the submission of a new component. After you approve the submission, developers can later directly add new versions of the component to the private Marketplace without an approval from a Mendix Admin, unless you also turn on the toggle **Mendix Admins must approve submissions of new component's versions**. {{% /alert %}}

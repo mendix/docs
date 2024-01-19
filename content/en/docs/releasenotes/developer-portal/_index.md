@@ -17,6 +17,15 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### January 18
+
+#### Improvements
+
+* We released a few improvements for [Feedback](/developerportal/app-insights/feedback/):
+    * We converted **Inbox** and **Archive** pages into two tabs on the homepage.
+    * We introduced a bulk action bar where you can link, move, archive, and delete items as well as assign item status and create stories in bulk.
+    * We now save your filters on **Inbox** and **Archive** tabs until the page is refreshed.
+
 ### January 11
 
 #### New Features

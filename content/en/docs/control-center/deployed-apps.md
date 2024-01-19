@@ -25,10 +25,10 @@ You can click the name of an app to see a list of environments available for the
 
 {{< figure src="/attachments/control-center/deployed-apps/cloud-provisioning.png"  class="image-border" alt="cloud provisioning page for an app" >}}
 
-Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/community-tools/support/submit-support-request/#submitting):
+Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
 
-* [Resize Environment](/community-tools/support/new-app-node-request-template/#resize) – requests a container size change
-* [Offboard Environment](/community-tools/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
+* [Resize Environment](/support/new-app-node-request-template/#resize) – requests a container size change
+* [Offboard Environment](/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
 
 ## 2 Adding a New Environment
 

@@ -15,6 +15,15 @@ There are separate release notes for other deployment targets; see the [Deployme
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### January 18, 2024
+
+#### Bug Fixes
+
+* We have fixed an issue with two-factor authentication (2FA) on the **Metrics** and **Logs** pages. The 2FA is now session based and not at the account level.
+* Memory-related metrics graphs now display in gibibytes (GiB) and not gigabytes (GB).
+
 ## 2023
 
 ### December 28, 2023
@@ -1080,7 +1089,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/community-tools/support/). Features of Flexible Environments include the following:
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/support/). Features of Flexible Environments include the following:
     * You can search for the environment for which you want to see details
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments

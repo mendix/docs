@@ -12,9 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the OData Connector for SAP solutions.
+Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the OData Connector for SAP Solutions.
 
-The [OData Connector for SAP solutions](/appstore/connectors/sap/sap-odata-connector/) needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (*.mpk*) file which can be imported into your Mendix app.
+The [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (*.mpk*) file which can be imported into your Mendix app.
 
 SAP data models reflect an [OData](/appstore/connectors/sap/sap-odata-connector/) service or [BAPI](/appstore/connectors/sap/sap-bapi-connector/) from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
 
@@ -45,7 +45,7 @@ Each Mendix SAP data model has a domain model that describes the information in 
 {{< figure src="/attachments/appstore/services/sap-model-creator/sap-service-example.png" >}}
 
 {{% alert color="warning" %}}
-Do not change the names of entities, attributes, or associations in the Domain Model; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.
+Do not change the names of entities, attributes, or associations in the Domain Model; they need to match the names used by the SAP OData service for the OData Connector for SAP Solutions to work correctly.
 {{% /alert %}}
 
 #### 1.2.2 Service Root
@@ -317,18 +317,18 @@ Now you have a Mendix module ready to import into your app.
 
 3. Use the navigation dialog to find your module, which will have the suffix **.mpk**.
 
-    You now have your service module, for example **GWSAMPLE_BASIC**, available in your app ready to use in combination with the OData Connector for SAP solutions.
+    You now have your service module, for example **GWSAMPLE_BASIC**, available in your app ready to use in combination with the OData Connector for SAP Solutions.
 
     {{< figure src="/attachments/appstore/services/sap-model-creator/app_explorer.png" >}}
 
 {{% alert color="warning" %}}
-Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP solutions to work correctly.
+Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP Solutions to work correctly.
 {{% /alert %}}
 
-For more information on how to use the imported data model together with the OData Connector for SAP solutions, see [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/).
+For more information on how to use the imported data model together with the OData Connector for SAP Solutions, see [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/).
 
 ## 6 Read More
 
 * [Using Marketplace Content](/appstore/overview/use-content/)
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
-* [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/odata)
+* [Model Creator for SAP Integrations (SAP)](https://sapmodelcreator.mendixcloud.com/link/odata)

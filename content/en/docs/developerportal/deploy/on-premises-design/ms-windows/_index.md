@@ -256,7 +256,7 @@ This has to be the first rule; it is described after the rewrite rules to ensure
 
 If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypted HTTP traffic to HTTPS. To configure this, follow these steps:
 
-1. Click **Add rule (or rules)…**.
+1. Click **Add rule(s)…**.
 2. Click **Blank Rule**.
 3. Set the **Name** to *Redirect to HTTPS*.
 4. In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.

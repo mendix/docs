@@ -15,7 +15,7 @@ Follow these steps to set the bookmark:
 
 1. Open your ATS instance in the browser.
 2. Log in with your account.
-3. Open the information dialog by clicking this icon in the upper right corner of the screen:
+3. Open the information dialog by clicking **Information** ({{% icon name="info-circle" %}}) in the upper right corner of the screen:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-ats-helper/information.png" >}}
 

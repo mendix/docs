@@ -9,7 +9,7 @@ The ATS Desktop recorder is a function/plugin in ATS that records the actions be
 
 ## 2 Installing the ATS Desktop Recorder
 
-To use the recorder function, you must have the Google Chrome browser installed on your system, install the **ATS Recorder** Chrome plugin, and download and install the ATS Desktop Recorder. To install the plugin, click this icon in the upper-right corner of the screen:
+To use the recorder function, you must have the Google Chrome browser installed on your system, install the **ATS Recorder** Chrome plugin, and download and install the ATS Desktop Recorder. To install the plugin, click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-recorder/information-icon.png" >}}
 

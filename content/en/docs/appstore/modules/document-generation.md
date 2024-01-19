@@ -292,9 +292,9 @@ Mendix recommends not using the viewport width (`vw`) and viewport height (`vh`)
 
 ### 5.1 App Environment Registration Issues
 
-In case you encounter any issues while [registering your app environment (or environments)](#register-app), refer to the table below for more details and suggestions on how to resolve them.
+In case you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
 
-| Error | Error message (or messages) | Description | Suggestion |
+| Error | Error message | Description | Suggestion |
 |-------|------------------|-------------|------------|
 | **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
 | **Invalid App** | <ul><li>"Invalid app"</li></ul><ul><li>"App not found for the given user"</li></ul> | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |

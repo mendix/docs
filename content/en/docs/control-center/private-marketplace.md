@@ -17,6 +17,8 @@ The **Private Marketplace** page in Control Center gives you the capabilities to
 
 The Private Marketplace page contains two tabs: the [Approval Requests](#approval-requests) tab and the [Approval History](#approval-history) tab.
 
+{{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to the [Company Content](/appstore/overview/my-marketplace/#company-content) in [My Marketplace](https://marketplace.mendix.com/link/mymarketplace), click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
+
 ## 2 Approval Requests {#approval-requests}
 
 On the **Approval Requests** tab, you can configure the governance capabilities for submission requests and check all the pending approvals.
@@ -29,9 +31,14 @@ Under the **Approvals Requests** section, you can configure settings for the fol
 
 * **Mendix Admins must approve submissions for new components** – If you turn on this toggle, when a new component is submitted to the private Marketplace, a Mendix Admin needs to approve the submission before the component is added to the private Marketplace. The submission appears on the [Pending Approvals](#pending-approvals) list before it gets approved or declined.
 
-  {{% alert color="info" %}}This setting only affects only the submission of a new component. After you approve this submission developers can later directly add new versions of the component to the private Marketplace without an approval from a Mendix Admin, unless you also turn on the toggle **Mendix Admins must approve submissions of new component's versions**. {{% /alert %}}
+  {{% alert color="info" %}}This setting only affects only the submission of a new component. After you approve the submission, developers can later directly add new versions of the component to the private Marketplace without an approval from a Mendix Admin, unless you also turn on the toggle **Mendix Admins must approve submissions of new component's versions**. {{% /alert %}}
 
-  If you turn off this toggle, developers can directly add component to the private Marketplace without an approval from a Mendix Admin.
+  If you turn off this toggle, there will be the following consequences:
+
+  * The toggle **Mendix Admins must approve submissions of new component's versions** will be turned off automatically.
+  * All the pending requests will get approved automatically.
+
+  * Developers will be able to directly add component to the private Marketplace without an approval from a Mendix Admin.
 
 * **Mendix Admins must approve submissions of new component's versions** – If you turn on this toggle, when a new version of a component is submitted to the private Marketplace, a Mendix Admin needs to approve the submission before the new version is added to the private Marketplace. The submission appears on the [Pending Approvals](#pending-approvals) list before it gets approved or declined.
 
@@ -39,7 +46,7 @@ Under the **Approvals Requests** section, you can configure settings for the fol
 
 * **I'd like to create a notification when an approval request is waiting to be approved** – If you turn on this toggle, when there is a new approval request, you get a notification.
 
-  {{% alert color="info" %}}This setting only affects your notifications, not the notifications of other Mendix Admins in your organization{{% /alert %}}
+  {{% alert color="info" %}}This setting only affects your notifications, not the notifications of other Mendix Admins in your organization.{{% /alert %}}
 
 ### 2.2 Pending Approvals List {#pending-approvals}
 

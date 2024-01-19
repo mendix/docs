@@ -206,7 +206,7 @@ Follow the instructions below and replace *[Name]* with the name of the rule in 
 
 1. Open the IIS Manager and navigate to the website you want to manage.
 2. In the **Features View**, double-click **URL Rewrite**.
-3. In the **Actions** pane on the right side of the screen, click **Add rule (or rules)…** to add a new rewrite rule.
+3. In the **Actions** pane on the right side of the screen, click **Add rule(s)…** to add a new rewrite rule.
 4. In the **Inbound Rules** section, double-click *Blank rule*.
 5. In the **Name** field, enter *[Name]* from the table above.
 6. In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.

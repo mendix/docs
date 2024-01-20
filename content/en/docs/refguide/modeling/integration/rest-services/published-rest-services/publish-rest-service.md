@@ -176,12 +176,11 @@ You have not yet implemented error handling in this new service. For example, if
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorResponseHeader.png" alt="Create Object dialog box for NewHttpHeader_1" >}}
 
-5. Right-click the sequence flow between the two **Create object** activities, and select **Set as error handler**.
-6. Add an **End Event** and set `$NewHttpErrorResponse` as its return value. Your microflow should look like this:
+5. Add an **End Event** and set `$NewHttpErrorResponse` as its return value. Your microflow should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorMicroflow.png" alt="Updated microflow with error handling" >}}
 
-7. Test your error handler, as you did with the app in the [Viewing the App](#viewing) section. Enter some text in the **OrderID** parameter, click **Execute**, and observe the request's response:
+6. Test your error handler, as you did with the app in the [Viewing the App](#viewing) section. Enter some text in the **OrderID** parameter, click **Execute**, and observe the request's response:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorRESTResult.png" alt="Error in server response" >}}
 

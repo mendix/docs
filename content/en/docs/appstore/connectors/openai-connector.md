@@ -247,7 +247,19 @@ This is a helper entity to edit the `ApiKey` to be stored in the [Configuration]
 | ---| --- | 
 | `ApiKey` | Access token to authorize your API call. | 
 
-#### 4.1.3 `AbstractChatCompletionsMessage` {#abstractchatcompletionsmessage} 
+#### 4.1.3 `AbstractUsage` {#abstractusage}
+
+This entity contains the usage statistics for the API call.
+
+| Attribute | Description |
+| ---| --- |
+| `Prompt_tokens` | This is the number of tokens in the prompt. |
+| `Completion_tokens` | This is the number of tokens in the generated completion. |
+| `Total_tokens` | This is the total number of tokens used in the request (`Prompt_tokens` + `Completion_tokens`). |
+
+For more information on how to manage tokens for text generation, see [Managing tokens](https://platform.openai.com/docs/guides/text-generation/managing-tokens).
+
+#### 4.1.4 `AbstractChatCompletionsMessage` {#abstractchatcompletionsmessage} 
 
 This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity directly. Instead, use one of its specializations. 
 
@@ -256,7 +268,7 @@ This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity
 | `Content` | This is the content of a message. |
 | `Role` | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
 
-#### 4.1.4 `ChatCompletionsRequest` {#chatcompletionsrequest} 
+#### 4.1.5 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
 A chat completions request that creates a model response for the given chat conversation. 
 
@@ -271,7 +283,7 @@ A chat completions request that creates a model response for the given chat conv
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.5 `ResponseFormat` 
+#### 4.1.6 `ResponseFormat` 
 
 This specifies the format that the model must output. 
 
@@ -279,15 +291,15 @@ This specifies the format that the model must output.
 | --- | --- |
 | `_Type` | This describes the format that the model must output. <br />For more information, see the [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) section. |
 
-#### 4.1.6 `ChatCompletionsMessages` 
+#### 4.1.7 `ChatCompletionsMessages` 
 
 This is a wrapper for a list of messages comprising the conversation so far. 
 
-#### 4.1.7 `ChatCompletionsMessageRequest` 
+#### 4.1.8 `ChatCompletionsMessageRequest` 
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. Each instance contains a text that needs to be taken into account by the model when processing the completion request. 
 
-#### 4.1.8 `ChatCompletionsResponse` {#chatcompletionsresponse} 
+#### 4.1.9 `ChatCompletionsResponse` {#chatcompletionsresponse} 
 
 This represents a chat completion response returned by the model, based on the provided input. 
 
@@ -301,7 +313,7 @@ This represents a chat completion response returned by the model, based on the p
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.9 `Choice`
+#### 4.1.10 `Choice`
 
 This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
@@ -310,31 +322,23 @@ This is a list of chat completion choices which are part of the response. There 
 | `Index` | This is the index of the choice in the list of choices. |
 | `Finish_reason` | This is the reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. |
 
-#### 4.1.10 `ChatCompletionsMessageResponse` 
+#### 4.1.11 `ChatCompletionsMessageResponse` 
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (assistant prompt). 
 
-#### 4.1.11 `Usage` 
+#### 4.1.12 `ChatCompletionsUsage` 
 
-This is the statistics for the completion request. 
+This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request. 
 
-| Attribute | Description |
-| ---| --- |
-| `Prompt_tokens` | This is the number of tokens in the prompt. |
-| `Completion_tokens` | This is the number of tokens in the generated completion. |
-| `Total_tokens` | This is the total number of tokens used in the request (`Prompt_tokens` + `Completion_tokens`). |
-
-For more information on how to manage tokens for text generation, see [Managing tokens](https://platform.openai.com/docs/guides/text-generation/managing-tokens).
-
-#### 4.1.12 `ChatCompletionsSession` {#chatcompletionssession} 
+#### 4.1.13 `ChatCompletionsSession` {#chatcompletionssession} 
 
 This entity functions as a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
 
-#### 4.1.13 `ChatCompletionsSessionMessage` 
+#### 4.1.14 `ChatCompletionsSessionMessage` 
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. 
 
-#### 4.1.14 `ImageGenerationsRequest` {#imagegenerationsrequest} 
+#### 4.1.15 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
 This is an image generations request that creates a model response including generated image (or images) for the given prompt. 
 
@@ -351,7 +355,7 @@ This is an image generations request that creates a model response including gen
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
 
-#### 4.1.15 `ImageGenerationsResponse` {#imagegenerationsresponse} 
+#### 4.1.16 `ImageGenerationsResponse` {#imagegenerationsresponse} 
 
 This represents an image generations response returned by the model, based on the provided input. 
 
@@ -359,11 +363,11 @@ This represents an image generations response returned by the model, based on th
 | --- | --- |
 | `Created` | This is the Unix timestamp (in seconds) of when the image generation was created. |
 
-#### 4.1.16 `Data` 
+#### 4.1.17 `Data` 
 
 This is a wrapper for a list of [images](#image) that are part of the [response](#imagegenerationsresponse). 
 
-#### 4.1.17 `Image` {#image}
+#### 4.1.18 `Image` {#image}
 
 This represents the URL or the content of an image generated by the API.
 
@@ -376,7 +380,7 @@ This represents the URL or the content of an image generated by the API.
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.18 `GeneratedImage` {#generatedimage}
+#### 4.1.19 `GeneratedImage` {#generatedimage}
 
 This is an entity that is used to map the [image](#image) data from the API response onto a Mendix image entity so that it can be used as such in the application. 
 
@@ -385,6 +389,70 @@ This is an entity that is used to map the [image](#image) data from the API resp
 | `RevisedPrompt` | This is the prompt that was used to generate the image. It is only populated if there was any revision to the prompt. |
 
 {{% alert color="info" %}} This entity is meant to be used as a generalization when one of the [exposed microflows for image generations](#image-generations-technical) is implemented. For more information about how to use this entity, see the [Image Generations Configuration](#image-generations-configuration) section. {{% /alert %}}
+
+#### 4.1.20 `EmbeddingsRequest` {#embeddingsrequest} 
+
+This is an embeddings request that generates a model response including a vector embedding per given input string text. 
+
+| Attribute | Description |
+| ---| --- |
+| `Model` | The model to use for generating embeddings. This is a mandatory field for OpenAI.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
+| `Encoding_format` | The format to return the embeddings in. Can be either float or base64.<br />For more information see the [ENUM_EncodingFormat_Embeddings](#enum_encodingformat_embeddings) section. |
+| `User` | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
+
+{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
+
+#### 4.1.21 `EmbeddingsInput` {#embeddingsinput}
+
+This is an entity that is used to contain a string input text for the embedding model. 
+
+| Attribute | Description |
+| ---| --- |
+| `Input` |This is the string input for a text chunk for which the embedding vector needs to be generated |
+
+#### 4.1.22 `EmbeddingsResponse` {#embeddingsresponse}
+
+This entity represents an embeddings response returned by model, based on the provided input.
+
+| Attribute | Description |
+| ---| --- |
+| `_object` | The object type, which is always `list`. |
+| `Model` | This is the model that has been used for generating the embeddings. | 
+
+#### 4.1.23 `EmbeddingUsage`  {#embeddingusage}
+
+This is a specialization of the [AbstractUsage](#abstractusage) entity. It represents usage statistics for the embeddings request that was processed.
+
+#### 4.1.24 `EmbeddingVector` {#embeddingvector}
+
+This is the vector that represents the embedding for the text input that was given in the request. There will be an instance of this entity for every input text string provided.
+
+| Attribute | Description |
+| ---| --- |
+| `_object` | The object type, which is always `embedding`. |
+| `Index` | This is the index of the embedding in the list of embeddings, can be used for ordering. | 
+
+#### 4.1.25 `EmbeddingValue` {#embeddingvalue}
+
+This entity representsan element the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model as listed in the [documenatation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
+
+| Attribute | Description |
+| ---| --- |
+| `Value` | A decimal in the embedding vector. | 
+
+#### 4.1.26 `DataBatch` {#databatch}
+
+This entity functions as a wrapper object for the list input operation for embeddings. It is associated with a list of input objects of entity [DataChunk](#datachunk) that contain the string texts for which the embedding vectors must be generated. 
+
+#### 4.1.27 `DataChunk` {#datachunk}
+
+This entity represents a text string, usually a part of a larger base text or discrete piece of text in a data set. It is designed to contain the input string and the corresponding embeddings vector retieved from the Embeddings API.
+
+| Attribute | Description |
+| ---| --- |
+| `Input` | The input text to embed will be mapped to the EmbeddingsInput entity as part of the request. | 
+| `EmbeddingVector` | String representation of the embedding vector of the input string. | 
+| `Index` | Used for mapping the EmbeddingsVector from the response onto the correct DataChunk in the list. | 
 
 ### 4.2 Enumerations {#enumerations} 
 

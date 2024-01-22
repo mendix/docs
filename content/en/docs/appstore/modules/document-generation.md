@@ -24,7 +24,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 * Currently, PDF is the only supported document export format.
 * For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage. Note that for all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
-* When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to "Allow all access" for the top-level path (`/`) and the DocGen request handler (`/docgen/`). If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
+* When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to *Allow all access* for the top-level path (`/`) and the DocGen request handler (`/docgen/`). If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
 * Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might be rendered inconsistently in the generated PDF due to factors like animation.
@@ -57,11 +57,11 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 5. To test the module locally, perform the procedure as described in the [Running locally from Studio Pro](#run-locally) section. 
 6. When deploying your app, consider that we currently support two types of deployments:
 
-    1. [Running on Mendix Cloud](#run-on-mendix-cloud) using the PDF service in the Mendix Public Platform. This option is available for apps that are deployed to:
+    1. [Running on Mendix Cloud](#run-on-mendix-cloud) using the PDF service in the Mendix Public Platform. This option is available for apps that are deployed to the following environments:
         * [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/)
         * [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/)
 
-    2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to:
+    2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to the following environments:
         * [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
         * [Linux](/developerportal/deploy/unix-like/)
 
@@ -85,7 +85,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 ### 3.2 Running on Mendix Cloud {#run-on-mendix-cloud}
 
-To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
+To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following steps:
 
 1. Enable the DocGen request handler.
 
@@ -141,7 +141,7 @@ The steps for each procedure are described in the sections below.
 
 ### 3.3 Running On-Premises {#run-on-premises}
 
-To configure the module to generate documents on your on-premises environments, you need to perform the following procedures:
+To configure the module to generate documents on your on-premises environments, you need to perform the following steps:
 
 1. Make sure that you have the prerequisite software installed.
 
@@ -150,7 +150,7 @@ To configure the module to generate documents on your on-premises environments, 
 1. Enable the DocGen request handler.
 
 #### 3.3.1 Installing the Prerequisite Software {#install-prerequisites}
-We assume the following software pre-installed and maintained by the developer. Mendix does not provide support for the installation, configuration and maintenance of these packages.
+We assume the following software pre-installed and maintained by the developer. Mendix does not provide support for the installation, configuration, and maintenance of these packages.
 
 ##### 3.3.1.1 Chromium
 

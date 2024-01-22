@@ -60,7 +60,7 @@ Without this text, the lower list was treated as part of the upper numbered list
 Two line breaks between the numbered lists were not enough to make them separate lists.
 {{% / alert %}}
 
-### 1.2 Indents with Four Spaces and Trailing Space(s)
+### 1.2 Indents with Four Spaces and Trailing Space (or Spaces)
 
 Paragraph text here.
 
@@ -267,7 +267,7 @@ Key Combination
     | --- | --- | 
     | Annotation | A comment explaining an aspect of the domain model | 
     | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database | 
-    | Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
+    | Event Handler (or Handlers) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
 
 A table with list items:
 

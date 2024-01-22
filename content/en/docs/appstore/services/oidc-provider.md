@@ -118,7 +118,7 @@ The rest of the configuration can be performed through the app.
 1. Deploy and run the app.
 1. Login as an administrator.
 1. Use the **Accounts** navigation item.
-1. Click **New** and create the user account(s) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
+1. Click **New** and create the user account (or accounts) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
 1. Use the **OpenID Connect** navigation item.
 1. Open the **Server Keys** tab.
 1. Click **New Key**.
@@ -243,7 +243,7 @@ The scopes you configure are not added automatically to the "scopes_supported" a
     * `AllowedScopeList` – the scopes associated with the client in the OIDC Provider
     * `scopesListFromRequest` – the scopes/user roles which the client requests
 
-    The Microflow returns the scope(s) as a String containing space-separated values. If any of the requested scopes are not associated with the client then the microflow returns an empty value as output.
+    The Microflow returns the scope (or scopes) as a String containing space-separated values. If any of the requested scopes are not associated with the client then the microflow returns an empty value as output.
 
     {{% alert color="info" %}}The default implementation of `OpenIDConnectProvider.SUB_CustomScope` grants any requested scope provided it is associated with client (your Mendix app). It does not do any validation of the end user.{{% /alert %}}
 

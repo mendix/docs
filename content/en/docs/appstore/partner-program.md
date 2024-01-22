@@ -34,7 +34,7 @@ The process is simple:
 
 As a partner in the Mendix Marketplace, you can offer your components to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
 
-There are a few steps to publishing an offering. A partner interested in publishing its product(s) on the Mendix Marketplace must meet certain criteria and must comply with some legal, compliance, technical, operational, and marketing requirements.
+There are a few steps to publishing an offering. A partner interested in publishing its product (or products) on the Mendix Marketplace must meet certain criteria and must comply with some legal, compliance, technical, operational, and marketing requirements.
 
 Currently, we are offering product listings with contact referrals for commercial content. There is currently no fee to publish an offering on the Mendix Marketplace.
 

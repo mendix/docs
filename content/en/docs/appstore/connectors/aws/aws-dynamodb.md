@@ -186,7 +186,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
     
-65. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+65. Click **Run Locally** ({{% icon name="controls-play" %}}) to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

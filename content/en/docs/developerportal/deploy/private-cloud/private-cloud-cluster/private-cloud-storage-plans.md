@@ -359,7 +359,7 @@ To connect to an Amazon RDS database, the VPC and firewall must be configured to
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 
-1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
@@ -971,7 +971,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 
-1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 

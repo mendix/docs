@@ -13,7 +13,7 @@ On the **Statistics** tab, the collected statistics are displayed with the follo
 * **90% (ms)** – the duration in 90% of the occurrences in milliseconds
 * **Total (ms)** – the total time of all occurrences in milliseconds
 
-This overview displays the statistics hourly or daily (you can switch between time periods). It is possible to drill down into each microflow, page, or client API call for more information. In the case of a microflow, statistics regarding the microflow action(s) and sub-microflow(s) are shown as well as an historic chart. In the case of a page, the historic chart is shown as well as which page(s) the users opened from that page. 
+This overview displays the statistics hourly or daily (you can switch between time periods). It is possible to drill down into each microflow, page, or client API call for more information. In the case of a microflow, statistics regarding the microflow action (or actions) and sub-microflow (or microflows) are shown as well as an historic chart. In the case of a page, the historic chart is shown as well as which page (or pages) the users opened from that page. 
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-statistics/statistics.png" >}}
 

@@ -73,6 +73,8 @@ For active development and running your application locally, your app folder sho
 
 ### 2.5 Supported Git Service Providers {#supported-providers}
 
+This section describes Git service providers when you are setting up your own Git repo. For information about Mendix Team Server (which is implemented using Git), see the [Team Server](#ts) section below.
+
 Git service providers have size limitations related to commits and repositories.
 
 Studio Pro does not support Large File Storage (LFS) for any provider.

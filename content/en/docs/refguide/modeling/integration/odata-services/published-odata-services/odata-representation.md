@@ -45,7 +45,7 @@ In the settings of the OData service, you can choose how associations are repres
 
 ### 3.1 As a Link
 
-When you choose to represent associations as links, each object contains a link for each of its associations. The associated object(s) can be retrieved via those links.
+When you choose to represent associations as links, each object contains a link for each of its associations. The associated object (or objects) can be retrieved via those links.
 
 This means that you can only publish an association when the entity on the other side is published in this service as well. This also means that you cannot publish the same entity more than once in the same service (because in that case, it would not be clear where the link should point to).
 

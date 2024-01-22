@@ -120,7 +120,7 @@ To configure the toggled sidebar to shrinking content (initially open), follow t
 
 To toggle the sidebar for **Shrinking content (initially open)**, follow these steps:
 
-1. Click the play button (**Run Locally**) to run your app.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to run your app.
 2. In your browser, click the toggle button:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif"   width="350"  >}}
@@ -151,7 +151,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 ### 3.4 Toggling the Sidebar for Shrinking Content (Initially Closed)
 
-1. Click the play button (**Run Locally**) to run your app.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to run your app.
 2. In your browser, click the toggle button:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif"   width="350"  >}}
@@ -188,7 +188,7 @@ To configure the toggled sidebar to **Push content aside**, follow these steps:
 
 To toggle the sidebar for Pushing content aside, follow these steps:
 
-1. Click the play button (**Run Locally**) to run your app.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to run your app.
 2. In your browser, right-click your web page and click **Inspect**:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/3.6_inspector.png"   width="350"  >}}
@@ -237,7 +237,7 @@ To configure the toggled sidebar to **Slide over content**, follow these steps:
 
 To toggle the sidebar for **Slide over content**, follow these steps:
 
-1. Click the play button (**Run Locally**) to run your app.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to run your app.
 2. In your browser, right-click your web page and click **Inspect**:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/3.8_inspector.png"   width="350"  >}}

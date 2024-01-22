@@ -181,7 +181,7 @@ If creation of the environment fails, then contact your cluster manager. If they
 
 You can deploy the deployment package of your app by doing the following:
 
-1. Click **Deploy** button provided in **...** section next to the deployment package you wish to deploy.
+1. Click the **Deploy** button provided in the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) menu next to the deployment package you wish to deploy.
 2. Select the **Destination** environment by clicking on Change environment (you can select a different one here if one is available).
 3. Confirm that the **Status** is *Ready*.
 4. Click **Transport**.

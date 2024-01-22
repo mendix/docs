@@ -468,6 +468,14 @@ This enumeration provides a list of supported visual styles for the generated im
 | `vivid` | **Vivid** |
 | `natural` | **Natural** |
 
+#### 4.2.9 `ENUM_EncodingFormat_Embeddings` {#enum-encodingformat-embeddings}
+
+This enumeration provides a list of supported encoding formats for embeddings returned by the API. The non-advanced operations currently only support the floating point representation of embedding vectors. Therefore only one value `float` exits. The other option supported by OpenAI and Azure OpenAI is `base64`; if this format is required for your specific usecase, please use the [advanced operation](#embeddings-advanced-technical) for embeddings.
+
+| Name | Caption | 
+| --- | --- | 
+| `_float` | **float** |
+
 ### 4.3 Activities {#activities} 
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information about the functional description of the actions, see the [Chat Completions Configuration](#chat-completions-configuration) section. 
@@ -530,7 +538,7 @@ The embeddings API from OpenAI accepts a complex JSON structure that consists of
 
 ##### 4.3.3.1 Call Embeddings API (single input) {#embeddings-single-technical} 
 
-Use the microflow `Embeddings_Execute_SingleInput` to execute a simple embeddings API call with a single string input. The output will be the string representation of the vector embedding of the input. See [ENUM_EncodingFormat_Embeddings](#enum-role) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_SingleInput` to execute a simple embeddings API call with a single string input. The output will be the string representation of the vector embedding of the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 | Input | Output | 
 | --- | --- | 
@@ -538,7 +546,7 @@ Use the microflow `Embeddings_Execute_SingleInput` to execute a simple embedding
 
 ##### 4.3.3.2 Call Embeddings API (list input) {#embeddings-list-technical}
 
-Use the microflow `Embeddings_Execute_ListInput` to execute embeddings API call with a [DataBatch](#databatch) input with a list of text strings as [DataChunks](#datachunk) attached. The resulting embedding vectors returned by the model end up in the EmbeddingVector string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-role) for the information of what encoding formats are suported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_ListInput` to execute embeddings API call with a [DataBatch](#databatch) input with a list of text strings as [DataChunks](#datachunk) attached. The resulting embedding vectors returned by the model end up in the EmbeddingVector string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for the information of what encoding formats are suported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 | Input | Output | 
 | --- | --- | 

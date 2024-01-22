@@ -202,7 +202,7 @@ Mendix supports RN and therefore auto-linking. Auto linking is a React Native me
 
 ### 6.2 Adding Dependencies Which Do Not Support Auto-Linking
 
-If a dependency does not suport auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
+If a dependency does not support auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
 
 ## 7 Removing Dependencies{#removing-dependencies}
 

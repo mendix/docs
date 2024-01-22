@@ -15,27 +15,27 @@ paths:
     get:
       tags:
         - statuses
-      summary: Get statuses by app ID
-      description: Returns an array of statuses
+      summary: Get statuses by the app ID
+      description: Returns an array of statuses.
       operationId: getProjectStatuses
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema:
             type: string
             format: uuid
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/statuses'
         '401':
           description: |-
-            There were no usable authentication credentials found.
+            No usable authentication credentials were found.
 
             The error response gives additional feedback.
           content:
@@ -58,25 +58,25 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories:
     get:
       tags:
         - stories
-      summary: Get stories by app ID
-      description: Returns an array of stories
+      summary: Get stories by the app ID
+      description: Returns an array of stories.
       operationId: getProjectStories
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema:
             type: string
             format: uuid
         - in: query
           name: limit
-          description: The maximum number of stories that can be returned per request. If the total stories retrieved is more than this limit, then we shall provide page links for retrieval of subsequent stories in the response.
+          description: The maximum number of stories that can be returned per request. If the total number of the stories retrieved is more than this limit, then in the response you can find links to pages for retrieving subsequent stories.
           required: false
           schema:
             type: integer
@@ -95,7 +95,7 @@ paths:
             default: 0
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -112,10 +112,10 @@ paths:
               example:
                 status: 400
                 title: Bad Request
-                detail: Unsupported query parameter was used
+                detail: Unsupported query parameter was used.
         '401':
           description: |-
-            There were no usable authentication credentials found.
+            No usable authentication credentials were found.
 
             The error response gives additional feedback.
           content:
@@ -138,23 +138,23 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
     post:
       tags:
         - stories
       summary: Create stories for an app
-      description: Returns an array of created stories
+      description: Returns an array of created stories.
       operationId: postProjectStories
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema:
             type: string
             format: uuid
       requestBody:
-        description: Create stories for an app
+        description: Create stories for an app.
         content:
           application/json:
             schema:
@@ -164,10 +164,10 @@ paths:
                 properties:
                   title:
                     type: string
-                    example: Title of something to do
+                    example: Users need to have a homepage that gives them access to pages where information can be seen.
                   description:
                     type: string
-                    example: A simple story description
+                    example: Add buttons to the existing homepage which give users access to other pages.
                   storyType:
                     type: string
                     example: Feature
@@ -189,7 +189,7 @@ paths:
                       - Backlog
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -215,7 +215,7 @@ paths:
                               type: string
                               example: TEST-1
         '207':
-          description: partial successful operation
+          description: Partial successful operation
           content:
             application/json:
               schema:
@@ -247,12 +247,12 @@ paths:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: The request was malformed and could not be read
+                    detail: The request was malformed and could not be read.
                 Example 2:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: Please, no more than 50 stories per request
+                    detail: The maximum number of stories per request is 50. Please do not exceed the limit.
         '401':
           description: |-
             The required item could not be found.
@@ -265,7 +265,7 @@ paths:
               example:
                 status: 401
                 title: Unauthorized
-                detail: The token is invalid
+                detail: The token is invalid.
         '404':
           description: |-
             The required item could not be found.
@@ -278,30 +278,30 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories/{storyId}:
     patch:
       tags:
         - stories
-      summary: Patch stories by story ID 
-      description: Returns success 
+      summary: Patch a story by the story ID
+      description: Returns the status code 204.
       operationId: patchProjectStory
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema:
             type: string
             format: uuid
         - in: path
           name: storyId
-          description: Readable ID of the story
+          description: The readable ID of the story
           required: true
           schema:
             type: string
       requestBody:
-        description: Patch stories by story ID
+        description: Patch a story by the story ID.
         content:
           application/json:
             schema:
@@ -309,10 +309,10 @@ paths:
               properties:
                 title:
                   type: string
-                  example: Title of something to do
+                  example: Users need to have a homepage that gives them access to pages where information can be seen.
                 description: 
                   type: string
-                  example: Update story description
+                  example: Update story description.
                 storyPoints:
                   type: integer
                   format: int64
@@ -337,7 +337,7 @@ paths:
                   example: Done
       responses:
         '204':
-          description: successful operation
+          description: Successful operation
         '400':
           description: |-
             The request likely contains invalid data or is missing data.
@@ -352,27 +352,27 @@ paths:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: The request is malformed and could not be read
+                    detail: The request is malformed and could not be read.
                 Example 2:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: The title of a story is required
+                    detail: The title of a story is required.
                 Example 3:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: Maximum 200 characters is allowed for Title 
+                    detail: The maximum number of characters for Title is 200. 
                 Example 4:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: The attribute "{attribute name} does not exist or you do not have access to it"
+                    detail: The attribute "{attribute name} does not exist or you do not have access to it".
                 Example 5:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: Invalid data type was used for "{attribute name}"
+                    detail: Invalid data type was used for "{attribute name}".
                 Example 6:
                   value:
                     status: 400
@@ -418,30 +418,30 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
     get:
       tags:
         - stories
-      summary: Get story by story ID
+      summary: Get a story by the story ID
       description: Returns success
       operationId: getProjectStory
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema:
             type: string
             format: uuid
         - in: path
           name: storyId
-          description: Readable ID of the story
+          description: The readable ID of the story
           required: true
           schema: 
             type: string
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -471,25 +471,25 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/epics:
     get:
       tags:
         - epics
-      summary: Get epics by app ID
-      description: Returns an array of epics
+      summary: Get epics by the app ID
+      description: Returns an array of epics.
       operationId: getProjectEpics
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema: 
             type: string
             format: uuid
         - in: query
           name: limit
-          description: The maximum number of epics that can be returned per request. If the total epics retrieved is more than this limit, then we shall provide page links for retrieval of subsequent epics in the response.
+          description: The maximum number of epics that can be returned per request. If the total number of the epics retrieved is more than this limit, then in the response you can find links to pages for retrieving subsequent epics. 
           required: false
           schema:
             type: integer
@@ -508,7 +508,7 @@ paths:
             default: 0
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -551,31 +551,31 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories/{storyId}/tasks:
     get:
       tags:
         - tasks
-      summary: Get tasks of a story by story ID and app ID
-      description: Returns an array of tasks
+      summary: Get tasks of a story by the story ID and the app ID
+      description: Returns an array of tasks.
       operationId: getStoryTasks
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema: 
             type: string
             format: uuid
         - in: path
           name: storyId
-          description: Readable ID of the story
+          description: The readable ID of the story
           required: true
           schema:
             type: string
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -605,29 +605,29 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
     post:
       tags:
         - tasks
       summary: Create tasks for a story 
-      description: Returns an array of created tasks
+      description: Returns an array of created tasks.
       operationId: postStoryTasks
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema: 
             type: string
             format: uuid
         - in: path
           name: storyId
-          description: Readable ID of the story
+          description: The readable ID of the story
           required: true
           schema: 
             type: string
       requestBody:
-        description: successful operation
+        description: Successful operation
         content:
           application/json:
             schema:
@@ -637,13 +637,13 @@ paths:
                 properties:
                   title:
                     type: string
-                    example: Title of something to do
+                    example: Users need to have a homepage that gives them access to pages where information can be seen.
                   isDone:
                     type: boolean
                     example: false
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -665,7 +665,7 @@ paths:
                               type: string
                               example: 346a2cad-6b96-477a-9225-3957b73ctest 
         '207':
-          description: partial successful operation
+          description: Partial successful operation
           content:
             application/json:
               schema:
@@ -697,15 +697,15 @@ paths:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: The request is malformed and could not be read
+                    detail: The request is malformed and could not be read.
                 Example 2:
                   value:
                     status: 400
                     title: Bad Request
-                    detail: Please, no more than 50 tasks per request
+                    detail: The maximum number of stories per request is 50. Please do not exceed the limit.
         '401':
           description: |-
-            There were no usable authentication credentials found.
+            No usable authentication credentials were found.
 
             The error response gives additional feedback.
           content:
@@ -728,25 +728,25 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/labels:
     get:
       tags:
         - labels
-      summary: Get labels by app ID
-      description: Returns an array of labels
+      summary: Get labels by the app ID
+      description: Returns an array of labels.
       operationId: getProjectLabels
       parameters:
         - in: path
           name: appId
-          description: ID of the app
+          description: The ID of the app
           required: true
           schema: 
             type: string
             format: uuid
         - in: query
           name: limit
-          description: The maximum number of labels that can be returned per request. If the total labels retrieved is more than this limit, then we shall provide page links for retrieval of subsequent labels in the response.
+          description: The maximum number of labels that can be returned per request. If the total number of the labels retrieved is more than this limit, then in the reponse you can find the links to pages for retrieving subsequent labels.
           required: false
           schema: 
             type: integer
@@ -765,7 +765,7 @@ paths:
             maximum: 0
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -785,7 +785,7 @@ paths:
                 detail: Unsupported query parameter was used.
         '401':
           description: |-
-            There were no usable authentication credentials found.
+            No usable authentication credentials were found.
 
             The error response gives additional feedback.
           content:
@@ -808,13 +808,13 @@ paths:
               example:
                 status: 404
                 title: Not Found
-                detail: The app does not exist or you do not have access to it
+                detail: The app does not exist or you do not have access to it.
 components:
   parameters:
     storyId:
       name: storyId
       in: path
-      description: Readable ID of the story
+      description: The readable ID of the story
       required: true
       schema:
         type: string
@@ -901,14 +901,14 @@ components:
           example: 0
         title:
           type: string
-          example: Title of something to do
+          example: Users need to have a homepage that gives them access to pages where information can be seen.
         descriptionHTML:
           type: string
           format: html
-          example: <p>A simple story description</p>
+          example: <p>Add buttons to the existing homepage which give users access to other pages.</p>
         descriptionPlain:
           type: string
-          example: A simple story description
+          example: Add buttons to the existing homepage which give users access to other pages.
         storyPoints:
           type: integer
           format: int64
@@ -957,14 +957,14 @@ components:
                 example: 0
               title:
                 type: string
-                example: "Title of something to do"
+                example: "Users need to have a homepage that gives them access to pages where information can be seen."
               descriptionHTML:
                 type: string
                 format: html 
-                example: <p>A simple story description</p>
+                example: <p>Add buttons to the existing homepage which give users access to other pages.</p>
               descriptionPlain:
                 type: string
-                example: A simple story description
+                example: Add buttons to the existing homepage which give users access to other pages.
               storyPoints:
                 type: integer
                 format: int64
@@ -1024,7 +1024,7 @@ components:
                 example: Public API Initiative
               objective:
                 type: string
-                example: ability to change stories programatically
+                example: Ability to change stories programatically
               numberOfStories:
                 type: integer
                 format: int64
@@ -1067,7 +1067,7 @@ components:
                 example: 346a2cad-6b96-477a-9225-3957b73ctest
               name:
                 type: string
-                example: Add post endpoint to generate resources
+                example: Add post endpoint to generate resources.
         totalLabels:
           type: integer
           format: int64
@@ -1096,7 +1096,7 @@ components:
             properties:
               title:
                 type: string
-                example: Title of something to do
+                example: Design the new buttons for the homepage.
               isDone:
                 type: boolean
                 example: false

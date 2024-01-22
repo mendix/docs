@@ -119,9 +119,10 @@ The following inputs are required for the Azure OpenAI configuration:
 | DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
 | API type | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/`.<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
-| API key | This is the access token to authorize your API call. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
+| API key | This is the access token to authorize your API call. |
+| Key type | The type of token that is entered in the API key field. For Azure OpenAI two types of keys are currently supported; Microsoft Entra tokens and API keys. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if allowed by your organisation, you could use the Azure "api-key" authentication mechanism. For more information about how to obtain this key, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below.
 
 {{% alert color="info" %}}
 For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects, one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
@@ -134,6 +135,14 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
 5. Use the value of the **name** field as your resource name in the endpoint URL.
+
+##### 3.1.2.2 Obtaining Azure OpenAI API keys {#azure-api-keys}
+
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
+3. Go to the **Resource** tab.
+4. Go to **Current resource** and click **JSON view**.
+5. Use the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be available depending on your organization's security settings.
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 
@@ -201,7 +210,8 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `Endpoint` | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
 | `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion` | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
-| `ApiKey `| This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
+| `ApiKey ` | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
+| `KeyType` | The type of token entered in the ApiKey field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-key-type) section. |
 
 #### 4.1.2 `ApiKey` 
 
@@ -363,7 +373,16 @@ This enumeration provides a list of supported API types.
 | `AzureOpenAI` | **Azure OpenAI** | 
 | `OpenAI` | **OpenAI** | 
 
-#### 4.2.2 `ENUM_Role` {#enum-role} 
+#### 4.2.2 `ENUM_KeyType` (#enum-key-type)
+
+This enumeration provides a list of key types that can be used druing the connection to the APIs of Azure OpenAI. 
+
+| Name | Caption | 
+| --- | --- | 
+| `Bearer_Token` | **Microsoft Entra token** |
+| `API_key` | **API key** |
+
+#### 4.2.3 `ENUM_Role` {#enum-role} 
 
 This enumeration provides a list of message author roles. 
 
@@ -373,7 +392,7 @@ This enumeration provides a list of message author roles.
 | `system` | **System** | This is a system message can be used to specify the persona used by the model in its replies. This is typically specified by the developer to steer the model response. |
 | `user` | **User** | This is a user message is the input from a user. |
 
-#### 4.2.3 `ENUM_ResponseFormat_Chat` {#enum-responseformat-chat} 
+#### 4.2.4 `ENUM_ResponseFormat_Chat` {#enum-responseformat-chat} 
 
 This enumeration provides a list of supported response types for chat completions. Currently chat completions can be returned in normal text format (supported for all chat completions models available in the connector), as well as in JSON mode for [specific models](https://platform.openai.com/docs/guides/text-generation/json-mode).
 
@@ -382,7 +401,7 @@ This enumeration provides a list of supported response types for chat completion
 | `json_object` | **JSONObject** |
 | `text` | **Text** |
 
-#### 4.2.4 `ENUM_Quality` {#enum-quality} 
+#### 4.2.5 `ENUM_Quality` {#enum-quality} 
 
 This enumeration provides a list of quality levels for the images that are generated. 
 
@@ -391,7 +410,7 @@ This enumeration provides a list of quality levels for the images that are gener
 | `standard` | **Standard** |
 | `hd` | **HD** |
 
-#### 4.2.5 `ENUM_ResponseFormat_Image` {#enum-responseformat-image} 
+#### 4.2.6 `ENUM_ResponseFormat_Image` {#enum-responseformat-image} 
 
 This enumeration provides a list of supported response types for generated images. Currently, images can be returned either as a URL to a PNG file, or a base64 encoded string representation of the image directly.
 
@@ -400,7 +419,7 @@ This enumeration provides a list of supported response types for generated image
 | `url` | **URL** |
 | `b64_json` | **Base64-JSON** |
 
-#### 4.2.6 `ENUM_Size` {#enum-size} 
+#### 4.2.7 `ENUM_Size` {#enum-size} 
 
 This enumeration provides a list of supported pixel dimensions for the generated images. It depends on the model which options are supported.
 
@@ -414,7 +433,7 @@ This enumeration provides a list of supported pixel dimensions for the generated
 | `_1204x1792` | **1024x1792** |
 | `_1792x1024` | **1792x1024** |
 
-#### 4.2.7 `ENUM_Style` {#enum-style} 
+#### 4.2.8 `ENUM_Style` {#enum-style} 
 
 This enumeration provides a list of supported visual styles for the generated images. It depends on the model whether this field is supported.
 

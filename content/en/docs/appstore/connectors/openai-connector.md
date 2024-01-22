@@ -148,7 +148,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, three microflows for chat completions are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
 
-These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model (optional) that should be used for generating responses. 
+These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses. 
 
 * For the OpenAI API configuration, the desired model must be specified for every call.
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -190,6 +190,32 @@ The microflow activity `Call Image Generations API (single image)` supports scen
 The microflow activity `Call Image Generations API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#image-generations-advanced-technical) section.
 
 For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+
+### 3.4 Embeddings Configuration {#embeddings-configuration}
+
+In order to implement embeddings into your Mendix application, you can use the microflows in the **USE_ME > Operations > Embeddings** folder. Currently, three microflows for embeddings are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
+
+These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses. 
+
+* For the OpenAI API configuration, the desired model must be specified for every call.
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
+
+#### 3.4.1 `Call Embeddings API (single input)` 
+
+The microflow activity `Call Embeddings API (single input)` supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `Input` parameter of this microflow. Note that the parameter `EncodingFormmat` is optional; the current version of this operation only supports the float representation of the resulting vector. For technical details, see the [Technical reference](#embeddings-single-technical) section.
+
+#### 3.4.2 `Call Embeddings API (list input)` 
+
+The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce http overhead. Two accompanying microflows are available to construct the input for the microflow. 
+
+* `DataBatch_Create` is used to create the wrapper that must be passed as input parameter. 
+* `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string)  to the `DataBatch` entity. 
+
+The resulting vectors returned after a successful API call will be stored in the same `DataChunk` entity. For technical details, see the [Technical reference](#embeddings-list-technical) section.
+
+#### 3.4.3 `Call Embeddings API (advanced)` 
+
+The microflow activity `Call Embeddings API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
 
 ## 4 Technical Reference 
 
@@ -470,7 +496,7 @@ The `ChatCompletionsSession` is a wrapper object for the ordered list of message
 
 ##### 4.3.1.3 Call Chat Completions API (Advanced) {#chat-completions-advanced-technical}
 
-For developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletionsRequest_CallAPI` microflow. The inputs and output are shown in the table below: 
+For developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletions_CallAPI` microflow. The inputs and output are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -497,6 +523,39 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 | Input | Output | 
 | --- | --- | 
 | `Configuration`, `ImageGenerationsRequest` | `ImageGenerationsResponse` | 
+
+#### 4.3.3 Embeddings
+
+The embeddings API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more text strings as input and generates a structure of model-generated vector embeddings as output; per input string one vector is returned. Depending on the use case there may be a need of generating an embedding for a single text at a time, whereas in the case of processing larger amount of data, bigger texts or data sets will be split up in discrete chunks, for which embeddings can be generated using batches of multiple input texts. The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. 
+
+##### 4.3.3.1 Call Embeddings API (single input) {#embeddings-single-technical} 
+
+Use the microflow `Embeddings_Execute_SingleInput` to execute a simple embeddings API call with a single string input. The output will be the string representation of the vector embedding of the input. See [ENUM_EncodingFormat_Embeddings](#enum-role) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+
+| Input | Output | 
+| --- | --- | 
+| `Input`, `Configuration`, `Model`, `ENUM_EncodingFormat_Embeddings` | `EmbeddingVector` | 
+
+##### 4.3.3.2 Call Embeddings API (list input) {#embeddings-list-technical}
+
+Use the microflow `Embeddings_Execute_ListInput` to execute embeddings API call with a [DataBatch](#databatch) input with a list of text strings as [DataChunks](#datachunk) attached. The resulting embedding vectors returned by the model end up in the EmbeddingVector string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-role) for the information of what encoding formats are suported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+
+| Input | Output | 
+| --- | --- | 
+| `DataBatch`, `Configuration`, `Model`, `ENUM_EncodingFormat_Embeddings` | nothing | 
+
+The `DataBatch` is a wrapper object for the ordered list of text strings for which the embeddings are generated. You can use `DataBatch_Create` to create a new `Databatch`  and with `DataChunk_Create` new `DataChunk` objects will be added to the wrapper. The order is not relevant technically here; each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the microflow itself has no return value.
+
+##### 4.3.3.3 Call Embeddings API (Advanced) {#embeddings-advanced-technical}
+
+For developers who want to configure the [EmbeddingsRequest](#embeddingsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `Embeddings_CallAPI` microflow. The inputs and output are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `Configuration`, `EmbeddingsRequest` | `EmbeddingsResponse` | 
+
+This option can be used if the default values and behaviour of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings, like usage metrics. 
+
 
 ## 5 Showcase Application 
 

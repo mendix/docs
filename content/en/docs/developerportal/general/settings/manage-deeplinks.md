@@ -30,7 +30,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/story-id.png" width="500px" alt="Story ID on Stories page" >}}
 
-* For the feedback item number, select **Collaborate** > **Feedback** – the number is next to the feedback item title:
+* For the feedback item number, under **App Insights** > **Feedback** – the number is next to the feedback item title:
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/feedback-nr.png" width="500px" alt="Feedback item number on Feedback page" >}}
 
@@ -49,8 +49,8 @@ The following deep links can be used:
 * App team: `https://sprintr.home.mendix.com/link/team/<appID>`
 * Stories overview for app: `https://sprintr.home.mendix.com/link/stories/<appID>`
 * Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
-* Feedback for app: `https://sprintr.home.mendix.com/link/feedback/<appID>`
-* Specific feedback item: `https://sprintr.home.mendix.com/link/showfeedback/<feedbackItemNr>`
+* Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
+* Specific feedback item: `https://appinsights.mendix.com/link/feedback/<appId>/item/<feedbackItemNr>`
 * Sprint planning for an app: `https://sprintr.home.mendix.com/link/planning/<appID>`
 * Sprint status of an app: `https://sprintr.home.mendix.com/link/sprint-status/<appID>`
 * App specific API keys: `https://sprintr.home.mendix.com/link/apikeys/<appID>`

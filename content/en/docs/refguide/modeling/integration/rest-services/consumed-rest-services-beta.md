@@ -28,6 +28,9 @@ You can use this Consumed REST service document to do the following:
   * `GET`
   * `POST`
   * `PATCH`
+
+  {{% alert color="info" %}}`PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above.{{% /alert %}} 
+
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
 * If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
 

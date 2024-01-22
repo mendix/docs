@@ -8,7 +8,7 @@ weight: 60
 ---
 
 {{% alert color="info" %}}
-This document is about [Private Mendix Platform](/private-mendix-platform/) API. For [Private Cloud](/developerportal/deploy/private-cloud/) API, see [Mendix for Private Cloud Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) and [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+This document is about [Private Mendix Platform](/private-mendix-platform/) API. To use this API, you must have a license for Private Mendix Platform. For [Private Cloud](/developerportal/deploy/private-cloud/) API, see [Mendix for Private Cloud Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) and [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 {{% /alert %}}
 
 ## 1 Introduction

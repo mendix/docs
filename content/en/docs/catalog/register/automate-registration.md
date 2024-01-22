@@ -64,11 +64,11 @@ To register the environment, you will need:
 * Environment `Location`
 * Environment `Type`
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. When finished, [register the endpoint (or endpoints)](#7-register-the-endpoints).
+Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. When finished, [register the endpoint (or endpoints)](#register-endpoints).
 
 Upon completion, you will have the `environment_UUID`.
 
-## 7 Register the Endpoint (or Endpoints)
+## 7 Register the Endpoint Endpoints {#register-endpoints}
 
 To register the service endpoint (or endpoints), you will need:
 

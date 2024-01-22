@@ -579,6 +579,7 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 | `Configuration`, `ChatCompletionsRequest` | `ChatCompletionsResponse` | 
 
 This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices. 
+The following flows may be used in order to construct and handle the required inputs: `ChatCompletionsRequest_Create`, `ChatCompletionsRequest_SetResponseType`,  `ChatCompletionsMessages_Create` and `ChatCompletionsMessageRequest_Create`. 
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
@@ -599,6 +600,8 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 | Input | Output | 
 | --- | --- | 
 | `Configuration`, `ImageGenerationsRequest` | `ImageGenerationsResponse` | 
+
+The microflow `ImageGenerationsRequest_Create` may be used here to create and handle the input requesst in a custom way.
 
 #### 4.3.3 Embeddings
 
@@ -631,6 +634,7 @@ For developers who want to configure the [EmbeddingsRequest](#embeddingsrequest)
 | `Configuration`, `EmbeddingsRequest` | `EmbeddingsResponse` | 
 
 This option can be used if the default values and behaviour of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings, like usage metrics. 
+The following flows may be used in order to construct and handle the required inputs: `EmbeddingsRequest_Create` and `EmbeddingsInput_Create`.
 
 
 ## 5 Showcase Application 

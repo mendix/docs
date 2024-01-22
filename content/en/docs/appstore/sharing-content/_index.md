@@ -205,7 +205,7 @@ You can configure the name of your **Main call-to-action** button from the follo
 
 * **Download** – no lead routing is established, but customers can directly download your product.
 
-In the **How would you like to receive information on new leads?** field, you must specify the email address(es) where notifications and information can be sent.
+In the **How would you like to receive information on new leads?** field, you must specify the email address (or addresses) where notifications and information can be sent.
 
 #### 4.1.4 Finishing Up
 

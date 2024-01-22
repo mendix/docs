@@ -41,15 +41,15 @@ There are six folders in the example above, and the database is structured and t
 
 For more information on how domain models are implemented in databases, see the [Implementation](/refguide/domain-model/#implementation) section of *Domain Model*.
 
-### 2.1 Retrieving the SubFolder(s) (Children) from a Folder (Parent)
+### 2.1 Retrieving the SubFolder (or SubFolders) (Children) from a Folder (Parent)
 
-If you have the $ChosenFolder object available in your microflow you can easily retrieve the subfolder(s). Each association has a right side (parent in the association) and a left side (child or owner of the association).  The platform reads each association and determines whether the parent is equal to the $ChosenFolder.
+If you have the $ChosenFolder object available in your microflow you can easily retrieve the subfolder (or subfolders). Each association has a right side (parent in the association) and a left side (child or owner of the association).  The platform reads each association and determines whether the parent is equal to the $ChosenFolder.
 
-This is implemented using the following XPath constraint: `[QueryOver.SubFolder_Folder=$ChosenFolder]`. The XPath constraint is read from right to left, with the resulting Folder(s) being the result. This is key to how you should interpret which direction you are following the association.  
+This is implemented using the following XPath constraint: `[QueryOver.SubFolder_Folder=$ChosenFolder]`. The XPath constraint is read from right to left, with the resulting Folder (or Folders) being the result. This is key to how you should interpret which direction you are following the association.  
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-normal.png"   width="400"  >}}
 
-If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The two folders in the left-hand table, highlighted in orange, will be returned. The platform applies the constraint by default on the right/parent side of the association and returns the relevant ChildFolder(s).
+If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The two folders in the left-hand table, highlighted in orange, will be returned. The platform applies the constraint by default on the right/parent side of the association and returns the relevant ChildFolder (or ChildFolders).
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-normal-tables.png" >}}
 

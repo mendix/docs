@@ -23,7 +23,7 @@ For the experienced user, this is quick outline of the installation:
 2. Import the APM Agent module.
 3. Copy the language if one other than English US is used.
 4. Configure to use `USE_ME/AfterStartup` and `USE_ME/BeforeShutdown`.
-5. Add permission(s) to your Administrator role.
+5. Add permission (or permissions) to your Administrator role.
 6. Add the USE_ME/IVK_OpenConsole microflow to the navigation.
 7. Set the `APMAgent.CompanyName` and `APMAgent.AppName` constants.
 8. Optionally configure the `APMAgent.NotifyMicroflowName` constant to call a microflow that sends mail.

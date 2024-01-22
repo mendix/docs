@@ -49,11 +49,7 @@ A Free App has several limitations compared to a licensed app. The main limitati
 | Support | No support | Depends on your license option |
 
 {{% alert color="info" %}}
-Free Apps are part of Mendix's Free Edition.
-
-If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.
-
-If you are an existing customer, you should deploy into your licensed cloud node.
+Free Apps are part of Mendix's Free Edition.<br><br>If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.<br><br>If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
 
 ¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
@@ -113,35 +109,27 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ## 2 Deploying an App to Mendix Cloud {#deploy-app-mendix-cloud}
 
-This how-to explains how to do the following:
+The method for deploying an app to Mendix Cloud differs depending on whether you have a licensed app or a Free App:
 
-* Create a deployment package for a licensed app on Mendix Cloud
-* Deploy a licensed app to an environment
-* Deploy a Free App to Mendix Cloud
+* For a licensed app, you first create a deployment package via Studio Pro or the Developer Portal, and then you deploy it to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below.
+* For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below.
 
-### 2.1 Prerequisites
+### 2.1 Deploying a Licensed App{#deploy-licensed-app}
 
-Before starting this how-to, make sure you have completed the prerequisites described below.
+#### 2.1.1 Prerequisites
 
-#### 2.1.1 Prerequisites for a Licensed App
-
-For a licensed app, make sure to complete these prerequisites:
+Before starting the process for deploying a licensed app, make sure to complete these prerequisites:
 
 * Your app is linked to a licensed cloud node
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
 * Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
 * The deployment package for your app is not bigger than 1 GB
 
-#### 2.1.2 Prerequisites for a Free App
+#### 2.1.2 Creating a Deployment Package for a Licensed App
 
-* You have created an app
-* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
+There are two methods for creating a deployment package on Mendix Cloud. You can create a deployment package directly via Studio Pro, or you can create a package via the Team Server through the Developer Portal.
 
-### 2.2 Creating a Deployment Package for a Licensed App on Mendix Cloud
-
-There are two methods for creating a deployment package on Mendix Cloud. The first option is directly via Studio Pro, and the second is from the Team Server through the Developer Portal.
-
-#### 2.2.1 Creating a Deployment Package via Studio Pro
+##### 2.1.2.1 Creating a Deployment Package via Studio Pro
 
 To create a deployment package directly from Studio Pro, follow these steps:
 
@@ -154,7 +142,7 @@ To create a deployment package directly from Studio Pro, follow these steps:
 4. In the **Deploy to the cloud** dialog box, click **Deploy**.
 5. You will see a dialog box with the following message: "Successfully started cloud deployment." To see the uploaded package, click **Show online** in the dialog box.
 
-#### 2.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
+##### 2.1.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
 
 You can also create a deployment package from the Team Server in the Developer Portal. To do this, follow these steps:
 
@@ -164,7 +152,7 @@ You can also create a deployment package from the Team Server in the Developer P
 1. Select your desired branch and revision and click **Next**.
 1. Give the build a version number and click **Build this revision**.
 
-### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
+#### 2.1.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps:
 
@@ -181,7 +169,7 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" class="image-border" >}}
 
 7. If prompted, clean the environment.
-8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
+8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done at a later stage in the settings.
 9. Configure the [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**.
 10. Click **Continue**.
 11. Click **Start application**. 
@@ -189,7 +177,16 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
 
 The app is now deployed. You can configure the administrative account.
 
-### 2.4 Deploying a Free App to Mendix Cloud {#deploy-free-app}
+### 2.2 Deploying a Free App {#deploy-free-app}
+
+#### 2.2.1 Prerequisites
+
+Before starting the process for deploying a Free App, make sure to complete these prerequisites:
+
+* You have created an app
+* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
+
+#### 2.2.2 Deploying the App
 
 With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by using one of the following methods:
 

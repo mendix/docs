@@ -10,7 +10,7 @@ draft: false
 
 ## 1 Introduction 
 
-The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) is the Mendix connector for OpenAI's ChatGPT (GPT-3.5 and GPT-4) and DALL-E, which are powered by large language models (LLMs). This connector allows you to integrate generative AI into your Mendix app. The connector is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
+The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app and is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
 The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat) for both platforms, with an additional image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images); DALL-E is currently only supported from OpenAI; Azure OpenAI only shows it in preview mode. Furthermore, the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings) can be used for a whole range of use cases, including retrieval augmented generation (RAG).
 
@@ -54,10 +54,10 @@ Embeddings are commonly used for:
 * Diversity measurement 
 * Classification 
 
-Combine embedinngs with the text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
+Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for use cases.
+You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation of an RAG-based search.
 {{% /alert %}}
 
 ### 1.2 Features 
@@ -67,7 +67,7 @@ With the current version, Mendix supports the Chat Completions API for [text gen
 
 ### 1.3 Limitations 
 
-The current scope of the connector is focused on text and image generation use cases, as well as embeddings. Instead of waiting for more scope to be ready, Mendix is releasing this version for you to experiment with.
+The current scope of the connector is focused on text and image generation use cases, as well as embeddings. We try to release early and often, so keep your eyes open for new releases!
 
 ### 1.4 Prerequisites 
 
@@ -142,7 +142,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
-5. Use the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be available depending on your organization's security settings.
+5. Use the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be available depending on your organization's security settings. 
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 
@@ -249,13 +249,12 @@ This is a helper entity to edit the `ApiKey` to be stored in the [Configuration]
 
 #### 4.1.3 `AbstractUsage` {#abstractusage}
 
-This entity contains the usage statistics for the API call.
+This entity contains usage statistics for an API call.
 
 | Attribute | Description |
 | ---| --- |
 | `Prompt_tokens` | This is the number of tokens in the prompt. |
-| `Completion_tokens` | This is the number of tokens in the generated completion. |
-| `Total_tokens` | This is the total number of tokens used in the request (`Prompt_tokens` + `Completion_tokens`). |
+| `Total_tokens` | This is the total number of tokens used in the request. |
 
 For more information on how to manage tokens for text generation, see [Managing tokens](https://platform.openai.com/docs/guides/text-generation/managing-tokens).
 
@@ -328,7 +327,11 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.12 `ChatCompletionsUsage` 
 
-This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request. 
+This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request with an additional attribute:
+
+| Attribute | Description |
+| ---| --- |
+| `Completion_tokens` | This is the number of tokens in the generated completion. |
 
 #### 4.1.13 `ChatCompletionsSession` {#chatcompletionssession} 
 
@@ -397,7 +400,7 @@ This is an embeddings request that generates a model response including a vector
 | Attribute | Description |
 | ---| --- |
 | `Model` | The model to use for generating embeddings. This is a mandatory field for OpenAI.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
-| `Encoding_format` | The format to return the embeddings in. Can be either float or base64.<br />For more information see the [ENUM_EncodingFormat_Embeddings](#enum_encodingformat_embeddings) section. |
+| `Encoding_format` | The format to return the embeddings in. The connector currently only supports float and not base64.<br />For more information see the [ENUM_EncodingFormat_Embeddings](#enum_encodingformat_embeddings) section. |
 | `User` | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
@@ -408,7 +411,7 @@ This is an entity that is used to contain a string input text for the embedding 
 
 | Attribute | Description |
 | ---| --- |
-| `Input` |This is the string input for a text chunk for which the embedding vector needs to be generated |
+| `Input` | This is the string input for a text chunk for which the embedding vector needs to be generated. |
 
 #### 4.1.22 `EmbeddingsResponse` {#embeddingsresponse}
 
@@ -419,7 +422,7 @@ This entity represents an embeddings response returned by model, based on the pr
 | `_object` | The object type, which is always `list`. |
 | `Model` | This is the model that has been used for generating the embeddings. | 
 
-#### 4.1.23 `EmbeddingUsage`  {#embeddingusage}
+#### 4.1.23 `EmbeddingsUsage`  {#embeddingsusage}
 
 This is a specialization of the [AbstractUsage](#abstractusage) entity. It represents usage statistics for the embeddings request that was processed.
 
@@ -434,7 +437,7 @@ This is the vector that represents the embedding for the text input that was giv
 
 #### 4.1.25 `EmbeddingValue` {#embeddingvalue}
 
-This entity representsan element the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model as listed in the [documenatation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
+This entity represents an element in the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model as listed in the [documenatation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
 
 | Attribute | Description |
 | ---| --- |
@@ -442,17 +445,27 @@ This entity representsan element the list of floats in the embedding vector retu
 
 #### 4.1.26 `DataBatch` {#databatch}
 
-This entity functions as a wrapper object for the list input operation for embeddings. It is associated with a list of input objects of entity [DataChunk](#datachunk) that contain the string texts for which the embedding vectors must be generated. 
+This entity functions as a wrapper object for the [list input operation for embeddings](#embeddings-list-technical). It is associated with a list of input objects of entity [DataChunk](#datachunk) that contain the string texts for which the embedding vectors must be generated. 
 
 #### 4.1.27 `DataChunk` {#datachunk}
 
-This entity represents a text string, usually a part of a larger base text or discrete piece of text in a data set. It is designed to contain the input string and the corresponding embeddings vector retieved from the Embeddings API.
+This entity represents a text string, usually a part of a larger base text or discrete piece of text in a data set. It is designed to contain the input string and the corresponding embedding vector retrieved from the Embeddings API.
 
 | Attribute | Description |
 | ---| --- |
 | `Input` | The input text to embed will be mapped to the EmbeddingsInput entity as part of the request. | 
 | `EmbeddingVector` | String representation of the embedding vector of the input string. | 
-| `Index` | Used for mapping the EmbeddingsVector from the response onto the correct DataChunk in the list. | 
+| `Index` | Used for mapping the EmbeddingVector from the response onto the correct DataChunk in the list. | 
+
+#### 4.1.28 `ConfigurationTest` {#configurationtest}
+
+This entity is only used to send a simple [chat completions request](#chat-completions-without-history-technical) to test an existing [configuration](#configuration-entity).
+
+| Attribute | Description |
+| ---| --- |
+| `UserPrompt` | The user message to send to the chat completions API. | 
+| `AssistantResponse` | The assistant response returned by the chat completions API. | 
+| `ChatCompletionsModel` | Model used for the API call. | 
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -538,7 +551,7 @@ This enumeration provides a list of supported visual styles for the generated im
 
 #### 4.2.9 `ENUM_EncodingFormat_Embeddings` {#enum-encodingformat-embeddings}
 
-This enumeration provides a list of supported encoding formats for embeddings returned by the API. The non-advanced operations currently only support the floating point representation of embedding vectors. Therefore only one value `float` exits. The other option supported by OpenAI and Azure OpenAI is `base64`; if this format is required for your specific usecase, please use the [advanced operation](#embeddings-advanced-technical) for embeddings.
+This enumeration provides a list of supported encoding formats for embeddings returned by the API. The connector operations currently only support the floating point representation of embedding vectors and not base64. Therefore, only one value `float` exits.
 
 | Name | Caption | 
 | --- | --- | 

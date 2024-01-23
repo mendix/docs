@@ -8,9 +8,9 @@ tags: ["studio pro", "consumed business event", "published business event"]
 
 ## 1 Introduction
 
-Studio Pro 10 integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/modules/business-events/) module, applications can signal when something important happens and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+Studio Pro 10 integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/modules/business-events/) for the complete documentation. 
+This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/services/business-events/) for the complete documentation. 
 
 {{% alert color="warning" %}}
 You must have the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module installed for it to work properly. If it is not installed, you will be prompted to download it and add it to your app.
@@ -30,7 +30,7 @@ To create a new business service, right-click on a module in your app and go to 
 
 {{< figure src="/attachments/refguide/modeling/integration/business-event-services/new-business-event-service.png" >}}
 
-See the [Creating a New Business Event Service](/appstore/modules/business-events/#two-way-be-create) section of *Mendix Business Events* for more information.
+See the [Creating a New Business Event Service](/appstore/services/business-events/#two-way-be-create) section of *Mendix Business Events* for more information.
 
 ##### 2.1.2 Using an Existing Business Event Service {#use-existing}
 
@@ -38,4 +38,4 @@ To create a new business service, right-click on a module in your app and go to 
 
 {{< figure src="/attachments/refguide/modeling/integration/business-event-services/existing-business-event-service.png" >}}
 
-See the [Using an Existing Business Event Service](/appstore/modules/business-events/#two-way-be-existing) section of *Mendix Business Events* for more information.
+See the [Using an Existing Business Event Service](/appstore/services/business-events/#two-way-be-existing) section of *Mendix Business Events* for more information.

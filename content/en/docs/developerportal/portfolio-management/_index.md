@@ -23,7 +23,7 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 **My Portfolios** shows all the portfolios to which you have access. Clicking a portfolio card opens the portfolio.
 
-**Company Portfolios** shows all the restricted portfolios in your company, to which you do not have access. Clicking a portfolio card shows more details about the portfolio. You can request access to a restricted portfolio by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
+**Company Portfolios** shows all the restricted and open portfolios in your company, for which you are not a portfolio member. For open portfolios, you can directly access the portfolio by clicking the portfolio card. Clicking on the card of a restricted portfolio shows more details about the portfolio. You can request to join to a restricted portfolio by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
 
 ### 2.2 Portfolio Cards {#portfolio-card}
 
@@ -31,12 +31,13 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 #### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
-Currently, the privacy settings of a portfolio can be private or restricted. Their differences are shown in the table below:
+Currently, the privacy settings of a portfolio can be private, restricted or open. Their differences are shown in the table below:
 
 | Portfolio type | Visible in the **Company Portfolios** section?               | How to join the portfolio?                                   |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). |
 | Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
+| Open           | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request access by clicking **Request to Join** from the left side menu after opening the portfolio.. A Portfolio Manager needs to approve this [access request](#access-requests). |
 
 A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
 
@@ -61,9 +62,9 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
 
-3. For **Privacy Settings**, select **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
+3. For **Privacy Settings**, select **Private**, **Restricted** or **Open**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
+    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
 
@@ -557,7 +558,7 @@ When there are deactivated members in the portfolio, the **Remove Deactivated Us
 This tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
-Users from the same company can request access to a restricted portfolio from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request. 
+Users from the same company can request to join to a restricted or open portfolio. For restricted portfolios you can request to join from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios you can request to join from the left side menu after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
@@ -602,7 +603,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
 * **Portfolio Description** – Click **Edit Portfolio Details** to change the portfolio description.
 
-* **Privacy Settings** – You can set the settings to **Private** or **Restricted**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
+* **Privacy Settings** – You can set the settings to **Private**, **Restricted** or **Open**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
 
     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
     

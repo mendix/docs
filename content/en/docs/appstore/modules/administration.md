@@ -31,7 +31,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Usage
 
-### 3.1 Adding the `Administration.Account_Overview` Page to the Navigation
+### 3.1 Adding the `Administration.Account_Overview` Page to the Navigation {#add-account-overview}
 
 The `Administration.Acount_Overview` page offers you an overview to view all the accounts in the app. To add the page to the navigation of the app, do as follows:
 
@@ -45,9 +45,13 @@ The `Administration.Acount_Overview` page offers you an overview to view all the
 
 If you run the app, you can see the new page in the navigation.
 
-### 3.2 Adding a User as an Administrator
+### 3.2 Adding Users as an Administrator
 
-
+1. Make sure that you [added the `Administration.Account_Overview` page to the navigation](#add-account-overview).
+2. Run the app and log in to the app as the [Administrator](/refguide/app-security/#administrator).
+3. Go to the account overview page.
+4. To add a new local user, click **New local user**, fill in the user data, and click **Save**.
+5. To add a new web service user, click **New web service user**, fill in the user data, and click **Save**.
 
 ## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 

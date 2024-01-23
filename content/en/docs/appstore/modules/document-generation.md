@@ -22,7 +22,10 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 ### 1.2 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage. Note that for all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
+
+    {{% alert color="info" %}}All deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.{{% /alert %}}
+
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to *Allow all access* for the top-level path (`/`) and the DocGen request handler (`/docgen/`). If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
@@ -40,7 +43,9 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 * The `System.Owner` association is currently not set to the user which has run the microflow. Instead, the user that is configured for the `Generate as user` property of the `Generate PDF from page` action is used to set the association.
 * For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
-* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.
+* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. 
+
+    {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
 ## 2 Installation {#installation}
 
@@ -155,7 +160,7 @@ You should pre-install and actively maintain the following software. Mendix does
 
 You should have installed a stable release of the Chromium browser. The currently supported stable release is 112.0.5615.0 ([Windows](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). [Linux](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/1109252/)).
 
-{{% alert color="info" %}}Even though we advise to use Chromium, you can also use Google Chrome instead. The configuration remains the same.{{% /alert %}}
+{{% alert color="info" %}}Even though we advise using Chromium, you can also use Google Chrome instead. The configuration remains the same.{{% /alert %}}
 
 ##### 3.3.1.1 Node.js
 

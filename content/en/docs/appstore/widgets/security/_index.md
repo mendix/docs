@@ -20,3 +20,7 @@ The following widgets are not fully compliant with strict CSP. See the widgets' 
 
 * [Map widget content security policy document](/appstore/widgets/security/content-security-policy/maps-csp)
 
+## 4 Read More
+
+* Read [Security Guide](/refguide/security/) to understand more about security roles and access in Mendix
+* See [App Permissions](/refguide/mobile/using-mobile-capabilities/generic-permission-action/) to understand how make your app ask users for permission before storing their media

@@ -16,7 +16,7 @@ The [Maps](/appstore/widgets/maps/) widget requires access to a map provider (wh
 
 ### 2.1 Google Maps
 
-You can enable `allowlist` CSP for google maps by including these domains:
+You can enable `allowlist` CSP for Google Maps by including these domains:
 
 ```
 script-src 'self' https: blob:;
@@ -33,9 +33,10 @@ This list is subject to change by google maps. Please refer to [google maps' con
 Or take a look at google maps [domain access](https://developers.google.com/maps/domains) list document for detail on each host name access requirements.
 {{% /alert %}}
 
-### 2.1.2 Open Street Map
+### 2.1.2 Open Street Maps
 
-You can enable allowlist CSP for open street map by including these domains:
+You can enable `allowlist` CSP for Open Street Maps by including these domains:
+
 ```
 script-src 'self';
 img-src 'self' https://*.tile.osm.org data:;
@@ -43,7 +44,7 @@ img-src 'self' https://*.tile.osm.org data:;
 
 ### 2.1.3 Mapbox
 
-You can enable enable allowlist CSP for mapbox by including these domains:
+You can enable enable `allowlist` CSP for Mapbox by including these domains:
 
 ```
 worker-src blob: ;
@@ -56,9 +57,9 @@ connect-src https://api.mapbox.com https://events.mapbox.com ;
 Please refer to [mapbox's content security policy](https://docs.mapbox.com/mapbox-search-js/guides/browsers-and-testing/) document for more detail.
 {{% /alert %}}
 
-### 2.1.4 Here Map
+### 2.1.4 Here Maps
 
-You can enable allowlist CSP for here map by including these domains:
+You can enable `allowlist` CSP for Here Maps by including these domains:
 
 ```
 script-src 'self';

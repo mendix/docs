@@ -4,8 +4,6 @@ url: /appstore/widgets/security/content-security-policy/
 weight: 20
 description: "By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context."
 tags: ["security", "headers", "widgets"]
-aliases:
-    - /howto/front-end/content-security-policy/
 ---
 
 ## 1 Introduction

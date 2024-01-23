@@ -43,6 +43,7 @@ If you want to provide links directly to a specific element in your app in the D
 
 The following deep links can be used:
 
+* Overview of your apps: `https://sprintr.home.mendix.com/link/myapps`
 * Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
 * App settings: `https://sprintr.home.mendix.com/link/settings/<appID>`
 * App Buzz: `https://sprintr.home.mendix.com/link/buzz/<appID>`
@@ -51,7 +52,6 @@ The following deep links can be used:
 * Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
 * Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
 * Specific feedback item: `https://appinsights.mendix.com/link/feedback/<appId>/item/<feedbackItemNr>`
-* Sprint planning for an app: `https://sprintr.home.mendix.com/link/planning/<appID>`
 * Sprint status of an app: `https://sprintr.home.mendix.com/link/sprint-status/<appID>`
 * App specific API keys: `https://sprintr.home.mendix.com/link/apikeys/<appID>`
 * App user management: `https://sprintr.home.mendix.com/link/appusermanagement/<appID>`

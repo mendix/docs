@@ -255,7 +255,7 @@ The legacy cloud resource packs listed below are still being used but are not av
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | ----------- | ------- | -------- | ------ | ------- | ---------- | ------------ |
-| XS20        |         |          |        |         |            |              |
+| XS20        | 1 GiB   |          | 1 GiB  |         | 5 GiB      | 10 GiB       |
 | S20         | 2 GiB   | 0.5      | 2 GiB  | 1       | 10 GiB     | 20 GiB       |
 | M20         | 4 GiB   | 1        | 4 GiB  | 1       | 20 GiB     | 40 GiB       |
 | L20         | 8 GiB   | 2        | 8 GiB  | 1       | 40 GiB     | 80 GiB       |
@@ -270,7 +270,6 @@ The legacy cloud resource packs listed below are still being used but are not av
 | L           | 4 GiB   | 1        | 4 GiB  | 2       | 20 GiB     | 20 GiB       |
 | XL          | 8 GiB   | 2        | 8 GiB  | 2       | 40 GiB     | 40 GiB       |
 | XXL         | 16 GiB  | 4        | 16 GiB | 4       | 80 GiB     | 80 GiB       |
-| XXXL        |         |          |        |         |            |              |
 
 {{% alert color="info" %}}
 You can have a pack using a fraction of a vCPU. This is because several environments can run, completely isolated from each other, on a single virtual machine.

@@ -56,7 +56,7 @@ Below are some icons that might be particularly useful for the docs. In this lis
 * star: **Favorite** ({{% icon name="star" %}})
 * subtract-circle-filled: **Not Running** ({{% icon name="subtract-circle-filled"  %}})
 * three-dots-menu-horizontal: **More Options** ({{% icon name="three-dots-menu-horizontal" %}})
-* three-dots-menu-vertical-filled: **DevTools** ({{% icon name="three-dots-menu-vertical" %}})
+* three-dots-menu-vertical-filled: **DevTools** ({{% icon name="three-dots-menu-vertical-filled" %}})
 * trash-can: **Delete** ({{% icon name="trash-can" %}})
 * view: **View** ({{% icon name="view" %}})
 * view-off: **View** ({{% icon name="view-off" %}})

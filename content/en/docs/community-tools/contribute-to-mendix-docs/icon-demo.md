@@ -14,8 +14,6 @@ Mendix provides a standard set of approved icons in [The Mendix Icon Set](https:
 
 To see more information about the pipeline, click **Details** ({{% icon name="notes-paper-text" %}}).
 
-{{% alert color="info" %}}For details on the icon style guidance, see the [Documentation Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+and+Icons#Icons).{{% /alert %}}
-
 ## 2 Syntax
 
 This shortcode has two attributes:
@@ -23,9 +21,13 @@ This shortcode has two attributes:
 * `name` (required) — This must exactly match the name of the file in the *docs/static/mx-icons* library.
 * `color` (optional) – By default, the icon has the same color as the surrounding text. You can override this by specifying an optional `color` attribute, like this: {{% icon name="alert-circle" color="red" %}}. You can set the color to green, red, blue, gray, yellow, purple, or violet.
 
+{{% alert color="info" %}}For details on the icon style guidance, see the [Documentation Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+and+Icons#Icons).{{% /alert %}}
+
 ## 3 Some Suggested Icons
 
-Below are some icons that might be particularly useful for the docs. In this list, you can see the name of the icon file, a common tooltip associated with the icon, and the icon itself. A few of the icons are shown here with the optional color attributes.
+{{% figure src="/attachments/community-tools/contribute-to-mendix-docs/common-icons.png" class="image-border" %}}
+
+Here are some icons that might be particularly useful for the docs. In the list below, you can see the name of the icon file, a common tooltip associated with the icon, and the icon itself. A few of the icons are shown here with the optional color attributes.
 
 * add: **Add** ({{% icon name="add" %}})
 * alarm-bell: **Notify** ({{% icon name="alarm-bell" %}}) 

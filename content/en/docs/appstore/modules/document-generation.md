@@ -137,7 +137,7 @@ The steps for each procedure are described in the sections below.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
 
-{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
+{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environments again.{{% /alert %}}
 
 ### 3.3 Running On-Premises {#run-on-premises}
 
@@ -150,23 +150,24 @@ To configure the module to generate documents on your on-premises environments, 
 1. Enable the DocGen request handler.
 
 #### 3.3.1 Installing the Prerequisite Software {#install-prerequisites}
-We assume the following software pre-installed and maintained by the developer. Mendix does not provide support for the installation, configuration, and maintenance of these packages.
+
+You should pre-install and actively maintain the following software. Mendix does not provide support for the installation, configuration, and maintenance of these packages.
 
 ##### 3.3.1.1 Chromium
 
-We assume a stable release of the Chromium browser is installed. The currently supported stable release is 112.0.5615.0 ([Windows](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). [Linux](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/1109252/)).
+You should have installed a stable release of the Chromium browser. The currently supported stable release is 112.0.5615.0 ([Windows](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). [Linux](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/1109252/)).
 
 {{% alert color="info" %}}Even though we advise to use Chromium, you can also use Google Chrome instead. The configuration remains the same.{{% /alert %}}
 
 ##### 3.3.1.1 Node.js
 
-We assume a stable release of [Node.js](https://nodejs.org/) is installed.  We recommend to install the same version that is shipped with the Studio Pro version that is used to build the project. You can find this version by locating and executing the `node` executable within the `modeler/tools/node` folder of your Studio Pro installation.
+You should have installed a stable release of [Node.js](https://nodejs.org/).  Mendix recommends installing the same version that is shipped with the Studio Pro version that is used to build the project. You can find this version by locating and executing the `node` executable within the `modeler/tools/node` folder of your Studio Pro installation.
 
-{{% alert color="info" %}}Make sure that the Mendix Runtime has the applicable rights to execute the *node* executable.{{% /alert %}}
+{{% alert color="info" %}}Make sure that the Mendix Runtime has the applicable permissions to run the *node* executable.{{% /alert %}}
 
 #### 3.3.1 Configuring the Module to use the Local Service {#configure-local-service}
 
-1. Set the **OverrideServiceType** constant to `Local` in the **_UseMe** > **Configuration** folder. This enforces the use of the local service instead of the cloud service.
+1. Set the **OverrideServiceType** constant to *Local* in the **_UseMe** > **Configuration** folder. This enforces the use of the local service instead of the cloud service.
 
 1. Configure the path to the *chrome* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 

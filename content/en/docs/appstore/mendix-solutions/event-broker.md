@@ -48,10 +48,10 @@ Events are placed in Channels, sometimes called Topics. Apps subscribed to a cha
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
-## 1.3 Mendix Event Broker Bridges {#manage-mx-broker}
+## 1.3 Mendix Event Broker Bridges {#manage-mx-broker-bridge}
 
 {{% alert color="warn" %}}
-This feature is currently in Private Beta.  Please reach out to your Customer Success Manager or Account Manager for further assistance
+This feature is currently in [Private Beta](/releasenotes/beta-features/).  Please reach out to your Customer Success Manager or Account Manager for further assistance
 {{% /alert %}}
 
 Mendix Event Broker Bridges allows for the integration of the Mendix Event Broker with other technologies, such as AWS SQS AWS S3 or Google Pub/Sub, in order to send and receive events from your larger Mendix Public Cloud landscape to technologies outside of your Mendix Public Cloud landscape.
@@ -80,8 +80,18 @@ The next step of configuration is to select a [Space](#manage-mx-broker), Name a
 
 #### 1.3.1.3 Choose the business events to integrate
 
-In this step the user must select events from the Event Broker landscape of events to send to or receive from AWS SQS.  Each event must be configured with its own SQS URL for each direction that the event will be integrated.
+In this step the user must select events from the Event Broker landscape of events to send to or receive from AWS SQS.  Events can be added to the configuration by selecting the `Add Business Events` option, searching for the appropriate events and adding them once selected
 
 {{< figure src="event_broker_bridges_create_3.png">}}
+
+Each event must be configured with its own SQS URL for each direction that the event will be integrated.
+
+{{< figure src="event_broker_bridges_create_4.png">}}
+
+After all events have been configured simply `Start` the Mendix Event Broker Bridge.  This process will take several minutes to complete.
+
+{{< figure src="event_broker_bridges_create_5.png">}}
+
+Once the Mendix Event Broker Bridge has been successfully deployed its configuration and status can be viewed on the Overview page.
 
 {{< figure src="event_broker_bridges_overview.png">}}

@@ -1,6 +1,6 @@
 ---
-title: "Maps"
-url: /appstore/widgets/security/content-security-policy/map
+title: "Maps CSP"
+url: /appstore/widgets/security/content-security-policy/maps-csp/
 weight: 20
 description: "Describe the configuration for map widget content security policy"
 tags: ["security", "headers", "widgets", "marketplace", "marketplace component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]

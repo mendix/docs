@@ -1,5 +1,5 @@
 ---
-title: "Security"
+title: "Widget CSP Overview"
 url: /appstore/widgets/security/content-security-policy/
 weight: 20
 description: "By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context."
@@ -10,13 +10,15 @@ aliases:
 
 ## 1 Introduction
 
-Currently, some of Mendix's pluggable widgets are not fully compliant with strict Content Security Policy. Some of the widgets need access to 3rd party domain. By using allowing these domains, widgets can still follow allowlist CSP.
+Currently, certain Mendix pluggable widgets are not fully compliant with strict content security policy (CSP). Some of these widgets require access to third party domains. By allowing access to these domains, these widgets can still follow allowlist CSP.
 
 ## 2 Setup
 
-Please refer to [content security policy](/howto/security/csp/) document for setting up your application's CSP.
+For information on setting up your application's CSP, see the [Content Security Policy](/howto/security/csp/) guide.
 
 ## 3 Widgets
 
-* [Map widget content security policy document](/appstore/widgets/security/content-security-policy/map)
+The following widgets are not fully compliant with strict CSP. See the widgets' documents below for additional information and setup instructions to enable CSP:
+
+* [Map widget content security policy document](/appstore/widgets/security/content-security-policy/maps-csp)
 

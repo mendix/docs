@@ -28,7 +28,7 @@ You can use this Consumed REST service document to do the following:
   * `GET`
   * `POST`
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
-* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a deadlock (Studio Pro hanging) issue MAY occur when sending the request. You can wait until the timeout occur (default: 300 seconds) to have your Studio Pro responding again.
+* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
 
 ### 1.3 Prerequisites 
 
@@ -85,7 +85,7 @@ You can configure basic authentication to use for all requests in your document.
 
 ### 3.3 Adding Parameters {#add-parameters}
 
-Parameters are fully supported in the path and query part of the URL, also in the header value. They are defined within curly brackets. For example, in the URL, defining `numbers` as parameter would be `http://numbersapi.com/{numbers}`. All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
+Parameters are fully supported in the path and query part of the URL and in the header value. They are defined within curly brackets. For example, in the URL, defining `numbers` as parameter would be `http://numbersapi.com/{numbers}`. All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/get-header.png" >}}
 
@@ -105,7 +105,7 @@ Parameters are not supported in the [configuration](#configuration), including a
 ### 3.4 Adding Headers {#add-headers}
 
 {{% alert color="info" %}}
-The support for parameter in header value was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
+The support for parameter in the header value was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
 {{% /alert %}}
 
 You can add a header for any HTTP request you have specified in your document. To add a header, do the following:
@@ -151,4 +151,4 @@ To select a request in the microflow, complete the following steps:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/select-rest-request.png" >}}
 
-If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow. The parameter values in this activity will be used by the runtime instead of the test value defined in the request.
+If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow. The parameter values in this activity are used by the runtime instead of the test value defined in the request.

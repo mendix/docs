@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### January 25
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances the Manage Users overview of the [App Access Management](/developerportal/collaborate/general-settings/#managing-app-users) would not show 
+
 ### January 18
 
 #### Improvements

@@ -15,21 +15,22 @@ aliases:
 ## 2 Setup
 
 ### 2.1 Google Map
-
-Please refer to [google maps' content security policy](https://developers.google.com/maps/documentation/javascript/content-security-policy#sample_content_security_policy) document for more detail.
 You can enable allowlist CSP for google maps by including these domains:
+
 ```
-script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com blob:;
-img-src 'self' https://*.googleapis.com https://*.gstatic.com *.google.com  *.googleusercontent.com data:;
+script-src 'self' https: blob:;
+img-src 'self' https://*.googleapis.com https://*.gstatic.com *.google.com *.googleusercontent.com data:;
 frame-src *.google.com;
-connect-src 'self' https://*.googleapis.com *.google.com https://*.gstatic.com  data: blob:;
+connect-src 'self' https://*.googleapis.com *.google.com https://*.gstatic.com data: blob:;
 font-src https://fonts.gstatic.com;
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
 worker-src blob:;
 ```
 
+{{% alert color="info" %}}This list is subject to change by google maps. Please refer to [google maps' content security policy](https://developers.google.com/maps/documentation/javascript/content-security-policy#sample_content_security_policy) document for more detail.
+Or take a look at google maps [domain access](https://developers.google.com/maps/domains) list document for detail on each host name access requirements.{{% /alert %}}
+
 ### 2.1.2 Open Street Map
-[Open street map](https://www.openstreetmap.org/) need access to `*.tile.osm.org`.
 You can enable allowlist CSP for open street map by including these domains:
 ```
 script-src 'self';
@@ -37,8 +38,6 @@ img-src 'self' https://*.tile.osm.org data:;
 ```
 
 ### 2.1.3 Mapbox
-
-Please refer to [mapbox's content security policy](https://docs.mapbox.com/mapbox-search-js/guides/browsers-and-testing/) document for more detail.
 You can enable enable allowlist CSP for mapbox by including these domains:
 ```
 worker-src blob: ;
@@ -47,8 +46,9 @@ img-src data: blob: ;
 connect-src https://api.mapbox.com https://events.mapbox.com ;
 ```
 
-### 2.1.4 Here Map
+{{% alert color="info" %}}Please refer to [mapbox's content security policy](https://docs.mapbox.com/mapbox-search-js/guides/browsers-and-testing/) document for more detail.{{% /alert %}}
 
+### 2.1.4 Here Map
 You can enable allowlist CSP for here map by including these domains:
 ```
 script-src 'self';

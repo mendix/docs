@@ -34,8 +34,6 @@ When you are running Studio Pro on a Parallels virtual machine on an ARM64 devic
 * .NET 6 Desktop Runtime (arm64)
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
-When you 
-
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}

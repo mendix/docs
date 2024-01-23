@@ -184,3 +184,16 @@ To solve this problem, you can use one of the following solutions:
        }
      }
      ```
+
+## 5 Migrating to Page and Microflow URLs{#migrate-page-micro}
+
+The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
+
+* **Page URLs** – For links to pages that have either no parameters or only parameters that are persistable entities, you should use [page URLs](/refguide/page-properties/#url). Using page URLs instead of microflow URLs increases performance speed because no microflow has to be executed. Furthermore, the URL will always be used for the page (even when opening it from a different source then the deep link). To keep the same URL as before, put the `name` of the deep link in the URL field, followed by the name of the attribute that was configured in the deep link. For example, use `product/{PageParameterName/AttributeName}` for a deep link with `name` `product` and `attribute` `AttributeName`.
+  * Within the runtime setting of your application you can configure the page URL prefix. Change this from the default `p` to `link` to keep you our existing URLs working. Note that after this you have to completely remove the Deep Link module from your app, or else your app will fail to start. 
+* **Microflow URLs** – For cases not entirely covered by the page URL functionality, use [microflow URLs](/refguide/microflow/#url). Specifically, add a URL to the microflows you were using with the Deep Link module. Because microflow URLs do not use query parameters (for example `?param1=foo&param2=bar`), you can end up with a different URL than before.
+* **Miscellaneous** – Other features of the deep link module can be replaced by their dedicated built-in features:
+  * `Do not force a login action` is replaced by the [built-in security features](/howto/security/set-up-anonymous-user-security/) for [anonymous users](/refguide/anonymous-users/). 
+  * `Alternative Index Page` is replaced by using distinct [theming options](/howto/front-end/configuring-your-theme/) depending on use case. If you specifically want to set up a dark mode page, see this [Mendix blog](https://www.mendix.com/blog/how-to-implement-dark-mode-in-your-apps/).  
+  * `Track hit count` is replaced by [application access logs and metrics](/developerportal/operate/logs/) which allow you to track your app's traffic. 
+  * `Keep the deep link the entire session` is no longer relevant, as page URLs give you finer-grained control over the URL the user sees in the browser.

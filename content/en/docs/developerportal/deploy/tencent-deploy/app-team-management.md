@@ -33,11 +33,11 @@ You can then access the following parts of the Mendix Platform:
 
 The **我的应用** page shows you a summary of your apps.
 
-The **激活** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. Any apps you pin with the pin icon will appear in the **固定** tab. 
+The **激活** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. Any apps you pin by clicking **Pin** ({{% icon name="pin" %}}) will appear in the **固定** tab. 
 
 Click an app tile to see more details about the app.
 
-By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
+By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
 
 * Open the app in Studio Pro
 * Archive the app – This allows you to archive the app, provided you are the only team member. You will be warned of the consequences and asked for confirmation before the app is archived. Any apps you archived will appear in the **归档** tab. 

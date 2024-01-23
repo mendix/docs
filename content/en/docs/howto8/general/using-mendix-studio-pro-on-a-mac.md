@@ -38,7 +38,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-control-center.png" alt="parallels control center"   width="450"  >}}
 
-2. Click the **gear** symbol to open the **Configuration Panel**.
+2. Click **Configuration** ({{% icon name="cog" %}}) to open the **Configuration Panel**.
 3. Navigate to the **Hardware** tab, and select **Network** from the left panel:
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-configuration.png" alt="network in configuration"   width="450"  >}}
@@ -55,7 +55,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png" alt="network tab"   width="450"  >}}
 
-8. Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8. Click the {{% icon name="add" %}} button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/port-setup.png" alt="plus button"   width="450"  >}}
 

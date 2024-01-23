@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{{ "css/swagger-ui.css" | relURL }}">
   </head>
   <body class="td-{{ .Kind }}">
+    <script>window.noZensmooth = true;</script> <!-- DB - Disable Swagger's scrolling behavior -->
     {{/* NK - deactivation of original navbar 
     <header>
       {{ partial "navbar.html" . }}

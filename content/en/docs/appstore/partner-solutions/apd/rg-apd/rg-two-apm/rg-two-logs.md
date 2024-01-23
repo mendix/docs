@@ -19,7 +19,7 @@ By clicking **Levels**, the levels of the available log nodes can be changed. Th
 
 Clicking **Trap now** creates a trap right away, storing all the trace/debug logging until right before the **Trap now** button was clicked.
 
-The logging will be cleaned up automatically. The **Pin icon** can be used to prevent log and trap records from being deleted by the auto-cleanup mechanism. You can also delete logs or traps yourself with the trash can icon.
+The logging will be cleaned up automatically. To prevent a log or trap record from being deleted by the auto-cleanup mechanism, click **Pin** {{% icon name="pin" %}} on the record. You can also delete logs or traps manually by clicking **Delete** ({{% icon name="trash-can" %}}).
 
 ## 3 Traps
 

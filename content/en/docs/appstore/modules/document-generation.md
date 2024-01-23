@@ -13,7 +13,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
 This module uses the PDF document generation service running in the Mendix Public Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
-When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
+When using **Run Locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
 When running on Mendix Cloud, the PDF document generation service on Mendix Public Cloud (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
@@ -77,7 +77,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
 
-To be able to test PDF document generation when using **Run locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
+To be able to test PDF document generation when using **Run Locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
 
 #### 3.1.1 Chrome
 
@@ -147,7 +147,7 @@ The steps for each procedure are described in the sections below.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
 
-{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
+{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environment (or environments) again.{{% /alert %}}
 
 ## 4 Usage
 
@@ -292,9 +292,9 @@ Mendix recommends not using the viewport width (`vw`) and viewport height (`vh`)
 
 ### 5.1 App Environment Registration Issues
 
-In case you encounter any issues while [registering your app environment(s)](#register-app), refer to the table below for more details and suggestions on how to resolve them.
+In case you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
 
-| Error | Error message(s) | Description | Suggestion |
+| Error | Error message | Description | Suggestion |
 |-------|------------------|-------------|------------|
 | **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
 | **Invalid App** | <ul><li>"Invalid app"</li></ul><ul><li>"App not found for the given user"</li></ul> | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
@@ -334,9 +334,9 @@ Mendix recommends temporarily setting the log level of the `DocumentGeneration` 
 In case you encounter the message "Unable to generate document, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
-* The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
+* The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
 
-In case you encounter the message "No configuration object available. For use in Mendix Cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
+In case you encounter the message "No configuration object available. For use in Mendix Cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
 
 #### 5.2.4 Timeout Errors
 

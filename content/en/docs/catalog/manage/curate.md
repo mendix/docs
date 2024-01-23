@@ -185,7 +185,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
-4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**.
+4. You can enter multiple tags separated by spaces. You can remove tags by clicking the {{% icon name="remove" %}}.
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 

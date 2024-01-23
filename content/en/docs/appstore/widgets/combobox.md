@@ -22,6 +22,7 @@ A typical combo box can look like this:
     * Enumeration
     * Boolean
 * Supports custom content rendering
+* Supports custom footers
 * Supports options filtering for quick selection
 
 ## 2 Properties Pane
@@ -59,8 +60,11 @@ The **General** section allows you to configure general behavior and captions fo
 * **Placeholder text** – captions that will be displayed when there is no data being selected
 * **Filter type** – allows the user to type into the input and filter displayable options on the combo box
 * **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
-* **Clearable** – if enabled, this allows selected data to be cleared
+* **Clearable** – if enabled, this allows selected data to be cleared all at once
 * **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values (only for association data source)
+* **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
+    {{< figure src="/attachments/appstore/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." >}}
+
 
 #### 2.1.3 Multi Selection (Reference Set)
 
@@ -68,10 +72,15 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 
 * **Selection Method** – configures the behavior for selecting options
     * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
-    * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the **X** button on each of the displayed selected items.
-* **Show selected item as** – you can choose to display selected item as labels with **X** buttons to unselect the items (shown at the top of this screenshot), or a simple comma separated text (shown at the bottom). This is only available for the **Checkbox** selection method:
+    * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
+* **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or as simple comma-separated text (shown at the bottom): 
 
     {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
+    {{% alert color="info" %}}The **Show selected item as** property is only available for the **Checkbox** selection method without custom content.{{% /alert %}}
+
+* **Show Select All** – you can choose to enable a "Show select all" button that will be displayed on the top of the options list. It allows the end-user to click it and select or deselect all options at once:
+
+    {{< figure src="/attachments/appstore/widgets/combobox/select-all.png" alt="Show select or unselect button header" >}}
 
 #### 2.1.4 Label
 

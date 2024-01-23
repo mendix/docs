@@ -26,7 +26,7 @@ For each module, you can see the number of translatable texts which have been en
 
 ## 3 Performing Operations
 
-Select an **Operation** to carry out on the selected module(s).
+Select an **Operation** to carry out on the selected module (or modules).
 
 There are four language operation options, described below. These can be carried out for any language which has been selected in the app, plus any other languages which have translated texts.
 

@@ -6,10 +6,6 @@ tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", 
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-a-new-sql-server-database.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This how-to explains how to manually set up a new SQL Server database.

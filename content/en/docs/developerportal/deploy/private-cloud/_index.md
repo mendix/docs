@@ -123,11 +123,11 @@ You can request an Operator license by doing the following:
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * The namespace(s) for which you want to request an Operator license
+    * The namespace (or namespaces) for which you want to request an Operator license
 
 5. Save the request.
 
-You will receive your Operator license(s) from Mendix Support, together with instructions on how to configure it(them).
+You will receive your Operator license (or licenses) from Mendix Support, together with instructions on how to configure it(them).
 
 You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
@@ -148,11 +148,11 @@ You can request a Runtime license by doing the following:
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Runtime
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * If "Connected" please provide the namespace(s) for which you are requesting the runtime license(s)
+    * If "Connected" please provide the namespace (or namespaces) for which you are requesting the runtime license (or licenses)
 
 5. Save the request.
 
-You will receive your Runtime license(s) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
+You will receive your Runtime license (or licenses) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
 
 ### 5.3 Request Both Operator and Runtime License
 
@@ -169,9 +169,9 @@ You can also request for both the Operator and Runtime license within the same r
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator and Runtime
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * The namespace(s) for which you want to request an Operator license
+    * The namespace (or namespaces) for which you want to request an Operator license
 
-### 5.4 Activating Your License(s)
+### 5.4 Activating Your License (or Licenses)
 
 #### 5.4.1 Online Private Cloud Apps{#activate-online}
 

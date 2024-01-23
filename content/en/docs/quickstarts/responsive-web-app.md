@@ -82,7 +82,7 @@ The Studio Pro configuration you see is completely editable. You can add or hide
 
 ### 4.1 Top Bar
 
-The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the **Run Locally** button (via the green play icon). 
+The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app by clicking **Run Locally** ({{% icon name="controls-play" %}}). 
 
 {{< figure src="/attachments/quickstarts/responsive-web-app/4.1-topbar1.png" width="450px" alt="Studio Pro">}}
 
@@ -296,7 +296,7 @@ Finally, the image needs to be committed to the database and the paged closed:
 
 3. Add a **Close page** action to the end of the microflow to ensure the end-user is directed back to the home page after clicking **Save**. 
 
-You have now finished developing your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking the **Run Locally** button (via the green play icon in the top bar). Your app should look like this:
+You have now finished developing your responsive app! You can run your photo album app and test it by pressing <kbd>F5</kbd> or by clicking **Run Locally** ({{% icon name="controls-play" %}}). Your app should look like this:
 
 {{< figure src="/attachments/quickstarts/responsive-web-app/7-closepageaction6.png" width="450px" alt="Run your app">}}
 

@@ -45,7 +45,7 @@ In the image above, the template for the message is *Email not sent to departmen
 
 The stack trace is a list of current method calls from the point when the application was started to the point where the exception occurred. 
 
-In Studio Pro, log messages that include a stack trace are marked with a paperclip icon. Double-clicking this icon shows the stack trace.
+In Studio Pro, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}). Double-clicking this icon shows the stack trace.
 
 ### 2.2 Level {#level}
 

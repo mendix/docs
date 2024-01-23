@@ -46,7 +46,7 @@ More information on multiple instances is in [Clustered Mendix Runtime](/refguid
 
 ### 2.2 External Services
 
-External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP(S) connections.
+External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP (or HTTPS) connections.
 
 ### 2.3 Infrastructure
 

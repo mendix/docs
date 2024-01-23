@@ -151,7 +151,7 @@ Select a revision to see additional details such as related Developer Portal sto
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/history-of-dialog.png" >}}
 
-## 5 Reverting Changes
+## 5 Reverting Changes {#reverting}
 
 Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original: that is, the state of the page before you started making changes.
 

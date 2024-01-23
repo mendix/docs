@@ -214,7 +214,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
 
 3. Allow a Kubernetes ServiceAccount (for example, `mendix-backup-restore`) to assume a role.
 
-    1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+    1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
         {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
@@ -271,7 +271,7 @@ kubectl -n $NAMESPACE cp files_and_database.tar.gz mendix-backup-restore:/tmp/re
 kubectl -n $NAMESPACE exec -it mendix-backup-restore -- /tmp/mxpc-data-migration restore -e $ENVIRONMENT -f /tmp/restore.tar.gz -n $NAMESPACE
 ```
 
-After running the import/export operation(s), delete the backup pod and its dependencies (replace `{namespace}` with the previously used namespace name):
+After running the import or export operation, delete the backup pod and its dependencies (replace `{namespace}` with the previously used namespace name):
 
 ```shell
 NAMESPACE={namespace}

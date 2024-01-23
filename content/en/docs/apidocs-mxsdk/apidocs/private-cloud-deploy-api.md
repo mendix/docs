@@ -7,6 +7,10 @@ description: "This API allows you to manage application environments deployed to
 weight: 60
 ---
 
+{{% alert color="info" %}}
+This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For [Private Mendix Platform](/private-mendix-platform/) API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Mendix for Private Cloud Deploy API allows you to manage application environments deployed to your private cloud using the Mendix Operator. You can use the API to do the following:
@@ -20,6 +24,11 @@ The Mendix for Private Cloud Deploy API allows you to manage application environ
 {{% alert color="info" %}}
 The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.
 {{% /alert %}}
+
+{{% alert color="info" %}}
+The Global Operator installation is not yet available in Deploy API.
+{{% /alert %}}
+
 
 ## 2 Using the API
 
@@ -107,6 +116,10 @@ The following steps will create a cluster, register and install a namespace, add
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Configuration of License Product type via the deploy API is not yet supported.
 {{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}

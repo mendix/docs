@@ -39,7 +39,7 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
     | Variable | Description | Default |
     | --- | --- | --- |
     | `SPLUNK_HOST` | The hostname or the IP address of the Splunk Cloud Platform Controller without the scheme (protocol). An example is `test.splunkcloud.com`. |
-    | `SPLUNK_PORT` | The HTTP(S) port of the Splunk Cloud Platform Controller. | `8088` |
+    | `SPLUNK_PORT` | The HTTP (or HTTPS) port of the Splunk Cloud Platform Controller. | `8088` |
     | `SPLUNK_TOKEN` | An access token to the Splunk Cloud Platform. To create a new token on the Splunk Cloud dashboard, open the Splunk Cloud dashboard in a browser, go to **Settings** > **Data Input** > **HTTP Event Collector**, and click **New Token** (on the upper-right corner of the page). |
     | `LOGS_REDACTION` | Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set `LOGS_REDACTION` to `false`. The environment variable `SPLUNK_LOGS_REDACTION` is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended. | `true` |
 

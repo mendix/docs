@@ -42,15 +42,15 @@ After a user submits a feedback item from your app, it goes automatically to **F
 
 {{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
 
-**Feedback** contains two pages: **Inbox** and **Archive**.
+**Feedback** contains two tabs: **Inbox** and **Archive**.
 
 ### 2.1 Inbox {#inbox}
 
-On the **Inbox** page, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
+On the **Inbox** tab, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
 
-{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" class="image-border" alt="inbox tab" >}}
 
-In the list on the **Inbox** page, you can find the following information for each feedback item:
+In the list on the **Inbox** tab, you can find the following information for each feedback item:
 
 * **ID** – the unique number that is assigned to the feedback item
 * **Subject** – the title of the feedback item given by the reporter
@@ -67,7 +67,7 @@ To export all feedback items into one Excel file, click **Export**.
 
 To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**.
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
 #### 2.1.1 Organizing Feedback Items in Inbox
 
@@ -75,9 +75,11 @@ If your [role](/developerportal/general/app-roles/) has the permission that **Ca
 
 You can add new feedback items manually yourself. 
 
-To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** page) or click **Add item** (if there are already feedback items on the **Inbox** page), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback item** dialog box.
+To manually add a feedback item, click **Create new feedback item** (if there is not any feedback item yet on the **Inbox** tab) or click **Add item** (if there are already feedback items on the **Inbox** tab), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback item** dialog box.
 
-If you select feedback items, you can see the following buttons: 
+If you select feedback items, you can see the following items: 
+
+{{< figure src="/attachments/developerportal/app-insights/feedback/bulk-actions-bar.png" class="image-border" alt="bulk-actions-bar" >}}
 
 * **Link Items** – Clicking this links the feedback items together into one feedback group.
 
@@ -85,17 +87,21 @@ If you select feedback items, you can see the following buttons:
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 
-* **Move** – Clicking this moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
+* **Move** – Clicking this moves the selected feedback items to any other app of which you are a member. Whenever you move feedback items, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback item from the group first.
 
-* **Archive** – Clicking this sets all the feedback items as archived.
+* **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the selected feedback items to stories on the designated board in Epics or Jira.
 
-* **Delete** – Clicking this removes the feedback item permanently from **Feedback**. The result is irreversible.
+* Status drop-down list – You can select a status from the drop-down list and then click **Apply** to change the status of the selected feedback items.
+
+* **Archive** – Clicking this sets the selected feedback items as archived.
+
+* **Delete** – Clicking this deletes the selected feedback items permanently. The result is irreversible.
 
 ### 2.2 Archive {#archive}
 
-On the **Archive** page, everyone in your team can view all the archived feedback items.
+On the **Archive** tab, everyone in your team can view all the archived feedback items.
 
-In the list on the **Archive** page, you can find the following information for each feedback item:
+In the list on the **Archive** tab, you can find the following information for each feedback item:
 
 * **ID** – the unique number that is assigned to the feedback item
 * **Subject** – the title of the feedback item given by the reporter
@@ -109,24 +115,21 @@ To export all the archived feedback items into one Excel file, click **Export**.
 
 To search by **Subject** and **ID**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**.
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
 ### 2.3 Feedback Details {#feedback-details}
 
-On the [Inbox](#inbox) or [Archive](#archive) page, when you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
+On the [Inbox](#inbox) and [Archive](#archive) tabs, if you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details.{{% /alert %}}
 
 The feedback details on the **Feedback Details** page or on the side panel contain the following items: 
 
-* Buttons on the upper-right corner
-
-  {{< figure src="/attachments/developerportal/app-insights/feedback/third-party-integration.png" >}}
-
-    * **Convert to a story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
-    * **Share** – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
-    * Ellipsis (**...**)
+* Buttons ({{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
+    * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
+    * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
         * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
+        * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback item to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
         * **Delete** – Clicking this button removes the feedback item permanently from **Feedback**. The result is irreversible.
 
 * **Last activity** – This shows when the last edit to the feedback item was made.
@@ -135,7 +138,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
 * **Assigned To** – This shows to whom the feedback item is assigned. When you assign the feedback item to someone,  they will get an email notification.
 
-* **Status** – This is the status of the feedback item. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. When you close a feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking the settings icon and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback items based on the status.
+* **Status** – This is the status of the feedback item. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. When you close a feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback items based on the status.
 
 * **Summary** – This is the summary of the feedback item. Only your team members can see this summary.
 
@@ -164,13 +167,13 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" >}}
 
-  Once a feedback item is linked, it disappears from the list on the **Inbox** or **Archive** page. You can only access the linked feedback item from its primary feedback item to which it is linked. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
+  Once a feedback item is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback item from its primary feedback item to which it is linked. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary Item** to make this feedback item the primary item of the feedback group instead.{{% /alert %}}
 
-  You can unlink a feedback item by hovering over the feedback item and clicking the **X** button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** page.
+  You can unlink a feedback item by hovering over the feedback item and clicking the **Remove** ({{% icon name="remove" %}}) button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** tab.
 
-* **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **+** and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
+* **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
 
 * **Team Comments** – This section shows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
@@ -180,7 +183,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
   
 #### 2.3.1 Managing Tags {#manage-tags}
 
-  From the [feedback details](#feedback-details) page, you can manage tags by clicking the settings icon next to the **Tags** text box:
+  From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" >}}
 
@@ -189,7 +192,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
   1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
   2. In the text box, enter the name for the new tag.
   3. If you want to change the color of the new tag, click the colored circle and select a different color.
-  4. Click the check mark icon to save the new tag.
+  4. Click **Save** ({{% icon name="checkmark-circle" %}}) to save the new tag.
 
   To edit an existing tag, do as follows:
 
@@ -198,6 +201,6 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   To delete an existing tag, do as follows:
 
-  1. Hover over the row where the tag is listed, a delete icon (red trash can) appears at the end of the row.
-  2. Click the delete icon. The **Confirmation** dialog box opens.
+  1. Hover over the row where the tag is listed. A **Delete** button ({{% icon name="trash-can" %}}) appears at the end of the row.
+  2. Click **Delete**. The **Confirmation** dialog box opens.
   3. Click **Delete Tag**.

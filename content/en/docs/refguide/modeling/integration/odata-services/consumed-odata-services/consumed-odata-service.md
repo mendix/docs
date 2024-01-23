@@ -70,7 +70,7 @@ Besides basic authentication, you can use custom authentication. For more inform
 
 You can specify additional HTTP request headers to be passed to the endpoint in this list by clicking **Add**, **Edit**, or **Delete** for custom HTTP headers for authentication. Each custom header is a pair with a key and a value.
 
-Using **Headers from a Microflow**, you can specify a microflow for creating a key and value pair(s) for dynamic values. The microflow must return a list of **System.HttpHeader** objects.
+Using **Headers from a Microflow**, you can specify a microflow for creating a key and value pair (or pairs) for dynamic values. The microflow must return a list of **System.HttpHeader** objects.
 
 {{% alert color="info" %}}
 For more flexible HTTP request headers, you can select a microflow that returns a list of **System.HttpHeader**. This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the response is **401 Unauthorized**, the microflow is called with that HTTP response and another call is made with the new HTTP headers.

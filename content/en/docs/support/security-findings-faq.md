@@ -1,19 +1,19 @@
 ---
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
-url: /community-tools/support/security-findings-faq
-category: "Mendix Support"
+url: /support/security-findings-faq
 weight: 60
 description: "FAQ about existing security findings and other security questions."
 tags: ["support", "FAQ", "security", "vulnerability", "malicious files", "file scanning", "insecure cookie", "cookies without security", "insecure access", "web server", "unauthorized access" ]
 aliases:
+    - /developerportal/support/security-findings-faq/
     - /community-tools/support/security-findings-faq/
 ---
 
 ## 1 Introduction
 
 This document lists a number of frequently asked questions (FAQs) we often receive about security findings and other issues around the security of the Mendix product and platform.
-See the [Requirements for Security Support Tickets](/community-tools/support/submit-support-request/#security-tickets) section of *Submit a Support Request* if you want to create a security tickets.
+See the [Requirements for Security Support Tickets](/support/submit-support-request/#security-tickets) section of *Submit a Support Request* if you want to create a security tickets.
 
 There is additional information about security and reported vulnerabilities available elsewhere on the Mendix Platform. See the links in the sections below.
 
@@ -31,7 +31,7 @@ You can find our best practices on how to make your app secure in [How To Implem
 
 ### 1.4 Platform Support
 
-Mendix Support will only assist when using platform-supported components. See the table  in the [Support for Different Deployment Strategies](/community-tools/support/#support-by-strategy) section of the *Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
+Mendix Support will only assist when using platform-supported components. See the table in the [Support for Different Deployment Strategies](/support/#support-by-strategy) section of the *Mendix Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
 
 ### 1.5 Security Contact
 
@@ -65,7 +65,7 @@ Hiding pages for end-users is not the way to restrict access to data, you should
 
 ### 2.4 XPath Query Manipulation/Injection
 
-When an XPath query is received by the runtime, the runtime will always apply entity access to the XPath query, based on the access rules connected with the role(s) of the end-user making the request. So, although an end-user might be able to change the XPath query before sending it to the runtime, the runtime will still apply access rules, and only return data the end-user is allowed to access.
+When an XPath query is received by the runtime, the runtime will always apply entity access to the XPath query, based on the access rules connected with the role (or roles) of the end-user making the request. So, although an end-user might be able to change the XPath query before sending it to the runtime, the runtime will still apply access rules, and only return data the end-user is allowed to access.
 
 ### 2.5 HTTP Verb Tampering
 
@@ -83,7 +83,7 @@ Uploaded files can’t be executed on the server. You can configure the file man
 
 If you want to scan uploaded files for malicious content, you have to implement virus and malware scanning yourself. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
 
-## 4 Why Are Vulnerabilities Reported in Some Java Libraries?{#java-libraries}
+## 4 Why Are Vulnerabilities Reported in Some Java Libraries? {#java-libraries}
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
@@ -102,6 +102,10 @@ We will only update a third-party library if:
 3. The old version of the library contains a security vulnerability - we have regular security scans on all of our platform-supported content and if the security scan reports a security vulnerability in a third-party library, we will update the library to mitigate the security finding.
 
 If an older library provides all the functionality that is required and doesn't contain any bugs or security vulnerabilities, there is no need to update the library. Updating a library in this case increases the risk of issues: newer versions of a library might contain changes that break existing functionality within the module.
+
+#### 4.1.1 Library Versions in Marketplace Modules
+
+Mendix will update to align major versions of libraries in Marketplace modules. 
 
 ## 5 Why Are Some Security Attributes Not Set for the Cookies in My App?
 

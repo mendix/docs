@@ -42,9 +42,9 @@ For more information on menus, see [Menus](/refguide9/menus/).
 
 ### 2.2 Run and View App {#run-and-view}
 
-You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
+You can deploy your app by clicking **Publish** or **Run Locally** ({{% icon name="controls-play" %}}). To view your deployed app, click **View App**. 
 
-{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View App, Publish, and Run Locally buttons" >}}
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 

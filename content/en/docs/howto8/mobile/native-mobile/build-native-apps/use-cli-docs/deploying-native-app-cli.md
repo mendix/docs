@@ -250,7 +250,7 @@ After your start your Native Builder build, you will see some or all of the foll
 
 If your build times out, you can either sign your app locally as described in [Android Local Signing](#android-local-signing) and [iOS Local Signing](#ios-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
 
-In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [Support ticket](/community-tools/support/submit-support-request/) with Mendix.
+In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [Support ticket](/support/submit-support-request/) with Mendix.
 
 Afer your build succeeds, note the downloaded *.zip* archives at the path provided by Native Builder.
 
@@ -386,14 +386,14 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-find-file.png" alt="find file toolbar"   width="400"  >}}
 
-1. Click the edit icon:
+1. Click **Edit this file** ({{% icon name="pencil" %}}):
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-edit-file.png" alt="find file toolbar"   width="400"  >}}
 
 1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
 1. Commit these changes.
 1. Using the **Find file** functionality again, find and open *info.plist*.
-1. Click the edit icon, then change the code like so: 
+1. Click **Edit this file** again, then change the code like so: 
 
     1. Before the final `</dict>` line, add this key:<br />
 

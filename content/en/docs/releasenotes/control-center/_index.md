@@ -11,6 +11,14 @@ These release notes cover changes to the app management functionality and other 
 
 To see the current status of the Mendix Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### January 22, 2023
+
+#### New Features
+
+* We introduced the [Private Marketplace](/control-center/private-marketplace/) page in Control Center, which allows Mendix Admins to approve or decline requests for publishing content to your organization's private Marketplace.
+
 ## 2023
 
 ### December 14, 2023

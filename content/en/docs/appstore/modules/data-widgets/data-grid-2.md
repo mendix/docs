@@ -62,7 +62,7 @@ Here is an example of reordering in progress:
 
 ### 2.4 Hiding
 
-**Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
+**Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon ({{% icon name="view" %}}) will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
 
 Here is an example of hiding button containing columns to be hidden:
 
@@ -90,9 +90,14 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" class="image-border">}}
+
+You can configure pagination based on the following properties:
+
+* **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
+* **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
 ### 3.2 Virtual Scrolling 
 
@@ -104,7 +109,7 @@ In Data Grid you can choose what you want to render into columns. This can be an
 
 Here is an example of column properties:
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" class="image-border">}}
 
 ### 4.1 Attribute
 
@@ -183,6 +188,10 @@ This property is not available if you enable **Custom content** for the column
 {{% alert color="info" %}}
 This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types don't support association filtering.
 {{% /alert %}}
+
+### 4.10 Visible {#visible-filter}
+
+When using a data grid, sometimes columns do not need to be shown. Using this **Visible** expression configuration, you can specify when you want to display columns
 
 ## 5 Rows
 

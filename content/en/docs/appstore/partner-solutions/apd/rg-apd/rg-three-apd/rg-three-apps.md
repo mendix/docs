@@ -13,7 +13,7 @@ It is possible to search on an app's name or select one from the overview direct
 
 Selecting an app in the overview displays the overview of the [Environments](/appstore/partner-solutions/apd/rg-three-environments/) for that app.
 
-In order to find a specific application faster, it is possible to mark it as a favorite by clicking the star icon on the application tile. Favorite applications are shown first in the overview.
+In order to find a specific application faster, it is possible to mark it as a favorite by clicking **Favorite** ({{% icon name="star" %}}) on the application tile. Favorite applications are shown first in the overview.
 
 In case an application is not visible in this overview, click **Can’t find your App?** in the upper-right corner.
 

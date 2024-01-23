@@ -431,6 +431,18 @@ The output is:
 'this is my string'
 ```
 
+If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` in the input is empty:
+
+```java {linenos=false}
+trim($MyString)
+```
+
+The output is:
+
+```java {linenos=false}
+''
+```
+
 ## 11 isMatch
 
 Checks to see if a string matches a given regular expression.

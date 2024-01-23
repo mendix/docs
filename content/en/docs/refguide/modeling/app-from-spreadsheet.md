@@ -78,7 +78,7 @@ After you upload the spreadsheet, worksheets that have relations (associations) 
 {{% alert color="info" %}}Associations are not identified if the data is converted to **Integer**. In this case you can either change the column type to **Text** in Excel, or change the type of both columns to **String** when previewing your data. For more information on how to change attribute types, see the [Managing Attribute Types](#managing-attribute-types) section.
 {{% /alert %}}
 
-In the **Data Import Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:
+In the **Data Import Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon ({{% icon name="hyperlink" %}}):
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/data-preview.jpg" >}}
 
@@ -119,7 +119,7 @@ Open the domain model to see the created entities and attributes:
 
 {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/domain-model-example.jpg"   width="650"  >}}
 
-You can now preview your app by running it locally (the play icon at the top) and test the app.
+You can now preview your app and test it out by clicking **Run Locally** ({{% icon name="controls-play" %}}).
 
 ### 4.3 Generating Pages {#generating-pages}
 

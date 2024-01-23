@@ -186,7 +186,7 @@ Changes between 4.2-beta2 and 4.2:
 * The Java temporary directory (-Djava.io.tmpdir) will now be set to the Mendix temporary directory, if not already set.
 * Added options to Advanced Settings, Jetty configuration: Request header size and Response header size for Mendix 3.3.7 and higher and Mendix 4.4.4 and higher.
 * Disabled possibility to set environment of app to the deprecated runtime configuration mode 'Acceptance' for apps of Mendix 5 and higher.
-* Improved check about already used ports in your or other apps if you choose the same one(s) and improved the information about already used ports.
+* Improved check about already used ports in your or other apps if you choose the same one (or ones) and improved the information about already used ports.
 * Improved unique port number generation for new apps.
 * The Console now checks on startup if apps share the same license configuration. The user has to choose one app for this license.
 * The Console now shows the correct service start/stop button text after starting a service, even if an error occurred while connecting to the app.

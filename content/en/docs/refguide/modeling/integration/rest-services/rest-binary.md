@@ -51,7 +51,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
      * Add a button to the home page that links to the **Overview** page you created.
 
 5. Expose the entity as a REST resource.
-     * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.
+     * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file (or files) that you want to publish, and click **Expose as a REST resource**.
      * Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
 
 6. Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:

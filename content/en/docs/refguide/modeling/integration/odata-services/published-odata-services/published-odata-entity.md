@@ -62,7 +62,7 @@ Location URIs must be unique. Publishing two different entities at the same loca
 
 Attributes and associations can be customized in the same way by clicking **Edit** in the list on the right. 
 
-For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). The default is the same as the name of the association in the domain model.
+For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object (or objects)). The default is the same as the name of the association in the domain model.
 
 {{% alert color="info" %}}
 
@@ -96,7 +96,7 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that it is not recommended to use the ID as a key. A published entity should have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that it is not recommended to use the ID as a key. A published entity should have a combination of attributes that form a key instead. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
@@ -104,7 +104,7 @@ Select a combination of attributes with the following constraints:
 * Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
 * Stable over time – The attribute values used for the key should not change, so that you can find it again later.
 
-Having an [index](/refguide/indexes/) for the key attribute(s) makes retrieving objects by key perform better.
+Having an [index](/refguide/indexes/) for the key attribute (or attributes) makes retrieving objects by key perform better.
 
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 

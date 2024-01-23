@@ -147,4 +147,4 @@ For more instructions on how to do this, see [Unix-Like Deployment](/developerpo
 
 ## 4 Read More
 
-* [Submit a Support Request](/community-tools/support/submit-support-request/)
+* [Submit a Support Request](/support/submit-support-request/)

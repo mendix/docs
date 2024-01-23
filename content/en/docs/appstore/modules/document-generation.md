@@ -67,7 +67,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
 
-To be able to test PDF document generation when using **Run locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
+To be able to test PDF document generation when using **Run Locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
 
 #### 3.1.1 Chrome
 
@@ -341,9 +341,9 @@ The PDF document generation service does not store pages or documents at any tim
 
 ### 6.1 App Environment Registration Issues
 
-In case you encounter any issues while [registering your app environment(s)](#register-app), refer to the table below for more details and suggestions on how to resolve them.
+In case you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
 
-| Error | Error message(s) | Description | Suggestion |
+| Error | Error message | Description | Suggestion |
 |-------|------------------|-------------|------------|
 | **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
 | **Invalid App** | <ul><li>"Invalid app"</li></ul><ul><li>"App not found for the given user"</li></ul> | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
@@ -383,7 +383,8 @@ We recommend that you temporarily set the log level of the `DocumentGeneration` 
 In case you encounter the message "Unable to generate document, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
-* The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
+* The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
+
 
 In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 

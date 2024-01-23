@@ -62,7 +62,7 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection/) module. In this section, you will learn how to do this by following these steps:
 
-1. Click the play button (**Run Locally**) to start your application.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to start your application.
 2. Click **View App** to open your application in the browser.
 3. **Log in** as an Administrator.
 4. Click on the menu item for the **MxObjects_Overview** in your navigation.

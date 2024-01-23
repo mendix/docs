@@ -15,6 +15,15 @@ There are separate release notes for other deployment targets; see the [Deployme
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### January 18, 2024
+
+#### Bug Fixes
+
+* We have fixed an issue with two-factor authentication (2FA) on the **Metrics** and **Logs** pages. The 2FA is now session based and not at the account level.
+* Memory-related metrics graphs now display in gibibytes (GiB) and not gigabytes (GB).
+
 ## 2023
 
 ### December 28, 2023
@@ -706,7 +715,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Improvements
 
-* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
+* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute (or attributes) or the Common Name attribute of the database server certificate is matched against the database host name.
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -862,7 +871,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
         {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
         For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
-    You will need to redeploy your app in order to apply the new ARP(s).
+    You will need to redeploy your app in order to apply the new ARP (or ARPs).
 
 ### May 1, 2020
 
@@ -1080,7 +1089,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/community-tools/support/). Features of Flexible Environments include the following:
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/support/). Features of Flexible Environments include the following:
     * You can search for the environment for which you want to see details
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments

@@ -83,7 +83,7 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click the details icon on the top right of the page:
+1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
 
@@ -705,8 +705,8 @@ Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
 When an environment is scaled (manually or automatically), it will not be restarted. Adjusting the number of replicas will not cause downtime - as long as the number of replicas is greater than zero.
-Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP(S) requests.
-Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP(S) traffic will be routed to the remaining pods.
+Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP (or HTTPS) requests.
+Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP (or HTTPS) traffic will be routed to the remaining pods.
 
 #### 6.6.3 Vertical Pod Autoscaling
 
@@ -846,8 +846,8 @@ From this page you can see a summary of your clusters with all their namespaces 
 
 Here you can perform the following actions on the entire cluster:
 
-* Delete the cluster by clicking the delete icon
-* Rename the cluster or edit its description by clicking the edit icon
+* Delete the cluster by clicking **Delete** ({{% icon name="trash-can" %}})
+* Rename the cluster or edit its description by clicking **Edit** ({{% icon name="pencil" %}})
 * Invite another cluster manager
 
 <a id="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
@@ -891,7 +891,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 
 See the sections below for more information.
 
-You can also delete your namespace from the cluster manager by clicking the delete icon in the top right.
+You can also delete your namespace from the cluster manager by clicking **Delete Namespace** ({{% icon name="trash-can" %}}) in the top right.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png" >}}
 

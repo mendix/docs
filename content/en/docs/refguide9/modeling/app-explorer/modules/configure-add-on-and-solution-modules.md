@@ -43,7 +43,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
 
     {{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
 
-You can see that documents/elements that are marked as usable have an **eye icon**, this means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
+You can see that documents/elements that are marked as usable have an eye icon ({{% icon name="view" %}}). This means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
 ### 2.2 Supported Documents {#supported-documents}
 

@@ -137,7 +137,7 @@ You can add your own HTTP headers as described in the [Adding HTTP Headers](/how
 
 ### 6.2 Missing/Misconfigured Content Security Policy (CSP)
 
-See [Content Security Policy](/howto/security/using-mobile-capabilities/csp/) for information on improvements to Content Security Policy in Mendix 9.12.0 and above.
+See [Content Security Policy](/howto/security/csp/) for information on improvements to Content Security Policy in Mendix 9.12.0 and above.
 
 ### 6.3 Sensitive Information in Server Response Header (Banner Grabbing)
 

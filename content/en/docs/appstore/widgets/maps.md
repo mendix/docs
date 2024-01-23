@@ -117,6 +117,8 @@ Under the **Dimensions** properties tab, you can adjust the following settings t
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
 
+Please refer to the [Maps CSP](/appstore/widgets/security/content-security-policy/maps-csp/) guide for more detail.
+
 ## 5 Widgets Below Version 2.0.0
 
 The Maps widget enables showing locations on maps. These are the available map types:

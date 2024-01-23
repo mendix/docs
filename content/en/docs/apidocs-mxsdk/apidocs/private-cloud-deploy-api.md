@@ -7,6 +7,10 @@ description: "This API allows you to manage application environments deployed to
 weight: 60
 ---
 
+{{% alert color="info" %}}
+This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For [Private Mendix Platform](/private-mendix-platform/) API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Mendix for Private Cloud Deploy API allows you to manage application environments deployed to your private cloud using the Mendix Operator. You can use the API to do the following:

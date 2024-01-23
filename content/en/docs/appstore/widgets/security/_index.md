@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-Currently, certain Mendix pluggable widgets are not fully compliant with strict content security policy (CSP). Some of these widgets require access to third party domains. By allowing access to these domains, these widgets can still follow allowlist CSP.
+Currently, certain Mendix pluggable widgets are not fully compliant with strict content security policy (CSP). Some of these widgets require access to third party domains. By allowing access to these domains, these widgets can still follow `allowlist` CSP.
 
 ## 2 Setup
 

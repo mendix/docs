@@ -14,6 +14,8 @@ Mendix provides a standard set of approved icons in [The Mendix Icon Set](https:
 
 To see more information about the pipeline, click **Details** ({{% icon name="notes-paper-text" %}}).
 
+{{% alert color="info" %}}For details on the icon style guidance, see the [Documentation Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+and+Icons#Icons).{{% /alert %}}
+
 ## 2 Syntax
 
 This shortcode has two attributes:
@@ -23,21 +25,38 @@ This shortcode has two attributes:
 
 ## 3 Some Suggested Icons
 
-Here are some icons that might be particularly useful:
+Below are some icons that might be particularly useful for the docs. In this list, you can see the name of the icon file, a common tooltip associated with the icon, and the icon itself.
 
-* add ({{% icon name="add" %}}) 
-* alarm-bell ({{% icon name="alarm-bell" %}}) 
-* alert-circle ({{% icon name="alert-circle" %}})
-* cloud-check ({{% icon name="cloud-check" %}})
-* cog ({{% icon name="cog" %}}) 
-* checkmark-circle ({{% icon name="checkmark-circle" %}})
-* controls-play ({{% icon name="controls-play" %}})
-* download-button ({{% icon name="download-button" %}})
-* layout-rounded-1 ({{% icon name="layout-rounded-1" %}})
-* notes-paper-edit ({{% icon name="notes-paper-edit" %}})
-* notes-paper-text ({{% icon name="notes-paper-text" %}})
-* pencil ({{% icon name="pencil" %}})
-* pipeline-run ({{% icon name="pipeline-run" %}})
-* three-dots-menu-horizontal ({{% icon name="three-dots-menu-horizontal" %}})
-* trash-can ({{% icon name="trash-can" %}})
-* view ({{% icon name="view" %}})
+* add: **Add** ({{% icon name="add" %}})
+* alarm-bell: **Notify** ({{% icon name="alarm-bell" %}}) 
+* alert-circle: **Alert** ({{% icon name="alert-circle" %}})
+* calendar: **Schedule** ({{% icon name="calendar" %}})
+* cog: **Settings** ({{% icon name="cog" %}})
+* checkmark-circle: **Save** ({{% icon name="checkmark-circle" %}})
+* checkmark-circle-filled: **Success** ({{% icon name="checkmark-circle-filled" %}})
+* chevron-down: **Move Down** ({{% icon name="chevron-down" %}})
+* chevron-left: **Move Left** ({{% icon name="chevron-left" %}})
+* chevron-right: **Move Right** ({{% icon name="chevron-right" %}})
+* chevron-up: **Move Up** ({{% icon name="chevron-up" %}})
+* controls-play-filled: **Run** ({{% icon name="controls-play-filled" %}})
+* deploy: **Deploy** ({{% icon name="deploy" %}})
+* download-button: **Download** ({{% icon name="download-button" %}})
+* hyperlink: **Copy Link** ({{% icon name="hyperlink" %}})
+* info-circle: **Information** ({{% icon name="info-circle" %}})
+* layout-rounded-1-filled: **Global Navigation** ({{% icon name="layout-rounded-1-filled" %}})
+* lock: **Lock** ({{% icon name="lock" %}})
+* notes-paper-edit: **Edit Details** ({{% icon name="notes-paper-edit" %}})
+* notes-paper-text **Details** ({{% icon name="notes-paper-text" %}})
+* paperclip: **Attach** ({{% icon name="paperclip" %}})
+* pencil: **Edit** ({{% icon name="pencil" %}})
+* pin: **Pin** ({{% icon name="pin" %}})
+* remove: **Remove** ({{% icon name="remove" %}})
+* remove-circle-filled: **Error** ({{% icon name="remove-circle-filled" %}})
+* search: **Search** ({{% icon name="search" %}})
+* star: **Favorite** ({{% icon name="star" %}})
+* subtract-circle-filled: **Not Running** ({{% icon name="subtract-circle-filled"  %}})
+* three-dots-menu-horizontal: **More Options** ({{% icon name="three-dots-menu-horizontal" %}})
+* three-dots-menu-vertical-filled: **DevTools** ({{% icon name="three-dots-menu-vertical" %}})
+* trash-can: **Delete** ({{% icon name="trash-can" %}})
+* view: **View** ({{% icon name="view" %}})
+* view-off: **View** ({{% icon name="view-off" %}})

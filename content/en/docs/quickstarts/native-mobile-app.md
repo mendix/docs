@@ -130,7 +130,7 @@ Do the following for your new **ACT_TakeNewPicture** nanoflow:
 
     {{< figure src="/attachments/quickstarts/native-mobile-app/config-take-pic.png" width="350px" alt="Configure take picture">}}
     
-5. Finally you need to create a page where the end-user can view and edit their new picture.v Add a **Show page** action to the nanoflow. 
+5. Finally you need to create a page where the end-user can view and edit their new picture. Add a **Show page** action to the nanoflow. 
 6. Open the action's properties:
     1. Set the **Object to pass** to be **$NewPicture entity**. 
     1. Click **Page** > **Select** and create a new page. 

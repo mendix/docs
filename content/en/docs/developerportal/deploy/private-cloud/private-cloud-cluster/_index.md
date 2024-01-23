@@ -65,11 +65,13 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    1. **Name** – The name you want to give the cluster you are creating.
+    1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or just a single operator namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
-    2. **Type** – choose the correct type for your cluster. See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for more information.
+    2. **Cluster Name** – The name that you want to give the cluster which you are creating.    
 
-    3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
+    3. **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
+
+    4. **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
 
 8. Click **Create**.
 
@@ -81,7 +83,7 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click the details icon on the top right of the page:
+1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
 
@@ -103,323 +105,10 @@ To add a namespace, do the following:
 
 ## 4. Installing and Configuring the Mendix Operator {#install-operator}
 
-Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
+You can install and run the Mendix Operator in either Global or Standard mode. In Global mode, the Operator is installed once for all available namespaces, whereas in Standard mode, it is installed separately for each namespace where a Mendix app is deployed. For more information, see:
 
-### 4.1 Download the Configuration Tool {#download-configuration-tool}
-
-If you are not already on the installation tab for your namespace, go to it by following these instructions:
-
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
-
-2. Click the **Details** icon next to the namespace you want to use.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
-
-3. Select **Installation** from the navigation bar to the left of the page.
-
-Now you can download the Configuration Tool by doing the following:
-
-1. Choose the **Operating System** for your local computer.
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/choose-operating-system.png" >}}
-
-2. Click **Download Executable**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-executable.png" >}}
-
-3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
-
-    {{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
-
-    {{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow *configuration* of previously installed Mendix Operator versions.{{% /alert %}}
-
-    {{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
-
-    {{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the configuration tool that is compatible with the Mendix Operator you have installed. Both the ARM and AMD versions of the mxpc-cli tool are available to download.{{% /alert %}}
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png" >}}
-
-4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
-
-### 4.2 Signing in to the Platform {#openshift-signin}
-
-You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
-
-These instructions are for the OpenShift platform; a similar process will be required for other platforms.
-
-You can do this as follows:
-
-1. Sign in to the OpenShift Console.
-
-2. Click **Copy Login Command** in the user drop-down.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" >}}
-
-3. Choose your IdP (Identity Provider).
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" >}}
-
-4. Click **Display Token**.
-
-5. Copy the command under **Log in with this token**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" >}}
-
-6. Paste the command into your command line terminal and press Enter.
-
-### 4.3 Running the Configuration Tool {#running-the-tool}
-
-Once you are signed in to your cluster you can run the Configuration Tool.
-
-To install in non-interactive mode please see: [Install and Configure Mendix for Private Cloud Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive/)
-
-1. Copy the **Installation Command** by clicking **Copy to clipboard**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-command.png" >}}
-
-2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
-
-    {{% alert color="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
-
-    You will see the configuration options on the screen and will be guided through filling in the information needed.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
-
-    {{% alert color="info" %}}Mendix recommends running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
-
-#### 4.3.1 Base Installation {#base-installation}
-
-If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
-
-1. Click **Base Installation**.
-
-2. Select the required **Cluster Mode** – *connected* or *standalone*.
-
-    For more information, see [Connected and Standalone Clusters](/developerportal/deploy/private-cloud/#connected-standalone) in the *Private Cloud* documentation.
-
-3. Select the required **Cluster Type** – *openshift* or *generic*.
-
-4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
-    You will see the screen below.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
-
-    {{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
-
-5. Click **Save Installer** if you want to save these settings to be used later.
-
-6. Click **Exit Installer** to finish.
-
-The Mendix operator and Mendix Gateway Agent are now installed on your platform.
-
-{{% alert color="info" %}}
-If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
-
-* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by safelisting the URL `https://interactor-bridge.private-cloud.api.mendix.com` as mentioned above.
-
-* All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
-{{% /alert %}}
-
-#### 4.3.2 Configure Namespace {#configure-namespace}
-
-You can now configure the resources required for your namespace.
-
-The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
-
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png" >}}
-
-The options do the following:
-
-* **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
-* **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
-* **Ingress** – will configure the ingress for your namespace — if there is already an ingress, this will replace it with new settings
-* **Registry** – will configure a registry for your namespace — if there is already a registry, this will replace it with new settings
-* **Proxy** – will configure a proxy for your namespace — if there is already a proxy, this will replace it with new settings
-* **Custom TLS** – will configure custom CA trust for your namespace — if there is already a custom CA trust configuration, this will replace it with new settings
-
-1. Select the options you need to configure – the first time you configure your namespace you must check *all the first four options*.  **Proxy** is optional.
-
-2. Click **Configure Namespace**.
-
-    You will be shown the **Installation wizard** landing page.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
-
-3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**).
-
-4. Each page will lead you through the information you need to supply.
-
-    These are described in the following sections:
-
-    * [Database Plan](#database-plan)
-    * [Storage Plan](#storage-plan)
-    * [Ingress](#ingress)
-    * [Registry](#registry)
-    * [Proxy](#proxy)
-    * [Custom TLS](#custom-tls)
-
-##### 4.3.2.1 Database Plan {#database-plan}
-
-Every Mendix app environment needs its own dedicated database.
-Create a database plan to configure how the Mendix Operator will manage databases.
-
-See the [Database plans](/developerportal/deploy/private-cloud-storage-plans/#database) document for a list and instructions for all options.
-
-##### 4.3.2.2 Storage Plan {#storage-plan}
-
-Every Mendix app environment needs a file (blob) storage bucket to store System.FileDocument entities, such as AWS S3, Azure Blob Storage or MinIO.
-Create a storage plan to configure how the Mendix Operator will manage file storage.
-
-See the [Blob storage plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) document for a list and instructions for all options.
-
-##### 4.3.2.3 Ingress {#ingress}
-
-**openshift-route** will configure an OpenShift Route. This can only be used for OpenShift clusters. This option allows you to enable or disable TLS.
-
-**kubernetes-ingress** will configure ingress according to the additional domain name you supply. This option allows you to configure the ingress path and custom ingress class (dependent on the Ingress controller) and enable or disable TLS.
-
-**service-only** will create just a Kubernetes Service, without an Ingress or OpenShift route.
-This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
-
-{{% alert color="info" %}}
-When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](#advanced-network-settings).
-{{% /alert %}}
-
-##### 4.3.2.4 Registry {#registry}
-
-To run an app in Kubernetes, it needs to be converted (packaged) into a container image and pushed to an OCI registry.
-
-The Mendix Operator automatically builds and pushes images into a private OCI registry; to push an image to the target registry, the Mendix Operator needs to be configured.
-
-See the [Image registry](/developerportal/deploy/private-cloud-registry/) document for a list of supported registries and instructions how to configure each one.
-
-#### 4.3.3 Proxy {#proxy}
-
-Check the **Enable Proxy** checkbox if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
-
-List all local (including cluster-local) IP addresses and domains in the **No proxy for** field. The format is listed below:
-
-Hosts which should be excluded from proxying are specified as:
-
-* A string containing comma-separated values, where each value is one of the following:
-    * An IP address prefix (`1.2.3.4`)
-    * An IP address prefix in CIDR notation (`1.2.3.4/8`)
-    * A domain name
-    * If you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied
-* Each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
-* A domain name matches that name and all subdomains
-* A domain name with a leading "." matches subdomains only
-
-    For example, "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
-
-For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
-
-#### 4.3.4 Custom TLS {#custom-tls}
-
-{{% alert color="info" %}}
-To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.7.0 or later.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-In Operator version 2.7.0 and above, the build pod will trust certificates from the custom TLS trust secret.
-{{% /alert %}}
-
-To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
-By default, Mendix Operator trusts Certificate Authorities from the [Mozilla CA root bundle](https://wiki.mozilla.org/CA), as they are provided by default in the container image.
-
-If Mendix for Private Cloud needs to communicate with external services, some of those services might have TLS certificates signed by a custom (private) CA.
-In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
-
-1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
-    1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
-
-        ```text
-        # Private CA 1
-        -----BEGIN CERTIFICATE-----
-        [...]
-        -----END CERTIFICATE-----
-        # Private CA 2
-        -----BEGIN CERTIFICATE-----
-        [...]
-        -----END CERTIFICATE-----
-        ```
-
-        (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
-    2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, for example, `mendix-custom-ca`):
-
-        For OpenShift:
-
-        ```shell {linenos=false}
-        oc -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
-        ```
-
-        For Kubernetes:
-
-        ```shell {linenos=false}
-        kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
-        ```
-
-2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
-
-These custom CAs will be trusted by:
-
-* The Mendix Operator when communicating with the database and file storage
-* The Mendix Operator when pushing app images to the container registry
-* Mendix apps when communicating with the database, file storage and external web services
-* The Mendix Agent when connecting to Mendix Developer portal
-
-{{% alert color="info" %}}
-To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The Mendix Gateway Agent will trust CAs specified through Custom TLS Trust if you are using Mendix Operator version 2.6.0 or above.
-{{% /alert %}}
-
-#### 4.3.5 Review and Apply {#review-apply}
-
-When you have configured all the resources, do the following:
-
-1. Press <kbd>F7</kbd> to **Review and Apply**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png" >}}
-
-2. Click **Evaluate Configuration** to check the configuration.
-
-    Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png" >}}
-
-3. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
-
-    The **Installer output** panel will display the locations of the saved files.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png" >}}
-
-4. Click **Apply Configuration** to apply the configuration to your namespace.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png" >}}
-
-    Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
-
-5. Click **Exit Installer** to return to the landing page.
-
-### 4.4 Confirming Namespace Configuration
-
-When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
-
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" >}}
+* [Running the Mendix Operator in Global Mode](/developerportal/deploy/global-operator/)
+* [Running the Mendix Operator in Standard Mode](/developerportal/deploy/standard-operator/)
 
 ### 5 Licensing the Application with Private Cloud License Manager
 
@@ -431,10 +120,18 @@ You can license the Operator and Runtime of your application by configuring the 
 In order to configure PCLM, make sure that the Operator version is 2.11.0 and above.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+In the context of the Global Operator, it is necessary to configure both the managed namespace and the Global Operator namespace with the License Manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+{{% /alert %}}
+
 ## 6 Advanced Operator Configuration
 
 {{% alert color="warning" %}}
 Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix for Private Cloud.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+For Global Operator scenarios, if the Operator configuration in the managed namespace differa from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
 {{% /alert %}}
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
@@ -469,6 +166,9 @@ When using **Ingress** for network endpoints:
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
 spec:
   # Endpoint (Network) configuration
   endpoint:
@@ -507,6 +207,9 @@ spec:
       path: "/"
       # Optional, can be omitted : specify the Ingress pathType
       pathType: ImplementationSpecific
+# ...
+# omitted lines for brevity
+# ...      
 ```
 
 When using **OpenShift Routes** for network endpoints:
@@ -697,131 +400,11 @@ spec:
             memory: 512Mi
 # ...
 # omitted lines for brevity
-# ...
+# ...    
 ```
+#### 6.3.1 Resource Definition via Operator Configuration Manifest
 
-#### 6.3.1 Customize Liveness Probe to Resolve Crash Loopback Scenarios
-
-The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
-
-The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
-
-{{% alert color="warning" %}}
-The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
-{{% /alert %}}
-
-Let us now analyze the `liveness probe` section from the application deployment example, above:
-
-```yaml
-livenessProbe:
-  failureThreshold: 3
-  httpGet:
-    path: /
-    port: mendix-app
-    scheme: HTTP
-  initialDelaySeconds: 60
-  periodSeconds: 15
-  successThreshold: 1
-  timeoutSeconds: 1
-```
-
-The following fields can be configured:
-
-* `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
-* `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
-* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
-* `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
-* `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
-
-{{% alert color="info" %}}
-If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
-{{% /alert %}}
-
-#### 6.3.2 Customize Startup Probes for Slow Starting Applications
-
-If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
-
-A startup probe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startup probe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. Startup probes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startup probe that hasn't yet succeeded.
-
-You can see an example of a startup probe configuration below:
-
-```yaml
-startupProbe:
-  httpGet:
-    path: /
-    port: mendix-app
-    scheme: HTTP
-  failureThreshold: 30
-  periodSeconds: 10
-```
-
-In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's [restartPolicy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy).
-
-{{% alert color="info" %}}
-If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
-
-Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
-{{% /alert %}}
-
-#### 6.3.3 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
-
-Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
-
-```yaml {linenos=false}
-terminationGracePeriodSeconds: 300
-```
-
-{{% alert color="info" %}}
-The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
-{{% /alert %}}
-
-#### 6.3.4 Customize Container Resources: Memory and CPU
-
-Let us now analyze the `resources` section from the example application deployment, above:
-
-```yaml
-resources:
-  limits:
-    cpu: 1
-    memory: 512Mi
-  requests:
-    cpu: 100m
-    memory: 512Mi
-```
-
-This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
-
-The settings in the example above mean that
-
-* the container will always receive at least the resources set in `requests`
-* if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
-* a container will never be granted more than its resource `limits`
-
-##### 6.3.4.1 Meaning of CPU
-
-Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
-
-Fractional requests are allowed. For instance, in this example, we are requesting `100m`, which can be read as *one hundred millicpu*, and limiting to a maximum of `1` CPU (1000m).
-
-A precision finer than 1m is not allowed.
-
-##### 6.3.4.2 Meaning of Memory
-
-Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
-
-For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
-
-{{% alert color="warning" %}}
-Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
-{{% /alert %}}
-
-#### 6.3.5 Resource Definition via Operator Configuration Manifest
-
-For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
+For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose. 
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -872,11 +455,132 @@ spec:
 
 The following fields can be configured:
 
-* `Liveness`, `readiness`, `startupProbe`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace — any changes made in the Deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
-* `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
-* `metricsSidecarResources` – this is used for all m2ee-metrics containers in the namespace
+* `Liveness`, `readiness`, `startupProbe`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace; any changes made in the deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
+* `sidecarResources` –  this is used for all `m2ee-sidecar` containers in the namespace
+* `metricsSidecarResources` – this is used for all `m2ee-metrics` containers in the namespace
 * `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
+
+#### 6.3.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+
+The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
+
+The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
+
+{{% alert color="warning" %}}
+The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
+{{% /alert %}}
+
+Let us now analyze the `liveness probe` section from the application deployment example, above:
+
+```yaml
+livenessProbe:
+  failureThreshold: 3
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  initialDelaySeconds: 60
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 1
+```
+
+The following fields can be configured:
+
+* `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
+* `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
+* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
+* `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
+* `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
+
+{{% alert color="info" %}}
+If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
+{{% /alert %}}
+
+#### 6.3.3 Customize Startup Probes for Slow Starting Applications
+
+If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
+
+A startup probe should be used when the application in your container could take a significant amount of time to reach its normal operating state. Applications that would crash or throw an error if they handled a liveness or readiness probe during startup need to be protected by a startup probe. This ensures the container doesn't continually restart due to failing health checks before it has finished launching. Using a startup probe is much better than increasing `initialDelaySeconds` on readiness or liveness probes. Startup probes defer the execution of liveness and readiness probes until a container indicates it is able to handle them because Kubernetes doesn't direct the other probe types to the container if it has a startup probe that hasn't yet succeeded.
+
+You can see an example of a startup probe configuration below:
+
+```yaml
+startupProbe:
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  failureThreshold: 30
+  periodSeconds: 10
+```
+
+In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's [restartPolicy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy).
+
+{{% alert color="info" %}}
+If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
+
+Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
+{{% /alert %}}
+
+#### 6.3.4 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
+
+Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
+
+```yaml {linenos=false}
+terminationGracePeriodSeconds: 300
+```
+
+{{% alert color="info" %}}
+The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+{{% /alert %}}
+
+#### 6.3.5 Customize Container Resources: Memory and CPU
+
+The `resources` following section shows an example configuration of the `resources` section from the example application deployment, above. Note that the configuration is just for reference purpose.
+
+
+```yaml
+resources:
+  limits:
+    cpu: 1
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 512Mi
+```
+
+This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
+
+The settings in the example above mean that
+
+* the container will always receive at least the resources set in `requests`
+* if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
+* a container will never be granted more than its resource `limits`
+
+##### 6.3.5.1 Meaning of CPU
+
+Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
+
+Fractional requests are allowed. For instance, in this example, we are requesting `100m`, which can be read as *one hundred millicpu*, and limiting to a maximum of `1` CPU (1000m).
+
+A precision finer than 1m is not allowed.
+
+##### 6.3.5.2 Meaning of Memory
+
+Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
+
+For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
+
+{{% alert color="warning" %}}
+Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
+{{% /alert %}}
+
 
 ### 6.4 Customize Runtime Metrics {#customize-runtime-metrics}
 
@@ -1001,8 +705,8 @@ Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
 When an environment is scaled (manually or automatically), it will not be restarted. Adjusting the number of replicas will not cause downtime - as long as the number of replicas is greater than zero.
-Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP(S) requests.
-Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP(S) traffic will be routed to the remaining pods.
+Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP (or HTTPS) requests.
+Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP (or HTTPS) traffic will be routed to the remaining pods.
 
 #### 6.6.3 Vertical Pod Autoscaling
 
@@ -1142,8 +846,8 @@ From this page you can see a summary of your clusters with all their namespaces 
 
 Here you can perform the following actions on the entire cluster:
 
-* Delete the cluster by clicking the delete icon
-* Rename the cluster or edit its description by clicking the edit icon
+* Delete the cluster by clicking **Delete** ({{% icon name="trash-can" %}})
+* Rename the cluster or edit its description by clicking **Edit** ({{% icon name="pencil" %}})
 * Invite another cluster manager
 
 <a id="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
@@ -1187,7 +891,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 
 See the sections below for more information.
 
-You can also delete your namespace from the cluster manager by clicking the delete icon in the top right.
+You can also delete your namespace from the cluster manager by clicking **Delete Namespace** ({{% icon name="trash-can" %}}) in the top right.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png" >}}
 
@@ -1523,7 +1227,7 @@ Once you enable the **Use custom core resources plans** button, you cannot switc
 
 #### 7.2.6 Installation
 
-The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
+The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
 #### 7.2.7 Additional Information
 
@@ -1531,7 +1235,7 @@ This tab shows information on the versions of the various components installed i
 
 #### 7.2.8 Customization
 
-This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers.
+This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers, and product type for the PCLM Runtime License.
 
 Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
@@ -1546,6 +1250,14 @@ If you want to use the secret store for custom runtime settings or MxApp constan
 {{% /alert %}}
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
+
+If PCLM is configured, the default product type for Runtime licenses is set to **standard**. However, if the product type for PCLM Runtime licenses in the license server differs from **Standard**, you can customize it here. To check the product type of the Runtime license, navigate to the **PCLM Statistics** page, and then select **Runtime** in the **Select type** field.
+
+{{% alert color="info" %}}
+The product type value to be entered is case-sensitive. Ensure that the value matches exactly with the product type of the Runtime license on the **PCLM Statistics** page.
+{{% /alert %}}
+
+The selected product type will be applied to all environments within this namespace, and associated environments will adopt the license of this specific product type.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 

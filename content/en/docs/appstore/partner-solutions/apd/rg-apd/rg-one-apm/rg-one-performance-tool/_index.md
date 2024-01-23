@@ -27,7 +27,7 @@ Enter a **Session name** and start recording.
 
 You can use **Set marker** to label or mark recorder items, so when recording multiple functions at once, you can recognize the recorded items in the results.
 
-The **Show recorded** button is used to see what has been recorded to assist in filtering. This button is also available under the magnify glass icon. The show recorded function is described below.
+The **Show recorded** button is used to see what has been recorded to assist in filtering. This button is also available under the {{% icon name="search" %}} icon. The show recorded function is described below.
 
 The **Filter** button opens the filter dialog and is described below.
 
@@ -49,7 +49,7 @@ The following screenshot shows the filter options of the Performance Tool when t
 
 The thresholds are used to filter recorded microflows, actions or SQL statements and not store them in/remove them from memory if they have an execution duration less than the threshold.
 
-You can see what has been recorded in memory with the **Show recorded** magnify glass button
+You can see what has been recorded in memory with the **Show recorded** button ({{% icon name="search" %}}).
 
 The option **Include sub-microflows** can be used to keep sub-microflows called from a long running microflow in memory.
 

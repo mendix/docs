@@ -173,7 +173,7 @@ spec:
 You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
-* **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace)
+* **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/standard-operator/#configure-namespace)
 * **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
@@ -298,7 +298,7 @@ kubectl apply -f {File containing the CR} -n {namespace where app is being deplo
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
-1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/private-cloud-cluster/#openshift-signin) section of *Creating a Private Cloud Cluster*.
+1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/standard-operator/#openshift-signin) section of *Creating a Private Cloud Cluster*.
 2. Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
 3. Paste the following command into your command line terminal:
 

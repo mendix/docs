@@ -86,7 +86,7 @@ To commit your changes, click the **Commit** button in the **Changes** pane, or 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" alt="Commit Button" >}}
 
-Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
+Git only creates a local commit and to submit your local commit (or commits) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" >}}
 
@@ -384,7 +384,7 @@ When using external tools, you might be asked to authenticate separately to Team
 
 Connecting to Git is done using a personal access token (PAT).
 
-For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+For information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 To connect to Git you need to use the following URL and credentials:
 

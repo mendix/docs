@@ -5,10 +5,6 @@ weight: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/updating-a-mendix-application.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A Mendix application on a Windows server can be updated using the Mendix Service Console. Before beginning the server update, you need to make sure that you have a versioned deployment archive (*.mda* file) accessible on your server and that the same version of the server distribution is either installed or else is available as an installation package on the server.

@@ -34,7 +34,7 @@ This is how the original chart looks:
 
 To create the required custom configuration easily, follow these steps:
 
-1. Open the app with the chart(s).
+1. Open the app with the chart (or charts).
 1. Open a page with a chart.
 1. Open the chart settings.
 1. Go to the tab **Advanced**.

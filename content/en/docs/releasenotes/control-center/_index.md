@@ -11,6 +11,14 @@ These release notes cover changes to the app management functionality and other 
 
 To see the current status of the Mendix Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### January 22, 2023
+
+#### New Features
+
+* We introduced the [Private Marketplace](/control-center/private-marketplace/) page in Control Center, which allows Mendix Admins to approve or decline requests for publishing content to your organization's private Marketplace.
+
 ## 2023
 
 ### December 14, 2023
@@ -68,7 +76,7 @@ We made the following improvements to the [access management](/control-center/po
 #### Improvements
 
 * On the [Members](/control-center/members/) page you can now sort members based on the number of apps to which they belong.
-* We introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-general-settings) tab of the [Company Settings](/control-center/company-settings/) page.
+* We introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-email-domains) tab of the [Company Settings](/control-center/company-settings/) page.
 
 ### July 13, 2023
 
@@ -113,7 +121,7 @@ We made the following improvements to the [access management](/control-center/po
 
 #### New Features
 
-* We have released a feature where you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+* We have released a feature where you can add and manage a [Security Contact](/control-center/company-settings/#security-contact) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
   With this feature, you can do the following:
 

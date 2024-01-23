@@ -9,6 +9,8 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 
 {{% alert color="warning" %}}
 ⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+
+We will continue to actively support this module for Mendix 9.
 {{% /alert %}}
 
 ## 1 Migrating to Page and Microflow URLs{#migrate-page-micro}
@@ -82,7 +84,7 @@ You need to add the `/link/` path as a request handler in your app. To achieve t
     3. For **After startup**, **Select** the **DeepLink.StartDeeplink** microflow.
 * If your app has an after-startup microflow, extend it with a [sub-microflow activity](/refguide/extracting-and-using-sub-microflows/) that calls the **DeepLink.StartDeeplink** microflow
 
-### 3.2 Configuring the Microflow for the Default Home Page
+### 4.2 Configuring the Microflow for the Default Home Page
 
 When a user accesses the Mendix app, the app needs to check if a deep link request is associated to the user session. To achieve this, add the **DeepLink.DeeplinkHome** microflow to a microflow that is configured for the [default home page](/refguide/navigation/#default-home-page) (via **App** > **Navigation** > **Home pages** > **Default home page**). For an example of this configuration, see the **DeepLink.Home_ResponsiveProfile** microflow.
 
@@ -169,7 +171,6 @@ When using the Deep Link module in Mendix 9 and higher, you might get stuck in a
 This is because for Mendix 9, the [default value for SameSite cookies](/developerportal/deploy/environments-details/#samesite) has been changed to `"Strict"` meaning that session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
-
 
 Additionally, there is an incompatibility between Mendix version 9.20 and higher and earlier versions of the Deep Link module which could cause this. If you are using Mendix version 9.20 or higher, you need to use version 9.0.8 or higher of the Deep Link module.
 

@@ -18,12 +18,11 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications {#software}
 
-Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro 10 versions are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro can run on Apple Macs using Parallels. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Macs using [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
-* Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
 * Git for Windows (x64) version 2.41.0 or above
@@ -73,6 +72,8 @@ For more information on ports and modifying Studio Pro's default ports, see [Con
 For active development and running your application locally, your app folder should be on a local drive (such as C:) or a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
 
 ### 2.5 Supported Git Service Providers {#supported-providers}
+
+This section describes Git service providers when you are setting up your own Git repo. For information about Mendix Team Server (which is implemented using Git), see the [Team Server](#ts) section below.
 
 Git service providers have size limitations related to commits and repositories.
 

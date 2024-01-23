@@ -10,7 +10,7 @@ tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 ## 1 Introduction 
 
 {{% alert color="info" %}}
-MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Preview Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
+MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
 
 MendixChat does not use any project, customer, or company information. It only uses the data that you have entered in MendixChat. Please do not enter any personal or sensitive data in the chat!
 {{% /alert %}}

@@ -32,7 +32,7 @@ This list is subject to change by Google Maps. For more first-party details, see
 You can also look at Google Maps' [domain access](https://developers.google.com/maps/domains) list for details on host name access requirements.
 {{% /alert %}}
 
-### 2.1.2 OpenStreetMap
+### 2.2 OpenStreetMap
 
 You can enable `allowlist` CSP for Open Street Maps by including these domains:
 
@@ -41,7 +41,7 @@ script-src 'self';
 img-src 'self' https://*.tile.osm.org data:;
 ```
 
-### 2.1.3 Mapbox
+### 2.3 Mapbox
 
 You can enable enable `allowlist` CSP for Mapbox by including these domains:
 
@@ -56,7 +56,7 @@ connect-src https://api.mapbox.com https://events.mapbox.com ;
 For more first-party details, see [Mapbox's content security policy](https://docs.mapbox.com/mapbox-search-js/guides/browsers-and-testing/).
 {{% /alert %}}
 
-### 2.1.4 HERE Maps
+### 2.4 HERE Maps
 
 You can enable `allowlist` CSP for HERE Maps by including these domains:
 

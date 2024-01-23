@@ -144,10 +144,8 @@ The steps for each procedure are described in the sections below.
 To configure the module to generate documents on your on-premises environments, you need to perform the following steps:
 
 1. Make sure that you have the prerequisite software installed.
-
-1. Configure the module to use the local service.
-
-1. Enable the DocGen request handler.
+2. Configure the module to use the local service.
+3. Enable the DocGen request handler.
 
 #### 3.3.1 Installing the Prerequisite Software {#install-prerequisites}
 
@@ -169,13 +167,13 @@ You should have installed a stable release of [Node.js](https://nodejs.org/).  M
 
 1. Set the **OverrideServiceType** constant to *Local* in the **_UseMe** > **Configuration** folder. This enforces the use of the local service instead of the cloud service.
 
-1. Configure the path to the *chrome* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
+2. Configure the path to the *chrome* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 
-1. Configure the path to the *node* executable in the **CustomNodePath** constant in the **_UseMe** > **Configuration** folder. 
+3. Configure the path to the *node* executable in the **CustomNodePath** constant in the **_UseMe** > **Configuration** folder. 
 
 #### 3.3.2 Enabling the DocGen Request Handler {#setup-inbound-rules}
 
-In case you deploy on [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you need to add the following rules when configuring the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules):
+In case you deploy on [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you need to add the following rules when configuring the [reverse proxy inbound rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules):
 
 Rule | Name | Pattern | Rewrite URL
 ---- | ---- | ------- | -----------
@@ -242,11 +240,10 @@ For scenarios where you want to generate documents as a system task (for example
    {{% /alert %}}
 
 5. Create a microflow to retrieve and return the configured service user object.
-
 6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user object) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
-We recommend to log in manually as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
+We recommend that you log in manually as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
 ### 4.3 Language and Date/Time Handling
@@ -318,7 +315,7 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
 {{% alert color="info" %}}
-We recommend not to use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
+We recommend you do not use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
 {{% /alert %}}
 
 ## 5 Architecture
@@ -357,7 +354,7 @@ In case you encounter any issues while [registering your app environment(s)](#re
 
 ### 6.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
-In general, we recommend you perform the following steps in case of any issues during runtime:
+In general, we recommend that you perform the following steps in case of any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
@@ -367,7 +364,7 @@ In general, we recommend you perform the following steps in case of any issues d
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
 {{% alert color="warning" %}}
-When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend to update to the latest Chrome release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
+When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
 {{% /alert %}}
 
 #### 6.2.2 Local Service Errors
@@ -379,7 +376,7 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 	at DocumentGenerationTest.ACT_TestDocument_WrongLayout (JavaAction : 'Generate PDF from page')
 ```
 
-We recommend you temporarily set the log level of the `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
+We recommend that you temporarily set the log level of the `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
 #### 6.2.3 Cloud Service Errors
 
@@ -390,7 +387,7 @@ In case you encounter the message "Unable to generate document, service response
 
 In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 
-In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
+In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
 
 #### 6.2.4 Timeout Errors
 

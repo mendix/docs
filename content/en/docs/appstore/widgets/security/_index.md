@@ -18,7 +18,7 @@ For information on setting up your application's CSP, see the [Content Security 
 
 The following widgets are not fully compliant with strict CSP. See the widgets' documents below for additional information and setup instructions to enable CSP:
 
-* [Map widget content security policy document](/appstore/widgets/security/content-security-policy/maps-csp)
+* [Map widget content security policy document](/appstore/widgets/security/content-security-policy/maps-csp/)
 
 ## 4 Read More
 

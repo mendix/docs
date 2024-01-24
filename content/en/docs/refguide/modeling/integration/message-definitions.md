@@ -42,7 +42,7 @@ To generate mappings, do the following:
 
 1. Select the message definition you want to use.
 2. Click **Generate mapping(s)…**.
-3. Ensure that the required mapping(s) is selected.
+3. Ensure that the required mapping (or mappings) is selected.
 4. Click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
@@ -63,7 +63,7 @@ The name of the message definition.
 
 #### 4.1.2 Entity
 
-An entity in your app domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
+An entity in your app domain model (or models) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
 
 #### 4.1.3 Structure
 

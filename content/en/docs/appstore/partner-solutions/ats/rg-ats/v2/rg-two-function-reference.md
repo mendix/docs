@@ -80,7 +80,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Find/Assert DataGrid Row | DataGrid | Finds/asserts a data grid row by a certain column value(s). |
+| Find/Assert DataGrid Row | DataGrid | Finds/asserts a data grid row by a certain column value (or values). |
 | Find/Assert Dialog | Window, DialogMessage, ConfirmationDialog | Finds/asserts a dialog by Title or Type. |
 | Find/Assert Menu Item | NavigationTree, MenuBar, SimpleMenuBar | Finds/asserts a visible menu item in a navigation tree, menu bar, and simple menu bar. |
 | Find/Assert Widget | All widgets | Finds/asserts a Mendix widget by its given name. It is possible to use a sequence of names as a path (separated by spaces). |

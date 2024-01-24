@@ -65,7 +65,7 @@ Hiding pages for end-users is not the way to restrict access to data, you should
 
 ### 2.4 XPath Query Manipulation/Injection
 
-When an XPath query is received by the runtime, the runtime will always apply entity access to the XPath query, based on the access rules connected with the role(s) of the end-user making the request. So, although an end-user might be able to change the XPath query before sending it to the runtime, the runtime will still apply access rules, and only return data the end-user is allowed to access.
+When an XPath query is received by the runtime, the runtime will always apply entity access to the XPath query, based on the access rules connected with the role (or roles) of the end-user making the request. So, although an end-user might be able to change the XPath query before sending it to the runtime, the runtime will still apply access rules, and only return data the end-user is allowed to access.
 
 ### 2.5 HTTP Verb Tampering
 
@@ -137,7 +137,7 @@ You can add your own HTTP headers as described in the [Adding HTTP Headers](/how
 
 ### 6.2 Missing/Misconfigured Content Security Policy (CSP)
 
-See [Content Security Policy](/howto/security/using-mobile-capabilities/csp/) for information on improvements to Content Security Policy in Mendix 9.12.0 and above.
+See [Content Security Policy](/howto/security/csp/) for information on improvements to Content Security Policy in Mendix 9.12.0 and above.
 
 ### 6.3 Sensitive Information in Server Response Header (Banner Grabbing)
 

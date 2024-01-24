@@ -94,7 +94,7 @@ Standard Mendix **List view** widgets can be used on your pages. However, these 
 
 Some SAP Fiori styling requires you to add some additional CSS classes manually for the styles to be implemented correctly. These cases are described in the following tables.
 
-| SAP Component Style | Mendix Class(es) |
+| SAP Component Style | Mendix Class |
 | --- | --- |
 | Disabled Link | link-disabled |
 | Emphasized Link | link-emphasized |

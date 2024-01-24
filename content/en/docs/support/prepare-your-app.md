@@ -2,7 +2,7 @@
 title: "Prepare Your App for Support"
 url: /support/prepare-your-app/
 weight: 10
-description: "Describes how to configure app authorization to select the affected app(s) in the Mendix Support Portal."
+description: "Describes how to configure app authorization to select the affected app (or apps) in the Mendix Support Portal."
 tags: ["on-premises", "support"]
 aliases:
     - /developerportal/support/change-affected-apps.html

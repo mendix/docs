@@ -16,28 +16,30 @@ You can restore a backup that has been stored in Mendix Cloud, associated with t
 For licensed nodes, it is also possible to restore a backup that has been stored locally. For example, you can restore a backup that has been [downloaded from Mendix Cloud](/developerportal/operate/download-backup/).
 
 {{% alert color="info" %}}
-You can only restore a backup if you have **Access to Backups** permissions for the target node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/) for more information.
+You can only restore a backup if you have **Access to Backups** permissions for the target node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 {{% /alert %}}
 
-{{% alert color="warning" %}}
+## 2 Important Notes
+
+### 2.1 Transferring Data Between Apps
+
 You cannot transfer data from one app to another by restoring a backup from one app to a different app. This is because each app labels the entities uniquely, even if the name in the domain model is the same. For more information, see [Data Storage](/refguide/data-storage/). If you want to copy data to another app, you can use the [Database Replication](/appstore/modules/database-replication/) module.
-{{% /alert %}}
 
-{{% alert color="warning" %}}
+### 2.2 Database Size 
+
 If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This leaves the database only partially restored. If this occurs, you will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete.
 
 Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25 GB used during the restoration process. The decompressed database size can be determined by [restoring the backup locally](/developerportal/operate/restore-backup-locally/) and using the pgAdmin statistics page.
 
-Contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
-{{% /alert %}}
+Contact [Mendix Support](https://support.mendix.com/) if you need further assistance.
 
-## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
+## 3 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
 
 Mendix Cloud automatically performs backups every night, and you can also manually trigger a backup. If you want to restore one of these backups to the node from which it was backed up, follow the steps below.
 
 If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
-1. Go to the **Backups** page of the Developer Portal for your app.
+1. From the Developer Portal, go to your app's **Backups** page.
 2. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" width=25% >}}
@@ -58,7 +60,7 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 You can choose to restore only the database by selecting **DB only restore**. Doing a database-only restore does not restore any of your files, leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
 {{% /alert %}}
 
-## 3 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
+## 4 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
 
 To transfer backups between environments, you need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup that has expired and been deleted from Mendix Cloud.
 
@@ -72,7 +74,7 @@ You can only restore data to an existing database. This means that there must ha
 4. Upload the *.db* or *.gz* backup file.
 5. You will now need to restore your backup that is held in Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
-## 4 Restoring a Backup for a Free App
+## 5 Restoring a Backup for a Free App
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
@@ -85,7 +87,7 @@ You can only restore data to an existing database. This means that there must ha
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
 {{% /alert %}}
 
-## 5 Restoring After a Backup Fails{#restore-after-fail}
+## 6 Restoring After a Backup Fails{#restore-after-fail}
 
 If a backup restore fails, you will be notified via your app's **Backup Activity** log (in the **Backups** page of the Developer Portal). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
 
@@ -97,21 +99,21 @@ In the event that a backup restore fails in this way, you will need to retry the
 
 Contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
 
-## 6 Format of a Backup File{#format-of-backup-file}
+## 7 Format of a Backup File{#format-of-backup-file}
 
-You may want to restore a backup that has been created on another platform (for example, an on-premises deployment). In this case, you will have to construct a backup file that Mendix Cloud will recognize. It is possible to upload a **Backup-Only** or **Full Snapshot** backup file.
+You may want to restore a backup that has been created on another platform (for example, an on-premises deployment). In this case, you will have to construct a backup file that Mendix Cloud will recognize. It is possible to upload a **Database Only** or **Full Snapshot** backup file.
 
-### 6.1 Backup-Only Format
+### 7.1 Database Only Format
 
-A **Backup-Only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
+A **Database Only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
 
-### 6.2 Full Snapshot Format
+### 7.2 Full Snapshot Format
 
-#### 6.2.1 .tar.gz Archive
+#### 7.2.1 .tar.gz Archive
 
 A **Full Snapshot** backup file is a *.tar.gz* file (for example, *files_and_database-fc9e126f-201811210121.tar.gz*).
 
-#### 6.2.2 .tar Archive
+#### 7.2.2 .tar Archive
 
 The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
 
@@ -133,7 +135,7 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-#### 6.2.3 .metadata File
+#### 7.2.3 .metadata File
 
 This contains JSON describing the backup. Here is an example:
 
@@ -147,7 +149,7 @@ This contains JSON describing the backup. Here is an example:
 }
 ```
 
-#### 6.2.4 db Folder{#db-folder}
+#### 7.2.4 db Folder{#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
@@ -157,7 +159,7 @@ If the dump does not use the custom format, then the restore will fail.
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
-#### 6.2.5 Tree Folder
+#### 7.2.5 Tree Folder
 
 This contains the files that are stored in external file storage. Each file has the name of the UUID used within Mendix to identify the resource. They are also stored in the following tree structure, where each file is stored in a second-level location:
 
@@ -183,7 +185,7 @@ So, for example, the first file in the example file above (0d3e301f-5551-46f8-ad
          /0d3e301f-5551-46f8-ad44-8de2be084c95
 ```
 
-## 7 Read More
+## 8 Read More
 
 * [Backups](/developerportal/operate/backups/)
 * [Creating a Backup](/developerportal/operate/create-backup/)

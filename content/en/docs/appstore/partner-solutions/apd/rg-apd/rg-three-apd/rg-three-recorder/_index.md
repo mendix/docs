@@ -9,7 +9,7 @@ The APD Performance Recorder enables recording each individual action within a M
 
 * Recording the runtime records the server actions (microflows and client API)
     * Useful for investigating a slow microflow or pinpointing a time-consuming action
-* Recording the browser(s) records the user's connection to the application
+* Recording the browser (or browsers) records the user's connection to the application
     * Shows the performance from the user's perspective as well as subsequent actions that the browser performs as a result of the server responses
 
 ## 2 Recording a New Session
@@ -26,7 +26,7 @@ When recording a browser, the user has to confirm the following message:
 
 ## 3 Recorded Results
 
-The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime(s) separate from the browser recordings. 
+The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime (or runtimes) separate from the browser recordings. 
 
 When you click a recording of the **Browser** type, the [browser recorder results](/appstore/partner-solutions/apd/rg-three-browser-recorder-results/) screen opens. When you click a recording of the **Server** type, the [server recording results](/appstore/partner-solutions/apd/rg-three-runtime-recorder-results/) screen opens.
 

@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object(s).
+A **reference set selector** is used to allow the end-user to display or select the value (or values) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object (or objects).
 
 A reference set selector must be placed in a [data container](/refguide/data-widgets/).
 
@@ -20,7 +20,7 @@ What you can do with a reference set selector depends on the **Owner** of the as
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/domain-model-owner-default.png" alt="The domain model for a reference set selector between Customer (parent) and Group where the owner is 'default' (as in, the Customer refers to the Group)" >}}
 
-You can put a reference set selector in a Customer data view to allow the user to select the Group(s) to which the customer belongs. However, because the Customer is the owner of the association, you cannot put a reference set selector in a Group data view to select the Customer(s) in the Group.
+You can put a reference set selector in a Customer data view to allow the user to select the Group (or Groups) to which the customer belongs. However, because the Customer is the owner of the association, you cannot put a reference set selector in a Group data view to select the Customer (or Customers) in the Group.
 
 To allow you to both add a Group to a Customer, and add a Customer to a Group, you need to set ownership of the association to **Both**.
 
@@ -28,7 +28,7 @@ To allow you to both add a Group to a Customer, and add a Customer to a Group, y
 
 In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [grid column](/refguide/columns/). The association and related entity and attributes are displayed between square brackets, and colored blue.
 
-For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
+For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name** of the **Group** associated with the current **Customer**.
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/reference-set-selector.png" >}}
 
@@ -160,7 +160,7 @@ The default button can be triggered by a single or a double click a row.
 
 {{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
-The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
+The attribute path specifies which attribute (or attributes) of an associated entity is shown in the reference set selector. The path must follow one association of type reference set starting in the entity of the data view.
 
 {{% alert color="warning" %}}
 You cannot currently use non-persistable entities in a reference set selector.

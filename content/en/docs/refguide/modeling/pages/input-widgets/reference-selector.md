@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A **reference selector** is used to display and, optionally, allow the end-user to select the value of a one-to-one or one-to-many [association](/refguide/associations/) by selecting the associated object.
 
-A reference selector must be placed in a [data container](/refguide/data-widgets/). The object(s) retrieved by this container must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
+A reference selector must be placed in a [data container](/refguide/data-widgets/). The object (or objects) retrieved by this container must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
 
 For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 

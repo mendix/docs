@@ -70,7 +70,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
 
-{{< figure src="/attachments/developerportal/company-apps.png" >}}
+{{< figure src="/attachments/developerportal/company-apps.png" class="image-border"  width=80%  alt="Company Apps in MxDock">}}
 
 Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
 

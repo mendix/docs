@@ -12,7 +12,8 @@ draft: false
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app and is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat) for both platforms, with an additional image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images); DALL-E is currently only supported from OpenAI; Azure OpenAI only shows it in preview mode. Furthermore, the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings) can be used for a whole range of use cases, including retrieval augmented generation (RAG).
+The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images) and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
+Image generations with the DALL-E models is currently only supported from OpenAI; Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
 
 ### 1.1 Typical Use Cases 
 
@@ -57,12 +58,12 @@ Embeddings are commonly used for:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation of an RAG-based search.
+You can check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation of retrieval augmented generation (RAG).
 {{% /alert %}}
 
 ### 1.2 Features 
 
-Mendix provides dual API support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
+Mendix provides dual platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
 With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images) and the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). 
 
 ### 1.3 Limitations 
@@ -92,8 +93,8 @@ After you install the OpenAI Connector, you can find it in the **App Explorer**,
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_Configurations** to a page that is already part of your navigation. 
 3. Continue to set up your OpenAI configuration at runtime. Depending the type of your configuration, continue with one of the following sections:
-   * [OpenAI Configuration](#openai-configuration); or
-   * [Azure OpenAI Configuration](#azure-open-ai-configuration)
+   * [OpenAI Configuration](#openai-configuration)
+   * [Azure OpenAI Configuration](#azure-openai-configuration)
 
 #### 3.1.1 OpenAI Configuration {#openai-configuration} 
 
@@ -110,7 +111,7 @@ The following inputs are required for the OpenAI configuration:
 For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference).
 {{% /alert %}}
 
-#### 3.1.2 Azure OpenAI Configuration {#azure-open-ai-configuration} 
+#### 3.1.2 Azure OpenAI Configuration {#azure-openai-configuration} 
 
 The following inputs are required for the Azure OpenAI configuration: 
 
@@ -122,7 +123,7 @@ The following inputs are required for the Azure OpenAI configuration:
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
 | API key | This is the access token to authorize your API call. |
-| Key type | The type of token that is entered in the API key field. For Azure OpenAI two types of keys are currently supported; Microsoft Entra tokens and API keys. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if allowed by your organisation, you could use the Azure "api-key" authentication mechanism. For more information about how to obtain this key, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below.
+| Key type | The type of token that is entered in the API key field. For Azure OpenAI two types of keys are currently supported; `Microsoft Entra token` and `API key`. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if allowed by your organisation, you could use the Azure **api-key** authentication mechanism. For more information about how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
 
 {{% alert color="info" %}}
 For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects, one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
@@ -155,25 +156,35 @@ These microflows expect a [Configuration](#configuration-entity) entity, as well
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
+For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+
 #### 3.2.1 `Call Chat Completions API (without history)` 
 
-The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
-Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
+The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used.
+For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
+Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior.
+For more information on prompt engineering, see the [Read More](#read-more) section.
 
 #### 3.2.2 `Call Chat Completions API (with history)`
 
-The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow. 
+The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow:
 
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
 * `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
 
-The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant. For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
+The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 `Call Chat Completions API (advanced)`
 
-The microflow activity `Call Chat Completions API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
+The microflow activity `Call Chat Completions API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Three accompanying microflows are available to construct the input for the microflow:
 
-For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+* `ChatCompletionsRequest_Create` is used to create the request object.
+* `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
+* `ChatCompletionsMessageRequest_Create` is used to create the message objects.
+
+The construction of the request and handling of the response must be implemented in a custom way.
+For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -181,15 +192,21 @@ In order to implement image generations into your Mendix application, you can us
 
 These microflows, similar to the [Chat Completions](#chat-completions-configuration) case, expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating an image responses in the case of OpenAI configurations. In this case the field is optional, as OpenAI assumes a default value `dall-e-2`.
 
+For more inspiration or guidance on how to use the below-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+
 #### 3.3.1 `Call Image Generations API (single image)` 
 
-The microflow activity `Call Image Generations API (single image)` supports scenarios where a single image must be generated based on the provided prompt. In order to implement this operation, you must create a specialization of the [GeneratedImage](#generatedimage) entity. For every implementation of this microflow, an instance of this specialization has to be created first and must be passed into the `OutputImage` parameter of the microflow. If the call is successful, the image generated by the model will be stored into that object. For technical details, see the [Technical reference](#image-generations-single-technical) section.
+The microflow activity `Call Image Generations API (single image)` supports scenarios where a single image must be generated based on the provided prompt. In order to implement this operation, you must create a specialization of the [GeneratedImage](#generatedimage) entity. For every implementation of this microflow, an instance of this specialization has to be created first and must be passed into the `OutputImage` parameter of the microflow. If the call is successful, the image generated by the model will be stored into that object.
+For technical details, see the [Technical reference](#image-generations-single-technical) section.
 
 #### 3.3.2 `Call Image Generations API (advanced)`
 
-The microflow activity `Call Image Generations API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#image-generations-advanced-technical) section.
+The microflow activity `Call Image Generations API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. One accompanying microflow is available to construct the input for the microflow:
 
-For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
+* `ImageGenerationsRequest_Create` is used to create the request object.
+
+The construction of the request and handling of the response must be implemented in a custom way.
+For technical details, see the [Technical reference](#image-generations-advanced-technical) section.
 
 ### 3.4 Embeddings Configuration {#embeddings-configuration}
 
@@ -202,20 +219,27 @@ These microflows expect a [Configuration](#configuration-entity) entity, as well
 
 #### 3.4.1 `Call Embeddings API (single input)` 
 
-The microflow activity `Call Embeddings API (single input)` supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `Input` parameter of this microflow. Note that the parameter `EncodingFormmat` is optional; the current version of this operation only supports the float representation of the resulting vector. For technical details, see the [Technical reference](#embeddings-single-technical) section.
+The microflow activity `Call Embeddings API (single input)` supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `Input` parameter of this microflow. Note that the parameter `EncodingFormat` is optional; the current version of this operation only supports the float representation of the resulting vector.
+For technical details, see the [Technical reference](#embeddings-single-technical) section.
 
 #### 3.4.2 `Call Embeddings API (list input)` 
 
-The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce http overhead. Two accompanying microflows are available to help construct the input for the main microflow. 
+The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce http overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not have a return value. Two accompanying microflows are available to help construct the input for the main microflow: 
 
-* `DataBatch_Create` is used to create the wrapper that must be passed as input parameter. 
+* `DataBatch_Create` is used to create the wrapper object for the list of `DataChunk` objects that must be passed as input parameter. 
 * `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string)  to the `DataBatch` entity. 
 
-The resulting vectors returned after a successful API call will be stored in the same `DataChunk` entity. For technical details, see the [Technical reference](#embeddings-list-technical) section.
+ For technical details, see the [Technical reference](#embeddings-list-technical) section.
 
 #### 3.4.3 `Call Embeddings API (advanced)` 
 
-The microflow activity `Call Embeddings API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
+The microflow activity `Call Embeddings API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. Two accompanying microflows are available to help construct the input for the main microflow: 
+
+* `EmbeddingsRequest_Create` is used to create the request object.
+* `EmbeddingsInput_Create` is used to create the input object.
+
+The construction of the request and handling of the response must be implemented in a custom way.
+For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
 
 ## 4 Technical Reference 
 
@@ -237,11 +261,11 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion` | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
 | `ApiKey ` | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
-| `KeyType` | The type of token entered in the ApiKey field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-key-type) section. |
+| `KeyType` | The type of token entered in the ApiKey field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
 
-#### 4.1.2 `ApiKey` 
+#### 4.1.2 `ApiKey` {#apikey}
 
-This is a helper entity to edit the `ApiKey` to be stored in the [Configuration](#configuration-entity) entity. 
+This entity is only used for editing the `ApiKey` to be stored in the [Configuration](#configuration-entity) entity. 
 
 | Attribute | Description | 
 | ---| --- | 
@@ -249,7 +273,7 @@ This is a helper entity to edit the `ApiKey` to be stored in the [Configuration]
 
 #### 4.1.3 `AbstractUsage` {#abstractusage}
 
-This entity contains usage statistics for an API call.
+This entity contains usage statistics for an API call. Do not use this entity directly. Instead, use one of its specializations.
 
 | Attribute | Description |
 | ---| --- |
@@ -273,7 +297,7 @@ A chat completions request that creates a model response for the given chat conv
 
 | Attribute | Description |
 | ---| --- |
-| `Model` | This is required for requests to OpenAI. For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation.<br /> Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment. |
+| `Model` | This is required for requests to OpenAI. For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation.<br /> Model is **not** considered for request to Azure OpenAI, because the model is determined by the deployment. |
 | `Frequency_penalty` | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0.0. |
 | `Max_tokens` | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length. This attribute is optional. |
 | `Temperature` | This is the sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. |
@@ -282,19 +306,19 @@ A chat completions request that creates a model response for the given chat conv
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.6 `ResponseFormat` 
+#### 4.1.6 `ResponseFormat` {#responseformatchat}
 
-This specifies the format that the model must output. 
+This specifies the format that the chat completions model must output. 
 
 | Attribute | Description |
 | --- | --- |
-| `_Type` | This describes the format that the model must output. <br />For more information, see the [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) section. |
+| `_Type` | This describes the format that the chat completions model must output. <br />For more information, see the [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) section. |
 
-#### 4.1.7 `ChatCompletionsMessages` 
+#### 4.1.7 `ChatCompletionsMessages` {#chatcompletionsmessages}
 
 This is a wrapper for a list of messages comprising the conversation so far. 
 
-#### 4.1.8 `ChatCompletionsMessageRequest` 
+#### 4.1.8 `ChatCompletionsMessageRequest` {#chatcompletionsmessagerequest}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. Each instance contains a text that needs to be taken into account by the model when processing the completion request. 
 
@@ -312,7 +336,7 @@ This represents a chat completion response returned by the model, based on the p
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-#### 4.1.10 `Choice`
+#### 4.1.10 `Choice` {#choicechat}
 
 This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
@@ -321,11 +345,11 @@ This is a list of chat completion choices which are part of the response. There 
 | `Index` | This is the index of the choice in the list of choices. |
 | `Finish_reason` | This is the reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. |
 
-#### 4.1.11 `ChatCompletionsMessageResponse` 
+#### 4.1.11 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (assistant prompt). 
 
-#### 4.1.12 `ChatCompletionsUsage` 
+#### 4.1.12 `ChatCompletionsUsage` {#chatcompletionsusage}
 
 This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request with an additional attribute:
 
@@ -337,7 +361,7 @@ This is a specialization of the [AbstractUsage](#abstractusage). It contains the
 
 This entity functions as a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
 
-#### 4.1.14 `ChatCompletionsSessionMessage` 
+#### 4.1.14 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. 
 
@@ -366,7 +390,7 @@ This represents an image generations response returned by the model, based on th
 | --- | --- |
 | `Created` | This is the Unix timestamp (in seconds) of when the image generation was created. |
 
-#### 4.1.17 `Data` 
+#### 4.1.17 `Data` {#dataimage}
 
 This is a wrapper for a list of [images](#image) that are part of the [response](#imagegenerationsresponse). 
 
@@ -407,7 +431,7 @@ This is an embeddings request that generates a model response including a vector
 
 #### 4.1.21 `EmbeddingsInput` {#embeddingsinput}
 
-This is an entity that is used to contain a string input text for the embedding model. 
+This is an entity that is used to contain a string input text for the embeddings model. 
 
 | Attribute | Description |
 | ---| --- |
@@ -453,7 +477,7 @@ This entity represents a text string, usually a part of a larger base text or di
 
 | Attribute | Description |
 | ---| --- |
-| `Input` | The input text to embed will be mapped to the EmbeddingsInput entity as part of the request. | 
+| `Input` | The input text to embed will be mapped to the `EmbeddingsInput` entity as part of the request. | 
 | `EmbeddingVector` | String representation of the embedding vector of the input string. | 
 | `Index` | Used for mapping the EmbeddingVector from the response onto the correct DataChunk in the list. | 
 
@@ -480,7 +504,7 @@ This enumeration provides a list of supported API types.
 | `AzureOpenAI` | **Azure OpenAI** | 
 | `OpenAI` | **OpenAI** | 
 
-#### 4.2.2 `ENUM_KeyType` (#enum-key-type)
+#### 4.2.2 `ENUM_KeyType` (#enum-keytype)
 
 This enumeration provides a list of key types that can be used druing the connection to the APIs of Azure OpenAI. 
 
@@ -557,9 +581,11 @@ This enumeration provides a list of supported encoding formats for embeddings re
 | --- | --- | 
 | `_float` | **float** |
 
+{{% alert color="info" %}}In this case, the captions are the values that are relevant for the raw API calls, since enumeration key values do not allow certain characters or words.{{% /alert %}}
+
 ### 4.3 Activities {#activities} 
 
-Activities define the actions that are executed in a microflow or a nanoflow. For more information about the functional description of the actions, see the [Chat Completions Configuration](#chat-completions-configuration) section. 
+Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.3.1 Chat Completions 
 

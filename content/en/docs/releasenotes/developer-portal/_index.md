@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-- You can now create open portfolios or change the privacy setting of existing portfolios to open. Open portfolios are discoverable in the [Company Portfolios](/developerportal/portfolio-management/#my-porfolios-vs-company-portfolios) section and accessible for all company members.
+- Besides the already existing private and restricted portfolios, we now introduced open portfolios. An open portfolio is discoverable within your [company portfolios](/developerportal/portfolio-management/#my-porfolios-vs-company-portfolios) and accessible for all company members.
 
 ### January 18
 

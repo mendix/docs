@@ -4,13 +4,15 @@ url: /developerportal/operate/logs/
 category: "Operations"
 weight: 30
 description: "Describes how to see the logs from your app."
-tags: ["Operate", "App", "Developer Portal", "SAP", "Mendix Cloud"]
+tags: ["Operate", "App", "Developer Portal", "Mendix Cloud"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
 From the **Logs** page, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
+
+{{% alert color="info" %}}This page describes logs for apps deployed to Mendix Cloud; Mendix Cloud is the default Mendix deployment for a licensed app.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Logs** page displays links to the corresponding page on SAP BTP.<br><br>To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For details on setting up Private Cloud logs, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).{{% /alert %}}
 
 To access the **Logs** page, open your app in the [Developer Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane. Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.
 
@@ -19,10 +21,6 @@ To view logs, you must have **Access to Monitoring** permission. For more inform
 {{% /alert %}}
 
 ## 2 Apps Deployed to Mendix Cloud
-
-{{% alert color="info" %}}
-Mendix Cloud is the default Mendix deployment for a licensed app.
-{{% /alert %}}
 
 When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. On the **Logs** page, you can view archived logs, view the live log, and view log access activity.
 
@@ -99,7 +97,3 @@ Archived logs are not available for Free Apps. The **Logs** page displays sample
 {{< figure src="/attachments/developerportal/operate/logs/free-app.png" alt="" >}}
 
 You can still interact with the sample data, and you can click **View Live Log** to access a live log of your deployed Free App.
-
-## 5 App Deployed to Other Clouds
-
-Logs are not available in the Development Portal for apps running on any clouds that are not mentioned above. To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For details on setting up Private Cloud logs, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).

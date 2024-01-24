@@ -31,7 +31,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Usage
 
-### 3.1 Adding the `Administration.Account_Overview` Page to the Navigation {#add-account-overview}
+### 3.1 Adding the Account Overview Page to the Navigation {#add-account-overview}
 
 The `Administration.Acount_Overview` page offers you an overview to view all the accounts in the app. To add the page to the navigation of the app, do as follows:
 
@@ -47,11 +47,23 @@ If you run the app, you can see the new page in the navigation.
 
 ### 3.2 Adding Users as an Administrator
 
-1. Make sure that you [added the `Administration.Account_Overview` page to the navigation](#add-account-overview).
+1. Make sure that you [added the account overview page to the navigation](#add-account-overview).
+
 2. Run the app and log in to the app as the [Administrator](/refguide/app-security/#administrator).
+
 3. Go to the account overview page.
-4. To add a new local user, click **New local user**, fill in the user data, and click **Save**.
-5. To add a new web service user, click **New web service user**, fill in the user data, and click **Save**.
+
+4. If the new user does not need to consume the published web service of your app, click **New local user** to add the new user.
+
+   {{% alert color="info" %}}A local user can only log in to your app using a web browser. Their user name and password cannot be used for authentication to consume a published web service of your app.{{% /alert %}}
+
+5. If the new user needs to consume the published web service of your app, click **New web service user** to add the new user.
+
+   {{% alert color="info" %}}A web service user can not log into your app using a web browser. Their user name and password can only be used for authentication to consume a published web service of your app.{{% /alert %}}
+
+6. In the **New Account** dialog box, fill in the fields.
+
+7.  Click **Save**.
 
 ## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 

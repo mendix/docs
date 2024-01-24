@@ -33,13 +33,13 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ### 3.1 Adding the Account Overview Page to the Navigation {#add-account-overview}
 
-The `Administration.Acount_Overview` page offers you an overview to view all the accounts in the app. To add the page to the navigation of the app, do as follows:
+On the `Administration.Acount_Overview` page, you can view and mange all the accounts in your app. To add the page to the navigation of the app, do as follows:
 
 1. In App Explorer, open **Navigation**.
 2. In **Menu**, click **New item**. The **New Menu Item** dialog box opens.
 3. Enter a caption.
 4. Select an icon.
-5. In the On click drop-list, select **Show a page**. The **Select web page** dialog box opens.
+5. In the **On click** drop-list, select **Show a page**. The **Select web page** dialog box opens.
 6. Find **Account_Overview** using the search box on the top and select it. The **Select web page** dialog box closes.
 7. Click **OK** to save the settings for the new menu item.
 
@@ -59,9 +59,9 @@ If you run the app, you can see the new page in the navigation.
 
 5. If the new user needs to consume the published web service of your app, click **New web service user** to add the new user.
 
-   {{% alert color="info" %}}A web service user can not log into your app using a web browser. Their user name and password can only be used for authentication to consume a published web service of your app.{{% /alert %}}
+   {{% alert color="info" %}}A web service user cannot log into your app using a web browser. Their user name and password can only be used for authentication to consume a published web service of your app.{{% /alert %}}
 
-6. In the **New Account** dialog box, fill in the fields.
+6. In the **New Account** dialog box, fill the user data.
 
 7.  Click **Save**.
 

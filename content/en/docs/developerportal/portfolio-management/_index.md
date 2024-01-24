@@ -36,8 +36,8 @@ Currently, the privacy settings of a portfolio can be private, restricted or ope
 | Portfolio type | Visible in the **Company Portfolios** section?               | How to join the portfolio?                                   |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). |
-| Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request access by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
-| Open           | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request access by clicking **Request to Join** from the left side menu after opening the portfolio.. A Portfolio Manager needs to approve this [access request](#access-requests). |
+| Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request to join by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests). |
+| Open           | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | All company members can access an open portfolio without being a portfolio member. A Portfolio Manager can [add users to the portfolio](#add-users). Users can also request to join by clicking **Request to Join** from the left side menu after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests). |
 
 A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
 
@@ -495,7 +495,7 @@ The **Members** tab lists all the users that have portfolio access. You can sear
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
-| Action | Portfolio Manager | Contributor | Viewer |
+| Action | Portfolio Manager | Contributor | Viewer* |
 | --- | --- | --- | --- |
 | Invite users | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |

@@ -8,9 +8,9 @@ tags: ["studio pro", "consumed business event", "published business event"]
 
 ## 1 Introduction
 
-Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/modules/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/modules/business-events/) for the complete documentation. 
+This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/services/business-events/) for the complete documentation. 
 
 {{% alert color="warning" %}}
 You must have the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module installed for it to work properly. If it is not installed, you will be prompted to download it and add it to your app.
@@ -32,7 +32,7 @@ A **Published Business Event Service** is the document defining various events, 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/published-business-event-service.png" >}}
 
-See the [Creating a Published Business Event Service](/appstore/modules/business-events/#create-be) section of *Mendix Business Events* for more extensive documentation.
+See the [Creating a Published Business Event Service](/appstore/services/business-events/#create-be) section of *Mendix Business Events* for more extensive documentation.
 
 ##### 2.1.2 Consumed Business Event Services {#consumed-event-service-doc}
 
@@ -40,7 +40,7 @@ To subscribe to a business event, you first need to create a **Consumed Business
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/consumed-business-event-service.png" >}}
 
-See the [Create a Consumed Business Event Service](/appstore/modules/business-events/#consume-be) section of *Mendix Business Events* for more extensive documentation.
+See the [Create a Consumed Business Event Service](/appstore/services/business-events/#consume-be) section of *Mendix Business Events* for more extensive documentation.
 
 #### 2.2 Business Event Services in Studio Pro 9.24 and Above {#be-924}
 
@@ -52,7 +52,7 @@ To create a new business service in Studio Pro 9.24 and above, right-click on a 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/new-business-event-service.png" >}}
 
-See the [Creating a New Business Event Service](/appstore/modules/business-events/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
+See the [Creating a New Business Event Service](/appstore/services/business-events/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
 
 ##### 2.2.2 Using an Existing Business Event Service {#use-existing}
 
@@ -60,4 +60,4 @@ To create a new business service in Studio Pro 9.24 and above, right-click on a 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/existing-business-event-service.png" >}}
 
-See the [Using an Existing Business Event Service](/appstore/modules/business-events/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.
+See the [Using an Existing Business Event Service](/appstore/services/business-events/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.

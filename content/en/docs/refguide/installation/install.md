@@ -27,7 +27,7 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
+2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro. Make sure to download the version for your operating system. 
 
 ## 3 Installing Mendix Studio Pro {#install}
 

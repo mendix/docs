@@ -19,7 +19,7 @@ To see more information about the pipeline, click **Details** ({{% icon name="no
 This shortcode has two attributes:
 
 * `name` (required) — This must exactly match the name of the file in the *docs/static/mx-icons* library.
-* `color` (optional) – By default, the icon has the same color as the surrounding text. You can override this by specifying an optional `color` attribute, like this: {{% icon name="alert-circle" color="red" %}}. You can set the color to green, red, blue, gray, yellow, purple, or violet.
+* `color` (optional) – By default, the icon has the same color as the surrounding text. You can override this by specifying an optional `color` attribute, like this: {{% icon name="alert-circle" color="red" %}}. You can set the color to green, red, blue, gray, yellow, or purple.
 
 {{% alert color="info" %}}For details on the icon style guidance, see the [Documentation Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+and+Icons#Icons).{{% /alert %}}
 

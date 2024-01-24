@@ -41,7 +41,7 @@ You can start using MendixChat by clicking one of the demo questions. You can al
 The following steps present an example of how you can interact with MendixChat by asking your own question:
 
 1. Type the following question in the chatbox: `When should I use a calculated attribute?`.
-2. Press <kbd>Enter</kbd> (or <kbd>Ctrl</kbd> + <kbd>Enter</kbd>), or the **Ask** button, to send the question.
+2. Press <kbd>Enter</kbd> or the **Ask** button to send the question.
 
     {{% alert color="info" %}} Optionally, you can use <kbd>Shift</kbd> + <kbd>Enter</kbd> to add a new line to your question. {{% /alert %}}
 

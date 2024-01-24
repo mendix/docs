@@ -323,17 +323,33 @@ Defines the maximum number of threads that can process active workflow instances
 
 Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
-### 7.3 Events {#events}
+### 7.3 Event Handlers {#event-handlers}
+
+An event handler allows you to specify a microflow which is triggered when the subscribed event(s) occurs. Each event handler can subscribe to multiple
+events and there can be multiple event handlers. An event is triggered when the workflow or its activity goes through transformations which warrant the event.
+
+An event handler has the following configuration:
+
+   * **Name** describes the event handler
+   * **Documentation** provides more information regarding the usage of the event handler
+   * **When section** allows you to select multiple workflow event types
+   * **Microflow** allows you to select a microflow that is triggered for each of the above selected workflow event types
+
+You can use the data from the event handler microflows to build audit trails or for logging purposes. For example, it can be useful for a manager to see progress of an employee onboarding process.
+
+For more information on workflow events, see [Workflow Events](/refguide/workflow-events/).
+
+### 7.4 Events {#events} (Deprecated)
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 
 
 Security settings of workflows and user tasks allow you to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
 
-#### 7.3.1 Workflow State Change {#workflow-state-change}
+#### 7.4.1 Workflow State Change {#workflow-state-change}
 
 A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
 
-#### 7.3.2 User Task State Change {#user-task-state-change}
+#### 7.4.2 User Task State Change {#user-task-state-change}
 
 A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
 

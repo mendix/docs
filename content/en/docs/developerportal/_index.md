@@ -64,7 +64,7 @@ The navigation pane is divided into four main categories, which correspond with 
 * [App Insights](/developerportal/app-insights/)
 * [Deployment](/developerportal/deploy/general/)
 
-{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" >}}
+{{< figure src="/attachments/developerportal/navigation-pane.png" class="image-border" max-width=50%  alt="The navigation pane" >}}
 
 ## 5 Company Buzz and Apps {#my-company-apps}
 

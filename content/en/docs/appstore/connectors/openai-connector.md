@@ -206,7 +206,7 @@ The microflow activity `Call Embeddings API (single input)` supports scenarios w
 
 #### 3.4.2 `Call Embeddings API (list input)` 
 
-The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce http overhead. Two accompanying microflows are available to construct the input for the microflow. 
+The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce http overhead. Two accompanying microflows are available to help construct the input for the main microflow. 
 
 * `DataBatch_Create` is used to create the wrapper that must be passed as input parameter. 
 * `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string)  to the `DataBatch` entity. 
@@ -614,15 +614,15 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 | --- | --- | 
 | `Configuration`, `ImageGenerationsRequest` | `ImageGenerationsResponse` | 
 
-The microflow `ImageGenerationsRequest_Create` may be used here to create and handle the input requesst in a custom way.
+The microflow `ImageGenerationsRequest_Create` may be used here to create and handle the input request in a custom way.
 
 #### 4.3.3 Embeddings
 
-The embeddings API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more text strings as input and generates a structure of model-generated vector embeddings as output; per input string one vector is returned. Depending on the use case there may be a need of generating an embedding for a single text at a time, whereas in the case of processing larger amount of data, bigger texts or data sets will be split up in discrete chunks, for which embeddings can be generated using batches of multiple input texts. The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. 
+The embeddings API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more text strings as input and generates a structure of model-generated vector embeddings as output; per input string one vector is returned. Depending on the use case, there may be a need of generating an embedding for a single text at a time, whereas in the case of processing larger amount of data, bigger texts or data sets will be split up in discrete chunks, for which embeddings can be generated using batches of multiple input texts. The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. 
 
 ##### 4.3.3.1 Call Embeddings API (single input) {#embeddings-single-technical} 
 
-Use the microflow `Embeddings_Execute_SingleInput` to execute a simple embeddings API call with a single string input. The output will be the string representation of the vector embedding of the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output will be the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 | Input | Output | 
 | --- | --- | 
@@ -630,13 +630,13 @@ Use the microflow `Embeddings_Execute_SingleInput` to execute a simple embedding
 
 ##### 4.3.3.2 Call Embeddings API (list input) {#embeddings-list-technical}
 
-Use the microflow `Embeddings_Execute_ListInput` to execute embeddings API call with a [DataBatch](#databatch) input with a list of text strings as [DataChunks](#datachunk) attached. The resulting embedding vectors returned by the model end up in the EmbeddingVector string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for the information of what encoding formats are suported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API call with a [DataBatch](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for the information of what encoding formats are suported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 | Input | Output | 
 | --- | --- | 
 | `DataBatch`, `Configuration`, `Model`, `ENUM_EncodingFormat_Embeddings` | nothing | 
 
-The `DataBatch` is a wrapper object for the ordered list of text strings for which the embeddings are generated. You can use `DataBatch_Create` to create a new `Databatch`  and with `DataChunk_Create` new `DataChunk` objects will be added to the wrapper. The order is not relevant technically here; each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the microflow itself has no return value.
+The `DataBatch` is a wrapper object for the list of text strings for which the embeddings are generated. You can use `DataBatch_Create` to create a new `Databatch`  and with `DataChunk_Create` new `DataChunk` objects will be added to the wrapper. The order is not relevant technically here; each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the microflow itself has no return value.
 
 ##### 4.3.3.3 Call Embeddings API (Advanced) {#embeddings-advanced-technical}
 

@@ -12,10 +12,10 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "Mendix Cloud"]
 
 From the **Logs** page, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-To access the **Logs** page, open your app in the [Developer Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane.
+To access the **Logs** page, open your app in the [Developer Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane. Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.
 
-{{% alert color="warning" %}}
-To view logs, you must have the **Access to Monitoring** permission enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+{{% alert color="info" %}}
+To view logs, you must have **Access to Monitoring** permission. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 {{% /alert %}}
 
 ## 2 Apps Deployed to Mendix Cloud
@@ -30,11 +30,19 @@ When your app is deployed to Mendix Cloud, it automatically creates daily app an
 
 For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
-Logs on Mendix Cloud are rotated and archived every day. For each day, you can download the app log or the access log by clicking the corresponding **Download** button ({{% icon name="download-bottom" %}}). File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
+### 2.1 Archived App and Access Logs
 
-By default, archived logs are sorted by date; the current log is the first one listed. They are stored for six months. You can manually click through the archived logs or use the search field to find logs for a specific date.
+{{% alert color="info" %}}For apps deployed to Mendix Cloud, logs are rotated and archived every day. They are retained for six months.{{% /alert %}}
+
+For each day, you can download the app log or the access log by clicking the corresponding **Download** button ({{% icon name="download-bottom" %}}).
+
+File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
+
+By default, archived logs are sorted by date; the current log is the first one listed. You can manually click through the archived logs or use the search field to find logs for a specific date.
 
 {{< figure src="/attachments/developerportal/operate/logs/logs-filter.png" alt="" >}}
+
+### 2.2 Live Log
 
 Click **View Live Log** to access your app's log in real time. You can use the drop-down menus to adjust the log sources and log levels that appear in the live log.
 
@@ -43,6 +51,8 @@ Click **View Live Log** to access your app's log in real time. You can use the d
 {{% alert color="info" %}}
 The live log displays in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
+
+### 2.3 Activity Log
 
 At the bottom of the **Logs** page, there is an activity log. This section reports data on who has viewed or downloaded the logs. You can see which log was interacted with, by whom, and when. If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download the activity log data as a CSV file.
 

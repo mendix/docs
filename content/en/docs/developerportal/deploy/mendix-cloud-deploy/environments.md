@@ -160,7 +160,7 @@ In the **Services** tab, the Technical Contact can determine which custom servic
 
 ### 6.1 Available Services
 
-One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
 
 ### 6.2 Enabling Custom Services
 

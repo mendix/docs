@@ -18,7 +18,7 @@ This activity is in Studio Pro 10.6 and above.
 
 The **Import data from file** activity can be used in a microflow to integrate data from an Excel file into your Mendix app. The activity can be found under **Integration activities** in the **Toolbox**.
 
-{{% alert color="warning" %}}Before using this activity, make sure you have created a Data Importer document using the [Data Importer extension](/appstore/modules/data-importer/).{{% /alert %}}
+{{% alert color="warning" %}}Before using this activity, make sure you have created a Data Importer document using the [Data Importer extension](/appstore/modules/data-importer-extension/).{{% /alert %}}
 
 ## 2  Properties
 
@@ -29,7 +29,7 @@ Drag the **Import data from file** activity into your microflow and double-click
 The following are the properties in the **Input** section:
 
 * **File** – name of file from which you want to import data
-* **Data importer document** – the [Data Importer document](/appstore/modules/data-importer/) created by going to **Add other** > **Data Importer**
+* **Data importer document** – the [Data Importer document](/appstore/modules/data-importer-extension/) created by going to **Add other** > **Data Importer**
 
 The following are the properties in the **Output** section:
 

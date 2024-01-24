@@ -4,7 +4,7 @@ url: /appstore/connectors/openai-connector
 linktitle: "OpenAI"
 weight: 
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG"], 
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG"]
 draft: false 
 ---
 
@@ -758,7 +758,6 @@ For developers who want to configure the [EmbeddingsRequest](#embeddingsrequest)
 
 This option can be used if the default values and behaviour of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings, like usage metrics. 
 The following flows may be used in order to construct and handle the required inputs: `EmbeddingsRequest_Create` and `EmbeddingsInput_Create`.
-
 
 ## 5 Showcase Application 
 

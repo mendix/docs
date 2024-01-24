@@ -64,13 +64,13 @@ The navigation pane is divided into four main categories, which correspond with 
 * [App Insights](/developerportal/app-insights/)
 * [Deployment](/developerportal/deploy/general/)
 
-{{< figure src="/attachments/developerportal/navigation-pane.png" class="image-border" max-width=50%  alt="The navigation pane" >}}
+{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" >}}
 
 ## 5 Company Buzz and Apps {#my-company-apps}
 
 In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
 
-{{< figure src="/attachments/developerportal/company-apps.png" >}}
+{{< figure src="/attachments/developerportal/company-apps.png" class="image-border"  width=80%  alt="Company Apps in MxDoc">}}
 
 Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
 

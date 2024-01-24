@@ -285,7 +285,19 @@ This is the response entity of the `GetIngestionJob` action.
 
 This is the response entity of the `StartIngestionJob` action.
 
-#### 4.1.26 IngestionJob {#ingestion-job}
+#### 4.1.26 StartIngestionJob {#start-ingestion-job}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity.|
+
+#### 4.1.27 GetIngestionJob {#start-ingestion-job}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity.|
+
+#### 4.1.28 IngestionJob {#ingestion-job}
 
 This is the response entity of the `IngestionJob` action.
 
@@ -295,17 +307,28 @@ This is the response entity of the `IngestionJob` action.
 | `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve.|
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
 | `Status` | The `Text` attribute contains the status of the ingestion job.|
-| `Statistics` | The `Text` attribute contains statistics about the ingestion job.|
 | `StartedAt` | The `Timestamp` at which the ingestion job started.|
 | `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated.|
 
-#### 4.1.27 FailureReason {#failure-reason}
+#### 4.1.29 FailureReason {#failure-reason}
 
 The `FailureReason` entity holds the reason an interaction failed.
 
 | Attribute | Description |
 | --- | --- |
 | `Text` | The `Text` attribute describes reason the interaction failed.|
+
+#### 4.1.30 IngestionJobStats {#ingestion-job-stats}
+
+The `IngestionJobStats` entity contains information about the failure of the interaction.
+
+| Attribute | Description |
+| --- | --- |
+| `numberOfDocumentsDeleted` | The `Long` attribute holds the number of documents that were deleted.|
+| `numberOfDocumentsFailed` | The `Long` attribute holds the number of documents that failed to be ingested.|
+| `numberOfDocumentsScanned` | The `Long` attribute holds the number of documents that were scanned.|
+| `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed.|
+| `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed.|
 
 ### 4.2 Activities {#activities}
 

@@ -15,7 +15,7 @@ The [Portfolio Management](https://portfolio.mendix.com) tool is available to al
 
 When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Get Started** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
 
-### 2.1 My Portfolios vs Company Portfolios
+### 2.1 My Portfolios vs Company Portfolios {#my-porfolios-vs-company-portfolios}
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**. A section only appears if there is at least one [portfolio card](#portfolio-card) in that section.
 
@@ -25,7 +25,7 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 * **Company Portfolios** – this section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
   * Restricted portfolios – clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
-  * Open portfolios – you can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as a Viewer of the portfolio. To join an open portfolio, click **Request to Join** from the left side menu after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).
+  * Open portfolios – you can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).
 
 ### 2.2 Portfolio Cards {#portfolio-card}
 
@@ -39,7 +39,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). |
 | Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | <ul><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
-| Open           | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | <ul><li>All company members can access an open portfolio without being a portfolio member. They have the same access rights as a Viewer of the portfolio.</li><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** from the left side menu after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
+| Open           | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | <ul><li>All company members can access an open portfolio without being a portfolio member. They have the same access rights as the Viewer of the portfolio.</li><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
 
 A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
 
@@ -521,7 +521,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 | Link and unlink epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View linked epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 
-\* For open portfolios, all company members (other than the portfolio members) have the same rights as a Viewer.
+\* For open portfolios, all company members (other than the portfolio members) have the same rights as the Viewer of the portfolio.
 
 #### 5.1.1 Leaving the Portfolio
 

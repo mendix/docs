@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvement
 
-* We added an improvement to enable users to register endpoints using OpenAPI 3.0. Previously, only OpenAPI 2.0 was supported.
+* Users can now register endpoints using OpenAPI 3.0. Previously, only OpenAPI 2.0 was supported.
 
 ### January 11, 2024
 

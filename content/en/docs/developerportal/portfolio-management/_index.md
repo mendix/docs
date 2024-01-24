@@ -21,11 +21,11 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 {{< figure src="/attachments/developerportal/portfolio-management/portfolio-landscape-overview.png" class="image-border" alt="portfolio-landscape-overview" >}}
 
-* **My Portfolios** – this section shows all the portfolios to which you have access. Clicking a portfolio card opens the portfolio.
+* **My Portfolios** – This section shows all the portfolios where you are a portfolio member. Clicking a portfolio card opens the portfolio.
 
-* **Company Portfolios** – this section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
-  * Restricted portfolios – clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
-  * Open portfolios – you can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).
+* **Company Portfolios** – This section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
+  * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
+  * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).
 
 ### 2.2 Portfolio Cards {#portfolio-card}
 

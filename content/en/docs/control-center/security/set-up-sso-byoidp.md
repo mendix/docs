@@ -192,7 +192,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-3.png" >}}
 
-8. Close the sidebar with the **X** in the top-right corner. This returns you to the app registration details page.
+8. Close the sidebar with the ({{% icon name="remove" %}}) in the top-right corner. This returns you to the app registration details page.
 9. Click **Certificates & secrets** in the left-hand menu bar.
 10. Click **New client secret** in the page that opens.
 

@@ -42,7 +42,7 @@ The **Source** defines the way the objects are retrieved:
 
 | Option | Description |
 | --- | --- |
-| By association | Retrieve the object(s) associated to an object by following an association. Note that when objects and/or their associations are changed and not committed, the data is not yet available in the database. By retrieving **By association**, the data that is not committed can be retrieved. For more information, see the [Retrieve by Association Properties](#association) section below.  |
+| By association | Retrieve the object (or objects) associated to an object by following an association. Note that when objects and/or their associations are changed and not committed, the data is not yet available in the database. By retrieving **By association**, the data that is not committed can be retrieved. For more information, see the [Retrieve by Association Properties](#association) section below.  |
 | From database | Retrieve objects from the database. This can only be used for [persistable objects](/refguide/persistability/). For more information, see the [Retrieve from Database Properties](#from-database) section below. 
 
 {{% alert color="warning" %}}

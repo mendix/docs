@@ -46,7 +46,7 @@ Due to a library update, your Native Template must be aligned with Native Mobile
 If you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:
 
 1. Open your project in AppCenter and go to **Build** menu item.
-1. In **all branches**, click the wrench icon.
+1. In **all branches**, click the wrench icon ({{% icon name="wrench" %}}).
 1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):
     1. Name: **JAVA_HOME**.
     1. Value: **$(JAVA_HOME_11_X64)**.

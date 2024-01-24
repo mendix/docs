@@ -20,7 +20,7 @@ The page shows you a summary of your apps.
 
 Click an app tile to see more details about the app.
 
-By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
+By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
 
 * Edit details such as app name and description
 * Invite users to work on the app
@@ -54,7 +54,7 @@ In the **User Management** section, administrators can manage user accounts and 
 
 As the administrator, you can perform the following actions:
 
-* In the **User Management** tab, you can create and edit accounts for your local users and API users (that is, accounts that are used by an API service to access your Private Mendix Platform). By clicking the ellipsis (**…**) by an account, you can quickly perform a number of actions:
+* In the **User Management** tab, you can create and edit accounts for your local users and API users (that is, accounts that are used by an API service to access your Private Mendix Platform). By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) by an account, you can quickly perform a number of actions:
 
     * Edit a user's name and email
     * Assign or remove user roles

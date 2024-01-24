@@ -1,13 +1,17 @@
 ---
-title: "Send REST Request (beta) Activity"
+title: "Send REST Request (beta)"
 url: /refguide/send-rest-request/
 tags: ["studio pro", "integration activity", "Send REST request"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
-The **Send REST request (beta)** activity allows you to send a REST request, which is configured in a [Consumed REST Service (beta) document](/refguide/consumed-rest-services-beta/).
+The **Send REST request (beta)** activity allows you to send a REST request, which is configured in a [Consumed REST Service (beta)](/refguide/consumed-rest-services-beta/) document.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/rest-microflow.png" >}}
 

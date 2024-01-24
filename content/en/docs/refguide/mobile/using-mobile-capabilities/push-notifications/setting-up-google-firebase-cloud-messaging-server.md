@@ -99,7 +99,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_cloud_messaging.png"   width="350"  >}}
 
-1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
+1. On this tab, upload either your APNs key or your APNs certificate (or certificates) as configured in your [Apple Developer account](https://developer.apple.com).
 
 ## 6 Setting Up a Service Account {#setting-up-a-service-account}
 

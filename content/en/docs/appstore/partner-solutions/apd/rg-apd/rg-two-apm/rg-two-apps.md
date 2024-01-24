@@ -13,13 +13,13 @@ It is possible to search on an app's name or select one from the overview direct
 
 Selecting an app in the overview displays the overview of the [environments](/appstore/partner-solutions/apd/rg-two-environments/) for that app.
 
-In order to find a specific application faster, it is possible to mark it as a favorite by clicking the star icon on the application tile. Favorite applications are shown first in the overview.
+In order to find a specific application faster, it is possible to mark it as a favorite by clicking **Favorite** ({{% icon name="star" %}})  on the application tile. Favorite applications are shown first in the overview.
 
 In case an application is not visible in this overview, click **Can’t find your App?** in the upper-right corner.
 
 ## 2 Tour Guides and Videos
 
-APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting the **Tour** option.
+APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the {{% icon name="question-circle" %}} icon next to your profile image and selecting the **Tour** option.
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/Documentation.png" >}}
 
@@ -64,6 +64,6 @@ The APM manager runs automatic cleanups. These remove monitoring data automatica
 * Medium – 1 week (for working data like performance recordings and logs)
 * Long – 1 year (for historic data like statistics)
 
-Data can be preserved using the push-pin button. This prevents automatic cleanup.
+Data can be preserved using the **Pin** ({{% icon name="pin" %}}) button. This prevents automatic cleanup.
 
 Environments are automatically deleted if they are not used for a year.

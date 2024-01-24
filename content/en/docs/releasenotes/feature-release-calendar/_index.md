@@ -17,7 +17,7 @@ The new features were divided into these major themes, which are described in th
 {{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).
+"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 2 Continuous Collaboration {#continuous}

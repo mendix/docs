@@ -8,7 +8,7 @@ tags: ["studio pro", "data importer", "excel importer"]
 
 ## 1 Introduction
 
-The Data Importer allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer document created earlier to import data from input Excel file(s).
+The Data Importer allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer document created earlier to import data from input Excel file (or files).
 
 {{% alert color="info" %}}
 The Data Importer is available in Studio Pro 10.6 and above.
@@ -85,7 +85,7 @@ The Data Importer document creation is complete and can be used to [import data 
 
 ## 3 Importing Data in a Microflow {#import-microflow}
 
-Use the previously created Data Importer document to import data from your Excel file(s) in a microflow. To do this, do the following:
+Use the previously created Data Importer document to import data from your Excel file (or files) in a microflow. To do this, do the following:
 
 1. Create a new microflow and drag the **Import data from file** activity into it.
 

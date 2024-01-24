@@ -5,9 +5,24 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.2
+
+**Release date: January 16, 2024**
+
+### Improvements
+
+* Apps built with Studio Pro [10.6](/releasenotes/studio-pro/10.6/) can now be tested using ATS.
+* We upgraded to Studio Pro [8.18.27](/releasenotes/studio-pro/8.18/#81827) for security fixes.
+* We addressed support for the MacOs versions (11, 12, 13) and resolutions (2K, 4K) for Selenium 4.
+* We added support for the [Accordion](/appstore/widgets/accordion/) widget.
+
+### Deprecations
+
+* Selenium version 3 is now deprecated and will be disabled after April 30, 2024.
+
 ## 2.29.1
 
-**Release date: Nov 7, 2023**
+**Release date: November 7, 2023**
 
 ### Improvements
 
@@ -960,7 +975,7 @@ The same holds for the function parameters.
 ### Fixes
 
 * Due to an artificial limitation only the first 20 fields were shown when editing a dataset. This limitation has been removed.
-* When a test step in the logs refers to a function it is not possible to open/edit this function. However, due to a bug the edit icon was still shown for such test steps. This has been fixed.
+* When a test step in the logs refers to a function it is not possible to open/edit this function. However, due to a bug the **Edit** icon ({{% icon name="pencil" %}}) was still shown for such test steps. This has been fixed.
 * When a test case with an empty test step in the middle was executed, the test case failed with a null pointer exception. This is now fixed and the empty test step is not interfering with the execution.
 * In some cases the tooltip for action/parameter documentation was not showing the full description. This is now fixed.
 * When pasting items in the repository it was possible to click the paste button multiple times. This is fixed by adding a progress bar to prevent pasting an item multiple times by accident.
@@ -1022,7 +1037,7 @@ Mendix applications built on Mendix 7.11 or 7.12 can now be tested and recorded 
 * We added support for the Radiobutton List widget and for the Input Reference Set Selector widget. They can be recorded as well as tested with the standard ATS function.
 * We now support the newest macOS version: macOS High Sierra.
 * You can now select multiple items in the search dialog box by holding down <kbd>Ctrl</kbd> while clicking the items. This is possible when you are adding a test case/suite to a test suite, adding test cases/suites to a story, and adding stories to a test case/suite.
-* A parameter of the text type now also shows the edit icon when it is empty.
+* A parameter of the text type now also shows the **Edit** icon ({{% icon name="pencil" %}}) when it is empty.
 
 ### Fixes
 
@@ -1064,7 +1079,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 * The PDF report still showed the result category **Unknown**, which was removed from the dashboard some time ago. To keep the reporting consistent between the dashboard and the PDF, we removed the category Unknown from the PDF report as well.
 * Under rare circumstances, the test suite results progress bar (shown on the dashboard) turned green, even though the percentage of passed test cases was below 100%. This is now fixed, and the progress bar will only be green if the percentage of past cases is exactly 100%.
 * When recording the **Click Widget button** action (which is used to click special list view, template grid, and data grid buttons such as search, clear, reset, etc.), the recorded action did not save the information about which button was clicked in the test step. This is now fixed.
-* Moving items from one project to another was not possible if the items' parent folder(s) still existed in another app. This is now possible. Please note that although importing items that already exist in another app is not allowed, you can circumvent this by, for example, copying a test case from app A, exporting the copy from app A, deleting the copy from app A, then importing the copy into app B.
+* Moving items from one project to another was not possible if the items' parent folder (or folders) still existed in another app. This is now possible. Please note that although importing items that already exist in another app is not allowed, you can circumvent this by, for example, copying a test case from app A, exporting the copy from app A, deleting the copy from app A, then importing the copy into app B.
 * In some rare circumstances, importing a complex test set failed due to an internal error. This is now fixed.
 * Exporting items that contained empty test steps (for example, a test step was added but no action was selected for the test step) was not possible. Items with empty test steps can now be exported.
 * A validation check was missing that allowed users to execute a test case with a dataset that has no records. This execution was followed by an error that did not provide much information to end-users. We added an extra validation check and improved the message that the user sees.

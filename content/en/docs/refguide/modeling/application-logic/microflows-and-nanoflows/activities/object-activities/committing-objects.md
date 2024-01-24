@@ -19,13 +19,13 @@ A Mendix commit does not always behave like a database commit. See [How Commits 
 
 ## 2 Properties
 
-An example of commit object(s) properties is represented in the image below:
+An example of **Commit object(s)** properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The commit object(s) properties pane consists of the following sections:
+The **Commit object(s)** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -56,9 +56,9 @@ Default: **Yes**
 
 Nanoflows do not have this property.
 
-If the commit object(s) activity is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
+If the **Commit object(s)** activity is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
 
-If the commit object(s) activity is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
+If the **Commit object(s)** activity is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
 
 ### 3.3 Refresh in Client{#refresh-in-client}
 

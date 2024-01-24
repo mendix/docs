@@ -43,7 +43,7 @@ Now you need to enter data for the chart.
     {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-dynamic-series/charts-dynamic-series-generate-pages.png" alt="Generate Series and Value overview and data entry pages" >}}
 
 4. Connect the **Series_Overview** page to the navigation.
-5. Click the play button (**Run Locally**) to run the app locally.
+5. Click **Run Locally** ({{% icon name="controls-play" %}}) to run the app locally.
 6. Enter some sample data.
 
     {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-dynamic-series/charts-dynamic-series-data-entry.png" alt="Enter data for chart" >}}

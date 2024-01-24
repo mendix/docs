@@ -36,7 +36,7 @@ When migrating your app, keep the following considerations in mind:
 Before following the steps described on this page, make sure that you have met the following prerequisites:
 
 * Ensure that your app is on a [supported version](/releasenotes/studio-pro/lts-mts/) of Mendix. For the best level of support, use a long-term support version.
-* Have a licensed cloud node available to use as your target node. For details on how to request a new node, see [Requesting a New Licensed App Node](/community-tools/support/new-app-node-request-template/#new-node). You can specify the hosting type and region during this app request process.
+* Have a licensed cloud node available to use as your target node. For details on how to request a new node, see [Requesting a New Licensed App Node](/support/new-app-node-request-template/#new-node). You can specify the hosting type and region during this app request process.
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both of your cloud nodes.
 * Create two new temporary Free Apps without Free App environments. For instructions on unlinking a Free App from its environment, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink).
 
@@ -44,7 +44,7 @@ Before following the steps described on this page, make sure that you have met t
 
 To manually migrate your app to a new node, follow the steps in the sections below. Those steps are summarized in this graphic:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/migratev4.png" alt="" >}}
 
 ### 4.1 Linking a Temporary Free App to the Target Cloud Node
 
@@ -56,7 +56,7 @@ First, link one of the new temporary apps to the target node.
 
 3. Click **Select a node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/select-a-node.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/select-a-node.png" >}}
 
 4. Select the target node by clicking **Use this Node**. Link it to your app.
 
@@ -78,7 +78,7 @@ To download a deployment package, follow these steps:
 
 2. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Details** for a deployment package.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/deployment-details.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/deployment-details.png" alt="" >}}
 
 3. In the resulting **MDA Details** dialog box, click **Download**.
 
@@ -88,7 +88,7 @@ To upload the deployment package, follow these steps:
 
 2. In the **Deployment Package Repository** section, click **Upload**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/upload-package.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/upload-package.png" >}}
 
 3. Browse and select the downloaded deployment package from your device.
 
@@ -183,7 +183,7 @@ Or, if you made a certificate request to Mendix, the private key is stored in th
 
 The two custom domain certificate options are shown below:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" alt="" width=75% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/tls-certificates.png" alt="" width=75% class="image-border" >}}
 
 ### 4.7 Offboarding the Source Node
 

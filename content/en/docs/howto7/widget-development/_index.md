@@ -31,15 +31,15 @@ The sections below describe the Mendix resources that can help you understand ho
 
 ### 3.2 Dojo
 
-Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
+Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their lifecycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
 * [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
 
-For details on the widget life cycle, reference this documentation:
+For details on the widget lifecycle, reference this documentation:
 
 * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
 * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
-* [Tutorial: Widget Life Cycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
+* [Tutorial: Widget Lifecycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 
@@ -77,7 +77,7 @@ Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/)
 
 Using the widget generator, you get a test project. With the test project (or your own project), you can quickly start creating widgets.
 
-By debugging your widgets, you will quickly learn where you make mistakes and how the widget life cycle works.
+By debugging your widgets, you will quickly learn where you make mistakes and how the widget lifecycle works.
 
 ### 4.3 Ask the Community
 

@@ -132,7 +132,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-body-structure.png" >}}
 
-4. The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. This creates an entity in your domain model, which you can see by clicking **Show**.
+4. The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. Click **Show** to view the entity in your domain model.
 
 ### 3.6 Creating an Entity from the Response {#create-entity}
 

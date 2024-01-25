@@ -7,7 +7,7 @@ tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 ---
 
-{{% alert color="warning" %}}The Pipelines Portal is currently in beta. This means it should not be used for production applications, it is not covered by any SLA, it may introduce breaking changes, and it is subject to change in future releases. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).{{% /alert %}}
+{{% alert color="warning" %}}The Pipelines Portal is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 
@@ -25,7 +25,7 @@ To design a new pipeline, click **Design a Pipeline**. That launches the **Desig
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/design-pipeline.png" width=60% alt="" >}}
 
-Give your pipeline a name, and click **Next** to go to your new pipeline's **Details** page.
+Give your pipeline a name, and click **Next** to go to your new pipeline's **Results** page.
 
 From there, you can customize your pipeline. If you choose to work from an empty pipeline, you will start by adding steps. Or, if you work from the template, you will start with a pipeline that is pre-populated with the following basic steps:
 
@@ -41,8 +41,8 @@ From there, you can customize your pipeline. If you choose to work from an empty
 
 You then have a variety of customization options:
 
-* Click **More Options** ({{% icon name="three-dots-menu-horizontal-small" %}}) to edit the pipeline name, duplicate it, or delete it.
-* Expand a step to configure or delete it.
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to edit the pipeline name, duplicate the pipeline, or delete it.
+* Expand a step to configure or delete the step.
 * Add a step by clicking **Add** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" class="image-border" >}}
@@ -52,9 +52,11 @@ The steps are sorted into categories based on their function:
 * Build
 * Release
 
+Note that some steps depend on the outputs of other steps. Therefore, you must add Start Pipeline before Checkout, Checkout before Publish, Publish before Deploy, and Deploy before Build.
+
 When you are finished customizing your pipeline, click **Save**. Or, to immediately start using it, click **Save & Activate**.
 
-The first time you activate a pipeline, you will be prompted to set up a personal access token (PAT) in the **Settings** tab if you have not already set one up. This is required for a successful pipeline run.
+The first time you activate a pipeline, you will be prompted to set up a personal access token and API key in the **Settings** tab if you have not already set these up. This is required for a successful pipeline run.
 
 ## 3 Navigation
 

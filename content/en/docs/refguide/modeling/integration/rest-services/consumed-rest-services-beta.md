@@ -124,7 +124,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 1. Click the **Body** tab and add your JSON string.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-sample.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" >}}
 
 2. To validate the input, click **Send**.
 

@@ -33,13 +33,13 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ### 3.1 Adding the Account Overview Page to the Navigation {#add-account-overview}
 
-On the `Administration.Acount_Overview` page, you can view and mange all the accounts in your app. To add the page to the navigation of the app, do as follows:
+On the `Administration.Account_Overview` page, you can view and manage all the accounts in your app. To add the page to the navigation of the app, do as follows:
 
 1. In App Explorer, open **Navigation**.
 2. In **Menu**, click **New item**. The **New Menu Item** dialog box opens.
 3. Enter a caption.
 4. Select an icon.
-5. In the **On click** drop-list, select **Show a page**. The **Select web page** dialog box opens.
+5. In the **On click** drop-down list, select **Show a page**. The **Select web page** dialog box opens.
 6. Find **Account_Overview** using the search box on the top and select it. The **Select web page** dialog box closes.
 7. Click **OK** to save the settings for the new menu item.
 
@@ -61,9 +61,9 @@ If you run the app, you can see the new page in the navigation.
 
    {{% alert color="info" %}}A web service user cannot log into your app using a web browser. Their user name and password can only be used for authentication to consume a published web service of your app.{{% /alert %}}
 
-6. In the **New Account** dialog box, fill the user data.
+6. In the **New Account** dialog box, fill in the user data.
 
-7.  Click **Save**.
+7. Click **Save**.
 
 ## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 

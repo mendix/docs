@@ -12,8 +12,9 @@ draft: false
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app and is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images) and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
-Image generations with the DALL-E models is currently only supported from OpenAI; Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
+The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
+
+Image generations with the DALL-E models is currently only supported from OpenAI, and Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
 
 ### 1.1 Typical Use Cases 
 
@@ -64,7 +65,7 @@ You can check out our [showcase app](https://marketplace.mendix.com/link/compone
 ### 1.2 Features 
 
 Mendix provides dual platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
-With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images) and the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). 
+With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), and the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). 
 
 ### 1.3 Limitations 
 
@@ -123,7 +124,7 @@ The following inputs are required for the Azure OpenAI configuration:
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
 | API key | This is the access token to authorize your API call. |
-| Key type | The type of token that is entered in the API key field. For Azure OpenAI two types of keys are currently supported; `Microsoft Entra token` and `API key`. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if allowed by your organisation, you could use the Azure **api-key** authentication mechanism. For more information about how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
+| Key type | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: `Microsoft Entra token` and `API key`. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure **api-key** authentication mechanism. For more information about how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
 
 {{% alert color="info" %}}
 For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects, one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
@@ -160,10 +161,9 @@ For more inspiration or guidance on how to use the above-mentioned microflows in
 
 #### 3.2.1 `Call Chat Completions API (without history)` 
 
-The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used.
-For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
-Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior.
-For more information on prompt engineering, see the [Read More](#read-more) section.
+The microflow activity `Call Chat Completions API (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The system prompt and user prompt are available as string input parameters. Depending on the use case, both or only one can be used. For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
+
+Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
 #### 3.2.2 `Call Chat Completions API (with history)`
 
@@ -173,6 +173,7 @@ The microflow activity `Chat completions with history` supports more complex use
 * `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
 
 The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 `Call Chat Completions API (advanced)`
@@ -184,13 +185,14 @@ The microflow activity `Call Chat Completions API (advanced)` can be used in cas
 * `ChatCompletionsMessageRequest_Create` is used to create the message objects.
 
 The construction of the request and handling of the response must be implemented in a custom way.
+
 For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
 In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, two microflows for image generations are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
 
-These microflows, similar to the [Chat Completions](#chat-completions-configuration) case, expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating an image responses in the case of OpenAI configurations. In this case the field is optional, as OpenAI assumes a default value `dall-e-2`.
+These microflows, similar to the [Chat Completions](#chat-completions-configuration) case, expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating image responses in the case of OpenAI configurations. In this case the field is optional, as OpenAI assumes a default value `dall-e-2`.
 
 For more inspiration or guidance on how to use the below-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
 
@@ -206,6 +208,7 @@ The microflow activity `Call Image Generations API (advanced)` can be used in ca
 * `ImageGenerationsRequest_Create` is used to create the request object.
 
 The construction of the request and handling of the response must be implemented in a custom way.
+
 For technical details, see the [Technical reference](#image-generations-advanced-technical) section.
 
 ### 3.4 Embeddings Configuration {#embeddings-configuration}
@@ -220,6 +223,7 @@ These microflows expect a [Configuration](#configuration-entity) entity, as well
 #### 3.4.1 `Call Embeddings API (single input)` 
 
 The microflow activity `Call Embeddings API (single input)` supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `Input` parameter of this microflow. Note that the parameter `EncodingFormat` is optional; the current version of this operation only supports the float representation of the resulting vector.
+
 For technical details, see the [Technical reference](#embeddings-single-technical) section.
 
 #### 3.4.2 `Call Embeddings API (list input)` 
@@ -239,6 +243,7 @@ The microflow activity `Call Embeddings API (advanced)` can be used in cases whe
 * `EmbeddingsInput_Create` is used to create the input object.
 
 The construction of the request and handling of the response must be implemented in a custom way.
+
 For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
 
 ## 4 Technical Reference 

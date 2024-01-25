@@ -109,9 +109,12 @@ To add a parameter, follow these steps:
 You can add a header for any HTTP request you have specified in your document. To add a header, do the following:
 
 1. Open the **Headers** tab and click **New**.
+
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header-example.png" >}}
+
 2. In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by selecting **Custom** and adding in the value. 
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/accept-header.png" >}}
 
 3. Click **OK**. To test the header, click **Send**.  
 

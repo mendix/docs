@@ -123,8 +123,12 @@ You can add a header for any HTTP request you have specified in your document. T
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-sample.png" >}}
 
-2. Click **Use JSON Snippet**. 
-3. To validate the input, click **Send**. The body string can be viewed in the **Body structure** tab.
+2. To validate the input, click **Send**.
+
+If you want to use the JSON string that you added as a request body in `Step 1` and create an entity in your domain model, you can do the following:
+
+1. Click **Use JSON Snippet** and then you will be automatically redirected to the **Body structure** tab 
+2. The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. This creates an entity in your domain model, which you can see by clicking **Show**
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-body-structure.png" >}}
 

@@ -43,13 +43,13 @@ On the `Administration.Account_Overview` page, you can view and manage all the a
 6. Find **Account_Overview** using the search box on the top and select it. The **Select web page** dialog box closes.
 7. Click **OK** to save the settings for the new menu item.
 
-If you run the app, you can see the new page in the navigation.
+If you run the app and log in as a user with the Administrator role, you can see the new page in the navigation.
 
 ### 3.2 Adding Users as an Administrator
 
 1. Make sure that you [added the account overview page to the navigation](#add-account-overview).
 
-2. Run the app and log in to the app as the [Administrator](/refguide/app-security/#administrator).
+2. Run the app and log in to the app as a user with the Administrator role.
 
 3. Go to the account overview page.
 

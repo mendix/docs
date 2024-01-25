@@ -602,9 +602,9 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | --- | --- | --- | --- |
 | `UserPrompt` | String | mandatory | A user message is the input from a user. |
 | `SystemPrompt` | String | optional | A system message can be used to specify the assistant persona or give the model more guidance and context. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 | `Model` | String | only mandatory for **OpenAI** | ID of the model to use; not considered for **Azure OpenAI** configurations. |
-| `ResponseFormat` | Enumeration | optional | Can be used to specify the format that the model must output. See [ENUM_ResponseFormat_Chat](#enum-responseformat-chat). |
+| `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional | Can be used to specify the format that the model must output. |
 
 **Return value**
 
@@ -621,9 +621,9 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | `ChatCompletionsSession` | String | mandatory | Wrapper object for a list of messages comprising the conversation so far. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 | `Model` | String | only mandatory for **OpenAI** | ID of the model to use; not considered for **Azure OpenAI** configurations. |
-| `ResponseFormat` | Enumeration | optional | Can be used to specify the format that the model must output. See [ENUM_ResponseFormat_Chat](#enum-responseformat-chat). |
+| `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional | Can be used to specify the format that the model must output. |
 
 **Return value**
 
@@ -639,14 +639,14 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| `ChatCompletionsRequest` | Object | mandatory | Request object with associated messages as specified by the ChatCompletions API. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `ChatCompletionsRequest` | [ChatCompletionsRequest](#chatcompletionsrequest) | mandatory | Request object with associated messages as specified by the ChatCompletions API. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 
 **Return value**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `ChatCompletionsResponse` | Object | Response object containing the assistant message and other details about the request. |
+| `ChatCompletionsResponse` | [ChatCompletionsResponse](#chatcompletionsresponse) | Response object containing the assistant message and other details about the request. |
 
 This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices. 
 The following flows may be used in order to construct and handle the required inputs: `ChatCompletionsRequest_Create`,  `ChatCompletionsMessages_Create` and `ChatCompletionsMessageRequest_Create`. 
@@ -663,14 +663,14 @@ Use the microflow `ImageGenerations_Execute` to execute a single image generatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| `OutputImage` | Object | mandatory | This is the target instance in which the resulting image will be stored. It must be instantiated before calling this flow, and it must be a specialization of the GeneratedImage entity. |
+| `OutputImage` | specialization of [GeneratedImage](#generatedimage) | mandatory | This is the target instance in which the resulting image will be stored. It must be instantiated before calling this flow, and it must be a custom specialization of the GeneratedImage entity. |
 | `Prompt` | String | mandatory | This is the prompt that is used by the model to generate the image. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 | `Model` | String | only mandatory for **OpenAI** | ID of the model to use; not considered for **Azure OpenAI** configurations. |
-| `Size` | Enumeration | optional | Can be used to request a specific image size. Default 1024x1024. See [ENUM_Size](#enum-size). |
-| `Quality` | Enumeration | optional |  The quality of the image that will be generated. This param is only supported for dall-e-3. See [ENUM_Quality](#enum-quality). |
-| `Style` | Enumeration | mandatory | The style of the generated images. This param is only supported for dall-e-3. See [ENUM_Style](#enum-style). |
-| `ResponseFormat` | Enumeration | mandatory | The format in which the generated images are returned. Must be one of url or b64_json. Defaults to url. See [ENUM_ResponseFormat_Image](#enum-responseformat-image). |
+| `Size` | [ENUM_Size](#enum-size) | optional | Can be used to request a specific image size. Default 1024x1024. |
+| `Quality` | [ENUM_Quality](#enum-quality) | optional |  The quality of the image that will be generated. This param is only supported for dall-e-3. |
+| `Style` | [ENUM_Style](#enum-style) | mandatory | The style of the generated images. This param is only supported for dall-e-3. |
+| `ResponseFormat` | [ENUM_ResponseFormat_Image](#enum-responseformat-image) | mandatory | The format in which the generated images are returned. Must be one of url or b64_json. Defaults to url. |
 | `UserString` | String | optional | A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. |
 
 **Return value**
@@ -687,14 +687,14 @@ For developers who want to configure the [ImageGenerationsRequest](#chatcompleti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| `ImageGenerationsRequest` | Object | mandatory | Request object for the ImageGenerations API. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `ImageGenerationsRequest` | [ImageGenerationsRequest](#chatcompletionsrequest) | mandatory | Request object for the ImageGenerations API. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 
 **Return value**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `ImageGenerationsResponse` | Object | Response object containing the generated image. |
+| `ImageGenerationsResponse` | [ImageGenerationsResponse](#imagegenerationsresponse) | Response object containing the generated image. |
 
 The microflow `ImageGenerationsRequest_Create` may be used here to create and handle the input request in a custom way.
 
@@ -711,9 +711,9 @@ Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | `Input` | String | mandatory | Input text to embed. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 | `Model` | String | only mandatory for **OpenAI** | ID of the model to use; not considered for **Azure OpenAI** configurations. |
-| `EncodingFormat` | Enumeration | optional | See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings). |
+| `EncodingFormat` | [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) | optional | Can be used to specify the format in which the generated vectors must be returned. |
 
 **Return value**
 
@@ -729,10 +729,10 @@ Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| `DataBatch` | Object | mandatory | A wrapper object for a list of `DataChunk` objects with Inputs for which an Embeddings vector should be generated. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `DataBatch` | [DataBatch](#databatch) | mandatory | A wrapper object for a list of `DataChunk` objects with Inputs for which an Embeddings vector should be generated. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 | `Model` | String | only mandatory for **OpenAI** | ID of the model to use; not considered for **Azure OpenAI** configurations. |
-| `EncodingFormat` | Enumeration | optional | See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings). |
+| `EncodingFormat` | [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) | optional | Can be used to specify the format in which the generated vectors must be returned. |
 
 **Return value**
 This operation does not have a return value, because the embedding vector attribute will directly be updated in the `DataChunk` objects.
@@ -747,14 +747,14 @@ For developers who want to configure the [EmbeddingsRequest](#embeddingsrequest)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| `EmbeddingsRequest` | Object | mandatory | Request object for the Embeddings API. |
-| `Configuration` | Object | mandatory | [Configuration](#configuration-entity) object that contains endpoint and API key. |
+| `EmbeddingsRequest` | [EmbeddingsRequest](#embeddingsrequest) | mandatory | Request object for the Embeddings API. |
+| `Configuration` | [Configuration](#configuration-entity) | mandatory | Object that contains endpoint and API key. |
 
 **Return value**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | Object | Response object containing the generated embedding vectors. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse) | Response object containing the generated embedding vectors. |
 
 This option can be used if the default values and behaviour of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings, like usage metrics. 
 The following flows may be used in order to construct and handle the required inputs: `EmbeddingsRequest_Create` and `EmbeddingsInput_Create`.

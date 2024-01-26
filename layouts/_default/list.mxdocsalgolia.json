@@ -1,5 +1,5 @@
 {{- /*
-Algolia generation based on this blog: https://forestry.io/blog/search-with-algolia-in-hugo/
+Algolia generation based on this blog: https://web.archive.org/web/20201109041339/https://forestry.io/blog/search-with-algolia-in-hugo/
 Define Global variables
 */ -}}
 {{- $firstloop := true -}}

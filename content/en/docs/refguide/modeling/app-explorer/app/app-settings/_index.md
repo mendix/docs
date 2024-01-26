@@ -325,21 +325,24 @@ Defines the maximum number of workflow-initiated microflows that the Runtime exe
 
 ### 7.3 Event Handlers {#event-handlers}
 
-An event handler allows you to specify a microflow which is triggered when the subscribed event(s) occurs. Each event handler can subscribe to multiple
-events and there can be multiple event handlers. An event is triggered when the workflow or its activity goes through transformations which warrant the event.
+An event handler allows you to specify a microflow which is triggered when the subscribed event(s) occurs. Each event handler can subscribe to multiple events and there can be multiple event handlers. An event is triggered when the workflow or its activity goes through transitions which warrant the event.
 
 An event handler has the following configuration:
 
    * **Name** describes the event handler
    * **Documentation** provides more information regarding the usage of the event handler
-   * **When section** allows you to select multiple workflow event types
-   * **Microflow** allows you to select a microflow that is triggered for each of the above selected workflow event types
+   * **When section** allows you to select the workflow event types, for which the handler should be triggered
+   * **Microflow** allows you to select a microflow that should be triggered for each of the above selected workflow event types
 
-You can use the data from the event handler microflows to build audit trails or for logging purposes. For example, it can be useful for a manager to see progress of an employee onboarding process.
+You can use the data from the event handler microflow to build audit trails or for logging purposes. For example, you can define an event handler that only collects data from user task events.
 
 For more information on workflow events, see [Workflow Events](/refguide/workflow-events/).
 
 ### 7.4 Events {#events} (Deprecated)
+
+{{% alert color="warning" %}}
+⚠ State change events are deprecated and replaced with the new event handlers (/refguide/#event-handlers), that also contain events for state changes. It's suggested to migrate the microflows to the new event handlers.
+{{% /alert %}}
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 
 

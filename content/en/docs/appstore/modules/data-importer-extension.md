@@ -28,11 +28,11 @@ This extension supports following source files:
 
 This extension currently has the following limitations:
 
-* The Excel column cell type is taken from the source file to determine the target attribute type; this cannot be changed during data preview stage.
+* The Excel column cell type is taken from the source file to determine the target attribute type; this cannot be changed during the data preview stage.
 * Source data can be mapped to one entity only; associations are not currently supported 
 * You cannot map the data to an already existing NPE; you have to create a new entity as part of mapping
 * Enumerations are not supported
-* As there is no certain way to identify data type of CSV file, all attribute types are defaulted to *String* 
+* **String** is the default attribute type 
 
 ### 1.4 Prerequisites
 
@@ -54,7 +54,7 @@ Name the document, click **OK**, and the new Data Importer document opens.
 
 ### 2.2 Previewing Data {#preview-data}
 
-Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*) or CSV file (*.csv).
+Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*) or CSV file (*.csv*).
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/select-file-for-preview.png" >}}
 
@@ -119,8 +119,8 @@ Use the previously created Data Importer document to import data from your Input
 
    {{< figure src="/attachments/appstore/modules/data-importer-extension/custom-activity.png" >}}
 
-2. Double-click the activity and in the **File** field, select an input file (either an Excel or CSV).
-3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. You will choose an appropriate Data Importer document based on the Input file.
+2. Double-click the activity and in the **File** field and select an input file (either Excel or CSV).
+3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. Choose an appropriate Data Importer document based on the input file.
 
   {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
 

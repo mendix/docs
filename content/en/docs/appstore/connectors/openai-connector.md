@@ -65,6 +65,7 @@ You can check out our [showcase app](https://marketplace.mendix.com/link/compone
 ### 1.2 Features 
 
 Mendix provides dual platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
+
 With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), and the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). 
 
 ### 1.3 Limitations 
@@ -228,12 +229,12 @@ For technical details, see the [Technical reference](#embeddings-single-technica
 
 #### 3.4.2 `Call Embeddings API (list input)` 
 
-The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce http overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not have a return value. Two accompanying microflows are available to help construct the input for the main microflow: 
+The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not have a return value. Two accompanying microflows are available to help construct the input for the main microflow: 
 
 * `DataBatch_Create` is used to create the wrapper object for the list of `DataChunk` objects that must be passed as input parameter. 
-* `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string)  to the `DataBatch` entity. 
+* `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string) to the `DataBatch` entity. 
 
- For technical details, see the [Technical reference](#embeddings-list-technical) section.
+For technical details, see the [Technical reference](#embeddings-list-technical) section.
 
 #### 3.4.3 `Call Embeddings API (advanced)` 
 
@@ -266,7 +267,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion` | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
 | `ApiKey ` | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-open-ai-configuration) sections. |
-| `KeyType` | The type of token entered in the ApiKey field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
+| `KeyType` | The type of token entered in the `ApiKey` field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
 
 #### 4.1.2 `ApiKey` {#apikey}
 
@@ -302,7 +303,7 @@ A chat completions request that creates a model response for the given chat conv
 
 | Attribute | Description |
 | ---| --- |
-| `Model` | This is required for requests to OpenAI. For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation.<br /> Model is **not** considered for request to Azure OpenAI, because the model is determined by the deployment. |
+| `Model` | This is required for requests to OpenAI. Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
 | `Frequency_penalty` | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0.0. |
 | `Max_tokens` | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length. This attribute is optional. |
 | `Temperature` | This is the sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. |
@@ -428,8 +429,8 @@ This is an embeddings request that generates a model response including a vector
 
 | Attribute | Description |
 | ---| --- |
-| `Model` | The model to use for generating embeddings. This is a mandatory field for OpenAI.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
-| `Encoding_format` | The format to return the embeddings in. The connector currently only supports float and not base64.<br />For more information see the [ENUM_EncodingFormat_Embeddings](#enum_encodingformat_embeddings) section. |
+| `Model` | This is the model used for generating embeddings. This is a mandatory field for OpenAI.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
+| `Encoding_format` | This is the format in which the embeddings are returned. The connector currently only supports float and not base64.<br />For more information see the [ENUM_EncodingFormat_Embeddings](#enum_encodingformat_embeddings) section. |
 | `User` | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
@@ -444,12 +445,12 @@ This is an entity that is used to contain a string input text for the embeddings
 
 #### 4.1.22 `EmbeddingsResponse` {#embeddingsresponse}
 
-This entity represents an embeddings response returned by model, based on the provided input.
+This entity represents an embeddings response returned by the model, based on the provided input.
 
 | Attribute | Description |
 | ---| --- |
-| `_object` | The object type, which is always `list`. |
-| `Model` | This is the model that has been used for generating the embeddings. | 
+| `_object` | This is the object type, which is always `list`. |
+| `Model` | This is the model that has been used for generating the embeddings. |
 
 #### 4.1.23 `EmbeddingsUsage`  {#embeddingsusage}
 
@@ -461,8 +462,8 @@ This is the vector that represents the embedding for the text input that was giv
 
 | Attribute | Description |
 | ---| --- |
-| `_object` | The object type, which is always `embedding`. |
-| `Index` | This is the index of the embedding in the list of embeddings, can be used for ordering. | 
+| `_object` | This is the object type, which is always `embedding`. |
+| `Index` | This is the index of the embedding in the list of embeddings. This can be used for ordering. |
 
 #### 4.1.25 `EmbeddingValue` {#embeddingvalue}
 
@@ -470,7 +471,7 @@ This entity represents an element in the list of floats in the embedding vector 
 
 | Attribute | Description |
 | ---| --- |
-| `Value` | A decimal in the embedding vector. | 
+| `Value` | This is a decimal in the embedding vector. |
 
 #### 4.1.26 `DataBatch` {#databatch}
 
@@ -482,9 +483,9 @@ This entity represents a text string, usually a part of a larger base text or di
 
 | Attribute | Description |
 | ---| --- |
-| `Input` | The input text to embed will be mapped to the `EmbeddingsInput` entity as part of the request. | 
-| `EmbeddingVector` | String representation of the embedding vector of the input string. | 
-| `Index` | Used for mapping the EmbeddingVector from the response onto the correct DataChunk in the list. | 
+| `Input` | This is the input text to embed will be mapped to the `EmbeddingsInput` entity as part of the request. |
+| `EmbeddingVector` | This is the string representation of the embedding vector of the input string. |
+| `Index` | This is used for mapping the EmbeddingVector from the response onto the correct DataChunk in the list. |
 
 #### 4.1.28 `ConfigurationTest` {#configurationtest}
 
@@ -492,9 +493,9 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 | Attribute | Description |
 | ---| --- |
-| `UserPrompt` | The user message to send to the chat completions API. | 
-| `AssistantResponse` | The assistant response returned by the chat completions API. | 
-| `ChatCompletionsModel` | Model used for the API call. | 
+| `UserPrompt` | This is the user message sent to the chat completions API. |
+| `AssistantResponse` | This is the assistant response returned by the chat completions API. |
+| `ChatCompletionsModel` | This is the model used for the API call. |
 
 ### 4.2 Enumerations {#enumerations} 
 

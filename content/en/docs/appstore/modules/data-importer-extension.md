@@ -22,7 +22,7 @@ The Data Importer extension allows you to import data from Excel and CSV files d
 
 This extension supports following source files:
 
-* Microsoft Excel (.xls, .xlsx, .csv)
+* Microsoft Excel (*.xls, .xlsx, .csv*)
 
 ### 1.3 Limitations
 

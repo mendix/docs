@@ -8,7 +8,7 @@ tags: ["studio pro", "data importer", "excel importer"]
 
 ## 1 Introduction
 
-The Data Importer allows you to import data from an Excel file and choose which sheet and columns you want to import. It can also be used to import data from CSV (comma separated values) file. You can preview the data you would like to import while creating the "Data Importer Document" and create a non-persistable entity (NPE) in your domain model that corresponds to your input. You can import data from input Excel or CSV files into your Mendix App by specifying the corresponding Data Importer document into the *Import data from file* activity.
+The Data Importer allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. You can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
 
 {{% alert color="info" %}}
 The Data Importer is available in Studio Pro 10.6 and above.

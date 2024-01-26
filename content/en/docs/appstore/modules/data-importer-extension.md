@@ -113,7 +113,7 @@ The Data Importer document creation is complete and can be used to [import data 
 
 ## 3 Importing Data in a Microflow {#import-microflow}
 
-Use the previously created Data Importer document to import data from your Input file (or files) in a microflow. This example shows how to import data from Excel file, but exact same steps are applicable to import data from CSV files.
+Use the previously created Data Importer document to import data from your input file (or files) in a microflow. The example below shows how to import data from Excel file. The same steps are applicable to import data from CSV files.
 
 1. Create a new microflow and drag the **Import data from file** activity into it.
 

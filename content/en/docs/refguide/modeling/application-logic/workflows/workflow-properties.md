@@ -44,7 +44,7 @@ The **Due date** section properties are described in the table below:
 You can define multiple workflow-specific event handlers. Even if a single event handler is defined for a specific workflow definition we will consider that it overrides all available app-wide event handlers for the workflow instances belonging to that definition.
 {{% /alert %}}
 
-### 2.4 Events {#events} (Deprecated)
+### 2.4 Events (Deprecated) {#events} 
 
 **Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
 

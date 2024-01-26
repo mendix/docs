@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}Mendix recommends using Eclipse to edit your Java code, Yalthough you can use any text editor. Studio Pro contains a [Deploy for Eclipse](/refguide/app-menu/#eclipse) feature which automatically creates everything that needs to be configured so you only have to import the app into your Eclipse working environment.{{% /alert %}}
 
-## 3 Setting Up a Simple App
+## 3 Setting Up a Simple App{#simple-app}
 
 Before you start, you need to create a simple app in which to create and use your Java actions. The app will store a number of products, each of which is assigned to a category. Each product will be in one of four states which indicates whether it is available from the supplier and whether it is currently in stock.
 
@@ -173,6 +173,64 @@ Now you will add a button to the Product_NewEdit page which will use a microflow
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/app2.png" width="400" >}}
 
 ## 5 XPath Retrieval in Java {#xpath}
+
+Using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) your Java actions can interact with many parts of your app. One thing that many developers want to do is to retrieve a list of objects using an [XPath Constraint](/refguide/xpath-constraints/). This section describes how to implement an XPath retrieval in a Java action.
+
+### 5.1 XPath in Microflow
+
+Using the Domain Model we set up in [Setting Up a Simple App](#simple-app) we want to retrieve a list of Products which fill the following criteria:
+
+* Have a specified name
+* Belong to a given category
+* Are available or in stock
+
+The example skips many features you would want to add to a real app, but is designed for simplicity.
+
+We can do this in a microflow using the following steps:
+
+1. Create a new microflow in the **Products** module and name it *ListWithRetrieve*.
+2. Add a **Retrieve** activity and configure it as follows:
+
+    * Source: From database
+    * Entity: Products.Category
+    * XPath constraint: Select a single category you know exists, for example `[(Name = 'Book')]`
+    * Range: First
+    * Output > Type: Products.Category
+    * Output > Object Name: Category
+
+    This will retrieve a category for us to use in the XPath.
+
+3. Add a second Retrieve activity and configure it as follows:
+
+    * Source: From database
+    * Entity: Products.Product
+    * XPath constraint:
+
+        ```xpath {linenos = false}
+        [Products.Product_ProductState/Products.ProductState[
+        InStock = true ()
+        or
+        Available = true ()
+        ]]
+        [Products.Product_Category = $Category]
+        [Name = 'The Lord of the Rings']
+        ```
+
+    * Range: All
+    * Output > Type: List of Products.Product
+    * Output > Object Name: ProductList
+
+4. Set the End Event to return **$ProductList** as a **Return type** *List of Products.Product*.
+5. Now add a **Responsive (Web)** page to the Products module with the following characteristics:
+
+    * Page name: *MicroflowProductList*
+    * Layout: **Grids** > **Grid**
+
+6. Set the data source to be the Microflow Products.ListWithRetrieve and allow the grid to be filled automatically (paging controls are not necessary).
+7. Go to the Home_Web page and drag the MicroflowProductList page onto it, so that a button is added to the page.
+8. Run your app locally.
+
+    Clicking the **Microflow product list** button will display all Products named The Lord of the Rings with the Category Book which are either InStock or Available. You may have to add some examples using the **Product Overview** if none are displayed.
 
 ## 6 Troubleshooting {#troubleshooting}
 

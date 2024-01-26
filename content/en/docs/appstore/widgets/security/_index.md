@@ -31,10 +31,7 @@ The following widgets are not fully compliant with strict CSP. See the widgets' 
     ```
 
 - ##### HTML/Javascript snippet
-    You can enable `allowlist` CSP for [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) by including these directive:
-    ```text
-    script-src 'self' 'unsafe-eval';
-    ```
+    Please see [HTML/Javascript content security policy document](/appstore/widgets/security/content-security-policy/html-javascript-snippet-csp/) for information on HTML/Javascript snippet widget CSP configurations.
     
 - ##### Map
     Please see [Map widget content security policy document](/appstore/widgets/security/content-security-policy/maps-csp/) for information on Map widget CSP configurations.

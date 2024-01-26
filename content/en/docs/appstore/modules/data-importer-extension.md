@@ -78,26 +78,26 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 #### 2.2.2 Previewing CSV Data {#preview-data-csv}
 
-Select or drop the CSV file in the **Select Source File** window. CSV Import supports multiple combinations of separator/delimiter, quote and escape characters. It also supports importing files where header row is absent.
+Select or drop the CSV file in the **Select Source File** window. CSV import supports multiple combinations of separator/delimiter, quote, and escape characters. It also supports importing files where the header row is absent.
 
-* **Delimiter(Separator)** – You can specify a delimiter from the dropdown. Current supported delimiters are Comma, Semicolon, Pipe and Tab; default is Comma.
-* **Quote Characters** – Current supported quote characters are single and double quotes; the default is Double quotes
-* **Escape Characters** – Current supported escape characters are backslash, single and double quotes; the default is Double quotes.
-* **Add Header Row** – You can specify if you would like to add an Header row or header row is already part of the CSV file; the default is Header row already included in file.
+Specify the values for all four configurations (Delimiter, Quote Character, Escape Character, and Add Header Row):
 
-Specify the values for all the 4 configurations (Delimiter, Quote Character, Escape Character and Add Header Row.
+* **Delimiter(Separator)** – current supported delimiters are comma, semicolon, pipe, and tab; the default is comma
+* **Quote Characters** – current supported quote characters are single and double quotes; the default is double quotes
+* **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
+* **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file
 
-Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The filename will be used to create an Entity (NPE), and it can be changed. The column names correspond to the attribute name within the entity.
+Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create an Entity (NPE), but this can be customized. The column names correspond to the attribute name within the entity.
 
 All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is defaulted to *String*.
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
-As an example, for the following source data (CSV), we will specify the separator as Comma, Quote and Escape character is Double Quote and Header is already part of the input file.
+For example, for the following source data (CSV), the separator is specified as Comma and Quote, and the Escape Character is Double Quote and Header. This is already part of the input file.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/source-csv-data.png" >}}
 
-The data preview and resultant Entity for this data would be as below.
+The data preview and resulting entity would be as seem below:
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/preview-csv-data-and-entity.png" >}}
 

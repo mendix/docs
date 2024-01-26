@@ -123,7 +123,7 @@ The following inputs are required for the Azure OpenAI configuration:
 | API type | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/`.<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
-| API version | The API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
+| API version | This is the API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
 | API key | This is the access token to authorize your API call. |
 | Key type | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: `Microsoft Entra token` and `API key`. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure **api-key** authentication mechanism. For more information about how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
 
@@ -273,9 +273,9 @@ This entity is used to store the API credentials and endpoints in the configurat
 
 This entity is only used for editing the `ApiKey` to be stored in the [Configuration](#configuration-entity) entity. 
 
-| Attribute | Description | 
-| ---| --- | 
-| `ApiKey` | Access token to authorize your API call. | 
+| Attribute | Description |
+| ---| --- |
+| `ApiKey` | This is the access token to authorize your API call. |
 
 #### 4.1.3 `AbstractUsage` {#abstractusage}
 
@@ -378,12 +378,12 @@ This is an image generations request that creates a model response including gen
 | Attribute | Description |
 | ---| --- |
 | `Prompt` | This is the prompt that is used by the model to generate the image (or images) . |
-| `Model` | The model to use for image generation. This is an optional field for OpenAI; its default value is `dall-e-2`. <br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
-| `N` | The number of images to generate. The value must be between 1 and 10. For `dall-e-3`, only n=1 is supported. This attribute is optional. |
+| `Model` | The model to use for image generation. This is an optional field for OpenAI. Its default value is `dall-e-2`. <br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
+| `N` | This is the number of images to generate. The value must be between 1 and 10. For `dall-e-3`, only n=1 is supported. This attribute is optional. |
 | `Quality` | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `standard`.<br />For more information, see the [ENUM_Quality](#enum-quality) section. |
 | `ResponseFormat` | This is a parameter used to specify the technical format of the returned generated images by the API. This attribute is optional. The default value is  `url`. <br />For more information see the [ENUM_ResponseFormat_Image](#enum-responseformat-image) section. |
 | `Size` | This is the requested size of the generated images. This attribute is optional. Its default value is `1024x1024`.<br />For more information see the [ENUM_Size](#enum-size) section. |
-| `Style` | The style of the generated images. This attribute is optional. Its default value is `vivid`.<br />For more information, see the [ENUM_Style](#enum-style) section. |
+| `Style` | This is the style of the generated images. This attribute is optional. Its default value is `vivid`.<br />For more information, see the [ENUM_Style](#enum-style) section. |
 | `User` | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
@@ -616,7 +616,7 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `AssistantResponseText` | String | Assistant message was generated by the model as a response to a user message. |
+| `AssistantResponseText` | String | An assistant message was generated by the model as a response to a user message. |
 
 ##### 4.3.1.2 Call Chat Completions API (with History) {#chat-completions-with-history-technical}
 

@@ -22,7 +22,7 @@ Under **Company Details**, you can edit your **Company Name** and **Description*
 
 ### 2.2 Company Email Domains {#company-email-domains}
 
-{{% alert color="warning" %}}Once you add an email domain, it is permanently added to your company and cannot be removed, as soon as a user creates a Mendix account with this email domain. That is to say, Mendix cannot remove an email domain from your company as soon as a user creates a Mendix account with this email domain, whether this Mendix account is active or not.{{% /alert %}}
+{{% alert color="warning" %}}Once you add an email domain, it is permanently added to your company and cannot be removed anymore, as soon as a user creates a Mendix account with this email domain, whether this Mendix account is active or not.{{% /alert %}}
 
 Under **Company Email Domains**, you can request new company email domains by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company, all existing users with this domain will be moved to your company, and their applications will also be moved to the new company.
 

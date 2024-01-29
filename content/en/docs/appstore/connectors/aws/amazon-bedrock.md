@@ -116,9 +116,9 @@ This is the request entity of the `InvokeModelGeneric` action. It is a specializ
 
 | Attribute | Description |
 | --- | --- |
-| `ModelId` | The `ModelId` attribute describes identifier of the model and is a required parameter.|
-| `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**.|
-| `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke.|
+| `ModelId` | The `ModelId` attribute describes identifier of the model and is a required parameter. |
+| `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**. |
+| `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke. |
 
 #### 4.1.5 InvokeModelGenericResponse {#invoke-model-generic-response}
 
@@ -126,9 +126,9 @@ This is the response entity of the `InvokeModelGeneric` action.
 
 | Attribute | Description |
 | --- | --- |
-| `ContentType` | The `ContentType` attribute describes the MIME type of the inference result.|
-| `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved.|
-| `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model.|
+| `ContentType` | The `ContentType` attribute describes the MIME type of the inference result. |
+| `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved. |
+| `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model. |
 
 #### 4.1.6 RetrieveRequest {#retrieve-request}
 
@@ -136,9 +136,9 @@ This is the request entity of the `Retrieve` action.
 
 | Attribute | Description |
 | --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter.|
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
-| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base.|
+| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter. |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
+| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
 
 #### 4.1.7 RetrievalConfiguration {#retrieval-configuration}
 
@@ -146,7 +146,7 @@ The `RetrievalConfiguration` entity holds information about how the results shou
 
 | Attribute | Description |
 | --- | --- |
-| `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return.|
+| `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return. |
 
 #### 4.1.8 RetrieveResponse {#retrieve-response}
 
@@ -154,7 +154,7 @@ This is the response entity of the `Retrieve` action.
 
 | Attribute | Description |
 | --- | --- |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken.|
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
 
 #### 4.1.9 RetrievalResult {#retrieval-result}
 
@@ -162,7 +162,7 @@ The `RetrievalResult` entity holds information about the query made to the knowl
 
 | Attribute | Description |
 | --- | --- |
-| `Score` | The `Score` attribute describes the level of relevance of the result to the query.|
+| `Score` | The `Score` attribute describes the level of relevance of the result to the query. |
 
 #### 4.1.10 Content {#content}
 
@@ -170,7 +170,7 @@ The `Content` entity holds information about the cited text from the data source
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute describes the cited text from the data source.|
+| `Text` | The `Text` attribute describes the cited text from the data source. |
 
 #### 4.1.11 Location {#location}
 
@@ -178,7 +178,7 @@ The `Location` entity holds information about the location of the data source.
 
 | Attribute | Description |
 | --- | --- |
-| `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source.|
+| `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source. |
 
 #### 4.1.12 S3Location {#s3location}
 
@@ -186,13 +186,13 @@ The `S3Location` entity holds information about the S3 location of the data sour
 
 | Attribute | Description |
 | --- | --- |
-| `URI` | The `URI` attribute describes the S3 URI of the data source.|
+| `URI` | The `URI` attribute describes the S3 URI of the data source. |
 
 #### 4.1.13 RetrieveLocation {#retrieve-location}
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
+| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
 #### 4.1.14 RetrieveAndGenerateRequest {#retrieve-and-generate-request}
 
@@ -200,8 +200,8 @@ This is the request entity of the `RetrieveAndGenerate` action.
 
 | Attribute | Description |
 | --- | --- |
-| `InputText` | The `InputText` attribute describes the query made to the knowledge base and is a required parameter.|
-| `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.|
+| `InputText` | The `InputText` attribute describes the query made to the knowledge base and is a required parameter. |
+| `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
 
 #### 4.1.15 RetrieveAndGenerateConfiguration {#retrieve-and-generate-configuration}
 
@@ -209,9 +209,9 @@ The `RetrieveAndGenerateConfiguration` entity holds information about the resour
 
 | Attribute | Description |
 | --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation and is a required parameter.|
-| `ModelARN` | The `ModelARN` attribute describes the ARN of the foundation model used to generate a response and is a required parameter.|
-| `RetrieveAndGenerateType` | The `RetrieveAndGenerateType` attribute describes the type of resource that is queried by the request. Currently, the only supported value is 'KNOWLEDGE_BASE'.|
+| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation and is a required parameter. |
+| `ModelARN` | The `ModelARN` attribute describes the ARN of the foundation model used to generate a response and is a required parameter. |
+| `RetrieveAndGenerateType` | The `RetrieveAndGenerateType` attribute describes the type of resource that is queried by the request. Currently, the only supported value is 'KNOWLEDGE_BASE'. |
 
 #### 4.1.16 SessionConfiguration {#session-configuration}
 
@@ -219,7 +219,7 @@ The `SessionConfiguration` entity holds information about details of the session
 
 | Attribute | Description |
 | --- | --- |
-| `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session.|
+| `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
 #### 4.1.17 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
@@ -227,8 +227,8 @@ This is the request entity of the `RetrieveAndGenerate` action.
 
 | Attribute | Description |
 | --- | --- |
-| `OutputText` | The `OutputText` attribute describes the response generated from querying the knowledge base.|
-| `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.|
+| `OutputText` | The `OutputText` attribute describes the response generated from querying the knowledge base. |
+| `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
 
 #### 4.1.18 Citation {#citation}
 
@@ -240,9 +240,9 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute describes the part of the generated text that contains a citation.|
-| `Start` | The `Start` attribute describes where the text with a citation starts in the generated output.|
-| `End` | The `End` attribute describes where the text with a citation ends in the generated output.|
+| `Text` | The `Text` attribute describes the part of the generated text that contains a citation. |
+| `Start` | The `Start` attribute describes where the text with a citation starts in the generated output. |
+| `End` | The `End` attribute describes where the text with a citation ends in the generated output. |
 
 #### 4.1.20 RetrievedReference {#retrieved-reference}
 
@@ -250,13 +250,13 @@ The `RetrievedReference` entity holds information about a sources cited for the 
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute contains the cited text from the data source.|
+| `Text` | The `Text` attribute contains the cited text from the data source. |
 
 #### 4.1.21 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity.|
+| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
 #### 4.1.22 StartIngestionJobRequest {#start-ingestion-job-request}
 
@@ -264,8 +264,8 @@ This is the request entity of the `StartIngestionJob` action.
 
 | Attribute | Description |
 | --- | --- |
-| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
-| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
+| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
+| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
 #### 4.1.23 GetIngestionJobRequest {#get-ingestion-job-request}
 
@@ -273,9 +273,9 @@ This is the request entity of the `GetIngestionJob` action.
 
 | Attribute | Description |
 | --- | --- |
-| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
-| `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve.|
-| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
+| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
+| `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve. |
+| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
 #### 4.1.24 GetIngestionJobResponse {#get-ingestion-job-response}
 
@@ -289,13 +289,13 @@ This is the response entity of the `StartIngestionJob` action.
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity.|
+| N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
 #### 4.1.27 GetIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity.|
+| N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
 #### 4.1.28 IngestionJob {#ingestion-job}
 
@@ -303,12 +303,12 @@ This is the response entity of the `IngestionJob` action.
 
 | Attribute | Description |
 | --- | --- |
-| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest.|
-| `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve.|
-| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source.|
-| `Status` | The `Text` attribute contains the status of the ingestion job.|
-| `StartedAt` | The `Timestamp` at which the ingestion job started.|
-| `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated.|
+| `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
+| `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve. |
+| `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
+| `Status` | The `Text` attribute contains the status of the ingestion job. |
+| `StartedAt` | The `Timestamp` at which the ingestion job started. |
+| `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated. |
 
 #### 4.1.29 FailureReason {#failure-reason}
 
@@ -316,7 +316,7 @@ The `FailureReason` entity holds the reason an interaction failed.
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute describes reason the interaction failed.|
+| `Text` | The `Text` attribute describes reason the interaction failed. |
 
 #### 4.1.30 IngestionJobStats {#ingestion-job-stats}
 
@@ -324,11 +324,11 @@ The `IngestionJobStats` entity contains information about the failure of the int
 
 | Attribute | Description |
 | --- | --- |
-| `numberOfDocumentsDeleted` | The `Long` attribute holds the number of documents that were deleted.|
-| `numberOfDocumentsFailed` | The `Long` attribute holds the number of documents that failed to be ingested.|
-| `numberOfDocumentsScanned` | The `Long` attribute holds the number of documents that were scanned.|
-| `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed.|
-| `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed.|
+| `numberOfDocumentsDeleted` | The `Long` attribute holds the number of documents that were deleted. |
+| `numberOfDocumentsFailed` | The `Long` attribute holds the number of documents that failed to be ingested. |
+| `numberOfDocumentsScanned` | The `Long` attribute holds the number of documents that were scanned. |
+| `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed. |
+| `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed. |
 
 ### 4.2 Activities {#activities}
 

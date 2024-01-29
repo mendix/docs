@@ -9,7 +9,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer/) from the Mendix Marketplace. In this how-to, you will set up import templates and import data into your app using this module.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time consuming. To save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer/) from the [Mendix Marketplace](http://marketplace.mendix.com). In this how-to, you learn how to set up import templates and import data into your app.
 
 ## 2 Prerequisites
 
@@ -24,18 +24,18 @@ Before starting this how-to, make sure you know how to do the following:
 
 ## 3 Preparing the Data Structure, GUI and Modules
 
-Before you can start importing data into your application, you first need to set up the data structure and GUI by following these these steps:
+Before you can start importing data into your application, set up the data structure and GUI by following these these steps:
 
 1. Create the following domain model:
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581969.png" >}}
 
-    Create an enumeration for the **OrderStatus** attribute with the values of **Open**, **Processing**, and **Complete**.
+    Create an enumeration for the **OrderStatus** attribute with the values **Open**, **Processing**, and **Complete**.
 
     Configure the **XLSFile** object to inherit from the **FileDocument** object.
 2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
-3. Create menu items to access the **Order** and the **Customer** overview pages.
-4. Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix Marketplace (available by clicking the shopping-cart icon in the upper right of Studio Pro).
+3. Create menu items to access the **Order** and **Customer** overview pages.
+4. Download the **Excel Importer** and **Mx Model Reflection** modules from the Marketplace (available by clicking the shopping cart icon in the upper right of Studio Pro).
 5. Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
 6. Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
@@ -60,17 +60,17 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 ## 5 Using Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection/) module. In this section, you will learn how to do this by following these steps:
+In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection/) module. To do this, follow these steps:
 
 1. Click the play button (**Run Locally**) to start your application.
 2. Click **View App** to open your application in the browser.
 3. **Log in** as an Administrator.
-4. Click on the menu item for the **MxObjects_Overview** in your navigation.
-5. Select the module that contains the objects you want to use in your client by checking the box to the left of it – which in this case  is **MyFirstModule**:
+4. Click the menu item for the **MxObjects_Overview** in your navigation.
+5. Select the module that contains the objects you want to use in your client by checking the box to the left of it. In this example, the module is **MyFirstModule**:
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581937.png" >}}
 
-6. Click the button next to **Synchronize all entities and microflows of checked modules on the left**. Now the two objects and the parse microflow from the **MyFirstModule** module can be seen and used in the client.
+6. Click the button next to **Synchronize all entities and microflows of checked modules on the left**. Now, the two objects and the parse microflow from the **MyFirstModule** module can be seen and used in the client.
 
 ## 6 Manually Creating an Import Template {#creating}
 

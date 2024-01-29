@@ -66,16 +66,26 @@ Do not fill the contents of the form automatically. Instead connect the Email Ad
 
 ### 2.2 Enable Anonymous Users
 
-Anonymous users let users use your application without needing to authenticate first. This is needed to let users access the sign-in page before they can use it to authenticate.
+The **Anonymous users** role allows users use your application without needing to authenticate first. This is needed to let users access the sign-in page before they can use it to authenticate.
 
-Anonymous users are enabled in the App Security. Find out more [here](/refguide/anonymous-users/).
+Anonymous users are enabled in **App Security**. For more information, see [Anonymous Users](/refguide/anonymous-users/).
 
 ### 2.3 Set Up Role-Based Homepages
 
-The final step is to set the sign-in page as the home page for anonymous users. This will ensure that if a user is not signed in that they will see the sign-in page instead of your application's other pages.
+Your final step is to set the sign-in page as the home page for anonymous users. This will ensure that if a user is not signed, then they will see the sign-in page instead of your application's other pages.
 
-Role-based homepages are set up in the App Navigation. Open the Native mobile profile, click on Edit next to Role-based home pages and then set the created sign-in page as the homepage for the user role Anonymous.
+Role-based homepages are set up in **App Navigation**:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/role-based-homepage.png" alt="Role-based home page" >}}
+1. Open the **Native mobile** profile.
+1. Click on **Edit** next to **Role-based home pages**.
+1. Set the created sign-in page as the homepage for the user role **Anonymous**:
 
-You can read more about role-based homepages [here](/refguide/setting-up-the-navigation-structure/#role-based-home-page).
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/role-based-homepage.png" alt="Role-based home page" >}}
+
+For more information on role-based homepages, see [Setting a Role-Based Homepage](/refguide/setting-up-the-navigation-structure/#role-based-home-page).
+
+## 3 Read More
+
+* [App Security](/refguide/app-security/)
+* [Anonymous Users](/refguide/anonymous-users/)
+* [Setting a Role-Based Homepage](/refguide/setting-up-the-navigation-structure/#role-based-home-page)

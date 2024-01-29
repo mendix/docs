@@ -13,16 +13,16 @@ The [Workflow Engine](/refguide/workflow-engine/) emits near real-time workflow 
 
 There are two ways in which you can configure workflow-related event handlers:
 
-* The events can be configured via the **Event handlers** setting in the [workflow properties](/refguide/workflow-properties/#event-handlers).
+* The events can be configured via the **Event handlers** setting in [workflow properties](/refguide/workflow-properties/#event-handlers).
 * The **Event handlers** setting can also be configured in [App Settings](/refguide/app-settings/#event-handlers):
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% class="image-border" >}}
 
 {{% alert color="info" %}}
-The event handlers added in workflow properties override the app-wide event handlers in the **App Settings**.
+The event handlers added in workflow properties override the app-wide event handlers in **App Settings**.
 {{% /alert %}}
 
-The image below presents an example of how you can configure an event handler either in the workflow properties or in the **App Settings**:
+The image below presents an example of how you can configure an event handler either in workflow properties or in **App Settings**:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% class="image-border" >}}
 

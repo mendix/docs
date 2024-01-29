@@ -1,6 +1,6 @@
 ---
 title: "Authenticating Users"
-url: /refguide/mobile/using-mobile-capabilities/deep-links/
+url: /refguide/mobile/using-mobile-capabilities/auth-users/
 weight: 10
 description: "This guide explains how to authenticate users in a mobile app."
 tags: ["authentication", "mobile"]
@@ -10,7 +10,7 @@ tags: ["authentication", "mobile"]
 
 Native mobile apps often need to authenticate users just like web applications. However, there are some differences when it comes to authenticating users in a native mobile app compared to a web-based app in Mendix. In this guide, you will learn how to authenticate users in native mobile apps and what to look out for.
 
-## 2 Setting up user authentication
+## 2 Setting Up User Authentication
 
 To enable user authentication in a native mobile app, you first need to enable [App Security](/refguide/app-security/) by setting the security level to Prototype or Production.
 
@@ -18,7 +18,7 @@ In a web-based app, you can rely on the provided `login.html` file to handle sho
 
 You can skip the first step if you are using the Blank Native App starter template, as the sign-in page has already been created.
 
-### 2.1 Model the sign-in page
+### 2.1 Model the Sign-In Page
 
 Start by creating a new native page called Login that will be used to show the sign in dialog to your users. Use the SignIn Phone template under Forms to get started quickly.
 
@@ -46,11 +46,11 @@ Do not fill the contents of the form automatically. Instead connect the Email Ad
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-form.png" alt="Finished sign-in form" >}}
 
-You need to create second Nanoflow to trigger the actual sign in. Change the On click action of the Login button to Call a nanoflow and create a new nanoflow called ACT_SignInUser. Make sure the parameter Login is passed to the Nanoflow.
+You need to create second nanoflow to trigger the actual sign in. Change the On click action of the Login button to Call a nanoflow and create a new nanoflow called ACT_SignInUser. Make sure the parameter Login is passed to the Nanoflow.
 
 In the Nanoflow call the Sign in action, which is part of [Nanoflow Commons](/appstore/modules/nanoflow-commons/). Pass the attributes from the Login parameter to the action and store the response in a new variable.
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/sign-in-action" alt="Sign-in action" >}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/sign-in-action.png" alt="Sign-in action" >}}
 
 The response of the Sign in action reflects the HTTP Status code of the sign-in network request. If it is 200 the sign in was successful. In this case, your app will automatically restart and show the homepage of the user. If the response is 401 the sign in was unsuccessful because either the user is unknown or the password is wrong. If the repsonse is 0 there was a network error.
 
@@ -58,13 +58,13 @@ Use this information to inform your user about the problem by filling the Valida
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-nanoflow.png" alt="Finished sign-in nanoflow" >}}
 
-### 2.2 Enable anonymous users
+### 2.2 Enable Anonymous Users
 
 Anonymous users let users use your application without needing to authenticate first. This is needed to let users access the sign-in page before they can use it to authenticate.
 
 Anonymous users are enabled in the App Security. Find out more [here](/refguide/anonymous-users/).
 
-### 2.3 Set up role-based homepages
+### 2.3 Set Up Role-Based Homepages
 
 The final step is to set the sign-in page as the home page for anonymous users. This will ensure that if a user is not signed in that they will see the sign-in page instead of your application's other pages.
 
@@ -73,7 +73,3 @@ Role-based homepages are set up in the App Navigation. Open the Native mobile pr
 {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/role-based-homepage.png" alt="Role-based home page" >}}
 
 You can read more about role-based homepages [here](/refguide/setting-up-the-navigation-structure/#role-based-home-page).
-
-## 3 Single-sign on
-
-Add summary and link to NativeSSO module here.

@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "workflow-events", "workflow event"]
 
 ## 1 Introduction
 
-[Workflow engine](/refguide/workflow-engine/) emits near real-time workflow events. These events provide a great way to build audit trails, handle errors, update KPI dashboards, etc. For example, you can define an event handler that only collects data from user task events.
+The [Workflow Engine](/refguide/workflow-engine/) emits near real-time workflow events. These events provide a great way to build audit trails, handle errors, update KPI dashboards, etc. For example, you can define an event handler that only collects data from user task events.
 
 ## 2 Configuration
 
@@ -28,7 +28,7 @@ The image below presents an example of how you can configure an event handler ei
 
 ## 3 Event Mechanism
 
-When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [workflow engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent entities [Workflow Entities](/refguide/workflows/##workflow-entities): **WorkflowEvent**, **WorkflowRecord** and **WorkflowActivityRecord**.
+When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent [workflow entities](/refguide/workflows/#workflow-entities): **WorkflowEvent**, **WorkflowRecord** and **WorkflowActivityRecord**.
 
 There are a few advantages of this mechanism:
 

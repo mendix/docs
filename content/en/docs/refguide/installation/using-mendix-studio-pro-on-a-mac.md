@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 {{% alert color="info" %}}
-From Mendix 10.7 onwards, you can run Mendix Studio Pro Natively on macOS. This means you no longer need to follow the guide below to get started on Mac. If you want to use older versions of Studio Pro, then you can follow the guide to get started.
+From Mendix 10.7.0 and above, you can run Mendix Studio Pro natively on macOS. This means you no longer need to follow the guide below to get started on Mac. If you are using  versions of Studio Pro below 10.7.0, follow the guide to get started.
 {{% /alert %}}
 
 

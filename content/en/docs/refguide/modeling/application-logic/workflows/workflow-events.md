@@ -7,15 +7,22 @@ tags: ["workflow", "workflows", "workflow-events", "workflow event"]
 
 ## 1 Introduction
 
-[Workflow engine](/refguide/workflow-engine/) emits near real-time workflow events. These events provide a great way to build audit trails, handle errors, update KPI dashboards, etc.
+[Workflow engine](/refguide/workflow-engine/) emits near real-time workflow events. These events provide a great way to build audit trails, handle errors, update KPI dashboards, etc. For example, you can define an event handler that only collects data from user task events.
 
 ## 2 Configuration
 
-The events can be configured via the **Event handlers** setting in [App Settings](/refguide/app-settings/#event-handlers):
+There are two ways in which you can configure workflow-related event handlers:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% class="image-border" >}}
+* The events can be configured via the **Event handlers** setting in the [workflow properties](/refguide/workflow-properties/#event-handlers).
+* The **Event handlers** setting can also be configured in [App Settings](/refguide/app-settings/#event-handlers):
 
-or in [workflow properties](/refguide/workflow-properties/#event-handlers):
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% class="image-border" >}}
+
+{{% alert color="info" %}}
+The event handlers added in workflow properties override the app-wide event handlers in the **App Settings**.
+{{% /alert %}}
+
+The image below presents an example of how you can configure an event handler either in the workflow properties or in the **App Settings**:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% class="image-border" >}}
 
@@ -31,7 +38,7 @@ There are a few advantages of this mechanism:
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% class="image-border" >}}
 
 {{% alert color="warning" %}}
-All associations with the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations with "live" objects, whose state may have been updated since the event occurred.
+All associations to the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred.
 {{% /alert %}}
 
 These non-persistent entities are provided as the default input parameters to the microflow specified in the event handler configuration:
@@ -54,7 +61,7 @@ In the case of workflow [operations](/refguide/change-workflow-state/#operation)
 
 ## 5 Event Types {#workflow-event-types}
 
-## 5.1 Workflow Lifecycle Events
+### 5.1 Workflow Lifecycle Events
 
 |   Event Type                    | Description                                                                                                                                 | Examples                                                                                                           |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -72,7 +79,7 @@ In the case of workflow [operations](/refguide/change-workflow-state/#operation)
 | Workflow Updated                | Triggered when a parent workflow is put back into progress after the sub-workflow is retried, restarted, or when jump-to option is applied  | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*                                                        |
 | Workflow Upgraded               | Triggered when the workflow definition has a new version having non-conflicting changes                                                     | See [Successful Upgrades to the Latest Workflow Definition](/refguide/workflow-versioning/#workflow-definition-upgrade) |
 
-## 5.2 Activity Events {#activity-event-type}
+### 5.2 Activity Events {#activity-event-type}
 
 |   Event Type                           | Description                                                                                             | Examples                                                                |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|

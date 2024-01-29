@@ -15,7 +15,8 @@ Workflow properties consist of the following sections:
 
 * [General](#general)
 * [Due date](#due-date)
-* [Events](#events)
+* [Event Handlers](#event-handlers)
+* ⚠ [Events (Deprecated)](#events)
 * [Admin page](#admin-page)
 * [Display information](#display-info)
 * [Common](#common)
@@ -38,13 +39,26 @@ The **Due date** section properties are described in the table below:
 
 ### 2.3 Event Handlers {#event-handlers}
 
-**Event Handlers** section allows you to override the app-wide event handlers in the **App Settings** and to set workflow-specific event handlers that will be triggered when the workflow or its activities goes through the transitions which warrant those workflow events. For more information on app-wide event handlers, see the [Events Handlers](/refguide/app-settings/#event-handlers) section in *App Settings*.
+**Event Handlers** section allows you to override the app-wide event handlers in the **App Settings** and to set workflow-specific event handlers that will be triggered when the workflow or its activities go through the transitions which warrant those workflow events. For more information on app-wide event handlers, see the [Events Handlers](/refguide/app-settings/#event-handlers) section in *App Settings*.
+
+An event handler has the following configuration:
+
+* **Name** – describes the event handler
+* **Documentation** – provides more information regarding the usage of the event handler
+* **When** – allows you to select the [workflow event types](/refguide/workflow-events/#workflow-event-types), for which the handler should be triggered
+* **Microflow** – allows you to select a microflow that should be triggered for each of the above selected workflow event types
+
+For more information on workflow events, see [Workflow Events](/refguide/workflow-events/).
 
 {{% alert color="info"%}}
-You can define multiple workflow-specific event handlers. Even if a single event handler is defined for a specific workflow definition we will consider that it overrides all available app-wide event handlers for the workflow instances belonging to that definition.
+You can define multiple workflow-specific event handlers. Even if a single event handler is defined for a specific workflow definition, it overrides all available app-wide event handlers for the workflow instances belonging to that definition.
 {{% /alert %}}
 
-### 2.4 Events (Deprecated) {#events} 
+### 2.4 ⚠ Events (Deprecated) {#events} 
+
+{{% alert color="warning" %}}
+⚠ State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
+{{% /alert %}}
 
 **Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
 

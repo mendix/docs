@@ -61,6 +61,10 @@ In the case of workflow [operations](/refguide/change-workflow-state/#operation)
 
 ## 5 Event Types {#workflow-event-types}
 
+{{% alert color="info" %}}
+The event types listed in the tables below correspond to the enumeration values of the **EventType** attribute of the [workflow entity](/refguide/workflows/#workflow-entities) **WorkflowEvent** in the system module.
+{{% /alert %}}
+
 ### 5.1 Workflow Lifecycle Events
 
 |   Event Type                    | Description                                                                                                                                 | Examples                                                                                                           |

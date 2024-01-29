@@ -87,9 +87,9 @@ Specify the values for all four configurations (Delimiter, Quote Character, Esca
 * **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
 * **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file
 
-Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create an Entity (NPE), but this can be customized. The column names correspond to the attribute name within the entity.
+Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create an entity (NPE), but this can be customized. The column names correspond to the attribute name within the entity.
 
-All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is defaulted to *String*.
+All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which defaults to **String**.
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
@@ -97,7 +97,7 @@ For example, for the following source data (CSV), the separator is specified as 
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/source-csv-data.png" >}}
 
-The data preview and resulting entity would be as seem below:
+The data preview and resulting entity would be as seen below:
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/preview-csv-data-and-entity.png" >}}
 

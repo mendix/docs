@@ -28,6 +28,7 @@ If you are looking for step-by-step guides on performing various Mendix actions,
 ## 2 Studio Pro Functionality
 
 Studio Pro allows you to create, test, and run apps. 
+Studio pro runs on both Windows and macOS.
 
 ### 2.1 Modeling 
 

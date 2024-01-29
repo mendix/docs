@@ -82,7 +82,7 @@ Select or drop the CSV file in the **Select Source File** window. CSV import sup
 
 Specify the values for all four configurations (Delimiter, Quote Character, Escape Character, and Add Header Row):
 
-* **Delimiter(Separator)** – current supported delimiters are comma, semicolon, pipe, and tab; the default is comma
+* **Delimiter (Separator)** – current supported delimiters are comma, semicolon, pipe, and tab; the default is comma
 * **Quote Characters** – current supported quote characters are single and double quotes; the default is double quotes
 * **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
 * **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file

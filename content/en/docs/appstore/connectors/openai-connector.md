@@ -8,7 +8,7 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 draft: false 
 ---
 
-## 1 Introduction 
+## 1 Introduction {#introduction}
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app and is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
@@ -16,9 +16,9 @@ The current scope covers text generation use cases based on the [OpenAI Chat Com
 
 Image generations with the DALL-E models is currently only supported from OpenAI, and Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
 
-### 1.1 Typical Use Cases 
+### 1.1 Typical Use Cases {#use-cases}
 
-#### 1.1.1 Text Generation
+#### 1.1.1 Text Generation {#use-cases-text}
 
 * Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
 * Use OpenAI’s large language models for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
@@ -40,11 +40,11 @@ OpenAI provides market-leading large language model capabilities with GPT-4:
 * Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
 * Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
   
-#### 1.1.2 Image Generation
+#### 1.1.2 Image Generation {#use-cases-images}
 
 Generate one or more completely new, original images and art from a text description. Powered by the OpenAI DALL-E models, the connector enables developers to generate these images by combining concepts, attributes, and styles.
 
-#### 1.1.3 Embeddings
+#### 1.1.3 Embeddings {#use-cases-embeddings}
 
 Convert strings into vector embeddings for various purposes based on the relatedness of texts. 
 Embeddings are commonly used for:
@@ -62,35 +62,35 @@ Combine embeddings with text generation capabilities and leverage specific sourc
 Follow our [tutorial](#RAG-tutorial) on how to setup a vector database for retrieval augmented generation (RAG) and check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
 {{% /alert %}}
 
-### 1.2 Features 
+### 1.2 Features {#features}
 
 Mendix provides dual platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
 
 With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), and the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). 
 
-### 1.3 Limitations 
+### 1.3 Limitations {#limitations}
 
 The current scope of the connector is focused on text and image generation use cases, as well as embeddings. We try to release early and often, so keep your eyes open for new releases!
 
-### 1.4 Prerequisites 
+### 1.4 Prerequisites {#prerequisites}
 
 You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
 
-### 1.5 Dependencies 
+### 1.5 Dependencies {#dependencies}
 
 - Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
 - [Encryption](https://marketplace.mendix.com/link/component/1011) module
 - [Community commons](https://marketplace.mendix.com/link/component/170) module
 
-## 2 Installation 
+## 2 Installation {#installation}
 
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OpenAI Connector into your app. 
 
-## 3 Configuration
+## 3 Configuration {#configuration}
 
 After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
 
-### 3.1 General Configuration
+### 3.1 General Configuration {#general-configuration}
 
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_Configurations** to a page that is already part of your navigation. 
@@ -769,13 +769,13 @@ The following flows may be used in order to construct and handle the required in
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
 
-## 6 Quickstart guide: RAG example implementation in the OpenAI Showcase application
+## 6 Quickstart Guide: RAG Example Implementation In The OpenAI Showcase Application {#rag-quickstart}
 
-### 6.1 What is Retrieval Augmented Generation (RAG)?
+### 6.1 What Is Retrieval Augmented Generation (RAG)? {#what-is-rag}
 
 RAG is a framework for an AI-based search with a private/external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the application can ask questions about it and the assistant responses will be based on this knowledge base only. 
 
-### 6.2 High-level steps of RAG
+### 6.2 High-level steps of RAG {#rag-high-level}
 
 We start with the private knowledge base, such as a text snippet. This content needs to be prepared for RAG, which happens only once (and must happen again only if the content changes). Additional steps happen every time an end-user triggers the RAG flow, e.g. by asking a question about the data. The complete technical flow can be split up into three main steps.
 
@@ -796,20 +796,22 @@ We start with the private knowledge base, such as a text snippet. This content n
 * Through prompt engineering, the text generation model is instructed to only base the answer to the user query on the data chunks that were sent as part of the request. This prevents the model from hallucinating.
 * Finally, the assistant response is returned to the user.
 
-### 6.3 Step-by-step guide
+### 6.3 Step-By-Step Guide {#rag-step-by-step}
 
-Disclaimer: Below we describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. This is not the only possible solution and other (vector) database types may better fit your use case.
+{{% alert color="info" %}}
+Disclaimer: Below we describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. This is not the only possible solution and other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
+{{% /alert %}}
 
 Follow the steps below to get started with the Retrieval Augmented Generation (RAG) example in the [showcase app](https://marketplace.mendix.com/link/component/220475).
 
 To start experimenting with the end-to-end process, you can use this document to ensure you’ve covered the following prerequisites which we will explain in more detail in this document:
 
-* You haave access to a (remote) PostgreSQL database with the `pgvector` extension available.
+* You have access to a (remote) PostgreSQL database with the `pgvector` extension available.
 * You have configured the connection to the above database in the OpenAI Showcase App.
 
 If you have access to an Amazon Web Services (AWS) account we recommend using the [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) set-up described in the upcoming section. This is convenient since PostgreSQL databases in Amazon RDS by default have the required extension available.
 
-#### 6.3.1 Create a PostgreSQL Database with Amazon RDS
+#### 6.3.1 Create a PostgreSQL Database with Amazon RDS {#rds-database}
 
 Make sure you are familiar with the basics of [Amazon RDS and the AWS console](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). We recommend the following sections as preliminary background knowledge:
 
@@ -817,7 +819,6 @@ Make sure you are familiar with the basics of [Amazon RDS and the AWS console](h
 * Create a PostgreSQL DB Instance
 
 Create a database instance in Amazon RDS according to their [documentation](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). As a quick-start we provide a summary of the steps including a list of values below that you can use to speed things up for experimental purposes.
-
 
 1. Login to the AWS console. Go to RDS using the search bar and go to Databases. 
 2. Click *Create database* and use the following specifications:
@@ -845,19 +846,20 @@ Create a database instance in Amazon RDS according to their [documentation](http
     3. Optional: if the database is required to be accessible from other locations as well: click the security group rule, go to the *inbound rules* tab, then add a rule:
         1. Type: choose *PostgreSQL*
         2. Port: set to `5432`.
-        3. Source: choose *Custom*; provide the IP CIDR range in the next field (see notes below). For a single IPv4 address, this is equal to the IP address with `/32` appended.
-    4. Optional: if you want the database to be accessible from anywhere, have a rule with its source set to `0.0.0.0/0` (see notes below).
+        3. Source: choose *Custom*; provide the IP CIDR range in the next field (see [IP inbound rules](#ip-inbound-rules) below). For a single IPv4 address, this is equal to the IP address with `/32` appended.
+    4. Optional: if you want the database to be accessible from anywhere, have a rule with its source set to `0.0.0.0/0` (see [IP inbound rules](#ip-inbound-rules) below).
 
-**Notes about IP inbound rules**
+##### 6.3.2 IP inbound rules {#ip-inbound-rules}
 
--  If you have access to a VPN, you could also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
-- If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source; see [Mendix IP Addresses: Outgoing IP](https://docs.mendix.com/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
+*  If you have access to a VPN, you could also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
+* If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source; see [Mendix IP Addresses: Outgoing IP](https://docs.mendix.com/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
 
-**Note about deleting resources in AWS**
+##### 6.3.3 Deleting Resources in AWS {#deleting-aws-resources}
 
-- If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free tier after a certain amount of time.
+If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain amount of time.
 
-#### 6.4 Configure the database connection details in the Showcase app
+#### 6.4 Configure The Database Connection Details In The Showcase App {#configure-database-connection}
+
 1. Login to the Showcase app and navigate to the RAG example
 2. After reading **Step 1: Introduction**, proceed to **Step 2: Vector Database Configuration**
 3. Edit the configuration details
@@ -872,7 +874,7 @@ Create a database instance in Amazon RDS according to their [documentation](http
     2. The username and password are equal to the Master Username and Master Password that you chose during the setup in previous section.
     3. Save the configuration.
 
-#### 6.5 Try out RAG end-to-end in the Showcase app!
+#### 6.5 Try out RAG end-to-end in the Showcase app! {#rag-showcase-app}
 
 **Step 3: Knowledge base step**
 Create embeddings from a text and store. Use our default text about ornamental flowering plants, or paste your own content!
@@ -890,7 +892,11 @@ Verify the embedding vectors have been created in your new database. If you ever
 - The Showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called `pgvector`. If you want to know more about the extension and how the tables look like in combination with this extension, refer to the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
 - If you want to know more about RAG, embeddings or vector databases, make sure to review the links on the Resources page of the Showcase Application.
 
-#### 6.6 I want to run a database locally! 
+#### 6.6 Setup Alternatives {#rag-setup-alternatives}
+
+We have found that setting up an AWS RDS database with the `pgvector` extention is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which we will describe in the following sections.
+
+##### 6.6.1 I want To Run A Database Locally! {#rag-local-database}
 
 That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recommended. The prerequisites are:
 
@@ -902,20 +908,20 @@ That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recomm
 
 In this case the configuration of the database connection details in the Showcase application is similar to what was described in the previous section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
-#### 6.7 I want to build my own RAG setup!
+##### 6.6.2 I Want To Build My Own RAG Setup! {#rag-takeaways}
 
 Good to hear! Feel free to learn from the Showcase app and start building your own applications. Key takeaways from the Showcase app are:
 
-* For retrieval augmented generation you need a storage space for embeddings outside of your normal Mendix app database. Typically this is a remote vector database. In order to connect to it the Showcase app uses the Mendix database connector.
+* For retrieval augmented generation you need a storage space for embeddings outside of your normal Mendix app database. Typically this is a remote vector database. In order to connect to it, the Showcase app uses the Mendix database connector.
 * The Showcase app relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries/statements you will have to do probably include at least the following:
-    * include the vector extension if applicable
-    * create tables to store the embeddings (create table)
-    * add new embeddings to tables (insert)
-    * find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
-    * remove individual records (delete) or tables (drop table)
+    * Include the vector extension if applicable
+    * Create tables to store the embeddings (create table)
+    * Add new embeddings to tables (insert)
+    * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
+    * Remove individual records (delete) or tables (drop table)
     Example queries in the form of SQL statements are available for inspiration in the source code of the Showcase application.
 
-#### 6.7 Troubleshooting
+#### 6.7 Troubleshooting {#rag-troubleshooting}
 
 **In my Mendix app I'm getting the error “FATAL: password authentication failed for user "postgres" all the time!**
 Sometimes there seems to be a caching issue in the execution of queries from apps locally. Make sure the configuration was set up correctly (re-enter the password to be sure). Close all browser tabs for the Mendix app, shut down the app locally and rerun.
@@ -928,7 +934,14 @@ Some company network might prohibit connections to AWS servers.  Make sure you a
 
 ## 7 Read More {#read-more}
 
-**Prompt engineering**
+### 7.1 Prompt engineering {#read-more-prompt-engineering}
 * [Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
 * [Introduction to Prompt Engineering](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
 * [Prompt Engineering Techniques](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
+
+### 7.2 Retrieval Augmented Generation {#read-more-rag}
+* [OpenAI Cookbook For Embeddings-based Search](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+* [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
+* [Vector Database Options Suggested By OpenAI](https://cookbook.openai.com/examples/vector_databases/readme)
+* [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
+* [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

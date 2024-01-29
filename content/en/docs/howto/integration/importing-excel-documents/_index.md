@@ -74,7 +74,7 @@ In order to set up import templates for importing data, your application model m
 
 ## 6 Manually Creating an Import Template {#creating}
 
-Before you can import data from an Excel File into your application, you have to set up an import template. In this template, you will configure the objects to which the data should be mapped, if an object is associated to another object, from which row of the Excel file the import should start, and which columns should be imported.
+Before you can import data from an Excel File, you have to set up an import template. In this template, you will configure the objects to which the data should be mapped, if an object is associated to another object, from which row of the Excel file the import should start, and which columns should be imported.
 
 In this section, you will import data from a simple Excel file example, which can be downloaded here:
 
@@ -87,7 +87,7 @@ Based on the structure of the file you want to import, you need to manually set 
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581971.png" >}}
 
-3. Give a name to the template.
+3. Name the template.
 4. Click the arrow next to the **Mendix object** box.
 5. Double-click the **Customer** object:
 
@@ -99,7 +99,7 @@ Based on the structure of the file you want to import, you need to manually set 
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581965.png" >}}
 
-    {{% alert color="info" %}}For this example you will be using a simple Excel file that has just one sheet and column headers on the first row. If a more comprehensive Excel file is used, you can change these values via the **Sheet nr**, **Header row nr**, and **Import from row nr** fields.{{% /alert %}}
+    {{% alert color="info" %}}For this example, you use a simple Excel file that has only one sheet and column headers on the first row. If a more comprehensive Excel file is used, you can change these values in the **Sheet nr**, **Header row nr**, and **Import from row nr** fields.{{% /alert %}}
 
 9. In the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
 10. Add the column number that corresponds to the column number from the Excel file you want to map.
@@ -122,20 +122,20 @@ Based on the structure of the file you want to import, you need to manually set 
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581961.png" >}}
 
-    {{% alert color="info" %}}If the mapping is set up right, a green check appears in front of the row.{{% /alert %}}
+    {{% alert color="info" %}}If the mapping is set up correctly, a green check appears in front of the row.{{% /alert %}}
 
-16. You now need to create mappings for the **Order** object attributes. However, because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. Follow these steps for each attribute of the **Order** object:
+16. Create mappings for the **Order** object attributes. However, because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. Follow these steps for each attribute of the **Order** object:
     1. Add the column number that corresponds to the column number from the Excel file you want to map.
     2. Define the Excel column header as the **Caption** value.
     3. Choose **Reference** for the type.
-    4. Click the arrow next to the **Reference** box, where you can select the association over which the order is linked to the customer –  which in this case should **Order_Customer**.
+    4. Click the arrow next to the **Reference** box, where you can select the association over which the order is linked to the customer. In this example, the association is **Order_Customer**.
     5. Click the arrow next to the **Attribute** box and double-click the **Attribute** to which you want to map the Excel value.
-    6. For the mapping of attribute **Number**, set the **Key** value to **Yes, only for the associated object** in order to prevent orders being duplicated.
+    6. For the mapping of attribute **Number**, set the **Key** value to **Yes, only for the associated object** in order to prevent orders from being duplicated.
     7. Click **Save**.
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581956.png" >}}
 
-17. For the mapping of the **OrderStatus** attribute, the Excel file value needs to be parsed to an enumeration value. To achieve this, you can use the **IVK_ParseStatus** microflow (created in the [Preparing the Logic for Data Import](#preparing) section above). Click the arrow next to the **Parse with** box and select the **IVK_ParseStatus** microflow:
+17. For the mapping of the **OrderStatus** attribute, the Excel file value needs to be parsed to an enumeration value. To achieve this, use the **IVK_ParseStatus** microflow (created in the [Preparing the Logic for Data Import](#preparing) section above). Click the arrow next to the **Parse with** box and select the **IVK_ParseStatus** microflow:
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581953.png" >}}
 

@@ -121,8 +121,9 @@ To configure the **Save** button for the use case above, do the following:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" >}}
 
-The created microflow is used for the **Save** button to validate all conditions. The sub-microflow can be used on a different page to validate the customer name. 
-You can now  click the **Play** button in the Studio Pro top bar to run your app locally and test validations.
+The created microflow is used for the **Save** button to validate all conditions. The sub-microflow can be used on a different page to validate the customer name.
+
+You can now click **Run Locally** ({{% icon name="controls-play-filled" %}}) in the Studio Pro top bar to run your app locally and test validations.
 
 ## 4 Read More 
 

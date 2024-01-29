@@ -22,6 +22,10 @@ MendixChat is built based on large language models (LLMs), using data from [Mend
 ## 2 Using MendixChat
 
 {{% alert color="warning" %}}
+Currently, MendixChat cannot make changes to your project, automate tasks, or create elements, components, documents, or models. In upcoming releases, these functionalities will be added to MendixChat or as separate features.
+{{% /alert %}}
+
+{{% alert color="warning"%}}
 In some cases, even if you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use .
 {{% /alert %}}
 

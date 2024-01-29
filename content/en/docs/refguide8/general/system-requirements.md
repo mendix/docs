@@ -120,7 +120,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide8/mysql/) 8.0
 * [Oracle Database](/refguide8/oracle/) 19, 21c
-* PostgreSQL 11, 12, 13, 14, 15, 16
+* PostgreSQL 12, 13, 14, 15, 16
 * [SAP HANA](/refguide8/saphana/) 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}
@@ -191,4 +191,4 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide8/mx-command-line-tool/).
 
-* Mono v5.20.x or .NET v4.7.2
+* Mono v5.20.x or .NET v4.7.2 

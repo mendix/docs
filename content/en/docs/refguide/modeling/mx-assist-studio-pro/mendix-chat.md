@@ -22,7 +22,7 @@ MendixChat is built based on large language models (LLMs), using data from [Mend
 ## 2 Using MendixChat
 
 {{% alert color="warning" %}}
-In some cases, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use even if you are already logged in to Studio Pro.
+In some cases, even if you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use .
 {{% /alert %}}
 
 To access MendixChat, follow these steps:

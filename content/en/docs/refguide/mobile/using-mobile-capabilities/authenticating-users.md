@@ -1,46 +1,50 @@
 ---
 title: "Authenticating Users"
 url: /refguide/mobile/using-mobile-capabilities/auth-users/
-weight: 10
+weight: 9
 description: "This guide explains how to authenticate users in a mobile app."
 tags: ["authentication", "mobile"]
 ---
 
 ## 1 Introduction
 
-Native mobile apps often need to authenticate users just like web applications. However, there are some differences when it comes to authenticating users in a native mobile app compared to a web-based app in Mendix. In this guide, you will learn how to authenticate users in native mobile apps and what to look out for.
+Native mobile apps often need to authenticate users just like web applications. However, there are some differences between native and web when it comes to authenticating users in Mendix. In this guide, you will learn how to authenticate users in native mobile apps and what to look out for.
 
 ## 2 Setting Up User Authentication
 
-To enable user authentication in a native mobile app, you first need to enable [App Security](/refguide/app-security/) by setting the security level to Prototype or Production.
+To enable user authentication in a native mobile app, you first need to enable [App Security](/refguide/app-security/) by setting the security level to **Prototype** or **Production**.
 
-In a web-based app, you can rely on the provided `login.html` file to handle showing a sign-in form to your users. This is not possible in a native mobile app. Instead, you must model the login page using Mendix. This requires three steps: Model the sign-in page, enable anonymous users, and set the role-based homepage for anonymous users to the sign-in page.
+In a web-based app, you can rely on the provided `login.html` file to handle showing a sign-in form to your users. This is not possible in a native mobile app. Instead, you must model the login page using Mendix. This requires three steps: model the sign-in page, enable anonymous users, and set the role-based homepage for anonymous users to the sign-in page.
 
-You can skip the first step if you are using the Blank Native App starter template, as the sign-in page has already been created.
+You can skip the first step if you are using the [Blank Native App](https://marketplace.mendix.com/link/component/109511) starter template, as the sign-in page has already been created.
 
 ### 2.1 Model the Sign-In Page
 
-Start by creating a new native page called Login that will be used to show the sign in dialog to your users. Use the SignIn Phone template under Forms to get started quickly.
+To model your native sign-in page, do the following:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/create-signin-page.png" alt="Create sign-in page" >}}
+1. Create a new native page called *Login* that will be used to show the sign-in dialog box to your users. Use the **SignIn Phone** template under **Forms** to get started quickly:
 
-The page already contains a sign-in form but is missing a data source to store the sign-in information. Before we will model that make sure to change the layout of the newly created page to NativePhone_TopBarOnly to remove the bottom navigation.
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/create-signin-page.png" alt="Create sign-in page" >}}
 
-To model the data source that will store the sign-in form data, start by creating a non-persistent entity in the [Domain model](/refguide/domain-model/) called Login. Add three attributes of type String: Username, Password, and ValidationMessage.
+    The page already contains a sign-in form but is missing a data source to store the sign-in information. 
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-entity.png" alt="Login entity" >}}
+1. Before you will model the data source, make sure to change the new page's layout to **NativePhone_TopBarOnly** to remove the bottom navigation.
+1. To model the data source that will store the sign-in form data, start by creating a non-persistent entity in the [Domain model](/refguide/domain-model/) called *Login*. 
+1. Add three attributes of type String: **Username**, **Password**, and **ValidationMessage**:
 
-Since anonymous users need to edit this entity, your need to set the access rights for this entity appropriately. Allow read and write access for all attributes of this entity for anonymous users.
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-entity.png" alt="Login entity" >}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/entity-access.png" alt="Entity access" >}}
+1. Since anonymous users need to edit this entity, you must set the access rights for this entity accordingly. Allow read and write access for all attributes of this entity for anonymous users:
 
-To use this custom entity in the sign-in page, you need to create a Nanoflow that will serve as the data source. This Nanoflow should create an empty Login object and return it. Call the Nanoflow DSS_CreateLoginContext.
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/entity-access.png" alt="Entity access" >}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/data-source-nanoflow.png" alt="Data source nanoflow" >}}
+1. To use this custom entity in the sign-in page, you need to create a nanoflow that will serve as the data source. This nanoflow should create an empty **Login** object and return it. Name the *Nanoflow DSS_CreateLoginContext*:
 
-Connect the Nanoflow to the page by setting the data source of the Data view surrounding the sign-in form to it.
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/data-source-nanoflow.png" alt="Data source nanoflow" >}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/form-data-source.png" alt="Connect the data source" >}}
+1. Connect the nanoflow to the page by setting the data source of the data view surrounding the sign-in form to it:
+
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/form-data-source.png" alt="Connect the data source" >}}
 
 Do not fill the contents of the form automatically. Instead connect the Email Address input field to the Username attribute and the Password input field to the Password attribute. Make sure that Show as password is set to true for the latter. Add a Text below the input fields to show the validation message.
 

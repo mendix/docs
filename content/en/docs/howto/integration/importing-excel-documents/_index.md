@@ -166,7 +166,7 @@ Follow these steps to import the Excel file:
 
 ## 7 Automatically Creating an Import Template via an Excel File
 
-In the previous steps, you manually added all the columns to your import template. In this section, you will create the same Excel template in an automated way, which you can do this via the specific **New template by excelfile** button. You can use this same Excel file example:
+In this section, you will create the same Excel template in an automated way, which you can do using the specific **New template by excelfile** button. You can use this same Excel file example:
 
 {{< figure src="/attachments/howto/integration/importing-excel-documents/18581938.png" link="/attachments/howto/integration/importing-excel-documents/18581949.xlsx" >}}
 
@@ -186,7 +186,7 @@ Follow these steps to create the import template via the Excel file:
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581936.png" >}}
 
-6. Back in the top section of the page, click the arrow next to **Mendix object** and select the **Customer** object type:
+6. In the top section of the page, click the arrow next to **Mendix object** and select the **Customer** object type:
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/18581935.png" >}}
 
@@ -221,6 +221,7 @@ You have now imported a complete import template.
 
 ## 9 Read More
 
+* [Import a Large Excel File](/howto/integration/import-a-large-excel-file/)
 * [Export XML Documents](/howto/integration/export-xml-documents/)
 * [Import XML Documents](/howto/integration/importing-xml-documents/)
 * [Expose a Web Service](/howto/integration/expose-a-web-service/)

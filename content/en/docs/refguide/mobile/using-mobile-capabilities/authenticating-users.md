@@ -46,21 +46,23 @@ To model your native sign-in page, do the following:
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/form-data-source.png" alt="Connect the data source" >}}
 
-Do not fill the contents of the form automatically. Instead connect the Email Address input field to the Username attribute and the Password input field to the Password attribute. Make sure that Show as password is set to true for the latter. Add a Text below the input fields to show the validation message.
+Do not fill the contents of the form automatically. Instead connect the Email Address input field to the Username attribute and the Password input field to the Password attribute. Make sure that **Show as password** is set to **true** for the latter. Add a Text below the input fields to show the validation message.
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-form.png" alt="Finished sign-in form" >}}
 
-You need to create second nanoflow to trigger the actual sign in. Change the On click action of the Login button to Call a nanoflow and create a new nanoflow called ACT_SignInUser. Make sure the parameter Login is passed to the Nanoflow.
+1. You need to create second nanoflow to trigger the actual sign in. Change the **On click** action of the **Login** button to **Call a nanoflow** and create a new nanoflow called *ACT_SignInUser*. Make sure the parameter `Login` is passed to the nanoflow.
+1. In the nanoflow, call the **Sign in** action (which is bundled inside the [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module). Pass the attributes from the `Login` parameter to the action and store the response in a new variable.
 
-In the Nanoflow call the Sign in action, which is part of [Nanoflow Commons](/appstore/modules/nanoflow-commons/). Pass the attributes from the Login parameter to the action and store the response in a new variable.
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/sign-in-action.png" alt="Sign-in action" >}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/sign-in-action.png" alt="Sign-in action" >}}
+    1. The response of the **Sign in** action reflects the **HTTP Status** code of the sign-in network request:
+        1. If it is 200, then the sign-in was successful. In this case, your app will automatically restart and show the homepage of the user. 
+        1. If the response is 401, then the sign in was unsuccessful because either the user is unknown or the password is wrong. 
+        1. If the response is 0, then there was a network error.
 
-The response of the Sign in action reflects the HTTP Status code of the sign-in network request. If it is 200 the sign in was successful. In this case, your app will automatically restart and show the homepage of the user. If the response is 401 the sign in was unsuccessful because either the user is unknown or the password is wrong. If the repsonse is 0 there was a network error.
+1. Use the information on responses above to inform your user about the problem by filling the **ValidationMessage** attribute with a meaningful error message. The following shows an example of the finished nanoflow:
 
-Use this information to inform your user about the problem by filling the ValidationMessage attribute with a meaningful error message. The following shows an example of the finished Nanoflow.
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-nanoflow.png" alt="Finished sign-in nanoflow" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-nanoflow.png" alt="Finished sign-in nanoflow" >}}
 
 ### 2.2 Enable Anonymous Users
 

@@ -8,4 +8,8 @@ description_list: true
 tags: ["marketplace", "marketplace component", "service"]
 ---
 
-## 1 Documents in This Category
+## 1 Introduction
+
+Mendix services provide software functionality that is reachable via APIs that have their own lifecycle.
+
+## 2 Documents in This Category 

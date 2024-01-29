@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### January 25
+
+#### New Features
+
+* Besides the already existing private and restricted portfolios, we now introduced open portfolios. An open portfolio is discoverable within your [company portfolios](/developerportal/portfolio-management/#my-porfolios-vs-company-portfolios) and accessible for all company members.
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances the **Manage Users** overview of the app [access management](/developerportal/collaborate/general-settings/#managing-app-users) would not show.
+
 ### January 18
 
 #### Improvements

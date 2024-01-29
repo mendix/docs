@@ -25,9 +25,9 @@ In the **Deploy** tab, you can view information about your environments. You can
 
 ### 2.1 Deployment Package Repository{#package-repository}
 
-The **Deployment Package Repository** section has an overview of the available deployment packages.
+The **Deployment Package Repository** section has an overview of your deployment packages.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" class="image-border" >}}
 
 You can perform the following actions in this section:
 
@@ -45,16 +45,16 @@ You can also see information and perform actions on the existing deployment pack
     * Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
     * Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
 
-To deploy a package, transporting it from the Team Server to the selected environment, click the **Deploy** icon.
+To deploy a package, transporting it from the Team Server to an environment where you can run your app, click **Deploy** ({{% icon name="deploy" %}}).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-icon.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-icon.png" class="image-border" alt="" >}}
 
 If you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a package, you can do the following:
 
 * View details, including the package size, description, build output, and an overview of the environments that are running the package
 * Delete the package
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package-options.png" alt="More Options" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package-options.png" class="image-border" alt="More Options" >}}
 
 ### 2.2 Environments
 
@@ -70,9 +70,9 @@ For standard plans, the **Environments** section shows the following information
 
 * Environment name (Acceptance, Production, or Test)
 * Environment status, indicated by the icon next to the environment name:
-    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
-    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
-    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * Name of the deployment package
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
@@ -98,9 +98,9 @@ If your Mendix license supports flexible environments, you can define the number
 For flexible environments, the **Environments** section shows the following information:
 
 * Environment status, indicated by the icon next to the environment name:
-    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
-    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
-    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * Name of the environment
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
@@ -118,7 +118,7 @@ You can perform the following actions in this section:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="Move Up and Move Down options" class="image-border" >}}
 
-    {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
+    {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** ({{% icon name="deploy" %}}) in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
 
 ### 2.3 Activity
 
@@ -160,7 +160,7 @@ In the **Services** tab, the Technical Contact can determine which custom servic
 
 ### 6.1 Available Services
 
-One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
 
 ### 6.2 Enabling Custom Services
 

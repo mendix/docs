@@ -9,10 +9,6 @@ tags: ["Deploy","Manage", "Mendix Cloud", "SAP", "Cloud Foundry", "Kubernetes", 
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to Mendix Cloud, which is the default location for both free and licensed apps. You can also deploy to SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
@@ -32,7 +28,7 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 ## 2 Run Locally or Preview
 
-In Studio Pro, you can click **Play** ({{% icon name="controls-play" %}}) in the toolbar to run your app locally. Use the **View App** button to directly jump to see your app running in your browser at *localhost*.
+In Studio Pro, you can click **Run Locally** ({{% icon name="controls-play-filled" %}}) in the toolbar to run your app locally. Use the **View App** button to directly jump to see your app running in your browser at *localhost*.
 
 To speed up the development process, most changes you make within Studio Pro will use "Instant Update" to be reflected immediately in the locally-running app. However, some changes (such as changes to the domain model) will need the whole app to be restarted.
 

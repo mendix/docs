@@ -145,7 +145,7 @@ The session token can be acquired by calling `mx.session.getConfig("csrftoken")`
 
 #### 5.2.3 Authentication Option 3, Custom {#custom}
 
-If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier(s). The microflow returns a `System.User` object or entity specialization thereof. This can be a new or existing object, based on the content of the HTTP request headers.
+If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier (or identifiers). The microflow returns a `System.User` object or entity specialization thereof. This can be a new or existing object, based on the content of the HTTP request headers.
 
 This functionality allows you, for example, to contact an external Identity Provider or verify the access to the API endpoint and resource based on scopes and claims encoded in a JWT token.
 

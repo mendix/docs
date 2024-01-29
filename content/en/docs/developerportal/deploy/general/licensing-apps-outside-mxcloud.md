@@ -8,10 +8,6 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/licensing-apps-outside-mxcloud.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 On Mendix Cloud, you can build [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app), which let you try things out and build and test apps using all the functionality of Mendix.
@@ -151,4 +147,4 @@ For more instructions on how to do this, see [Unix-Like Deployment](/developerpo
 
 ## 4 Read More
 
-* [Submit a Support Request](/community-tools/support/submit-support-request/)
+* [Submit a Support Request](/support/submit-support-request/)

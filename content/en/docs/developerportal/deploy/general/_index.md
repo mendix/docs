@@ -8,10 +8,6 @@ tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Az
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/general.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix apps can be deployed to many different platforms. Much of the deployment and management of a Mendix app depends on which platform it is deployed to. You can find information about each platform in the sections of documentation which relate specifically to deployment to that platform.

@@ -15,14 +15,52 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### January 25
+
+#### New Features
+
+* Besides the already existing private and restricted portfolios, we now introduced open portfolios. An open portfolio is discoverable within your [company portfolios](/developerportal/portfolio-management/#my-porfolios-vs-company-portfolios) and accessible for all company members.
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances the **Manage Users** overview of the app [access management](/developerportal/collaborate/general-settings/#managing-app-users) would not show.
+
+### January 18
+
+#### Improvements
+
+* We released a few improvements for [Feedback](/developerportal/app-insights/feedback/):
+    * We converted **Inbox** and **Archive** pages into two tabs on the homepage.
+    * We introduced a bulk action bar where you can link, move, archive, and delete items as well as assign item status and create stories in bulk.
+    * We now save your filters on **Inbox** and **Archive** tabs until the page is refreshed.
+
+### January 11
+
+#### New Features
+
+We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
+
+* You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+* You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
+
+#### Improvements
+
+* [Epics](/developerportal/project-management/epics/), our new agile planning tool has [replaced Mendix Stories](#stories-deprecation). We have added the option to export data from the [Story Archive](/developerportal/collaborate/general-settings/#story-archive) in batches, for those of you who had a lot of stories to export.
+
+    You will need to export everything you want to keep before 1 October, 2024. After that, old data will be deleted.
+
 ## 2023
 
 ### December 14
 
 #### New Features
 
-* In [Feedback](/developerportal/app-insights/feedback/), app team members now can assign priority to feedback items and filter feedback items by their priority.
-* In [Feedback](/developerportal/app-insights/feedback/), it is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
+
+* App team members now can assign priority to feedback items and filter feedback items by their priority.
+*  It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 
@@ -136,7 +174,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We improved the migration flow to make it as easy as possible for you to [move your data from Stories to Epics](/developerportal/project-management/epics/planning/#data-migration).
 
-#### Deprecations
+#### Deprecations{#stories-deprecation}
 
 * Stories is officially retired and Epics is the only official Mendix agile planning tool now. You can still migrate all your data from Stories to Epics.
 
@@ -262,13 +300,13 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a bug where we accidently tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
+* We fixed a bug where we accidentally tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
 
 ### June 29, 2023
 
 #### New Features
 
-* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/) , we will [archive all your work in Mendix Stories](/developerportal/collaborate/general-settings/#story-archive) and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page.
+* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), we will [archive all your work in Mendix Stories](/developerportal/collaborate/general-settings/#story-archive) and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page.
 * To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in Epics works a bit differently than before: the navigation items are on a pane on the left now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another. (If you need more space on the screen, you can always collapse the navigation pane.)
 * Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
@@ -365,7 +403,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the ellipsis (**…**) in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
+* In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
 * After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of Stories. We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
 * We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.
@@ -529,7 +567,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
+* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
 
 #### Fixes
 
@@ -1075,8 +1113,8 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
-* We fixed a bug where the star icon on your [favorite apps](/developerportal/#my-apps) was not displayed properly.
+* We fixed a bug where the calendar icon ({{% icon name="calendar" %}}) on date/time input fields was not displayed properly.
+* We fixed a bug where the star icon ({{% icon name="star" %}}) on your [favorite apps](/developerportal/#my-apps) was not displayed properly.
 
 ### May 22, 2020
 

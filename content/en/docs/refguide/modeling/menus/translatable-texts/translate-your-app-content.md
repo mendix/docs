@@ -126,7 +126,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" >}}
 
-6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module(s).
+6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module (or modules).
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" >}}
 

@@ -24,11 +24,11 @@ The **Paid Environments** tab presents an overview of the licensed Mendix Cloud 
 
 When you select one or more environments via the checkboxes on the **Paid Environments**, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 
-There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/community-tools/support/submit-support-request/#submitting) to do the following:
+There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting) to do the following:
 
-* [Add Node](/community-tools/support/new-app-node-request-template/#new-node) – requests a new app node for a specific app and environment
-* [Resize Environment](/community-tools/support/new-app-node-request-template/#resize) – requests a container size change
-* [Offboard Environment](/community-tools/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
+* [Add Node](/support/new-app-node-request-template/#new-node) – requests a new app node for a specific app and environment
+* [Resize Environment](/support/new-app-node-request-template/#resize) – requests a container size change
+* [Offboard Environment](/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
 
 {{% alert color="info" %}}
 These links will open in a new browser tab.

@@ -156,7 +156,7 @@ To access your data from Data Lake storage using the OData technology provided b
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_metadata.png" alt="data-lake-manager" >}}
 
-1. In the **Folder Selection** section, select the folder(s) to be published in the contract. In the right panel, the selected folders are listed.
+1. In the **Folder Selection** section, select the folder (or folders) to be published in the contract. In the right panel, the selected folders are listed.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_folder_selection.png" alt="data-lake-manager" >}}
 
@@ -289,7 +289,7 @@ If you want to use the [Siemens Insights Hub Widgets](https://marketplace.mendix
 To enable this, you will have to do two things:
 
 1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
-2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow(s) which are run when the app is started.
+2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow (or microflows) which are run when the app is started.
 
 ## 8 Data Hub Limitations{#dh-limitations}
 

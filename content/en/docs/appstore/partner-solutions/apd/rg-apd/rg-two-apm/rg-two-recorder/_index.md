@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/apd/rg-two-recorder/
 
 ## 1 Introduction
 
-The Performance Recorder enables recording each individual action within a Mendix application. There are two recording options. Recording the runtime records server actions (microflows and client API), and recording the browser(s) records the user's connection to the application.
+The Performance Recorder enables recording each individual action within a Mendix application. There are two recording options. Recording the runtime records server actions (microflows and client API), and recording the browser (or browsers) records the user's connection to the application.
 
 Recording the runtime is useful for investigating a slow microflow or pinpointing a time-consuming action. Recording the browser shows the performance from the user's perspective as well as subsequent actions the browser performs as a result of the server responses.
 
@@ -23,7 +23,7 @@ When recording a browser, the user has to confirm the following message:
 
 ## 3 Recorded Results
 
-The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime(s) separate from the browser recordings. 
+The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime (or runtimes) separate from the browser recordings. 
 
 When you click a recording of the **Browser** type, the [browser recording results](/appstore/partner-solutions/apd/rg-two-browser-recorder-results/) opens. When you click a recording of the **Server** type, the [server recording results](/appstore/partner-solutions/apd/rg-two-runtime-recorder-results/) opens.
 

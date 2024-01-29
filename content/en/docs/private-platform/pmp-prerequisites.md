@@ -30,6 +30,8 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 | Memory | 24 GB |
 | Database HA | CPU: 1 core; Memory: 2x2 GB |
 
+[Additional services](/developerportal/deploy/private-cloud-monitor/) (Prometheus, Grafana, Loki) for observability are recommended.
+
 ## 3 General Requirements
 
 * The machine where Private Mendix Platform is installed must have connectivity to the Container Registry and the Kubernetes cluster
@@ -44,7 +46,7 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 * Mendix Studio Pro must be able to access Private Mendix Platform
 * IdP for SSO must be available and configurable during installation process
 G* it, Jenkins and other services must be accessible on the same virtual network, or allow external bi-directional communication with Private Mendix Platform
-* For Mendix Marketplace, an object storage must be accessible over HTTP(S) on either internal network or through a connection to a Mendix repository
+* For Mendix Marketplace, an object storage must be accessible over HTTP (or HTTPS) on either internal network or through a connection to a Mendix repository
 * Private Mendix Platform should be able to access the Kubernetes API directly
 
 ## 4 Software Resource Requirements
@@ -74,8 +76,13 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Version control | GitHub | Latest | Required for projects and collaboration |
 | Version control | Bitbucket | Latest | Required for projects and collaboration |
 | Version control | Azure DevOps | Latest | Required for projects and collaboration |
+| CI/CD | Kubernetes | See [Supported Environments](/developerportal/deploy/private-cloud-supported-environments/) | Default for CI/CD |
 | CI/CD | Jenkins | 2.346.1 or newer, with support for the Docker agent | Required for CI/CD |
 | CI/CD | Tekton | Mendix Operator version 1.20 or newer, Kubernetes version 1.19 or newer, latest version of Tekton from Mendix for Private Cloud | Required for CI/CD |
+| CI/CD | Azure DevOps | Latest | Required for CI/CD |
+| Logging & Metrics | Prometheus | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
+| Logging & Metrics | Grafana | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
+| Logging & Metrics | Loki | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 
 ### 4.3 Customer Apps
 
@@ -85,7 +92,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Database | PostgreSQL | Postgres 11 |
 | Object storage | S3-type Bucket | S3 API compatible |
 | Application management | Mendix for Private Cloud Operator | 2.x+ |
-| Runtime | Mendix | 9.18+ |
+| Runtime | Mendix | 9.24+ |
 
 ## 5 Infrastructure Requirements
 

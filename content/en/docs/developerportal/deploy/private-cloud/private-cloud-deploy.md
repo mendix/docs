@@ -181,7 +181,7 @@ If creation of the environment fails, then contact your cluster manager. If they
 
 You can deploy the deployment package of your app by doing the following:
 
-1. Click **Deploy** button provided in **...** section next to the deployment package you wish to deploy.
+1. Click the **Deploy** button provided in the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) menu next to the deployment package you wish to deploy.
 2. Select the **Destination** environment by clicking on Change environment (you can select a different one here if one is available).
 3. Confirm that the **Status** is *Ready*.
 4. Click **Transport**.
@@ -253,6 +253,10 @@ This creates a new package as described in [Creating a Deployment Package](#crea
 This displays details of the deployment package.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image18.png" >}}
+
+{{% alert color="info" %}}
+Should a deployment package remain unused, inactive, or unlocked for a period exceeding 2 weeks, it will be automatically deleted according to the expiry date. To retain the deployment package for future use, be sure to lock it.
+{{% /alert %}}
 
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
 
@@ -453,7 +457,7 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
 * ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
 
-    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/private-cloud-cluster/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
+    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
 
 * ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
 
@@ -474,6 +478,8 @@ If you need to enter or change the subscription secret, then you can do that her
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
 
 #### 5.1.4 Security
 
@@ -711,6 +717,10 @@ This error refers to a situation where a running pod is terminated because it ha
 To fix this issue, you can raise memory requests to match the memory limit by performing the following steps:
 
 1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
+
+{{% alert color="info" %}}
+For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
+{{% /alert %}}
 
     1. To update the Mendix Operator configuration, use the following command:
 

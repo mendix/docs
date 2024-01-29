@@ -30,12 +30,13 @@ In the list, you can see the following items:
 
     * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+    * **Open** – An open portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. All company members can access an open portfolio without being a portfolio member.
 
 * **Created** – This shows the date on which the portfolio was created.
 
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
-* Ellipsis (**...**) – Clicking the button opens a menu with the following items:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu with the following items:
 
     * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
@@ -49,7 +50,7 @@ If a portfolio has an alert icon (**⚠**), that means it no longer has a Portfo
 
 ### 2.1 Access Management {#access-management}
 
-After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page. The Access Management page contains two tabs: the **Members** tab and the **Pending Invites** tab.
+After you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Access Management** to open the **Access Management** page. The Access Management page contains two tabs: the **Members** tab and the **Pending Invites** tab.
 
 #### 2.1.1 Members {#members}
 
@@ -69,7 +70,7 @@ In the list, you can see the following items:
   {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
   
 * **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
-* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
     * **Edit Role** – Selecting this allows you to change the role of the user.
     * **Remove** – Selecting this allows you to remove the user from the portfolio.
 
@@ -82,13 +83,13 @@ The **Pending Invites** tab shows all pending invites of external users. You can
 * **Email** – This shows the email of the invited user.
 * **Role** – This shows the access role of the invited user.
 * **Invite Date** – This shows the date the invite was sent.
-* Ellipsis button (**...**) – Clicking the button opens a menu with the following items:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu with the following items:
     * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
     * **Delete** – Selecting this allows you to cancel the pending invite.
 
 ### 2.2 Deleting a Portfolio {#delete-portfolio}
 
-After you click the ellipsis button (**...**) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
+After you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the list on the [All Portfolios](#all-portfolios) tab or the [Alerts](#alerts) tab, you can choose **Delete** to delete the portfolio.
 
 {{% alert color="warning" %}}
 
@@ -100,7 +101,7 @@ The **Delete Portfolio** dialog box opens. If you decide to continue, type *DELE
 
 ## 3 Alerts {#alerts}
 
-The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking the ellipsis button (**...**) on the list and selecting the corresponding item.
+The **Alerts** tab lists all the portfolios that no longer have a Portfolio Manager. You can assign new Portfolio Managers to a portfolio or delete the portfolio by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the list and selecting the corresponding item.
 
 In the list, you can see the following items:
 
@@ -113,11 +114,13 @@ In the list, you can see the following items:
 * **Privacy** – This shows the current privacy settings of the portfolio.
     * **Private** – A private portfolio is not discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a private portfolio need an invitation.
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
+    * **Open** – An open portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. All company members can access an open portfolio without being a portfolio member.
+
 
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 
-* Ellipsis button (**...**) – Clicking the icon opens a menu with the following items:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu with the following items:
 
     * **Access management** – Selecting this brings you to the [Access Management](#access-management) page.
 
@@ -125,11 +128,11 @@ In the list, you can see the following items:
 
 ## 4 Privacy Requests {#privacy-requests}
 
-On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted portfolio or any change of privacy settings of an existing portfolio. You can use the toggle on the tab to turn it on or off. 
+On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted or open portfolio or any change of privacy settings of an existing portfolio. You can use the toggle on the tab to turn it on or off. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](/developerportal/portfolio-management/#privacy-settings) section.
 
 {{< figure src="/attachments/control-center/portfolios/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" >}}
 
-The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/global-navigation/#notifications) whenever someone creates a restricted portfolio or changes the privacy settings of an existing portfolio. 
+The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/global-navigation/#notifications) whenever someone creates a restricted or open portfolio or changes the privacy settings of an existing portfolio. 
 
 On the **Privacy Requests** tab, you can view all the pending requests. You can approve or reject a request here. Every request contains the following items:
 

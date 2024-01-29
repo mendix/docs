@@ -15,7 +15,7 @@ weight: 96
 The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.
 
 {{% alert color="warning" %}}
-The Group management functions of this API apply only to apps which are using the [Mendix SSO](/appstore/modules/mendix-sso/) module to authenticate end-users. This allows end-users to use their Mendix account to sign in to your app(s).
+The Group management functions of this API apply only to apps which are using the [Mendix SSO](/appstore/modules/mendix-sso/) module to authenticate end-users. This allows end-users to use their Mendix account to sign in to your app (or apps).
 {{% /alert %}}
 
 ## 2 Authentication

@@ -133,14 +133,16 @@ The XSD file is ready to be imported into. To import it, follow these steps:
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/import-a-large-excel-file/19398898.png" >}}
 
-5. Go to your domain model, set the entity’s **Persistable** property to **Yes**, and the job is done!
+5. Go to your domain model and set the entity’s **Persistable** property to **Yes**. 
 
     {{< figure src="/attachments/howto/integration/importing-excel-documents/import-a-large-excel-file/19398899.png" >}}
 
-6. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your app.
+The data is imported to the page, as seen in the image below:  
+
+{{< figure src="/attachments/howto/integration/importing-excel-documents/import-a-large-excel-file/large-file.png" >}}
+
+To keep your application clean, you can delete the XSD schema and XML-to-domain files from your app.
 
 A video demonstrating this technique can be viewed below:  
 
 {{% youtube 8qLyIoUqKEE %}}
-
-Happy modeling!

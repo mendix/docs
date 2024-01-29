@@ -9,12 +9,8 @@ tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 
 ## 1 Introduction 
 
-{{% alert color="warning"%}}
-Currently, the availability of MendixChat is limited to Europe and APAC. It will be available worldwide by January 12, 2024.
-{{% /alert %}}
-
 {{% alert color="info"%}}
-MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Preview Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
+MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
 
 MendixChat does not use any project, customer, or company information. It only uses the data that you have entered in MendixChat. Please do not enter any personal or sensitive data in the chat!
 {{% /alert %}}
@@ -24,6 +20,10 @@ MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. 
 MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Forum](https://forum.mendix.com/index3.html#/community), and [Mendix Academy](https://academy.mendix.com/link/home). 
 
 ## 2 Using MendixChat
+
+{{% alert color="warning" %}}
+Currently, MendixChat cannot make changes to your project, automate tasks, or create elements, components, documents, or models. In upcoming releases, these functionalities will be added to MendixChat or as separate features.
+{{% /alert %}}
 
 {{% alert color="warning"%}}
 Sometimes even if you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use.

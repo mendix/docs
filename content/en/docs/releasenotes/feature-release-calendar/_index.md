@@ -17,7 +17,7 @@ The new features were divided into these major themes, which are described in th
 {{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Preview Releases](/releasenotes/beta-features/).
+"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 2 Continuous Collaboration {#continuous}
@@ -72,7 +72,7 @@ The new features were divided into these major themes, which are described in th
 | Mendix on AWS EKS (Private Cloud) | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8-2023) |
 | Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud, Private Mendix Platform) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
 | Private Mendix Platform | Released [Nov 15, 2023](/releasenotes/private-platform/)   |
-| Multi-region failover (Mendix Cloud, Cloud Dedicated) | GA: Q1 2024 |
+| Multi-region failover (Mendix Cloud, Cloud Dedicated) | Released for GA [Dec 28, 2023](/releasenotes/developer-portal/mendix-cloud/#december-28-2023) |
 | Pipelines (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
 | Pipelines (Private Cloud) | GA: TBD |
 

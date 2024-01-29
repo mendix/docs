@@ -9,15 +9,7 @@ tags: ["marketplace", "marketplace component", "document generation", "platform 
 
 ## 1 Introduction
 
-The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app.
-
-This module uses the PDF document generation service running in the Mendix Public Cloud to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
-
-When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
-
-When running on Mendix Cloud, the PDF document generation service on Mendix Public Cloud (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
-
-{{< figure src="/attachments/appstore/modules/document-generation/request-flow.png" >}}
+The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app. 
 
 ### 1.1 Features
 
@@ -27,22 +19,18 @@ When running on Mendix Cloud, the PDF document generation service on Mendix Publ
 * Use “Instant Update” during local development, which allows you to see changes to your documents immediately without having to do a full restart of your app.
 * Generate documents using a synchronous or asynchronous approach. In the asynchronous action, the result object is available instantly, the content is added at a later stage.
 
-### 1.2 Security
-
-When deployed to Mendix Cloud, the cloud service uses the user which was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
-
-The architecture is set up to process every request in a fully isolated context. The cloud service creates a request-specific worker instance for every PDF that is generated and sends the result back to the runtime when finished. After this, the worker instance is destroyed.
-
-The PDF document generation service does not store pages or documents at any time in the process.
-
-### 1.3 Limitations
+### 1.2 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/). Other deployment scenarios will be supported at a later stage. Note that we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.
-* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. Mendix recommends compressing high-resolution images to reduce their file size.
-* When you deploy your app, it needs to be accessible to our cloud service. This requires access to the DocGen request handler which can be configured in the Cloud Portal. If your app is configured to restrict access (for example, using IP safe-listing and/or client certificates), our cloud service will not be able to reach your app and the module will not work properly.
-* Mendix uses a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
+
+    {{% alert color="info" %}}For all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.{{% /alert %}}
+
+* The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in a timeout. We recommend compressing high-resolution images to reduce their file size.
+* When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to *Allow all access* for the top-level path (`/`) and the DocGen request handler (`/docgen/`). If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
+* We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
+* Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might be rendered inconsistently in the generated PDF due to factors like animation.
 * Complex documents (for example, large tables) may run into memory limitations, separate from the file size limitation. Try to reduce the number of widgets inside repeatable widgets as much as possible.
 * We currently do not enforce strict rate limits. However, take into account the following guidelines:
     * Only set the `Wait for result` parameter to *true* for direct user actions. Do not set it to *true* for batch processing. Under heavy load, requests that wait for the result may fail due to strict timeout limitations.
@@ -53,13 +41,11 @@ The PDF document generation service does not store pages or documents at any tim
 * Objects that are created in microflows that contain the `Generate PDF from page` action are not available to use in your PDF document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 * Setting the microflow property **Apply entity access** to *Yes* does not have any effect on the `Generate PDF from page` action. Regardless of the **Apply entity access** setting, the action does not require *Create* or *Write* access rights for the `FileDocument` object that gets created.
 * The `System.Owner` association is currently not set to the user which has run the microflow. Instead, the user that is configured for the `Generate as user` property of the `Generate PDF from page` action is used to set the association.
-* For local development, Mendix uses the Chrome or Chromium executable that is available on the development machine. Even though this has not been observed yet, there might be minor differences in PDF output locally vs. when using the cloud service.
+* For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
-* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. Note: This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.
+* If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. 
 
-### 1.4 Known Issues {#known-issues}
-
-* Some widgets, such as the [Charts](/appstore/widgets/charts/) widget, might not be fully loaded if they are rendered before all data is available. We check on pending network requests to prevent this, but this is not 100% reliable.
+    {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
 ## 2 Installation {#installation}
 
@@ -73,11 +59,20 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
     1. Add the module role **User** from the **DocumentGeneration** module to all app user roles that should be able to generate a document.
     2. Add the module role **Administrator** from the **DocumentGeneration** module to all app user roles that should be able to [register](#register-app) the app environments on Mendix Cloud.
 4. To clean up old document requests, enable the scheduled event **SE_DocumentRequest_Cleanup** in the  **_UseMe** folder of the **DocumentGeneration** module. This will automatically remove expired **DocumentRequest** objects after a configured offset in days. The offset is configured using the constant **DocumentGeneration.RequestCleanupOffsetInDays** (the default value is 7 days). The scheduled event runs daily at 03:00 UTC.
-5. Depending on where you run the module, continue to perform the procedure in the [Running locally from Studio Pro](#run-locally) section or in the [Running on Mendix Cloud](#run-on-mendix-cloud) section.
+5. To test the module locally, perform the procedure as described in the [Running locally from Studio Pro](#run-locally) section. 
+6. When deploying your app, consider that we currently support two types of deployments:
+
+    1. [Running on Mendix Cloud](#run-on-mendix-cloud) using the PDF service in the Mendix Public Platform. This option is available for apps that are deployed to the following environments:
+        * [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+        * [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/)
+
+    2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to the following environments:
+        * [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
+        * [Linux](/developerportal/deploy/unix-like/)
 
 ### 3.1 Running Locally from Studio Pro {#run-locally}
 
-To be able to test PDF document generation when using **Run locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
+To be able to test PDF document generation when using **Run Locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
 
 #### 3.1.1 Chrome
 
@@ -95,7 +90,7 @@ Configure the path to the *chrome.exe* executable in the **CustomChromePath** co
 
 ### 3.2 Running on Mendix Cloud {#run-on-mendix-cloud}
 
-To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following procedures:
+To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following steps:
 
 1. Enable the DocGen request handler.
 
@@ -147,7 +142,48 @@ The steps for each procedure are described in the sections below.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.
 
-{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environment(s) again.{{% /alert %}}
+{{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environments again.{{% /alert %}}
+
+### 3.3 Running On-Premises {#run-on-premises}
+
+To configure the module to generate documents on your on-premises environments, you need to perform the following steps:
+
+1. Make sure that you have the prerequisite software installed.
+2. Configure the module to use the local service.
+3. Enable the DocGen request handler.
+
+#### 3.3.1 Installing the Prerequisite Software {#install-prerequisites}
+
+You should pre-install and actively maintain the following software. Mendix does not provide support for the installation, configuration, and maintenance of these packages.
+
+##### 3.3.1.1 Chromium
+
+You should have installed a stable release of the Chromium browser. The currently supported stable release is 112.0.5615.0 ([Windows](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). [Linux](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/1109252/)).
+
+{{% alert color="info" %}}Even though we advise using Chromium, you can also use Google Chrome instead. The configuration remains the same.{{% /alert %}}
+
+##### 3.3.1.1 Node.js
+
+You should have installed a stable release of [Node.js](https://nodejs.org/).  Mendix recommends installing the same version that is shipped with the Studio Pro version that is used to build the project. You can find this version by locating and executing the `node` executable within the `modeler/tools/node` folder of your Studio Pro installation.
+
+{{% alert color="info" %}}Make sure that the Mendix Runtime has the applicable permissions to run the *node* executable.{{% /alert %}}
+
+#### 3.3.1 Configuring the Module to use the Local Service {#configure-local-service}
+
+1. Set the **OverrideServiceType** constant to *Local* in the **_UseMe** > **Configuration** folder. This enforces the use of the local service instead of the cloud service.
+
+2. Configure the path to the *chrome* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
+
+3. Configure the path to the *node* executable in the **CustomNodePath** constant in the **_UseMe** > **Configuration** folder. 
+
+#### 3.3.2 Enabling the DocGen Request Handler {#setup-inbound-rules}
+
+In case you deploy on [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you need to add the following rules when configuring the [reverse proxy inbound rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules):
+
+Rule | Name | Pattern | Rewrite URL
+---- | ---- | ------- | -----------
+1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 ## 4 Usage
 
@@ -209,11 +245,10 @@ For scenarios where you want to generate documents as a system task (for example
    {{% /alert %}}
 
 5. Create a microflow to retrieve and return the configured service user object.
-
 6. In the microflow where you call the **Generate PDF from page** action, add a microflow call to the microflow you created in the previous step, and use the return value (the service user object) as input for the **Generate as user** parameter of the action.
 
 {{% alert color="info" %}}
-Mendix recommends trying to log in as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
+We recommend that you log in manually as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
 ### 4.3 Language and Date/Time Handling
@@ -285,16 +320,35 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
 {{% alert color="info" %}}
-Mendix recommends not using the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
+We recommend you do not use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
 {{% /alert %}}
 
-## 5 Troubleshooting
+## 5 Architecture
 
-### 5.1 App Environment Registration Issues
+### 5.1 Overview
+The Document Generation module uses the PDF document generation service running in the Mendix Public Platform to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
-In case you encounter any issues while [registering your app environment(s)](#register-app), refer to the table below for more details and suggestions on how to resolve them.
+When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
 
-| Error | Error message(s) | Description | Suggestion |
+When running on Mendix Cloud, the PDF document generation service on Mendix Public Platform (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
+
+{{< figure src="/attachments/appstore/modules/document-generation/request-flow.png" class="image-border"  alt="architecture-overview-diagram" >}}
+
+### 5.2 Security
+
+When deployed to Mendix Cloud, the cloud service uses the user which was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
+
+The architecture is set up to process every request in a fully isolated context. The cloud service creates a request-specific worker instance for every PDF that is generated and sends the result back to the runtime when finished. After this, the worker instance is destroyed.
+
+The PDF document generation service does not store pages or documents at any time in the process.
+
+## 6 Troubleshooting
+
+### 6.1 App Environment Registration Issues
+
+In case you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
+
+| Error | Error message | Description | Suggestion |
 |-------|------------------|-------------|------------|
 | **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
 | **Invalid App** | <ul><li>"Invalid app"</li></ul><ul><li>"App not found for the given user"</li></ul> | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
@@ -303,22 +357,22 @@ In case you encounter any issues while [registering your app environment(s)](#re
 | **Invalid Token** | "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
 | **Other Errors** |<ul><li>"Project verification failed"</li></ul><ul><li>"Domain verification failed, invalid response from verification endpoint"</li></ul><ul><li>"Domain verification failed for unknown reason"</li></ul> | An unexpected error occurred. | Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal. |
 
-### 5.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
+### 6.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
-In general, Mendix recommends performing the following steps in case of any issues during runtime:
+In general, we recommend that you perform the following steps in case of any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
-#### 5.2.1 Rendering/Styling Issues
+#### 6.2.1 Rendering/Styling Issues
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
 {{% alert color="warning" %}}
-If the document generated locally is not matching with the one generated in the cloud, we advise using the Chromium version cited in the [Chromium](#chromium) section above to guarantee the same result locally as from our PDF document generation service.
+When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
 {{% /alert %}}
 
-#### 5.2.2 Local Service Errors
+#### 6.2.2 Local Service Errors
 
 In case you encounter the message "Local service exited with error" in your runtime logs, for example:
 
@@ -327,23 +381,26 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 	at DocumentGenerationTest.ACT_TestDocument_WrongLayout (JavaAction : 'Generate PDF from page')
 ```
 
-Mendix recommends temporarily setting the log level of the `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
+We recommend that you temporarily set the log level of the `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
-#### 5.2.3 Cloud Service Errors
+#### 6.2.3 Cloud Service Errors
 
 In case you encounter the message "Unable to generate document, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
-* The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment(s) again.
+* The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
 
-In case you encounter the message "No configuration object available. For use in Mendix Cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environment(s)](#register-app).
 
-#### 5.2.4 Timeout Errors
+In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
+
+In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
+
+#### 6.2.4 Timeout Errors
 
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 
 * The required **Enable PDF export** design property is not set to **Yes** for the page you are trying to export to PDF.
-* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, Mendix recommends temporarily adding the page to, for example, the app navigation.
+* Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.
 * A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.
 * The configured service user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions.
 * Make sure that the module role `User` is assigned to the user who is passed in the `Generate as user` property of the `Generate PDF from page` action.

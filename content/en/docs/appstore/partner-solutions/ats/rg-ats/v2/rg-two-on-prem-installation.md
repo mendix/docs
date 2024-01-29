@@ -19,7 +19,7 @@ A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 10 GB of fr
 
 A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 20 GB of free disk space are recommended.
 
-### 2.3 Selenium Server(s)
+### 2.3 Selenium Server (or Servers)
 
  &#xfeff; | Standalone Server | Grid Hub | Grid Node 
 -----|----|--------------|--------------

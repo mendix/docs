@@ -137,7 +137,7 @@ The following table describes the various properties of the *problems* JSON obje
 | `message` | The description of the problem. This is the same as the message in the [Errors pane](/refguide/errors-pane/) of Mendix Studio Pro. |
 | `locations` | Contains zero or more objects that describe the location in the Mendix app where the problem occurs (see the following table). |
 
-The location(s) associated with the problem have the following properties:
+The location (or locations) associated with the problem have the following properties:
 
 | Property | Description |
 | --- | --- |

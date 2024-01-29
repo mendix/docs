@@ -144,7 +144,7 @@ Content in this support category is supported as-is. When changing the content, 
 
 #### 4.2.2 Deprecated Category {#deprecated}
 
-Mendix moves platform-supported content into this category when the content is considered end-of-life. These decisions factor in popularity, the availability of improved alternative(s), and industry standards.
+Mendix moves platform-supported content into this category when the content is considered end-of-life. These decisions factor in popularity, the availability of improved alternatives, and industry standards.
 
 Support for content in this category is limited and is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
 

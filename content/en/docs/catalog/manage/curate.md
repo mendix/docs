@@ -21,7 +21,7 @@ Users who can curate assets in the Catalog are as follows:
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab in the Catalog.
 
 {{% alert color="info" %}}
-Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
+Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the service contract, metadata files, or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
 {{% /alert %}}
 
 ## 2 Curate List {#curatelist}
@@ -153,9 +153,9 @@ You can curate data sources to add a Catalog description and add tags.
 
 ### 5.1 Adding or Editing a Catalog Description
 
-If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
+If a description was included in the metadata contract, this will be displayed in the asset details screen for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
-You can specify if the OData service **Contract Description** or the **Catalog Description** is displayed in the Catalog.
+You can specify if the service **Contract Description** or the **Catalog Description** is displayed in the Catalog.
 
 {{% alert color="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
 
@@ -165,7 +165,7 @@ To edit the asset metadata, follow these steps:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
 
-2. The description from the OData service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the OData service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
+2. The description from the service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
 
     {{< figure src="/attachments/catalog/curate/service-metadata-description.png" alt="edit description" >}}
 
@@ -185,7 +185,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
-4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**.
+4. You can enter multiple tags separated by spaces. You can remove tags by clicking the {{% icon name="remove" %}}.
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 

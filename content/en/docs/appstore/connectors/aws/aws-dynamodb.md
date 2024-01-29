@@ -90,15 +90,15 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 14. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
 15. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 16. Click **OK**, and then click **OK** again.
-17. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GenerateCredentials** activity.
-18. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
-19. Double-click the **GenerateCredential**s activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
+17. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
+18. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
+19. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 20. Double-click the **ListTables** activity and configure the **Credentials** parameter by doing the following steps:
 
     * Click **Edit parameter value**.
     * Edit the **Credentials** parameter and let it auto-fill.
 
-22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GenerateCredentials** and the **ListTables** activity.
+22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **ListTables** activity.
 23. Double-click the **Create Object** activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
 24. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
 
@@ -186,7 +186,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
     
-65. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+65. Click **Run Locally** ({{% icon name="controls-play" %}}) to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

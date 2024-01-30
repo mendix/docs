@@ -788,12 +788,12 @@ We start with the private knowledge base, such as a text snippet. This content n
 **Query knowledge base (once per search)**
 
 * User query is sent to the embeddings API to retrieve the embedding vector of the query.
-* A predefined number of data chunks is retrieved from the vector database; The data chunks are determined based on Cosine similarity to the user query embedding vector.
+* A predefined number of most-relevant data chunks is retrieved from the vector database; this set is selected based on cosine similarity to the user query embedding vector.
 
 **Invoke text generation model (once per search)**
 
 * User query and the relevant data chunks are sent to the chat completions API.
-* Through prompt engineering, the text generation model is instructed to only base the answer to the user query on the data chunks that were sent as part of the request. This prevents the model from hallucinating.
+* Through prompt engineering, the text generation model is instructed to only base the answer on the data chunks that were sent as part of the request. This prevents the model from hallucinating.
 * Finally, the assistant response is returned to the user.
 
 ### 6.3 Step-By-Step Guide {#rag-step-by-step}
@@ -809,11 +809,11 @@ To start experimenting with the end-to-end process, you can use this document to
 * You have access to a (remote) PostgreSQL database with the `pgvector` extension available.
 * You have configured the connection to the above database in the OpenAI Showcase App.
 
-If you have access to an Amazon Web Services (AWS) account we recommend using the [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) set-up described in the upcoming section. This is convenient since PostgreSQL databases in Amazon RDS by default have the required extension available.
+If you have access to an Amazon Web Services (AWS) account we recommend using a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the upcoming section. This is convenient since PostgreSQL databases in Amazon RDS by default have the required extension available.
 
 #### 6.3.1 Create a PostgreSQL Database with Amazon RDS {#rds-database}
 
-Make sure you are familiar with the basics of [Amazon RDS and the AWS console](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). We recommend the following sections as preliminary background knowledge:
+Make sure you are familiar with the basics of [Amazon RDS and the AWS console](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). We recommend the following sections there as preliminary background knowledge:
 
 * Enter the RDS Console
 * Create a PostgreSQL DB Instance
@@ -856,7 +856,7 @@ Create a database instance in Amazon RDS according to their [documentation](http
 
 ##### 6.3.3 Deleting Resources in AWS {#deleting-aws-resources}
 
-If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain amount of time.
+If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
 #### 6.4 Configure The Database Connection Details In The Showcase App {#configure-database-connection}
 
@@ -896,7 +896,7 @@ Verify the embedding vectors have been created in your new database. If you ever
 
 We have found that setting up an AWS RDS database with the `pgvector` extention is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which we will describe in the following sections.
 
-##### 6.6.1 I want To Run A Database Locally! {#rag-local-database}
+##### 6.6.1 I want To Run A PostgreSQL Database Locally! {#rag-local-database}
 
 That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recommended. The prerequisites are:
 

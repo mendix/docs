@@ -16,7 +16,7 @@ aliases:
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of [installing the latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
 
-If you use a Mac device, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
+If you use a Mac device and need to use a version of Mendix Studio Pro older than 10.7, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
@@ -24,10 +24,12 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 
 ## 2 Downloading Mendix Studio Pro
 
-Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
+Mendix Studio Pro can be installed on your Windows machine with a Windows executable file or on your Mac machine using a pkg file. This file can be downloaded from the Mendix Marketplace. 
+
+Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
+2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro. Make sure to download the version for your operating system. 
 
 ## 3 Installing Mendix Studio Pro {#install}
 

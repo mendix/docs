@@ -160,7 +160,7 @@ The entity name is prefilled, but you can change it to a custom name. To create 
 
 To select a request in the microflow, complete the following steps:
 
-1. Create a new microflow and drag the **Send REST request** activity into it.
+1. Create a new microflow and drag the [Send REST request](/refguide/send-rest-request/) activity into it.
 2. Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/select-rest-request.png" >}}

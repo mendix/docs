@@ -323,19 +323,38 @@ Defines the maximum number of threads that can process active workflow instances
 
 Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
-### 7.3 Events {#events}
+### 7.3 Event Handlers {#event-handlers}
+
+An event handler allows you to specify a microflow which is triggered when the subscribed event (or events) occur. Each event handler can subscribe to multiple events and there can be multiple event handlers. An event is triggered when the workflow or its activity goes through transitions which warrant the event. This setting is app-wide; you can override it by setting workflow-specific event handlers in [workflow properties](/refguide/workflow-properties/#event-handlers).
+
+An event handler has the following configuration:
+
+* **Name** – describes the event handler
+* **Documentation** – provides more information regarding the usage of the event handler
+* **When** – allows you to select the [workflow event types](/refguide/workflow-events/#workflow-event-types), for which the handler should be triggered
+* **Microflow** – allows you to select a microflow that should be triggered for each of the above selected workflow event types
+
+You can use the data from the event handler microflow to build audit trails or for logging purposes. For example, you can define an event handler that only collects data from user task events.
+
+For more information on workflow events, see [Workflow Events](/refguide/workflow-events/).
+
+### 7.4 ⚠ Events (Deprecated) {#events} 
+
+{{% alert color="warning" %}}
+⚠ State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
+{{% /alert %}}
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 
 
 Security settings of workflows and user tasks allow you to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
 
-#### 7.3.1 Workflow State Change {#workflow-state-change}
+#### 7.4.1 Workflow State Change {#workflow-state-change}
 
-A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
-#### 7.3.2 User Task State Change {#user-task-state-change}
+#### 7.4.2 User Task State Change {#user-task-state-change}
 
-A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
 ## 8 Deployment Tab {#deployment}
 

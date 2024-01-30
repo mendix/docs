@@ -8,25 +8,28 @@ tags: ["security", "headers", "widgets", "marketplace", "marketplace component",
 
 ## 1 Introduction
 
-The [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget is not fully CSP compliant due to it's nature of injecting HTML or javascript into the page.
-But there are still guidance that user could follow to make it CSP compliant.
+The [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget is not fully CSP compliant out-of-the-box. This is due to the widget's innate methods of injecting HTML or JavaScript into pages. To make this widget CSP compliant, see the sections below.
 
 ## 2 Setup Information
-Here are the some configurations that you can follow for making the widget CSP compliant:
 
-- ##### Use CSP compliant code
-    Make sure that the HTML/Javascript code that you are injecting to the page is following CSP compliant specification.
+Follow the configuration advice below to made the widget CSP compliant.
 
-- ##### Use external file instead of content attribute
-    Create a new javascript file in the root directory (Theme folder) and refer to it instead of writing it in content attribute.
-    This is apply for both HTML and Javascript snippet.
+### 2.1 Use CSP Compliant Code
 
-    {{< figure src="/attachments/" >}}
-    {{< figure src="/attachments/" >}}
+Make sure that the HTML or JavaScript code that you are injecting to the page is following CSP compliant specifications.
 
-- ##### unsafe-inline and unsafe-eval
-    If you can't follow both of the steps above, you can always put the following directive to enable the widget in CSP environment:
-    ```text
-    script-src 'self' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';;
-    ```
+### 2.2 Use External Files Instead of Content Attributes
+
+Create a new JavaScript file in the app's root directory (**theme** folder) and refer to it instead of writing it in content attribute. This applies for both HTML and JavaScript snippets:
+
+{{< figure src="/attachments/" >}}
+{{< figure src="/attachments/" >}}
+
+### 2.3 unsafe-inline and unsafe-eval
+
+If you cannot follow both of the steps above, you can always input the following directives to enable the widget in CSP environment:
+
+```text
+script-src 'self' 'unsafe-inline';
+style-src 'self' 'unsafe-inline';;
+```

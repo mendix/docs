@@ -17,7 +17,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Fixes
 
-- We fixed an issue where iOS apps were containing push notifications entitlement even when it was disabled (Ticket #167685).
+- We fixed an issue where iOS apps were containing push notifications entitlement code even after notifications were disabled in the Native Builder (Ticket #167685).
 
 #### Changes
 

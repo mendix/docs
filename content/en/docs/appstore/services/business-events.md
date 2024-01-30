@@ -64,11 +64,6 @@ Optionally you can set **SummaryLogIntervalSeconds** to a different value. The d
 
 This section explains how to use business events in Mendix apps with the Mendix Business Events service.
 
-Usage and user experience differs depending on which versions of Studio Pro you are using:
-
-* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) through [9.23](/releasenotes/studio-pro/9.23/) support published and consumed business event services with one publishing app and multiple consuming apps ([one-way events](#one-way-be))
-* Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above supports events defined centrally by one app for a specific use case, and other apps sending or receiving these predefined events ([two-way events](#two-way-be))
-
 ### 4.1 Using Business Events {#two-way-be}
 
 Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event of some other publishing app, and a subscriber can publish a business event to another app.

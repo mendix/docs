@@ -34,3 +34,35 @@ To check out which modules a category contains, click the category name, which b
 * User Interface
 * Utility
 * Visualization
+
+
+
+Artificial Intelligence
+
+Authentication
+
+AWS
+
+Communication
+
+Connectors
+
+Data
+
+Import/Export
+
+Internet-of-Things
+
+Mobile
+
+Scheduling
+
+Starter Apps
+
+Tracing
+
+User Interface
+
+Utility
+
+Visualization

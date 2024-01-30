@@ -52,18 +52,18 @@ To set up your local app, do the following:
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/wizard-app-details.png" alt="Wizard App Details"   width="350"  >}}
 
 1. Click **Next Step** when ready.
-2. In the **Build type** make sure the **Local** option is selected. 
+1. In the **Build type** make sure the **Local** option is selected. 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/wizard-buildtype-local.png" alt="Build type"   width="350"  >}}
-3. Select the folder for your app's Native Template. Valid choices are an empty directory or a directory with an existing Native Template.
-4. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
-5. Click **Next Step** until you reach the end of the wizard. Feel free to configure any step as needed.  
-6. Select **Build type** from the side bar. 
+1. Select the folder for your app's Native Template. Valid choices are an empty directory or a directory with an existing Native Template.
+1. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
+1. Click **Next Step** until you reach the end of the wizard. Feel free to configure any step as needed.  
+1. Select **Build type** from the side bar. 
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/advanced-buildtype-local.png" alt="Build type"   width="350"  >}}
 
     As you already selected to use the Local build flow with this app it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your app and commit your changes. But keep in mind that the Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
 
-7. Select **Configure app locally** and fill in the information as needed for your app.
+1. Select **Configure app locally** and fill in the information as needed for your app.
 {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/advanced-configure-app-locally.png" alt="Build type"   width="350"  >}}
 1. Click **Configure locally**
 

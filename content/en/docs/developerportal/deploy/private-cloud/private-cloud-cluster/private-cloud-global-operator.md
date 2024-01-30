@@ -41,7 +41,7 @@ To install and configure the Global Operator, perform the following steps:
 4.  After the Global Operator cluster is created, click **Add Global Operator Main Namespace**.
 
     {{% alert color="warning" %}}
-    Ensure that you do not use a namespace that is intended to be a managed namespace (that is, a namespace where you plan to deploy a Mendix app). The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+    Ensure that you do not use a namespace that is intended to be a managed namespace that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
     {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" >}}
@@ -58,8 +58,19 @@ To install and configure the Global Operator, perform the following steps:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator6.png" >}}
 
-7. Verify that the installation was successful by using the following command: `kubectl -n \<globalOperatorNamespace\> get deployments`.
-8.  Verify that the status of the Operator and Agent pod is *Running* by using the following command: `kubectl -n \<globalOperatorNamespace\> get pods`,
+7. Verify that the installation was successful by using the following command: 
+
+
+        ```shell
+        kubectl -n {globalOperatorNamespace} get deployments
+        ```
+
+8. Verify that the status of the Operator and Agent pod is *Running* by using the following command:
+
+        ```shell
+        kubectl -n {globalOperatorNamespace} get pods
+        ```
+
 9. In the Private Cloud Portal, verify that the status of the Global Operator namespace is *Connected*, as in the following figure:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator7.png" >}}
@@ -71,6 +82,10 @@ To install and configure the Global Operator, perform the following steps:
 11. Install the managed namespace under the Global Operator namespace by clicking **Add Managed Namespace**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator9.png" >}}
+
+    {{% alert color="warning" %}}
+    Ensure to use the same name for the managed namespace in the portal which you would like to use in the cluster, otherwise this may result into unwanted issues.
+    {{% /alert %}}
 
 12. Open the managed namespace and click **Done**.
 
@@ -85,7 +100,7 @@ To install and configure the Global Operator, perform the following steps:
 15. Click **Configure Namespace** and select the items which you want to configure.
 16. In the **Global Operator** section, enter the **Global Operator namespace name**.
 
-    {{% alert color="warning" %}}
+    {{% alert color="info" %}}
     Ensure that you do not the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).
     {{% /alert %}}
 
@@ -95,9 +110,17 @@ To install and configure the Global Operator, perform the following steps:
 
 After you configure the managed namespace, the Agent and Operator pod are restarted automatically, so that the Global Operator namespace can process the newly added managed namespace. The managed namespace is added to the Operator configuration for the Global Operator namespace, and the required storage plans are created in the managed namespace.
 
+
 The Operator configuration for the managed namespace is created as well. The configuration changes inside the managed namespace will take precedence over the global configuration.
 
 After configuration, the status of managed namespace changes to **Configured**.
+
+Once the managed namespace is configured, you can find the list with all the namespaces managed by the globally installed operator in **Addition Information** section of Global Operator Namespace.
+
+    {{% alert color="info" %}}
+     If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster.
+    {{% /alert %}}
+
 
 ### 2.2 Next Steps
 

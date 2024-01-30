@@ -103,10 +103,14 @@ All environments are defined as production environments, which means that [secur
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}
-You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
-{{% /alert %}}
+    You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
+    {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
+
+    {{% alert color="warning" %}}
+    In case of Global operator, in order to avoid issues, same internal id for the environment should not be used for the managed namespaces under same global operator namespace.
+    {{% /alert %}}    
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.
 

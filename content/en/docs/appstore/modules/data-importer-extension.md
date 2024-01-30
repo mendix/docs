@@ -1,14 +1,14 @@
 ---
 title: "Data Importer"
-url: /appstore/modules/data-importer-extension/
-weight: 21
+url: /appstore/modules/data-importer/
+category: "Modules"
 description: "Overview of the Data Importer in Studio Pro"
 tags: ["studio pro", "data importer", "excel importer"]
 ---
 
 ## 1 Introduction
 
-The Data Importer allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer document created earlier to import data from input Excel file (or files).
+The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import an Excel file and choose which sheet and columns you want to import. During the design-time flow, you can preview the data you would like to import and create a non-persistable entity (NPE) in your domain model that corresponds to your input. During run-time, you can use the Data Importer document created earlier to import data from input Excel file (or files).
 
 {{% alert color="info" %}}
 The Data Importer is available in Studio Pro 10.6 and above.

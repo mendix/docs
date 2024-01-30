@@ -17,6 +17,20 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### February 1 
+
+#### New Features
+
+* New Report Maker functionality in [Feedback](/developerportal/app-insights/feedback/):
+    * Contacting the reporter is now available in the sidepanel.
+    * Makers can now toggle between team comments and reporter messages.
+
+#### Improvements
+
+* Errors are now gracefully handled when a [MiniSurvey](/developerportal/app-insights/minisurvey/) submission is sent outside the boundaries of the Survey runtime window.
+* We fixed an issue where some users were unable to close feedback items
+* We fixed an issue where some users were encountering an error when navigating back to the feedback home page.
+
 ### January 25
 
 #### New Features

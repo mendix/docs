@@ -11,7 +11,9 @@ tags: ["marketplace",  "marketplace component", "database connector", "mendix 10
 
 Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
-This connector is supported for Studio Pro 10.6 and above. 
+{{% alert color="info" %}}
+The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
+{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
@@ -32,14 +34,14 @@ If you are looking for another database type, follow the prompt to request suppo
 
 This connector supports the following statements:
 
-* `SELECT` — retrieves rows and columns from a database
-* `INSERT` — inserts data into a database  
+* `SELECT`
+* `INSERT` 
+* `UPDATE`
+* `DELETE`
 
 ### 1.3 Limitations 
 
-* Only `SELECT` and `INSERT` queries are supported at this time
 * `SELECT` queries can be saved only if they are successfully executed and a response structure is created
-* The connector displays tables and views for the default schema of the logged in user
 * The connector supports columns with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
@@ -48,9 +50,9 @@ This connector supports the following statements:
 
 * Studio Pro 10.6 or above
 * External database connection details, including the following:
-  * Login credentials
-  * Database type
-  * Hostname, port, and database name; or, instead, the JDBC connection string
+    * Login credentials
+    * Database type
+    * Hostname, port, and database name; or, instead, the JDBC connection string
 
 ## 2 Installation {#installation}
 

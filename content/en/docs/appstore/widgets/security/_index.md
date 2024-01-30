@@ -47,10 +47,7 @@ The following widgets are not fully compliant with strict CSP. See the widgets' 
     Please use minimum version 3.3.0 of [Progress Circle](/appstore/widgets/progress-circle/) for strict CSP compliant.
 
 - ##### Web actions
-    You can enable `allowlist` CSP for [Web Actions](/appstore/modules/web-actions/) by including these directive:
-    ```text
-    style-src 'self' 'unsafe-inline';
-    ```
+    Please use minimum version 2.10.0 of [Web Actions](/appstore/modules/web-actions/) for strict CSP compliant.
 
 ## 4 Read More
 

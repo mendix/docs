@@ -18,7 +18,18 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### 2.1 Software Specifications {#software}
 
-Mendix [Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. Studio Pro can run on Apple Macs using Parallels. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Macs using [Parallels 17](https://www.parallels.com/) and Windows 11.
+[Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
+
+Studio Pro 10.7 and above can run on an Apple Mac on ARM and Intel Mac running macOS Sonoma and above. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+
+These are the known limitations for Mac:
+
+* No native mobile support.
+* No support for document templates.
+* No **Structure mode** for the page editor.
+* The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
+* If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
+* The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 

@@ -22,7 +22,7 @@ This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/
 You can use this Consumed REST service document to do the following:
 
 * Consume a REST service
-* Configure `GET` and `POST` requests
+* Configure `GET`, `POST`, and `PATCH` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 
@@ -31,8 +31,12 @@ You can use this Consumed REST service document to do the following:
 * This feature supports the following HTTP request methods:
   * `GET`
   * `POST`
+  * `PATCH`
+
+  {{% alert color="info" %}}`PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above.{{% /alert %}} 
+
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
-* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a timeout issue will occur when sending the request.
+* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
 
 ### 1.3 Prerequisites 
 
@@ -51,11 +55,11 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration {#configuration}
 
-Use the Consumed REST service to configure a `GET` or `POST` request for your app. 
+Use the Consumed REST service to configure a `GET`, `POST`, or `PATCH` request for your app. 
 
 ### 3.1 Basic Configuration {#configure-a-request}
 
-Create a `GET` or `POST` request to send data to your server by doing the following:
+Create a `GET`, `POST`, or `PATCH` request to send data to your server by doing the following:
 
 1. In the **General** field, name your request. 
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
@@ -89,7 +93,7 @@ You can configure basic authentication to use for all requests in your document.
 
 ### 3.3 Adding Parameters {#add-parameters}
 
-Parameters are fully supported in the path & query part of the URL. They are defined within curly brackets in the URL (for example, `http://numbersapi.com/{numbers}`). All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
+Parameters are fully supported in the path and query part of the URL and in the header value. They are defined within curly brackets. For example, in the URL, defining `numbers` as parameter would be `http://numbersapi.com/{numbers}`. All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/get-header.png" >}}
 
@@ -102,31 +106,43 @@ To add a parameter, follow these steps:
 
 3. Click **Send** to test the parameters. 
 
-{{% alert color="info" %}}Parameters are not supported for the base URL.{{% /alert %}} 
+{{% alert color="info" %}}
+Parameters are not supported in the [configuration](#configuration), including authentication and Base URL.
+{{% /alert %}} 
 
 ### 3.4 Adding Headers {#add-headers}
+
+{{% alert color="info" %}}
+The support for parameter in the header value was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
+{{% /alert %}}
 
 You can add a header for any HTTP request you have specified in your document. To add a header, do the following:
 
 1. Open the **Headers** tab and click **New**.
+
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header-example.png" >}}
+
 2. In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by selecting **Custom** and adding in the value. 
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/accept-header.png" >}}
 
 3. Click **OK**. To test the header, click **Send**.  
 
-### 3.5 Adding a Request Body (for POST requests only) {#add-a-request-body}
+### 3.5 Adding a Request Body (for POST and PATCH requests only) {#add-a-request-body}
 
-`POST` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
+`POST` and `PATCH` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
 1. Click the **Body** tab and add your JSON string.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-sample.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" >}}
 
-2. Click **Use JSON Snippet**. 
-3. To validate the input, click **Send**. The body string can be viewed in the **Body structure** tab.
+2. To validate the input, navigate to the **General** field and click **Send**.
+
+3. If you want to use the newly-created JSON string as an entity in your domain model, click **Use JSON Snippet**. The body string can be viewed in the **Body structure** tab.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-body-structure.png" >}}
+
+4. The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. Click **Show** to view the entity in your domain model.
 
 ### 3.6 Creating an Entity from the Response {#create-entity}
 
@@ -149,4 +165,4 @@ To select a request in the microflow, complete the following steps:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/select-rest-request.png" >}}
 
-If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow.
+If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow. The parameter values in this activity are used by the runtime instead of the test value defined in the request.

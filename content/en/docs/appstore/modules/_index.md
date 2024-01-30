@@ -19,24 +19,18 @@ Modules in the Mendix Marketplace have the following categories. Some modules ma
 
 To check out which modules a category contains, click the category name, which brings you to the corresponding section:
 
-* Data
-
-* Connectors
-
 * Artificial Intelligence
-
 * Authentication
-
-* User Interface
-
-* Import/Export
-
-* Starter Apps
-* Communication
-* Internet-of-Things
-* Visualization
 * AWS
+* Communication
+* Connectors
+* Data
+* Import/Export
+* Internet-of-Things
 * Mobile
-* Tracing
-* Utility
 * Scheduling
+* Starter Apps
+* Tracing
+* User Interface
+* Utility
+* Visualization

@@ -25,7 +25,7 @@ Create a new JavaScript file in the app's root directory (**theme** folder) and 
 {{< figure src="/attachments/appstore/widgets/security/html-js-csp/create.png" class="image-border">}}
 {{< figure src="/attachments/appstore/widgets/security/html-js-csp/refer.png" class="image-border">}}
 
-### 2.3 unsafe-inline and unsafe-eval
+### 2.3 Directives Unsafe-Inline and Unsafe-Eval
 
 If you cannot follow both of the steps above, you can always input the following directives to enable the widget in CSP environment:
 

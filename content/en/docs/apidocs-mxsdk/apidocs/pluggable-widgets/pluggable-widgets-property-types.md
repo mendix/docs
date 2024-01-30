@@ -745,7 +745,7 @@ Then the Studio Pro UI for the property appears like this:
 The property type was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
 {{% /alert %}}
 
-The selection property allows a widget to read and set a [selection](/refguide/selection/) that can be used in actions, expressions, or a `Listen to` data source of a data view.
+The selection property allows a widget to read and set a selection that can be used in actions, expressions, or a `Listen to` data source of a data view.
 
 #### 4.9.1 XML Attributes
 

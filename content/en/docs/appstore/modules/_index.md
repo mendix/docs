@@ -37,32 +37,47 @@ To check out which modules a category contains, click the category name, which b
 
 
 
-Artificial Intelligence
+## Artificial Intelligence {#artificial-intelligence}
 
-Authentication
+## Authentication {#authentication}
 
-AWS
+## AWS {#aws}
 
-Communication
+## Communication {#communication}
 
-Connectors
+## Connectors {#connectors}
 
-Data
+* [Data Importer](/appstore/modules/data-importer/)
 
-Import/Export
+## Data {#data}
 
-Internet-of-Things
+* [Data Importer](/appstore/modules/data-importer/)
 
-Mobile
+## Import/Export {#import-export}
 
-Scheduling
+* [Data Importer](/appstore/modules/data-importer/)
 
-Starter Apps
+## Internet-of-Things {#internet-of-things}
 
-Tracing
+## Mobile {#mobile}
 
-User Interface
+## Scheduling {#scheduling}
 
-Utility
+## Starter Apps {#starter-apps}
 
-Visualization
+## Tracing {#tracing}
+
+## User Interface {#user-interface}
+
+* [Atlas Core](/appstore/modules/atlas-core/)
+
+## Utility {#utility}
+
+* [Administration](/appstore/modules/administration/)
+
+## Visualization {#visualization}
+
+## Uncategorized
+
+* [Any Chart](/appstore/modules/any-chart/)
+* [App Switcher](/appstore/modules/app-switcher/)

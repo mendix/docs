@@ -15,13 +15,13 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 **Release date: January 29, 2024**
 
+#### Improvements
+
+* We now recommend local building over using AppCenter and changed the Native Builder to reflect that.
+
 #### Fixes
 
-- We fixed an issue where iOS apps were containing push notifications entitlement code even after notifications were disabled in the Native Builder (Ticket #167685).
-
-#### Changes
-
-- We now recommend local building over using AppCenter and changed the Native Builder to reflect that.
+* We fixed an issue where iOS apps were containing push notifications entitlement code even after notifications were disabled in the Native Builder (Ticket #167685).
 
 ## 2022
 

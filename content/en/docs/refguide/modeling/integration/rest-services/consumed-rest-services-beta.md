@@ -1,5 +1,5 @@
 ---
-title: "Consumed REST Services (beta)"
+title: "Consumed REST Services (Beta)"
 url: /refguide/consumed-rest-services-beta/
 category: "Integration"
 description: "Describes the configuration and usage of the new Consumed REST service document."

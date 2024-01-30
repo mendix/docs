@@ -81,7 +81,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.
 10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-12. Select the **ModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`ModelSummary`](#model-summary).
+12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`FoundationModelSummary`](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ## 4 Technical Reference
@@ -96,21 +96,70 @@ The domain model is a data model that describes the information in your applicat
 
 This is the request entity of the `ListFoundationModels` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
 
+| Attribute | Description |
+| --- | --- |
+| `ByCustomizationType` | To filter the received foundation models by customization type (enum)|
+| `ByInferenceType` | To filter the received foundation models by inference type (enum)|
+| `ByOutputModality` | To filter the received foundation models by output modality type (enum)|
+| `ByProvider` | To filter the received foundation models by an Amazon Bedrock model provider (string)|
+
 #### 4.1.2 ListFoundationModelsResponse {#list-foundation-models-response}
 
 The `ListFoundationModelsResponse` entity collects (through association) the details needed to invoke all available foundational models that AWS provides in its response. The details per model are stored on the `ModelSummary` entity.
 
-#### 4.1.3 ModelSummary {#model-summary}
+#### 4.1.3 FoundationModelSummary {#foundation-model-summary}
 
-The `ModelSummary` entity stores the details (per model) needed to invoke all the available foundational models.
+The `FoundationModelSummary` entity stores the details (per model) needed to invoke all the available foundational models.
 
-| Attribute/Association | Description |
+| Attribute | Description |
 | --- | --- |
-| `ModelArn` | The ARN (Amazon Resource Name) that identifies the foundational model (string)|
-| `ModelId` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
-| `ModelSummary_ListFoundationModelsResponse (*-1)` | For collecting the returned foundational models under the `ListFoundationalModelsResponse` (string)|
+| `ModelARN` | The ARN (Amazon Resource Name) that identifies the foundational model (string)|
+| `ModelID` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
+| `ModelName` | The name of the foundational model (string)|
+| `ProviderName` | The provider name of the foundational model (string)|
+| `ResponseStreamingSupported` | Indicates whether the model supports streaming (boolean)|
 
-#### 4.1.4 InvokeModelGenericRequest {#invoke-model-generic-request}
+#### 4.1.4 FoundationModelLifecycle {#foundation-model-lifecycle}
+
+The `FoundationModelLifecycle` entity stores details about whether a model version is available or deprecated.
+
+| Attribute | Description |
+| --- | --- |
+| `Status` | The Status attribute describes whether a model version is available (ACTIVE) or deprecated (LEGACY). |
+
+#### 4.1.5 OutputModality {#output-modality}
+
+The `OutputModality` entity contains the output modality that the model supports.
+
+| Attribute | Description |
+| --- | --- |
+| `OutputModalityType` | The type of the output modality. |
+
+#### 4.1.6 InputModality {#input-modality}
+
+The `InputModality` entity contains the input modality that the model supports.
+
+| Attribute | Description |
+| --- | --- |
+| `InputModalityType` | The type of the input modality. |
+
+#### 4.1.7 SupportedInferenceType {#supported-inference-type}
+
+The `SupportedInferenceType` entity contains the inference type that the model supports.
+
+| Attribute | Description |
+| --- | --- |
+| `InferenceType` | The type of the inference. |
+
+#### 4.1.8 SupportedCustomization {#supported-customization}
+
+The `SupportedCustomization` entity contains the customization type that the model supports.
+
+| Attribute | Description |
+| --- | --- |
+| `CustomizationType` | The type of the customization. |
+
+#### 4.1.9 InvokeModelGenericRequest {#invoke-model-generic-request}
 
 This is the request entity of the `InvokeModelGeneric` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
 
@@ -120,7 +169,7 @@ This is the request entity of the `InvokeModelGeneric` action. It is a specializ
 | `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**. |
 | `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke. |
 
-#### 4.1.5 InvokeModelGenericResponse {#invoke-model-generic-response}
+#### 4.1.10 InvokeModelGenericResponse {#invoke-model-generic-response}
 
 This is the response entity of the `InvokeModelGeneric` action.
 
@@ -130,7 +179,7 @@ This is the response entity of the `InvokeModelGeneric` action.
 | `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved. |
 | `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model. |
 
-#### 4.1.6 RetrieveRequest {#retrieve-request}
+#### 4.1.11 RetrieveRequest {#retrieve-request}
 
 This is the request entity of the `Retrieve` action.
 
@@ -140,7 +189,7 @@ This is the request entity of the `Retrieve` action.
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
 | `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
 
-#### 4.1.7 RetrievalConfiguration {#retrieval-configuration}
+#### 4.1.12 RetrievalConfiguration {#retrieval-configuration}
 
 The `RetrievalConfiguration` entity holds information about how the results should be returned.
 
@@ -148,7 +197,7 @@ The `RetrievalConfiguration` entity holds information about how the results shou
 | --- | --- |
 | `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return. |
 
-#### 4.1.8 RetrieveResponse {#retrieve-response}
+#### 4.1.13 RetrieveResponse {#retrieve-response}
 
 This is the response entity of the `Retrieve` action.
 
@@ -156,7 +205,7 @@ This is the response entity of the `Retrieve` action.
 | --- | --- |
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
 
-#### 4.1.9 RetrievalResult {#retrieval-result}
+#### 4.1.14 RetrievalResult {#retrieval-result}
 
 The `RetrievalResult` entity holds information about the query made to the knowledge base.
 
@@ -164,7 +213,7 @@ The `RetrievalResult` entity holds information about the query made to the knowl
 | --- | --- |
 | `Score` | The `Score` attribute describes the level of relevance of the result to the query. |
 
-#### 4.1.10 Content {#content}
+#### 4.1.15 Content {#content}
 
 The `Content` entity holds information about the cited text from the data source.
 
@@ -172,7 +221,7 @@ The `Content` entity holds information about the cited text from the data source
 | --- | --- |
 | `Text` | The `Text` attribute describes the cited text from the data source. |
 
-#### 4.1.11 Location {#location}
+#### 4.1.16 Location {#location}
 
 The `Location` entity holds information about the location of the data source.
 
@@ -180,7 +229,7 @@ The `Location` entity holds information about the location of the data source.
 | --- | --- |
 | `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source. |
 
-#### 4.1.12 S3Location {#s3location}
+#### 4.1.17 S3Location {#s3location}
 
 The `S3Location` entity holds information about the S3 location of the data source.
 
@@ -188,13 +237,13 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | --- | --- |
 | `URI` | The `URI` attribute describes the S3 URI of the data source. |
 
-#### 4.1.13 RetrieveLocation {#retrieve-location}
+#### 4.1.18 RetrieveLocation {#retrieve-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-#### 4.1.14 RetrieveAndGenerateRequest {#retrieve-and-generate-request}
+#### 4.1.19 RetrieveAndGenerateRequest {#retrieve-and-generate-request}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -203,7 +252,7 @@ This is the request entity of the `RetrieveAndGenerate` action.
 | `InputText` | The `InputText` attribute describes the query made to the knowledge base and is a required parameter. |
 | `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
 
-#### 4.1.15 RetrieveAndGenerateConfiguration {#retrieve-and-generate-configuration}
+#### 4.1.20 RetrieveAndGenerateConfiguration {#retrieve-and-generate-configuration}
 
 The `RetrieveAndGenerateConfiguration` entity holds information about the resource being queried.
 
@@ -213,7 +262,7 @@ The `RetrieveAndGenerateConfiguration` entity holds information about the resour
 | `ModelARN` | The `ModelARN` attribute describes the ARN of the foundation model used to generate a response and is a required parameter. |
 | `RetrieveAndGenerateType` | The `RetrieveAndGenerateType` attribute describes the type of resource that is queried by the request. Currently, the only supported value is 'KNOWLEDGE_BASE'. |
 
-#### 4.1.16 SessionConfiguration {#session-configuration}
+#### 4.1.21 SessionConfiguration {#session-configuration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.
 
@@ -221,7 +270,7 @@ The `SessionConfiguration` entity holds information about details of the session
 | --- | --- |
 | `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
-#### 4.1.17 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
+#### 4.1.22 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -230,11 +279,11 @@ This is the request entity of the `RetrieveAndGenerate` action.
 | `OutputText` | The `OutputText` attribute describes the response generated from querying the knowledge base. |
 | `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
 
-#### 4.1.18 Citation {#citation}
+#### 4.1.23 Citation {#citation}
 
 The `Citation` entity contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
-#### 4.1.19 GeneratedResponsePart {#generated-response-part}
+#### 4.1.24 GeneratedResponsePart {#generated-response-part}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.
 
@@ -244,7 +293,7 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 | `Start` | The `Start` attribute describes where the text with a citation starts in the generated output. |
 | `End` | The `End` attribute describes where the text with a citation ends in the generated output. |
 
-#### 4.1.20 RetrievedReference {#retrieved-reference}
+#### 4.1.25 RetrievedReference {#retrieved-reference}
 
 The `RetrievedReference` entity holds information about a sources cited for the generated response.
 
@@ -252,13 +301,36 @@ The `RetrievedReference` entity holds information about a sources cited for the 
 | --- | --- |
 | `Text` | The `Text` attribute contains the cited text from the data source. |
 
-#### 4.1.21 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
+#### 4.1.26 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-#### 4.1.22 StartIngestionJobRequest {#start-ingestion-job-request}
+#### 4.1.27 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | The maximum number of results to return in the response.  |
+| `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
+
+#### 4.1.28 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
+
+#### 4.1.29 KnowledgeBaseSummary {#knowledge-base-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `KnowledgeBaseID` | The unique identifier of the knowledge base.  |
+| `Name` | The name of the knowledge base.  |
+| `Status` | The status of the knowledge base.  |
+| `UpdatedAt` | The time at which the knowledge base was last updated.  |
+| `Description` | The description of the knowledge base.  |
+
+#### 4.1.30 StartIngestionJobRequest {#start-ingestion-job-request}
 
 This is the request entity of the `StartIngestionJob` action.
 
@@ -267,7 +339,7 @@ This is the request entity of the `StartIngestionJob` action.
 | `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-#### 4.1.23 GetIngestionJobRequest {#get-ingestion-job-request}
+#### 4.1.31 GetIngestionJobRequest {#get-ingestion-job-request}
 
 This is the request entity of the `GetIngestionJob` action.
 
@@ -277,27 +349,27 @@ This is the request entity of the `GetIngestionJob` action.
 | `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-#### 4.1.24 GetIngestionJobResponse {#get-ingestion-job-response}
+#### 4.1.32 GetIngestionJobResponse {#get-ingestion-job-response}
 
 This is the response entity of the `GetIngestionJob` action.
 
-#### 4.1.25 StartIngestionJobResponse {#start-ingestion-job-response}
+#### 4.1.33 StartIngestionJobResponse {#start-ingestion-job-response}
 
 This is the response entity of the `StartIngestionJob` action.
 
-#### 4.1.26 StartIngestionJob {#start-ingestion-job}
+#### 4.1.34 StartIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-#### 4.1.27 GetIngestionJob {#start-ingestion-job}
+#### 4.1.35 GetIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-#### 4.1.28 IngestionJob {#ingestion-job}
+#### 4.1.36 IngestionJob {#ingestion-job}
 
 This is the response entity of the `IngestionJob` action.
 
@@ -310,7 +382,7 @@ This is the response entity of the `IngestionJob` action.
 | `StartedAt` | The `Timestamp` at which the ingestion job started. |
 | `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated. |
 
-#### 4.1.29 FailureReason {#failure-reason}
+#### 4.1.37 FailureReason {#failure-reason}
 
 The `FailureReason` entity holds the reason an interaction failed.
 
@@ -318,7 +390,7 @@ The `FailureReason` entity holds the reason an interaction failed.
 | --- | --- |
 | `Text` | The `Text` attribute describes reason the interaction failed. |
 
-#### 4.1.30 IngestionJobStats {#ingestion-job-stats}
+#### 4.1.38 IngestionJobStats {#ingestion-job-stats}
 
 The `IngestionJobStats` entity contains information about the failure of the interaction.
 
@@ -334,9 +406,9 @@ The `IngestionJobStats` entity contains information about the failure of the int
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
 
-#### 4.2.1 List Foundation Models {#list-foundation-models}
+#### 4.2.1 ListFoundationModels {#list-foundation-models}
 
-The `List Foundation Models` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires `ENUM_Region`, `Credentials` and `ListFoundationModelsRequest` as input parameters.
+The `ListFoundationModels` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires `ENUM_Region`, `Credentials` and `ListFoundationModelsRequest` as input parameters.
 
 The input and output for this service are shown in the table below:
 
@@ -344,9 +416,9 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
 
-#### 4.2.2 Invoke Model Generic {#invoke-model-generic}
+#### 4.2.2 InvokeModelGeneric {#invoke-model-generic}
 
-The `InvokeModel Generic` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
+The `InvokeModelGeneric` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
 
 The `InvokeModel Generic` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
 
@@ -368,9 +440,9 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
-#### 4.2.4 Retrieve And Generate {#retrieve-and-generate}
+#### 4.2.4 RetrieveAndGenerate {#retrieve-and-generate}
 
-The `Retrieve And Generate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
+The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
 
 To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
 
@@ -380,7 +452,17 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
 
-#### 4.2.5 Start Ingestion Job {#start-ingestion-job}
+#### 4.2.5 ListKnowledgeBases {#list-knowledge-bases}
+
+The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials` and `ListKnowledgeBasesRequest` as input parameters.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
+
+#### 4.2.6 StartIngestionJob {#start-ingestion-job}
 
 The `Start Ingestion Job` activity allows you to begin an ingestion job, in which a data source is added to a knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
 
@@ -392,7 +474,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `StartIngestionJobRequest (object)` | `StartIngestionJobResponse (object)` |
 
-#### 4.2.6 Get Ingestion Job {#get-ingestion-job}
+#### 4.2.7 GetIngestionJob {#get-ingestion-job}
 
 The `Get Ingestion Job` activity allows you to retrieve information about a ingestion job, in which a data source is added to a knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 

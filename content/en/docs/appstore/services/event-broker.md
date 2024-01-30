@@ -48,27 +48,27 @@ Events are placed in Channels, sometimes called Topics. Apps subscribed to a cha
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
-## 1.3 Mendix Event Broker Bridges {#manage-mx-broker-bridge}
+### 1.3 Mendix Event Broker Bridges {#manage-mx-broker-bridge}
 
 {{% alert color="warn" %}}
 This feature is currently in [Private Beta](/releasenotes/beta-features/).  Please reach out to your Customer Success Manager or Account Manager for further assistance
 {{% /alert %}}
 
-Mendix Event Broker Bridges allows for the integration of the Mendix Event Broker with other technologies, such as AWS SQS AWS S3 or Google Pub/Sub, in order to send and receive events from your larger Mendix Public Cloud landscape to technologies outside of your Mendix Public Cloud landscape.
+Mendix Event Broker Bridges allows for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3 or Google Pub/Sub, in order to send and receive events between your Mendix Public Cloud landscape and technologies outside of your Mendix Public Cloud landscape.
 
 {{< figure src="event_broker_bridges.png" >}}
 
-### 1.3.1 Configuring a Bridge with AWS SQS
+#### 1.3.1 Configuring a Bridge with AWS SQS
 
-Technical Contacts with a license to the Mendix Event Broker can manage its features on the [Event Broker Manager](https://broker.mendix.com/) page.
+Technical Contacts with a license to the Mendix Event Broker can manage this feature from the [Event Broker Manager](https://broker.mendix.com/) menu item for `Event Broker Bridges`.
 
 {{< figure src="event_broker_bridges_management.png">}}
 
-The creation process contains three steps:
+The creation process contains three steps on the Mendix side and policies that need to be implemented on the AWS side.
 
 #### 1.3.1.1 Select a service to configure
 
-Within the scope of the current Public Beta for this feature, Mendix Event Broker Bridges are capable of transporting events between the Mendix Event Broker and AWS SQS.
+Within the scope of the current Public Beta for this feature, Mendix Event Broker Bridges are capable of transporting events between the Mendix Event Broker and AWS SQS.  Other options in the list are currently not available for use.
 
 {{< figure src="event_broker_bridges_create_1.png">}}
 
@@ -95,3 +95,45 @@ After all events have been configured simply `Start` the Mendix Event Broker Bri
 Once the Mendix Event Broker Bridge has been successfully deployed its configuration and status can be viewed on the Overview page.
 
 {{< figure src="event_broker_bridges_overview.png">}}
+
+#### 1.3.1.4 Configure AWS Acesss Policy for sending Messages to Mendix
+
+Add this code to your Access Policy of the AWS SQS queue if it is sending message to Mendix.
+
+```
+{
+  "Sid": "__sender_statement",
+  "Effect": "Allow",
+  "Principal": {
+    "AWS": [
+      "arn:aws:iam::044806572671:role/mendix-event-broker-bridge"
+    ]
+  },
+  "Action": [
+    "SQS:SendMessage"
+  ],
+  "Resource": "<Tenant SQS ARN>"
+}
+```
+
+#### 1.3.1.5 Configure AWS Acesss Policy for receiving Messages from Mendix
+
+Add this code to your Access Policy of the AWS SQS queue if it is receiving message from Mendix.
+
+```
+{
+  "Sid": "__receiver_statement",
+  "Effect": "Allow",
+  "Principal": {
+    "AWS": [
+      "arn:aws:iam::044806572671:role/mendix-event-broker-bridge"
+    ]
+  },
+  "Action": [
+    "SQS:ChangeMessageVisibility",
+    "SQS:DeleteMessage",
+    "SQS:ReceiveMessage"
+  ],
+  "Resource": "<Tenant SQS ARN>"
+}
+```

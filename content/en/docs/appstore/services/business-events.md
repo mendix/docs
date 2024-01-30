@@ -69,76 +69,14 @@ Usage and user experience differs depending on which versions of Studio Pro you 
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) through [9.23](/releasenotes/studio-pro/9.23/) support published and consumed business event services with one publishing app and multiple consuming apps ([one-way events](#one-way-be))
 * Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above supports events defined centrally by one app for a specific use case, and other apps sending or receiving these predefined events ([two-way events](#two-way-be))
 
-### 4.1 Using Business Events (Studio Pro 9.18 through 9.23) {#one-way-be}
-
-Studio Pro 9.18 through 9.23 support the first experience of business events, sometimes called *one way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events.
-
-{{% alert color="info" %}}
-If you are running with Studio Pro 9.24 and above, skip down to [Creating a Service, and Sending/Receiving Business Events in Studio Pro 9.24](#two-way-be). For modelling with any version, see [Modelling with Business Events](#be-modelling).{{% /alert %}}
-
-#### 4.1.1 Creating a Published Business Event Service {#create-be}
-
-A **Published Business Event Service** contains a definition of the business events provided by this service. A document can be exported from the published service, to inform other developers what the published business event service provides. This is an AsyncAPI document, similar to an OpenAPI or WSDL contract.
-
-1. Right-click the service folder, hover over **Add other**, and click **Published Business Event Service**.
-2. Provide the name for your service and **OK** to create it.
-3. If needed, select an **Event Name Prefix**. Use this to distinguish events from other ones in your company, like in a different department. This ensures that your events are uniquely named. This field is empty by default.
-4. Once you have the service created, click **Add** to link your modelled **PublishedBusinessEvent** entity as an event.
-5. Either select an existing **PublishedBusinessEvent** entity, or click **New** to create a new published entity there.
-6. Once you have all of your entities linked into the **Published Business Event Service**, export it to be shared as an AsyncAPI document in YAML format.
-
-{{% alert color="info" %}}
-When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a service with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently.
-{{% /alert %}}
-
-To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handling the received event. This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
-
-#### 4.1.2 Create a Consumed Business Event Service {#consume-be}
-
-To consume a business event, you first need to create a **Consumed Business Event Service**.
-
-1. Right-click the service folder, hover over **Add other**, then click **Consumed Business Event Service**.
-2. Provide the name for your service.
-3. Import an AsyncAPI service document. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
-4. Click **OK**.
-
-{{< figure src="/attachments/appstore/services/business-events/subscriptions-available.png" >}}
-
-#### 4.1.3 Subscribing to a Business Event
-
-There are two ways to subscribe to, or consume a specific business event:
-
-* **Add** the subscription in the [consumed business event service](#consume-be)
-* **Drag and drop** the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
-
-##### 4.1.3.1 Automatically Created Event Handler Microflow and Entity
-
-When you click **Add** to add the events from the AsyncAPI document into your service, Studio Pro will automatically create a **persistable** consumed entity within your domain model, and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
-
-You can use the payload of the event as an entity:
-{{< figure src="/attachments/appstore/services/business-events/payload-event-entity-2.png" >}}
-
-The handler microflow attached to it triggers each event where you can build your business logic:
-{{< figure src="/attachments/appstore/services/business-events/payload-event-entity-3.png" >}}
-
-#### 4.1.4 Migrating Business Event Apps to Studio Pro 9.24 and Above {#migrate-two-way-be}
-
-Upgrade your apps to Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above to enjoy the most recent business event behavior. When you upgrade, the following happens:
-
-* [Published business event](/refguide9/business-event-services/#published-event-service-doc) service documents are converted to created business event service documents.
-    * The created service document allows it to publish events.
-    * The other app's implementation will be to subscribe to events.
-* [Consumed business event](/refguide9/business-event-services/#consumed-event-service-doc) service documents are converted to documents that use a business events service.
-    * They will be able to subscribe to events.
-
-### 4.2 Using Business Events (Studio Pro 9.24 and Above) {#two-way-be}
+### 4.1 Using Business Events {#two-way-be}
 
 Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event of some other publishing app, and a subscriber can publish a business event to another app.
 
 {{% alert color="info" %}}
 If you are modelling in Studio Pro 9.18 through 9.23, go back up to [Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23](#one-way-be), or learn how [migrating business event apps](#migrate-two-way-be) to Studio Pro 9.24 and above works. For modelling with any version, see [Modelling with Business Events](#be-modelling).{{% /alert %}}
 
-#### 4.2.1 Creating a New Business Event Service {#two-way-be-create}
+#### 4.1.1 Creating a New Business Event Service {#two-way-be-create}
 
 In your defining app, you can create a new service by doing the following:
 
@@ -153,7 +91,7 @@ The business event service document is open in Studio Pro:
 
 In the [next section](#add-be-definitions), you will define the information included in your events, as well as what the service will implement.
 
-##### 4.2.1.1 Adding Event Definitions {#add-be-definitions}
+##### 4.1.1.1 Adding Event Definitions {#add-be-definitions}
 
 To define what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
 
@@ -185,7 +123,7 @@ Click **Done** to exit the wizard and view the defined service document.
 
 **Export AsyncAPI Document** exports the YAML file of the business event service so that other apps can [use your newly created service](#two-way-be-existing).
 
-##### 4.2.1.2 Attribute Types {#attribute-types}
+##### 4.1.1.2 Attribute Types {#attribute-types}
 
 Attribute types for business events relate to attribute types of entities, but not all attribute types are supported for business events. The following attribute types are not supported:
 
@@ -196,13 +134,13 @@ Attribute types for business events relate to attribute types of entities, but n
 
 In Studio Pro 9.24 and below, all types were supported implicitly because a business event was defined by an entity. The unsupported types were from the perspective of the consumer received as a string.
 
-###### 4.2.1.2.1 Enumeration Attribute Type {#enum-att-type}
+###### 4.1.1.2.1 Enumeration Attribute Type {#enum-att-type}
 
 In Studio Pro [9.24](/releasenotes/studio-pro/9.24/), consumers see enumerations as a plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers. Enumerations cannot be modelled for new services in Studio Pro [9.24](/releasenotes/studio-pro/9.24/), but for converted earlier apps the functionality is maintained.
 
 In Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above, enumerations are fully supported. The enumeration attribute type can be modelled, the enumeration items are stored in the exported AsyncAPI document, when imported a new enumeration document will be created with the name '<attributeName>Enum’. The **Caption** and **Image** fields are not transmitted to the importer of the AsyncAPI document. Captions and images can be provided manually and will not cause conflicts when an AsyncAPI document is re-imported.
 
-#### 4.2.2 Using an Existing Business Event Service {#two-way-be-existing}
+#### 4.1.2 Using an Existing Business Event Service {#two-way-be-existing}
 
 To use an existing business service in Studio Pro 9.24 and above, do the following:
 
@@ -216,7 +154,7 @@ The business event service document is open in Studio Pro:
 
 {{< figure src="/attachments/appstore/services/business-events/existing-business-event-service.png" >}}
 
-##### 4.2.2.1 Publishing and Subscribing to Business Events
+##### 4.1.2.1 Publishing and Subscribing to Business Events
 
 After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
@@ -225,7 +163,7 @@ After following the instructions in [Using an Existing Business Event Service](#
 
 To publish a business event service, you need to use it in a microflow.
 
-#### 4.2.3 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
+#### 4.1.3 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
 When you click **Add** to add the events from the document into your service, Studio Pro will automatically create a **persistable** consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
@@ -294,7 +232,7 @@ Use these fields to transform the payload back into a Mendix entity again. If th
 
 ## 5 Mendix Event Broker {#mendix-event-broker}
 
-Within Mendix Public Cloud a Mendix Event Broker is available for easy deployment of Mendix Applications using the Mendix Business Events module.  For further information please see the information on the [Mendix Event Broker](/appstore/mendix-solutions/event-broker/)
+Within Mendix Public Cloud a Mendix Event Broker is available for easy deployment of Mendix Applications using the Mendix Business Events module.  For further information please see the information on the [Mendix Event Broker](/appstore/services/event-broker/)
 
 ### 5.1 Topics and Channels {#topics-channels}
 

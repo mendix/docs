@@ -22,8 +22,8 @@ Make sure that the HTML or JavaScript code that you are injecting to the page is
 
 Create a new JavaScript file in the app's root directory (**theme** folder) and refer to it instead of using its content attribute. This applies for both HTML and JavaScript snippets:
 
-{{< figure src="/attachments/appstore/widgets/security/html-js-csp/create.png" >}}
-{{< figure src="/attachments/appstore/widgets/security/html-js-csp/refer.png" >}}
+{{< figure src="/attachments/appstore/widgets/security/html-js-csp/create.png" class="image-border">}}
+{{< figure src="/attachments/appstore/widgets/security/html-js-csp/refer.png" class="image-border">}}
 
 ### 2.3 unsafe-inline and unsafe-eval
 

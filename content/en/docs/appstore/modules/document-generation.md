@@ -47,6 +47,8 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
     {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
+* The new React client that is introduced in 10.7.0 (currently in public beta) is not yet supported. Generating PDF documents does not work when setting the 'Use React client (Beta)' to 'Yes' in the runtime settings of your app. We will introduce support for the React client soon.
+
 ## 2 Installation {#installation}
 
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Documentation Generation module into your app.

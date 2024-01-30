@@ -4,7 +4,7 @@ url: /refguide/troubleshoot-repository-size/
 linktitle: "Repository size"
 weight: 20
 description: "Explains consequences and root cause of a large repository size and how to mitigate this."
-tags: "version control", "troubleshoot", "repository size", "mpr size", "performance", "git"]
+tags: ["version control", "troubleshoot", "repository size", "mpr size", "performance", "git"]
 ---
 
 ## 1 Introduction

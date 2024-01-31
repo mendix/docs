@@ -60,7 +60,6 @@ To install and configure the Global Operator, perform the following steps:
 
 7. Verify that the installation was successful by using the following command: 
 
-
         ```shell
         kubectl -n {globalOperatorNamespace} get deployments
         ```

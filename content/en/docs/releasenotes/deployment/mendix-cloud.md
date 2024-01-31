@@ -1584,3 +1584,9 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * We removed static information from the log lines in Mendix Cloud v3. Every line before contained `tr10000` and `127.0.0.1`. We removed these fields as they were useless.
+
+### January 31, 2024 
+
+#### Improvements
+
+* We added the AWS Osaka, Seoul & Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.

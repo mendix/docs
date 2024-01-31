@@ -17,20 +17,23 @@ Apps deployed to Mendix Cloud run in Cloud Foundry clusters that are deployed on
 
 The primary hosting locations are as follows:
 
-* Mendix Cloud Africa: AWS Cape Town
-* Mendix Cloud Asia Pacific: AWS Mumbai
-* Mendix Cloud Asia Pacific: AWS Singapore
-* Mendix Cloud Asia Pacific: AWS Sydney
-* Mendix Cloud Asia Pacific: AWS Tokyo
-* Mendix Cloud Canada: AWS Canada
-* Mendix Cloud EU: AWS Dublin
-* Mendix Cloud EU: AWS Frankfurt
-* Mendix Cloud Middle East: AWS Bahrain
-* Mendix Cloud Middle East: AWS UAE
-* Mendix Cloud UK: AWS London
-* Mendix Cloud US: AWS North Virginia
-* Mendix Cloud US: AWS Oregon
-* Mendix Cloud SA: AWS São Paulo
+* Mendix Cloud Africa: Cape Town
+* Mendix Cloud Australia: Sydney
+* Mendix Cloud Asia Pacific: Mumbai
+* Mendix Cloud Asia Pacific: Singapore
+* Mendix Cloud Asia Pacific: Tokyo
+* Mendix Cloud Asia Pacific: Osaka
+* Mendix Cloud Asia Pacific: Seoul
+* Mendix Cloud Asia Pacific: Jakarta
+* Mendix Cloud Canada: Central
+* Mendix Cloud Europe: Ireland
+* Mendix Cloud Europe: Frankfurt
+* Mendix Cloud Middle East: Bahrain
+* Mendix Cloud Middle East: UAE
+* Mendix Cloud UK: London
+* Mendix Cloud US East: North Virginia
+* Mendix Cloud US West: Oregon
+* Mendix Cloud South America: São Paulo
 
 Backups are always stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable; in other words, once it has been written to Mendix's storage location, it can no longer be modified or overwritten.
 

@@ -455,10 +455,25 @@ The `InvokeModelRequestStabilityAIStableDiffusionXL` entity holds the settings n
 | `Seed` | The `Seed` attribute is part of the inference configuration Determines initial noise. Using same seed with same settings will create similar images.|
 | `Steps` | The `Steps` is part of the inference configuration. How many times image is sampled. More steps may be more accurate.|
 
-#### 4.1.43 InvokeModelResponseStabilityAIStableDiffusionXL {#invoke-model-response-stabilityai-stable-diffusionxl}
+#### 4.1.43 StabilityAIStableDiffusionXL_TextPrompt {#stability-ai-stablediffusionxl-text-prompt}
+
+The `StabilityAIStableDiffusionXL_TextPrompt` entity holds the part of the request of the StabilityAI diffusion XL foundational model containing the Prompt on which the response will be based and is used in the example implementation included in the Amazon Bedrock Connector.
+| Attribute | Description |
+| --- | --- |
+| `InputText` | The `InputText` attribute describes the content of the text prompt used to generate an image.|
+
+#### 4.1.44 InvokeModelResponseStabilityAIStableDiffusionXL {#invoke-model-response-stabilityai-stable-diffusionxl}
 
 The `InvokeModelResponseStabilityAIStableDiffusionXL` entity holds the response of the StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it will be associated to a list of StabilityAIStableDiffusionXL_Settings objects.
 
+| Attribute | Description |
+| --- | --- |
+| `Result` | The `Result` attribute describes the outcome of the Invoke Model action.|
+| `PromptId` | The `PromptId` attribute describes an identifier of the used prompt.|
+
+#### 4.1.45 StabilityAIStableDiffusionXL_Settings {#stability-ai-stablediffusionxl-settings}
+
+The `StabilityAIStableDiffusionXL_Settings` entity holds part of the response of the StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. 
 | Attribute | Description |
 | --- | --- |
 | `Seed` | The `Seed` attribute specifies the seed that was used for the image generated.|

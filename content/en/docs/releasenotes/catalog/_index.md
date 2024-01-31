@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue that would prevent integrations from being automatically registered for applications that also use Mendix Business Events.
+* We fixed an issue that would prevent data sources from being automatically registered for applications that also use Mendix Business Events.
 
 ### January 25, 2024
 

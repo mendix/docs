@@ -12,11 +12,23 @@ aliases:
 
 ## 1 Introduction
 
-If you app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. You can access this page by selecting your app in the Developer Portal and then clicking **Feedback** in the navigation pane. **Feedback** enables your team to view and manage all the feedback items that users have sent from your app.
+If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback items. It also allows team members with the right permissions to organize the feedback items, and add feedback items manually. 
+
+You can access the **Feedback** page by selecting your app in the Developer Portal and then clicking **Feedback** in the navigation pane. 
+
+The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive).
 
 ### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
-After a user reports feedback in the app using the feedback widget, they will get an email with a link to their submitted feedback item. When the user opens the link, a page opens and shows their feedback details. See the table below:
+#### 1.1.1 What Happens to Your Team
+
+After a user reports feedback in the app using the feedback widget, the feedback item goes automatically to the [Inbox](#inbox) on the **Feedback** page, and everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app. 
+
+Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.
+
+#### 1.1.2 What Happens to the User
+
+After a user reports feedback in the app using the feedback widget, the user will get an email with a link to their submitted feedback item. When the user opens the link, a page opens and shows their feedback details. See the table below:
 
 | What a User Can See on the Page                             | What a User Cannot See on the Page                           |
 | ----------------------------------------------------------- | ------------------------------------------------------------ |
@@ -28,23 +40,15 @@ After a user reports feedback in the app using the feedback widget, they will ge
 | Last activity on the feedback item                          | Attachments that you team uploaded for this feedback item    |
 |                                                             | Team comments on this feedback item                          |
 
-This page also has a message feature for the user to communicate with your team directly. You can upload images in your messages. When the user posts a message, the assigned team member will receive an email. When there is a reply from your team, the user will get an email notification.
+This page also has a message feature for the user to communicate with your team directly. Users can upload images in the messages. When the user posts a message, the assigned team member will receive an email. When there is a reply from your team, the user will get an email notification.
 
-{{% alert color="warning" %}}Do not share the link to your feedback details with someone unless it is necessary. Anyone who has this link can access your feedback details, including the title and the description of the feedback item as well as the screenshot if there is one.{{% /alert %}}
+{{% alert color="warning" %}}Do not share the link to feedback details with someone unless it is necessary. Anyone who has this link can access the feedback details, including the title and the description of the feedback item as well as the screenshot if there is one.{{% /alert %}}
 
 If the user does not want to receive notifications anymore, they can clear the checkbox for the notification on the page, as shown in the image below: 
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/user-notification.png" >}}
 
-## 2 Using Feedback
-
-After a user submits a feedback item from your app, it goes automatically to **Feedback** in the Developer Portal. **Feedback** enables your team to view all the feedback items. It also allows team members with the right permissions to organize the feedback items, and add feedback items manually.
-
-{{% alert color="info" %}}When a user submits a feedback item from your app, everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app.</br>Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.{{% /alert %}}
-
-**Feedback** contains two tabs: **Inbox** and **Archive**.
-
-### 2.1 Inbox {#inbox}
+## 2 Inbox {#inbox}
 
 On the **Inbox** tab, everyone from your team can view all the unarchived feedback items that have been sent from your app by users.  
 
@@ -69,7 +73,7 @@ To search by **Subject**, **Description**, **User Email** and **Tags**, type the
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
-#### 2.1.1 Organizing Feedback Items in Inbox
+### 2.1 Organizing Feedback Items in Inbox
 
 If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can also organize feedback items.
 
@@ -97,7 +101,7 @@ If you select feedback items, you can see the following items:
 
 * **Delete** – Clicking this deletes the selected feedback items permanently. The result is irreversible.
 
-### 2.2 Archive {#archive}
+## 2 Archive {#archive}
 
 On the **Archive** tab, everyone in your team can view all the archived feedback items.
 
@@ -117,11 +121,11 @@ To search by **Subject** and **ID**, type the keywords in the search bar.
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
-### 2.3 Opening a Feedback Item {#feedback-details}
+## 3 Opening a Feedback Item in Inbox or Archive{#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open a feedback item by clicking it in the list. If you click the **ID** of a feedback item, the feedback details page will open. If you click a place other than the **ID** of a feedback item, a side panel will open. Either the feedback details page or the side panel contains two tabs: **Feedback** and **Contact Reporter**. You can find the description of the two tabs in the sections below.
+On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open a feedback item by clicking it in the list. If you click the **ID** of a feedback item, the feedback details page will open. If you click a place other than the **ID** of a feedback item, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Contact Reporter](#contact-reporter).
 
-#### 2.3.1 Feedback Tab
+### 3.1 Feedback Tab {#feedback}
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details on the **Feedback** tab.{{% /alert %}}
 
@@ -183,15 +187,15 @@ The **Feedback** tab shows the following items:
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
   
-#### 2.3.2 Contact Report Tab
+### 3.2 Contact Reporter Tab {#contact-reporter}
 
-The**Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
+The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
-##### 2.3.2.1 Managing Tags {#manage-tags}
+#### 3.2.1 Managing Tags {#manage-tags}
 
- From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
+From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" class="image-border" alt="tag management setting" >}}
 

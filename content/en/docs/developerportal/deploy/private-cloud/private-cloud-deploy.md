@@ -109,7 +109,7 @@ All environments are defined as production environments, which means that [secur
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
 
     {{% alert color="warning" %}}
-    In case of Global operator, in order to avoid issues, same internal id for the environment should not be used for the managed namespaces under same global operator namespace.
+    In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
     {{% /alert %}}    
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.

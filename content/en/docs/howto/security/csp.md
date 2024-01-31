@@ -22,7 +22,18 @@ Currently, some of Mendix's pluggable widgets are not fully compliant with CSP. 
 
 In order to be able to use the strictest setting of a CSP (`default-src: self`) you must make some changes in your application. See the sections below for guidance.
 
-### 2.1 Changing the Theme
+### 2.1 Updating the Theme folder
+
+To upgrade your theme directory to latest version, please complete the following steps:
+
+1. Rename your current theme directory. For instance, you can use "theme_backup" as the new name.
+
+2. Download the new theme files from this link: [theme.zip](https://github.com/mendix/atlas/releases/download/atlasui-theme-files-2024-01-25/atlasui-theme-files.zip). Extract the downloaded file into the root of your Mendix app folder. The folder structure should be similar to the previous folder, i.e., the Mendix app root, then theme, and then web and native.
+
+3. After extracting the new theme files, restore your custom styling from the backup by copying over the new theme folder files. The main changes made to make it compatible with strict CSP involve the login.html and one Javascript file for the toggle password.
+
+
+### 2.1.1 Changing the Theme
 
 Create a new file to contain the Dojo configuration in your theme folder (*theme/web/appSetup.js*) with the following configuration:
 
@@ -91,7 +102,7 @@ In *theme/web/index.html* do the following:
 
 Lastly, ensure you are not using any external fonts by checking your theme's styling to confirm all of the fonts are loaded locally.
 
-#### 2.1.1 Testing Your Changes Locally
+#### 2.1.2 Testing Your Changes Locally
 
 To check that your changes are working locally, you can temporarily enforce the header by adding the following *theme/web/index.html* at the top of the `<head>` tag:
 

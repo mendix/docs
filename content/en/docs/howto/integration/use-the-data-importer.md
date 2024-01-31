@@ -24,10 +24,10 @@ Download the [Data Importer extension](https://marketplace.mendix.com/link/compo
 * A file document (for more information, see [File Manager](/refguide/file-manager/))
 
 ## 3 Data Importer Document
-(
+
 The Data Importer extension allows you to import data from Excel and CSV files directly into your app. Create a Data Importer document to define which columns to import and a non-persistable entity (NPE) to hold the imported data, along with source-to-target mapping. During the Data Importer document creation, you can preview the data and choose which columns you want to import and edit the name of resulting entity.
 
-The Data Importer document can be used along with the **Import data from file** custom activity. Use this activity in a microflow to import data from an Excel or CSV file.
+The Data Importer document can be used along with the [Import data from file](/refguide/import-data-from-file/) custom activity. Use this activity in a microflow to import data from an Excel or CSV file.
 
 ### 3.1 Creating a Data Importer Document
 
@@ -80,7 +80,7 @@ For example, for the following source data (CSV), the separator is specified as 
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/source-csv-data.png" >}}
 
-The data preview and resulting entity would be as seen below:
+The data preview and resulting entity are seen below:
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/preview-csv-data-and-entity.png" >}}
 
@@ -137,7 +137,7 @@ The **Import data from file** custom activity needs an input file to import data
 ### 4.3 Configuring the Import data from file Activity in a Microflow 
 
 {{% alert color="info" %}}
-The steps below are shown using an Excel input file with its corresponding Data Importer document. You can substitute an Excel Data Importer Document by a CSV Data Importer Document to import data from CSV input files.
+The steps below are shown using an Excel input file with its corresponding Data Importer document. You can substitute an Excel document with a CSV document to import data from CSV input files.
 {{% /alert %}}
 
 1. In the created microflow, drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under **Integration activities**.

@@ -117,16 +117,15 @@ To search by **Subject** and **ID**, type the keywords in the search bar.
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
-### 2.3 Feedback Details {#feedback-details}
+### 2.3 Opening a Feedback Item {#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, you can click a feedback item in the list to check the feedback details:
+On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open a feedback item by clicking it in the list. If you click the **ID** of a feedback item, the feedback details page will open. If you click a place other than the **ID** of a feedback item, a side panel will open. Either the feedback details page or the side panel contains two tabs: **Feedback** and **Contact Reporter**. You can find the description of the two tabs in the sections below.
 
-* If you click the **ID** of a feedback item, the feedback details page will open. It provides all the feedback details, and on the right-side **Contact Reporter** pane, you can contact the reporter of the feedback item.
-* If you click a place other than the **ID** of a feedback item, a side panel will open, with all the feedback details shown on the **Feedback** tab, and the feature for messaging the reporter available on the **Contact Reporter** tab.
+#### 2.3.1 Feedback Tab
 
-{{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details.{{% /alert %}}
+{{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details on the **Feedback** tab.{{% /alert %}}
 
-The feedback details page or the side panel contains the following items: 
+The **Feedback** tab shows the following items: 
 
 * Buttons ({{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
@@ -184,9 +183,15 @@ The feedback details page or the side panel contains the following items:
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
   
-#### 2.3.1 Managing Tags {#manage-tags}
+#### 2.3.2 Contact Report Tab
 
-  From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
+The**Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
+
+For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
+
+##### 2.3.2.1 Managing Tags {#manage-tags}
+
+ From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" class="image-border" alt="tag management setting" >}}
 

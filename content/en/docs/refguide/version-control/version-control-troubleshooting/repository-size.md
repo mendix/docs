@@ -150,7 +150,7 @@ Downloading the first branch of an app takes slightly longer than consecutive do
 
 We recommend doing the following:
 
-* Check the dependencies section of this README
+* Check the **Dependencies** section of the README of the cleanup tool
 * Consider re-running with verbose output
 * Check the config
 * Check the input provided by you in the different steps

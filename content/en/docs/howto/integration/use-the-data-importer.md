@@ -37,7 +37,7 @@ Right-click the module you want to add the Data Importer document to and click *
 
 Name the document, then click **OK**, and the new Data Importer document opens.
 
-### 3.2 Previewing Excel Data {#preview-data-excel}
+### 3.2 Previewing Excel Data {#preview-excel-data}
 
 Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
@@ -59,7 +59,7 @@ All the columns are automatically selected (checked) for import. You can uncheck
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/preview-data-and-entity.png" >}}
 
-### 3.3 Previewing CSV Data {#preview-data-csv}
+### 3.3 Previewing CSV Data {#preview-csv-data}
 
 Select or drop the CSV file in the **Select Source File** window. CSV import supports multiple combinations of separator/delimiter, quote, and escape characters. It also supports importing files where the header row is absent.
 

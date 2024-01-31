@@ -378,7 +378,7 @@ The following Mendix services support usage of PATs:
 
 ##### 10.4.2.1 Creating a PAT {#create-pat}
 
-When you click **New Token**, you need to set the following characteristics of the PAT:
+When you click **New Token** in the [Developer Settings](https://user-settings.mendix.com/link/developersettings), you need to set the following characteristics of the PAT:
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT

@@ -97,10 +97,10 @@ You can select how you want to represent associations. For more information, see
 
 #### 3.1.3 Include metadata in response by default
 
-This checkbox allows you to change whether or not the service should include the metadata, such as the `@context` property, by default in the response. By default this is enabled, in order to conform to the OData specification. Disabling this has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedences over this setting.
+This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedences over this setting.
 
 {{% alert color="info" %}}
-Disabling this setting might break integrations with this service. Specifically for integrations with Microsoft Excel and PowerBI to work this setting must be left enabled.
+Disabling this setting could break integrations with this service, specifically integrations with Microsoft Excel and PowerBI. This setting must enabled to use these features.
 {{% /alert %}}
 
 ### 3.2 Export

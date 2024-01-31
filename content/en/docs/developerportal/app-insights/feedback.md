@@ -180,7 +180,7 @@ The feedback details page or the side panel contains the following items:
 
 * **Team Comments** – This section shows all the comments on this feedback istem from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
-* **Contact reporter** – This section allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
+* **Contact Reporter** – This feature allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
   

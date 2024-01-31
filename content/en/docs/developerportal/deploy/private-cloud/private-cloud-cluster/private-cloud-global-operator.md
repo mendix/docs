@@ -109,7 +109,6 @@ To install and configure the Global Operator, perform the following steps:
 
 After you configure the managed namespace, the Agent and Operator pod are restarted automatically, so that the Global Operator namespace can process the newly added managed namespace. The managed namespace is added to the Operator configuration for the Global Operator namespace, and the required storage plans are created in the managed namespace.
 
-
 The Operator configuration for the managed namespace is created as well. The configuration changes inside the managed namespace will take precedence over the global configuration.
 
 After configuration, the status of managed namespace changes to **Configured**.
@@ -119,7 +118,6 @@ Once the managed namespace is configured, you can find the list with all the nam
     {{% alert color="info" %}}
      If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster.
     {{% /alert %}}
-
 
 ### 2.2 Next Steps
 

@@ -119,11 +119,14 @@ Clicking the filter bar will open the **Filter by** side panel. In this side pan
 
 ### 2.3 Feedback Details {#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, if you click the **ID** of a feedback item in the list, the **Feedback Details** page opens. There, you can see more details about the feedback item, and contact the reporter of the feedback item. (If you click a place other than the **ID** of a feedback item in the list, the details of the feedback will show on a side panel. However, you cannot contact the reporter of the feedback item from this side panel.)
+On the [Inbox](#inbox) and [Archive](#archive) tabs, you can click a feedback item in the list to check the feedback details:
+
+* If you click the **ID** of a feedback item, the feedback details page will open. It provides all the feedback details, and on the right-side **Contact Reporter** pane, you can contact the reporter of the feedback item.
+* If you click a place other than the **ID** of a feedback item, a side panel will open, with all the feedback details shown on the **Feedback** tab, and the feature for messaging the reporter available on the **Contact Reporter** tab.
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details.{{% /alert %}}
 
-The feedback details on the **Feedback Details** page or on the side panel contain the following items: 
+The feedback details page or the side panel contains the following items: 
 
 * Buttons ({{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
@@ -175,9 +178,9 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
 * **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
 
-* **Team Comments** – This section shows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
+* **Team Comments** – This section shows all the comments on this feedback istem from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
-* **Contact reporter** (not available on the side panel) – This section allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
+* **Contact reporter** – This section allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
 
   For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
   
@@ -185,7 +188,7 @@ The feedback details on the **Feedback Details** page or on the side panel conta
 
   From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
-  {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" >}}
+  {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" class="image-border" alt="tag management setting" >}}
 
   To create a new tag, do as follows:
 

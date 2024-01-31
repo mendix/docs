@@ -25,9 +25,9 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* Errors are now gracefully handled when a [MiniSurvey](/developerportal/app-insights/minisurvey/) submission is sent outside the boundaries of the Survey runtime window.
-* We fixed an issue where some users were unable to close feedback items
-* We fixed an issue where some users were encountering an error when navigating back to the feedback home page.
+* Errors are now gracefully handled when a [mini survey](/developerportal/app-insights/mini-surveys/) submission is sent outside the boundaries of the survey runtime window.
+* We fixed an issue where some users were unable to close feedback items.
+* We fixed an issue where some users were encountering an error when navigating back to the Feedback home page.
 
 ### January 25
 

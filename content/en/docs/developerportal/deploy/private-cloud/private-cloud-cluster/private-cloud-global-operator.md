@@ -41,7 +41,7 @@ To install and configure the Global Operator, perform the following steps:
 4.  After the Global Operator cluster is created, click **Add Global Operator Main Namespace**.
 
     {{% alert color="warning" %}}
-    Ensure that you do not use a namespace that is intended to be a managed namespace that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+    Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
     {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" >}}

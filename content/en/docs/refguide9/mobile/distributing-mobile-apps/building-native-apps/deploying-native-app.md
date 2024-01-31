@@ -1,8 +1,8 @@
 ---
-title: "Deploy Your First Mendix Native Mobile App"
+title: "Build a Mendix Native App in the Cloud"
 linktitle: "Deploy Mendix Native Mobile App"
 url: /refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
-weight: 10
+weight: 30
 description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 aliases:

@@ -84,6 +84,20 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`FoundationModelSummary`](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
+### 3.3 Invoking specific models using the InvokeGenericModel operation
+
+To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model) we have included two example implementations in the Amazon Bedrock Connector (for more Example implementations check the example Implementation module availeble on the marketplace: https://marketplace.mendix.com/link/component/215751). One for invoking the LLM called Claude V.2.1 that generates text and another for the LDM model called SDXL V.1.0 that generates images from a text prompt. These examples can be used as a reference together with documentation found here, in the bedrock console and from the provider of the model. Lets enummerate the steps one needs to take to invoke a specific model:
+
+1. Choose the model you wish to interact with via the [Invoke Generic Model](#invoke-generic-model) operation.
+2. Find the request and response Json structures of the specific model you want to invoke. The best resource to find these is the model parameters section of the Amazon Bedrock user guide https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html.
+3. Create your domain model inspired by the Json structures found. There are some free and helpful tools to visualize JSON structures, for example: https://jsoncrack.com/editor.
+4. In Mendix studio pro create a "JSON structure" by right clicking on the target folder, choosing the "Add other" option and clicking the "JSON structure" option. Create one for the request JSON and one for the response. Open the created JSON structure and copy the request/response JSON in to it and press the OK button.
+5. Now that we have the JSON structures for the request and response in our Mendix application we can use it to generate export and import mappings from them. The export mapping serves the purpose of creating a JSON from the request related objects (specific to the model you want to invoke) that then should be added as the request body of the "InvokeModelGenericRequest" object that should be provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping serves the purpose of mapping the returned (by [Invoke Generic Model](#invoke-generic-model) operation) response body to your model specific response objects.
+To create import or export mappings, right click on the target folder and choose "Add other" after which you click the Import/Export mapping option. After creating an Export/Import mapping a window will open where you can assign a "Schema source", Choose the JSON structure option and find the appropriate request/response JSON structure and select the schema elements that are relevant for you and press the OK button. After doing this map the relevant elements to the correct attributes by double clicking the shown entities and choosing the correct entity attributes for the correct elements.
+Now we have all of the tools we need to create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation.
+6. The microflow that you will have to create will look something like this (Claude V.2.1):
+![image](https://github.com/mx-awsdevteam/docs/assets/139855197/f3beba01-7662-4c48-ace8-03befc6252c9)
+
 ## 4 Technical Reference
 
 To help you work with the Amazon Bedrock connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
@@ -402,6 +416,55 @@ The `IngestionJobStats` entity contains information about the failure of the int
 | `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed. |
 | `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed. |
 
+#### 4.1.39 InvokeModelRequestAnthropicClaude {#invoke-model-request-anthropic-claude}
+
+The `InvokeModelRequestAnthropicClaude` entity holds the request parameters needed to invoke Anthropic Claude foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it is potentially associated to a list of AnthropicClaude_StopSequences objects that are used to specify a list of stop sequences.
+
+| Attribute | Description |
+| --- | --- |
+| `Prompt` | The `Prompt` attribute holds the prompt send to the Claude model.|
+| `Max_tokens_to_sample` | The `Max_tokens_to_sample` attribute holds an integer specifying the max amount of returned tokens by the Claude model.|
+| `Temperature` | The `Temperature` attribute can be used to tune the degree of randomness in the resposes generated.|
+| `Top_k` | The `Top_k` attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
+| `Top_p` | The `Top_p` attribute influences what tokens will be choosen by the model. If set to float less than 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.|
+
+#### 4.1.40 AnthropicClaude_StopSequences {#anthropic-claude-stop-sequence}
+
+The `AnthropicClaude_StopSequences` entity holds the stop sequence parameter that can be used to invoke Anthropic Claude foundational model and is used in the example implementation included in the Amazon Bedrock Connector. A list of up to four of these objects can be associated to the InvokeModelRequestAnthropicClaude object used for invoking the Claude model.
+
+| Attribute | Description |
+| --- | --- |
+| `Sequence` | The `Sequence` attribute holds a string and tells the API to stop generating further tokens when this string is encountered.|
+
+#### 4.1.41 InvokeModelResponseAnthropicClaude {#invoke-model-response-anthropic-claude}
+
+The `InvokeModelResponseAnthropicClaude` entity holds the response of the Anthropic Claude model.
+
+| Attribute | Description |
+| --- | --- |
+| `Completion` | The `Completion` attribute holds the response string of Claude.|
+| `StopReason` | The `StopReason` attribute holds the reason that Claude stoped generating text.|
+
+#### 4.1.42 InvokeModelRequestStabilityAIStableDiffusionXL {#invoke-model-request-stabilityai-stable-diffusionxl}
+
+The `InvokeModelRequestStabilityAIStableDiffusionXL` entity holds the settings needed to invoke StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it is associated to a StabilityAIStableDiffusionXL_TextPrompt object.
+
+| Attribute | Description |
+| --- | --- |
+| `cfg_scale` | The `cfg_scale` attribute is part of the inference configuration. Determines how much final image portrays prompts.|
+| `Seed` | The `Seed` attribute is part of the inference configuration Determines initial noise. Using same seed with same settings will create similar images.|
+| `Steps` | The `Steps` is part of the inference configuration. How many times image is sampled. More steps may be more accurate.|
+
+#### 4.1.43 InvokeModelResponseStabilityAIStableDiffusionXL {#invoke-model-response-stabilityai-stable-diffusionxl}
+
+The `InvokeModelResponseStabilityAIStableDiffusionXL` entity holds the response of the StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it will be associated to a list of StabilityAIStableDiffusionXL_Settings objects.
+
+| Attribute | Description |
+| --- | --- |
+| `Seed` | The `Seed` attribute specifies the seed that was used for the image generated.|
+| `FinishReason` | The `FinishReason` attribute describes the reason the process finished.|
+| `Base64` | The `Base64` attribute describes the image content as a base64 encrypted string.|
+
 ### 4.2 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
@@ -420,7 +483,7 @@ The input and output for this service are shown in the table below:
 
 The `InvokeModelGeneric` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
 
-The `InvokeModel Generic` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
+The `InvokeModelGeneric` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModelGeneric` operation to invoke specific moedels. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
 
 The input and output for this service are shown in the table below:
 
@@ -464,7 +527,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.2.6 StartIngestionJob {#start-ingestion-job}
 
-The `Start Ingestion Job` activity allows you to begin an ingestion job, in which a data source is added to a knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
+The `StartIngestionJob` activity allows you to begin an ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
 
 To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
 
@@ -476,7 +539,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.2.7 GetIngestionJob {#get-ingestion-job}
 
-The `Get Ingestion Job` activity allows you to retrieve information about a ingestion job, in which a data source is added to a knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
+The `GetIngestionJob` activity allows you to retrieve information about a ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 
 To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
 

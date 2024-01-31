@@ -39,27 +39,26 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
     {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  >}}
 
-   Note, on mac you may get the following dialog:
+     On mac you may get the following dialog:
 
-   ![warning_mac](https://github.com/mendix/docs/assets/122016392/b1d0c893-c71f-4dd3-9347-08dac7edd1de)
+    ![warning_mac](https://github.com/mendix/docs/assets/122016392/b1d0c893-c71f-4dd3-9347-08dac7edd1de)
 
-   To bypass this, right click on the installer and click **Open**.
-   You can then click on **Open** in the next dialog to run the installer.
+    To bypass the dialog box, right-click the installer, click **Open** and run the installer.
    
-3. Select **I accept the terms in the License Agreement** and click **Next**.
+2. Select **I accept the terms in the License Agreement** and click **Next**.
 
-4. Select the folder in which you want to install Studio Pro and click **Next**:
+3. Select the folder in which you want to install Studio Pro and click **Next**:
 
     {{< figure src="/attachments/refguide/installation/install/select-folder.png"   >}}
 
-5. Enter the start menu shortcuts folder you want to use and click **Next**:
+4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
     {{< figure src="/attachments/refguide/installation/install/shortcut-folder.png"  >}}
 
-6. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
-7. Click **Install** to install Studio Pro on your computer.
+5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
+6. Click **Install** to install Studio Pro on your computer.
 
-8. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
+7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 4 Troubleshooting {#troubleshooting}
 

@@ -10,19 +10,25 @@ tags: ["studio pro"]
 {{% alert color="warning" %}}
 The OData implementation in Mendix does not support all features of the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data and logic between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed.
 
-When using 3rd-party APIs, we advise you to make a proof of concept to ensure that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, you can use the Mendix [REST](/refguide/consumed-rest-services/) functionality instead.
+When using third-party APIs, it is advised you to make a proof of concept to ensure the functionality provided in Mendix matches the requirements of your third-party APIs. If external entities do not work with your OData APIs, you can use the Mendix [REST](/refguide/consumed-rest-services/) functionality instead.
 {{% /alert %}}
 
 ## 1 Introduction
 
-This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold. If these requirements are not met, errors may result.
+This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and are expected to hold. If these requirements are not met, errors may result.
 
 ## 2 Requirements for a Consumed OData Service
 
 The requirements for a consumed OData service used in a Mendix app are the following:
 
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
-* It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, and `$count` (or `$inlinecount`)
+* It should support queries on the OData feed, including:
+    * `$filter`
+    * `$orderby`
+    * `$top`
+    * `$skip`
+    * `$expand`
+    * `$count` (or `$inlinecount`)
 
 ## 3 Requirements on the Service Entities and Attributes
 
@@ -32,10 +38,10 @@ This section describes the features of a consumed OData service that are support
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
-* **Countable** – an entity set marked as `Countable="false"` prevents the user from adding the entity to the app
-* **Filterable** – an entity set marked as `Filterable="false"` sets all properties as non-filterable
-* **Sortable** – an entity set marked as `Sortable="false"` sets all properties as non-sortable
-* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
+* **Countable** – an entity set marked as `Countable="false"` prevents the user from adding the entity to the app.
+* **Filterable** – an entity set marked as `Filterable="false"` sets all properties as non-filterable.
+* **Sortable** – an entity set marked as `Sortable="false"` sets all properties as non-sortable.
+* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable.
 * **Insertable** – an entity marked as `Insertable="true"` will make the entity creatable in the domain model. That means, for example, that you can model pages that create new objects, and that you can use the entity in the [Create Object](/refguide/create-object/) activity. For insertable entities, the annotations `NonInsertableProperties` and `NonInsertableNavigationProperties` list the (navigation) properties that cannot be passed to the service in the [Send External Object](/refguide/send-external-object/) activity.
 * **Updatable** – an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for example, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change Object](/refguide/change-object/) activity. For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` list the (navigation)properties that cannot be updated.
 * **Deletable** - an entity marked as `Deletable="true"` can be used in the [Delete External Object](/refguide/delete-external-object/) activity.
@@ -45,8 +51,18 @@ An entity can only be used when it is accessible through an entity set.
 Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified).
-* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`.
-* If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the domain model.
+* Only the following types are allowed: 
+    * `Byte`
+    * `SByte`
+    * `Int16`
+    * `Int32`
+    * `Int64`
+    * `Boolean`
+    * `Decimal`
+    * `Single`
+    * `Double`
+    * `String`
+* If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified and you know the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the domain model.
 
 {{% alert color="info" %}}
 The list above for supported key fields does not include `Date` or `DateTime` data types.
@@ -60,7 +76,7 @@ The list above for supported key fields does not include `Date` or `DateTime` da
 Attributes marked as `FC_KeepInContent=false` cannot be used.
 {{% /alert %}}
 
-The most commonly used attribute types can be used in your app. The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
+The most commonly used attribute types can be used in your app. The types of the attributes are be based on the types of the attributes in the OData metadata, as given in the following table:
 
 | OData Type                     | Mendix Type                           |
 | ---                            | ---                                   |

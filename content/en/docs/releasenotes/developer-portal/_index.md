@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* In [Feedback](/developerportal/app-insights/feedback/), you can now message the reporter on the **Contact Reporter** tab on the side panel after you open a feedback item from the **Inbox**.
+* In Feedback, you can now message the reporter on the **Contact Reporter** tab on the [side panel](/developerportal/app-insights/feedback/#feedback-details) after you open a feedback item.
 
 #### Improvements
 

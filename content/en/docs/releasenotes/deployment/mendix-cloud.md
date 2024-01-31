@@ -17,6 +17,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### February 01, 2024
+
+#### Bug Fixes
+
+* Remove extra white space issue on the logs page. 
+* On the metrics page, viewing both the application and the database metrics together, they are now aligned & are not mixed among each other. The logs page first renders all the application metrics graphs followed by the database metrics graphs.
+* The environments drop-down maintains the sort order as it's displayed in the developer portal environments page
+
 ### January 18, 2024
 
 #### Bug Fixes

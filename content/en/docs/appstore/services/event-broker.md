@@ -56,13 +56,13 @@ This feature is currently in [Private Beta](/releasenotes/beta-features/).  Plea
 
 Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3 or Google Pub/Sub, in order to send and receive events between your Mendix Public Cloud landscape and technologies outside of your Mendix Public Cloud landscape.
 
-{{< figure src="event_broker_bridges.png" >}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges.png" >}}
 
 #### 1.3.1 Configuring a Bridge with AWS SQS
 
 Technical Contacts with a license to the Mendix Event Broker can manage this feature from the [Event Broker Manager](https://broker.mendix.com/) menu item for `Event Broker Bridges`.
 
-{{< figure src="event_broker_bridges_management.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_management.png">}}
 
 The creation process contains three steps on the Mendix side and policies that need to be implemented on the AWS side.
 
@@ -70,31 +70,31 @@ The creation process contains three steps on the Mendix side and policies that n
 
 Within the scope of the current Public Beta for this feature, Mendix Event Broker Bridges are capable of transporting events between the Mendix Event Broker and AWS SQS.  Other options in the list are currently not available for use.
 
-{{< figure src="event_broker_bridges_create_1.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_1.png">}}
 
 #### 1.3.1.2 Configuration details
 
 The next step of configuration is to select a [Space](#manage-mx-broker), Name and Region for the bridge to operate in.
 
-{{< figure src="event_broker_bridges_create_2.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_2.png">}}
 
 #### 1.3.1.3 Choose the business events to integrate
 
 In this step the user must select events from the Event Broker landscape of events to send to or receive from AWS SQS.  Events can be added to the configuration by selecting the `Add Business Events` option, searching for the appropriate events and adding them once selected
 
-{{< figure src="event_broker_bridges_create_3.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_3.png">}}
 
 Each event must be configured with its own SQS URL for each direction that the event will be integrated.
 
-{{< figure src="event_broker_bridges_create_4.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_4.png">}}
 
 After all events have been configured simply `Start` the Mendix Event Broker Bridge.  This process will take several minutes to complete.
 
-{{< figure src="event_broker_bridges_create_5.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_5.png">}}
 
 Once the Mendix Event Broker Bridge has been successfully deployed its configuration and status can be viewed on the Overview page.
 
-{{< figure src="event_broker_bridges_overview.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_overview.png">}}
 
 #### 1.3.1.4 Configure AWS Acesss Policy for sending Messages to Mendix
 

@@ -133,10 +133,10 @@ This is the request entity of the `ListFoundationModels` action. It is a special
 
 | Attribute | Description |
 | --- | --- |
-| `ByCustomizationType` | To filter the received foundation models by customization type (enum)|
-| `ByInferenceType` | To filter the received foundation models by inference type (enum)|
-| `ByOutputModality` | To filter the received foundation models by output modality type (enum)|
-| `ByProvider` | To filter the received foundation models by an Amazon Bedrock model provider (string)|
+| `ByCustomizationType` | Filter the received foundation models by customization type (enum) |
+| `ByInferenceType` | Filter the received foundation models by inference type (enum) |
+| `ByOutputModality` | Filter the received foundation models by output modality type (enum) |
+| `ByProvider` | Filter the received foundation models by an Amazon Bedrock model provider (string) |
 
 #### 4.1.2 ListFoundationModelsResponse {#list-foundation-models-response}
 

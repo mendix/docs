@@ -81,7 +81,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.
 10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [`FoundationModelSummary`](#foundation-model-summary).
+12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ### 3.3 Invoking specific models using the InvokeGenericModel operation

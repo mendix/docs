@@ -106,11 +106,18 @@ To invoke a specific model, perform the following steps:
     5. Open the created JSON structure.
     6. Paste the request or response JSON into the created structure.
     7. Click **OK**.
-6. Now that we have the JSON structures for the request and response in our Mendix application we can use it to generate export and import mappings from them. The export mapping serves the purpose of creating a JSON from the request related objects (specific to the model you want to invoke) that then should be added as the request body of the "InvokeModelGenericRequest" object that should be provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping serves the purpose of mapping the returned (by [Invoke Generic Model](#invoke-generic-model) operation) response body to your model specific response objects.
-To create import or export mappings, right click on the target folder and choose "Add other" after which you click the Import/Export mapping option. After creating an Export/Import mapping a window will open where you can assign a "Schema source", Choose the JSON structure option and find the appropriate request/response JSON structure and select the schema elements that are relevant for you and press the OK button. After doing this map the relevant elements to the correct attributes by double clicking the shown entities and choosing the correct entity attributes for the correct elements.
-Now we have all of the tools we need to create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation.
-7. The microflow that you will have to create will look something like this (Claude V.2.1):
-![image](https://github.com/mx-awsdevteam/docs/assets/139855197/f3beba01-7662-4c48-ace8-03befc6252c9)
+6. Generate export and import mappings for the request and response JSON structures.
+    The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelGenericRequest` object provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping maps the response returned by the [Invoke Generic Model](#invoke-generic-model) operation to your model-specific response objects. To create import or export mappings, perform the following steps:
+    1. Right-click the target folder.
+    2. Click **Add other** > **Import/Export mapping**.
+    3. In the dialogue window, select the **Schema source**.
+    4. Click **JSON structure** and select the appropriate request/response JSON structure.
+    5. Select the relevant schema elements.
+    6. Click **OK**.
+    7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
+7. Create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation, such as in the following figure (for Claude v. 2.1):
+
+    {{< figure src="/attachments/appstore/connectors/aws-bedrock/microflow.png" >}}
 
 ## 4 Technical Reference
 

@@ -84,18 +84,32 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.3 Invoking specific models using the InvokeGenericModel operation
+### 3.3 Invoking Specific Models by Using the InvokeGenericModel Operation
 
-To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model) we have included two example implementations in the Amazon Bedrock Connector (for more Example implementations check the example Implementation module availeble on the marketplace: https://marketplace.mendix.com/link/component/215751). One for invoking the LLM called Claude V.2.1 that generates text and another for the LDM model called SDXL V.1.0 that generates images from a text prompt. These examples can be used as a reference together with documentation found here, in the bedrock console and from the provider of the model. Lets enummerate the steps one needs to take to invoke a specific model:
+To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-1. Choose the model you wish to interact with via the [Invoke Generic Model](#invoke-generic-model) operation.
-2. Find the request and response Json structures of the specific model you want to invoke. The best resource to find these is the model parameters section of the Amazon Bedrock user guide https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html.
-3. Create your domain model inspired by the Json structures found. There are some free and helpful tools to visualize JSON structures, for example: https://jsoncrack.com/editor.
-4. In Mendix studio pro create a "JSON structure" by right clicking on the target folder, choosing the "Add other" option and clicking the "JSON structure" option. Create one for the request JSON and one for the response. Open the created JSON structure and copy the request/response JSON in to it and press the OK button.
-5. Now that we have the JSON structures for the request and response in our Mendix application we can use it to generate export and import mappings from them. The export mapping serves the purpose of creating a JSON from the request related objects (specific to the model you want to invoke) that then should be added as the request body of the "InvokeModelGenericRequest" object that should be provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping serves the purpose of mapping the returned (by [Invoke Generic Model](#invoke-generic-model) operation) response body to your model specific response objects.
+* An implemnentation for invoking the Claude v. 2.1 LLM that generates text
+* An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
+
+These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  
+
+To invoke a specific model, perform the following steps:
+
+1. Choose the model with which you want to interact by using the [Invoke Generic Model](#invoke-generic-model) operation.
+2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
+3. Create your domain model inspired by the JSON structures that you found by using a tool to visualize Json structures, such as [JSON Crack](https://jsoncrack.com/editor).
+4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
+    1. Right-click on the target folder.
+    2. Click **Add other** > **JSON structure**.
+    3. Create a structure for the request JSON.
+    4. Repeat the previous steps to create a structure for the response JSON.
+    5. Open the created JSON structure.
+    6. Paste the request or response JSON into the created structure.
+    7. Click **OK**.
+6. Now that we have the JSON structures for the request and response in our Mendix application we can use it to generate export and import mappings from them. The export mapping serves the purpose of creating a JSON from the request related objects (specific to the model you want to invoke) that then should be added as the request body of the "InvokeModelGenericRequest" object that should be provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping serves the purpose of mapping the returned (by [Invoke Generic Model](#invoke-generic-model) operation) response body to your model specific response objects.
 To create import or export mappings, right click on the target folder and choose "Add other" after which you click the Import/Export mapping option. After creating an Export/Import mapping a window will open where you can assign a "Schema source", Choose the JSON structure option and find the appropriate request/response JSON structure and select the schema elements that are relevant for you and press the OK button. After doing this map the relevant elements to the correct attributes by double clicking the shown entities and choosing the correct entity attributes for the correct elements.
 Now we have all of the tools we need to create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation.
-6. The microflow that you will have to create will look something like this (Claude V.2.1):
+7. The microflow that you will have to create will look something like this (Claude V.2.1):
 ![image](https://github.com/mx-awsdevteam/docs/assets/139855197/f3beba01-7662-4c48-ace8-03befc6252c9)
 
 ## 4 Technical Reference

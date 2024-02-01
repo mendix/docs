@@ -19,13 +19,13 @@ There is a single Kafka broker for Free Apps that all your company Free Apps can
 
 Purchase a license to the Mendix Event Broker to deploy unlimited apps on production environments in the Mendix Cloud. Ask your Customer Success Manager or Account Manager to get in touch with us to purchase a license. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
 
-Licenses for the Mendix Event Broker are available for all regions, but once selected, you can only run on a single region (no multi-region support). To learn more about how this broker works, see [Mendix Event Broker](#mendix-event-broker). This license is available for all customers. You can also run business events on [your own Kafka cluster](#byok).
+A license for the Mendix Event Broker is available for any Mendix region, but once selected, you can only run on a single region (no multi-region support). This license is available for all customers. You can also run business events on [your own Kafka cluster](#byok).
 
 ### 1.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
 Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
 
-1. On the App level, under Environments > [Services](/developerportal/deploy/environments/#services)
+1. On App level, under the menu item Environments , under the [Services](/developerportal/deploy/environments/#services) tab
 2. On the [Environment Details](/developerportal/deploy/environments-details/#services) page, for each environment
 
 The event broker must be enabled on both the *App* and specific *Environment* levels in order to use the event broker services.
@@ -54,7 +54,7 @@ Events published by Free Apps are published to one shared company channel on a m
 This feature is currently in [Private Beta](/releasenotes/beta-features/).  Please reach out to your Customer Success Manager or Account Manager for further assistance
 {{% /alert %}}
 
-Mendix Event Broker Bridges allows for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3 or Google Pub/Sub, in order to send and receive events between your Mendix Public Cloud landscape and technologies outside of your Mendix Public Cloud landscape.
+Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3 or Google Pub/Sub, in order to send and receive events between your Mendix Public Cloud landscape and technologies outside of your Mendix Public Cloud landscape.
 
 {{< figure src="event_broker_bridges.png" >}}
 
@@ -98,7 +98,7 @@ Once the Mendix Event Broker Bridge has been successfully deployed its configura
 
 #### 1.3.1.4 Configure AWS Acesss Policy for sending Messages to Mendix
 
-Add this code to your Access Policy of the AWS SQS queue if it is sending message to Mendix.
+Add this object to your Access Policy of the AWS SQS queue if it is sending message to Mendix.
 
 ```
 {
@@ -118,7 +118,7 @@ Add this code to your Access Policy of the AWS SQS queue if it is sending messag
 
 #### 1.3.1.5 Configure AWS Acesss Policy for receiving Messages from Mendix
 
-Add this code to your Access Policy of the AWS SQS queue if it is receiving message from Mendix.
+Add this object to your Access Policy of the AWS SQS queue if it is receiving message from Mendix.
 
 ```
 {

@@ -112,7 +112,7 @@ Below is an explanation of the possibilities for what other apps can do and what
 | ---------- | ---------- | ---------- | ---------- |
 | Publish events | Subscribing to events | Publishing events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
 | Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
-| Publish events and<br>Subscribe to events | [Nothing required: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created
+| Publish events and<br>Subscribe to events | [Nothing required: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created|
 
 Click **Done** to exit the wizard and view the defined service document.
 
@@ -254,7 +254,7 @@ Business Events offers four different deployment models:
 * Deploying locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 * Free apps using a free multi-tenant event broker
 * Production apps using the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-* Apps running their own Kafka cluster (bring your own Kafka; currently in [beta](/releasenotes/beta-features/))
+* Apps running their own Kafka cluster (bring your own Kafka;
 
 ### 6.1 Local Deployment
 

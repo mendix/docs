@@ -14,7 +14,7 @@ Most Mendix Platform APIs require you to authenticate yourself. This is done by 
 
 ## 2 Obtaining API Keys
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/#profile-api-keys) section of *[Mendix Profile](https://user-settings.mendix.com/link/developersettings)*.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/#profile-api-keys) section of [Mendix Profile](https://user-settings.mendix.com/link/developersettings).
 
 ## 3 Using Authentication Headers
 

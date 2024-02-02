@@ -8,11 +8,11 @@ description: "Overview of the Data Importer in Studio Pro"
 
 ## 1 Introduction
 
-Data is constantly exchanged between various systems inside and outside an organization. Microsoft Excel is a common spreadsheet software where data is stored in a tabular grid of rows and columns and has a structure that can be beneficial in your app.
+Data is constantly exchanged between various systems inside and outside an organization. The most commonly used file formats for data exchage are Microsoft Excel and comma-separated value (CSV). These files contain data in a tabular grid of rows, columns, and delimiter-separated values.
 
 This how-to teaches you to do the following:
 
-* Create a Data Importer document using a sample representative file
+* Create a Data Importer document using a sample representative file (Excel and CSV)
 * Create a (non-persistable) entity in your domain model
 * Import data using the custom **Import data from file** activity
 
@@ -23,11 +23,11 @@ Download the [Data Importer extension](https://marketplace.mendix.com/link/compo
 * Studio Pro [10.4](/releasenotes/studio-pro/10.4/) or above
 * A file document (for more information, see [File Manager](/refguide/file-manager/))
 
-## 3 Design Time Flow
+## 3 Data Importer Document
 
-The Data Importer allows you to import an Excel file into your app. Choose which sheet to import data from and which columns you want to include. During the design time flow, you can preview the data and create a non-persistable entity (NPE) in your domain model. 
+The Data Importer extension allows you to import data from Excel and CSV files directly into your app. Create a Data Importer document to define which columns to import and a non-persistable entity (NPE) to hold the imported data, along with source-to-target mapping. During the Data Importer document creation, you can preview the data and choose which columns you want to import and edit the name of resulting entity.
 
-This module creates a Data Importer document, which you can use along with the **Import data from file** activity. Use this custom activity in a microflow to import data from an Excel file.
+The Data Importer document can be used along with the [Import data from file](/refguide/import-data-from-file/) custom activity. Use this activity in a microflow to import data from an Excel or CSV file.
 
 ### 3.1 Creating a Data Importer Document
 
@@ -37,7 +37,7 @@ Right-click the module you want to add the Data Importer document to and click *
 
 Name the document, then click **OK**, and the new Data Importer document opens.
 
-### 3.2 Previewing Data {#preview-data}
+### 3.2 Previewing Excel Data {#preview-excel-data}
 
 Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
@@ -59,11 +59,36 @@ All the columns are automatically selected (checked) for import. You can uncheck
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/preview-data-and-entity.png" >}}
 
-### 3.3 Creating an Entity {#create-entity}
+### 3.3 Previewing CSV Data {#preview-csv-data}
 
-View the entity in the **Entity Preview** section. You can change the name of the entity, though one is suggested for you based on the sheet name. To create the entity in your domain model, click **Create Entity** > **OK**. You see a confirmation message that an entity has been created in the domain model and is ready to use.
+Select or drop the CSV file in the **Select Source File** window. CSV import supports multiple combinations of separator/delimiter, quote, and escape characters. It also supports importing files where the header row is absent.
 
-When the entity is created, you can view the mapping of the source Excel columns to the target entity attributes. 
+Specify the values for all four configurations (Delimiter, Quote Character, Escape Character, and Add Header Row):
+
+* **Delimiter (Separator)** – current supported delimiters are comma, semicolon, pipe, and tab; the default is comma
+* **Quote Characters** – current supported quote characters are single and double quotes; the default is double quotes
+* **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
+* **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file
+
+Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to define the entity (NPE), but this can be edited. The column names correspond to the attribute name within the entity.
+
+All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which defaults to **String**.
+
+{{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
+
+For example, for the following source data (CSV), the separator is specified as Comma and Quote, and the Escape Character is Double Quote and Header. This is already part of the input file.
+
+{{< figure src="/attachments/howto/integration/use-the-data-importer/source-csv-data.png" >}}
+
+The data preview and resulting entity are seen below:
+
+{{< figure src="/attachments/howto/integration/use-the-data-importer/preview-csv-data-and-entity.png" >}}
+
+### 3.4 Creating an Entity {#create-entity}
+
+View the entity in the **Entity Preview** section. You can change the name of the entity, though one is suggested for you based on the sheet name (Excel) or file name (CSV). To create the entity in your domain model, click **Create Entity** > **OK**. You see a confirmation message that an entity has been created in the domain model and is ready to use.
+
+When the entity is created, you can view the mapping of the source columns to the target entity attributes. 
 
 {{< figure src="/attachments/howto/integration/use-the-data-importer/source-to-target-mapping.png" >}}
 
@@ -71,7 +96,7 @@ The Data Importer document creation is complete and can be used to import data i
 
 ## 4 Building your App {#build-data-importer-app}
 
-At the end of the design time flow, you create a Data Importer document, which allows you to periodically import and validate data from an Excel file that is generated by another app or system. 
+The newly-created Data Importer document allows you to periodically import data from an Excel or CSV file that is generated by another app or system.
 
 ### 4.1 Custom Activity {#Import-data-from-file}
 
@@ -110,6 +135,10 @@ The **Import data from file** custom activity needs an input file to import data
 {{< figure src="/attachments/howto/integration/use-the-data-importer/add-parameter.png" >}}
 
 ### 4.3 Configuring the Import data from file Activity in a Microflow 
+
+{{% alert color="info" %}}
+The steps below are shown using an Excel input file with its corresponding Data Importer document. You can substitute an Excel document with a CSV document to import data from CSV input files.
+{{% /alert %}}
 
 1. In the created microflow, drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under **Integration activities**.
 

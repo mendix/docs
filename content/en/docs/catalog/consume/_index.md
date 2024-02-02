@@ -16,4 +16,4 @@ Common tasks for users who want to consume data sources from the Catalog include
 * Using the [Integration Pane](/refguide/integration-pane/)
 * Understanding how sources are related in the [Landscape](/data-hub/data-hub-landscape/)
 
-For an overview on consuming data sources, see [Consume Registered Assets](/catalog/consume/). 
+For an overview on consuming data sources, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/). 

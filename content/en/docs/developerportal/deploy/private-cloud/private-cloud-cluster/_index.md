@@ -901,6 +901,10 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
+{{% alert color="info" %}}
+In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually.
+{{% /alert %}}
+
 In order to delete the namespace from the cluster, perform the following steps:
 
 1. Ensure that all the environments under this namespaces are removed. You can check the list of environments under this namespace using the following command:

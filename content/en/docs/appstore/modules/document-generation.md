@@ -328,6 +328,7 @@ We recommend you do not use the viewport width (`vw`) and viewport height (`vh`)
 ## 5 Architecture
 
 ### 5.1 Overview
+
 The Document Generation module uses the PDF document generation service running in the Mendix Public Platform to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
 When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
@@ -391,7 +392,6 @@ In case you encounter the message "Unable to generate document, service response
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
-
 
 In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 

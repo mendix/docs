@@ -29,9 +29,9 @@ You can use this Consumed REST service document to do the following:
 ### 1.2 Limitations
 
 * This feature supports the following HTTP request methods:
-  * `GET`
-  * `POST`
-  * `PATCH`
+    * `GET`
+    * `POST`
+    * `PATCH`
 
   {{% alert color="info" %}}`PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above.{{% /alert %}} 
 

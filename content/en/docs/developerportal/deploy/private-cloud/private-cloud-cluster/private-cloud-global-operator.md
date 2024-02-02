@@ -26,19 +26,19 @@ After configuring the Global Operator namespace, you must configure the *managed
 
 To install and configure the Global Operator, perform the following steps:
 
-1.  In the Private Cloud Portal, create a cluster and select **Global Installation** as the **Installation Type**.
+1. In the Private Cloud Portal, create a cluster and select **Global Installation** as the **Installation Type**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator1.png" >}}
 
-2.  Provide the **Cluster Name**, **Cluster Type** and **Description**.
+2. Provide the **Cluster Name**, **Cluster Type** and **Description**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator2.png" >}}
 
-3.  Click **Create**.
+3. Click **Create**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator3.png" >}}
 
-4.  After the Global Operator cluster is created, click **Add Global Operator Main Namespace**.
+4. After the Global Operator cluster is created, click **Add Global Operator Main Namespace**.
 
     {{% alert color="warning" %}}
     Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
@@ -46,11 +46,11 @@ To install and configure the Global Operator, perform the following steps:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" >}}
 
-5.  Provide the Global Operator **Namespace name**, select the **Installation type**, and then click **Done**.
+5. Provide the Global Operator **Namespace name**, select the **Installation type**, and then click **Done**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator5.png" >}}
 
-6.  Select the **Operating system** and install the Mendix Operator by performing the following steps:
+6. Select the **Operating system** and install the Mendix Operator by performing the following steps:
 
     1. [Download the Configuration Tool](/developerportal/deploy/standard-operator/#download-configuration-tool).
     2. [Sign into the Platform](/developerportal/deploy/standard-operator/#openshift-signin).

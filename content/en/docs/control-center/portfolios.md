@@ -116,7 +116,6 @@ In the list, you can see the following items:
     * **Restricted** – A restricted portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. People who want to access a restricted portfolio need an invitation.
     * **Open** – An open portfolio is discoverable in the **Company Portfolios** section of the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) page in the Portfolio Management app. All company members can access an open portfolio without being a portfolio member.
 
-
 * **Created** – This shows the date on which the portfolio was created.
 * **Last Modified** – This shows the date on which the portfolio was last modified.
 

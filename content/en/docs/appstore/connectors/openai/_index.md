@@ -56,7 +56,7 @@ Embeddings are commonly used for:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-Follow our [tutorial](#RAG-tutorial) on how to set up a vector database for retrieval augmented generation (RAG) and check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
+See [RAG Example Implementation in the OpenAI showcase Application](/appstore/connectors/openai-connector/rag-example-implementation/) for more information on how to set up a vector database for retrieval augmented generation (RAG) and check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
 {{% /alert %}}
 
 ### 1.2 Features {#features}

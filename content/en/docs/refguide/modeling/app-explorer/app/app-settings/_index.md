@@ -31,7 +31,7 @@ These settings influence the behavior of the Runtime when running your applicati
 
 This setting enables the new React client. This client was released into Beta with Mendix 10.7. There are three options:
 
-- _No_: Don't use the React (default).
+- _No_: Don't use the React client (default).
 - _Yes_: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
 - _Migration mode_: Use the React client and ignore incompatible widgets. Recommended for trying out the new client.
 

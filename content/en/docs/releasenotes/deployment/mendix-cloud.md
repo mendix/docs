@@ -1589,4 +1589,4 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We added the AWS Osaka, Seoul & Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.
+* We added the AWS Osaka, Seoul, and Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.

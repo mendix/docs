@@ -33,7 +33,7 @@ jobs:
       # Adds the terminal messages to tmp.log file
       - name: Run markdownlint-cli2
         run: |
-          markdownlint-cli2-config ".markdownlint-cli2.yaml" "content/en/docs/**/*.md" 2>&1 | tee ./tmp.log
+          markdownlint-cli2 --config ".markdownlint-cli2.yaml" "content/en/docs/**/*.md" 2>&1 | tee ./tmp.log
       # Dumps tmp.log contents into env variable, to use for PR body text
       - name: Grab markdownlint log
         id: echo-log

@@ -1,5 +1,5 @@
 ---
-title: "Pipelines Portal (Beta)"
+title: "Pipelines (Beta)"
 url: /developerportal/deploy/pipelines/
 weight: 33
 description: "Describes how to set up pipelines in the Developer Portal"
@@ -7,7 +7,7 @@ tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 ---
 
-{{% alert color="warning" %}}The Pipelines Portal is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).{{% /alert %}}
+{{% alert color="warning" %}}The Pipelines feature is in [Public Beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on use in the future.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,7 +16,7 @@ From the **Pipelines** page, you can set up automated deployment pipelines for y
 To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane.
 
 {{% alert color="info" %}}
-To view the Pipelines Portal, you must have a role with cloud access. For details on configuring roles, see [Team](/developerportal/general/team/).
+To view the **Pipelines** page, you must have a role with cloud access. For details on configuring roles, see [Team](/developerportal/general/team/).
 {{% /alert %}}
 
 ## 2 Designing or Editing a Pipeline{#design-edit-pipeline}

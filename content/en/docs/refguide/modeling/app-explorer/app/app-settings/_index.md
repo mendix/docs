@@ -33,7 +33,7 @@ This setting enables the new React client. This client was released into Beta wi
 
 - _No_: Don't use the React client (default).
 - _Yes_: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
-- _Migration mode_: Use the React client and ignore incompatible widgets. Recommended for trying out the new client.
+- _Migration mode_: Use the React client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended for trying out the new client.
 
 ### 3.2 Static Resources from Disk
 

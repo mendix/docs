@@ -63,7 +63,7 @@ For each value element that the complex schema element encompasses, an attribute
 | --- | --- |
 | Entity attribute | The attribute in the domain entity that should be mapped to the element. |
 | Schema value element | The element that will be filled. |
-| Occurrence | Displays how often the element may occur. This can be "0.1" or "1", depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0 (as specified by the schema) the creation of the element will be skipped. In the case you want to never map a value to an optional element, disable it in the "Select elements..." dialog. |
+| Occurrence | Displays how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0 (as specified by the schema) the creation of the element will be skipped. In the case you want to never map a value to an optional element, disable it in the "Select elements..." dialog. |
 | Convert Using (optional) | A microflow to convert the value before performing export. |
 | Map attributes by name | When this button is clicked, an effort is made to match attributes by name. A dialog appears reporting what has been changed. |
 

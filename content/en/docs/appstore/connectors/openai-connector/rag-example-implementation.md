@@ -1,18 +1,18 @@
 ---
 title: "RAG Example Implementation in the OpenAI Showcase Application"
 url: /appstore/connectors/openai-connector/rag-example-implementation/
+category: "Open AI"
 linktitle: "RAG Example Implementation"
 weight: 5
 description: "describes the RAG example implementation in the OpenAI showcase application"
 tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "showcase application"]
-draft: false 
 ---
 
 ## 1 Introduction
 
 RAG is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text-generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the application can ask questions about it and the assistant responses will be based on this knowledge base only. 
 
-## 2 High-level Summary {#rag-high-level}
+## 2 Technical Flow {#rag-high-level}
 
 The complete technical flow can be split up into the following three steps at a high level:
 
@@ -35,7 +35,7 @@ In summary, as the first step, you need to provide the private knowledge base, s
 ## 3 Procedure {#rag-step-by-step}
 
 {{% alert color="info" %}}
-Disclaimer: The sections below describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. This is not the only possible solution. Other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
+The sections below describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
 {{% /alert %}}
 
 Follow the steps below to get started with the Retrieval Augmented Generation (RAG) example in the [showcase app](https://marketplace.mendix.com/link/component/220475).

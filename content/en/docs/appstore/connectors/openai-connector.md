@@ -59,7 +59,7 @@ Embeddings are commonly used for:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-Follow our [tutorial](#RAG-tutorial) on how to setup a vector database for retrieval augmented generation (RAG) and check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
+Follow our [tutorial](#RAG-tutorial) on how to set up a vector database for retrieval augmented generation (RAG) and check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
 {{% /alert %}}
 
 ### 1.2 Features {#features}
@@ -769,11 +769,11 @@ The following flows may be used in order to construct and handle the required in
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
 
-## 6 Quickstart Guide: RAG Example Implementation In The OpenAI Showcase Application {#rag-quickstart}
+## 6 Quick Start Guide: RAG Example Implementation In The OpenAI Showcase Application {#rag-quickstart}
 
 ### 6.1 What Is Retrieval Augmented Generation (RAG)? {#what-is-rag}
 
-RAG is a framework for an AI-based search with a private/external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the application can ask questions about it and the assistant responses will be based on this knowledge base only. 
+RAG is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text-generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the application can ask questions about it and the assistant responses will be based on this knowledge base only. 
 
 ### 6.2 High-level steps of RAG {#rag-high-level}
 

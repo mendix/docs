@@ -1,44 +1,41 @@
 ---
-title: "OpenAI"
+title: "RAG Example Implementation in the OpenAI Showcase Application"
 url: /appstore/connectors/openai-connector/rag-example-implementation/
-linktitle: "OpenAI"
+linktitle: "RAG Example Implementation"
 weight: 5
-description: "The quick start guide describes the RAG example implementation in the OpenAI showcase application"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG"]
+description: "describes the RAG example implementation in the OpenAI showcase application"
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "showcase application"]
 draft: false 
 ---
 
-## RAG Example Implementation In The OpenAI Showcase Application
-
-## 1 What Is Retrieval Augmented Generation (RAG)? {#what-is-rag}
+## 1 Introduction
 
 RAG is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text-generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the application can ask questions about it and the assistant responses will be based on this knowledge base only. 
 
-## 2 High-level steps of RAG {#rag-high-level}
+## 2 High-level Summary {#rag-high-level}
 
-We start with the private knowledge base, such as a text snippet. This content needs to be prepared for RAG, which happens only once (and must happen again only if the content changes). Additional steps happen every time an end-user triggers the RAG flow, e.g. by asking a question about the data. The complete technical flow can be split up into three main steps.
+The complete technical flow can be split up into the following three steps at a high level:
 
-**Prepare knowledge base (once per document)**
+1. Prepare the knowledge base (once per document)
+   1. Data is chunked into smaller, partially overlapping, pieces of information.
+   2. For each data chunk, the embedding vector will be retrieved from OpenAI's embeddings API.
+   3. Data chunks are stored in a vector database together with their embedding vector.
 
-* Data is chunked into smaller, (partially overlapping) pieces of information.
-* For each data chunk, the embedding vector will be retrieved from OpenAI's embeddings API.
-* Data chunks are stored in a vector database together with their embedding vector.
+2. Query the knowledge base (once per search)
+   1. User query is sent to the embeddings API to retrieve the embedding vector of the query.
+   2. A pre-defined number of most-relevant data chunks is retrieved from the vector database. This set is selected based on cosine similarity to the user query embedding vector.
 
-**Query knowledge base (once per search)**
+3. Invoke the text generation model (once per search)
+   1. User query and the relevant data chunks are sent to the chat completions API.
+   2. Through prompt engineering, the text generation model is instructed to only base the answer on the data chunks that were sent as part of the request. This prevents the model from hallucinating.
+   3. The assistant response is returned to the user.
 
-* User query is sent to the embeddings API to retrieve the embedding vector of the query.
-* A predefined number of most-relevant data chunks is retrieved from the vector database; this set is selected based on cosine similarity to the user query embedding vector.
+In summary, as the first step, you need to provide the private knowledge base, such as a text snippet. You need to prepare the content for RAG, which happens only once. If the content changes, you need to provide it again for RAG. The last two steps happen every time an end-user triggers the RAG flow, e.g. by asking a question about the data.
 
-**Invoke text generation model (once per search)**
-
-* User query and the relevant data chunks are sent to the chat completions API.
-* Through prompt engineering, the text generation model is instructed to only base the answer on the data chunks that were sent as part of the request. This prevents the model from hallucinating.
-* Finally, the assistant response is returned to the user.
-
-## 3 Step-By-Step Guide {#rag-step-by-step}
+## 3 Procedure {#rag-step-by-step}
 
 {{% alert color="info" %}}
-Disclaimer: Below we describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. This is not the only possible solution and other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
+Disclaimer: The sections below describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. This is not the only possible solution. Other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
 {{% /alert %}}
 
 Follow the steps below to get started with the Retrieval Augmented Generation (RAG) example in the [showcase app](https://marketplace.mendix.com/link/component/220475).

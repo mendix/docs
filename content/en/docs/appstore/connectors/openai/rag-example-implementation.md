@@ -38,52 +38,57 @@ In summary, as the first step, you need to provide the private knowledge base, s
 The sections below describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case. If you want to build your own RAG setup, see the [Building Your Own RAG Setup](#build-your-own-rag-setup) section.
 {{% /alert %}}
 
-Follow the steps below to get started with the Retrieval Augmented Generation (RAG) example in the [showcase app](https://marketplace.mendix.com/link/component/220475).
+Follow the steps below to get started with the Retrieval Augmented Generation (RAG) example in the [showcase app](https://marketplace.mendix.com/link/component/220475):
 
-To start experimenting with the end-to-end process, you can use this document to ensure you’ve covered the following prerequisites which we will explain in more detail in this document:
+### 3.1 Prerequisites
+
+Before you start experimenting with the end-to-end process, make sure that you have covered the following prerequisites:
 
 * You have access to a (remote) PostgreSQL database with the `pgvector` extension available.
 * You have configured the connection to the above database in the OpenAI Showcase App.
 
-If you have access to an Amazon Web Services (AWS) account we recommend using a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the upcoming section. This is convenient since PostgreSQL databases in Amazon RDS by default have the required extension available.
+If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required extension available.
 
-### 3.1 Create a PostgreSQL Database with Amazon RDS {#rds-database}
+### 3.1 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
 
-Make sure you are familiar with the basics of [Amazon RDS and the AWS console](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). We recommend the following sections there as preliminary background knowledge:
+{{% alert color="info" %}}Before you get started, make sure you are familiar with the basics of [Amazon RDS and the AWS console](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). We recommend the following sections there as preliminary background knowledge:
 
 * Enter the RDS Console
 * Create a PostgreSQL DB Instance
 
-Create a database instance in Amazon RDS according to their [documentation](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). As a quick-start we provide a summary of the steps including a list of values below that you can use to speed things up for experimental purposes.
+For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in *AWS Documentation*.{{% /alert %}}
 
-1. Login to the AWS console. Go to RDS using the search bar and go to Databases. 
-2. Click *Create database* and use the following specifications:
-   1. Method: choose *standard create*
-   2. Engine: choose *PostgreSQL Version 15.4*
-   3. Template: pick *Free tier*
-   4. Availability and durability: leave default values
-   5. Settings: 
-      1. Database instance identifier: provide a name e.g. *database-1*
-      2. Master username and master password: set and store safely. **You need this later.**
-   6. Instance configuration: leave default values
-   7. Storage: leave default values (General purpose SSD / 20GiB for the free tier)
-   8. Connectivity: 
-      1. Virtual Private Cloud (VPC): choose *create new VPC*
-      2. Public access: set to *Yes*
-      3. VPC security group: choose *create new*, pick a name, e.g. *RDS-database-1*
-      4. Additional configuration: check that database port was set to 5432
-   9. Database authentication: select *password authentication* if not selected by default
-   10. Monitoring: leave default values
-   11. Additional configuration:
-       1. Initial database name: e.g. *myVectorDatabase*. **You need this later.**
-3. Wait for the database to be created (this can take some time)
-   1. When done, click on the name to view it.
-   2. In the *Connectivity & Security* tab find the **Inbound** Security group rule. By default this will only accept incoming traffic from your current IPv4 address.
-   3. Optional: if the database is required to be accessible from other locations as well: click the security group rule, go to the *inbound rules* tab, then add a rule:
-      1. Type: choose *PostgreSQL*
-      2. Port: set to `5432`.
-      3. Source: choose *Custom*; provide the IP CIDR range in the next field (see [IP inbound rules](#ip-inbound-rules) below). For a single IPv4 address, this is equal to the IP address with `/32` appended.
-   4. Optional: if you want the database to be accessible from anywhere, have a rule with its source set to `0.0.0.0/0` (see [IP inbound rules](#ip-inbound-rules) below).
+Below you can find a list of values that you can use for experimental purposes.
+
+1. Login to the AWS console. 
+2. Go to RDS using the search bar.
+3. Go to **Databases**. 
+4. Click **Create database** and use the following specifications:
+   1. For **Method**, select *standard create*
+   2. For **Engine**, select *PostgreSQL Version 15.4*
+   3. For **Template**, select *Free tier*
+   4. Use the default values for **Availability and durability**.
+   5. Configure the **Settings**: as follows:
+      1. Enter a name for **Database instance identifier**, for example, *database-1*
+      2. Enter values for **Master username and master password**. Store them safely. You will need them later.
+   6. Use the default values for **Instance configuration**.
+   7. Use the default values for **Storage**. If you use the free tier, Use **General purpose SSD / 20GiB**.
+   8. Configure the **Connectivity**: as follows:
+      1. For **Virtual Private Cloud (VPC)**, select *create new VPC*.
+      2. Set **Public access** to *Yes*.
+      3. For **VPC security group**, select **Create new**, and then enter a name, for example, *RDS-database-1*.
+      4. Set **Database port** to *5432*.
+   9. For **Database authentication**, select *Password authentication*.
+   10. Use the default values for **Monitoring**.
+   11. Set an initial database name, for example, *myVectorDatabase*. You will need it later.
+5. Wait for the database to be created. This can take some time.
+6. When the database is created, click the database name to view it.
+   1. On the **Connectivity & Security** tab, find the **Inbound** Security group rule. By default this will only accept incoming traffic from your current IPv4 address.
+   2. Optionally, if the database is required to be accessible from other locations as well, click the security group rule, go to the **Inbound rules** tab, then add a rule as follows:
+      1. For **Type**, select *PostgreSQL*.
+      2. Set **Port** to *5432*.
+      3. For **Source**, select *Custom*. Provide the IP CIDR range in the next field (see [IP inbound rules](#ip-inbound-rules) below). For a single IPv4 address, this is equal to the IP address with `/32` appended.
+   3. Optionally, if you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0* (see [IP inbound rules](#ip-inbound-rules) below).
 
 ### 3.2 IP inbound rules {#ip-inbound-rules}
 
@@ -94,7 +99,7 @@ Create a database instance in Amazon RDS according to their [documentation](http
 
 If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-## 4 Configure The Database Connection Details In The Showcase App {#configure-database-connection}
+## 4 Configuring The Database Connection Details In The Showcase App {#configure-database-connection}
 
 1. Login to the Showcase app and navigate to the RAG example
 2. After reading **Step 1: Introduction**, proceed to **Step 2: Vector Database Configuration**

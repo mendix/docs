@@ -21,11 +21,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repo
         uses: actions/checkout@v3
-      # Installs NodeJS v16 in runner environment
+      # Installs NodeJS v20 in runner environment (upgraded from v16 in Feb 2024)
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
       # Installs linting tool via npm
       - name: Install markdown linter
         run: npm install markdownlint-cli2 --global

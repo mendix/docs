@@ -1,11 +1,10 @@
 ---
 title: "OpenAI"
-url: /appstore/connectors/openai-connector 
+url: /appstore/connectors/openai-connector/
 linktitle: "OpenAI"
 weight: 
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
 tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG"]
-draft: false 
 ---
 
 ## 1 Introduction {#introduction}

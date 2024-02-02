@@ -75,7 +75,8 @@ You may get an "Oops" pop-up menu when setting a name and an email for Git in th
 
 Any of these commands will create a global Git config. Subsequent interactions via the Studio Pro interface will succeed from now on.
 
-### 2.3 Merging Branches Results in No Changes Being Applied
+### 2.4 Merging Branches Results in No Changes Being Applied
+
 When two branches are merged, changes sometimes do not come through.
 To fix this issue, take the following steps:
 

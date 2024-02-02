@@ -39,6 +39,8 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
     {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  >}}
 
+     On a Mac, you may get a warning during installation. For more information on how to troubleshoot it, see the [Mac Warning](#mac-warning) section below.
+
 2. Select **I accept the terms in the License Agreement** and click **Next**.
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
@@ -55,6 +57,8 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 4 Troubleshooting {#troubleshooting}
+
+### 4.1 Installing Prerequisites Separately
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -76,6 +80,14 @@ The prerequisites are the following:
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
 After that you can retry installing Studio Pro.
+
+### 4.2 Mac Warning {#mac-warning}
+
+On a Mac, you may get the following warning during installation:
+
+{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  >}}
+
+To bypass it, right-click the installer, click **Open** and run the installer.
 
 ## 5 Installing Mendix Studio Pro Offline {#offline}
 

@@ -25,6 +25,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * On the Metrics page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The Logs page now shows all the application metrics graphs first, followed by the database metrics graphs.
 * The Environments drop-down list maintains the same sorting order as on the Environments page in the Developer Portal.
 
+### January 31, 2024 
+
+#### Improvements
+
+* We added the AWS Osaka, Seoul, and Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.
+* We added support for regional fallback in Japan (Tokyo and Osaka).
+
 ### January 18, 2024
 
 #### Bug Fixes
@@ -1592,9 +1599,3 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * We removed static information from the log lines in Mendix Cloud v3. Every line before contained `tr10000` and `127.0.0.1`. We removed these fields as they were useless.
-
-### January 31, 2024 
-
-#### Improvements
-
-* We added the AWS Osaka, Seoul, and Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.

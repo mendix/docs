@@ -7,7 +7,7 @@ tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 ---
 
-{{% alert color="warning" %}}The Pipelines feature is in [Public Beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on use in the future.{{% /alert %}}
+{{% alert color="warning" %}}The Pipelines feature is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -21,29 +21,39 @@ To view the **Pipelines** page, you must have a role with cloud access. For deta
 
 ## 2 Designing or Editing a Pipeline{#design-edit-pipeline}
 
+### 2.1 Getting Started
+
 To design a new pipeline, click **Design a Pipeline**. That launches the **Design a Pipeline** dialog box. You can choose if you want to start from a pipeline template or an empty pipeline.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/design-pipeline.png" width=60% alt="" >}}
 
-Give your pipeline a name, and click **Next** to go to your new pipeline's **Results** page.
+Give your pipeline a name, and click **Next** to go to your new pipeline's **Details** page.
 
-From there, you can customize your pipeline. If you choose to work from an empty pipeline, you will start by adding steps. Or, if you work from the template, you will start with a pipeline that is pre-populated with the following basic steps:
+### 2.2 Customizing Your Pipeline
 
-1. Start Pipeline —  This is a mandatory step for each pipeline. In this step, you define the conditions on which the pipeline should start; you can set the pipeline to run on commit or according to a weekly schedule.
-1. Checkout — This is a mandatory step for each pipeline. In this step, you select a branch to check out.
-1. Build — Build a deployment package
-1. Publish — Publish generated deployment package to a repository
-1. Stop Environment — Stop a selected environment
+From your pipeline's **Details** page, you can customize your pipeline. If you choose to work from an empty pipeline, you will start by adding steps. Or, if you work from the template, you will start with a pipeline that is pre-populated with the following basic steps:
+
+1. Start Pipeline —  This is a mandatory step for each pipeline; you cannot delete this step. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run on commit or according to a weekly schedule (in UTC).
+1. Checkout — Check out a branch.
+1. Build — Build a deployment package based on the latest major or minor version of the branch you checked out.
+1. Publish — Publish the newly built deployment package to a repository.
+1. Stop Environment — Stop a selected environment.
 1. Create Backup — Create and store a backup of an existing environment before deploying a new deployment package
-1. Deploy — Deploy to selected target environment
+1. Deploy — Deploy to a selected environment.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
 
-You then have a variety of customization options:
+Once you have added some steps, you have a variety of customization options:
 
 * Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to edit the pipeline name, duplicate the pipeline, or delete it.
-* Expand a step to configure or delete the step.
-* Add a step by clicking **Add** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box:
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/more-options.png" alt="" class="image-border" max-width=70% >}}
+
+* Expand a step to configure or delete the step, or view its outputs.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/expanded-build.png" alt="" class="image-border" max-width=70% >}}
+
+* Add another step by clicking **Add** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" class="image-border" >}}
 
@@ -52,7 +62,9 @@ The steps are sorted into categories based on their function:
 * Build
 * Release
 
-Note that some steps depend on the outputs of other steps. Therefore, you must add Start Pipeline before Checkout, Checkout before Publish, Publish before Deploy, and Deploy before Build.
+{{% alert color="info" %}}Some steps depend on the outputs of other steps. Therefore, you must add Start Pipeline before Checkout, Checkout before Publish, Publish before Deploy, and Deploy before Build. These pipeline steps use Mendix-defined variables to reference outputs of previous steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.{{% /alert %}}
+
+### 2.3 Saving Your Pipeline
 
 When you are finished customizing your pipeline, click **Save**. Or, to immediately start using it, click **Save & Activate**.
 
@@ -118,10 +130,7 @@ Click **Setup** to launch the **Setup** dialog box. Then, enter your email, pers
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/user-setup.png" alt="" width=60% class="image-border" >}}
 
-## 4 Limitations
-
-(ANY WORTH NOTING?)
-
-## 5 Read More
+## 4 Read More
 
 * [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/)
+* [Developer Settings](/community-tools/mendix-profile/#dev-settings)

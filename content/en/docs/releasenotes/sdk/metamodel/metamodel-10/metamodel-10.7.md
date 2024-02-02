@@ -102,5 +102,3 @@ parent: "metamodel-10"
 
 #### WorkflowEventHandler (Element)
 * We introduced this element. 
-
-This page has been generated automatically.

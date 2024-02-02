@@ -1,10 +1,20 @@
-## 6 Quick Start Guide: RAG Example Implementation In The OpenAI Showcase Application {#rag-quickstart}
+---
+title: "OpenAI"
+url: /appstore/connectors/openai-connector/rag-example-implementation/
+linktitle: "OpenAI"
+weight: 5
+description: "The quick start guide describes the RAG example implementation in the OpenAI showcase application"
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG"]
+draft: false 
+---
 
-### 6.1 What Is Retrieval Augmented Generation (RAG)? {#what-is-rag}
+## RAG Example Implementation In The OpenAI Showcase Application
+
+## 1 What Is Retrieval Augmented Generation (RAG)? {#what-is-rag}
 
 RAG is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text-generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the application can ask questions about it and the assistant responses will be based on this knowledge base only. 
 
-### 6.2 High-level steps of RAG {#rag-high-level}
+## 2 High-level steps of RAG {#rag-high-level}
 
 We start with the private knowledge base, such as a text snippet. This content needs to be prepared for RAG, which happens only once (and must happen again only if the content changes). Additional steps happen every time an end-user triggers the RAG flow, e.g. by asking a question about the data. The complete technical flow can be split up into three main steps.
 
@@ -25,7 +35,7 @@ We start with the private knowledge base, such as a text snippet. This content n
 * Through prompt engineering, the text generation model is instructed to only base the answer on the data chunks that were sent as part of the request. This prevents the model from hallucinating.
 * Finally, the assistant response is returned to the user.
 
-### 6.3 Step-By-Step Guide {#rag-step-by-step}
+## 3 Step-By-Step Guide {#rag-step-by-step}
 
 {{% alert color="info" %}}
 Disclaimer: Below we describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. This is not the only possible solution and other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
@@ -40,7 +50,7 @@ To start experimenting with the end-to-end process, you can use this document to
 
 If you have access to an Amazon Web Services (AWS) account we recommend using a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the upcoming section. This is convenient since PostgreSQL databases in Amazon RDS by default have the required extension available.
 
-#### 6.3.1 Create a PostgreSQL Database with Amazon RDS {#rds-database}
+### 3.1 Create a PostgreSQL Database with Amazon RDS {#rds-database}
 
 Make sure you are familiar with the basics of [Amazon RDS and the AWS console](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/). We recommend the following sections there as preliminary background knowledge:
 
@@ -78,16 +88,16 @@ Create a database instance in Amazon RDS according to their [documentation](http
       3. Source: choose *Custom*; provide the IP CIDR range in the next field (see [IP inbound rules](#ip-inbound-rules) below). For a single IPv4 address, this is equal to the IP address with `/32` appended.
    4. Optional: if you want the database to be accessible from anywhere, have a rule with its source set to `0.0.0.0/0` (see [IP inbound rules](#ip-inbound-rules) below).
 
-##### 6.3.2 IP inbound rules {#ip-inbound-rules}
+### 3.2 IP inbound rules {#ip-inbound-rules}
 
 *  If you have access to a VPN, you could also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
 *  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source; see [Mendix IP Addresses: Outgoing IP](https://docs.mendix.com/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
 
-##### 6.3.3 Deleting Resources in AWS {#deleting-aws-resources}
+### 3.3 Deleting Resources in AWS {#deleting-aws-resources}
 
 If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-#### 6.4 Configure The Database Connection Details In The Showcase App {#configure-database-connection}
+## 4 Configure The Database Connection Details In The Showcase App {#configure-database-connection}
 
 1. Login to the Showcase app and navigate to the RAG example
 2. After reading **Step 1: Introduction**, proceed to **Step 2: Vector Database Configuration**
@@ -103,7 +113,7 @@ If no action is taken, resources in AWS stay around indefinitely. Make sure to t
    2. The username and password are equal to the Master Username and Master Password that you chose during the setup in previous section.
    3. Save the configuration.
 
-#### 6.5 Try out RAG end-to-end in the Showcase app! {#rag-showcase-app}
+## 5 Try out RAG end-to-end in the Showcase app! {#rag-showcase-app}
 
 **Step 3: Knowledge base step**
 Create embeddings from a text and store. Use our default text about ornamental flowering plants, or paste your own content!
@@ -123,11 +133,11 @@ Verify the embedding vectors have been created in your new database. If you ever
 - The Showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called `pgvector`. If you want to know more about the extension and how the tables look like in combination with this extension, refer to the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
 - If you want to know more about RAG, embeddings or vector databases, make sure to review the links on the Resources page of the Showcase Application.
 
-#### 6.6 Setup Alternatives {#rag-setup-alternatives}
+## 6 Setup Alternatives {#rag-setup-alternatives}
 
 We have found that setting up an AWS RDS database with the `pgvector` extention is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which we will describe in the following sections.
 
-##### 6.6.1 I want To Run A PostgreSQL Database Locally! {#rag-local-database}
+### 6.1 I want To Run A PostgreSQL Database Locally! {#rag-local-database}
 
 That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recommended. The prerequisites are:
 
@@ -139,7 +149,7 @@ That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recomm
 
 In this case the configuration of the database connection details in the Showcase application is similar to what was described in the previous section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
-##### 6.6.2 I Want To Build My Own RAG Setup! {#rag-takeaways}
+### 6.2 I Want To Build My Own RAG Setup! {#rag-takeaways}
 
 Good to hear! Feel free to learn from the Showcase app and start building your own applications. Key takeaways from the Showcase app are:
 
@@ -152,7 +162,7 @@ Good to hear! Feel free to learn from the Showcase app and start building your o
   * Remove individual records (delete) or tables (drop table)
     Example queries in the form of SQL statements are available for inspiration in the source code of the Showcase application.
 
-#### 6.7 Troubleshooting {#rag-troubleshooting}
+## 7 Troubleshooting {#rag-troubleshooting}
 
 **In my Mendix app I'm getting the error “FATAL: password authentication failed for user "postgres" all the time!**
 Sometimes there seems to be a caching issue in the execution of queries from apps locally. Make sure the configuration was set up correctly (re-enter the password to be sure). Close all browser tabs for the Mendix app, shut down the app locally and rerun.

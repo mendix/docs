@@ -9,7 +9,7 @@ aliases:
 # Linked from https://marketplace.mendix.com/link/component/214681
 ---
 
-## 1 Introduction / intro
+## 1 Introduction
 
 The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
 

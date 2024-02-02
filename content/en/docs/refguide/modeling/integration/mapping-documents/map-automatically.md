@@ -32,9 +32,9 @@ If the domain model already contains entities that map to schema elements, they 
 
 ## 3 Limitations
 
-The parameter entity for import mappings is not created by **Map Automatically**. By default, non-persistable entities are created. You can change this manually in the domain model.
+The parameter entity for import mappings is not created by **Map automatically**. By default, non-persistable entities are created. You can change this manually in the domain model.
 
-Note that **Map Automatically** is not going to create entity generalization if there is any impact on the persistence behavior of the entity.
+Note that **Map automatically** is not going to create entity generalization if there is any impact on the persistence behavior of the entity.
 
 ## 4 Manual Verification
 

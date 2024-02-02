@@ -146,8 +146,8 @@ You can force Studio Pro to recreate the metadata by doing the following:
 
 This will recreate the metadata and you should now be able to create a deployment package from this new revision.
 
-### 2.9 Installed Git version does not meet Studio Pro's requirement
+### 2.9 Installed Git Version Does Not Meet Studio Pro's Requirement
 
-Studio Pro relies on a specific minimum version of Git, as mentioned in the [system requirements](https://docs.mendix.com/refguide/system-requirements/). If this version is not installed on your device, Studio Pro will show a message during start-up, indicating that certain features will not be available.
+Studio Pro requires a specific minimum version of Git (for more information, see [System Requirements](/refguide/system-requirements/)). If this version is not installed on your device, Studio Pro will show a message during a start-up indicating that certain features will not be available.
 
 You can download and install a recent version of Git from [here](https://git-scm.com/downloads). 

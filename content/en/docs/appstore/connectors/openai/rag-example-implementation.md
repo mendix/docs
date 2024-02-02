@@ -35,7 +35,7 @@ In summary, as the first step, you need to provide the private knowledge base, s
 ## 3 Procedure {#rag-step-by-step}
 
 {{% alert color="info" %}}
-The sections below describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case. In this [section](#rag-takeaways), we have listed some key points that apply regardless of which architecture you choose.
+The sections below describe a setup based on a PostgreSQL database with the pgvector extension to query vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case. If you want to build your own RAG setup, see the [Building Your Own RAG Setup](#build-your-own-rag-setup) section.
 {{% /alert %}}
 
 Follow the steps below to get started with the Retrieval Augmented Generation (RAG) example in the [showcase app](https://marketplace.mendix.com/link/component/220475).
@@ -134,7 +134,7 @@ Verify the embedding vectors have been created in your new database. If you ever
 
 We have found that setting up an AWS RDS database with the `pgvector` extention is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which we will describe in the following sections.
 
-### 6.1 I want To Run A PostgreSQL Database Locally! {#rag-local-database}
+### 6.1 Running A PostgreSQL Database Locally! {#rag-local-database}
 
 That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recommended. The prerequisites are:
 
@@ -146,9 +146,11 @@ That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recomm
 
 In this case the configuration of the database connection details in the Showcase application is similar to what was described in the previous section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
-### 6.2 I Want To Build My Own RAG Setup! {#rag-takeaways}
+### 6.2 Building Your Own RAG Setup {#build-your-own-rag-setup}
 
-Good to hear! Feel free to learn from the Showcase app and start building your own applications. Key takeaways from the Showcase app are:
+This section lists some key points that apply regardless of which architecture you choose.
+
+If you would like to build your own RAG setup, feel free to learn from the Showcase app and start building your own app. Below you can find the key takeaways from the showcase app:
 
 * For retrieval augmented generation you need a storage space for embeddings outside of your normal Mendix app database. Typically this is a remote vector database. In order to connect to it, the Showcase app uses the Mendix database connector.
 * The Showcase app relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries/statements you will have to do probably include at least the following:

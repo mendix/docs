@@ -515,7 +515,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
 
-#### 4.2.2 InvokeModelGeneric {#invoke-model-generic}
+#### 4.2.2 InvokeModelGeneric {#invoke-generic-model}
 
 The `InvokeModelGeneric` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
 

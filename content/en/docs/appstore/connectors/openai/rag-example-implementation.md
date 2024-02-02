@@ -1,5 +1,5 @@
 ---
-title: "RAG Example Implementation in the OpenAI Showcase Application"
+title: "RAG Example Implementation in the OpenAI showcase Application"
 url: /appstore/connectors/openai-connector/rag-example-implementation/
 category: "Open AI"
 linktitle: "RAG Example Implementation"
@@ -45,7 +45,7 @@ Follow the steps below to get started with the Retrieval Augmented Generation (R
 Before you start experimenting with the end-to-end process, make sure that you have covered the following prerequisites:
 
 * You have access to a (remote) PostgreSQL database with the `pgvector` extension available.
-* You have configured the connection to the above database in the OpenAI Showcase App.
+* You have configured the connection to the above database in the OpenAI showcase App.
 
 If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required extension available.
 
@@ -68,7 +68,7 @@ Below you can find a list of values that you can use for experimental purposes.
    2. For **Engine**, select *PostgreSQL Version 15.4*
    3. For **Template**, select *Free tier*
    4. Use the default values for **Availability and durability**.
-   5. Configure the **Settings**: as follows:
+   5. Configure the **Settings** as follows:
       1. Enter a name for **Database instance identifier**, for example, *database-1*
       2. Enter values for **Master username and master password**. Store them safely. You will need them later.
    6. Use the default values for **Instance configuration**.
@@ -92,30 +92,42 @@ Below you can find a list of values that you can use for experimental purposes.
 
 ### 3.2 IP inbound rules {#ip-inbound-rules}
 
-*  If you have access to a VPN, you could also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
-*  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source; see [Mendix IP Addresses: Outgoing IP](https://docs.mendix.com/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
+*  If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
+*  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
 
 ### 3.3 Deleting Resources in AWS {#deleting-aws-resources}
 
-If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and delete the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
+If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-## 4 Configuring The Database Connection Details In The Showcase App {#configure-database-connection}
+## 4 Configuring The Database Connection Details In The showcase App {#configure-database-connection}
 
-1. Login to the Showcase app and navigate to the RAG example
-2. After reading **Step 1: Introduction**, proceed to **Step 2: Vector Database Configuration**
-3. Edit the configuration details
-   1. The Jdbc URL needs to be formatted in the following way
+1. Login to the [showcase app](https://marketplace.mendix.com/link/component/220475).
+
+2. Navigate to the RAG example.
+
+3. After reading **Step 1: Introduction**, proceed to **Step 2: Vector Database Configuration**
+
+4. Edit the configuration details as follows:
+   1. Format the Jdbc URL in the following way:
       `jdbc:postgresql://{endpoint-from-the-AWS-console}:5432/{vectorDatabaseName}`
+
       To find the endpoint in the AWS console: 
-      1. Go to Amazon RDS and make sure the right region in with the RDS database was created is selected at the top.
-      2. Under *Databases*, click on your new database to view the details.
-      3. In the *Connectivity & Security* tab you can find the Endpoint.
-         The value for `{vectorDatabaseName}` in the URL is the one you have chosen in the previous section.
-      4. `5432` is the default port for PostrgreSQL databases, if you manually chose another port, you need to change this in the URL as well.
-   2. The username and password are equal to the Master Username and Master Password that you chose during the setup in previous section.
+
+      1. Go to Amazon RDS and make sure the right region in which the RDS database was created is selected at the top.
+
+      2. Under **Databases**, click your new database to view the details.
+
+      3. On the **Connectivity & Security** tab, you can find the Endpoint.
+
+         The value for `{vectorDatabaseName}` in the URL is the one you have selected in the previous section.
+
+      4. `5432` is the default port for PostrgreSQL databases. If you manually chose another port, you need to change this in the URL as well.
+
+   2. Use the Master Username and Master Password that you chose in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#rds-database) as your username and password.
+
    3. Save the configuration.
 
-## 5 Try out RAG end-to-end in the Showcase app! {#rag-showcase-app}
+## 5 Running the RAG End-to-End in the showcase App {#rag-showcase-app}
 
 **Step 3: Knowledge base step**
 Create embeddings from a text and store. Use our default text about ornamental flowering plants, or paste your own content!
@@ -131,48 +143,53 @@ Verify the embedding vectors have been created in your new database. If you ever
 
 **Notes**
 
-- The Showcase application uses the [Mendix database connector](https://marketplace.mendix.com/link/component/2888) to execute queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, please refer to [Mendix Docs](https://docs.mendix.com/appstore/connectors/database-connector/).
-- The Showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called `pgvector`. If you want to know more about the extension and how the tables look like in combination with this extension, refer to the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
-- If you want to know more about RAG, embeddings or vector databases, make sure to review the links on the Resources page of the Showcase Application.
+- The showcase application uses the [Mendix database connector](https://marketplace.mendix.com/link/component/2888) to execute queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, please refer to [Mendix Docs](https://docs.mendix.com/appstore/connectors/database-connector/).
+- The showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, refer to the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
+- If you want to know more about RAG, embeddings or vector databases, make sure to review the links on the Resources page of the showcase Application.
 
 ## 6 Setup Alternatives {#rag-setup-alternatives}
 
-We have found that setting up an AWS RDS database with the `pgvector` extention is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which we will describe in the following sections.
+We have found that setting up an AWS RDS database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
 
-### 6.1 Running A PostgreSQL Database Locally! {#rag-local-database}
+### 6.1 Running a PostgreSQL Database Locally {#rag-local-database}
 
-That is possible! Familiarity with PostgreSQL and tooling like pgAdmin is recommended. The prerequisites are:
+It is possible to run a PostgreSQL database locally. It is useful to familiarize yourself with PostgreSQL and tooling like pgAdmin. 
 
-1. Have [PostgreSQL installed](https://www.postgresql.org/download/). During the installation it asks to install pgAdmin 4 as well, which we recommend for creating the local server and database as described in the steps below. If you prefer different tooling to reach the same goals, feel free to do so.
-2. Have a new local database that you can connect to. Use pgAdmin to:
-   1. Register your new PostgreSQL server. The port is typically 5432. The credentials that are needed here are the ones you entered during the installation of PostgreSQL. **You need these later.**
-   2. Create a database e.g. myVectorDatabase. **You need this later.**
-3. Have the `pgvector` extension installed. Depending on your hardware and operating system the steps to install the pgvector extension vary. Please follow the [installation steps](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on Github carefully and be sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
+Make sure that you meet the following prerequisites:
 
-In this case the configuration of the database connection details in the Showcase application is similar to what was described in the previous section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
+1. You have [PostgreSQL installed](https://www.postgresql.org/download/). During the installation, it asks to install pgAdmin 4 as well, which is recommended for creating the local server and database as described the rest of this section. You can also choose other tooling to your liking to reach the same goal.
+2. Have a new local database that you can connect to. Use pgAdmin to do the following:
+   1. Register your new PostgreSQL server. The port is typically 5432. The credentials that are needed here are the ones you entered during the installation of PostgreSQL. You will need this later.
+   2. Create a database, for example, myVectorDatabase. You will need this later.
+3. Have the pgvector extension installed. Depending on your hardware and operating system, the steps to install the pgvector extension can be different. Follow the [installation instructions](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on Github carefully and be sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
+
+In this case, the configuration of the database connection details in the showcase application is similar to what was described in the previous section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
 ### 6.2 Building Your Own RAG Setup {#build-your-own-rag-setup}
 
-This section lists some key points that apply regardless of which architecture you choose.
+This section lists some general key points that apply regardless of which architecture you choose.
 
-If you would like to build your own RAG setup, feel free to learn from the Showcase app and start building your own app. Below you can find the key takeaways from the showcase app:
+If you would like to build your own RAG setup, feel free to learn from the showcase app and start building your own app. Below you can find the key takeaways from the showcase app:
 
-* For retrieval augmented generation you need a storage space for embeddings outside of your normal Mendix app database. Typically this is a remote vector database. In order to connect to it, the Showcase app uses the Mendix database connector.
-* The Showcase app relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries/statements you will have to do probably include at least the following:
+* For retrieval augmented generation you need a storage space for embeddings outside of your normal Mendix app database. Typically this is a remote vector database. In order to connect to it, the showcase app uses the Mendix database connector.
+* The showcase app relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries/statements you will have to do probably include at least the following:
   * Include the vector extension if applicable
   * Create tables to store the embeddings (create table)
   * Add new embeddings to tables (insert)
   * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
   * Remove individual records (delete) or tables (drop table)
-    Example queries in the form of SQL statements are available for inspiration in the source code of the Showcase application.
+    Example queries in the form of SQL statements are available for inspiration in the source code of the showcase application.
 
 ## 7 Troubleshooting {#rag-troubleshooting}
 
-**In my Mendix app I'm getting the error “FATAL: password authentication failed for user "postgres" all the time!**
-Sometimes there seems to be a caching issue in the execution of queries from apps locally. Make sure the configuration was set up correctly (re-enter the password to be sure). Close all browser tabs for the Mendix app, shut down the app locally and rerun.
+### 7.1 Password Authentication Failed for User "postgres" in the Mendix App
 
-**There is an error in the logs of my Mendix app about the extension called “vector”.**
-According to the documentation of pgvector, the minimum version of PostgreSQL to use is 11. Make sure you are using the right version. If you are using a PostgreSQL database on your local machine, make sure you have followed all the installation prerequisites specific for your setup and operating system. 
+If you get the error message “FATAL: password authentication failed for user "postgres", it could be a caching issue in the execution of queries from apps locally. Make sure the configuration was set up correctly (re-enter the password to be sure). Close all browser tabs for the Mendix app, shut down the app locally and rerun.
 
-**There is a timeout error in the logs of my Mendix app when trying to connect to the external database.**
-Some company network might prohibit connections to AWS servers.  Make sure you are connected to a network that does allow these connections, e.g. with a phone hotspot or from your home network.
+### 7.2 Error in Logs of the Mendix App about the Extension "Vector"
+
+If there is an error in the logs of your Mendix app about the extension called “vector", it could be that your PostgreSQL version does not meet the requirement of pgvector according to its documentation, or you have not followed the installation prerequisites. When this happens, make sure that you use the PostgreSQL version 11 or above. If you are using a PostgreSQL database on your local machine, make sure you have followed all the installation prerequisites specific for your setup and operating system. 
+
+### 7.3 Timeout Error in  Logs of the Mendix App When You Try to Connect to the External Database
+
+If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, it could because some company network prohibits connections to AWS servers. Make sure you are connected to a network that does allow these connections, for example, with a phone hotspot or from your home network.

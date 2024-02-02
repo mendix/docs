@@ -43,9 +43,9 @@ jobs:
           echo "VER<<EOF" >> $GITHUB_ENV
           echo "$VER" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      # Creates PR for linted content changes
+      # Creates PR for linted content changes - needs version > 4 for NodeJS 20
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Run markdownlint-cli2 on docs to find (and correct) linting errors. 
           title: '[Auto] Lint docs'

@@ -208,7 +208,7 @@ You can edit the information on your Mendix Profile by clicking **User Settings*
 
 ### 10.1 Profile {#profile}
 
-In this section, you can upload your profile image and fill in your personal and work details
+On the [Profile](https://user-settings.mendix.com/link/profile) page, you can upload your profile image and fill in your personal and work details
 
 You can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
 
@@ -293,7 +293,7 @@ It is not possible to separate profiles after they have been merged. Double-chec
 
 ### 10.2 Accounts
 
-This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
+The [Accounts](https://user-settings.mendix.com/link/account) page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/security/).
 
@@ -322,7 +322,7 @@ This feature is not available if your company has enabled single sign-on. If thi
 
 ### 10.3 Notification Settings {#notifications}
 
-On this page, you can configure how you want to be notified of Mendix Platform activity.
+On the [Notification Settings](https://user-settings.mendix.com/link/notifications) page, you can configure how you want to be notified of Mendix Platform activity.
 
 When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Apps](/developerportal/#my-apps).
 
@@ -332,6 +332,8 @@ You can also configure your **Buzz Notifications**:
 * **Receive updates for Buzz threads in which I am active** – enabled by default
 
 ### 10.4 Developer Settings {#dev-settings}
+
+On the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can manage the API keys and personal access tokens (PAT).
 
 #### 10.4.1 API Keys {#profile-api-keys}
 
@@ -358,7 +360,7 @@ For more information, see the following:
 
 #### 10.4.2 Personal Access Tokens {#pat}
 
-Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
+Some platform APIs use personal access tokens (PATs) rather than API keys. This section explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
 PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
@@ -378,7 +380,7 @@ The following Mendix services support usage of PATs:
 
 ##### 10.4.2.1 Creating a PAT {#create-pat}
 
-When you click **New Token** in the [Developer Settings](https://user-settings.mendix.com/link/developersettings), you need to set the following characteristics of the PAT:
+In the **Peronsal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
@@ -438,7 +440,7 @@ For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk
 
 ### 10.5 Personal Data
 
-The Mendix Platform stores certain personal information about you. You can view this information by clicking  **Download Personal Data**.
+On the [Personal Data](https://user-settings.mendix.com/link/notifications) page, you can view and download your personal data. The Mendix Platform stores certain personal information about you. You can view this information on the page or download it by clicking  **Download Personal Data**.
 
 {{% alert color="info" %}}
 Mendix has been tracking these data changes since November 2018.

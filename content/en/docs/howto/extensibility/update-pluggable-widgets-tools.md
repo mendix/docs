@@ -17,9 +17,9 @@ Follow this guide to update the Pluggable Widgets Tools package used by your plu
 * Install the latest LTS version of [Node.js](https://nodejs.org)
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 
-## 3 Updating the Pluggable Widgets Tools Package for a Widget
+## 3 Updating a Pluggable Widgets Tools Package
 
-Run the following commands at the root of the widget's directory:
+To update a specific widget's Pluggable Widget Tools package, run the following commands at the root of the widget's directory:
 
 1. Open the widget with the IDE of your choice.
 1. Run `npm install --save-dev @mendix/pluggable-widgets-tools` to get the latest version.

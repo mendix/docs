@@ -19,7 +19,7 @@ The **System.WorkflowActivityRecord** entity represents a snapshot of workflow a
 
 The most common use case for the retrieved list of **System.WorkflowActivityRecord** objects is to build an activity timeline for a specific workflow. Each **System.WorkflowActivityRecord** object is linked to the previously executed activity through the **System.WorkflowActivityRecord_PreviousActivity** association (except for the Start event). It can be used to visualize the order in which each activity finishes.
 
-The image below shows an example of how an activity timeline can look like using the data returned by the **Retrieve workflow activity records** activity:
+The image below shows an example of how an activity timeline can look like using the data returned from the **Retrieve workflow activity records** activity:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/example-activity-timeline.png" max-width=100% class="image-border" >}}
 

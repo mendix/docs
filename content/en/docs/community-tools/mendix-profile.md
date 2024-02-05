@@ -360,6 +360,8 @@ For more information, see the following:
 
 #### 10.4.2 Personal Access Tokens {#pat}
 
+On the **Personal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can view, create, and manage your PATs.
+
 Some platform APIs use personal access tokens (PATs) rather than API keys. This section explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
 PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
@@ -380,7 +382,7 @@ The following Mendix services support usage of PATs:
 
 ##### 10.4.2.1 Creating a PAT {#create-pat}
 
-In the **Peronsal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
+In the **Peronsal Access Tokens** section, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT

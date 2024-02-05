@@ -127,7 +127,7 @@ In this tab, you can configure whether contents that users publish to the privat
 
 You can populate your private Marketplace with contents by importing a zip file that contains the content packages along with a *package.json* file. To enable content import from the import bundle, you must unpack it and point Private Mendix Platform to the location of the json file by following these steps:
 
-1. Download the [Marketplace contents](https://mendix-private-platform.s3.eu-central-1.amazonaws.com/release/marketplace/Marketplace-1.0.zip) available as a zip file.
+1. Download the Marketplace contents available as a zip file. To obtain the link to the zip file, contact your Mendix point of contact.
 2. Unzip the files to an internal location which Private Mendix Platform can access via HTTP or HTTPS. Do not change the directory structure.
 3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Private Cloud Cluster](/developerportal/deploy/standard-operator/#custom-tls).
 4. In the **Content Import** tab, in the **Marketplace import bundle URL** field, enter the root URL of the *package.json* file included in the Marketplace download. 

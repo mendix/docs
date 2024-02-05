@@ -22,7 +22,7 @@ By default, any newly created Mendix account comes with its own Mendix Profile.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can [edit your Mendix profile](/community-tools/mendix-profile/user-settings/) by clicking the settings (({{% icon name="cog" %}}) icon on the upper-right corner.
+You can [edit your Mendix profile](/community-tools/mendix-profile/user-settings/) by clicking the settings ({{% icon name="cog" %}}) icon on the upper-right corner.
 {{% /alert %}}
 
 ## 2 Header {#header}

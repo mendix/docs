@@ -333,7 +333,15 @@ You can also configure your **Buzz Notifications**:
 
 ### 10.4 Developer Settings {#dev-settings}
 
-#### 10.4.1 API Keys {#profile-api-keys}
+#### 10.4.1 Two-Factor Authentication{#profile-2fa}
+
+In this section, you can view the status of your two-factor authentication (2FA). You can see if your 2FA is configured with SMS or an authenticator app, and you can also deactivate your 2FA.
+
+{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" class="image-border" max-width=80%  alt="" >}}
+
+For more information, see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+
+#### 10.4.2 API Keys {#profile-api-keys}
 
 In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
@@ -356,7 +364,7 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-#### 10.4.2 Personal Access Tokens {#pat}
+#### 10.4.3 Personal Access Tokens {#pat}
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
@@ -376,7 +384,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.2.1 Creating a PAT {#create-pat}
+##### 10.4.3.1 Creating a PAT {#create-pat}
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 
@@ -395,7 +403,7 @@ After you click **Create**, a pop-up window shows your secret token, which is th
 Store the secret token in a safe location, because it will not be displayed again!
 {{% /alert %}}
 
-##### 10.4.2.2 Managing a PAT
+##### 10.4.3.2 Managing a PAT
 
 To see the scopes of a PAT you have created, click **View Details**.
 
@@ -407,7 +415,7 @@ You cannot see the secret token of a PAT here. You can only see that the PAT exi
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
 
-##### 10.4.2.3 Using a PAT
+##### 10.4.3.3 Using a PAT
 
 Use of a PAT depends on the API you are accessing.
 

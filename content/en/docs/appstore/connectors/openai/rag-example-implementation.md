@@ -128,9 +128,9 @@ If no action is taken, resources in AWS stay around indefinitely. Make sure to t
 
       3. On the **Connectivity & Security** tab, you can find the endpoint.
 
-         The value for `{vectorDatabaseName}` in the URL is the one you have selected in the previous section.
+         The value for `{vectorDatabaseName}` in the URL is the initial database name you set when you [created the PostgreSQL database with Amazon RDS](#rds-database).
 
-      4. `5432` is the default port for PostrgreSQL databases. If you manually chose another port, you need to change this in the URL as well.
+      4. `5432` is the default port for PostrgreSQL databases. If you manually chose another port, then change this in the URL as well.
 
    2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#rds-database) as your username and password.
 

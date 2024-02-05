@@ -42,7 +42,7 @@ We are working on solutions to both notify you when this issue applies to you an
 
 ## 3 How Migration Works
 
-If your main line (**main**) is Mendix version 9.24.11 or above, and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration:
+If your main line is Mendix version 9.24.11 or above, and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration:
 
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 

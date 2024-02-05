@@ -84,7 +84,7 @@ Once you have 2FA configured to use an authenticator app, you can use it to comp
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" class="image-border" alt="" >}}
 
-## 3 Changing Your Authentication Method
+## 3 Changing Your Authentication Method{#change-2fa-method}
 
 To change your 2FA method, phone number, or authenticator app, you need to deactivate your 2FA and then set it up again with your new details.
 

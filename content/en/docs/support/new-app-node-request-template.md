@@ -60,7 +60,7 @@ Offboarding will remove access to everything related to the node. If you want to
 * Alerts
 * Logs
 
-When your app is offboarded, you still retain all access to the metadata associated with the app, such as the stories in Epics, the feedback in App Insights, and the repository on the Team Server.
+When your app is offboarded, only the deployed app is removed. You still retain all access to the data associated with the development of the app, such as Epics, App Insights, and the repository on the Team Server.
 
 ## 5 Read More
 

@@ -60,8 +60,11 @@ Before you start experimenting with the end-to-end process, make sure that you h
 You can use the values in the steps below for experimental purposes:
 
 1. Login to the AWS console. 
+
 2. Go to RDS using the search bar.
+
 3. Go to **Databases**. 
+
 4. Click **Create database** and use the following specifications:
    1. For **Method**, select *standard create*.
    2. For **Engine**, select *PostgreSQL Version 15.4*
@@ -80,19 +83,24 @@ You can use the values in the steps below for experimental purposes:
    9. For **Database authentication**, select *Password authentication*.
    10. Use the default values for **Monitoring**.
    11. Set an initial database name, for example, *myVectorDatabase*. You will need it later.
+   
 5. Wait for the database to be created. This can take some time.
+
 6. When the database is created, click the database name to view it.
    1. On the **Connectivity & Security** tab, find the inbound security group rule. By default this will only accept incoming traffic from your current IPv4 address.
+   
    2. Optionally, if the database is required to be accessible from other locations as well, click the security group rule, go to the **Inbound rules** tab, then add a rule as follows:
       1. For **Type**, select *PostgreSQL*.
+      
       2. Set **Port** to *5432*.
-      3. For **Source**, select *Custom*. Provide the IP CIDR range in the next field (see [IP inbound rules](#ip-inbound-rules) below). For a single IPv4 address, this is equal to the IP address with `/32` appended.
-   3. Optionally, if you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0* (see [IP inbound rules](#ip-inbound-rules) below).
-
-### 3.2 IP Inbound rules {#ip-inbound-rules}
-
-*  If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
-*  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
+      
+      3. For **Source**, select *Custom*, and provide the IP CIDR range in the field as follows:
+      
+         *  If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
+         *  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
+         *  If you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0* (see [IP inbound rules](#ip-inbound-rules) below).
+      
+         {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
 
 ### 3.3 Deleting Resources in AWS {#deleting-aws-resources}
 

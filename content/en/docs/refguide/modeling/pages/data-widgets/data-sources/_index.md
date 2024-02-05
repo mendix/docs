@@ -27,7 +27,8 @@ The **Microflow** source is not supported in offline applications because it imp
 
 ## 3 List Widgets {#list-widgets}
 
-A data grid, template grid, and list view are list widgets. Also some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) may behave as list widgets and use data sources. Supported data sources are listed below:
+### 3.1 Introduction
+A data grid, template grid, and list view are list widgets. Also, some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) may behave as list widgets and use data sources. Supported data sources are listed below:
 
 * [Database](/refguide/database-source/) – objects are retrieved from the database; database constraints can be used to limit which objects are shown. 
 * [XPath](/refguide/xpath-source/) – objects are retrieved from the database; an XPath constraint can be used to constrain which objects are shown.
@@ -42,6 +43,23 @@ The data source also determines which features of the widget are enabled. For ex
 Database and nanoflow data sources are the only data sources supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](/refguide/button-properties/) widget for creating a new object.
 {{% /alert %}}
 
+### 3.2 Network optimization mode {#optimization-mode}
+During runtime the client will retrieve the data which is configured in Studio Pro. The data can be retrieved in two possible modes depending on how the page is modeled, [optimized for network round trips](##optimzed-network-round-trips) or [optimized for network load](#optimized-for-network-load-optimized-network-load).
+Which of the modes is used can be seen in the advanced tab of the data source properties.
+
+If "optimize for network load" is the default then this can be changed to the other mode. In case the mode
+defaults to "optimize for network round trips" then this is required by the client and cannot be changed.
+
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage">}}
+#### Optimized for number of round trips {#optimzed-network-round-trips}
+In this mode all the attributes of the displayed entity is returned for the client, even if not all these attributes are shown by the widget.
+The advantage of this mode is when a [client action](/refguide/on-click-event/#actions) is triggered, an additional request to the runtime might be prevented. 
+
+#### Optimized for network load {#optimized-network-load}
+In this mode only the attributes which are shown by the list widget are returned to the client.  This reduces the amount of data transferred over the network.
+But when a [client action](/refguide/on-click-event/#actions) is triggered an additional request to the runtime might be necessary. 
+
 ## 4 Read More
 
 * [Data Containers](/refguide/data-widgets/)
+* [Runtime behavior of list data source](/refguide/datasource-runtime) 

@@ -9,7 +9,7 @@ tags: ["profile", "Developer Portal", "settings", "accounts", "notification sett
 
 ## 1 Introduction {#settings}
 
-You can edit the information on your Mendix Profile by clicking **User Settings**. The **Settings** page has a navigation pane that allows you to edit the sections described below.
+On the [User Settings](https://user-settings.mendix.com/link/profile) page, you can edit your [Mendix Profile](/community-tools/mendix-profile/).
 
 ## 2 Profile {#profile}
 

@@ -98,7 +98,7 @@ You can use the values in the steps below for experimental purposes:
       
          *  If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
          *  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
-         *  If you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0* (see [IP inbound rules](#ip-inbound-rules) below).
+         *  If you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0*.
       
          {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
 

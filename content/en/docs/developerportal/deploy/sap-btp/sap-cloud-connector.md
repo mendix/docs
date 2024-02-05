@@ -1,12 +1,13 @@
 ---
 title: "SAP Cloud Connector"
-url: /appstore/connectors/sap/sap-cloud-connector/
+url: /developerportal/deploy/sap-cloud-platform/sap-cloud-connector/
 category: "SAP"
 weight: 28
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "on-premises", "Cloud Connector", "Destination Services", "SAP BTP", "SAP Business Technology Platform"]
 aliases:
     - /partners/sap/sap-cloud-connector/
+    - /appstore/connectors/sap/sap-cloud-connector/
 ---
 
 ## 1 Introduction
@@ -17,7 +18,7 @@ SAP Cloud Connector is not available in OData Connector for SAP solutions versio
 
 A challenge when running an application in the cloud is to be able to access your on-premises systems in a secure way.
 
-For SAP Business Technology Platform (SAP BTP) users, this is solved by using the SAP Cloud Connector. With the SAP Cloud Connector, a Mendix application deployed on SAP BTP can access any SAP system running on premises.
+For SAP Business Technology Platform (SAP BTP) users, this is solved by using the [Cloud Connector](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector) tool provided by SAP. With the SAP Cloud Connector, a Mendix application deployed on SAP BTP can access any SAP system running on premises.
 
 {{< figure src="/attachments/appstore/connectors/sap-cloud-connector/connectivity-service.png" >}}
 

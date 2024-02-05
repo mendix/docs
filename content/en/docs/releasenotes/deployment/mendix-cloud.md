@@ -15,6 +15,15 @@ There are separate release notes for other deployment targets; see the [Deployme
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### February 14, 2024
+
+#### New Features
+
+* We added a Pipelines feature, which provides a low-code way to design, implement, and review automated deployment pipelines for your apps. For the initial beta release, pipelines built using this feature can include the following steps: Start pipeline, Checkout source code, Build deployment package, Publish deployment package, Stop environment, Create backup, and Deploy to an environment; more steps are in development for later releases. For more information about this new feature, see [Pipelines](/developerportal/deploy/pipelines/).
+    * The Pipelines feature is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future. 
+
 ## 2023
 
 ### November 22, 2023

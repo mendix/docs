@@ -407,7 +407,7 @@ When using the **Log Levels** tab, bear in mind the following considerations:
 * If your app is not running, the tab only shows log nodes that are set to a level other than Info. Log nodes that are set to the Info level become visible when your app is restarted.
     * For custom nodes, log nodes become visible when your app is restarted and after messages have been logged to them.
 * If you change the log level, this level will continue to be used even if you later restart your app.
-* If you change the log level, the startup logs (the logs that are created while starting the runtime, including the logs the after-startup microflow generates) will not be affected. It is not possible to change the log level of the startup logs for apps hosted on the Mendix Cloud. 
+* If you change the log level, the startup logs (the logs that are created while starting the runtime, including the logs that the after-startup microflow generates) are not affected. It is not possible to change the log level of the startup logs for apps hosted on Mendix Cloud. 
 * For an application running a single instance, any changes are applied immediately to the application.
 * For an application running more than one instance, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
 * Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).

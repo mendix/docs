@@ -4,15 +4,15 @@ url: /appstore/connectors/openai-connector/rag-example-implementation/
 category: "Open AI"
 linktitle: "RAG Example Implementation"
 weight: 5
-description: "describes the RAG example implementation in the OpenAI showcase application"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application"]
+description: "Describes the retrieval augmented generation (RAG) example implementation in the OpenAI showcase application"
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application", "Azure OpenAI"]
 ---
 
 ## 1 Introduction
 
 Retrieval augmented generation (RAG) is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text-generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant responses will be based on this knowledge base only. 
 
-## 2 Technical Flow {#rag-high-level}
+## 2 High-level Flow {#rag-high-level}
 
 The complete technical flow can be split up into the following three steps at a high level:
 
@@ -153,7 +153,7 @@ The showcase application uses the Mendix [Database Connector](https://marketplac
 
 The showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or vector databases, make sure to review the links on the **Resources** page of the showcase application.
+If you want to know more about RAG, embeddings, or vector databases, make sure to review the links on the **Resources** page of the showcase application or in the [Read Me](#read-more) section.
 
 {{% /alert %}}
 
@@ -220,3 +220,12 @@ When this occurs, make sure that you use the PostgreSQL version 11 or above. If 
 If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, the cause could be that some company network prohibits connections to AWS servers. 
 
 When this occurs, make sure you are connected to a network that does allow these connections, for example, with a phone hotspot or from your home network.
+
+## 8 Read More {#read-more}
+
+- Retrieval Augmented Generation
+  - [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+  - [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
+  - [Vector Database Options – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
+  - [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
+  - [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

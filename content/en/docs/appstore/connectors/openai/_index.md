@@ -3,7 +3,7 @@ title: "OpenAI"
 url: /appstore/connectors/openai-connector/
 linktitle: "OpenAI"
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG"]
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI"]
 ---
 
 ## 1 Introduction {#introduction}
@@ -773,10 +773,3 @@ For more inspiration or guidance on how to use those microflows in your logic, M
   - [Prompt Engineering – Open AI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
   - [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
   - [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
-
-- Retrieval Augmented Generation
-  - [OpenAI Cookbook For Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
-  - [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
-  - [Vector Database Options Suggested By OpenAI – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
-  - [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
-  - [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

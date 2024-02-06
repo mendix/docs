@@ -526,34 +526,11 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
-
-#### 4.2.3 Retrieve {#retrieve}
-
-The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
-
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
-
-#### 4.2.4 RetrieveAndGenerate {#retrieve-and-generate}
-
-The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
-
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
-
-#### 4.2.5 ListKnowledgeBases {#list-knowledge-bases}
+#### 4.2.3 ListKnowledgeBases {#list-knowledge-bases}
 
 The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials` and `ListKnowledgeBasesRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
 The input and output for this service are shown in the table below:
 
@@ -561,11 +538,35 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
 
+#### 4.2.4 Retrieve {#retrieve}
+
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
+
+#### 4.2.5 RetrieveAndGenerate {#retrieve-and-generate}
+
+The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
+
 #### 4.2.6 StartIngestionJob {#start-ingestion-job}
 
 The `StartIngestionJob` activity allows you to begin an ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
 
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
 The input and output for this service are shown in the table below:
 
@@ -577,7 +578,7 @@ The input and output for this service are shown in the table below:
 
 The `GetIngestionJob` activity allows you to retrieve information about a ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).  
 
 The input and output for this service are shown in the table below:
 
@@ -601,7 +602,7 @@ Your AWS organization may not have been granted access to the model which you ar
 
 To solve this issue, follow these steps:
 
-1. In your Amazon Bedrock environment, navigate to [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) in the Oregon region (**us-west-2**).
+1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you would like to work.
 2. If the status of a model is **Available**, enable access to this model for your AWS organization by doing the following steps:
     1. In the top-right corner of the overview, click on **Edit**.
     2. Select the check boxes by the models which you want to access with your credential set.
@@ -626,3 +627,27 @@ To solve this issue, verify the following:
 
 1. Ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) section of your Amazon Bedrock environment.
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
+
+## 6 Appendix
+
+### 6.1 Knowledge Base {#knowledge-base}
+
+In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
+
+For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
+
+#### 6.1.1 Creating a Knowledge Base 
+
+Since setting up knowledge bases is usually a one-time configuration, it is recommended to set this up by using the AWS Console. For more information, see [Create a knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html).
+
+#### 6.1.2 Adding Data from Your App
+
+After a knowledge base has been set up, information from your app can be added in a file to the relevant S3 bucket, and then used during subsequent inquiries. Which information is used and how that information is exported depends on the customer's use case and is up to the Mendix developer to implement. For more information, see [Set up your data for ingestion](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html).
+
+Amazon Bedrock only processes the information that existed during the last sync, so the data source must be synchronized whenever a new file is added to your S3 bucket or the existing files are changed. For more information, see [Sync to ingest your data sources into the knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-ingest.html). 
+
+The sync can be done from the information page of your knowledge base in the Amazon Bedrock Console, or by using the [StartIngestionJob](#start-ingestion-job) action in the Amazon Bedrock Connector.
+
+{{% alert color="info" %}}
+The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
+{{% /alert %}}

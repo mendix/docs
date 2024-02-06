@@ -26,7 +26,7 @@ Pluggable widgets can also include a preview component for when they are preview
 
 For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client/#pluggable-widgets) section of *Mendix Client*.
 
-For information on how to update Pluggable Widgets Tools to a newer version, see [Updating Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools)
+For information on how to update Pluggable Widgets Tools to a newer version, see [Updating Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools/)
 
 {{% alert color="info" %}}
 Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.

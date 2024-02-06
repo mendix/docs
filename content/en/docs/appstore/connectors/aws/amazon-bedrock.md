@@ -566,7 +566,7 @@ The input and output for this service are shown in the table below:
 
 The `StartIngestionJob` activity allows you to begin an ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
 
-To use this activity, it is essential to have a knowledge base set up in your Amazon Bedrock Environment. For further details, please navigate to [Knowledge Base](#knowledge-base). 
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
 The input and output for this service are shown in the table below:
 
@@ -578,7 +578,7 @@ The input and output for this service are shown in the table below:
 
 The `GetIngestionJob` activity allows you to retrieve information about a ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 
-To use this activity, it is essential to have a knowledge base set up in your Amazon Bedrock Environment. For further details, please navigate to [Knowledge Base](#knowledge-base). 
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).  
 
 The input and output for this service are shown in the table below:
 

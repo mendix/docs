@@ -554,7 +554,7 @@ The input and output for this service are shown in the table below:
 
 The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
 
-To use this activity, it is essential to have a knowledge base set up in your Amazon Bedrock Environment. For further details, please navigate to [Knowledge Base](#knowledge-base). 
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
 The input and output for this service are shown in the table below:
 

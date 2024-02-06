@@ -92,7 +92,9 @@ To deactivate your 2FA, go to **User Settings** > [Developer Settings](/communit
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/deactivate.png" alt="" class="image-border" alt="" >}}
 
-In the dialog box that opens, confirm that you want to deactivate your 2FA. This sends a verification email to your registered email address; click the **Deactivate 2FA** link in the email to complete the deactivation process. The email link is valid for 15 minutes; if it expires before you use it, you can repeat this process to get a new link.
+In the dialog box that opens, confirm that you want to deactivate your 2FA. This sends a verification email to your registered email address; click the **Deactivate 2FA** link in the email to complete the deactivation process. The email link is valid for several minutes; if it expires before you use it, you can repeat this process to get a new link.
+
+{{% alert color="info" %}}Your Company Security Contact (or Company Admin) will receive notification emails when you initiate and complete the deactivation process.{{% /alert %}}
 
 Once your 2FA is deactivated, your Developer Settings will show the following message:
 

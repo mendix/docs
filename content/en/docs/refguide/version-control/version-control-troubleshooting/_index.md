@@ -75,7 +75,8 @@ You may get an "Oops" pop-up menu when setting a name and an email for Git in th
 
 Any of these commands will create a global Git config. Subsequent interactions via the Studio Pro interface will succeed from now on.
 
-### 2.3 Merging Branches Results in No Changes Being Applied
+### 2.4 Merging Branches Results in No Changes Being Applied
+
 When two branches are merged, changes sometimes do not come through.
 To fix this issue, take the following steps:
 
@@ -145,3 +146,9 @@ You can force Studio Pro to recreate the metadata by doing the following:
 5. Commit and Push the changes from Studio Pro.
 
 This will recreate the metadata and you should now be able to create a deployment package from this new revision.
+
+### 2.9 Installed Git Version Does Not Meet Studio Pro's Requirement
+
+Studio Pro requires a specific minimum version of Git (for more information, see [System Requirements](/refguide/system-requirements/)). If this version is not installed on your device, Studio Pro will show a message during a start-up indicating that certain features will not be available.
+
+You can download and install a recent version of Git from [here](https://git-scm.com/downloads). 

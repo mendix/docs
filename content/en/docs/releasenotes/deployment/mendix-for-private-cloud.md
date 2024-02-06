@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### Februry 1, 2024
+
+#### Portal Improvements
+
+* We have addressed an issue where changes in the data type and value of the model constants were not reflected in the application (Ticket [205850](https://mendixsupport.zendesk.com/agent/tickets/205850).)
+
 ### January 14, 2024
 
 #### New Global Operator Installation Method

@@ -18,7 +18,46 @@ For information on setting up your application's CSP, see the [Content Security 
 
 The following widgets are not fully compliant with strict CSP. See the widgets' documents below for additional information and setup instructions to enable CSP:
 
-* [Map widget content security policy document](/appstore/widgets/security/content-security-policy/maps-csp/)
+### 3.1 Charts
+
+You can enable `allowlist` CSP for [Charts](/appstore/widgets/charts/) by including these directives:
+
+```text
+style-src 'self' 'unsafe-inline';
+```
+
+### 3.2 Color Picker
+
+You can enable `allowlist` CSP for [Color Picker](/appstore/widgets/color-picker/) by including these directives:
+
+```text
+style-src 'self' 'unsafe-inline';
+```
+
+### 3.3 HTML/JavaScript Snippet
+
+For information on HTML/JavaScript Snippet widget CSP configurations, see [HTML/JavaScript Snippet CSP](/appstore/widgets/security/content-security-policy/html-javascript-snippet-csp/).
+
+### 3.4 Maps
+
+For information on Maps widget CSP configurations, see [Maps CSP](/appstore/widgets/security/content-security-policy/maps-csp/).
+
+### 3.5 Rich Text
+
+You can enable `allowlist` CSP for [Rich Text](/appstore/widgets/rich-text/) by including these directives:
+
+```text
+script-src 'self' 'unsafe-inline';
+style-src 'self' 'unsafe-inline';;
+```
+
+### 3.6 Progress Circle
+
+Use versions 3.3.0 and higher of [Progress Circle](/appstore/widgets/progress-circle/) for strict CSP compliance.
+
+### 3.7 Web Actions
+
+Use versions 2.10.0 and higher [Web Actions](/appstore/modules/web-actions/) for strict CSP compliance.
 
 ## 4 Read More
 

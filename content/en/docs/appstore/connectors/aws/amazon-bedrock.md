@@ -602,7 +602,7 @@ Your AWS organization may not have been granted access to the model which you ar
 
 To solve this issue, follow these steps:
 
-1. In your Amazon Bedrock environment, navigate to *Model Access* in the region you would like to work in.
+1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you would like to work.
 2. If the status of a model is **Available**, enable access to this model for your AWS organization by doing the following steps:
     1. In the top-right corner of the overview, click on **Edit**.
     2. Select the check boxes by the models which you want to access with your credential set.
@@ -630,19 +630,24 @@ To solve this issue, verify the following:
 
 ## 6 Appendix
 
-### 6.1 Knowledge Base  {#knowledge-base}
+### 6.1 Knowledge Base {#knowledge-base}
 
-In Bedrock, a "knowledge base" denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
+In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
 
-For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
 
-#### 6.1.1 Creating a knowledge base 
+#### 6.1.1 Creating a Knowledge Base 
 
-Since setting up knowledge bases will probably be a one-time configuration it is recommended to set this up via the AWS Console. For a detailed description on how to create a knowledge base one can view the documentation [here](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html).
+Since setting up knowledge bases is usually a one-time configuration, it is recommended to set this up by using the AWS Console. For more information, see [Create a knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html).
 
-#### 6.1.2 Adding data from your app
+#### 6.1.2 Adding Data from Your App
 
-After a knowledge base has been set up, information from your app can be added in a file to the relevant S3 bucket and then used during the subsequent inquiries. Which information or how that information is exported is dependent on the customer's use case and will be up to the Mendix developer to implement. You can read more about how to set up your data [here](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html).
+After a knowledge base has been set up, information from your app can be added in a file to the relevant S3 bucket, and then used during subsequent inquiries. Which information is used and how that information is exported depends on the customer's use case and is up to the Mendix developer to implement. For more information, see [Set up your data for ingestion](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html).
 
-Everytime a new file is added to your S3 bucket or the existing files are changed, the data source must be synced as the Amazon Bedrock only processes the information that existed during the last sync. You can read more about this [here](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-ingest.html). The sync can be done from the information page of your knowledge base in the Amazon Bedrock Console or by using the [StartIngestionJob](#start-ingestion-job) action in the Amazon Bedrock Connector. Please be aware that the sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector can be used to retrieve details about the ingestion job (like its status).
+Amazon Bedrock only processes the information that existed during the last sync, so the data source must be synchronized whenever a new file is added to your S3 bucket or the existing files are changed. For more information, see [Sync to ingest your data sources into the knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-ingest.html). 
 
+The sync can be done from the information page of your knowledge base in the Amazon Bedrock Console, or by using the [StartIngestionJob](#start-ingestion-job) action in the Amazon Bedrock Connector.
+
+{{% alert color="info" %}}
+The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
+{{% /alert %}}

@@ -22,8 +22,10 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 
 ### 1.2 Dependencies
 
-* [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730)
-* [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
+* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+* [Combo Box](https://marketplace.mendix.com/link/component/219304)
+
+{{% alert color="info" %}} For versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) of the Administration module, [Mendix SSO](https://marketplace.mendix.com/link/component/111349) is also required. {{% /alert %}}
 
 ## 2 Installation
 

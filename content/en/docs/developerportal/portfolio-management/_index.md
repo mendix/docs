@@ -285,7 +285,7 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" class="image-border" max-width="60%" >}}
 
-* ① Initiative status – This shows the status of your initiative. It can be either **On Track**, **At Risk**, or **Off Track**.
+* ① Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * ② Initiative name – This is the name of the initiative. 
 * ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
@@ -314,7 +314,7 @@ The list contains the following information:
   
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-* **Status** – This shows the status of your initiative. It can be either **On Track**, **At Risk**, or **Off Track**.
+* **Status** – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
 * **Go-Live Date** – This shows the date when the initiative is expected to be delivered or implemented.
@@ -389,7 +389,7 @@ The planning view gives you a clear visual representation of initiatives on a ti
 The view contains the following information:
 
 * Initiative Name – Clicking this opens a side pane that shows initiative details.
-* Initiative Status – This shows the status of your initiative. It can be either **On Track**, **At Risk**, or **Off Track**.
+* Initiative Status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:

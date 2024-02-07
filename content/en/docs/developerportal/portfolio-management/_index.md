@@ -120,7 +120,7 @@ To add general information to your initiative, follow these steps:
 
 {{% alert color="info" %}}Some fields in this procedure have an {{% icon name="info-circle" %}} icon next to them, for example, the **Link Existing App** field. You can check out the descriptions of these fields by hovering over the {{% icon name="info-circle" %}} icons.{{% /alert %}}
 
-1. In the **Edit Initiative** side pane, select the status of your inititive, it can be **On Track**, **At Risk** or **Off Track**.
+1. In the **Edit Initiative** side pane, select the status of your inititive, it can be **On Track**, **At Risk**, or **Off Track**.
 
 2. Select **Tags** for the initiative. You can use tags to classify your initiatives, for example by types. You can select existing tags or create new tags. 
 
@@ -285,7 +285,7 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
-* ① Initiative status – This shows the status of your initiative. Can be either **On Track**, **At Risk** or **Off Track**.
+* ① Initiative status – This shows the status of your initiative. It can be either **On Track**, **At Risk**, or **Off Track**.
 * ② Initiative name    
 * ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 

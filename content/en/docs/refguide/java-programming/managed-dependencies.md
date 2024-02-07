@@ -115,7 +115,7 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 
     * Check that you have a working internet connection.
     * If you are using a [custom repository](#custom-repos), confirm that the repository can be reached.
-        
+
 3. CE9806 – Unable to reach repository / mis-configuration of custom repository.
 
     * Check that **Repositories** are configured if [**Use custom repositories**](#custom-repos) is set to *Yes*.
@@ -132,11 +132,11 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
     * Restarting Studio Pro
 
 6. CE9803 – Any failure which is not covered in the above scenarios.
-    
+
     * Try manually synchronizing dependencies once more.
+    * If you are using a VPN then the following hosts must be accessible:
+        * repo.maven.apache.org
+        * plugins.gradle.org
+        * jcenter.bintray.com
+        * plugins-artifacts.gradle.org
     * Reach out to [Mendix Support](https://support.mendix.com/) if the issue persists.
-    * If you are using a VPN then the following hosts should be accessible:
-      * repo.maven.apache.org
-      * plugins.gradle.org
-      * jcenter.bintray.com
-      * plugins-artifacts.gradle.org

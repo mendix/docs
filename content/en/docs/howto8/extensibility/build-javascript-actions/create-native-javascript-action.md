@@ -82,7 +82,7 @@ In this section, you will create a normal custom developer app to learn the proc
 
 Now you will build a native custom developer app and install it on your phone:
 
-1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto8/mobile/deploying-native-app/#getting-your-tokens) section of *Build a Mendix Native App in the Cloud with the Native Builder CLI* to get your authentication codes.
+1. If you do not have your GitHub and App Center keys, follow [Getting Your Tokens](/howto8/mobile/deploying-native-app/#getting-your-tokens) to get your authentication codes.
 1. Complete the [Preparing Your Project](/howto8/mobile/deploying-native-app-cli/#preparing) section of *How to Build a Mendix Native App in the Cloud* using these parameters:
 
     ```shell

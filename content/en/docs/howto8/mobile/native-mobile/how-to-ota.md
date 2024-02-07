@@ -28,8 +28,8 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro v8.15 or above using the online installer (the offline installer does not include the Mendix Native Mobile Builder dependency)
-* Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/).
-* Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](/howto8/mobile/deploying-native-app/#appcenter-token) section of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
+* Deploy your app by completing [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/).
+* Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](/howto8/mobile/deploying-native-app/#appcenter-token) section of *How to Build a Mendix Native App in the Cloud*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
 * Install your app on a test device or emulator.
 * Read the [Offline First Reference Guide](/refguide8/offline-first/).
 
@@ -207,7 +207,7 @@ If the OTA release button remains disabled. Verify that the app names added in t
 
 ## 8 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [Offline First Reference Guide](/refguide8/offline-first/)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
 * [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

@@ -23,7 +23,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 ### 1.2 Dependencies
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187): required for the Administration module versions 4.0.0 and above
-* [Combo Box](https://marketplace.mendix.com/link/component/219304): required for theAdministration module versions 4.0.0 and above
+* [Combo Box](https://marketplace.mendix.com/link/component/219304): required for the Administration module versions 4.0.0 and above
 * [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730): required for the Administration module versions 3.0.0 and below
 * [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
 

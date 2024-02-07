@@ -47,7 +47,7 @@ A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settin
 
 When you click a portfolio card to which you have access, the portfolio opens with a menu on the left side. 
 
-{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png"  class="image-border">}}
 
 Clicking a menu item opens the corresponding page:
 
@@ -82,7 +82,7 @@ In the Portfolio Management app, the term "Initiative" represents a business obj
 
 The **Initiatives Overview** page gives an overview of all the initiatives in this portfolio.
 
-{{< figure src="/attachments/developerportal/portfolio-management/initiatives-overview.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/initiatives-overview.png" class="image-border" >}}
 
 In the search box on the top, you can search for an initiative by the initiative name.
 
@@ -150,13 +150,13 @@ Now you can proceed to [link Epics to your initiative](#link-epics).
 
 While you are in the process of [adding general information](#add-general-information), you can manage tags as follows:
 
-In the **Edit Initiative** side pane, click **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box.
+In the **Edit Initiative** side pane, click the {{% icon name="cog" %}} icon next to the **Tags** text box.
 
-{{< figure src="/attachments/developerportal/portfolio-management/manage-tags.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/manage-tags.png" class="image-border" max-width="80%" >}}
 
 The **Manage Tags** dialog box opens.
 
-{{< figure src="/attachments/developerportal/portfolio-management/manage-tags-dialog-box.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/manage-tags-dialog-box.png" max-width="70%" >}}
 
 To create a new tag, do as follows:
 
@@ -283,10 +283,10 @@ In Kanban view, all the initiatives are represented by initiative cards, and are
 
 Each initiative card shows the following information:
 
-{{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" class="image-border" max-width="60%" >}}
 
 * ① Initiative status – This shows the status of your initiative. It can be either **On Track**, **At Risk**, or **Off Track**.
-* ② Initiative name    
+* ② Initiative name – This is the name of the initiative. 
 * ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}

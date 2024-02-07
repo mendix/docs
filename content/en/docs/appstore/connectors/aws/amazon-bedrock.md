@@ -88,7 +88,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-* An implemnentation for invoking the Claude v. 2.1 LLM that generates text
+* An implementation for invoking the Claude v. 2.1 LLM that generates text
 * An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  
@@ -106,7 +106,7 @@ To invoke a specific model, perform the following steps:
     5. Open the created JSON structure.
     6. Paste the request or response JSON into the created structure.
     7. Click **OK**.
-6. Generate export and import mappings for the request and response JSON structures.
+5. Generate export and import mappings for the request and response JSON structures.
     The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelGenericRequest` object provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping maps the response returned by the [Invoke Generic Model](#invoke-generic-model) operation to your model-specific response objects. To create import or export mappings, perform the following steps:
     1. Right-click the target folder.
     2. Click **Add other** > **Import/Export mapping**.
@@ -115,7 +115,7 @@ To invoke a specific model, perform the following steps:
     5. Select the relevant schema elements.
     6. Click **OK**.
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
-7. Create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation, such as in the following figure (for Claude v. 2.1):
+6. Create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation, such as in the following figure (for Claude v. 2.1):
 
     {{< figure src="/attachments/appstore/connectors/aws-bedrock/microflow.png" >}}
 
@@ -445,9 +445,9 @@ The `InvokeModelRequestAnthropicClaude` entity holds the request parameters need
 | --- | --- |
 | `Prompt` | The `Prompt` attribute holds the prompt send to the Claude model.|
 | `Max_tokens_to_sample` | The `Max_tokens_to_sample` attribute holds an integer specifying the max amount of returned tokens by the Claude model.|
-| `Temperature` | The `Temperature` attribute can be used to tune the degree of randomness in the resposes generated.|
+| `Temperature` | The `Temperature` attribute can be used to tune the degree of randomness in the responses generated.|
 | `Top_k` | The `Top_k` attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
-| `Top_p` | The `Top_p` attribute influences what tokens will be choosen by the model. If set to float less than 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.|
+| `Top_p` | The `Top_p` attribute influences what tokens will be chosen by the model. If set to float less than 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.|
 
 #### 4.1.40 AnthropicClaude_StopSequences {#anthropic-claude-stop-sequence}
 
@@ -464,7 +464,7 @@ The `InvokeModelResponseAnthropicClaude` entity holds the response of the Anthro
 | Attribute | Description |
 | --- | --- |
 | `Completion` | The `Completion` attribute holds the response string of Claude.|
-| `StopReason` | The `StopReason` attribute holds the reason that Claude stoped generating text.|
+| `StopReason` | The `StopReason` attribute holds the reason that Claude stopped generating text.|
 
 #### 4.1.42 InvokeModelRequestStabilityAIStableDiffusionXL {#invoke-model-request-stabilityai-stable-diffusionxl}
 
@@ -519,13 +519,14 @@ The input and output for this service are shown in the table below:
 
 The `InvokeModelGeneric` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
 
-The `InvokeModelGeneric` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModelGeneric` operation to invoke specific moedels. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
+The `InvokeModelGeneric` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModelGeneric` operation to invoke specific models. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
+
 #### 4.2.3 ListKnowledgeBases {#list-knowledge-bases}
 
 The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials` and `ListKnowledgeBasesRequest` as input parameters.

@@ -298,7 +298,7 @@ Each initiative card shows the following information:
     * **Start** – This shows the date when the first actions are taken to start implementation.
     * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
 * ⑦ Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* ⑧ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
 

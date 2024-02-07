@@ -88,7 +88,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-* An implemnentation for invoking the Claude v. 2.1 LLM that generates text
+* An implementation for invoking the Claude v. 2.1 LLM that generates text
 * An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  

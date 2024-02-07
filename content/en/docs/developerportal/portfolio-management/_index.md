@@ -388,8 +388,8 @@ The planning view gives you a clear visual representation of initiatives on a ti
 
 The view contains the following information:
 
-* Initiative Name – Clicking this opens a side pane that shows initiative details.
-* Initiative Status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
+* Initiative name – Clicking this opens a side pane that shows initiative details.
+* Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:

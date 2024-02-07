@@ -101,7 +101,7 @@ If you want to customize the login page, make sure to add the **App events** wid
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Custom login.png" >}}
 
-### 4.4 Configuring Client Information
+### 4.4 Configuring Client Information {#client-info}
 
 Follow the [General OIDC Providers](https://docs.mendix.com/appstore/modules/oidc/#511-general-oidc-providers) section of the ***OIDC SSO*** documentation for configuring client information.
 
@@ -115,12 +115,12 @@ In the developer mode or local system application, add the `makeitnative://oauth
 
 A standard sign out action will end an end-user’s Mendix session, but it will not end their SSO session. To perform a single sign out, also known as Single Logout (SLO), use the nanoflow `ACT_NativeLogout`. This nanoflow redirects end-user to the end session endpoint of the IdP if it is configured. To do this, add a menu item or button to call the nanoflow `ACT_NativeLogout`.
 
-### 4.6 Building Native Mobile App
+### 4.6 Building Native Mobile App {#build-native}
 
 When you are building the native mobile app using Build Native Mobile App option, make sure to follow the steps below:
 
 1. Turn on **Deep Link**
-1. After turning on the **Deep Link**, add the same <appname> from `<appname>://oauth/callback` to the **App Scheme**. For more information, see the Configuring Client Information section above.
+1. After turning on the **Deep Link**, add the same <appname> from `<appname>://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Deeplink.png" max-width=80% class="image-border">}}
 
@@ -144,7 +144,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
         ],
         ```
 
-        {{% alert color="info" %}} Use the same <appname> which you used in the Custom callback URL tab of the configuration and while building the application using Build Native Mobile App. For more information, see the Configuring Client Information and Building Native Mobile App sections above. {{% /alert %}}
+        {{% alert color="info" %}} Use the same <appname> which you used in the Custom callback URL tab of the configuration and while building the application using Build Native Mobile App. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Manifest.png" max-width=80% class="image-border">}}
 
@@ -161,7 +161,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
         }
         ```
 
-        {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the Configuring Client Information section above.
+        {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above.
 
 1. Save the **Manifest** file.
 1. In the Azure AD, click **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
@@ -182,13 +182,13 @@ The following subsections show how to configure IdP for Azure AD and Okta:
     1. For the application that has been deployed using Build Native Mobile App:
     <appname>://oauth/callback
 
-        {{% alert color="info" %}} Use the same <appname> which you used in the Custom callback URL tab of the configuration and while building the application using Build Native Mobile App. For more information, see the Configuring Client Information and Building Native Mobile App sections above. {{% /alert %}}
+        {{% alert color="info" %}} Use the same <appname> which you used in the Custom callback URL tab of the configuration and while building the application using Build Native Mobile App. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) App sections above. {{% alert %}} 
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Okta deployed.png" max-width=80% class="image-border">}}
     
     2. For local testing: `http://<IP_address>/oauth/v2/callback` and `makeitnative://oauth/callback`
 
-        {{% alert color="info" %}} Make sure to add makeitnative://oauth/callback to the Custom callback URL tab of the configuration. For more information, see the Configuring Client Information section above.{{% /alert %}}
+        {{% alert color="info" %}} Make sure to add makeitnative://oauth/callback to the Custom callback URL tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above.{{% /alert %}}
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Okta local.png" max-width=80% class="image-border">}}
 

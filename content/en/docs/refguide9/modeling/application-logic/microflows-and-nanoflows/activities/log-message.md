@@ -44,7 +44,7 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
+| Warning | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |
 | Error | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
 | Critical | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
 

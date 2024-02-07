@@ -40,7 +40,7 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
     | `DT_TENANT` | Yes | The Dynatrace Environment ID | For more information, see the [Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id) Dynatrace documentation. |
     | `DT_PAAS_TOKEN` | Yes | The access token for integrating your Mendix app with Dynatrace | Create this on the Dynatrace environment. For more information, see [Generate an Access Token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token). The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes. |
     | `DT_IS_MANAGED` | No | Set this to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`. | This variable is only needed for custom application metrics ingestion. |
-    | `DT_CLUSTER_ID` | No | You can use this to tag your cluster, process group, or deployment group. |
+    | `DT_CLUSTER_ID` | No | You can use this to tag your cluster, process group, or deployment group. | |
     | `DT_CUSTOM_PROP` | No | This can be used to provide metadata for your process group. | For more information, see [Define Your Own Process Group Metadata](https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata). |
 
 5. Return to the **General** tab and restart your environment.

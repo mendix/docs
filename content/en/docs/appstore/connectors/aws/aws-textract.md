@@ -63,65 +63,65 @@ After setting up the authentication, to analyze a document, implement the [Analy
 
     {{< figure src="/attachments/appstore/connectors/aws-textract/6-completed-access-rules.png" >}}
    
-7. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
-8. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
-9. In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
-10. Configure your page by doing the following steps:
+6. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
+7. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
+8. In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
+9. Configure your page by doing the following steps:
     1. Open the page. 
     2. Double-click on the data grid.
     3. In the **Data source** tab, select the **Document** entity.
     4. Click **OK**.
     5. Confirm that you want to automatically fill the contents of the data grid.
-11. Create a page where your users can enter data for the app by doing the following steps:
+10. Create a page where your users can enter data for the app by doing the following steps:
     1. Right-click the **New** button in the data grid.
     2. Click **Generate page**.
     3. Enter a name for your page, for example, *Document_NewEdit*.
     4. Click **OK**.
-12. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
-13. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
-14. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
-15. Add an input [parameter](/refguide/parameter/) of the Document entity to the ACT_AnalyzeDocument microflow.
-16. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
-17. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
-18. Configure the  **Create object** activity by doing the following steps:
+11. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
+12. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
+13. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
+14. Add an input [parameter](/refguide/parameter/) of the Document entity to the ACT_AnalyzeDocument microflow.
+15. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
+16. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
+17. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
     3. Add another **Create object** activity, and select the **AnalyzeDocFeatureType** enitity.
     4. Set it's Value attribute to **ENUM_FeatureType.FORMS** and the **AnalyzeDocFeatureType_AnalyzeDocumentRequest** association to the **AnalyzeDocumentRequest** object created in step 2.
-19. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
-20. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activities and the microflow end event.
-21. Configure the **AnalyzeDocument** activity by doing the following steps:
+18. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
+19. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activities and the microflow end event.
+20. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
     2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
 
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-properties.png" >}}
     
-23. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
-24. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
-25. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
+21. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
+22. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
+23. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
     1. Double-click the **AnalyzeDocumentResponse_ProcessResults** microflow.
     2. Set the **AnalyzeDocumentResponse** parameter.
     3. Click **OK**.
-26. In the **Toolbox** pane, find the **List operation** activity.
-27. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
-28. Configure the **List operation** activity by doing the following steps:
+24. In the **Toolbox** pane, find the **List operation** activity.
+25. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
+26. Configure the **List operation** activity by doing the following steps:
     1. Double-click the activity.
     2. Select **Head** as the operation.
     3. Select the list that the **AnalyzeDocumentResponse_ProcessResults** microflow returns.
-29. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
+27. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
 
     {{< figure src="/attachments/appstore/connectors/aws-textract/block-item-page.png" >}}
 
-30. In the **Toolbox** pane, find the **Show page** activity.
-31. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
-32. Configure the **Show page** activity by doing the following steps:
+28. In the **Toolbox** pane, find the **Show page** activity.
+29. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
+30. Configure the **Show page** activity by doing the following steps:
     1. Double-click the activity
     2. Select the page with a data view of the Page entity.
     3. Set the **Page** parameter
     4. Click **OK**.
-33. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
-34. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
+31. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
+32. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
 
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-configure-microflow.png" >}}
 
@@ -152,9 +152,9 @@ The domain model is a data model that describes the information in your applicat
 | `FeatureType` | This entity holds information about the type of analysis that should be executed. It contains the attribute `Value` which specifies the feature type value of type enumeration. {{% alert color="info" %}} The current version of the Amazon Textract Connector support the following Feature Types: TABLES, FORMS, QUERIES and SIGNATURES. Adding the Feature Type LAYOUT to the request is currently not supported and can cause errors. {{% /alert %}} |
 | `Warning` | This entity holds information about the warnings that have been sent along with a `GetDocumentAnalysisResponse` or a `GetExpenseAnalysisResponse`. It contains an `ErrorCode` attribute which specifies the error code of the warning. It has a list of `PageNumber` objects associated. |
 | `PageNumber` | This entity holds information about the `PageNumber` to which the associated `Warning` object refers. |
-| `RequestQuery` | This entity holds information about the question which Textract should apply to the document. The `Text` attribtue holds the question. It has a list of `PagesToSearch` objects associated. |
+| `RequestQuery` | This entity holds information about the question which Textract should apply to the document. The `Text` attribute holds the question. It has a list of `PagesToSearch` objects associated. |
 | `PagesToSearch` | This entity holds information about the `StartPage` and `EndPage` to which the associated `Query` will be applied. |
-| `AbstractDocumentAnalysisResponse` | This entity is the generalization of the response entities of the `AnalyzeDocument` and `GetDocumentAnalysis` actions. It contains the part of the responses that are shared between those actions. Most importantly, it has a list of type `DocumentAnalysisBlock` associated. A spcialization of this object should be used as an input parameter of the `AbstractDocumentAnalysisResponse_ProcessResults` microflow. This way, the responses from both the `AnalyzeDocument` and the `GetDocumentAnalysis` actions can be used by as input parameters.|
+| `AbstractDocumentAnalysisResponse` | This entity is the generalization of the response entities of the `AnalyzeDocument` and `GetDocumentAnalysis` actions. It contains the part of the responses that are shared between those actions. Most importantly, it has a list of type `DocumentAnalysisBlock` associated. A specialization of this object should be used as an input parameter of the `AbstractDocumentAnalysisResponse_ProcessResults` microflow. This way, the responses from both the `AnalyzeDocument` and the `GetDocumentAnalysis` actions can be used by as input parameters.|
 | `DocumentAnalysisBlock` | This entity is a specialization of the `Block` entity and holds the blocks returned by `AnalyzeDocument` and the `GetDocumentAnalysis` actions. |
 |`NotificationChannel`|This entity holds information about the Amazon SNS topic ARN that you want Amazon Textract to publish the completion status of the operation to.|
 |`DocumentLocation`|This entity holds information about the S3 location of the document to be processed.|
@@ -212,10 +212,10 @@ This enumeration describes the current block. For more information about the enu
 | `SELECTION_ELEMENT` | SELECTION_ELEMENT |
 | `TABLE` | TABLE |
 | `TITLE` | TITLE |
-| `WORD` | WORD | |
-| `TABLE_TITLE` | TABLE_TITLE | |
-| `TABLE_FOOTER` | TABLE_FOOTER | |
-| `SIGANTURE` | SIGNATURE | |
+| `WORD` | WORD |
+| `TABLE_TITLE` | TABLE_TITLE |
+| `TABLE_FOOTER` | TABLE_FOOTER |
+| `SIGANTURE` | SIGNATURE |
 
 #### 4.2.5 SelectionStatus
 
@@ -261,7 +261,7 @@ You can use the action for use cases such as the following:
 
 * Splitting a two-pager PDF into two one-pagers and using the synchronous `AnalyzeDocument` action on both. 
 * Removing a cover page that does not contain information of interest from a document.
-* When working with a large PDF file, extracting a small subset of pages (for example, only pages 10-12), which contain the information to analyse. 
+* When working with a large PDF file, extracting a small subset of pages (for example, only pages 10-12), which contain the information to analyze. 
 
 #### 4.3.1 AnalyzeDocument {#analyzedocument}
 
@@ -296,7 +296,7 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `AnalyzeExpenseRequest` (Object) | `AnalyzeDocumentResponse` (Object) |
-| `AWS_Region` (Enumeration) |
+| `AWS_Region` (Enumeration) | |
 | `FileDocument` (Object) | |
 
 This activity returns an `AnalyzeExpenseResponse` object with objects from the following entities, as shown in the table below:
@@ -313,7 +313,7 @@ This activity returns an `AnalyzeExpenseResponse` object with objects from the f
 
 #### 4.3.3 StartDocumentAnalysis {#startdocumentanalysis}
 
-The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specifiy the query.
+The `StartDocumentAnalysis` Amazon Textract action allows you to analyze multi-page documents asynchronously and extract information from them. It requires a valid AWS region, a `Credentials` object, a `StartDocumentAnalysisRequest` object, and a `S3DocumentLocation` object. It additionally requires at least one `AsynchronousFeatureType` object. If the Feature Type **QUERIES** is part of the request, it additionally requires a `AsnychronousRequestQuery` object to specify the query.
 
 The current version of the Amazon Textract Connector support the following Feature Types: TABLES, FORMS, QUERIES and SIGNATURES. Adding the Feature Type LAYOUT to the request is currently not supported and can cause errors. 
 

@@ -120,13 +120,15 @@ To add general information to your initiative, follow these steps:
 
 {{% alert color="info" %}}Some fields in this procedure have an {{% icon name="info-circle" %}} icon next to them, for example, the **Link Existing App** field. You can check out the descriptions of these fields by hovering over the {{% icon name="info-circle" %}} icons.{{% /alert %}}
 
-1. In the **Edit Initiative** side pane, select **Tags** for the initiative. You can use tags to classify your initiatives, for example by types. You can select existing tags or create new tags. 
+1. In the **Edit Initiative** side pane, select the status of your inititive, it can be **On Track**, **At Risk** or **Off Track**.
+
+2. Select **Tags** for the initiative. You can use tags to classify your initiatives, for example by types. You can select existing tags or create new tags. 
 
     {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
-2. Enter the **Description** of the initiative.
+3. Enter the **Description** of the initiative.
 
-3. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
+4. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
 
     1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
@@ -134,13 +136,13 @@ To add general information to your initiative, follow these steps:
 
     3. Repeat the two steps above to link more apps if you want to link more than one app.
 
-4. Set the **Owner** for the initiative.
+5. Set the **Owner** for the initiative.
 
-5. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
+6. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
 
     {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-6. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
+7. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
 Now you can proceed to [link Epics to your initiative](#link-epics).
 
@@ -283,19 +285,20 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
-* ① Initiative name
-* ② **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
-  
+* ① Initiative Status – This shows the status of your initiative. Can be either **On Track**, **At Risk** or **Off Track**.
+* ② Initiative name    
+* ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
-    
-* ③ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
-* ④ Department – This shows the department to which the initiative belongs.
-* ⑤ **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
+  
+* ④ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
+* ⑤ Department – This shows the department to which the initiative belongs.
+* ⑥ **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.
     * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
-* ⑥ Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
-* ⑦ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* ⑦ Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 #### 3.2.2 List View {#list-view}
 
@@ -310,7 +313,8 @@ The list contains the following information:
 * **Stage** – This shows the stage the initiative is currently in.
   
     {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-    
+
+* **Status** – This shows the status of your initiative. Can be either **On Track**, **At Risk** or **Off Track**.
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
 * **Go-Live Date** – This shows the date when the initiative is expected to be delivered or implemented.
@@ -385,6 +389,7 @@ The planning view gives you a clear visual representation of initiatives on a ti
 The view contains the following information:
 
 * Initiative Name – Clicking this opens a side pane that shows initiative details.
+* Initiative Status – This shows the status of your initiative. Can be either **On Track**, **At Risk** or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:

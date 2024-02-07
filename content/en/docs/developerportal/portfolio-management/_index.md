@@ -285,7 +285,7 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" >}}
 
-* ① Initiative Status – This shows the status of your initiative. Can be either **On Track**, **At Risk** or **Off Track**.
+* ① Initiative status – This shows the status of your initiative. Can be either **On Track**, **At Risk** or **Off Track**.
 * ② Initiative name    
 * ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 

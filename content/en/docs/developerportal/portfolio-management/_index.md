@@ -304,7 +304,7 @@ Each initiative card shows the following information:
 
 In the list view, initiatives are shown in a list. Clicking the header of a column sequences the initiatives using the values in that column.
 
-{{< figure src="/attachments/developerportal/portfolio-management/list-view.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/list-view.png" class="image-border">}}
 
 The list contains the following information:
 
@@ -384,7 +384,7 @@ The list contains the following information:
 
 The planning view gives you a clear visual representation of initiatives on a timeline to assist you with planning, coordination, and decision-making. Initiatives in this view are sorted by their go-live date. You can see maximum one year back and two years ahead from the current date.
 
-{{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" class="image-border">}}
 
 The view contains the following information:
 
@@ -409,7 +409,7 @@ On the upper-right corner of the pane, there is a **Copy link** ({{% icon name="
 Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" class="image-border" >}}
 
 When you view initiative details, you can only post comments or link epics. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
 
@@ -477,7 +477,7 @@ Alternatively, to delete an archived initiative, you can also click **More Optio
 
 The **Access Management** page allows you to view and manage user access to the portfolio.
 
-{{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/access-management.png" class="image-border" >}}
 
 ### 5.1 Members {#members}
 

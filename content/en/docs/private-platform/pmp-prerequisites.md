@@ -91,7 +91,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Container orchestration | Kubernetes | See [Supported Environments](/developerportal/deploy/private-cloud-supported-environments/) |
 | Database | PostgreSQL | Postgres 11 |
 | Object storage | S3-type Bucket | S3 API compatible |
-| Application management | Mendix for Private Cloud Operator | 2.x+ |
+| Application management | Mendix for Private Cloud Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |
 
 ## 5 Infrastructure Requirements

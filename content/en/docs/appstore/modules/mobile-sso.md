@@ -5,7 +5,7 @@ category: "Modules"
 description: "Describes the configuration and usage of the Mobile SSO module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "Mobile SSO", "IdP", "single sign on", "platform support", "Azure","Okta"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# Linked from https://marketplace.mendix.com/link/component/120371
+# Linked from 
 ---
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ The following diagram gives an overview of architecture of the module:
 
 The Mobile SSO module has the following features:
 
-* Supports native mobile apps
+* Supports [native mobile apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 * Supports the assignment of user roles from your IdP
     
 #### 1.2.2 Limitations
@@ -36,15 +36,15 @@ The Mobile SSO module has the following limitations:
 
 * Mendix sessions in the mobile app do not time out
 * Does not support local sign out
-* Mobile SSO module cannot be used with IdPs that support only the SAML protocol
+* Mobile SSO module cannot be used with IdPs that support only the [SAML](/appstore/modules/saml/) protocol
 * Mendix has not pen-tested the Mobile SSO module yet
 * Does not support Progressive web app (PWA). If you are building a progressive web app, you need to use OIDC SSO module instead.
 * It doesn't support IdPs that lack Custom Callback URLs, such as Google
-* Private use URI Scheme’s as per RFC8252, section 7.1 is not used.
+* Private use URI Scheme’s as per [RFC8252, section 7.1](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1) is not used.
 
 #### 1.2.3 Adherence
 
-This section clarifies to what extend a Mobile Mendix app using Mobile SSO module adheres to best practices for mobile SSO as per RFC 8252:
+This section clarifies to what extend a Mobile Mendix app using Mobile SSO module adheres to best practices for mobile SSO as per [RFC 8252](https://www.rfc-editor.org/rfc/rfc8252.txt):
 
 * The Mobile SSO module uses an embedded browser for sign in and does not utilize an external browser.
 * Native Mendix apps have a back-end counterpart that holds the credentials for client authentication, as shown in the diagram above. This makes the native app a confidential client instead of a public client.
@@ -55,8 +55,8 @@ The Mobile SSO module requires your app to be using Mendix 9.24 or above.
 
 It requires the following Marketplace modules to be included in your app:
 
-* OIDC SSO
-* Native Mobile Resources
+* [OIDC SSO](https://marketplace.mendix.com/link/component/120371)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
 
 ## 3 Installation
 
@@ -64,7 +64,7 @@ This guide provides the step-by-step process of integrating the Mobile Single Si
 
 1. Add the Mobile SSO module to your app.
 2. Add the necessary dependencies listed above from the Marketplace, if they are not already included in your app.
-3. Follow the OIDC SSO documentation to configure the app security settings for the OIDC SSO module. 
+3. Follow the [OIDC SSO](/appstore/modules/oidc/) documentation to configure the app security settings for the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module. 
 
     {{% alert color="info" %}} From an IdP perspective, Mendix mobile apps behave as single page web apps (SPA), so specific instructions for desktop or mobile apps do not apply. {{% /alert %}}
 
@@ -81,8 +81,8 @@ This section shows you how to configure your app to use OIDC for SSO.
 
 ### 4.1 Configuration Settings
 
-Refer to the OIDC SSO documentation for the configuration settings of the OIDC SSO module and ensure the OIDC_Client_Overview page is appropriately set up.
-As the Mobile SSO module supports the OIDC SSO features, follow the OIDC SSO documentation for the configuration.
+Refer to the [OIDC SSO](/appstore/modules/oidc/) documentation for the configuration settings of the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module and ensure the OIDC_Client_Overview page is appropriately set up.
+As the Mobile SSO module supports the OIDC SSO features, follow the [OIDC SSO](/appstore/modules/oidc/) documentation for the configuration.
 
 {{% alert color="warning" %}} Configure the IdP in the web application (web page of OIDC SSO using **OIDC_Client_Overview** ) {{% /alert %}}
 
@@ -103,7 +103,7 @@ If you want to customize the login page, make sure to add the **App events** wid
 
 ### 4.4 Configuring Client Information
 
-Follow the General OIDC Providers section of the ***OIDC SSO*** documentation for configuring client information.
+Follow the [General OIDC Providers](https://docs.mendix.com/appstore/modules/oidc/#511-general-oidc-providers) section of the ***OIDC SSO*** documentation for configuring client information.
 
 {{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, `<appname>://oauth/callback`, where <appname> is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
@@ -130,7 +130,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
 
 #### 4.7.1 Configuring IdP for Azure AD
 
-1. On Microsoft Azure (tenant?), select App Registrations.
+1. On [Microsoft Azure](https://portal.azure.com/#home) (tenant?), select App Registrations.
 1. Click New registration, provide required information, and click Register
 1. Go to the Manifest of the application and add following JSON representations to it:
     1. For the application that has been deployed using **Build Native Mobile App**
@@ -171,7 +171,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
 
 #### 4.7.2 Configuring IdP for Okta
 
-1. Go to the Okta and click Create a new app integration.
+1. Go to the [Okta](https://dev-5541262-admin.okta.com/admin/apps/active) and click Create a new app integration.
 1. Select OIDC-OpenID Connect option for the Sign-in method.
 1. Select Native Application for the Application type and click Next.
 

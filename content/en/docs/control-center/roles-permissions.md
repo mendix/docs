@@ -9,7 +9,7 @@ no_list: true
 
 ## 1 Introduction
 
-On the **Roles & Permissions** page, you can view and manage default app roles and other app roles.
+On the **Roles & Permissions** page, you can view and manage app roles and permissions.
 
 ## 2 Default App Roles
 

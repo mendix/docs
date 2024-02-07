@@ -13,26 +13,32 @@
     unicode-range: U+000-5FF; /* Latin glyphs */
 }
 
-// _alert.scss - Style alert boxes
+// _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
 .alert {
     font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
-    //background: $white; // NK - turns off explicit color set, now it's inherited from bootstrap _alerts.scss
     color: inherit;
-    border-radius: 0;
-
+    padding: 15px;
+    display: flex;
+    align-items: center;
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            & .alert-heading {
-                color: $value;
-            }
-
-            border-style: solid;
-            border-color: $value;
-            border-width: 0 0 0 4px;
-            background-color: fade-out($value, 0.85%); // NK - adds faded gradient to alert backgrounds
+            background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
+            border-radius: 4px; // Round corners
         }
     }
+}
+
+.alert-content { // Format all alert content
+    display: flex; // Nested flexbox container
+    align-items: center; // Align items vertically
+}
+
+.alert-svg { // Format alert icons
+    height:1.4rem;
+    width:1.4rem;
+    flex-shrink: 0; // Prevent icon from shrinking when text wraps
 }
 
 // _code.scss -  Code formatting

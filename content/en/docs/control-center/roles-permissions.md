@@ -21,4 +21,4 @@ To edit a role, click **Edit**.
 
 To delete a role, click **Edit** and then **Delete project role**.
 
-You can not edit or delete the Scrum Master role.
+You can not edit or delete the 'SCRUM Master' role.

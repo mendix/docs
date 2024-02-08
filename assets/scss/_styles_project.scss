@@ -41,6 +41,10 @@
     margin-right:12px;
 }
 
+.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks
+    padding-bottom: 0px;
+}
+
 // _code.scss -  Code formatting
 
 .td-content {

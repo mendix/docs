@@ -16,7 +16,7 @@ The [Email](https://marketplace.mendix.com/link/component/120739) connector allo
 The Email connector includes the following features:
 
 * Configuration of multiple email accounts
-    * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Azure AD accounts
+    * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Entra ID (formerly Azure Active Directory) accounts
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
 * Email templates
@@ -76,11 +76,11 @@ Once you run your Studio Pro app, you can start configuring your email accounts 
 
 When you run your app to use the Email connector module for the first time (and if no earlier data is present), you will see a welcome screen with an account setup wizard. Click **Get Started** and follow the steps to add email accounts. The wizard takes you through three steps to configure either your primary email account or a shared mailbox:
 
-1. Select the authentication method that you want to use. You can choose either **Use Basic Credentials** or **Use Microsoft Azure AD** (OAuth 2.0).
+1. Select the authentication method that you want to use. You can choose either **Use Basic Credentials** or **Use Microsoft Entra ID** (OAuth 2.0).
 2. Select if you want to configure a primary mailbox or a shared mailbox.
 3. Select your desired protocols for sending and receiving emails.
 
-You can add and configure primary and shared mailboxes in the Email Connector using basic authentication or OAuth 2.0 for Microsoft Azure AD accounts. For OAuth authentication, you can use the authorization code flow or the client credentials flow.
+You can add and configure primary and shared mailboxes in the Email Connector using basic authentication or OAuth 2.0 for Microsoft Entra ID (formerly Azure Active Directory) accounts. For OAuth authentication, you can use the authorization code flow or the client credentials flow.
 
 For details on how to configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations for sending and receiving emails.
 
@@ -239,9 +239,9 @@ There is one input parameter:
 
 ### 4.7 Configuring Azure OAuth 2.0 {#create-oauth}
 
-You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
+You can configure your account to authenticate with Microsoft Entra ID (formerly Azure Active Directory) OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
-If no email accounts are configured, you can create a new OAuth configuration from the **Add Email Account** wizard by selecting **Use Microsoft Azure AD**. Otherwise, select **OAuth Configurations** to add, delete, and edit OAuth configurations, as described in the next section.
+If no email accounts are configured, you can create a new OAuth configuration from the **Add Email Account** wizard by selecting **Use Microsoft Entra ID**. Otherwise, select **OAuth Configurations** to add, delete, and edit OAuth configurations, as described in the next section.
 
 #### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
@@ -262,7 +262,7 @@ With Email Connector version 5.2.0 and newer, it is now possible to send emails 
 
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
-To register your app on the Azure portal, follow Microsoft's tutorial [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). As mentioned above in [OAuth Provider Configuration Details](#oauth-config-details), make sure to set the **Redirect URI** as the **Callback URL**.
+To register your app on the Azure portal, follow Microsoft's tutorial [Register an app with Microsoft Entra ID](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). As mentioned above in [OAuth Provider Configuration Details](#oauth-config-details), make sure to set the **Redirect URI** as the **Callback URL**.
 
 This connector contains functionality for sending and receiving emails, so during the OAuth process, the connector will ask for permissions for sending and receiving emails.
 
@@ -272,7 +272,7 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 #### 4.7.3 Settings in the Microsoft Azure Portal (Client Credentials Flow)
 
-To register your app in the Azure portal, follow Microsoft's [Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+To register your app in the Azure portal, follow Microsoft's [Register an app with Microsoft Entra ID](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
 This connector contains functionality for sending and receiving emails, so APIs related to Office 365 Exchange Online need to be given permission along with admin consent.
 

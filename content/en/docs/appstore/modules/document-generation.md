@@ -187,6 +187,8 @@ Rule | Name | Pattern | Rewrite URL
 1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
+{{% alert color="info" %}}Rule 1 is based on the default URL prefix (*p*) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
+
 ## 4 Usage
 
 ### 4.1 Generating Documents for the Current User

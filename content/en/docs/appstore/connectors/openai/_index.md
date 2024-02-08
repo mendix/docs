@@ -18,24 +18,24 @@ Image generations with the DALL-E models is currently only supported from OpenAI
 
 #### 1.1.1 Text Generation {#use-cases-text}
 
-- Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
-- Use OpenAI’s large language models for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
-- Fine-tune the OpenAI models on a specific task or domain, by training it on custom data, to improve its performance. 
-- Integrate more easily with OpenAI’s platform which, by providing text generation models, allows you to build applications with the following features:
-  - Draft documents 
-  - Write computer code 
-  - Answer questions about a knowledge base 
-  - Analyze texts 
-  - Give software a natural language interface 
-  - Tutor in a range of subjects 
-  - Translate languages 
-  - Simulate characters for games 
+* Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
+* Use OpenAI’s large language models for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
+* Fine-tune the OpenAI models on a specific task or domain, by training it on custom data, to improve its performance. 
+* Integrate more easily with OpenAI’s platform which, by providing text generation models, allows you to build applications with the following features:
+    * Draft documents 
+    * Write computer code 
+    * Answer questions about a knowledge base 
+    * Analyze texts 
+    * Give software a natural language interface 
+    * Tutor in a range of subjects 
+    * Translate languages 
+    * Simulate characters for games 
 
 OpenAI provides market-leading large language model capabilities with GPT-4: 
 
-- Advanced reasoning: Follow complex instructions in natural language and solve difficult problems with accuracy. 
-- Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
-- Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
+* Advanced reasoning: Follow complex instructions in natural language and solve difficult problems with accuracy. 
+* Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
+* Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
 
 #### 1.1.2 Image Generation {#use-cases-images}
 
@@ -46,12 +46,12 @@ Generate one or more completely new, original images and art from a text descrip
 Convert strings into vector embeddings for various purposes based on the relatedness of texts. 
 Embeddings are commonly used for:
 
-- Search 
-- Clustering 
-- Recommendations 
-- Anomaly detection 
-- Diversity measurement 
-- Classification 
+* Search 
+* Clustering 
+* Recommendations 
+* Anomaly detection 
+* Diversity measurement 
+* Classification 
 
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
@@ -75,9 +75,9 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 
 ### 1.5 Dependencies {#dependencies}
 
-- Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
-- [Encryption](https://marketplace.mendix.com/link/component/1011) module
-- [Community commons](https://marketplace.mendix.com/link/component/170) module
+* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
+* [Encryption](https://marketplace.mendix.com/link/component/1011) module
+* [Community commons](https://marketplace.mendix.com/link/component/170) module
 
 ## 2 Installation {#installation}
 
@@ -92,8 +92,8 @@ After you install the OpenAI Connector, you can find it in the **App Explorer**,
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_Configurations** to a page that is already part of your navigation. 
 3. Continue to set up your OpenAI configuration at runtime. Depending the type of your configuration, continue with one of the following sections:
-   - [OpenAI Configuration](#openai-configuration)
-   - [Azure OpenAI Configuration](#azure-openai-configuration)
+   * [OpenAI Configuration](#openai-configuration)
+   * [Azure OpenAI Configuration](#azure-openai-configuration)
 
 #### 3.1.1 OpenAI Configuration {#openai-configuration} 
 
@@ -150,8 +150,8 @@ After following the general setup above, you are all set to use the microflows i
 
 These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses. 
 
-- For the OpenAI API configuration, the desired model must be specified for every call.
-- For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
+* For the OpenAI API configuration, the desired model must be specified for every call.
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
@@ -167,8 +167,8 @@ Functionally, the prompt strings can be written in a specific way and can be tai
 
 The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow:
 
-- `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-- `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
+* `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
 
 The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
 
@@ -178,9 +178,9 @@ For technical details, see the [Technical reference](#chat-completions-with-hist
 
 The microflow activity `Call Chat Completions API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Three accompanying microflows are available to construct the input for the microflow:
 
-- `ChatCompletionsRequest_Create` is used to create the request object.
-- `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
-- `ChatCompletionsMessageRequest_Create` is used to create the message objects.
+* `ChatCompletionsRequest_Create` is used to create the request object.
+* `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
+* `ChatCompletionsMessageRequest_Create` is used to create the message objects.
 
 The construction of the request and handling of the response must be implemented in a custom way.
 
@@ -203,7 +203,7 @@ For technical details, see the [Technical reference](#image-generations-single-t
 
 The microflow activity `Call Image Generations API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. One accompanying microflow is available to construct the input for the microflow:
 
-- `ImageGenerationsRequest_Create` is used to create the request object.
+* `ImageGenerationsRequest_Create` is used to create the request object.
 
 The construction of the request and handling of the response must be implemented in a custom way.
 
@@ -215,8 +215,8 @@ In order to implement embeddings into your Mendix application, you can use the m
 
 These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses. 
 
-- For the OpenAI API configuration, the desired model must be specified for every call.
-- For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
+* For the OpenAI API configuration, the desired model must be specified for every call.
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
 #### 3.4.1 `Call Embeddings API (single input)` {#embeddings-single}
 
@@ -226,10 +226,10 @@ For technical details, see the [Technical reference](#embeddings-single-technica
 
 #### 3.4.2 `Call Embeddings API (list input)` {#embeddings-list}
 
-The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can singificantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not have a return value. Two accompanying microflows are available to help construct the input for the main microflow: 
+The microflow activity `Call Embeddings API (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not have a return value. Two accompanying microflows are available to help construct the input for the main microflow: 
 
-- `DataBatch_Create` is used to create the wrapper object for the list of `DataChunk` objects that must be passed as input parameter. 
-- `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string) to the `DataBatch` entity. 
+* `DataBatch_Create` is used to create the wrapper object for the list of `DataChunk` objects that must be passed as input parameter. 
+* `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string) to the `DataBatch` entity. 
 
 For technical details, see the [Technical reference](#embeddings-list-technical) section.
 
@@ -237,8 +237,8 @@ For technical details, see the [Technical reference](#embeddings-list-technical)
 
 The microflow activity `Call Embeddings API (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. Two accompanying microflows are available to help construct the input for the main microflow: 
 
-- `EmbeddingsRequest_Create` is used to create the request object.
-- `EmbeddingsInput_Create` is used to create the input object.
+* `EmbeddingsRequest_Create` is used to create the request object.
+* `EmbeddingsInput_Create` is used to create the input object.
 
 The construction of the request and handling of the response must be implemented in a custom way.
 
@@ -267,7 +267,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `Endpoint`       | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
 | `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion`     | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
-| `ApiKey `        | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-openai-configuration) sections. |
+| `ApiKey`        | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-openai-configuration) sections. |
 | `KeyType`        | This is the type of token entered in the `ApiKey` field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
 
 ##### 4.1.1.2 `ApiKey` {#apikey}
@@ -493,7 +493,7 @@ This is the vector that represents the embedding for the text input that was giv
 
 ##### 4.1.5.6 `EmbeddingValue` {#embeddingvalue}
 
-This entity represents an element in the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model as listed in the [documenatation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
+This entity represents an element in the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model as listed in the [documentation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
 
 | Attribute | Description                                |
 | --------- | ------------------------------------------ |
@@ -530,7 +530,7 @@ This enumeration provides a list of supported API types.
 
 ##### 4.2.1.2 `ENUM_KeyType` {#enum-keytype}
 
-This enumeration provides a list of key types that can be used druing the connection to the APIs of Azure OpenAI. 
+This enumeration provides a list of key types that can be used during the connection to the APIs of Azure OpenAI. 
 
 | Name           | Caption                   |
 | -------------- | ------------------------- |
@@ -753,7 +753,7 @@ Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embe
 
 ##### 4.3.3.2 Call Embeddings API (list input) {#embeddings-list-technical}
 
-Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API call with a [DataBatch](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for the information of what encoding formats are suported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API call with a [DataBatch](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for the information of what encoding formats are supported. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 **Input parameters**
 
@@ -786,7 +786,7 @@ For developers who want to configure the [EmbeddingsRequest](#embeddingsrequest)
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse) | This is the response object containing the generated embedding vectors. |
 
-This option can be used if the default values and behaviour of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings, like usage metrics. 
+This option can be used if the default values and behavior of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings, like usage metrics. 
 The following flows may be used in order to construct and handle the required inputs: `EmbeddingsRequest_Create` and `EmbeddingsInput_Create`.
 
 ## 5 Showcase Application {#showcase-application}
@@ -797,8 +797,14 @@ For more inspiration or guidance on how to use those microflows in your logic, M
 
 ## 6 Read More {#read-more}
 
-- Prompt Engineering
-  - [Prompt Engineering – Open AI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
-  - [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
-  - [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
-  - [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
+* Prompt Engineering
+  * [Prompt Engineering – Open AI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
+  * [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
+  * [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
+  * [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
+* Retrieval Augmented Generation
+    * [OpenAI Cookbook For Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+    * [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
+    * [Vector Database Options Suggested By OpenAI – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
+    * [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
+    * [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

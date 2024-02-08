@@ -13,6 +13,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### February 8, 2024
+
+#### Fixes
+
+* We fixed an issue where the **View** button could not be clicked on the **Curate** page.
+* We addressed potential security vulnerabilities.
+
 ### February 1, 2024
 
 #### Fixes

@@ -134,4 +134,9 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 6. CE9803 – Any failure which is not covered in the above scenarios.
 
     * Try manually synchronizing dependencies once more.
+    * If you are using a VPN then the following hosts must be accessible:
+        * repo.maven.apache.org
+        * plugins.gradle.org
+        * jcenter.bintray.com
+        * plugins-artifacts.gradle.org
     * Reach out to [Mendix Support](https://support.mendix.com/) if the issue persists.

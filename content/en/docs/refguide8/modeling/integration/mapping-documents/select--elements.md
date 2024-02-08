@@ -62,4 +62,5 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 | Collapse all | Collapses the entire tree, so that only the root node remains visible |
 | Check all | Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
 | Uncheck all | Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
+
 {{% /alert %}}

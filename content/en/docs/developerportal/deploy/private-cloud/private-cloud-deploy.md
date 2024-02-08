@@ -722,9 +722,7 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
 
 1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
 
-{{% alert color="info" %}}
-For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
-{{% /alert %}}
+    {{% alert color="info" %}}For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.{{% /alert %}}
 
     1. To update the Mendix Operator configuration, use the following command:
 

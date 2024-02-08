@@ -88,7 +88,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-* An implemnentation for invoking the Claude v. 2.1 LLM that generates text
+* An implementation for invoking the Claude v. 2.1 LLM that generates text
 * An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  
@@ -106,7 +106,7 @@ To invoke a specific model, perform the following steps:
     5. Open the created JSON structure.
     6. Paste the request or response JSON into the created structure.
     7. Click **OK**.
-6. Generate export and import mappings for the request and response JSON structures.
+5. Generate export and import mappings for the request and response JSON structures.
     The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelGenericRequest` object provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping maps the response returned by the [Invoke Generic Model](#invoke-generic-model) operation to your model-specific response objects. To create import or export mappings, perform the following steps:
     1. Right-click the target folder.
     2. Click **Add other** > **Import/Export mapping**.
@@ -115,7 +115,7 @@ To invoke a specific model, perform the following steps:
     5. Select the relevant schema elements.
     6. Click **OK**.
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
-7. Create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation, such as in the following figure (for Claude v. 2.1):
+6. Create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation, such as in the following figure (for Claude v. 2.1):
 
     {{< figure src="/attachments/appstore/connectors/aws-bedrock/microflow.png" >}}
 
@@ -445,9 +445,9 @@ The `InvokeModelRequestAnthropicClaude` entity holds the request parameters need
 | --- | --- |
 | `Prompt` | The `Prompt` attribute holds the prompt send to the Claude model.|
 | `Max_tokens_to_sample` | The `Max_tokens_to_sample` attribute holds an integer specifying the max amount of returned tokens by the Claude model.|
-| `Temperature` | The `Temperature` attribute can be used to tune the degree of randomness in the resposes generated.|
+| `Temperature` | The `Temperature` attribute can be used to tune the degree of randomness in the responses generated.|
 | `Top_k` | The `Top_k` attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
-| `Top_p` | The `Top_p` attribute influences what tokens will be choosen by the model. If set to float less than 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.|
+| `Top_p` | The `Top_p` attribute influences what tokens will be chosen by the model. If set to float less than 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.|
 
 #### 4.1.40 AnthropicClaude_StopSequences {#anthropic-claude-stop-sequence}
 
@@ -464,7 +464,7 @@ The `InvokeModelResponseAnthropicClaude` entity holds the response of the Anthro
 | Attribute | Description |
 | --- | --- |
 | `Completion` | The `Completion` attribute holds the response string of Claude.|
-| `StopReason` | The `StopReason` attribute holds the reason that Claude stoped generating text.|
+| `StopReason` | The `StopReason` attribute holds the reason that Claude stopped generating text.|
 
 #### 4.1.42 InvokeModelRequestStabilityAIStableDiffusionXL {#invoke-model-request-stabilityai-stable-diffusionxl}
 
@@ -519,7 +519,7 @@ The input and output for this service are shown in the table below:
 
 The `InvokeModelGeneric` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
 
-The `InvokeModelGeneric` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModelGeneric` operation to invoke specific moedels. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
+The `InvokeModelGeneric` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModelGeneric` operation to invoke specific models. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
 
 The input and output for this service are shown in the table below:
 
@@ -527,33 +527,11 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
 
-#### 4.2.3 Retrieve {#retrieve}
-
-The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
-
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
-
-#### 4.2.4 RetrieveAndGenerate {#retrieve-and-generate}
-
-The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
-
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
-
-#### 4.2.5 ListKnowledgeBases {#list-knowledge-bases}
+#### 4.2.3 ListKnowledgeBases {#list-knowledge-bases}
 
 The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials` and `ListKnowledgeBasesRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
 The input and output for this service are shown in the table below:
 
@@ -561,11 +539,35 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
 
+#### 4.2.4 Retrieve {#retrieve}
+
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
+
+#### 4.2.5 RetrieveAndGenerate {#retrieve-and-generate}
+
+The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
+
 #### 4.2.6 StartIngestionJob {#start-ingestion-job}
 
 The `StartIngestionJob` activity allows you to begin an ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
 
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
 The input and output for this service are shown in the table below:
 
@@ -577,7 +579,7 @@ The input and output for this service are shown in the table below:
 
 The `GetIngestionJob` activity allows you to retrieve information about a ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 
-To use this activity it is required to setup a knowledge base in your Amazon Bedrock Environment. For more information about knowledge bases, please refer to the [Knowledge Base for Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html).
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).  
 
 The input and output for this service are shown in the table below:
 
@@ -601,7 +603,7 @@ Your AWS organization may not have been granted access to the model which you ar
 
 To solve this issue, follow these steps:
 
-1. In your Amazon Bedrock environment, navigate to [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) in the Oregon region (**us-west-2**).
+1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you would like to work.
 2. If the status of a model is **Available**, enable access to this model for your AWS organization by doing the following steps:
     1. In the top-right corner of the overview, click on **Edit**.
     2. Select the check boxes by the models which you want to access with your credential set.
@@ -626,3 +628,27 @@ To solve this issue, verify the following:
 
 1. Ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) section of your Amazon Bedrock environment.
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
+
+## 6 Appendix
+
+### 6.1 Knowledge Base {#knowledge-base}
+
+In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
+
+For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
+
+#### 6.1.1 Creating a Knowledge Base 
+
+Since setting up knowledge bases is usually a one-time configuration, it is recommended to set this up by using the AWS Console. For more information, see [Create a knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html).
+
+#### 6.1.2 Adding Data from Your App
+
+After a knowledge base has been set up, information from your app can be added in a file to the relevant S3 bucket, and then used during subsequent inquiries. Which information is used and how that information is exported depends on the customer's use case and is up to the Mendix developer to implement. For more information, see [Set up your data for ingestion](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html).
+
+Amazon Bedrock only processes the information that existed during the last sync, so the data source must be synchronized whenever a new file is added to your S3 bucket or the existing files are changed. For more information, see [Sync to ingest your data sources into the knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-ingest.html). 
+
+The sync can be done from the information page of your knowledge base in the Amazon Bedrock Console, or by using the [StartIngestionJob](#start-ingestion-job) action in the Amazon Bedrock Connector.
+
+{{% alert color="info" %}}
+The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
+{{% /alert %}}

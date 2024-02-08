@@ -19,7 +19,7 @@ In addition to auto-instrumented built-in metrics collected by OneAgent, Mendix 
 
 To use Dynatrace and send data to Dynatrace from your Mendix app, you need the following:
 
-* Access to a Saas or Managed Dynatrace environment
+* Access to a Dynatrace SaaS or Dynatrace Managed environment
 * The following information about Dynatrace:
     * The Dynatrace environment URL
     * The [Dynatrace environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id)
@@ -69,7 +69,7 @@ You can set extra dimensions as tags in the Developer Portal. Mendix recommends 
 To set this tag, do the following:
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
-2. Click **Details** on an environment you are monitoring with Dynatrace. 
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on an environment you are monitoring with Dynatrace. 
 3. Switch to the **Tags** tab.
 4. Click **Add** and type in a string to be sent to Dynatrace as a dimension. For more information, see the [**Tags** tab](/developerportal/deploy/environments-details/#tags) documentation in *Environment Details*.
 5. Restart the application.
@@ -78,7 +78,7 @@ Setting this value for your app causes all metrics from this environment of your
 
 ### 4.2 Dynatrace Issues
 
-If you have any issues related to accessing Dynatrace, contact their support at [Dynatrace Support](https://one.dynatrace.com/hc/en-us/requests). You will need a Dynatrace account to request support.
+If you have any issues related to accessing Dynatrace, contact their support at [Dynatrace Support](https://one.dynatrace.com/hc/en-us/requests). You need a Dynatrace account to request their support.
 
 ## 5 Read More
 

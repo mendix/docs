@@ -18,27 +18,27 @@
 .alert {
     font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
     color: inherit;
-    padding: 15px;
+    border-radius: 4px; // Round corners
+    padding: 14px;
     display: flex;
-    align-items: center;
+    align-items: flex-start; // Align items at the top of the flexbox
     @each $color, $value in $theme-colors {
         &-#{$color} {
             background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
             border: 1px solid map-get($theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
-            border-radius: 4px; // Round corners
         }
     }
 }
 
 .alert-content { // Format all alert content
     display: flex; // Nested flexbox container
-    align-items: flex-start; // Align items vertically at the top of the flexbox
 }
 
 .alert-svg { // Format alert icons
-    height:1.4rem;
-    width:1.4rem;
+    height:1.3rem;
+    width:1.3rem;
     flex-shrink: 0; // Prevent icon from shrinking when text wraps
+    margin-right:14px;
 }
 
 // _code.scss -  Code formatting

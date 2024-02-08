@@ -153,7 +153,7 @@ The showcase application uses the Mendix [Database Connector](https://marketplac
 
 The showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or vector databases, make sure to review the links on the **Resources** page of the showcase application or in the [Read Me](#read-more) section.
+If you want to know more about RAG, embeddings, or vector databases, make sure to review the links on the **Resources** page of the showcase application or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 

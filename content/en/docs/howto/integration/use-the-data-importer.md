@@ -8,7 +8,7 @@ description: "Overview of the Data Importer in Studio Pro"
 
 ## 1 Introduction
 
-Data is constantly exchanged between various systems inside and outside an organization. The most commonly used file formats for data exchage are Microsoft Excel and comma-separated value (CSV). These files contain data in a tabular grid of rows, columns, and delimiter-separated values.
+Data is constantly exchanged between various systems inside and outside an organization. The most commonly used file formats for data exchange are Microsoft Excel and comma-separated value (CSV). These files contain data in a tabular grid of rows, columns, and delimiter-separated values.
 
 This how-to teaches you to do the following:
 
@@ -122,11 +122,11 @@ The **Import data from file** custom activity needs an input file to import data
 2. Double-click the button and in the **Events** field under the **On click** drop-down, select **Create object** to create a `System.FileDocument` entity.
 3. Pass the control to a new page (**UploadCustomerData**) where the file is uploaded.
 
-{{< figure src="/attachments/howto/integration/use-the-data-importer/home-page-button.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-data-importer/home-page-button.png" >}}
 
 4. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
 
-{{< figure src="/attachments/howto/integration/use-the-data-importer/data-view-file-manager.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-data-importer/data-view-file-manager.png" >}}
 
 5. Open the **Toolbox** and add a **Call microflow button**. 
 
@@ -148,33 +148,33 @@ The steps below are shown using an Excel input file with its corresponding Data 
 
    {{< figure src="/attachments/howto/integration/use-the-data-importer/custom-activity.png" >}}
 
-To address these errors, double-click the activity and in the **File** field, choose the input file that is passed from the file upload page to this microflow as a parameter.
+    To address these errors, double-click the activity and in the **File** field, choose the input file that is passed from the file upload page to this microflow as a parameter.
 
 3. In the **Data Importer document** field, click **Select** and choose the Data Importer document you want to use.
 
-  {{< figure src="/attachments/howto/integration/use-the-data-importer/choose-data-importer-template.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-data-importer/choose-data-importer-template.png" >}}
 
-After selecting the Data Importer document, the **Return type** and **Variable name** auto-populates. You can change the name of the output variable if you wish.
+    After selecting the Data Importer document, the **Return type** and **Variable name** auto-populates. You can change the name of the output variable if you wish.
 
 4. Click **OK**. The custom activity is configured and all the errors will resolve.
 
-  {{< figure src="/attachments/howto/integration/use-the-data-importer/configured-custom-activity.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-data-importer/configured-custom-activity.png" >}}
 
 5. Add an **Aggregate list** activity and configure it to count the size of the 'CustomerList', which is returned from the previous activity.
 
-  {{< figure src="/attachments/howto/integration/use-the-data-importer/aggregate-list.png" >}}
+   {{< figure src="/attachments/howto/integration/use-the-data-importer/aggregate-list.png" >}}
 
 6. Configure a **Show message** activity. You can use a template message and a parameter, such as in the example below.
 
-  {{< figure src="/attachments/howto/integration/use-the-data-importer/show-message-with-list-size.png" >}}
+   {{< figure src="/attachments/howto/integration/use-the-data-importer/show-message-with-list-size.png" >}}
 
 7. Set '$CustomerList' as the return value from the **Import data from file** activity to be used later. Your completed microflow should look like the image below.
 
-  {{< figure src="/attachments/howto/integration/use-the-data-importer/example-microflow.png" >}}
+   {{< figure src="/attachments/howto/integration/use-the-data-importer/example-microflow.png" >}}
 
 8. Deploy your app locally. Browse and upload an input file, which is similar to the file that was used as a template while creating Data Importer document.
 9. Check that you see a message that states **Imported xx rows from input file into a list of NPEs**.
 
-  {{< figure src="/attachments/howto/integration/use-the-data-importer/local-app-run.png" >}}
+   {{< figure src="/attachments/howto/integration/use-the-data-importer/local-app-run.png" >}}
 
 You have successfully configured and used the Data Importer extension. You can extend this as per your requirements. For example, you can convert the list of NPEs into persistable entities by providing a message definition, or use each loop construct and individually create and commit entities into your database.

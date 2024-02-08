@@ -174,13 +174,7 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 6 Default App Roles
-
-The **Default App Roles** tab shows the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** and **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/general/team-server/) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) information.
-
-{{< figure src="/attachments/control-center/apps/roles.jpg" >}}
-
-## 7 Filtering Apps in the Table {#filter-apps}
+## 6 Filtering Apps in the Table {#filter-apps}
 
 On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
@@ -196,7 +190,7 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 {{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
 
-## 8 Viewing App Details {#app-details}
+## 7 Viewing App Details {#app-details}
 
 If you click the name of an app in the overview table, a page opens and shows the details of this app.
 
@@ -215,7 +209,7 @@ If the app is not a licensed app, you can see the action menu ({{% icon name="th
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 {{% /alert %}} 
 
-## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
+## 8 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
 You can delete or deactivate a single app, or deactive (or activate) mutilple apps in one go.
 
@@ -233,7 +227,7 @@ The consequences of deactivating and deleting an app are as below:
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.
 {{% /alert %}}
 
-## 10 Exporting the Information About Apps to an Excel File {#export-to-excel}
+## 9 Exporting the Information About Apps to an Excel File {#export-to-excel}
 
 On each tab with an overview of apps, you can export information of apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 

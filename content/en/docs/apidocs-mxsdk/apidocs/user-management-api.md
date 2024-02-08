@@ -60,10 +60,8 @@ The following error codes can be returned on authentication and authorization er
 
 | Error code | Description |
 | --- | --- |
-| UNAUTHORIZED
-401 | Authentication failed. Credentials provided with the request are either invalid or incomplete. |
-| FORBIDDEN
-403 | Authentication succeeded, but user is not authorized to execute this request. |
+| UNAUTHORIZED 401 | Authentication failed. Credentials provided with the request are either invalid or incomplete. |
+| FORBIDDEN 403 | Authentication succeeded, but user is not authorized to execute this request. |
 
 #### 3.1.2 General Error Codes
 
@@ -71,21 +69,16 @@ The following error codes can be returned on authentication and authorization er
 
 | Error code | Description |
 | --- | --- |
-| PARAMETER_MISSING
-400 | One of the required parameters for the request is missing or does not contain a value. |
-| BAD_PARAMETER
-400 | One of the parameters included with the request has an illegal value. |
-| RESOURCE_NOT_FOUND
-404 | The requested resource cannot be found on the server. |
-| RESOURCE_ALREADY_EXISTS
-409 | The resource cannot be created on the server because it already exists. |
+| PARAMETER_MISSING 400 | One of the required parameters for the request is missing or does not contain a value. |
+| BAD_PARAMETER 400 | One of the parameters included with the request has an illegal value. |
+| RESOURCE_NOT_FOUND 404 | The requested resource cannot be found on the server. |
+| RESOURCE_ALREADY_EXISTS 409 | The resource cannot be created on the server because it already exists. |
 
 ##### 3.1.2.2 Server Errors (5xx)
 
 | Error code | Description |
 | --- | --- |
-| SERVICE_UNAVAILABLE
-503 | Service is unavailable. Please try again later. |
+| SERVICE_UNAVAILABLE 503 | Service is unavailable. Please try again later. |
 
 ## 4 API Calls
 

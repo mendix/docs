@@ -208,10 +208,10 @@ The Register Deep Link nanoflow action will create a new Mendix object, split a 
 | password                                                    | secret                                                                                       |
 | username                                                    | john.doe                                                                                     |
 | origin                                                      | https://www.example.com:123                                                                  |
-| **Dynamically based on the number of slashes in the paths** |
+| **Dynamically based on the number of slashes in the paths** | |
 | path0                                                       | forum                                                                                        |
 | path1                                                       | questions                                                                                    |
-| **Dynamically based on the number of query keys**           |
+| **Dynamically based on the number of query keys**           | |
 | tag                                                         | networking                                                                                   |
 | order                                                       | newest                                                                                       |
 

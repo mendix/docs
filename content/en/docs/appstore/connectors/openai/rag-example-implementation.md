@@ -4,15 +4,15 @@ url: /appstore/connectors/openai-connector/rag-example-implementation/
 category: "Open AI"
 linktitle: "RAG Example Implementation"
 weight: 5
-description: "describes the RAG example implementation in the OpenAI showcase application"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application"]
+description: "Describes the retrieval augmented generation (RAG) example implementation in the OpenAI showcase application"
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application", "Azure OpenAI"]
 ---
 
 ## 1 Introduction
 
 Retrieval augmented generation (RAG) is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text-generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant responses will be based on this knowledge base only. 
 
-## 2 Technical Flow {#rag-high-level}
+## 2 High-level Flow {#rag-high-level}
 
 The complete technical flow can be split up into the following three steps at a high level:
 
@@ -96,9 +96,9 @@ You can use the values in the steps below for experimental purposes:
       
       3. For **Source**, select *Custom*, and provide the IP CIDR range in the field as follows:
       
-         *  If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
-         *  If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
-         *  If you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0*.
+         * If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
+         * If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
+         * If you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0*.
       
          {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
 
@@ -151,9 +151,9 @@ If no action is taken, resources in AWS stay around indefinitely. Make sure to t
 
 The showcase application uses the Mendix [Database Connector](https://marketplace.mendix.com/link/component/2888) to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [Database Connector](/appstore/connectors/database-connector/).
 
-The showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on Github](https://github.com/pgvector/pgvector).
+The showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or vector databases, make sure to review the links on the **Resources** page of the showcase application.
+If you want to know more about RAG, embeddings, or vector databases, make sure to review the links on the **Resources** page of the showcase application or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 
@@ -171,7 +171,7 @@ Make sure that you meet the following prerequisites:
 2. Have a new local database that you can connect to. Use the tool that you choose in step 1, for example pgAdmin, to do the following:
    1. Register your new PostgreSQL server. The port is typically 5432. The credentials needed here are the ones you entered during the installation of PostgreSQL. You will need this later.
    2. Create a database, for example, myVectorDatabase. You will need this later.
-3. Have the pgvector extension installed. Depending on your hardware and operating system, the steps to install the pgvector extension can be different. Follow the [installation instructions](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on Github carefully and make sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
+3. Have the pgvector extension installed. Depending on your hardware and operating system, the steps to install the pgvector extension can be different. Follow the [installation instructions](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on GitHub carefully and make sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
 
 In this case, the configuration of the database connection details in the showcase application is similar to what was described in the [Configuring the Database Connection Details in the Showcase Application](#configure-database-connection) section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
@@ -184,15 +184,15 @@ If you would like to build your own RAG setup, feel free to learn from the showc
 * For RAG, you need a storage space for embeddings outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the showcase application uses the Mendix database connector.
 
 * The showcase application relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries or statements you will have to do probably cover at least the following:
-  * Include the vector extension if applicable.
-  
-  * Create tables to store the embeddings (create table).
-  
-  * Add new embeddings to tables (insert).
-  
-  * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
-  
-  * Remove individual records (delete) or tables (drop table).
+    * Include the vector extension if applicable.
+    
+    * Create tables to store the embeddings (create table).
+    
+    * Add new embeddings to tables (insert).
+    
+    * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
+    
+    * Remove individual records (delete) or tables (drop table).
     
 
 {{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the showcase application.{{% /alert %}}
@@ -220,3 +220,11 @@ When this occurs, make sure that you use the PostgreSQL version 11 or above. If 
 If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, the cause could be that some company network prohibits connections to AWS servers. 
 
 When this occurs, make sure you are connected to a network that does allow these connections, for example, with a phone hotspot or from your home network.
+
+## 8 Read More {#read-more}
+
+- [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+- [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
+- [Vector Database Options – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
+- [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
+- [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

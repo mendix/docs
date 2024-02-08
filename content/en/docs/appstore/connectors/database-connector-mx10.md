@@ -19,7 +19,7 @@ The External Database Connector is supported for [Studio Pro 10.6](/releasenotes
 
 Use this module if you need to connect to databases and select data to use in your app. This connector allows you to directly test connections and queries during configuration in Studio Pro (design time). 
 
-If you need to connect to other database types, check out the [Database Connector](/appstore/connectors/database-connector/). Keep in mind that design time support is not available for the older verison of the connector.
+If you need to connect to other database types, check out the [Database Connector](/appstore/connectors/database-connector/). Keep in mind that design time support is not available for the older version of the connector.
 
 ### 1.2 Features {#features}
 
@@ -68,7 +68,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 1. Right-click the module you would like to add the connection to and click **Add other** > **External database connection**. This opens the **Database Connection** wizard:
 
-{{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
+    {{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
 
 2. Select the database to which you would like to connect and enter the required information.
 
@@ -85,7 +85,7 @@ To query the database, do the following:
 1. Enter a query **Name** so you can access the same query later.
 2. Enter your **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * from customers` selects all rows in the **Customers** table:
 
-{{< figure src="/attachments/appstore/connectors/external-database-connector/select-query-columns.png" >}}
+    {{< figure src="/attachments/appstore/connectors/external-database-connector/select-query-columns.png" >}}
    
 3. Click **Run Query** to move to the **Response data** tab and view the queried data.
 
@@ -125,14 +125,14 @@ Use the Query External Database activity to call the database in a microflow. Do
 
 1. Create a new microflow and drag the **Query external database** activity into it.
 
-{{< figure src="/attachments/appstore/connectors/external-database-connector/query-external-database.png" >}}
+    {{< figure src="/attachments/appstore/connectors/external-database-connector/query-external-database.png" >}}
 
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
 5. In the Output field, select if you want to **Use return value**.
 
-{{< figure src="/attachments/appstore/connectors/external-database-connector/return-type.png" >}}
+    {{< figure src="/attachments/appstore/connectors/external-database-connector/return-type.png" >}}
  
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 

@@ -402,6 +402,7 @@ spec:
 # omitted lines for brevity
 # ...    
 ```
+
 #### 6.3.1 Resource Definition via Operator Configuration Manifest
 
 For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose. 
@@ -544,7 +545,6 @@ The `terminationGracePeriodSeconds` setting is available in the Mendix for Priva
 
 The `resources` following section shows an example configuration of the `resources` section from the example application deployment, above. Note that the configuration is just for reference purpose.
 
-
 ```yaml
 resources:
   limits:
@@ -580,7 +580,6 @@ For instance, in the example above, we are requesting and limiting memory usage 
 {{% alert color="warning" %}}
 Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
 {{% /alert %}}
-
 
 ### 6.4 Customize Runtime Metrics {#customize-runtime-metrics}
 

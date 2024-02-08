@@ -138,10 +138,17 @@ You can also configure your **Buzz Notifications**:
 
 ## 5 Developer Settings {#dev-settings}
 
-On the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can manage the API keys and personal access tokens (PAT).
+On the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can manage your two-factor authentication, API keys, and personal access tokens (PAT).
 
-### 5.1 API Keys {#profile-api-keys}
+### 5.1 Two-Factor Authentication{#profile-2fa}
 
+In this section, you can view the status of your two-factor authentication (2FA). You can see if your 2FA is configured with SMS or an authenticator app, and you can also deactivate your 2FA.
+
+{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" class="image-border" max-width=80%  >}}
+
+For more information, see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+
+### 5.2 API Keys {#profile-api-keys}
 In the [API Keys](https://sprintr.home.mendix.com/link/personalapikeys) section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
 To get a Mendix API key, click **Configure API Keys** > **Create New API Key** and follow the instructions.
@@ -163,8 +170,7 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-### 5.2 Personal Access Tokens {#pat}
-
+### 5.3 Personal Access Tokens {#pat}
 On the **Personal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can view, create, and manage your PATs.
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This section explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
@@ -185,8 +191,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-#### 5.2.1 Creating a PAT {#create-pat}
-
+#### 5.3.1 Creating a PAT {#create-pat}
 In the **Peronsal Access Tokens** section, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
@@ -204,8 +209,7 @@ After you click **Create**, a pop-up window shows your secret token, which is th
 Store the secret token in a safe location, because it will not be displayed again!
 {{% /alert %}}
 
-#### 5.2.2 Managing a PAT
-
+#### 5.3.2 Managing a PAT
 To see the scopes of a PAT you have created, click **View Details**.
 
 {{< figure src="/attachments/community-tools/mendix-profile/manage-pat.png" >}}
@@ -216,8 +220,7 @@ You cannot see the secret token of a PAT here. You can only see that the PAT exi
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
 
-#### 5.2.3 Using a PAT
-
+#### 5.3.3 Using a PAT
 Use of a PAT depends on the API you are accessing.
 
 {{% alert color="warning" %}}

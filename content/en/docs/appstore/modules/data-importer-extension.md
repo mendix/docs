@@ -1,14 +1,16 @@
 ---
 title: "Data Importer"
-url: /appstore/modules/data-importer-extension/
-weight: 21
+url: /appstore/modules/data-importer/
+category: "Modules"
 description: "Overview of the Data Importer in Studio Pro"
 tags: ["studio pro", "data importer", "excel importer"]
+aliases:
+    -  /appstore/modules/data-importer-extension/
 ---
 
 ## 1 Introduction
 
-The Data Importer allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. You can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
+The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. You can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
 
 {{% alert color="info" %}}
 The Data Importer is available in Studio Pro 10.6 and above.
@@ -122,12 +124,12 @@ Use the previously created Data Importer document to import data from your input
 2. Double-click the activity and in the **File** field and select an input file (either Excel or CSV).
 3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. Choose an appropriate Data Importer document based on the input file.
 
-  {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
+   {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
 
 4. After selecting the Data Importer document, the **Return type** and **Variable name** will autopopulate. You can also change the name of the output variable.
 5. Click **OK**.
 
-The custom activity is configrued and you can import data from input files.
+The custom activity is configured and you can import data from input files.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/example-microflow.png" >}}
 

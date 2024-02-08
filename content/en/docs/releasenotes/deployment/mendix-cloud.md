@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
-### February 01, 2024
+### February 08, 2024
 
 #### Bug Fixes
 

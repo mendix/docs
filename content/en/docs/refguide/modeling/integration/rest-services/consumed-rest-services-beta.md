@@ -29,9 +29,9 @@ You can use this Consumed REST service document to do the following:
 ### 1.2 Limitations
 
 * This feature supports the following HTTP request methods:
-  * `GET`
-  * `POST`
-  * `PATCH`
+    * `GET`
+    * `POST`
+    * `PATCH`
 
   {{% alert color="info" %}}`PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above.{{% /alert %}} 
 
@@ -65,12 +65,12 @@ Create a `GET`, `POST`, or `PATCH` request to send data to your server by doing 
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
 3. Add an endpoint and click **Send**.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/general-section.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/general-section.png" >}}
 
 4. Click **Configuration & authentication**.
 5. Add a **Base URL** to use the same URL across all requests in this consumed REST service document.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/configuration-screen.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/configuration-screen.png" >}}
 
 6. Select an authentication method. For more information, see [Authentication methods](#authentication).
 7. Click **Send**. 
@@ -84,7 +84,7 @@ You can configure basic authentication to use for all requests in your document.
 1. Click **Configuration & authentication**.
 2. Under **Authentication method**, click the drop-down and select **Basic authentication**. 
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/authentication-setup.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/authentication-setup.png" >}}
 
 3. Select a constant or create a new one for your username and password. To create a new constant, follow these steps:
    1. Next to **Username** or **Password**, click **Select** > **New**.
@@ -102,7 +102,7 @@ To add a parameter, follow these steps:
 1. Open the **Parameters** tab and click **Add**.
 2. Name your parameter, add a test value, and click **OK**.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/parameter.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/parameter.png" >}}
 
 3. Click **Send** to test the parameters. 
 
@@ -120,11 +120,11 @@ You can add a header for any HTTP request you have specified in your document. T
 
 1. Open the **Headers** tab and click **New**.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header-example.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header-example.png" >}}
 
 2. In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by selecting **Custom** and adding in the value. 
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/accept-header.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/accept-header.png" >}}
 
 3. Click **OK**. To test the header, click **Send**.  
 
@@ -134,13 +134,13 @@ You can add a header for any HTTP request you have specified in your document. T
 
 1. Click the **Body** tab and add your JSON string.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" >}}
 
 2. To validate the input, navigate to the **General** field and click **Send**.
 
 3. If you want to use the newly-created JSON string as an entity in your domain model, click **Use JSON Snippet**. The body string can be viewed in the **Body structure** tab.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-body-structure.png" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-body-structure.png" >}}
 
 4. The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. Click **Show** to view the entity in your domain model.
 

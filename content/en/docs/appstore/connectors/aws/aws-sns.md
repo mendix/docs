@@ -289,7 +289,7 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (Enumeration)` | `PublishBatchResponse` |
-| `PublishRequest (Object)` | 
+| `PublishRequest (Object)` | | 
 | `Credentials (Object)` | |
 
 #### 4.3.5 Subscribe {#subscribe}

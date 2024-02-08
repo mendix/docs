@@ -185,15 +185,16 @@ If you would like to build your own RAG setup, feel free to learn from the showc
 
 * The showcase application relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries or statements you will have to do probably cover at least the following:
     * Include the vector extension if applicable.
-  
+    
     * Create tables to store the embeddings (create table).
-  
+    
     * Add new embeddings to tables (insert).
-  
+    
     * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
-  
+    
     * Remove individual records (delete) or tables (drop table).
     
+
 {{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the showcase application.{{% /alert %}}
 
 ## 7 Troubleshooting {#rag-troubleshooting}
@@ -222,9 +223,8 @@ When this occurs, make sure you are connected to a network that does allow these
 
 ## 8 Read More {#read-more}
 
-- Retrieval Augmented Generation
-  - [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
-  - [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
-  - [Vector Database Options – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
-  - [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
-  - [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)
+- [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+- [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
+- [Vector Database Options – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
+- [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)
+- [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

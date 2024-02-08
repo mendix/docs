@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### February 8
+
+#### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now assign a status to your initiatives.
+
 ### February 1 
 
 #### New Features

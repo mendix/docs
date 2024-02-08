@@ -32,7 +32,7 @@
 
 .alert-content { // Format all alert content
     display: flex; // Nested flexbox container
-    align-items: center; // Align items vertically
+    align-items: flex-start; // Align items vertically at the top of the flexbox
 }
 
 .alert-svg { // Format alert icons

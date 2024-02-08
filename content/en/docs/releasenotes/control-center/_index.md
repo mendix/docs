@@ -13,7 +13,15 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
-### January 22, 2023
+### February 8, 2024
+
+#### Improvements
+* We added the [Roles & Permissions](/control-center/roles-and-permissions/) page to Control Center.
+
+#### Deprecations
+* We removed the **Default App Roles** tab in the [Apps](/control-center/apps/) page in Control Center.
+
+### January 22, 2024
 
 #### New Features
 

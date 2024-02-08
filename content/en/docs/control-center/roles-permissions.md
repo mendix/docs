@@ -16,7 +16,9 @@ On the **Roles & Permissions** page, you can view and manage app roles and permi
 Default app roles are the default [team roles](https://docs.mendix.com/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company.
 
 To create a new role, click **Create Project Role**.
-To edit a role, click **Edit**
-To delete a role, click **Edit** and then **Delete project role**
+
+To edit a role, click **Edit**.
+
+To delete a role, click **Edit** and then **Delete project role**.
 
 You can not edit or delete the Scrum Master role.

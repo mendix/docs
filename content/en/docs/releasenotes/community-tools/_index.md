@@ -11,7 +11,7 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 
 ## 2024
 
-### February 7, 2024
+### February 8, 2024
 
 #### New Features
 

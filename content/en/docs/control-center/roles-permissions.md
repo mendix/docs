@@ -19,8 +19,8 @@ Default app roles are the default [team roles](https://docs.mendix.com/developer
 
 To create a new role, click **Create Project Role**.
 
-To edit a role, click **Edit**.
+To edit a role, click **Edit Role**.
 
-To delete a role, click **Edit** and then **Delete project role**.
+To delete a role, click **Edit Role** and then **Delete Project Role**.
 
 You can not edit or delete the 'SCRUM Master' role.

@@ -206,7 +206,7 @@ When the end-user launches an app in the browser, it triggers the following flow
 11. The Mendix Client displays the page to the end-user.
 12. The Mendix Client processes input from the end-user and repeats the steps above to show the correct page.
 
-> For the React client step 7 to 12 are different. Here Studio Pro will export JavaScript files containing React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders is then bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates _chunks_ that dynamicly loaded when needed by the React client for optimal performance.
+> For the React client step 7 to 12 are different. Here Studio Pro will export JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are then bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates _chunks_ that are dynamicly loaded when needed by the React client for optimal performance.
 
 #### 4.1.2 Location of Mendix Client Resources
 

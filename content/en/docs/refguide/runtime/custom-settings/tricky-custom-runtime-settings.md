@@ -119,11 +119,12 @@ In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (
 The settings mentioned below are supported since Mendix 10.6.4 and 10.8.0.
 
 In some deployments, database connections can be closed by the network infrastructure, for example some firewalls may close connections when they have been inactive for a long time.
-This may cause the Mendix runtime to raise an error when it attempts to use the database connection that has now been closed.
-We recommend avoiding such deployments, but if one is used anyway, the consequences can be mitigated by letting the connection pool validate connections.
+This may cause the Mendix Runtime to raise an error when it attempts to use the database connection that has now been closed.
+Mendix recommends avoiding such deployments but, if one is used, the consequences can be mitigated by letting the connection pool validate connections.
 This validation is performed using the `java.sql.Connection.isValid` method, which the JDBC driver will implement in a vendor specific way.
 
 There are a number of custom runtime settings to enable this validation:
+
 * `ConnectionPoolingTestOnBorrow`: Validate connections before returning them to the application.
 * `ConnectionPoolingTestOnCreate`: Validate connections after creating them.
 * `ConnectionPoolingTestOnReturn`: Validate connections after they are returned to the pool.

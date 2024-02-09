@@ -114,11 +114,11 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
 
-### 4.2 Validating database connections
+### 4.2 Validating Database Connections
 
-The settings mentioned below are supported since Mendix 10.6.4 and 10.8.0.
+The settings mentioned below are supported in Mendix version 10.6 in patch versions 10.6.4 and above, and in Mendix version 10.8.0 and above.
 
-In some deployments, database connections can be closed by the network infrastructure, for example some firewalls may close connections when they have been inactive for a long time.
+In some deployments, database connections can be closed by the network infrastructure, for example by a firewall when they have been inactive for a long time.
 This may cause the Mendix Runtime to raise an error when it attempts to use the database connection that has now been closed.
 Mendix recommends avoiding such deployments but, if one is used, the consequences can be mitigated by letting the connection pool validate connections.
 This validation is performed using the `java.sql.Connection.isValid` method, which the JDBC driver will implement in a vendor specific way.

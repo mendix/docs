@@ -292,6 +292,23 @@ div.date-format{
     border-style: solid;
 }
 
+// _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
+
+.pageinfo {
+    font-weight: $font-weight-medium;
+    color: inherit;
+    border-radius: 4px;
+    margin: 2rem;
+    padding: 14px;
+    padding-bottom: 0px;
+    @each $color, $value in $theme-colors {
+        &-#{$color} {
+            background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
+        }
+    }
+}
+
 // Foldable sidebar menu
 nav.foldable-nav {
 

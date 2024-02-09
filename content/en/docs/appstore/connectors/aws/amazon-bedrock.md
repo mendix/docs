@@ -639,7 +639,11 @@ For more information about knowledge bases, see [Knowledge Base](https://docs.aw
 
 #### 6.1.1 Creating a Knowledge Base 
 
-Since setting up knowledge bases is usually a one-time configuration, it is recommended to set this up by using the AWS Console. For more information, see [Create a knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html).
+To get the best results, you should consider whether to use one of the chunking strategies available on AWS and/or pre-process the data before building the knowledge base. Chunking is the practice of breaking large chunks of data into smaller segments. On the one hand, chunking the data allows the embedding algorithm to process the given data in a chunk-wise manner, thus increasing the training efficiency of the vector database. On the other hand, chunking can even introduce a structure that helps the model to understand which data belongs to the same context. To decide which way to go, ask yourself: what is a natural split for my data? If there is none, then the default chunking strategy should be fine; if there is, then let the model know. 
+
+In the example of a chatbot giving restaurant recommendations, the knowledge base would need to be set up with a list of restaurant reviews. Using the default chunking into 300 tokens might result in chunks containing reviews for different restaurants, whereas better results are more likely if each chunk corresponds to reviews for one restaurant. The reason for this is that it is less likely that the model will then associate the review with the wrong restaurant. This can be achieved by pre-processing the data so that there is one file per restaurant and using the 'no chunking' option when setting up the knowledge base.
+
+Setting up knowledge bases is usually a one-time configuration, which can be easily done with the AWS Console. A guide to the set up and a list of the available chunking strategies can be found here [Create a knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html). 
 
 #### 6.1.2 Adding Data from Your App
 

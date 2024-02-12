@@ -10,13 +10,13 @@ tags: ["studio pro"]
 
 Message definitions define the structure of the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
 
-A message definition can be used for both JSON and XML, and it can be used for both single objects and lists of objects.
+A message definition can be used for both JSON and XML and can be used for both single objects and lists of objects.
 
 ## 2 Adding a Message Definitions Document
 
 Message Definitions is a type of document you can add to modules in your app.
 
-To add a message definitions document do the following:
+To add a message definitions document, do the following:
 
 1. Right-click your module or a folder within a module.
 2. Choose **Add other > Message definitions**.
@@ -63,7 +63,7 @@ The name of the message definition.
 
 #### 4.1.2 Entity
 
-An entity in your app domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
+An entity in your app domain model (or models) on which to base the message definition. Using this message definition, you can export and import individual objects and lists of objects of this entity type.
 
 #### 4.1.3 Structure
 
@@ -72,8 +72,8 @@ The structure tree shows the attributes and some of the associations of the enti
 | Column | Description | Can edit? | Notes |
 | --- | --- | :---: | --- |
 | Checkbox | Check if the attribute or association is part of the message. | y | |
-| Name | The name of the item in the Domain Model. | n | |
-| Type | The type of the item in the Domain Model. | n | |
+| Name | The name of the item in the domain model. | n | |
+| Type | The type of the item in the domain model. | n | |
 | Occurrence | How many times this item can occur for each parent item. | n | |
 | External Name | The name of the XML node or the JSON property. | y | By default, the name of the attribute or (for associations) entity.<br />For a `0..*` occurrence, a letter `s` is added. |
 | External Single Item Name | The XML node that represents a single item. | y | Only relevant for XML when the occurrence is `0..*`<br /> By default, the entity name. |

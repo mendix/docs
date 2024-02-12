@@ -64,7 +64,7 @@ Your pipeline can include the following steps:
 
 Once you have added some steps, you have several customization options:
 
-* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to edit the pipeline name, duplicate the pipeline, or delete it.
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to edit the pipeline name.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/more-options.png" alt="" class="image-border" max-width=70% >}}
 
@@ -132,9 +132,9 @@ For each run, you can view the following information:
 
 The search and filter options allow you to review specific run types. You can do the following:
 
-* Search by run ID, branch, or pipeline name
-* Filter by trigger: All triggers, on commit, scheduled, manual
-* Filter by status: All statuses, succeeded, in progress, or failed
+* Search by keywords, such as run ID, branch, or pipeline name
+* Filter by trigger: All triggers, scheduled, or Teamserver push (Git)
+* Filter by status: All statuses, pending, succeeded, in progress, or failed
 
 To see the results of a particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
@@ -162,8 +162,8 @@ For each design, you can view the following information:
 * Pipeline Name
 * Trigger
 * Branch
-* Last Modified by
-* Last Modified Date/Time
+* Last modified by
+* Last modified date/time
 * Status
 
 Click **Details** ({{% icon name="paper-clipboard" %}}) on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in [Designing or Editing a Pipeline](#design-edit-pipeline), above.
@@ -176,11 +176,13 @@ Click **Delete** ({{% icon name="trash-can" %}}) to delete a pipeline design.
 
 The **Settings** tab lets you configure pipeline run users.
 
-Click **Setup** to launch the **Setup** dialog box. Then, enter your email, personal access token (PAT), and API key. You must set this up before you can run your first pipeline, but the settings configured here will apply to all future pipeline runs across all of your apps.
+Click **Setup** to launch the **Setup** dialog box. Then, enter your email, API key, and personal access token (PAT). You must set this up before you can run your first pipeline, but the settings configured here will apply to all future pipeline runs across all of your apps.
 
 The PAT scope is `mx:modelrepository:write`, `mx:webhook:read`, `mx:webhook:write`, and `mx:deployment:write`. Without the right scope, the pipeline runs may fail.
 
-For security reasons, the API key and PAT values are not displayed once they are saved; if you click **Configure** ({{% icon name="cog" %}}) on the **Settings** tab, you will see empty **API Key** and **Personal Access Token** fields. Any new values you save into these fields will override the existing values.
+For security reasons, the API key and PAT values are not displayed once they are saved; you can see a {{% icon name="checkmark-circle" %}} icon if the values are saved and a {{% icon name="delete-circle" %}} icon if no values are saved.
+
+To change your API key and PAT, click **Delete** and then **Setup** to relaunch the **Setup** dialog box and provide new values as described above.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/user-setup.png" alt="" width=60% class="image-border" >}}
 

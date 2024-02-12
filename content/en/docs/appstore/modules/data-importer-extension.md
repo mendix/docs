@@ -124,12 +124,12 @@ Use the previously created Data Importer document to import data from your input
 2. Double-click the activity and in the **File** field and select an input file (either Excel or CSV).
 3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. Choose an appropriate Data Importer document based on the input file.
 
-  {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
+   {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
 
 4. After selecting the Data Importer document, the **Return type** and **Variable name** will autopopulate. You can also change the name of the output variable.
 5. Click **OK**.
 
-The custom activity is configrued and you can import data from input files.
+The custom activity is configured and you can import data from input files.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/example-microflow.png" >}}
 

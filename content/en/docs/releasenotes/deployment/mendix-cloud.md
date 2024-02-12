@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
-### February 01, 2024
+### February 08, 2024
 
 #### Bug Fixes
 
@@ -307,17 +307,17 @@ We added the ability to enable and disable additional services at an app and env
 
 We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=4793020705>
+Current Certificate Details: [https://crt.sh/?id=4793020705](https://crt.sh/?id=4793020705)
 
-New Certificate Details: <https://crt.sh/?id=6940447552>
+New Certificate Details: [https://crt.sh/?id=6940447552](https://crt.sh/?id=6940447552)
 
 **Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
 
 We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=4793020687>
+Current Certificate Details: [https://crt.sh/?id=4793020687](https://crt.sh/?id=4793020687)
 
-New Certificate Details: <https://crt.sh/?id=6940402070>
+New Certificate Details: [https://crt.sh/?id=6940402070](https://crt.sh/?id=6940402070)
 
 ### June 15, 2022
 
@@ -434,9 +434,9 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 We will gradually replace the TLS certificate for `*.mendix.com` in January 2022. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=2349479044>
+Current Certificate Details: [https://crt.sh/?id=2349479044](https://crt.sh/?id=2349479044)
 
-New Certificate Details: <https://crt.sh/?id=5832398831>
+New Certificate Details: [https://crt.sh/?id=5832398831](https://crt.sh/?id=5832398831)
 
 ### November 18, 2021
 

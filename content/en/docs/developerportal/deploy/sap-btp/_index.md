@@ -798,9 +798,9 @@ Starting from Mendix version 9.7, the support for the `statsd` is removed.
 
 1. In the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab), in the **Custom Environment Variables** section, add a new variable with the following settings:
 
-* **Supported** - select **Yes**
-* **Name** - select **NON_MENDIX_PUBLIC_CLOUD**
-* **Value** - select **true**
+    * **Supported** - select **Yes**
+    * **Name** - select **NON_MENDIX_PUBLIC_CLOUD**
+    * **Value** - select **true**
 
 2. Restart your application.
 

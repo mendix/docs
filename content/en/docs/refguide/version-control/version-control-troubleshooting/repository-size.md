@@ -14,6 +14,7 @@ In case you are experiencing performance issues when cloning or pulling your app
 ## 2 Causes of a Large Repository 
 
 There are several reasons why your repository may be large. The most common reasons for a Mendix app are the following:
+
 * Version control systems tend to store the differences between revisions instead of full copies of each revision. Mendix apps are stored in an *.mpr* binary file, and version control systems are traditionally not well-equipped to deal with large binary files. This means that Git stores a larger difference between revisions than it would for text files. This results in rapid repository growth.
 * Large files committed to version control, such as *.mp4*, *.pdf*, or *.zip* files.
 * Frequent reimporting of modules. Regular module updates do not cause issues, but a module-import heavy workflow can cause a large repository size.
@@ -36,7 +37,7 @@ The *.mpr* storage format will be changed in H1 2024 to reduce the rapid reposit
 
 ### 4.2 Mitigating Large Repository Size
 
-In cases where a repository has already grown to a significant size, we recommend you to consider shrinking the repository by removing parts of the history. 
+In cases where a repository has already grown to a significant size, Mendix recommends you to consider shrinking the repository by removing parts of the history. 
 
 Mendix has developed a git-fixer – a cleanup tool to assist you in shrinking your repository. For more information, see the [Cleanup Tool](#cleanup-tool) section below.
 
@@ -58,6 +59,7 @@ The cleanup is executed on your local machine on a local version of the reposito
 
 {{% alert color="info" %}}
 When planning the cleanup, note the following:
+
 * Changes made by other users after you made your local copy are lost after pushing the cleaned repository to the Git server.
 * All users need to get fresh clones from the server after the cleanup is completed. This means all changes that have not been committed and pushed to the server before you download the repository you will use for cleaning, will be lost.
 * The process can take up several hours, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.

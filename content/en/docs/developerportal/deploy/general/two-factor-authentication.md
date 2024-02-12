@@ -84,15 +84,23 @@ Once you have 2FA configured to use an authenticator app, you can use it to comp
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" class="image-border" alt="" >}}
 
-## 3 Changing Your Authentication Method or Phone Number
+## 3 Changing Your Authentication Method{#change-2fa-method}
 
-After you have set up your 2FA, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) can deactivate the current authentication method. After Support has deactivated your authentication method, you can then set up a different authentication method.
+To change your 2FA method, phone number, or authenticator app, you need to deactivate your 2FA and then set it up again with your new details.
 
-This also applies if you want to change your phone number or authenticator app.
+To deactivate your 2FA, go to **User Settings** > [Developer Settings](/community-tools/mendix-profile/#dev-settings). Then, in the **Two-Factor Authentication (2FA)** section, click **Deactivate**.
 
-For example, if you want to change your authentication method from SMS to an authenticator app, submit a [Mendix Support request](https://support.mendix.com//requests/new) and ask for your two-factor authentication to be reset.
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/deactivate.png" alt="" class="image-border" alt="" >}}
 
-Once your 2FA is deactivated, you can reactivate it by triggering any action that requires 2FA. Then, set up your new authentication method using the setup steps outlined on this page.
+In the dialog box that opens, confirm that you want to deactivate your 2FA. This sends a verification email to your registered email address; click the **Deactivate 2FA** link in the email to complete the deactivation process. The email link is valid for several minutes; if it expires before you use it, you can repeat this process to get a new link.
+
+{{% alert color="info" %}}Your Company Security Contact (or Company Admin) will receive notification emails when you initiate and complete the deactivation process.{{% /alert %}}
+
+Once your 2FA is deactivated, your Developer Settings will show the following message:
+
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/not-configured.png" max-width=70% alt="" class="image-border" alt="" >}}
+
+You can reactivate your 2FA by triggering any action that requires 2FA. Then, set up your new authentication method using the setup steps outlined on this page.
 
 ## 4 Read More
 

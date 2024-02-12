@@ -2,7 +2,7 @@
 title: "Pipelines (Beta)"
 url: /developerportal/deploy/pipelines/
 weight: 33
-description: "Describes how to set up pipelines in the Developer Portal"
+description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Developer Portal"
 tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 ---
@@ -21,32 +21,31 @@ To view the **Pipelines** page, you must have a role with cloud access. For deta
 
 ## 2 Designing or Editing a Pipeline{#design-edit-pipeline}
 
-### 2.1 Getting Started
+### 2.1 Designing a New Pipeline
 
-To design a new pipeline, click **Design a Pipeline**. That launches the **Design a Pipeline** dialog box. You can choose to start from a template pipeline or an empty pipeline.
+To design a new pipeline, click **Design a Pipeline** from any tab. That launches the **Design a Pipeline** dialog box. You can choose to start from a template pipeline or an empty pipeline.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/design-pipeline.png" width=60% alt="" >}}
-
-
-The template pipeline is pre-populated with the following basic steps:
+{{% alert color="info" %}}
+If you start from the template, you can still add, remove, and configure its steps to match your needs; it is just intended to help you get started quickly. The template pipeline is pre-populated with the following basic steps:
 
 1. Start Pipeline
 1. Checkout
 1. Build
 1. Publish
 1. Deploy
-
-{{% alert color="info" %}}
-If you start from the template, you can still add, remove, and configure steps to match your needs; it is just intended to help you get started quickly.
 {{% /alert %}}
 
-Give your pipeline a name, and click **Next** to go to your new pipeline's **Details** page.
+Give your pipeline a name, and click **Next** to go to your new pipeline design's **Details** page.
 
-### 2.2 Customizing Your Pipeline
+### 2.2 Editing a Pipeline
 
-From your pipeline's **Details** page, you can add, remove, and configure the steps in your pipeline.
+From your pipeline design's **Details** page, you can add, remove, and configure the steps in your pipeline. You can also click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the pipeline name to edit the name.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
 
 #### 2.2.1 Pipeline Steps{#pipeline-steps}
+
+To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step** ({{% icon name="add" %}}).
 
 Your pipeline can include the following steps:
 
@@ -58,36 +57,17 @@ Your pipeline can include the following steps:
 * Create Backup – Create and store a backup of an existing environment before deploying a new deployment package.
 * Deploy – Deploy to a selected environment.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
+Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 
-#### 2.2.2 Pipeline Customization
+##### 2.2.1.1 Variables
 
-Once you have added some steps, you have several customization options:
+Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Publish, Publish before Deploy, and Deploy before Build.
 
-* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to edit the pipeline name.
+These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. These variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/more-options.png" alt="" class="image-border" max-width=70% >}}
+### 2.3 Saving a Pipeline
 
-* Expand a step to configure it, delete it, or view its outputs.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/expanded-build.png" alt="" class="image-border" max-width=70% >}}
-
-* Add another step by clicking **Add Step** ({{% icon name="add" %}}), which launches the **Pipeline Steps** dialog box.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-steps.png" alt="" class="image-border" >}}
-
-The steps are sorted into categories based on their function:
-
-* Build
-* Release
-
-{{% alert color="info" %}}
-Some steps depend on the outputs of other steps. Therefore, you must add Start Pipeline before Checkout, Checkout before Publish, Publish before Deploy, and Deploy before Build. These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. These variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
-{{% /alert %}}
-
-### 2.3 Saving Your Pipeline
-
-When you are finished customizing your pipeline, click **Save**. Or, to immediately start using it, click **Save & Activate**.
+When you are finished editing your pipeline design, click **Save**. Or, to immediately start using the pipeline, click **Save & Activate**.
 
 {{% alert color="info" %}}
 The first time you activate a pipeline, you will be prompted to add a personal access token and API key in the [**Settings** tab](#settings-tab) if you have not already set these up. This is required for a successful pipeline run.
@@ -95,7 +75,7 @@ The first time you activate a pipeline, you will be prompted to add a personal a
 
 ### 2.4 Running Your Pipeline
 
-Once activated, your pipeline will automatically run according to the trigger defined in the [Start Pipeline step](#pipeline-steps).
+Once activated, your pipeline runs automatically according to the trigger defined in the [Start Pipeline step](#pipeline-steps).
 
 Before you run your first pipeline, configure your user settings by adding your API key and PAT in the [**Settings** tab](#settings-tab). This allows your existing permissions to be used to run the pipeline.
 
@@ -103,7 +83,9 @@ Before you run your first pipeline, configure your user settings by adding your 
 Your pipeline runs will fail if you do not have these user settings configured.
 {{% /alert %}}
 
-For example, if the trigger in your Start Pipeline step is set to **Teamserver push (Git)**, then the pipeline will run whenever someone pushes to the specified branch. However, if that user has not configured their user settings yet, then the pipeline run will fail. Or, if the user has configured their user settings but does not have sufficient [permissions](/developerportal/deploy/node-permissions/) for all the steps in the pipeline, then the pipeline will stop running once it reaches the step where the permissions are lacking.
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/user-setup.png" alt="" width=60% class="image-border" >}}
+
+For example, if the trigger in your Start Pipeline step is set to **Teamserver push (Git)**, then the pipeline runs whenever someone pushes to the specified branch. However, if that user has not configured their user settings yet, then the pipeline run will fail. Or, if the user has configured their user settings but does not have sufficient [permissions](/developerportal/deploy/node-permissions/) for all the steps in the pipeline, then the pipeline will stop running once it reaches the step where the permissions are lacking.
 
 If the pipeline fails, the user who triggered the pipeline is notified via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, as configured in the user's [notification settings](/community-tools/mendix-profile/#notifications).
 
@@ -136,17 +118,19 @@ The search and filter options allow you to review specific run types. You can do
 * Filter by trigger: All triggers, scheduled, or Teamserver push (Git)
 * Filter by status: All statuses, pending, succeeded, in progress, or failed
 
+#### 3.1.1 Run Results
+
 To see the results of a particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
 
 From this page, you can view an overview of the run and expand each executed step to see its log. You can also download the logs.
 
-If the pipeline failed, you will see that status indicated alongside the reason for failure.
+The upper-left card indicates the run's status. If the run failed, this card also identifies the error that caused it to fail.
 
 There are two types of errors:
 
-* Step-level errors occur when a step in the pipeline fails, either because the step itself failed or because the user had insufficient rights to run a step. For example, if you have the [permissions](/developerportal/deploy/node-permissions/) to back up a production environment but not to deploy to production, then the pipeline will run until it reaches the step where your permissions are insufficient.
+* Step-level errors occur when a step in the pipeline fails, either because the step itself failed or because the user had insufficient rights to run a step. For example, if you do not have the [permissions](/developerportal/deploy/node-permissions/) to deploy to the target environment, then the pipeline will fail at the Deploy step (or earlier, if there is also an earlier step where your permissions are insufficient).
 * System-level errors occur when the pipeline does not run. This happens if there are internal system errors or if user settings have not been configured. 
 
 You can click **See more details** to view more information about a run failure. 
@@ -174,17 +158,23 @@ Click **Delete** ({{% icon name="trash-can" %}}) to delete a pipeline design.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" class="image-border" >}}
 
-The **Settings** tab lets you configure pipeline run users.
+The **Settings** tab lets you configure user settings. You must configure your API key and personal access token (PAT) before you can activate or run your first pipeline, but you only need to set these up once. The settings configured here apply to all future pipeline runs across all of your apps.
 
-Click **Setup** to launch the **Setup** dialog box. Then, enter your email, API key, and personal access token (PAT). You must set this up before you can run your first pipeline, but the settings configured here will apply to all future pipeline runs across all of your apps.
+#### 3.3.1 Configuring User Settings
 
-The PAT scope is `mx:modelrepository:write`, `mx:webhook:read`, `mx:webhook:write`, and `mx:deployment:write`. Without the right scope, the pipeline runs may fail.
+Click **Setup** to launch the **Setup** dialog box. Then, enter your email, API key, and PAT.
 
-For security reasons, the API key and PAT values are not displayed once they are saved; you can see a {{% icon name="checkmark-circle" %}} icon if the values are saved and a {{% icon name="remove-circle" %}} icon if no values are saved.
+Your PAT should have the following scope:
+
+* Deployment Mendix Cloud – `mx:deployment:write`
+* Model Repository – `mx:modelrepository:write`
+* Webhook Portal – `mx:webhook:read` and `mx:webhook:write`
+
+Without the right scope, the pipeline runs may fail.
+
+For security reasons, the API key and PAT values are not displayed once they are saved; instead, you see a {{% icon name="checkmark-circle" %}} icon in the overview table if the values are saved and a {{% icon name="remove-circle" %}} icon if no values are saved.
 
 To change your API key and PAT, click **Delete** and then **Setup** to relaunch the **Setup** dialog box and provide new values as described above.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/user-setup.png" alt="" width=60% class="image-border" >}}
 
 ## 4 Read More
 

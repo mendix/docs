@@ -63,7 +63,7 @@ We expect that many questions and issues can be solved by reading the [Mendix Do
 
 If you have questions about [Mendix Academy](https://academy.mendix.com/link/home) these will normally be handled by the Academy team.
 
-You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). Your email will be answered within 3 business days.
+You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). Mendix Academy may take 3-5 business days to reply to your inquiry.
 
 If you have passed a Mendix certification, Mendix Academy will need 3-5 business days to prepare your certificate. You do not need to raise a support ticket as it will only be forwarded to the Academy team.
 

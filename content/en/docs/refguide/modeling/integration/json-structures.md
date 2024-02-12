@@ -36,18 +36,18 @@ Special unicode characters are encoded according to JSON standards. For example,
 
 Shows a tree structure with a schema that is parsed from the JSON snippet. The following columns are available:
 
-* **Name** – this shows the name of a JSON element. If the JSON element does not have a name, it shows the element type within parentheses: (Object), (Array), (Wrapper) or (Value).
+* **Name** – this shows the name of a JSON element. If the JSON element does not have a name, it shows the element type within parentheses: (Object), (Array), (Wrapper), or (Value).
 * **Value** – this shows the original value of the element in the JSON snippet. It is used to make it easier to find back the original element in the snippet. It is not used in the rest of the model.
-* **Primitive Type** – shows the type of element after parsing.
-* **Occurrence** – shows the occurrence of the element. Typically JSON arrays have multiple occurrence (0..*) and JSON objects single occurrence (1).
-* **Custom name** – this column is editable. Often the name JSON objects or arrays can not be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use Mapping documents based on the JSON schema. You will see this name in mapping elements, and it is used when you want to use "Map Automatically" to generate domain model entities and associations.
+* **Primitive Type** – this shows the type of element after parsing.
+* **Occurrence** – this shows the occurrence of the element. Typically, JSON arrays have multiple occurrence (0..*) and JSON objects have a single occurrence (1).
+* **Custom name** – this column is editable. Often, the name JSON objects or arrays can not be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use mapping documents based on the JSON schema. You will see this name in mapping elements. It is used when you want to use **Map Automatically** to generate domain model entities and associations.
 
 {{% alert color="info" %}}
-When you modify the JSON snippet, you need to refresh the structure by clicking the 'Refresh' button. If you have not done so, an error will appear:
+When you modify the JSON snippet, you need to refresh the structure by clicking **Refresh**. If you have not done so, an error will appear:
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/19399140.png" >}}
 
-You cannot press "OK" without updating the structure.
+You cannot click **OK** without updating the structure.
 {{% /alert %}}
 
 ### 1.4 Documentation

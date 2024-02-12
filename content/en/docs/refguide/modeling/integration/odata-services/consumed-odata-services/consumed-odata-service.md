@@ -82,7 +82,7 @@ Custom authentication can be done with the microflow where the authentication va
 
 #### 2.5.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}
 
-Publishers can set up [Custom](/refguide/published-odata-services/#authentication-microflow) authentication using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
+Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
 
 Consumers of an OData service that is set up with Mendix SSO authentication can use the **CreateAccessTokenAuthorizationHeaderList**.
 

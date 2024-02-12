@@ -47,7 +47,7 @@ Please contact [Mendix Support](https://support.mendix.com/) or your Customer Su
 
 ### 1.3 Extended Support {#extended-support}
 
-Extended Support may be offered in cases where the support of a major Mendix version is discontinued in line with its [end of Support date](/releasenotes/studio-pro/lts-mts/#end). Extended Support incurs and additional cost and covers support within one year following the GA release of the latest Mendix major version. 
+Extended Support may be offered in cases where the support of a major Mendix version is discontinued in line with its [end of Support date](/releasenotes/studio-pro/lts-mts/#end). Extended Support incurs an additional cost and covers support within one year following the GA release of the latest Mendix major version. 
 
 There are 6-month and 12-month packages available for Extended Support.
 
@@ -63,9 +63,9 @@ We expect that many questions and issues can be solved by reading the [Mendix Do
 
 If you have questions about [Mendix Academy](https://academy.mendix.com/link/home) these will normally be handled by the Academy team.
 
-You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). If you raise a support ticket, this will be forwarded to the Academy team.
+You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). Your email will be answered within 3 business days.
 
-Mendix Academy will respond as quickly as they can, but cannot guarantee to meet the same SLA as Mendix Support.
+If you have passed a Mendix certification, Mendix Academy will need 3-5 business days to prepare your certificate. You do not need to raise a support ticket as it will only be forwarded to the Academy team.
 
 ## 3 Feature Requests
 

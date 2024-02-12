@@ -6,10 +6,11 @@ tags: ["control center", "mendix admin", "role", "permissions", "fallback", "res
 weight: 35
 no_list: false 
 description_list: true
+cascade:
+    - space: "Control Center Guide"
+    - mendix_version: 10
 aliases:
     - /developerportal/control-center
-    - /developerportal/company-app-roles/users.html
-    - /developerportal/company-app-roles/users
 ---
 
 ## 1 Introduction

@@ -5,21 +5,21 @@ weight: 70
 tags: ["workflow", "workflows", "call workflow", "Studio Pro"]
 ---
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 This page describes the **Call workflow** activity you can use in your [workflow](/refguide/workflow-elements/). Looking for information on the **Call workflow** activity for [microflows](/refguide/workflow-activities/) instead? See [Call workflow](/refguide/workflow-call/).
 {{% /alert %}}
 
 ## 1 Introduction
 
-To improve the maintainability of a workflow, you can split a larger process into smaller pieces and avoid having repeated tasks. You can use the **Call workflow** activity for this purpose and use another workflow as a *sub-workflow* for the current one. 
+To improve the maintainability of a workflow, you can split a larger process into smaller pieces and avoid having repeated tasks. You can use the **Call workflow** activity for this purpose and use another workflow as a sub-workflow for the current one. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-example.jpg" alt="Call Workflow Example" >}}
 
-You can drag the **Call workflow** activity into the flow and either select an existing workflow or create a new one. The *called* workflow is then used as a *sub-workflow* for the current, *calling* workflow.   
+You can drag the **Call workflow** activity into the flow, and then either select an existing workflow or create a new one. The called workflow is then used as a sub-workflow for the current calling workflow.   
 
 The calling workflow waits for the called workflow to finish before continuing with the rest of the activities. 
 
-It is also possible to nest **Call Workflow** activities, i.e. to use **Call workflow** in the called workflow.
+It is also possible to nest **Call Workflow** activities, that is, to use **Call workflow** in the called workflow.
 
 ## 2 Properties
 

@@ -250,7 +250,7 @@ The reference selector and input reference set selector are input widgets that c
 Objects selectable for the association are determined by the SelectorSource, and can be queried from the database or
 retrieved from a microflow (only for the reference selector).
 
-Both widgets have a `selectPageSettings` that determines the page used to select the linked object(s). The reference selector
+Both widgets have a `selectPageSettings` that determines the page used to select the linked object (or objects). The reference selector
 optionally also has a `goToPageSettings` that determines the page used to display detailed information about the associated
 object.
 

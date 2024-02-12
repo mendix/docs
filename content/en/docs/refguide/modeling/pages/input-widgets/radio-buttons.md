@@ -12,11 +12,11 @@ tags: ["studio pro"]
 
 **Radio Buttons** are used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *Boolean* or *Enumeration*.
 
-When the page is displayed to the end-user, all the possible values are listed, with a filled-in circle next to the selected value and an empty circle next to the unselected value(s). Only one value can be chosen – choosing another value deselects the current value. For example:
+When the page is displayed to the end-user, all the possible values are listed, with a filled-in circle next to the selected value and an empty circle next to the unselected value (or values). Only one value can be chosen – choosing another value deselects the current value. For example:
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/radio-buttons/radio-buttons-displayed.png" >}}
 
-Radio buttons must be placed in a [data container](/refguide/data-widgets/) and display an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the radio button widget, between square brackets, and colored blue.
+Radio buttons must be placed in a [data container](/refguide/data-widgets/) and display an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the radio button widget, between square brackets, and colored blue.
 
 For example, the following image contains two sets of radio buttons.  The first allows the end-user to see, and set, the value of an enumeration identifying the preferred time to contact this person (**PreferredContact**). The second allows the end-user to see, and set, a Boolean indicating whether this is a **Personal** contact.
 

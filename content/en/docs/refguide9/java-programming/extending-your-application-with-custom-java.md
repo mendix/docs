@@ -146,7 +146,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 6 Deploying and Seeing the Results
 
-1. Click the play button (**Run Locally**) to deploy the application locally and click **View App** to open the application in your browser.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to deploy the application locally and click **View App** to open the application in your browser.
 2. Select **Add asset** from the top right.
 3. In the new window input *Asset to Reverse* in the **Name** field.
 4. Select **Save**.

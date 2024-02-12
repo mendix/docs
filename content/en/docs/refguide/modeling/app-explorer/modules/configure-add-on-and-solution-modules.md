@@ -39,7 +39,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
 
     {{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
 
-You can see that documents/elements that are marked as usable have an eye icon. This means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
+You can see that documents/elements that are marked as usable have an eye icon ({{% icon name="view" %}}). This means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
 ### 2.2 Supported Documents {#supported-documents}
 
@@ -58,6 +58,10 @@ Below is the list of documents and elements that can be mark as **Usable**:
 * Regular expressions
 * Image collections
 * Custom widgets
+
+{{% alert color="info" %}}
+Pages cannot be made **Usable**. Instead, a navigation microflow that opens the page can be made **Usable**.
+{{% /alert %}}
 
 ## 3 Exporting Add-on Modules and Solutions {#export}
 

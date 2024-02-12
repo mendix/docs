@@ -12,7 +12,7 @@ A **Check box** widget is used to display and, optionally, allow the end-user to
 
 {{% alert color="info" %}}In native mobile applications, the checkbox widget can be rendered as either a switch (default) or a checkbox. If checkbox, it displays a tick if the value is true and remains empty if it is false. If switch, it displays a track with right-positioned thumb button if the value is true and a left-positioned thumb button if it is false.{{% /alert %}}
 
-A checkbox must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the checkbox widget, between square brackets, and colored blue.
+A checkbox must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the checkbox widget, between square brackets, and colored blue.
 
 For example, this checkbox allows you to see, and set, whether someone is subscribed to your newsletter.
 

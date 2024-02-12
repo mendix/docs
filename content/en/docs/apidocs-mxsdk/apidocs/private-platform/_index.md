@@ -8,6 +8,10 @@ description_list: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This document is about [Private Mendix Platform](/private-mendix-platform/) API. This API is only available on instances of Private Mendix Platform. For [Private Cloud](/developerportal/deploy/private-cloud/) API, see [Mendix for Private Cloud Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) and [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The documents in this category present an overview of the [Private Mendix Platform](/private-mendix-platform/) API documentation, such as Group, User, Marketplace, and Project.

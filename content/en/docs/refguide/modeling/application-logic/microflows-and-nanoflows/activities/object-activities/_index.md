@@ -18,7 +18,7 @@ The following are the object activities you can use in your microflow or nanoflo
 
 * [Cast object](/refguide/cast-object/) – changes the type of object from a generalized object type to the specialized object type
 * [Change object](/refguide/change-object/) – changes the members of an object
-* [Commit objects(s)](/refguide/committing-objects/) – either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back
+* [Commit object(s)](/refguide/committing-objects/) – either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back
 * [Create object](/refguide/create-object/) – creates an object
 * [Delete object(s)](/refguide/deleting-objects/) – activity deletes one or more objects
 * [Retrieve](/refguide/retrieve/) – gets one or more objects of an entity

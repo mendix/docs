@@ -11,7 +11,7 @@ aliases:
 
 While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`. 
 
-Deeplinks are always called or triggered within the schema that they define. For example, using `makeitnative://` instead of `http://` in the mobile browser would force the Make It Native app to open. 
+Deep links are always called or triggered within the schema that they define. For example, using `makeitnative://` instead of `http://` in the mobile browser would force the Make It Native app to open. 
 
 A URL is constructed of these parts (everything after **path** is defined as a detail):
 
@@ -21,7 +21,7 @@ You can also register the handling of a normal weblink beginning with `http://` 
 
 When an app is installed it registers the `schema` and optionally the `host` so its operating system knows which application should be opened when the URL is clicked. If you tap the link, the application will be opened whether it is running, running in the background, or closed.
 
-Deeplinks registrations persist after the app is closed. Specifically, deeplinks are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
+Deep link registrations persist after the app is closed. Specifically, deep links are registered in the app manifest, which for Android production apps is read when the app is installed and for iOS apps is registered in the OS *info.plist* (which also makes the OS aware).
 
 ### 1.1 Testing With the Make It Native App
 
@@ -99,10 +99,10 @@ The Register Deep Link nanoflow action will create a new Mendix object, split a 
 | password                                                    | secret                                                                                       |
 | username                                                    | john.doe                                                                                     |
 | origin                                                      | https://www.example.com:123                                                                  |
-| **Dynamically based on the number of slashes in the paths** |
+| **Dynamically based on the number of slashes in the paths** | |
 | path0                                                       | forum                                                                                        |
 | path1                                                       | questions                                                                                    |
-| **Dynamically based on the number of query keys**           |
+| **Dynamically based on the number of query keys**           | |
 | tag                                                         | networking                                                                                   |
 | order                                                       | newest                                                                                       |
 

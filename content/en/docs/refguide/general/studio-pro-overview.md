@@ -42,7 +42,7 @@ For more information on menus, see [Menus](/refguide/menus/).
 
 ### 2.2 Run and View App {#run-and-view}
 
-You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
+You can deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
 
 {{< figure src="/attachments/refguide/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
 
@@ -161,9 +161,9 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
-| <kbd>Delete</kbd> | Deletes the currently selected item(s). |
+| <kbd>Delete</kbd> | Deletes the currently selected item (or items). |
 | <kbd>↑</kbd> / <kbd>↓</kbd> | Selects previous/next item. |
-| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item(s) up/down. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item (or items) up/down. |
 
 ### 7.2 Domain Model Editor Shortcut Keys
 

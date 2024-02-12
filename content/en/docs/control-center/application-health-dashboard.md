@@ -46,7 +46,7 @@ The information on the dashboard is retrieved when you open the page. If you lea
 
 You can also manually refresh your alerts using the **Refresh Alerts** button on the upper-right corner of the page. After clicking this button, the alerts of all the environments in your landscape are refreshed. After the refreshing is completed, you need to wait one minute before you can refresh it again.
 
-You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click the ellipsis button (**...**) on the upper-right of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
+You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
 
 ## 3 Environment Details
 
@@ -58,7 +58,7 @@ The **Environment Details** page also lists the alert information of this specif
 
 * **Alert Type** – This shows the name of the alert type.
 * **Status** – This shows the status of the specific alert, indicated by an icon:
-    * A critical alert is indicated by a circle icon with a cross in the middle.
-    * A warning alert is indicated by a triangle icon with an exclamation mark in the middle.
+    * A critical alert is indicated by a {{% icon name="remove-circle" %}} icon.
+    * A warning alert is indicated by a {{% icon name="alert-triangle" %}} icon.
     * An OK alert is indicated by the word **OK**.
 * **Timestamp** – This is the date and time this alert occurred.

@@ -27,6 +27,8 @@ Backups are created and retained as follows:
 
 Each backup is automatically deleted when its retention period is over, but you can always manually delete it before then. By default, backups are retained for exactly the specified period; for example, a weekly backup created at 3:18 on December 3 expires at 3:18 on March 3. If you want to keep a backup for longer than scheduled, you can download the backup to your computer.
 
+{{% alert color="info" %}}Backups are only created when the app is deployed and running.{{% /alert %}}
+
 ### 2.1 Nightly Backups{#nightly-backups}
 
 The **Start Time** of nightly backups in UTC is shown below. The **Local Time** indicates the time at the regional data center; this may vary if **Summer Time** or other adjustments are in place.
@@ -40,11 +42,14 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin      | Frankfurt          | 23:00            | 00:00      | 3 hours            |
 | Frankfurt   | Dublin             | 00:00            | 01:00      | 3 hours            |
+| Jakarta     | Singapore          | 00:00            | 07:00      | 1 hour             |
 | London      | Frankfurt          | 23:00            | 23:00      | 2 hours            |
 | Mumbai      | Hyderabad          | 19:30            | 01:00      | 1 hour             |
 | N. Virginia | N. California      | 05:00            | 00:00      | 4 hours            |
 | Oregon      | Ohio               | 07:00            | 00:00      | 1 hour             |
+| Osaka       | Tokyo              | 00:00            | 09:00      | 1 hour             |
 | São Paulo   | N. Virginia        | 00:00            | 21:00      | 1 hour             |
+| Seoul       | Singapore          | 00:00            | 09:00      | 1 hour             |
 | Singapore   | Sydney             | 17:00            | 01:00      | 1 hour             |
 | Sydney      | Melbourne          | 07:00            | 17:00      | 1 hour             |
 | Tokyo       | Osaka              | 16:00            | 01:00      | 1 hour             |
@@ -66,33 +71,32 @@ The **Backups** page presents options for managing your backups. These are descr
 
 ### 3.1 Create Backup
 
-This automatically generates a backup snapshot from your application data. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
+Clicking **Create Backup** automatically generates a backup snapshot from your application data. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
 
 ### 3.2 Upload Backup {#upload}
 
-The sections below present details on uploading data in recent Mendix Cloud versions.
+To upload a backup, click **Upload Backup** and then select the backup archive you want to upload. For information on downloading backup archives, see [Download Backup](#download-backup), below.
 
-#### 3.2.1 Uploading Data in Mendix Cloud
+You can upload archives containing the following:
 
-In Mendix Cloud, the upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application. 
+* Full Snapshot
+* Database Only
 
-Once you download something, you can also upload it again. This means you can upload archives containing the following:
+{{% alert color="info" %}}
+**Files Only** archives are meant for offline archiving purposes only. Because this archive type does not contain a database, it is not possible to restore it.
+{{% /alert %}}
+
+Uploading a backup creates a new backup item in your backup list. You can then restore the new backup item via the regular restore process (as described in [Restore Backup](#restore-backup), below). This ensures less downtime for your application.
+
+### 3.3 Download Backup {#download-backup}
+
+To download a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download** on the backup you want to download.
+
+You can download a backup archive containing one of the following: 
 
 * Full Snapshot
 * Database Only
 * Files Only
-
-{{% alert color="info" %}}
-Uploading a **Files Only** archive results in a backup item with an exclamation mark and a warning message. Because the archive does not contain a database, it is not possible to restore it.
-{{% /alert %}}
-
-### 3.3 Download Backup {#download-backup}
-
-You can download a backup archive containing one of the following: 
-
-* **Full Snapshot**
-* **Database Only**
-* **Files Only**
 
 For more information, see the [Downloading a Backup](/developerportal/operate/download-backup/) page.
 
@@ -100,7 +104,9 @@ For more information, see the [Downloading a Backup](/developerportal/operate/do
 Because the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
-### 3.4 Restore Backup
+### 3.4 Restore Backup {#restore-backup}
+
+To restore a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Restore** on the backup you want to restore.
 
 You can choose the destination environment to which you want to restore the backup snapshot. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
@@ -127,7 +133,7 @@ You can view details of a backup by clicking **More Options** ({{% icon name="th
 | **Snapshot Size Uncompressed (MB)** | The size of database dump and files of the snapshot in MB                                     |
 | **Comment**                         | A comment added to the backup                                                                 |
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" width=60% >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% >}}
 
 ## 4 Limitations
 

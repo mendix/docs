@@ -81,7 +81,7 @@ A layout can also be based on another layout, which is called the "primary layou
 
 All pages can be opened on all device types, because the generated HTML for the pages is HTML5.  However, each device has its own specific UI design needs. Therefore, it is logical for you to define a set of layouts per device type that serves the needs of that specific device type.
 
-By default, the desktop and phone layouts are available out-of-the-box, and the design of the layouts can be customized to your needs. You can change and extend the default layouts as wel as create new layouts as needed. 
+By default, the desktop and phone layouts are available out-of-the-box, and the design of the layouts can be customized to your needs. You can change and extend the default layouts as well as create new layouts as needed. 
 
 Be careful with how you design these layouts. For example, in the mobile apps, you do not want to have too many regions, or the design will look crowded and confusing to the end-user. On the other hand, a desktop application might require different regions that allow for more content to be shown and details to be displayed.
 
@@ -179,8 +179,8 @@ The Mendix Runtime automatically redirects users to the home page of the appropr
 
 | User-Agent String Regular Expression | Device Type |
 | ------------------------------------ | ----------- |
-| `Android.*Mobile|iPhone`             | Phone       |
-| `Android|iPad`                       | Tablet      |
+| `Android.*Mobile` or `iPhone`             | Phone       |
+| `Android` or `iPad`                       | Tablet      |
 | (Other)                              | Desktop     |
 
 The string for specific user interphases can also be configured within the server custom settings (this is more advanced and not covered here).

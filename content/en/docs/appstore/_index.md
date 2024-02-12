@@ -32,7 +32,7 @@ For details on the Studio Pro version required for use and when the component wa
 * [Excel Exporter](/appstore/modules/excel-exporter/) module
 * [Email](/appstore/connectors/email-connector/) connector
 * [MQTT](/appstore/connectors/mqtt/) connector
-* [Mendix Business Events](/appstore/modules/business-events/) module
+* [Mendix Business Events](/appstore/services/business-events/) module
 
 And our strategic partner connectors:
 

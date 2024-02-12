@@ -11,7 +11,36 @@ These release notes cover changes to the app management functionality and other 
 
 To see the current status of the Mendix Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2024
+
+### February 8, 2024
+
+#### Improvements
+* We added the [Roles & Permissions](/control-center/roles-and-permissions/) page to Control Center.
+
+#### Deprecations
+* We removed the **Default App Roles** tab in the [Apps](/control-center/apps/) page in Control Center.
+
+### January 22, 2024
+
+#### New Features
+
+* We introduced the [Private Marketplace](/control-center/private-marketplace/) page in Control Center, which allows Mendix Admins to approve or decline requests for publishing content to your organization's private Marketplace.
+
 ## 2023
+
+### December 14, 2023
+
+#### New Features
+
+We upgraded the [Apps](/control-center/apps/) page as follows:
+
+* You can now see the information of your apps combined with the information of their environments. (Currently only licensed and free apps deployed on the Mendix Public Cloud have distinct tabs, but eventually all deployment options will be supported.)
+* You can use different kinds of filters and sorting options to analyze your application landscape more closely.
+* You can check the Mendix version deployed in your repository to check whether your Mendix version is up to date.
+* You can now update Technical Contact on the **Apps** page.
+* You can deactivate multiple free apps in one go.
+* You can [export the information of apps to an Excel file](/control-center/apps/#export-to-excel).
 
 ### December 7, 2023
 
@@ -55,7 +84,7 @@ We made the following improvements to the [access management](/control-center/po
 #### Improvements
 
 * On the [Members](/control-center/members/) page you can now sort members based on the number of apps to which they belong.
-* We introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-general-settings) tab of the [Company Settings](/control-center/company-settings/) page.
+* We introduced an export feature to make it possible for you to export email domains on the [General Settings](/control-center/company-settings/#company-email-domains) tab of the [Company Settings](/control-center/company-settings/) page.
 
 ### July 13, 2023
 
@@ -93,14 +122,14 @@ We made the following improvements to the [access management](/control-center/po
 
 #### Improvements
 
-* On the **Apps** page, we increased the limit of apps you can [activate or deactivate](/control-center/apps/#active-deactivated) to 100.
+* On the **Apps** page, we increased the limit of apps you can activate or deactivate to 100.
 * We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### February 23, 2023
 
 #### New Features
 
-* We have released a feature where you can add and manage a [Security Contact](/control-center/company-settings/#company-general-settings) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
+* We have released a feature where you can add and manage a [Security Contact](/control-center/company-settings/#security-contact) for your company. A Security Contact is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components.
 
   With this feature, you can do the following:
 

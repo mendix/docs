@@ -38,7 +38,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 ### 3.2 Download a Backup{#download-backup}
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
-1. On the backup that you want to download, click **More Options** > **Download**.
+1. On the backup that you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download**.
 1. Make sure **Full Snapshot** is selected, then click **Start** to prepare the download.
 1. Once the backup is ready, click **Download**.
 
@@ -78,22 +78,22 @@ Before your app can be deployed live, you may need to configure your environment
 
 ### 3.6 Deploy Your App
 
-Now you need to deploy your app! To do so, you will need a deployment package.
+Now you need to deploy your app! To do so, you need a deployment package.
 
-1. Create a deployment package as described on the [Creating a Package from the Team Server](/developerportal/deploy/mendix-cloud-deploy/#package-from-team-server) page.
-2. Select the deployment package you just created, then click **Deploy** to publish your app to production.
+1. Create a deployment package as described in the [Creating a Deployment Package](/developerportal/deploy/mendix-cloud-deploy/#package-from-team-server).
+2. On the deployment package you just created, click **Deploy** ({{% icon name="deploy" %}}) to publish your app to the production environment.
 
 ### 3.7 Upload and Restore the Backup
 
-The final step is restoring your data. This must be done after you've deployed your app because this ensures that a database has been provisioned ready to accept your data.
+The final step is restoring your data. You must do this after you've deployed your app because this ensures that a database has been provisioned and is ready to accept your data.
 
-1. Go back to the **Backups** page.
+1. Go to the **Backups** page.
 
 2. Click **Upload Backup**.
 
 3. Select the backup file you downloaded earlier in [Download a Backup](#download-backup), then click **Upload Archive**. The file will be uploaded. Once the upload completes, a backup file is uploaded to your app using the data from your old Free App environment.
 
-4. On the backup you just uploaded, click **More Options** > **Restore**.
+4. On the backup you just uploaded, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Restore**.
 
 5. Confirm the restore by clicking **Restore Backup**.
 

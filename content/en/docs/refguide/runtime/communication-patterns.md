@@ -266,7 +266,7 @@ Change and validate the changed attributes of the object in the Runtime Server:
 This will trigger the following actions on the database:
 
 * Get the original object from the database
-* Update the attribute(s) changed by the user in the Runtime Server
+* Update the attribute (or attributes) changed by the user in the Runtime Server
 
 The first step is required to determine all the data business logic and validations defined on the entity.
 

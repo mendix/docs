@@ -266,7 +266,7 @@ div.date-format{
     }
 }
 
-// DB - custom edit, inlline SVG icons for shortcode
+// DB - custom edit, inline SVG icons for shortcode
 .inline-svg {
     display: inline-block;
     height:0.9rem;
@@ -568,3 +568,61 @@ nav.foldable-nav {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
   }
+
+  // Footer styling
+ .mx-footer {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 0.5rem;
+         flex-wrap: wrap;
+         background-color: #f7f7f7;
+         color: rgba(10, 19, 36, 0.7);
+         font-size: 0.75rem;
+         text-align: center;
+         border-top: 1px solid #e7e7e9;
+         padding: 1rem;
+         font-family: 'noto-sans', 'Noto Sans', sans-serif;
+   }
+    
+   .mx-footer__copyright {
+         margin: 0;
+   }
+    
+   .mx-footer__link {
+         color: rgba(10, 19, 36, 0.7);
+         text-decoration: none;
+         white-space: nowrap;
+         border-radius: 0.125rem;
+   }
+    
+   .mx-footer__links-list {
+         list-style: none;
+         padding: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 0.5rem;
+         flex-wrap: wrap;
+         margin: 0;
+    
+         > li::before {
+               content: '';
+               border-left: 1px solid #e7e7e9;
+               margin-right: 0.5rem;
+         }
+   }
+    
+   .mx-footer__link:hover {
+         color: #0123c6;
+         text-decoration: underline;
+   }
+    
+   .mx-footer__link:focus {
+         outline: none;
+   }
+    
+   .mx-footer__link:focus-visible {
+         outline: 2px solid #298efb;
+         outline-offset: 2px;
+   }

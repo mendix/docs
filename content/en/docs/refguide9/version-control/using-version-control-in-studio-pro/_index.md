@@ -151,7 +151,7 @@ Select a revision to see additional details such as related Developer Portal sto
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/history-of-dialog.png" >}}
 
-## 5 Reverting Changes
+## 5 Reverting Changes {#reverting}
 
 Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original: that is, the state of the page before you started making changes.
 
@@ -389,7 +389,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 You need to use the following credentials:
 

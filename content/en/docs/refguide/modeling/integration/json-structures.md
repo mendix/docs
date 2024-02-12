@@ -58,7 +58,7 @@ Documentation that describes the snippet.
 
 ### 2.1 Simple JSON Objects
 
-A simple JSON object is contained in curly braces (between '{' and '}'). It contains a comma-separated list of JSON properties. See the following example.
+A simple JSON object is contained in curly braces (between `{` and `}`). It contains a comma-separated list of JSON properties. See the following example.
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/19398772.png" >}}
 

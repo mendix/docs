@@ -180,7 +180,7 @@ Click **Setup** to launch the **Setup** dialog box. Then, enter your email, API 
 
 The PAT scope is `mx:modelrepository:write`, `mx:webhook:read`, `mx:webhook:write`, and `mx:deployment:write`. Without the right scope, the pipeline runs may fail.
 
-For security reasons, the API key and PAT values are not displayed once they are saved; you can see a {{% icon name="checkmark-circle" %}} icon if the values are saved and a {{% icon name="delete-circle" %}} icon if no values are saved.
+For security reasons, the API key and PAT values are not displayed once they are saved; you can see a {{% icon name="checkmark-circle" %}} icon if the values are saved and a {{% icon name="remove-circle" %}} icon if no values are saved.
 
 To change your API key and PAT, click **Delete** and then **Setup** to relaunch the **Setup** dialog box and provide new values as described above.
 

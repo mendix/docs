@@ -8,25 +8,25 @@ tags: ["studio pro"]
 
 ## 1 General
 
-A JSON structure document stores a JSON snippet, and converts it into a schema structure that can be used in [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/) to convert JSON content to Mendix objects and vice versa. 
+A JSON structure document stores a JSON snippet and converts it into a schema structure that can be used in [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/) to convert JSON content to Mendix objects and vice versa. 
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/19398772.png" >}}
 
 ### 1.1 JSON Snippet
 
-Contains text of the JSON snippet. Usually it is pasted from API documentation, or you can enter it manually for simple JSON.
+Contains text of the JSON snippet. It is usually pasted from API documentation, or you can enter it manually for simple JSON.
 
 {{% alert color="info" %}}
 When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is not valid, an exclamation mark appears above the snippet:
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/19398781.png" >}}
 
-You cannot press "OK" without making the JSON valid.
+You cannot click **OK** without making the JSON valid.
 {{% /alert %}}
 
 ### 1.2 Format
 
-Formattings and whitespacing of JSON snippets that are found in API documentations may vary. You can paste JSON into the document without bothering about whitespaces. The button 'Format' formats the JSON snippet in such a way that it is canonical and readable. The semantic contents of the snippets are not changed.
+Formattings and whitespacing of JSON snippets that are found in API documentation may vary. You can paste JSON into the document without bothering about whitespaces. The **Format** button formats the JSON snippet so it is recognizable and readable. The semantic contents of the snippets are not changed.
 
 {{% alert color="info" %}}
 Special unicode characters are encoded according to JSON standards. For example, if the original snippet contained a heart-shaped symbol (❤️), it is replaced by '\u2764'.

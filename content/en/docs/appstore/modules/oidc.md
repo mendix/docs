@@ -41,7 +41,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 
 #### 1.2.1 Features
 
-* Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs.
+* Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
     * For example, PKCE will be used automatically if it is detected.
 * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
@@ -656,7 +656,7 @@ ACR is available in version 2.3.0 and above of the OIDC SSO module.
 
 #### 8.5.1 Configuring Authentication Methods That Can Be Requested at Your IdP
 
-To configure the ACR value(s) in the OIDC SSO module, follow these steps:
+To configure the ACR value (or values) in the OIDC SSO module, follow these steps:
 
 1. Navigate to the screen where the OIDC configuration is managed.
 2. Select your client configuration and click **Edit**.

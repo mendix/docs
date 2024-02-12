@@ -390,16 +390,17 @@ This can be done by calling the internal microflow `TestConnection`, provided. O
 
 The BAPI Connector for SAP Solutions contains the microflow **Create_BAPIExplorer**.
 
-This can be used to find all BAPIs from SAP systems which are available to you. You can then select the BAPI which you need for your app and download the schema which you can convert into a Mendix BAPI module for use in your app using the [Model Creator](#create-bapi-module). You can create several Mendix BAPI modules if you need to use multiple BAPIs in your app.
+You can use this to find all BAPIs from SAP systems that are available to you. You can then select the BAPI you need for your app and download the schema, which you can convert into a Mendix BAPI module for use in your app using the [Model Creator](#create-bapi-module). You can create several Mendix BAPI modules if you need to use multiple BAPIs in your app.
 
 The **Create_BAPIExplorer** microflow displays BAPIs grouped by SAP Object Name in alphabetical order.
-You can see all the BAPIs for an SAP object by clicking the `+` symbol next to the object. You can also search for the BAPI you need in the search box.
+
+You can see all the BAPIs for an SAP object by clicking **Expand** ({{% icon name="add" %}}) next to the SAP object. You can also search for the BAPI you need in the search box.
 
 {{% alert color="info" %}}
 A BAPI has to have the status `Released` to be shown in the list. You will not see unreleased BAPIs.
 {{% /alert %}}
 
-When you find a BAPI, you can click the info icon (🛈) to see details including documentation, import, export, and table parameters.
+When you find a BAPI, you can click **Information** ({{% icon name="info-circle" %}}) to see details including documentation, import, export, and table parameters.
 
 {{< figure src="/attachments/appstore/connectors/sap-bapi-connector/bapi-explorer-bapis.png" alt="BAPI Explorer" >}}
 
@@ -413,7 +414,7 @@ Once you find the BAPI you need, select it and click **Next** to generate the BA
 
 ## 9 Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 
-See [How to Use the Model Creator for SAP Integrations](/appstore/connectors/sap/use-sap-model-creator/) for information on how to use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
+See [Model Creator for SAP Integrations](/appstore/services/use-sap-model-creator/) for information on how to use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
 
 ## 10 Limitations
 

@@ -9,7 +9,7 @@ Build status:
 
 ## Contribute
 
-Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-mendix-docs). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
+Want to contribute? Take a look at [How to Contribute to Mendix Docs](https://docs.mendix.com/community-tools/contribute-to-mendix-docs/). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
 
 ## Local Build
 

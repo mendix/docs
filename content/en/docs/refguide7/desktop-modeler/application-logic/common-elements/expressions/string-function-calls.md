@@ -122,10 +122,10 @@ returns:
 'my'
 ```
 
-If this third parameter is too big, the function will throw an error saying it is out of range, so make sure to limit it. This is an example with use of the length function:
+If this third parameter is too big, the function will throw an error saying it is out of range. To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
 
-```java
-'substring('thisismystring', 0, min(length('thisismystring') - 1, 20))'
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

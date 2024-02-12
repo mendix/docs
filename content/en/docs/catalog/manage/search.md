@@ -231,11 +231,11 @@ You can start searching from the [Home](#data-hub-home) page, or click the [Cata
 
 #### 3.1.1 Versions
 
-Every published OData service (or data source) has a version number. Apps that consume a data source will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. Several versions of a registered data source may be available in the Catalog. The data source version is displayed in the [Asset Details](#search-details).
+Every published service (or data source) has a version number. Apps that consume a data source will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. Several versions of a registered data source may be available in the Catalog. The data source version is displayed in the [Asset Details](#search-details).
 
 #### 3.1.2 Environments
 
-The Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
+The Catalog is a register of published services (or data sources) that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
@@ -250,7 +250,7 @@ By default, search results in the Catalog are filtered to show only hits in the 
 The description that is included as part of the published service metadata. This description can be edited at the data source, dataset, and attribute level by owners and curators.
 
 {{% alert color="info" %}}
-In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and registered in the Catalog.
+In Studio Pro, when publishing a service, it is possible to specify a summary of the service and a description. Only the description is included in the service contract document and registered in the Catalog.
 {{% /alert %}}
 
 ### 3.2 Searching for Assets {#data-hub-home}
@@ -296,7 +296,7 @@ In the **Filters** dialog box, check the **Environment Type** that you want to i
 
 You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. For more information, see [Write Data to Another App](/howto/integration/write-data/).
 
-You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
+You will also see any restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
 #### 3.4.3 Search Results {#search-results}
 
@@ -314,7 +314,7 @@ When you click a search result, the details are displayed in this panel.
 
 #### 3.5.1 Details of a Selected Data Source {#service-details}
 
-The contract of the published OData service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, and types. The contract metadata is displayed, along with any Catalog-curated metadata.
+The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, and types. The contract metadata is displayed, along with any Catalog-curated metadata.
 
 When a data source is selected in the search results, the following details are displayed:
 
@@ -335,7 +335,7 @@ You can perform the following actions from this screen:
 
 * **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
 * **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
-* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
+* [Download](#download-contract) – retrieve and save the contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
 #### 3.5.2 Details for a Selected Dataset {#entity-details}
@@ -361,7 +361,7 @@ You can perform the following actions from this screen:
 
 #### 3.5.2.2 Dataset Information
 
-The **Attributes** tab lists the attributes that are exposed for the dataset in the OData service.
+The **Attributes** tab lists the attributes that are exposed for the dataset in the service.
 
 Under the **Associations** tab for each dataset, the associations are displayed:
 
@@ -372,7 +372,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 ### 3.6 Metadata Panel {#metadata}
 
-The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Catalog:
+The metadata panel at the right of the asset details screen displays details from the service metadata contract and values that have been curated in the Catalog:
 
 {{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
 
@@ -386,7 +386,7 @@ This is a link to the business owner of the data exposed in the data source. For
 
 #### 3.6.3 Technical Owner
 
-This is a technical contact for the app. By default, this is the owner who registered the OData service.
+This is a technical contact for the app. By default, this is the owner who registered the service.
 
 For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
 
@@ -433,9 +433,9 @@ The data source URI is the location of the service contract of the data source, 
 
 ### 3.9 Download the Metadata Contract of a Data Source {#download-contract}
 
-For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full metadata contract is generated and downloaded.
+For a selected data source, you can click **Download** to download the service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full metadata contract is generated and downloaded.
 
-The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the OData version (`v3` or `v4`) in the file name.
+The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the version (`v3` or `v4`) in the file name.
 
 Here is an example:
 

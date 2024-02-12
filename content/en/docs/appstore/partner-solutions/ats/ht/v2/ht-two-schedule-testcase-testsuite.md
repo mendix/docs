@@ -62,14 +62,13 @@ The following steps explain how to schedule test cases:
     * **Platform** - Set platform on which to run the test
     * **Resolution** - Set resolution with which the test is run
 
-    {{% alert color="info" %}}Note: Platform Settings are not visible for all Selenium hubs.
-    {{% /alert %}}
+    {{% alert color="info" %}}Platform Settings are not visible for all Selenium hubs.{{% /alert %}}
 
 8. Click **Save**:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
 
-Clicking **Save** adds the test case to the list of scheduled items. Click the **Edit icon** to change the settings (1). Click the **Delete icon** to delete the scheduled test case(2):
+Clicking **Save** adds the test case to the list of scheduled items. Click **Edit** ({{% icon name="pencil" %}}) to change the settings (1). Click **Delete** ({{% icon name="remove" %}}) to delete the scheduled test case (2):
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testcase.png" >}}
 
 ## 4 Scheduling Test Suites
@@ -116,7 +115,8 @@ The following steps explain how to schedule test suites:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
 
-Clicking **Save** adds the test suite to the list of scheduled items. Click the **Edit icon** to change the settings (1). Click the **Delete icon** to delete the scheduled test case(2):
+Clicking **Save** adds the test suite to the list of scheduled items. Click **Edit** ({{% icon name="pencil" %}}) to change the settings (1). Click **Delete** ({{% icon name="remove" %}}) to delete the scheduled test case (2):
+
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testsuite-g.png" >}}
 
 {{% alert color="info" %}}

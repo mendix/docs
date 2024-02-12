@@ -1,6 +1,6 @@
 ---
 title: "Content Security Policy"
-url: /howto9/security/using-mobile-capabilities/csp/
+url: /howto9/security/csp/
 weight: 80
 description: By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context.
 tags: ["security", "headers"]
@@ -15,7 +15,7 @@ In Mendix Studio Pro 9.12.0 and higher, a web app (including progressive web app
 For more background information on CSPs, see [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) from Mozilla.
 
 {{% alert type="warning" %}}
-Currently, some of Mendix's pluggable widgets are not fully compliant with CSP. If used with strict CSP, these widgets can result in CSP errors in the console or broken flows. Please consult a widget's documentation page before implementing CSP.
+Currently, some of Mendix's pluggable widgets are not fully compliant with CSP. If used with strict CSP, these widgets can result in CSP errors in the console or broken flows. Please refer to [widget's security documentation](/appstore/widgets/security/content-security-policy/) page for more details.
 {{% /alert %}}
 
 ## 2 Setup

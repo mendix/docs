@@ -86,94 +86,94 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
   
     For the `ListTables` activity, you must specify the region for which you want to retrieve the tables from, a `Credentials` object and a `ListTablesRequest` object. Other activities may have different required parameters.
     
-13. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-14. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
-15. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
-16. Click **OK**, and then click **OK** again.
-17. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GenerateCredentials** activity.
-18. Drag the **GenerateCredentials** activity onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
-19. Double-click the **GenerateCredential**s activity, and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
-20. Double-click the **ListTables** activity and configure the **Credentials** parameter by doing the following steps:
+12. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
+13. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
+15. Click **OK**, and then click **OK** again.
+16. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
+17. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **ListTables** activity.
+18. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
+19. Double-click the **ListTables** activity and configure the **Credentials** parameter by doing the following steps:
 
     * Click **Edit parameter value**.
     * Edit the **Credentials** parameter and let it auto-fill.
 
-22. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GenerateCredentials** and the **ListTables** activity.
-23. Double-click the **Create Object** activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
-24. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
+20. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the **GetStaticCredentials** or **GetTemporaryCredentials** and the **ListTables** activity.
+21. Double-click the **Create Object** activity, and then select **AmazonDynamoDBConnector.ListTablesRequest** as the entity.
+22. Double-click the **CreateBucket** activity and configure the **CreateBucketRequest** parameter by doing the following steps:
 
     * Click **Edit parameter value**.
     * Edit the **CreateBucketRequest** parameter and let it auto-fill.
 
-26. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-27. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
+23. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+24. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow.png" alt="The microflow with the Retrieve activity added">}}
 
-28. Double-click the **Retrieve** activity.
-29. In the **Association** section, click **Select**.
-30. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListTablesResponse** as the association.
+25. Double-click the **Retrieve** activity.
+26. In the **Association** section, click **Select**.
+27. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListTablesResponse** as the association.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/selectassociation.png" alt="Selecting the association">}}
 
-31. Click **OK**.
-32. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
-33. Position the **Create list** activity between the microflow start event and the **ListTables** activity.
+28. Click **OK**.
+29. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
+30. Position the **Create list** activity between the microflow start event and the **ListTables** activity.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/createlist.png" alt="The microflow with the Create list activity added">}}
 
-34. Double-click the **Create list** activity.
-35. In the **Entity** section, click **Select**.
-36. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`.
+31. Double-click the **Create list** activity.
+32. In the **Entity** section, click **Select**.
+33. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/selectentity.png" alt="Selecting the entity">}}
 
-37. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
-38. Position the **Loop** activity before the microflow end event.
+34. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
+35. Position the **Loop** activity before the microflow end event.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/addloop.png" alt="The microflow with the loop added">}}
 
-39. Double-click the **Loop** activity.
-40. In the **Iterate over** list, select **ListTableList**.
+36. Double-click the **Loop** activity.
+37. In the **Iterate over** list, select **ListTableList**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/editloop.png" alt="Selecting the entity to iterate over">}}
 
-41. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
+38. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/createobject.png" alt="The microflow with the Create activity added">}}
 
-42. Double-click the **Create object** activity.
-43. In the **Entity** section, click **Select**.
-44. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`, and then click **Select**.
-45. In the **Create Object** dialog box, click **New**.
-46. In the **Edit Change Item** dialog box, in the **Member** drop-down, select the attribute that you previously created, for example, `TableName`.
-47. In the expression editor, type `$IteratorListTable/TableName`, and then click **OK**.
-48. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
-49. Double-click the **Change List** activity, and then set the following values:
+39. Double-click the **Create object** activity.
+40. In the **Entity** section, click **Select**.
+41. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`, and then click **Select**.
+42. In the **Create Object** dialog box, click **New**.
+43. In the **Edit Change Item** dialog box, in the **Member** drop-down, select the attribute that you previously created, for example, `TableName`.
+44. In the expression editor, type `$IteratorListTable/TableName`, and then click **OK**.
+45. In the **Toolbox** pane, search for the **Change List** activity and drag it inside the loop area, to the right of the **Create Object** activity.
+46. Double-click the **Change List** activity, and then set the following values:
 
     * **Type** - **Add**
     * **Value** - The created object, for example, `$NewDBTable`
     
-50. Double-click the end event of your microflow, and then set the following values:
+47. Double-click the end event of your microflow, and then set the following values:
 
     * **Type** - **List**
     * **Entity** - The entity that you previously added to your domain model, for example, `DBTable`
       
-52. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
-53. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
-54. In the **Lists** category, select the **List** template for the page.
-55. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
-56. On the page, double-click the **List view** widget.
+48. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
+49. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+50. In the **Lists** category, select the **List** template for the page.
+51. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
+52. On the page, double-click the **List view** widget.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listview.png" alt="The List view widget">}}
 
-57. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-58. In the **Microflow** field, select the **DS_ListTables** microflow.
-59. Click **OK**, and then click **Yes**.
-60. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
-61. In the **App Explorer**, double-click the **Navigation** for your app.
-62. In the Menu section, click **New Item**.
-63. In the **New Menu Item** dialog, configure the following settings:
+53. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+54. In the **Microflow** field, select the **DS_ListTables** microflow.
+55. Click **OK**, and then click **Yes**.
+56. In the **Properties** pane for the page, in the **Navigation** > **Visible for** section, select a user role that should be allowed to run the microflow.
+57. In the **App Explorer**, double-click the **Navigation** for your app.
+58. In the Menu section, click **New Item**.
+59. In the **New Menu Item** dialog, configure the following settings:
 
     * **Caption** - A caption for the navigation item, for example, *Table*
     * **Icon** - An icon that will be displayed for this page in the navigation for your app
@@ -182,11 +182,11 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
 
-64. Click **OK**.
+60. Click **OK**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
     
-65. Click the **Run locally** icon to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+61. Click **Run Locally** ({{% icon name="controls-play" %}}) to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

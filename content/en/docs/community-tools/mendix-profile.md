@@ -7,8 +7,7 @@ description: "Describes the personal profile page of the Mendix Developer Portal
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:
-    - /developerportal/mendix-profile/
-    - /community-tools/mendix-profile/
+    - /developerportal/community-tools/mendix-profile/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -209,7 +208,7 @@ You can edit the information on your Mendix Profile by clicking **User Settings*
 
 ### 10.1 Profile {#profile}
 
-In this section, you can upload your profile image and fill in your personal and work details
+On the [Profile](https://user-settings.mendix.com/link/profile) page, you can upload your profile image and fill in your personal and work details
 
 You can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
 
@@ -294,13 +293,13 @@ It is not possible to separate profiles after they have been merged. Double-chec
 
 ### 10.2 Accounts
 
-This page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
+The [Accounts](https://user-settings.mendix.com/link/account) page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/security/).
 
-You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking the menu button (**...**) of the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
+You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
-If you do not want to use an account anymore, you can remove it from this page. Click the menu button (**...**) for the logged-in account and select **Delete this account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile is deleted when you delete all of your accounts. 
+If you do not want to use an account anymore, you can remove it from this page. Click **More Options** for the logged-in account and select **Delete this account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile is deleted when you delete all of your accounts. 
 
 You can only remove the account with which you are logged in. If you do not have access to your account anymore, please reach out to [Mendix Support](https://support.mendix.com/hc/en-us) to delete your account.
 
@@ -323,7 +322,7 @@ This feature is not available if your company has enabled single sign-on. If thi
 
 ### 10.3 Notification Settings {#notifications}
 
-On this page, you can configure how you want to be notified of Mendix Platform activity.
+On the [Notification Settings](https://user-settings.mendix.com/link/notifications) page, you can configure how you want to be notified of Mendix Platform activity.
 
 When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Apps](/developerportal/#my-apps).
 
@@ -334,9 +333,19 @@ You can also configure your **Buzz Notifications**:
 
 ### 10.4 Developer Settings {#dev-settings}
 
-#### 10.4.1 API Keys {#profile-api-keys}
+On the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can manage your two-factor authentication, API keys, and personal access tokens (PAT).
 
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
+#### 10.4.1 Two-Factor Authentication{#profile-2fa}
+
+In this section, you can view the status of your two-factor authentication (2FA). You can see if your 2FA is configured with SMS or an authenticator app, and you can also deactivate your 2FA.
+
+{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" class="image-border" max-width=80%  alt="" >}}
+
+For more information, see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+
+#### 10.4.2 API Keys {#profile-api-keys}
+
+In the [API Keys](https://sprintr.home.mendix.com/link/personalapikeys) section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
 To get a Mendix API key, click **Configure API Keys** > **Create New API Key** and follow the instructions.
 
@@ -357,9 +366,11 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-#### 10.4.2 Personal Access Tokens {#pat}
+#### 10.4.3 Personal Access Tokens {#pat}
 
-Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
+On the **Personal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can view, create, and manage your PATs.
+
+Some platform APIs use personal access tokens (PATs) rather than API keys. This section explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
 PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
@@ -377,9 +388,9 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.2.1 Creating a PAT {#create-pat}
+##### 10.4.3.1 Creating a PAT {#create-pat}
 
-When you click **New Token**, you need to set the following characteristics of the PAT:
+In the **Peronsal Access Tokens** section, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
@@ -396,7 +407,7 @@ After you click **Create**, a pop-up window shows your secret token, which is th
 Store the secret token in a safe location, because it will not be displayed again!
 {{% /alert %}}
 
-##### 10.4.2.2 Managing a PAT
+##### 10.4.3.2 Managing a PAT
 
 To see the scopes of a PAT you have created, click **View Details**.
 
@@ -408,7 +419,7 @@ You cannot see the secret token of a PAT here. You can only see that the PAT exi
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
 
-##### 10.4.2.3 Using a PAT
+##### 10.4.3.3 Using a PAT
 
 Use of a PAT depends on the API you are accessing.
 
@@ -439,7 +450,7 @@ For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk
 
 ### 10.5 Personal Data
 
-The Mendix Platform stores certain personal information about you. You can view this information by clicking  **Download Personal Data**.
+On the [Personal Data](https://user-settings.mendix.com/link/notifications) page, you can view and download your personal data. The Mendix Platform stores certain personal information about you. You can view this information on the page or download it by clicking  **Download Personal Data**.
 
 {{% alert color="info" %}}
 Mendix has been tracking these data changes since November 2018.

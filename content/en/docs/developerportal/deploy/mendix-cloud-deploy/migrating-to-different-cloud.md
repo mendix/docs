@@ -1,9 +1,9 @@
 ---
-title: "Migrate to a Different Public Cloud Region"
-linktitle: "Migrate to Other Region"
+title: "Migrate to a Different Cloud Node"
+linktitle: "Migrate to Other Node"
 url: /developerportal/deploy/migrating-on-public-cloud/
 weight: 10
-description: "How to migrate your app from one Mendix Public Cloud region to another."
+description: "How to migrate your app from one cloud node to another."
 tags: ["App","Migrate","Developer Portal","public cloud","Node", "region", "data center"]
 aliases:
     - /developerportal/howto/migrating-to-v4.html
@@ -14,7 +14,10 @@ aliases:
 
 ## 1 Introduction
 
-This document explains how to migrate your licensed app from one Mendix Public Cloud region to another.
+This document explains how to migrate your licensed app from one cloud node to another. There are a couple of reasons you may wish to move your app to a different node:
+
+* You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a node in the region of your choosing and then migrate your app to this target node.
+* You want to switch from Mendix Public Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
 
 ## 2 Migration Considerations
 
@@ -33,17 +36,17 @@ When migrating your app, keep the following considerations in mind:
 Before following the steps described on this page, make sure that you have met the following prerequisites:
 
 * Ensure that your app is on a [supported version](/releasenotes/studio-pro/lts-mts/) of Mendix. For the best level of support, use a long-term support version.
-* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available. To request a licensed Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app.
+* Have a licensed cloud node available to use as your target node. For details on how to request a new node, see [Requesting a New Licensed App Node](/support/new-app-node-request-template/#new-node). You can specify the hosting type and region during this app request process.
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both of your cloud nodes.
 * Create two new temporary Free Apps without Free App environments. For instructions on unlinking a Free App from its environment, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink).
 
 ## 4 Migrating the App
 
-To manually migrate your app to a different node in Mendix Cloud, follow the steps in the sections below. Those steps are summarized in this graphic:
+To manually migrate your app to a new node, follow the steps in the sections below. Those steps are summarized in this graphic:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/migratev4.png" alt="" >}}
 
-### 4.1 Linking the New Free App to the Target Cloud Node
+### 4.1 Linking a Temporary Free App to the Target Cloud Node
 
 First, link one of the new temporary apps to the target node.
 
@@ -53,7 +56,7 @@ First, link one of the new temporary apps to the target node.
 
 3. Click **Select a node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/select-a-node.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/select-a-node.png" >}}
 
 4. Select the target node by clicking **Use this Node**. Link it to your app.
 
@@ -61,31 +64,31 @@ For more information on how to do this, see [Licensing Mendix Cloud Apps](/devel
 
 ### 4.2 Copying the Deployment Package and Data from the Source Node to the Target Node
 
-Before migrating, you need to deploy a copy of your app to the target node. You can then copy the data from the source node to the target node. After copying the data, you should test the app and correct errors if needed. Repeat this process until all the errors are resolved.
+Before migrating, you need to deploy a copy of your source app to the target node. You can then copy the data from the source node to the target node. After copying the data, test the app and correct errors if needed. Repeat this process until all the errors are resolved.
 
 The following steps explain how to do this.
 
 #### 4.2.1 Downloading and Uploading the Deployment Package
 
-Download the deployment package of your app hosted in the source node and upload the deployment package to the app hosted in the target node.
+Download the deployment package of your app hosted in the source node, and upload the deployment package to the app hosted in the target node.
 
 To download a deployment package, follow these steps:
 
-1. Go to **Environments** of the source app.
+1. Go to the **Environments** page of the source app.
 
-2. Click **More Options** > **Details** for a deployment package.
+2. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Details** for a deployment package.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/deployment-details.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/deployment-details.png" alt="" >}}
 
 3. In the resulting **MDA Details** dialog box, click **Download**.
 
 To upload the deployment package, follow these steps:
 
-1. Go to **Environments** of the target app.
+1. Go to the **Environments** page of the app on your target node.
 
 2. In the **Deployment Package Repository** section, click **Upload**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/upload-package.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/upload-package.png" >}}
 
 3. Browse and select the downloaded deployment package from your device.
 
@@ -96,7 +99,7 @@ To upload the deployment package, follow these steps:
 #### 4.2.2 Backing Up
 
 {{% alert color="warning" %}}
-Before backing up your data as described in this section, you must complete the steps above. In particular, make sure that you have already deployed, started, and stopped your app. Making a deployment prepares the environment and ensures that your data is restored to the correct locations.
+Before backing up your data as described in this section, you must have already deployed, started, and stopped your app, as described in the steps above. This prepares the environment and ensures that your data is restored to the correct locations.
 {{% /alert %}}
 
 Transfer the backup data from the source app to the target app by following these steps:
@@ -109,15 +112,15 @@ Transfer the backup data from the source app to the target app by following thes
 
 #### 4.2.3 Configuring the New App
 
-Before starting your app in the target node, make sure it has the same configuration as the source node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details/) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
+Before starting your app in the target node, make sure it has the same configuration as the source node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details/) page under the **Model Options**, **Network**, **Runtime**, and **Maintenance** tabs.
 
 #### 4.2.4 Testing and Repeating
 
-Now that the target app contains your data and is configured, deploy the deployment package to an environment and start your app.
+Now that the target node contains your data and is configured, deploy the deployment package to an environment and start your app.
 
 To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-the-app-to-an-environment).
 
-### 4.3 Unlink the App from the Source Node
+### 4.3 Unlinking the App from the Source Node
 
 It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
 
@@ -180,7 +183,7 @@ Or, if you made a certificate request to Mendix, the private key is stored in th
 
 The two custom domain certificate options are shown below:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/tls-certificates.png" alt="" width=75% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/migrating/tls-certificates.png" alt="" width=75% class="image-border" >}}
 
 ### 4.7 Offboarding the Source Node
 

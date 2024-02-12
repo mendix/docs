@@ -45,7 +45,7 @@ In the **App** menu, you can view and/or manipulate settings that are connected 
 
 ## 7 Run Menu {#run}
 
-The **Run** menu contains actions for deploying and monitoring your app, such as **Publish**, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide/run-menu/). 
+The **Run** menu contains actions for deploying and monitoring your app, such as **Publish**, **Run Locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide/run-menu/). 
 
 ## 8 Version Control Menu {#version-control}
 

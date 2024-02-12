@@ -129,9 +129,11 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 4. Paste the signed **TLS Certificate** (in PEM format).
 
-5. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers require it. The intermediate certificate chain is provided by your certificate authority.
+5. Paste an **Intermediate Certificate Chain**. This is optional, but highly recommended. The intermediate certificate chain is provided by your certificate authority.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/signed-certificate.png" width=80% >}}
+
+    {{% alert color="warning" %}}The intermediate certificates of the main certificate authorities are included in the built-in CA databases of modern browsers. Therefore, you do not need to include an intermediate certificate to serve your website through SSL/TLS to users of modern browsers. However, you cannot predict how your users will attempt to connect to your website; not including an intermediate certificate may result in connection issues for some users. Tools such as cURL do not recognize intermediate certificates automatically. Because of this, intermediate certificates are highly recommended but optional.{{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 

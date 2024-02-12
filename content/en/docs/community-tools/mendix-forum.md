@@ -5,7 +5,7 @@ category: "Community Tools"
 weight: 3
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 aliases:
-    - /community-tools/mendix-forum/
+    - /developerportal/community-tools/mendix-forum/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

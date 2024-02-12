@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### New Features
 
-* We added a Pipelines feature, which provides a low-code way to design, implement, and review automated deployment pipelines for your apps. For the initial beta release, pipelines built using this feature can include the following steps: Start pipeline, Checkout source code, Build deployment package, Publish deployment package, Stop environment, Create backup, and Deploy to an environment; more steps are in development for later releases. For more information about this new feature, see [Pipelines](/developerportal/deploy/pipelines/).
+* We added a Pipelines feature, which provides a low-code way to design, implement, and review automated build and deployment pipelines for your apps. For the initial beta release, pipelines built using this feature can include the following steps: Start pipeline, Checkout source code, Build deployment package, Publish deployment package, Stop environment, Create backup, and Deploy to an environment; more steps are in development for later releases. For more information about this new feature, see [Pipelines](/developerportal/deploy/pipelines/).
     * The Pipelines feature is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future. 
 
 ## 2023

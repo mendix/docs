@@ -249,7 +249,7 @@ When a published entity has the [Deletable](/refguide/published-odata-entity/#de
 
 ## 13 Calling Microflows {#actions}
 
-To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL. Here is an example: `POST /odata/myservice/v1/OnboardNewEmployee`.
+To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL (for example, `POST /odata/myservice/v1/OnboardNewEmployee`).
 
 The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/#edit-microflow) dialog box and look at the **Example of location** property.
 

@@ -42,11 +42,14 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin      | Frankfurt          | 23:00            | 00:00      | 3 hours            |
 | Frankfurt   | Dublin             | 00:00            | 01:00      | 3 hours            |
+| Jakarta     | Singapore          | 00:00            | 07:00      | 1 hour             |
 | London      | Frankfurt          | 23:00            | 23:00      | 2 hours            |
 | Mumbai      | Hyderabad          | 19:30            | 01:00      | 1 hour             |
 | N. Virginia | N. California      | 05:00            | 00:00      | 4 hours            |
 | Oregon      | Ohio               | 07:00            | 00:00      | 1 hour             |
+| Osaka       | Tokyo              | 00:00            | 09:00      | 1 hour             |
 | São Paulo   | N. Virginia        | 00:00            | 21:00      | 1 hour             |
+| Seoul       | Singapore          | 00:00            | 09:00      | 1 hour             |
 | Singapore   | Sydney             | 17:00            | 01:00      | 1 hour             |
 | Sydney      | Melbourne          | 07:00            | 17:00      | 1 hour             |
 | Tokyo       | Osaka              | 16:00            | 01:00      | 1 hour             |
@@ -68,33 +71,32 @@ The **Backups** page presents options for managing your backups. These are descr
 
 ### 3.1 Create Backup
 
-This automatically generates a backup snapshot from your application data. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
+Clicking **Create Backup** automatically generates a backup snapshot from your application data. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
 
 ### 3.2 Upload Backup {#upload}
 
-The sections below present details on uploading data in recent Mendix Cloud versions.
+To upload a backup, click **Upload Backup** and then select the backup archive you want to upload. For information on downloading backup archives, see [Download Backup](#download-backup), below.
 
-#### 3.2.1 Uploading Data in Mendix Cloud
+You can upload archives containing the following:
 
-In Mendix Cloud, the upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application. 
+* Full Snapshot
+* Database Only
 
-Once you download something, you can also upload it again. This means you can upload archives containing the following:
+{{% alert color="info" %}}
+**Files Only** archives are meant for offline archiving purposes only. Because this archive type does not contain a database, it is not possible to restore it.
+{{% /alert %}}
+
+Uploading a backup creates a new backup item in your backup list. You can then restore the new backup item via the regular restore process (as described in [Restore Backup](#restore-backup), below). This ensures less downtime for your application.
+
+### 3.3 Download Backup {#download-backup}
+
+To download a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download** on the backup you want to download.
+
+You can download a backup archive containing one of the following: 
 
 * Full Snapshot
 * Database Only
 * Files Only
-
-{{% alert color="info" %}}
-Uploading a **Files Only** archive results in a backup item with an exclamation mark and a warning message. Because the archive does not contain a database, it is not possible to restore it.
-{{% /alert %}}
-
-### 3.3 Download Backup {#download-backup}
-
-You can download a backup archive containing one of the following: 
-
-* **Full Snapshot**
-* **Database Only**
-* **Files Only**
 
 For more information, see the [Downloading a Backup](/developerportal/operate/download-backup/) page.
 
@@ -102,7 +104,9 @@ For more information, see the [Downloading a Backup](/developerportal/operate/do
 Because the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
-### 3.4 Restore Backup
+### 3.4 Restore Backup {#restore-backup}
+
+To restore a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Restore** on the backup you want to restore.
 
 You can choose the destination environment to which you want to restore the backup snapshot. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
@@ -112,7 +116,7 @@ If you restore a backup snapshot that was originally deployed with an older Mend
 If the restore takes too long, the system shows a timeout message. In this case, the restore continues behind the scenes; you can track the progress of the restore by inspecting your database free disk space graphs. As long as the database free disk space keeps decreasing, the restore process is still in progress. If the database free disk space is constant, that means the restore process is finished, and you can try to start your application. If you regularly see the timeout message, consider upgrading to a database plan with more CPU cores; this allows the restore process to happen faster.
 {{% /alert %}}
 
-For more information, see [Restoring a Backup](/developerportal/operate/restore-backup/).
+For more information, see the [Restoring a Backup](/developerportal/operate/restore-backup/) page.
  
 ### 3.5 Details {#backups-details}
 

@@ -141,7 +141,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
         * **On click** - **Show a page**
         * **Page** - Your **Table_Overview** page
     12. Click **OK**.
-45. Click the **Run locally** icon to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
+45. Click **Run Locally** ({{% icon name="controls-play" %}}) to preview your app and validate your results. AWS IoT TwinMaker will return the workspaces it finds (by default 25, but you can increase it up to 250 workspaces by using the `MaxResults` attribute). For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
 ## 4 Technical Reference
 

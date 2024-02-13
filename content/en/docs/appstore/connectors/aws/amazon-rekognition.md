@@ -70,9 +70,9 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 5. Double-click the **DetectLabels** microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
 6. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type ENUM_Region of the AWS Authentication connector.
 7. For the **Credentials** parameter, provide a Credentials Object from the AWS Authentication connector:
-    1. In the **App Explorer**, in the **AWSAuthentication** section, find the **Generate Credentials** action under > **Operations**.
-    2. Drag the **Generate Credentials** to the beginning of your microflow.
-    3. Double-click the **Generate Credentials** activity to configure the required parameters and provide a value for the AWS Region.
+    1. In the **App Explorer**, in the **AWSAuthentication** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions under > **Operations**.
+    2. Drag the one you would like to use to the beginning of your microflow.
+    3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region.
 8. The `DetectLabelResponse` object is returned by the **DetectLabels** activity.   
 9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow work area.
 10. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.
@@ -93,17 +93,17 @@ The entities in the table below describe all generalizations. These are (re-)use
 
 | Name | Description |
 | --- | --- |
-| `Face` | This entity includes a confidence. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `BoundingBox` | This entity identifies the bounding box around the label, face, text, object of interest, or Personal Protective Equipment (PPE). The left (x) coordinate and top (y) coordinate are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). The top and left values returned are ratios of the overall image size. For example, if the input image is 700 x 200 pixels, and the top-left coordinate of the bounding box is 350 x 50 pixels, the API returns a left value of 0.5 (350/700) and a top value of 0.25 (50/200). The width and height values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700 x 200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Label` | This entity includes a confidence and a name. The confidence is that of Amazon Rekognition service's accuracy in recognizing a face and the name is that of the generated label. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Polygon` | This entity contains the left (x) and top (y) coordinates of a point in an image or a video frame. The left (x) and top (y) values are ratios of the overall image size or video resolution. For example, if an input image is 700 x 200 and the values are X = 0.5 and Y = 0.25, then the point is at the (350,50) pixel coordinate in the image. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Pose` | This entity indicates the pose of the face as determined by its pitch, roll, and yaw. These three Euler angles could be described as following: the pitch is the rotational movement of the head that resembles nodding, the yaw resembles the movement of shaking, and the roll resembles the movement of tilting. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `Face` | This entity includes a confidence. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `BoundingBox` | This entity identifies the bounding box around the label, face, text, object of interest, or Personal Protective Equipment (PPE). The left (x) coordinate and top (y) coordinate are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). The top and left values returned are ratios of the overall image size. For example, if the input image is 700 x 200 pixels, and the top-left coordinate of the bounding box is 350 x 50 pixels, the API returns a left value of 0.5 (350/700) and a top value of 0.25 (50/200). The width and height values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700 x 200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `Label` | This entity includes a confidence and a name. The confidence is that of Amazon Rekognition service's accuracy in recognizing a face and the name is that of the generated label. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `Polygon` | This entity contains the left (x) and top (y) coordinates of a point in an image or a video frame. The left (x) and top (y) values are ratios of the overall image size or video resolution. For example, if an input image is 700 x 200 and the values are X = 0.5 and Y = 0.25, then the point is at the (350,50) pixel coordinate in the image. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `Pose` | This entity indicates the pose of the face as determined by its pitch, roll, and yaw. These three Euler angles could be described as following: the pitch is the rotational movement of the head that resembles nodding, the yaw resembles the movement of shaking, and the roll resembles the movement of tilting. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
 | `Base64Image` | This entity contains the Base64 Representation of an input image. This entity is used in every Request object and makes it possible to send an image as a String in the REST requests. |
-| `ImageQuality` | This entity identifies the brightness and sharpness of the face image. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Landmark` | This entity indicates the location of the landmark on the face, it includes the type and left (x) and top (y) coordinates. The type relates to the referenced region of the face. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `PhysicalProperty` | This entity is extracted from various entities that consist of the same attributes and can be described as physical properties. The attributes include a confidence and a value. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face and the value is whether the said physical property has been detected or not. These entities are the following:; `Beard`; `Eyeglasses`;  `EyesOpen`; `CoversBodyPart`; `MouthOpen`; `Mustache`; `Sunglasses`; `SmileDetectFace`; `SmileRecognizeFace`; `SmileCompareFace`. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `Emotion` | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
-| `PersonsEquipment` | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person. Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
+| `ImageQuality` | This entity identifies the brightness and sharpness of the face image. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `Landmark` | This entity indicates the location of the landmark on the face, it includes the type and left (x) and top (y) coordinates. The type relates to the referenced region of the face. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `PhysicalProperty` | This entity is extracted from various entities that consist of the same attributes and can be described as physical properties. The attributes include a confidence and a value. The confidence is that of Amazon Rekognition service in its accuracy of recognizing a face and the value is whether the said physical property has been detected or not. These entities are the following:; `Beard`; `Eyeglasses`;  `EyesOpen`; `CoversBodyPart`; `MouthOpen`; `Mustache`; `Sunglasses`; `SmileDetectFace`; `SmileRecognizeFace`; `SmileCompareFace`. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `Emotion` | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
+| `PersonsEquipment` | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person. Additionally, this entity is a generalization, and the specialization (or specializations) of this entity should be used instead. |
 
 ### 4.2 Enumerations {#enumerations}
 
@@ -175,7 +175,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Image` (Image) | An array or object of detected face(s) |
+| `Image` (Image) | An array or object of detected face (or faces) |
 
 This activity returns a `DetectFacesResponse` object with results as shown in the table below:
 
@@ -195,7 +195,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Image` (Image) | An array or object of detected face(s) |
+| `Image` (Image) | An array or object of detected face (or faces) |
 
 This activity returns a list of `DetectFacesResponse` object with results as shown in the table below:
 
@@ -226,7 +226,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `Image` (Image) | An array or object of detected moderation label (or labels) |
 
 This activity returns a `DetectModerationLabelsResponse` objects and associated objects as shown in the table below:
 
@@ -245,7 +245,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label(s) |
+| `MinConfidence` (Integer/Long, value should be between 0 and 100); `MaxLabels` (Integer/Long, minimum value of 0); `Image` (Image) | An array or object of detected label (or labels) |
 
 This activity returns a `DetectLabelsResponse` objects with associated objects as shown in the table below:
 
@@ -289,7 +289,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Image` (Image) | An array or object of detected person(s), including their status of protective equipment (with, without or indeterminate) |
+| `Image` (Image) | An array or object of detected person (or persons), including their status of protective equipment (with, without or indeterminate) |
 
 This activity returns a `DetectProtectiveEquipmentResponse` object with the results as shown in the table below:
 

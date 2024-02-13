@@ -49,11 +49,7 @@ A Free App has several limitations compared to a licensed app. The main limitati
 | Support | No support | Depends on your license option |
 
 {{% alert color="info" %}}
-Free Apps are part of Mendix's Free Edition.
-
-If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.
-
-If you are an existing customer, you should deploy into your licensed cloud node.
+Free Apps are part of Mendix's Free Edition.<br><br>If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.<br><br>If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
 
 ¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
@@ -113,53 +109,42 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ## 2 Deploying an App to Mendix Cloud {#deploy-app-mendix-cloud}
 
-There are several options available to deploy your application to a connected Mendix Cloud node.
+The method for deploying an app to Mendix Cloud differs depending on whether you have a licensed app or a Free App:
 
-This how-to explains how to do the following:
+* For a licensed app, you first create a deployment package via Studio Pro or the Developer Portal, and then you deploy it to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below.
+* For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below.
 
-* Deploy a licensed app to Mendix Cloud
-* Deploy via Mendix Studio Pro
-* Deploy the app to an environment
-* Deploy a Free App to Mendix Cloud
+### 2.1 Deploying a Licensed App{#deploy-licensed-app}
 
-### 2.1 Prerequisites
+#### 2.1.1 Prerequisites
 
-Before starting this how-to, make sure you have completed the prerequisites described below.
+Before starting the process for deploying a licensed app, make sure to complete these prerequisites:
 
-#### 2.1.1 Prerequisites for a Licensed App
+* Your app is linked to a licensed cloud node
+* You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
+* Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
+* The deployment package for your app is not bigger than 1 GB
 
-For a licensed app, make sure to complete these prerequisites:
+#### 2.1.2 Creating a Deployment Package for a Licensed App
 
-* Your app must be linked to a licensed cloud node
-* You must have deployment permissions
-* Your Google Authenticator must be enabled
-* The deployment package for your app must be no bigger than 1 GB
+There are two methods for creating a deployment package on Mendix Cloud. You can create a deployment package directly via Studio Pro, or you can create a package via the Team Server through the Developer Portal.
 
-#### 2.1.2 Prerequisites for a Free App
+##### 2.1.2.1 Creating a Deployment Package via Studio Pro
 
-* You must have created an app
-* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
-
-### 2.2 Deploying a Licensed App to Mendix Cloud
-
-There are two methods for deploying your app to Mendix Cloud. The first option is directly via Studio Pro, and the second is from the Team Server through the Developer Portal.
-
-#### 2.2.1 Deploying via Studio Pro
-
-To deploy your app directly from Studio Pro, follow these steps:
+To create a deployment package directly from Studio Pro, follow these steps:
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
 3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% class="image-border" >}}
 
-4. In the **Deploy to Mendix Cloud** dialog box, click **Deploy**.
-5. You will see a dialog box with the following message: "Successfully started Mendix Cloud deployment. To see the uploaded package, click **Show online** in the dialog box."
+4. In the **Deploy to the cloud** dialog box, click **Deploy**.
+5. You will see a dialog box with the following message: "Successfully started cloud deployment." To see the uploaded package, click **Show online** in the dialog box.
 
-#### 2.2.2 Creating a Package from the Team Server {#package-from-team-server}
+##### 2.1.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
 
-You can also deploy an app from the Team Server. To do this, follow these steps:
+You can also create a deployment package from the Team Server in the Developer Portal. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 1. Open your app's **Environments** page.
@@ -167,26 +152,24 @@ You can also deploy an app from the Team Server. To do this, follow these steps:
 1. Select your desired branch and revision and click **Next**.
 1. Give the build a version number and click **Build this revision**.
 
-The package is now deployed to Mendix Cloud.
+#### 2.1.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
-### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
+The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps:
 
-The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
-
-1. Open the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open your app.
 3. Go to **Environments**.
-4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy**.
+4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" class="image-border" alt="" >}}
 
-5. Click the environment to which you want to deploy the package.
+5. Select the environment to which you want to deploy the package.
 6. Click **Transport**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" class="image-border" >}}
 
 7. If prompted, clean the environment.
-8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
+8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done at a later stage in the settings.
 9. Configure the [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**.
 10. Click **Continue**.
 11. Click **Start application**. 
@@ -194,7 +177,16 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
 
 The app is now deployed. You can configure the administrative account.
 
-### 2.4 Deploying a Free App to Mendix Cloud {#deploy-free-app}
+### 2.2 Deploying a Free App {#deploy-free-app}
+
+#### 2.2.1 Prerequisites
+
+Before starting the process for deploying a Free App, make sure to complete these prerequisites:
+
+* You have created an app
+* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
+
+#### 2.2.2 Deploying the App
 
 With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by using one of the following methods:
 
@@ -202,9 +194,9 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected"  width=60% >}}
 
-* Alternatively, in the top bar of Studio Pro, click **Run** (▶) or **Publish**.
+* Alternatively, in the top bar of Studio Pro, click **Publish**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" width=20% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" width=20% >}}
 
 ## 3 Status of Deployment
 
@@ -232,29 +224,30 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 ### 4.2 Cloud Resource Packs {#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
+Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-The current resource packs are listed below.
+If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual credits known as cloud credits to purchase cloud resource packs on the Mendix Platform. For more information about how this works, see [Entitlements](/control-center/entitlements/).
 
-| Pack        | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
-| ----------- | ------- | -------- | ------- | ------- | ---------- | ------------ |
-| XS21        | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
-| S21 ¹       | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
-| M21 ¹       | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
-| L21 ¹       | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
-| XL21 ¹ ²    | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
-| XXL21 ¹ ²   | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
-| XXXL21 ¹ ²  | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
-| XXXXL21 ¹ ² | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
+The technical details for the cloud resource packs are listed below.
 
-¹ Can also be used with a Premium plan to provide multi-AZ fallback
+| Pack                                                 | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
+| ---------------------------------------------------- | ------- | -------- | ------- | ------- | ---------- | ------------ |
+| XS21                                                 | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
+| S21,<br>S21 Premium                                  | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
+| M21,<br>M21 Premium                                  | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
+| L21,<br>L21 Premium                                  | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
+| XL21,<br>XL21 Premium,<br>XL21 Premium Plus          | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
+| XXL21,<br>XXL21 Premium,<br>XXL21 Premium Plus       | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
+| XXXL21,<br>XXXL21 Premium,<br>XXXL21 Premium Plus    | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
+| XXXXL21,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
 
-² Can also be used with a Premium Plus plan to provide multi-region fallback
+{{% alert color="info" %}}Premium plans provide multi-AZ fallback, and Premium Plus plans provide multi-region fallback. For more details, see [Additional Resources](#additional-resources), below.{{% /alert %}}
 
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | ----------- | ------- | -------- | ------ | ------- | ---------- | ------------ |
+| XS20        | 1 GiB   |          | 1 GiB  |         | 5 GiB      | 10 GiB       |
 | S20         | 2 GiB   | 0.5      | 2 GiB  | 1       | 10 GiB     | 20 GiB       |
 | M20         | 4 GiB   | 1        | 4 GiB  | 1       | 20 GiB     | 40 GiB       |
 | L20         | 8 GiB   | 2        | 8 GiB  | 1       | 40 GiB     | 80 GiB       |
@@ -274,7 +267,7 @@ The legacy cloud resource packs listed below are still being used but are not av
 You can have a pack using a fraction of a vCPU. This is because several environments can run, completely isolated from each other, on a single virtual machine.
 {{% /alert %}}
 
-### 4.3 Additional Resources
+### 4.3 Additional Resources{#additional-resources}
 
 For Premium customers using a Premium resource pack, there are additional features available for apps deployed to Mendix Cloud. There are also additional ways to deploy Mendix Apps.
 
@@ -288,7 +281,7 @@ Fallback ensures that the data in your database is automatically copied to a dat
 
 The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
 
-#### 4.3.2 Regional Fallback
+#### 4.3.2 Regional Fallback{#regional-fallback}
 
 You can also purchase a Premium Plus plan, which provides all the features of the Premium plan, with the addition of Regional Fallback.
 

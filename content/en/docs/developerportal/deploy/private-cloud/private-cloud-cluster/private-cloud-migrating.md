@@ -25,7 +25,7 @@ To export components from the Mendix registry, you will need the following:
 
 ## 3 Download the Mendix Configuration Tool
 
-Follow the instructions in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) using the configuration tool until you reach [Running the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#running-the-tool).
+Follow the instructions in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) using the configuration tool until you reach [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool).
 
 ## 4 Export Mendix Components{#export}
 
@@ -86,19 +86,19 @@ You can now create a new Mendix for Private Cloud cluster and namespace. To tell
 If you have already installed and configured a namespace, skip directly to the [Upgrade cluster](#upgrade-cluster) section.
 {{% /alert %}}
 
-Continue following the instructions in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) from [Running the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#running-the-tool).
+Continue following the instructions in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) from [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool).
 
-In the section [Running the Configuration Tool](/developerportal/deploy/private-cloud-cluster/#running-the-tool), add the flag `--registry` to the command line that you paste into the terminal, before your press <kbd>Enter</kbd>.
+In the section [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), add the flag `--registry` to the command line that you paste into the terminal, before your press <kbd>Enter</kbd>.
 
 ### 6.1 Base Installation
 
-With the `--registry` flag set, follow the instructions in the [Base Installation](/developerportal/deploy/private-cloud-cluster/#base-installation) section of *Creating a Private Cloud Cluster*.
+With the `--registry` flag set, follow the instructions in the [Base Installation](/developerportal/deploy/standard-operator/#base-installation) section of *Creating a Private Cloud Cluster*.
 
 ### 6.2 Configure Namespace
 
-With the `--registry` flag set, follow the instructions in the [Configure Namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace) section of *Creating a Private Cloud Cluster*.
+With the `--registry` flag set, follow the instructions in the [Configure Namespace](/developerportal/deploy/standard-operator/#configure-namespace) section of *Creating a Private Cloud Cluster*.
 
-When you get to the stage [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and Linux). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
+When you get to the stage [Review and Apply](/developerportal/deploy/standard-operator/#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and Linux). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.
 

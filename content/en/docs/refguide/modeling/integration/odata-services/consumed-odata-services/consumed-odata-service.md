@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-When an external entity or action is used in an app module through the [Integration Pane](/refguide/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity or action is used in an app module through the [Integration pane](/refguide/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 ## 2 Consumed OData Service screen
 
@@ -70,7 +70,7 @@ Besides basic authentication, you can use custom authentication. For more inform
 
 You can specify additional HTTP request headers to be passed to the endpoint in this list by clicking **Add**, **Edit**, or **Delete** for custom HTTP headers for authentication. Each custom header is a pair with a key and a value.
 
-Using **Headers from a Microflow**, you can specify a microflow for creating a key and value pair(s) for dynamic values. The microflow must return a list of **System.HttpHeader** objects.
+Using **Headers from a Microflow**, you can specify a microflow for creating a key and value pair (or pairs) for dynamic values. The microflow must return a list of **System.HttpHeader** objects.
 
 {{% alert color="info" %}}
 For more flexible HTTP request headers, you can select a microflow that returns a list of **System.HttpHeader**. This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the response is **401 Unauthorized**, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
@@ -124,7 +124,7 @@ When downloading the metadata from a URL, the server may request a user name and
 This information is not stored, so if you download the metadata from the same server again, you will have to re-enter your user name and password.
 {{% /alert %}}
 
-When you import the metadata, you can add external entities and actions from the consumed OData service in the [Integration Pane](/refguide/integration-pane/).
+When you import the metadata, you can add external entities and actions from the consumed OData service in the [Integration pane](/refguide/integration-pane/).
 
 ### 2.8 Properties
 
@@ -241,7 +241,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switch-dialog-box.png" alt="major change environment" width="700" >}}
 
-3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document displays the changed service details and the [Integration Pane](/refguide/integration-pane/) will display that you are consuming from the selected environment:
+3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document displays the changed service details and the [Integration pane](/refguide/integration-pane/) will display that you are consuming from the selected environment:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/integration-pane-2.png" width="350" >}}
 

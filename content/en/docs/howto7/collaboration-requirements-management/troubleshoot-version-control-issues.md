@@ -160,4 +160,4 @@ If the solutions here do not work for your version control problems, please subm
 
 ## 4 Read More
 
-* [How to Submit Support Requests](/community-tools/support/submit-support-request/)
+* [How to Submit Support Requests](/support/submit-support-request/)

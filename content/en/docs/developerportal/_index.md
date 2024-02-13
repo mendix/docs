@@ -33,7 +33,7 @@ When you open the Developer Portal, you are brought to the **My Apps** page, whi
 
 The **All** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. 
 
-Any app tile you pin with the pin icon will appear in the **Pinned** tab. 
+Any app tile you pin by clicking **Pin** ({{% icon name="pin" %}}) will appear in the **Pinned** tab. 
 
 Use the drop-down menu on the right side of the page to sort the apps by **Most Recent** or in alphabetical order of **App Name**.
 
@@ -43,13 +43,13 @@ The **Pending Invites** tab presents the pending invitations to apps that you ha
 
 Click an app tile to see the app [Buzz](/developerportal/general/buzz/#app-buzz).
 
-By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
+By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
 
 {{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
 
 The actions available depend on the app selected. The default actions available are **Edit in Mendix Studio Pro** and **Leave App**.
 
-To stop watching an app and disable notifications for that app, click the eye icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the eye icon so that you see the **You are watching this app** tooltip.
+To stop watching an app and disable notifications for that app, click the {{% icon name="view" %}} icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the {{% icon name="view-off" %}} icon so that you see the **You are watching this app** tooltip.
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
@@ -70,7 +70,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
 
-{{< figure src="/attachments/developerportal/company-apps.png" >}}
+{{< figure src="/attachments/developerportal/company-apps.png" class="image-border"  width=80%  alt="Company Apps in MxDock">}}
 
 Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
 

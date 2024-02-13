@@ -49,7 +49,7 @@ The following table lists the properties used as keys for database and storage-r
 | Data type | Key | Example | Required |
 | --- | --- | --- | --- |
 | Database type (for example, SQLSERVER, PostgreSQL) | `database-type` | `PostgreSQL` | ✓ |
-| Database Jdbc Url | `database-jdbc-url` | `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` |  | ✓ |
+| Database Jdbc Url | `database-jdbc-url` | `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` | ✓ |
 | Database Host | `database-host` | `pg.example.com:5432` | ✓ |
 | Database Name | `database-name` | `my-app-1` | ✓ |
 | Database Username | `database-username` | `my-app-user-1` | ✓ |
@@ -330,7 +330,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
 
 9. Allow a Kubernetes ServiceAccount to assume a role.
 
-    1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+    1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
         {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 

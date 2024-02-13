@@ -56,7 +56,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 
 #### 3.2.1 Activity Used in a Microflow Called from the Client in a Responsive Web App or PWA
 
-If **Refresh in client** is set to **No**, the data sources are not rerun, and widgets which need to reload data will still display the object(s).
+If **Refresh in client** is set to **No**, the data sources are not rerun, and widgets which need to reload data will still display the object (or objects).
 
 If set to **Yes**, the deletion is reflected across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 

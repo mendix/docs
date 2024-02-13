@@ -29,7 +29,7 @@ A Mendix Admin sees the **Curators** tab displaying the list of Curators for the
 
 The Curator role can see and edit metadata for all registered assets in the Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
 
-To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
+To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the users you want to assign the Curator role to.
 
 {{% alert color="info" %}}
 A user with Curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/catalog/manage/search/#discoverability-metadata) section in *How to Search in the Catalog*). Curators can also change the metadata for assets that are owned by other users.

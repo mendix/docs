@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Catalog](/catalog/) is a metadata hub for managing shared registered assets made available through OData services. Registering data to the Catalog happens automatically when deploying an app with a published OData service to Mendix Cloud.
+The [Catalog](/catalog/) is a metadata hub for managing shared registered assets made available through OData and OpenAPI services. Registering data to the Catalog happens automatically when deploying an app with a published service to Mendix Cloud.
 
 For users deploying to a (virtual) private cloud, you can follow the steps in this document to automate registration to the Catalog in your pipeline.
 
@@ -24,7 +24,7 @@ Before you begin, make sure you have the following:
 
 ## 3 Starting Point: dependencies.json
 
-A file called *dependencies.json* lists all published and consumed OData services in your app. This file contains information you will need to make the API calls in the next steps.
+A file called *dependencies.json* lists all published and consumed services in your app. This file contains information you will need to make the API calls in the next steps.
 
 Create an `.mda` package that includes *dependencies.json*. Go to the **Environments** page in the Developer Portal and click **Create Package** From Team server, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/) for information on how to build a Mendix Deployment Package).
 
@@ -38,8 +38,8 @@ For this section, you will need:
 
 * A [personal access token](/community-tools/mendix-profile/#pat)
 * The `dependencies.json` file 
-* Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
-* Endpoint location `Value` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **DefaultValue**)
+* Endpoint location `Name` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **Name**)
+* Endpoint location `Value` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **DefaultValue**)
 
 Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to prepare your service details. When finished, [register the application](#5-register-the-application).
 
@@ -64,13 +64,13 @@ To register the environment, you will need:
 * Environment `Location`
 * Environment `Type`
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. When finished, [register the endpoint(s)](#7-register-the-endpoints).
+Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. When finished, [register the endpoint (or endpoints)](#register-endpoints).
 
 Upon completion, you will have the `environment_UUID`.
 
-## 7 Register the Endpoint(s)
+## 7 Register the Endpoint Endpoints {#register-endpoints}
 
-To register the service endpoint(s), you will need:
+To register the service endpoint (or endpoints), you will need:
 
 * A [Personal Access Token](/community-tools/mendix-profile/#pat)
 * The `application_UUID`

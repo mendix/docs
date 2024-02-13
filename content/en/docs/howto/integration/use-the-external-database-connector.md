@@ -41,7 +41,7 @@ If additional connection properties are required to connect, you can alternative
 
 2. Select the database you want to connect to and add the connection details the Database Connection wizard.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" >}}
 
 3. Click **“Test Connection”** to validate the connection to the external database.
 
@@ -94,7 +94,7 @@ SQL Query:
 
 1. For DML queries, *Number of affected rows* will be displayed as a response.
    
-For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
+    For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
 
 2. Click **Save Query**.
 

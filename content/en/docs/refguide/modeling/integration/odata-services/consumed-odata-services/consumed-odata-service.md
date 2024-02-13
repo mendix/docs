@@ -92,7 +92,7 @@ To learn more about using external entities with security enabled (in production
 
 ### 2.6 Error Handling Microflow
 
-When a call to the OData service fails, users will see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows/) to change this message.
+When a call to the OData service fails, users see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows/) to change this message.
 
 When the service responds with an unsuccessful status code (not in the 2xx range), or does not return a response at all, this microflow decides which message to show to the user.
 
@@ -145,7 +145,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. 
 
-When set to `Yes`, a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
+When set to `Yes`, a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
 
 ## 3 Updating or Switching a Consumed OData Service {#updating}
 
@@ -163,7 +163,7 @@ When you drag the **Customer** entity from **CustomerApi version 1.0.0** deploye
 
 It is important the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users.
 
-Mendix recommends a strict versioning system, such as semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
+It is recommended to use a strict versioning system, such as semantic numbering, when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
 #### 3.2.1 Minor Service Updates
 
@@ -227,7 +227,7 @@ In the example in the [Consuming from Service Endpoints](#consume-service-endpoi
 
 A published OData service that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) is shown as separate items in the search results of the [Integration pane](/refguide/integration-pane/).
 
-In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However, the same service is deployed to the **Acceptance** environment:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switching-consumed-services.png" alt="major change environment" >}}
 

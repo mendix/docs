@@ -13,15 +13,19 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
+{{% alert color="info" %}}
+With Studio Pro 10.6.0 the React client has been released as a [beta](/releasenotes/beta-features/). You can enable this new editor in the [App settings](/refguide/app-settings/#31-use-react-client-beta).
+
+The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. Other components of the Mendix Client are the same in both the React and Dojo client. See our [Release Blog](https://www.mendix.com/blog/mendix-release-10-7-go-mac-it/#react-client-public-beta) for more information.
+{{% /alert %}}
+
 ## 2 Description {#description}
 
 The Mendix Client is a part of every application built with Mendix: both web and mobile.
 
 For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
-{{% alert color="info" %}}
-The Mendix React client is bootstrapped by loading the `index.js` file. This loads the `commons.js` file which contains the Mendix Client.
-{{% /alert %}}
+The new React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
 
 For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 

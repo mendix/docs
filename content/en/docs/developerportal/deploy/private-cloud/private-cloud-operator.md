@@ -57,8 +57,8 @@ spec:
     servicePlan: dev
   storage: # Specification of Storage CR
     servicePlan: dev
-  mendixRuntimeVersion: 7.23.3.48173 # Mendix version to use for placeholder runtime image. 
-  sourceURL: https://example.com/example-app.mda # URL of App's source MDA
+  mendixRuntimeVersion: 8.0.0 # Mendix version to use for placeholder runtime image. 
+  sourceURL: https://example.com/example-app.mda # URL of App's source MDA or url to already built docker image
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
   tls: # Optional, can be omitted : set a custom TLS configuration, overriding the default operator configuration
     # Enable or disable TLS for the app
@@ -175,7 +175,7 @@ You need to make the following changes:
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/standard-operator/#configure-namespace)
 * **mendixRuntimeVersion** – the full runtime version of the app. From Operator version 2.15 onwards, though this field will be mandatory, but the value from this field will not be used in deploying the mda. 
-* **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
+* **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication. We can also provide URL to already built docker image
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
 * **tls** – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
 * **enableTLS** – allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Route

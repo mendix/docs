@@ -187,7 +187,7 @@ Rule | Name | Pattern | Rewrite URL
 1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
-{{% alert color="info" %}}Rule 1 is based on the default URL prefix (*p*) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
+{{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
 
 ## 4 Usage
 
@@ -373,7 +373,7 @@ In general, we recommend that you perform the following steps in case of any iss
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
-In case the resulting PDF document only contains a part of the expected content, verify that the layout that is used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
+In case the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
 
 {{% alert color="warning" %}}
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.

@@ -48,4 +48,4 @@ Select **Filter** to allow clients to filter results based on this attribute.
 
 ## 3 Public Documentation
 
-In the **Public documentation** tab, you can write a summary and a description intended for people using the service.
+In the **Public documentation** tab, you can write a summary and description intended for people using the service.

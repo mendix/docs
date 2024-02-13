@@ -31,7 +31,7 @@ To enable JMX on your Mendix Runtime, you can use the following Java options in 
 ```yaml
 javaopts: [
 
-"-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx128M", "-Xms128M",
+"-Dfile.encoding=UTF-8", "-Xmx128M", "-Xms128M",
 
 "-Djava.io.tmpdir=/tmp",
 

@@ -18,7 +18,7 @@ The standard used for OData in Mendix is [OData v4](http://www.odata.org/documen
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
-This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
+This document describes the options available to you when you create a published OData service and ends with some runtime considerations.
 
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
@@ -42,12 +42,12 @@ It is recommended to use [semantic versioning](https://semver.org/) for services
 {{% alert color="warning" %}}
 Once a version is released to production, any further changes should be made to a new version of the service.
 
-This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
+This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
 {{% /alert %}}
 
 ### 2.3 Location
 
-The location denotes where the service will be available. It is recommended to include the service name and the major version in the location, e.g. `svc/products/v1/`.
+The location denotes where the service will be available. It is recommended to include the service name and the major version in the location (for example, `svc/products/v1/`).
 
 The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 

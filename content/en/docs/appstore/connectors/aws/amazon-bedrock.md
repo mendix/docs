@@ -44,7 +44,16 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-{{% alert color="info" %}}
+### 3.1 Using Amazon Bedrock Models
+
+To use Amazon Bedrock models, keep in mind some specific requirements, as listed below.
+
+#### 3.1.1 Model Lifecycle
+
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state.
+
+#### 3.1.2 Server-Side Validation
+
 Amazon Bedrock has server-side validation for specific models. The Claude models require all prompts to be in the following format:
 
 ```text
@@ -53,9 +62,8 @@ Assistant:
 ```
 
 For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
-{{% /alert %}}
 
-### 3.1 Configuring AWS Authentication
+### 3.2 Configuring AWS Authentication
 
 In order to use the Amazon Bedrock service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -63,7 +71,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### 3.3 Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
@@ -84,7 +92,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.3 Invoking Specific Models by Using the InvokeModel Operation
+### 3.4 Invoking Specific Models by Using the InvokeGenericModel Operation
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Model](#invoke-model), we have included two example implementations in the Amazon Bedrock Connector:
 

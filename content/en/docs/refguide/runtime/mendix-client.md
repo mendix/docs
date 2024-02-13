@@ -14,7 +14,7 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
 {{% alert color="info" %}}
-With Studio Pro 10.6.0 the React client has been released as a [beta](/releasenotes/beta-features/). You can enable this new editor in the [App settings](/refguide/app-settings/#31-use-react-client-beta).
+In Studio Pro versions 10.6.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this new client in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. Other components of the Mendix Client are the same in both the React and Dojo client. See our [Release Blog](https://www.mendix.com/blog/mendix-release-10-7-go-mac-it/#react-client-public-beta) for more information.
 {{% /alert %}}

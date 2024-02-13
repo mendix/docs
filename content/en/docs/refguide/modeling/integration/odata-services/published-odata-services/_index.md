@@ -135,11 +135,11 @@ If authentication is required, you can select which authentication methods you w
 * Select **Active session** to allow access from JavaScript inside your current application
 * Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a published entity)
 
-Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
+Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, then **Active session**.
 
 ##### 3.3.2.1 Username and Password {#username-password}
 
-Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
+Authentication can be done by including basic authentication in the HTTP header of the call. To do this, construct a header called **Authorization** and its content should be constructed as follows:
 
 1. Username and password are combined into a string "username:password".
 2. The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
@@ -182,7 +182,7 @@ You can configure a published OData service to authenticate with the [Mendix SSO
 
 To set up authentication with Mendix SSO, do the following:
 
-1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
+1. Ensure the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
 2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### 3.3.3 Allowed Roles
@@ -199,7 +199,7 @@ In the **Public documentation** tab, you can write a summary and a description i
 
 ## 5 Properties
 
-In the properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
+In the Properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
@@ -209,22 +209,17 @@ Here you can add a description of the service. This is available to other users 
 
 ### 5.2 Replace Illegal XML Characters
 
-Some special characters cannot be used in XML. If your data contains these
-characters, the client will get an error. If you set this setting to *Yes*,
-those illegal characters are replaced by the DEL character, and the client will
-not get an error. However, the data that the client receives will not be exactly
-what is stored in your database, because these characters have been replaced.
+Some special characters cannot be used in XML. If your data contains these characters, the client will get an error. If you set this setting to **Yes**, the illegal characters are replaced by the DEL character, and the client will not get an error. However, the data the client receives will not be exactly what is stored in your database because these characters have been replaced.
 
-This *Replace Illegal XML Characters* option is not available when the OData
-version is OData 4, because OData 4 returns data in JSON format.
+The **Replace Illegal XML Characters** option is not available when the OData version is OData 4, because OData 4 returns data in JSON format.
 
-Default value: *No*
+Default value: **No**
 
 ## 6 Runtime Considerations
 
 ### 6.1 General
 
-Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
+Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/` (for example, `http://localhost:8080/odata-doc/`). For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
 
 {{% alert color="warning" %}}
 While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
@@ -234,11 +229,11 @@ For details on how to filter the OData response, refer to [OData Query Options](
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 
-When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
+When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion to avoid out-of-memory errors in the Mendix Runtime.
 
 ### 6.2 On-Premises Deployments
 
-Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
+Some on-premises servers (in particular, those using Microsoft IIS) will strip the host header from requests. This means your OData service and documentation will be published on an unexpected URL.
 
 To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#preserve-header) in the *Microsoft Windows* deployment documentation.
 
@@ -248,11 +243,11 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 * `200`, `201`, `204` – [Successful responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
-* `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+* `500` – Mendix default when something goes wrong and it has not been modeled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
 ## 8 Publishing OData Services
 
-To publish an entity with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
+To publish an entity with full CRUD (Create, Read, Update, or Delete functionality; or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
 
 ## 9 Limitations
 

@@ -100,7 +100,7 @@ The most commonly used attribute types can be used in your app. The types of the
 Support for consuming attributes of complex types was introduced in Mendix version 10.6.
 {{% /alert %}}
 
-Complex types are not supported by the Mendix domain model. However, Mendix allows you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.
+Complex types are not supported by the domain model. However, Studio Pro allows you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.
 
 By default, the attribute names consist of the name of the complex attribute and the name of the property that is part of the complex type, separated by an underscore. For example, if your external entity `Employee` contains an attribute `HomeAddress` of type `Lato.Address` with properties `Street`, `PostcalCode`, and `City`, Studio Pro allows you to add these as attributes of external entity `Employee` with default names `HomeAddress_Street`, `HomeAddress_PostalCode`, and `HomeAddress_City`, respectively. Note that only the properties of the types described in [Supported Attribute Types](#supported-types) are supported.
 

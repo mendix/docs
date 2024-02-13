@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources and actions in apps through the [Integration pane](/refguide/integration-pane/).
 
-OData services that are registered in the [Catalog](/catalog/) publish entities that can be dragged and dropped into your domain model through the [Integration pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and published entities.
+OData services that are registered in the [Catalog](/catalog/) publish entities that can be dragged and dropped into your domain model through the Integration pane as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and published entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](/refguide/consumed-odata-service/).
 

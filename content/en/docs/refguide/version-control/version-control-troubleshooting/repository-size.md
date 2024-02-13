@@ -37,7 +37,7 @@ The *.mpr* storage format will be changed in H1 2024 to reduce the rapid reposit
 
 ### 4.2 Mitigating Large Repository Size
 
-In cases where a repository has already grown to a significant size, we recommend you to consider shrinking the repository by removing parts of the history. 
+In cases where a repository has already grown to a significant size, Mendix recommends you to consider shrinking the repository by removing parts of the history. 
 
 Mendix has developed a git-fixer – a cleanup tool to assist you in shrinking your repository. For more information, see the [Cleanup Tool](#cleanup-tool) section below.
 

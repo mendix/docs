@@ -44,7 +44,16 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-{{% alert color="info" %}}
+### 3.1 Using Amazon Bedrock Models
+
+To use Amazon Bedrock models, keep in mind some specific requirements, as listed below.
+
+#### 3.1.1 Model Lifecycle
+
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state.
+
+#### 3.1.2 Server-Side Validation
+
 Amazon Bedrock has server-side validation for specific models. The Claude models require all prompts to be in the following format:
 
 ```text
@@ -53,9 +62,8 @@ Assistant:
 ```
 
 For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
-{{% /alert %}}
 
-### 3.1 Configuring AWS Authentication
+### 3.2 Configuring AWS Authentication
 
 In order to use the Amazon Bedrock service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -63,7 +71,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### 3.3 Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
@@ -84,9 +92,9 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.3 Invoking Specific Models by Using the InvokeGenericModel Operation
+### 3.4 Invoking Specific Models by Using the InvokeGenericModel Operation
 
-To help users understand what needs to be done to invoke a specific model using the [Invoke Generic Model](#invoke-generic-model), we have included two example implementations in the Amazon Bedrock Connector:
+To help users understand what needs to be done to invoke a specific model using the [Invoke Model](#invoke-model), we have included two example implementations in the Amazon Bedrock Connector:
 
 * An implementation for invoking the Claude v. 2.1 LLM that generates text
 * An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
@@ -95,7 +103,7 @@ These examples can be used as a reference together with the documentation found 
 
 To invoke a specific model, perform the following steps:
 
-1. Choose the model with which you want to interact by using the [Invoke Generic Model](#invoke-generic-model) operation.
+1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
 3. Create your domain model inspired by the JSON structures that you found by using a tool to visualize Json structures, such as [JSON Crack](https://jsoncrack.com/editor).
 4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
@@ -107,7 +115,7 @@ To invoke a specific model, perform the following steps:
     6. Paste the request or response JSON into the created structure.
     7. Click **OK**.
 5. Generate export and import mappings for the request and response JSON structures.
-    The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelGenericRequest` object provided as input parameter to the [Invoke Generic Model](#invoke-generic-model) operation. The import mapping maps the response returned by the [Invoke Generic Model](#invoke-generic-model) operation to your model-specific response objects. To create import or export mappings, perform the following steps:
+    The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelRequest` object provided as input parameter to the [Invoke Model](#invoke-model) operation. The import mapping maps the response returned by the [Invoke Model](#invoke-model) operation to your model-specific response objects. To create import or export mappings, perform the following steps:
     1. Right-click the target folder.
     2. Click **Add other** > **Import/Export mapping**.
     3. In the dialogue window, select the **Schema source**.
@@ -115,7 +123,7 @@ To invoke a specific model, perform the following steps:
     5. Select the relevant schema elements.
     6. Click **OK**.
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
-6. Create a microflow that invokes a specific model using the [Invoke Generic Model](#invoke-generic-model) operation, such as in the following figure (for Claude v. 2.1):
+6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
 
     {{< figure src="/attachments/appstore/connectors/aws-bedrock/microflow.png" >}}
 
@@ -194,9 +202,9 @@ The `SupportedCustomization` entity contains the customization type that the mod
 | --- | --- |
 | `CustomizationType` | The type of the customization. |
 
-#### 4.1.9 InvokeModelGenericRequest {#invoke-model-generic-request}
+#### 4.1.9 InvokeModelRequest {#invoke-model-request}
 
-This is the request entity of the `InvokeModelGeneric` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
+This is the request entity of the `InvokeModel` action. It is a specialization of the `AbstractRequest` entity of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333)
 
 | Attribute | Description |
 | --- | --- |
@@ -204,9 +212,9 @@ This is the request entity of the `InvokeModelGeneric` action. It is a specializ
 | `SavePrompt` | The `SavePrompt` attribute describes whether to save this prompt in your prompt history. The default value is **false**. |
 | `RequestBody` | The `RequestBody` Attribute describes the JSON request body of the specific model to invoke. |
 
-#### 4.1.10 InvokeModelGenericResponse {#invoke-model-generic-response}
+#### 4.1.10 InvokeModelResponse {#invoke-model-response}
 
-This is the response entity of the `InvokeModelGeneric` action.
+This is the response entity of the `InvokeModel` action.
 
 | Attribute | Description |
 | --- | --- |
@@ -515,17 +523,17 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
 
-#### 4.2.2 InvokeModelGeneric {#invoke-generic-model}
+#### 4.2.2 InvokeModel {#invoke-model}
 
-The `InvokeModelGeneric` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelGenericRequest` as input parameters.
+The `InvokeModel` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelRequest` as input parameters.
 
-The `InvokeModelGeneric` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModelGeneric` operation to invoke specific models. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel Generic` operation.
+The `InvokeModel` operation provides a versatile interface for integrating with Amazon Bedrock models. Each available model in Amazon Bedrock has its own set of model-specific parameters required to be passed into the `InvokeModelRequest`. The Amazon Bedrock Connector contains two example implementations to showcase how to use the `InvokeModel` operation to invoke specific models. The [Amazon Bedrock example implementation](https://marketplace.mendix.com/link/component/215751) available on the Mendix Marketplace provides a more extensive reference implementation of how to configure the model-specific parameters into the generic `InvokeModel` operation.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelGenericRequest (object)` | `InvokeModelGenericResponse (object)` |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)` | `InvokeModelResponse (object)` |
 
 #### 4.2.3 ListKnowledgeBases {#list-knowledge-bases}
 

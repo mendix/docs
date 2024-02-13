@@ -7,7 +7,7 @@ tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 ---
 
-{{% alert color="warning" %}}The Pipelines feature is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.{{% /alert %}}
+{{% alert color="warning" %}}Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.{{% /alert %}}
 
 ## 1 Introduction
 
@@ -62,7 +62,7 @@ Step-level errors occur when a step in the pipeline fails, either because the st
 
 For example, if you do not have the [permissions](/developerportal/deploy/node-permissions/) to deploy to the target environment, then the pipeline will fail at the Deploy step (or earlier, if there is also an earlier step where your permissions are insufficient).
 
-If a step fails, that step is flagged with an error icon: {{% icon name="alert-triangle" %}}. The step's logs indicate the cause of failure.
+If a step fails, that step is flagged with an error icon ({{% icon name="alert-triangle-filled" color="red" %}}). The step's logs indicate the cause of failure.
 
 #### 2.1.2 System-Level Errors
 
@@ -105,11 +105,15 @@ If you start from the template, you can still add, remove, and configure its ste
 
 Give your pipeline a name, and click **Next** to go to your new pipeline design's **Details** page.
 
-### 3.2 Editing a Pipeline{#edit-pipeline}
+### 3.2 Editing a Pipeline Design{#edit-pipeline}
 
 From your pipeline design's **Details** page, you can add, remove, and configure the steps in your pipeline. You can also click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the pipeline name to edit the name.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
+
+{{% alert color="info" %}}
+Active pipelines cannot be edited; if you want to edit an existing pipeline, make sure it is deactivated.
+{{% /alert %}}
 
 #### 3.2.1 Pipeline Steps{#pipeline-steps}
 
@@ -129,25 +133,40 @@ Expand each step to configure it, delete it, or view its outputs. You can expand
 
 ##### 3.2.1.1 Variables
 
-Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Publish, Publish before Deploy, and Deploy before Build.
+Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
 
-These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. These variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
+These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
 
-### 3.3 Saving a Pipeline
+### 3.3 Saving, Activating, and Deactivating a Pipeline
 
-When you are finished editing your pipeline design, click **Save**. Or, to immediately start using the pipeline, click **Save & Activate**.
+#### 3.3.1 Saving
 
-{{% alert color="info" %}}
-The first time you activate a pipeline, you will be prompted to add a personal access token and API key in the [**Settings** tab](#settings-tab) if you have not already set these up. Configuring these settings is required for a successful pipeline run.
-{{% /alert %}}
+When you are ready, click **Save**. This saves your design as a draft but does not activate it. You can continue editing your saved draft at any time.
+
+#### 3.3.2 Activating
+
+When you are finished editing your pipeline design, click **Save & Activate**. This does the following:
+
+1. Saves your design.
+2. Checks if all mandatory fields in your pipeline steps have been filled out. If any of the steps are missing information, an error message displays and the step with the missing information is highlighted.
+3. Checks if your user settings have been configured. If you have not yet added a personal access token and API key in the [**Settings** tab](#settings-tab), an error message displays.
+4. If the above conditions are met, activates your pipeline.
 
 Once activated, your pipeline runs automatically according to the trigger defined in the [Start Pipeline step](#pipeline-steps).
+
+#### 3.3.3 Deactivating
+
+To deactivate an active pipeline, click **Deactivate** in the pipeline's design. If you want to use the pipeline again, you can always click **Save & Activate** to reactivate it.
+
+Note that active pipelines cannot be edited. If you want to edit an existing pipeline, you must deactivate it before making changes.
+
+The pipeline design's status (**Active** or **Inactive**) is displayed in the overview table on the **Designs** tab.
 
 ## 4 The Settings Tab{#settings-tab}
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" class="image-border" >}}
 
-The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline.
+The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert ({{% icon name="alert-circle-filled" color="red" %}}).
 
 Adding your API key and PAT allows your existing permissions to be used to run the pipeline. For example, if the trigger in your Start Pipeline step is set to **Teamserver push (Git)**, then the pipeline runs whenever someone pushes to the specified branch. However, if that user has not configured their user settings yet, then the pipeline run will fail.
 
@@ -187,5 +206,4 @@ Pipeline failure notifications are only sent if the user who triggered the pipel
 
 ## 5 Read More
 
-* [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/)
-* [Developer Settings](/community-tools/mendix-profile/#dev-settings)
+* [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/) – This document describes how to use Mendix APIs to set up your CI/CD process; this is possible if you use Jenkins, GitLab, or another CI/CD tool.

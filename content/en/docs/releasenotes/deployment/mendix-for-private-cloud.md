@@ -13,6 +13,24 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### February 16th, 2023
+
+#### Mendix Operator v2.15.0 {#2.15.0}
+
+* Support for Java 17 has been incorporated into Mendix versions 8, 9, and 10, while Java 21 is now supported in Mendix 9 and 10. Additionally, with the release of Mendix 10.10, compatibility with Java 21 will be added.
+* The capability to remove annotations from Ingress and Service objects has been implemented, eliminating the need for manual annotation removal by users.
+* Enhancements have been made to the liveness probe, resulting in improved handling of slow-starting applications and database migrations. This enhancement negates the requirement for startup probe configurations.
+* The log collection feature of the `mxpc-cli` installation and configuration tool has been expanded to include the saving of operator configuration, storage plans, storage instances, Mendix App CRs, build, pods, endpoint and services.
+* Kubernetes server information is now included in the Mendix operator version data.
+* Users can now specify only the app constants they wish to update, with the remaining constants automatically taking default values. This update removes the necessity for users to set all app constants in their Mendix App CR.
+* An issue has been resolved where the Storage Plan status erroneously displayed deleted Storage instances.
+* Operator and its associated components have been upgraded to Golang 1.21 and K8s 0.28.4, effectively addressing Synk security warnings.
+* More detailed data per replica is now provided within the application.
+* With Mendix Operator version 2.15.0, it is now feasible to retrieve the Debugger password from the Kubernetes CSI Secrets Store, enabling secure storage of configurations in credential storage systems like Hashcorp Vault or AWS Secrets Manager.
+* Configuration tool now enables users to utilize previously saved YAML configurations for their namespace settings.
+* Enhancements have been made to the Global Operator, allowing managed namespaces to be automatically upgraded when the global operator namespace is upgraded.
+
+
 ### Februry 1, 2024
 
 #### Portal Improvements

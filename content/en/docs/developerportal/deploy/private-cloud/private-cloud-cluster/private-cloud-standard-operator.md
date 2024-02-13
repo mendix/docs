@@ -140,6 +140,8 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
+Before you configure the namespace, user will be redirected to a screen which will ask the user if they want to load the previous session of namespace configuration file. If user clicks on **OK** button, then the last session for the namespace will be loaded in the screen. This means, if user configured the storage plans like database in previous session, but did not applied it. Then this feature will be useful for the user as clicking **OK** button will load the database details in the screen of configuration tool. If user clicks on **Cancel** button, no session will be loaded in the screen.
+
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png" >}}
 
 The options do the following:

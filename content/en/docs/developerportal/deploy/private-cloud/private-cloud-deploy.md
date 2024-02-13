@@ -32,7 +32,7 @@ You can also create environments and deploy and manage apps using the [Mendix fo
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro 7.23.3 (build 48173) or above.
+* Mendix Studio Pro 8.0.0 (build 56467) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. If you want to change it to Developer mode, the Cluster Manager can do this from the cluster manager page.
 
@@ -148,15 +148,15 @@ All environments are defined as production environments, which means that [secur
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
+{{% alert color="info" %}}
     If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-    {{% /alert %}}
+{{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
+{{% alert color="info" %}}
     If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-    {{% /alert %}}
+{{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
 
@@ -401,6 +401,21 @@ Most of the information is self-explanatory, but the status information gives yo
 
 This status shows you the following information – how many replicas are running, whether there was a successful build, and how long since the app was last started.
 
+In order to get more detailed information per replica in the application, you can click on **More Info** button.
+
+You can get the information related to Runtime status, License status and Sources w.r.t to Database, Storage, MxAdmin password, Debugger password, App constants and Custom Runtime settings. Along with this, from Operator version 2.15.0 onwards, you can also specifically collect information w.r.t to pods running in the application. Below is the brief explanation of the fields in the section:
+
+
+1. **deletionInitiated**: This indicates whether the deletion of the pod has been initiated. If it's set to `false`, it means the pod is not currently being deleted.
+
+2. **ready**: This shows whether the pod is ready to serve requests. If it's `false`, it means the pod is not ready to serve requests, possibly due to containers within the pod not being ready or other issues.
+
+3. **restartCount**: This represents the number of times the containers within the pod have been restarted.
+
+4. **started**: This indicates whether the pod has started. If it's `false`, it means the pod has not yet started successfully.
+
+5. **state**: This describes the current state of the pod. In this case, it indicates that the pod is in a waiting state, which means it is not running but waiting for something to happen, such as a container to become ready or other conditions to be met before it can start running.
+
 #### 5.1.2 Environment Details > Status
 
 This shows you the status of the environment and is the same as the status shown on the Environments page and described in [Environment Status Indicators](#environment-status), above.
@@ -587,6 +602,10 @@ On the Debugger tab you can set up and view the credentials you need to debug yo
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/debuggerTab.png" >}}
 
+{{% alert color="info" %}}
+If the Debugger password is configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+{{% /alert %}}
+
 ## 6 Current Limitations{#limitations}
 
 ### 6.1 Reserved Names for Mendix Apps{#reserved-names}
@@ -695,8 +714,14 @@ In version 2.10.0 and above of the `mxpc-cli` administration and configuration t
 To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where the information should be saved:
 
 ```bash {linenos=false}
-mxpc-cli log-extract -n {namespace} -f {filename}
+mxpc-cli log-extract -n {namespace} -f {filename} 
 ```
+
+From version 2.15.0 onwards, it will now also be possible to collect Mendix App CR, Operator Configuration, Storage Plans, Storage Instance, endpoints, deployments, services, build, pods and operator version. However, if you would not like to share data such as Mendix App CR, Operator Configuration, Storage Plans, Storage Instance with the Mendix Support, you can use below flags to false. 
+
+  -m - Mendix Apps CR(s) (default true)
+  -o - OperatorConfig (default true)
+  -s - Storage Plan and Storage Instance (default true)     
 
 This file can be shared with Mendix Support or the team responsible for maintaining infrastructure.
 

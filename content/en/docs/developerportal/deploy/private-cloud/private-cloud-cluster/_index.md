@@ -67,7 +67,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or just a single operator namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
-    2. **Cluster Name** – The name that you want to give the cluster which you are creating.    
+    2. **Cluster Name** – The name that you want to give the cluster which you are creating.
 
     3. **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
 
@@ -157,16 +157,33 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. Mendix recommends making a backup before applying any changes.
 {{% /alert %}}
 
-### 6.1 Runtime Base Image 
+### 6.1 Runtime Base Image
 
-The Operator configuration contains below field which contains the base os version along with the Java version. From Operator 2.15.0 onwards, the below field will be automatically set to 'ubi8-1-jre{{.JavaVersion}}-entrypoint'. 
+Starting from version 2.15.0, the OperatorConfiguration contains allows to specify the base OS image tag template.
+
+The Operator will parse the MDA file metadata and use this metadata to fill in the `JavaVersion` field.
 
 ```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
+spec:
   baseOSImageTagTemplate: 'ubi8-1-jre{{.JavaVersion}}-entrypoint'
 ```
 
+At the moment, the `baseOSImageTagTemplate` can be set to one of the following values:
+
+* `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this is the default option.
+* `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this option can be used to use a newer OS and improve security scores..
+
 {{% alert color="info" %}}
-Official support for Java 11 will conclude in October 2024. Java 17 will be supported in Mendix 8, 9, and 10 and, subsequently, support for Java 21 will be added in Mendix 9 and 10. Java 17 and 21 enjoy official support until October 2027 and September 2029, respectively. Mendix 10.7 will run on Java 17, and Mendix 10.10 will add Java 21 compatibility. As soon as Java 17 support is released we’ll also backport that to the 10.6 MTS release.
+
+Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
+
+If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA.
+
 {{% /alert %}}
 
 
@@ -222,7 +239,7 @@ spec:
       pathType: ImplementationSpecific
 # ...
 # omitted lines for brevity
-# ...      
+# ...
 ```
 
 When using **OpenShift Routes** for network endpoints:
@@ -377,13 +394,13 @@ spec:
         livenessProbe:
           failureThreshold: 3
           httpGet:
-          path: /
-          port: mendix-app
-          scheme: HTTP
+            path: /m2ee-sidecar/v1/healthz
+            port: 8800
+            scheme: HTTP
           initialDelaySeconds: 60
           periodSeconds: 15
           successThreshold: 1
-          timeoutSeconds: 1
+          timeoutSeconds: 3
         readinessProbe:
           failureThreshold: 3
           httpGet:
@@ -394,15 +411,6 @@ spec:
           periodSeconds: 1
           successThreshold: 1
           timeoutSeconds: 1
-        startupProbe:
-            httpGet:
-              path: /
-              port: mendix-app
-              scheme: HTTP
-            timeoutSeconds: 1
-            periodSeconds: 25
-            successThreshold: 1
-            failureThreshold: 4
         terminationGracePeriodSeconds: 300
         resources:
           limits:
@@ -413,16 +421,12 @@ spec:
             memory: 512Mi
 # ...
 # omitted lines for brevity
-# ...    
+# ...
 ```
-
-{{% alert color="info" %}}
-The liveness probe has been improved from Operator version 2.15 onwards, hence, support for runtimeStartupProbe is removed from this version onwards.
-{{% /alert %}}
 
 #### 6.4.1 Resource Definition via Operator Configuration Manifest
 
-For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose. 
+For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose.
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -465,22 +469,28 @@ spec:
   runtimeReadinessProbe:
     initialDelaySeconds: 5
     periodSeconds: 1
+  # startup probes are deprecated in Mendix Operator 2.15.0
   runtimeStartupProbe:
     failureThreshold: 30
-    periodSeconds: 10  
+    periodSeconds: 10
   runtimeTerminationGracePeriodSeconds: 300
 ```
 
 The following fields can be configured:
 
-* `Liveness`, `readiness`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace; any changes made in the deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
+* `liveness`, `readiness`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace; any changes made in the deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
 * `sidecarResources` –  this is used for all `m2ee-sidecar` containers in the namespace
 * `metricsSidecarResources` – this is used for all `m2ee-metrics` containers in the namespace
 * `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
 {{% alert color="info" %}}
-The liveness probe has been improved from Operator version 2.15 onwards, hence, support for runtimeStartupProbe is removed from this version onwards.
+Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
+
+As soon as the Mendix Runtime begins the startup process, the liveness check will return a valid response - as long as the Mendix Runtime is starting and passes its internal healthchecks.
+
+The liveness probe will begin returning valid responses just a few seconds after the Runtime container starts, and this removes the need to use startup probes.
+Starting from Mendix Operator 2.15.0, startup probes are no longer used, and changing their settings will have no effect.
 {{% /alert %}}
 
 #### 6.4.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
@@ -499,8 +509,8 @@ Let us now analyze the `liveness probe` section from the application deployment 
 livenessProbe:
   failureThreshold: 3
   httpGet:
-    path: /
-    port: mendix-app
+    path: /m2ee-sidecar/v1/healthz
+    port: 8800
     scheme: HTTP
   initialDelaySeconds: 60
   periodSeconds: 15
@@ -512,7 +522,7 @@ The following fields can be configured:
 
 * `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
 * `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
-* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
+* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 3 second. Minimum value is 1.
 * `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
 * `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
 
@@ -520,11 +530,11 @@ The following fields can be configured:
 If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-From Operator 2.15 onwards, the liveness probe has been improved, which will result into less restarts of the app. 
-If app might be taking too long to start and is failing the startup or liveness probes, 2.15.0 release will address this type of issue by using a better liveness probe
-{{% /alert %}}
+{{% alert color="warning" %}}
+Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
 
+The default settings for the liveness probe should work for almost every use case, and should not be modified unless instructed by Mendix Support.
+{{% /alert %}}
 
 #### 6.4.3 Customize Startup Probes for Slow Starting Applications
 
@@ -556,8 +566,10 @@ Startup probes are available in the Mendix for Private Cloud Operator version 2.
 In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
 {{% /alert %}}
 
-{{% alert color="info" %}}
-From Operator 2.15 onwards, the liveness probe has been improved, which now removes the need to configure Start up probe, hence, Start up probe is no more required from this 2.15 version onwards. 
+{{% alert color="warning" %}}
+Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
+
+Startup probes are no longer used, and changing the `startupProbe` settings will have no effect.
 {{% /alert %}}
 
 #### 6.4.4 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
@@ -824,7 +836,7 @@ The Mendix Operator uses some labels for internal use. To avoid conflicts with t
 
 ### 6.10 GKE Autopilot Workarounds {#gke-autopilot-workarounds}
 
-In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements. 
+In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements.
 
 As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to deployments and pods.
 
@@ -1081,6 +1093,11 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Mendix Operator version 2.14.0 (and older) don't remove ingress or service annotations when an annotation is removed from the Private Cloud Portal or in the `MendixApp` CR.
+
+This is addressed in Mendix Operator version 2.15.0; if you need to remove an ingress or service annotation, please upgrade to the latest Mendix Operator version first.
+{{% /alert %}}
 
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
 
@@ -1216,14 +1233,14 @@ kubectl -n {namespace} delete storageplan {StoragePlanName}
 
 #### 7.2.5 Custom Core Resource Plan
 
-Here, you can create customized plan for your core resources. 
+Here, you can create customized plan for your core resources.
 
 1. Click **Add New Plan**.
 2. Provide a name to the plan under **Plan Name**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice. 
+3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 

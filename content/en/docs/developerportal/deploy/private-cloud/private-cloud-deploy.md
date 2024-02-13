@@ -110,7 +110,7 @@ All environments are defined as production environments, which means that [secur
 
     {{% alert color="warning" %}}
     In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
-    {{% /alert %}}    
+    {{% /alert %}}
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.
 
@@ -148,15 +148,15 @@ All environments are defined as production environments, which means that [secur
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
-{{% alert color="info" %}}
+    {{% alert color="info" %}}
     If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-{{% /alert %}}
+    {{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
-{{% alert color="info" %}}
+    {{% alert color="info" %}}
     If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-{{% /alert %}}
+    {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
 
@@ -170,8 +170,8 @@ All environments are defined as production environments, which means that [secur
     You can also filter the environment by the namespace name, environment ID, and environment name.
 
 {{% alert color="info" %}}
-The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
-{{% /alert %}}  
+The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial*
+{{% /alert %}}
 
 ### 3.4 Deploying the Deployment Package{#deploy-package}
 
@@ -405,8 +405,7 @@ In order to get more detailed information per replica in the application, you ca
 
 You can get the information related to Runtime status, License status and Sources w.r.t to Database, Storage, MxAdmin password, Debugger password, App constants and Custom Runtime settings. Along with this, from Operator version 2.15.0 onwards, you can also specifically collect information w.r.t to pods running in the application. Below is the brief explanation of the fields in the section:
 
-
-1. **deletionInitiated**: This indicates whether the deletion of the pod has been initiated. If it's set to `false`, it means the pod is not currently being deleted.
+1. **deletionInitiated**: This indicates whether the deletion of the pod has been initiated (pod is stopping). If it's `false`, it means the pod is not currently being deleted.
 
 2. **ready**: This shows whether the pod is ready to serve requests. If it's `false`, it means the pod is not ready to serve requests, possibly due to containers within the pod not being ready or other issues.
 
@@ -476,7 +475,7 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
 * ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
 
-    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
+    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}}
 
 * ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
 
@@ -714,14 +713,14 @@ In version 2.10.0 and above of the `mxpc-cli` administration and configuration t
 To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where the information should be saved:
 
 ```bash {linenos=false}
-mxpc-cli log-extract -n {namespace} -f {filename} 
+mxpc-cli log-extract -n {namespace} -f {filename}
 ```
 
-From version 2.15.0 onwards, it will now also be possible to collect Mendix App CR, Operator Configuration, Storage Plans, Storage Instance, endpoints, deployments, services, build, pods and operator version. However, if you would not like to share data such as Mendix App CR, Operator Configuration, Storage Plans, Storage Instance with the Mendix Support, you can use below flags to false. 
+From version 2.15.0 onwards, it will now also be possible to collect Mendix App CR, Operator Configuration, Storage Plans, Storage Instance, endpoints, deployments, services, build, pods and operator version. However, if you would not like to share data such as Mendix App CR, Operator Configuration, Storage Plans, Storage Instance with the Mendix Support, you can use below flags to false.
 
   -m - Mendix Apps CR(s) (default true)
   -o - OperatorConfig (default true)
-  -s - Storage Plan and Storage Instance (default true)     
+  -s - Storage Plan and Storage Instance (default true)
 
 This file can be shared with Mendix Support or the team responsible for maintaining infrastructure.
 

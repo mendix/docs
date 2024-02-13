@@ -17,19 +17,36 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.15.0 {#2.15.0}
 
-* Support for Java 17 has been incorporated into Mendix versions 8, 9, and 10, while Java 21 is now supported in Mendix 9 and 10. Additionally, with the release of Mendix 10.10, compatibility with Java 21 will be added.
-* The capability to remove annotations from Ingress and Service objects has been implemented, eliminating the need for manual annotation removal by users.
-* Enhancements have been made to the liveness probe, resulting in improved handling of slow-starting applications and database migrations. This enhancement negates the requirement for startup probe configurations.
+* The build process was refactored by decoupling the base OS image (containing the OS, Java and their dependencies) and Mendix Runtime layers.
+  * This simplifies replacing the base OS and Java versions, and keeping them up to date.
+  * The Operator will detect which version of Java is required by the app and use the same major Java version that was used to build the app.
+* It's now possible to switch the image builder build app images based on `ubi9` instead of `ubi8`.
+* Instead of checking if the app is responding to HTTP requests (which only happens after an app has completed its startup process), the liveness probe now calls a dedicated healthcheck endpoint.
+  * This prevents Kubernetes from restarting an app if it's temporarily overwhelmed with requests or background tasks - instead, an app fails a liveness check only if it's not replying to healthcheck calls, or returning a failed healthcheck status.
+  * It's no longer necessary to adjust startup or liveness probes, as the app will be detected as healthy a few seconds after it's started.
+* For Standalone clusters, it's no longer necessary to specify all `microflowConstants` in the MendixApp CR.
+  * The Operator will use default constant values for any constants that are not specified.
+  * With this change, _Missing microflow constant definitions_ errors will no longer cause deployments to fail.
+  * In addition, the `mendixRuntimeVersion` parameter no longer needs to be updated.
+* The MendixApp CR status will show more details about each of the app's replicas. In the future, the _More Info_ button next to the Runtime status will show details such as number of restarts or the replica's pod phase.
+* It's now possible to specify the Debugger password in the Kubernetes CSI Secrets Store, enabling secure storage of configurations in credential storage systems like Hashcorp Vault or AWS Secrets Manager.
+* After closing the `mxpc-cli` installation and configuration tool, it's possible to resume a previous session and values of all filled in fields.
 * The log collection feature of the `mxpc-cli` installation and configuration tool has been expanded to include the saving of operator configuration, storage plans, storage instances, Mendix App CRs, build, pods, endpoint and services.
-* Kubernetes server information is now included in the Mendix operator version data.
-* Users can now specify only the app constants they wish to update, with the remaining constants automatically taking default values. This update removes the necessity for users to set all app constants in their Mendix App CR.
-* An issue has been resolved where the Storage Plan status erroneously displayed deleted Storage instances.
-* Operator and its associated components have been upgraded to Golang 1.21 and K8s 0.28.4, effectively addressing Synk security warnings.
-* More detailed data per replica is now provided within the application.
-* With Mendix Operator version 2.15.0, it is now feasible to retrieve the Debugger password from the Kubernetes CSI Secrets Store, enabling secure storage of configurations in credential storage systems like Hashcorp Vault or AWS Secrets Manager.
-* Configuration tool now enables users to utilize previously saved YAML configurations for their namespace settings.
-* Enhancements have been made to the Global Operator, allowing managed namespaces to be automatically upgraded when the global operator namespace is upgraded.
+* When upgrading to this version, configuration of managed namespaces (managed by Global Operator) will be upgraded to ensure that all managed namespaces use a configuration that's compatible with the Global Operator..
+* When removing an ingress or service annotation in the Private Cloud Portal or MendixApp CR, the Operator will remove this annotation from the Kubernetes ingress, route or service resource.
+* We have fixed ARN validation in the `mxpc-cli` installation and configuration tool, and no longer mark ARNs from custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) as invalid. This should improve support for AWS China and GovCloud.
+* We fixed an issue where a StorageInstance from a deleted an environment would still show in the StoragePlan status.
+* Kubernetes server information is now included in the Mendix operator version data, and in the near future will be availailable in the Additional Information tab in the Private Cloud Portal.
+* We have updated components to use Go 1.21 and the latest dependency versions, in order to improve security score ratings for all container images.
+* Upgrading to Mendix Operator v2.15.0 from a previous version will restart environments managed by that version of the Operator.
 
+{{% alert color="warning" %}}
+Mendix Operator 2.15.0 is compatible with app images built after December 20, 2023 or later.
+
+Before upgrading to this Operator version, ensure that all apps managed by the Mendix Operator have been deployed after December 20, 2023; if not, rebuild and redeploy app MDAs before (or after) upgrading the Operator.
+
+We recommend regularly updating apps to ensure that they contain the latest security updates.
+{{% /alert %}}
 
 ### Februry 1, 2024
 

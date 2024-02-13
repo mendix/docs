@@ -65,7 +65,9 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 The prerequisites are the following:
 
 * [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
-* [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
+* Java JDK
+   * For Mendix Studio Pro 10.8 and above – [Eclipse Temurin JDK 17 (x64)](https://github.com/adoptium/temurin17-binaries/releases)
+   * For Mendix Studio Pro 10.7 and below – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
@@ -101,7 +103,9 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
-    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to *adoptiumjdk_11_x64.msi*
+    * The Java Development Kit 11 or 17 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+       * *adoptiumjdk_17_x64.msi* – for versions 10.8 and above
+       * *adoptiumjdk_11_x64.msi* – for versions 10.7 and below
     * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to *vcredist2019_x64.exe*
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
@@ -110,7 +114,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
-If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installation, try the following:
+If an error occurs during JDK installation, try the following:
 
 * Abort the installation process
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges

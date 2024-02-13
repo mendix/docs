@@ -14,7 +14,7 @@ tags: ["studio pro", "expressions", "parsing", "formatting"]
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
+For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/SimpleDateFormat.html). 
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 

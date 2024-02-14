@@ -208,6 +208,10 @@ If the pipeline fails, it sends a notification to the user who triggered the pip
 Pipeline failure notifications are only sent if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.
 {{% /alert %}}
 
-## 5 Read More
+## 5 Limitations
+
+Pipelines time out if they run for more than three hours. In other words, if the operations in your pipeline cumulatively take longer than three hours to complete, then the pipeline will fail.
+
+## 6 Read More
 
 * [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/) – This document describes how to use Mendix APIs to set up your CI/CD process; this is possible if you use Jenkins, GitLab, or another CI/CD tool.

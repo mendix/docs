@@ -104,7 +104,7 @@ To add a custom **Business Owner**, follow these steps:
 
 ### 4.2 Changing the App Icon {#application-icon}
 
-You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Integration Pane](/refguide/integration-pane/).
+You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Integration pane](/refguide/integration-pane/).
 
 When you change an application icon, all data sources that are registered in the Catalog for that application will show the new icon. 
 

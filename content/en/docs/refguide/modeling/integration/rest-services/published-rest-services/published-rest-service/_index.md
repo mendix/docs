@@ -38,21 +38,7 @@ Example:
 http://localhost:8080/rest/my_service_name/v1
 ```
 
-You can change the default location to almost any valid URL.
-
-#### 2.3.1 Reserved Prefixes
-
-Following URL prefixes are reserved and are not allowed to be used in location:
-
-* `ws/`
-* `ws-doc/`
-* `rest-doc/`
-* `odata/`
-* `odata-doc/`
-* `api-doc/`
-* `xas/`
-* `p/`
-* `reload/`
+The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
 When your application is running, you can click the location to open the [interactive documentation page](/refguide/published-rest-services/#interactive-documentation).
 

@@ -18,7 +18,7 @@ You must have the [External Database Connector](https://marketplace.mendix.com/l
 
 ## 2 Connect to Database Wizard {#wizard}
 
-Click **Add other > External database connection** on your module to open the **Connect to Database** wizard:
+Right-click on your module and click **Add other > External database connection** to open the **Connect to Database** wizard:
 
 {{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
 
@@ -44,14 +44,14 @@ If you select **Use connection string**, enter the following:
 * **Username** — the username to access the database
 * **Password** — the password to access the database
 * **JDBC Connection String** — the connection string, in the following formats for each database type:
-  * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
-  * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
-  * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
-  * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+    * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
+    * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
+    * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
+    * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
 
 ## 3 External Database Connection Document {#external-database-document}
 
-After completing the **Connect to Database** wizard, the external database connection document is open in Studio Pro. 
+After entering your database information in the **Connect to Database** wizard, the external database connection document is open in Studio Pro. 
 
 The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
 
@@ -65,7 +65,7 @@ View data from the database in the [Tables & Columns](#tables-columns) screen on
 
 This screen includes the following fields:
 
-* **Query Name** — query name, since it is saved and can be used later
+* **Query Name** — query name, which is saved and can be used later
 * **SQL Query** — text box where you can enter your query
 
 In the **Parameters** section, click **Add Parameter** to enter the following information:

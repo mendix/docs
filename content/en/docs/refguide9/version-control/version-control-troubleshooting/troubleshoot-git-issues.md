@@ -109,7 +109,3 @@ There are properties of the Git repository that provide you with the information
 `git remote -v` — lists the remotes specified for the repository
 
 `git config --list --show-origin --show-scope` — provides information on user's Git config
-
-
-
- 

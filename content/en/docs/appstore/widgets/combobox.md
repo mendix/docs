@@ -65,7 +65,6 @@ The **General** section allows you to configure general behavior and captions fo
 * **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
     {{< figure src="/attachments/appstore/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." >}}
 
-
 #### 2.1.3 Multi Selection (Reference Set)
 
 The **Multi selection (reference set)** section allows you to configure combo box behavior for reference set type datasource. The following configurations are available:

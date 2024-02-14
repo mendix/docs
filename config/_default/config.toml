@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = false
 enableMissingTranslationPlaceholders = true
 languageCode = "en-us"
 
-disableKinds = ["taxonomy","taxonomyTerm","term"]
+disableKinds = ["taxonomy", "term"]
 
 # Image processing configuration. (Do we use this - probably not?)
 [imaging]

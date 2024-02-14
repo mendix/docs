@@ -97,6 +97,14 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
 
+#### 3.1.3 Include metadata in response by default
+
+This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedences over this setting.
+
+{{% alert color="info" %}}
+Disabling this setting could break integrations with this service, specifically integrations with Microsoft Excel and PowerBI. This setting must enabled to use these features.
+{{% /alert %}}
+
 ### 3.2 Export
 
 In this section, you can save the different representations of the service to file.

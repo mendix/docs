@@ -27,19 +27,27 @@ For more information on settings in a configuration, see [Configuration](/refgui
 
 These settings influence the behavior of the Runtime when running your application.
 
-### 3.1 Static Resources from Disk
+### 3.1 Use React Client (Beta) {#react-client}
+
+This setting enables the new React client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
+
+* **No**: Do not use the React client (default).
+* **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
+* **Migration mode**: Use the React client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended when trying out the new client.
+
+### 3.2 Static Resources from Disk
 
 If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including your theme, the JavaScript client, CSS files, and pages.
 
-### 3.2 Optimize Network Calls {#optimize-network-calls}
+### 3.3 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 URL Prefix{#url-prefix}
+### 3.4 URL Prefix{#url-prefix}
 
 Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
 
@@ -59,7 +67,7 @@ The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or 
 
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 
-### 3.4 After Startup{#after-startup}
+### 3.5 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
@@ -69,11 +77,11 @@ There is a timeout of *11 minutes* on the after startup microflow. If your after
 **After startup** is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
-### 3.5 Before Shutdown
+### 3.6 Before Shutdown
 
 Here you can select a microflow that is automatically executed when a shutdown command has been given, just before the application shuts down.
 
-### 3.6 Health Check
+### 3.7 Health Check
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
@@ -87,7 +95,7 @@ The health check microflow is specific to the [Mendix Cloud](/developerportal/de
 
 {{% /alert %}}
 
-### 3.7 First Day of the Week {#first-day-of-the-week}
+### 3.8 First Day of the Week {#first-day-of-the-week}
 
 The **First day of the week** setting determines the first day of the week in the date picker widget.
 
@@ -102,11 +110,11 @@ The **First day of the week** setting determines the first day of the week in th
 | **Friday** | Use Friday as first day of the week in date picker widgets. |
 | **Saturday** | Use Saturday as first day of the week in date picker widgets. |
 
-### 3.8 Default Time Zone
+### 3.9 Default Time Zone
 
 The **Default time zone** determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
-### 3.9 Scheduled Event Time Zone {#scheduled}
+### 3.10 Scheduled Event Time Zone {#scheduled}
 
 The **Scheduled event time zone** defines under which time zone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default time zone), you can select it here.
 
@@ -114,7 +122,7 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.10 Hash Algorithm{#hash-algorithm}
+### 3.11 Hash Algorithm{#hash-algorithm}
 
 The **Hash algorithm** is used to generate hash values for attributes of the hashed string type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
@@ -125,15 +133,15 @@ The **Hash algorithm** is used to generate hash values for attributes of the has
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.10.1 BCrypt Cost {#bcrypt-cost}
+#### 3.11.1 BCrypt Cost {#bcrypt-cost}
 
 **BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 12, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
-#### 3.10.2 Performance
+#### 3.11.2 Performance
 
 If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose **SSHA256** over **BCrypt**. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
 
-#### 3.10.3 Performance Tests
+#### 3.11.3 Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
@@ -160,7 +168,7 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms that any hashed attribute (like the `System$User` password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.11 Rounding Numbers{#rounding}
+### 3.12 Rounding Numbers{#rounding}
 
 The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
@@ -181,7 +189,7 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-### 3.12 Multiple Sessions per User {#multiple-sessions}
+### 3.13 Multiple Sessions per User {#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
@@ -323,19 +331,38 @@ Defines the maximum number of threads that can process active workflow instances
 
 Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
-### 7.3 Events {#events}
+### 7.3 Event Handlers {#event-handlers}
+
+An event handler allows you to specify a microflow which is triggered when the subscribed event (or events) occur. Each event handler can subscribe to multiple events and there can be multiple event handlers. An event is triggered when the workflow or its activity goes through transitions which warrant the event. This setting is app-wide; you can override it by setting workflow-specific event handlers in [workflow properties](/refguide/workflow-properties/#event-handlers).
+
+An event handler has the following configuration:
+
+* **Name** – describes the event handler
+* **Documentation** – provides more information regarding the usage of the event handler
+* **When** – allows you to select the [workflow event types](/refguide/workflow-events/#workflow-event-types), for which the handler should be triggered
+* **Microflow** – allows you to select a microflow that should be triggered for each of the above selected workflow event types
+
+You can use the data from the event handler microflow to build audit trails or for logging purposes. For example, you can define an event handler that only collects data from user task events.
+
+For more information on workflow events, see [Workflow Events](/refguide/workflow-events/).
+
+### 7.4 ⚠ Events (Deprecated) {#events} 
+
+{{% alert color="warning" %}}
+⚠ State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
+{{% /alert %}}
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 
 
 Security settings of workflows and user tasks allow you to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
 
-#### 7.3.1 Workflow State Change {#workflow-state-change}
+#### 7.4.1 Workflow State Change {#workflow-state-change}
 
-A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
-#### 7.3.2 User Task State Change {#user-task-state-change}
+#### 7.4.2 User Task State Change {#user-task-state-change}
 
-A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
 ## 8 Deployment Tab {#deployment}
 

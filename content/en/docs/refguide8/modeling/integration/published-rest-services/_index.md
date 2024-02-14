@@ -7,10 +7,6 @@ tags: ["publish", "REST service", "overview", "configuration"]
 # linked from integration - published rest > F1 help
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-services.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Add a [published REST service](/refguide8/published-rest-service/) to expose your entities and microflows to other apps using the REST standard.

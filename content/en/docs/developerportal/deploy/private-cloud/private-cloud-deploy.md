@@ -103,10 +103,14 @@ All environments are defined as production environments, which means that [secur
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}
-You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
-{{% /alert %}}
+    You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
+    {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
+
+    {{% alert color="warning" %}}
+    In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
+    {{% /alert %}}    
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.
 
@@ -455,7 +459,7 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
 
-* ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
+* ​​Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
 
     {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
 
@@ -718,9 +722,7 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
 
 1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
 
-{{% alert color="info" %}}
-For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.
-{{% /alert %}}
+    {{% alert color="info" %}}For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.{{% /alert %}}
 
     1. To update the Mendix Operator configuration, use the following command:
 

@@ -17,7 +17,7 @@ The new features were divided into these major themes, which are described in th
 {{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+"GA" means general availability for all users. A GA release is different than a beta or experimental release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 2 Continuous Collaboration {#continuous}
@@ -49,7 +49,7 @@ The new features were divided into these major themes, which are described in th
 | Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q1 2024 |
 | MendixChat | Released for public beta [Dec 21, 2023](/releasenotes/studio-pro/10.6/)<br>GA: TBD |
 | Mixed online and offline data | GA: Q1 2024 |
-| Mac support | Preview: Q1 2024<br>Public beta: TBD<br>GA: TBD |
+| Mac support | Released for public beta [Jan 30, 2024](/releasenotes/studio-pro/10.7/) <br>GA: TBD |
 
 ## 4 Composability {#composability}
 

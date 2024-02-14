@@ -65,9 +65,9 @@ The most important part of this setting is to regularly check the application lo
 
 You can find these log entries by looking for the following phrase in your application log: **Query executed in**. The phrase will appear in an example like this: `Jan 01 02:03:04.567 - WARNING - ConnectionBus_Queries: (1/4) Query executed in 642 seconds and 694 milliseconds: UPDATE "somemodule$someentity”`.
 
-## 4 The Number of Database Connections{#num-connections}
+## 4 Connection Pooling
 
-### 4.1 Connection Pooling
+### 4.1 The Number of Database Connections{#num-connections}
 
 The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/).
 
@@ -113,6 +113,24 @@ However, if all of the following are true, you should increase the `ConnectionPo
 * There is plenty of database memory available at all times
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
+
+### 4.2 Validating Database Connections
+
+The settings mentioned below are supported in Mendix versions 9.24.16 and above.
+
+In some deployments, database connections can be closed by the network infrastructure, for example by a firewall when they have been inactive for a long time.
+This may cause the Mendix Runtime to raise an error when it attempts to use the database connection that has now been closed.
+Mendix recommends avoiding such deployments but, if one is used, the consequences can be mitigated by letting the connection pool validate connections.
+This validation is performed using the `java.sql.Connection.isValid` method, which the JDBC driver will implement in a vendor specific way.
+
+There are a number of custom runtime settings to enable this validation:
+
+* `ConnectionPoolingTestOnBorrow`: Validate connections before returning them to the application.
+* `ConnectionPoolingTestOnCreate`: Validate connections after creating them.
+* `ConnectionPoolingTestOnReturn`: Validate connections after they are returned to the pool.
+* `ConnectionPoolingTestWhileIdle`: Validate connections when the idle object evictor runs.
+
+These options may have a small performance impact, which is the reason they are not enabled by default.
 
 ## 5 Read More
 

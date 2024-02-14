@@ -7,4 +7,3 @@ Under Article 24 (2) of the DSA, online platforms are required to publish "infor
 Based on the six-month period from August 2022 to January 2023, the average number of monthly active recipients of our Mendix Community in the EU was well below the threshold of 45 million.
 
 Since, at the time of publication of this information, the European Commission has not enacted delegated acts (as mentioned under Article 24 (2) of the DSA) on the methodology of the calculation of the number of monthly active recipients, we have performed our calculation to the best of our knowledge based on the current information the DSA provides as well as the European Commission’s guidance on the requirement to publish user numbers of February 1, 2023. We will continue to monitor the number of average monthly active recipients of our Mendix Community in the EU and will publish updated information in accordance with Article 24 (2) of the DSA.
-

@@ -17,6 +17,21 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### February 08, 2024
+
+#### Bug Fixes
+
+* We have removed an extra white space on the Logs page. 
+* On the Metrics page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The Logs page now shows all the application metrics graphs first, followed by the database metrics graphs.
+* The Environments drop-down list maintains the same sorting order as on the Environments page in the Developer Portal.
+
+### January 31, 2024 
+
+#### Improvements
+
+* We added the AWS Osaka, Seoul, and Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.
+* We added support for regional fallback in Japan (Tokyo and Osaka).
+
 ### January 18, 2024
 
 #### Bug Fixes
@@ -292,17 +307,17 @@ We added the ability to enable and disable additional services at an app and env
 
 We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=4793020705>
+Current Certificate Details: [https://crt.sh/?id=4793020705](https://crt.sh/?id=4793020705)
 
-New Certificate Details: <https://crt.sh/?id=6940447552>
+New Certificate Details: [https://crt.sh/?id=6940447552](https://crt.sh/?id=6940447552)
 
 **Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
 
 We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=4793020687>
+Current Certificate Details: [https://crt.sh/?id=4793020687](https://crt.sh/?id=4793020687)
 
-New Certificate Details: <https://crt.sh/?id=6940402070>
+New Certificate Details: [https://crt.sh/?id=6940402070](https://crt.sh/?id=6940402070)
 
 ### June 15, 2022
 
@@ -419,9 +434,9 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 We will gradually replace the TLS certificate for `*.mendix.com` in January 2022. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=2349479044>
+Current Certificate Details: [https://crt.sh/?id=2349479044](https://crt.sh/?id=2349479044)
 
-New Certificate Details: <https://crt.sh/?id=5832398831>
+New Certificate Details: [https://crt.sh/?id=5832398831](https://crt.sh/?id=5832398831)
 
 ### November 18, 2021
 

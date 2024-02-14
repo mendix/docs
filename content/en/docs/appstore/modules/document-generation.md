@@ -47,6 +47,8 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
     {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
+* The new React client that is introduced in [10.7.0](/releasenotes/studio-pro/10.7/#react-client) is not yet supported. Generating PDF documents does not work when setting the 'Use React client (Beta)' to 'Yes' in the runtime settings of your app. We will introduce support for the React client soon.
+
 ## 2 Installation {#installation}
 
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Documentation Generation module into your app.
@@ -184,6 +186,8 @@ Rule | Name | Pattern | Rewrite URL
 ---- | ---- | ------- | -----------
 1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+
+{{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
 
 ## 4 Usage
 
@@ -326,6 +330,7 @@ We recommend you do not use the viewport width (`vw`) and viewport height (`vh`)
 ## 5 Architecture
 
 ### 5.1 Overview
+
 The Document Generation module uses the PDF document generation service running in the Mendix Public Platform to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
 When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
@@ -368,6 +373,8 @@ In general, we recommend that you perform the following steps in case of any iss
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
+In case the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
+
 {{% alert color="warning" %}}
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
 {{% /alert %}}
@@ -389,7 +396,6 @@ In case you encounter the message "Unable to generate document, service response
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
-
 
 In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 

@@ -265,6 +265,7 @@ An object with the following key-value pairs:
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | NOT_FOUND | Snapshot not found. |
 | 500 | SERVICE_UNAVAILABLE | Operation failed. Please try again later or contact Support if the problem persists. |
+
 **Example Output**
 
 ```json

@@ -17,6 +17,24 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### February 8
+
+#### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now assign a status to your initiatives.
+
+### February 1 
+
+#### New Features
+
+* In Feedback, you can now message the reporter on the **Contact Reporter** tab on the [side panel](/developerportal/app-insights/feedback/#feedback-details) after you open a feedback item.
+
+#### Improvements
+
+* Errors are now gracefully handled when a [mini survey](/developerportal/app-insights/mini-surveys/) submission is sent outside the boundaries of the survey runtime window.
+* We fixed an issue where some users were unable to close feedback items.
+* We fixed an issue where some users were encountering an error when navigating back to the Feedback home page.
+
 ### January 25
 
 #### New Features
@@ -40,10 +58,11 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
+* We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
 
-* You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
-* You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
+    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+
+    * You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
 
 #### Improvements
 
@@ -57,10 +76,11 @@ We added the following new features in [Portfolio Management](/developerportal/p
 
 #### New Features
 
-We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
+* We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
 
-* App team members now can assign priority to feedback items and filter feedback items by their priority.
-*  It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+    * App team members now can assign priority to feedback items and filter feedback items by their priority.
+
+    * It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 

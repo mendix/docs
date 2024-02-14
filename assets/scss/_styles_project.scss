@@ -13,6 +13,20 @@
     unicode-range: U+000-5FF; /* Latin glyphs */
 }
 
+// Temp bug fixes for version update
+
+.btn-info { //_blog.scss
+    all: unset;
+}
+
+.btn-outline-primary { //_drawio.scss
+    all: unset;
+}
+
+.td-box--dark { //main.scss
+    all: unset;
+}
+
 // _alert.scss - Style alert boxes
 
 .alert {

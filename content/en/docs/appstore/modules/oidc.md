@@ -486,10 +486,10 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
     * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
     * **Allow the module to create users** – This enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
-          * By default, the value is set to ***Yes***.
+        * By default, the value is set to ***Yes***.
     * **User role** – the role which will be assigned to newly created users.
     * **User Type** – This allows you to configure end-users of your application as internal or external.
-          * By default, the value is set to ***Internal***.
+        * By default, the value is set to ***Internal***.
 
 5. Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
 
@@ -512,7 +512,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
 
 Review the custom microflow `evaluateMultipleUserMatches` in the **USE_ME** folder. The module tries to find the user corresponding to the given username. This microflow is triggered when multiple matching `System.User` records are found.
 
-You can customize this microflow to determine the correct user. The resulted user instance will be signed in to the application and passed on to any other microflow. However, Mendix recommends using provided unique entity attribute only. For example, `System.User.Name`
+You can customize this microflow to determine the correct user. The resulted user instance will be signed in to the application and passed on to any other microflow. However, Mendix recommends using provided unique entity attribute only. For example, `System.User.Name`.
 
 ## 7 API Authentication {#api-authentication}
 

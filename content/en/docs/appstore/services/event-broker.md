@@ -9,15 +9,15 @@ aliases:
 
 ## 1 Introduction
 
-Based on [Apache Kafka](https://kafka.apache.org/), the Mendix Event Broker is single-tenant, and will only be used by apps running on nodes provisioned for your company.
+Based on [Apache Kafka](https://kafka.apache.org/), the Mendix Event Broker is single-tenant and can only be used by apps running on nodes provisioned for your company.
 
 Events are published to a Kafka topic. Apps are subscribed to a Kafka topic to receive events, and messages use standard [CloudEvents payload format](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md).
 
-There is a single Kafka broker for Free Apps that all your company Free Apps can connect to. All Free Apps in your company publish and consume from the same Kafka broker. Events are published to one shared Kafka topic, and any Free App in your company can receive these events.
+There is a single Kafka broker for Free Apps that your company Free Apps can connect to. All Free Apps in your company publish and consume from the same Kafka broker. Events are published to one shared Kafka topic, and any Free App in your company can receive these events.
 
 ## 2 Mendix Event Broker License {#event-broker-license}
 
-Purchase a license to the Mendix Event Broker to deploy unlimited apps on production environments in the Mendix Cloud. Ask your Customer Success Manager or Account Manager to get in touch with us to purchase a license. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
+Purchase a license to the Mendix Event Broker to deploy unlimited apps on production environments in the Mendix Cloud. Ask your Customer Success Manager or Account Manager to reach out to purchase a license. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
 
 A license for the Mendix Event Broker is available for any Mendix region, but once selected, you can only run on a single region (no multi-region support). This license is available for all customers. You can also run business events on [your own Kafka cluster](/appstore/services/business-events/#byok).
 
@@ -25,10 +25,10 @@ A license for the Mendix Event Broker is available for any Mendix region, but on
 
 Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
 
-1. On App level, under the menu item Environments , under the [Services](/developerportal/deploy/environments/#services) tab
-2. On the [Environment Details](/developerportal/deploy/environments-details/#services) page, for each environment
+1. On the app level under **Environments** > [Services](/developerportal/deploy/environments/#services)
+2. On the [Environment Details](/developerportal/deploy/environments-details/#services) page for each environment
 
-The event broker must be enabled on both the *App* and specific *Environment* levels in order to use the event broker services.
+The Event Broker must be enabled on both the app and specific environment levels in order to use the Event Broker services.
 
 ### 2.2 Managing the Mendix Event Broker {#manage-mx-broker}
 

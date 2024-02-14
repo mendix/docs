@@ -30,6 +30,10 @@ When your app is deployed to Mendix Cloud, it automatically creates daily app an
 
 For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
+{{% alert color="info" %}}
+Logging for apps deployed in Mendix Cloud is limited to 500 loglines per second. Any loglines above this limit are suppressed; they do not appear in the log files or live log. if loglines are suppressed because of this rate limit, the log displays a notification with the number of loglines that were suppressed.
+{{% /alert %}}
+
 ### 2.1 Archived App and Access Logs
 
 {{% alert color="info" %}}For apps deployed to Mendix Cloud, logs are rotated and archived every day. They are retained for six months.{{% /alert %}}
@@ -61,9 +65,6 @@ The activity log records access by team members as well as members of Mendix Sup
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" class="image-border" >}}
-
-### 2.4 Log rate-limiting
-Logging for apps deployed in the Mendix Cloud is limited to 500 loglines per second. Loglines above this limit will be suppressed and will thus not appear in the log files or live logging. If loglines are skipped because of the rate-limit, we will note this in the log itself. This notification includes the number of loglines that were suppressed.
 
 ## 3 Apps on SAP Business Technology Platform
 

@@ -11,10 +11,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-For information about personal access tokens, see [User Settings](/community-tools/mendix-profile/user-settings/#pat).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. To get more involved in the Mendix community, your profile is the best place to start. 
@@ -25,15 +21,11 @@ You can access your Mendix profile by clicking your picture in the upper-right c
 By default, any newly created Mendix account comes with its own Mendix Profile.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-You can [edit your Mendix profile](/community-tools/mendix-profile/user-settings/) by clicking the settings ({{% icon name="cog" %}}) icon on the upper-right corner.
-{{% /alert %}}
-
 ## 2 Header {#header}
 
 Your profile header displays a quick overview of information about you. Your Mendix experience in level and points, your number of [credits](#challenges), and your number of [connections](#connections) are all found here. You can also select up to four featured [badges](#badges) to display your progress on the Mendix Platform. If you have a certificate from the Mendix [Academy](https://academy.mendix.com), this will also be displayed. The **Personal Info** card presents other information.
 
-You can change these details in the [Settings](#settings).
+You can [edit your Mendix profile](/community-tools/mendix-profile/user-settings/) by clicking the settings ({{% icon name="cog" %}}) icon on the upper-right corner.
 
 ## 3 Overview and Stats
 

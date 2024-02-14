@@ -22,9 +22,9 @@ The **Consumed OData Service** document contains the following information:
 * **View in Catalog** link to the **Service Details** where you can see the full details that are registered
 * **Update/Switch** – You can update the consumed service contract to another version that has been detected in the [Catalog](/catalog/) for the same app and service. The button will show the following, depending on what has been returned for the consumed contract:
     * **Update** – This button is displayed so you can update the contract that is currently consumed and shown in the **Consumed OData Service** document. You will be presented with the contract that is currently at the service endpoint. It is good practice that only minor, non-breaking changes are deployed to the same endpoint.
-    * **Switch** – This button is shown if other registered instances of the same service—with the same name, from the same app—are available in the Catalog but are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
+    * **Switch** – This button is shown if other registered instances of the same service with the same name, from the same app are available in the Catalog, but are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-    {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the the Catalog search and **App** pane, when a different contract is detected at the service endpoint, it will be indicated with an update arrow for the service. For more information on updating and switching services, see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
+    {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Catalog search and **App** pane, when a different contract is detected at the service endpoint, it will be indicated with an update arrow for the service. For more information on updating and switching services, see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
     {{% alert color="info" %}}In the [Integration pane](/refguide/integration-pane/), consumed services display an **Update** icon (a blue arrow) if there is an update available.{{% /alert %}}
 
@@ -41,7 +41,7 @@ The **Service URL** displays the URL of the service endpoint:
 
 **Timeout** is the response time for fetching data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows/).
 
-Default value: *300 seconds*
+Default value: 300 seconds
 
 ### 2.3 Proxy Configuration
 
@@ -64,7 +64,7 @@ The **Use HTTP authentication** checkbox specifies if basic authentication shoul
 
 Input these as a string with single quotes.
 
-Besides basic authentication, you can use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
+In addition to basic authentication, you can also use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
 ### 2.5 HTTP Headers {#http-headers}
 
@@ -82,7 +82,7 @@ Custom authentication can be done with the microflow where the authentication va
 
 #### 2.5.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}
 
-Publishers can set up [Custom](/refguide/published-odata-services/#authentication-microflow) authentication using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
+Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
 
 Consumers of an OData service that is set up with Mendix SSO authentication can use the **CreateAccessTokenAuthorizationHeaderList**.
 
@@ -92,7 +92,7 @@ To learn more about using external entities with security enabled (in production
 
 ### 2.6 Error Handling Microflow
 
-When a call to the OData service fails, users will see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows/) to change this message.
+When a call to the OData service fails, users see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows/) to change this message.
 
 When the service responds with an unsuccessful status code (not in the 2xx range), or does not return a response at all, this microflow decides which message to show to the user.
 
@@ -145,7 +145,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. 
 
-When set to `Yes`, a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
+When set to `Yes`, a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
 
 ## 3 Updating or Switching a Consumed OData Service {#updating}
 
@@ -163,7 +163,7 @@ When you drag the **Customer** entity from **CustomerApi version 1.0.0** deploye
 
 It is important the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users.
 
-Mendix recommends a strict versioning system, such as semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
+It is recommended to use a strict versioning system, such as semantic numbering, when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
 #### 3.2.1 Minor Service Updates
 
@@ -227,7 +227,7 @@ In the example in the [Consuming from Service Endpoints](#consume-service-endpoi
 
 A published OData service that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) is shown as separate items in the search results of the [Integration pane](/refguide/integration-pane/).
 
-In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However, the same service is deployed to the **Acceptance** environment:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/switching-consumed-services.png" alt="major change environment" >}}
 

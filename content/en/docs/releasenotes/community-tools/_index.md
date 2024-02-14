@@ -39,7 +39,7 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 
 #### Improvements
 
-* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *Mendix Profile*.
 
 ### March 9, 2023
 

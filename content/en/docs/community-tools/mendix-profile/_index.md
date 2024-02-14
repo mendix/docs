@@ -11,6 +11,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+For information about personal access tokens, see [User Settings](/community-tools/mendix-profile/user-settings/#pat).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. To get more involved in the Mendix community, your profile is the best place to start. 

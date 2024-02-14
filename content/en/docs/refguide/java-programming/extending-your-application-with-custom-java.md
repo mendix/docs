@@ -61,11 +61,15 @@ To create the app, follow these steps:
 
 Now you have some data to use when building your app.
 
+{{% alert color="info" %}}
+The examples below use categories which include "book" and products with the name "The Lord of the Rings".
+{{% /alert %}}
+
 ## 4 Adding a Java Action to Reverse a Product Name
 
-To demonstrate how to add a Java action, we will use Java to reverse the name of a product and display it.
+To demonstrate how to add a Java action, you will use Java to reverse the name of a product and display it.
 
-### 4.1 Adding a Java Action to the Products Module
+### 4.1 Adding a Java Action to the Products Module{#add-java-action}
 
 In this section, you will create a new Java action and deploy the app for Eclipse, which creates a file containing the Java class for the action.
 
@@ -176,9 +180,7 @@ Now you will add a button to the Product_NewEdit page which will use a microflow
 
 Using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) your Java actions can interact with many parts of your app. One thing that many developers want to do is to retrieve a list of objects using an [XPath Constraint](/refguide/xpath-constraints/). This section describes how to implement an XPath retrieval in a Java action.
 
-### 5.1 XPath in Microflow
-
-Using the Domain Model we set up in [Setting Up a Simple App](#simple-app) we want to retrieve a list of Products which fill the following criteria:
+Using the Domain Model you set up in [Setting Up a Simple App](#simple-app) you want to retrieve a list of Products which meet the following criteria:
 
 * Have a specified name
 * Belong to a given category
@@ -186,7 +188,9 @@ Using the Domain Model we set up in [Setting Up a Simple App](#simple-app) we wa
 
 The example skips many features you would want to add to a real app, but is designed for simplicity.
 
-We can do this in a microflow using the following steps:
+### 5.1 XPath in Microflow
+
+Firstly, a reminder of how this XPath could be implemented in a Retrieve activity. You can use this XPath in a Retrieve activity in a microflow using the following steps:
 
 1. Create a new microflow in the **Products** module and name it *ListWithRetrieve*.
 2. Add a **Retrieve** activity and configure it as follows:
@@ -200,7 +204,7 @@ We can do this in a microflow using the following steps:
 
     This will retrieve a category for us to use in the XPath.
 
-3. Add a second Retrieve activity and configure it as follows:
+3. Add a second **Retrieve** activity and configure it as follows:
 
     * Source: From database
     * Entity: Products.Product
@@ -226,11 +230,85 @@ We can do this in a microflow using the following steps:
     * Page name: *MicroflowProductList*
     * Layout: **Grids** > **Grid**
 
-6. Set the data source to be the Microflow Products.ListWithRetrieve and allow the grid to be filled automatically (paging controls are not necessary).
-7. Go to the Home_Web page and drag the MicroflowProductList page onto it, so that a button is added to the page.
+6. Set the **Data source** to be the Microflow **Products.ListWithRetrieve** and allow the grid to be filled automatically (paging controls are not necessary).
+7. Go to the **Home_Web** page and drag the **MicroflowProductList** page onto it, so that a button is added to the page.
 8. Run your app locally.
 
-    Clicking the **Microflow product list** button will display all Products named The Lord of the Rings with the Category Book which are either InStock or Available. You may have to add some examples using the **Product Overview** if none are displayed.
+    Clicking the **Microflow product list** button will display all Products named "The Lord of the Rings" with the Category "Book" which are either `InStock` or `Available`. You may have to add some examples using the **Product Overview** if none are displayed.
+
+### 5.2 XPath in a Java Action
+
+To use this XPath in a Java action called from a microflow, perform the following steps:
+
+1. Add a new Java action using the instructions in [Adding a Java Action to the Products Module](#add-java-action). The Java action has the following configuration:
+
+    * Name – *findProductByNameAndCategory*
+    * Parameters:
+        * name – a **String**
+        * category -  an **Object** of type **Products.Category**
+    * Return > Type – **List** of **Products.Product** with the **Variable name** *ProductList*
+
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/java-action-2.png" width="400" >}}
+
+2. Deploy the app for Eclipse using the menu item **App** > **Deploy for Eclipse**.
+3. Search in Eclipse for **findProductByNameAndCategory.java** and open it. If the package was already open in Eclipse, you may need to refresh the editor using <kbd>F5</kbd>.
+
+    You will now add the Java code to retrieve the product list using an XPath.
+
+    Using raw strings in XPath is generally recognized as a bad practice. Using strings you will not get compile errors if the domain model changes. You can avoid this by using format strings and the proxy classes generated by Mendix Studio Pro. As soon as the domain model changes, the proxy classes are regenerated, and the identifiers used in this code will become unresolvable, resulting in compiler errors.
+
+    First you need to import the classes you will use.
+
+4. Add the following `import` statements after the generated import statements in the Java file:
+
+    ```java {linenos = false}
+    import java.util.List;
+    import com.mendix.core.Core;
+    import products.proxies.Product;
+    import products.proxies.ProductState;
+
+    ```
+
+    And now add the XPath code.
+
+5. Add the following instructions between `//BEGIN USER CODE` and `//END USER CODE` to build the XPath and execute it. This replaces the placeholder command to throw a runtime exception.
+
+    ```java {linenos = false}
+   	//create the xpath
+	String xpath = String.format("//%s[%s/%s[%s = true() or %s = true()]][%s = $Category][%s = '%s']",
+			Product.entityName,
+			Product.MemberNames.Product_ProductState, ProductState.entityName,
+			ProductState.MemberNames.Available, ProductState.MemberNames.InStock,
+			Product.MemberNames.Product_Category, 
+			Product.MemberNames.Name, name
+	        );
+    //execute the xpath and return the list of products found
+	return Core.createXPathQuery(xpath)
+			.setVariable("Category", __category)
+			.execute(getContext());
+    ```
+
+    {{% alert color="info" %}}This, simplified, approach should be made more robust in a real app by checking and sanitizing the inputs to prevent exceptions or attempts at hacking if the end-user can formulate the search.<br/><br/>Alternatively, you can use the XPath class from the [Community Commons](/appstore/modules/community-commons-function-library/) module, which provides a powerful way of working with XPaths and performs checks automatically.
+    {{% /alert %}}
+
+6. Select **File** > **Save** to save the Java action in Eclipse.
+7. In Studio Pro, **Duplicate** the **ListWithRetrieve** microflow you created in the previous section and name it *ListWithJavaAction*.
+8. Edit the **ListWithJavaAction** microflow.
+9. Delete the second **Retrieve** activity.
+10. Drag the **findProductByNameAndCategory** Java action to the end of the microflow
+11. Configure the inputs of the **findProductByNameAndCategory** Java action as follows:
+
+    * Name: a product name which exists in your data, for example 'The Lord of the Rings'
+    * Category: $Category
+
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/call-java-action.png" width="400" >}}
+12. **Duplicate** the **MicroflowProductList** page and name it *JavaActionProductList*.
+13. Open the **JavaActionProductList** page.
+14. Set the **Data source** for the data grid to be to be the Microflow Products.ListWithJavaAction.
+15. Go to the Home_Web page and drag the JavaActionProductList page onto it, so that a button is added to the page.
+16. Run your app locally.
+
+    Clicking the **Java action product list** button will display all Products named "The Lord of the Rings" with the Category "Book" which are either InStock or Available. You may have to add some examples using the **Product Overview** if none are displayed.
 
 ## 6 Troubleshooting {#troubleshooting}
 

@@ -50,11 +50,15 @@ The search and filter options allow you to review specific run types. You can do
 
 To see the results of a particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" class="image-border" alt="" >}}
 
-From this page, you can view an overview of the run. You can also expand each executed step to see its log.
+From this page, you can view an overview of the run. You can also expand each executed step to see more information about it; this is especially useful for debugging when a pipeline run fails. Expanding a step shows the following information:
 
-There are two types of errors: step-level errors and system-level errors.
+* The step log
+* A **View Logs in fullscreen** button
+* A **View Parameters** button, which you can use to view the input and output parameters as well as the values of the step
+
+At the top of the page, there are several cards that display important information, such as whether the run succeeded or failed. If it failed, it includes information about the error that caused the run failure. There are two types of errors: step-level errors and system-level errors.
 
 #### 2.1.1 Step-Level Errors
 
@@ -109,7 +113,7 @@ Give your pipeline a name, and click **Next** to go to your new pipeline design'
 
 From your pipeline design's **Details** page, you can add, remove, and configure the steps in your pipeline. You can also click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the pipeline name to edit the name.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" class="image-border" alt="" >}}
 
 {{% alert color="info" %}}
 Active pipelines cannot be edited; if you want to edit an existing pipeline, make sure it is deactivated.
@@ -127,7 +131,7 @@ Your pipeline can include the following steps:
 * Publish – Publish the newly built deployment package to a repository.
 * Stop Environment – Stop a selected environment.
 * Create Backup – Create and store a backup of an existing environment before deploying a new deployment package.
-* Deploy – Deploy to a selected environment.
+* Deploy – Deploy to a selected environment. In this step's configuration, there is a **Use defaults for new constants** toggle that you can use to fetch the default values of new constants and scheduled events from Studio Pro and apply them to the environment. (To adjust an environment-specific configuration, see the [Environments](/developerportal/deploy/environments/) page.)
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 

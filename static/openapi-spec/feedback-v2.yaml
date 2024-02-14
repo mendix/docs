@@ -1,0 +1,837 @@
+openapi: 3.0.0
+info:
+  version: 2.0.0
+  title: Feedback API Version 2
+  description: 'The Mendix Feedback API allows you to retrieve, add and manage feedback for your Mendix apps.'
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+servers:
+  - url: 'https://feedback-api.mendix.com/v2'
+    description: Base URL
+paths:
+  /feedback-items:
+    get:
+      summary: Get Feedback Items
+      description: Returns list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.
+      operationId: get-feedback-items
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/storyId'
+        - $ref: '#/components/parameters/legacyId'
+        - $ref: '#/components/parameters/status'
+        - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/storyId'
+        - $ref: '#/components/parameters/legacyId'
+        - $ref: '#/components/parameters/status'
+        - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+      responses:
+        '200':
+          $ref: '#/components/responses/200-Feedback-Items'
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+    post:
+      summary: Create Feedback Item
+      description: This call adds a new feedback item to a specified project and returns the legacyId and UUID  of the new feedback item.
+      operationId: post-feedback-item
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/storyId'
+        - $ref: '#/components/parameters/legacyId'
+        - $ref: '#/components/parameters/status'
+        - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+      requestBody:
+        $ref: '#/components/requestBodies/feedback'
+      responses:
+        '201':
+          $ref: '#/components/responses/201-Feedback-Item-Created'
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+    patch:
+      summary: Change Feedback Item Status
+      description: Changes the status of a feedback item.
+      operationId: patch-feedback-item
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/storyId'
+        - $ref: '#/components/parameters/legacyId'
+        - $ref: '#/components/parameters/status'
+        - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+      requestBody:
+        $ref: '#/components/requestBodies/status'
+      responses:
+        '204':
+          description: ''
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+  '/feedback-items/{feedback-item-uuid}':
+    get:
+      summary: Get a Feedback Item
+      description: This call retrieves a single feedback item by the UUID of the feedback item.
+      operationId: get-feedback-item
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/feedback-item-uuid'
+      responses:
+        '200':
+          $ref: '#/components/responses/200-Feedback-Item'
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
+    delete:
+      summary: Delete a Feedback Item
+      description: Deletes a feedback item.
+      operationId: delete-feedback-item
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/feedback-item-uuid'
+      responses:
+        '204':
+          description: ''
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
+  '/feedback-items/{feedback-item-uuid}screenshot':
+    get:
+      summary: Get a Screenshot by Feedback Item UUID
+      description: Returns a screenshot for a specified feedback item. The image result is in Binary format.
+      operationId: get-feedback-item-screenshot
+      parameters:
+        - name: Authorization
+          in: header
+          description: Authentication for the Feedback API uses a personal access token (PAT).
+          required: false
+          schema:
+            type: string
+            example: MxToken <PAT>
+        - name: feedback-item-uuid
+          in: path
+          description: The unique id of the feedback item
+          required: true
+          schema:
+            type: string
+            example: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
+      responses:
+        '200':
+          description: <binary content of the file>
+          content:
+            application/octet-stream:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+  '/feedback-items/{feedback-item-uuid}/attachments/{file-id}':
+    get:
+      summary: Get an Attachment
+      description: Returns a specific attachment for a specified feedback item.
+      operationId: get-feedback-item-attachment
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/feedback-item-uuid'
+        - $ref: '#/components/parameters/file-id'
+      responses:
+        '200':
+          description: <binary content of the file>
+          content:
+            application/octet-stream:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/400-Bad-Request'
+        '401':
+          $ref: '#/components/responses/401-Invalid-Token'
+        '404':
+          $ref: '#/components/responses/404-Not-Found'
+        '500':
+          $ref: '#/components/responses/500-Something-went-wrong'
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
+tags:
+  - name: Feedback
+components:
+  parameters:
+    projectId:
+      name: projectId
+      in: query
+      description: The unique id of the project
+      required: true
+      schema:
+        type: string
+        example: 988df472-452c-4e7b-aa9c-384e0364960c
+    offset:
+      name: offset
+      in: query
+      description: The offset is the zero-based index of the first feedback item to be returned on the page. The default value is 0.
+      required: false
+      schema:
+        type: string
+        example: '10'
+    limit:
+      name: limit
+      in: query
+      description: 'The maximum number of feedback items that can be returned per request If no limit, is provided, it shall be defaulted to 100, the maximum limit that can be supplied is 100, if a limit over 100 is supplied, it shall be defaulted to 100 and no error message shall be generated.'
+      required: false
+      schema:
+        type: string
+        example: '3'
+    priority:
+      name: priority
+      in: query
+      description: 'The priority of a feedback item (Low, Medium, High, Urgent)'
+      required: false
+      schema:
+        type: string
+        example: Low
+    status:
+      name: status
+      in: query
+      description: The status of a feedback item
+      required: false
+      schema:
+        type: string
+        example: Inbox
+    legacyId:
+      name: legacyId
+      in: query
+      description: The legacy unique feedback id
+      required: false
+      schema:
+        type: string
+        example: '225'
+    storyId:
+      name: storyId
+      in: query
+      description: The story id of a feedback item
+      schema:
+        type: string
+        example: '22'
+    feedback-item-uuid:
+      name: feedback-item-uuid
+      in: path
+      description: The unique id of the feedback item
+      required: true
+      schema:
+        type: string
+        example: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
+    file-id:
+      name: file-id
+      in: path
+      description: The unique id of the attachment
+      required: true
+      schema:
+        type: integer
+    Authorization:
+      name: Authorization
+      in: header
+      description: Authentication for the Feedback API uses a personal access token (PAT).
+      required: false
+      schema:
+        type: string
+        example: MxToken <PAT>
+  requestBodies:
+    feedback:
+      description: Feedback item request body.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              projectId:
+                type: string
+                description: The unique id of the project
+              submitterDisplayName:
+                type: string
+                description: The name of the submitter
+              submitterEmail:
+                type: string
+                description: The email address of the submitter
+              submitterUUID:
+                type: string
+                description: Unique ID of the user who submitted the feedback item
+              subject:
+                type: string
+                description: Subject line of a feedback item
+              description:
+                type: string
+                description: Description of a feedback item
+              screenshot:
+                type: string
+                description: 'Base64 binary representation of an image (allowed extensions: .jpg or .png)'
+              screenshotName:
+                type: string
+                description: Name of the physical document of the screenshot
+              priority:
+                type: string
+                description: 'Name of the priority (Low, Medium, High, Urgent)'
+            required:
+              - projectId
+          examples:
+            Request example:
+              value:
+                projectId: 00000000-0000-0000-0000-000000000000
+                submitterDisplayName: John Doe
+                submitterEmail: john.doe@email.com
+                submitterUUID: 00000000-0000-0000-0000-000000000000
+                subject: Unable to export feedback
+                description: When i click on the 'export' button on the feedback overview i get an error telling me to contact the system administrator
+                screenshot: Base64 string
+                screenshotName: FeedbackExportBug1.png
+                priority: Urgent
+    status:
+      description: Status request body.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                description: The status of the feedback item
+            required:
+              - status
+          examples:
+            Request example:
+              value:
+                status: Inbox
+  responses:
+    400-Bad-Request:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Bad Request
+                  detail: ''
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-Invalid-or-empty-Authorization-header:
+      description: Invalid or empty Authorization header
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Bad Request
+                  detail: Invalid or empty Authorization header
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-Authorization-header-value-is-not-a-Bearer-token:
+      description: Authorization header value is not a Bearer token
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Bad Request
+                  detail: Authorization header value is not a Bearer token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-Authorization-header-value-is-not-a-MxToken-token:
+      description: Authorization header value is not a MxToken token
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Bad Request
+                  detail: Authorization header value is not a MxToken token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-ProjectId-is-missing:
+      description: ProjectId is missing
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Bad Request
+                  detail: ProjectId is missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    401-The-access-token-expired:
+      description: The access token expired
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Invalid scope
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    401-Invalid-Token:
+      description: Invalid Token
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Invalid Token
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    401-Invalid-scope:
+      description: Invalid scope
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Invalid scope
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    401-Missing-required-scopes:
+      description: Missing required scopes
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Invalid scope
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    404-Not-Found:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Not Found
+                  detail: ''
+                  code: 404
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    500-Something-went-wrong:
+      description: Something went wrong
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Response example:
+              value:
+                error:
+                  message: Internal Server Error
+                  detail: Something went wrong
+                  code: 500
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    200-Feedback-Items:
+      description: 200 response for Get Feedback Items
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    legacyId:
+                      type: integer
+                    uuid:
+                      type: string
+                    subject:
+                      type: string
+                    description:
+                      type: string
+                    displayId:
+                      type: integer
+                    summary:
+                      type: string
+                    activeUserRoles:
+                      type: string
+                    pageName:
+                      type: string
+                    environmentUrl:
+                      type: string
+                    screenSize:
+                      type: string
+                    browser:
+                      type: string
+                    submissionDate:
+                      type: string
+                    closedDate:
+                      type: string
+                    storyUrl:
+                      type: string
+                    storyId:
+                      type: string
+                    submitterDisplayName:
+                      type: string
+                    submitterEmail:
+                      type: string
+                    submitterUUID:
+                      type: string
+                    status:
+                      type: string
+                    issueType:
+                      type: string
+                    fileAttachments:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          fileId:
+                            type: integer
+                          name:
+                            type: string
+                    priority:
+                      type: object
+                      properties:
+                        label:
+                          type: string
+          examples:
+            Response example:
+              value:
+                items:
+                  - legacyId: 0
+                    uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
+                    subject: Unable to export feedback
+                    description: When i click on the 'export' button on the feedback overview i get an error telling me to contact the system administrator
+                    displayId: 102
+                    summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
+                    activeUserRoles: User
+                    pageName: FeedbackManagement/Overview.page.xml
+                    environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                    screenSize: 1920 x 1080
+                    browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
+                    submissionDate: '2023-05-21T09:22:41.321Z'
+                    closedDate: '2023-05-22T12:08:39.321Z'
+                    storyUrl: ''
+                    storyId: '12345'
+                    submitterDisplayName: Joe Sudlow
+                    submitterEmail: Joe.Sudlow@email.com
+                    submitterUUID: 00000000-0000-0000-0000-000000000000
+                    status: Inbox
+                    issueType: Problem
+                    fileAttachments:
+                      - fileId: 2009
+                        name: FeedbackExportBug1.png
+                    priority:
+                      label: Urgent
+    200-Feedback-Item:
+      description: 200 response for Get Feedback Item
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              legacyId:
+                type: integer
+              uuid:
+                type: string
+              subject:
+                type: string
+              description:
+                type: string
+              displayId:
+                type: integer
+              summary:
+                type: string
+              activeUserRoles:
+                type: string
+              pageName:
+                type: string
+              environmentUrl:
+                type: string
+              screenSize:
+                type: string
+              browser:
+                type: string
+              submissionDate:
+                type: string
+              closedDate:
+                type: string
+              storyUrl:
+                type: string
+              storyId:
+                type: string
+              submitterDisplayName:
+                type: string
+              submitterEmail:
+                type: string
+              submitterUUID:
+                type: string
+              status:
+                type: string
+              issueType:
+                type: string
+              fileAttachments:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    fileId:
+                      type: integer
+                    name:
+                      type: string
+              priority:
+                type: object
+                properties:
+                  label:
+                    type: string
+          examples:
+            Response example:
+              value:
+                legacyId: 0
+                uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
+                subject: Unable to export feedback
+                description: When i click on the 'export' button on the feedback overview i get an error telling me to contact the system administrator
+                displayId: 102
+                summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
+                activeUserRoles: User
+                pageName: FeedbackManagement/Overview.page.xml
+                environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                screenSize: 1920 x 1080
+                browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
+                submissionDate: '2023-05-21T09:22:41.321Z'
+                closedDate: '2023-05-22T12:08:39.321Z'
+                storyUrl: ''
+                storyId: '12345'
+                submitterDisplayName: Joe Sudlow
+                submitterEmail: Joe.Sudlow@email.com
+                submitterUUID: 00000000-0000-0000-0000-000000000000
+                status: Inbox
+                issueType: Problem
+                fileAttachments:
+                  - fileId: 2009
+                    name: FeedbackExportBug1.png
+                priority:
+                  label: Urgent
+    201-Feedback-Item-Created:
+      description: Feedback Item created.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              legacyId:
+                type: integer
+              UUID:
+                type: string
+          examples:
+            Response example:
+              value:
+                legacyId: 34
+                UUID: 00000000-0000-0000-0000-000000000000

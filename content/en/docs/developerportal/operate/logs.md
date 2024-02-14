@@ -31,7 +31,7 @@ When your app is deployed to Mendix Cloud, it automatically creates daily app an
 For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
 {{% alert color="info" %}}
-Logging for apps deployed in Mendix Cloud is limited to 500 loglines per second. Any loglines above this limit are suppressed; they do not appear in the log files or live log. if loglines are suppressed because of this rate limit, the log displays a notification with the number of loglines that were suppressed.
+Logging for apps deployed to Mendix Cloud is limited to 500 loglines per second. Any loglines above this limit are suppressed; they do not appear in the log files or live log. If loglines are suppressed because of this rate limit, the log displays a notification with the number of loglines that were suppressed.
 {{% /alert %}}
 
 ### 2.1 Archived App and Access Logs

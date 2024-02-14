@@ -36,7 +36,7 @@ To use Mendix Business Events, you will need the following:
 
 ## 2 Licensing {#licensing}
 
-The Mendix Business Events service itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a Mendix Event Broker License for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
+The Mendix Business Events service itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](/appstore/services/event-broker/#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
 
 ## 3 Configuration
 

@@ -12,7 +12,7 @@ aliases:
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or web services, is that there is no direct communication between the different apps.
 
-To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](#mendix-event-broker).
+To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](/appstore/services/event-broker/).
 
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above, and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}}
@@ -270,7 +270,7 @@ Any free app in your organization will be able to receive any event published by
 
 ### 6.3 Production Deployment
 
-To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). 
+To deploy to production, you must have a subscription to the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907). For more information, see the (Mendix Event Broker License)[/appstore/services/event-broker/#event-broker-license] section of *Mendix Event Broker*.  
 
 Make sure you enable the Mendix Event Broker for every app and environment before deploying. See [Mendix Event Broker](/appstore/services/event-broker/) for more information.
 

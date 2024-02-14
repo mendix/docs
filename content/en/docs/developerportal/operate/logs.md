@@ -62,6 +62,9 @@ The activity log records access by team members as well as members of Mendix Sup
 
 {{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" class="image-border" >}}
 
+### 2.4 Log rate-limiting
+Logging for apps deployed in the Mendix Cloud is limited to 500 loglines per second. Loglines above this limit will be suppressed and will thus not appear in the log files or live logging. If loglines are skipped because of the rate-limit, we will note this in the log itself. This notification includes the number of loglines that were suppressed.
+
 ## 3 Apps on SAP Business Technology Platform
 
 For apps deployed to SAP Business Technology Platform (SAP BTP), you can see the logs using Kibana.

@@ -6,10 +6,6 @@ description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["data hub", "studio Pro", "data hub pane", "Catalog"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-hub-pane.pdf).
-{{% /alert %}}
-
 ## 1 Introduction 
 
 [Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.

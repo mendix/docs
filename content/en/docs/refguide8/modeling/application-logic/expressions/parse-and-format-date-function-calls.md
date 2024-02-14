@@ -6,10 +6,6 @@ description: "Describes the functions for parsing Date and time values from stri
 tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/parse-and-format-date-function-calls.pdf).
-{{% /alert %}}
-
 ## 1 Introduction 
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.

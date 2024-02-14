@@ -11,6 +11,14 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ## 2024
 
+### Release 1.0.130
+
+**Release date: February 13, 2024**
+
+#### Fixes
+
+* Fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
+
 ### Release 1.0.129
 
 **Release date: January 29, 2024**

@@ -495,7 +495,7 @@ nav.foldable-nav {
   
     th,
     td {
-      padding: $table-cell-padding;
+      padding: $table-cell-padding-x $table-cell-padding-y;
       vertical-align: top;
       border: $table-border-width solid $table-border-color; // NK - added borders to tables
       font-size: 0.8rem; // NK - smaller font size

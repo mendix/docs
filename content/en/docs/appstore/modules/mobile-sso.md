@@ -70,10 +70,10 @@ This guide provides the step-by-step process of integrating the Mobile Single Si
 
 4. Ensure that you have allocated the following user roles to the Mobile SSO module roles:
 
-| **User Role** | **Mobile SSO Module Role** |
-| --- | --- |
-| Anonymous | MobileSSO.Anonymous |
-| User| MobileSSO.User |
+    | **User Role** | **Mobile SSO Module Role** |
+    | --- | --- |
+    | Anonymous | MobileSSO.Anonymous |
+    | User| MobileSSO.User |
 
 ## 4 Configuration
 
@@ -119,7 +119,7 @@ A standard sign out action will end an end-user’s Mendix session, but it will 
 
 When you are building the native mobile app using **Build Native Mobile App** option, make sure to follow the steps below:
 
-1. Turn on **Deep Link**
+1. Turn on **Deep Link**.
 1. After turning on the **Deep Link**, add the same appname from `<appname>://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Deeplink.png" max-width=80% class="image-border">}}
@@ -130,8 +130,12 @@ The following subsections show how to configure IdP for Azure AD and Okta:
 
 #### 4.7.1 Configuring IdP for Azure AD
 
-1. On [Microsoft Azure](https://portal.azure.com/#home) (tenant?), select **App Registrations**.
-1. Click **New registration**, provide required information, and click **Register**
+1. On [Microsoft Entra ID](https://portal.azure.com/#home) portal, select **App Registrations**.
+1. Click **New registration**, provide required information, and click **Register**.
+1. In the **Authentication** tab, select **No** to disable the option to **Allow public client flows** as this module only supports confidential client flows.
+
+    {{< figure src="/attachments/appstore/modules/mobile-sso/Public client flows.png" max-width=80% class="image-border">}}
+
 1. Go to the **Manifest** of the application and add following JSON representations to it:
     1. For the application that has been deployed using **Build Native Mobile App**
 
@@ -147,7 +151,6 @@ The following subsections show how to configure IdP for Azure AD and Okta:
         {{% alert color="info" %}} Use the same <appname> which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Manifest.png" max-width=80% class="image-border">}}
-
 
     2. For local testing, use below JSON representation to the **Manifest** of the application:
 
@@ -176,9 +179,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
 1. Select **OIDC-OpenID Connect** option for the **Sign-in method**.
 1. Select **Native Application** for the **Application type** and click **Next**.
 
-
     {{< figure src="/attachments/appstore/modules/mobile-sso/Okta1.png" max-width=80% class="image-border">}}
-
 
 1. In the **Sign-in redirect URIs** of the **LOGIN** field, add the following application URI:
 
@@ -189,7 +190,6 @@ The following subsections show how to configure IdP for Azure AD and Okta:
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Okta deployed.png" max-width=80% class="image-border">}}
         
-
     2. For local testing: `http://<IP_address>/oauth/v2/callback` and `makeitnative://oauth/callback`
 
         {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above.{{% /alert %}}

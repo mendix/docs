@@ -49,7 +49,7 @@ The data grid is configured with a database datasource of entity `OrderLine`. Th
 
 ### Optimize for network round trips
 In this mode when objects are requested it returns the objects from the server and the objects include all the attributes of the `OrderLine` entity.
-So if the entity would also have a `Price` attribute, it would be included in the network response, even though it is not displayed in the data grid.  This increases the network load as more information is returned over the network.
+So if the entity would also have a `Quantity` attribute, it would be included in the network response, even though it is not displayed in the data grid. This increases the network load as more information is returned over the network.
 The higher the number of attributes, the more data is transferred over the network.
 
 In this mode the object received from the runtime is registered in the [Mendix object cache](/refguide/mendix-client/#210-object-cache).

@@ -7,18 +7,17 @@ weight: 60
 
 ## Introduction
 When configuring a [list widget](/refguide/data-sources/#list-widgets) it doesn't matter which data source you select. 
-All data sources  provide the same features. For example, widgets contained by the list widget can use attributes of the entity which is returned from the data source, and if the widget supports sorting and filtering it supports it for all data sources.
+All types of data sources provide the same features when configuring a list widget. For example, widgets contained by the list widget can use attributes of the entity that is provided by the data source. If the list widget supports sorting and filtering it supports it for all types of data sources.
 
-When implementing a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets/), the widget is even not aware which kind of data source it is,
-and can use the same [APIs](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for all data sources.
+Likewise, when implementing a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets/), the type of data source configured is not a concern as all types of data sources work with the same [API](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/).
 
-Although the details are hidden away, and you don't need even be aware of them in most cases, there are cases
-where it is helpful to know those details to be able to make a page more efficient, performant or to better
-understand the behavior of a list widget. This page describes what is happening behind the 
-scenes for these data sources and what the differences are at runtime.
+Although the internal mechanics of data sources are hidden away, and you don't need be aware of them, there are cases
+where it is helpful to know some details to be able to make a page more efficient or performant.
+It will also help to get a better understanding of the behavior of a list widget. This page describes what happens behind the 
+scenes with data flow in the Mendix platform and what the differences are at runtime.
 
 ## Paging, sorting and filtering {#paging-sorting-filtering}
-All the data sources support paging, sorting and filtering but how this is handled during runtime differs for different data sources. 
+All types of data sources support paging, sorting and filtering but the way they are handled at runtime depends on the type. 
 
 For the [Database source](/refguide/database-source/) these operations are applied by the runtime.
 This means the client sends a request with all the paging, sorting and filtering information and the
@@ -46,7 +45,7 @@ The size of the response of this request depends on the number of objects return
 There are two [optimization modes](/refguide/data-sources/#optimization-mode) and the one that applies to the data source can be seen in the data source properties.
 
 As an example how this modes impact the performance and behavior of the widget we use a Data grid 2 as an example.
-The data grid is configured with a database datasource of entity `OrderLine`. The data grid is configured to have two columns which both display an attribute, the `Description` and the `Price` attribute.
+The data grid is configured with a database datasource of entity `OrderLine`. The data grid is configured to have two columns which both show an attribute, the `Description` and the `Price` attribute.
 
 ### Optimize for network round trips
 In this mode when objects are requested it returns the objects from the server and the objects include all the attributes of the `OrderLine` entity.

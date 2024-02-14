@@ -44,22 +44,22 @@ Database and nanoflow data sources are the only data sources supported offline. 
 {{% /alert %}}
 
 ### 3.2 Network optimization mode {#optimization-mode}
-During runtime the client will retrieve the data which is configured in Studio Pro. The data can be retrieved in two possible modes depending on how the page is modeled, [optimized for network round trips](##optimzed-network-round-trips) or [optimized for network load](#optimized-for-network-load-optimized-network-load).
+At runtime the client will retrieve the data which is configured in Studio Pro. The data can be retrieved in two possible modes depending on how the page is modeled, [optimize for network round trips](#optimize-for-network-round-trips) or [optimize for network load](#optimize-for-network-load).
 Which of the modes is used can be seen in the advanced tab of the data source properties.
 
 If "optimize for network load" is the default then this can be changed to the other mode. In case the mode
 defaults to "optimize for network round trips" then this is required by the client and cannot be changed.
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage">}}
-#### Optimized for number of round trips {#optimzed-network-round-trips}
-In this mode all the attributes of the displayed entity is returned for the client, even if not all these attributes are shown by the widget.
+#### Optimize for network round trips {#optimize-for-network-round-trips}
+In this mode all the attributes of the data source entity are returned for the client, even if not all these attributes are shown by the widget.
 The advantage of this mode is when a [client action](/refguide/on-click-event/#actions) is triggered, an additional request to the runtime might be prevented. 
 
-#### Optimized for network load {#optimized-network-load}
+#### Optimize for network load {#optimize-for-network-load}
 In this mode only the attributes which are shown by the list widget are returned to the client.  This reduces the amount of data transferred over the network.
 But when a [client action](/refguide/on-click-event/#actions) is triggered an additional request to the runtime might be necessary. 
 
 ## 4 Read More
 
 * [Data Containers](/refguide/data-widgets/)
-* [Runtime behavior of list data source](/refguide/datasource-runtime) 
+* [Data sources retrieval](/refguide/datasource-runtime) 

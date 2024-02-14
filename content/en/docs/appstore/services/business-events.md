@@ -30,13 +30,13 @@ Business events help you automate the resulting actions when something happens i
 To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service from the Mendix Marketplace
-* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above for [one-way events](#one-way-be), Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above for [two-way events](#two-way-be)
+* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above for one-way events, Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above for [two-way events](#two-way-be)
 * An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
 ## 2 Licensing {#licensing}
 
-The Mendix Business Events service itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
+The Mendix Business Events service itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a Mendix Event Broker License for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
 
 ## 3 Configuration
 
@@ -141,7 +141,7 @@ To use an existing business service in Studio Pro 9.24 and above, do the followi
 
 1. Right-click the service folder, hover over **Add other**, then click **Business Event Service**.
 2. Select **Use an existing business event service**.
-3. Click **Browse** and navigate to the YAML file you [exported from the publishing app](#create-be).
+3. Click **Browse** and navigate to the YAML file you exported from the publishing app.
 4. Enter a **Document name**, or use the default name, for the [business event service document](/refguide/business-event-services/).
 5. Click **OK**.
 
@@ -270,9 +270,9 @@ Any free app in your organization will be able to receive any event published by
 
 ### 6.3 Production Deployment
 
-To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). See [Mendix Event Broker License](#event-broker-license) for licensing information.
+To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). 
 
-Make sure you [enable the Mendix Event Broker](#enable-mx-event-broker) for every app and environment before deploying.
+Make sure you enable the Mendix Event Broker for every app and environment before deploying. See [Mendix Event Broker](/appstore/services/event-broker/) for more information.
 
 #### 6.3.1 Warning Message When Enabling Mendix Event Broker
 
@@ -290,7 +290,7 @@ When this requirement is not met, **app B** will either be terminated or, when u
 
 When this occurs, please execute the following steps:
 
-1. Ensure **app A** has started in the same [space](#521-environments-and-spaces) as **app B**.
+1. Ensure **app A** has started in the same space as **app B**.
 1. Restart **app B**.
 
 ### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}

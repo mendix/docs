@@ -23,7 +23,7 @@ Authentication for the Content API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-For details on how to generate a PAT, see the [Creating a PAT](/community-tools/mendix-profile/#create-pat) section in *Mendix Profile*.
+For details on how to generate a PAT, see the [Creating a PAT](/community-tools/mendix-profile/user-setting/#create-pat) section in *Mendix Profile*.
 
 Select the following : 
 

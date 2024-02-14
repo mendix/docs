@@ -60,7 +60,7 @@ Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker
 
 ### 3.1 Standard message format
 
-To move from SQS to Mendix Event Broker, a message must contain the following message attributes and start with `ce_`:
+To move an event from SQS to Mendix Event Broker, a message must contain the following message attributes and start with `ce_`:
 
 * id as `ce_id`
 * source as `ce_source`
@@ -71,7 +71,7 @@ See [CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md#requir
 
 ### 3.2 Configuring a Bridge with AWS SQS
 
-Technical Contacts with a license to the Mendix Event Broker can manage this feature from the [Event Broker Manager](https://broker.mendix.com/) menu item for `Event Broker Bridges`.
+Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_1.png">}}
 

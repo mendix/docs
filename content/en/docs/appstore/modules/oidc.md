@@ -484,24 +484,36 @@ You can set up custom user provisioning once your app is running using the `OIDC
     
     * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
     * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
-    * **User role** – the role which will be assigned to newly created users.
+    * **Allow the module to create users** – This enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
 
-5. Under **Just in time provisioning**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Custom user Entity Attribute** where you want to store the information.
+      * By default, the value is set to ***Yes***.
+    * **User role** – the role which will be assigned to newly created users.
+    * **User Type** – This allows you to configure end-users of your application as internal or external.
+
+      * By default, the value is set to ***Internal***.
+
+5. Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
 
     Note the following:
 
     * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**
-    * You can only map one IdP claim to a **Custom user Entity Attribute**
+    * You can only map one IdP claim to a **Configured Entity Attribute**
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association
 
 6. In **Select the CustomUserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
 
-    The custom microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
+    The custom microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 
     This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
+
+### 6.3 Evaluating Multiple User Matches
+
+Review the custom microflow `evaluateMultipleUserMatches` in the **USE_ME** folder. The module tries to find the user corresponding to the given username. This microflow is triggered when multiple matching `System.User` records are found.
+
+You can customize this microflow to determine the correct user. The resulted user instance will be signed in to the application and passed on to any other microflow. However, Mendix recommends using provided unique entity attribute only. For example, `System.User.Name`
 
 ## 7 API Authentication {#api-authentication}
 
@@ -694,7 +706,7 @@ If your microflow is not correctly implemented you will be told that **Authentic
 
 ### 8.3 Deep Links
 
-To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to '/oauth/v2/login?cont='
+To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to `/oauth/v2/login?cont=`.
 
 If end-users that use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If that is successful, the end-user will automatically be redirected back to the deeplink.
 

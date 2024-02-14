@@ -66,7 +66,7 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 {{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" >}}
 
-{{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
+{{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
 
 ### 2.2 Release Cycle
 
@@ -86,10 +86,12 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 An MTS is a minor version released approximately every 6 months after a new major version release for general availability.
 
-The next MTS version for Studio Pro will be 10.6, due to be released in December, 2023.
+This is the current MTS version of Studio Pro:
+
+* [10.6](/releasenotes/studio-pro/10.6/) (started in December, 2023)
 
 {{% alert color="info" %}}
-Older MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10).
+MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10.0).
 {{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
@@ -142,4 +144,4 @@ The "end of support" for a version means that fixes, updates, investigating, tro
 
 If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer LTS version that is supported. 
 
-Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended unless you have purchased the [Extended Support](/developerportal/support/#extended-support) product.
+Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended unless you have purchased the [Extended Support](/support/#extended-support) product.

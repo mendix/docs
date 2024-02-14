@@ -26,10 +26,6 @@ For more information, see [Control Bar](/refguide/control-bar/).
 
 **Search Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
 
-### 2.3 Sort Bar
-
-**Sort Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](/refguide/sort-bar/).
-
 ## 3 Properties
 
 An example of template grid properties is represented in the image below:
@@ -45,6 +41,8 @@ Template grid properties consist of the following sections:
 * [Visibility](#visibility)
 
 ### 3.1 Common Section {#common}
+
+The rows of the template grid can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

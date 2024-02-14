@@ -23,11 +23,11 @@ This document describes the options available to you when you create a published
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
 
-## 2 General
+## 2 General {#general}
 
 To create a Published OData Service, right-click on the module in your app and choose **Add other** > **Published OData service**. You can also edit an existing published OData service by double-clicking on it, or right-clicking on it and selecting **Open**.
 
-### 2.1 Service Name
+### 2.1 Service Name {#service-name}
 
 The service name uniquely identifies the published OData service within the app.
 
@@ -47,7 +47,9 @@ This is because changes to a particular version of a published OData service wil
 
 ### 2.3 Location
 
-The location denotes where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.
+The location denotes where the service will be available. It is recommended to include the service name and the major version in the location, e.g. `svc/products/v1/`.
+
+The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
 ### 2.4 Namespace
 

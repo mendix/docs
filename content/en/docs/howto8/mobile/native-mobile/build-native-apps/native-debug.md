@@ -27,7 +27,7 @@ When the Make It Native app finishes loading your app, do the following:
 
 Your mobile app should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
-If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
+If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** ({{% icon name="controls-play" %}}) again to restart your app. 
 
 You should see this page:
 

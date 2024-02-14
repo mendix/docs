@@ -62,7 +62,7 @@ As a best practice, test your new storage plan by creating a new environment and
 
 To create a new storage plan, do the following steps:
 
-1. Run the [mxpc-cli configuration tool](/developerportal/deploy/private-cloud-cluster/#download-configuration-tool) and fill in all the necessary details for the storage plan or plans.
+1. Run the [mxpc-cli configuration tool](/developerportal/deploy/standard-operator/#download-configuration-tool) and fill in all the necessary details for the storage plan or plans.
 2. Apply the changes but keep the `mxpc-cli` configuration tool open.
 3. Try to create a new test environment using the new storage plan.
     If the environment is successfully created and able to start, the storage plan is ready to use.
@@ -359,7 +359,7 @@ To connect to an Amazon RDS database, the VPC and firewall must be configured to
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 
-1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
@@ -971,7 +971,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 
-1. Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 

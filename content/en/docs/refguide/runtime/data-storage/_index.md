@@ -23,7 +23,7 @@ See [Databases and Apps](#databases), below, for an overview of this.
 
 ## 2 Supported Databases
 
-For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model(s).
+For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model (or models).
 
 If you are deploying to a different infrastructure, you will need to provide your own database.
 See [System Requirements](/refguide/system-requirements/#databases) for the list of supported databases.
@@ -71,3 +71,34 @@ When the record gets locked, as long as the transaction is executing, no other u
 To ensure data validity and improve database performance in a multiuser environment, Mendix isolates concurrent database transactions. Isolation is done by using the `Read Committed` isolation level. This is the default isolation setting for PostgreSQL databases. Mendix relies on the implementation of `Read Committed` in the database. If you use a different database, the results of `Read Committed` might vary due to a different implementation of the isolation level.
 
 For more information on how `Read Committed` works in PostgreSQL, see [PostgreSQL Read Committed documentation](https://www.postgresql.org/docs/12/transaction-iso.html#XACT-READ-COMMITTED).
+
+## 5 Foreign Key Constraints{#fkc}
+
+A Foreign Key Constraint (FKC) is a database-level concept. An FKC enforces consistency of links between tables and makes sure that a reference to a table row exists only if a referred row exists as well.
+
+### 5.1 Foreign Key Constraints in Mendix
+
+{{% alert color="info" %}}
+Foreign Key Constraints are applied to new apps created in Mendix version 10.6.0 and above.
+{{% /alert %}}
+
+When it comes to the Mendix data model, having a FKC means that all associations and System members such as `owner` and `changedBy` are guaranteed to be consistent; if there is an association, then the associated object exists as well.
+
+From the user perspective, that is already the case. In a Mendix app, is impossible to encounter a reference that does not refer to an object.
+
+Nevertheless, because of the way Mendix uses association tables in the database to record associations from the Domain Model, there are certain scenarios that may lead to records in these association tables referring to non-existent records in entity tables, leaving the association tables having dangling references. Such association records are not accessible from the app itself, so such orphaned records do not affect app functionality in any way. But their existence in the database usually indicates that the app itself may contain an error that leads to inconsistent data.
+
+The FKC feature is designed to safeguard against scenarios that would lead to dangling references. Using FKCs is also a good practice of database development.
+
+With this feature, if the app is going to create a dangling reference, a runtime exception is thrown. This allows the developer to identify and investigate the root cause of the dangling reference. Without that feature, the erroneous scenario would go unnoticed.
+
+### 5.2 Adding Foreign Key Constraints to New Projects
+
+Foreign Key Constraints are enabled for new projects in version 10.6.0 and above. This applies to:
+
+* Projects created from scratch using a starter app
+* Projects created using [Import app package](/refguide/import-app-package-dialog/)
+
+Apps created before 10.6 are not affected. This means that if your app is created in a version of Studio Pro below 10.6.0 and then upgraded to version 10.6.0 or above, FKCs do not get enabled for it.
+
+When a new app is created from a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted from the database. This cleanup is performed only once and is not repeated on consequent runs for the same database.

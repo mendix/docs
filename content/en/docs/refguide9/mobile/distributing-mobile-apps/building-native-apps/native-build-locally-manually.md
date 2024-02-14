@@ -161,7 +161,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
 
-1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
+1. After a short time the app should be synchronized and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
 
@@ -179,7 +179,7 @@ To build an Android app with Android Studio, do the following:
 
     As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
-1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
+1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click **Run Locally** ({{% icon name="controls-play" %}}) to start a build for your app:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
 
@@ -202,7 +202,7 @@ Mendix supports RN and therefore auto-linking. Auto linking is a React Native me
 
 ### 6.2 Adding Dependencies Which Do Not Support Auto-Linking
 
-If a dependency does not suport auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
+If a dependency does not support auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
 
 ## 7 Removing Dependencies{#removing-dependencies}
 

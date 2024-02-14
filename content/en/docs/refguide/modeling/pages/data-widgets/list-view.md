@@ -37,6 +37,10 @@ List view properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
+The rows of the list view can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+
+To specify which attributes to use when searching, configure the search attributes property. It is only available for **Database** [data sources](#data-source).
+
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2. Data Source Section {#data-source}

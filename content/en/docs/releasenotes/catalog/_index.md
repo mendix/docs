@@ -3,7 +3,7 @@ title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 tags: ["data hub", "Catalog", "data hub Landscape"]
-weight: 37
+weight: 36
 aliases:
     - /releasenotes/data-hub/
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -11,7 +11,57 @@ aliases:
 
 These release notes cover changes made to the [Catalog](/catalog/).
 
+## 2024
+
+### February 8, 2024
+
+#### Fixes
+
+* We fixed an issue where the **View** button could not be clicked on the **Curate** page.
+* We addressed potential security vulnerabilities.
+
+### February 1, 2024
+
+#### Fixes
+
+* We fixed an issue that would prevent data sources from being automatically registered for applications that also use Mendix Business Events.
+
+### January 25, 2024
+
+#### Improvement
+
+* Users can now register endpoints using OpenAPI 3.0. Previously, only OpenAPI 2.0 was supported.
+
+### January 11, 2024
+
+#### Improvement
+
+* We addressed potential security vulnerabilities.
+
+### January 4, 2024
+
+#### Fixes
+
+* We fixed a visual bug on the Curation page where two pagination bars were shown.
+* We addressed potential security vulnerabilities.
+
+#### Improvement
+
+* Users that are not an administrator or curator can now view deeplinks to undiscoverable services.
+
 ## 2023
+
+### December 28, 2023
+
+#### Fixes
+
+* We removed delete access for automatically registered data sources, a feature that was mistakenly introduced in a previous release.
+
+### December 8, 2023
+
+#### Fixes
+
+* We fixed an issue where the search feature in Studio Pro did not work as expected.
 
 ### November 30, 2023
 

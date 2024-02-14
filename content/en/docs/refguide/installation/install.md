@@ -16,7 +16,7 @@ aliases:
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of [installing the latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
 
-If you use a Mac device, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
+If you use a Mac device and need to use a version of Mendix Studio Pro older than 10.7, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
@@ -24,10 +24,12 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 
 ## 2 Downloading Mendix Studio Pro
 
-Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
+Mendix Studio Pro can be installed on your Windows machine with a Windows executable file or on your Mac machine using a pkg file. This file can be downloaded from the Mendix Marketplace. 
+
+Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
+2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro. Make sure to download the version for your operating system. 
 
 ## 3 Installing Mendix Studio Pro {#install}
 
@@ -36,6 +38,8 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-10.X.X-Setup*. Then click **Next**:
 
     {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  >}}
+
+     On a Mac, you may get a warning during installation. For more information on how to troubleshoot it, see the [Mac Warning](#mac-warning) section below.
 
 2. Select **I accept the terms in the License Agreement** and click **Next**.
 
@@ -53,6 +57,8 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 4 Troubleshooting {#troubleshooting}
+
+### 4.1 Installing Prerequisites Separately
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -75,6 +81,14 @@ Based on the error message you get from the installer you can decide to install 
 
 After that you can retry installing Studio Pro.
 
+### 4.2 Mac Warning {#mac-warning}
+
+On a Mac, you may get the following warning during installation:
+
+{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  >}}
+
+To bypass it, right-click the installer, click **Open** and run the installer.
+
 ## 5 Installing Mendix Studio Pro Offline {#offline}
 
 The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
@@ -92,7 +106,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
-    * The Gradle zip file should be named *gradle-7.6-bin.zip*
+    * The Gradle zip file should be named *gradle-7.6.3-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
@@ -110,7 +124,13 @@ For more information on how to configure a custom repository, see the *Custom Re
 
 Mendix also offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installer is available to download on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
 
-As compared to the regular installer, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionality.
+While the regular installer installs Mendix Studio Pro dependencies in system directories, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionalities.
+
+The portable installer does not include all tools that come installed with Studio Pro or can be leveraged by Studio Pro, such as the MPR tool, mx, mxbuild, mxuit, or the Console Log. The portable installer only includes the tools that are necessary to be able to build with Studio Pro and to run apps locally. 
+
+Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking on the **Add custom version** button in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
+
+{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450">}}
 
 ## 7 Signing In
 

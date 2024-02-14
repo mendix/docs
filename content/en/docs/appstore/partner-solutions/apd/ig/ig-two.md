@@ -28,7 +28,7 @@ To install APM 2, follow these steps:
 6. Click **Save and generate API key**, then use this key as the value for the **APMAgent.APMAPIKey** constant in step 10.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://marketplace.mendix.com/link/component/6127/) module from the Mendix Marketplace.
 8. Add the **USE_ME/AfterStartup** microflow to your app's **After startup** microflow.
-9. Copy the widget from **USE_ME/CopyPasteAPMBrowserWidget** to the layout(s) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
+9. Copy the widget from **USE_ME/CopyPasteAPMBrowserWidget** to the layout (or layouts) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
 10. Set the value of the **USE_ME/APMAgent.APMAPIKey** constant with the key you generated at step 6.
 
 ## 3 Upgrading

@@ -140,7 +140,7 @@ The diagram below provides a more detailed explanation how the Mendix Operator c
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-provision-storage.png" >}}
 
 The Operator doesn't communicate with the database or file storage directly, instead, the `StorageInstance` controller runs a provisioner pod (a “task” pod) to create a new storage tenant in the database or file server.
-The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](/developerportal/deploy/private-cloud-cluster/#configure-namespace)) contains blueprints for the provisioner pod, such as:
+The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](/developerportal/deploy/standard-operator/#configure-namespace) contains blueprints for the provisioner pod, such as:
 
 * The provisioner image name
 * The name of the Kubernetes secret containing management credentials – such as the PostgreSQL admin username/password or AWS credentials
@@ -199,8 +199,8 @@ To use an Ingress controller, you need to install it first:
 1. Install your chosen ingress controller.
     Most ingress controllers will also create a Kubernetes load balancer service on installation
 2. Set up DNS in one of two ways:
-    * ensure that your app domain(s) (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
-    * install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
+    * Ensure that your app domains (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
+    * Install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
 3. Create a test ingress object and deploy a test app to verify that the network setup is working.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-ingress-controller.png" >}}

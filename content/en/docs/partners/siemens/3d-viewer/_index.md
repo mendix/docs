@@ -12,7 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D files (JT, OBJ, glTF, and STL formats) in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, [domain models](/refguide/domain-model/), [nanoflows](/refguide/nanoflows/), [microflows](/refguide/microflows/), and a set of 3D widgets that enable you to build apps to work with 3D models. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
+{{% alert color="info" %}}Currently, the 3D Viewer service does not work with Mendix 10. We are working to resolve this.{{% /alert %}}
+
+The [3D Viewer](https://marketplace.mendix.com/link/component/118345) service lets you upload, visualize, and operate on 3D files (JT, OBJ, glTF, and STL formats) in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, [domain models](/refguide/domain-model/), [nanoflows](/refguide/nanoflows/), [microflows](/refguide/microflows/), and a set of 3D widgets that enable you to build apps to work with 3D models. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
@@ -90,7 +92,7 @@ To download and install the 3D Viewer app service in your app, follow the instru
 
 To use the 3DViewer features, your app needs to be bound to the 3D Viewer service. This is achieved by executing a microflow when the app starts. The 3D Viewer contains a Java action called **VisServerAction**, which can start the 3D Viewer service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the 3D Viewer when the app starts (running after startup usually means you want to run a specific tool all the time.).
 
-If you app does not have an after-startup microflow set,  follow these steps:
+If you app does not have an after-startup microflow set, follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
 2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.

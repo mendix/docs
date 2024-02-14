@@ -46,7 +46,7 @@ Due to a library update, your Native Template must be aligned with Native Mobile
 If you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:
 
 1. Open your project in AppCenter and go to **Build** menu item.
-1. In **all branches**, click the wrench icon.
+1. In **all branches**, click the wrench icon ({{% icon name="wrench" %}}).
 1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):
     1. Name: **JAVA_HOME**.
     1. Value: **$(JAVA_HOME_11_X64)**.
@@ -255,7 +255,7 @@ In the end, your variable should be set up like this:
 
 ### Improvements
 
-* We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.
+* We added support for the new native mobile encryption features introduced with Mendix Studio Pro 9.8.
 * We added support for authentication token encryption for iOS and Android.
     * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
 * We added support for all cookies on Android.
@@ -279,7 +279,7 @@ In the end, your variable should be set up like this:
 
 ### Improvements
 
-* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/refguide/mobile/using-mobile-capabilities/deep-links/).
+* Mendix Studio Pro 9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Fixes
 

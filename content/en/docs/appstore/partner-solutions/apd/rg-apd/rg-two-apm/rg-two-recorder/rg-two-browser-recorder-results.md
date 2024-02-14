@@ -43,7 +43,7 @@ Console messages in JavaScript may contain variables, which are stringified if p
 
 In the case of a client–server communication action, all detailed information is divided over three tabs instead of one, due to the amount of details. These tabs are labeled **Request**, **Response**, and **Connection**.
 
-The **Request** tab displays the request details. This is the request from the client (browser) to the Mendix Server. The details vary depending on the request. For example, in the case of retrieving data by XPath, the details will list the XPath, whether or not sorting is applied, which attribute(s) are used, possible offsets and limits, and more.
+The **Request** tab displays the request details. This is the request from the client (browser) to the Mendix Server. The details vary depending on the request. For example, in the case of retrieving data by XPath, the details will list the XPath, whether or not sorting is applied, which attribute (or attributes) are used, possible offsets and limits, and more.
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-recorder/rg-two-browser-recorder-results/Performance_browser_recording_ActionsRequest.png" >}}
 

@@ -128,7 +128,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 3. Open the **Chrome** browser.
 4. Open the **Chrome Developer Tools (F12)**.
-5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**:
+5. Click **Customize and control DevTools** ({{% icon name="three-dots-menu-vertical" %}}) and select **More tools** > **Remote devices**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-3.png" alt="android-3" >}}
 
@@ -393,7 +393,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 3. Open the **Chrome** browser.
 4. Open the **Chrome Developer Tools (F12)**.
-5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**:
+5. Click **Customize and control DevTools** ({{% icon name="three-dots-menu-vertical" %}}) and select **More tools** > **Remote devices**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-3.png" alt="android-3" >}}
 

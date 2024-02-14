@@ -314,7 +314,7 @@ Without etcd, MinIO will disable its admin API – which is required by the Mend
 
 [Amazon S3](https://aws.amazon.com/s3/) is supported. Mendix for Private Cloud supports multiple ways of managing and accessing S3 buckets: from creating a new S3 bucket and IAM account per environment to sharing an account and bucket by all environments in a namespace.
 
-A complete list of supported S3 modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/private-cloud-cluster/#storage-plan)
+A complete list of supported S3 modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan)
 configuration details.
 
 ### 5.4 Azure Blob Storage
@@ -376,7 +376,7 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik](https://traefik.io/traefik/)
 * [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
-* [Ingress for External HTTP(S) Load Balancing](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
+* [Ingress for External Application Load Balancer](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
 * [Azure Application Gateway Ingress Controller](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)
 
 For ingress, it is possible to do the following:
@@ -405,7 +405,7 @@ There are multiple ways of managing TLS certificates:
 * Providing a TLS certificate secret for each environment.
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
 
-Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP(S) traffic between the Ingress Controller and the Pod running a Mendix app.
+Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP (or HTTPs) traffic between the Ingress Controller and the Pod running a Mendix app.
 
 ### 6.3 Service Only
 

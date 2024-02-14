@@ -47,10 +47,12 @@ To install and configure the Mendix Operator, perform the following steps:
 
 2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
 
-    * **Tools** - *mx-pclm-cli* tools which can be used to manage PCLM
+    * **Tools** - *mx-pclm-cli*, which can be used to manage PCLM
+    * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
     * **images** - Private Mendix Platform image, PCLM image, Svix image, test application image
     * **Installer** - installer tools
-    * **mxpc-cli** - Installation tools which can be used to manage or configure the Mendix Operator
+    * **mxpc-cli** - installation tools which can be used to manage or configure the Mendix Operator
+    * **charts**  - charts, including Private Mendix Platform charts and Svix charts
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" >}}
 
@@ -184,7 +186,16 @@ Install the Private Mendix Platform by doing the following steps:
 
     {{< figure src="/attachments/private-platform/pmp-install8.png" >}}
 
-5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable.
+5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable:
+ 
+    * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
+    * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+    * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+    * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
+    * **Marketplace Import** - Optional. Enables content import with an external source.
+    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
+    * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+
 6. Click **Review and Apply** > **Evaluate Configuration**.
 7. Make any required changes or click **Run Test App**.
 
@@ -225,7 +236,17 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
 
     {{< figure src="/attachments/private-platform/pmp-upgrade1.png" >}}
 
-5. Click **Run Upgrade**.
+5. Verify the following settings:
+    
+    * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
+    * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+    * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+    * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
+    * **Marketplace Import** - Optional. Enables content import with an external source.
+    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
+    * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+
+6. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" >}}
 

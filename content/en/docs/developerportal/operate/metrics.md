@@ -16,7 +16,7 @@ aliases:
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
-These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
+These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
 
 ## 2 Accessing the Metrics Graphs
 
@@ -148,7 +148,7 @@ These are the types:
 
 ### 4.5 Memory Usage{#Trends-appmemory}
 
-The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gigabytes.
+The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
 
 {{< figure src="/attachments/developerportal/operate/metrics/node-os-memory.png" >}}
 
@@ -188,7 +188,7 @@ In addition to the threadpool that is used for external HTTP requests (described
 
 ### 4.8 CPU Usage{#Trends-appcpu}
 
-The **CPU usage** graph shows the app CPU utilization, as a percentage.
+The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data, ranging from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
 
@@ -196,7 +196,7 @@ The **CPU usage** graph shows the app CPU utilization, as a percentage.
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
-This graph is normalized so that 100% is the full capacity of a single CPU. If you have two CPUs, you would expect your graph to peak at 200%. 
+This graph is normalized so that 100% is the full capacity of a single CPU, 200% is the full capacity of two CPUs, and so on.
 
 Your app can always access at least the amount of CPU specified for your container. However, because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with two CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
@@ -204,7 +204,7 @@ Your app can always access at least the amount of CPU specified for your contain
 
 ### 4.9 Disk Usage {#Trends-appdf}
 
-The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed in percentage.
+The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed as a percentage. The graph's y-axis scales dynamically based on the data. If the app's disk usage is below 100%, then the y-axis ranges from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage-pct.png" >}}
 
@@ -307,7 +307,7 @@ The standard configuration sets a maximum of 50 connections per instance. You ca
 
 ### 5.5 Database Memory{#Trends-dbmemory}
 
-The **Database memory** graph shows the distribution of operating system memory, in gigabytes, that is available for this server.
+The **Database memory** graph shows the distribution of operating system memory, in gibibytes, that is available for this server.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -354,9 +354,9 @@ If you see large values here that do not immediately drop back again, it may ind
 
 ### 5.8 Database Disk Usage{#Trends-dbdfabs}
 
-The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). It is measured in gibibytes.
 
-The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 GiB. 
+The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 gibibytes.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.

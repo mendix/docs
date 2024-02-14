@@ -16,31 +16,32 @@ aliases:
 
 ## 1 Introduction
 
-When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the **Developer Portal**, you can inspect your application's health in Mendix Cloud. 
+When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Developer Portal, you can inspect your application's health in Mendix Cloud. 
 
 Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
 
-If you [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
+{{% alert color="info" %}}
+If you have status alerts set up (for details, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)), you will receive each status alert only once. Mendix will not send you multiple alerts for the same status.
+{{% /alert %}}
 
-This document explainsxs how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
+This document explains how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
 ## 2 Application Status
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1. Go to the [Developer Portal](https://home.mendix.com).
-2. Open the app that you want to monitor.
-3. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
+1. From the [Developer Portal](https://home.mendix.com), open the app that you want to monitor.
+2. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18580000.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" >}}
 
-4. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
+3. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18579999.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" >}}
 
-You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Logs** page.
+You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the [Logs](/developerportal/operate/logs/) page.
 
-Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users who are subscribed to alerts receive an email alert.
+Any status that could cause your app to stop functioning results in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users who are subscribed to alerts receive an email alert.
 
 ## 3 Mendix Cloud Alerting Categories and Thresholds
 
@@ -52,11 +53,11 @@ Some alerts listed in the tables below only appear when the alert is triggered. 
 
 Application Status | |
 :---|:---|
-Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert.|
+Description | The application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system generates an alert.|
 Example message | No runtime heartbeat received for 8m45s.
 Warning Threshold | Not used.                                              |
 Critical Threshold | If the runtime heartbeat of the application has not been received for 5 minutes, a critical alert will be generated.
-First actions to take | Check the application logs for issues. Also check [https://status.mendix.com/](https://status.mendix.com/) for any planned maintenance.                         |
+First actions to take | Check the application logs for issues. Also check [Mendix Platform Status](https://status.mendix.com/) for any planned maintenance.                         |
 
 Application Container CPU Percentage | |
 :---|:---|
@@ -84,7 +85,7 @@ First actions to take | Inspect the trends for **Application node operating syst
 
 Critical Logs | |
 :---|:---|
-Description | The CRITICAL log level is reserved for issuing messages in rare cases where the application may not be able to function reliably anymore. For example, there is a chance of data corruption when the application continues to be running. Internal JVM errors are logged to this level. Out of memory errors (which are JVM errors) must be treated as harmful for the stability and integrity of your Mendix application process.
+Description | The CRITICAL log level is reserved for issuing messages in rare cases where the application may not be able to function reliably anymore. For example, there is a chance of data corruption when the application continues to be running. Internal JVM errors are logged to this level. Out of memory errors (which are JVM errors) must be treated as harmful to the stability and integrity of your Mendix application process.
 Example message | Critical errors count is 2.
 Warning Threshold | Not used.
 Critical Threshold | If any logging is done on the CRITICAL level, the alerts status always directly switches to Critical. The critical log message counter will only be reset when restarting the application process.
@@ -128,7 +129,7 @@ Description | Each application can define a health check microflow. This microfl
 Example message | Health: the nightly import job took more than an hour to complete!
 Warning Threshold | If the health check microflow returns a non-empty string value, this means the application is not healthy and a WARNING alert is generated.
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
-First actions to take | Since the health check microflow is specific to your application, we cannot generically advise actions to take.
+First actions to take | Because the health check microflow is specific to your application, Mendix cannot generically advise actions to take.
 
 Virtual Machine Error | |
 :---|:---|
@@ -173,4 +174,4 @@ To access the history of the alerts from your app, follow these steps:
 * [Metrics](/developerportal/operate/metrics/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
 * [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/)
-* [How to Submit Support Requests](/developerportal/support/submit-support-request/)
+* [How to Submit Support Requests](/support/submit-support-request/)

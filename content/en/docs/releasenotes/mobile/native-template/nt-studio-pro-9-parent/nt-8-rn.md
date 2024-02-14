@@ -11,7 +11,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We have removed redundant launch screen
+* We removed a redundant launch screen.
 
 ## 8.0.2 {#802}
 
@@ -19,7 +19,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We have fixed issues related to building with pipelines
+* We fixed issues affecting building with pipelines.
 
 ## 8.0.1 {#801}
 
@@ -27,7 +27,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We updated react-native-vector-icons to version 10.0.3
+* We upgraded `react-native-vector-icons` to version 10.0.3.
 
 ## 8.0.0 {#800}
 
@@ -35,6 +35,6 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* We have upgraded our React Native version to 0.72.7
-* We have upgrade node to version 18
-* We have upgrade JAVA to version 17
+* We have upgraded our React Native version to 0.72.7.
+* We have upgraded node to version 18.
+* We have upgraded JAVA to version 17.

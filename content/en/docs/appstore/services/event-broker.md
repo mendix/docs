@@ -107,7 +107,7 @@ After all events have been configured simply `Start` the Mendix Event Broker Bri
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_7.png">}}
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_management.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_management.png">}}
 
 Once the Mendix Event Broker Bridge has been successfully deployed its configuration and status can be viewed on the Overview page.
 

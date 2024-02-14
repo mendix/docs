@@ -5,10 +5,6 @@ weight: 100
 tags: ["studio pro", "between date function calls", "expression", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/between-date-function-calls.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Between date function calls calculate the differences between two dates.

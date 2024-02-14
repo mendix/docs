@@ -6,10 +6,6 @@ description: "Widgets which can be added to pages to view and edit attributes of
 tags: ["studio pro", "input widgets", "widget", "reference selector", "reference set", "association", "edit", "data input"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/input-widgets.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Input widgets show data to the end-user and, optionally, allow them to edit the data.

@@ -23,8 +23,8 @@ To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-prof
 
 Select the following as **Deployment Mendix Cloud** scopes:
 
-* `mx:epics:read` – to perform `GET` operations
-* `mx:epics:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+* `mx:feednback:read` – to perform `GET` operations
+* `mx:feedback:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Deploy API calls.
 

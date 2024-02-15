@@ -80,13 +80,13 @@ Default: {Entity name}s
 
 ## 6 Use Paging {#paging}
 
-The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
+The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
 Default: **No**
 
 When set to **Yes**, select **Top supported** and **Skip supported** [query options](#query-options).
 
-Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 then moves to position 1000. This means that the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
+Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
 ## 7 Page Size
 
@@ -100,9 +100,9 @@ Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representa
 
 Select a combination of attributes with the following constraints:
 
-* Unique – The combination of key attributes should be unique, so each key points to exactly one object.
+* Unique – The combination of key attributes should be unique so each key points to exactly one object.
 * Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
-* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
+* Stable over time – The attribute values used for the key should not change so you can find it again later.
 
 Having an [index](/refguide/indexes/) for the key attribute (or attributes) makes retrieving objects by key perform better.
 

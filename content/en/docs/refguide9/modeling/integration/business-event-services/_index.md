@@ -32,15 +32,11 @@ A **Published Business Event Service** is the document defining various events, 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/published-business-event-service.png" >}}
 
-See the [Creating a Published Business Event Service](/appstore/services/business-events/#create-be) section of *Mendix Business Events* for more extensive documentation.
-
 ##### 2.1.2 Consumed Business Event Services {#consumed-event-service-doc}
 
 To subscribe to a business event, you first need to create a **Consumed Business Event Service**. Right-click on a module in your app and go to **Add other** > **Consumed Business Event Service**. The published business event service document is open in Studio Pro:
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/consumed-business-event-service.png" >}}
-
-See the [Create a Consumed Business Event Service](/appstore/services/business-events/#consume-be) section of *Mendix Business Events* for more extensive documentation.
 
 #### 2.2 Business Event Services in Studio Pro 9.24 and Above {#be-924}
 

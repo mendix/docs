@@ -166,7 +166,7 @@ Currently, we don’t support multiple subscribers to the same business event wi
 
 ### 4.3 Modelling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
 
-Once you have created a service in [Studio Pro 9.18 through 9.23](#one-way-be) or [Studio Pro 9.24 and above](#two-way-be), you can start modelling with them in your app.
+Once you have created a service in Studio Pro 9.18 through 9.23 or [Studio Pro 9.24 and above](#two-way-be), you can start modelling with them in your app.
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events service.
 
